@@ -1,44 +1,49 @@
 import { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Splash } from './Splash';
-import { Welcome } from './Welcome';
-import { About } from './About';
-import { Location } from './Location';
-import { Participant } from './Participant';
-import { Age } from './Age';
-import { Accelerometer } from './Accelerometer';
-import { GreatJob } from './GreatJob';
+import Splash from "./Splash";
+import Welcome from "./Welcome";
+import About from "./About";
+import Location from "./Location";
+import Participant from "./Participant";
+import Age from "./Age";
+import Accelerometer from "./Accelerometer";
+import GreatJob from "./GreatJob";
 
-function PageWrapper() {
-
+export default function PageWrapper() {
     /** vars */
     let page = <Splash />;
     const TOTAL_PAGES = 7;
-    const [currentPageNumber, setCurrentPageNumber] = useState(1);
+    const [currentPageNumber, setCurrentPageNumber] = useState(3);
 
     /** functions */
     function nextPage() {
-        setCurrentPageNumber(currentPage => ++currentPage);
+        if(currentPageNumber > TOTAL_PAGES) {
+            setCurrentPageNumber(TOTAL_PAGES);
+        } else {
+            setCurrentPageNumber((currentPage) => ++currentPage);
+        }
+        console.log(currentPageNumber)
     }
 
     function prevPage() {
-        if(currentPageNumber <= 1) {
+        if (currentPageNumber <= 1) {
             setCurrentPageNumber(1);
         } else {
-            setCurrentPageNumber(currentPage => --currentPage);
+            setCurrentPageNumber((currentPage) => --currentPage);
         }
+        console.log(currentPageNumber)
     }
 
     /** switch page */
-    switch(currentPageNumber) {
+    switch (currentPageNumber) {
         case 1:
-            page = <Splash />;
+            page = <Splash onPress={nextPage}/>;
             break;
         case 2:
-            page = <Welcome />;
+            page = <Welcome onPress={nextPage} />;
             break;
         case 3:
-            page = <About />;
+            page = <About onPress={nextPage}/>;
             break;
         case 4:
             page = <Location />;
@@ -54,26 +59,21 @@ function PageWrapper() {
             break;
         case 8:
             page = <GreatJob />;
-        
     }
 
-
     return (
-
         <View style={styles.container}>
-            <Text>Page Wrapper</Text>
+            {page}
         </View>
     );
 }
 
-export default PageWrapper;
-
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'yellow',
+        backgroundColor: "white",
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%'
-    }
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+    },
 });

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import FullWidthButton from './components/kids/FullWidthButton';
 import PageWrapper from './base-pages/PageWrapper';
 
+
 export default function App() {
   return (
     <View style={styles.container}>
