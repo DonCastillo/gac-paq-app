@@ -11,7 +11,7 @@ export default function QuestionLabel({ children, fontSize }) {
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        marginBottom: 15,
+        marginBottom: 20,
     },
     text: {
         fontSize: 24,

@@ -2,33 +2,35 @@ import { Text, View, Image, StyleSheet } from "react-native";
 import Colors from "./../styles/kids/Colors";
 import Heading from "../components/kids/Heading";
 import Paragraph from "../components/kids/Paragraph";
-import CenterMain from "../components/CenterMain";
+import TopMain from "../components/TopMain";
 import Navigation from "../components/Navigation";
 import FullWidthButton from "../components/kids/FullWidthButton";
+import Main from "./../components/Main";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
+import QuestionLabel from "../components/kids/QuestionLabel";
+import QuestionSelect from "../components/kids/QuestionSelect";
 
+export default function Location() {
+    const {nextPage} = useContext(AppContext);
+    const options = [
+        { label: "Child / Teen", value: "Child / Teen" },
+        { label: "Parent", value: "Parent" }
+    ];
 
-export default function Participant({onPress }) {
     return (
-        <View style={styles.container}>
-            <CenterMain>
-                <Heading color={Colors.introBackgroundColor} fontSize={70}>welcome!</Heading>
-                <Paragraph color={Colors.introBackgroundColor} fontSize={15} lineHeight={17}>
-                    Physical activity is essential for healthy child development, yet 80% of youth are not active enough and we lack information about activity levels of young children.
-                </Paragraph>
-            </CenterMain>
-            <Navigation>
-                <FullWidthButton onPress={onPress}>Start</FullWidthButton>
-            </Navigation>
+        <View>
+            <Main>
+                <TopMain>
+                    <QuestionLabel>Who's taking this{'\n'}questionnaire?</QuestionLabel>
+                    <QuestionSelect options={options} />
+                </TopMain>
+                <Navigation>
+                    <FullWidthButton onPress={nextPage}>
+                        Continue
+                    </FullWidthButton>
+                </Navigation>
+            </Main>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});

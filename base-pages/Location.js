@@ -6,8 +6,6 @@ import TopMain from "../components/TopMain";
 import Navigation from "../components/Navigation";
 import FullWidthButton from "../components/kids/FullWidthButton";
 import Main from "./../components/Main";
-import QuestionLabel from "../components/questions/QuestionLabel";
-import QuestionSelect from "../components/questions/QuestionSelect";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import QuestionLabel from "../components/kids/QuestionLabel";
