@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         marginBottom: 15,
-        // backgroundColor: 'pink'
     },
     text: {
         fontSize: 24,

@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import {useState} from 'react';
 import DropDownPicker from "react-native-dropdown-picker";
+import Colors from "../../styles/kids/Colors";
 
 export default function QuestionSelect({ options }) {
     const [open, setOpen] = useState(false);
@@ -25,6 +26,8 @@ export default function QuestionSelect({ options }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        borderColor: Colors.introBorderColor,
+        borderWidth: 2,
         backgroundColor: "#fff",
         width: "100%",
         alignItems: "center",

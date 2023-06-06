@@ -10,12 +10,10 @@ export default function Main({ children }) {
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: "green",
         flex: 4,
         flexDirection: "column",
         paddingVertical: 40,
         paddingHorizontal: 0,
-        backgroundColor: "pink",
         width: "100%"
     },
 });
