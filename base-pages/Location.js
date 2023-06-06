@@ -10,8 +10,10 @@ import QuestionLabel from "../components/questions/QuestionLabel";
 import QuestionSelect from "../components/questions/QuestionSelect";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import QuestionLabel from "../components/kids/QuestionLabel";
+import QuestionSelect from "../components/kids/QuestionSelect";
 
-export default function Location({ onPress }) {
+export default function Location() {
     const {nextPage} = useContext(AppContext);
     const locationOptions = [
         { label: "United States", value: "United States" },
