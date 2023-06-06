@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
+import * as Font from 'expo-font';
 import { StyleSheet, Text, View } from 'react-native';
 import FullWidthButton from './components/kids/FullWidthButton';
 import PageWrapper from './base-pages/PageWrapper';
+import React, { useCallback, useEffect, useState } from 'react';
 
+import useFonts from './hooks/useFonts';
+import Splash from './base-pages/Splash';
 
 export default function App() {
+ 
+
   return (
     <View style={styles.container}>
       <PageWrapper />

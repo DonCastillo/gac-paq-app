@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import React, { createContext } from "react";
 import Splash from "./Splash";
 import Welcome from "./Welcome";
 import About from "./About";
@@ -9,20 +10,22 @@ import Age from "./Age";
 import Accelerometer from "./Accelerometer";
 import GreatJob from "./GreatJob";
 
+import { AppContext } from "../context/AppContext";
+
 export default function PageWrapper() {
     /** vars */
     let page = <Splash />;
     const TOTAL_PAGES = 7;
-    const [currentPageNumber, setCurrentPageNumber] = useState(3);
+    const [currentPageNumber, setCurrentPageNumber] = useState(2);
 
     /** functions */
     function nextPage() {
-        if(currentPageNumber > TOTAL_PAGES) {
+        if (currentPageNumber > TOTAL_PAGES) {
             setCurrentPageNumber(TOTAL_PAGES);
         } else {
             setCurrentPageNumber((currentPage) => ++currentPage);
         }
-        console.log(currentPageNumber)
+        console.log(currentPageNumber);
     }
 
     function prevPage() {
@@ -31,19 +34,19 @@ export default function PageWrapper() {
         } else {
             setCurrentPageNumber((currentPage) => --currentPage);
         }
-        console.log(currentPageNumber)
+        console.log(currentPageNumber);
     }
 
     /** switch page */
     switch (currentPageNumber) {
         case 1:
-            page = <Splash onPress={nextPage}/>;
+            page = <Splash />;
             break;
         case 2:
-            page = <Welcome onPress={nextPage} />;
+            page = <Welcome />;
             break;
         case 3:
-            page = <About onPress={nextPage}/>;
+            page = <About />;
             break;
         case 4:
             page = <Location />;
@@ -62,9 +65,9 @@ export default function PageWrapper() {
     }
 
     return (
-        <View style={styles.container}>
-            {page}
-        </View>
+        <AppContext.Provider value={{ currentPageNumber, setCurrentPageNumber, nextPage }}>
+            <View style={styles.container}>{page}</View>
+        </AppContext.Provider>
     );
 }
 

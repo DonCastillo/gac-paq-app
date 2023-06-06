@@ -19,9 +19,9 @@ export default function Splash({onPress}) {
                     The global adolescent and children activity questionnaire
                 </Paragraph>
             </CenterMain>
-            <Navigation>
+            {/* <Navigation>
                 <FullWidthButton onPress={onPress}>Start</FullWidthButton>
-            </Navigation>
+            </Navigation> */}
         </View>
     );
 }

@@ -1,16 +1,17 @@
 import { Text, View, Image, StyleSheet } from "react-native";
+import Main from "./Main";
 
-export default function CenterMain({ children }) {
+export default function TopMain({ children }) {
     return <View style={styles.container}>{children}</View>;
 }
 
 const styles = StyleSheet.create({
     container: {
+        width: "100%",
         flex: 4,
         flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "blue",
-        width: "100%",
+        justifyContent: "flex-start",
+        alignItems: "stretch",
+        backgroundColor: "green",
     },
 });
