@@ -9,14 +9,15 @@ import Participant from "./Participant";
 import Age from "./Age";
 import Accelerometer from "./Accelerometer";
 import GreatJob from "./GreatJob";
-
+import QuestionCover from "../components/kids/QuestionCover";
 import { AppContext } from "../context/AppContext";
+import Colors from "../styles/kids/Colors";
 
 export default function PageWrapper() {
     /** vars */
     let page = <Splash />;
-    const TOTAL_PAGES = 7;
-    const [currentPageNumber, setCurrentPageNumber] = useState(2);
+    const TOTAL_PAGES = 9;
+    const [currentPageNumber, setCurrentPageNumber] = useState(6);
 
     /** functions */
     function nextPage() {
@@ -62,10 +63,24 @@ export default function PageWrapper() {
             break;
         case 8:
             page = <GreatJob />;
+            break;
+        case 9:
+            page = (
+                <QuestionCover
+                    heading={"School Activities"}
+                    subheading={"Section 1"}
+                    imageSrc={require("./../assets/images/image-placeholder.jpg")}
+                    themeColor={Colors.Green500}
+                    accentColor={Colors.Green400}
+                />
+            );
+            break;
     }
 
     return (
-        <AppContext.Provider value={{ currentPageNumber, setCurrentPageNumber, nextPage }}>
+        <AppContext.Provider
+            value={{ currentPageNumber, setCurrentPageNumber, nextPage }}
+        >
             <View style={styles.container}>{page}</View>
         </AppContext.Provider>
     );
