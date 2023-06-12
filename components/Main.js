@@ -12,8 +12,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 4,
         flexDirection: "column",
-        paddingVertical: 40,
-        paddingHorizontal: 0,
-        width: "100%"
+        paddingVertical: 30,
+        paddingHorizontal: "13%",
+        width: "100%",
+        // backgroundColor: 'yellow'
     },
 });

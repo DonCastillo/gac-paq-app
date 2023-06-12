@@ -8,9 +8,12 @@ export default function TopMain({ children }) {
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        flex: 4,
+        flex: 5,
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "stretch",
+        // backgroundColor: "pink",
+        // paddingHorizontal: "8%",
+
     },
 });

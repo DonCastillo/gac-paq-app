@@ -1,16 +1,17 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 
-export default function Navigation({ children, justify = "center" }) {
+
+export default function QuestionBreadcrumb({children}) {
     return (
-        <View style={[styles.container, { justifyContent: justify }]}>
-            {children}
+        <View>
+            <Text style={styles.textHeading}>{children}</Text>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: "red",
+        backgroundColor: "red",
         flex: 1,
         flexDirection: "row",
         justifyContent: "center",
@@ -19,4 +20,9 @@ const styles = StyleSheet.create({
         // paddingHorizontal: "8%",
 
     },
+    textHeading: {
+        fontWeight: 700,
+        fontSize: 24,
+        color: "#000"
+    }
 });

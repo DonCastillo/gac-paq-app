@@ -1,5 +1,7 @@
 import { View, ImageBackground, Text, StyleSheet } from "react-native";
 import ButtonContainerWidth from "./ButtonContainerWidth";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 export default function QuestionCover({
     themeColor,
@@ -11,6 +13,8 @@ export default function QuestionCover({
     console.log("Don");
     console.log("imagesrc: ", imageSrc);
     console.log(heading);
+    const {nextPage} = useContext(AppContext);
+
 
     return (
         <View style={styles.container}>
@@ -33,7 +37,7 @@ export default function QuestionCover({
                             { justifyContent: "center" },
                         ]}
                     >
-                        <ButtonContainerWidth color={accentColor}>
+                        <ButtonContainerWidth onPress={nextPage} color={accentColor}>
                             Go!
                         </ButtonContainerWidth>
                     </View>

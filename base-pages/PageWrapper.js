@@ -12,12 +12,14 @@ import GreatJob from "./GreatJob";
 import QuestionCover from "../components/kids/QuestionCover";
 import { AppContext } from "../context/AppContext";
 import Colors from "../styles/kids/Colors";
+import QuestionRadioPage from "./QuestionRadioPage";
+// import QuestionRadio from "../components/kids/QuestionRadio";
 
 export default function PageWrapper() {
     /** vars */
     let page = <Splash />;
     const TOTAL_PAGES = 9;
-    const [currentPageNumber, setCurrentPageNumber] = useState(6);
+    const [currentPageNumber, setCurrentPageNumber] = useState(10);
 
     /** functions */
     function nextPage() {
@@ -75,11 +77,27 @@ export default function PageWrapper() {
                 />
             );
             break;
+        case 10:
+            const options = [{text: "Yes", value: "yes"}, {text: "No", value: "no"}];
+            page = (
+                <QuestionRadioPage
+                    breadcrumb={"School"}
+                    title={"Question 1"}
+                    options={options}
+                    label={"Did you attend school in the past week?"}
+                />
+            );
+            break;
     }
 
     return (
         <AppContext.Provider
-            value={{ currentPageNumber, setCurrentPageNumber, nextPage }}
+            value={{
+                currentPageNumber,
+                setCurrentPageNumber,
+                nextPage,
+                prevPage,
+            }}
         >
             <View style={styles.container}>{page}</View>
         </AppContext.Provider>
