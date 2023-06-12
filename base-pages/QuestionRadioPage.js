@@ -15,7 +15,7 @@ import QuestionRadio from "../components/kids/QuestionRadio";
 export default function QuestionSingle({ breadcrumb, title, options, label }) {
     const { nextPage, prevPage } = useContext(AppContext);
     return (
-        <View>
+        <View style={styles.container}>
             {/* <QuestionProgress>School</QuestionProgress> */}
             {/* <Text>{children}</Text> */}
             <Main>
@@ -51,4 +51,7 @@ const styles = StyleSheet.create({
     question: {
         // backgroundColor: "pink",
     },
+    container: {
+        paddingHorizontal: "12%"
+    }
 });

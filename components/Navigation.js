@@ -11,6 +11,7 @@ export default function Navigation({ children, justify = "center" }) {
 const styles = StyleSheet.create({
     container: {
         // backgroundColor: "red",
+        backgroundColor: "#fff",
         flex: 1,
         flexDirection: "row",
         justifyContent: "center",

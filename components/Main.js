@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 4,
         flexDirection: "column",
-        paddingVertical: 30,
-        paddingHorizontal: "13%",
+        paddingVertical: 20,
+        paddingHorizontal: 10,
         width: "100%",
         // backgroundColor: 'yellow'
     },
