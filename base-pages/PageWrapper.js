@@ -19,7 +19,7 @@ export default function PageWrapper() {
     /** vars */
     let page = <Splash />;
     const TOTAL_PAGES = 12;
-    const [currentPageNumber, setCurrentPageNumber] = useState(12);
+    const [currentPageNumber, setCurrentPageNumber] = useState(2);
 
     /** functions */
     function nextPage() {
