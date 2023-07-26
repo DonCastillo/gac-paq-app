@@ -1,0 +1,55 @@
+import { createContext, useEffect, useState } from "react";
+import Mode from "../constants/mode";
+import Colors from "./data/colors";
+
+/**
+ * by default the app should be set as:
+ *      mode: kid,
+ */
+
+export const ModeContext = createContext({
+    mode: "",
+    language: "",
+    setMode: (mode: Mode.Adult | Mode.Kid) => {},
+    setLanguage: (language: string) => {},
+});
+
+export default function ModeContextProvider({ children }) {
+    const totalColors = 8; //
+    const [mode, setMode] = useState(Mode.Kid);
+    const [language, setLanguage] = useState("en-us");
+    const [colorIndex, setColorIndex] = useState(0);
+    const [colorTheme, setColorTheme] = useState({});
+
+
+    function nextColor() {
+        setColorIndex(currColorIndex => (currColorIndex++) % totalColors);
+    }
+
+    function prevColor() {
+        setColorIndex(currColorIndex => {
+            if (currColorIndex > 0) {
+                return (currColorIndex--) % totalColors;
+            } else {
+                return 0;
+            }
+        });
+    }
+
+    setColorTheme(currColorTheme => Colors[mode][colorIndex]);
+
+    const value = {
+        mode: mode,
+        language: language,
+        setMode: setMode,
+        setLanguage: setLanguage,
+        nextColor: nextColor,
+        prevColor: prevColor,
+        colorTheme: colorTheme
+    };
+    return (
+        <ModeContext.Provider value={value}>
+            {children}
+        </ModeContext.Provider>
+    );
+}
