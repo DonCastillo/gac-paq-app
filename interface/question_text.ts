@@ -7,6 +7,9 @@ interface Field {
 }
 
 export default interface QuestionTextInterface {
+    id?: string | number | null,
+    question_text_id?: string | number | null,
+    sort?: number | null,
     heading: string;
     label: string;
     fields: Field[];

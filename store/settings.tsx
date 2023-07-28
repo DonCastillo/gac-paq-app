@@ -7,19 +7,21 @@ import Colors from "./data/colors";
  *      mode: kid,
  */
 
-export const ModeContext = createContext({
+export const SettingContext = createContext({
     mode: "",
     language: "",
+    directusAccessToken: "",
     setMode: (mode: Mode.Adult | Mode.Kid) => {},
     setLanguage: (language: string) => {},
 });
 
-export default function ModeContextProvider({ children }) {
+export default function SettingContextProvider({ children }) {
     const totalColors = 8; //
     const [mode, setMode] = useState(Mode.Kid);
     const [language, setLanguage] = useState("en-us");
     const [colorIndex, setColorIndex] = useState(0);
     const [colorTheme, setColorTheme] = useState({});
+    const [directusAccessToken, setDirectusAccessToken] = useState("");
 
 
     function nextColor() {
@@ -45,11 +47,12 @@ export default function ModeContextProvider({ children }) {
         setLanguage: setLanguage,
         nextColor: nextColor,
         prevColor: prevColor,
-        colorTheme: colorTheme
+        colorTheme: colorTheme,
+        directusAccessToken: directusAccessToken,
     };
     return (
-        <ModeContext.Provider value={value}>
+        <SettingContext.Provider value={value}>
             {children}
-        </ModeContext.Provider>
+        </SettingContext.Provider>
     );
 }

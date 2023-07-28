@@ -6,6 +6,8 @@ interface Choice {
 }
 
 export default interface QuestionDropdownInterface {
+    id?: string | number | null,
+    question_dropdown_id?: string | number | null,
     heading: string;
     label: string;
     choices : Choice[]; 
