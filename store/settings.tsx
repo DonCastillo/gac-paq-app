@@ -41,14 +41,14 @@ export default function SettingContextProvider({ children }) {
     setColorTheme(currColorTheme => Colors[mode][colorIndex]);
 
     const value = {
-        mode: mode,
-        language: language,
-        setMode: setMode,
-        setLanguage: setLanguage,
-        nextColor: nextColor,
-        prevColor: prevColor,
-        colorTheme: colorTheme,
-        directusAccessToken: directusAccessToken,
+        mode,
+        language,
+        setMode,
+        setLanguage,
+        nextColor,
+        prevColor,
+        colorTheme,
+        directusAccessToken,
     };
     return (
         <SettingContext.Provider value={value}>
