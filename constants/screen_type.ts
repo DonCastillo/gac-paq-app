@@ -1,9 +1,9 @@
 enum ScreenType {
-    ScreenSplash = 'splash',
-    ScreenPage = 'page',
-    ScreenQuestion = 'question_single',
-    ScreenIntroQuestion = 'question_intro',
-    ScreenExtroQuestion = 'question_extro',
+    Splash = 'splash',
+    Page = 'page',
+    Question = 'question_single',
+    IntroQuestion = 'question_intro',
+    ExtroQuestion = 'question_extro',
 }
 
 export default ScreenType;

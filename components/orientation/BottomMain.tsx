@@ -1,18 +1,17 @@
 import { Text, View, Image, StyleSheet } from "react-native";
-import Main from "./Main";
 
-export default function TopMain({ children }) {
+export default function BottomMain({ children }) {
     return <View style={styles.container}>{children}</View>;
 }
 
 const styles = StyleSheet.create({
     container: {
-        width: "100%",
         flex: 7,
         flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "flex-end",
         alignItems: "stretch",
-        backgroundColor: "#fff",
+        width: "100%",
+        // backgroundColor: "red"
         // paddingHorizontal: "8%",
 
     },

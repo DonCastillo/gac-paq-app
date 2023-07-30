@@ -2,7 +2,7 @@ import { Text, View, Image, StyleSheet } from "react-native";
 import Colors from "./../styles/kids/Colors";
 import Heading from "../components/kids/Heading";
 import Paragraph from "../components/kids/Paragraph";
-import CenterMain from "../components/CenterMain";
+import CenterMain from "../components/orientation/CenterMain";
 import Navigation from "../components/Navigation";
 import FullWidthButton from "../components/kids/FullWidthButton";
 import { useContext } from "react";

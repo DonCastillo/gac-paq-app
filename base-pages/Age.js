@@ -2,7 +2,7 @@ import { Text, View, Image, StyleSheet } from "react-native";
 import Colors from "./../styles/kids/Colors";
 import Heading from "../components/kids/Heading";
 import Paragraph from "../components/kids/Paragraph";
-import TopMain from "../components/TopMain";
+import TopMain from "../components/orientation/TopMain";
 import Navigation from "../components/Navigation";
 import FullWidthButton from "../components/kids/FullWidthButton";
 import Main from "./../components/Main";

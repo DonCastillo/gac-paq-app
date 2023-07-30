@@ -4,6 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Splash from "../screens/Splash";
 import { useContext } from "react";
 import { SettingContext } from "../store/settings";
+import { getScreen } from "../utils/screen";
+import ScreenType from "../constants/screen_type";
+import Mode from "../constants/mode";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,8 +24,8 @@ function AppWrapper() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="SpashScreen" component={Splash} />
+            <Stack.Navigator screenOptions={{headerShown: false}}>
+                <Stack.Screen name="SplashScreen" component={getScreen(mode, ScreenType.Splash)} />
             </Stack.Navigator>
         </NavigationContainer>
     );

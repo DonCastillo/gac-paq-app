@@ -1,6 +1,6 @@
 import { View, StyleSheet, Text } from "react-native";
 import Main from "../components/Main";
-import TopMain from "../components/TopMain";
+import TopMain from "../components/orientation/TopMain";
 import Navigation from "../components/Navigation";
 import ButtonContainerWidth from "../components/kids/ButtonContainerWidth";
 import Colors from "../styles/kids/Colors";

@@ -5,7 +5,7 @@ import Logo from "./../assets/images/Logo.svg";
 import FullWidthButton from "../components/kids/FullWidthButton";
 import Heading from "../components/kids/Heading";
 import Paragraph from "../components/kids/Paragraph";
-import CenterMain from "../components/CenterMain";
+import CenterMain from "../components/orientation/CenterMain";
 import Navigation from "../components/Navigation";
 
 export default function Splash({onPress}) {

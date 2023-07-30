@@ -14,21 +14,10 @@ import SettingContextProvider from "./store/settings";
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <SettingContextProvider>
-                <QuestionContextProvider>
-                    <AppWrapper />
-                </QuestionContextProvider>
-            </SettingContextProvider>
-        </View>
+        <SettingContextProvider>
+            <QuestionContextProvider>
+                <AppWrapper />
+            </QuestionContextProvider>
+        </SettingContextProvider>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});

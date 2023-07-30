@@ -6,20 +6,29 @@ import Colors from "./data/colors";
  * by default the app should be set as:
  *      mode: kid,
  */
+const DEFAULT_MODE = Mode.Adult;
+const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
+
 const INITIAL_STATE = {
-    mode: Mode.Kid,
+    mode: DEFAULT_MODE,
     language: "en-us",
     directusAccessToken: "",
-    colorIndex: 0,
+    colorIndex: DEFAULT_COLOR_INDEX,
     colorTheme: {
-        color100: Colors[Mode.Kid][0].color100,
-        color200: Colors[Mode.Kid][0].color200
+        color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
+        color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200
     }
 }
 
 export const SettingContext = createContext({
-    settingState: {},
+    settingState: {
+        mode: "",
+        language: "",
+        directusAccessToken: "",
+        colorIndex: "", 
+        colorTheme: {color100: "", color200: ""} 
+    },
     setMode: (newMode: Mode.Adult | Mode.Kid) => {},
     setLanguage: (newLanguage: string) => {},
     setDirectusAccessToken: (newToken: string) => {},
