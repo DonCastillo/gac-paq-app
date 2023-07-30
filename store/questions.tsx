@@ -68,8 +68,6 @@ export default function QuestionContextProvider({ children }) {
         setIntroductoryPages
     };
 
-    console.log('value: ', value)
-
     return (<QuestionContext.Provider value={value}>
         {children}
     </QuestionContext.Provider>);
