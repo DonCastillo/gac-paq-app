@@ -6,7 +6,7 @@ import Colors from "./data/colors";
  * by default the app should be set as:
  *      mode: kid,
  */
-const DEFAULT_MODE = Mode.Adult;
+const DEFAULT_MODE = Mode.Kid;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
@@ -14,6 +14,8 @@ const INITIAL_STATE = {
     mode: DEFAULT_MODE,
     language: "en-us",
     directusAccessToken: "",
+    currentPage: 0,
+    totalPage: 0,
     colorIndex: DEFAULT_COLOR_INDEX,
     colorTheme: {
         color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
@@ -26,6 +28,8 @@ export const SettingContext = createContext({
         mode: "",
         language: "",
         directusAccessToken: "",
+        currentPage: 0,
+        totalPage: 0,
         colorIndex: "", 
         colorTheme: {color100: "", color200: ""} 
     },
@@ -33,7 +37,9 @@ export const SettingContext = createContext({
     setLanguage: (newLanguage: string) => {},
     setDirectusAccessToken: (newToken: string) => {},
     nextColor: () => {},
-    prevColor: () => {} 
+    prevColor: () => {},
+    nextPage: () => {},
+    prevPage: () => {} ,
 });
 
 function settingReducer(state: any, action: any) {
@@ -56,6 +62,12 @@ function settingReducer(state: any, action: any) {
             const newColorIndex2 = state.colorIndex > 0 ? (state.colorIndex--) % TOTAL_COLORS : 0;
             const newColorTheme2 = Colors[state.mode][newColorIndex2];
             return { ...state, colorIndex: newColorIndex2, colorTheme: newColorTheme2 };
+        case 'NEXT_PAGE':
+            return { ...state, currentPage: state.currentPage++ };
+        case 'PREV_PAGE':
+            return { ...state, currentPage: state.currentPage-- };
+        case 'SET_TOTAL_PAGE':
+            return { ...state, totalPage: action.payload };
         default:
             return state;
     }
@@ -97,6 +109,19 @@ export default function SettingContextProvider({ children }) {
         })
     }
 
+    function nextPage() {
+        dispatch({
+            type: 'NEXT_PAGE'
+        })
+    }
+
+    function prevPage() {
+        dispatch({
+            type: 'PREV_PAGE'
+        })
+    }
+
+
 
     const value: any = {
         settingState,
@@ -104,7 +129,9 @@ export default function SettingContextProvider({ children }) {
         setLanguage,
         setDirectusAccessToken,
         nextColor,
-        prevColor
+        prevColor,
+        nextPage,
+        prevPage
     };
 
 

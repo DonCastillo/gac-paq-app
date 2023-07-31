@@ -14,9 +14,11 @@ const INITIAL_STATE = {
 }
 
 export const QuestionContext = createContext({
-    regionOption: [],
-    languageOption: [],
-    introductoryPages: [],
+    questionState: {
+        regionOption: [],
+        languageOption: [],
+        introductoryPages: []
+    },
     setRegionOption: (newRegionOptions: RegionInterface[]) => {},
     setLanguageOption: (newLanguageOptions: LanguageInterface[]) => {},
     setIntroductoryPages: (newIntroductoryPages: (PagePayloadInterface | QuestionDropdownPayloadInterface)[] | []) => {}

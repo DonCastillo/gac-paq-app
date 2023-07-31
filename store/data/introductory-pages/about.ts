@@ -1,7 +1,10 @@
+import ScreenType from "../../../constants/screen_type";
 import PagePayloadInterface from "../../../interface/directus/page-payload";
 
 const AboutPage: PagePayloadInterface = {
     title: "About Page",
+    name: "About Page",
+    type: ScreenType.Page,
     translations: [
         {
             id: 4,

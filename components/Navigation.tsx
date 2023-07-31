@@ -1,8 +1,8 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 
-export default function Navigation({ children, justify = "center" }) {
+export default function Navigation({ children, customStyle = {}}) {
     return (
-        <View style={[styles.container, { justifyContent: justify }]}>
+        <View style={[styles.container, customStyle]}>
             {children}
         </View>
     );

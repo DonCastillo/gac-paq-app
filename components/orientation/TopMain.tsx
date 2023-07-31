@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "stretch",
         width: "100%",
-        backgroundColor: "pink",
+        // backgroundColor: "pink",
         // paddingHorizontal: "8%",
 
     },

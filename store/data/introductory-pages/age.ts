@@ -1,7 +1,9 @@
+import ScreenType from "../../../constants/screen_type";
 import QuestionDropdownPayloadInterface from "../../../interface/directus/question-dropdown-payload";
 
 const AgePage: QuestionDropdownPayloadInterface = {
     name: "Who's taking this questionnaire?",
+    type: ScreenType.Question,
     translations: [
         {
             id: 4,

@@ -1,8 +1,10 @@
 import QuestionTextPayloadInterface from "../../../interface/directus/question-text-payload";
 import QuestionField from "../../../constants/question_field";
+import ScreenType from "../../../constants/screen_type";
 
 const AccelerometerPage: QuestionTextPayloadInterface = {
     name: "What is your Accelerometer Serial Number?",
+    type: ScreenType.Question,
     translations: [
         {
             id: 5,

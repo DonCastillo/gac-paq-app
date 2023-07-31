@@ -11,6 +11,7 @@ export default function Heading({children, customStyle = {}}) {
 
 const styles = StyleSheet.create({
     text: {
+        // backgroundColor: 'green',
         fontWeight: 'bold',
         color:'white',
         flexWrap: "wrap",
