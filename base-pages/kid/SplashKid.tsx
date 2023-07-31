@@ -1,18 +1,15 @@
 import { useContext, useEffect } from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import { SettingContext } from "../../store/settings";
 import Main from "../../components/Main";
 import CenterMain from "../../components/orientation/CenterMain";
-import TopMain from "../../components/orientation/TopMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
-import BottomMain from "../../components/orientation/BottomMain";
 
 export default function SplashKid({ route, navigation }) {
     const settingCtx = useContext(SettingContext);
     const { color100, color200 } = settingCtx.settingState.colorTheme;
     const currentPage = settingCtx.settingState.currentPage;
-    // console.log(route.params.pageNumber)
     const pageNumber = route.params.pageNumber;
 
     useEffect(() => {

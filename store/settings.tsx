@@ -6,7 +6,7 @@ import Colors from "./data/colors";
  * by default the app should be set as:
  *      mode: kid,
  */
-const DEFAULT_MODE = Mode.Kid;
+const DEFAULT_MODE = Mode.Adult;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 

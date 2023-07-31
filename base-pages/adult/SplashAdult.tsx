@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { SettingContext } from "../../store/settings";
 import Main from "../../components/Main";
@@ -7,9 +7,19 @@ import Paragraph from "../../components/Paragraph";
 import BottomMain from "../../components/orientation/BottomMain";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
-export default function SplashAdult() {
+export default function SplashAdult({ route, navigation }) {
     const settingCtx = useContext(SettingContext);
     const { color100, color200 } = settingCtx.settingState.colorTheme;
+    const currentPage = settingCtx.settingState.currentPage;
+    const pageNumber = route.params.pageNumber;
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            clearInterval(timeout);
+            navigation.navigate(`Page-${pageNumber + 1}`);
+        }, 3000)
+    })
+
 
     return (
         <View style={[styles.container, { backgroundColor: color100 }]}>
