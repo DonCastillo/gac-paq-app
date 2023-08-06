@@ -9,31 +9,32 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import Main from "../components/Main";
 
-export default function Welcome() {
+export default function GreatJob() {
     const { nextPage } = useContext(AppContext);
 
     return (
         <View>
             <Main>
                 <CenterMain>
-                    <Heading color={Colors.introBackgroundColor} fontSize={70}>
-                        welcome!
-                    </Heading>
-                    <Paragraph
-                        color={Colors.introBackgroundColor}
-                        fontSize={15}
-                        lineHeight={17}
-                    >
-                        Physical activity is essential for healthy child
-                        development, yet 80% of youth are not active enough and
-                        we lack information about activity levels of young
-                        children.
-                    </Paragraph>
+                    <View style={styles.headingContainer}>
+                        <Heading
+                            color={Colors.introBackgroundColor}
+                            fontSize={60}
+                        >
+                            Great job!
+                        </Heading>
+                    </View>
                 </CenterMain>
                 <Navigation>
-                    <FullWidthButton onPress={nextPage}>Start</FullWidthButton>
+                    <FullWidthButton onPress={nextPage}>Let's get started!</FullWidthButton>
                 </Navigation>
             </Main>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    headingContainer: {
+        marginBottom: 60,
+    },
+});
