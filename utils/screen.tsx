@@ -12,9 +12,7 @@ import Mode from "../constants/mode";
 import ScreenType from "../constants/screen_type";
 
 
-function getScreen(mode: Mode, screenType: ScreenType) {
-    console.log('inside get screen: ', mode)
-    console.log('inside get screen: ', screenType)
+function getScreen(mode: Mode | string, screenType: ScreenType) {
     if (mode === Mode.Adult && screenType === ScreenType.Splash)
         return SplashAdult;
     else if (mode === Mode.Adult && screenType === ScreenType.Page)

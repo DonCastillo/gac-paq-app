@@ -10,11 +10,12 @@ export default function Main({ children }) {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 4,
+        flex: 1,
         flexDirection: "column",
         paddingVertical: 20,
         paddingHorizontal: 10,
-        width: "100%",
+        minWidth: "100%",
+        height: "100%",
         // backgroundColor: 'yellow'
     },
 });

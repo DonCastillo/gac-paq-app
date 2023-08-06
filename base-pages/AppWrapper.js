@@ -8,6 +8,7 @@ import { getScreen } from "../utils/screen";
 import ScreenType from "../constants/screen_type";
 import Mode from "../constants/mode";
 import { QuestionContext } from "../store/questions";
+import Language from "../screens/kid/Language";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,8 +25,8 @@ function AppWrapper() {
     // console.log('language: ', language),
     // console.log('mode: ', mode),
     // console.log('colorTheme: ', colorTheme),
-    console.log("introductory pages: ", JSON.stringify(introductoryPages));
-    console.log("introductory pages length: ", introductoryPages.length);
+    // console.log("introductory pages: ", JSON.stringify(introductoryPages));
+    // console.log("introductory pages length: ", introductoryPages.length);
     console.log("app wrapper ======");
 
     // {introductoryPages.map(page =>
@@ -33,7 +34,7 @@ function AppWrapper() {
     // )}
 
     return (
-        <NavigationContainer>
+        <NavigationContainer onStateChange={(nav) => console.log('nav state: ', JSON.stringify(nav))}>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 {/* Splash Screen */}
                 <Stack.Screen
@@ -42,13 +43,20 @@ function AppWrapper() {
                     initialParams={{pageNumber: 0}}
                 />
 
+                {/* Splash Screen */}
+                <Stack.Screen
+                    name="Page-1"
+                    component={Language}
+                    initialParams={{pageNumber: 1}}
+                />
+
                 {/* Introductory Pages */}
                 {introductoryPages.map((page, index) => (
                     <Stack.Screen
-                        name={`Page-${index + 1}`}
+                        name={`Page-${index + 2}`}
                         component={getScreen(mode, page.type)}
                         key={page.name}
-                        initialParams={{pageNumber: index + 1, page: page}}
+                        initialParams={{pageNumber: index + 2, page: page}}
                     />
                 ))}
             </Stack.Navigator>

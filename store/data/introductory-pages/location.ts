@@ -2,7 +2,7 @@ import ScreenType from "../../../constants/screen_type";
 import QuestionDropdownPayloadInterface from "../../../interface/directus/question-dropdown-payload";
 
 const LocationPage: QuestionDropdownPayloadInterface = {
-    name: "Where are you?",
+    name: "Location",
     type: ScreenType.Question,
     translations: [
         {

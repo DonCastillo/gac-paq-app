@@ -28,7 +28,7 @@ export default function PageAdult({ route, navigation}) {
             <BGLinearGradient />
             <Main>
                 <CenterMain>
-                    <Heading customStyle={{ color: 'white', fontSize: 70 }}>
+                    <Heading customStyle={{ color: 'white', fontSize: 70, marginBottom: 50 }}>
                         {translatedPage.heading.toLowerCase()}
                     </Heading>
                     <Paragraph

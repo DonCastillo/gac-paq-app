@@ -16,6 +16,7 @@ export default function PageKid({ route, navigation }) {
     const { page, pageNumber } = route.params;
     const translatedPage = translate(page.translations, language);
 
+    console.log('this page: ', `Page-${pageNumber}`)
     function pressHandler() {
         console.log("press handler: ");
         navigation.navigate(`Page-${pageNumber + 1}`);
@@ -25,14 +26,14 @@ export default function PageKid({ route, navigation }) {
         <View style={styles.container}>
             <Main>
                 <CenterMain>
-                    <Heading customStyle={{ color: color100, fontSize: 70 }}>
+                    <Heading customStyle={{ color: color100, fontSize: 50, marginBottom: 50 }}>
                         {translatedPage.heading.toLowerCase()}
                     </Heading>
                     <Paragraph
                         customStyle={{
                             color: color100,
                             fontSize: 15,
-                            lineHeight: 17,
+                            lineHeight: 20,
                         }}
                     >
                         {translatedPage.description}

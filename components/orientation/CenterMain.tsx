@@ -6,11 +6,12 @@ export default function CenterMain({ children }) {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 4,
+        flex: 7,
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
+        height: "100%",
         // backgroundColor: "#FF69B4"
     },
 });
