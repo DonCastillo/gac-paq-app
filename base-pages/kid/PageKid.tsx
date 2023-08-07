@@ -17,8 +17,9 @@ export default function PageKid() {
 
     // console.log('this page: ', `Page-${pageNumber}`)
     function pressHandler() {
-        // console.log("press handler: ");
+        console.log("press handler: ");
         // navigation.navigate(`Page-${pageNumber + 1}`);
+        settingCtx.nextPage();
     }
 
     return (
