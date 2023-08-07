@@ -6,17 +6,20 @@ import CenterMain from "../../components/orientation/CenterMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import ProgressBar from "../../components/ProgressBar";
+import { useNavigation } from "@react-navigation/native";
 
-export default function SplashKid({ route, navigation }) {
+export default function SplashKid() {
     const settingCtx = useContext(SettingContext);
     const { color100, color200 } = settingCtx.settingState.colorTheme;
     const currentPage = settingCtx.settingState.currentPage;
-    const pageNumber = route.params.pageNumber;
+    // const pageNumber = route.params.pageNumber;
+    const navigation = useNavigation();
 
     useEffect(() => {
         const timeout = setTimeout(() => {
             clearInterval(timeout);
-            navigation.navigate(`Page-${pageNumber + 1}`);
+            navigation.navigate(`RegularPageScreen`);
+            // navigation.navigate()
         }, 3000)
     })
 

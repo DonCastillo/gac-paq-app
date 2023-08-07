@@ -12,7 +12,7 @@ import LoadingScreenKid from "../../base-pages/kid/LoadingScreenKid";
 import ProgressBar from "../../components/ProgressBar";
 import { useNavigationState } from "@react-navigation/native";
 
-export default function Language({ route, navigation }) {
+export default function Language() {
     const [languageSelected, setLanguageSelected] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [newLanguage, setNewLanguage] = useState(null);
@@ -20,78 +20,21 @@ export default function Language({ route, navigation }) {
     const settingCtx = useContext(SettingContext);
     const { language, colorTheme, mode } = settingCtx.settingState;
     const { color100, color200 } = colorTheme;
-
-    // route
-    const { pageNumber } = route.params;
-    console.log('this page: ', `Page-${pageNumber}`)
-
-
-    navigation.addListener('state', () => {
-        // console.log('options: ', e.data.options)
-        console.log('route: ', route);
-    })
-    // navigation.addListener('state', function() {
-    //     console.log('goof to go')
-    //     // console.log(settingCtx.settingState);
-    //     console.log('-----')
-    //     console.log(navigation.getState());
-    // })
-
-    // const d = useNavigationState()
-
-    console.log('current language: ', settingCtx.settingState.language);
-    
-    useEffect(() => {
-        console.log('language has been changed.')
-        if(settingCtx.settingState.language) {
+  
+    function changeHandler(value: string) {
+        if(value) {
+            settingCtx.setLanguage(value);
             setLanguageSelected(true);
-        }else {
+        } else {
             setLanguageSelected(false);
         }
-    }, [settingCtx.settingState.language])
-
-
-    function pressHandler() {
-
-        // console.log(settingCtx.settingState.language)
-        // if(newLanguage !== 'de-DE' && newLanguage !== 'nl-NL' && newLanguage !== 'zh-CN') {
-        //     settingCtx.setLanguage(newLanguage);
-        // }else {
-        //     settingCtx.setLanguage('en-US');
-        // }
-        // console.log(settingCtx.settingState.language)
-
-        // setNewLanguage(null)
-        console.log(`Page-${pageNumber + 1}`);
-
-  
-    }
-
-    function changeHandler(value: string) {
-        // setLanguageSelected(currentLanguage => false)
-        if(value !== 'de-DE' && value !== 'nl-NL' && value !== 'zh-CN') {
-            settingCtx.setLanguage(value);
-        }else {
-            settingCtx.setLanguage('en-US');
-        }
-        navigation.push(`Page-${pageNumber + 1}`);
-
-        // const timeout = setTimeout(() => {
-        //     clearInterval(timeout);
-        // },1000)
-        // setLanguageSelected(currentLanguage => true);
-
-        // setNewLanguage(value);
-
 
     }
-    
 
-    // return <LoadingScreenKid text={'Loading'}/>
-    // console.log('isLoafing: ', isLoading)
-    // if(isLoading) {
-    //    <ProgressBar />;
-    // }
+    function nextPage() {
+        console.log('going to next page...')
+        settingCtx.nextPage();
+    }
 
     return (
         <View style={styles.container}>
@@ -106,7 +49,7 @@ export default function Language({ route, navigation }) {
                     {languageSelected && 
                         <FullWidthButton
                             customStyle={{ backgroundColor: color100 }}
-                            onPress={pressHandler}
+                            onPress={nextPage}
                         >
                             Continue
                         </FullWidthButton>

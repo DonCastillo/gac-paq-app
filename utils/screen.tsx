@@ -11,31 +11,37 @@ import SplashKid from "../base-pages/kid/SplashKid";
 import Mode from "../constants/mode";
 import ScreenType from "../constants/screen_type";
 
-
-function getScreen(mode: Mode | string, screenType: ScreenType) {
-    if (mode === Mode.Adult && screenType === ScreenType.Splash)
-        return SplashAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.Page)
-        return PageAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.Question)
-        return QuestionAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)
-        return QuestionIntroAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)
-        return QuestionExtroAdult;
-    else if (mode === Mode.Kid && screenType === ScreenType.Splash)
-        return SplashKid;
-    else if (mode === Mode.Kid && screenType === ScreenType.Page)
-        return PageKid;
+function getScreen(mode: Mode | string, screenType: ScreenType | string) {
+    // if (mode === Mode.Adult && screenType === ScreenType.Splash)
+    //     return SplashAdult;
+    // else if (mode === Mode.Adult && screenType === ScreenType.Page)
+    //     return PageAdult;
+    // else if (mode === Mode.Adult && screenType === ScreenType.Question)
+    //     return QuestionAdult;
+    // else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)
+    //     return QuestionIntroAdult;
+    // else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)
+    //     return QuestionExtroAdult;
+    // if (mode === Mode.Kid && screenType === ScreenType.Splash)
+    //     return <SplashKid />;
+    if (mode === Mode.Kid && screenType === ScreenType.Page)
+        return <PageKid />;
     else if (mode === Mode.Kid && screenType === ScreenType.Question)
-        return QuestionKid;
+        return <QuestionKid />;
     else if (mode === Mode.Kid && screenType === ScreenType.IntroQuestion)
-        return QuestionIntroKid;
+        return <QuestionIntroKid />;
     else if (mode === Mode.Kid && screenType === ScreenType.ExtroQuestion)
-        return QuestionExtroKid;
-    else
-        return <></>
-    
+        return <QuestionExtroKid />;
+    else return <></>;
 }
 
-export { getScreen };
+function getScreenType(screenType: string) {
+    if (screenType === "page") {
+        return ScreenType.Page;
+    } else if (screenType === "question_single") {
+        return ScreenType.Question;
+    } else {
+        return ScreenType.Page;
+    }
+}
+export { getScreen, getScreenType };

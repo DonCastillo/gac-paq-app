@@ -10,4 +10,10 @@ function translate(translationArray: PageInterface[] | QuestionDropdownInterface
     });
 }
 
-export { translate };
+function getPage(currentPageNumber: number, pages: any[]) {
+    return pages.find(page => {
+        return page.pageNumber === currentPageNumber;
+    })
+}
+
+export { translate, getPage };

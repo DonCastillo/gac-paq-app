@@ -9,17 +9,16 @@ import Paragraph from "../../components/Paragraph";
 import Navigation from "../../components/Navigation";
 import FullWidthButton from "../../components/buttons/FullWidthButton";
 
-export default function PageKid({ route, navigation }) {
+export default function PageKid() {
     const settingCtx = useContext(SettingContext);
-    const { language, colorTheme } = settingCtx.settingState;
+    const { language, colorTheme, currentPage } = settingCtx.settingState;
     const { color100, color200 } = colorTheme;
-    const { page, pageNumber } = route.params;
-    const translatedPage = translate(page.translations, language);
+    const translatedPage = translate(currentPage.page.translations, language);
 
-    console.log('this page: ', `Page-${pageNumber}`)
+    // console.log('this page: ', `Page-${pageNumber}`)
     function pressHandler() {
-        console.log("press handler: ");
-        navigation.navigate(`Page-${pageNumber + 1}`);
+        // console.log("press handler: ");
+        // navigation.navigate(`Page-${pageNumber + 1}`);
     }
 
     return (

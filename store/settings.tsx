@@ -1,11 +1,23 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 import Mode from "../constants/mode";
 import Colors from "./data/colors";
+import { getPage } from "../utils/page";
 
 /**
  * by default the app should be set as:
  *      mode: kid,
  */
+
+interface page {
+    component: any,
+    page: any,
+    pageNumber: number 
+}
+
+// interface currentPage: {
+
+// }
+
 const DEFAULT_MODE = Mode.Kid;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
@@ -14,13 +26,20 @@ const INITIAL_STATE = {
     mode: DEFAULT_MODE,
     language: null,
     directusAccessToken: "",
-    currentPage: 0,
+    currentPageNumber: 0,
+    currentPage: {
+        component: null,
+        page: {},
+        pageNumber: null,
+        screen: null,
+    },
     totalPage: 0,
     colorIndex: DEFAULT_COLOR_INDEX,
     colorTheme: {
         color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
         color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200
-    }
+    },
+    pages: [],
 }
 
 export const SettingContext = createContext({
@@ -28,10 +47,17 @@ export const SettingContext = createContext({
         mode: "",
         language: "",
         directusAccessToken: "",
-        currentPage: 0,
+        currentPageNumber: 0,
+        currentPage: {
+            component: null,
+            page: {},
+            pageNumber: null,
+            screen: null,
+        },
         totalPage: 0,
         colorIndex: "", 
-        colorTheme: {color100: "", color200: ""} 
+        colorTheme: {color100: "", color200: ""},
+        pages: [],
     },
     setMode: (newMode: Mode.Adult | Mode.Kid) => {},
     setLanguage: (newLanguage: string) => {},
@@ -39,7 +65,8 @@ export const SettingContext = createContext({
     nextColor: () => {},
     prevColor: () => {},
     nextPage: () => {},
-    prevPage: () => {} ,
+    prevPage: () => {},
+    addPage: (obj: any) => {}
 });
 
 function settingReducer(state: any, action: any) {
@@ -63,11 +90,17 @@ function settingReducer(state: any, action: any) {
             const newColorTheme2 = Colors[state.mode][newColorIndex2];
             return { ...state, colorIndex: newColorIndex2, colorTheme: newColorTheme2 };
         case 'NEXT_PAGE':
-            return { ...state, currentPage: state.currentPage++ };
+            const currentpageNumber1 = state.currentPageNumber + 1;
+            const currentPage1 =  getPage(currentpageNumber1, state.pages);
+            return { ...state, currentPageNumber: currentpageNumber1, currentPage: currentPage1 };
         case 'PREV_PAGE':
-            return { ...state, currentPage: state.currentPage-- };
+            const currentpageNumber2 = state.currentPageNumber - 1;
+            const currentPage2 =  getPage(currentpageNumber2, state.pages);
+            return { ...state, currentPageNumber: state.currentpageNumber2, currentPage: currentPage2 };
         case 'SET_TOTAL_PAGE':
             return { ...state, totalPage: action.payload };
+        case 'ADD_PAGE':
+            return { ...state, pages: [...state.pages, action.payload] }
         default:
             return state;
     }
@@ -121,6 +154,13 @@ export default function SettingContextProvider({ children }) {
         })
     }
 
+    function addPage(obj: any) {
+        dispatch({
+            type: 'ADD_PAGE',
+            payload: obj
+        })
+    }
+
 
 
     const value: any = {
@@ -131,7 +171,8 @@ export default function SettingContextProvider({ children }) {
         nextColor,
         prevColor,
         nextPage,
-        prevPage
+        prevPage,
+        addPage
     };
 
 

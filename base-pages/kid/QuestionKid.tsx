@@ -14,16 +14,16 @@ import { getQuestionComponent, getQuestionType } from "../../utils/questions";
 import QuestionType from "../../constants/question_type";
 import QuestionSelect from "../../components/kid/QuestionSelect";
 
-export default function QuestionKid({ route, navigation }) {
+export default function QuestionKid() {
     // setting
     const settingCtx = useContext(SettingContext);
     const { language, colorTheme, mode } = settingCtx.settingState;
     const { color100, color200 } = colorTheme;
 
     // route
-    const { page, pageNumber } = route.params;
-    const translatedPage = translate(page.translations, language);
-    const pageName = page.name;
+    // const { page, pageNumber } = route.params;
+    // const translatedPage = translate(page.translations, language);
+    // const pageName = page.name;
     const questionType = getQuestionType(translatedPage);
     let questionComponent = <></>
     // const questionComponent = getQuestionComponent(mode, questionType)
@@ -34,8 +34,8 @@ export default function QuestionKid({ route, navigation }) {
 
 
     function pressHandler() {
-        console.log("press handler: ");
-        navigation.navigate(`Page-${pageNumber + 1}`);
+        // console.log("press handler: ");
+        // navigation.navigate(`Page-${pageNumber + 1}`);
     }
 
 
