@@ -12,13 +12,15 @@ export default function RegularPageScreen() {
     useEffect(() => {
         const mode = settingCtx.settingState.mode;
         const pageType = settingCtx.settingState.currentPage.screen;
+        console.log('mode: ', mode)
+        console.log('pageType: ', pageType)
         let tempComponent = <></>;
 
         if (settingCtx.settingState.currentPageNumber == 0) {
             tempComponent = <Language />;
         } else {
             if (pageType) {
-                tempComponent = getScreen(mode, pageType);
+                tempComponent = getScreen(mode, getScreenType(pageType));
             } else {
                 tempComponent = <></>;
             }

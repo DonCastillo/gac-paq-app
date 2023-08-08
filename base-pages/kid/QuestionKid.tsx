@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
@@ -13,36 +13,67 @@ import QuestionLabel from "../../components/kid/QuestionLabel";
 import { getQuestionComponent, getQuestionType } from "../../utils/questions";
 import QuestionType from "../../constants/question_type";
 import QuestionSelect from "../../components/kid/QuestionSelect";
+import Mode from "../../constants/mode";
+import { ResponseContext } from "../../store/responses";
 
 export default function QuestionKid() {
     // setting
+    const [response, setResponse] = useState({ label: null, answer: null })
     const settingCtx = useContext(SettingContext);
-    const { language, colorTheme, mode } = settingCtx.settingState;
-    const { color100, color200 } = colorTheme;
+    const responseCtx = useContext(ResponseContext);
 
-    // route
-    // const { page, pageNumber } = route.params;
-    // const translatedPage = translate(page.translations, language);
-    // const pageName = page.name;
+    const { language, colorTheme, currentPage } = settingCtx.settingState;
+    const { color100, color200 } = colorTheme;
+    const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
     let questionComponent = <></>
-    // const questionComponent = getQuestionComponent(mode, questionType)
+
 
     console.log('+++++')
-    console.log('hhh: ', translatedPage)
+    console.log('currentPage: ', currentPage)
     console.log('+++++')
 
 
-    function pressHandler() {
-        // console.log("press handler: ");
+    /**
+     * finalizes response
+     */
+    function proceedHandler() {
+        console.log("press handler: ");
+        console.log('response: ', response);
+        responseCtx.addResponse({
+            pageNumber: currentPage.pageNumber,
+            label: response.label,
+            answer: response.answer
+        })
+        settingCtx.nextPage();
         // navigation.navigate(`Page-${pageNumber + 1}`);
+    }
+
+    /**
+     * temporarily store the initial selection
+     */
+    function selectChangeHandler(value: string) {
+        setResponse({
+            label: currentPage.page?.name,
+            answer: value
+        })
+
+        // set mode
+        // if(currentPage.page.name === "Who's taking this questionnaire?") {
+        //     if (value === "child") {
+        //         settingCtx.setMode(Mode.Kid); 
+        //     } else {
+        //         settingCtx.setMode(Mode.Adult);
+        //     }
+        // }
+        console.log('response: ', response)
     }
 
 
     if (questionType === QuestionType.QuestionCheckbox) {
         questionComponent = <></>;
     } else if (questionType === QuestionType.QuestionDropdown) {
-        questionComponent = <QuestionSelect options={translatedPage.choices} />
+        questionComponent = <QuestionSelect options={translatedPage.choices} onChange={selectChangeHandler} />
     } else if (questionType === QuestionType.QuestionRadio) {
         questionComponent = <></>;
     } else if (questionType === QuestionType.QuestionRadioImage) {
@@ -66,12 +97,14 @@ export default function QuestionKid() {
                     </View>
                 </TopMain>
                 <Navigation>
-                    <FullWidthButton
-                        customStyle={{ backgroundColor: color100 }}
-                        onPress={pressHandler}
-                    >
-                        Start
-                    </FullWidthButton>
+                    {response.answer && 
+                        <FullWidthButton
+                            customStyle={{ backgroundColor: color100 }}
+                            onPress={proceedHandler}
+                        >
+                            Start
+                        </FullWidthButton>
+                    }
                 </Navigation>
             </Main>
         </View>

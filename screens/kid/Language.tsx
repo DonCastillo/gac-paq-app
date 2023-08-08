@@ -11,19 +11,27 @@ import LoadingScreen from "./LoadingScreen";
 import LoadingScreenKid from "../../base-pages/kid/LoadingScreenKid";
 import ProgressBar from "../../components/ProgressBar";
 import { useNavigationState } from "@react-navigation/native";
+import { ResponseContext } from "../../store/responses";
 
 export default function Language() {
     const [languageSelected, setLanguageSelected] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [newLanguage, setNewLanguage] = useState(null);
+    const LABEL = "What is your preferred language?";
     // setting
     const settingCtx = useContext(SettingContext);
+    const responseCtx = useContext(ResponseContext);
     const { language, colorTheme, mode } = settingCtx.settingState;
     const { color100, color200 } = colorTheme;
   
     function changeHandler(value: string) {
         if(value) {
             settingCtx.setLanguage(value);
+            responseCtx.addResponse({
+                pageNumber: 0,
+                label: LABEL,
+                answer: value
+            })
             setLanguageSelected(true);
         } else {
             setLanguageSelected(false);
@@ -41,7 +49,7 @@ export default function Language() {
             <Main>
                 <TopMain>
                     <View style={styles.innerContainer}>
-                        <QuestionLabel fontSize={25}>What is your preferred language?</QuestionLabel>
+                        <QuestionLabel fontSize={25}>{LABEL}</QuestionLabel>
                         <QuestionSelectLanguage onChange={changeHandler}/>
                     </View>
                 </TopMain>

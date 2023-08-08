@@ -11,13 +11,16 @@ import useFonts from "./hooks/useFonts";
 import Splash from "./base-pages/Splash";
 import QuestionContextProvider from "./store/questions";
 import SettingContextProvider from "./store/settings";
+import ResponseContextProvider, { ResponseContext } from "./store/responses";
 
 export default function App() {
     return (
-        <SettingContextProvider>
-            <QuestionContextProvider>
-                <AppWrapper />
-            </QuestionContextProvider>
-        </SettingContextProvider>
+        <ResponseContextProvider>
+            <SettingContextProvider>
+                <QuestionContextProvider>
+                    <AppWrapper />
+                </QuestionContextProvider>
+            </SettingContextProvider>
+        </ResponseContextProvider>
     );
 }

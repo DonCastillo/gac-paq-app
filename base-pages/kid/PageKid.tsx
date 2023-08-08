@@ -15,10 +15,8 @@ export default function PageKid() {
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
 
-    // console.log('this page: ', `Page-${pageNumber}`)
     function pressHandler() {
         console.log("press handler: ");
-        // navigation.navigate(`Page-${pageNumber + 1}`);
         settingCtx.nextPage();
     }
 

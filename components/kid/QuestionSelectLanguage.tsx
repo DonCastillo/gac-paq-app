@@ -1,7 +1,6 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import { useContext, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
-import Colors from "../../styles/kids/Colors";
 import LanguageInterface from "../../interface/language";
 import Languages from "../../store/data/languages";
 import { SettingContext } from "../../store/settings";

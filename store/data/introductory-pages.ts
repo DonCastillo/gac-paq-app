@@ -13,9 +13,9 @@ import WelcomePage from "./introductory-pages/welcome";
 const IntroductoryPages: (PagePayloadInterface | QuestionDropdownPayloadInterface | QuestionTextPayloadInterface)[] | [] = [
     WelcomePage,
     AboutPage,
-    LocationPage,
-    DemographicPage,
+    // LocationPage,
     AgePage,
+    DemographicPage,
     AccelerometerPage,
     GreatJobPage
 ]

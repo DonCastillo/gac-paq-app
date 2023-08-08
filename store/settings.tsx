@@ -29,7 +29,11 @@ const INITIAL_STATE = {
     currentPageNumber: 0,
     currentPage: {
         component: null,
-        page: {},
+        page: {
+            name: null,
+            type: null,
+            translations: []
+        },
         pageNumber: null,
         screen: null,
     },
@@ -43,22 +47,7 @@ const INITIAL_STATE = {
 }
 
 export const SettingContext = createContext({
-    settingState: {
-        mode: "",
-        language: "",
-        directusAccessToken: "",
-        currentPageNumber: 0,
-        currentPage: {
-            component: null,
-            page: {},
-            pageNumber: null,
-            screen: null,
-        },
-        totalPage: 0,
-        colorIndex: "", 
-        colorTheme: {color100: "", color200: ""},
-        pages: [],
-    },
+    settingState: INITIAL_STATE,
     setMode: (newMode: Mode.Adult | Mode.Kid) => {},
     setLanguage: (newLanguage: string) => {},
     setDirectusAccessToken: (newToken: string) => {},
