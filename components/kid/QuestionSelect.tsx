@@ -19,6 +19,10 @@ export default function QuestionSelect({ options, onChange }) {
         return {label: option.text, value: option.value}
     });
 
+    function changeHandler(value: string) {
+        onChange(value);
+    }
+
     // console.log('rawItems: ', rawItems)
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
@@ -45,7 +49,7 @@ export default function QuestionSelect({ options, onChange }) {
                 { borderColor: color100 },
             ]}
             listItemContainerStyle={styles.listItemContainerStyle}
-            onChangeValue={(value: string) => onChange(value)}
+            onChangeValue={changeHandler}
             textStyle={{fontSize: FONT_SIZE, fontWeight: "bold"}}
         />
     );

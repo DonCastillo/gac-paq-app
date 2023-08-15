@@ -1,24 +1,27 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
-import CenterMain from "../../components/orientation/CenterMain";
-import Heading from "../../components/Heading";
-import Paragraph from "../../components/Paragraph";
 import Navigation from "../../components/Navigation";
 import FullWidthButton from "../../components/buttons/FullWidthButton";
 import TopMain from "../../components/orientation/TopMain";
 import QuestionLabel from "../../components/kid/QuestionLabel";
-import { getQuestionComponent, getQuestionType } from "../../utils/questions";
+import { getQuestionType } from "../../utils/questions";
 import QuestionType from "../../constants/question_type";
 import QuestionSelect from "../../components/kid/QuestionSelect";
-import Mode from "../../constants/mode";
 import { ResponseContext } from "../../store/responses";
+import QuestionText from "../../components/kid/QuestionText";
+
+interface ResponseInterface {
+    label: string;
+    answer: string;
+}
 
 export default function QuestionKid() {
     // setting
-    const [response, setResponse] = useState({ label: null, answer: null })
+    const [responses, setResponses] = useState({});
+    const [proceed, setProceed] = useState(false);
     const settingCtx = useContext(SettingContext);
     const responseCtx = useContext(ResponseContext);
 
@@ -26,54 +29,58 @@ export default function QuestionKid() {
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
-    let questionComponent = <></>
+    let questionComponent = <></>;
 
-
-    console.log('+++++')
-    console.log('currentPage: ', currentPage)
-    console.log('+++++')
-
+    useEffect(() => {
+        const theresResponse = (Object.keys(responses)).length > 0;
+        setProceed(theresResponse);
+    }, [responses])
 
     /**
      * finalizes response
      */
     function proceedHandler() {
-        console.log("press handler: ");
-        console.log('response: ', response);
-        responseCtx.addResponse({
-            pageNumber: currentPage.pageNumber,
-            label: response.label,
-            answer: response.answer
-        })
+        for (const [key, value] of Object.entries(responses)) {
+            responseCtx.addResponse({
+                pageNumber: currentPage.pageNumber,
+                label: key,
+                answer: value,
+            });
+        }
+        setResponses({});
         settingCtx.nextPage();
-        // navigation.navigate(`Page-${pageNumber + 1}`);
     }
 
     /**
      * temporarily store the initial selection
      */
-    function selectChangeHandler(value: string) {
-        setResponse({
-            label: currentPage.page?.name,
-            answer: value
-        })
-
+    function changeHandler(value: string) {
+        setResponses((currResponse) => {
+            return {...currResponse, [currentPage.page?.name]: value}
+        });
+        
         // set mode
         // if(currentPage.page.name === "Who's taking this questionnaire?") {
         //     if (value === "child") {
-        //         settingCtx.setMode(Mode.Kid); 
+        //         settingCtx.setMode(Mode.Kid);
         //     } else {
         //         settingCtx.setMode(Mode.Adult);
         //     }
         // }
-        console.log('response: ', response)
+
     }
+
 
 
     if (questionType === QuestionType.QuestionCheckbox) {
         questionComponent = <></>;
     } else if (questionType === QuestionType.QuestionDropdown) {
-        questionComponent = <QuestionSelect options={translatedPage.choices} onChange={selectChangeHandler} />
+        questionComponent = (
+            <QuestionSelect
+                options={translatedPage.choices}
+                onChange={changeHandler}
+            />
+        );
     } else if (questionType === QuestionType.QuestionRadio) {
         questionComponent = <></>;
     } else if (questionType === QuestionType.QuestionRadioImage) {
@@ -81,23 +88,29 @@ export default function QuestionKid() {
     } else if (questionType === QuestionType.QuestionSlider) {
         questionComponent = <></>;
     } else if (questionType === QuestionType.QuestionText) {
-        questionComponent = <></>;
+        questionComponent = (
+            <QuestionText
+                fields={translatedPage.fields}
+                onChange={changeHandler}
+            />
+        );
     } else {
         questionComponent = <></>;
     }
-    
 
     return (
         <View style={styles.container}>
             <Main>
                 <TopMain>
                     <View style={styles.innerContainer}>
-                        <QuestionLabel fontSize={33}>{translatedPage.heading}</QuestionLabel>
+                        <QuestionLabel fontSize={33}>
+                            {translatedPage.heading}
+                        </QuestionLabel>
                         {questionComponent}
                     </View>
                 </TopMain>
                 <Navigation>
-                    {response.answer && 
+                    {proceed &&
                         <FullWidthButton
                             customStyle={{ backgroundColor: color100 }}
                             onPress={proceedHandler}

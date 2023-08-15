@@ -15,6 +15,7 @@ const AccelerometerPage: QuestionTextPayloadInterface = {
                 {
                     type: QuestionField.QuestionFieldText,
                     label: "Serial number",
+                    name: "Serial number",
                 },
             ],
             sort: null,
@@ -32,6 +33,7 @@ const AccelerometerPage: QuestionTextPayloadInterface = {
                 {
                     type: QuestionField.QuestionFieldText,
                     label: "Número de serie",
+                    name: "Serial number",
                 },
             ],
             sort: null,
@@ -49,6 +51,7 @@ const AccelerometerPage: QuestionTextPayloadInterface = {
                 {
                     type: QuestionField.QuestionFieldText,
                     label: "Numéro de série",
+                    name: "Serial number",
                 },
             ],
             sort: null,

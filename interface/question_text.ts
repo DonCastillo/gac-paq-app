@@ -4,6 +4,7 @@ import QuestionField from "../constants/question_field";
 interface Field {
     type: QuestionField.QuestionFieldText | QuestionField.QuestionFieldNumber;
     label: string;
+    name: string;
 }
 
 export default interface QuestionTextInterface {

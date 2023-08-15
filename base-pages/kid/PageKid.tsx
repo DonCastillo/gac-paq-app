@@ -24,7 +24,7 @@ export default function PageKid() {
         <View style={styles.container}>
             <Main>
                 <CenterMain>
-                    <Heading customStyle={{ color: color100, fontSize: 50, marginBottom: 50 }}>
+                    <Heading customStyle={{ color: color100, fontSize: 50, marginBottom: 50, textAlign: "center" }}>
                         {translatedPage.heading.toLowerCase()}
                     </Heading>
                     <Paragraph
