@@ -17,7 +17,8 @@ export const QuestionContext = createContext({
     questionState: {
         regionOption: [],
         languageOption: [],
-        introductoryPages: []
+        introductoryPages: [],
+        questionPages: []
     },
     setRegionOption: (newRegionOptions: RegionInterface[]) => {},
     setLanguageOption: (newLanguageOptions: LanguageInterface[]) => {},
