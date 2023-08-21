@@ -9,16 +9,20 @@ import GreatJobPage from "./introductory-pages/great-job";
 import LocationPage from "./introductory-pages/location";
 import WelcomePage from "./introductory-pages/welcome";
 
-
-const IntroductoryPages: (PagePayloadInterface | QuestionDropdownPayloadInterface | QuestionTextPayloadInterface)[] | [] = [
+const IntroductoryPages:
+    | (
+          | PagePayloadInterface
+          | QuestionDropdownPayloadInterface
+          | QuestionTextPayloadInterface
+      )[]
+    | [] = [
     WelcomePage,
     AboutPage,
     // LocationPage,
     AgePage,
     DemographicPage,
     AccelerometerPage,
-    GreatJobPage
-]
-
+    GreatJobPage,
+];
 
 export default IntroductoryPages;

@@ -22,6 +22,8 @@ function AppWrapper() {
     const mode = settingCtx.settingState.mode;
     const colorTheme = settingCtx.settingState.colorTheme;
     const introductoryPages = questionCtx.questionState.introductoryPages;
+    const questionPages = questionCtx.questionState.questionPages;
+
 
     // console.log("app wrapper ======");
     // console.log('language: ', language),
@@ -35,14 +37,25 @@ function AppWrapper() {
     //     console.log(page.name)
     // )}
     useEffect(() => {
-        console.log('inside app wrapper...');
-        introductoryPages.forEach((page, index) => {
+        console.log('load introductory pages...');
+        let index = 0;
+        introductoryPages.forEach((page) => {
             settingCtx.addPage({
-                pageNumber: index + 1,
+                pageNumber: index++,
+                page: page,
+                screen: page.type
+            })
+        });
+
+        console.log('load question pages...');
+        questionPages.forEach((page) => {
+            settingCtx.addPage({
+                pageNumber: index++,
                 page: page,
                 screen: page.type
             })
         })
+
     }, [])
 
     return (

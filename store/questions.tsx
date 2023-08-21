@@ -6,11 +6,13 @@ import Languages from "./data/languages";
 import IntroductoryPages from "./data/introductory-pages";
 import PagePayloadInterface from "../interface/directus/page-payload";
 import QuestionDropdownPayloadInterface from "../interface/directus/question-dropdown-payload";
+import QuestionPages from "./data/question-pages";
 
 const INITIAL_STATE = {
     regionOption: Regions,
     languageOption: Languages,
-    introductoryPages: IntroductoryPages
+    introductoryPages: IntroductoryPages,
+    questionPages: QuestionPages
 }
 
 export const QuestionContext = createContext({
