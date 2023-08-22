@@ -40,6 +40,10 @@ function getScreenType(screenType: string) {
         return ScreenType.Page;
     } else if (screenType === "question_single") {
         return ScreenType.Question;
+    } else if (screenType === "question_intro") {
+        return ScreenType.IntroQuestion;
+    } else if (screenType === "question_extro") {
+        return ScreenType.ExtroQuestion;
     } else {
         return ScreenType.Page;
     }

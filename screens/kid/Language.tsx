@@ -10,10 +10,16 @@ import QuestionSelectLanguage from "../../components/kid/QuestionSelectLanguage"
 import LoadingScreen from "./LoadingScreen";
 import LoadingScreenKid from "../../base-pages/kid/LoadingScreenKid";
 import ProgressBar from "../../components/ProgressBar";
-import { useNavigationState } from "@react-navigation/native";
+import { useNavigation, useNavigationState } from "@react-navigation/native";
 import { ResponseContext } from "../../store/responses";
+import ScreenType from "../../constants/screen_type";
+import { getScreenType } from "../../utils/screen";
+
+
 
 export default function Language() {
+const navigation = useNavigation();
+
     const [languageSelected, setLanguageSelected] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [newLanguage, setNewLanguage] = useState(null);
@@ -40,7 +46,6 @@ export default function Language() {
     }
 
     function nextPage() {
-        console.log('going to next page...')
         settingCtx.nextPage();
     }
 

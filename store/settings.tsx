@@ -14,9 +14,16 @@ interface page {
     pageNumber: number 
 }
 
-// interface currentPage: {
-
-// }
+const nullPage = {
+    component: null,
+    page: {
+        name: null,
+        type: null,
+        translations: []
+    },
+    pageNumber: null,
+    screen: null,
+}
 
 const DEFAULT_MODE = Mode.Kid;
 const DEFAULT_COLOR_INDEX = 0;
@@ -27,16 +34,8 @@ const INITIAL_STATE = {
     language: null,
     directusAccessToken: "",
     currentPageNumber: 0,
-    currentPage: {
-        component: null,
-        page: {
-            name: null,
-            type: null,
-            translations: []
-        },
-        pageNumber: null,
-        screen: null,
-    },
+    currentPage: nullPage,
+    nextPage: nullPage,
     totalPage: 0,
     colorIndex: DEFAULT_COLOR_INDEX,
     colorTheme: {
@@ -55,7 +54,8 @@ export const SettingContext = createContext({
     prevColor: () => {},
     nextPage: () => {},
     prevPage: () => {},
-    addPage: (obj: any) => {}
+    addPage: (obj: any) => {},
+    initializeNextPage: () => {}
 });
 
 function settingReducer(state: any, action: any) {
@@ -81,15 +81,23 @@ function settingReducer(state: any, action: any) {
         case 'NEXT_PAGE':
             const currentpageNumber1 = state.currentPageNumber + 1;
             const currentPage1 =  getPage(currentpageNumber1, state.pages);
-            return { ...state, currentPageNumber: currentpageNumber1, currentPage: currentPage1 };
+            const nextPage1 = getPage(currentpageNumber1 + 1, state.pages);
+            return { ...state, currentPageNumber: currentpageNumber1, currentPage: currentPage1, nextPage: nextPage1 };
         case 'PREV_PAGE':
+            if(state.currentPageNumber <= 0) {
+                return state;
+            }
             const currentpageNumber2 = state.currentPageNumber - 1;
             const currentPage2 =  getPage(currentpageNumber2, state.pages);
-            return { ...state, currentPageNumber: state.currentpageNumber2, currentPage: currentPage2 };
+            const nextPage2 = getPage(state.currentPageNumber, state.pages);
+            return { ...state, currentPageNumber: state.currentpageNumber2, currentPage: currentPage2, nextPage: nextPage2 };
         case 'SET_TOTAL_PAGE':
             return { ...state, totalPage: action.payload };
         case 'ADD_PAGE':
-            return { ...state, pages: [...state.pages, action.payload] }
+            return { ...state, pages: [...state.pages, action.payload] };
+        case 'INITIALIZE_NEXT_PAGE':
+            const nextPage = getPage(1, state.pages);
+            return {...state, nextPage: nextPage};
         default:
             return state;
     }
@@ -150,6 +158,12 @@ export default function SettingContextProvider({ children }) {
         })
     }
 
+    function initializeNextPage() {
+        dispatch({
+            type: 'INITIALIZE_NEXT_PAGE'
+        })
+    }
+
 
 
     const value: any = {
@@ -161,7 +175,8 @@ export default function SettingContextProvider({ children }) {
         prevColor,
         nextPage,
         prevPage,
-        addPage
+        addPage,
+        initializeNextPage
     };
 
 
