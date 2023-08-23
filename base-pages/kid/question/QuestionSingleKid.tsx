@@ -1,24 +1,28 @@
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { SettingContext } from "../../store/settings";
-import { translate } from "../../utils/page";
-import Main from "../../components/Main";
-import Navigation from "../../components/Navigation";
-import FullWidthButton from "../../components/buttons/FullWidthButton";
-import TopMain from "../../components/orientation/TopMain";
-import QuestionLabel from "../../components/kid/QuestionLabel";
-import { getQuestionType } from "../../utils/questions";
-import QuestionType from "../../constants/question_type";
-import QuestionSelect from "../../components/kid/QuestionSelect";
-import { ResponseContext } from "../../store/responses";
-import QuestionText from "../../components/kid/QuestionText";
+import { SettingContext } from "../../../store/settings";
+import { translate } from "../../../utils/page";
+import Main from "../../../components/Main";
+import Navigation from "../../../components/Navigation";
+import FullWidthButton from "../../../components/buttons/FullWidthButton";
+import TopMain from "../../../components/orientation/TopMain";
+import QuestionLabel from "../../../components/kid/QuestionLabel";
+import { getQuestionType } from "../../../utils/questions";
+import QuestionType from "../../../constants/question_type";
+import QuestionSelect from "../../../components/kid/QuestionSelect";
+import { ResponseContext } from "../../../store/responses";
+import QuestionText from "../../../components/kid/QuestionText";
+import QuestionBreadcrumb from "../../../components/kid/QuestionBreadcrumb";
+import QuestionProgress from "../../../components/kid/QuestionProgress";
+import QuestionTitle from "../../../components/kid/QuestionTitle";
 
 interface ResponseInterface {
     label: string;
     answer: string;
 }
 
-export default function QuestionKid() {
+export default function QuestionSingleKid() {
+    console.log("here.....")
     // setting
     const [responses, setResponses] = useState({});
     const [proceed, setProceed] = useState(false);
@@ -100,11 +104,13 @@ export default function QuestionKid() {
 
     return (
         <View style={styles.container}>
+            {/* <QuestionProgress></QuestionProgress> */}
             <Main>
                 <TopMain>
                     <View style={styles.innerContainer}>
-                        <QuestionLabel fontSize={33}>
-                            {translatedPage.heading}
+                        <QuestionTitle>{translatedPage.heading}</QuestionTitle>
+                        <QuestionLabel fontSize={20} customStyle={{marginBottom: 10}}>
+                            {translatedPage.label}
                         </QuestionLabel>
                         {questionComponent}
                     </View>
@@ -134,7 +140,7 @@ const styles = StyleSheet.create({
     innerContainer: {
         // backgroundColor: "red",
         // height: "100%",
-        marginHorizontal: 20,
-        marginTop: 50,
+        marginHorizontal: 10,
+        marginTop: 25,
     },
 });

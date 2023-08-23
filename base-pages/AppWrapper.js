@@ -1,16 +1,11 @@
-import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Splash from "../screens/Splash";
 import { useContext, useEffect } from "react";
 import { SettingContext } from "../store/settings";
-import { getScreen, getScreenType } from "../utils/screen";
-import ScreenType from "../constants/screen_type";
-import Mode from "../constants/mode";
 import { QuestionContext } from "../store/questions";
-import Language from "../screens/kid/Language";
 import RegularPageScreen from "../screens/RegularPageScreen";
 import SplashKid from "./kid/SplashKid";
+import SectionType from "../constants/section_type";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,23 +33,30 @@ function AppWrapper() {
     // )}
     useEffect(() => {
         console.log('load introductory pages...');
-        let index = 0;
-        introductoryPages.forEach((page) => {
-            settingCtx.addPage({
-                pageNumber: index++,
-                page: page,
-                screen: page.type
-            })
-        });
+        let index = 1;
+        // introductoryPages.forEach((page, sectionIndex) => {
+        //     settingCtx.addPage({
+        //         pageNumber: index++,
+        //         page: page,
+        //         screen: page.type,
+        //         section: SectionType.Intro,
+        //         sectionPageNumber: ++sectionIndex
+        //     })
+        // });
 
         console.log('load question pages...');
-        questionPages.forEach((page) => {
+        questionPages.forEach((page, sectionIndex) => {
             settingCtx.addPage({
                 pageNumber: index++,
                 page: page,
-                screen: page.type
+                screen: page.type,
+                section: SectionType.Question,
+                sectionPageNumber: ++sectionIndex
             })
         })
+
+        console.log('loading next page');
+        // settingCtx.initializeCurrentPage();
 
     }, [])
 
@@ -69,9 +71,10 @@ function AppWrapper() {
                     name="RegularPageScreen"
                     component={RegularPageScreen}
                 />
-                {/* <Stack.Screen name="RegularPageScreen" component={<></>}/>
-                <Stack.Screen name="QuestionIntroScreen" component={<></>}/>
-                <Stack.Screen name="QuestionExtroScreen" component={<></>}/> */}
+                {/* <Stack.Screen
+                    name="QuestionIntroScreen"
+                    component={QuestionIntroScreen}
+                /> */}
             </Stack.Navigator>
         </NavigationContainer>
     );

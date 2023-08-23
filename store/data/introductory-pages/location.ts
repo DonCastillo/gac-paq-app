@@ -3,7 +3,7 @@ import QuestionDropdownPayloadInterface from "../../../interface/directus/questi
 
 const LocationPage: QuestionDropdownPayloadInterface = {
     name: "Location",
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: [
         {
             id: 1,

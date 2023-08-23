@@ -4,7 +4,7 @@ import ScreenType from "../../../constants/screen_type";
 
 const AccelerometerPage: QuestionTextPayloadInterface = {
     name: "What is your Accelerometer Serial Number?",
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: [
         {
             id: 5,

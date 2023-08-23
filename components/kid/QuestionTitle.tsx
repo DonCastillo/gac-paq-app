@@ -12,9 +12,10 @@ export default function QuestionTitle({children}) {
 const styles = StyleSheet.create({
     text: {
         // backgroundColor: "yellowgreen",
-        marginVertical: 20,
+        marginVertical: 15,
         fontWeight: 700,
         fontSize: 36,
+        lineHeight: 35,
         color: "#000"
     }
 });

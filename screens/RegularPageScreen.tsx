@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Text } from "react-native";
 import { SettingContext } from "../store/settings";
 import Language from "./kid/Language";
-import { getScreen, getScreenType } from "../utils/screen";
+import { getScreen, getScreenType, getSectionType } from "../utils/screen";
 import ScreenType from "../constants/screen_type";
 
 export default function RegularPageScreen() {
@@ -12,6 +12,7 @@ export default function RegularPageScreen() {
     useEffect(() => {
         const mode = settingCtx.settingState.mode;
         const pageType = settingCtx.settingState.currentPage.screen;
+        const sectionType = settingCtx.settingState.currentPage.section;
         console.log('mode: ', mode)
         console.log('pageType: ', pageType)
         let tempComponent = <></>;
@@ -20,7 +21,7 @@ export default function RegularPageScreen() {
             tempComponent = <Language />;
         } else {
             if (pageType) {
-                tempComponent = getScreen(mode, getScreenType(pageType));
+                tempComponent = getScreen(mode, getScreenType(pageType), getSectionType(sectionType));
             } else {
                 tempComponent = <></>;
             }

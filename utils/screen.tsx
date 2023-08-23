@@ -6,12 +6,14 @@ import SplashAdult from "../base-pages/adult/SplashAdult";
 import PageKid from "../base-pages/kid/PageKid";
 import QuestionExtroKid from "../base-pages/kid/QuestionExtroKid";
 import QuestionIntroKid from "../base-pages/kid/QuestionIntroKid";
-import QuestionKid from "../base-pages/kid/QuestionKid";
+import {default as IntroQuestionSingleKid} from "../base-pages/kid/intro/QuestionSingleKid";
+import {default as QuestionQuestionSingleKid} from "../base-pages/kid/question/QuestionSingleKid";
 import SplashKid from "../base-pages/kid/SplashKid";
 import Mode from "../constants/mode";
 import ScreenType from "../constants/screen_type";
+import SectionType from "../constants/section_type";
 
-function getScreen(mode: Mode | string, screenType: ScreenType | string) {
+function getScreen(mode: Mode | string, screenType: ScreenType | string, sectionType?: SectionType | string) {
     // if (mode === Mode.Adult && screenType === ScreenType.Splash)
     //     return SplashAdult;
     // else if (mode === Mode.Adult && screenType === ScreenType.Page)
@@ -26,8 +28,10 @@ function getScreen(mode: Mode | string, screenType: ScreenType | string) {
     //     return <SplashKid />;
     if (mode === Mode.Kid && screenType === ScreenType.Page)
         return <PageKid />;
-    else if (mode === Mode.Kid && screenType === ScreenType.Question)
-        return <QuestionKid />;
+    else if (mode === Mode.Kid && screenType === ScreenType.SingleQuestion && sectionType === SectionType.Intro)
+        return <IntroQuestionSingleKid />;
+    else if (mode === Mode.Kid && screenType === ScreenType.SingleQuestion && sectionType === SectionType.Question)
+        return <QuestionQuestionSingleKid />;
     else if (mode === Mode.Kid && screenType === ScreenType.IntroQuestion)
         return <QuestionIntroKid />;
     else if (mode === Mode.Kid && screenType === ScreenType.ExtroQuestion)
@@ -35,11 +39,11 @@ function getScreen(mode: Mode | string, screenType: ScreenType | string) {
     else return <></>;
 }
 
-function getScreenType(screenType: string) {
+function getScreenType(screenType: string) : ScreenType {
     if (screenType === "page") {
         return ScreenType.Page;
     } else if (screenType === "question_single") {
-        return ScreenType.Question;
+        return ScreenType.SingleQuestion;
     } else if (screenType === "question_intro") {
         return ScreenType.IntroQuestion;
     } else if (screenType === "question_extro") {
@@ -48,4 +52,12 @@ function getScreenType(screenType: string) {
         return ScreenType.Page;
     }
 }
-export { getScreen, getScreenType };
+
+function getSectionType(sectionType: string) : SectionType {
+    if (sectionType === "intro") {
+        return SectionType.Intro;
+    } else {
+        return SectionType.Question;
+    }
+}
+export { getScreen, getScreenType, getSectionType };

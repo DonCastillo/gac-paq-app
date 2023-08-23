@@ -3,7 +3,7 @@ import QuestionDropdownPayloadInterface from "../../../interface/directus/questi
 
 const AgePage: QuestionDropdownPayloadInterface = {
     name: "Who's taking this questionnaire?",
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: [
         {
             id: 4,

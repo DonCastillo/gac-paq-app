@@ -11,7 +11,7 @@ import { getPage } from "../utils/page";
 interface page {
     component: any,
     page: any,
-    pageNumber: number 
+    pageNumber: number
 }
 
 const nullPage = {
@@ -23,6 +23,8 @@ const nullPage = {
     },
     pageNumber: null,
     screen: null,
+    section: null,
+    sectionPageNumber: null
 }
 
 const DEFAULT_MODE = Mode.Kid;
@@ -36,7 +38,7 @@ const INITIAL_STATE = {
     currentPageNumber: 0,
     currentPage: nullPage,
     nextPage: nullPage,
-    totalPage: 0,
+    totalPage: null,
     colorIndex: DEFAULT_COLOR_INDEX,
     colorTheme: {
         color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
@@ -55,7 +57,8 @@ export const SettingContext = createContext({
     nextPage: () => {},
     prevPage: () => {},
     addPage: (obj: any) => {},
-    initializeNextPage: () => {}
+    initializeNextPage: () => {},
+    initializeCurrentPage: () => {}
 });
 
 function settingReducer(state: any, action: any) {
@@ -95,9 +98,14 @@ function settingReducer(state: any, action: any) {
             return { ...state, totalPage: action.payload };
         case 'ADD_PAGE':
             return { ...state, pages: [...state.pages, action.payload] };
-        case 'INITIALIZE_NEXT_PAGE':
-            const nextPage = getPage(1, state.pages);
-            return {...state, nextPage: nextPage};
+        case 'INITIALIZE_CURRENT_PAGE':
+            const currentPageNumber = state.currentPageNumber;
+            const currentPage = getPage(state.currentPageNumber, state.pages);
+            const nextPage = getPage(state.currentPageNumber + 1, state.pages);
+            return { ...state, currentPageNumber: currentPageNumber, currentPage: currentPage, nextPage: nextPage };
+        // case 'INITIALIZE_NEXT_PAGE':
+        //     const nextPage = getPage(state.currentPageNumber, state.pages);
+        //     return {...state, nextPage: nextPage};
         default:
             return state;
     }
@@ -164,6 +172,12 @@ export default function SettingContextProvider({ children }) {
         })
     }
 
+    function initializeCurrentPage() {
+        dispatch({
+            type: 'INITIALIZE_CURRENT_PAGE'
+        })
+    }
+
 
 
     const value: any = {
@@ -176,7 +190,8 @@ export default function SettingContextProvider({ children }) {
         nextPage,
         prevPage,
         addPage,
-        initializeNextPage
+        initializeNextPage,
+        initializeCurrentPage
     };
 
 

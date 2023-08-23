@@ -1,4 +1,4 @@
-import { View, ImageBackground, Text, StyleSheet } from "react-native";
+import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useContext, useLayoutEffect } from "react";
 import { SettingContext } from "../../store/settings";
@@ -22,14 +22,14 @@ export default function QuestionIntroKid() {
                 style={styles.image}
             ></ImageBackground>
             <View style={[styles.headingPanel, { backgroundColor: color100 }]}>
-                <View style={styles.headingPanelTop}>
+                <ScrollView style={styles.headingPanelTop}>
                     <Text style={styles.headingSubText}>
                         {translatedPage.subheading}
                     </Text>
                     <Text style={styles.headingText}>
                         {translatedPage.heading}
                     </Text>
-                </View>
+                </ScrollView>
                 <View style={styles.headingPanelBottom}>
                     <View
                         style={[
@@ -83,12 +83,15 @@ const styles = StyleSheet.create({
         textAlign: "center",
         paddingTop: 20,
         color: "#fff",
-        fontSize: 36,
+        fontSize: 32,
         fontWeight: "bold",
+        height: "100%"
     },
     headingPanelTop: {
         // backgroundColor: 'lightblue',
         flex: 1,
+        // height: "100%",
+        // fontSize: 9,
     },
     headingPanelBottom: {
         // backgroundColor: 'blue',

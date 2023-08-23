@@ -4,7 +4,7 @@ import QuestionSliderPayloadInterface from "../../../../interface/directus/quest
 
 const S1Q4: QuestionRadioPayloadInterface = {
     name: "Question 4: How long are your physical education classes?",
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: [
         {
             id: 7,

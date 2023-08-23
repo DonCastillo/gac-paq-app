@@ -3,7 +3,7 @@ import QuestionSliderPayloadInterface from "../../../../interface/directus/quest
 
 const S1Q3: QuestionSliderPayloadInterface = {
     name: "Question 3: How many physical education classes did you have in the past week?",
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: [
         {
             id: 1,

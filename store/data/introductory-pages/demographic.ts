@@ -3,7 +3,7 @@ import QuestionDropdownPayloadInterface from "../../../interface/directus/questi
 
 const DemographicPage: QuestionDropdownPayloadInterface = {
     name: "How old are you?",
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: [
         {
             id: 7,

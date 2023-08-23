@@ -3,7 +3,7 @@ import QuestionRadioPayloadInterface from "../../../../interface/directus/questi
 
 const S1Q2: QuestionRadioPayloadInterface = {
     name: "Question 2: How many days did you attend school in the past week?",
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: [
         {
             id: 6,

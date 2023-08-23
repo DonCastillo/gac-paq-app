@@ -7,9 +7,9 @@ import Colors from "../styles/kids/Colors";
 import { AppContext } from "../context/AppContext";
 import { useContext } from "react";
 import Heading from "../components/kids/Heading";
-import QuestionBreadcrumb from "../components/kids/QuestionBreadcrumb";
-import QuestionProgress from "../components/kids/QuestionProgress";
-import QuestionTitle from "../components/kids/QuestionTitle";
+// import QuestionBreadcrumb from "../components/kid/QuestionBreadcrumb";
+// import QuestionProgress from "../components/kid/QuestionProgress";
+// import QuestionTitle from "../components/kid/QuestionTitle";
 import QuestionRadio from "../components/kids/QuestionRadio";
 
 export default function QuestionSingle({ breadcrumb, title, options, label }) {
@@ -20,9 +20,9 @@ export default function QuestionSingle({ breadcrumb, title, options, label }) {
             {/* <Text>{children}</Text> */}
             <Main>
                 <TopMain>
-                    <QuestionBreadcrumb>{breadcrumb}</QuestionBreadcrumb>
+                    {/* <QuestionBreadcrumb>{breadcrumb}</QuestionBreadcrumb> */}
                     {/* <QuestionProgress /> */}
-                    <QuestionTitle>{title}</QuestionTitle>
+                    {/* <QuestionTitle>{title}</QuestionTitle> */}
                     <QuestionRadio
                         label={label}
                         options={options}
