@@ -10,7 +10,7 @@ import Heading from "../components/kids/Heading";
 // import QuestionBreadcrumb from "../components/kid/QuestionBreadcrumb";
 // import QuestionProgress from "../components/kid/QuestionProgress";
 // import QuestionTitle from "../components/kid/QuestionTitle";
-import QuestionRadio from "../components/kids/QuestionRadio";
+import QuestionRadio from "../components/kid/QuestionRadio";
 
 export default function QuestionSingle({ breadcrumb, title, options, label }) {
     const { nextPage, prevPage } = useContext(AppContext);

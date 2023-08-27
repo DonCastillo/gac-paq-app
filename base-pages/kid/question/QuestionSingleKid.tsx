@@ -15,6 +15,7 @@ import QuestionText from "../../../components/kid/QuestionText";
 import QuestionBreadcrumb from "../../../components/kid/QuestionBreadcrumb";
 import QuestionProgress from "../../../components/kid/QuestionProgress";
 import QuestionTitle from "../../../components/kid/QuestionTitle";
+import QuestionRadio from "../../../components/kid/QuestionRadio";
 
 interface ResponseInterface {
     label: string;
@@ -22,7 +23,6 @@ interface ResponseInterface {
 }
 
 export default function QuestionSingleKid() {
-    console.log("here.....")
     // setting
     const [responses, setResponses] = useState({});
     const [proceed, setProceed] = useState(false);
@@ -36,9 +36,9 @@ export default function QuestionSingleKid() {
     let questionComponent = <></>;
 
     useEffect(() => {
-        const theresResponse = (Object.keys(responses)).length > 0;
+        const theresResponse = Object.keys(responses).length > 0;
         setProceed(theresResponse);
-    }, [responses])
+    }, [responses]);
 
     /**
      * finalizes response
@@ -58,11 +58,13 @@ export default function QuestionSingleKid() {
     /**
      * temporarily store the initial selection
      */
-    function changeHandler(value: string) {
+    function changeHandler(value: string | null) {
         setResponses((currResponse) => {
-            return {...currResponse, [currentPage.page?.name]: value}
+            return { ...currResponse, [currentPage.page?.name]: value };
         });
         
+
+
         // set mode
         // if(currentPage.page.name === "Who's taking this questionnaire?") {
         //     if (value === "child") {
@@ -71,10 +73,7 @@ export default function QuestionSingleKid() {
         //         settingCtx.setMode(Mode.Adult);
         //     }
         // }
-
     }
-
-
 
     if (questionType === QuestionType.QuestionCheckbox) {
         questionComponent = <></>;
@@ -86,7 +85,12 @@ export default function QuestionSingleKid() {
             />
         );
     } else if (questionType === QuestionType.QuestionRadio) {
-        questionComponent = <></>;
+        questionComponent = (
+            <QuestionRadio
+                options={translatedPage.choices}
+                onChange={changeHandler}
+            />
+        );
     } else if (questionType === QuestionType.QuestionRadioImage) {
         questionComponent = <></>;
     } else if (questionType === QuestionType.QuestionSlider) {
@@ -109,21 +113,26 @@ export default function QuestionSingleKid() {
                 <TopMain>
                     <View style={styles.innerContainer}>
                         <QuestionTitle>{translatedPage.heading}</QuestionTitle>
-                        <QuestionLabel fontSize={20} customStyle={{marginBottom: 10}}>
+                        <QuestionLabel
+                            fontSize={20}
+                            customStyle={{ marginBottom: 10 }}
+                        >
                             {translatedPage.label}
                         </QuestionLabel>
-                        {questionComponent}
+                        <View style={styles.questionContainer}>
+                            {questionComponent}
+                        </View>
                     </View>
                 </TopMain>
                 <Navigation>
-                    {proceed &&
+                    {proceed && (
                         <FullWidthButton
                             customStyle={{ backgroundColor: color100 }}
                             onPress={proceedHandler}
                         >
                             Start
                         </FullWidthButton>
-                    }
+                    )}
                 </Navigation>
             </Main>
         </View>
@@ -142,5 +151,9 @@ const styles = StyleSheet.create({
         // height: "100%",
         marginHorizontal: 10,
         marginTop: 25,
+    },
+    questionContainer: {
+        marginTop: 25,
+        // backgroundColor: 'pink'
     },
 });

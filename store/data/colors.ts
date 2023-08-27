@@ -3,7 +3,7 @@ import ColorInterface from "../../interface/color";
 const kidColor: ColorInterface[] = [
     {
         color100: "#E09F57",
-        color200: "#E09F57",
+        color200: "#FF7512",
     },
     {
         color100: "#A6E771",
