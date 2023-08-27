@@ -16,6 +16,7 @@ import QuestionBreadcrumb from "../../../components/kid/QuestionBreadcrumb";
 import QuestionProgress from "../../../components/kid/QuestionProgress";
 import QuestionTitle from "../../../components/kid/QuestionTitle";
 import QuestionRadio from "../../../components/kid/QuestionRadio";
+import QuestionSlider from "../../../components/kid/QuestionSlider";
 
 interface ResponseInterface {
     label: string;
@@ -33,6 +34,7 @@ export default function QuestionSingleKid() {
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
+    console.log('questiontype: ', questionType);
     let questionComponent = <></>;
 
     useEffect(() => {
@@ -59,11 +61,10 @@ export default function QuestionSingleKid() {
      * temporarily store the initial selection
      */
     function changeHandler(value: string | null) {
+        console.log('change handler from the question single kid: ', )
         setResponses((currResponse) => {
             return { ...currResponse, [currentPage.page?.name]: value };
         });
-        
-
 
         // set mode
         // if(currentPage.page.name === "Who's taking this questionnaire?") {
@@ -94,7 +95,7 @@ export default function QuestionSingleKid() {
     } else if (questionType === QuestionType.QuestionRadioImage) {
         questionComponent = <></>;
     } else if (questionType === QuestionType.QuestionSlider) {
-        questionComponent = <></>;
+        questionComponent = <QuestionSlider onChange={changeHandler} />;
     } else if (questionType === QuestionType.QuestionText) {
         questionComponent = (
             <QuestionText

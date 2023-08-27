@@ -10,6 +10,7 @@ const GeneralStyle = {
             paddingVertical: 18,
             minHeight: 60,
             marginBottom: 15,
+            marginTop: 15,
             borderColor: "#000",
         }
     },
