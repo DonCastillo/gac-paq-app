@@ -3,6 +3,6 @@ import QuestionTextInterface from "../question_text";
 
 export default interface QuestionTextPayloadInterface {
     name?: string | null,
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: QuestionTextInterface[]
 }

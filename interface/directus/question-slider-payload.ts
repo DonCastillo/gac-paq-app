@@ -3,6 +3,6 @@ import QuestionSliderInterface from "../question_slider";
 
 export default interface QuestionSliderPayloadInterface {
     name?: string | null,
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: QuestionSliderInterface[]
 }

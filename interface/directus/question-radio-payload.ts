@@ -3,6 +3,6 @@ import QuestionRadioInterface from "../question_radio";
 
 export default interface QuestionRadioPayloadInterface {
     name?: string | null,
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: QuestionRadioInterface[]
 }

@@ -17,6 +17,7 @@ import QuestionProgress from "../../../components/kid/QuestionProgress";
 import QuestionTitle from "../../../components/kid/QuestionTitle";
 import QuestionRadio from "../../../components/kid/QuestionRadio";
 import QuestionSlider from "../../../components/kid/QuestionSlider";
+import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 
 interface ResponseInterface {
     label: string;
@@ -34,10 +35,12 @@ export default function QuestionSingleKid() {
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
-    console.log('questiontype: ', questionType);
+    // console.log("questiontype: ", questionType);
+    // console.log("translatedPage: ", translatedPage);
     let questionComponent = <></>;
 
     useEffect(() => {
+        console.log('use effect here... heres the responses: ', responses)
         const theresResponse = Object.keys(responses).length > 0;
         setProceed(theresResponse);
     }, [responses]);
@@ -61,7 +64,7 @@ export default function QuestionSingleKid() {
      * temporarily store the initial selection
      */
     function changeHandler(value: string | null) {
-        console.log('change handler from the question single kid: ', )
+        console.log("change handler from the question single kid: ", value);
         setResponses((currResponse) => {
             return { ...currResponse, [currentPage.page?.name]: value };
         });
@@ -93,7 +96,12 @@ export default function QuestionSingleKid() {
             />
         );
     } else if (questionType === QuestionType.QuestionRadioImage) {
-        questionComponent = <></>;
+        questionComponent = (
+            <QuestionRadioImage
+                options={translatedPage.choices}
+                onChange={changeHandler}
+            />
+        );
     } else if (questionType === QuestionType.QuestionSlider) {
         questionComponent = <QuestionSlider onChange={changeHandler} />;
     } else if (questionType === QuestionType.QuestionText) {

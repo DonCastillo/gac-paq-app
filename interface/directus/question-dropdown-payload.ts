@@ -3,6 +3,6 @@ import QuestionDropdownInterface from "../question_dropdown";
 
 export default interface QuestionDropdownPayloadInterface {
     name?: string | null,
-    type: ScreenType.Question,
+    type: ScreenType.SingleQuestion,
     translations: QuestionDropdownInterface[]
 }
