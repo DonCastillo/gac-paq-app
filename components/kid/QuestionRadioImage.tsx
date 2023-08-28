@@ -37,6 +37,9 @@ export default function QuestionRadioImage({ options, onChange }) {
 
     function renderImage(image: string, image_default: any) {
         const ImageComponent = image_default;
+        if(!image_default) {
+            return <></>;
+        }
         return <ImageComponent height={150} width={150} padding={0} margin={0} />
         // return (
         //     <View>
