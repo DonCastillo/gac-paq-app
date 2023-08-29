@@ -7,6 +7,7 @@ import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import ProgressBar from "../../components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
+import { Images } from "../../styles/images";
 
 export default function SplashKid() {
     const settingCtx = useContext(SettingContext);
@@ -14,6 +15,7 @@ export default function SplashKid() {
     const currentPage = settingCtx.settingState.currentPage;
     // const pageNumber = route.params.pageNumber;
     const navigation = useNavigation();
+    const SplashImage = Images.kid.splash_image;
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -27,10 +29,9 @@ export default function SplashKid() {
         <View style={[styles.container, { backgroundColor: color100 }]}>
             <Main>
                 <CenterMain>
-                    <Image
-                        style={styles.logo}
-                        source={require("./../../assets/images/Logo.png")}
-                    />
+                    <View style={styles.imageContainer}>
+                        <SplashImage height={300} width={350} />
+                    </View>
                     <Heading customStyle={{ fontWeight: "bold" }}>
                         gacpaq
                     </Heading>
@@ -58,9 +59,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
-    logo: {
-        height: 400,
-        width: 350,
-        resizeMode: "contain",
-    },
+    imageContainer: {
+        // backgroundColor: "red"
+    }
 });

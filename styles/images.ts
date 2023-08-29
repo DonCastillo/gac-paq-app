@@ -11,6 +11,7 @@ import Basket5SVG from "./../store/assets/images/basket_5.svg";
 import CarrotSVG from "./../store/assets/images/carrot.svg";
 import CarrotBiteSVG from "./../store/assets/images/carrot_bite.svg";
 import EmptyBasket from "./../store/assets/images/empty_basket.svg";
+import RabbitFaceSVG from "./../store/assets/images/logo.svg";
 
 const Images = {
     kid: {
@@ -25,6 +26,7 @@ const Images = {
         background_image_5: CarrotSVG,
         background_image_6: CarrotBiteSVG,
         background_image_7: EmptyBasket,
+        splash_image: RabbitFaceSVG
     },
     adult: {},
 };
