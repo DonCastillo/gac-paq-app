@@ -1,7 +1,9 @@
 import RunningSVG from "./../store/assets/images/running.svg";
 import SmallWalkingSVG from "./../store/assets/images/small_walking.svg";
 import SittingSVG from "./../store/assets/images/sitting.svg";
-import BasketSVG from "./../store/assets/images/sitting.svg";
+import BasketSVG from "./../store/assets/images/basket.svg";
+import BasketOutlineSVG from "./../store/assets/images/basket_outline.svg";
+import BasketFullSVG from "./../store/assets/images/basket_full.svg";
 import Basket1SVG from "./../store/assets/images/basket_1.svg";
 import Basket2SVG from "./../store/assets/images/basket_2.svg";
 import Basket4SVG from "./../store/assets/images/basket_4.svg";
@@ -15,7 +17,7 @@ const Images = {
         mostly_not_moving: SittingSVG,
         mostly_easy_effort: SmallWalkingSVG,
         mostly_medium: RunningSVG,
-        extro_question_page: BasketSVG,
+        extro_question_page: BasketFullSVG,
         background_image_1: Basket1SVG,
         background_image_2: Basket2SVG,
         background_image_3: Basket4SVG,
