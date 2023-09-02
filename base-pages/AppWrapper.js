@@ -6,6 +6,8 @@ import { QuestionContext } from "../store/questions";
 import RegularPageScreen from "../screens/RegularPageScreen";
 import SplashKid from "./kid/SplashKid";
 import SectionType from "../constants/section_type";
+import { getScreenType } from "../utils/screen";
+import ScreenType from "../constants/screen_type";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +21,6 @@ function AppWrapper() {
     const introductoryPages = questionCtx.questionState.introductoryPages;
     const questionPages = questionCtx.questionState.questionPages;
 
-
     // console.log("app wrapper ======");
     // console.log('language: ', language),
     // console.log('mode: ', mode),
@@ -31,42 +32,52 @@ function AppWrapper() {
     // {introductoryPages.map(page =>
     //     console.log(page.name)
     // )}
-    useEffect(() => {
-        console.log('load introductory pages...');
-        let index = 1;
-        // introductoryPages.forEach((page, sectionIndex) => {
-        //     settingCtx.addPage({
-        //         pageNumber: index++,
-        //         page: page,
-        //         screen: page.type,
-        //         section: SectionType.Intro,
-        //         sectionPageNumber: ++sectionIndex
-        //     })
-        // });
 
-        console.log('load question pages...');
-        questionPages.forEach((page, sectionIndex) => {
+    // sectionNumber:
+    //                 getScreenType(page.type) === ScreenType.IntroQuestion
+    //                     ? ++sectionIndex
+    //                     : sectionIndex,
+    useEffect(() => {
+        console.log("load introductory pages...");
+        let index = 1;
+        introductoryPages.forEach((page, sectionIndex) => {
+            settingCtx.addPage({
+                pageNumber: index++,
+                page: page,
+                screen: page.type,
+                section: SectionType.Intro,
+                sectionPageNumber: ++sectionIndex
+            })
+        });
+
+        console.log("load question pages...");
+        let sectionPageNumber = 1;
+        let sectionNumber = 0;
+
+        questionPages.forEach((page) => {
+            if (getScreenType(page.type) === ScreenType.IntroQuestion) {
+                sectionPageNumber = 1;
+                sectionNumber++;
+            }
+
             settingCtx.addPage({
                 pageNumber: index++,
                 page: page,
                 screen: page.type,
                 section: SectionType.Question,
-                sectionPageNumber: ++sectionIndex
-            })
-        })
+                sectionNumber: sectionNumber,
+                sectionPageNumber: sectionPageNumber++,
+            });
+        });
 
-        console.log('loading next page');
+        console.log("loading next page");
         // settingCtx.initializeCurrentPage();
-
-    }, [])
+    }, []);
 
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen
-                    name="SplashScreen"
-                    component={SplashKid}
-                />
+                <Stack.Screen name="SplashScreen" component={SplashKid} />
                 <Stack.Screen
                     name="RegularPageScreen"
                     component={RegularPageScreen}

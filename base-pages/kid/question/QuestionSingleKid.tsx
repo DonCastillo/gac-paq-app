@@ -134,14 +134,14 @@ export default function QuestionSingleKid() {
                     </View>
                 </TopMain>
                 <Navigation>
-                    {proceed && (
+                    {/* {proceed && ( */}
                         <FullWidthButton
                             customStyle={{ backgroundColor: color100 }}
                             onPress={proceedHandler}
                         >
-                            Start
+                            Continue
                         </FullWidthButton>
-                    )}
+                    {/* )} */}
                 </Navigation>
             </Main>
         </View>

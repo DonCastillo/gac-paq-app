@@ -42,7 +42,7 @@ export default function PageKid() {
                         customStyle={{ backgroundColor: color100 }}
                         onPress={pressHandler}
                     >
-                        Start
+                        Continue
                     </FullWidthButton>
                 </Navigation>
             </Main>

@@ -7,6 +7,8 @@ import CenterMain from "../../components/orientation/CenterMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import { Images } from "../../styles/images";
+import Navigation from "../../components/Navigation";
+import FullWidthButton from "../../components/buttons/FullWidthButton";
 
 export default function QuestionExtroKid() {
     console.log("question extro kid ...");
@@ -19,20 +21,45 @@ export default function QuestionExtroKid() {
 
     console.log(translatedPage);
 
+    function pressHandler() {
+        console.log("press handler: ");
+        settingCtx.nextPage();
+    }
+
     return (
         <View style={styles.container}>
             <Main>
                 <CenterMain>
-                    <Heading customStyle={{ color: "#000", fontSize: 32, fontWeight: "bold", textAlign: "center" }}>
+                    <Heading
+                        customStyle={{
+                            color: "#000",
+                            fontSize: 32,
+                            fontWeight: "bold",
+                            textAlign: "center",
+                        }}
+                    >
                         {translatedPage.heading}
                     </Heading>
                     <Paragraph customStyle={{ color: "#000", fontSize: 20 }}>
                         {translatedPage.subheading}
                     </Paragraph>
                     <View style={styles.imageContainer}>
-                        <ImageComponent height={400} width={300} padding={0} margin={0} />
+                        <ImageComponent
+                            height={400}
+                            width={300}
+                            padding={0}
+                            margin={0}
+                        />
                     </View>
                 </CenterMain>
+                <Navigation>
+                    <FullWidthButton
+                        customStyle={{ backgroundColor: color100 }}
+                        onPress={pressHandler}
+                    >
+                        Start
+                    </FullWidthButton>
+                </Navigation>
             </Main>
         </View>
     );
@@ -43,12 +70,12 @@ const styles = StyleSheet.create({
         flex: 1,
         // backgroundColor: "green",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
     },
     imageContainer: {
         // backgroundColor: "red",
         justifyContent: "center",
         alignItems: "center",
         marginLeft: -40,
-    }
+    },
 });
