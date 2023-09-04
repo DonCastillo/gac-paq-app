@@ -120,7 +120,7 @@ function settingReducer(state: any, action: any) {
             const currentpageNumber2 = state.currentPageNumber - 1;
             const currentPage2 =  getPage(currentpageNumber2, state.pages);
             const nextPage2 = getPage(state.currentPageNumber, state.pages);
-            return { ...state, currentPageNumber: state.currentpageNumber2, currentPage: currentPage2, nextPage: nextPage2 };
+            return { ...state, currentPageNumber: currentpageNumber2, currentPage: currentPage2, nextPage: nextPage2 };
         case 'SET_TOTAL_PAGE':
             return { ...state, totalPage: action.payload };
         case 'ADD_PAGE':
