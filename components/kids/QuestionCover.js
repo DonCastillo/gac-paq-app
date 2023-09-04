@@ -1,5 +1,5 @@
 import { View, ImageBackground, Text, StyleSheet } from "react-native";
-import ButtonContainerWidth from "./ButtonContainerWidth";
+import ButtonContainerWidth from "../buttons/ButtonContainerWidth";
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 

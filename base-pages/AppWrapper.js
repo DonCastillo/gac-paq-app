@@ -21,6 +21,8 @@ function AppWrapper() {
     const introductoryPages = questionCtx.questionState.introductoryPages;
     const questionPages = questionCtx.questionState.questionPages;
 
+    // buttons
+
     // console.log("app wrapper ======");
     // console.log('language: ', language),
     // console.log('mode: ', mode),

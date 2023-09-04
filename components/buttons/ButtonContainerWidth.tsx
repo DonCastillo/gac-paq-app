@@ -2,11 +2,11 @@ import { View, Text, Pressable, StyleSheet } from "react-native";
 import { useFonts } from 'expo-font';
 import Colors from "../../styles/kids/Colors";
 
-export default function ButtonContainerWidth({ children, onPress, color }) {
+export default function ButtonContainerWidth({ children, onPress, borderColor, textColor, bgColor }) {
     return (
-        <View style={[style.container, {borderColor: color}]}>
-            <Pressable onPress={onPress}>
-                <Text style={[style.buttonText, {color: color}]}>{children}</Text>
+        <View>
+            <Pressable onPress={onPress} style={[style.container, {borderColor: borderColor, backgroundColor: bgColor}]}>
+                <Text style={[style.buttonText, {color: textColor}]}>{children}</Text>
             </Pressable>
         </View>
     );

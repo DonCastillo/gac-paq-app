@@ -18,6 +18,7 @@ import QuestionTitle from "../../../components/kid/QuestionTitle";
 import QuestionRadio from "../../../components/kid/QuestionRadio";
 import QuestionSlider from "../../../components/kid/QuestionSlider";
 import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
+import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 
 interface ResponseInterface {
     label: string;
@@ -135,12 +136,7 @@ export default function QuestionSingleKid() {
                 </TopMain>
                 <Navigation>
                     {/* {proceed && ( */}
-                        <FullWidthButton
-                            customStyle={{ backgroundColor: color100 }}
-                            onPress={proceedHandler}
-                        >
-                            Continue
-                        </FullWidthButton>
+                        <BackAndNextNav />
                     {/* )} */}
                 </Navigation>
             </Main>

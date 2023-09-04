@@ -3,7 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useContext, useLayoutEffect } from "react";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
-import ButtonContainerWidth from "../../components/kids/ButtonContainerWidth";
+import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
 
 export default function QuestionIntroKid() {
     console.log('question intro kid.......')
@@ -31,19 +31,7 @@ export default function QuestionIntroKid() {
                     </Text>
                 </ScrollView>
                 <View style={styles.headingPanelBottom}>
-                    <View
-                        style={[
-                            styles.bottomNavigation,
-                            { justifyContent: "center" },
-                        ]}
-                    >
-                        <ButtonContainerWidth
-                            onPress={() => settingCtx.nextPage()}
-                            color={color200}
-                        >
-                            Go!
-                        </ButtonContainerWidth>
-                    </View>
+                    <BackAndGoNav />
                 </View>
             </View>
         </View>
@@ -100,11 +88,5 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         paddingHorizontal: 20,
     },
-    bottomNavigation: {
-        // backgroundColor: "pink",
-        width: "100%",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-    },
+   
 });

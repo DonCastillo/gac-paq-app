@@ -7,12 +7,24 @@ import IntroductoryPages from "./data/introductory-pages";
 import PagePayloadInterface from "../interface/directus/page-payload";
 import QuestionDropdownPayloadInterface from "../interface/directus/question-dropdown-payload";
 import QuestionPages from "./data/question-pages";
+import BackButton from "./data/buttons/back";
+import CompleteButton from "./data/buttons/complete";
+import ContinueButton from "./data/buttons/continue";
+import GoButton from "./data/buttons/go";
+import NextButton from "./data/buttons/next";
+import StartedButton from "./data/buttons/started";
 
 const INITIAL_STATE = {
     regionOption: Regions,
     languageOption: Languages,
     introductoryPages: IntroductoryPages,
-    questionPages: QuestionPages
+    questionPages: QuestionPages,
+    backButton: BackButton,
+    completeButton: CompleteButton,
+    continueButton: ContinueButton,
+    goButton: GoButton,
+    nextButton: NextButton,
+    startedButton: StartedButton
 }
 
 export const QuestionContext = createContext({
@@ -20,7 +32,13 @@ export const QuestionContext = createContext({
         regionOption: [],
         languageOption: [],
         introductoryPages: [],
-        questionPages: []
+        questionPages: [],
+        backButton: [],
+        completeButton: [],
+        continueButton: [],
+        goButton: [],
+        nextButton: [],
+        startedButton: []
     },
     setRegionOption: (newRegionOptions: RegionInterface[]) => {},
     setLanguageOption: (newLanguageOptions: LanguageInterface[]) => {},

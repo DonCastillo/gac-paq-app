@@ -53,11 +53,4 @@ function getScreenType(screenType: string) : ScreenType {
     }
 }
 
-function getSectionType(sectionType: string) : SectionType {
-    if (sectionType === "intro") {
-        return SectionType.Intro;
-    } else {
-        return SectionType.Question;
-    }
-}
-export { getScreen, getScreenType, getSectionType };
+export { getScreen, getScreenType };

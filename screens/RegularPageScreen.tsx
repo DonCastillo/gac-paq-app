@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { Text } from "react-native";
 import { SettingContext } from "../store/settings";
 import Language from "./kid/Language";
-import { getScreen, getScreenType, getSectionType } from "../utils/screen";
+import { getScreen, getScreenType } from "../utils/screen";
+import { getSectionType } from "../utils/section";
 import ScreenType from "../constants/screen_type";
 
 export default function RegularPageScreen() {

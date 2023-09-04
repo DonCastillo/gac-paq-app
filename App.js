@@ -14,11 +14,11 @@ import ResponseContextProvider, { ResponseContext } from "./store/responses";
 export default function App() {
     return (
         <ResponseContextProvider>
-            <SettingContextProvider>
-                <QuestionContextProvider>
+            <QuestionContextProvider>
+                <SettingContextProvider>
                     <AppWrapper />
-                </QuestionContextProvider>
-            </SettingContextProvider>
+                </SettingContextProvider>
+            </QuestionContextProvider>
         </ResponseContextProvider>
     );
 }

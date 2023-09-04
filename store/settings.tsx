@@ -1,21 +1,36 @@
-import { createContext, useEffect, useReducer, useState } from "react";
+import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import Mode from "../constants/mode";
 import Colors from "./data/colors";
 import { getPage } from "../utils/page";
+import ScreenType from "../constants/screen_type";
+import SectionType from "../constants/section_type";
+import { translateButton } from "../utils/translate";
+import { QuestionContext } from "./questions";
+import ButtonLabel from "../constants/button_label";
 
 /**
  * by default the app should be set as:
  *      mode: kid,
  */
-
-interface page {
-    component: any,
-    page: any,
-    pageNumber: number
+interface pageInterface {
+    screen: ScreenType | null,
+    page: any | null | {},
+    pageNumber: number | null,
+    section: SectionType.Intro | SectionType.Question | null,
+    sectionNumber: number | null,
+    sectionPageNumber: number | null
 }
 
-const nullPage = {
-    component: null,
+interface buttonInterface {
+    back: string,
+    complete: string,
+    continue: string,
+    go: string,
+    next: string,
+    started: string
+}
+
+const defaultPage : pageInterface = {
     page: {
         name: null,
         type: null,
@@ -24,7 +39,17 @@ const nullPage = {
     pageNumber: null,
     screen: null,
     section: null,
+    sectionNumber: null,
     sectionPageNumber: null
+}
+
+const defaultButton : buttonInterface = {
+    back: ButtonLabel.Back,
+    complete: ButtonLabel.Complete,
+    continue: ButtonLabel.Continue,
+    go: ButtonLabel.Go,
+    next: ButtonLabel.Next,
+    started: ButtonLabel.Started
 }
 
 const DEFAULT_MODE = Mode.Kid;
@@ -36,8 +61,9 @@ const INITIAL_STATE = {
     language: null,
     directusAccessToken: "",
     currentPageNumber: 0,
-    currentPage: nullPage,
-    nextPage: nullPage,
+    currentPage: defaultPage,
+    nextPage: defaultPage,
+    buttons: defaultButton,
     totalPage: null,
     colorIndex: DEFAULT_COLOR_INDEX,
     colorTheme: {
@@ -56,9 +82,10 @@ export const SettingContext = createContext({
     prevColor: () => {},
     nextPage: () => {},
     prevPage: () => {},
-    addPage: (obj: any) => {},
+    addPage: (obj: pageInterface) => {},
     initializeNextPage: () => {},
-    initializeCurrentPage: () => {}
+    initializeCurrentPage: () => {},
+    translateButtons: (obj: buttonInterface) => {},
 });
 
 function settingReducer(state: any, action: any) {
@@ -103,9 +130,8 @@ function settingReducer(state: any, action: any) {
             const currentPage = getPage(state.currentPageNumber, state.pages);
             const nextPage = getPage(state.currentPageNumber + 1, state.pages);
             return { ...state, currentPageNumber: currentPageNumber, currentPage: currentPage, nextPage: nextPage };
-        // case 'INITIALIZE_NEXT_PAGE':
-        //     const nextPage = getPage(state.currentPageNumber, state.pages);
-        //     return {...state, nextPage: nextPage};
+        case 'SET_BUTTONS':
+            return { ...state, buttons: action.payload };
         default:
             return state;
     }
@@ -125,6 +151,9 @@ export default function SettingContextProvider({ children }) {
         dispatch({
             type: 'SET_LANGUAGE',
             payload: newLanguage,
+        })
+        dispatch({
+            type: 'SET_BUTTONS'
         })
     } 
 
@@ -159,7 +188,7 @@ export default function SettingContextProvider({ children }) {
         })
     }
 
-    function addPage(obj: any) {
+    function addPage(obj: pageInterface) {
         dispatch({
             type: 'ADD_PAGE',
             payload: obj
@@ -178,7 +207,12 @@ export default function SettingContextProvider({ children }) {
         })
     }
 
-
+    function translateButtons(obj: buttonInterface) {
+        dispatch({
+            type: 'SET_BUTTONS',
+            payload: obj
+        })
+    }
 
     const value: any = {
         settingState,
@@ -191,7 +225,8 @@ export default function SettingContextProvider({ children }) {
         prevPage,
         addPage,
         initializeNextPage,
-        initializeCurrentPage
+        initializeCurrentPage,
+        translateButtons
     };
 
 

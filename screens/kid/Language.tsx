@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import Main from "../../components/Main";
@@ -14,6 +14,9 @@ import { useNavigation, useNavigationState } from "@react-navigation/native";
 import { ResponseContext } from "../../store/responses";
 import ScreenType from "../../constants/screen_type";
 import { getScreenType } from "../../utils/screen";
+import { QuestionContext } from "../../store/questions";
+import { translateButton } from "../../utils/translate";
+import ButtonLabel from "../../constants/button_label";
 
 
 
@@ -24,11 +27,30 @@ const navigation = useNavigation();
     const [isLoading, setIsLoading] = useState(false);
     const [newLanguage, setNewLanguage] = useState(null);
     const LABEL = "What is your preferred language?";
-    // setting
     const settingCtx = useContext(SettingContext);
     const responseCtx = useContext(ResponseContext);
-    const { language, colorTheme, mode } = settingCtx.settingState;
+    const questionCtx = useContext(QuestionContext);
+
+    const { language, colorTheme, mode, buttons } = settingCtx.settingState;
+    const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } = questionCtx.questionState;
+    
+    console.log('completeButton button: ', completeButton);
     const { color100, color200 } = colorTheme;
+
+
+    
+
+    useEffect(() => {
+        settingCtx.translateButtons({
+            back: translateButton(backButton, language) || ButtonLabel.Back,
+            complete: translateButton(completeButton, language) || ButtonLabel.Complete,
+            continue: translateButton(continueButton, language) || ButtonLabel.Continue,
+            go: translateButton(goButton, language) || ButtonLabel.Go,
+            next: translateButton(nextButton, language) || ButtonLabel.Next,
+            started: translateButton(startedButton, language) || ButtonLabel.Started
+        });
+
+    }, [language])
   
     function changeHandler(value: string) {
         if(value) {
@@ -64,7 +86,7 @@ const navigation = useNavigation();
                             customStyle={{ backgroundColor: color100 }}
                             onPress={nextPage}
                         >
-                            Continue
+                            {buttons?.continue}
                         </FullWidthButton>
                     }
                 </Navigation>
