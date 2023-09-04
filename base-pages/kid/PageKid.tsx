@@ -11,34 +11,57 @@ import FullWidthButton from "../../components/buttons/FullWidthButton";
 import { getSectionType } from "../../utils/section";
 import SectionType from "../../constants/section_type";
 import { QuestionContext } from "../../store/questions";
+import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
 
 export default function PageKid() {
     const settingCtx = useContext(SettingContext);
     const questionCtx = useContext(QuestionContext);
-    const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
-    const { introductoryPages } = questionCtx.questionState
+    const { language, colorTheme, currentPage, buttons } =
+        settingCtx.settingState;
+    const { introductoryPages } = questionCtx.questionState;
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
     const [label, setLabel] = useState("Continue");
+    const [buttonComponent, setButtonComponent] = useState(null);
 
     useEffect(() => {
-        let buttonLabel = buttons?.continue;
+        let buttonComponent = <></>;
         const section = getSectionType(currentPage.section);
         const sectionPageNumber = currentPage.sectionPageNumber;
 
+        buttonComponent = renderDoubleButton();
+
         /** Welcome Page should display "Let's get started" button */
-        if(section === SectionType.Intro && sectionPageNumber === 1) {
-            buttonLabel = buttons?.started + "!"
+        if (section === SectionType.Intro && sectionPageNumber === 1) {
+            buttonComponent = renderSingleButton(buttons?.started + "!");
         }
 
         /** Great Job Page should display "Let's get started" button */
-        if(section === SectionType.Intro && sectionPageNumber === introductoryPages.length) {
-            buttonLabel = buttons?.started + "!";
-        }
+        // if (
+        //     section === SectionType.Intro &&
+        //     sectionPageNumber === introductoryPages.length
+        // ) {
+        //     buttonComponent = renderSingleButton(buttons?.started + "!");
+        // }
 
-        setLabel(buttonLabel);
+        setButtonComponent(buttonComponent);
 
-    }, [currentPage.section, currentPage.sectionPageNumber]);
+    }, [currentPage?.section, currentPage?.sectionPageNumber]);
+
+    function renderSingleButton(label: string) {
+        return (
+            <FullWidthButton
+                customStyle={{ backgroundColor: color100 }}
+                onPress={pressHandler}
+            >
+                {label}
+            </FullWidthButton>
+        );
+    }
+
+    function renderDoubleButton() {
+        return <BackAndGoNav />;
+    }
 
     function pressHandler() {
         console.log("press handler: ");
@@ -49,7 +72,14 @@ export default function PageKid() {
         <View style={styles.container}>
             <Main>
                 <CenterMain>
-                    <Heading customStyle={{ color: color100, fontSize: 50, marginBottom: 50, textAlign: "center" }}>
+                    <Heading
+                        customStyle={{
+                            color: color100,
+                            fontSize: 50,
+                            marginBottom: 50,
+                            textAlign: "center",
+                        }}
+                    >
                         {translatedPage.heading.toLowerCase()}
                     </Heading>
                     <Paragraph
@@ -63,12 +93,7 @@ export default function PageKid() {
                     </Paragraph>
                 </CenterMain>
                 <Navigation>
-                    <FullWidthButton
-                        customStyle={{ backgroundColor: color100 }}
-                        onPress={pressHandler}
-                    >
-                        {label}
-                    </FullWidthButton>
+                    {buttonComponent}
                 </Navigation>
             </Main>
         </View>

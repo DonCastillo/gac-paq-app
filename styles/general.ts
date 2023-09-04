@@ -12,11 +12,24 @@ const GeneralStyle = {
             marginBottom: 15,
             marginTop: 15,
             borderColor: "#000",
-        }
+        },
     },
-    adult: {
+    adult: {},
+};
 
-    }
-}
+const DefaultStyle = {
+    button: {
+        paddingHorizontal: 20,
+        paddingVertical: 15,
+        borderRadius: 10,
+        borderWidth: 2,
+        fontSize: 18,
+        textAlign: "center",
+        fontWeight: "bold",
+        color: "#fff",
+        backgroundColor: "#fff",
+        lineHeight: 27
+    },
+};
 
-export { GeneralStyle }
+export { GeneralStyle, DefaultStyle };

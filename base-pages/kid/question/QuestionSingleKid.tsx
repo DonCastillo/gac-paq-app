@@ -121,7 +121,7 @@ export default function QuestionSingleKid() {
             {/* <QuestionProgress></QuestionProgress> */}
             <Main>
                 <TopMain>
-                    <View style={styles.innerContainer}>
+                    <View>
                         <QuestionTitle>{translatedPage.heading}</QuestionTitle>
                         <QuestionLabel
                             fontSize={20}
@@ -150,12 +150,6 @@ const styles = StyleSheet.create({
         // backgroundColor: "green",
         alignItems: "center",
         justifyContent: "center",
-    },
-    innerContainer: {
-        // backgroundColor: "red",
-        // height: "100%",
-        marginHorizontal: 10,
-        marginTop: 25,
     },
     questionContainer: {
         marginTop: 25,

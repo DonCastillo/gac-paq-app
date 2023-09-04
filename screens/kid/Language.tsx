@@ -75,7 +75,7 @@ const navigation = useNavigation();
         <View style={styles.container}>
             <Main>
                 <TopMain>
-                    <View style={styles.innerContainer}>
+                    <View>
                         <QuestionLabel fontSize={25}>{LABEL}</QuestionLabel>
                         <QuestionSelectLanguage onChange={changeHandler}/>
                     </View>
@@ -101,11 +101,5 @@ const styles = StyleSheet.create({
         // backgroundColor: "green",
         alignItems: "center",
         justifyContent: "center",
-    },
-    innerContainer: {
-        // backgroundColor: "red",
-        // height: "100%",
-        marginHorizontal: 20,
-        marginTop: 50,
-    },
+    }
 });

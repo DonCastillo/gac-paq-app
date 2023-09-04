@@ -12,6 +12,7 @@ import QuestionType from "../../../constants/question_type";
 import QuestionSelect from "../../../components/kid/QuestionSelect";
 import { ResponseContext } from "../../../store/responses";
 import QuestionText from "../../../components/kid/QuestionText";
+import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 
 interface ResponseInterface {
     label: string;
@@ -94,7 +95,7 @@ export default function QuestionSingleKid() {
         <View style={styles.container}>
             <Main>
                 <TopMain>
-                    <View style={styles.innerContainer}>
+                    <View>
                         <QuestionLabel fontSize={33}>
                             {translatedPage.heading}
                         </QuestionLabel>
@@ -102,14 +103,7 @@ export default function QuestionSingleKid() {
                     </View>
                 </TopMain>
                 <Navigation>
-                    {proceed &&
-                        <FullWidthButton
-                            customStyle={{ backgroundColor: color100 }}
-                            onPress={proceedHandler}
-                        >
-                            Start
-                        </FullWidthButton>
-                    }
+                    <BackAndNextNav />
                 </Navigation>
             </Main>
         </View>
@@ -121,9 +115,5 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-    },
-    innerContainer: {
-        marginHorizontal: 20,
-        marginTop: 50,
     },
 });

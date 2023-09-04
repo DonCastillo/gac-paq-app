@@ -1,6 +1,7 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { useFonts } from 'expo-font';
 import Colors from "../../styles/kids/Colors";
+import { DefaultStyle } from "../../styles/general";
 
 export default function FullWidthButton({ children, onPress, customStyle = {} }) {
     return (
@@ -16,18 +17,17 @@ export default function FullWidthButton({ children, onPress, customStyle = {} })
 
 const style = StyleSheet.create({
     container: {
-        backgroundColor: "white",
-        paddingHorizontal: 20,
-        paddingVertical: 15,
-        borderRadius: 10,
-        // marginVertical: 15,
-        width: '90%',
+        backgroundColor: DefaultStyle.button.backgroundColor,
+        paddingHorizontal: DefaultStyle.button.paddingHorizontal,
+        paddingVertical: DefaultStyle.button.paddingVertical,
+        borderRadius: DefaultStyle.button.borderRadius,
+        width: '100%',
     },
     buttonText: {
-        color: 'white',
-        textAlign: 'center',
-        fontSize: 18,
-        lineHeight: 27,
-        fontWeight: 'bold',
+        color: DefaultStyle.button.color,
+        textAlign: DefaultStyle.button.textAlign,
+        fontSize: DefaultStyle.button.fontSize,
+        lineHeight: DefaultStyle.button.lineHeight,
+        fontWeight: DefaultStyle.button.fontWeight,
     }
 })

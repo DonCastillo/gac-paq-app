@@ -10,14 +10,14 @@ export default function Navigation({ children, customStyle = {}}) {
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: "red",
+        // backgroundColor: "pink",
         // backgroundColor: "#fff",
         flex: 1,
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        paddingHorizontal: 10,
+        paddingHorizontal: 20,
 
     },
 });
