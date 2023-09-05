@@ -8,10 +8,18 @@ export default function BackAndGoNav() {
     const { colorTheme, buttons } = settingCtx.settingState;
     const { color100, color200 } = colorTheme;
 
+    function prevPage() {
+        settingCtx.prevPage();
+    }
+
+    function nextPage() {
+        settingCtx.nextPage();
+    }
+
     return (
         <View style={styles.bottomNavigation}>
             <ButtonContainerWidth
-                onPress={() => settingCtx.prevPage()}
+                onPress={prevPage()}
                 borderColor={color100}
                 bgColor={"#fff"}
                 textColor={color100}
@@ -20,7 +28,7 @@ export default function BackAndGoNav() {
             </ButtonContainerWidth>
 
             <ButtonContainerWidth
-                onPress={() => settingCtx.nextPage()}
+                onPress={nextPage}
                 borderColor={color100}
                 bgColor={color100}
                 textColor={"#fff"}
