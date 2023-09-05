@@ -1,10 +1,9 @@
-import { useContext, useEffect, useLayoutEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { SettingContext } from "../../../store/settings";
 import { translate } from "../../../utils/page";
 import Main from "../../../components/Main";
 import Navigation from "../../../components/Navigation";
-import FullWidthButton from "../../../components/buttons/FullWidthButton";
 import TopMain from "../../../components/orientation/TopMain";
 import QuestionLabel from "../../../components/kid/QuestionLabel";
 import { getQuestionType } from "../../../utils/questions";
@@ -135,9 +134,7 @@ export default function QuestionSingleKid() {
                     </View>
                 </TopMain>
                 <Navigation>
-                    {/* {proceed && ( */}
-                        <BackAndNextNav />
-                    {/* )} */}
+                    <BackAndNextNav />
                 </Navigation>
             </Main>
         </View>
