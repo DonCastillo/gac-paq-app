@@ -22,6 +22,7 @@ const style = StyleSheet.create({
         paddingVertical: DefaultStyle.button.paddingVertical,
         borderRadius: DefaultStyle.button.borderRadius,
         borderWidth: DefaultStyle.button.borderWidth,
+        minWidth: DefaultStyle.button.minWidth
     },
     buttonText: {
         color: DefaultStyle.button.color,

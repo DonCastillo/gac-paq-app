@@ -19,6 +19,8 @@ import S2Extro from "./questionpages/section-2/S2Extro";
 
 const Section1 = [S1Intro, S1Q1, S1Q2, S1Q3, S1Q4, S1Q5, S1Q6, S1Q7, S1Extro];
 const Section2 = [S2Intro, S2Q1, S2Q2, S2Q3, S2Extro];
+const Section3 = [S2Intro, S2Q1, S2Q2, S2Q3, S2Extro];
+const Section4 = [S2Intro, S2Q1, S2Q2, S2Q3, S2Extro];
 
 const QuestionPages:
     | (
@@ -27,6 +29,6 @@ const QuestionPages:
           | QuestionSliderPayloadInterface
           | ExtroPayloadInterface
       )[]
-    | [] = [...Section1, ...Section2];
+    | [] = [...Section1, ...Section2, ...Section3, ...Section4];
 
 export default QuestionPages;
