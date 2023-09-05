@@ -101,11 +101,11 @@ function settingReducer(state: any, action: any) {
         case 'SET_COLOR_INDEX':
             return { ...state, colorIndex: action.payload };
         case 'NEXT_COLOR':
-            const newColorIndex1 = (state.colorIndex++) % TOTAL_COLORS;
+            const newColorIndex1 = (state.colorIndex + 1) % TOTAL_COLORS;
             const newColorTheme1 = Colors[state.mode][newColorIndex1];
             return { ...state, colorIndex: newColorIndex1, colorTheme: newColorTheme1 };
         case 'PREV_COLOR':
-            const newColorIndex2 = state.colorIndex > 0 ? (state.colorIndex--) % TOTAL_COLORS : 0;
+            const newColorIndex2 = state.colorIndex > 0 ? (state.colorIndex - 1) % TOTAL_COLORS : 0;
             const newColorTheme2 = Colors[state.mode][newColorIndex2];
             return { ...state, colorIndex: newColorIndex2, colorTheme: newColorTheme2 };
         case 'NEXT_PAGE':
@@ -179,13 +179,13 @@ export default function SettingContextProvider({ children }) {
     function nextPage() {
         dispatch({
             type: 'NEXT_PAGE'
-        })
+        });
     }
 
     function prevPage() {
         dispatch({
             type: 'PREV_PAGE'
-        })
+        });
     }
 
     function addPage(obj: pageInterface) {
