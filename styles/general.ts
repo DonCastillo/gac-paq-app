@@ -28,7 +28,8 @@ const DefaultStyle = {
         fontWeight: "bold",
         color: "#fff",
         backgroundColor: "#fff",
-        lineHeight: 27
+        lineHeight: 27,
+        minWidth: 100
     },
 };
 
