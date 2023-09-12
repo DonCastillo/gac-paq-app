@@ -19,7 +19,7 @@ export default function BackAndGoNav() {
     return (
         <View style={styles.bottomNavigation}>
             <ButtonContainerWidth
-                onPress={prevPage()}
+                onPress={prevPage}
                 borderColor={color100}
                 bgColor={"#fff"}
                 textColor={color100}

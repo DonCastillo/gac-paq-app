@@ -15,47 +15,28 @@ function AppWrapper() {
     const settingCtx = useContext(SettingContext);
     const questionCtx = useContext(QuestionContext);
 
-    const language = settingCtx.settingState.language;
-    const mode = settingCtx.settingState.mode;
-    const colorTheme = settingCtx.settingState.colorTheme;
     const introductoryPages = questionCtx.questionState.introductoryPages;
     const questionPages = questionCtx.questionState.questionPages;
 
-    // buttons
-
-    // console.log("app wrapper ======");
-    // console.log('language: ', language),
-    // console.log('mode: ', mode),
-    // console.log('colorTheme: ', colorTheme),
-    // console.log("introductory pages: ", JSON.stringify(introductoryPages));
-    // console.log("introductory pages length: ", introductoryPages.length);
-    // console.log("app wrapper ======");
-
-    // {introductoryPages.map(page =>
-    //     console.log(page.name)
-    // )}
-
-    // sectionNumber:
-    //                 getScreenType(page.type) === ScreenType.IntroQuestion
-    //                     ? ++sectionIndex
-    //                     : sectionIndex,
     useEffect(() => {
-        console.log("load introductory pages...");
-        let index = 1;
+        let pageNumber = 1;
+        let sectionNumber = 0;
+        let sectionPageNumber = 1;
+
+        console.log("load intro pages...");
         introductoryPages.forEach((page, sectionIndex) => {
             settingCtx.addPage({
-                pageNumber: index++,
+                pageNumber: pageNumber++,
                 page: page,
                 screen: page.type,
+                sectionNumber: sectionNumber,
                 section: SectionType.Intro,
                 sectionPageNumber: ++sectionIndex
             })
         });
 
-        console.log("load question pages...");
-        let sectionPageNumber = 1;
-        let sectionNumber = 0;
-
+        
+        console.log("load intro pages...");
         questionPages.forEach((page) => {
             if (getScreenType(page.type) === ScreenType.IntroQuestion) {
                 sectionPageNumber = 1;
@@ -63,7 +44,7 @@ function AppWrapper() {
             }
 
             settingCtx.addPage({
-                pageNumber: index++,
+                pageNumber: pageNumber++,
                 page: page,
                 screen: page.type,
                 section: SectionType.Question,
@@ -72,8 +53,6 @@ function AppWrapper() {
             });
         });
 
-        console.log("loading next page");
-        // settingCtx.initializeCurrentPage();
     }, []);
 
     return (
@@ -84,10 +63,6 @@ function AppWrapper() {
                     name="RegularPageScreen"
                     component={RegularPageScreen}
                 />
-                {/* <Stack.Screen
-                    name="QuestionIntroScreen"
-                    component={QuestionIntroScreen}
-                /> */}
             </Stack.Navigator>
         </NavigationContainer>
     );

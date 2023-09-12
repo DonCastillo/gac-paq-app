@@ -65,7 +65,6 @@ const INITIAL_STATE = {
     nextPage: defaultPage,
     buttons: defaultButton,
     totalPage: null,
-    colorIndex: DEFAULT_COLOR_INDEX,
     colorTheme: {
         color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
         color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200
@@ -78,8 +77,7 @@ export const SettingContext = createContext({
     setMode: (newMode: Mode.Adult | Mode.Kid) => {},
     setLanguage: (newLanguage: string) => {},
     setDirectusAccessToken: (newToken: string) => {},
-    nextColor: () => {},
-    prevColor: () => {},
+    setColorTheme: (colorIndex: number) => {},
     nextPage: () => {},
     prevPage: () => {},
     addPage: (obj: pageInterface) => {},
@@ -97,17 +95,8 @@ function settingReducer(state: any, action: any) {
         case 'SET_DIRECTUS_ACCESS_TOKEN':
             return { ...state, directusAccessToken: action.payload };
         case 'SET_COLOR_THEME':
-            return { ...state, colorTheme: action.payload };
-        case 'SET_COLOR_INDEX':
-            return { ...state, colorIndex: action.payload };
-        case 'NEXT_COLOR':
-            const newColorIndex1 = (state.colorIndex + 1) % TOTAL_COLORS;
-            const newColorTheme1 = Colors[state.mode][newColorIndex1];
-            return { ...state, colorIndex: newColorIndex1, colorTheme: newColorTheme1 };
-        case 'PREV_COLOR':
-            const newColorIndex2 = state.colorIndex > 0 ? (state.colorIndex - 1) % TOTAL_COLORS : 0;
-            const newColorTheme2 = Colors[state.mode][newColorIndex2];
-            return { ...state, colorIndex: newColorIndex2, colorTheme: newColorTheme2 };
+            const newColor = Colors[state.mode][action.payload % TOTAL_COLORS];
+            return { ...state, colorTheme: newColor };
         case 'NEXT_PAGE':
             const currentpageNumber1 = state.currentPageNumber + 1;
             const currentPage1 =  getPage(currentpageNumber1, state.pages);
@@ -164,17 +153,13 @@ export default function SettingContextProvider({ children }) {
         })
     }
 
-    function nextColor() {
+    function setColorTheme(colorIndex: number = 0) {
         dispatch({
-            type: 'NEXT_COLOR'
+            type: 'SET_COLOR_THEME',
+            payload: colorIndex
         })
     }
 
-    function prevColor() {
-        dispatch({
-            type: 'PREV_COLOR'
-        })
-    }
 
     function nextPage() {
         dispatch({
@@ -219,8 +204,7 @@ export default function SettingContextProvider({ children }) {
         setMode,
         setLanguage,
         setDirectusAccessToken,
-        nextColor,
-        prevColor,
+        setColorTheme,
         nextPage,
         prevPage,
         addPage,

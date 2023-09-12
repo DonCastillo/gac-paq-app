@@ -17,6 +17,7 @@ import { getScreenType } from "../../utils/screen";
 import { QuestionContext } from "../../store/questions";
 import { translateButton } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
+import SingleNav from "../../components/kid/navigation/SingleNav";
 
 
 
@@ -31,11 +32,10 @@ const navigation = useNavigation();
     const responseCtx = useContext(ResponseContext);
     const questionCtx = useContext(QuestionContext);
 
-    const { language, colorTheme, mode, buttons } = settingCtx.settingState;
+    const { language, colorTheme, buttons } = settingCtx.settingState;
     const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } = questionCtx.questionState;
     
     console.log('completeButton button: ', completeButton);
-    const { color100, color200 } = colorTheme;
 
 
     
@@ -49,7 +49,6 @@ const navigation = useNavigation();
             next: translateButton(nextButton, language) || ButtonLabel.Next,
             started: translateButton(startedButton, language) || ButtonLabel.Started
         });
-
     }, [language])
   
     function changeHandler(value: string) {
@@ -82,12 +81,7 @@ const navigation = useNavigation();
                 </TopMain>
                 <Navigation>
                     {languageSelected && 
-                        <FullWidthButton
-                            customStyle={{ backgroundColor: color100 }}
-                            onPress={nextPage}
-                        >
-                            {buttons?.continue}
-                        </FullWidthButton>
+                        <SingleNav label={buttons?.continue} onPress={nextPage}/>
                     }
                 </Navigation>
             </Main>
@@ -98,7 +92,6 @@ const navigation = useNavigation();
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: "green",
         alignItems: "center",
         justifyContent: "center",
     }
