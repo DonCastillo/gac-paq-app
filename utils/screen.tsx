@@ -12,6 +12,8 @@ import SplashKid from "../base-pages/kid/SplashKid";
 import Mode from "../constants/mode";
 import ScreenType from "../constants/screen_type";
 import SectionType from "../constants/section_type";
+import LanguageKid from "../base-pages/kid/LanguageKid";
+import LanguageAdult from "../base-pages/adult/LanguageAdult";
 
 function getScreen(mode: Mode | string, screenType: ScreenType | string, sectionType?: SectionType | string) {
     // if (mode === Mode.Adult && screenType === ScreenType.Splash)
@@ -26,8 +28,12 @@ function getScreen(mode: Mode | string, screenType: ScreenType | string, section
     //     return QuestionExtroAdult;
     // if (mode === Mode.Kid && screenType === ScreenType.Splash)
     //     return <SplashKid />;
-    if (mode === Mode.Kid && screenType === ScreenType.Page)
+    if (mode === Mode.Adult && screenType === ScreenType.Language)
+        return <LanguageAdult />;
+    else if (mode === Mode.Kid && screenType === ScreenType.Page)
         return <PageKid />;
+    else if (mode === Mode.Kid && screenType === ScreenType.Language)
+        return <LanguageKid />;
     else if (mode === Mode.Kid && screenType === ScreenType.SingleQuestion && sectionType === SectionType.Intro)
         return <IntroQuestionSingleKid />;
     else if (mode === Mode.Kid && screenType === ScreenType.SingleQuestion && sectionType === SectionType.Question)

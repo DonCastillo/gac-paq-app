@@ -24,7 +24,7 @@ export default function SplashAdult() {
     useEffect(() => {
         const timeout = setTimeout(() => {
             clearInterval(timeout);
-            // navigation.navigate(`RegularPageScreen`);
+            navigation.navigate(`RegularPageScreen`);
         }, 3000)
     })
 

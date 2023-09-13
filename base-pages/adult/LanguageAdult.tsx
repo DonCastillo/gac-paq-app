@@ -7,8 +7,6 @@ import FullWidthButton from "../../components/buttons/FullWidthButton";
 import TopMain from "../../components/orientation/TopMain";
 import QuestionLabel from "../../components/kid/QuestionLabel";
 import QuestionSelectLanguage from "../../components/kid/QuestionSelectLanguage";
-import LoadingScreen from "./LoadingScreen";
-import LoadingScreenKid from "../../base-pages/kid/LoadingScreenKid";
 import ProgressBar from "../../components/ProgressBar";
 import { useNavigation, useNavigationState } from "@react-navigation/native";
 import { ResponseContext } from "../../store/responses";
@@ -18,10 +16,13 @@ import { QuestionContext } from "../../store/questions";
 import { translateButton } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
 import SingleNav from "../../components/kid/navigation/SingleNav";
+import CenterMain from "../../components/orientation/CenterMain";
+import QuestionContainer from "../../components/adults/QuestionContainer";
+import BGLinearGradient from "../../components/BGLinearGradient";
 
 
 
-export default function Language() {
+export default function LanguageAdult() {
 const navigation = useNavigation();
 
     const [languageSelected, setLanguageSelected] = useState(false);
@@ -36,6 +37,7 @@ const navigation = useNavigation();
     const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } = questionCtx.questionState;
     
     console.log('completeButton button: ', completeButton);
+    console.log('Language Adult');
 
 
     
@@ -72,13 +74,14 @@ const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
+            <BGLinearGradient />
             <Main>
-                <TopMain>
-                    <View>
+                <CenterMain>
+                    <QuestionContainer>
                         <QuestionLabel fontSize={25}>{LABEL}</QuestionLabel>
                         <QuestionSelectLanguage onChange={changeHandler}/>
-                    </View>
-                </TopMain>
+                    </QuestionContainer>
+                </CenterMain>
                 <Navigation>
                     {languageSelected && 
                         <SingleNav label={buttons?.continue} onPress={nextPage}/>
@@ -94,5 +97,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        // backgroundColor: "pink"
     }
 });

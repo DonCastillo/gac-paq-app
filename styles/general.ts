@@ -14,7 +14,20 @@ const GeneralStyle = {
             borderColor: "#000",
         },
     },
-    adult: {},
+    adult: {
+        questionContainer: {
+            maxHeight: 450,
+            borderRadius: 20,
+            height: "100%",
+            width: "100%",
+            backgroundColor: "white",
+            padding: 20,
+            shadowColor: "#000",
+            shadowOffset: {width: 0.5, height: 1},
+            shadowOpacity: 0.2,
+            shadowRadius: 2,
+        }
+    },
 };
 
 const DefaultStyle = {
@@ -31,6 +44,7 @@ const DefaultStyle = {
         lineHeight: 27,
         minWidth: 100
     },
+
 };
 
 export { GeneralStyle, DefaultStyle };

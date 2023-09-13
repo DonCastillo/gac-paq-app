@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { SettingContext } from "../store/settings";
-import Language from "./kid/Language";
 import { getScreen, getScreenType } from "../utils/screen";
 import { getSectionType } from "../utils/section";
+import ScreenType from "../constants/screen_type";
 
 export default function RegularPageScreen() {
     const settingCtx = useContext(SettingContext);
@@ -15,7 +15,7 @@ export default function RegularPageScreen() {
         let tempComponent = <></>;
         
         if (settingCtx.settingState.currentPageNumber == 0) {
-            tempComponent = <Language />;
+            tempComponent = getScreen(mode, ScreenType.Language);
         } else {
             if (pageType) {
                 tempComponent = getScreen(mode, pageType, sectionType);
