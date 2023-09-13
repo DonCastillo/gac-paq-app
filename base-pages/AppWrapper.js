@@ -8,15 +8,32 @@ import SplashKid from "./kid/SplashKid";
 import SectionType from "../constants/section_type";
 import { getScreenType } from "../utils/screen";
 import ScreenType from "../constants/screen_type";
+import Mode from "../constants/mode";
+import SplashAdult from "./adult/SplashAdult";
 
 const Stack = createNativeStackNavigator();
 
 function AppWrapper() {
     const settingCtx = useContext(SettingContext);
     const questionCtx = useContext(QuestionContext);
+    const { mode } = settingCtx.settingState;
 
     const introductoryPages = questionCtx.questionState.introductoryPages;
     const questionPages = questionCtx.questionState.questionPages;
+
+
+    function SplashScreen() {
+        if (mode === Mode.Kid) {
+            return <SplashKid />;
+        } else if (mode === Mode.Adult) {
+            return <SplashAdult />;
+        } else {
+            return <></>;
+        }
+    }
+
+
+    
 
     useEffect(() => {
         let pageNumber = 1;
@@ -58,7 +75,7 @@ function AppWrapper() {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="SplashScreen" component={SplashKid} />
+                <Stack.Screen name="SplashScreen" component={SplashScreen} />
                 <Stack.Screen
                     name="RegularPageScreen"
                     component={RegularPageScreen}

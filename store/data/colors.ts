@@ -43,6 +43,8 @@ const adultColor: ColorInterface[] = [
     {
         color100: "#E09F57",
         color200: "#FF7512",
+        color300: "#F15C16",
+        color400: "#D84F0F",
     },
     {
         color100: "#A6E771",

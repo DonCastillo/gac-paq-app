@@ -11,8 +11,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         alignItems: "stretch",
         width: "100%",
-        // backgroundColor: "red"
-        // paddingHorizontal: "8%",
-
+        paddingHorizontal: 20,
+        paddingTop: 50,
     },
 });

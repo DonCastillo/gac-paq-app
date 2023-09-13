@@ -52,7 +52,7 @@ const defaultButton : buttonInterface = {
     started: ButtonLabel.Started
 }
 
-const DEFAULT_MODE = Mode.Kid;
+const DEFAULT_MODE = Mode.Adult;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
@@ -67,7 +67,9 @@ const INITIAL_STATE = {
     totalPage: null,
     colorTheme: {
         color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
-        color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200
+        color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200,
+        color300: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color300,
+        color400: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color400,
     },
     pages: [],
 }

@@ -19,6 +19,9 @@ export default function ProgressBar() {
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 10
+        marginVertical: 10,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",        
     }
 })
