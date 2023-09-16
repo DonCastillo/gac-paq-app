@@ -4,22 +4,18 @@ import DropDownPicker from "react-native-dropdown-picker";
 import LanguageInterface from "../../interface/language";
 import Languages from "../../store/data/languages";
 import { SettingContext } from "../../store/settings";
+import QuestionRadioItemInterface from "../../interface/question_radio_item";
 
 const FONT_SIZE = 16;
 const BORDER_WIDTH = 2;
 
-interface ItemInterface {
-    label: string;
-    value: string;
-    icon: any;
-}
 
 export default function QuestionSelectLanguage({onChange}) {
     const settingCtx = useContext(SettingContext);
     const { color100, color200 } = settingCtx.settingState.colorTheme;
     // console.log('choices: ', options)
     const options: LanguageInterface[] = Languages;
-    const itemsRaw: ItemInterface[] = options.map((option) => {
+    const itemsRaw: QuestionRadioItemInterface[] = options.map((option) => {
         return {
             label: option.name,
             value: option.lang_code,

@@ -2,20 +2,17 @@ import { Text, View, Image, StyleSheet } from "react-native";
 import {useState, useContext} from 'react';
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "../../store/settings";
+import QuestionRadioItemInterface from "../../interface/question_radio_item";
 
 
 const FONT_SIZE = 16;
 const BORDER_WIDTH = 2;
 
-interface ItemInterface {
-    label: string;
-    value: string;
-}
 
 export default function QuestionSelect({ options, onChange }) {
     const settingCtx = useContext(SettingContext);
     const { color100, color200 } = settingCtx.settingState.colorTheme;
-    const rawItems: ItemInterface[] = options.map((option) => {
+    const rawItems: QuestionRadioItemInterface[] = options.map((option) => {
         return {label: option.text, value: option.value}
     });
 

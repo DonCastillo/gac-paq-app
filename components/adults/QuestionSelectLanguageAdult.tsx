@@ -4,19 +4,14 @@ import LanguageInterface from "../../interface/language";
 import Languages from "../../store/data/languages";
 import { SettingContext } from "../../store/settings";
 import RadioOption from "./item/RadioOption";
-
-interface ItemInterface {
-    label: string;
-    value: string;
-    icon: any;
-}
+import QuestionRadioItemInterface from "../../interface/question_radio_item";
+import QuestionRadio from "./QuestionRadio";
 
 export default function QuestionSelectLanguageAdult({ onChange }) {
     const settingCtx = useContext(SettingContext);
     const { color100, color200 } = settingCtx.settingState.colorTheme;
-    const [value, setValue] = useState(null);
     const options: LanguageInterface[] = Languages;
-    const itemsRaw: ItemInterface[] = options.map(
+    const itemsRaw: QuestionRadioItemInterface[] = options.map(
         (option: LanguageInterface) => {
             return {
                 label: option.name,
@@ -33,25 +28,11 @@ export default function QuestionSelectLanguageAdult({ onChange }) {
         }
     );
 
-    function pressHandler(value: string) {
-        setValue(value);
+    function selectHandler(value: string) {
         onChange(value);
     }
 
-    return (
-        <FlatList
-            data={itemsRaw}
-            renderItem={({ item }) => (
-                <RadioOption
-                    {...item}
-                    onPress={pressHandler}
-                    selected={value === item.value}
-                />
-            )}
-            persistentScrollbar={true}
-            showsVerticalScrollIndicator={true}
-        />
-    );
+    return <QuestionRadio options={itemsRaw} onSelect={selectHandler} />;
 }
 
 const styles = StyleSheet.create({
