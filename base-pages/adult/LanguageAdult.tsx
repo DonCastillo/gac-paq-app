@@ -36,10 +36,6 @@ const navigation = useNavigation();
     const { language, colorTheme, buttons } = settingCtx.settingState;
     const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } = questionCtx.questionState;
     
-    console.log('completeButton button: ', completeButton);
-    console.log('Language Adult');
-
-
     
 
     useEffect(() => {
@@ -51,7 +47,7 @@ const navigation = useNavigation();
             next: translateButton(nextButton, language) || ButtonLabel.Next,
             started: translateButton(startedButton, language) || ButtonLabel.Started
         });
-    }, [language])
+    }, [language, languageSelected]);
   
     function changeHandler(value: string) {
         if(value) {

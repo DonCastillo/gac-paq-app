@@ -34,10 +34,6 @@ const navigation = useNavigation();
     const { language, colorTheme, buttons } = settingCtx.settingState;
     const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } = questionCtx.questionState;
     
-    console.log('completeButton button: ', completeButton);
-
-
-    
 
     useEffect(() => {
         settingCtx.translateButtons({

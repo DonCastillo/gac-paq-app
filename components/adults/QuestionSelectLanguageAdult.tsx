@@ -1,11 +1,4 @@
-import {
-    Text,
-    View,
-    Image,
-    StyleSheet,
-    FlatList,
-    ScrollView,
-} from "react-native";
+import { Image, StyleSheet, FlatList } from "react-native";
 import { useContext, useState } from "react";
 import LanguageInterface from "../../interface/language";
 import Languages from "../../store/data/languages";
@@ -41,7 +34,6 @@ export default function QuestionSelectLanguageAdult({ onChange }) {
     );
 
     function pressHandler(value: string) {
-        console.log("value chosen is: ", value);
         setValue(value);
         onChange(value);
     }

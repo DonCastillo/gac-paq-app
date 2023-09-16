@@ -9,8 +9,13 @@ export default function RadioOption({ label, value, icon, onPress, selected = fa
     const [optionValue, setOptionValue] = useState(value);
 
     function pressHandler() {
-        console.log("Press handler");
-        onPress(optionValue)
+        if (selected) {
+            // console.log('already selected');
+            onPress(null);
+        } else {
+            // console.log('selected');
+            onPress(optionValue);
+        }
     }
 
     return (

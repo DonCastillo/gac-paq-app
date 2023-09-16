@@ -19,7 +19,6 @@ export default function PageAdult({ route, navigation}) {
     const translatedPage = translate(page.translations, language);
 
     function pressHandler() {
-        console.log("press handler: ");
         navigation.navigate(`Page-${pageNumber + 1}`);
     }
 
