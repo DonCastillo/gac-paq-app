@@ -4,7 +4,7 @@ import { GeneralStyle } from "../../styles/general";
 export default function QuestionContainer({ children }) {
     return (
         <View style={styles.container}>
-            <ScrollView>{children}</ScrollView>
+            {children}
         </View>
     );
 }

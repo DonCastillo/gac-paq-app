@@ -26,6 +26,16 @@ const GeneralStyle = {
             shadowOffset: {width: 0.5, height: 1},
             shadowOpacity: 0.2,
             shadowRadius: 2,
+        },
+        optionContainer: {
+            paddingVertical: 4,
+            paddingHorizontal: 10,
+            marginBottom: 5,
+            width: "100%",
+            flex: 1,
+        },
+        optionText: {
+            fontSize: 16,            
         }
     },
 };

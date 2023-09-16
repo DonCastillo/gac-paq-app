@@ -6,7 +6,7 @@ import Navigation from "../../components/Navigation";
 import FullWidthButton from "../../components/buttons/FullWidthButton";
 import TopMain from "../../components/orientation/TopMain";
 import QuestionLabel from "../../components/kid/QuestionLabel";
-import QuestionSelectLanguage from "../../components/kid/QuestionSelectLanguage";
+import QuestionSelectLanguageAdult from "../../components/adults/QuestionSelectLanguageAdult";
 import ProgressBar from "../../components/ProgressBar";
 import { useNavigation, useNavigationState } from "@react-navigation/native";
 import { ResponseContext } from "../../store/responses";
@@ -79,7 +79,7 @@ const navigation = useNavigation();
                 <CenterMain>
                     <QuestionContainer>
                         <QuestionLabel fontSize={25}>{LABEL}</QuestionLabel>
-                        <QuestionSelectLanguage onChange={changeHandler}/>
+                        <QuestionSelectLanguageAdult onChange={changeHandler}/>
                     </QuestionContainer>
                 </CenterMain>
                 <Navigation>
@@ -97,6 +97,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        // backgroundColor: "pink"
+        backgroundColor: "pink"
     }
 });
