@@ -3,11 +3,11 @@ import { useFonts } from 'expo-font';
 import Colors from "../../styles/kids/Colors";
 import { DefaultStyle } from "../../styles/general";
 
-export default function FullWidthButton({ children, onPress, customStyle = {} }) {
+export default function FullWidthButton({ children, onPress, textStyle = {}, customStyle = {} }) {
     return (
         <View style={[style.container, customStyle]}>
             <Pressable onPress={onPress}>
-                <Text style={[style.buttonText]}>{children}</Text>
+                <Text style={[style.buttonText, textStyle]}>{children}</Text>
             </Pressable>
         </View>
     );
