@@ -16,12 +16,10 @@ import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
 export default function PageKid() {
     const settingCtx = useContext(SettingContext);
     const questionCtx = useContext(QuestionContext);
-    const { language, colorTheme, currentPage, buttons } =
-        settingCtx.settingState;
+    const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
     const { introductoryPages } = questionCtx.questionState;
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
-    const [label, setLabel] = useState("Continue");
     const [buttonComponent, setButtonComponent] = useState(null);
 
     useEffect(() => {
