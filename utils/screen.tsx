@@ -48,6 +48,8 @@ function getScreen(mode: Mode | string, screenType: ScreenType | string, section
         return <QuestionIntroAdult />;
     else if (mode === Mode.Kid && screenType === ScreenType.IntroQuestion)
         return <QuestionIntroKid />;
+    else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)
+        return <QuestionExtroAdult />;
     else if (mode === Mode.Kid && screenType === ScreenType.ExtroQuestion)
         return <QuestionExtroKid />;
     else return <></>;
