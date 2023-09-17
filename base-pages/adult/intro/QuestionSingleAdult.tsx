@@ -14,6 +14,7 @@ import QuestionContainer from "../../../components/adults/QuestionContainer";
 import SingleNav from "../../../components/adults/navigation/SingleNav";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioItemInterface from "../../../interface/question_radio_item";
+import { normalize } from "../../../utils/options";
 
 interface ResponseInterface {
     label: string;
@@ -38,6 +39,7 @@ export default function QuestionSingleAdult() {
         const theresResponse = Object.keys(responses).length > 0;
         setProceed(theresResponse);
     }, [responses]);
+
 
     /**
      * finalizes response
@@ -75,11 +77,7 @@ export default function QuestionSingleAdult() {
     console.log("choices: ", translatedPage.choices);
 
     if (questionType === QuestionType.QuestionDropdown) {
-        const options: QuestionRadioItemInterface[] =
-            translatedPage.choices.map(({ text, value }) => {
-                return { label: text, value: value };
-            });
-
+        const options: QuestionRadioItemInterface[] = normalize(translatedPage.choices);
         questionComponent = (
             <QuestionRadio
                 options={options}
