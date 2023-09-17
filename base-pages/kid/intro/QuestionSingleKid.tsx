@@ -95,7 +95,7 @@ export default function QuestionSingleKid() {
             <Main>
                 <TopMain>
                     <View style={styles.innerContainer}>
-                        <QuestionLabel fontSize={33}>
+                        <QuestionLabel textStyle={{ fontSize: 33 }}>
                             {translatedPage.heading}
                         </QuestionLabel>
                         {questionComponent}

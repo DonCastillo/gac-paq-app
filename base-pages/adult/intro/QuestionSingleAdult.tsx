@@ -1,10 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../../store/settings";
 import { translate } from "../../../utils/page";
 import Main from "../../../components/Main";
 import Navigation from "../../../components/Navigation";
-import TopMain from "../../../components/orientation/TopMain";
 import QuestionLabel from "../../../components/kid/QuestionLabel";
 import { getQuestionType } from "../../../utils/questions";
 import QuestionType from "../../../constants/question_type";
@@ -13,6 +12,8 @@ import BGLinearGradient from "../../../components/BGLinearGradient";
 import CenterMain from "../../../components/orientation/CenterMain";
 import QuestionContainer from "../../../components/adults/QuestionContainer";
 import SingleNav from "../../../components/adults/navigation/SingleNav";
+import QuestionRadio from "../../../components/adults/QuestionRadio";
+import QuestionRadioItemInterface from "../../../interface/question_radio_item";
 
 interface ResponseInterface {
     label: string;
@@ -26,16 +27,17 @@ export default function QuestionSingleAdult() {
     const settingCtx = useContext(SettingContext);
     const responseCtx = useContext(ResponseContext);
 
-    const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+    const { language, colorTheme, currentPage, buttons } =
+        settingCtx.settingState;
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
     let questionComponent = <></>;
 
     useEffect(() => {
-        const theresResponse = (Object.keys(responses)).length > 0;
+        const theresResponse = Object.keys(responses).length > 0;
         setProceed(theresResponse);
-    }, [responses])
+    }, [responses]);
 
     /**
      * finalizes response
@@ -57,9 +59,9 @@ export default function QuestionSingleAdult() {
      */
     function changeHandler(value: string) {
         setResponses((currResponse) => {
-            return {...currResponse, [currentPage.page?.name]: value}
+            return { ...currResponse, [currentPage.page?.name]: value };
         });
-        
+
         // set mode
         // if(currentPage.page.name === "Who's taking this questionnaire?") {
         //     if (value === "child") {
@@ -68,13 +70,24 @@ export default function QuestionSingleAdult() {
         //         settingCtx.setMode(Mode.Adult);
         //     }
         // }
-
     }
 
-
+    console.log("choices: ", translatedPage.choices);
 
     if (questionType === QuestionType.QuestionDropdown) {
-        questionComponent = <></>;
+        const options: QuestionRadioItemInterface[] =
+            translatedPage.choices.map(({ text, value }) => {
+                return { label: text, value: value };
+            });
+
+        questionComponent = (
+            <QuestionRadio
+                options={options}
+                onSelect={(value: string) =>
+                    console.log("selected item is ", value)
+                }
+            />
+        );
     } else if (questionType === QuestionType.QuestionText) {
         questionComponent = <></>;
     } else {
@@ -87,12 +100,17 @@ export default function QuestionSingleAdult() {
             <Main>
                 <CenterMain>
                     <QuestionContainer>
-                        <QuestionLabel fontSize={25}>{translatedPage.label}</QuestionLabel>
+                        <QuestionLabel textStyle={{fontSize: 25, fontWeight: "bold"}} >
+                            {translatedPage.label}
+                        </QuestionLabel>
                         {questionComponent}
                     </QuestionContainer>
                 </CenterMain>
                 <Navigation>
-                    <SingleNav label={buttons?.continue} onPress={proceedHandler} />
+                    <SingleNav
+                        label={buttons?.continue}
+                        onPress={proceedHandler}
+                    />
                 </Navigation>
             </Main>
         </View>

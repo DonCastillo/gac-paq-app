@@ -123,7 +123,7 @@ export default function QuestionSingleKid() {
                     <View>
                         <QuestionTitle>{translatedPage.heading}</QuestionTitle>
                         <QuestionLabel
-                            fontSize={20}
+                            textStyle={{ fontSize: 20 }}
                             customStyle={{ marginBottom: 10 }}
                         >
                             {translatedPage.label}

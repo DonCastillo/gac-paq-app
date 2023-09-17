@@ -74,7 +74,7 @@ const navigation = useNavigation();
             <Main>
                 <CenterMain>
                     <QuestionContainer>
-                        <QuestionLabel fontSize={25}>{LABEL}</QuestionLabel>
+                        <QuestionLabel textStyle={{ fontSize: 25, fontWeight: "bold" }}>{LABEL}</QuestionLabel>
                         <QuestionSelectLanguageAdult onChange={changeHandler}/>
                     </QuestionContainer>
                 </CenterMain>

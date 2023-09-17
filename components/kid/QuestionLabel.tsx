@@ -2,7 +2,6 @@ import { Text, View, Image, StyleSheet } from "react-native";
 
 export default function QuestionLabel({
     children,
-    fontSize = 24,
     customStyle = {},
     textStyle = {},
 }) {
