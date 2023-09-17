@@ -18,7 +18,7 @@ const GeneralStyle = {
         questionContainer: {
             maxHeight: 450,
             borderRadius: 20,
-            height: "100%",
+            height: "auto",
             width: "100%",
             backgroundColor: "white",
             padding: 20,
