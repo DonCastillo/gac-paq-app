@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { Icon } from "@rneui/themed";
 import { useContext } from "react";
 import { SettingContext } from "../../store/settings";
@@ -18,30 +18,37 @@ export default function Toolbar() {
     }
 
     return (
-        <View style={styles.container}>
-            <Icon
-                name="west"
-                size={ICON_SIZE}
-                color={"#fff"}
-                onPress={backHandler}
-            />
-            <Icon
-                name="volume-up"
-                size={ICON_SIZE}
-                color={"#fff"}
-                onPress={audioHandler}
-            />
-        </View>
+        <SafeAreaView style={styles.safearea}>
+            <View style={styles.container}>
+                <Icon
+                    name="west"
+                    size={ICON_SIZE}
+                    color={"#fff"}
+                    onPress={backHandler}
+                />
+                <Icon
+                    name="volume-up"
+                    size={ICON_SIZE}
+                    color={"#fff"}
+                    onPress={audioHandler}
+                />
+            </View>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: "pink",
         paddingVertical: 10,
         paddingHorizontal: 20,
         justifyContent: "space-between",
         alignItems: "center",
         flexDirection: "row",
     },
+    safearea: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+    }
 });

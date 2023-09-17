@@ -1,9 +1,9 @@
 import { Text, View, Image, StyleSheet, SafeAreaView } from "react-native";
 
-export default function Main({ children }) {
+export default function Main({ children, customStyle = {} }) {
     return (
         <SafeAreaView>
-            <View style={styles.container}>{children}</View>
+            <View style={[styles.container, customStyle]}>{children}</View>
         </SafeAreaView>
     );
 }

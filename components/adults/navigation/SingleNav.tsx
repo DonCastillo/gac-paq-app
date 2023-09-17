@@ -6,7 +6,7 @@ import { DefaultStyle, GeneralStyle } from "../../../styles/general";
 export default function SingleNav({ label, onPress }) {
     const settingCtx = useContext(SettingContext);
     const { colorTheme } = settingCtx.settingState;
-    const { color100, color200 } = colorTheme;
+    const { color100 } = colorTheme;
 
     function nextPage() {
         onPress();
