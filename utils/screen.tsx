@@ -9,6 +9,7 @@ import QuestionIntroKid from "../base-pages/kid/QuestionIntroKid";
 import {default as IntroQuestionSingleKid} from "../base-pages/kid/intro/QuestionSingleKid";
 import {default as IntroQuestionSingleAdult} from "../base-pages/adult/intro/QuestionSingleAdult";
 import {default as QuestionQuestionSingleKid} from "../base-pages/kid/question/QuestionSingleKid";
+import {default as QuestionQuestionSingleAdult} from "../base-pages/adult/question/QuestionSingleAdult";
 import SplashKid from "../base-pages/kid/SplashKid";
 import Mode from "../constants/mode";
 import ScreenType from "../constants/screen_type";
@@ -39,6 +40,8 @@ function getScreen(mode: Mode | string, screenType: ScreenType | string, section
         return <IntroQuestionSingleAdult />;
     else if (mode === Mode.Kid && screenType === ScreenType.SingleQuestion && sectionType === SectionType.Intro)
         return <IntroQuestionSingleKid />;
+    else if (mode === Mode.Adult && screenType === ScreenType.SingleQuestion && sectionType === SectionType.Question)
+        return <QuestionQuestionSingleAdult />;
     else if (mode === Mode.Kid && screenType === ScreenType.SingleQuestion && sectionType === SectionType.Question)
         return <QuestionQuestionSingleKid />;
     else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)

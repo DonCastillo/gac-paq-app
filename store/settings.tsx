@@ -68,8 +68,10 @@ const INITIAL_STATE = {
     colorTheme: {
         color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
         color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200,
-        color300: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color300,
-        color400: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color400,
+        grad100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad100,
+        grad200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad200,
+        grad300: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad300,
+        grad400: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad400,
     },
     pages: [],
 }
