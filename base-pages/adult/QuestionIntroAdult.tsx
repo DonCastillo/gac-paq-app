@@ -23,7 +23,6 @@ export default function QuestionIntroAdult() {
     const translatedPage = translate(currentPage.page.translations, language);
 
     const image = { uri: currentPage.page.image_mobile };
-    console.log("image: ", image);
 
     return (
         <View style={styles.container}>
@@ -62,7 +61,6 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
         position: "relative",
-        // backgroundColor: "pink"
     },
     image: {
         flex: 1,
@@ -71,7 +69,6 @@ const styles = StyleSheet.create({
     toolbar: {
         position: "absolute",
         top: 0,
-        // left:0,
         width: "100%",
     },
     headingPanel: {
@@ -87,14 +84,10 @@ const styles = StyleSheet.create({
         paddingBottom: 50,
     },
     headingSubText: {
-        // backgroundColor: "#f7dcbe",
-        // opacity: "0.3",
         textAlign: "center",
         color: "#fff",
     },
     headingText: {
-        // backgroundColor: "#d4fae7",
-        // opacity: "0.3",
         textAlign: "center",
         paddingTop: 20,
         color: "#fff",
@@ -103,13 +96,9 @@ const styles = StyleSheet.create({
         height: "100%",
     },
     headingPanelTop: {
-        // backgroundColor: 'lightblue',
         flex: 1,
-        // height: "100%",
-        // fontSize: 9,
     },
     headingPanelBottom: {
-        // backgroundColor: 'blue',
         flex: 1,
         alignItems: "center",
         justifyContent: "flex-end",
