@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
@@ -44,6 +44,7 @@ export default function PageAdult() {
                             color: "white",
                             fontSize: 70,
                             marginBottom: 50,
+                            textAlign: "center"
                         }}
                     >
                         {translatedPage.heading.toLowerCase()}

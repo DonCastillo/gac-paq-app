@@ -19,7 +19,7 @@ const IntroductoryPages:
     WelcomePage,
     AboutPage,
     // LocationPage,
-    // AgePage,
+    AgePage,
     DemographicPage,
     AccelerometerPage,
     GreatJobPage,

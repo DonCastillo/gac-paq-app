@@ -16,6 +16,7 @@ import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioItemInterface from "../../../interface/question_radio_item";
 import { normalize } from "../../../utils/options";
 import QuestionText from "../../../components/adults/QuestionText";
+import Toolbar from "../../../components/adults/Toolbar";
 
 interface ResponseInterface {
     label: string;
@@ -101,6 +102,7 @@ export default function QuestionSingleAdult() {
         <View style={styles.container}>
             <BGLinearGradient />
             <Main>
+                <Toolbar />
                 <CenterMain>
                     <QuestionContainer>
                         <QuestionLabel
