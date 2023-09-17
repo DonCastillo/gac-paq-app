@@ -18,16 +18,26 @@ export default function PageAdult() {
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
 
+    console.log("currentPage: ", JSON.stringify(currentPage))
+
     function pressHandler() {
         console.log("press handler: ");
         settingCtx.nextPage();
+    }
+
+    function renderToolbar() {
+        if (currentPage.section === "intro" && currentPage.sectionPageNumber === 1) {
+            return <></>;
+        } else {
+            return <Toolbar />;
+        }
     }
 
     return (
         <View style={[styles.container, { backgroundColor: color100 }]}>
             <BGLinearGradient />
             <Main>
-                <Toolbar />
+                {renderToolbar()}
                 <CenterMain>
                     <Heading
                         customStyle={{
