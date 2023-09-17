@@ -15,6 +15,7 @@ import SingleNav from "../../../components/adults/navigation/SingleNav";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioItemInterface from "../../../interface/question_radio_item";
 import { normalize } from "../../../utils/options";
+import QuestionText from "../../../components/adults/QuestionText";
 
 interface ResponseInterface {
     label: string;
@@ -39,7 +40,6 @@ export default function QuestionSingleAdult() {
         const theresResponse = Object.keys(responses).length > 0;
         setProceed(theresResponse);
     }, [responses]);
-
 
     /**
      * finalizes response
@@ -74,20 +74,25 @@ export default function QuestionSingleAdult() {
         // }
     }
 
-    console.log("choices: ", translatedPage.choices);
+    // console.log("choices: ", translatedPage.choices);
 
     if (questionType === QuestionType.QuestionDropdown) {
-        const options: QuestionRadioItemInterface[] = normalize(translatedPage.choices);
+        const options: QuestionRadioItemInterface[] = normalize(
+            translatedPage.choices
+        );
         questionComponent = (
             <QuestionRadio
                 options={options}
-                onSelect={(value: string) =>
-                    console.log("selected item is ", value)
-                }
+                onSelect={(value: string) => changeHandler(value)}
             />
         );
     } else if (questionType === QuestionType.QuestionText) {
-        questionComponent = <></>;
+        questionComponent = (
+            <QuestionText
+                fields={translatedPage.fields}
+                onChange={changeHandler}
+            />
+        );
     } else {
         questionComponent = <></>;
     }
@@ -98,7 +103,9 @@ export default function QuestionSingleAdult() {
             <Main>
                 <CenterMain>
                     <QuestionContainer>
-                        <QuestionLabel textStyle={{fontSize: 25, fontWeight: "bold"}} >
+                        <QuestionLabel
+                            textStyle={{ fontSize: 25, fontWeight: "bold" }}
+                        >
                             {translatedPage.label}
                         </QuestionLabel>
                         {questionComponent}

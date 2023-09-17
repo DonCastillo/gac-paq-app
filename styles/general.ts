@@ -15,6 +15,19 @@ const GeneralStyle = {
         },
     },
     adult: {
+        field: {
+            fontSize: 18,
+            fontWeight: "400",
+            borderWidth: 2,
+            borderRadius: 4,
+            paddingHorizontal: 15,
+            // paddingVertical: 3,
+            paddingVertical: 10,
+            minHeight: 60,
+            marginBottom: 15,
+            marginTop: 15,
+            borderColor: "#C5C5C5",
+        },
         questionContainer: {
             maxHeight: 450,
             borderRadius: 20,
