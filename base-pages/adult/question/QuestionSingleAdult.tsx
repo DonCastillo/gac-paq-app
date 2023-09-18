@@ -14,8 +14,7 @@ import QuestionText from "../../../components/kid/QuestionText";
 import QuestionBreadcrumb from "../../../components/kid/QuestionBreadcrumb";
 import QuestionProgress from "../../../components/kid/QuestionProgress";
 import QuestionTitle from "../../../components/kid/QuestionTitle";
-import QuestionRadio from "../../../components/kid/QuestionRadio";
-import QuestionSlider from "../../../components/kid/QuestionSlider";
+import QuestionSlider from "../../../components/adults/QuestionSlider";
 import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import BGLinearGradient from "../../../components/BGLinearGradient";
@@ -23,6 +22,9 @@ import Toolbar from "../../../components/adults/Toolbar";
 import CenterMain from "../../../components/orientation/CenterMain";
 import SingleNav from "../../../components/adults/navigation/SingleNav";
 import QuestionContainer from "../../../components/adults/QuestionContainer";
+import QuestionRadioItemInterface from "../../../interface/question_radio_item";
+import { normalize } from "../../../utils/options";
+import QuestionRadio from "../../../components/adults/QuestionRadio";
 
 interface ResponseInterface {
     label: string;
@@ -70,57 +72,68 @@ export default function QuestionSingleAdult() {
     /**
      * temporarily store the initial selection
      */
-    // function changeHandler(value: string | null) {
-    //     console.log("change handler from the question single kid: ", value);
-    //     setResponses((currResponse) => {
-    //         return { ...currResponse, [currentPage.page?.name]: value };
-    //     });
+    function changeHandler(value: string | null) {
+        console.log("change handler from the question single kid: ", value);
+        setResponses((currResponse) => {
+            return { ...currResponse, [currentPage.page?.name]: value };
+        });
 
-    //     // set mode
-    //     // if(currentPage.page.name === "Who's taking this questionnaire?") {
-    //     //     if (value === "child") {
-    //     //         settingCtx.setMode(Mode.Kid);
-    //     //     } else {
-    //     //         settingCtx.setMode(Mode.Adult);
-    //     //     }
-    //     // }
-    // }
+        // set mode
+        // if(currentPage.page.name === "Who's taking this questionnaire?") {
+        //     if (value === "child") {
+        //         settingCtx.setMode(Mode.Kid);
+        //     } else {
+        //         settingCtx.setMode(Mode.Adult);
+        //     }
+        // }
+    }
 
-    // if (questionType === QuestionType.QuestionCheckbox) {
-    //     questionComponent = <></>;
-    // } else if (questionType === QuestionType.QuestionDropdown) {
+    if (questionType === QuestionType.QuestionCheckbox) {
+        questionComponent = <></>;
+    }
+    // else if (questionType === QuestionType.QuestionDropdown) {
     //     questionComponent = (
     //         <QuestionSelect
     //             options={translatedPage.choices}
     //             onChange={changeHandler}
     //         />
     //     );
-    // } else if (questionType === QuestionType.QuestionRadio) {
-    //     questionComponent = (
-    //         <QuestionRadio
-    //             options={translatedPage.choices}
-    //             onChange={changeHandler}
-    //         />
-    //     );
-    // } else if (questionType === QuestionType.QuestionRadioImage) {
+    // }
+    else if (questionType === QuestionType.QuestionRadio) {
+        const options: QuestionRadioItemInterface[] = normalize(
+            translatedPage.choices
+        );
+        console.log("choices here: ", options);
+
+        questionComponent = (
+            <QuestionRadio
+                options={options}
+                onSelect={(value: string) => changeHandler(value)}
+            />
+        );
+    }
+    // else if (questionType === QuestionType.QuestionRadioImage) {
     //     questionComponent = (
     //         <QuestionRadioImage
     //             options={translatedPage.choices}
     //             onChange={changeHandler}
     //         />
     //     );
-    // } else if (questionType === QuestionType.QuestionSlider) {
-    //     questionComponent = <QuestionSlider onChange={changeHandler} />;
-    // } else if (questionType === QuestionType.QuestionText) {
+    // } 
+    else if (questionType === QuestionType.QuestionSlider) {
+        questionComponent = <QuestionSlider onChange={changeHandler} />;
+    } 
+    // else if (questionType === QuestionType.QuestionText) {
     //     questionComponent = (
     //         <QuestionText
     //             fields={translatedPage.fields}
     //             onChange={changeHandler}
     //         />
     //     );
-    // } else {
-    //     questionComponent = <></>;
     // }
+    else {
+        questionComponent = <></>;
+    }
 
     return (
         <View style={styles.container}>

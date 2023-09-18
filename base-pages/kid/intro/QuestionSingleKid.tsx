@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "pink",
+        // backgroundColor: "pink",
     },
     innerContainer: {
         // backgroundColor: "green",

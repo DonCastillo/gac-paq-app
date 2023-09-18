@@ -51,10 +51,10 @@ const adultColor: ColorInterface[] = [
     {
         color100: "#A6E771",
         color200: "#6FC231",
-        grad100: "#A6E771",
-        grad200: "#6FC231",
-        grad300: "#4c9417",
-        grad400: "#37710c",
+        grad100: "#a6e771",
+        grad200: "#bfb751",
+        grad300: "#989154",
+        grad400: "#5e8046",
     },
     {
         color100: "#BE78FF",
