@@ -29,7 +29,7 @@ const GeneralStyle = {
             borderColor: "#C5C5C5",
         },
         questionContainer: {
-            maxHeight: 450,
+            // maxHeight: 450,
             borderRadius: 20,
             height: "auto",
             width: "100%",
@@ -49,6 +49,20 @@ const GeneralStyle = {
         },
         optionText: {
             fontSize: 16,            
+        },
+        optionImageContainer: {
+            backgroundColor: "#fff",
+            height: 150,
+            flex: 1,
+            width: "100%",
+            maxWidth: 130,
+            borderRadius: 5,
+            marginLeft: 10,
+            marginBottom: 10,
+            shadowColor: "#000",
+            shadowOffset: {width: 0.5, height: 1},
+            shadowOpacity: 0.2,
+            shadowRadius: 2,
         }
     },
 };

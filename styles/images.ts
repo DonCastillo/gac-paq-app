@@ -1,17 +1,21 @@
-import RunningSVG from "./../store/assets/images/running.svg";
-import SmallWalkingSVG from "./../store/assets/images/small_walking.svg";
-import SittingSVG from "./../store/assets/images/sitting.svg";
-import BasketSVG from "./../store/assets/images/basket.svg";
-import BasketOutlineSVG from "./../store/assets/images/basket_outline.svg";
-import BasketFullSVG from "./../store/assets/images/basket_full.svg";
-import Basket1SVG from "./../store/assets/images/basket_1.svg";
-import Basket2SVG from "./../store/assets/images/basket_2.svg";
-import Basket4SVG from "./../store/assets/images/basket_4.svg";
-import Basket5SVG from "./../store/assets/images/basket_5.svg";
-import CarrotSVG from "./../store/assets/images/carrot.svg";
-import CarrotBiteSVG from "./../store/assets/images/carrot_bite.svg";
-import EmptyBasket from "./../store/assets/images/empty_basket.svg";
-import RabbitFaceSVG from "./../store/assets/images/logo.svg";
+import RunningSVG from "./../assets/images/kids/running.svg";
+import SmallWalkingSVG from "./../assets/images/kids/small_walking.svg";
+import SittingSVG from "./../assets/images/kids/sitting.svg";
+import BasketSVG from "./../assets/images/kids/basket.svg";
+import BasketOutlineSVG from "./../assets/images/kids/basket_outline.svg";
+import BasketFullSVG from "./../assets/images/kids/basket_full.svg";
+import Basket1SVG from "./../assets/images/kids/basket_1.svg";
+import Basket2SVG from "./../assets/images/kids/basket_2.svg";
+import Basket4SVG from "./../assets/images/kids/basket_4.svg";
+import Basket5SVG from "./../assets/images/kids/basket_5.svg";
+import CarrotSVG from "./../assets/images/kids/carrot.svg";
+import CarrotBiteSVG from "./../assets/images/kids/carrot_bite.svg";
+import EmptyBasket from "./../assets/images/kids/empty_basket.svg";
+import RabbitFaceSVG from "./../assets/images/kids/logo.svg";
+
+const GirlExercising = {uri: require("./../assets/images/adult/girl-exercising.jpg")};
+const GirlForest = {uri: require("./../assets/images/adult/girl-in-the-forest.jpg")};
+const GirlHeadphones = {uri: require("./../assets/images/adult/girl-with-headphones.jpg")};
 
 const Images = {
     kid: {
@@ -28,7 +32,11 @@ const Images = {
         background_image_7: EmptyBasket,
         splash_image: RabbitFaceSVG
     },
-    adult: {},
+    adult: {
+        mostly_not_moving: GirlHeadphones,
+        mostly_easy_effort: GirlForest,
+        mostly_medium: GirlExercising,
+    },
 };
 
 export { Images };

@@ -15,7 +15,6 @@ import QuestionBreadcrumb from "../../../components/kid/QuestionBreadcrumb";
 import QuestionProgress from "../../../components/kid/QuestionProgress";
 import QuestionTitle from "../../../components/kid/QuestionTitle";
 import QuestionSlider from "../../../components/adults/QuestionSlider";
-import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import BGLinearGradient from "../../../components/BGLinearGradient";
 import Toolbar from "../../../components/adults/Toolbar";
@@ -25,6 +24,7 @@ import QuestionContainer from "../../../components/adults/QuestionContainer";
 import QuestionRadioItemInterface from "../../../interface/question_radio_item";
 import { normalize } from "../../../utils/options";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
+import QuestionRadioImage from "../../../components/adults/QuestionRadioImage";
 
 interface ResponseInterface {
     label: string;
@@ -112,14 +112,14 @@ export default function QuestionSingleAdult() {
             />
         );
     }
-    // else if (questionType === QuestionType.QuestionRadioImage) {
-    //     questionComponent = (
-    //         <QuestionRadioImage
-    //             options={translatedPage.choices}
-    //             onChange={changeHandler}
-    //         />
-    //     );
-    // } 
+    else if (questionType === QuestionType.QuestionRadioImage) {
+        questionComponent = (
+            <QuestionRadioImage
+                options={translatedPage.choices}
+                onChange={changeHandler}
+            />
+        );
+    } 
     else if (questionType === QuestionType.QuestionSlider) {
         questionComponent = <QuestionSlider onChange={changeHandler} />;
     } 

@@ -22,7 +22,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_not_moving,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_not_moving
                     },
                 },
                 {
@@ -34,7 +34,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: "15261058-5631-4eed-93e1-5411370faccd",
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_easy_effort,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_easy_effort
                     },
                 },
                 {
@@ -46,7 +46,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: "516d367e-23f2-4afa-a5f3-8fe19b2f7f06",
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_medium,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_medium,
                     },
                 },
             ],
@@ -70,7 +70,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: null,
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_not_moving,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_not_moving
                     },
                 },
                 {
@@ -82,7 +82,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: null,
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_easy_effort,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_easy_effort
                     },
                 },
                 {
@@ -94,7 +94,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: null,
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_medium,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_medium,
                     },
                 },
             ],
@@ -118,7 +118,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: null,
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_not_moving,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_not_moving
                     },
                 },
                 {
@@ -130,7 +130,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: null,
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_easy_effort,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_easy_effort
                     },
                 },
                 {
@@ -142,7 +142,7 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
                         image_kid: null,
                         image_adult: null,
                         image_kid_default: Images.kid.mostly_medium,
-                        image_adult_default: ""
+                        image_adult_default: Images.adult.mostly_medium,
                     },
                 },
             ],
