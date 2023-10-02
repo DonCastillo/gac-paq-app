@@ -71,7 +71,7 @@ const navigation = useNavigation();
                 <TopMain>
                     <View>
                         <QuestionLabel textStyle={{ fontSize: 25}}>{LABEL}</QuestionLabel>
-                        <QuestionSelectLanguage onChange={changeHandler}/>
+                        <QuestionSelectLanguage onChange={changeHandler} selectedValue={language}/>
                     </View>
                 </TopMain>
                 <Navigation>
