@@ -10,6 +10,7 @@ import { getScreenType } from "../utils/screen";
 import ScreenType from "../constants/screen_type";
 import Mode from "../constants/mode";
 import SplashAdult from "./adult/SplashAdult";
+import { loadRegionsOffline } from "../utils/load";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,10 @@ function AppWrapper() {
     
 
     useEffect(() => {
+        // load offline regions 
+        const regions = loadRegionsOffline();
+        questionCtx.setRegionOption(regions);
+
         let pageNumber = 1;
         let sectionNumber = 0;
         let sectionPageNumber = 1;
