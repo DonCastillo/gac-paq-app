@@ -7,8 +7,6 @@ import { SettingContext } from "../../store/settings";
 import QuestionRadioItemInterface from "../../interface/question_radio_item";
 import DropDownSelector from "../DropDownPicker";
 
-const FONT_SIZE = 16;
-const BORDER_WIDTH = 2;
 
 export default function QuestionSelectLanguage({ selectedValue, onChange }) {
     const settingCtx = useContext(SettingContext);

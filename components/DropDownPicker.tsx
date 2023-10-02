@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     dropdownContainer: {
         marginTop: 5,
         borderWidth: BORDER_WIDTH,
-        minHeight: 280,
+        // minHeight: 280,
     },
     headingContainer: {
         marginBottom: 60,
