@@ -22,6 +22,7 @@ export default function QuestionSingleKid() {
     // setting
     const [responses, setResponses] = useState({});
     const [proceed, setProceed] = useState(false);
+    const [questionComponent, setQuestionComponent] = useState(<></>)
     const settingCtx = useContext(SettingContext);
     const responseCtx = useContext(ResponseContext);
 
@@ -29,12 +30,13 @@ export default function QuestionSingleKid() {
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
-    let questionComponent = <></>;
 
     useEffect(() => {
         const theresResponse = (Object.keys(responses)).length > 0;
         setProceed(theresResponse);
     }, [responses])
+
+    
 
     /**
      * finalizes response
@@ -70,25 +72,32 @@ export default function QuestionSingleKid() {
 
     }
 
+    useEffect(() => {
+        let tempQuestionComponent = <></>;
+        if (questionType === QuestionType.QuestionDropdown) {
+            tempQuestionComponent = (
+                <QuestionSelect
+                    key={translatedPage.name}
+                    options={translatedPage.choices}
+                    onChange={changeHandler}
+                />
+            );
+        } else if (questionType === QuestionType.QuestionText) {
+            tempQuestionComponent = (
+                <QuestionText
+                    fields={translatedPage.fields}
+                    onChange={changeHandler}
+                />
+            );  
+        }
+        setQuestionComponent(tempQuestionComponent);
+    }, [translatedPage]);
 
 
-    if (questionType === QuestionType.QuestionDropdown) {
-        questionComponent = (
-            <QuestionSelect
-                options={translatedPage.choices}
-                onChange={changeHandler}
-            />
-        );
-    } else if (questionType === QuestionType.QuestionText) {
-        questionComponent = (
-            <QuestionText
-                fields={translatedPage.fields}
-                onChange={changeHandler}
-            />
-        );
-    } else {
-        questionComponent = <></>;
-    }
+
+
+
+   
 
     return (
         <View style={styles.container}>

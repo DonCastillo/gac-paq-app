@@ -1,5 +1,5 @@
 import { Text, View, Image, StyleSheet } from "react-native";
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useContext, useEffect, useLayoutEffect, useState } from "react";
 
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "../store/settings";
@@ -7,13 +7,16 @@ import { SettingContext } from "../store/settings";
 const FONT_SIZE = 16;
 const BORDER_WIDTH = 2;
 
-export default function DropDownSelector({ options, selectedValue, onSelect }) {
+export default function DropDownSelector({ options, selectedValue, onSelect, rerender = false }) {
     const settingCtx = useContext(SettingContext);
     const { color100, color200 } = settingCtx.settingState.colorTheme;
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(selectedValue);
     const [items, setItems] = useState(options);
 
+    if(items !== options && rerender) {
+        setItems(options);
+    }
 
     return (
         <>

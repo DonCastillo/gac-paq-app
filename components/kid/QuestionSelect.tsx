@@ -9,6 +9,7 @@ export default function QuestionSelect({ options, onChange }) {
 
     return (
         <DropDownSelector
+            rerender={true}
             options={rawItems}
             selectedValue={""}
             onSelect={onChange}

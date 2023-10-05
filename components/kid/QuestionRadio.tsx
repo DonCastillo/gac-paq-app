@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
-import Colors from "../../styles/kids/Colors";
 import { useContext, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
@@ -79,10 +78,6 @@ const styles = StyleSheet.create({
     optionText: {
         fontWeight: GeneralStyle.kid.field.fontWeight,
         fontSize: GeneralStyle.kid.field.fontSize,
-    },
-    optionPressed: {
-        backgroundColor: Colors.Green400,
-        borderColor: Colors.Green400,
     },
     optionUnpressed: {
         backgroundColor: "#fff",

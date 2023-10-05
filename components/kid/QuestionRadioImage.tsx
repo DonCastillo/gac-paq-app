@@ -7,7 +7,6 @@ import {
     SafeAreaView,
     Image,
 } from "react-native";
-import Colors from "../../styles/kids/Colors";
 import { Component, useContext, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
@@ -143,10 +142,6 @@ const styles = StyleSheet.create({
         fontSize: GeneralStyle.kid.field.fontSize - 6,
         textAlign: 'center',
         marginTop: -15
-    },
-    optionPressed: {
-        backgroundColor: Colors.Green400,
-        borderColor: Colors.Green400,
     },
     optionUnpressed: {
         backgroundColor: "#fff",
