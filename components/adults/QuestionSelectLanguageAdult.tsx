@@ -6,27 +6,25 @@ import { SettingContext } from "../../store/settings";
 import RadioOption from "./item/RadioOption";
 import QuestionRadioItemInterface from "../../interface/question_radio_item";
 import QuestionRadio from "./QuestionRadio";
+import { QuestionContext } from "../../store/questions";
 
 export default function QuestionSelectLanguageAdult({ onChange }) {
     const settingCtx = useContext(SettingContext);
-    const { color100, color200 } = settingCtx.settingState.colorTheme;
-    const options: LanguageInterface[] = Languages;
+    const questionCtx = useContext(QuestionContext)
+    const options: LanguageInterface[] = questionCtx.questionState.languageOption;
+
     const itemsRaw: QuestionRadioItemInterface[] = options.map(
         (option: LanguageInterface) => {
+            const FlagComponent = option.flag;
             return {
                 label: option.name,
                 value: option.lang_code,
-                icon: (
-                    <Image
-                        source={{
-                            uri: `https://flagsapi.com/${option.flag_code}/flat/64.png`,
-                        }}
-                        style={styles.optionIcon}
-                    />
-                ),
+                icon: <FlagComponent height={50} width={50} padding={0} margin={0} />,
             };
         }
     );
+
+    console.log("itemsRaw", itemsRaw)
 
     function selectHandler(value: string) {
         onChange(value);
