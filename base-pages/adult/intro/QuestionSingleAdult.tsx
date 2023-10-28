@@ -14,9 +14,10 @@ import QuestionContainer from "../../../components/adults/QuestionContainer";
 import SingleNav from "../../../components/adults/navigation/SingleNav";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioItemInterface from "../../../interface/question_radio_item";
-import { normalize } from "../../../utils/options";
+import { optionRegion, optionText } from "../../../utils/options";
 import QuestionText from "../../../components/adults/QuestionText";
 import Toolbar from "../../../components/adults/Toolbar";
+import { QuestionContext } from "../../../store/questions";
 
 interface ResponseInterface {
     label: string;
@@ -29,10 +30,12 @@ export default function QuestionSingleAdult() {
     const [proceed, setProceed] = useState(false);
     const settingCtx = useContext(SettingContext);
     const responseCtx = useContext(ResponseContext);
+    const questionCtx = useContext(QuestionContext);
 
     const { language, colorTheme, currentPage, buttons } =
         settingCtx.settingState;
     const { color100, color200 } = colorTheme;
+    const regionsOptions = questionCtx.questionState.regionOption;
     const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
     let questionComponent = <></>;
@@ -78,12 +81,16 @@ export default function QuestionSingleAdult() {
     // console.log("choices: ", translatedPage.choices);
 
     if (questionType === QuestionType.QuestionDropdown) {
-        const options: QuestionRadioItemInterface[] = normalize(
-            translatedPage.choices
-        );
         questionComponent = (
             <QuestionRadio
-                options={options}
+                options={optionText(translatedPage.choices)}
+                onSelect={(value: string) => changeHandler(value)}
+            />
+        );
+    } else if (questionType === QuestionType.QuestionRegion) {
+        questionComponent = (
+            <QuestionRadio
+                options={optionRegion(regionsOptions)}
                 onSelect={(value: string) => changeHandler(value)}
             />
         );

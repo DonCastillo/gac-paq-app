@@ -22,7 +22,7 @@ import CenterMain from "../../../components/orientation/CenterMain";
 import SingleNav from "../../../components/adults/navigation/SingleNav";
 import QuestionContainer from "../../../components/adults/QuestionContainer";
 import QuestionRadioItemInterface from "../../../interface/question_radio_item";
-import { normalize } from "../../../utils/options";
+import { optionText } from "../../../utils/options";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioImage from "../../../components/adults/QuestionRadioImage";
 
@@ -100,14 +100,9 @@ export default function QuestionSingleAdult() {
     //     );
     // }
     else if (questionType === QuestionType.QuestionRadio) {
-        const options: QuestionRadioItemInterface[] = normalize(
-            translatedPage.choices
-        );
-        console.log("choices here: ", options);
-
         questionComponent = (
             <QuestionRadio
-                options={options}
+                options={optionText(translatedPage.choices)}
                 onSelect={(value: string) => changeHandler(value)}
             />
         );
