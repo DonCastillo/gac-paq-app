@@ -1,6 +1,6 @@
-import PagePayloadInterface from "../../interface/directus/page-payload";
-import QuestionDropdownPayloadInterface from "../../interface/directus/question-dropdown-payload";
-import QuestionTextPayloadInterface from "../../interface/directus/question-text-payload";
+import type PagePayloadInterface from "../../interface/directus/page-payload";
+import type QuestionDropdownPayloadInterface from "../../interface/directus/question-dropdown-payload";
+import type QuestionTextPayloadInterface from "../../interface/directus/question-text-payload";
 import AboutPage from "./introductory-pages/about";
 import AccelerometerPage from "./introductory-pages/accelerometer";
 import AgePage from "./introductory-pages/age";
@@ -10,19 +10,15 @@ import LocationPage from "./introductory-pages/location";
 import WelcomePage from "./introductory-pages/welcome";
 
 const IntroductoryPages:
-    | (
-          | PagePayloadInterface
-          | QuestionDropdownPayloadInterface
-          | QuestionTextPayloadInterface
-      )[]
-    | [] = [
-    WelcomePage,
-    AboutPage,
-    LocationPage,
-    AgePage,
-    DemographicPage,
-    AccelerometerPage,
-    GreatJobPage,
+	| Array<PagePayloadInterface | QuestionDropdownPayloadInterface | QuestionTextPayloadInterface>
+	| [] = [
+	WelcomePage,
+	AboutPage,
+	LocationPage,
+	AgePage,
+	DemographicPage,
+	AccelerometerPage,
+	GreatJobPage,
 ];
 
 export default IntroductoryPages;

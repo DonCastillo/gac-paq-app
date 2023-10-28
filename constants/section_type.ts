@@ -1,6 +1,6 @@
 enum SectionType {
-    Intro = 'intro',
-    Question = 'question'
+	Intro = "intro",
+	Question = "question",
 }
 
 export default SectionType;

@@ -5,33 +5,33 @@ import { getSectionType } from "../utils/section";
 import ScreenType from "../constants/screen_type";
 
 export default function RegularPageScreen() {
-    const settingCtx = useContext(SettingContext);
-    const { currentPage, currentPageNumber, mode } = settingCtx.settingState;
-    const pageType = currentPage.screen ? getScreenType(currentPage.screen) : null;
-    const sectionType = currentPage.section ? getSectionType(currentPage.section) : null;
-    const [component, setComponent] = useState(<></>);
+	const settingCtx = useContext(SettingContext);
+	const { currentPage, currentPageNumber, mode } = settingCtx.settingState;
+	const pageType = currentPage.screen ? getScreenType(currentPage.screen) : null;
+	const sectionType = currentPage.section ? getSectionType(currentPage.section) : null;
+	const [component, setComponent] = useState(<></>);
 
-    function changeComponent() {
-        let tempComponent = <></>;
-        
-        if (settingCtx.settingState.currentPageNumber == 0) {
-            tempComponent = getScreen(mode, ScreenType.Language);
-        } else {
-            if (pageType) {
-                tempComponent = getScreen(mode, pageType, sectionType);
-            }
-        }
-        setComponent(tempComponent);
-    }
+	function changeComponent() {
+		let tempComponent = <></>;
 
-    function changeColor() {
-        settingCtx.setColorTheme(currentPage.sectionNumber);
-    }
+		if (settingCtx.settingState.currentPageNumber == 0) {
+			tempComponent = getScreen(mode, ScreenType.Language);
+		} else {
+			if (pageType) {
+				tempComponent = getScreen(mode, pageType, sectionType);
+			}
+		}
+		setComponent(tempComponent);
+	}
 
-    useEffect(() => {
-        changeComponent();
-        changeColor();
-    }, [currentPageNumber, currentPage]);
+	function changeColor() {
+		settingCtx.setColorTheme(currentPage.sectionNumber);
+	}
 
-    return <>{component}</>;
+	useEffect(() => {
+		changeComponent();
+		changeColor();
+	}, [currentPageNumber, currentPage]);
+
+	return <>{component}</>;
 }

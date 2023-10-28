@@ -1,11 +1,5 @@
 import { useContext } from "react";
-import {
-    Text,
-    View,
-    StyleSheet,
-    ScrollView,
-    ImageBackground,
-} from "react-native";
+import { Text, View, StyleSheet, ScrollView, ImageBackground } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
@@ -20,68 +14,74 @@ import Toolbar from "../../components/adults/Toolbar";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
 export default function QuestionExtroAdult() {
-    console.log("question extro kid ...");
-    const settingCtx = useContext(SettingContext);
-    const { language, colorTheme, currentPage, buttons } =
-        settingCtx.settingState;
-    const translatedPage = translate(currentPage.page.translations, language);
-    const ImageComponent = Images.kid.extro_question_page;
+	console.log("question extro kid ...");
+	const settingCtx = useContext(SettingContext);
+	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+	const translatedPage = translate(currentPage.page.translations, language);
+	const ImageComponent = Images.kid.extro_question_page;
 
-    const bgImageURL =
-        "http://localhost:8055/assets/607b231c-f6d0-439d-8b0a-a8e873457ed9?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5";
+	const bgImageURL =
+		"http://localhost:8055/assets/607b231c-f6d0-439d-8b0a-a8e873457ed9?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5";
 
-    return (
-        <View style={styles.container}>
-            <BGLinearGradient />
-            <ImageBackground
-                source={{ uri: bgImageURL }}
-                resizeMode="cover"
-                style={styles.bgImage}
-            ></ImageBackground>
-            <Main>
-                <Toolbar />
-                <CenterMain>
-                    <Heading
-                        customStyle={{
-                            color: "white",
-                            fontSize: 40,
-                            fontWeight: "bold",
-                            textAlign: "center",
-                        }}
-                    >
-                        {translatedPage.heading}
-                    </Heading>
-                    <Paragraph customStyle={{ color: "#fff", fontSize: 20 }}>
-                        {translatedPage.subheading}
-                    </Paragraph>
-                </CenterMain>
-                <Navigation>
-                    <SingleNav
-                        label={buttons?.continue}
-                        onPress={() => settingCtx.nextPage()}
-                    />
-                </Navigation>
-            </Main>
-        </View>
-    );
+	return (
+		<View style={styles.container}>
+			<BGLinearGradient />
+			<ImageBackground
+				source={{ uri: bgImageURL }}
+				resizeMode="cover"
+				style={styles.bgImage}
+			></ImageBackground>
+			<Main>
+				<Toolbar />
+				<CenterMain>
+					<Heading
+						customStyle={{
+							color: "white",
+							fontSize: 40,
+							fontWeight: "bold",
+							textAlign: "center",
+						}}
+					>
+						{translatedPage.heading}
+					</Heading>
+					<Paragraph
+						customStyle={{
+							color: "#fff",
+							fontSize: 20,
+						}}
+					>
+						{translatedPage.subheading}
+					</Paragraph>
+				</CenterMain>
+				<Navigation>
+					<SingleNav
+						label={buttons?.continue}
+						onPress={() => {
+							settingCtx.nextPage();
+						}}
+					/>
+				</Navigation>
+			</Main>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-        height: "100%",
-        position: "relative",
-    },
-    bgImage: {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        height: "100%",
-        width: "100%",
-        opacity: 0.3
-    },
+	container: {
+		flex: 1,
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
+		width: "100%",
+		height: "100%",
+		position: "relative",
+	},
+	bgImage: {
+		position: "absolute",
+		top: 0,
+		left: 0,
+		height: "100%",
+		width: "100%",
+		opacity: 0.3,
+	},
 });

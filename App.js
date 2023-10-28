@@ -11,13 +11,13 @@ import SettingContextProvider from "./store/settings";
 import ResponseContextProvider, { ResponseContext } from "./store/responses";
 
 export default function App() {
-    return (
-        <ResponseContextProvider>
-            <QuestionContextProvider>
-                <SettingContextProvider>
-                    <AppWrapper />
-                </SettingContextProvider>
-            </QuestionContextProvider>
-        </ResponseContextProvider>
-    );
+	return (
+		<ResponseContextProvider>
+			<QuestionContextProvider>
+				<SettingContextProvider>
+					<AppWrapper />
+				</SettingContextProvider>
+			</QuestionContextProvider>
+		</ResponseContextProvider>
+	);
 }

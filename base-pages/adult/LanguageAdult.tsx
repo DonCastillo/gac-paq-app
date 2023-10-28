@@ -20,79 +20,85 @@ import CenterMain from "../../components/orientation/CenterMain";
 import QuestionContainer from "../../components/adults/QuestionContainer";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
-
-
 export default function LanguageAdult() {
-const navigation = useNavigation();
+	const navigation = useNavigation();
 
-    const [languageSelected, setLanguageSelected] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [newLanguage, setNewLanguage] = useState(null);
-    const LABEL = "What is your preferred language?";
-    const settingCtx = useContext(SettingContext);
-    const responseCtx = useContext(ResponseContext);
-    const questionCtx = useContext(QuestionContext);
+	const [languageSelected, setLanguageSelected] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+	const [newLanguage, setNewLanguage] = useState(null);
+	const LABEL = "What is your preferred language?";
+	const settingCtx = useContext(SettingContext);
+	const responseCtx = useContext(ResponseContext);
+	const questionCtx = useContext(QuestionContext);
 
-    const { language, colorTheme, buttons } = settingCtx.settingState;
-    const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } = questionCtx.questionState;
-    
-    
+	const { language, colorTheme, buttons } = settingCtx.settingState;
+	const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } =
+		questionCtx.questionState;
 
-    useEffect(() => {
-        settingCtx.translateButtons({
-            back: translateButton(backButton, language) || ButtonLabel.Back,
-            complete: translateButton(completeButton, language) || ButtonLabel.Complete,
-            continue: translateButton(continueButton, language) || ButtonLabel.Continue,
-            go: translateButton(goButton, language) || ButtonLabel.Go,
-            next: translateButton(nextButton, language) || ButtonLabel.Next,
-            started: translateButton(startedButton, language) || ButtonLabel.Started
-        });
-    }, [language, languageSelected]);
-  
-    function changeHandler(value: string) {
-        if(value) {
-            settingCtx.setLanguage(value);
-            responseCtx.addResponse({
-                pageNumber: 0,
-                label: LABEL,
-                answer: value
-            })
-            setLanguageSelected(true);
-        } else {
-            setLanguageSelected(false);
-        }
+	useEffect(() => {
+		settingCtx.translateButtons({
+			back: translateButton(backButton, language) || ButtonLabel.Back,
+			complete: translateButton(completeButton, language) || ButtonLabel.Complete,
+			continue: translateButton(continueButton, language) || ButtonLabel.Continue,
+			go: translateButton(goButton, language) || ButtonLabel.Go,
+			next: translateButton(nextButton, language) || ButtonLabel.Next,
+			started: translateButton(startedButton, language) || ButtonLabel.Started,
+		});
+	}, [language, languageSelected]);
 
-    }
+	function changeHandler(value: string) {
+		if (value) {
+			settingCtx.setLanguage(value);
+			responseCtx.addResponse({
+				pageNumber: 0,
+				label: LABEL,
+				answer: value,
+			});
+			setLanguageSelected(true);
+		} else {
+			setLanguageSelected(false);
+		}
+	}
 
-    function nextPage() {
-        settingCtx.nextPage();
-    }
+	function nextPage() {
+		settingCtx.nextPage();
+	}
 
-    return (
-        <View style={styles.container}>
-            <BGLinearGradient />
-            <Main>
-                <CenterMain>
-                    <QuestionContainer>
-                        <QuestionLabel textStyle={{ fontSize: 25, fontWeight: "bold" }}>{LABEL}</QuestionLabel>
-                        <QuestionSelectLanguageAdult onChange={changeHandler}/>
-                    </QuestionContainer>
-                </CenterMain>
-                <Navigation>
-                    {languageSelected && 
-                        <SingleNav label={buttons?.continue} onPress={nextPage}/>
-                    }
-                </Navigation>
-            </Main>
-        </View>
-    );
+	return (
+		<View style={styles.container}>
+			<BGLinearGradient />
+			<Main>
+				<CenterMain>
+					<QuestionContainer>
+						<QuestionLabel
+							textStyle={{
+								fontSize: 25,
+								fontWeight: "bold",
+							}}
+						>
+							{LABEL}
+						</QuestionLabel>
+						<QuestionSelectLanguageAdult onChange={changeHandler} />
+					</QuestionContainer>
+				</CenterMain>
+				<Navigation>
+					{languageSelected && (
+						<SingleNav
+							label={buttons?.continue}
+							onPress={nextPage}
+						/>
+					)}
+				</Navigation>
+			</Main>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        // backgroundColor: "pink"
-    }
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		// backgroundColor: "pink"
+	},
 });

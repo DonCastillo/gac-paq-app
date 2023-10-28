@@ -1,20 +1,20 @@
-import {Text, View, StyleSheet} from 'react-native';
-import { useFonts } from 'expo-font';
+import { Text, View, StyleSheet } from "react-native";
+import { useFonts } from "expo-font";
 
-
-export default function Heading({children, customStyle = {}}) {
-
-    return <View>
-        <Text style={[styles.text, customStyle]}>{children}</Text>
-    </View>
+export default function Heading({ children, customStyle = {} }) {
+	return (
+		<View>
+			<Text style={[styles.text, customStyle]}>{children}</Text>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    text: {
-        // backgroundColor: 'green',
-        fontWeight: 'bold',
-        color:'white',
-        flexWrap: "wrap",
-        fontSize: 100,
-    }
+	text: {
+		// backgroundColor: 'green',
+		fontWeight: "bold",
+		color: "white",
+		flexWrap: "wrap",
+		fontSize: 100,
+	},
 });

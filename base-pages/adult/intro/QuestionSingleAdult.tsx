@@ -20,122 +20,131 @@ import Toolbar from "../../../components/adults/Toolbar";
 import { QuestionContext } from "../../../store/questions";
 
 interface ResponseInterface {
-    label: string;
-    answer: string;
+	label: string;
+	answer: string;
 }
 
 export default function QuestionSingleAdult() {
-    // setting
-    const [responses, setResponses] = useState({});
-    const [proceed, setProceed] = useState(false);
-    const settingCtx = useContext(SettingContext);
-    const responseCtx = useContext(ResponseContext);
-    const questionCtx = useContext(QuestionContext);
+	// setting
+	const [responses, setResponses] = useState({});
+	const [proceed, setProceed] = useState(false);
+	const settingCtx = useContext(SettingContext);
+	const responseCtx = useContext(ResponseContext);
+	const questionCtx = useContext(QuestionContext);
 
-    const { language, colorTheme, currentPage, buttons } =
-        settingCtx.settingState;
-    const { color100, color200 } = colorTheme;
-    const regionsOptions = questionCtx.questionState.regionOption;
-    const translatedPage = translate(currentPage.page.translations, language);
-    const questionType = getQuestionType(translatedPage);
-    let questionComponent = <></>;
+	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+	const { color100, color200 } = colorTheme;
+	const regionsOptions = questionCtx.questionState.regionOption;
+	const translatedPage = translate(currentPage.page.translations, language);
+	const questionType = getQuestionType(translatedPage);
+	let questionComponent = <></>;
 
-    useEffect(() => {
-        const theresResponse = Object.keys(responses).length > 0;
-        setProceed(theresResponse);
-    }, [responses]);
+	useEffect(() => {
+		const theresResponse = Object.keys(responses).length > 0;
+		setProceed(theresResponse);
+	}, [responses]);
 
-    /**
-     * finalizes response
-     */
-    function proceedHandler() {
-        for (const [key, value] of Object.entries(responses)) {
-            responseCtx.addResponse({
-                pageNumber: currentPage.pageNumber,
-                label: key,
-                answer: value,
-            });
-        }
-        setResponses({});
-        settingCtx.nextPage();
-    }
+	/**
+	 * finalizes response
+	 */
+	function proceedHandler() {
+		for (const [key, value] of Object.entries(responses)) {
+			responseCtx.addResponse({
+				pageNumber: currentPage.pageNumber,
+				label: key,
+				answer: value,
+			});
+		}
+		setResponses({});
+		settingCtx.nextPage();
+	}
 
-    /**
-     * temporarily store the initial selection
-     */
-    function changeHandler(value: string) {
-        setResponses((currResponse) => {
-            return { ...currResponse, [currentPage.page?.name]: value };
-        });
+	/**
+	 * temporarily store the initial selection
+	 */
+	function changeHandler(value: string) {
+		setResponses((currResponse) => {
+			return {
+				...currResponse,
+				[currentPage.page?.name]: value,
+			};
+		});
 
-        // set mode
-        // if(currentPage.page.name === "Who's taking this questionnaire?") {
-        //     if (value === "child") {
-        //         settingCtx.setMode(Mode.Kid);
-        //     } else {
-        //         settingCtx.setMode(Mode.Adult);
-        //     }
-        // }
-    }
+		// set mode
+		// if(currentPage.page.name === "Who's taking this questionnaire?") {
+		//     if (value === "child") {
+		//         settingCtx.setMode(Mode.Kid);
+		//     } else {
+		//         settingCtx.setMode(Mode.Adult);
+		//     }
+		// }
+	}
 
-    // console.log("choices: ", translatedPage.choices);
+	// console.log("choices: ", translatedPage.choices);
 
-    if (questionType === QuestionType.QuestionDropdown) {
-        questionComponent = (
-            <QuestionRadio
-                options={optionText(translatedPage.choices)}
-                onSelect={(value: string) => changeHandler(value)}
-            />
-        );
-    } else if (questionType === QuestionType.QuestionRegion) {
-        questionComponent = (
-            <QuestionRadio
-                options={optionRegion(regionsOptions)}
-                onSelect={(value: string) => changeHandler(value)}
-            />
-        );
-    } else if (questionType === QuestionType.QuestionText) {
-        questionComponent = (
-            <QuestionText
-                fields={translatedPage.fields}
-                onChange={changeHandler}
-            />
-        );
-    } else {
-        questionComponent = <></>;
-    }
+	if (questionType === QuestionType.QuestionDropdown) {
+		questionComponent = (
+			<QuestionRadio
+				options={optionText(translatedPage.choices)}
+				onSelect={(value: string) => {
+					changeHandler(value);
+				}}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionRegion) {
+		questionComponent = (
+			<QuestionRadio
+				options={optionRegion(regionsOptions)}
+				onSelect={(value: string) => {
+					changeHandler(value);
+				}}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionText) {
+		questionComponent = (
+			<QuestionText
+				fields={translatedPage.fields}
+				onChange={changeHandler}
+			/>
+		);
+	} else {
+		questionComponent = <></>;
+	}
 
-    return (
-        <View style={styles.container}>
-            <BGLinearGradient />
-            <Main>
-                <Toolbar />
-                <CenterMain>
-                    <QuestionContainer>
-                        <QuestionLabel
-                            textStyle={{ fontSize: 25, fontWeight: "bold" }}
-                        >
-                            {translatedPage.label}
-                        </QuestionLabel>
-                        {questionComponent}
-                    </QuestionContainer>
-                </CenterMain>
-                <Navigation>
-                    <SingleNav
-                        label={buttons?.continue}
-                        onPress={proceedHandler}
-                    />
-                </Navigation>
-            </Main>
-        </View>
-    );
+	return (
+		<View style={styles.container}>
+			<BGLinearGradient />
+			<Main>
+				<Toolbar />
+				<CenterMain>
+					<QuestionContainer>
+						<QuestionLabel
+							textStyle={{
+								fontSize: 25,
+								fontWeight: "bold",
+							}}
+						>
+							{translatedPage.label}
+						</QuestionLabel>
+						{questionComponent}
+					</QuestionContainer>
+				</CenterMain>
+				<Navigation>
+					<SingleNav
+						label={buttons?.continue}
+						onPress={proceedHandler}
+					/>
+				</Navigation>
+			</Main>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        // backgroundColor: "pink",
-    },
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		// backgroundColor: "pink",
+	},
 });

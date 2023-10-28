@@ -1,410 +1,410 @@
 [
-    {
-        "title": "Welcome Page",
-        "type": "page",
-        "translations": [
-            {
-                "id": 1,
-                "pages_id": 1,
-                "heading": "Welcome!",
-                "button_text": "Let's get started",
-                "description": "Physical activity is essential for healthy child development, yet 80% of youth are not active enough and we lack information about activity levels of young children.",
-                "languages_id": {
-                    "name": "English",
-                    "lang_code": "en-US"
-                }
-            },
-            {
-                "id": 2,
-                "pages_id": 1,
-                "heading": "¡Bienvenido!",
-                "button_text": "¡Empecemos!",
-                "description": "La actividad física es esencial para el desarrollo saludable de los niños, sin embargo, el 80% de los jóvenes no son lo suficientemente activos y carecemos de información sobre los niveles de actividad de los niños pequeños.",
-                "languages_id": {
-                    "name": "Spanish",
-                    "lang_code": "es-ES"
-                }
-            },
-            {
-                "id": 3,
-                "pages_id": 1,
-                "heading": "Bienvenue !",
-                "button_text": "Commençons!",
-                "description": "L'activité physique est essentielle pour le développement sain de l'enfant, pourtant 80 % des jeunes ne sont pas assez actifs et nous manquons d'informations sur les niveaux d'activité des jeunes enfants.",
-                "languages_id": {
-                    "name": "French",
-                    "lang_code": "fr-FR"
-                }
-            }
-        ]
-    },
-    {
-        "title": "About Page",
-        "type": "page",
-        "translations": [
-            {
-                "id": 4,
-                "pages_id": 2,
-                "heading": "gacpaq",
-                "button_text": "Continue",
-                "description": "Our goal is to address the lack of information on activity levels, particularly among young children, and the limitations of current questionnaires that neglect certain types of physical activity. By collecting data on active play, we can compare activity levels within and between countries to identify effective strategies for promoting physical activity. Our study involves expert and public reviews, translations, pilot studies, and a large-scale data collection across diverse urban and rural areas. By comparing our questionnaire data with movement sensors, we aim to create a more accurate global measurement of physical activity, contributing to healthier lifestyles worldwide.",
-                "languages_id": {
-                    "name": "English",
-                    "lang_code": "en-US"
-                }
-            },
-            {
-                "id": 5,
-                "pages_id": 2,
-                "heading": "gacpaq",
-                "button_text": "Seguir",
-                "description": "Nuestro objetivo es abordar la falta de información sobre los niveles de actividad, especialmente entre los niños pequeños, y las limitaciones de los cuestionarios actuales que descuidan ciertos tipos de actividad física. Al recopilar datos sobre el juego activo, podemos comparar los niveles de actividad dentro y entre países para identificar estrategias efectivas para promover la actividad física. Nuestro estudio involucra revisiones de expertos y del público, traducciones, estudios piloto y una amplia recopilación de datos en diversas áreas urbanas y rurales. Al comparar nuestros datos del cuestionario con sensores de movimiento, aspiramos a crear una medición global más precisa de la actividad física, contribuyendo a estilos de vida más saludables en todo el mundo.",
-                "languages_id": {
-                    "name": "Spanish",
-                    "lang_code": "es-ES"
-                }
-            },
-            {
-                "id": 6,
-                "pages_id": 2,
-                "heading": "gacpaq",
-                "button_text": "Continuer",
-                "description": "Notre objectif est de remédier au manque d'informations sur les niveaux d'activité, notamment chez les jeunes enfants, ainsi que les limites des questionnaires actuels qui négligent certains types d'activité physique. En collectant des données sur le jeu actif, nous pouvons comparer les niveaux d'activité au sein des différents pays pour identifier des stratégies efficaces de promotion de l'activité physique. Notre étude comprend des évaluations d'experts et du public, des traductions, des études pilotes et une collecte de données à grande échelle dans diverses zones urbaines et rurales. En comparant nos données de questionnaire avec des capteurs de mouvement, nous visons à créer une mesure mondiale plus précise de l'activité physique, contribuant ainsi à des modes de vie plus sains à l'échelle mondiale.",
-                "languages_id": {
-                    "name": "French",
-                    "lang_code": "fr-FR"
-                }
-            }
-        ]
-    },
-    {
-        "name": "Where are you?",
-        "type": "question_single",
-        "translations": [
-            {
-                "id": 1,
-                "question_dropdown_id": 1,
-                "heading": "Where are you?",
-                "label": "Where are you?",
-                "choices": [
-                    {
-                        "text": "US",
-                        "value": "US"
-                    },
-                    {
-                        "text": "CA",
-                        "value": "CA"
-                    },
-                    {
-                        "text": "MX",
-                        "value": "MX"
-                    },
-                    {
-                        "text": "JP",
-                        "value": "JP"
-                    }
-                ],
-                "languages_id": {
-                    "name": "English",
-                    "lang_code": "en-US"
-                }
-            },
-            {
-                "id": 2,
-                "question_dropdown_id": 1,
-                "heading": "¿Dónde estás?",
-                "label": "¿Dónde estás?",
-                "choices": [
-                    {
-                        "text": "US",
-                        "value": "US"
-                    },
-                    {
-                        "text": "CA",
-                        "value": "CA"
-                    },
-                    {
-                        "text": "MX",
-                        "value": "MX"
-                    },
-                    {
-                        "text": "JP",
-                        "value": "JP"
-                    }
-                ],
-                "languages_id": {
-                    "name": "Spanish",
-                    "lang_code": "es-ES"
-                }
-            },
-            {
-                "id": 3,
-                "question_dropdown_id": 1,
-                "heading": "Où es-tu?",
-                "label": "Où es-tu?",
-                "choices": [
-                    {
-                        "text": "US",
-                        "value": "US"
-                    },
-                    {
-                        "text": "CA",
-                        "value": "CA"
-                    },
-                    {
-                        "text": "MX",
-                        "value": "MX"
-                    },
-                    {
-                        "text": "JP",
-                        "value": "JP"
-                    }
-                ],
-                "languages_id": {
-                    "name": "French",
-                    "lang_code": "fr-FR"
-                }
-            }
-        ]
-    },
-    {
-        "name": "How old are you?",
-        "type": "question_single",
-        "translations": [
-            {
-                "id": 7,
-                "question_dropdown_id": 3,
-                "heading": "How old are you?",
-                "label": "How old are you?",
-                "choices": [
-                    {
-                        "text": "Under 10 years old",
-                        "value": "Under 10 years old"
-                    },
-                    {
-                        "text": "10 - 14 years old",
-                        "value": "10 - 14 years old"
-                    },
-                    {
-                        "text": "15 - 17 years old",
-                        "value": "15 - 17 years old"
-                    }
-                ],
-                "languages_id": {
-                    "name": "English",
-                    "lang_code": "en-US"
-                }
-            },
-            {
-                "id": 8,
-                "question_dropdown_id": 3,
-                "heading": "¿Cuántos años tienes?",
-                "label": "¿Cuántos años tienes?",
-                "choices": [
-                    {
-                        "text": "Menor de 10 años",
-                        "value": "Under 10 years old"
-                    },
-                    {
-                        "text": "10 - 14 años",
-                        "value": "10 - 14 years old"
-                    },
-                    {
-                        "text": "15 - 17 años",
-                        "value": "15 - 17 years old"
-                    }
-                ],
-                "languages_id": {
-                    "name": "Spanish",
-                    "lang_code": "es-ES"
-                }
-            },
-            {
-                "id": 9,
-                "question_dropdown_id": 3,
-                "heading": "Quel âge avez-vous ?",
-                "label": "Quel âge avez-vous ?",
-                "choices": [
-                    {
-                        "text": "Moins de 10 ans",
-                        "value": "Under 10 years old"
-                    },
-                    {
-                        "text": "10 à 14 ans",
-                        "value": "10 - 14 years old"
-                    },
-                    {
-                        "text": "15 à 17 ans",
-                        "value": "15 - 17 years old"
-                    }
-                ],
-                "languages_id": {
-                    "name": "French",
-                    "lang_code": "fr-FR"
-                }
-            }
-        ]
-    },
-    {
-        "name": "Who's taking this questionnaire?",
-        "type": "question_single",
-        "translations": [
-            {
-                "id": 4,
-                "question_dropdown_id": 2,
-                "heading": "Who's taking this questionnaire?",
-                "label": "Who's taking this questionnaire?",
-                "choices": [
-                    {
-                        "text": "Child / Teen",
-                        "value": "child"
-                    },
-                    {
-                        "text": "Parent",
-                        "value": "adult"
-                    }
-                ],
-                "languages_id": {
-                    "name": "English",
-                    "lang_code": "en-US"
-                }
-            },
-            {
-                "id": 5,
-                "question_dropdown_id": 2,
-                "heading": "¿Quién está contestando este cuestionario?",
-                "label": "¿Quién está contestando este cuestionario?",
-                "choices": [
-                    {
-                        "text": "Niño / Adolescente",
-                        "value": "child"
-                    },
-                    {
-                        "text": "Padre / Madre",
-                        "value": "adult"
-                    }
-                ],
-                "languages_id": {
-                    "name": "Spanish",
-                    "lang_code": "es-ES"
-                }
-            },
-            {
-                "id": 6,
-                "question_dropdown_id": 2,
-                "heading": "Qui remplit ce questionnaire ?",
-                "label": "Qui remplit ce questionnaire ?",
-                "choices": [
-                    {
-                        "text": "Enfant / Adolescent",
-                        "value": "child"
-                    },
-                    {
-                        "text": "Parent",
-                        "value": "adult"
-                    }
-                ],
-                "languages_id": {
-                    "name": "French",
-                    "lang_code": "fr-FR"
-                }
-            }
-        ]
-    },
-    {
-        "name": "What is your Accelerometer Serial Number?",
-        "type": "question_single",
-        "translations": [
-            {
-                "id": 5,
-                "question_text_id": 5,
-                "heading": "What is your Accelerometer Serial Number?",
-                "label": "What is your Accelerometer Serial Number?",
-                "fields": [
-                    {
-                        "type": "text",
-                        "label": "Serial number"
-                    }
-                ],
-                "sort": null,
-                "languages_id": {
-                    "name": "English",
-                    "lang_code": "en-US"
-                }
-            },
-            {
-                "id": 6,
-                "question_text_id": 5,
-                "heading": "¿Cuál es el número de serie de tu acelerómetro?",
-                "label": "¿Cuál es el número de serie de tu acelerómetro?",
-                "fields": [
-                    {
-                        "type": "text",
-                        "label": "Número de serie"
-                    }
-                ],
-                "sort": null,
-                "languages_id": {
-                    "name": "Spanish",
-                    "lang_code": "es-ES"
-                }
-            },
-            {
-                "id": 7,
-                "question_text_id": 5,
-                "heading": "Quel est le numéro de série de votre accéléromètre ?",
-                "label": "Quel est le numéro de série de votre accéléromètre ?",
-                "fields": [
-                    {
-                        "type": "text",
-                        "label": "Numéro de série"
-                    }
-                ],
-                "sort": null,
-                "languages_id": {
-                    "name": "French",
-                    "lang_code": "fr-FR"
-                }
-            }
-        ]
-    },
-    {
-        "title": "Great Job",
-        "type": "page",
-        "translations": [
-            {
-                "id": 7,
-                "pages_id": 3,
-                "heading": "Great Job",
-                "button_text": "Let's get started",
-                "description": null,
-                "languages_id": {
-                    "name": "English",
-                    "lang_code": "en-US"
-                }
-            },
-            {
-                "id": 8,
-                "pages_id": 3,
-                "heading": " ¡Excelente trabajo!",
-                "button_text": "¡Comencemos!",
-                "description": null,
-                "languages_id": {
-                    "name": "Spanish",
-                    "lang_code": "es-ES"
-                }
-            },
-            {
-                "id": 9,
-                "pages_id": 3,
-                "heading": "Excellent travail",
-                "button_text": "Commençons!",
-                "description": null,
-                "languages_id": {
-                    "name": "French",
-                    "lang_code": "fr-FR"
-                }
-            }
-        ]
-    }
+	{
+		"title": "Welcome Page",
+		"type": "page",
+		"translations": [
+			{
+				"id": 1,
+				"pages_id": 1,
+				"heading": "Welcome!",
+				"button_text": "Let's get started",
+				"description": "Physical activity is essential for healthy child development, yet 80% of youth are not active enough and we lack information about activity levels of young children.",
+				"languages_id": {
+					"name": "English",
+					"lang_code": "en-US"
+				}
+			},
+			{
+				"id": 2,
+				"pages_id": 1,
+				"heading": "¡Bienvenido!",
+				"button_text": "¡Empecemos!",
+				"description": "La actividad física es esencial para el desarrollo saludable de los niños, sin embargo, el 80% de los jóvenes no son lo suficientemente activos y carecemos de información sobre los niveles de actividad de los niños pequeños.",
+				"languages_id": {
+					"name": "Spanish",
+					"lang_code": "es-ES"
+				}
+			},
+			{
+				"id": 3,
+				"pages_id": 1,
+				"heading": "Bienvenue !",
+				"button_text": "Commençons!",
+				"description": "L'activité physique est essentielle pour le développement sain de l'enfant, pourtant 80 % des jeunes ne sont pas assez actifs et nous manquons d'informations sur les niveaux d'activité des jeunes enfants.",
+				"languages_id": {
+					"name": "French",
+					"lang_code": "fr-FR"
+				}
+			}
+		]
+	},
+	{
+		"title": "About Page",
+		"type": "page",
+		"translations": [
+			{
+				"id": 4,
+				"pages_id": 2,
+				"heading": "gacpaq",
+				"button_text": "Continue",
+				"description": "Our goal is to address the lack of information on activity levels, particularly among young children, and the limitations of current questionnaires that neglect certain types of physical activity. By collecting data on active play, we can compare activity levels within and between countries to identify effective strategies for promoting physical activity. Our study involves expert and public reviews, translations, pilot studies, and a large-scale data collection across diverse urban and rural areas. By comparing our questionnaire data with movement sensors, we aim to create a more accurate global measurement of physical activity, contributing to healthier lifestyles worldwide.",
+				"languages_id": {
+					"name": "English",
+					"lang_code": "en-US"
+				}
+			},
+			{
+				"id": 5,
+				"pages_id": 2,
+				"heading": "gacpaq",
+				"button_text": "Seguir",
+				"description": "Nuestro objetivo es abordar la falta de información sobre los niveles de actividad, especialmente entre los niños pequeños, y las limitaciones de los cuestionarios actuales que descuidan ciertos tipos de actividad física. Al recopilar datos sobre el juego activo, podemos comparar los niveles de actividad dentro y entre países para identificar estrategias efectivas para promover la actividad física. Nuestro estudio involucra revisiones de expertos y del público, traducciones, estudios piloto y una amplia recopilación de datos en diversas áreas urbanas y rurales. Al comparar nuestros datos del cuestionario con sensores de movimiento, aspiramos a crear una medición global más precisa de la actividad física, contribuyendo a estilos de vida más saludables en todo el mundo.",
+				"languages_id": {
+					"name": "Spanish",
+					"lang_code": "es-ES"
+				}
+			},
+			{
+				"id": 6,
+				"pages_id": 2,
+				"heading": "gacpaq",
+				"button_text": "Continuer",
+				"description": "Notre objectif est de remédier au manque d'informations sur les niveaux d'activité, notamment chez les jeunes enfants, ainsi que les limites des questionnaires actuels qui négligent certains types d'activité physique. En collectant des données sur le jeu actif, nous pouvons comparer les niveaux d'activité au sein des différents pays pour identifier des stratégies efficaces de promotion de l'activité physique. Notre étude comprend des évaluations d'experts et du public, des traductions, des études pilotes et une collecte de données à grande échelle dans diverses zones urbaines et rurales. En comparant nos données de questionnaire avec des capteurs de mouvement, nous visons à créer une mesure mondiale plus précise de l'activité physique, contribuant ainsi à des modes de vie plus sains à l'échelle mondiale.",
+				"languages_id": {
+					"name": "French",
+					"lang_code": "fr-FR"
+				}
+			}
+		]
+	},
+	{
+		"name": "Where are you?",
+		"type": "question_single",
+		"translations": [
+			{
+				"id": 1,
+				"question_dropdown_id": 1,
+				"heading": "Where are you?",
+				"label": "Where are you?",
+				"choices": [
+					{
+						"text": "US",
+						"value": "US"
+					},
+					{
+						"text": "CA",
+						"value": "CA"
+					},
+					{
+						"text": "MX",
+						"value": "MX"
+					},
+					{
+						"text": "JP",
+						"value": "JP"
+					}
+				],
+				"languages_id": {
+					"name": "English",
+					"lang_code": "en-US"
+				}
+			},
+			{
+				"id": 2,
+				"question_dropdown_id": 1,
+				"heading": "¿Dónde estás?",
+				"label": "¿Dónde estás?",
+				"choices": [
+					{
+						"text": "US",
+						"value": "US"
+					},
+					{
+						"text": "CA",
+						"value": "CA"
+					},
+					{
+						"text": "MX",
+						"value": "MX"
+					},
+					{
+						"text": "JP",
+						"value": "JP"
+					}
+				],
+				"languages_id": {
+					"name": "Spanish",
+					"lang_code": "es-ES"
+				}
+			},
+			{
+				"id": 3,
+				"question_dropdown_id": 1,
+				"heading": "Où es-tu?",
+				"label": "Où es-tu?",
+				"choices": [
+					{
+						"text": "US",
+						"value": "US"
+					},
+					{
+						"text": "CA",
+						"value": "CA"
+					},
+					{
+						"text": "MX",
+						"value": "MX"
+					},
+					{
+						"text": "JP",
+						"value": "JP"
+					}
+				],
+				"languages_id": {
+					"name": "French",
+					"lang_code": "fr-FR"
+				}
+			}
+		]
+	},
+	{
+		"name": "How old are you?",
+		"type": "question_single",
+		"translations": [
+			{
+				"id": 7,
+				"question_dropdown_id": 3,
+				"heading": "How old are you?",
+				"label": "How old are you?",
+				"choices": [
+					{
+						"text": "Under 10 years old",
+						"value": "Under 10 years old"
+					},
+					{
+						"text": "10 - 14 years old",
+						"value": "10 - 14 years old"
+					},
+					{
+						"text": "15 - 17 years old",
+						"value": "15 - 17 years old"
+					}
+				],
+				"languages_id": {
+					"name": "English",
+					"lang_code": "en-US"
+				}
+			},
+			{
+				"id": 8,
+				"question_dropdown_id": 3,
+				"heading": "¿Cuántos años tienes?",
+				"label": "¿Cuántos años tienes?",
+				"choices": [
+					{
+						"text": "Menor de 10 años",
+						"value": "Under 10 years old"
+					},
+					{
+						"text": "10 - 14 años",
+						"value": "10 - 14 years old"
+					},
+					{
+						"text": "15 - 17 años",
+						"value": "15 - 17 years old"
+					}
+				],
+				"languages_id": {
+					"name": "Spanish",
+					"lang_code": "es-ES"
+				}
+			},
+			{
+				"id": 9,
+				"question_dropdown_id": 3,
+				"heading": "Quel âge avez-vous ?",
+				"label": "Quel âge avez-vous ?",
+				"choices": [
+					{
+						"text": "Moins de 10 ans",
+						"value": "Under 10 years old"
+					},
+					{
+						"text": "10 à 14 ans",
+						"value": "10 - 14 years old"
+					},
+					{
+						"text": "15 à 17 ans",
+						"value": "15 - 17 years old"
+					}
+				],
+				"languages_id": {
+					"name": "French",
+					"lang_code": "fr-FR"
+				}
+			}
+		]
+	},
+	{
+		"name": "Who's taking this questionnaire?",
+		"type": "question_single",
+		"translations": [
+			{
+				"id": 4,
+				"question_dropdown_id": 2,
+				"heading": "Who's taking this questionnaire?",
+				"label": "Who's taking this questionnaire?",
+				"choices": [
+					{
+						"text": "Child / Teen",
+						"value": "child"
+					},
+					{
+						"text": "Parent",
+						"value": "adult"
+					}
+				],
+				"languages_id": {
+					"name": "English",
+					"lang_code": "en-US"
+				}
+			},
+			{
+				"id": 5,
+				"question_dropdown_id": 2,
+				"heading": "¿Quién está contestando este cuestionario?",
+				"label": "¿Quién está contestando este cuestionario?",
+				"choices": [
+					{
+						"text": "Niño / Adolescente",
+						"value": "child"
+					},
+					{
+						"text": "Padre / Madre",
+						"value": "adult"
+					}
+				],
+				"languages_id": {
+					"name": "Spanish",
+					"lang_code": "es-ES"
+				}
+			},
+			{
+				"id": 6,
+				"question_dropdown_id": 2,
+				"heading": "Qui remplit ce questionnaire ?",
+				"label": "Qui remplit ce questionnaire ?",
+				"choices": [
+					{
+						"text": "Enfant / Adolescent",
+						"value": "child"
+					},
+					{
+						"text": "Parent",
+						"value": "adult"
+					}
+				],
+				"languages_id": {
+					"name": "French",
+					"lang_code": "fr-FR"
+				}
+			}
+		]
+	},
+	{
+		"name": "What is your Accelerometer Serial Number?",
+		"type": "question_single",
+		"translations": [
+			{
+				"id": 5,
+				"question_text_id": 5,
+				"heading": "What is your Accelerometer Serial Number?",
+				"label": "What is your Accelerometer Serial Number?",
+				"fields": [
+					{
+						"type": "text",
+						"label": "Serial number"
+					}
+				],
+				"sort": null,
+				"languages_id": {
+					"name": "English",
+					"lang_code": "en-US"
+				}
+			},
+			{
+				"id": 6,
+				"question_text_id": 5,
+				"heading": "¿Cuál es el número de serie de tu acelerómetro?",
+				"label": "¿Cuál es el número de serie de tu acelerómetro?",
+				"fields": [
+					{
+						"type": "text",
+						"label": "Número de serie"
+					}
+				],
+				"sort": null,
+				"languages_id": {
+					"name": "Spanish",
+					"lang_code": "es-ES"
+				}
+			},
+			{
+				"id": 7,
+				"question_text_id": 5,
+				"heading": "Quel est le numéro de série de votre accéléromètre ?",
+				"label": "Quel est le numéro de série de votre accéléromètre ?",
+				"fields": [
+					{
+						"type": "text",
+						"label": "Numéro de série"
+					}
+				],
+				"sort": null,
+				"languages_id": {
+					"name": "French",
+					"lang_code": "fr-FR"
+				}
+			}
+		]
+	},
+	{
+		"title": "Great Job",
+		"type": "page",
+		"translations": [
+			{
+				"id": 7,
+				"pages_id": 3,
+				"heading": "Great Job",
+				"button_text": "Let's get started",
+				"description": null,
+				"languages_id": {
+					"name": "English",
+					"lang_code": "en-US"
+				}
+			},
+			{
+				"id": 8,
+				"pages_id": 3,
+				"heading": " ¡Excelente trabajo!",
+				"button_text": "¡Comencemos!",
+				"description": null,
+				"languages_id": {
+					"name": "Spanish",
+					"lang_code": "es-ES"
+				}
+			},
+			{
+				"id": 9,
+				"pages_id": 3,
+				"heading": "Excellent travail",
+				"button_text": "Commençons!",
+				"description": null,
+				"languages_id": {
+					"name": "French",
+					"lang_code": "fr-FR"
+				}
+			}
+		]
+	}
 ]

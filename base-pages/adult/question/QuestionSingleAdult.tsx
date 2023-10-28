@@ -27,139 +27,144 @@ import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioImage from "../../../components/adults/QuestionRadioImage";
 
 interface ResponseInterface {
-    label: string;
-    answer: string;
+	label: string;
+	answer: string;
 }
 
 export default function QuestionSingleAdult() {
-    // setting
-    const [responses, setResponses] = useState({});
-    const [proceed, setProceed] = useState(false);
-    const settingCtx = useContext(SettingContext);
-    const responseCtx = useContext(ResponseContext);
+	// setting
+	const [responses, setResponses] = useState({});
+	const [proceed, setProceed] = useState(false);
+	const settingCtx = useContext(SettingContext);
+	const responseCtx = useContext(ResponseContext);
 
-    const { language, colorTheme, currentPage, buttons } =
-        settingCtx.settingState;
-    const { color100, color200 } = colorTheme;
-    const translatedPage = translate(currentPage.page.translations, language);
-    const questionType = getQuestionType(translatedPage);
-    // console.log("questiontype: ", questionType);
-    // console.log("translatedPage: ", translatedPage);
-    let questionComponent = <></>;
-    console.log("Here is the question adult");
+	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+	const { color100, color200 } = colorTheme;
+	const translatedPage = translate(currentPage.page.translations, language);
+	const questionType = getQuestionType(translatedPage);
+	// console.log("questiontype: ", questionType);
+	// console.log("translatedPage: ", translatedPage);
+	let questionComponent = <></>;
+	console.log("Here is the question adult");
 
-    useEffect(() => {
-        // console.log('use effect here... heres the responses: ', responses)
-        // const theresResponse = Object.keys(responses).length > 0;
-        // setProceed(theresResponse);
-    }, [responses]);
+	useEffect(() => {
+		// console.log('use effect here... heres the responses: ', responses)
+		// const theresResponse = Object.keys(responses).length > 0;
+		// setProceed(theresResponse);
+	}, [responses]);
 
-    /**
-     * finalizes response
-     */
-    function proceedHandler() {
-        for (const [key, value] of Object.entries(responses)) {
-            responseCtx.addResponse({
-                pageNumber: currentPage.pageNumber,
-                label: key,
-                answer: value,
-            });
-        }
-        setResponses({});
-        settingCtx.nextPage();
-    }
+	/**
+	 * finalizes response
+	 */
+	function proceedHandler() {
+		for (const [key, value] of Object.entries(responses)) {
+			responseCtx.addResponse({
+				pageNumber: currentPage.pageNumber,
+				label: key,
+				answer: value,
+			});
+		}
+		setResponses({});
+		settingCtx.nextPage();
+	}
 
-    /**
-     * temporarily store the initial selection
-     */
-    function changeHandler(value: string | null) {
-        console.log("change handler from the question single kid: ", value);
-        setResponses((currResponse) => {
-            return { ...currResponse, [currentPage.page?.name]: value };
-        });
+	/**
+	 * temporarily store the initial selection
+	 */
+	function changeHandler(value: string | null) {
+		console.log("change handler from the question single kid: ", value);
+		setResponses((currResponse) => {
+			return {
+				...currResponse,
+				[currentPage.page?.name]: value,
+			};
+		});
 
-        // set mode
-        // if(currentPage.page.name === "Who's taking this questionnaire?") {
-        //     if (value === "child") {
-        //         settingCtx.setMode(Mode.Kid);
-        //     } else {
-        //         settingCtx.setMode(Mode.Adult);
-        //     }
-        // }
-    }
+		// set mode
+		// if(currentPage.page.name === "Who's taking this questionnaire?") {
+		//     if (value === "child") {
+		//         settingCtx.setMode(Mode.Kid);
+		//     } else {
+		//         settingCtx.setMode(Mode.Adult);
+		//     }
+		// }
+	}
 
-    if (questionType === QuestionType.QuestionCheckbox) {
-        questionComponent = <></>;
-    }
-    // else if (questionType === QuestionType.QuestionDropdown) {
-    //     questionComponent = (
-    //         <QuestionSelect
-    //             options={translatedPage.choices}
-    //             onChange={changeHandler}
-    //         />
-    //     );
-    // }
-    else if (questionType === QuestionType.QuestionRadio) {
-        questionComponent = (
-            <QuestionRadio
-                options={optionText(translatedPage.choices)}
-                onSelect={(value: string) => changeHandler(value)}
-            />
-        );
-    }
-    else if (questionType === QuestionType.QuestionRadioImage) {
-        questionComponent = (
-            <QuestionRadioImage
-                options={translatedPage.choices}
-                onChange={changeHandler}
-            />
-        );
-    } 
-    else if (questionType === QuestionType.QuestionSlider) {
-        questionComponent = <QuestionSlider onChange={changeHandler} />;
-    } 
-    // else if (questionType === QuestionType.QuestionText) {
-    //     questionComponent = (
-    //         <QuestionText
-    //             fields={translatedPage.fields}
-    //             onChange={changeHandler}
-    //         />
-    //     );
-    // }
-    else {
-        questionComponent = <></>;
-    }
+	if (questionType === QuestionType.QuestionCheckbox) {
+		questionComponent = <></>;
+	}
+	// else if (questionType === QuestionType.QuestionDropdown) {
+	//     questionComponent = (
+	//         <QuestionSelect
+	//             options={translatedPage.choices}
+	//             onChange={changeHandler}
+	//         />
+	//     );
+	// }
+	else if (questionType === QuestionType.QuestionRadio) {
+		questionComponent = (
+			<QuestionRadio
+				options={optionText(translatedPage.choices)}
+				onSelect={(value: string) => {
+					changeHandler(value);
+				}}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionRadioImage) {
+		questionComponent = (
+			<QuestionRadioImage
+				options={translatedPage.choices}
+				onChange={changeHandler}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionSlider) {
+		questionComponent = <QuestionSlider onChange={changeHandler} />;
+	}
+	// else if (questionType === QuestionType.QuestionText) {
+	//     questionComponent = (
+	//         <QuestionText
+	//             fields={translatedPage.fields}
+	//             onChange={changeHandler}
+	//         />
+	//     );
+	// }
+	else {
+		questionComponent = <></>;
+	}
 
-    return (
-        <View style={styles.container}>
-            <BGLinearGradient />
-            <Main>
-                <Toolbar />
-                <CenterMain>
-                    <QuestionContainer>
-                        <QuestionLabel
-                            textStyle={{ fontSize: 25, fontWeight: "bold" }}
-                        >
-                            {translatedPage.label}
-                        </QuestionLabel>
-                        {questionComponent}
-                    </QuestionContainer>
-                </CenterMain>
-                <Navigation>
-                    <SingleNav
-                        label={buttons?.continue}
-                        onPress={proceedHandler}
-                    />
-                </Navigation>
-            </Main>
-        </View>
-    );
+	return (
+		<View style={styles.container}>
+			<BGLinearGradient />
+			<Main>
+				<Toolbar />
+				<CenterMain>
+					<QuestionContainer>
+						<QuestionLabel
+							textStyle={{
+								fontSize: 25,
+								fontWeight: "bold",
+							}}
+						>
+							{translatedPage.label}
+						</QuestionLabel>
+						{questionComponent}
+					</QuestionContainer>
+				</CenterMain>
+				<Navigation>
+					<SingleNav
+						label={buttons?.continue}
+						onPress={proceedHandler}
+					/>
+				</Navigation>
+			</Main>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-    },
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+	},
 });

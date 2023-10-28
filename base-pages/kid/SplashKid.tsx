@@ -10,56 +10,62 @@ import { useNavigation } from "@react-navigation/native";
 import { Images } from "../../styles/images";
 
 export default function SplashKid() {
-    const settingCtx = useContext(SettingContext);
-    const { color100, color200 } = settingCtx.settingState.colorTheme;
-    const currentPage = settingCtx.settingState.currentPage;
-    // const pageNumber = route.params.pageNumber;
-    const navigation = useNavigation();
-    const SplashImage = Images.kid.splash_image;
+	const settingCtx = useContext(SettingContext);
+	const { color100, color200 } = settingCtx.settingState.colorTheme;
+	const currentPage = settingCtx.settingState.currentPage;
+	// const pageNumber = route.params.pageNumber;
+	const navigation = useNavigation();
+	const SplashImage = Images.kid.splash_image;
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            clearInterval(timeout);
-            navigation.navigate(`RegularPageScreen`);
-            // navigation.navigate()
-        }, 3000)
-    })
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			clearInterval(timeout);
+			navigation.navigate(`RegularPageScreen`);
+			// navigation.navigate()
+		}, 3000);
+	});
 
-    return (
-        <View style={[styles.container, { backgroundColor: color100 }]}>
-            <Main>
-                <CenterMain>
-                    <View style={styles.imageContainer}>
-                        <SplashImage height={300} width={350} />
-                    </View>
-                    <Heading customStyle={{ fontWeight: "bold" }}>
-                        gacpaq
-                    </Heading>
-                    <Paragraph
-                        customStyle={{
-                            color: "#fff",
-                            fontSize: 20,
-                            lineHeight: 23.6,
-                        }}
-                    >
-                        The global adolescent and children activity
-                        questionnaire
-                    </Paragraph>
-                    <ProgressBar />
-                </CenterMain>
-            </Main>
-        </View>
-    );
+	return (
+		<View style={[styles.container, { backgroundColor: color100 }]}>
+			<Main>
+				<CenterMain>
+					<View style={styles.imageContainer}>
+						<SplashImage
+							height={300}
+							width={350}
+						/>
+					</View>
+					<Heading
+						customStyle={{
+							fontWeight: "bold",
+						}}
+					>
+						gacpaq
+					</Heading>
+					<Paragraph
+						customStyle={{
+							color: "#fff",
+							fontSize: 20,
+							lineHeight: 23.6,
+						}}
+					>
+						The global adolescent and children activity questionnaire
+					</Paragraph>
+					<ProgressBar />
+				</CenterMain>
+			</Main>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    imageContainer: {
-        // backgroundColor: "red"
-    }
+	container: {
+		flex: 1,
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	imageContainer: {
+		// backgroundColor: "red"
+	},
 });

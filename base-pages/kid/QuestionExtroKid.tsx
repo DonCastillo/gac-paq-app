@@ -11,71 +11,78 @@ import Navigation from "../../components/Navigation";
 import FullWidthButton from "../../components/buttons/FullWidthButton";
 
 export default function QuestionExtroKid() {
-    console.log("question extro kid ...");
-    const settingCtx = useContext(SettingContext);
-    const { language, colorTheme, currentPage } = settingCtx.settingState;
-    const color100 = "#FFEDA5";
-    const color200 = "#FFCB66";
-    const translatedPage = translate(currentPage.page.translations, language);
-    const ImageComponent = Images.kid.extro_question_page;
+	console.log("question extro kid ...");
+	const settingCtx = useContext(SettingContext);
+	const { language, colorTheme, currentPage } = settingCtx.settingState;
+	const color100 = "#FFEDA5";
+	const color200 = "#FFCB66";
+	const translatedPage = translate(currentPage.page.translations, language);
+	const ImageComponent = Images.kid.extro_question_page;
 
-    console.log(translatedPage);
+	console.log(translatedPage);
 
-    function pressHandler() {
-        console.log("press handler: ");
-        settingCtx.nextPage();
-    }
+	function pressHandler() {
+		console.log("press handler: ");
+		settingCtx.nextPage();
+	}
 
-    return (
-        <View style={styles.container}>
-            <Main>
-                <CenterMain>
-                    <Heading
-                        customStyle={{
-                            color: "#000",
-                            fontSize: 32,
-                            fontWeight: "bold",
-                            textAlign: "center",
-                        }}
-                    >
-                        {translatedPage.heading}
-                    </Heading>
-                    <Paragraph customStyle={{ color: "#000", fontSize: 20 }}>
-                        {translatedPage.subheading}
-                    </Paragraph>
-                    <View style={styles.imageContainer}>
-                        <ImageComponent
-                            height={400}
-                            width={300}
-                            padding={0}
-                            margin={0}
-                        />
-                    </View>
-                </CenterMain>
-                <Navigation>
-                    <FullWidthButton
-                        customStyle={{ backgroundColor: color100 }}
-                        onPress={pressHandler}
-                    >
-                        Start
-                    </FullWidthButton>
-                </Navigation>
-            </Main>
-        </View>
-    );
+	return (
+		<View style={styles.container}>
+			<Main>
+				<CenterMain>
+					<Heading
+						customStyle={{
+							color: "#000",
+							fontSize: 32,
+							fontWeight: "bold",
+							textAlign: "center",
+						}}
+					>
+						{translatedPage.heading}
+					</Heading>
+					<Paragraph
+						customStyle={{
+							color: "#000",
+							fontSize: 20,
+						}}
+					>
+						{translatedPage.subheading}
+					</Paragraph>
+					<View style={styles.imageContainer}>
+						<ImageComponent
+							height={400}
+							width={300}
+							padding={0}
+							margin={0}
+						/>
+					</View>
+				</CenterMain>
+				<Navigation>
+					<FullWidthButton
+						customStyle={{
+							backgroundColor: color100,
+						}}
+						onPress={pressHandler}
+					>
+						Start
+					</FullWidthButton>
+				</Navigation>
+			</Main>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        // backgroundColor: "green",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    imageContainer: {
-        // backgroundColor: "red",
-        justifyContent: "center",
-        alignItems: "center",
-        marginLeft: -40,
-    },
+	container: {
+		flex: 1,
+		// backgroundColor: "green",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	imageContainer: {
+		// backgroundColor: "red",
+		justifyContent: "center",
+		alignItems: "center",
+		marginLeft: -40,
+	},
 });

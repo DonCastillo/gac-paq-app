@@ -1,4 +1,4 @@
-import LanguageInterface from "../../interface/language";
+import type LanguageInterface from "../../interface/language";
 
 const Languages: LanguageInterface[] = [
 	{
