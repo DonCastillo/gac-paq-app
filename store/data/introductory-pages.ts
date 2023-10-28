@@ -18,7 +18,7 @@ const IntroductoryPages:
     | [] = [
     WelcomePage,
     AboutPage,
-    // LocationPage,
+    LocationPage,
     AgePage,
     DemographicPage,
     AccelerometerPage,

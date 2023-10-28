@@ -1,5 +1,5 @@
-import { Text, View, Image, StyleSheet } from "react-native";
-import { useCallback, useContext, useEffect, useLayoutEffect, useState } from "react";
+import { StyleSheet } from "react-native";
+import { useContext, useEffect, useState } from "react";
 
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "../store/settings";
@@ -7,16 +7,21 @@ import { SettingContext } from "../store/settings";
 const FONT_SIZE = 16;
 const BORDER_WIDTH = 2;
 
-export default function DropDownSelector({ options, selectedValue, onSelect, rerender = false }) {
+export default function DropDownSelector({ options, selectedValue, onSelect, dropdownMinHeight = 280 }) {
     const settingCtx = useContext(SettingContext);
-    const { color100, color200 } = settingCtx.settingState.colorTheme;
+    const { colorTheme, currentPage } = settingCtx.settingState;
+    const { color100 } = colorTheme;
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(selectedValue);
     const [items, setItems] = useState(options);
 
-    if(items !== options && rerender) {
-        setItems(options);
-    }
+
+    useEffect(() => {
+        if(items !== options) {
+            setItems(options);
+        }
+    }, [currentPage])
+
 
     return (
         <>
@@ -35,7 +40,7 @@ export default function DropDownSelector({ options, selectedValue, onSelect, rer
                 iconContainerStyle={styles.iconContainer}
                 dropDownContainerStyle={[
                     styles.dropdownContainer,
-                    { borderColor: color100 },
+                    { borderColor: color100, minHeight: dropdownMinHeight || 280 },
                 ]}
                 listItemContainerStyle={styles.listItemContainerStyle}
                 onChangeValue={(value: string) => onSelect(value)}

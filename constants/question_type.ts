@@ -4,7 +4,8 @@ enum QuestionType {
     QuestionText = 'question_text',
     QuestionCheckbox = 'question_checkbox',
     QuestionDropdown = 'question_dropdown',
-    QuestionRadioImage = 'question_radio_image'
+    QuestionRadioImage = 'question_radio_image',
+    QuestionRegion = 'question_region'
 }
 
 export default QuestionType;

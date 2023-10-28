@@ -15,6 +15,8 @@ function getQuestionType(questionPage: {}) {
         return QuestionType.QuestionCheckbox;
     } else if (questionPage.hasOwnProperty("question_radio_image_id")) {
         return QuestionType.QuestionRadioImage;
+    } else if (questionPage.hasOwnProperty("region_question_dropdown_id")) {
+        return QuestionType.QuestionRegion;
     } else {
     }
 }

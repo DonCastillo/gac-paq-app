@@ -5,4 +5,5 @@ export default interface LanguageInterface {
     flag_code?: string | null;
     lang_code?: string | null;
     direction?: string | null;
+    flag?: any | null;
 };

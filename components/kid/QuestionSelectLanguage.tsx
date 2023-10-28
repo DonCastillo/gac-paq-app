@@ -1,33 +1,26 @@
-import { Text, View, Image, StyleSheet } from "react-native";
-import { useContext, useState } from "react";
-import DropDownPicker from "react-native-dropdown-picker";
+import { StyleSheet } from "react-native";
+import { useContext } from "react";
 import LanguageInterface from "../../interface/language";
-import Languages from "../../store/data/languages";
 import { SettingContext } from "../../store/settings";
 import QuestionRadioItemInterface from "../../interface/question_radio_item";
 import DropDownSelector from "../DropDownPicker";
+import { QuestionContext } from "../../store/questions";
 
 
 export default function QuestionSelectLanguage({ selectedValue, onChange }) {
     const settingCtx = useContext(SettingContext);
-    const { color100, color200 } = settingCtx.settingState.colorTheme;
-    const options: LanguageInterface[] = Languages;
+    const questionCtx = useContext(QuestionContext);
+    const options: LanguageInterface[] = questionCtx.questionState.languageOption;
+
     const itemsRaw: QuestionRadioItemInterface[] = options.map((option) => {
+        const FlagComponent = option.flag;
+        console.log("flag component: ", option.flag);
         return {
             label: option.name,
             value: option.lang_code,
-            icon: () => (
-                <Image
-                    source={{
-                        uri: `https://flagsapi.com/${option.flag_code}/flat/64.png`,
-                    }}
-                    style={styles.optionIcon}
-                />
-            ),
+            icon: () => <FlagComponent height={50} width={50} padding={0} margin={0} />
         };
     });
-
-
 
 
     return (

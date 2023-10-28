@@ -12,6 +12,8 @@ import QuestionSelect from "../../../components/kid/QuestionSelect";
 import { ResponseContext } from "../../../store/responses";
 import QuestionText from "../../../components/kid/QuestionText";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
+import { QuestionContext } from "../../../store/questions";
+import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
 
 interface ResponseInterface {
     label: string;
@@ -22,14 +24,17 @@ export default function QuestionSingleKid() {
     // setting
     const [responses, setResponses] = useState({});
     const [proceed, setProceed] = useState(false);
-    const [questionComponent, setQuestionComponent] = useState(<></>)
     const settingCtx = useContext(SettingContext);
     const responseCtx = useContext(ResponseContext);
+    const questionCtx = useContext(QuestionContext);
 
     const { language, colorTheme, currentPage } = settingCtx.settingState;
+    const { regionOption } = questionCtx.questionState;
     const { color100, color200 } = colorTheme;
     const translatedPage = translate(currentPage.page.translations, language);
     const questionType = getQuestionType(translatedPage);
+    console.log("question type: ", questionType);
+    let questionComponent = <></>;
 
     useEffect(() => {
         const theresResponse = (Object.keys(responses)).length > 0;
@@ -72,26 +77,33 @@ export default function QuestionSingleKid() {
 
     }
 
-    useEffect(() => {
-        let tempQuestionComponent = <></>;
-        if (questionType === QuestionType.QuestionDropdown) {
-            tempQuestionComponent = (
-                <QuestionSelect
-                    key={translatedPage.name}
-                    options={translatedPage.choices}
-                    onChange={changeHandler}
-                />
-            );
-        } else if (questionType === QuestionType.QuestionText) {
-            tempQuestionComponent = (
-                <QuestionText
-                    fields={translatedPage.fields}
-                    onChange={changeHandler}
-                />
-            );  
-        }
-        setQuestionComponent(tempQuestionComponent);
-    }, [translatedPage]);
+    if (questionType === QuestionType.QuestionDropdown) {
+        questionComponent = (
+            <QuestionSelect
+                options={translatedPage.choices}
+                onChange={changeHandler}
+            />
+        );
+    } else if (questionType === QuestionType.QuestionRegion) {
+        console.log("rendering the region question....");
+        questionComponent = (
+            <QuestionSelectRegion 
+                selectedValue={""}
+                onChange={(value: string) => console.log("value: ", value)}
+            />
+        )
+
+    } else if (questionType === QuestionType.QuestionText) {
+        questionComponent = (
+            <QuestionText
+                fields={translatedPage.fields}
+                onChange={changeHandler}
+            />
+        );
+    } else {
+        questionComponent = <></>;
+    }
+
 
 
 
@@ -123,10 +135,10 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        // backgroundColor: "pink",
+        backgroundColor: "pink",
     },
     innerContainer: {
-        // backgroundColor: "green",
+        backgroundColor: "green",
         marginTop: 50
     }
 });
