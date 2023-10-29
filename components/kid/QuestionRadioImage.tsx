@@ -1,23 +1,27 @@
-import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
-import { Component, useContext, useState } from "react";
+import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
+import React, { useContext, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
-import Svg, { Path } from "react-native-svg";
-import { Images } from "../../styles/images";
+import PropTypes from "prop-types";
 
-export default function QuestionRadioImage({ options, onChange }) {
+QuestionRadioImage.propTypes = {
+	options: PropTypes.array,
+	onChange: PropTypes.func,
+};
+
+export default function QuestionRadioImage({ options, onChange }): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
-	const [selected, setSelected] = useState(null);
+	const { color100 } = colorTheme;
+	const [selected, setSelected] = useState<string | null>(null);
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 		borderColor: color100,
 	};
 
-	function selectHandler(value: string) {
-		if (value == selected) {
+	function selectHandler(value: string): void {
+		if (value === selected) {
 			setSelected(null);
 			onChange(null);
 		} else {
@@ -26,9 +30,9 @@ export default function QuestionRadioImage({ options, onChange }) {
 		}
 	}
 
-	function renderImage(image: string, image_default: any) {
+	function renderImage(image: string, image_default: any): React.ReactElement {
 		const ImageComponent = image_default;
-		if (!image_default) {
+		if (image_default === null || image_default === undefined) {
 			return <></>;
 		}
 		return (
@@ -59,7 +63,7 @@ export default function QuestionRadioImage({ options, onChange }) {
 		// }
 	}
 
-	function renderOption({ item }) {
+	function renderOption({ item }): React.ReactElement {
 		const { image_kid, image_kid_default, text, value } = item.image_choices_id;
 		return (
 			<Pressable
@@ -102,16 +106,13 @@ export default function QuestionRadioImage({ options, onChange }) {
 
 const styles = StyleSheet.create({
 	container: {
-		// backgroundColor: "orange",
 		marginTop: -20,
 	},
 	imageContainer: {
 		justifyContent: "center",
 		alignItems: "center",
-		// backgroundColor: "pink"
 	},
 	optionContainer: {
-		// backgroundColor: "red",
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",

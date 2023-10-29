@@ -1,6 +1,12 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import React from "react";
+import PropTypes from "prop-types";
+import { Text, View, StyleSheet } from "react-native";
 
-export default function QuestionBreadcrumb({ children }) {
+QuestionBreadcrumb.propTypes = {
+	children: PropTypes.node,
+};
+
+export default function QuestionBreadcrumb({ children }): React.ReactElement {
 	return (
 		<View>
 			<Text style={styles.textHeading}>{children}</Text>
@@ -19,7 +25,7 @@ const styles = StyleSheet.create({
 		// paddingHorizontal: "8%",
 	},
 	textHeading: {
-		fontWeight: 700,
+		fontWeight: "bold",
 		fontSize: 24,
 		color: "#000",
 	},

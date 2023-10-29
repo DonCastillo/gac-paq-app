@@ -1,6 +1,18 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import React from "react";
+import { StyleSheet, View, Text } from "react-native";
+import PropTypes from "prop-types";
 
-export default function QuestionLabel({ children, customStyle = {}, textStyle = {} }) {
+QuestionLabel.propTypes = {
+	children: PropTypes.node,
+	customStyle: PropTypes.object,
+	textStyle: PropTypes.object,
+};
+
+export default function QuestionLabel({
+	children,
+	customStyle = {},
+	textStyle = {},
+}): React.ReactElement {
 	return (
 		<View style={[styles.container, customStyle]}>
 			<Text style={[styles.text, textStyle]}>{children}</Text>
@@ -13,7 +25,6 @@ const styles = StyleSheet.create({
 		width: "100%",
 		flexDirection: "row",
 		marginBottom: 20,
-		// backgroundColor: 'pink'
 	},
 	text: {
 		textAlign: "left",

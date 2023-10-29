@@ -1,21 +1,27 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
+import PropTypes from "prop-types";
 
-export default function QuestionRadio({ options, onChange }) {
+QuestionRadio.propTypes = {
+	options: PropTypes.array,
+	onChange: PropTypes.func,
+};
+
+export default function QuestionRadio({ options, onChange }): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
-	const [selected, setSelected] = useState(null);
+	const { color100 } = colorTheme;
+	const [selected, setSelected] = useState<string | null>(null);
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 		borderColor: color100,
 	};
 
-	function selectHandler(value: string) {
-		if (value == selected) {
+	function selectHandler(value: string): void {
+		if (value === selected) {
 			setSelected(null);
 			onChange(null);
 		} else {

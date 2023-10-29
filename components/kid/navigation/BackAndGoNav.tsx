@@ -1,18 +1,18 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
 import { SettingContext } from "../../../store/settings";
-import { useContext } from "react";
+import React, { useContext } from "react";
 
-export default function BackAndGoNav() {
+export default function BackAndGoNav(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, buttons } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { color100 } = colorTheme;
 
-	function prevPage() {
+	function prevPage(): void {
 		settingCtx.prevPage();
 	}
 
-	function nextPage() {
+	function nextPage(): void {
 		settingCtx.nextPage();
 	}
 
@@ -45,6 +45,5 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",
-		// backgroundColor: "pink",
 	},
 });

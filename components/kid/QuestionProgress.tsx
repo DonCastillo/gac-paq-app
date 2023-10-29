@@ -1,6 +1,12 @@
-import { View, Text, StyleSheet } from "react-native";
+import React from "react";
+import PropTypes from "prop-types";
+import { View, StyleSheet } from "react-native";
 
-export default function QuestionProgress({ children }) {
+QuestionProgress.propTypes = {
+	children: PropTypes.node,
+};
+
+export default function QuestionProgress({ children }): React.ReactElement {
 	return <View style={styles.container}></View>;
 }
 
