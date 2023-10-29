@@ -1,3 +1,4 @@
+import React from "react";
 import type LanguageInterface from "../interface/language";
 import type QuestionRadioItemInterface from "../interface/question_radio_item";
 import type RegionInterface from "../interface/region";

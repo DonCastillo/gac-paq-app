@@ -1,20 +1,18 @@
-import { createContext, useContext, useEffect, useReducer, useState } from "react";
+import React, { createContext, useReducer } from "react";
 import Mode from "../constants/mode";
 import Colors from "./data/colors";
 import { getPage } from "../utils/page";
 import type ScreenType from "../constants/screen_type";
 import type SectionType from "../constants/section_type";
-import { translateButton } from "../utils/translate";
-import { QuestionContext } from "./questions";
 import ButtonLabel from "../constants/button_label";
 
 /**
  * by default the app should be set as:
  *      mode: kid,
  */
-interface pageInterface {
+export interface pageInterface {
 	screen: ScreenType | null;
-	page: any | null | {};
+	page: any | null;
 	pageNumber: number | null;
 	section: SectionType.Intro | SectionType.Question | null;
 	sectionNumber: number | null;
@@ -90,7 +88,7 @@ export const SettingContext = createContext({
 	translateButtons: (obj: buttonInterface) => {},
 });
 
-function settingReducer(state: any, action: any) {
+function settingReducer(state: any, action: any): any {
 	switch (action.type) {
 		case "SET_MODE":
 			return {
@@ -107,13 +105,14 @@ function settingReducer(state: any, action: any) {
 				...state,
 				directusAccessToken: action.payload,
 			};
-		case "SET_COLOR_THEME":
+		case "SET_COLOR_THEME": {
 			const newColor = Colors[state.mode][action.payload % TOTAL_COLORS];
 			return {
 				...state,
 				colorTheme: newColor,
 			};
-		case "NEXT_PAGE":
+		}
+		case "NEXT_PAGE": {
 			const currentpageNumber1 = state.currentPageNumber + 1;
 			const currentPage1 = getPage(currentpageNumber1, state.pages);
 			const nextPage1 = getPage(currentpageNumber1 + 1, state.pages);
@@ -123,7 +122,8 @@ function settingReducer(state: any, action: any) {
 				currentPage: currentPage1,
 				nextPage: nextPage1,
 			};
-		case "PREV_PAGE":
+		}
+		case "PREV_PAGE": {
 			if (state.currentPageNumber <= 0) {
 				return state;
 			}
@@ -136,6 +136,7 @@ function settingReducer(state: any, action: any) {
 				currentPage: currentPage2,
 				nextPage: nextPage2,
 			};
+		}
 		case "SET_TOTAL_PAGE":
 			return {
 				...state,
@@ -146,7 +147,7 @@ function settingReducer(state: any, action: any) {
 				...state,
 				pages: [...state.pages, action.payload],
 			};
-		case "INITIALIZE_CURRENT_PAGE":
+		case "INITIALIZE_CURRENT_PAGE": {
 			const currentPageNumber = state.currentPageNumber;
 			const currentPage = getPage(state.currentPageNumber, state.pages);
 			const nextPage = getPage(state.currentPageNumber + 1, state.pages);
@@ -156,6 +157,7 @@ function settingReducer(state: any, action: any) {
 				currentPage,
 				nextPage,
 			};
+		}
 		case "SET_BUTTONS":
 			return {
 				...state,
@@ -166,17 +168,18 @@ function settingReducer(state: any, action: any) {
 	}
 }
 
-export default function SettingContextProvider({ children }) {
+
+export default function SettingContextProvider({ children }: { children: React.ReactNode }): JSX.Element {
 	const [settingState, dispatch] = useReducer(settingReducer, INITIAL_STATE);
 
-	function setMode(newMode: Mode.Adult | Mode.Kid) {
+	function setMode(newMode: Mode.Adult | Mode.Kid): void {
 		dispatch({
 			type: "SET_MODE",
 			payload: newMode,
 		});
 	}
 
-	function setLanguage(newLanguage: string) {
+	function setLanguage(newLanguage: string): void {
 		dispatch({
 			type: "SET_LANGUAGE",
 			payload: newLanguage,
@@ -186,52 +189,52 @@ export default function SettingContextProvider({ children }) {
 		});
 	}
 
-	function setDirectusAccessToken(newDirectusAccessToken: string) {
+	function setDirectusAccessToken(newDirectusAccessToken: string): void {
 		dispatch({
 			type: "SET_DIRECTUS_ACCESS_TOKEN",
 			payload: newDirectusAccessToken,
 		});
 	}
 
-	function setColorTheme(colorIndex: number = 0) {
+	function setColorTheme(colorIndex: number = 0): void {
 		dispatch({
 			type: "SET_COLOR_THEME",
 			payload: colorIndex,
 		});
 	}
 
-	function nextPage() {
+	function nextPage(): void {
 		dispatch({
 			type: "NEXT_PAGE",
 		});
 	}
 
-	function prevPage() {
+	function prevPage(): void {
 		dispatch({
 			type: "PREV_PAGE",
 		});
 	}
 
-	function addPage(obj: pageInterface) {
+	function addPage(obj: pageInterface): void {
 		dispatch({
 			type: "ADD_PAGE",
 			payload: obj,
 		});
 	}
 
-	function initializeNextPage() {
+	function initializeNextPage(): void {
 		dispatch({
 			type: "INITIALIZE_NEXT_PAGE",
 		});
 	}
 
-	function initializeCurrentPage() {
+	function initializeCurrentPage(): void {
 		dispatch({
 			type: "INITIALIZE_CURRENT_PAGE",
 		});
 	}
 
-	function translateButtons(obj: buttonInterface) {
+	function translateButtons(obj: buttonInterface): void {
 		dispatch({
 			type: "SET_BUTTONS",
 			payload: obj,
