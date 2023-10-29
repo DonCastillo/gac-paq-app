@@ -1,6 +1,12 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import PropTypes from "prop-types";
 
-export default function BottomMain({ children }) {
+BottomMain.propTypes = {
+	children: PropTypes.node,
+};
+
+export default function BottomMain({ children }): React.ReactElement {
 	return <View style={styles.container}>{children}</View>;
 }
 

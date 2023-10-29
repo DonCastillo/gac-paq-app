@@ -1,16 +1,21 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import React from "react";
+import PropTypes from "prop-types";
+import { Text, View, StyleSheet } from "react-native";
 
-export default function QuestionTitle({ children }) {
+QuestionTitle.propTypes = {
+	children: PropTypes.node,
+};
+
+export default function QuestionTitle({ children }): React.ReactElement {
 	return (
 		<View>
-			<Text style={styles.text}>{children}</Text>
+			<Text style={{ ...styles.text, fontWeight: "bold" }}>{children}</Text>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
 	text: {
-		// backgroundColor: "yellowgreen",
 		marginVertical: 15,
 		fontWeight: 700,
 		fontSize: 36,

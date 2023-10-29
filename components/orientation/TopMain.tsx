@@ -1,6 +1,12 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import React from "react";
+import PropTypes from "prop-types";
+import { View, StyleSheet } from "react-native";
 
-export default function TopMain({ children }) {
+TopMain.propTypes = {
+	children: PropTypes.node,
+};
+
+export default function TopMain({ children }): React.ReactElement {
 	return <View style={styles.container}>{children}</View>;
 }
 
@@ -12,9 +18,7 @@ const styles = StyleSheet.create({
 		alignItems: "stretch",
 		width: "100%",
 		height: "100%",
-		// backgroundColor: "blue",
 		paddingHorizontal: 20,
 		paddingTop: 20,
-		// paddingHorizontal: "8%",
 	},
 });

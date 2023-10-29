@@ -8,7 +8,7 @@ export default function Navigation({ children, customStyle = {} }): React.ReactE
 }
 
 Navigation.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	customStyle: PropTypes.object,
 };
 

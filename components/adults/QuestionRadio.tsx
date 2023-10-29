@@ -1,14 +1,26 @@
 import { FlatList } from "react-native";
-import QuestionRadioItemInterface from "../../interface/question_radio_item";
+import PropTypes from "prop-types";
 import RadioOption from "./item/RadioOption";
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function QuestionRadio({ options, onSelect }) {
-	const [selectedValue, setSelectedValue] = useState(null);
+QuestionRadio.propTypes = {
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			label: PropTypes.string.isRequired,
+			value: PropTypes.string.isRequired,
+		}),
+	).isRequired,
+	onSelect: PropTypes.func.isRequired,
+};
 
-	function pressHandler(value: string) {
-		setSelectedValue(value);
-		onSelect(value);
+export default function QuestionRadio({ options, onSelect }): React.ReactElement {
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+
+	function pressHandler(value: string): void {
+		if (value !== "") {
+			setSelectedValue(value);
+			onSelect(value);
+		}
 	}
 
 	return (

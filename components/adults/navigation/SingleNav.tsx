@@ -1,14 +1,20 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import FullWidthButton from "../../buttons/FullWidthButton";
 import { SettingContext } from "../../../store/settings";
-import { DefaultStyle, GeneralStyle } from "../../../styles/general";
+import { DefaultStyle } from "../../../styles/general";
 
-export default function SingleNav({ label, onPress }) {
+SingleNav.propTypes = {
+	label: PropTypes.string.isRequired,
+	onPress: PropTypes.func.isRequired,
+};
+
+export default function SingleNav({ label, onPress }): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 
-	function nextPage() {
+	function nextPage(): void {
 		onPress();
 	}
 

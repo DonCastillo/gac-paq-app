@@ -1,8 +1,8 @@
-import { createContext, useReducer } from "react";
+import React, { createContext, useReducer } from "react";
 
 interface response {
-	pageNumber: number | null;
-	label: string | null;
+	pageNumber: number;
+	label: string;
 	answer: string | null;
 }
 
@@ -11,9 +11,9 @@ export const ResponseContext = createContext({
 	addResponse: (response: response) => {},
 });
 
-function responseReducer(state: any, action: any) {
+function responseReducer(state: any, action: any): any {
 	switch (action.type) {
-		case "ADD_RESPONSE":
+		case "ADD_RESPONSE": {
 			const newResponse = {
 				label: action.payload.label,
 				answer: action.payload.answer,
@@ -23,15 +23,20 @@ function responseReducer(state: any, action: any) {
 				...state,
 				[action.payload.label]: newResponse,
 			};
+		}
 		default:
 			return state;
 	}
 }
 
-export default function ResponseContextProvider({ children }) {
+export default function ResponseContextProvider({
+	children,
+}: {
+	children: React.ReactNode;
+}): React.ReactElement {
 	const [responses, dispatch] = useReducer(responseReducer, {});
 
-	function addResponse(newResponse: response) {
+	function addResponse(newResponse: response): void {
 		dispatch({
 			type: "ADD_RESPONSE",
 			payload: newResponse,

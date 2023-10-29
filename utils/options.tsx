@@ -21,7 +21,7 @@ function optionRegion(options: RegionInterface[]): QuestionRadioItemInterface[] 
 			return {
 				label: title,
 				value: title,
-				icon: (
+				icon: () => (
 					<FlagComponent
 						height={50}
 						width={50}
@@ -45,7 +45,7 @@ function optionLanguage(options: LanguageInterface[]): QuestionRadioItemInterfac
 			return {
 				label: name,
 				value: lang_code,
-				icon: (
+				icon: () => (
 					<FlagComponent
 						height={50}
 						width={50}

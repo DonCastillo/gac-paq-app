@@ -1,4 +1,4 @@
-import { createContext, useReducer, useState } from "react";
+import React, { createContext, useReducer } from "react";
 import type RegionInterface from "../interface/region";
 import type LanguageInterface from "../interface/language";
 import Regions from "./data/regions";
@@ -47,7 +47,7 @@ export const QuestionContext = createContext({
 	) => {},
 });
 
-function questionReducer(state: any, action: any) {
+function questionReducer(state: any, action: any): any {
 	switch (action.type) {
 		case "SET_REGION_OPTION":
 			return {
@@ -69,17 +69,21 @@ function questionReducer(state: any, action: any) {
 	}
 }
 
-export default function QuestionContextProvider({ children }) {
+export default function QuestionContextProvider({
+	children,
+}: {
+	children: React.ReactNode;
+}): React.ReactElement {
 	const [questionState, dispatch] = useReducer(questionReducer, INITIAL_STATE);
 
-	function setRegionOption(newRegionOptions: RegionInterface[]) {
+	function setRegionOption(newRegionOptions: RegionInterface[]): void {
 		dispatch({
 			type: "SET_REGION_OPTION",
 			payload: newRegionOptions,
 		});
 	}
 
-	function setLanguageOption(newLanguageOptions: LanguageInterface[]) {
+	function setLanguageOption(newLanguageOptions: LanguageInterface[]): void {
 		dispatch({
 			type: "SET_LANGUAGE_OPTION",
 			payload: newLanguageOptions,
@@ -88,7 +92,7 @@ export default function QuestionContextProvider({ children }) {
 
 	function setIntroductoryPages(
 		newIntroductoryPages: Array<PagePayloadInterface | QuestionDropdownPayloadInterface> | [],
-	) {
+	): void {
 		dispatch({
 			type: "SET_INTRODUCTORY_PAGES_OPTION",
 			payload: newIntroductoryPages,

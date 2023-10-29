@@ -17,7 +17,10 @@ function loadLanguagesOffline(): LanguageInterface[] {
 	return Languages.map((language: LanguageInterface) => {
 		return {
 			...language,
-			flag: language.flag_code !== "" ? FlagIcons[language.flag_code.toLowerCase()] : null,
+			flag:
+				language.flag_code !== "" && language.flag_code !== undefined
+					? FlagIcons[language.flag_code.toLowerCase()]
+					: null,
 		};
 	});
 }

@@ -12,7 +12,7 @@ export default function Paragraph({ children, customStyle = {} }): React.ReactEl
 }
 
 Paragraph.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	customStyle: PropTypes.object,
 };
 

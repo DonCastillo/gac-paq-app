@@ -5,17 +5,21 @@ import { SettingContext } from "../store/settings";
 
 export default function BGLinearGradient(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	console.log(settingCtx.settingState.mode);
-	const { grad100, grad200, grad300, grad400 } = settingCtx.settingState.colorTheme;
+	const {
+		grad100 = "",
+		grad200 = "",
+		grad300 = "",
+		grad400 = "",
+	} = settingCtx.settingState.colorTheme;
 
 	return (
 		<LinearGradient
-			colors={[grad100, grad200, grad300, grad400]}
+			colors={[grad100 ?? "", grad200 ?? "", grad300 ?? "", grad400 ?? ""]}
 			start={[1, 0]}
 			end={[0, 1]}
 			locations={[0, 0.3, 0.6, 1]}
 			style={styles.bgGradient}
-		></LinearGradient>
+		/>
 	);
 }
 

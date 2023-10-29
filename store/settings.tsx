@@ -50,7 +50,7 @@ const defaultButton: buttonInterface = {
 	started: ButtonLabel.Started,
 };
 
-const DEFAULT_MODE = Mode.Adult;
+const DEFAULT_MODE = Mode.Kid;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
@@ -172,7 +172,7 @@ export default function SettingContextProvider({
 	children,
 }: {
 	children: React.ReactNode;
-}): JSX.Element {
+}): React.ReactElement {
 	const [settingState, dispatch] = useReducer(settingReducer, INITIAL_STATE);
 
 	function setMode(newMode: Mode.Adult | Mode.Kid): void {

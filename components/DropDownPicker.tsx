@@ -1,11 +1,24 @@
 import { StyleSheet } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-
+import PropTypes from "prop-types";
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "../store/settings";
+import type QuestionRadioItemInterface from "../interface/question_radio_item";
 
 const FONT_SIZE = 16;
 const BORDER_WIDTH = 2;
+
+DropDownSelector.propTypes = {
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			label: PropTypes.string.isRequired,
+			value: PropTypes.string.isRequired,
+		}),
+	).isRequired,
+	selectedValue: PropTypes.string,
+	onSelect: PropTypes.func.isRequired,
+	dropdownMinHeight: PropTypes.number,
+};
 
 export default function DropDownSelector({
 	options,
@@ -16,8 +29,8 @@ export default function DropDownSelector({
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
-	const [open, setOpen] = useState(false);
-	const [value, setValue] = useState(selectedValue);
+	const [open, setOpen] = useState<boolean>(false);
+	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState(options);
 
 	useEffect(() => {
@@ -45,7 +58,7 @@ export default function DropDownSelector({
 					styles.dropdownContainer,
 					{
 						borderColor: color100,
-						minHeight: dropdownMinHeight || 280,
+						minHeight: dropdownMinHeight ?? 280,
 					},
 				]}
 				listItemContainerStyle={styles.listItemContainerStyle}

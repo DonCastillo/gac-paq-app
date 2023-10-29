@@ -1,7 +1,15 @@
+import React from "react";
+import PropTypes from "prop-types";
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import { useFonts } from "expo-font";
-import Colors from "../../styles/kids/Colors";
-import { DefaultStyle, GeneralStyle } from "../../styles/general";
+import { DefaultStyle } from "../../styles/general";
+
+ButtonContainerWidth.propTypes = {
+	children: PropTypes.node,
+	onPress: PropTypes.func.isRequired,
+	borderColor: PropTypes.string,
+	textColor: PropTypes.string,
+	bgColor: PropTypes.string,
+};
 
 export default function ButtonContainerWidth({
 	children,
@@ -9,7 +17,7 @@ export default function ButtonContainerWidth({
 	borderColor,
 	textColor,
 	bgColor,
-}) {
+}): React.ReactElement {
 	return (
 		<View>
 			<Pressable

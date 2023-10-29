@@ -1,32 +1,33 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import { SettingContext } from "../../store/settings";
-import {
-	Text,
-	TextInput,
-	View,
-	StyleSheet,
-	ScrollView,
-	Keyboard,
-	TouchableWithoutFeedback,
-} from "react-native";
+import { TextInput, View, StyleSheet, ScrollView } from "react-native";
 import { GeneralStyle } from "../../styles/general";
 
-export default function QuestionText({ fields, onChange }) {
-	console.log("fields: ", fields);
-	// setting
+QuestionText.propTypes = {
+	fields: PropTypes.arrayOf(
+		PropTypes.shape({
+			label: PropTypes.string.isRequired,
+			value: PropTypes.string,
+		}),
+	),
+	onChange: PropTypes.func.isRequired,
+};
+
+export default function QuestionText({ fields, onChange }): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { colorTheme } = settingCtx.settingState;
+	const { color100 } = colorTheme;
 
 	// function DismissKeyboard({children}) {
 	//     return <TouchableWithoutFeedback
 	// }
 
-	function changeHandler(value: string) {
+	function changeHandler(value: string): void {
 		onChange(value);
 	}
 
-	function displayTextInput(field: any, index: number) {
+	function displayTextInput(field: any, index: number): React.ReactElement {
 		return (
 			<ScrollView key={index + 1}>
 				<TextInput
@@ -50,7 +51,6 @@ const styles = StyleSheet.create({
 		fontSize: GeneralStyle.kid.field.fontSize,
 		paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
 		paddingVertical: GeneralStyle.kid.field.paddingVertical,
-		// minHeight: MIN_HEIGHT,
 		backgroundColor: "#fff",
 		width: "100%",
 		alignItems: "center",

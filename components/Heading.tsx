@@ -11,7 +11,7 @@ export default function Heading({ children, customStyle = {} }): React.ReactElem
 }
 
 Heading.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	customStyle: PropTypes.object,
 };
 

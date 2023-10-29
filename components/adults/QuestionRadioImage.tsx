@@ -1,24 +1,32 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
-import { useContext, useState } from "react";
+import PropTypes from "prop-types";
+import React, { useContext, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
 import { Images } from "../../styles/images";
 
-export default function QuestionRadioImage({ options, onChange }) {
+QuestionRadioImage.propTypes = {
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			label: PropTypes.string.isRequired,
+			value: PropTypes.string.isRequired,
+		}),
+	).isRequired,
+	onChange: PropTypes.func.isRequired,
+};
+
+export default function QuestionRadioImage({ options, onChange }): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
-	const [selected, setSelected] = useState(null);
-	const imagePath = "./../../store/assets/images";
-
-	console.log("images: ", Images);
+	const { color100 } = colorTheme;
+	const [selected, setSelected] = useState<string | null>(null);
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 	};
 
-	function selectHandler(value: string) {
-		if (value == selected) {
+	function selectHandler(value: string): void {
+		if (value === selected) {
 			setSelected(null);
 			onChange(null);
 		} else {
@@ -27,9 +35,9 @@ export default function QuestionRadioImage({ options, onChange }) {
 		}
 	}
 
-	function renderImage(image: string, image_default: any) {
+	function renderImage(image: string, image_default: any): React.ReactElement {
 		let ImageComponent = <></>;
-		if (image) {
+		if (image !== "") {
 			const url = `http://localhost:8055/assets/${image}?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5`;
 			ImageComponent = (
 				<Image
@@ -51,9 +59,8 @@ export default function QuestionRadioImage({ options, onChange }) {
 		return ImageComponent;
 	}
 
-	function renderOption({ item }) {
+	function renderOption({ item }): React.ReactElement {
 		const { image_adult, image_adult_default, text, value } = item.image_choices_id;
-		console.log("image here: ", image_adult_default);
 
 		return (
 			<Pressable

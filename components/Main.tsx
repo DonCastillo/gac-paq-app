@@ -11,7 +11,7 @@ export default function Main({ children, customStyle = {} }): React.ReactElement
 }
 
 Main.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	customStyle: PropTypes.object,
 };
 

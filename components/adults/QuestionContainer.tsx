@@ -1,7 +1,13 @@
-import { ScrollView, StyleSheet, View } from "react-native";
+import React from "react";
+import PropTypes from "prop-types";
+import { StyleSheet, View } from "react-native";
 import { GeneralStyle } from "../../styles/general";
 
-export default function QuestionContainer({ children }) {
+QuestionContainer.propTypes = {
+	children: PropTypes.node,
+};
+
+export default function QuestionContainer({ children }): React.ReactElement {
 	return <View style={styles.container}>{children}</View>;
 }
 
