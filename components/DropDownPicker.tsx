@@ -31,7 +31,7 @@ export default function DropDownSelector({
 	const { color100 } = colorTheme;
 	const [open, setOpen] = useState<boolean>(false);
 	const [value, setValue] = useState<string | null>(selectedValue);
-	const [items, setItems] = useState(options);
+	const [items, setItems] = useState<QuestionRadioItemInterface[]>(options);
 
 	useEffect(() => {
 		if (items !== options) {
