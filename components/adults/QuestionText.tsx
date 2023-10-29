@@ -1,32 +1,18 @@
-import { useContext } from "react";
-import { SettingContext } from "../../store/settings";
-import {
-	Text,
-	TextInput,
-	View,
-	StyleSheet,
-	ScrollView,
-	Keyboard,
-	TouchableWithoutFeedback,
-} from "react-native";
+import React from "react";
+import { TextInput, View, StyleSheet, ScrollView } from "react-native";
 import { GeneralStyle } from "../../styles/general";
 
-export default function QuestionText({ fields, onChange }) {
-	console.log("fields: ", fields);
-	// setting
-	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+interface Props {
+	fields: any[];
+	onChange: (value: string) => void;
+}
 
-	// function DismissKeyboard({children}) {
-	//     return <TouchableWithoutFeedback
-	// }
-
-	function changeHandler(value: string) {
+export default function QuestionText({ fields, onChange }: Props): React.ReactElement {
+	function changeHandler(value: string): void {
 		onChange(value);
 	}
 
-	function displayTextInput(field: any, index: number) {
+	function displayTextInput(field: any, index: number): React.ReactElement {
 		return (
 			<ScrollView key={index + 1}>
 				<TextInput
@@ -40,7 +26,7 @@ export default function QuestionText({ fields, onChange }) {
 		);
 	}
 
-	return <View>{fields.map(displayTextInput)}</View>;
+	return <View>{fields.length > 0 ? fields.map(displayTextInput) : ""}</View>;
 }
 
 const styles = StyleSheet.create({

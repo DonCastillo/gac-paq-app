@@ -1,5 +1,5 @@
+import React, { ReactElement } from "react";
 import PageAdult from "../base-pages/adult/PageAdult";
-import QuestionAdult from "../base-pages/adult/QuestionAdult";
 import QuestionExtroAdult from "../base-pages/adult/QuestionExtroAdult";
 import QuestionIntroAdult from "../base-pages/adult/QuestionIntroAdult";
 import SplashAdult from "../base-pages/adult/SplashAdult";
@@ -24,8 +24,6 @@ function getScreen(
 ) {
 	// if (mode === Mode.Adult && screenType === ScreenType.Splash)
 	//     return SplashAdult;
-	// else if (mode === Mode.Adult && screenType === ScreenType.Question)
-	//     return QuestionAdult;
 	// else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)
 	//     return QuestionIntroAdult;
 	// else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)

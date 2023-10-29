@@ -1,21 +1,24 @@
 import { View, Text, StyleSheet } from "react-native";
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
 import { Slider } from "@rneui/themed";
 
-export default function QuestionSlider({ onChange }) {
+interface Props {
+	onChange: (value: number) => void;
+}
+
+export default function QuestionSlider({ onChange }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState(0);
 
 	useEffect(() => {
-		console.log("rendering question slider...");
 		onChange(value);
 	}, []);
 
-	function changeHandler(value: number) {
+	function changeHandler(value: number): void {
 		setValue(value);
 		onChange(value);
 	}
@@ -76,7 +79,5 @@ const styles = StyleSheet.create({
 	trackStyle: {
 		height: 5,
 		borderRadius: GeneralStyle.kid.field.borderRadius,
-		// borderColor: "#000",
-		// borderWidth: GeneralStyle.kid.field.borderWidth,
 	},
 });

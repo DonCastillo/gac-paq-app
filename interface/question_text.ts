@@ -8,11 +8,11 @@ interface Field {
 }
 
 export default interface QuestionTextInterface {
-	id?: string | number | null;
-	question_text_id?: string | number | null;
+	id?: string | number;
+	question_text_id?: string | number;
 	sort?: number | null;
 	heading: string;
 	label: string;
 	fields: Field[];
-	languages_id?: LanguageInterface;
+	languages_id?: LanguageInterface | null;
 }

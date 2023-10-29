@@ -1,17 +1,15 @@
+import React, { useContext } from "react";
 import { View, ImageBackground, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { useContext, useLayoutEffect } from "react";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
-import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
 import SingleNav from "../../components/adults/navigation/SingleNav";
 import Toolbar from "../../components/adults/Toolbar";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
-export default function QuestionIntroAdult() {
+export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
 	const image = {
@@ -29,8 +27,8 @@ export default function QuestionIntroAdult() {
 			<Toolbar />
 			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
 				<ScrollView style={styles.headingPanelTop}>
-					<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
-					<Text style={styles.headingText}>{translatedPage.heading}</Text>
+					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
+					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
 				</ScrollView>
 				<View style={styles.headingPanelBottom}>
 					<SafeAreaView style={{ width: "100%" }}>

@@ -1,51 +1,32 @@
-import { useContext, useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useContext, useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../../store/settings";
 import { translate } from "../../../utils/page";
 import Main from "../../../components/Main";
 import Navigation from "../../../components/Navigation";
-import TopMain from "../../../components/orientation/TopMain";
 import QuestionLabel from "../../../components/kid/QuestionLabel";
 import { getQuestionType } from "../../../utils/questions";
 import QuestionType from "../../../constants/question_type";
-import QuestionSelect from "../../../components/kid/QuestionSelect";
 import { ResponseContext } from "../../../store/responses";
-import QuestionText from "../../../components/kid/QuestionText";
-import QuestionBreadcrumb from "../../../components/kid/QuestionBreadcrumb";
-import QuestionProgress from "../../../components/kid/QuestionProgress";
-import QuestionTitle from "../../../components/kid/QuestionTitle";
 import QuestionSlider from "../../../components/adults/QuestionSlider";
-import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import BGLinearGradient from "../../../components/BGLinearGradient";
 import Toolbar from "../../../components/adults/Toolbar";
 import CenterMain from "../../../components/orientation/CenterMain";
 import SingleNav from "../../../components/adults/navigation/SingleNav";
 import QuestionContainer from "../../../components/adults/QuestionContainer";
-import QuestionRadioItemInterface from "../../../interface/question_radio_item";
 import { optionText } from "../../../utils/options";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioImage from "../../../components/adults/QuestionRadioImage";
 
-interface ResponseInterface {
-	label: string;
-	answer: string;
-}
-
-export default function QuestionSingleAdult() {
-	// setting
+export default function QuestionSingleAdult(): React.ReactElement {
 	const [responses, setResponses] = useState({});
-	const [proceed, setProceed] = useState(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { language, currentPage, buttons } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
-	const questionType = getQuestionType(translatedPage);
-	// console.log("questiontype: ", questionType);
-	// console.log("translatedPage: ", translatedPage);
+	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
-	console.log("Here is the question adult");
 
 	useEffect(() => {
 		// console.log('use effect here... heres the responses: ', responses)
@@ -56,7 +37,7 @@ export default function QuestionSingleAdult() {
 	/**
 	 * finalizes response
 	 */
-	function proceedHandler() {
+	function proceedHandler(): void {
 		for (const [key, value] of Object.entries(responses)) {
 			responseCtx.addResponse({
 				pageNumber: currentPage.pageNumber,
@@ -71,7 +52,7 @@ export default function QuestionSingleAdult() {
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string | null) {
+	function changeHandler(value: string | null): void {
 		console.log("change handler from the question single kid: ", value);
 		setResponses((currResponse) => {
 			return {
@@ -104,7 +85,7 @@ export default function QuestionSingleAdult() {
 	else if (questionType === QuestionType.QuestionRadio) {
 		questionComponent = (
 			<QuestionRadio
-				options={optionText(translatedPage.choices)}
+				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}
@@ -113,7 +94,7 @@ export default function QuestionSingleAdult() {
 	} else if (questionType === QuestionType.QuestionRadioImage) {
 		questionComponent = (
 			<QuestionRadioImage
-				options={translatedPage.choices}
+				options={translatedPage?.choices}
 				onChange={changeHandler}
 			/>
 		);
@@ -145,7 +126,7 @@ export default function QuestionSingleAdult() {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage.label}
+							{translatedPage?.label}
 						</QuestionLabel>
 						{questionComponent}
 					</QuestionContainer>

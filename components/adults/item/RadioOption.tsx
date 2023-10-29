@@ -1,14 +1,29 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { GeneralStyle } from "../../../styles/general";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { SettingContext } from "../../../store/settings";
+import PropTypes from "prop-types";
 
-export default function RadioOption({ label, value, icon, onPress, selected = false }) {
+RadioOption.propTypes = {
+	label: PropTypes.string.isRequired,
+	value: PropTypes.string.isRequired,
+	icon: PropTypes.element.isRequired,
+	onPress: PropTypes.func.isRequired,
+	selected: PropTypes.bool,
+};
+
+export default function RadioOption({
+	label,
+	value,
+	icon,
+	onPress,
+	selected = false,
+}): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { color100, color200 } = settingCtx.settingState.colorTheme;
+	const { color100 } = settingCtx.settingState.colorTheme;
 	const [optionValue, setOptionValue] = useState(value);
 
-	function pressHandler() {
+	function pressHandler(): void {
 		if (selected) {
 			// console.log('already selected');
 			onPress(null);
@@ -43,10 +58,8 @@ const styles = StyleSheet.create({
 		...GeneralStyle.adult.optionContainer,
 		alignItems: "center",
 		flexDirection: "row",
-		// backgroundColor: "pink",
 	},
 	radioButton: {
-		// backgroundColor: "whitesmoke",
 		height: 25,
 		width: 25,
 		marginRight: 15,
@@ -59,13 +72,11 @@ const styles = StyleSheet.create({
 		width: "100%",
 		flex: 1,
 		flexDirection: "row",
-		// backgroundColor: "yellow",
 		alignItems: "center",
 		flexWrap: "nowrap",
 	},
 	labelText: {
 		...GeneralStyle.adult.optionText,
-		// backgroundColor: "lightblue",
 		flexWrap: "wrap",
 		flex: 1,
 	},

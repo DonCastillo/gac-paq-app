@@ -1,24 +1,20 @@
-import { useContext } from "react";
-import { Text, View, StyleSheet, ScrollView, ImageBackground } from "react-native";
+import React, { useContext } from "react";
+import { View, StyleSheet, ImageBackground } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
 import CenterMain from "../../components/orientation/CenterMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
-import { Images } from "../../styles/images";
 import Navigation from "../../components/Navigation";
-import FullWidthButton from "../../components/buttons/FullWidthButton";
 import SingleNav from "../../components/adults/navigation/SingleNav";
 import Toolbar from "../../components/adults/Toolbar";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
-export default function QuestionExtroAdult() {
-	console.log("question extro kid ...");
+export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+	const { language, currentPage, buttons } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
-	const ImageComponent = Images.kid.extro_question_page;
 
 	const bgImageURL =
 		"http://localhost:8055/assets/607b231c-f6d0-439d-8b0a-a8e873457ed9?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5";
@@ -42,7 +38,7 @@ export default function QuestionExtroAdult() {
 							textAlign: "center",
 						}}
 					>
-						{translatedPage.heading}
+						{translatedPage?.heading}
 					</Heading>
 					<Paragraph
 						customStyle={{
@@ -50,7 +46,7 @@ export default function QuestionExtroAdult() {
 							fontSize: 20,
 						}}
 					>
-						{translatedPage.subheading}
+						{translatedPage?.subheading}
 					</Paragraph>
 				</CenterMain>
 				<Navigation>

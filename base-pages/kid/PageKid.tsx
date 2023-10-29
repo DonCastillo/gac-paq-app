@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useContext, useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
@@ -10,15 +10,15 @@ import Navigation from "../../components/Navigation";
 import FullWidthButton from "../../components/buttons/FullWidthButton";
 import { getSectionType } from "../../utils/section";
 import SectionType from "../../constants/section_type";
-import { QuestionContext } from "../../store/questions";
+// import { QuestionContext } from "../../store/questions";
 import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
 
-export default function PageKid() {
+export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const questionCtx = useContext(QuestionContext);
+	// const questionCtx = useContext(QuestionContext);
 	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
-	const { introductoryPages } = questionCtx.questionState;
-	const { color100, color200 } = colorTheme;
+	// const { introductoryPages } = questionCtx.questionState;
+	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState(null);
 
@@ -45,7 +45,7 @@ export default function PageKid() {
 		setButtonComponent(buttonComponent);
 	}, [currentPage?.section, currentPage?.sectionPageNumber]);
 
-	function renderSingleButton(label: string) {
+	function renderSingleButton(label: string): React.ReactElement {
 		return (
 			<FullWidthButton
 				customStyle={{
@@ -58,11 +58,11 @@ export default function PageKid() {
 		);
 	}
 
-	function renderDoubleButton() {
+	function renderDoubleButton(): React.ReactElement {
 		return <BackAndGoNav />;
 	}
 
-	function pressHandler() {
+	function pressHandler(): void {
 		console.log("press handler: ");
 		settingCtx.nextPage();
 	}

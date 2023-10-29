@@ -168,8 +168,11 @@ function settingReducer(state: any, action: any): any {
 	}
 }
 
-
-export default function SettingContextProvider({ children }: { children: React.ReactNode }): JSX.Element {
+export default function SettingContextProvider({
+	children,
+}: {
+	children: React.ReactNode;
+}): JSX.Element {
 	const [settingState, dispatch] = useReducer(settingReducer, INITIAL_STATE);
 
 	function setMode(newMode: Mode.Adult | Mode.Kid): void {

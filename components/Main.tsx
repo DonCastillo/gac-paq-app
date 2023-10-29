@@ -1,12 +1,19 @@
-import { Text, View, Image, StyleSheet, SafeAreaView } from "react-native";
+import React from "react";
+import { View, StyleSheet, SafeAreaView } from "react-native";
+import PropTypes from "prop-types";
 
-export default function Main({ children, customStyle = {} }) {
+export default function Main({ children, customStyle = {} }): React.ReactElement {
 	return (
 		<SafeAreaView>
 			<View style={[styles.container, customStyle]}>{children}</View>
 		</SafeAreaView>
 	);
 }
+
+Main.propTypes = {
+	children: PropTypes.node.isRequired,
+	customStyle: PropTypes.object,
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -16,6 +23,5 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 10,
 		minWidth: "100%",
 		height: "100%",
-		// backgroundColor: 'yellow'
 	},
 });

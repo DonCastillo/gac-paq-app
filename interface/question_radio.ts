@@ -6,10 +6,10 @@ interface Choice {
 }
 
 export default interface QuestionRadioInterface {
-	id?: string | number | null;
-	question_radio_id?: string | number | null;
+	id?: string | number;
+	question_radio_id?: string | number;
 	heading: string;
 	label: string;
 	choices: Choice[];
-	languages_id?: LanguageInterface;
+	languages_id?: LanguageInterface | null;
 }

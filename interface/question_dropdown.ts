@@ -6,10 +6,10 @@ interface Choice {
 }
 
 export default interface QuestionDropdownInterface {
-	id?: string | number | null;
-	question_dropdown_id?: string | number | null;
+	id?: string | number;
+	question_dropdown_id?: string | number;
 	heading: string;
 	label: string;
 	choices: Choice[];
-	languages_id?: LanguageInterface;
+	languages_id?: LanguageInterface | null;
 }

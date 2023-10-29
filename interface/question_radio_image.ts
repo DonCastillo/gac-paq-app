@@ -2,7 +2,7 @@ import type LanguageInterface from "./language";
 
 interface Choice {
 	image_choices_id: {
-		id?: number | string | null;
+		id?: number | string;
 		sort?: number | null;
 		text: string;
 		value: string;
@@ -14,10 +14,10 @@ interface Choice {
 }
 
 export default interface QuestionRadioImageInterface {
-	id?: string | number | null;
-	question_radio_image_id?: string | number | null;
+	id?: string | number;
+	question_radio_image_id?: string | number;
 	heading: string;
 	label: string;
 	choices: Choice[];
-	languages_id?: LanguageInterface;
+	languages_id?: LanguageInterface | null;
 }

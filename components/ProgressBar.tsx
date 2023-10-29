@@ -1,7 +1,8 @@
+import React from "react";
 import { StyleSheet, View } from "react-native";
 import * as Progress from "react-native-progress";
 
-export default function ProgressBar() {
+export default function ProgressBar(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<Progress.Bar

@@ -17,17 +17,23 @@ function optionText(options: OptionInterface[]): QuestionRadioItemInterface[] {
 function optionRegion(options: RegionInterface[]): QuestionRadioItemInterface[] {
 	return options.map(({ title, code, flag }) => {
 		const FlagComponent = flag;
+		if (FlagComponent !== null || FlagComponent !== undefined) {
+			return {
+				label: title,
+				value: title,
+				icon: (
+					<FlagComponent
+						height={50}
+						width={50}
+						padding={0}
+						margin={0}
+					/>
+				),
+			};
+		}
 		return {
 			label: title,
 			value: title,
-			icon: (
-				<FlagComponent
-					height={50}
-					width={50}
-					padding={0}
-					margin={0}
-				/>
-			),
 		};
 	});
 }
@@ -35,17 +41,23 @@ function optionRegion(options: RegionInterface[]): QuestionRadioItemInterface[] 
 function optionLanguage(options: LanguageInterface[]): QuestionRadioItemInterface[] {
 	return options.map(({ name, lang_code, flag }) => {
 		const FlagComponent = flag;
+		if (FlagComponent !== null || FlagComponent !== undefined) {
+			return {
+				label: name,
+				value: lang_code,
+				icon: (
+					<FlagComponent
+						height={50}
+						width={50}
+						padding={0}
+						margin={0}
+					/>
+				),
+			};
+		}
 		return {
 			label: name,
 			value: lang_code,
-			icon: (
-				<FlagComponent
-					height={50}
-					width={50}
-					padding={0}
-					margin={0}
-				/>
-			),
 		};
 	});
 }

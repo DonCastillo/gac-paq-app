@@ -1,13 +1,20 @@
+import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { useFonts } from "expo-font";
 
-export default function Paragraph({ children, customStyle = {} }) {
+import PropTypes from "prop-types";
+
+export default function Paragraph({ children, customStyle = {} }): React.ReactElement {
 	return (
 		<View>
 			<Text style={[styles.text, customStyle]}>{children}</Text>
 		</View>
 	);
 }
+
+Paragraph.propTypes = {
+	children: PropTypes.node.isRequired,
+	customStyle: PropTypes.object,
+};
 
 const styles = StyleSheet.create({
 	text: {

@@ -1,19 +1,19 @@
-import { Pressable, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Pressable, SafeAreaView, StyleSheet, View } from "react-native";
 import { Icon } from "@rneui/themed";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { SettingContext } from "../../store/settings";
 
 const ICON_SIZE = 30;
 
-export default function Toolbar() {
+export default function Toolbar(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 
-	function backHandler() {
+	function backHandler(): void {
 		console.log("back pressed from the toolbar");
 		settingCtx.prevPage();
 	}
 
-	function audioHandler() {
+	function audioHandler(): void {
 		console.log("audio pressed from the toolbar");
 	}
 

@@ -10,5 +10,7 @@
 		"sourceType": "module"
 	},
 	"plugins": ["react", "prettier"],
-	"rules": {}
+	"rules": {
+		"@typescript-eslint/naming-convention": "off"
+	}
 }

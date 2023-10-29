@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useContext } from "react";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
@@ -11,20 +11,20 @@ import BGLinearGradient from "../../components/BGLinearGradient";
 import SingleNav from "../../components/adults/navigation/SingleNav";
 import Toolbar from "../../components/adults/Toolbar";
 
-export default function PageAdult() {
+export default function PageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
 	console.log("currentPage: ", JSON.stringify(currentPage));
 
-	function pressHandler() {
+	function pressHandler(): void {
 		console.log("press handler: ");
 		settingCtx.nextPage();
 	}
 
-	function renderToolbar() {
+	function renderToolbar(): React.ReactElement {
 		if (currentPage.section === "intro" && currentPage.sectionPageNumber === 1) {
 			return <></>;
 		} else {
@@ -46,7 +46,7 @@ export default function PageAdult() {
 							textAlign: "center",
 						}}
 					>
-						{translatedPage.heading.toLowerCase()}
+						{translatedPage?.heading.toLowerCase()}
 					</Heading>
 					<Paragraph
 						customStyle={{
@@ -55,7 +55,7 @@ export default function PageAdult() {
 							lineHeight: 17,
 						}}
 					>
-						{translatedPage.description}
+						{translatedPage?.description}
 					</Paragraph>
 				</CenterMain>
 				<Navigation>

@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useContext, useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../../store/settings";
 import { translate } from "../../../utils/page";
 import Main from "../../../components/Main";
@@ -15,25 +15,15 @@ import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { QuestionContext } from "../../../store/questions";
 import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
 
-interface ResponseInterface {
-	label: string;
-	answer: string;
-}
-
-export default function QuestionSingleKid() {
-	// setting
+export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState({});
 	const [proceed, setProceed] = useState(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-	const questionCtx = useContext(QuestionContext);
 
-	const { language, colorTheme, currentPage } = settingCtx.settingState;
-	const { regionOption } = questionCtx.questionState;
-	const { color100, color200 } = colorTheme;
+	const { language, currentPage } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
-	const questionType = getQuestionType(translatedPage);
-	console.log("question type: ", questionType);
+	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
 	useEffect(() => {
@@ -44,7 +34,7 @@ export default function QuestionSingleKid() {
 	/**
 	 * finalizes response
 	 */
-	function proceedHandler() {
+	function proceedHandler(): void {
 		for (const [key, value] of Object.entries(responses)) {
 			responseCtx.addResponse({
 				pageNumber: currentPage.pageNumber,
@@ -59,7 +49,7 @@ export default function QuestionSingleKid() {
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string) {
+	function changeHandler(value: string): void {
 		setResponses((currResponse) => {
 			return {
 				...currResponse,
@@ -80,12 +70,11 @@ export default function QuestionSingleKid() {
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionSelect
-				options={translatedPage.choices}
+				options={translatedPage?.choices}
 				onChange={changeHandler}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionRegion) {
-		console.log("rendering the region question....");
 		questionComponent = (
 			<QuestionSelectRegion
 				selectedValue={""}
@@ -97,7 +86,7 @@ export default function QuestionSingleKid() {
 	} else if (questionType === QuestionType.QuestionText) {
 		questionComponent = (
 			<QuestionText
-				fields={translatedPage.fields}
+				fields={translatedPage?.fields}
 				onChange={changeHandler}
 			/>
 		);
@@ -115,7 +104,7 @@ export default function QuestionSingleKid() {
 								fontSize: 33,
 							}}
 						>
-							{translatedPage.heading}
+							{translatedPage?.heading}
 						</QuestionLabel>
 						{questionComponent}
 					</View>

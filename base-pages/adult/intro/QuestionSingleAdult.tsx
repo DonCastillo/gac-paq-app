@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../../store/settings";
 import { translate } from "../../../utils/page";
@@ -13,30 +13,22 @@ import CenterMain from "../../../components/orientation/CenterMain";
 import QuestionContainer from "../../../components/adults/QuestionContainer";
 import SingleNav from "../../../components/adults/navigation/SingleNav";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
-import QuestionRadioItemInterface from "../../../interface/question_radio_item";
 import { optionRegion, optionText } from "../../../utils/options";
 import QuestionText from "../../../components/adults/QuestionText";
 import Toolbar from "../../../components/adults/Toolbar";
 import { QuestionContext } from "../../../store/questions";
 
-interface ResponseInterface {
-	label: string;
-	answer: string;
-}
-
-export default function QuestionSingleAdult() {
-	// setting
+export default function QuestionSingleAdult(): React.ReactElement {
 	const [responses, setResponses] = useState({});
 	const [proceed, setProceed] = useState(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { language, currentPage, buttons } = settingCtx.settingState;
 	const regionsOptions = questionCtx.questionState.regionOption;
 	const translatedPage = translate(currentPage.page.translations, language);
-	const questionType = getQuestionType(translatedPage);
+	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
 	useEffect(() => {
@@ -47,7 +39,7 @@ export default function QuestionSingleAdult() {
 	/**
 	 * finalizes response
 	 */
-	function proceedHandler() {
+	function proceedHandler(): void {
 		for (const [key, value] of Object.entries(responses)) {
 			responseCtx.addResponse({
 				pageNumber: currentPage.pageNumber,
@@ -62,7 +54,7 @@ export default function QuestionSingleAdult() {
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string) {
+	function changeHandler(value: string): void {
 		setResponses((currResponse) => {
 			return {
 				...currResponse,
@@ -80,12 +72,10 @@ export default function QuestionSingleAdult() {
 		// }
 	}
 
-	// console.log("choices: ", translatedPage.choices);
-
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionRadio
-				options={optionText(translatedPage.choices)}
+				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}
@@ -103,7 +93,7 @@ export default function QuestionSingleAdult() {
 	} else if (questionType === QuestionType.QuestionText) {
 		questionComponent = (
 			<QuestionText
-				fields={translatedPage.fields}
+				fields={translatedPage?.fields}
 				onChange={changeHandler}
 			/>
 		);
@@ -124,7 +114,7 @@ export default function QuestionSingleAdult() {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage.label}
+							{translatedPage?.label}
 						</QuestionLabel>
 						{questionComponent}
 					</QuestionContainer>
@@ -145,6 +135,5 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
-		// backgroundColor: "pink",
 	},
 });

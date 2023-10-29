@@ -1,15 +1,13 @@
 import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { useContext, useLayoutEffect } from "react";
+import React, { useContext } from "react";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
 
-export default function QuestionIntroKid() {
-	console.log("question intro kid.......");
+export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { language, colorTheme, currentPage } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
 	const image = {
@@ -25,8 +23,8 @@ export default function QuestionIntroKid() {
 			></ImageBackground>
 			<View style={[styles.headingPanel, { backgroundColor: color100 }]}>
 				<ScrollView style={styles.headingPanelTop}>
-					<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
-					<Text style={styles.headingText}>{translatedPage.heading}</Text>
+					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
+					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
 				</ScrollView>
 				<View style={styles.headingPanelBottom}>
 					<BackAndGoNav />
@@ -58,14 +56,10 @@ const styles = StyleSheet.create({
 		paddingBottom: 50,
 	},
 	headingSubText: {
-		// backgroundColor: "#f7dcbe",
-		// opacity: "0.3",
 		textAlign: "center",
 		color: "#fff",
 	},
 	headingText: {
-		// backgroundColor: "#d4fae7",
-		// opacity: "0.3",
 		textAlign: "center",
 		paddingTop: 20,
 		color: "#fff",
@@ -74,13 +68,9 @@ const styles = StyleSheet.create({
 		height: "100%",
 	},
 	headingPanelTop: {
-		// backgroundColor: 'lightblue',
 		flex: 1,
-		// height: "100%",
-		// fontSize: 9,
 	},
 	headingPanelBottom: {
-		// backgroundColor: 'blue',
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "flex-end",

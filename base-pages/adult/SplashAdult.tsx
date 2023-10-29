@@ -1,24 +1,20 @@
-import { useContext, useEffect } from "react";
-import { StyleSheet, View, Image } from "react-native";
+import React, { useContext, useEffect } from "react";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import Main from "../../components/Main";
-import CenterMain from "../../components/orientation/CenterMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import ProgressBar from "../../components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
-import { Images } from "../../styles/images";
 import BottomMain from "../../components/orientation/BottomMain";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
-export default function SplashAdult() {
+export default function SplashAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { currentPage, currentPageNumber, mode, colorTheme } = settingCtx.settingState;
+	const { colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 
-	// const pageNumber = route.params.pageNumber;
 	const navigation = useNavigation();
-	const SplashImage = Images.kid.splash_image;
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
@@ -70,7 +66,5 @@ const styles = StyleSheet.create({
 	progressContainer: {
 		marginVertical: 20,
 	},
-	imageContainer: {
-		// backgroundColor: "red"
-	},
+	imageContainer: {},
 });

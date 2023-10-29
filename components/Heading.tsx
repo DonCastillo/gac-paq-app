@@ -1,7 +1,8 @@
+import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { useFonts } from "expo-font";
+import PropTypes from "prop-types";
 
-export default function Heading({ children, customStyle = {} }) {
+export default function Heading({ children, customStyle = {} }): React.ReactElement {
 	return (
 		<View>
 			<Text style={[styles.text, customStyle]}>{children}</Text>
@@ -9,9 +10,13 @@ export default function Heading({ children, customStyle = {} }) {
 	);
 }
 
+Heading.propTypes = {
+	children: PropTypes.node.isRequired,
+	customStyle: PropTypes.object,
+};
+
 const styles = StyleSheet.create({
 	text: {
-		// backgroundColor: 'green',
 		fontWeight: "bold",
 		color: "white",
 		flexWrap: "wrap",

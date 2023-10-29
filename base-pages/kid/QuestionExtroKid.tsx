@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import React, { useContext } from "react";
+import { View, StyleSheet } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
@@ -10,18 +10,18 @@ import { Images } from "../../styles/images";
 import Navigation from "../../components/Navigation";
 import FullWidthButton from "../../components/buttons/FullWidthButton";
 
-export default function QuestionExtroKid() {
+export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage } = settingCtx.settingState;
+	const { language, currentPage } = settingCtx.settingState;
 	const color100 = "#FFEDA5";
-	const color200 = "#FFCB66";
+	// const color200 = "#FFCB66";
 	const translatedPage = translate(currentPage.page.translations, language);
 	const ImageComponent = Images.kid.extro_question_page;
 
 	console.log(translatedPage);
 
-	function pressHandler() {
+	function pressHandler(): void {
 		console.log("press handler: ");
 		settingCtx.nextPage();
 	}
@@ -38,7 +38,7 @@ export default function QuestionExtroKid() {
 							textAlign: "center",
 						}}
 					>
-						{translatedPage.heading}
+						{translatedPage?.heading}
 					</Heading>
 					<Paragraph
 						customStyle={{
@@ -46,7 +46,7 @@ export default function QuestionExtroKid() {
 							fontSize: 20,
 						}}
 					>
-						{translatedPage.subheading}
+						{translatedPage?.subheading}
 					</Paragraph>
 					<View style={styles.imageContainer}>
 						<ImageComponent
@@ -75,12 +75,10 @@ export default function QuestionExtroKid() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		// backgroundColor: "green",
 		alignItems: "center",
 		justifyContent: "center",
 	},
 	imageContainer: {
-		// backgroundColor: "red",
 		justifyContent: "center",
 		alignItems: "center",
 		marginLeft: -40,

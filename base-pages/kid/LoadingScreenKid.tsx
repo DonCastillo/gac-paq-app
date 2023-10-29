@@ -1,18 +1,13 @@
-import { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { StyleSheet, View, Image } from "react-native";
 import { SettingContext } from "../../store/settings";
 import Main from "../../components/Main";
 import CenterMain from "../../components/orientation/CenterMain";
-import Heading from "../../components/Heading";
-import Paragraph from "../../components/Paragraph";
 import ProgressBar from "../../components/ProgressBar";
 
-const FONT_SIZE = 20;
-
-export default function LoadingScreenKid({ text = "" }) {
+export default function LoadingScreenKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { color100, color200 } = settingCtx.settingState.colorTheme;
-	const currentPage = settingCtx.settingState.currentPage;
+	const { color100 } = settingCtx.settingState.colorTheme;
 
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>

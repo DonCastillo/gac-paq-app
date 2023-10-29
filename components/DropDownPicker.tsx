@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "../store/settings";
@@ -12,7 +12,7 @@ export default function DropDownSelector({
 	selectedValue,
 	onSelect,
 	dropdownMinHeight = 280,
-}) {
+}): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;

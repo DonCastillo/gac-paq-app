@@ -1,5 +1,5 @@
-import { useContext, useEffect } from "react";
-import { StyleSheet, View, Image } from "react-native";
+import React, { useContext, useEffect } from "react";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import Main from "../../components/Main";
 import CenterMain from "../../components/orientation/CenterMain";
@@ -9,11 +9,9 @@ import ProgressBar from "../../components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
 import { Images } from "../../styles/images";
 
-export default function SplashKid() {
+export default function SplashKid(): JSX.Element {
 	const settingCtx = useContext(SettingContext);
-	const { color100, color200 } = settingCtx.settingState.colorTheme;
-	const currentPage = settingCtx.settingState.currentPage;
-	// const pageNumber = route.params.pageNumber;
+	const { color100 } = settingCtx.settingState.colorTheme;
 	const navigation = useNavigation();
 	const SplashImage = Images.kid.splash_image;
 
@@ -21,7 +19,6 @@ export default function SplashKid() {
 		const timeout = setTimeout(() => {
 			clearInterval(timeout);
 			navigation.navigate(`RegularPageScreen`);
-			// navigation.navigate()
 		}, 3000);
 	});
 
@@ -65,7 +62,5 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 	},
-	imageContainer: {
-		// backgroundColor: "red"
-	},
+	imageContainer: {},
 });

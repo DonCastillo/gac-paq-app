@@ -1,13 +1,19 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import React from "react";
+import { View, StyleSheet } from "react-native";
 
-export default function Navigation({ children, customStyle = {} }) {
+import PropTypes from "prop-types";
+
+export default function Navigation({ children, customStyle = {} }): React.ReactElement {
 	return <View style={[styles.container, customStyle]}>{children}</View>;
 }
 
+Navigation.propTypes = {
+	children: PropTypes.node.isRequired,
+	customStyle: PropTypes.object,
+};
+
 const styles = StyleSheet.create({
 	container: {
-		// backgroundColor: "pink",
-		// backgroundColor: "#fff",
 		flex: 1,
 		flexDirection: "row",
 		justifyContent: "center",

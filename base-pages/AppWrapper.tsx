@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { SettingContext } from "../store/settings";
 import { QuestionContext } from "../store/questions";
 import RegularPageScreen from "../screens/RegularPageScreen";
@@ -14,7 +14,7 @@ import { loadLanguagesOffline, loadRegionsOffline } from "../utils/load";
 
 const Stack = createNativeStackNavigator();
 
-function AppWrapper() {
+function AppWrapper(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const questionCtx = useContext(QuestionContext);
 	const { mode } = settingCtx.settingState;
@@ -22,7 +22,7 @@ function AppWrapper() {
 	const introductoryPages = questionCtx.questionState.introductoryPages;
 	const questionPages = questionCtx.questionState.questionPages;
 
-	function SplashScreen() {
+	function SplashScreen(): React.ReactElement {
 		if (mode === Mode.Kid) {
 			return <SplashKid />;
 		} else if (mode === Mode.Adult) {
@@ -49,9 +49,9 @@ function AppWrapper() {
 		introductoryPages.forEach((page, sectionIndex) => {
 			settingCtx.addPage({
 				pageNumber: pageNumber++,
-				page: page,
+				page,
 				screen: page.type,
-				sectionNumber: sectionNumber,
+				sectionNumber,
 				section: SectionType.Intro,
 				sectionPageNumber: ++sectionIndex,
 			});
@@ -66,10 +66,10 @@ function AppWrapper() {
 
 			settingCtx.addPage({
 				pageNumber: pageNumber++,
-				page: page,
+				page,
 				screen: page.type,
 				section: SectionType.Question,
-				sectionNumber: sectionNumber,
+				sectionNumber,
 				sectionPageNumber: sectionPageNumber++,
 			});
 		});
