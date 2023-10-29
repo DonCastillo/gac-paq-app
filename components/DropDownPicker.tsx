@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "../store/settings";
 import type QuestionRadioItemInterface from "../interface/question_radio_item";
@@ -8,30 +7,27 @@ import type QuestionRadioItemInterface from "../interface/question_radio_item";
 const FONT_SIZE = 16;
 const BORDER_WIDTH = 2;
 
-DropDownSelector.propTypes = {
-	options: PropTypes.arrayOf(
-		PropTypes.shape({
-			label: PropTypes.string.isRequired,
-			value: PropTypes.string.isRequired,
-		}),
-	).isRequired,
-	selectedValue: PropTypes.string,
-	onSelect: PropTypes.func.isRequired,
-	dropdownMinHeight: PropTypes.number,
-};
+interface DropDownSelectorPropsInterface {
+	options: QuestionRadioItemInterface[];
+	selectedValue: string | null;
+	onSelect: (value: string) => void;
+	dropdownMinHeight?: number;
+}
 
 export default function DropDownSelector({
 	options,
 	selectedValue,
 	onSelect,
 	dropdownMinHeight = 280,
-}): React.ReactElement {
+}: DropDownSelectorPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [open, setOpen] = useState<boolean>(false);
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<QuestionRadioItemInterface[]>(options);
+
+	console.log("DropDownSelector");
 
 	useEffect(() => {
 		if (items !== options) {

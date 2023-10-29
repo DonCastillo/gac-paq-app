@@ -41,9 +41,7 @@ export default function QuestionRadio({ options, onChange }): React.ReactElement
 								<Pressable
 									style={[
 										styles.optionContainer,
-										selected === item.value
-											? optionPressedStyle
-											: styles.optionUnpressed,
+										selected === item.value ? optionPressedStyle : styles.optionUnpressed,
 									]}
 									onPress={() => {
 										selectHandler(item.value);
@@ -52,9 +50,7 @@ export default function QuestionRadio({ options, onChange }): React.ReactElement
 									<Text
 										style={[
 											styles.optionText,
-											selected === item.value
-												? styles.textPressed
-												: styles.textUnpressed,
+											selected === item.value ? styles.textPressed : styles.textUnpressed,
 										]}
 									>
 										{item.text}

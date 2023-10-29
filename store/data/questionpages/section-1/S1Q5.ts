@@ -9,7 +9,8 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 		{
 			id: 1,
 			question_radio_image_id: 1,
-			label: "Which of the following images shows what you do most of the time in physical education class? ",
+			label:
+				"Which of the following images shows what you do most of the time in physical education class? ",
 			heading: "Question 5",
 			choices: [
 				{
@@ -57,7 +58,8 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 		{
 			id: 2,
 			question_radio_image_id: 1,
-			label: "¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
+			label:
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
 			heading: "Pregunta 5",
 			choices: [
 				{
@@ -105,7 +107,8 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 		{
 			id: 3,
 			question_radio_image_id: 1,
-			label: "Laquelle des images suivantes montre ce que vous faites la plupart du temps pendant le cours d'éducation physique ?",
+			label:
+				"Laquelle des images suivantes montre ce que vous faites la plupart du temps pendant le cours d'éducation physique ?",
 			heading: "Question 5",
 			choices: [
 				{

@@ -9,7 +9,8 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
 		{
 			id: 7,
 			question_radio_image_id: 3,
-			label: "Which of the following shows what you do most of the time while volunteering and/or working? ",
+			label:
+				"Which of the following shows what you do most of the time while volunteering and/or working? ",
 			heading: "Question 10",
 			choices: [
 				{
@@ -57,7 +58,8 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
 		{
 			id: 8,
 			question_radio_image_id: 3,
-			label: "¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras haces voluntariado y/o trabajas?",
+			label:
+				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras haces voluntariado y/o trabajas?",
 			heading: "Pregunta 10",
 			choices: [
 				{
@@ -105,7 +107,8 @@ const S2Q3: QuestionRadioImagePayloadInterface = {
 		{
 			id: 9,
 			question_radio_image_id: 3,
-			label: "Laquelle des options suivantes montre ce que vous faites la plupart du temps pendant que vous faites du bénévolat et/ou travaillez ?",
+			label:
+				"Laquelle des options suivantes montre ce que vous faites la plupart du temps pendant que vous faites du bénévolat et/ou travaillez ?",
 			heading: "Question 10",
 			choices: [
 				{

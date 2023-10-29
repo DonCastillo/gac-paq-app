@@ -3,23 +3,23 @@ import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
 import { SettingContext } from "../../../store/settings";
 import React, { useContext } from "react";
 
-export default function BackAndNextNav(): React.ReactElement {
+interface BackAndNextNavProps {
+	onPrev?: () => void;
+	onNext?: () => void;
+}
+
+export default function BackAndNextNav({
+	onPrev,
+	onNext,
+}: BackAndNextNavProps): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, buttons } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 
-	function prevPage(): void {
-		settingCtx.prevPage();
-	}
-
-	function nextPage(): void {
-		settingCtx.nextPage();
-	}
-
 	return (
 		<View style={styles.bottomNavigation}>
 			<ButtonContainerWidth
-				onPress={prevPage}
+				onPress={onPrev}
 				borderColor={color100}
 				bgColor={"#fff"}
 				textColor={color100}
@@ -28,7 +28,7 @@ export default function BackAndNextNav(): React.ReactElement {
 			</ButtonContainerWidth>
 
 			<ButtonContainerWidth
-				onPress={nextPage}
+				onPress={onNext}
 				borderColor={color100}
 				bgColor={color100}
 				textColor={"#fff"}
@@ -45,5 +45,6 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",
+		backgroundColor: "pink",
 	},
 });

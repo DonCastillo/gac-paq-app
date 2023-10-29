@@ -127,7 +127,10 @@ export default function QuestionSingleKid(): React.ReactElement {
 					</View>
 				</TopMain>
 				<Navigation>
-					<BackAndNextNav />
+					<BackAndNextNav
+						onPrev={() => settingCtx.prevPage()}
+						onNext={proceedHandler}
+					/>
 				</Navigation>
 			</Main>
 		</View>

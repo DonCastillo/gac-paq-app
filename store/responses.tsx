@@ -1,14 +1,9 @@
 import React, { createContext, useReducer } from "react";
-
-interface response {
-	pageNumber: number;
-	label: string;
-	answer: string | null;
-}
+import type ResponseInterface from "../interface/response";
 
 export const ResponseContext = createContext({
 	responses: {},
-	addResponse: (response: response) => {},
+	addResponse: (response: ResponseInterface) => {},
 });
 
 function responseReducer(state: any, action: any): any {
@@ -36,7 +31,7 @@ export default function ResponseContextProvider({
 }): React.ReactElement {
 	const [responses, dispatch] = useReducer(responseReducer, {});
 
-	function addResponse(newResponse: response): void {
+	function addResponse(newResponse: ResponseInterface): void {
 		dispatch({
 			type: "ADD_RESPONSE",
 			payload: newResponse,

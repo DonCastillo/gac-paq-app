@@ -11,7 +11,7 @@ import FullWidthButton from "../../components/buttons/FullWidthButton";
 import { getSectionType } from "../../utils/section";
 import SectionType from "../../constants/section_type";
 // import { QuestionContext } from "../../store/questions";
-import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
+import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -51,7 +51,7 @@ export default function PageKid(): React.ReactElement {
 				customStyle={{
 					backgroundColor: color100,
 				}}
-				onPress={pressHandler}
+				onPress={() => settingCtx.nextPage()}
 			>
 				{label}
 			</FullWidthButton>
@@ -59,12 +59,12 @@ export default function PageKid(): React.ReactElement {
 	}
 
 	function renderDoubleButton(): React.ReactElement {
-		return <BackAndGoNav />;
-	}
-
-	function pressHandler(): void {
-		console.log("press handler: ");
-		settingCtx.nextPage();
+		return (
+			<BackAndNextNav
+				onPrev={() => settingCtx.prevPage()}
+				onNext={() => settingCtx.nextPage()}
+			/>
+		);
 	}
 
 	return (

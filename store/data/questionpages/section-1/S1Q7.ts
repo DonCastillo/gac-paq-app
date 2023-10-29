@@ -57,7 +57,8 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 		{
 			id: 5,
 			question_radio_image_id: 2,
-			label: "¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo durante tus descansos?",
+			label:
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo durante tus descansos?",
 			heading: "Pregunta 7",
 			choices: [
 				{
@@ -105,7 +106,8 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 		{
 			id: 6,
 			question_radio_image_id: 2,
-			label: "Laquelle des images suivantes montre ce que vous faites la plupart du temps pendant vos pauses ?",
+			label:
+				"Laquelle des images suivantes montre ce que vous faites la plupart du temps pendant vos pauses ?",
 			heading: "Question 7",
 			choices: [
 				{

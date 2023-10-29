@@ -75,9 +75,7 @@ export default function QuestionRadioImage({ options, onChange }): React.ReactEl
 					selectHandler(value);
 				}}
 			>
-				<View style={styles.imageContainer}>
-					{renderImage(image_kid, image_kid_default)}
-				</View>
+				<View style={styles.imageContainer}>{renderImage(image_kid, image_kid_default)}</View>
 				<Text
 					style={[
 						styles.optionText,

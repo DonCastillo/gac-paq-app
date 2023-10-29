@@ -9,7 +9,8 @@ const S1Q6: QuestionRadioPayloadInterface = {
 			id: 9,
 			question_radio_id: 7,
 			heading: "Question 6",
-			label: "On a normal school day, how much break time do you have? (including recess/breaks/lunch)",
+			label:
+				"On a normal school day, how much break time do you have? (including recess/breaks/lunch)",
 			choices: [
 				{
 					text: "0 minutes",
@@ -45,7 +46,8 @@ const S1Q6: QuestionRadioPayloadInterface = {
 			id: 44,
 			question_radio_id: 7,
 			heading: "Pregunta 6",
-			label: "En un día normal de escuela, ¿cuánto tiempo de descanso tienes? (incluyendo recreos/intervalos/almuerzo)",
+			label:
+				"En un día normal de escuela, ¿cuánto tiempo de descanso tienes? (incluyendo recreos/intervalos/almuerzo)",
 			choices: [
 				{
 					text: "0 minutos",
@@ -81,7 +83,8 @@ const S1Q6: QuestionRadioPayloadInterface = {
 			id: 45,
 			question_radio_id: 7,
 			heading: "Question 6",
-			label: "Pendant une journée normale d'école, combien de temps de pause avez-vous ? (y compris les récréations, les pauses et le déjeuner)",
+			label:
+				"Pendant une journée normale d'école, combien de temps de pause avez-vous ? (y compris les récréations, les pauses et le déjeuner)",
 			choices: [
 				{
 					text: "0 minutes",

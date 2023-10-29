@@ -70,9 +70,7 @@ export default function QuestionRadioImage({ options, onChange }): React.ReactEl
 				}}
 			>
 				<View style={styles.optionImageContainer}>
-					{selected === value && (
-						<View style={[styles.imageFilter, optionPressedStyle]}></View>
-					)}
+					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(image_adult, image_adult_default)}
 				</View>
 				<View style={styles.optionTextContainer}>

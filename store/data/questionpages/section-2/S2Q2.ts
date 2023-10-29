@@ -73,7 +73,8 @@ const S2Q2: QuestionRadioPayloadInterface = {
 			id: 49,
 			question_radio_id: 9,
 			heading: "Question 9",
-			label: "Au cours de la semaine dernière, combien d'heures avez-vous passé à faire du bénévolat et/ou à travailler ?",
+			label:
+				"Au cours de la semaine dernière, combien d'heures avez-vous passé à faire du bénévolat et/ou à travailler ?",
 			choices: [
 				{
 					text: "0 heures",

@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import PageAdult from "../base-pages/adult/PageAdult";
 import QuestionExtroAdult from "../base-pages/adult/QuestionExtroAdult";
 import QuestionIntroAdult from "../base-pages/adult/QuestionIntroAdult";
@@ -21,15 +21,7 @@ function getScreen(
 	mode: Mode | string,
 	screenType: ScreenType | string,
 	sectionType?: SectionType | string,
-) {
-	// if (mode === Mode.Adult && screenType === ScreenType.Splash)
-	//     return SplashAdult;
-	// else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)
-	//     return QuestionIntroAdult;
-	// else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)
-	//     return QuestionExtroAdult;
-	// if (mode === Mode.Kid && screenType === ScreenType.Splash)
-	//     return <SplashKid />;
+): React.ReactElement {
 	if (mode === Mode.Adult && screenType === ScreenType.Language) return <LanguageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Language) return <LanguageKid />;
 	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;

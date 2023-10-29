@@ -9,12 +9,12 @@ export default function RegularPageScreen(): React.ReactElement {
 	const { currentPage, currentPageNumber, mode } = settingCtx.settingState;
 	const pageType = currentPage.screen !== null ? getScreenType(currentPage.screen) : null;
 	const sectionType = currentPage.section !== null ? getSectionType(currentPage.section) : null;
-	const [component, setComponent] = useState(<></>);
+	const [component, setComponent] = useState<React.ReactElement>(<></>);
 
 	function changeComponent(): void {
 		let tempComponent = <></>;
 
-		if (settingCtx.settingState.currentPageNumber === 0) {
+		if (currentPageNumber === 0) {
 			tempComponent = getScreen(mode, ScreenType.Language);
 		} else {
 			if (pageType !== null && sectionType !== null) {

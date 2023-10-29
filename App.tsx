@@ -1,16 +1,10 @@
-import { StatusBar } from "expo-status-bar";
-import * as Font from "expo-font";
-import { StyleSheet, Text, View } from "react-native";
 import AppWrapper from "./base-pages/AppWrapper";
-
-import React, { useCallback, useEffect, useState } from "react";
-
-import useFonts from "./hooks/useFonts";
+import React from "react";
 import QuestionContextProvider from "./store/questions";
 import SettingContextProvider from "./store/settings";
-import ResponseContextProvider, { ResponseContext } from "./store/responses";
+import ResponseContextProvider from "./store/responses";
 
-export default function App() {
+export default function App(): React.ReactElement {
 	return (
 		<ResponseContextProvider>
 			<QuestionContextProvider>

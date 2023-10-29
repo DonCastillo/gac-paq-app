@@ -16,8 +16,8 @@ import { QuestionContext } from "../../../store/questions";
 import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
 
 export default function QuestionSingleKid(): React.ReactElement {
-	const [responses, setResponses] = useState({});
-	const [proceed, setProceed] = useState(false);
+	const [responses, setResponses] = useState<Record<string, string | null>>({});
+	const [proceed, setProceed] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
@@ -49,7 +49,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string): void {
+	function changeHandler(value: string | null): void {
 		setResponses((currResponse) => {
 			return {
 				...currResponse,
@@ -78,9 +78,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		questionComponent = (
 			<QuestionSelectRegion
 				selectedValue={""}
-				onChange={(value: string) => {
-					console.log("value: ", value);
-				}}
+				onChange={changeHandler}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionText) {
@@ -110,7 +108,10 @@ export default function QuestionSingleKid(): React.ReactElement {
 					</View>
 				</TopMain>
 				<Navigation>
-					<BackAndNextNav />
+					<BackAndNextNav
+						onPrev={() => settingCtx.prevPage()}
+						onNext={proceedHandler}
+					/>
 				</Navigation>
 			</Main>
 		</View>
@@ -122,10 +123,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
-		// backgroundColor: "pink",
 	},
 	innerContainer: {
-		// backgroundColor: "green",
 		marginTop: 50,
 	},
 });

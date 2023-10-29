@@ -9,7 +9,8 @@ const S2Q1: QuestionRadioPayloadInterface = {
 			id: 10,
 			question_radio_id: 8,
 			heading: "Question 8",
-			label: "In the past week, did you volunteer or have a job that earned you and your family some income?",
+			label:
+				"In the past week, did you volunteer or have a job that earned you and your family some income?",
 			choices: [
 				{
 					text: "Yes",
@@ -29,7 +30,8 @@ const S2Q1: QuestionRadioPayloadInterface = {
 			id: 46,
 			question_radio_id: 8,
 			heading: "Pregunta 8",
-			label: "¿Durante la última semana, hiciste trabajo voluntario o tuviste un empleo que te proporcionó ingresos a ti o a tu familia?",
+			label:
+				"¿Durante la última semana, hiciste trabajo voluntario o tuviste un empleo que te proporcionó ingresos a ti o a tu familia?",
 			choices: [
 				{
 					text: "Sí",
@@ -49,7 +51,8 @@ const S2Q1: QuestionRadioPayloadInterface = {
 			id: 47,
 			question_radio_id: 8,
 			heading: "Question 8",
-			label: "Au cours de la semaine dernière, avez-vous fait du bénévolat ou avez-vous eu un emploi qui vous a rapporté des revenus à vous ou à votre famille ?",
+			label:
+				"Au cours de la semaine dernière, avez-vous fait du bénévolat ou avez-vous eu un emploi qui vous a rapporté des revenus à vous ou à votre famille ?",
 			choices: [
 				{
 					text: "Oui",
