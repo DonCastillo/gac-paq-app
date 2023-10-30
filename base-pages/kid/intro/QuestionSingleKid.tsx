@@ -40,8 +40,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if(Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
 			// console.log("++++++++")
-			// console.log("saved question: ", currentPage.page.name)
-			// console.log("saved response: ", getResponse(currentPageNumber, response))
+			console.log("saved question: ", currentPage.page.name)
+			console.log("saved response: ", getResponse(currentPageNumber, response))
 			// console.log("++++++++")
 
 		}
@@ -105,8 +105,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 		// console.log("question region")
 		questionComponent = (
 			<QuestionSelectRegion
-				selectedValue={""}
 				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionText) {

@@ -7,7 +7,7 @@ import { optionRegion } from "../../utils/options";
 
 interface QuestionSelectRegionProps {
 	onChange: (value: string) => void;
-	selectedValue: string;
+	selectedValue: string | null;
 }
 
 export default function QuestionSelectRegion({
