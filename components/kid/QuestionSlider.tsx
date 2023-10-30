@@ -1,23 +1,28 @@
 import { View, Text, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
 import { Slider } from "@rneui/themed";
 
-QuestionSlider.propTypes = {
-	onChange: PropTypes.func.isRequired,
-};
+interface QuestionSliderPropsInterface {
+	onChange: (value: number | null) => void;
+	selectedValue: number;
+}
 
-export default function QuestionSlider({ onChange }): React.ReactElement {
+export default function QuestionSlider({
+	onChange,
+	selectedValue,
+}: QuestionSliderPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
+	const { colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
-	const [value, setValue] = useState(0);
+	const [value, setValue] = useState<number>(selectedValue ?? 0);
 
 	useEffect(() => {
-		onChange(value);
-	}, []);
+		if (value !== selectedValue) {
+			setValue(selectedValue);
+		}
+	}, [currentPage, selectedValue]);
 
 	function changeHandler(value: number): void {
 		setValue(value);

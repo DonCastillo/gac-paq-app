@@ -68,6 +68,24 @@ export default function QuestionSingleKid(): React.ReactElement {
 		// }
 	}
 
+	function stringToInt(value: string | null): number {
+		if (value === null || value === undefined || value === "") {
+			return 0;
+		}
+		const parsedValue = parseInt(value);
+		if (isNaN(parsedValue)) return 0;
+		if (parsedValue < 0) return 0;
+		return parsedValue;
+	}
+
+	function intToString(value: number | null): string {
+		if (value === null || value === undefined) {
+			return "0";
+		}
+		if (value < 0) return "0";
+		return value.toString();
+	}
+
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionSelect
@@ -93,7 +111,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionSlider) {
-		questionComponent = <QuestionSlider onChange={changeHandler} />;
+		questionComponent = (
+			<QuestionSlider
+				onChange={(value: number | null) => changeHandler(intToString(value))}
+				selectedValue={stringToInt(selectedValue)}
+			/>
+		);
 	} else if (questionType === QuestionType.QuestionText) {
 		questionComponent = (
 			<QuestionText
