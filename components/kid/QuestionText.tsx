@@ -10,7 +10,11 @@ interface QuestionTextProps {
 	onChange: (value: string) => void;
 }
 
-export default function QuestionText({ fields, onChange, selectedValue }: QuestionTextProps): React.ReactElement {
+export default function QuestionText({
+	fields,
+	onChange,
+	selectedValue,
+}: QuestionTextProps): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;

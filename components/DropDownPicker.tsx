@@ -31,7 +31,6 @@ export default function DropDownSelector({
 		if (items !== options) {
 			setItems(options);
 		}
-		
 	}, [currentPage]);
 
 	useEffect(() => {
@@ -42,7 +41,6 @@ export default function DropDownSelector({
 
 	// console.log("selected value: ", selectedValue)
 	// console.log("value: ", value);
-
 
 	return (
 		<>

@@ -16,10 +16,13 @@ import QuestionRadio from "../../../components/kid/QuestionRadio";
 import QuestionSlider from "../../../components/kid/QuestionSlider";
 import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
+import { getResponse } from "../../../utils/response";
+
 
 export default function QuestionSingleKid(): React.ReactElement {
-	const [responses, setResponses] = useState({});
-	const [proceed, setProceed] = useState(false);
+	const [responses, setResponses] = useState<Record<string, string | null>>({});
+	const [proceed, setProceed] = useState<boolean>(false);
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
@@ -34,30 +37,28 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setProceed(theresResponse);
 	}, [responses]);
 
-	/**
-	 * finalizes response
-	 */
-	function proceedHandler(): void {
-		for (const [key, value] of Object.entries(responses)) {
-			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
-				label: key,
-				answer: value,
-			});
+	useEffect(() => {
+		const response = responseCtx.responses;
+		const currentPageNumber = settingCtx.settingState.currentPageNumber;
+		if (Object.keys(response).length > 0) {
+			setSelectedValue(getResponse(currentPageNumber, response));
+			// console.log("++++++++")
+			console.log("saved question: ", currentPage.page.name);
+			console.log("saved response: ", getResponse(currentPageNumber, response));
+			// console.log("++++++++")
 		}
-		setResponses({});
-		settingCtx.nextPage();
-	}
+	}, [settingCtx.settingState.currentPageNumber]);
+
+	
 
 	/**
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		setResponses((currResponse) => {
-			return {
-				...currResponse,
-				[currentPage.page?.name]: value,
-			};
+		responseCtx.addResponse({
+			pageNumber: currentPage.pageNumber,
+			label: currentPage.page.name,
+			answer: value,
 		});
 
 		// set mode
@@ -70,13 +71,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 		// }
 	}
 
-	if (questionType === QuestionType.QuestionCheckbox) {
-		questionComponent = <></>;
-	} else if (questionType === QuestionType.QuestionDropdown) {
+	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionSelect
 				options={translatedPage?.choices}
 				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionRadio) {
@@ -84,6 +84,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			<QuestionRadio
 				options={translatedPage?.choices}
 				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionRadioImage) {
@@ -100,6 +101,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			<QuestionText
 				fields={translatedPage?.fields}
 				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else {
@@ -108,7 +110,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
-			{/* <QuestionProgress></QuestionProgress> */}
 			<Main>
 				<TopMain>
 					<View>
@@ -129,7 +130,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<Navigation>
 					<BackAndNextNav
 						onPrev={() => settingCtx.prevPage()}
-						onNext={proceedHandler}
+						onNext={() => settingCtx.nextPage()}
 					/>
 				</Navigation>
 			</Main>

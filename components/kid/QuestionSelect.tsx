@@ -4,14 +4,17 @@ import DropDownSelector from "../DropDownPicker";
 import { optionText } from "../../utils/options";
 import type { OptionInterface } from "../../utils/options";
 
-
 interface QuestionSelectPropsInterface {
 	options: OptionInterface[];
 	onChange: (value: string) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionSelect({ options, onChange, selectedValue }: QuestionSelectPropsInterface): React.ReactElement {
+export default function QuestionSelect({
+	options,
+	onChange,
+	selectedValue,
+}: QuestionSelectPropsInterface): React.ReactElement {
 	const rawItems: QuestionRadioItemInterface[] = optionText(options);
 	return (
 		<DropDownSelector

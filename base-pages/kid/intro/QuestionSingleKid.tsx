@@ -37,51 +37,26 @@ export default function QuestionSingleKid(): React.ReactElement {
 		// console.log("getting response....")
 		const response = responseCtx.responses;
 		const currentPageNumber = settingCtx.settingState.currentPageNumber;
-		if(Object.keys(response).length > 0) {
+		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
 			// console.log("++++++++")
-			console.log("saved question: ", currentPage.page.name)
-			console.log("saved response: ", getResponse(currentPageNumber, response))
+			console.log("saved question: ", currentPage.page.name);
+			console.log("saved response: ", getResponse(currentPageNumber, response));
 			// console.log("++++++++")
-
 		}
 	}, [settingCtx.settingState.currentPageNumber]);
 
-	/**
-	 * finalizes response
-	 */
-	// function proceedHandler(): void {
-		// if(Object.keys(responses).length > 0) {
-		// 	for (const [key, value] of Object.entries(responses)) {
-		// 		responseCtx.addResponse({
-		// 			pageNumber: currentPage.pageNumber,
-		// 			label: key,
-		// 			answer: value,
-		// 		});
-		// 	}
-		// }
-		// setResponses({});
-		// setSelectedValue(null);
-		// settingCtx.nextPage();
-	// }
 
 	/**
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		// console.log("change handled...")
 		responseCtx.addResponse({
 			pageNumber: currentPage.pageNumber,
 			label: currentPage.page.name,
 			answer: value,
 		});
-		// setResponses((currResponse) => {
-		// 	return {
-		// 		...currResponse,
-		// 		[currentPage.page?.name]: value,
-		// 	};
-		// });
-
+		
 		// set mode
 		// if(currentPage.page.name === "Who's taking this questionnaire?") {
 		//     if (value === "child") {
@@ -93,7 +68,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}
 
 	if (questionType === QuestionType.QuestionDropdown) {
-		// console.log("question dropdown");
 		questionComponent = (
 			<QuestionSelect
 				options={translatedPage?.choices}
@@ -102,7 +76,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionRegion) {
-		// console.log("question region")
 		questionComponent = (
 			<QuestionSelectRegion
 				onChange={changeHandler}
@@ -110,7 +83,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionText) {
-		console.log("question text")
+		console.log("question text");
 		questionComponent = (
 			<QuestionText
 				fields={translatedPage?.fields}
