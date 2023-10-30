@@ -4,17 +4,13 @@ import { SettingContext } from "../../store/settings";
 import { TextInput, View, StyleSheet, ScrollView } from "react-native";
 import { GeneralStyle } from "../../styles/general";
 
-QuestionText.propTypes = {
-	fields: PropTypes.arrayOf(
-		PropTypes.shape({
-			label: PropTypes.string.isRequired,
-			value: PropTypes.string,
-		}),
-	),
-	onChange: PropTypes.func.isRequired,
-};
+interface QuestionTextProps {
+	fields: any[];
+	selectedValue: string | null;
+	onChange: (value: string) => void;
+}
 
-export default function QuestionText({ fields, onChange }): React.ReactElement {
+export default function QuestionText({ fields, onChange, selectedValue }: QuestionTextProps): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;
@@ -36,6 +32,7 @@ export default function QuestionText({ fields, onChange }): React.ReactElement {
 					autoCorrect={false}
 					onChangeText={changeHandler}
 					placeholder={field.label}
+					defaultValue={selectedValue ?? ""}
 				/>
 			</ScrollView>
 		);

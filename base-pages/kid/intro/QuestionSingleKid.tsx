@@ -110,11 +110,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionText) {
-		// console.log("question text")
+		console.log("question text")
 		questionComponent = (
 			<QuestionText
 				fields={translatedPage?.fields}
 				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else {

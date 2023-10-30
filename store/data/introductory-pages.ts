@@ -17,7 +17,7 @@ const IntroductoryPages:
 	LocationPage,
 	AgePage,
 	DemographicPage,
-	// AccelerometerPage,
+	AccelerometerPage,
 	GreatJobPage,
 ];
 
