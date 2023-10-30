@@ -18,7 +18,6 @@ import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { getResponse } from "../../../utils/response";
 
-
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [proceed, setProceed] = useState<boolean>(false);
@@ -48,8 +47,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 			// console.log("++++++++")
 		}
 	}, [settingCtx.settingState.currentPageNumber]);
-
-	
 
 	/**
 	 * temporarily store the initial selection
@@ -92,6 +89,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			<QuestionRadioImage
 				options={translatedPage?.choices}
 				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionSlider) {

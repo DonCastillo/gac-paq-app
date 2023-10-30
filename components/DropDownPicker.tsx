@@ -39,9 +39,6 @@ export default function DropDownSelector({
 		}
 	}, [currentPage, selectedValue]);
 
-	// console.log("selected value: ", selectedValue)
-	// console.log("value: ", value);
-
 	return (
 		<>
 			<Text>{selectedValue}</Text>

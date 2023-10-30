@@ -4,30 +4,32 @@ import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
 import type { OptionInterface } from "../../utils/options";
 
-interface QuestionRadionPropsInterface {
+interface QuestionRadioPropsInterface {
 	options: OptionInterface[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionRadio({ options, onChange, selectedValue }: QuestionRadionPropsInterface): React.ReactElement {
+export default function QuestionRadio({
+	options,
+	onChange,
+	selectedValue,
+}: QuestionRadioPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 
 	useEffect(() => {
-		if(selected !== selectedValue) {
+		if (selected !== selectedValue) {
 			setSelected(selectedValue);
 		}
-	}, [currentPage, selectedValue])
-
+	}, [currentPage, selectedValue]);
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 		borderColor: color100,
 	};
-
 
 	function selectHandler(value: string): void {
 		if (value === selected) {

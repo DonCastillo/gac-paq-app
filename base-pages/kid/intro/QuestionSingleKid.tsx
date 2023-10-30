@@ -46,7 +46,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 		}
 	}, [settingCtx.settingState.currentPageNumber]);
 
-
 	/**
 	 * temporarily store the initial selection
 	 */
@@ -56,7 +55,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			label: currentPage.page.name,
 			answer: value,
 		});
-		
+
 		// set mode
 		// if(currentPage.page.name === "Who's taking this questionnaire?") {
 		//     if (value === "child") {

@@ -1,19 +1,29 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "../../store/settings";
-import PropTypes from "prop-types";
 
-QuestionRadioImage.propTypes = {
-	options: PropTypes.array,
-	onChange: PropTypes.func,
-};
+interface QuestionRadioImagePropsInterface {
+	options: any[];
+	onChange: (value: string | null) => void;
+	selectedValue: string | null;
+}
 
-export default function QuestionRadioImage({ options, onChange }): React.ReactElement {
+export default function QuestionRadioImage({
+	options,
+	onChange,
+	selectedValue,
+}: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
+	const { colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
-	const [selected, setSelected] = useState<string | null>(null);
+	const [selected, setSelected] = useState<string | null>(selectedValue);
+
+	useEffect(() => {
+		if (selected !== selectedValue) {
+			setSelected(selectedValue);
+		}
+	}, [currentPage, selectedValue]);
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
