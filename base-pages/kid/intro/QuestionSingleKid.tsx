@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { SettingContext } from "../../../store/settings";
 import { translate } from "../../../utils/page";
 import Main from "../../../components/Main";
@@ -14,10 +14,12 @@ import QuestionText from "../../../components/kid/QuestionText";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { QuestionContext } from "../../../store/questions";
 import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
+import { getResponse } from "../../../utils/response";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [proceed, setProceed] = useState<boolean>(false);
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
@@ -31,31 +33,54 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setProceed(theresResponse);
 	}, [responses]);
 
+	useEffect(() => {
+		// console.log("getting response....")
+		const response = responseCtx.responses;
+		const currentPageNumber = settingCtx.settingState.currentPageNumber;
+		if(Object.keys(response).length > 0) {
+			setSelectedValue(getResponse(currentPageNumber, response));
+			// console.log("++++++++")
+			// console.log("saved question: ", currentPage.page.name)
+			// console.log("saved response: ", getResponse(currentPageNumber, response))
+			// console.log("++++++++")
+
+		}
+	}, [settingCtx.settingState.currentPageNumber]);
+
 	/**
 	 * finalizes response
 	 */
-	function proceedHandler(): void {
-		for (const [key, value] of Object.entries(responses)) {
-			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
-				label: key,
-				answer: value,
-			});
-		}
-		setResponses({});
-		settingCtx.nextPage();
-	}
+	// function proceedHandler(): void {
+		// if(Object.keys(responses).length > 0) {
+		// 	for (const [key, value] of Object.entries(responses)) {
+		// 		responseCtx.addResponse({
+		// 			pageNumber: currentPage.pageNumber,
+		// 			label: key,
+		// 			answer: value,
+		// 		});
+		// 	}
+		// }
+		// setResponses({});
+		// setSelectedValue(null);
+		// settingCtx.nextPage();
+	// }
 
 	/**
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		setResponses((currResponse) => {
-			return {
-				...currResponse,
-				[currentPage.page?.name]: value,
-			};
+		// console.log("change handled...")
+		responseCtx.addResponse({
+			pageNumber: currentPage.pageNumber,
+			label: currentPage.page.name,
+			answer: value,
 		});
+		// setResponses((currResponse) => {
+		// 	return {
+		// 		...currResponse,
+		// 		[currentPage.page?.name]: value,
+		// 	};
+		// });
 
 		// set mode
 		// if(currentPage.page.name === "Who's taking this questionnaire?") {
@@ -68,13 +93,16 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}
 
 	if (questionType === QuestionType.QuestionDropdown) {
+		// console.log("question dropdown");
 		questionComponent = (
 			<QuestionSelect
 				options={translatedPage?.choices}
 				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionRegion) {
+		// console.log("question region")
 		questionComponent = (
 			<QuestionSelectRegion
 				selectedValue={""}
@@ -82,6 +110,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionText) {
+		// console.log("question text")
 		questionComponent = (
 			<QuestionText
 				fields={translatedPage?.fields}
@@ -110,7 +139,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<Navigation>
 					<BackAndNextNav
 						onPrev={() => settingCtx.prevPage()}
-						onNext={proceedHandler}
+						onNext={() => settingCtx.nextPage()}
 					/>
 				</Navigation>
 			</Main>

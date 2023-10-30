@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "../store/settings";
@@ -27,16 +27,23 @@ export default function DropDownSelector({
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<QuestionRadioItemInterface[]>(options);
 
-	console.log("DropDownSelector");
-
 	useEffect(() => {
 		if (items !== options) {
 			setItems(options);
 		}
+		
 	}, [currentPage]);
+
+	useEffect(() => {
+		if (value !== selectedValue) {
+			setValue(selectedValue);
+		}
+	}, [currentPage, selectedValue]);
+
 
 	return (
 		<>
+			<Text>{selectedValue}</Text>
 			<DropDownPicker
 				style={[styles.container, { borderColor: color100 }]}
 				showTickIcon={true}
@@ -59,6 +66,7 @@ export default function DropDownSelector({
 				]}
 				listItemContainerStyle={styles.listItemContainerStyle}
 				onChangeValue={(value: string) => onSelect(value)}
+				// onSelectItem={(item) => onSelect(item.value ?? null)}
 				textStyle={{
 					fontSize: FONT_SIZE,
 					fontWeight: "bold",
