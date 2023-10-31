@@ -17,10 +17,12 @@ import { optionRegion, optionText } from "../../../utils/options";
 import QuestionText from "../../../components/adults/QuestionText";
 import Toolbar from "../../../components/adults/Toolbar";
 import { QuestionContext } from "../../../store/questions";
+import { getResponse } from "../../../utils/response";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [responses, setResponses] = useState({});
 	const [proceed, setProceed] = useState(false);
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
@@ -36,30 +38,27 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		setProceed(theresResponse);
 	}, [responses]);
 
-	/**
-	 * finalizes response
-	 */
-	function proceedHandler(): void {
-		for (const [key, value] of Object.entries(responses)) {
-			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
-				label: key,
-				answer: value,
-			});
+	useEffect(() => {
+		// console.log("getting response....")
+		const response = responseCtx.responses;
+		const currentPageNumber = settingCtx.settingState.currentPageNumber;
+		if (Object.keys(response).length > 0) {
+			setSelectedValue(getResponse(currentPageNumber, response));
+			// console.log("++++++++")
+			console.log("saved question: ", currentPage.page.name);
+			console.log("saved response: ", getResponse(currentPageNumber, response));
+			// console.log("++++++++")
 		}
-		setResponses({});
-		settingCtx.nextPage();
-	}
+	}, [settingCtx.settingState.currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string): void {
-		setResponses((currResponse) => {
-			return {
-				...currResponse,
-				[currentPage.page?.name]: value,
-			};
+	function changeHandler(value: string | null): void {
+		responseCtx.addResponse({
+			pageNumber: currentPage.pageNumber,
+			label: currentPage.page.name,
+			answer: value,
 		});
 
 		// set mode
@@ -75,6 +74,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionRadio
+				selectedValue={selectedValue}
 				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
 					changeHandler(value);
@@ -84,6 +84,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionRegion) {
 		questionComponent = (
 			<QuestionRadio
+				selectedValue={selectedValue}
 				options={optionRegion(regionsOptions)}
 				onSelect={(value: string) => {
 					changeHandler(value);
@@ -122,7 +123,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<Navigation>
 					<SingleNav
 						label={buttons?.continue}
-						onPress={proceedHandler}
+						onPress={() => settingCtx.nextPage()}
 					/>
 				</Navigation>
 			</Main>

@@ -1,6 +1,6 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { GeneralStyle } from "../../../styles/general";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "../../../store/settings";
 import { Svg } from "react-native-svg";
 
@@ -23,6 +23,10 @@ export default function RadioOption({
 	const { color100 } = settingCtx.settingState.colorTheme;
 	const [optionValue, setOptionValue] = useState<string>(value);
 
+
+	console.log("option value: ", value);
+	console.log("option optionValue: ", optionValue);
+
 	function pressHandler(): void {
 		if (selected) {
 			onPress(null);
@@ -30,6 +34,12 @@ export default function RadioOption({
 			onPress(optionValue);
 		}
 	}
+
+	useEffect(() => {
+		if(optionValue !== value) {
+			setOptionValue(value);
+		}
+	},[value])
 
 	return (
 		<Pressable
