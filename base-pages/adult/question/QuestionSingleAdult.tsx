@@ -17,9 +17,14 @@ import QuestionContainer from "../../../components/adults/QuestionContainer";
 import { optionText } from "../../../utils/options";
 import QuestionRadio from "../../../components/adults/QuestionRadio";
 import QuestionRadioImage from "../../../components/adults/QuestionRadioImage";
+import { getResponse } from "../../../utils/response";
+import { intToString, stringToInt } from "../../../utils/translate";
+import QuestionText from "../../../components/adults/QuestionText";
 
 export default function QuestionSingleAdult(): React.ReactElement {
-	const [responses, setResponses] = useState({});
+	const [responses, setResponses] = useState<Record<string, string | null>>({});
+	const [proceed, setProceed] = useState<boolean>(false);
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
@@ -29,36 +34,27 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	let questionComponent = <></>;
 
 	useEffect(() => {
-		// console.log('use effect here... heres the responses: ', responses)
-		// const theresResponse = Object.keys(responses).length > 0;
-		// setProceed(theresResponse);
+		console.log("use effect here... heres the responses: ", responses);
+		const theresResponse = Object.keys(responses).length > 0;
+		setProceed(theresResponse);
 	}, [responses]);
 
-	/**
-	 * finalizes response
-	 */
-	function proceedHandler(): void {
-		for (const [key, value] of Object.entries(responses)) {
-			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
-				label: key,
-				answer: value,
-			});
+	useEffect(() => {
+		const response = responseCtx.responses;
+		const currentPageNumber = settingCtx.settingState.currentPageNumber;
+		if (Object.keys(response).length > 0) {
+			setSelectedValue(getResponse(currentPageNumber, response));
 		}
-		setResponses({});
-		settingCtx.nextPage();
-	}
+	}, [settingCtx.settingState.currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		console.log("change handler from the question single kid: ", value);
-		setResponses((currResponse) => {
-			return {
-				...currResponse,
-				[currentPage.page?.name]: value,
-			};
+		responseCtx.addResponse({
+			pageNumber: currentPage.pageNumber,
+			label: currentPage.page.name,
+			answer: value,
 		});
 
 		// set mode
@@ -71,20 +67,10 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		// }
 	}
 
-	if (questionType === QuestionType.QuestionCheckbox) {
-		questionComponent = <></>;
-	}
-	// else if (questionType === QuestionType.QuestionDropdown) {
-	//     questionComponent = (
-	//         <QuestionSelect
-	//             options={translatedPage.choices}
-	//             onChange={changeHandler}
-	//         />
-	//     );
-	// }
-	else if (questionType === QuestionType.QuestionRadio) {
+	if (questionType === QuestionType.QuestionRadio) {
 		questionComponent = (
 			<QuestionRadio
+				selectedValue={selectedValue}
 				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
 					changeHandler(value);
@@ -94,22 +80,27 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionRadioImage) {
 		questionComponent = (
 			<QuestionRadioImage
+				selectedValue={selectedValue}
 				options={translatedPage?.choices}
 				onChange={changeHandler}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionSlider) {
-		questionComponent = <QuestionSlider onChange={changeHandler} />;
-	}
-	// else if (questionType === QuestionType.QuestionText) {
-	//     questionComponent = (
-	//         <QuestionText
-	//             fields={translatedPage.fields}
-	//             onChange={changeHandler}
-	//         />
-	//     );
-	// }
-	else {
+		questionComponent = (
+			<QuestionSlider
+				onChange={(value: number | null) => changeHandler(intToString(value))}
+				selectedValue={stringToInt(selectedValue)}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionText) {
+		questionComponent = (
+			<QuestionText
+				selectedValue={selectedValue}
+				fields={translatedPage?.fields}
+				onChange={changeHandler}
+			/>
+		);
+	} else {
 		questionComponent = <></>;
 	}
 
@@ -134,7 +125,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<Navigation>
 					<SingleNav
 						label={buttons?.continue}
-						onPress={proceedHandler}
+						onPress={() => settingCtx.nextPage()}
 					/>
 				</Navigation>
 			</Main>

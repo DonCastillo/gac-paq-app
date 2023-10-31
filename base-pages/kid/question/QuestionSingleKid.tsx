@@ -17,6 +17,7 @@ import QuestionSlider from "../../../components/kid/QuestionSlider";
 import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { getResponse } from "../../../utils/response";
+import { intToString, stringToInt } from "../../../utils/translate";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
@@ -62,24 +63,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 		//         settingCtx.setMode(Mode.Adult);
 		//     }
 		// }
-	}
-
-	function stringToInt(value: string | null): number {
-		if (value === null || value === undefined || value === "") {
-			return 0;
-		}
-		const parsedValue = parseInt(value);
-		if (isNaN(parsedValue)) return 0;
-		if (parsedValue < 0) return 0;
-		return parsedValue;
-	}
-
-	function intToString(value: number | null): string {
-		if (value === null || value === undefined) {
-			return "0";
-		}
-		if (value < 0) return "0";
-		return value.toString();
 	}
 
 	if (questionType === QuestionType.QuestionDropdown) {

@@ -21,7 +21,6 @@ export default function QuestionRadio({
 	console.log("options: ", options);
 
 	function pressHandler(value: string | null): void {
-		console.log("selection triggered....", value);
 		if (value !== "" && value !== null && value !== undefined) {
 			setValue(value);
 			onSelect(value);
