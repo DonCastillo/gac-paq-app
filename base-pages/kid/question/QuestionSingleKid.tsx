@@ -41,10 +41,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 		const currentPageNumber = settingCtx.settingState.currentPageNumber;
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
-			// console.log("++++++++")
-			console.log("saved question: ", currentPage.page.name);
-			console.log("saved response: ", getResponse(currentPageNumber, response));
-			// console.log("++++++++")
 		}
 	}, [settingCtx.settingState.currentPageNumber]);
 

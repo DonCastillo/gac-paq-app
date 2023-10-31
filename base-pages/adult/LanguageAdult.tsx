@@ -15,12 +15,12 @@ import QuestionContainer from "../../components/adults/QuestionContainer";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
 export default function LanguageAdult(): React.ReactElement {
-	const [languageSelected, setLanguageSelected] = useState(false);
+	console.log("LanguageAdult.tsx: LanguageAdult()");
+	const [languageSelected, setLanguageSelected] = useState<boolean>(false);
 	const LABEL = "What is your preferred language?";
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
-
 	const { language, buttons } = settingCtx.settingState;
 	const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } =
 		questionCtx.questionState;
@@ -36,8 +36,8 @@ export default function LanguageAdult(): React.ReactElement {
 		});
 	}, [language, languageSelected]);
 
-	function changeHandler(value: string): void {
-		if (value !== "") {
+	function changeHandler(value: string | null): void {
+		if (value !== "" && value !== null && value !== undefined) {
 			settingCtx.setLanguage(value);
 			responseCtx.addResponse({
 				pageNumber: 0,
@@ -68,7 +68,10 @@ export default function LanguageAdult(): React.ReactElement {
 						>
 							{LABEL}
 						</QuestionLabel>
-						<QuestionSelectLanguageAdult onChange={changeHandler} />
+						<QuestionSelectLanguageAdult
+							onChange={changeHandler}
+							selectedValue={language}
+						/>
 					</QuestionContainer>
 				</CenterMain>
 				<Navigation>

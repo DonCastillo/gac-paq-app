@@ -1,16 +1,16 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { GeneralStyle } from "../../../styles/general";
 import React, { useContext, useState } from "react";
 import { SettingContext } from "../../../store/settings";
-import PropTypes from "prop-types";
+import { Svg } from "react-native-svg";
 
-RadioOption.propTypes = {
-	label: PropTypes.string.isRequired,
-	value: PropTypes.string.isRequired,
-	icon: PropTypes.element.isRequired,
-	onPress: PropTypes.func.isRequired,
-	selected: PropTypes.bool,
-};
+interface RadioOptionPropsInterface {
+	label: string;
+	value: string;
+	icon?: React.ReactElement;
+	onPress: (value: string | null) => void;
+	selected: boolean;
+}
 
 export default function RadioOption({
 	label,
@@ -18,17 +18,15 @@ export default function RadioOption({
 	icon,
 	onPress,
 	selected = false,
-}): React.ReactElement {
+}: RadioOptionPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { color100 } = settingCtx.settingState.colorTheme;
-	const [optionValue, setOptionValue] = useState(value);
+	const [optionValue, setOptionValue] = useState<string>(value);
 
 	function pressHandler(): void {
 		if (selected) {
-			// console.log('already selected');
 			onPress(null);
 		} else {
-			// console.log('selected');
 			onPress(optionValue);
 		}
 	}
@@ -47,7 +45,7 @@ export default function RadioOption({
 				]}
 			></View>
 			<View style={styles.labelContainer}>
-				<View style={styles.labelImage}>{icon}</View>
+				{icon !== undefined && icon !== null && <View style={styles.labelImage}>{icon()}</View>}
 				<Text style={styles.labelText}>{label}</Text>
 			</View>
 		</Pressable>

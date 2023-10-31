@@ -6,22 +6,29 @@ import QuestionRadio from "./QuestionRadio";
 import { QuestionContext } from "../../store/questions";
 import { optionLanguage } from "../../utils/options";
 
-QuestionSelectLanguageAdult.propTypes = {
-	onChange: PropTypes.func.isRequired,
-};
+interface QuestionSelectLanguageAdultPropsInterface {
+	onChange: (value: string | null) => void;
+	selectedValue: string | null;
+}
 
-export default function QuestionSelectLanguageAdult({ onChange }): React.ReactElement {
+export default function QuestionSelectLanguageAdult({
+	onChange,
+	selectedValue,
+}: QuestionSelectLanguageAdultPropsInterface): React.ReactElement {
 	const questionCtx = useContext(QuestionContext);
 	const options: LanguageInterface[] = questionCtx.questionState.languageOption;
 	const itemsRaw: QuestionRadioItemInterface[] = optionLanguage(options);
 
-	function selectHandler(value: string): void {
+	console.log("itemsRaw: ", itemsRaw);
+
+	function selectHandler(value: string | null): void {
 		onChange(value);
 	}
 
 	return (
 		<QuestionRadio
 			options={itemsRaw}
+			selectedValue={selectedValue}
 			onSelect={selectHandler}
 		/>
 	);

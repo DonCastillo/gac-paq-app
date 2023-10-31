@@ -50,7 +50,7 @@ const defaultButton: buttonInterface = {
 	started: ButtonLabel.Started,
 };
 
-const DEFAULT_MODE = Mode.Kid;
+const DEFAULT_MODE = Mode.Adult;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
