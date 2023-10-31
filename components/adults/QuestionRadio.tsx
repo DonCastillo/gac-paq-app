@@ -16,9 +16,9 @@ export default function QuestionRadio({
 	selectedValue,
 }: QuestionRadioPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const {currentPage} = settingCtx.settingState;
+	const { currentPage } = settingCtx.settingState;
 	const [value, setValue] = useState<string | null>(selectedValue);
-	console.log("options: ", options)
+	console.log("options: ", options);
 
 	function pressHandler(value: string | null): void {
 		console.log("selection triggered....", value);
@@ -32,10 +32,10 @@ export default function QuestionRadio({
 	}
 
 	useEffect(() => {
-		if(value !== selectedValue) {
+		if (value !== selectedValue) {
 			setValue(selectedValue);
 		}
-	}, [currentPage, selectedValue])
+	}, [currentPage, selectedValue]);
 
 	return (
 		<FlatList

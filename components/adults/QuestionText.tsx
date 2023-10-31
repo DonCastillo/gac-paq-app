@@ -2,12 +2,17 @@ import React from "react";
 import { TextInput, View, StyleSheet, ScrollView } from "react-native";
 import { GeneralStyle } from "../../styles/general";
 
-interface Props {
+interface QuestionTextPropsInterface {
 	fields: any[];
 	onChange: (value: string) => void;
+	selectedValue: string | null;
 }
 
-export default function QuestionText({ fields, onChange }: Props): React.ReactElement {
+export default function QuestionText({
+	fields,
+	onChange,
+	selectedValue,
+}: QuestionTextPropsInterface): React.ReactElement {
 	function changeHandler(value: string): void {
 		onChange(value);
 	}
@@ -21,6 +26,7 @@ export default function QuestionText({ fields, onChange }: Props): React.ReactEl
 					autoCorrect={false}
 					onChangeText={changeHandler}
 					placeholder={field.label}
+					defaultValue={selectedValue ?? ""}
 				/>
 			</ScrollView>
 		);

@@ -23,7 +23,6 @@ export default function RadioOption({
 	const { color100 } = settingCtx.settingState.colorTheme;
 	const [optionValue, setOptionValue] = useState<string>(value);
 
-
 	console.log("option value: ", value);
 	console.log("option optionValue: ", optionValue);
 
@@ -36,10 +35,10 @@ export default function RadioOption({
 	}
 
 	useEffect(() => {
-		if(optionValue !== value) {
+		if (optionValue !== value) {
 			setOptionValue(value);
 		}
-	},[value])
+	}, [value]);
 
 	return (
 		<Pressable

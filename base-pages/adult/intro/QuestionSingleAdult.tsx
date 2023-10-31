@@ -94,6 +94,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionText) {
 		questionComponent = (
 			<QuestionText
+				selectedValue={selectedValue}
 				fields={translatedPage?.fields}
 				onChange={changeHandler}
 			/>
