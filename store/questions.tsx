@@ -13,6 +13,7 @@ import ContinueButton from "./data/buttons/continue";
 import GoButton from "./data/buttons/go";
 import NextButton from "./data/buttons/next";
 import StartedButton from "./data/buttons/started";
+import ScreenType from "../constants/screen_type";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
@@ -40,6 +41,7 @@ export const QuestionContext = createContext({
 		nextButton: [],
 		startedButton: [],
 	},
+	identifyLastSectionExtroPage: () => {},
 	setRegionOption: (newRegionOptions: RegionInterface[]) => {},
 	setLanguageOption: (newLanguageOptions: LanguageInterface[]) => {},
 	setIntroductoryPages: (
@@ -64,6 +66,17 @@ function questionReducer(state: any, action: any): any {
 				...state,
 				introductoryPages: action.payload,
 			};
+		case "IDENTIFY_LAST_SECTION_EXTRO_PAGE": {
+			const questionsPages = state.questionPages;
+			const lastSectionExtroIndex = questionsPages.findLastIndex((page: any) => {
+				return page.type === ScreenType.ExtroQuestion;
+			});
+			questionsPages[lastSectionExtroIndex].isFinal = true;
+			return {
+				...state,
+				questionPages: questionsPages,
+			};
+		}
 		default:
 			return state;
 	}
@@ -99,11 +112,18 @@ export default function QuestionContextProvider({
 		});
 	}
 
+	function identifyLastSectionExtroPage(): void {
+		dispatch({
+			type: "IDENTIFY_LAST_SECTION_EXTRO_PAGE",
+		});
+	}
+
 	const value: any = {
 		questionState,
 		setRegionOption,
 		setLanguageOption,
 		setIntroductoryPages,
+		identifyLastSectionExtroPage,
 	};
 
 	return <QuestionContext.Provider value={value}>{children}</QuestionContext.Provider>;

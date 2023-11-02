@@ -41,6 +41,9 @@ function AppWrapper(): React.ReactElement {
 		const languages = loadLanguagesOffline();
 		questionCtx.setLanguageOption(languages);
 
+		// determine the last section extro page
+		questionCtx.identifyLastSectionExtroPage();
+
 		let pageNumber = 1;
 		let sectionNumber = 0;
 		let sectionPageNumber = 1;
@@ -57,7 +60,7 @@ function AppWrapper(): React.ReactElement {
 			});
 		});
 
-		console.log("load intro pages...");
+		console.log("load question and section pages...");
 		questionPages.forEach((page) => {
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
 				sectionPageNumber = 1;

@@ -13,17 +13,25 @@ import FullWidthButton from "../../components/buttons/FullWidthButton";
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
 	const settingCtx = useContext(SettingContext);
-	const { language, currentPage } = settingCtx.settingState;
+	const { language, currentPage, buttons } = settingCtx.settingState;
 	const color100 = "#FFEDA5";
 	// const color200 = "#FFCB66";
+	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const ImageComponent = Images.kid.extro_question_page;
 
 	console.log(translatedPage);
+	console.log("isFinal: ", isFinal);
 
 	function pressHandler(): void {
-		console.log("press handler: ");
-		settingCtx.nextPage();
+		if (isFinal === true) {
+			console.log("submitting the responses...");
+			console.log("reset the responses");
+			console.log("go back to the beginning of the page");
+		} else {
+			console.log("press handler: ");
+			settingCtx.nextPage();
+		}
 	}
 
 	return (
@@ -64,7 +72,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 						}}
 						onPress={pressHandler}
 					>
-						Start
+						{isFinal === true ? buttons?.complete : buttons?.next}
 					</FullWidthButton>
 				</Navigation>
 			</Main>
