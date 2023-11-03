@@ -18,4 +18,23 @@ function getResponse(
 	}
 }
 
-export { getResponse };
+function sanitizeResponse(responses: Record<string, ResponseInterface>,): Record<string, string> {
+	const sanitizedResponse: Record<string, string> = {};
+	let payloadValues = Object.values(responses);
+	payloadValues = payloadValues.map((responseObj: ResponseInterface) => {
+		return {
+			pageNumber: responseObj.pageNumber,
+			label: responseObj.label,
+			answer: responseObj.answer,
+		};
+	});
+
+	payloadValues.forEach(({ label, answer }) => {
+		if (answer !== null) {
+			sanitizedResponse[label] = answer;
+		}
+	});
+	return sanitizedResponse;
+
+}
+export { getResponse, sanitizeResponse };

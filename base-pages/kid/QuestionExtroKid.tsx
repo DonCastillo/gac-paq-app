@@ -9,11 +9,15 @@ import Paragraph from "../../components/Paragraph";
 import { Images } from "../../styles/images";
 import Navigation from "../../components/Navigation";
 import FullWidthButton from "../../components/buttons/FullWidthButton";
+import { submitResponse } from "../../utils/api";
+import { ResponseContext } from "../../store/responses";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
 	const settingCtx = useContext(SettingContext);
-	const { language, currentPage, buttons } = settingCtx.settingState;
+	const responseCtx = useContext(ResponseContext);
+	const { language, currentPage, buttons, directusAccessToken, directusBaseEndpoint } =
+		settingCtx.settingState;
 	const color100 = "#FFEDA5";
 	// const color200 = "#FFCB66";
 	const isFinal = currentPage.page.isFinal;
@@ -23,14 +27,26 @@ export default function QuestionExtroKid(): React.ReactElement {
 	console.log(translatedPage);
 	console.log("isFinal: ", isFinal);
 
-	function pressHandler(): void {
-		if (isFinal === true) {
-			console.log("submitting the responses...");
-			console.log("reset the responses");
-			console.log("go back to the beginning of the page");
-		} else {
-			console.log("press handler: ");
-			settingCtx.nextPage();
+	async function pressHandler(): Promise<void> {
+		try {
+			if (isFinal === true) {
+				console.log("submitting the responses...");
+				console.log("reset the responses");
+				console.log("go back to the beginning of the page");
+				console.log(responseCtx.responses)
+				console.log("!!!!!!!")
+				await submitResponse(
+					responseCtx.responses,
+					`${directusBaseEndpoint}/items/response`,
+					directusAccessToken,
+				);
+				console.log("done submitting the responses");
+			} else {
+				console.log("press handler: ");
+				settingCtx.nextPage();
+			}
+		} catch (error) {
+			console.log("error: ", error);
 		}
 	}
 

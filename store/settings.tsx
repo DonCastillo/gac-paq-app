@@ -57,7 +57,8 @@ const TOTAL_COLORS = 8;
 const INITIAL_STATE = {
 	mode: DEFAULT_MODE,
 	language: null,
-	directusAccessToken: "",
+	directusAccessToken: "kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5",
+	directusBaseEndpoint: "http://localhost:8055",
 	currentPageNumber: 0,
 	currentPage: defaultPage,
 	nextPage: defaultPage,

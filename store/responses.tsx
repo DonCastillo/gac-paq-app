@@ -1,7 +1,12 @@
 import React, { createContext, useReducer } from "react";
 import type ResponseInterface from "../interface/response";
 
-export const ResponseContext = createContext({
+interface ResponseContextInterface {
+	responses: Record<string, ResponseInterface>;
+	addResponse: (response: ResponseInterface) => void;
+}
+
+export const ResponseContext = createContext<ResponseContextInterface>({
 	responses: {},
 	addResponse: (response: ResponseInterface) => {},
 });
