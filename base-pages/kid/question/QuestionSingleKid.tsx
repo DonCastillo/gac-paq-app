@@ -18,6 +18,8 @@ import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { getResponse } from "../../../utils/response";
 import { intToString, stringToInt } from "../../../utils/translate";
+import GenericBackgroundStroke from "../../../components/kid/background/question-pages/GenericBackgroundStroke";
+import { Images } from "../../../styles/images";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
@@ -110,6 +112,10 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
+			<GenericBackgroundStroke
+				strokeSVG={Images.kid.green_stroke}
+				strokeSVGLg={Images.kid.green_stroke_lg}
+			/>
 			<Main>
 				<TopMain>
 					<View>
@@ -143,6 +149,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
+		position: "relative",
 	},
 	questionContainer: {
 		marginTop: 25,

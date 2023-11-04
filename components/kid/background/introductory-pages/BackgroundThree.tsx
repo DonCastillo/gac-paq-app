@@ -42,5 +42,5 @@ const styles = StyleSheet.create({
 		right: "-10%",
 		bottom: "15%",
 		transform: [{ rotate: "20deg" }],
-	}
+	},
 });

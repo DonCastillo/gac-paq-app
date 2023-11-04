@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 	carrotWholeTop: {
 		position: "absolute",
 		top: "0%",
-		right: "0%"
+		right: "0%",
 	},
 	carrotWholeBottom: {
 		position: "absolute",

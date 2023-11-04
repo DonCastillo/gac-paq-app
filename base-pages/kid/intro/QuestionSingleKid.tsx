@@ -16,7 +16,6 @@ import { QuestionContext } from "../../../store/questions";
 import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
 import { getResponse } from "../../../utils/response";
 
-
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [proceed, setProceed] = useState<boolean>(false);
