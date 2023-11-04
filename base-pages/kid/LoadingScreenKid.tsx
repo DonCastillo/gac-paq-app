@@ -9,9 +9,6 @@ import Mode from "../../constants/mode";
 
 export default function LoadingScreenKid(): React.ReactElement {
 	const color100 = Colors[Mode.Kid][0].color100;
-
-	console.log("color 100 ...", color100);
-
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<Main>

@@ -41,12 +41,12 @@ export default function QuestionExtroKid(): React.ReactElement {
 
 				console.log("done submitting the responses");
 				// introduce a delay
-				await new Promise(resolve => setTimeout(resolve, 5000));
+				await new Promise((resolve) => setTimeout(resolve, 5000));
 			} else {
 				settingCtx.nextPage();
 			}
 		} catch (error) {
-			await new Promise(resolve => setTimeout(resolve, 5000));
+			await new Promise((resolve) => setTimeout(resolve, 5000));
 			console.log("redirect to the error page");
 			console.log("error: ", error);
 		} finally {
@@ -54,7 +54,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 		}
 	}
 
-	if(!loading) {
+	if (!loading) {
 		return (
 			<View style={styles.container}>
 				<Main>
@@ -100,10 +100,8 @@ export default function QuestionExtroKid(): React.ReactElement {
 			</View>
 		);
 	} else {
-		return <LoadingScreenKid />
+		return <LoadingScreenKid />;
 	}
-
-
 }
 
 const styles = StyleSheet.create({
