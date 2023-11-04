@@ -15,6 +15,8 @@ import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { QuestionContext } from "../../../store/questions";
 import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
 import { getResponse } from "../../../utils/response";
+import BackgroundThree from "../../../components/kid/background/BackgroundThree";
+import BackgroundFour from "../../../components/kid/background/BackgroundFour";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
@@ -96,6 +98,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
+			<BackgroundFour />
 			<Main>
 				<TopMain>
 					<View style={styles.innerContainer}>
