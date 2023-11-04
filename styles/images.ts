@@ -12,6 +12,11 @@ import CarrotSVG from "./../assets/images/kids/carrot.svg";
 import CarrotBiteSVG from "./../assets/images/kids/carrot_bite.svg";
 import EmptyBasket from "./../assets/images/kids/empty_basket.svg";
 import RabbitFaceSVG from "./../assets/images/kids/logo.svg";
+import YellowStrokeLG from "./../assets/images/kids/doodles/stroke_yellow_lg.svg";
+import YellowStroke from "./../assets/images/kids/doodles/stroke_yellow.svg";
+import YellowStarsLG from "./../assets/images/kids/doodles/stars_yellow_lg.svg";
+import YellowStars from "./../assets/images/kids/doodles/stars_yellow.svg";
+
 
 const GirlExercising = {
 	uri: require("./../assets/images/adult/girl-exercising.jpg"),
@@ -37,6 +42,10 @@ const Images = {
 		background_image_6: CarrotBiteSVG,
 		background_image_7: EmptyBasket,
 		splash_image: RabbitFaceSVG,
+		yellow_stroke_lg: YellowStrokeLG,
+		yellow_stroke: YellowStroke,
+		yellow_stars_lg: YellowStarsLG,
+		yellow_stars: YellowStars,
 	},
 	adult: {
 		mostly_not_moving: GirlHeadphones,

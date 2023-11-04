@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Images } from "../../../styles/images";
+import { Images } from "../../../../styles/images";
 
 export default function BackgroundThree(): React.ReactElement {
 	const CarrotWhole = Images.kid.background_image_5;

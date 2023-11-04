@@ -12,6 +12,8 @@ import FullWidthButton from "../../components/buttons/FullWidthButton";
 import { submitResponse } from "../../utils/api";
 import { ResponseContext } from "../../store/responses";
 import LoadingScreenKid from "./LoadingScreenKid";
+import YellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
+import BackgroundYellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
@@ -57,6 +59,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 	if (!loading) {
 		return (
 			<View style={styles.container}>
+				<BackgroundYellowStroke />
 				<Main>
 					<CenterMain>
 						<Heading
@@ -109,6 +112,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
+		position: "relative",
 	},
 	imageContainer: {
 		justifyContent: "center",

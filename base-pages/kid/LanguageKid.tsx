@@ -12,7 +12,6 @@ import { translateButton } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
 import SingleNav from "../../components/kid/navigation/SingleNav";
 import { getResponse } from "../../utils/response";
-import BackgroundOne from "../../components/kid/background/BackgroundOne";
 
 export default function LanguageKid(): React.ReactElement {
 	const [languageSelected, setLanguageSelected] = useState<boolean>(false);
@@ -68,7 +67,6 @@ export default function LanguageKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
-			<BackgroundOne />
 			<Main>
 				<TopMain>
 					<View>
