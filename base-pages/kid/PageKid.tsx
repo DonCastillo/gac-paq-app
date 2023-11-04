@@ -12,6 +12,7 @@ import { getSectionType } from "../../utils/section";
 import SectionType from "../../constants/section_type";
 // import { QuestionContext } from "../../store/questions";
 import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
+import BackgroundTwo from "../../components/kid/background/backgroundTwo";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -69,6 +70,7 @@ export default function PageKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
+			<BackgroundTwo />
 			<Main>
 				<CenterMain>
 					<Heading
