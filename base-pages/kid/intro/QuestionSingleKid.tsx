@@ -18,6 +18,7 @@ import { getResponse } from "../../../utils/response";
 import BackgroundThree from "../../../components/kid/background/BackgroundThree";
 import BackgroundFour from "../../../components/kid/background/BackgroundFour";
 import BackgroundFive from "../../../components/kid/background/BackgroundFive";
+import BackgroundSix from "../../../components/kid/background/BackgroundSix";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
@@ -99,7 +100,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
-			<BackgroundFive />
+			<BackgroundSix />
 			<Main>
 				<TopMain>
 					<View style={styles.innerContainer}>
