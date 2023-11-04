@@ -18,7 +18,7 @@ function getResponse(
 	}
 }
 
-function sanitizeResponse(responses: Record<string, ResponseInterface>,): Record<string, string> {
+function sanitizeResponse(responses: Record<string, ResponseInterface>): Record<string, string> {
 	const sanitizedResponse: Record<string, string> = {};
 	let payloadValues = Object.values(responses);
 	payloadValues = payloadValues.map((responseObj: ResponseInterface) => {
@@ -35,6 +35,5 @@ function sanitizeResponse(responses: Record<string, ResponseInterface>,): Record
 		}
 	});
 	return sanitizedResponse;
-
 }
 export { getResponse, sanitizeResponse };
