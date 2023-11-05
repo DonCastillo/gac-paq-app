@@ -8,6 +8,7 @@ import Paragraph from "../../components/Paragraph";
 import ProgressBar from "../../components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
 import { Images } from "../../styles/images";
+import { Logo } from "../../components/svgs/kid";
 
 export default function SplashKid(): JSX.Element {
 	const settingCtx = useContext(SettingContext);
@@ -27,10 +28,7 @@ export default function SplashKid(): JSX.Element {
 			<Main>
 				<CenterMain>
 					<View style={styles.imageContainer}>
-						<SplashImage
-							height={300}
-							width={350}
-						/>
+						<Logo />
 					</View>
 					<Heading
 						customStyle={{
