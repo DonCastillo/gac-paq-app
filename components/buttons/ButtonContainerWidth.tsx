@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { DefaultStyle } from "../../styles/general";
 

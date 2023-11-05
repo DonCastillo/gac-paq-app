@@ -1,17 +1,18 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Images } from "../../../../styles/images";
+import AbsoluteFullScreenContainer from "../AbsoluteFullScreenContainer";
 
 export default function BackgroundYellowStroke(): React.ReactElement {
 	const YellowStrokeLG = Images.kid.yellow_stroke_lg;
 	const YellowStroke = Images.kid.yellow_stroke;
 	return (
-		<View style={styles.container}>
+		<AbsoluteFullScreenContainer>
 			<YellowStroke
 				width={"120%"}
 				style={styles.yellowStroke}
 			/>
-		</View>
+		</AbsoluteFullScreenContainer>
 	);
 }
 const styles = StyleSheet.create({

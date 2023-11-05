@@ -1,33 +1,26 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+import AbsoluteFullScreenContainer from "../AbsoluteFullScreenContainer";
 import { Images } from "../../../../styles/images";
 
 export default function BackgroundRunning(): React.ReactElement {
-	const Running = Images.kid.mostly_medium;
+	const SVGRunning = Images.kid.mostly_medium;
 	return (
-		<View style={styles.container}>
-			<Running
-				height={200}
-				width={120}
+		<AbsoluteFullScreenContainer>
+			<SVGRunning
+				height={250}
+				width={160}
 				style={styles.running}
 			/>
-		</View>
+
+		</AbsoluteFullScreenContainer>
 	);
 }
 
 const styles = StyleSheet.create({
-	container: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		right: 0,
-		bottom: 0,
-		width: "100%",
-		height: "100%",
-	},
 	running: {
-        position: "absolute",
-        bottom: "20%",
-        right: "10%",
-    }
+		position: "absolute",
+		bottom: "20%",
+		right: "5%",
+	},
 });

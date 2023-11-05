@@ -1,11 +1,12 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { Images } from "../../../../styles/images";
+import AbsoluteFullScreenContainer from "../AbsoluteFullScreenContainer";
 
 export default function BackgroundFour(): React.ReactElement {
 	const CarrotWhole = Images.kid.background_image_5;
 	return (
-		<View style={styles.container}>
+		<AbsoluteFullScreenContainer>
 			<CarrotWhole
 				height={100}
 				width={100}
@@ -16,20 +17,11 @@ export default function BackgroundFour(): React.ReactElement {
 				width={100}
 				style={styles.carrotWholeRight}
 			/>
-		</View>
+		</AbsoluteFullScreenContainer>
 	);
 }
 
 const styles = StyleSheet.create({
-	container: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		right: 0,
-		bottom: 0,
-		width: "100%",
-		height: "100%",
-	},
 	carrotWholeLeft: {
 		position: "absolute",
 		bottom: "30%",
