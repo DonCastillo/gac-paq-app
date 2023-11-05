@@ -4,6 +4,10 @@ import SittingSVG from "./../assets/images/kids/sitting.svg";
 import BasketSVG from "./../assets/images/kids/basket.svg";
 import BasketOutlineSVG from "./../assets/images/kids/basket_outline.svg";
 import BasketFullSVG from "./../assets/images/kids/basket_full.svg";
+import VolunteerClubSVG from "./../assets/images/kids/volunteer_club.svg";
+import WinkPoseSVG from "./../assets/images/kids/wink_pose.svg";
+import SurprisedPoseSVG from "./../assets/images/kids/surprised_pose.svg";
+import ChoresSVG from "./../assets/images/kids/chores.svg";
 import Basket1SVG from "./../assets/images/kids/basket_1.svg";
 import Basket2SVG from "./../assets/images/kids/basket_2.svg";
 import Basket4SVG from "./../assets/images/kids/basket_4.svg";
@@ -47,6 +51,10 @@ const Images = {
 		mostly_easy_effort: SmallWalkingSVG,
 		mostly_medium: RunningSVG,
 		extro_question_page: BasketFullSVG,
+		volunteer_club: VolunteerClubSVG,
+		chores: ChoresSVG,
+		wink_pose: WinkPoseSVG,
+		surprised_pose: SurprisedPoseSVG,
 		background_image_1: Basket1SVG,
 		background_image_2: Basket2SVG,
 		background_image_3: Basket4SVG,

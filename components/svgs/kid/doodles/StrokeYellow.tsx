@@ -22,4 +22,4 @@ const SvgStrokeYellow = (props: SvgProps) => (
 	</Svg>
 );
 const Memo = memo(SvgStrokeYellow);
-export default Memo;
+export default SvgStrokeYellow;

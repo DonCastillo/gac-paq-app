@@ -20,7 +20,10 @@ import { getResponse } from "../../../utils/response";
 import { intToString, stringToInt } from "../../../utils/translate";
 import GenericBackgroundStroke from "../../../components/kid/background/question-pages/GenericBackgroundStroke";
 import { Images } from "../../../styles/images";
-import BackgroundRunning from "../../../components/kid/background/question-pages/BackgroundRunning";
+import BackgroundRunning from "../../../components/kid/background/question-pages/BackgroundRight";
+import BackgroundClubVolunteer from "../../../components/kid/background/question-pages/BackgroundCenter";
+import BackgroundGraphicCenter from "../../../components/kid/background/question-pages/BackgroundCenter";
+import BackgroundLeft from "../../../components/kid/background/question-pages/BackgroundLeft";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
@@ -29,7 +32,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, currentPage } = settingCtx.settingState;
+	const { language, currentPage, colorTheme } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
@@ -113,7 +116,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
-			<BackgroundRunning />
+			{/* <GenericBackgroundStroke fillColor={colorTheme.color100} /> */}
+			{/* <BackgroundGraphicCenter svg={Images.kid.chores} /> */}
+			<BackgroundLeft svg={Images.kid.surprised_pose}/>
 			<Main>
 				<TopMain>
 					<View>
