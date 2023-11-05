@@ -8,8 +8,8 @@ export default function BackgroundLeft({
 	width,
 }: {
 	svg: any;
-	height: number;
-	width: number;
+	height?: number;
+	width?: number;
 }): React.ReactElement {
 	const SVGImage = svg;
 	return (

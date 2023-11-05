@@ -9,23 +9,23 @@ export default function BackgroundTwo(): React.ReactElement {
 	return (
 		<AbsoluteFullScreenContainer>
 			<CarrotWhole
-				height={130}
-				width={130}
+				height={100}
+				width={100}
 				style={styles.carrotWholeTop}
 			/>
 			<CarrotWhole
-				height={80}
-				width={80}
+				height={60}
+				width={60}
 				style={styles.carrotWholeBottom}
 			/>
 			<CarrotBite
-				height={150}
-				width={150}
+				height={100}
+				width={100}
 				style={styles.carrotBiteTop}
 			/>
 			<CarrotBite
-				height={200}
-				width={200}
+				height={140}
+				width={140}
 				style={styles.carrotBiteBottom}
 			/>
 		</AbsoluteFullScreenContainer>
@@ -33,15 +33,6 @@ export default function BackgroundTwo(): React.ReactElement {
 }
 
 const styles = StyleSheet.create({
-	container: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		right: 0,
-		bottom: 0,
-		width: "100%",
-		height: "100%",
-	},
 	carrotWholeTop: {
 		position: "absolute",
 		top: "0%",

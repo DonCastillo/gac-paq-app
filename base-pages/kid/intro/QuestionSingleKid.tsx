@@ -15,18 +15,24 @@ import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { QuestionContext } from "../../../store/questions";
 import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
 import { getResponse } from "../../../utils/response";
+import { getIntroductoryBackground } from "../../../utils/background";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
+	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, currentPage } = settingCtx.settingState;
+	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
+
+	useEffect(() => {
+		setBackground(getIntroductoryBackground(currentPageNumber));
+	}, [currentPageNumber]);
 
 	useEffect(() => {
 		const theresResponse = Object.keys(responses).length > 0;
@@ -96,6 +102,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
+			{background !== null && background}
 			<Main>
 				<TopMain>
 					<View style={styles.innerContainer}>

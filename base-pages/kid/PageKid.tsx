@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
@@ -12,15 +12,21 @@ import { getSectionType } from "../../utils/section";
 import SectionType from "../../constants/section_type";
 // import { QuestionContext } from "../../store/questions";
 import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
+import { getIntroductoryBackground } from "../../utils/background";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	// const questionCtx = useContext(QuestionContext);
 	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
-	// const { introductoryPages } = questionCtx.questionState;
+	const [background, setBackground] = useState<React.ReactElement | null>(null);
+
+	const { currentPageNumber } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState(null);
+
+	useEffect(() => {
+		setBackground(getIntroductoryBackground(currentPageNumber));
+	}, [currentPageNumber]);
 
 	useEffect(() => {
 		let buttonComponent = <></>;
@@ -69,6 +75,7 @@ export default function PageKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
+			{background !== null && background}
 			<Main>
 				<CenterMain>
 					<Heading

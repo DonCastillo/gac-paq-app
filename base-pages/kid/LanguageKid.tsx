@@ -12,16 +12,25 @@ import { translateButton } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
 import SingleNav from "../../components/kid/navigation/SingleNav";
 import { getResponse } from "../../utils/response";
+import BackgroundOne from "../../components/kid/background/introductory-pages/BackgroundOne";
+import { getIntroductoryBackground } from "../../utils/background";
 
 export default function LanguageKid(): React.ReactElement {
 	const [languageSelected, setLanguageSelected] = useState<boolean>(false);
+	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const LABEL = "What is your preferred language?";
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
-	const { language, buttons } = settingCtx.settingState;
+	const { language, buttons, currentPageNumber } = settingCtx.settingState;
 	const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } =
 		questionCtx.questionState;
+
+	useEffect(() => {
+		if (background === null) {
+			setBackground(getIntroductoryBackground(currentPageNumber));
+		}
+	}, [currentPageNumber]);
 
 	useEffect(() => {
 		settingCtx.translateButtons({
@@ -67,6 +76,7 @@ export default function LanguageKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
+			{background !== null && background}
 			<Main>
 				<TopMain>
 					<View>

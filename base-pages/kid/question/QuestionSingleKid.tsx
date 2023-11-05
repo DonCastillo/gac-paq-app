@@ -18,21 +18,18 @@ import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
 import { getResponse } from "../../../utils/response";
 import { intToString, stringToInt } from "../../../utils/translate";
-import GenericBackgroundStroke from "../../../components/kid/background/question-pages/GenericBackgroundStroke";
-import { Images } from "../../../styles/images";
-import BackgroundRunning from "../../../components/kid/background/question-pages/BackgroundRight";
-import BackgroundClubVolunteer from "../../../components/kid/background/question-pages/BackgroundCenter";
-import BackgroundGraphicCenter from "../../../components/kid/background/question-pages/BackgroundCenter";
-import BackgroundLeft from "../../../components/kid/background/question-pages/BackgroundLeft";
+import { getQuestionBackground } from "../../../utils/background";
+import DeviceType from "../../../constants/device_type";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
+	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, currentPage, colorTheme } = settingCtx.settingState;
+	const { language, currentPage, colorTheme, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
@@ -49,7 +46,19 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
 		}
-	}, [settingCtx.settingState.currentPageNumber]);
+	}, [currentPageNumber]);
+
+	useEffect(() => {
+		setBackground(
+			getQuestionBackground(
+				currentPage.sectionNumber,
+				currentPage.sectionPageNumber,
+				questionType,
+				DeviceType.Mobile,
+				colorTheme.color100,
+			),
+		);
+	}, [currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
@@ -116,9 +125,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
-			{/* <GenericBackgroundStroke fillColor={colorTheme.color100} /> */}
-			{/* <BackgroundGraphicCenter svg={Images.kid.chores} /> */}
-			<BackgroundLeft svg={Images.kid.surprised_pose}/>
+			{background !== null && background}
 			<Main>
 				<TopMain>
 					<View>

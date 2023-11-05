@@ -9,13 +9,13 @@ export default function BackgroundOne(): React.ReactElement {
 	return (
 		<AbsoluteFullScreenContainer>
 			<CarrotWhole
-				height={200}
-				width={200}
+				height={150}
+				width={150}
 				style={styles.carrotWhole}
 			/>
 			<CarrotBite
-				height={200}
-				width={200}
+				height={150}
+				width={150}
 				style={styles.carrotBite}
 			/>
 		</AbsoluteFullScreenContainer>

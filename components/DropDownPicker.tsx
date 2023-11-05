@@ -41,7 +41,6 @@ export default function DropDownSelector({
 
 	return (
 		<>
-			<Text>{selectedValue}</Text>
 			<DropDownPicker
 				style={[styles.container, { borderColor: color100 }]}
 				showTickIcon={true}
