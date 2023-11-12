@@ -11,6 +11,7 @@ import ScreenType from "../constants/screen_type";
 import Mode from "../constants/mode";
 import SplashAdult from "./adult/SplashAdult";
 import { loadLanguagesOffline, loadRegionsOffline } from "../utils/load";
+import GenericSplash from "./generic/GenericSplash";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,9 +25,9 @@ function AppWrapper(): React.ReactElement {
 
 	function SplashScreen(): React.ReactElement {
 		if (mode === Mode.Kid) {
-			return <SplashKid />;
+			return <GenericSplash />;
 		} else if (mode === Mode.Adult) {
-			return <SplashAdult />;
+			return <GenericSplash />;
 		} else {
 			return <></>;
 		}
