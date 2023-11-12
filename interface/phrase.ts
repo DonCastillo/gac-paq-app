@@ -6,5 +6,6 @@ export default interface PhraseInterface {
 	introduction_phrase_id?: number;
 	agreement_phrase_id?: number;
 	dont_know_id?: number;
+	done_id?: number;
 	languages_id?: LanguageInterface | null;
 }
