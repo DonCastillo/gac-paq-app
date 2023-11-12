@@ -21,7 +21,8 @@ const SuccessPage: PagePayloadInterface = {
 			id: 2,
 			pages_id: 1,
 			heading: "Éxito!",
-			description: "Buen trabajo. Has terminado el cuestionario.\n\nTus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
+			description:
+				"Buen trabajo. Has terminado el cuestionario.\n\nTus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
 			languages_id: {
 				name: "Spanish - Spain",
 				lang_code: "es-ES",
@@ -31,7 +32,8 @@ const SuccessPage: PagePayloadInterface = {
 			id: 3,
 			pages_id: 1,
 			heading: "Succès!",
-			description: "Bon travail. Vous avez terminé le questionnaire.\n\nVos réponses ont été envoyées avec succès.\n\nMerci pour votre aide.",
+			description:
+				"Bon travail. Vous avez terminé le questionnaire.\n\nVos réponses ont été envoyées avec succès.\n\nMerci pour votre aide.",
 			languages_id: {
 				name: "French - Canada",
 				lang_code: "fr-CA",
