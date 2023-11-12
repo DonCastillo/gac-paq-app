@@ -24,6 +24,7 @@ import DeviceType from "../../../constants/device_type";
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
@@ -48,6 +49,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
+	// set background screen dynamically
 	useEffect(() => {
 		setBackground(
 			getQuestionBackground(
@@ -58,6 +60,20 @@ export default function QuestionSingleKid(): React.ReactElement {
 				colorTheme.color100,
 			),
 		);
+	}, [currentPageNumber]);
+
+	// set button component dynamically
+	useEffect(() => {
+		if (currentPageNumber > 0) {
+			setButtonComponent(
+				<BackAndNextNav
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+		}
 	}, [currentPageNumber]);
 
 	/**
@@ -143,12 +159,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 						<View style={styles.questionContainer}>{questionComponent}</View>
 					</View>
 				</TopMain>
-				<Navigation>
-					<BackAndNextNav
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
-					/>
-				</Navigation>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
 		</View>
 	);

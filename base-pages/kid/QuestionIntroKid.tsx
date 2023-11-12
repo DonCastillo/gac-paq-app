@@ -1,14 +1,29 @@
 import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
-import BackAndGoNav from "../../components/kid/navigation/BackAndGoNav";
+import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+
+	// set button component dynamically
+	useEffect(() => {
+		if (currentPageNumber > 0) {
+			setButtonComponent(
+				<BackAndNextNav
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+		}
+	}, [currentPageNumber]);
 
 	const image = {
 		uri: currentPage.page.image_mobile,
@@ -26,9 +41,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
 					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
 				</ScrollView>
-				<View style={styles.headingPanelBottom}>
-					<BackAndGoNav />
-				</View>
+				<View style={styles.headingPanelBottom}>{buttonComponent !== null && buttonComponent}</View>
 			</View>
 		</View>
 	);

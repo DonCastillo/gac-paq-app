@@ -18,7 +18,7 @@ export default function ButtonIcon({
 		<Icon
 			type={type ?? "ionicons"}
 			name={name}
-			size={70}
+			size={50}
 			color={color}
 			onPress={onPress}
 		/>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
@@ -7,71 +7,36 @@ import CenterMain from "../../components/orientation/CenterMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import Navigation from "../../components/Navigation";
-import FullWidthButton from "../../components/buttons/FullWidthButton";
-import { getSectionType } from "../../utils/section";
-import SectionType from "../../constants/section_type";
-// import { QuestionContext } from "../../store/questions";
 import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "../../utils/background";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
-	const { currentPageNumber } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
-	const [buttonComponent, setButtonComponent] = useState(null);
 
+	// set background screen dynamically
 	useEffect(() => {
 		setBackground(getIntroductoryBackground(currentPageNumber));
 	}, [currentPageNumber]);
 
+	// set button component dynamically
 	useEffect(() => {
-		let buttonComponent = <></>;
-		const section = getSectionType(currentPage.section);
-		const sectionPageNumber = currentPage.sectionPageNumber;
-
-		buttonComponent = renderDoubleButton();
-
-		/** Welcome Page should display "Let's get started" button */
-		if (section === SectionType.Intro && sectionPageNumber === 1) {
-			buttonComponent = renderSingleButton(buttons?.started + "!");
+		if (currentPageNumber > 0) {
+			setButtonComponent(
+				<BackAndNextNav
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
 		}
-
-		/** Great Job Page should display "Let's get started" button */
-		// if (
-		//     section === SectionType.Intro &&
-		//     sectionPageNumber === introductoryPages.length
-		// ) {
-		//     buttonComponent = renderSingleButton(buttons?.started + "!");
-		// }
-
-		setButtonComponent(buttonComponent);
-	}, [currentPage?.section, currentPage?.sectionPageNumber]);
-
-	function renderSingleButton(label: string): React.ReactElement {
-		return (
-			<FullWidthButton
-				customStyle={{
-					backgroundColor: color100,
-				}}
-				onPress={() => settingCtx.nextPage()}
-			>
-				{label}
-			</FullWidthButton>
-		);
-	}
-
-	function renderDoubleButton(): React.ReactElement {
-		return (
-			<BackAndNextNav
-				onPrev={() => settingCtx.prevPage()}
-				onNext={() => settingCtx.nextPage()}
-			/>
-		);
-	}
+	}, [currentPageNumber]);
 
 	return (
 		<View style={styles.container}>
@@ -98,7 +63,7 @@ export default function PageKid(): React.ReactElement {
 						{translatedPage?.description}
 					</Paragraph>
 				</CenterMain>
-				<Navigation>{buttonComponent}</Navigation>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
 		</View>
 	);

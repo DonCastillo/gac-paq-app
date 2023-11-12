@@ -4,22 +4,23 @@ import { SettingContext } from "../../../store/settings";
 import React, { useContext, useEffect, useState } from "react";
 import ButtonIcon from "../../buttons/ButtonIcon";
 import ScreenType from "../../../constants/screen_type";
+import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
 
-interface BackAndNextNavProps {
+interface BackAndSubmitNavProps {
 	onPrev?: () => void;
-	onNext?: () => void;
+	onNext?: () => Promise<void>;
 }
 
-export default function BackAndNextNav({
+export default function BackAndSubmitNav({
 	onPrev,
 	onNext,
-}: BackAndNextNavProps): React.ReactElement {
+}: BackAndSubmitNavProps): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
 	const [buttonColor, setButtonColor] = useState<string>("#fff");
-	const { colorTheme, currentPageNumber, currentPage } = settingCtx.settingState;
+	const { colorTheme, currentPageNumber, currentPage, buttons } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 
 	// set button color dynamically
@@ -28,9 +29,6 @@ export default function BackAndNextNav({
 		setButtonColor(color100);
 		if (currentScreen === ScreenType.IntroQuestion) {
 			setButtonColor("#fff");
-		}
-		if (currentScreen === ScreenType.ExtroQuestion) {
-			setButtonColor("#FFCB66");
 		}
 	}, [currentPageNumber, currentPage]);
 
@@ -69,12 +67,14 @@ export default function BackAndNextNav({
 			)}
 
 			{hasNext && (
-				<ButtonIcon
-					name="arrowright"
-					type="antdesign"
-					color={buttonColor}
+				<ButtonContainerWidth
 					onPress={() => onNext !== undefined && onNext()}
-				/>
+					borderColor={buttonColor}
+					textColor={buttonColor}
+					bgColor="#fff"
+				>
+					{buttons?.complete}
+				</ButtonContainerWidth>
 			)}
 		</View>
 	);

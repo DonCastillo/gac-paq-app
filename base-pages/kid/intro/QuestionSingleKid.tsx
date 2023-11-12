@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../../store/settings";
 import { translate } from "../../../utils/page";
 import Main from "../../../components/Main";
@@ -12,7 +12,6 @@ import QuestionSelect from "../../../components/kid/QuestionSelect";
 import { ResponseContext } from "../../../store/responses";
 import QuestionText from "../../../components/kid/QuestionText";
 import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
-import { QuestionContext } from "../../../store/questions";
 import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
 import { getResponse } from "../../../utils/response";
 import { getIntroductoryBackground } from "../../../utils/background";
@@ -21,6 +20,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [proceed, setProceed] = useState<boolean>(false);
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
@@ -30,8 +30,23 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
+	// set background screen dynamically
 	useEffect(() => {
 		setBackground(getIntroductoryBackground(currentPageNumber));
+	}, [currentPageNumber]);
+
+	// set button component dynamically
+	useEffect(() => {
+		if (currentPageNumber > 0) {
+			setButtonComponent(
+				<BackAndNextNav
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+		}
 	}, [currentPageNumber]);
 
 	useEffect(() => {
@@ -116,12 +131,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 						{questionComponent}
 					</View>
 				</TopMain>
-				<Navigation>
-					<BackAndNextNav
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
-					/>
-				</Navigation>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
 		</View>
 	);

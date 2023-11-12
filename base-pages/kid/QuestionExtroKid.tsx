@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
@@ -8,22 +8,21 @@ import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import { Images } from "../../styles/images";
 import Navigation from "../../components/Navigation";
-import FullWidthButton from "../../components/buttons/FullWidthButton";
 import { submitResponse } from "../../utils/api";
 import { ResponseContext } from "../../store/responses";
 import LoadingScreenKid from "./LoadingScreenKid";
-import YellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
 import BackgroundYellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
+import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
+import BackAndSubmitNav from "../../components/kid/navigation/BackAndSubmitNav";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const [loading, setLoading] = useState<boolean>(false);
-	const { language, currentPage, buttons, directusAccessToken, directusBaseEndpoint } =
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+	const { language, currentPage, currentPageNumber, directusAccessToken, directusBaseEndpoint } =
 		settingCtx.settingState;
-	const color100 = "#FFEDA5";
-	// const color200 = "#FFCB66";
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const ImageComponent = Images.kid.extro_question_page;
@@ -31,22 +30,42 @@ export default function QuestionExtroKid(): React.ReactElement {
 	console.log(translatedPage);
 	console.log("isFinal: ", isFinal);
 
-	async function pressHandler(): Promise<void> {
+	// set button component dynamically
+	useEffect(() => {
+		if (isFinal === true) {
+			setButtonComponent(
+				<BackAndSubmitNav
+					onPrev={() => settingCtx.prevPage()}
+					onNext={async () => await submitResponseHandler()}
+				/>,
+			);
+		} else {
+			if (currentPageNumber > 0) {
+				setButtonComponent(
+					<BackAndNextNav
+						onPrev={() => settingCtx.prevPage()}
+						onNext={() => settingCtx.nextPage()}
+					/>,
+				);
+			} else {
+				setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+			}
+		}
+	}, [currentPageNumber]);
+
+	async function submitResponseHandler(): Promise<void> {
 		try {
 			setLoading(true);
-			if (isFinal === true) {
-				await submitResponse(
-					responseCtx.responses,
-					`${directusBaseEndpoint}/items/response`,
-					directusAccessToken,
-				);
 
-				console.log("done submitting the responses");
-				// introduce a delay
-				await new Promise((resolve) => setTimeout(resolve, 5000));
-			} else {
-				settingCtx.nextPage();
-			}
+			await submitResponse(
+				responseCtx.responses,
+				`${directusBaseEndpoint}/items/response`,
+				directusAccessToken,
+			);
+
+			console.log("done submitting the responses");
+			// introduce a delay
+			await new Promise((resolve) => setTimeout(resolve, 5000));
 		} catch (error) {
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			console.log("redirect to the error page");
@@ -89,16 +108,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 							/>
 						</View>
 					</CenterMain>
-					<Navigation>
-						<FullWidthButton
-							customStyle={{
-								backgroundColor: color100,
-							}}
-							onPress={pressHandler}
-						>
-							{isFinal === true ? buttons?.complete : buttons?.next}
-						</FullWidthButton>
-					</Navigation>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 				</Main>
 			</View>
 		);
