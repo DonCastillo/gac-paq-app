@@ -1,6 +1,6 @@
 import type PhraseInterface from "../../../interface/phrase";
 
-const Introduction: PhraseInterface[] = [
+const IntroductionPhrase: PhraseInterface[] = [
 	{
 		id: 1,
 		introduction_phrase_id: 1,
@@ -30,4 +30,4 @@ const Introduction: PhraseInterface[] = [
 	},
 ];
 
-export default Introduction;
+export default IntroductionPhrase;

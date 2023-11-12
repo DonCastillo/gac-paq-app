@@ -5,7 +5,8 @@ export default interface PhraseInterface {
 	label: string;
 	introduction_phrase_id?: number;
 	agreement_phrase_id?: number;
-	dont_know_id?: number;
-	done_id?: number;
+	dont_know_phrase_id?: number;
+	done_phrase_id?: number;
+	try_again_phrase_id?: number;
 	languages_id?: LanguageInterface | null;
 }

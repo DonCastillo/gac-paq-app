@@ -1,9 +1,9 @@
 import type PhraseInterface from "../../../interface/phrase";
 
-const DontKnow: PhraseInterface[] = [
+const DontKnowPhrase: PhraseInterface[] = [
 	{
 		id: 1,
-		dont_know_id: 1,
+		dont_know_phrase_id: 1,
 		label: "I don't know",
 		languages_id: {
 			name: "English - Canada",
@@ -12,7 +12,7 @@ const DontKnow: PhraseInterface[] = [
 	},
 	{
 		id: 2,
-		dont_know_id: 1,
+		dont_know_phrase_id: 1,
 		label: "No sé",
 		languages_id: {
 			name: "Spanish - Spain",
@@ -21,7 +21,7 @@ const DontKnow: PhraseInterface[] = [
 	},
 	{
 		id: 3,
-		dont_know_id: 1,
+		dont_know_phrase_id: 1,
 		label: "Je ne sais pas",
 		languages_id: {
 			name: "French - Canada",
@@ -30,4 +30,4 @@ const DontKnow: PhraseInterface[] = [
 	},
 ];
 
-export default DontKnow;
+export default DontKnowPhrase;

@@ -1,10 +1,10 @@
 import type PhraseInterface from "../../../interface/phrase";
 
-const AgreementPhrase: PhraseInterface[] = [
+const TryAgainPhrase: PhraseInterface[] = [
 	{
 		id: 1,
-		agreement_phrase_id: 1,
-		label: "Yes, I Understand & Agree. ",
+		try_again_phrase_id: 1,
+		label: "Try Again",
 		languages_id: {
 			name: "English - Canada",
 			lang_code: "en-CA",
@@ -12,8 +12,8 @@ const AgreementPhrase: PhraseInterface[] = [
 	},
 	{
 		id: 2,
-		agreement_phrase_id: 1,
-		label: "Sí, entiendo y estoy de acuerdo.",
+		try_again_phrase_id: 1,
+		label: "Inténtalo de nuevo.",
 		languages_id: {
 			name: "Spanish - Spain",
 			lang_code: "es-ES",
@@ -21,8 +21,8 @@ const AgreementPhrase: PhraseInterface[] = [
 	},
 	{
 		id: 3,
-		agreement_phrase_id: 1,
-		label: "Oui, je comprends et j'accepte.",
+		try_again_phrase_id: 1,
+		label: "Essaye encore",
 		languages_id: {
 			name: "French - Canada",
 			lang_code: "fr-CA",
@@ -30,4 +30,4 @@ const AgreementPhrase: PhraseInterface[] = [
 	},
 ];
 
-export default AgreementPhrase;
+export default TryAgainPhrase;

@@ -1,9 +1,9 @@
 import type PhraseInterface from "../../../interface/phrase";
 
-const Introduction: PhraseInterface[] = [
+const DonePhrase: PhraseInterface[] = [
 	{
 		id: 1,
-		done_id: 1,
+		done_phrase_id: 1,
 		label: "Done",
 		languages_id: {
 			name: "English - Canada",
@@ -12,7 +12,7 @@ const Introduction: PhraseInterface[] = [
 	},
 	{
 		id: 2,
-		done_id: 1,
+		done_phrase_id: 1,
 		label: "Hecho",
 		languages_id: {
 			name: "Spanish - Spain",
@@ -21,7 +21,7 @@ const Introduction: PhraseInterface[] = [
 	},
 	{
 		id: 3,
-		done_id: 1,
+		done_phrase_id: 1,
 		label: "Terminé",
 		languages_id: {
 			name: "French - Canada",
@@ -30,4 +30,4 @@ const Introduction: PhraseInterface[] = [
 	},
 ];
 
-export default Introduction;
+export default DonePhrase;
