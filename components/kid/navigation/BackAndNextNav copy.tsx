@@ -1,8 +1,9 @@
 import { View, StyleSheet } from "react-native";
 import type { FlexStyle } from "react-native";
+import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
 import { SettingContext } from "../../../store/settings";
 import React, { useContext, useEffect, useState } from "react";
-import ButtonIcon from "../../buttons/ButtonIcon";
+import { Icon } from "@rneui/themed";
 
 interface BackAndNextNavProps {
 	onPrev?: () => void;
@@ -17,7 +18,7 @@ export default function BackAndNextNav({
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
-	const { colorTheme } = settingCtx.settingState;
+	const { colorTheme, buttons } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 
 	useEffect(() => {
@@ -44,21 +45,25 @@ export default function BackAndNextNav({
 	return (
 		<View style={[styles.bottomNavigation, { justifyContent: justification }]}>
 			{hasPrev && (
-				<ButtonIcon
-					name="arrowleft"
-					type="antdesign"
-					color={color100}
-					onPress={() => onPrev !== undefined && onPrev()}
-				/>
+				<ButtonContainerWidth
+					onPress={onPrev}
+					borderColor={color100}
+					bgColor={"#fff"}
+					textColor={color100}
+				>
+					{buttons?.back}
+				</ButtonContainerWidth>
 			)}
 
 			{hasNext && (
-				<ButtonIcon
-					name="arrowright"
-					type="antdesign"
-					color={color100}
-					onPress={() => onNext !== undefined && onNext()}
-				/>
+				<ButtonContainerWidth
+					onPress={onNext}
+					borderColor={color100}
+					bgColor={color100}
+					textColor={"#fff"}
+				>
+					{buttons?.next}
+				</ButtonContainerWidth>
 			)}
 		</View>
 	);
@@ -70,5 +75,6 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",
+		backgroundColor: "pink",
 	},
 });

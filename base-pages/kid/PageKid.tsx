@@ -86,7 +86,7 @@ export default function PageKid(): React.ReactElement {
 							textAlign: "center",
 						}}
 					>
-						{translatedPage.heading.toLowerCase()}
+						{translatedPage?.heading.toLowerCase()}
 					</Heading>
 					<Paragraph
 						customStyle={{
@@ -95,7 +95,7 @@ export default function PageKid(): React.ReactElement {
 							lineHeight: 20,
 						}}
 					>
-						{translatedPage.description}
+						{translatedPage?.description}
 					</Paragraph>
 				</CenterMain>
 				<Navigation>{buttonComponent}</Navigation>
