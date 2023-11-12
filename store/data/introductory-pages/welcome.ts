@@ -14,8 +14,8 @@ const WelcomePage: PagePayloadInterface = {
 			description:
 				"Physical activity is essential for healthy child development, yet 80% of youth are not active enough and we lack information about activity levels of young children.",
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -26,7 +26,7 @@ const WelcomePage: PagePayloadInterface = {
 			description:
 				"La actividad física es esencial para el desarrollo saludable de los niños, sin embargo, el 80% de los jóvenes no son lo suficientemente activos y carecemos de información sobre los niveles de actividad de los niños pequeños.",
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -38,8 +38,8 @@ const WelcomePage: PagePayloadInterface = {
 			description:
 				"L'activité physique est essentielle pour le développement sain de l'enfant, pourtant 80 % des jeunes ne sont pas assez actifs et nous manquons d'informations sur les niveaux d'activité des jeunes enfants.",
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

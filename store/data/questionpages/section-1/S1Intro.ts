@@ -14,7 +14,7 @@ const S1Intro: SectionPayloadInterface = {
 			heading: "Actividades escolares",
 			subheading: "Sección 1",
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -23,8 +23,8 @@ const S1Intro: SectionPayloadInterface = {
 			heading: "School Activities",
 			subheading: "Section 1",
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -32,8 +32,8 @@ const S1Intro: SectionPayloadInterface = {
 			heading: "Activités scolaires",
 			subheading: "Section 1",
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

@@ -15,8 +15,8 @@ const S2Intro: SectionPayloadInterface = {
 			heading: "Work Activities",
 			subheading: "Section 2",
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -25,7 +25,7 @@ const S2Intro: SectionPayloadInterface = {
 			heading: "Actividades laborales",
 			subheading: "Sección 2",
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},

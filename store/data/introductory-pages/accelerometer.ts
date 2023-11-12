@@ -20,8 +20,8 @@ const AccelerometerPage: QuestionTextPayloadInterface = {
 			],
 			sort: null,
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -38,7 +38,7 @@ const AccelerometerPage: QuestionTextPayloadInterface = {
 			],
 			sort: null,
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -56,8 +56,8 @@ const AccelerometerPage: QuestionTextPayloadInterface = {
 			],
 			sort: null,
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

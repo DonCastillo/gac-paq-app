@@ -12,8 +12,8 @@ const S1Extro: ExtroPayloadInterface = {
 			image: "74cf789b-e40a-4bcb-a723-bdea3f7315f0",
 			subheading: "Only six more to go!",
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -23,7 +23,7 @@ const S1Extro: ExtroPayloadInterface = {
 			image: "74cf789b-e40a-4bcb-a723-bdea3f7315f0",
 			subheading: "¡Solo seis más por hacer!",
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -34,8 +34,8 @@ const S1Extro: ExtroPayloadInterface = {
 			image: "74cf789b-e40a-4bcb-a723-bdea3f7315f0",
 			subheading: "Plus que six à faire !",
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

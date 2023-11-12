@@ -6,8 +6,8 @@ const NextButton: ButtonInterface[] = [
 		next_button_id: 1,
 		label: "Next",
 		languages_id: {
-			name: "English",
-			lang_code: "en-US",
+			name: "English - Canada",
+			lang_code: "en-CA",
 		},
 	},
 	{
@@ -15,7 +15,7 @@ const NextButton: ButtonInterface[] = [
 		next_button_id: 1,
 		label: "Siguiente",
 		languages_id: {
-			name: "Spanish",
+			name: "Spanish - Spain",
 			lang_code: "es-ES",
 		},
 	},
@@ -24,8 +24,8 @@ const NextButton: ButtonInterface[] = [
 		next_button_id: 1,
 		label: "Suivant",
 		languages_id: {
-			name: "French",
-			lang_code: "fr-FR",
+			name: "French - Canada",
+			lang_code: "fr-CA",
 		},
 	},
 ];

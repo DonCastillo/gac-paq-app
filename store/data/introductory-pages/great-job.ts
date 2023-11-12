@@ -13,8 +13,8 @@ const GreatJobPage: PagePayloadInterface = {
 			button_text: "Let's get started",
 			description: null,
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -24,7 +24,7 @@ const GreatJobPage: PagePayloadInterface = {
 			button_text: "¡Comencemos!",
 			description: null,
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -35,8 +35,8 @@ const GreatJobPage: PagePayloadInterface = {
 			button_text: "Commençons!",
 			description: null,
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

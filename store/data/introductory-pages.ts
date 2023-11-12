@@ -6,12 +6,14 @@ import AccelerometerPage from "./introductory-pages/accelerometer";
 import AgePage from "./introductory-pages/age";
 import DemographicPage from "./introductory-pages/demographic";
 import GreatJobPage from "./introductory-pages/great-job";
+import LanguagePage from "./introductory-pages/language";
 import LocationPage from "./introductory-pages/location";
 import WelcomePage from "./introductory-pages/welcome";
 
 const IntroductoryPages:
 	| Array<PagePayloadInterface | QuestionDropdownPayloadInterface | QuestionTextPayloadInterface>
 	| [] = [
+	LanguagePage,
 	WelcomePage,
 	AboutPage,
 	LocationPage,
