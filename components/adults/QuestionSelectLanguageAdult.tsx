@@ -19,8 +19,6 @@ export default function QuestionSelectLanguageAdult({
 	const options: LanguageInterface[] = questionCtx.questionState.languageOption;
 	const itemsRaw: QuestionRadioItemInterface[] = optionLanguage(options);
 
-	console.log("itemsRaw: ", itemsRaw);
-
 	function selectHandler(value: string | null): void {
 		onChange(value);
 	}

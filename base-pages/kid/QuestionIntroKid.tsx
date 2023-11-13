@@ -2,7 +2,7 @@ import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-nativ
 import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
-import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
+import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

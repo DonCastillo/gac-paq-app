@@ -4,6 +4,7 @@ import type QuestionTextPayloadInterface from "../../interface/directus/question
 import AboutPage from "./introductory-pages/about";
 import AccelerometerPage from "./introductory-pages/accelerometer";
 import AgePage from "./introductory-pages/age";
+import ConfidentialityPage from "./introductory-pages/confidentiality";
 import DemographicPage from "./introductory-pages/demographic";
 import GreatJobPage from "./introductory-pages/great-job";
 import LanguagePage from "./introductory-pages/language";
@@ -16,7 +17,7 @@ const IntroductoryPages:
 	LanguagePage,
 	WelcomePage,
 	AboutPage,
-	LocationPage,
+	ConfidentialityPage,
 	AgePage,
 	DemographicPage,
 	AccelerometerPage,

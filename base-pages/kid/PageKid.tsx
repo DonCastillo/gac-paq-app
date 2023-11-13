@@ -7,7 +7,7 @@ import CenterMain from "../../components/orientation/CenterMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import Navigation from "../../components/Navigation";
-import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
+import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "../../utils/background";
 
 export default function PageKid(): React.ReactElement {

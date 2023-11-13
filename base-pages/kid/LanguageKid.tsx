@@ -8,7 +8,7 @@ import QuestionLabel from "../../components/kid/QuestionLabel";
 import QuestionSelectLanguage from "../../components/kid/QuestionSelectLanguage";
 import { ResponseContext } from "../../store/responses";
 import { getIntroductoryBackground } from "../../utils/background";
-import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
+import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 import { translateButton } from "../../utils/translate";
 import { QuestionContext } from "../../store/questions";
 import ButtonLabel from "../../constants/button_label";

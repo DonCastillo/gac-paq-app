@@ -15,7 +15,7 @@ import QuestionTitle from "../../../components/kid/QuestionTitle";
 import QuestionRadio from "../../../components/kid/QuestionRadio";
 import QuestionSlider from "../../../components/kid/QuestionSlider";
 import QuestionRadioImage from "../../../components/kid/QuestionRadioImage";
-import BackAndNextNav from "../../../components/kid/navigation/BackAndNextNav";
+import BackAndNextNav from "../../../components/generic/navigation/BackAndNextNav";
 import { getResponse } from "../../../utils/response";
 import { intToString, stringToInt } from "../../../utils/translate";
 import { getQuestionBackground } from "../../../utils/background";

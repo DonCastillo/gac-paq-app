@@ -23,8 +23,8 @@ export default function RadioOption({
 	const { color100 } = settingCtx.settingState.colorTheme;
 	const [optionValue, setOptionValue] = useState<string>(value);
 
-	console.log("option value: ", value);
-	console.log("option optionValue: ", optionValue);
+	// console.log("option value: ", value);
+	// console.log("option optionValue: ", optionValue);
 
 	function pressHandler(): void {
 		if (selected) {

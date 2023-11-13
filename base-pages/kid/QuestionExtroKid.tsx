@@ -12,7 +12,7 @@ import { submitResponse } from "../../utils/api";
 import { ResponseContext } from "../../store/responses";
 import LoadingScreenKid from "./LoadingScreenKid";
 import BackgroundYellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
-import BackAndNextNav from "../../components/kid/navigation/BackAndNextNav";
+import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "../../components/kid/navigation/BackAndSubmitNav";
 
 export default function QuestionExtroKid(): React.ReactElement {

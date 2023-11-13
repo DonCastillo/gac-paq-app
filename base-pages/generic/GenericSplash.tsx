@@ -13,7 +13,8 @@ import BGLinearGradient from "../../components/BGLinearGradient";
 export default function GenericSplash(): JSX.Element {
     console.log("GenericSplash");
 	const settingCtx = useContext(SettingContext);
-	const { color100 } = settingCtx.settingState.colorTheme;
+	const { colorTheme } = settingCtx.settingState;
+	const { color100 } = colorTheme
 	const navigation = useNavigation();
 
 	useEffect(() => {
