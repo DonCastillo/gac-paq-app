@@ -17,14 +17,19 @@ import SectionType from "../constants/section_type";
 import LanguageKid from "../base-pages/kid/LanguageKid";
 import LanguageAdult from "../base-pages/adult/LanguageAdult";
 import GenericLanguage from "../base-pages/generic/GenericLanguage";
+import GenericPage from "../base-pages/generic/GenericPage";
 
 function getScreen(
 	mode: Mode | string,
 	screenType: ScreenType | string,
 	sectionType?: SectionType | string,
 ): React.ReactElement {
+	// all language screens are generic
 	if (mode === Mode.Adult && screenType === ScreenType.Language) return <GenericLanguage />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Language) return <GenericLanguage />;
+	// all intro screens are generic
+	else if (sectionType === SectionType.Intro && screenType === ScreenType.Page)
+		return <GenericPage />;
 	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
 	else if (
@@ -66,9 +71,9 @@ function getScreenType(screenType: string): ScreenType {
 	if (screenType === "page") {
 		return ScreenType.Page;
 	} else if (screenType === "language") {
-		return ScreenType.Language
+		return ScreenType.Language;
 	} else if (screenType === "region") {
-		return ScreenType.Region
+		return ScreenType.Region;
 	} else if (screenType === "splash") {
 		return ScreenType.Splash;
 	} else if (screenType === "question_single") {

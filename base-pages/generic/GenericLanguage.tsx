@@ -16,19 +16,17 @@ import { translate } from "../../utils/page";
 import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 
 export default function GenericLanguage(): React.ReactElement {
-    console.log("GenericLanguage ...");
+	console.log("GenericLanguage ...");
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-
 
 	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 
 	const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } =
 		questionCtx.questionState;
-
 
 	console.log("translatedPage: ", translatedPage);
 
@@ -44,13 +42,10 @@ export default function GenericLanguage(): React.ReactElement {
 		});
 	}, [language]);
 
-
 	// set selected value
 	useEffect(() => {
-		setSelectedValue(language)
+		setSelectedValue(language);
 	}, [currentPageNumber]);
-
-
 
 	function changeHandler(value: string | null): void {
 		console.log("Changing the language...");
@@ -88,9 +83,7 @@ export default function GenericLanguage(): React.ReactElement {
 					</QuestionContainer>
 				</CenterMain>
 				<Navigation>
-					{selectedValue !== null && (
-						<BackAndNextNav onNext={() => settingCtx.nextPage()} />
-					)}
+					{selectedValue !== null && <BackAndNextNav onNext={() => settingCtx.nextPage()} />}
 				</Navigation>
 			</Main>
 		</View>

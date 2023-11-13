@@ -11,10 +11,10 @@ import { Logo } from "../../components/svgs/kid";
 import BGLinearGradient from "../../components/BGLinearGradient";
 
 export default function GenericSplash(): JSX.Element {
-    console.log("GenericSplash");
+	console.log("GenericSplash");
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
-	const { color100 } = colorTheme
+	const { color100 } = colorTheme;
 	const navigation = useNavigation();
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ export default function GenericSplash(): JSX.Element {
 
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
-            <BGLinearGradient />
+			<BGLinearGradient />
 			<Main>
 				<CenterMain>
 					<View style={styles.imageContainer}>
@@ -44,7 +44,7 @@ export default function GenericSplash(): JSX.Element {
 							color: "#fff",
 							fontSize: 20,
 							lineHeight: 23.6,
-                            maxWidth: 340,
+							maxWidth: 340,
 						}}
 					>
 						The global adolescent and children activity questionnaire
