@@ -34,7 +34,7 @@ export default function GenericPage(): React.ReactElement {
 					<Heading
 						customStyle={{
 							color: "white",
-							fontSize: 70,
+							fontSize: 40,
 							marginBottom: 50,
 							textAlign: "center",
 						}}

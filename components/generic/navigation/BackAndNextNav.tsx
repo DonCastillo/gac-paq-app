@@ -4,6 +4,7 @@ import { SettingContext } from "../../../store/settings";
 import React, { useContext, useEffect, useState } from "react";
 import ButtonIcon from "../../buttons/ButtonIcon";
 import ScreenType from "../../../constants/screen_type";
+import SectionType from "../../../constants/section_type";
 
 interface BackAndNextNavProps {
 	onPrev?: () => void;
@@ -25,9 +26,15 @@ export default function BackAndNextNav({
 	// set button color dynamically
 	useEffect(() => {
 		const currentScreen: ScreenType | null = currentPage.screen ?? null;
+		const currentSection: SectionType | null = currentPage.section ?? null;
 		setButtonColor(color100);
+		if (currentSection === SectionType.Intro) {
+			setButtonColor("#fff");
+			return;
+		}
 		if (currentScreen === ScreenType.IntroQuestion) {
 			setButtonColor("#fff");
+			return;
 		}
 		if (currentScreen === ScreenType.ExtroQuestion) {
 			setButtonColor("#FFCB66");

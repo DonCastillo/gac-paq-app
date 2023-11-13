@@ -22,18 +22,6 @@ export default function Toolbar(): React.ReactElement {
 			<View style={styles.container}>
 				<Pressable
 					style={styles.button}
-					onPress={backHandler}
-				>
-					<Icon
-						name="west"
-						size={ICON_SIZE}
-						color={"#fff"}
-						containerStyle={styles.icon}
-					/>
-				</Pressable>
-
-				<Pressable
-					style={styles.button}
 					onPress={audioHandler}
 				>
 					<Icon
@@ -52,7 +40,7 @@ const styles = StyleSheet.create({
 	container: {
 		paddingVertical: 10,
 		paddingHorizontal: 20,
-		justifyContent: "space-between",
+		justifyContent: "flex-end",
 		alignItems: "center",
 		flexDirection: "row",
 	},
