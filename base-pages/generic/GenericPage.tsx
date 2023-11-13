@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
@@ -10,6 +10,7 @@ import Navigation from "../../components/Navigation";
 import BGLinearGradient from "../../components/BGLinearGradient";
 import Toolbar from "../../components/adults/Toolbar";
 import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
+import ScrollContainer from "../../components/ScrollContainer";
 
 export default function GenericPage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -31,25 +32,27 @@ export default function GenericPage(): React.ReactElement {
 			<Main>
 				{renderToolbar()}
 				<CenterMain>
-					<Heading
-						customStyle={{
-							color: "white",
-							fontSize: 40,
-							marginBottom: 50,
-							textAlign: "center",
-						}}
-					>
-						{translatedPage?.heading.toLowerCase()}
-					</Heading>
-					<Paragraph
-						customStyle={{
-							color: "white",
-							fontSize: 15,
-							lineHeight: 17,
-						}}
-					>
-						{translatedPage?.description}
-					</Paragraph>
+					<ScrollContainer>
+						<Heading
+							customStyle={{
+								color: "white",
+								fontSize: 40,
+								marginBottom: 50,
+								textAlign: "center",
+							}}
+						>
+							{translatedPage?.heading.toLowerCase()}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								color: "white",
+								fontSize: 15,
+								lineHeight: 17,
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+					</ScrollContainer>
 				</CenterMain>
 				<Navigation>
 					<BackAndNextNav
