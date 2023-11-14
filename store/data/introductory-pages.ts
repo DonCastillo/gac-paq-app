@@ -1,6 +1,7 @@
 import type PagePayloadInterface from "../../interface/directus/page-payload";
 import type QuestionDropdownPayloadInterface from "../../interface/directus/question-dropdown-payload";
 import type QuestionTextPayloadInterface from "../../interface/directus/question-text-payload";
+import type SingleCheckboxPayloadInterface from "../../interface/directus/single-checkbox-payload";
 import AboutPage from "./introductory-pages/about";
 import AccelerometerPage from "./introductory-pages/accelerometer";
 import AgePage from "./introductory-pages/age";
@@ -12,7 +13,12 @@ import LocationPage from "./introductory-pages/location";
 import WelcomePage from "./introductory-pages/welcome";
 
 const IntroductoryPages:
-	| Array<PagePayloadInterface | QuestionDropdownPayloadInterface | QuestionTextPayloadInterface>
+	| Array<
+			| PagePayloadInterface
+			| QuestionDropdownPayloadInterface
+			| QuestionTextPayloadInterface
+			| SingleCheckboxPayloadInterface
+	  >
 	| [] = [
 	LanguagePage,
 	WelcomePage,
