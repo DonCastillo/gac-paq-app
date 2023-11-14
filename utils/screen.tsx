@@ -18,6 +18,7 @@ import LanguageKid from "../base-pages/kid/LanguageKid";
 import LanguageAdult from "../base-pages/adult/LanguageAdult";
 import GenericLanguage from "../base-pages/generic/GenericLanguage";
 import GenericPage from "../base-pages/generic/GenericPage";
+import GenericSingleCheckbox from "../base-pages/generic/GenericSingleCheckbox";
 
 function getScreen(
 	mode: Mode | string,
@@ -30,6 +31,8 @@ function getScreen(
 	// all intro screens are generic
 	else if (sectionType === SectionType.Intro && screenType === ScreenType.Page)
 		return <GenericPage />;
+	else if (sectionType === SectionType.Intro && screenType === ScreenType.SingleCheckbox)
+		return <GenericSingleCheckbox />;
 	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
 	else if (
@@ -82,6 +85,8 @@ function getScreenType(screenType: string): ScreenType {
 		return ScreenType.IntroQuestion;
 	} else if (screenType === "question_extro") {
 		return ScreenType.ExtroQuestion;
+	} else if (screenType === "single_checkbox") {
+		return ScreenType.SingleCheckbox;
 	} else {
 		return ScreenType.Page;
 	}

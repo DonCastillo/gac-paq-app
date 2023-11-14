@@ -7,8 +7,8 @@ import ScreenType from "../../../constants/screen_type";
 import SectionType from "../../../constants/section_type";
 
 interface BackAndNextNavProps {
-	onPrev?: () => void;
-	onNext?: () => void;
+	onPrev?: () => void | null;
+	onNext?: () => void | null;
 }
 
 export default function BackAndNextNav({
@@ -71,6 +71,7 @@ export default function BackAndNextNav({
 					name="arrowleft"
 					type="antdesign"
 					color={buttonColor}
+					size={40}
 					onPress={() => onPrev !== undefined && onPrev()}
 				/>
 			)}
@@ -80,6 +81,7 @@ export default function BackAndNextNav({
 					name="arrowright"
 					type="antdesign"
 					color={buttonColor}
+					size={40}
 					onPress={() => onNext !== undefined && onNext()}
 				/>
 			)}
