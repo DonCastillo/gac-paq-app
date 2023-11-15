@@ -21,13 +21,13 @@ export default function BackAndNextNav({
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
 	const [buttonColor, setButtonColor] = useState<string>("#fff");
 	const { colorTheme, currentPageNumber, currentPage } = settingCtx.settingState;
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 
 	// set button color dynamically
 	useEffect(() => {
 		const currentScreen: ScreenType | null = currentPage.screen ?? null;
 		const currentSection: SectionType | null = currentPage.section ?? null;
-		setButtonColor(color100);
+		setButtonColor(color200);
 		if (currentSection === SectionType.Intro) {
 			setButtonColor("#fff");
 			return;
@@ -68,8 +68,8 @@ export default function BackAndNextNav({
 		<View style={[styles.bottomNavigation, { justifyContent: justification }]}>
 			{hasPrev && (
 				<ButtonIcon
-					name="arrowleft"
-					type="antdesign"
+					name="arrow-left"
+					type="font-awesome-5"
 					color={buttonColor}
 					size={40}
 					onPress={() => onPrev !== undefined && onPrev()}
@@ -78,8 +78,8 @@ export default function BackAndNextNav({
 
 			{hasNext && (
 				<ButtonIcon
-					name="arrowright"
-					type="antdesign"
+					name="arrow-right"
+					type="font-awesome-5"
 					color={buttonColor}
 					size={40}
 					onPress={() => onNext !== undefined && onNext()}
