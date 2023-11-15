@@ -32,13 +32,11 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-
-	const { language, currentPage, currentPageNumber} = settingCtx.settingState;
+	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	console.log("questionType: ", questionType);
 	let questionComponent = <></>;
-
 
 	console.log("translatedPage: ", translatedPage);
 
@@ -48,22 +46,27 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		setProceed(theresResponse);
 	}, [responses]);
 
+	// set selected value
 	useEffect(() => {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
 		}
+		console.log("selected value inside the generic single questions: ", selectedValue);
 	}, [currentPageNumber]);
 
-	/**
-	 * temporarily store the initial selection
-	 */
+	// save response
 	function changeHandler(value: string | null): void {
-		responseCtx.addResponse({
-			pageNumber: currentPage.pageNumber,
-			label: currentPage.page.name,
-			answer: value,
-		});
+		if (value !== "" && value !== null && value !== undefined) {
+			responseCtx.addResponse({
+				pageNumber: currentPage.pageNumber,
+				label: currentPage.page.name,
+				answer: value,
+			});
+			setSelectedValue(value);
+		} else {
+			setSelectedValue(null);
+		}
 
 		// set mode
 		// if(currentPage.page.name === "Who's taking this questionnaire?") {
@@ -116,10 +119,18 @@ export default function GenericSingleQuestion(): React.ReactElement {
 					</QuestionContainer>
 				</CenterMain>
 				<Navigation>
-					<BackAndNextNav
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
-					/>
+					{selectedValue !== null ? (
+						<BackAndNextNav
+							key={"WithValue"}
+							onPrev={() => settingCtx.prevPage()}
+							onNext={() => settingCtx.nextPage()}
+						/>
+					) : (
+						<BackAndNextNav
+							key={"WithoutValue"}
+							onPrev={() => settingCtx.prevPage()}
+						/>
+					)}
 				</Navigation>
 			</Main>
 		</View>

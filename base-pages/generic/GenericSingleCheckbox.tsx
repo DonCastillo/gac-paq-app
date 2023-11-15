@@ -49,7 +49,7 @@ export default function GenericSingleCheckbox(): React.ReactElement {
 		responseCtx.addResponse({
 			pageNumber: currentPage.pageNumber,
 			label: currentPage.page.name,
-			answer: checked === true ? "agree" : "disagree",
+			answer: checked ? "agree" : "disagree",
 		});
 	}, [checked]);
 
