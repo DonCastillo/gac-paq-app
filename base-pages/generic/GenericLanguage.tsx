@@ -14,6 +14,7 @@ import QuestionContainer from "../../components/adults/QuestionContainer";
 import BGLinearGradient from "../../components/BGLinearGradient";
 import { translate } from "../../utils/page";
 import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
+import { getResponse } from "../../utils/response";
 
 export default function GenericLanguage(): React.ReactElement {
 	console.log("GenericLanguage ...");
@@ -46,6 +47,20 @@ export default function GenericLanguage(): React.ReactElement {
 	useEffect(() => {
 		setSelectedValue(language);
 	}, [currentPageNumber]);
+
+
+	// set language default
+	useEffect(() => {
+		const response = responseCtx.responses;
+		if (Object.keys(response).length === 0) {
+			responseCtx.addResponse({
+				pageNumber: currentPage.pageNumber,
+				label: currentPage.page.name,
+				answer: language,
+			});
+		}
+	}, [])
+
 
 	function changeHandler(value: string | null): void {
 		console.log("Changing the language...");

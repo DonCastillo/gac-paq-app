@@ -26,8 +26,8 @@ const IntroductoryPages:
 	ConfidentialityPage,
 	AgePage,
 	DemographicPage,
-	AccelerometerPage,
-	GreatJobPage,
+	// AccelerometerPage,
+	// GreatJobPage,
 ];
 
 export default IntroductoryPages;
