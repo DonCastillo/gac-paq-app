@@ -14,6 +14,11 @@ import GoButton from "./data/buttons/go";
 import NextButton from "./data/buttons/next";
 import StartedButton from "./data/buttons/started";
 import ScreenType from "../constants/screen_type";
+import AgreementPhrase from "./data/phrase/agreement";
+import DonePhrase from "./data/phrase/done";
+import DontKnowPhrase from "./data/phrase/dont-know";
+import IntroductionPhrase from "./data/phrase/introduction";
+import TryAgainPhrase from "./data/phrase/try-again";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
@@ -26,6 +31,11 @@ const INITIAL_STATE = {
 	goButton: GoButton,
 	nextButton: NextButton,
 	startedButton: StartedButton,
+	agreementPhrase: AgreementPhrase,
+	donePhrase: DonePhrase,
+	dontKnowPhrase: DontKnowPhrase,
+	introductionPhrase: IntroductionPhrase,
+	tryAgainPhrase: TryAgainPhrase,
 };
 
 export const QuestionContext = createContext({
@@ -40,6 +50,11 @@ export const QuestionContext = createContext({
 		goButton: [],
 		nextButton: [],
 		startedButton: [],
+		agreementPhrase: [],
+		donePhrase: [],
+		dontKnowPhrase: [],
+		introductionPhrase: [],
+		tryAgainPhrase: [],
 	},
 	identifyLastSectionExtroPage: () => {},
 	setRegionOption: (newRegionOptions: RegionInterface[]) => {},

@@ -5,6 +5,7 @@ import { getPage } from "../utils/page";
 import type ScreenType from "../constants/screen_type";
 import type SectionType from "../constants/section_type";
 import ButtonLabel from "../constants/button_label";
+import PhraseLabel from "../constants/phrase_label";
 
 /**
  * by default the app should be set as:
@@ -26,6 +27,14 @@ interface buttonInterface {
 	go: string;
 	next: string;
 	started: string;
+}
+
+interface phraseInterface {
+	agreement: string;
+	done: string;
+	dontKnow: string;
+	introduction: string;
+	tryAgain: string;
 }
 
 const defaultPage: pageInterface = {
@@ -50,6 +59,14 @@ const defaultButton: buttonInterface = {
 	started: ButtonLabel.Started,
 };
 
+const defaultPhrase: phraseInterface = {
+	agreement: PhraseLabel.Agreement,
+	done: PhraseLabel.Done,
+	dontKnow: PhraseLabel.DontKnow,
+	introduction: PhraseLabel.Introduction,
+	tryAgain: PhraseLabel.TryAgain,
+};
+
 const DEFAULT_MODE = Mode.Kid;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
@@ -63,6 +80,7 @@ const INITIAL_STATE = {
 	currentPage: defaultPage,
 	nextPage: defaultPage,
 	buttons: defaultButton,
+	phrases: defaultPhrase,
 	totalPage: null,
 	colorTheme: {
 		color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
@@ -87,6 +105,7 @@ export const SettingContext = createContext({
 	initializeNextPage: () => {},
 	initializeCurrentPage: () => {},
 	translateButtons: (obj: buttonInterface) => {},
+	translatePhrases: (obj: phraseInterface) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -164,6 +183,11 @@ function settingReducer(state: any, action: any): any {
 				...state,
 				buttons: action.payload,
 			};
+		case "SET_PHRASES":
+			return {
+				...state,
+				phrases: action.payload,
+			};
 		default:
 			return state;
 	}
@@ -190,6 +214,9 @@ export default function SettingContextProvider({
 		});
 		dispatch({
 			type: "SET_BUTTONS",
+		});
+		dispatch({
+			type: "SET_PHRASES",
 		});
 	}
 
@@ -245,6 +272,13 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function translatePhrases(obj: phraseInterface): void {
+		dispatch({
+			type: "SET_PHRASES",
+			payload: obj,
+		});
+	}
+
 	const value: any = {
 		settingState,
 		setMode,
@@ -257,6 +291,7 @@ export default function SettingContextProvider({
 		initializeNextPage,
 		initializeCurrentPage,
 		translateButtons,
+		translatePhrases,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

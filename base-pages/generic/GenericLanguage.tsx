@@ -7,7 +7,7 @@ import QuestionLabel from "../../components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "../../components/adults/QuestionSelectLanguageAdult";
 import { ResponseContext } from "../../store/responses";
 import { QuestionContext } from "../../store/questions";
-import { translateButton } from "../../utils/translate";
+import { translateButton, translatePhrase } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
 import CenterMain from "../../components/orientation/CenterMain";
 import QuestionContainer from "../../components/adults/QuestionContainer";
@@ -15,6 +15,7 @@ import BGLinearGradient from "../../components/BGLinearGradient";
 import { translate } from "../../utils/page";
 import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 import { getResponse } from "../../utils/response";
+import PhraseLabel from "../../constants/phrase_label";
 
 export default function GenericLanguage(): React.ReactElement {
 	console.log("GenericLanguage ...");
@@ -26,12 +27,23 @@ export default function GenericLanguage(): React.ReactElement {
 	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 
-	const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } =
-		questionCtx.questionState;
+	const {
+		backButton,
+		completeButton,
+		continueButton,
+		goButton,
+		nextButton,
+		startedButton,
+		agreementPhrase,
+		donePhrase,
+		dontKnowPhrase,
+		introductionPhrase,
+		tryAgainPhrase,
+	} = questionCtx.questionState;
 
 	console.log("translatedPage: ", translatedPage);
 
-	// translate phrases
+	// translate phrases and buttons
 	useEffect(() => {
 		settingCtx.translateButtons({
 			back: translateButton(backButton, language) ?? ButtonLabel.Back,
@@ -40,6 +52,13 @@ export default function GenericLanguage(): React.ReactElement {
 			go: translateButton(goButton, language) ?? ButtonLabel.Go,
 			next: translateButton(nextButton, language) ?? ButtonLabel.Next,
 			started: translateButton(startedButton, language) ?? ButtonLabel.Started,
+		});
+		settingCtx.translatePhrases({
+			agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
+			done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
+			dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
+			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
+			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
 		});
 	}, [language]);
 
