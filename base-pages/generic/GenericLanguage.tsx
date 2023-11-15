@@ -48,7 +48,6 @@ export default function GenericLanguage(): React.ReactElement {
 		setSelectedValue(language);
 	}, [currentPageNumber]);
 
-
 	// set language default
 	useEffect(() => {
 		const response = responseCtx.responses;
@@ -59,8 +58,7 @@ export default function GenericLanguage(): React.ReactElement {
 				answer: language,
 			});
 		}
-	}, [])
-
+	}, []);
 
 	function changeHandler(value: string | null): void {
 		console.log("Changing the language...");
