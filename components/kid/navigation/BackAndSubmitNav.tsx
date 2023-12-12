@@ -68,7 +68,7 @@ export default function BackAndSubmitNav({
 
 			{hasNext && (
 				<ButtonContainerWidth
-					onPress={() => onNext !== undefined && onNext()}
+					onPress={async () => onNext !== undefined && onNext()}
 					borderColor={buttonColor}
 					textColor={buttonColor}
 					bgColor="#fff"

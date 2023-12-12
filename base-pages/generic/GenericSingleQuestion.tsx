@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import Main from "../../components/Main";
@@ -22,6 +22,7 @@ import { intToString, stringToInt } from "../../utils/translate";
 import QuestionText from "../../components/adults/QuestionText";
 import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 import { QuestionContext } from "../../store/questions";
+import QuestionInput from "../../components/adults/QuestionInput";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	console.log("Generic Single Question");
@@ -88,11 +89,12 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				}}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionText) {
+	} else if (questionType === QuestionType.QuestionInput) {
+		console.log("******");
 		questionComponent = (
-			<QuestionText
+			<QuestionInput
 				selectedValue={selectedValue}
-				fields={translatedPage?.fields}
+				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}
 			/>
 		);
@@ -115,6 +117,13 @@ export default function GenericSingleQuestion(): React.ReactElement {
 						>
 							{translatedPage?.label}
 						</QuestionLabel>
+						{questionType === QuestionType.QuestionInput &&
+							Object.prototype.hasOwnProperty.call(translatedPage, "sublabel") === true &&
+							translatedPage?.sublabel !== undefined &&
+							translatedPage?.sublabel !== null &&
+							translatedPage?.sublabel !== "" && (
+								<Text style={styles.sublabel}>{translatedPage?.sublabel}</Text>
+							)}
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>
@@ -142,5 +151,11 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
+	},
+	sublabel: {
+		color: "black",
+		fontSize: 17,
+		marginBottom: 10,
+		backgroundColor: "pink",
 	},
 });

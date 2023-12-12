@@ -10,6 +10,7 @@ import DemographicPage from "./introductory-pages/demographic";
 import GreatJobPage from "./introductory-pages/great-job";
 import LanguagePage from "./introductory-pages/language";
 import LocationPage from "./introductory-pages/location";
+import ParticipantIDPage from "./introductory-pages/participant";
 import WelcomePage from "./introductory-pages/welcome";
 
 const IntroductoryPages:
@@ -24,10 +25,10 @@ const IntroductoryPages:
 	WelcomePage,
 	AboutPage,
 	ConfidentialityPage,
+	ParticipantIDPage,
+	AccelerometerPage,
 	AgePage,
 	DemographicPage,
-	// AccelerometerPage,
-	// GreatJobPage,
 ];
 
 export default IntroductoryPages;

@@ -6,7 +6,8 @@ export default interface QuestionInputInterface {
 	sort?: number | null;
 	heading: string;
 	label: string;
-	placeholder: string
-	type: "text" | "number",
+	sublabel?: string | null;
+	placeholder: string;
+	type: "text" | "number";
 	languages_id?: LanguageInterface | null;
 }
