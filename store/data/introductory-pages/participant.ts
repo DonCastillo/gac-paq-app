@@ -1,17 +1,16 @@
-import QuestionField from "../../../constants/question_field";
 import ScreenType from "../../../constants/screen_type";
 import type QuestionInputPayloadInterface from "../../../interface/directus/question-input-payload";
 
-const AccelerometerPage: QuestionInputPayloadInterface = {
-	name: "Please enter your Accelerometer ID",
+const ParticipantIDPage: QuestionInputPayloadInterface = {
+	name: "Please enter your Participant ID",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 5,
 			question_input_id: 5,
-			heading: "Please enter your Accelerometer ID",
+			heading: "Please enter your Participant ID",
 			label: "",
-			placeholder: "Accelerometer ID Serial Number",
+			placeholder: "Participant ID Serial Number",
 			type: "text",
 			sort: null,
 			languages_id: {
@@ -22,9 +21,9 @@ const AccelerometerPage: QuestionInputPayloadInterface = {
 		{
 			id: 5,
 			question_input_id: 5,
-			heading: "Por favor, ingrese su ID de acelerómetro.",
+			heading: "Por favor, ingrese su ID de participante.",
 			label: "",
-			placeholder: "Número de serie del ID del acelerómetro.",
+			placeholder: "Número de serie del ID del participante.",
 			type: "text",
 			sort: null,
 			languages_id: {
@@ -35,9 +34,9 @@ const AccelerometerPage: QuestionInputPayloadInterface = {
 		{
 			id: 5,
 			question_input_id: 5,
-			heading: "Veuillez saisir votre ID d'accéléromètre.",
+			heading: "Veuillez saisir votre ID de participant.",
 			label: "",
-			placeholder: "Numéro de série de l'ID de l'accéléromètre.",
+			placeholder: "Número de serie del ID del participante.",
 			type: "text",
 			sort: null,
 			languages_id: {
@@ -48,4 +47,4 @@ const AccelerometerPage: QuestionInputPayloadInterface = {
 	],
 };
 
-export default AccelerometerPage;
+export default ParticipantIDPage;
