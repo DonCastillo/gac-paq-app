@@ -1,16 +1,32 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { View, ImageBackground, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import SingleNav from "../../components/adults/navigation/SingleNav";
 import Toolbar from "../../components/adults/Toolbar";
 import BGLinearGradient from "../../components/BGLinearGradient";
+import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber, buttons } = settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+
+	// set button component dynamically
+	useEffect(() => {
+		if (currentPageNumber > 0) {
+			setButtonComponent(
+				<BackAndNextNav
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+		}
+	}, [currentPageNumber]);
 
 	const image = {
 		uri: currentPage.page.image_mobile,
@@ -30,16 +46,7 @@ export default function QuestionIntroAdult(): React.ReactElement {
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
 					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
 				</ScrollView>
-				<View style={styles.headingPanelBottom}>
-					<SafeAreaView style={{ width: "100%" }}>
-						<SingleNav
-							label={buttons?.continue}
-							onPress={() => {
-								settingCtx.nextPage();
-							}}
-						/>
-					</SafeAreaView>
-				</View>
+				<View style={styles.headingPanelBottom}>{buttonComponent !== null && buttonComponent}</View>
 			</View>
 		</View>
 	);

@@ -20,15 +20,17 @@ import QuestionRadioImage from "../../../components/adults/QuestionRadioImage";
 import { getResponse } from "../../../utils/response";
 import { intToString, stringToInt } from "../../../utils/translate";
 import QuestionText from "../../../components/adults/QuestionText";
+import BackAndNextNav from "../../../components/generic/navigation/BackAndNextNav";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, currentPage, buttons } = settingCtx.settingState;
+	const { language, currentPage, currentPageNumber, buttons } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
@@ -46,6 +48,20 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setSelectedValue(getResponse(currentPageNumber, response));
 		}
 	}, [settingCtx.settingState.currentPageNumber]);
+
+	// set button component dynamically
+	useEffect(() => {
+		if (currentPageNumber > 0) {
+			setButtonComponent(
+				<BackAndNextNav
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+		}
+	}, [currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
@@ -122,12 +138,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>
-				<Navigation>
-					<SingleNav
-						label={buttons?.continue}
-						onPress={() => settingCtx.nextPage()}
-					/>
-				</Navigation>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
 		</View>
 	);
