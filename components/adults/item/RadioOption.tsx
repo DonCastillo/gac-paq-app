@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
 		...GeneralStyle.adult.optionContainer,
 		alignItems: "center",
 		flexDirection: "row",
+		width: "100%",
 	},
 	radioButton: {
 		height: 25,

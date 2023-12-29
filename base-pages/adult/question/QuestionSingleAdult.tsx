@@ -21,6 +21,7 @@ import { getResponse } from "../../../utils/response";
 import { intToString, stringToInt } from "../../../utils/translate";
 import QuestionText from "../../../components/adults/QuestionText";
 import BackAndNextNav from "../../../components/generic/navigation/BackAndNextNav";
+import PhraseLabel from "../../../constants/phrase_label";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
@@ -104,8 +105,18 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionSlider) {
 		questionComponent = (
 			<QuestionSlider
-				onChange={(value: number | null) => changeHandler(intToString(value))}
-				selectedValue={stringToInt(selectedValue)}
+				onChange={(value: number | null | PhraseLabel.DontKnow) => {
+					if (typeof value === "number" && Number.isInteger(value)) {
+						changeHandler(intToString(value));
+					} else if (value === PhraseLabel.DontKnow) {
+						changeHandler(value);
+					} else {
+						changeHandler(null);
+					}
+				}}
+				selectedValue={
+					selectedValue === PhraseLabel.DontKnow ? PhraseLabel.DontKnow : stringToInt(selectedValue)
+				}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionText) {

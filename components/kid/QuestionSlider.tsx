@@ -120,7 +120,6 @@ export default function QuestionSlider({
 const styles = StyleSheet.create({
 	container: {
 		marginTop: GeneralStyle.kid.field.marginTop + 20,
-		// backgroundColor: "orange",
 	},
 	tooltip: {
 		bottom: 50,
