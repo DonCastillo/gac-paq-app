@@ -2,10 +2,10 @@ import React, { useContext, useState, useEffect } from "react";
 import { View, ImageBackground, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
-import SingleNav from "../../components/adults/navigation/SingleNav";
-import Toolbar from "../../components/adults/Toolbar";
-import BGLinearGradient from "../../components/BGLinearGradient";
-import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
+import SingleNav from "components/adults/navigation/SingleNav";
+import Toolbar from "components/adults/Toolbar";
+import BGLinearGradient from "components/BGLinearGradient";
+import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

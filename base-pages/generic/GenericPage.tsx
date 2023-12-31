@@ -2,15 +2,15 @@ import React, { useContext } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
-import Main from "../../components/Main";
-import CenterMain from "../../components/orientation/CenterMain";
-import Heading from "../../components/Heading";
-import Paragraph from "../../components/Paragraph";
-import Navigation from "../../components/Navigation";
-import BGLinearGradient from "../../components/BGLinearGradient";
-import Toolbar from "../../components/adults/Toolbar";
-import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
-import ScrollContainer from "../../components/ScrollContainer";
+import Main from "components/Main";
+import CenterMain from "components/orientation/CenterMain";
+import Heading from "components/Heading";
+import Paragraph from "components/Paragraph";
+import Navigation from "components/Navigation";
+import BGLinearGradient from "components/BGLinearGradient";
+import Toolbar from "components/adults/Toolbar";
+import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import ScrollContainer from "components/ScrollContainer";
 
 export default function GenericPage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

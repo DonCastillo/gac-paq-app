@@ -1,18 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
-import Main from "../../components/Main";
-import Navigation from "../../components/Navigation";
-import QuestionLabel from "../../components/kid/QuestionLabel";
-import QuestionSelectLanguageAdult from "../../components/adults/QuestionSelectLanguageAdult";
+import Main from "components/Main";
+import Navigation from "components/Navigation";
+import QuestionLabel from "components/kid/QuestionLabel";
+import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
 import { ResponseContext } from "../../store/responses";
 import { QuestionContext } from "../../store/questions";
 import { translateButton } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
-import SingleNav from "../../components/kid/navigation/SingleNav";
-import CenterMain from "../../components/orientation/CenterMain";
-import QuestionContainer from "../../components/adults/QuestionContainer";
-import BGLinearGradient from "../../components/BGLinearGradient";
+import SingleNav from "components/kid/navigation/SingleNav";
+import CenterMain from "components/orientation/CenterMain";
+import QuestionContainer from "components/adults/QuestionContainer";
+import BGLinearGradient from "components/BGLinearGradient";
 
 export default function LanguageAdult(): React.ReactElement {
 	console.log("LanguageAdult.tsx: LanguageAdult()");

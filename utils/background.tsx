@@ -1,16 +1,16 @@
 import React from "react";
-import BackgroundOne from "../components/kid/background/introductory-pages/BackgroundOne";
-import BackgroundTwo from "../components/kid/background/introductory-pages/BackgroundTwo";
-import BackgroundThree from "../components/kid/background/introductory-pages/BackgroundThree";
-import BackgroundFour from "../components/kid/background/introductory-pages/BackgroundFour";
-import BackgroundFive from "../components/kid/background/introductory-pages/BackgroundFive";
-import BackgroundSix from "../components/kid/background/introductory-pages/BackgroundSix";
-import BackgroundSeven from "../components/kid/background/introductory-pages/BackgroundSeven";
+import BackgroundOne from "components/kid/background/introductory-pages/BackgroundOne";
+import BackgroundTwo from "components/kid/background/introductory-pages/BackgroundTwo";
+import BackgroundThree from "components/kid/background/introductory-pages/BackgroundThree";
+import BackgroundFour from "components/kid/background/introductory-pages/BackgroundFour";
+import BackgroundFive from "components/kid/background/introductory-pages/BackgroundFive";
+import BackgroundSix from "components/kid/background/introductory-pages/BackgroundSix";
+import BackgroundSeven from "components/kid/background/introductory-pages/BackgroundSeven";
 import QuestionType from "../constants/question_type";
 import DeviceType from "../constants/device_type";
-import GenericBackgroundStroke from "../components/kid/background/question-pages/GenericBackgroundStroke";
-import BackgroundRight from "../components/kid/background/question-pages/BackgroundRight";
-import BackgroundCenter from "../components/kid/background/question-pages/BackgroundCenter";
+import GenericBackgroundStroke from "components/kid/background/question-pages/GenericBackgroundStroke";
+import BackgroundRight from "components/kid/background/question-pages/BackgroundRight";
+import BackgroundCenter from "components/kid/background/question-pages/BackgroundCenter";
 import Images from "styles/images/index";
 function getIntroductoryBackground(pageNumber: number): React.ReactElement {
 	switch (pageNumber % 6) {

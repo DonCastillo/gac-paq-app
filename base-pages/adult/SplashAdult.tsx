@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
-import Main from "../../components/Main";
-import Heading from "../../components/Heading";
-import Paragraph from "../../components/Paragraph";
-import ProgressBar from "../../components/ProgressBar";
+import Main from "components/Main";
+import Heading from "components/Heading";
+import Paragraph from "components/Paragraph";
+import ProgressBar from "components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
-import BottomMain from "../../components/orientation/BottomMain";
-import BGLinearGradient from "../../components/BGLinearGradient";
+import BottomMain from "components/orientation/BottomMain";
+import BGLinearGradient from "components/BGLinearGradient";
 
 export default function SplashAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

@@ -2,18 +2,18 @@ import React, { useContext, useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
-import Main from "../../components/Main";
-import CenterMain from "../../components/orientation/CenterMain";
-import Heading from "../../components/Heading";
-import Paragraph from "../../components/Paragraph";
+import Main from "components/Main";
+import CenterMain from "components/orientation/CenterMain";
+import Heading from "components/Heading";
+import Paragraph from "components/Paragraph";
 import Images from "styles/images/index";
-import Navigation from "../../components/Navigation";
+import Navigation from "components/Navigation";
 import { submitResponse } from "../../utils/api";
 import { ResponseContext } from "../../store/responses";
 import LoadingScreenKid from "./LoadingScreenKid";
-import BackgroundYellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
-import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
-import BackAndSubmitNav from "../../components/generic/navigation/BackAndSubmitNav";
+import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
+import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");

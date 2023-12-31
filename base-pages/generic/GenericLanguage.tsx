@@ -1,19 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
-import Main from "../../components/Main";
-import Navigation from "../../components/Navigation";
-import QuestionLabel from "../../components/kid/QuestionLabel";
-import QuestionSelectLanguageAdult from "../../components/adults/QuestionSelectLanguageAdult";
+import Main from "components/Main";
+import Navigation from "components/Navigation";
+import QuestionLabel from "components/kid/QuestionLabel";
+import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
 import { ResponseContext } from "../../store/responses";
 import { QuestionContext } from "../../store/questions";
 import { translateButton, translatePhrase } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
-import CenterMain from "../../components/orientation/CenterMain";
-import QuestionContainer from "../../components/adults/QuestionContainer";
-import BGLinearGradient from "../../components/BGLinearGradient";
+import CenterMain from "components/orientation/CenterMain";
+import QuestionContainer from "components/adults/QuestionContainer";
+import BGLinearGradient from "components/BGLinearGradient";
 import { translate } from "../../utils/page";
-import BackAndNextNav from "../../components/generic/navigation/BackAndNextNav";
+import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { getResponse } from "../../utils/response";
 import PhraseLabel from "../../constants/phrase_label";
 

@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
-import Main from "../../components/Main";
-import CenterMain from "../../components/orientation/CenterMain";
-import Heading from "../../components/Heading";
-import Paragraph from "../../components/Paragraph";
-import ProgressBar from "../../components/ProgressBar";
+import Main from "components/Main";
+import CenterMain from "components/orientation/CenterMain";
+import Heading from "components/Heading";
+import Paragraph from "components/Paragraph";
+import ProgressBar from "components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
 import Images from "styles/images/index";
-import { Logo } from "../../components/svgs/kid";
+import { Logo } from "components/svgs/kid";
 
 export default function SplashKid(): JSX.Element {
 	const settingCtx = useContext(SettingContext);

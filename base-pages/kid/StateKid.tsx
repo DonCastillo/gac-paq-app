@@ -3,20 +3,20 @@ import { StyleSheet, View } from "react-native";
 import { SettingContext } from "../../store/settings";
 import { translate } from "../../utils/page";
 import { Icon } from "@rneui/themed";
-import Main from "../../components/Main";
-import CenterMain from "../../components/orientation/CenterMain";
-import Heading from "../../components/Heading";
-import Paragraph from "../../components/Paragraph";
-import Navigation from "../../components/Navigation";
+import Main from "components/Main";
+import CenterMain from "components/orientation/CenterMain";
+import Heading from "components/Heading";
+import Paragraph from "components/Paragraph";
+import Navigation from "components/Navigation";
 import StateType from "../../constants/state_type";
 import { QuestionContext } from "../../store/questions";
 import type PagePayloadInterface from "../../interface/directus/page-payload";
 import type PageInterface from "../../interface/page";
 import type QuestionDropdownInterface from "../../interface/question_dropdown";
-import BackgroundYellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
+import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
 import Images from "styles/images/index";
-import BackAndTryAgainNav from "../../components/generic/navigation/BackAndTryAgainNav";
-import FWBtnShadowed from "../../components/derived-buttons/FWBtnShadowed";
+import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
+import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 
 interface Props {
 	state: StateType;

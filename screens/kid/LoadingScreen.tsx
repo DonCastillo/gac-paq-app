@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View, StyleSheet, ActivityIndicator } from "react-native";
 import PropTypes from "prop-types";
-import Main from "../../components/Main";
-import CenterMain from "../../components/orientation/CenterMain";
+import Main from "components/Main";
+import CenterMain from "components/orientation/CenterMain";
 
 LoadingScreen.propTypes = {
 	text: PropTypes.string,
