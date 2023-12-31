@@ -1,5 +1,5 @@
 import ScreenType from "constants/screen_type";
-import type QuestionDropdownPayloadInterface from "../../../interface/directus/question-dropdown-payload";
+import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 
 const LanguagePage: QuestionDropdownPayloadInterface = {
 	name: "What language do you speak & Where are you?",

@@ -1,4 +1,4 @@
-import type ButtonInterface from "../../../interface/button";
+import type ButtonInterface from "interface/button";
 
 const BackButton: ButtonInterface[] = [
 	{

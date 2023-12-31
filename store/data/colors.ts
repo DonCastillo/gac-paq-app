@@ -1,4 +1,4 @@
-import type ColorInterface from "../../interface/color";
+import type ColorInterface from "interface/color";
 
 const kidColor: ColorInterface[] = [
 	{

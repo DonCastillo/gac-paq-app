@@ -1,5 +1,5 @@
-import type ButtonInterface from "../interface/button";
-import type PhraseInterface from "../interface/phrase";
+import type ButtonInterface from "interface/button";
+import type PhraseInterface from "interface/phrase";
 
 function translateButton(buttons: ButtonInterface[], langCode: string | null): string | null {
 	if (langCode === null || langCode === undefined || langCode === "") return null;

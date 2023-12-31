@@ -1,11 +1,11 @@
 import React, { createContext, useReducer } from "react";
-import type RegionInterface from "../interface/region";
-import type LanguageInterface from "../interface/language";
+import type RegionInterface from "interface/region";
+import type LanguageInterface from "interface/language";
 import Regions from "./data/regions";
 import Languages from "./data/languages";
 import IntroductoryPages from "./data/introductory-pages";
-import type PagePayloadInterface from "../interface/directus/page-payload";
-import type QuestionDropdownPayloadInterface from "../interface/directus/question-dropdown-payload";
+import type PagePayloadInterface from "interface/directus/page-payload";
+import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 import QuestionPages from "./data/question-pages";
 import BackButton from "./data/buttons/back";
 import CompleteButton from "./data/buttons/complete";

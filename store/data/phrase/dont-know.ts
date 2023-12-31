@@ -1,4 +1,4 @@
-import type PhraseInterface from "../../../interface/phrase";
+import type PhraseInterface from "interface/phrase";
 
 const DontKnowPhrase: PhraseInterface[] = [
 	{

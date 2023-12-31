@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import type LanguageInterface from "../../interface/language";
-import type QuestionRadioItemInterface from "../../interface/question_radio_item";
+import type LanguageInterface from "interface/language";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
 import DropDownSelector from "../DropDownPicker";
 import { QuestionContext } from "store/questions";
 import { optionLanguage } from "utils/options";

@@ -1,7 +1,7 @@
-import type PagePayloadInterface from "../../interface/directus/page-payload";
-import type QuestionDropdownPayloadInterface from "../../interface/directus/question-dropdown-payload";
-import type QuestionTextPayloadInterface from "../../interface/directus/question-text-payload";
-import type SingleCheckboxPayloadInterface from "../../interface/directus/single-checkbox-payload";
+import type PagePayloadInterface from "interface/directus/page-payload";
+import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
+import type QuestionTextPayloadInterface from "interface/directus/question-text-payload";
+import type SingleCheckboxPayloadInterface from "interface/directus/single-checkbox-payload";
 import AboutPage from "./introductory-pages/about";
 import AccelerometerPage from "./introductory-pages/accelerometer";
 import AgePage from "./introductory-pages/age";

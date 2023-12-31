@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import type ResponseInterface from "../interface/response";
+import type ResponseInterface from "interface/response";
 
 interface ResponseContextInterface {
 	responses: Record<string, ResponseInterface>;

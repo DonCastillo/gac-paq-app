@@ -1,7 +1,7 @@
-import type QuestionRadioPayloadInterface from "../../interface/directus/question-radio-payload";
-import type QuestionSliderPayloadInterface from "../../interface/directus/question-slider-payload";
-import type SectionPayloadInterface from "../../interface/directus/section-payload";
-import type ExtroPayloadInterface from "../../interface/directus/extro-payload";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import type QuestionSliderPayloadInterface from "interface/directus/question-slider-payload";
+import type SectionPayloadInterface from "interface/directus/section-payload";
+import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import S1Q2 from "./questionpages/section-1/S1Q2";
 import S1Q3 from "./questionpages/section-1/S1Q3";
 import S1Q4 from "./questionpages/section-1/S1Q4";

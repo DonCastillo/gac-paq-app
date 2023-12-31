@@ -1,4 +1,4 @@
-import type ResponseInterface from "../interface/response";
+import type ResponseInterface from "interface/response";
 
 function getResponse(
 	pageNumber: number,

@@ -2,7 +2,7 @@ import { StyleSheet, Text } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "store/settings";
-import type QuestionRadioItemInterface from "../interface/question_radio_item";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
 
 const FONT_SIZE = 16;
 const BORDER_WIDTH = 2;

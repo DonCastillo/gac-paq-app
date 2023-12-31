@@ -1,5 +1,5 @@
 import ScreenType from "constants/screen_type";
-import type PagePayloadInterface from "../../../interface/directus/page-payload";
+import type PagePayloadInterface from "interface/directus/page-payload";
 
 const AboutPage: PagePayloadInterface = {
 	title: "About Page",

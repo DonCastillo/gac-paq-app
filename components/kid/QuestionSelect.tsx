@@ -1,5 +1,5 @@
 import React from "react";
-import type QuestionRadioItemInterface from "../../interface/question_radio_item";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
 import DropDownSelector from "../DropDownPicker";
 import { optionText } from "utils/options";
 import type { OptionInterface } from "utils/options";

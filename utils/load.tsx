@@ -1,7 +1,7 @@
-import type RegionInterface from "../interface/region";
+import type RegionInterface from "interface/region";
 import { FlagIcons } from "../styles/flags";
 import Regions from "store/data/regions";
-import type LanguageInterface from "../interface/language";
+import type LanguageInterface from "interface/language";
 import Languages from "store/data/languages";
 
 function loadRegionsOffline(): RegionInterface[] {

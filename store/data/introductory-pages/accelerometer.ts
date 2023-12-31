@@ -1,6 +1,6 @@
 import QuestionField from "constants/question_field";
 import ScreenType from "constants/screen_type";
-import type QuestionInputPayloadInterface from "../../../interface/directus/question-input-payload";
+import type QuestionInputPayloadInterface from "interface/directus/question-input-payload";
 
 const AccelerometerPage: QuestionInputPayloadInterface = {
 	name: "Please enter your Accelerometer ID",

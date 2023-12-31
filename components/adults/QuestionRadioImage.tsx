@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "store/settings";
-import type QuestionRadioItemInterface from "../../interface/question_radio_item";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
