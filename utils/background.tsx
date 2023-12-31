@@ -10,8 +10,8 @@ import QuestionType from "../constants/question_type";
 import DeviceType from "../constants/device_type";
 import GenericBackgroundStroke from "../components/kid/background/question-pages/GenericBackgroundStroke";
 import BackgroundRight from "../components/kid/background/question-pages/BackgroundRight";
-import { Images } from "../styles/images";
 import BackgroundCenter from "../components/kid/background/question-pages/BackgroundCenter";
+import Images from "styles/images/index";
 function getIntroductoryBackground(pageNumber: number): React.ReactElement {
 	switch (pageNumber % 6) {
 		case 0:
@@ -49,9 +49,9 @@ function getQuestionBackground(
 	if (sectionNumber === 1 && sectionPageNumber === 2) {
 		return <GenericBackgroundStroke fillColor={fillColor} />;
 	} else if (sectionNumber === 1 && questionType === QuestionType.QuestionSlider) {
-		return <BackgroundRight svg={Images.kid.mostly_medium} />;
+		return <BackgroundRight svg={Images.kids.graphics.mostly_medium} />;
 	} else if (sectionNumber === 2 && sectionPageNumber === 2) {
-		return <BackgroundCenter svg={Images.kid.volunteer_club} />;
+		return <BackgroundCenter svg={Images.kids.graphics.volunteer_club} />;
 	} else {
 		return <></>;
 	}

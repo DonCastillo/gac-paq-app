@@ -16,6 +16,7 @@ import SuccessScreenKid from "../screens/kid/SuccessScreenKid";
 import ErrorScreenKid from "../screens/kid/ErrorScreenKid";
 import StateKid from "./kid/StateKid";
 import StateType from "../constants/state_type";
+import StateAdult from "./adult/StateAdult";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,11 +33,19 @@ function AppWrapper(): React.ReactElement {
 	}
 
 	function ErrorScreen(): React.ReactElement {
-		return mode === Mode.Kid ? <StateKid state={StateType.Error} /> : <></>;
+		return mode === Mode.Kid ? (
+			<StateKid state={StateType.Error} />
+		) : (
+			<StateAdult state={StateType.Error} />
+		);
 	}
 
 	function SuccessScreen(): React.ReactElement {
-		return mode === Mode.Kid ? <StateKid state={StateType.Success} /> : <></>;
+		return mode === Mode.Kid ? (
+			<StateKid state={StateType.Success} />
+		) : (
+			<StateAdult state={StateType.Success} />
+		);
 	}
 
 	useEffect(() => {
@@ -100,7 +109,6 @@ function AppWrapper(): React.ReactElement {
 					name="ErrorScreen"
 					component={ErrorScreen}
 				/>
-
 				<Stack.Screen
 					name="SplashScreen"
 					component={SplashScreen}

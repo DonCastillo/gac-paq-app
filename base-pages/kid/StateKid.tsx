@@ -14,7 +14,7 @@ import type PagePayloadInterface from "../../interface/directus/page-payload";
 import type PageInterface from "../../interface/page";
 import type QuestionDropdownInterface from "../../interface/question_dropdown";
 import BackgroundYellowStroke from "../../components/kid/background/question-pages/BackgroundYellowStroke";
-import { Images } from "../../styles/images";
+import Images from "styles/images/index";
 import BackAndTryAgainNav from "../../components/generic/navigation/BackAndTryAgainNav";
 import FWBtnShadowed from "../../components/derived-buttons/FWBtnShadowed";
 
@@ -33,9 +33,11 @@ function StateKid({ state }: Props): React.ReactElement {
 		PageInterface | QuestionDropdownInterface | null | null
 	>(null);
 
-	const ErrorImage = Images.kid.error_image;
-	const SuccessImage = Images.kid.success_image;
-	const ICON_SIZE = 180;
+	const SuccessImage = Images.kids.graphics.success_image;
+	const ErrorImage = Images.kids.graphics.error_image;
+	const ErrorMark = Images.general.error;
+	const CheckMark = Images.general.check;
+	const MARK_SIZE = 250;
 	// const translatedPage = translate(currentPage.page.translations, language);
 
 	// set image, state icon, and state page on state change
@@ -106,21 +108,7 @@ function StateKid({ state }: Props): React.ReactElement {
 
 						{/* State Icon */}
 						<View style={styles.stateIconContainer}>
-							{state === StateType.Success ? (
-								<Icon
-									type="font-awesome"
-									name="check-circle"
-									size={ICON_SIZE}
-									color={"#A6E771"}
-								/>
-							) : (
-								<Icon
-									type="font-awesome"
-									name="times-circle"
-									size={ICON_SIZE}
-									color={"#FB5353"}
-								/>
-							)}
+							{state === StateType.Success ? <CheckMark /> : <ErrorMark  />}
 						</View>
 					</View>
 				</CenterMain>
@@ -150,7 +138,7 @@ const styles = StyleSheet.create({
 	stateIconContainer: {
 		position: "absolute",
 		zIndex: -1,
-		right: -35,
+		right: -50,
 	},
 });
 

@@ -6,7 +6,7 @@ import Main from "../../components/Main";
 import CenterMain from "../../components/orientation/CenterMain";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
-import { Images } from "../../styles/images";
+import Images from "styles/images/index";
 import Navigation from "../../components/Navigation";
 import { submitResponse } from "../../utils/api";
 import { ResponseContext } from "../../store/responses";
@@ -26,7 +26,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
-	const ImageComponent = Images.kid.extro_question_page;
+	const ImageComponent = Images.kids.graphics.extro_question_page;
 
 	console.log(translatedPage);
 	console.log("isFinal: ", isFinal);
