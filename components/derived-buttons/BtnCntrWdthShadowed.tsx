@@ -6,7 +6,7 @@ interface Props {
 	onPress: () => void;
 }
 
-export default function BtnCntrWdthShadowed({ label, onPress }: Props): React.ReactElement {
+function BtnCntrWdthShadowed({ label, onPress }: Props): React.ReactElement {
 	return (
 		<ButtonContainerWidth
 			onPress={onPress}
@@ -18,3 +18,5 @@ export default function BtnCntrWdthShadowed({ label, onPress }: Props): React.Re
 		</ButtonContainerWidth>
 	);
 }
+
+export default BtnCntrWdthShadowed;

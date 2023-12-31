@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@rneui/themed";
 
-interface ButtonIconPropsInterface {
+interface Props {
 	type?: string;
 	color: string;
 	name: string;
@@ -9,13 +9,7 @@ interface ButtonIconPropsInterface {
 	onPress: () => void;
 }
 
-export default function ButtonIcon({
-	type,
-	color,
-	name,
-	size,
-	onPress,
-}: ButtonIconPropsInterface): React.ReactElement {
+function ButtonIcon({ type, color, name, size, onPress }: Props): React.ReactElement {
 	return (
 		<Icon
 			type={type ?? "ionicons"}
@@ -26,3 +20,5 @@ export default function ButtonIcon({
 		/>
 	);
 }
+
+export default ButtonIcon;

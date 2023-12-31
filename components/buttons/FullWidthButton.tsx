@@ -2,8 +2,16 @@ import { View, Text, Pressable, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 import Colors from "../../styles/kids/Colors";
 import { DefaultStyle } from "../../styles/general";
+import React from "react";
 
-export default function FullWidthButton({ children, onPress, textStyle = {}, customStyle = {} }) {
+interface Props {
+	children: React.ReactNode;
+	onPress: () => void;
+	textStyle?: any;
+	customStyle?: any;
+}
+
+function FullWidthButton({ children, onPress, textStyle, customStyle }: Props): React.ReactElement {
 	return (
 		<View style={[style.container, customStyle]}>
 			<Pressable onPress={onPress}>
@@ -29,3 +37,5 @@ const style = StyleSheet.create({
 		fontWeight: DefaultStyle.button.fontWeight,
 	},
 });
+
+export default FullWidthButton;

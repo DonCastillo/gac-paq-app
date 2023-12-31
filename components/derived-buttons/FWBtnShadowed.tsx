@@ -6,7 +6,7 @@ interface Props {
 	onPress: () => void;
 }
 
-export default function FWBtnShadowed({ label, onPress }: Props): React.ReactElement {
+function FWBtnShadowed({ label, onPress }: Props): React.ReactElement {
 	return (
 		<FullWidthButton
 			onPress={onPress}
@@ -30,3 +30,5 @@ export default function FWBtnShadowed({ label, onPress }: Props): React.ReactEle
 		</FullWidthButton>
 	);
 }
+
+export default FWBtnShadowed;
