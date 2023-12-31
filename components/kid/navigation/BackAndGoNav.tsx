@@ -20,18 +20,26 @@ export default function BackAndGoNav(): React.ReactElement {
 		<View style={styles.bottomNavigation}>
 			<ButtonContainerWidth
 				onPress={prevPage}
-				borderColor={color100}
-				bgColor={"#fff"}
-				textColor={color100}
+				customStyle={{
+					borderColor: color100,
+					backgroundColor: "#fff",
+				}}
+				textStyle={{
+					color: color100,
+				}}
 			>
 				{buttons?.back}
 			</ButtonContainerWidth>
 
 			<ButtonContainerWidth
 				onPress={nextPage}
-				borderColor={color100}
-				bgColor={color100}
-				textColor={"#fff"}
+				customStyle={{
+					borderColor: color100,
+					backgroundColor: color100,
+				}}
+				textStyle={{
+					color: "#fff",
+				}}
 			>
 				{buttons?.next}
 			</ButtonContainerWidth>

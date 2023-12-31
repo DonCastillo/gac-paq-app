@@ -12,6 +12,10 @@ import Mode from "../constants/mode";
 import SplashAdult from "./adult/SplashAdult";
 import { loadLanguagesOffline, loadRegionsOffline } from "../utils/load";
 import GenericSplash from "./generic/GenericSplash";
+import SuccessScreenKid from "../screens/kid/SuccessScreenKid";
+import ErrorScreenKid from "../screens/kid/ErrorScreenKid";
+import StateKid from "./kid/StateKid";
+import StateType from "../constants/state_type";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,13 +28,15 @@ function AppWrapper(): React.ReactElement {
 	const questionPages = questionCtx.questionState.questionPages;
 
 	function SplashScreen(): React.ReactElement {
-		if (mode === Mode.Kid) {
-			return <GenericSplash />;
-		} else if (mode === Mode.Adult) {
-			return <GenericSplash />;
-		} else {
-			return <></>;
-		}
+		return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;
+	}
+
+	function ErrorScreen(): React.ReactElement {
+		return mode === Mode.Kid ? <StateKid state={StateType.Error} /> : <></>;
+	}
+
+	function SuccessScreen(): React.ReactElement {
+		return mode === Mode.Kid ? <StateKid state={StateType.Success} /> : <></>;
 	}
 
 	useEffect(() => {
@@ -87,9 +93,19 @@ function AppWrapper(): React.ReactElement {
 				}}
 			>
 				<Stack.Screen
+					name="SuccessScreen"
+					component={SuccessScreen}
+				/>
+				<Stack.Screen
+					name="ErrorScreen"
+					component={ErrorScreen}
+				/>
+
+				<Stack.Screen
 					name="SplashScreen"
 					component={SplashScreen}
 				/>
+
 				<Stack.Screen
 					name="RegularPageScreen"
 					component={RegularPageScreen}

@@ -6,15 +6,12 @@ import ButtonIcon from "../../buttons/ButtonIcon";
 import ScreenType from "../../../constants/screen_type";
 import SectionType from "../../../constants/section_type";
 
-interface BackAndNextNavProps {
+interface Props {
 	onPrev?: () => void | null;
 	onNext?: () => void | null;
 }
 
-export default function BackAndNextNav({
-	onPrev,
-	onNext,
-}: BackAndNextNavProps): React.ReactElement {
+function BackAndNextNav({ onPrev, onNext }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
@@ -97,3 +94,5 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 	},
 });
+
+export default BackAndNextNav;

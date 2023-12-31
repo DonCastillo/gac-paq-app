@@ -63,6 +63,8 @@ const Images = {
 		background_image_6: CarrotBiteSVG,
 		background_image_7: EmptyBasket,
 		splash_image: RabbitFaceSVG,
+		success_image: RabbitFaceSVG,
+		error_image: SurprisedPoseSVG,
 		yellow_stroke_lg: YellowStrokeLG,
 		yellow_stroke: YellowStroke,
 		pink_stroke_lg: PinkStrokeLG,

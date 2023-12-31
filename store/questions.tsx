@@ -19,6 +19,8 @@ import DonePhrase from "./data/phrase/done";
 import DontKnowPhrase from "./data/phrase/dont-know";
 import IntroductionPhrase from "./data/phrase/introduction";
 import TryAgainPhrase from "./data/phrase/try-again";
+import SuccessPage from "./data/state-pages/success";
+import ErrorPage from "./data/state-pages/error";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
@@ -36,6 +38,8 @@ const INITIAL_STATE = {
 	dontKnowPhrase: DontKnowPhrase,
 	introductionPhrase: IntroductionPhrase,
 	tryAgainPhrase: TryAgainPhrase,
+	successPage: SuccessPage,
+	errorPage: ErrorPage,
 };
 
 export const QuestionContext = createContext({
@@ -55,6 +59,8 @@ export const QuestionContext = createContext({
 		dontKnowPhrase: [],
 		introductionPhrase: [],
 		tryAgainPhrase: [],
+		successPage: {},
+		errorPage: {},
 	},
 	identifyLastSectionExtroPage: () => {},
 	setRegionOption: (newRegionOptions: RegionInterface[]) => {},

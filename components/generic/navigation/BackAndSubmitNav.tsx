@@ -6,15 +6,12 @@ import ButtonIcon from "../../buttons/ButtonIcon";
 import ScreenType from "../../../constants/screen_type";
 import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
 
-interface BackAndSubmitNavProps {
+interface Props {
 	onPrev?: () => void;
 	onNext?: () => Promise<void>;
 }
 
-export default function BackAndSubmitNav({
-	onPrev,
-	onNext,
-}: BackAndSubmitNavProps): React.ReactElement {
+function BackAndSubmitNav({ onPrev, onNext }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
@@ -69,9 +66,13 @@ export default function BackAndSubmitNav({
 			{hasNext && (
 				<ButtonContainerWidth
 					onPress={async () => onNext !== undefined && onNext()}
-					borderColor={buttonColor}
-					textColor={buttonColor}
-					bgColor="#fff"
+					customStyle={{
+						borderColor: buttonColor,
+						backgroundColor: "#fff",
+					}}
+					textStyle={{
+						color: buttonColor,
+					}}
 				>
 					{buttons?.complete}
 				</ButtonContainerWidth>
@@ -88,3 +89,5 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 	},
 });
+
+export default BackAndSubmitNav;

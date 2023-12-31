@@ -10,9 +10,21 @@ function BtnCntrWdthShadowed({ label, onPress }: Props): React.ReactElement {
 	return (
 		<ButtonContainerWidth
 			onPress={onPress}
-			borderColor={"#000"}
-			bgColor={"#fff"}
-			textColor={"#000"}
+			customStyle={{
+				backgroundColor: "#fff",
+				borderWidth: 3,
+				borderColor: "#FFCB66",
+				shadowColor: "#FFCB66",
+				shadowOffset: {
+					width: 5,
+					height: 5,
+				},
+				shadowOpacity: 1000,
+				shadowRadius: 0,
+			}}
+			textStyle={{
+				color: "#000",
+			}}
 		>
 			{label}
 		</ButtonContainerWidth>

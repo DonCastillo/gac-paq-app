@@ -47,9 +47,13 @@ export default function BackAndNextNav({
 			{hasPrev && (
 				<ButtonContainerWidth
 					onPress={onPrev}
-					borderColor={color100}
-					bgColor={"#fff"}
-					textColor={color100}
+					customStyle={{
+						borderColor: color100,
+						backgroundColor: "#fff",
+					}}
+					textStyle={{
+						color: color100,
+					}}
 				>
 					{buttons?.back}
 				</ButtonContainerWidth>
@@ -58,9 +62,13 @@ export default function BackAndNextNav({
 			{hasNext && (
 				<ButtonContainerWidth
 					onPress={onNext}
-					borderColor={color100}
-					bgColor={color100}
-					textColor={"#fff"}
+					customStyle={{
+						borderColor: color100,
+						backgroundColor: color100,
+					}}
+					textStyle={{
+						color: "#fff",
+					}}
 				>
 					{buttons?.next}
 				</ButtonContainerWidth>

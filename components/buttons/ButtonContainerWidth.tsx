@@ -5,31 +5,23 @@ import { DefaultStyle } from "../../styles/general";
 interface Props {
 	children?: React.ReactNode;
 	onPress?: () => void;
-	borderColor?: string;
-	textColor?: string;
-	bgColor?: string;
+	textStyle?: any;
+	customStyle?: any;
 }
 
 function ButtonContainerWidth({
 	children,
 	onPress,
-	borderColor,
-	textColor,
-	bgColor,
+	textStyle,
+	customStyle,
 }: Props): React.ReactElement {
 	return (
 		<View>
 			<Pressable
 				onPress={onPress}
-				style={[
-					style.container,
-					{
-						borderColor,
-						backgroundColor: bgColor,
-					},
-				]}
+				style={[style.container, customStyle]}
 			>
-				<Text style={[style.buttonText, { color: textColor }]}>{children}</Text>
+				<Text style={[style.buttonText, textStyle]}>{children}</Text>
 			</Pressable>
 		</View>
 	);
