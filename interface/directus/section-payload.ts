@@ -1,4 +1,4 @@
-import type ScreenType from "../../constants/screen_type";
+import type ScreenType from "constants/screen_type";
 import type SectionInterface from "../section";
 
 export default interface SectionPayloadInterface {

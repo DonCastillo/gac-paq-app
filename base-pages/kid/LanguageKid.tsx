@@ -11,7 +11,7 @@ import { getIntroductoryBackground } from "../../utils/background";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { translateButton } from "../../utils/translate";
 import { QuestionContext } from "store/questions";
-import ButtonLabel from "../../constants/button_label";
+import ButtonLabel from "constants/button_label";
 
 export default function LanguageKid(): React.ReactElement {
 	const [languageSelected, setLanguageSelected] = useState<boolean>(false);

@@ -6,7 +6,7 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "../../utils/questions";
-import QuestionType from "../../constants/question_type";
+import QuestionType from "constants/question_type";
 import { ResponseContext } from "store/responses";
 import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";

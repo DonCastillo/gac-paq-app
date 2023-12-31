@@ -11,9 +11,9 @@ import { default as IntroQuestionSingleAdult } from "../base-pages/adult/intro/Q
 import { default as QuestionQuestionSingleKid } from "../base-pages/kid/question/QuestionSingleKid";
 import { default as QuestionQuestionSingleAdult } from "../base-pages/adult/question/QuestionSingleAdult";
 import SplashKid from "../base-pages/kid/SplashKid";
-import Mode from "../constants/mode";
-import ScreenType from "../constants/screen_type";
-import SectionType from "../constants/section_type";
+import Mode from "constants/mode";
+import ScreenType from "constants/screen_type";
+import SectionType from "constants/section_type";
 import LanguageKid from "../base-pages/kid/LanguageKid";
 import LanguageAdult from "../base-pages/adult/LanguageAdult";
 import GenericLanguage from "../base-pages/generic/GenericLanguage";

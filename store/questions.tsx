@@ -13,7 +13,7 @@ import ContinueButton from "./data/buttons/continue";
 import GoButton from "./data/buttons/go";
 import NextButton from "./data/buttons/next";
 import StartedButton from "./data/buttons/started";
-import ScreenType from "../constants/screen_type";
+import ScreenType from "constants/screen_type";
 import AgreementPhrase from "./data/phrase/agreement";
 import DonePhrase from "./data/phrase/done";
 import DontKnowPhrase from "./data/phrase/dont-know";

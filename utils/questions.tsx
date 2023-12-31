@@ -1,5 +1,5 @@
-import Mode from "../constants/mode";
-import QuestionType from "../constants/question_type";
+import Mode from "constants/mode";
+import QuestionType from "constants/question_type";
 
 function getQuestionType(questionPage: any): QuestionType {
 	if (Object.prototype.hasOwnProperty.call(questionPage, "question_dropdown_id") === true) {

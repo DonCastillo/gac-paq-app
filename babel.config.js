@@ -27,6 +27,7 @@ module.exports = function (api) {
 						styles: "./styles",
 						components: "./components",
 						store: "./store",
+						constants: "./constants",
 					},
 				},
 			],

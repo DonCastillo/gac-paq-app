@@ -8,7 +8,7 @@ import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
-import StateType from "../../constants/state_type";
+import StateType from "constants/state_type";
 import { QuestionContext } from "store/questions";
 import type PagePayloadInterface from "../../interface/directus/page-payload";
 import type PageInterface from "../../interface/page";
