@@ -15,7 +15,7 @@ export default function LoadingScreenAdult(): React.ReactElement {
 				<CenterMain>
 					<Image
 						style={styles.logo}
-						source={require("./../../assets/images/Logo.png")}
+						source={require("assets/images/Logo.png")}
 					/>
 					<ProgressBar />
 				</CenterMain>
