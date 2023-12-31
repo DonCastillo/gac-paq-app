@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ScrollView } from "react-native";
-import { SettingContext } from "../store/settings";
+import { SettingContext } from "store/settings";
 
 interface ScrollContainerPropsInterface {
 	children: React.ReactNode;

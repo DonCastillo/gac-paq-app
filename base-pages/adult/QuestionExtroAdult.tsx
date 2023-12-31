@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { View, StyleSheet, ImageBackground } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import { translate } from "../../utils/page";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
@@ -9,7 +9,7 @@ import Paragraph from "components/Paragraph";
 import Images from "styles/images/index";
 import Navigation from "components/Navigation";
 import { submitResponse } from "../../utils/api";
-import { ResponseContext } from "../../store/responses";
+import { ResponseContext } from "store/responses";
 import SingleNav from "components/adults/navigation/SingleNav";
 import Toolbar from "components/adults/Toolbar";
 import BGLinearGradient from "components/BGLinearGradient";

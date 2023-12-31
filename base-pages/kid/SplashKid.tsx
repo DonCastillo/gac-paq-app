@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";

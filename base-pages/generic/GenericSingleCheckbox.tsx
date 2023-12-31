@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import { translate } from "../../utils/page";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
@@ -12,7 +12,7 @@ import Toolbar from "components/adults/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ScrollContainer from "components/ScrollContainer";
 import { CheckBox } from "@rneui/themed";
-import { ResponseContext } from "../../store/responses";
+import { ResponseContext } from "store/responses";
 import { getResponse } from "../../utils/response";
 
 export default function GenericSingleCheckbox(): React.ReactElement {

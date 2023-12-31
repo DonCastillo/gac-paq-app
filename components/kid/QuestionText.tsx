@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import { TextInput, View, StyleSheet, ScrollView } from "react-native";
 import { GeneralStyle } from "../../styles/general";
 

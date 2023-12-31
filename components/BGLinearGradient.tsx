@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { SettingContext } from "../store/settings";
+import { SettingContext } from "store/settings";
 
 export default function BGLinearGradient(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

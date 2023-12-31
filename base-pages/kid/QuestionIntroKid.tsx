@@ -1,6 +1,6 @@
 import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import { translate } from "../../utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 

@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
 import React, { useContext, useState, useEffect } from "react";
 import { GeneralStyle } from "../../styles/general";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 
 interface QuestionRadioImagePropsInterface {
 	options: any[];

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import { translate } from "../../utils/page";
 import { Icon } from "@rneui/themed";
 import Main from "components/Main";
@@ -9,7 +9,7 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import StateType from "../../constants/state_type";
-import { QuestionContext } from "../../store/questions";
+import { QuestionContext } from "store/questions";
 import type PagePayloadInterface from "../../interface/directus/page-payload";
 import type PageInterface from "../../interface/page";
 import type QuestionDropdownInterface from "../../interface/question_dropdown";

@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "../../constants/phrase_label";
 import RadioOption from "./item/RadioOption";

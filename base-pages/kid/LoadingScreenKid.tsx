@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { StyleSheet, View, Image } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
-import Colors from "../../store/data/colors";
+import Colors from "store/data/colors";
 import Mode from "../../constants/mode";
 
 export default function LoadingScreenKid(): React.ReactElement {

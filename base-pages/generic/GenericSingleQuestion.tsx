@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import { translate } from "../../utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "../../utils/questions";
 import QuestionType from "../../constants/question_type";
-import { ResponseContext } from "../../store/responses";
+import { ResponseContext } from "store/responses";
 import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/Toolbar";
@@ -21,7 +21,7 @@ import { getResponse } from "../../utils/response";
 import { intToString, stringToInt } from "../../utils/translate";
 import QuestionText from "components/adults/QuestionText";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { QuestionContext } from "../../store/questions";
+import { QuestionContext } from "store/questions";
 import QuestionInput from "components/adults/QuestionInput";
 
 export default function GenericSingleQuestion(): React.ReactElement {

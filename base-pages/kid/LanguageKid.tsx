@@ -1,16 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguage from "components/kid/QuestionSelectLanguage";
-import { ResponseContext } from "../../store/responses";
+import { ResponseContext } from "store/responses";
 import { getIntroductoryBackground } from "../../utils/background";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { translateButton } from "../../utils/translate";
-import { QuestionContext } from "../../store/questions";
+import { QuestionContext } from "store/questions";
 import ButtonLabel from "../../constants/button_label";
 
 export default function LanguageKid(): React.ReactElement {

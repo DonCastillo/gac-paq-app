@@ -1,8 +1,8 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React, { useContext, useEffect } from "react";
-import { SettingContext } from "../store/settings";
-import { QuestionContext } from "../store/questions";
+import { SettingContext } from "store/settings";
+import { QuestionContext } from "store/questions";
 import RegularPageScreen from "../screens/RegularPageScreen";
 import SplashKid from "./kid/SplashKid";
 import SectionType from "../constants/section_type";

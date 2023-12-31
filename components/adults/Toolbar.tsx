@@ -1,7 +1,7 @@
 import { Pressable, SafeAreaView, StyleSheet, View } from "react-native";
 import { Icon } from "@rneui/themed";
 import React, { useContext } from "react";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 
 const ICON_SIZE = 30;
 

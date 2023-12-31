@@ -2,7 +2,7 @@ import { FlatList } from "react-native";
 import RadioOption from "./item/RadioOption";
 import React, { useContext, useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "../../interface/question_radio_item";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 
 interface QuestionRadioPropsInterface {
 	options: QuestionRadioItemInterface[];

@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
-import { ResponseContext } from "../../store/responses";
-import { QuestionContext } from "../../store/questions";
+import { ResponseContext } from "store/responses";
+import { QuestionContext } from "store/questions";
 import { translateButton, translatePhrase } from "../../utils/translate";
 import ButtonLabel from "../../constants/button_label";
 import CenterMain from "components/orientation/CenterMain";
