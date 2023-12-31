@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "../../styles/general";
 import { SettingContext } from "store/settings";
-import type { OptionInterface } from "../../utils/options";
+import type { OptionInterface } from "utils/options";
 
 interface QuestionRadioPropsInterface {
 	options: OptionInterface[];

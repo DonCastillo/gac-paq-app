@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "store/settings";
-import { getScreen, getScreenType } from "../utils/screen";
-import { getSectionType } from "../utils/section";
+import { getScreen, getScreenType } from "utils/screen";
+import { getSectionType } from "utils/section";
 import ScreenType from "constants/screen_type";
 
 export default function RegularPageScreen(): React.ReactElement {

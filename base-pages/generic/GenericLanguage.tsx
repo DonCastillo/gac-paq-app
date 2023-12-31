@@ -7,14 +7,14 @@ import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
 import { ResponseContext } from "store/responses";
 import { QuestionContext } from "store/questions";
-import { translateButton, translatePhrase } from "../../utils/translate";
+import { translateButton, translatePhrase } from "utils/translate";
 import ButtonLabel from "constants/button_label";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
-import { translate } from "../../utils/page";
+import { translate } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { getResponse } from "../../utils/response";
+import { getResponse } from "utils/response";
 import PhraseLabel from "constants/phrase_label";
 
 export default function GenericLanguage(): React.ReactElement {

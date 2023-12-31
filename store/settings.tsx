@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from "react";
 import Mode from "constants/mode";
 import Colors from "./data/colors";
-import { getPage } from "../utils/page";
+import { getPage } from "utils/page";
 import type ScreenType from "constants/screen_type";
 import type SectionType from "constants/section_type";
 import ButtonLabel from "constants/button_label";

@@ -28,6 +28,7 @@ module.exports = function (api) {
 						components: "./components",
 						store: "./store",
 						constants: "./constants",
+						utils: "./utils",
 					},
 				},
 			],

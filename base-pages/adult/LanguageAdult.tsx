@@ -7,7 +7,7 @@ import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
 import { ResponseContext } from "store/responses";
 import { QuestionContext } from "store/questions";
-import { translateButton } from "../../utils/translate";
+import { translateButton } from "utils/translate";
 import ButtonLabel from "constants/button_label";
 import SingleNav from "components/kid/navigation/SingleNav";
 import CenterMain from "components/orientation/CenterMain";

@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
-import { translate } from "../../utils/page";
+import { translate } from "utils/page";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { getIntroductoryBackground } from "../../utils/background";
+import { getIntroductoryBackground } from "utils/background";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

@@ -3,7 +3,7 @@ import type LanguageInterface from "../../interface/language";
 import type QuestionRadioItemInterface from "../../interface/question_radio_item";
 import DropDownSelector from "../DropDownPicker";
 import { QuestionContext } from "store/questions";
-import { optionLanguage } from "../../utils/options";
+import { optionLanguage } from "utils/options";
 
 interface QuestionSelectLanguagePropsInterface {
 	onChange: (value: string) => void;
