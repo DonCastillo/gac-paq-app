@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
-import { SettingContext } from "../../../store/settings";
+import { SettingContext } from "store/settings";
 import React, { useContext } from "react";
 
 export default function BackAndGoNav(): React.ReactElement {

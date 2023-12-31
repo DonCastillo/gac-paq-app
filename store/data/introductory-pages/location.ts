@@ -1,4 +1,4 @@
-import ScreenType from "../../../constants/screen_type";
+import ScreenType from "constants/screen_type";
 import type QuestionDropdownPayloadInterface from "../../../interface/directus/question-dropdown-payload";
 
 const LocationPage: QuestionDropdownPayloadInterface = {

@@ -1,4 +1,4 @@
-import ScreenType from "../../../constants/screen_type";
+import ScreenType from "constants/screen_type";
 import type QuestionInputPayloadInterface from "../../../interface/directus/question-input-payload";
 
 const ParticipantIDPage: QuestionInputPayloadInterface = {

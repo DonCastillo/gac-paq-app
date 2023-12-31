@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import { SettingContext } from "../../../store/settings";
+import { SettingContext } from "store/settings";
 import React, { useContext } from "react";
 import ButtonIcon from "../../buttons/ButtonIcon";
 import BtnCntrWdthShadowed from "../../derived-buttons/BtnCntrWdthShadowed";

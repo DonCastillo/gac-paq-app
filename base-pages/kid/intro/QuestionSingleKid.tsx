@@ -1,20 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "../../../store/settings";
-import { translate } from "../../../utils/page";
-import Main from "../../../components/Main";
-import Navigation from "../../../components/Navigation";
-import TopMain from "../../../components/orientation/TopMain";
-import QuestionLabel from "../../../components/kid/QuestionLabel";
-import { getQuestionType } from "../../../utils/questions";
-import QuestionType from "../../../constants/question_type";
-import QuestionSelect from "../../../components/kid/QuestionSelect";
-import { ResponseContext } from "../../../store/responses";
-import QuestionText from "../../../components/kid/QuestionText";
-import BackAndNextNav from "../../../components/generic/navigation/BackAndNextNav";
-import QuestionSelectRegion from "../../../components/kid/QuestionSelectRegion";
-import { getResponse } from "../../../utils/response";
-import { getIntroductoryBackground } from "../../../utils/background";
+import { SettingContext } from "store/settings";
+import { translate } from "utils/page";
+import Main from "components/Main";
+import Navigation from "components/Navigation";
+import TopMain from "components/orientation/TopMain";
+import QuestionLabel from "components/kid/QuestionLabel";
+import { getQuestionType } from "utils/questions";
+import QuestionType from "constants/question_type";
+import QuestionSelect from "components/kid/QuestionSelect";
+import { ResponseContext } from "store/responses";
+import QuestionText from "components/kid/QuestionText";
+import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import QuestionSelectRegion from "components/kid/QuestionSelectRegion";
+import { getResponse } from "utils/response";
+import { getIntroductoryBackground } from "utils/background";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
