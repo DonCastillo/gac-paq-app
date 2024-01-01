@@ -30,6 +30,8 @@ module.exports = function (api) {
 						constants: "./constants",
 						utils: "./utils",
 						interface: "./interface",
+						base_pages: "./base_pages",
+						screens: "./screens",
 					},
 				},
 			],

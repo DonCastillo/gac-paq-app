@@ -1,25 +1,25 @@
 import React from "react";
-import PageAdult from "../base-pages/adult/PageAdult";
-import QuestionExtroAdult from "../base-pages/adult/QuestionExtroAdult";
-import QuestionIntroAdult from "../base-pages/adult/QuestionIntroAdult";
-import SplashAdult from "../base-pages/adult/SplashAdult";
-import PageKid from "../base-pages/kid/PageKid";
-import QuestionExtroKid from "../base-pages/kid/QuestionExtroKid";
-import QuestionIntroKid from "../base-pages/kid/QuestionIntroKid";
-import { default as IntroQuestionSingleKid } from "../base-pages/kid/intro/QuestionSingleKid";
-import { default as IntroQuestionSingleAdult } from "../base-pages/adult/intro/QuestionSingleAdult";
-import { default as QuestionQuestionSingleKid } from "../base-pages/kid/question/QuestionSingleKid";
-import { default as QuestionQuestionSingleAdult } from "../base-pages/adult/question/QuestionSingleAdult";
-import SplashKid from "../base-pages/kid/SplashKid";
+import PageAdult from "base_pages/adult/PageAdult";
+import QuestionExtroAdult from "base_pages/adult/QuestionExtroAdult";
+import QuestionIntroAdult from "base_pages/adult/QuestionIntroAdult";
+import SplashAdult from "base_pages/adult/SplashAdult";
+import PageKid from "base_pages/kid/PageKid";
+import QuestionExtroKid from "base_pages/kid/QuestionExtroKid";
+import QuestionIntroKid from "base_pages/kid/QuestionIntroKid";
+import { default as IntroQuestionSingleKid } from "base_pages/kid/intro/QuestionSingleKid";
+import { default as IntroQuestionSingleAdult } from "base_pages/adult/intro/QuestionSingleAdult";
+import { default as QuestionQuestionSingleKid } from "base_pages/kid/question/QuestionSingleKid";
+import { default as QuestionQuestionSingleAdult } from "base_pages/adult/question/QuestionSingleAdult";
+import SplashKid from "base_pages/kid/SplashKid";
 import Mode from "constants/mode";
 import ScreenType from "constants/screen_type";
 import SectionType from "constants/section_type";
-import LanguageKid from "../base-pages/kid/LanguageKid";
-import LanguageAdult from "../base-pages/adult/LanguageAdult";
-import GenericLanguage from "../base-pages/generic/GenericLanguage";
-import GenericPage from "../base-pages/generic/GenericPage";
-import GenericSingleCheckbox from "../base-pages/generic/GenericSingleCheckbox";
-import GenericSingleQuestion from "../base-pages/generic/GenericSingleQuestion";
+import LanguageKid from "base_pages/kid/LanguageKid";
+import LanguageAdult from "base_pages/adult/LanguageAdult";
+import GenericLanguage from "base_pages/generic/GenericLanguage";
+import GenericPage from "base_pages/generic/GenericPage";
+import GenericSingleCheckbox from "base_pages/generic/GenericSingleCheckbox";
+import GenericSingleQuestion from "base_pages/generic/GenericSingleQuestion";
 
 function getScreen(
 	mode: Mode | string,

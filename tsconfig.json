@@ -5,6 +5,15 @@
 		"paths": {
 			"*": ["."],
 			"assets/*": ["./assets/*"],
+			"styles/*": ["./styles/*"],
+			"components/*": ["./components/*"],
+			"store/*": ["./store/*"],
+			"constants/*": ["./constants/*"],
+			"utils/*": ["./utils/*"],
+			"interface/*": ["./interface/*"],
+			"base_pages/*": ["./base_pages/*"],
+			"screens/*": ["./screens/*"],
+
 
 		}
 	},

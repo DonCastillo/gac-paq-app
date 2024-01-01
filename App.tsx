@@ -1,4 +1,4 @@
-import AppWrapper from "./base-pages/AppWrapper";
+import AppWrapper from "base_pages/AppWrapper";
 import React from "react";
 import QuestionContextProvider from "./store/questions";
 import SettingContextProvider from "./store/settings";
