@@ -11,7 +11,6 @@ import { Logo } from "components/svgs/kid";
 import BGLinearGradient from "components/BGLinearGradient";
 
 export default function GenericSplash(): JSX.Element {
-	console.log("GenericSplash");
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;

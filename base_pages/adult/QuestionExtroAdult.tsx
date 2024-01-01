@@ -6,7 +6,6 @@ import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
-import Images from "styles/images/index";
 import Navigation from "components/Navigation";
 import { submitResponse } from "utils/api";
 import { ResponseContext } from "store/responses";

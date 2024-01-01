@@ -14,11 +14,9 @@ import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
 import { translate } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { getResponse } from "utils/response";
 import PhraseLabel from "constants/phrase_label";
 
 export default function GenericLanguage(): React.ReactElement {
-	console.log("GenericLanguage ...");
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
@@ -41,7 +39,6 @@ export default function GenericLanguage(): React.ReactElement {
 		tryAgainPhrase,
 	} = questionCtx.questionState;
 
-	console.log("translatedPage: ", translatedPage);
 
 	// translate phrases and buttons
 	useEffect(() => {
@@ -80,7 +77,6 @@ export default function GenericLanguage(): React.ReactElement {
 	}, []);
 
 	function changeHandler(value: string | null): void {
-		console.log("Changing the language...");
 		if (value !== "" && value !== null && value !== undefined) {
 			settingCtx.setLanguage(value);
 			responseCtx.addResponse({

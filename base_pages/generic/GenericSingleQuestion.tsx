@@ -8,41 +8,29 @@ import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
 import { ResponseContext } from "store/responses";
-import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
-import SingleNav from "components/adults/navigation/SingleNav";
 import QuestionContainer from "components/adults/QuestionContainer";
-import { optionRegion, optionText } from "utils/options";
+import { optionText } from "utils/options";
 import QuestionRadio from "components/adults/QuestionRadio";
-import QuestionRadioImage from "components/adults/QuestionRadioImage";
 import { getResponse } from "utils/response";
-import { intToString, stringToInt } from "utils/translate";
-import QuestionText from "components/adults/QuestionText";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { QuestionContext } from "store/questions";
 import QuestionInput from "components/adults/QuestionInput";
 
 export default function GenericSingleQuestion(): React.ReactElement {
-	console.log("Generic Single Question");
 	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-	const questionCtx = useContext(QuestionContext);
 
 	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
-	console.log("questionType: ", questionType);
 	let questionComponent = <></>;
 
-	console.log("translatedPage: ", translatedPage);
-
 	useEffect(() => {
-		console.log("use effect here... heres the responses: ", responses);
 		const theresResponse = Object.keys(responses).length > 0;
 		setProceed(theresResponse);
 	}, [responses]);
@@ -53,7 +41,6 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
 		}
-		console.log("selected value inside the generic single questions: ", selectedValue);
 	}, [currentPageNumber]);
 
 	// save response
@@ -90,7 +77,6 @@ export default function GenericSingleQuestion(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionInput) {
-		console.log("******");
 		questionComponent = (
 			<QuestionInput
 				selectedValue={selectedValue}

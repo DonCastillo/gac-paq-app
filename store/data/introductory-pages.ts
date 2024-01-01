@@ -24,11 +24,11 @@ const IntroductoryPages:
 	LanguagePage,
 	WelcomePage,
 	AboutPage,
-	ConfidentialityPage,
-	ParticipantIDPage,
-	AccelerometerPage,
-	AgePage,
-	DemographicPage,
+	// ConfidentialityPage,
+	// ParticipantIDPage,
+	// AccelerometerPage,
+	// AgePage,
+	// DemographicPage,
 ];
 
 export default IntroductoryPages;

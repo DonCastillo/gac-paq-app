@@ -16,7 +16,6 @@ import { ResponseContext } from "store/responses";
 import { getResponse } from "utils/response";
 
 export default function GenericSingleCheckbox(): React.ReactElement {
-	console.log("GenericSingleCheckbox");
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
