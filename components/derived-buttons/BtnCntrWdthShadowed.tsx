@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonContainerWidth from "../buttons/ButtonContainerWidth";
+import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
 
 interface Props {
 	label: string;
