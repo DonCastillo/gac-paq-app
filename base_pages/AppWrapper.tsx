@@ -114,7 +114,6 @@ function AppWrapper(): React.ReactElement {
 					name="ErrorScreen"
 					component={ErrorScreen}
 				/>
-				
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

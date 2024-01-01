@@ -12,9 +12,7 @@
 			"utils/*": ["./utils/*"],
 			"interface/*": ["./interface/*"],
 			"base_pages/*": ["./base_pages/*"],
-			"screens/*": ["./screens/*"],
-
-
+			"screens/*": ["./screens/*"]
 		}
 	},
 	"extends": "expo/tsconfig.base"

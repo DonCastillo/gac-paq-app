@@ -1,8 +1,7 @@
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { GeneralStyle } from "../../../styles/general";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import { GeneralStyle } from "styles/general";
 import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "store/settings";
-import { Svg } from "react-native-svg";
 
 interface RadioOptionPropsInterface {
 	label: string;

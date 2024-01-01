@@ -2,9 +2,9 @@ import { View, StyleSheet } from "react-native";
 import type { FlexStyle } from "react-native";
 import { SettingContext } from "store/settings";
 import React, { useContext, useEffect, useState } from "react";
-import ButtonIcon from "../../buttons/ButtonIcon";
+import ButtonIcon from "components/buttons/ButtonIcon";
 import ScreenType from "constants/screen_type";
-import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
+import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
 
 interface Props {
 	onPrev?: () => void;

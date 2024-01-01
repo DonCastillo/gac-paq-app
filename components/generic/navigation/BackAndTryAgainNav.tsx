@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import { SettingContext } from "store/settings";
 import React, { useContext } from "react";
-import ButtonIcon from "../../buttons/ButtonIcon";
+import ButtonIcon from "components/buttons/ButtonIcon";
 import BtnCntrWdthShadowed from "../../derived-buttons/BtnCntrWdthShadowed";
 
 interface Props {

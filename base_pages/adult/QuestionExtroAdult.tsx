@@ -10,12 +10,11 @@ import Images from "styles/images/index";
 import Navigation from "components/Navigation";
 import { submitResponse } from "utils/api";
 import { ResponseContext } from "store/responses";
-import SingleNav from "components/adults/navigation/SingleNav";
 import Toolbar from "components/adults/Toolbar";
 import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
-import LoadingScreenAdult from "./LoadingScreenAdult";
+import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -26,7 +25,6 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
-	const ImageComponent = Images.kids.graphics.extro_question_page;
 
 	console.log(translatedPage);
 	console.log("isFinal: ", isFinal);

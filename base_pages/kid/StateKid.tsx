@@ -108,7 +108,7 @@ function StateKid({ state }: Props): React.ReactElement {
 
 						{/* State Icon */}
 						<View style={styles.stateIconContainer}>
-							{state === StateType.Success ? <CheckMark /> : <ErrorMark  />}
+							{state === StateType.Success ? <CheckMark /> : <ErrorMark />}
 						</View>
 					</View>
 				</CenterMain>

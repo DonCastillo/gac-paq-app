@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
+import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
 import { SettingContext } from "store/settings";
 import React, { useContext } from "react";
 
