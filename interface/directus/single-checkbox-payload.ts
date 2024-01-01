@@ -1,5 +1,5 @@
 import type ScreenType from "constants/screen_type";
-import type SingleCheckboxInterface from "../single_checkbox";
+import type SingleCheckboxInterface from "interface/single_checkbox";
 
 export default interface SingleCheckboxPayloadInterface {
 	title?: string | null;

@@ -1,6 +1,6 @@
 import type ScreenType from "constants/screen_type";
-import type QuestionDropdownInterface from "../question_dropdown";
-import type QuestionDropdownLanguageInterface from "../question_dropdown_language";
+import type QuestionDropdownInterface from "interface/question_dropdown";
+import type QuestionDropdownLanguageInterface from "interface/question_dropdown_language";
 
 export default interface QuestionDropdownPayloadInterface {
 	name?: string | null;

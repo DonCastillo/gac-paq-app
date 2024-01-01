@@ -1,5 +1,5 @@
 import type ScreenType from "constants/screen_type";
-import type ExtroInterface from "../extro";
+import type ExtroInterface from "interface/extro";
 
 export default interface ExtroPayloadInterface {
 	name?: string | null;
