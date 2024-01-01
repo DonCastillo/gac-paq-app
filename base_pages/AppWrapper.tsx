@@ -4,19 +4,15 @@ import React, { useContext, useEffect } from "react";
 import { SettingContext } from "store/settings";
 import { QuestionContext } from "store/questions";
 import RegularPageScreen from "screens/RegularPageScreen";
-import SplashKid from "./kid/SplashKid";
 import SectionType from "constants/section_type";
 import { getScreenType } from "utils/screen";
 import ScreenType from "constants/screen_type";
 import Mode from "constants/mode";
-import SplashAdult from "./adult/SplashAdult";
 import { loadLanguagesOffline, loadRegionsOffline } from "utils/load";
-import GenericSplash from "./generic/GenericSplash";
-import SuccessScreenKid from "screens/kid/SuccessScreenKid";
-import ErrorScreenKid from "screens/kid/ErrorScreenKid";
-import StateKid from "./kid/StateKid";
+import GenericSplash from "base_pages/generic/GenericSplash";
+import StateKid from "base_pages/kid/StateKid";
 import StateType from "constants/state_type";
-import StateAdult from "./adult/StateAdult";
+import StateAdult from "base_pages/adult//StateAdult";
 
 const Stack = createNativeStackNavigator();
 
