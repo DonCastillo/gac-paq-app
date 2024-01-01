@@ -1,26 +1,26 @@
 import React, { createContext, useReducer } from "react";
 import type RegionInterface from "interface/region";
 import type LanguageInterface from "interface/language";
-import Regions from "./data/regions";
-import Languages from "./data/languages";
-import IntroductoryPages from "./data/introductory-pages";
+import Regions from "store/data/regions";
+import Languages from "store/data/languages";
+import IntroductoryPages from "store/data/introductory-pages";
 import type PagePayloadInterface from "interface/directus/page-payload";
 import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
-import QuestionPages from "./data/question-pages";
-import BackButton from "./data/buttons/back";
-import CompleteButton from "./data/buttons/complete";
-import ContinueButton from "./data/buttons/continue";
-import GoButton from "./data/buttons/go";
-import NextButton from "./data/buttons/next";
-import StartedButton from "./data/buttons/started";
+import QuestionPages from "store/data/question-pages";
+import BackButton from "store/data/buttons/back";
+import CompleteButton from "store/data/buttons/complete";
+import ContinueButton from "store/data/buttons/continue";
+import GoButton from "store/data/buttons/go";
+import NextButton from "store/data/buttons/next";
+import StartedButton from "store/data/buttons/started";
 import ScreenType from "constants/screen_type";
-import AgreementPhrase from "./data/phrase/agreement";
-import DonePhrase from "./data/phrase/done";
-import DontKnowPhrase from "./data/phrase/dont-know";
-import IntroductionPhrase from "./data/phrase/introduction";
-import TryAgainPhrase from "./data/phrase/try-again";
-import SuccessPage from "./data/state-pages/success";
-import ErrorPage from "./data/state-pages/error";
+import AgreementPhrase from "store/data/phrase/agreement";
+import DonePhrase from "store/data/phrase/done";
+import DontKnowPhrase from "store/data/phrase/dont-know";
+import IntroductionPhrase from "store/data/phrase/introduction";
+import TryAgainPhrase from "store/data/phrase/try-again";
+import SuccessPage from "store/data/state-pages/success";
+import ErrorPage from "store/data/state-pages/error";
 
 const INITIAL_STATE = {
 	regionOption: Regions,

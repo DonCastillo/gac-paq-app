@@ -1,6 +1,6 @@
 import axios from "axios";
 import type ResponseInterface from "interface/response";
-import { sanitizeResponse } from "./response";
+import { sanitizeResponse } from "utils/response";
 
 async function submitResponse(
 	responses: Record<string, ResponseInterface>,

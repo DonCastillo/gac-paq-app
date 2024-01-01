@@ -1,4 +1,4 @@
-import type LanguageInterface from "./language";
+import type LanguageInterface from "interface/language";
 
 interface Choice {
 	text: string;

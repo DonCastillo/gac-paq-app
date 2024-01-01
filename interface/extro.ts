@@ -1,4 +1,4 @@
-import type LanguageInterface from "./language";
+import type LanguageInterface from "interface/language";
 
 export default interface ExtroInterface {
 	id?: string | number;
