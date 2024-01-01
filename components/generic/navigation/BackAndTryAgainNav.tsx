@@ -2,7 +2,7 @@ import { View, StyleSheet } from "react-native";
 import { SettingContext } from "store/settings";
 import React, { useContext } from "react";
 import ButtonIcon from "components/buttons/ButtonIcon";
-import BtnCntrWdthShadowed from "../../derived-buttons/BtnCntrWdthShadowed";
+import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed";
 
 interface Props {
 	onPrev: () => void;

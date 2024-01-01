@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import React from "react";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
-import { StrokeYellow } from "../../../svgs/kid/doodles";
+import { StrokeYellow } from "components/svgs/kid/doodles";
 
 interface GenericBackgroundStrokePropsInterface {
 	fillColor: string;
