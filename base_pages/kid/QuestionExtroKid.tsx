@@ -10,7 +10,7 @@ import Images from "styles/images/index";
 import Navigation from "components/Navigation";
 import { submitResponse } from "utils/api";
 import { ResponseContext } from "store/responses";
-import LoadingScreenKid from "./LoadingScreenKid";
+import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
 import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
