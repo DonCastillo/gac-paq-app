@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, View } from "react-native";
-import { GeneralStyle } from "../../styles/general";
+import { GeneralStyle } from "styles/general";
 
 QuestionContainer.propTypes = {
 	children: PropTypes.node,

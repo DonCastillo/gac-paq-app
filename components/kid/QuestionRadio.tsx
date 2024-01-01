@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { GeneralStyle } from "../../styles/general";
+import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { OptionInterface } from "utils/options";
 

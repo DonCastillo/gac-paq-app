@@ -1,7 +1,7 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
-import Colors from "../../styles/kids/Colors";
-import { DefaultStyle } from "../../styles/general";
+import Colors from "styles/kids/Colors";
+import { DefaultStyle } from "styles/general";
 import React from "react";
 
 interface Props {

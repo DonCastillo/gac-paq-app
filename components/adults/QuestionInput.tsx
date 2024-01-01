@@ -1,6 +1,6 @@
 import React from "react";
 import { TextInput, View, StyleSheet, ScrollView } from "react-native";
-import { GeneralStyle } from "../../styles/general";
+import { GeneralStyle } from "styles/general";
 
 interface QuestionInputPropsInterface {
 	onChange: (value: string) => void;
