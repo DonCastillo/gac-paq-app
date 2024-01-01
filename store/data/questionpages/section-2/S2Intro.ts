@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type SectionPayloadInterface from "../../../../interface/directus/section-payload";
+import ScreenType from "constants/screen_type";
+import type SectionPayloadInterface from "interface/directus/section-payload";
 
 const S2Intro: SectionPayloadInterface = {
 	heading: "Work Activities",

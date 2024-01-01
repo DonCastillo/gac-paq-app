@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type QuestionRadioPayloadInterface from "../../../../interface/directus/question-radio-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S1Q4: QuestionRadioPayloadInterface = {
 	name: "Question 4: How long are your physical education classes?",

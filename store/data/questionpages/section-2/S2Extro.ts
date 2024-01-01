@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type ExtroPayloadInterface from "../../../../interface/directus/extro-payload";
+import ScreenType from "constants/screen_type";
+import type ExtroPayloadInterface from "interface/directus/extro-payload";
 
 const S2Extro: ExtroPayloadInterface = {
 	name: "Section 2 Extro",

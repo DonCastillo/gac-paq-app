@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type QuestionRadioPayloadInterface from "../../../../interface/directus/question-radio-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S2Q1: QuestionRadioPayloadInterface = {
 	name: "Question 8: In the past week, did you volunteer or have a job that earned you and your family some income?",

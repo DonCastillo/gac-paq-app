@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type QuestionRadioPayloadInterface from "../../../../interface/directus/question-radio-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S1Q6: QuestionRadioPayloadInterface = {
 	name: "Question 6: On a normal school day, how much break time do you have? (including recess/breaks/lunch)",

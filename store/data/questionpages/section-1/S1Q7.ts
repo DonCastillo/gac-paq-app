@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type QuestionRadioImagePayloadInterface from "../../../../interface/directus/question-radio-image-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
 import Images from "styles/images/index";
 
 const S1Q7: QuestionRadioImagePayloadInterface = {

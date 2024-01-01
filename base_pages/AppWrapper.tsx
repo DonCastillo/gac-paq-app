@@ -98,14 +98,6 @@ function AppWrapper(): React.ReactElement {
 				}}
 			>
 				<Stack.Screen
-					name="SuccessScreen"
-					component={SuccessScreen}
-				/>
-				<Stack.Screen
-					name="ErrorScreen"
-					component={ErrorScreen}
-				/>
-				<Stack.Screen
 					name="SplashScreen"
 					component={SplashScreen}
 				/>
@@ -114,6 +106,15 @@ function AppWrapper(): React.ReactElement {
 					name="RegularPageScreen"
 					component={RegularPageScreen}
 				/>
+				<Stack.Screen
+					name="SuccessScreen"
+					component={SuccessScreen}
+				/>
+				<Stack.Screen
+					name="ErrorScreen"
+					component={ErrorScreen}
+				/>
+				
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

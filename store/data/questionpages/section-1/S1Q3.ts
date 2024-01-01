@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type QuestionSliderPayloadInterface from "../../../../interface/directus/question-slider-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionSliderPayloadInterface from "interface/directus/question-slider-payload";
 
 const S1Q3: QuestionSliderPayloadInterface = {
 	name: "Question 3: How many physical education classes did you have in the past week?",
