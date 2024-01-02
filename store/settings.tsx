@@ -104,6 +104,7 @@ export const SettingContext = createContext({
 	addPage: (obj: pageInterface) => {},
 	initializeNextPage: () => {},
 	initializeCurrentPage: () => {},
+	setCurrentPage: (pageNumber: number) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
 });
@@ -176,6 +177,16 @@ function settingReducer(state: any, action: any): any {
 				currentPageNumber,
 				currentPage,
 				nextPage,
+			};
+		}
+		case "SET_CURRENT_PAGE": {
+			let finalPageNumber = state.currentPageNumber;
+			if (action.payload <= 0) finalPageNumber = 0;
+			else if (action.payload > state.pages.length) finalPageNumber = state.pages.length;
+			else finalPageNumber = action.payload;
+			return {
+				...state,
+				currentPageNumber: finalPageNumber,
 			};
 		}
 		case "SET_BUTTONS":
@@ -265,6 +276,16 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function setCurrentPage(pageNumber: number): void {
+		dispatch({
+			type: "SET_CURRENT_PAGE",
+			payload: pageNumber,
+		});
+		dispatch({
+			type: "INITIALIZE_CURRENT_PAGE",
+		});
+	}
+
 	function translateButtons(obj: buttonInterface): void {
 		dispatch({
 			type: "SET_BUTTONS",
@@ -290,6 +311,7 @@ export default function SettingContextProvider({
 		addPage,
 		initializeNextPage,
 		initializeCurrentPage,
+		setCurrentPage,
 		translateButtons,
 		translatePhrases,
 	};

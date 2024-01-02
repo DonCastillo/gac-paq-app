@@ -19,5 +19,6 @@ const styles = StyleSheet.create({
 		height: "100%",
 		paddingHorizontal: 20,
 		paddingTop: 30,
+		// backgroundColor: "pink"
 	},
 });

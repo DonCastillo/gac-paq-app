@@ -16,8 +16,8 @@ function BackAndTryAgainNav({ onPrev, onNext }: Props): React.ReactElement {
 	return (
 		<View style={[styles.bottomNavigation, { justifyContent: "space-between" }]}>
 			<ButtonIcon
-				name="arrowleft"
-				type="antdesign"
+				name="arrow-left"
+				type="font-awesome"
 				color={"#FFCB66"}
 				onPress={() => onPrev !== undefined && onPrev()}
 			/>

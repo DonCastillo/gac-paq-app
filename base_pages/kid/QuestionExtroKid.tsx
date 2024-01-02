@@ -14,6 +14,7 @@ import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
 import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
+import { useNavigation } from "@react-navigation/native";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
@@ -26,6 +27,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const ImageComponent = Images.kids.graphics.extro_question_page;
+	const navigation = useNavigation();
 
 	console.log(translatedPage);
 	console.log("isFinal: ", isFinal);
@@ -56,6 +58,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 	async function submitResponseHandler(): Promise<void> {
 		try {
 			setLoading(true);
+			throw new Error("testing error page");
 
 			await submitResponse(
 				responseCtx.responses,
@@ -65,11 +68,14 @@ export default function QuestionExtroKid(): React.ReactElement {
 
 			console.log("done submitting the responses");
 			// introduce a delay
+			responseCtx.resetResponses();
 			await new Promise((resolve) => setTimeout(resolve, 5000));
+			navigation.navigate("SuccessScreen");
 		} catch (error) {
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			console.log("redirect to the error page");
 			console.log("error: ", error);
+			navigation.navigate("ErrorScreen");
 		} finally {
 			setLoading(false);
 		}
@@ -127,6 +133,9 @@ const styles = StyleSheet.create({
 	imageContainer: {
 		justifyContent: "center",
 		alignItems: "center",
-		marginLeft: -40,
+		marginTop: 20,
+		width: "100%",
+		// marginLeft: -40,
+		// backgroundColor: "blue"
 	},
 });

@@ -5,6 +5,7 @@ import React, { useContext, useEffect, useState } from "react";
 import ButtonIcon from "components/buttons/ButtonIcon";
 import ScreenType from "constants/screen_type";
 import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
+import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed";
 
 interface Props {
 	onPrev?: () => void;
@@ -56,26 +57,18 @@ function BackAndSubmitNav({ onPrev, onNext }: Props): React.ReactElement {
 		<View style={[styles.bottomNavigation, { justifyContent: justification }]}>
 			{hasPrev && (
 				<ButtonIcon
-					name="arrowleft"
-					type="antdesign"
-					color={buttonColor}
+					name="arrow-left"
+					type="font-awesome"
+					color={"#FFCB66"}
 					onPress={() => onPrev !== undefined && onPrev()}
 				/>
 			)}
-
+			
 			{hasNext && (
-				<ButtonContainerWidth
+				<BtnCntrWdthShadowed
+					label={buttons?.complete}
 					onPress={async () => onNext !== undefined && onNext()}
-					customStyle={{
-						borderColor: buttonColor,
-						backgroundColor: "#fff",
-					}}
-					textStyle={{
-						color: buttonColor,
-					}}
-				>
-					{buttons?.complete}
-				</ButtonContainerWidth>
+				/>
 			)}
 		</View>
 	);

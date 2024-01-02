@@ -8,7 +8,7 @@ async function submitResponse(
 	accessToken: string,
 ): Promise<boolean> {
 	const sanitizedResponses = sanitizeResponse(responses);
-	console.log("sanitizedResponses: ", sanitizedResponses);
+	// console.log("sanitizedResponses: ", sanitizedResponses);
 	return new Promise((resolve, reject) => {
 		axios
 			.post(
@@ -19,6 +19,7 @@ async function submitResponse(
 				{
 					headers: {
 						Authorization: `Bearer ${accessToken}`,
+						"Content-Type": "application/json",
 					},
 				},
 			)

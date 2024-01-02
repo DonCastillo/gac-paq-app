@@ -95,6 +95,7 @@ function AppWrapper(): React.ReactElement {
 			<Stack.Navigator
 				screenOptions={{
 					headerShown: false,
+					animation: "none",
 				}}
 			>
 				<Stack.Screen

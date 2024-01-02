@@ -66,9 +66,9 @@ function BackAndNextNav({ onPrev, onNext }: Props): React.ReactElement {
 			{hasPrev && (
 				<ButtonIcon
 					name="arrow-left"
-					type="font-awesome-5"
+					type="font-awesome"
 					color={buttonColor}
-					size={40}
+					// size={40}
 					onPress={() => onPrev !== undefined && onPrev()}
 				/>
 			)}
@@ -76,9 +76,9 @@ function BackAndNextNav({ onPrev, onNext }: Props): React.ReactElement {
 			{hasNext && (
 				<ButtonIcon
 					name="arrow-right"
-					type="font-awesome-5"
+					type="font-awesome"
 					color={buttonColor}
-					size={40}
+					// size={40}
 					onPress={() => onNext !== undefined && onNext()}
 				/>
 			)}

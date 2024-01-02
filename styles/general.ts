@@ -1,4 +1,7 @@
 const GeneralStyle = {
+	general: {
+		extroColor: "#e3a324"
+	},
 	kid: {
 		field: {
 			fontSize: 18,

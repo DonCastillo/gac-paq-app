@@ -17,6 +17,8 @@ import BackgroundYellowStroke from "components/kid/background/question-pages/Bac
 import Images from "styles/images/index";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
+import { useNavigation } from "@react-navigation/native";
+import { ResponseContext } from "store/responses";
 
 interface Props {
 	state: StateType;
@@ -25,6 +27,7 @@ interface Props {
 function StateKid({ state }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const questionCtx = useContext(QuestionContext);
+	const responseCtx = useContext(ResponseContext);
 	const { language, phrases } = settingCtx.settingState;
 	const successPage = questionCtx.questionState.successPage as PagePayloadInterface;
 	const errorPage = questionCtx.questionState.errorPage as PagePayloadInterface;
@@ -32,6 +35,7 @@ function StateKid({ state }: Props): React.ReactElement {
 	const [translatedPage, setTranslatedPage] = useState<
 		PageInterface | QuestionDropdownInterface | null | null
 	>(null);
+	const navigation = useNavigation();
 
 	const SuccessImage = Images.kids.graphics.success_image;
 	const ErrorImage = Images.kids.graphics.error_image;
@@ -54,19 +58,29 @@ function StateKid({ state }: Props): React.ReactElement {
 		}
 	}
 
+	function resetApp(): void {
+		settingCtx.setCurrentPage(1);
+		settingCtx.setColorTheme(0);
+		navigation.navigate("SplashScreen");
+	}
+
+	function resubmitResponse(): Promise<void> {
+
+	}
+
 	function buttonChange(): void {
 		if (state === StateType.Success) {
 			setButtonComponent(
 				<FWBtnShadowed
 					label={phrases.done}
-					onPress={() => console.log("Clicking done xxx ...")}
+					onPress={resetApp}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndTryAgainNav
-					onPrev={() => console.log("Prev")}
-					onNext={async () => console.log("Next")}
+					onPrev={() => settingCtx.prevPage()}
+					onNext={async () => await resubmitResponse()}
 				/>,
 			);
 		}
@@ -108,7 +122,7 @@ function StateKid({ state }: Props): React.ReactElement {
 
 						{/* State Icon */}
 						<View style={styles.stateIconContainer}>
-							{state === StateType.Success ? <CheckMark /> : <ErrorMark />}
+							{state === StateType.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
 						</View>
 					</View>
 				</CenterMain>
@@ -140,6 +154,10 @@ const styles = StyleSheet.create({
 		zIndex: -1,
 		right: -50,
 	},
+	errorMark: {
+		top: 40,
+		left:-45,
+	}
 });
 
 export default StateKid;
