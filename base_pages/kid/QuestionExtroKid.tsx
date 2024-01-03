@@ -58,7 +58,6 @@ export default function QuestionExtroKid(): React.ReactElement {
 	async function submitResponseHandler(): Promise<void> {
 		try {
 			setLoading(true);
-			throw new Error("testing error page");
 
 			await submitResponse(
 				responseCtx.responses,

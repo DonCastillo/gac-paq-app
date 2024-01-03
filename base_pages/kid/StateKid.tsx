@@ -19,6 +19,8 @@ import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import { useNavigation } from "@react-navigation/native";
 import { ResponseContext } from "store/responses";
+import { submitResponse } from "utils/api";
+import LoadingScreenKid from "./LoadingScreenKid";
 
 interface Props {
 	state: StateType;
@@ -28,7 +30,8 @@ function StateKid({ state }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const questionCtx = useContext(QuestionContext);
 	const responseCtx = useContext(ResponseContext);
-	const { language, phrases } = settingCtx.settingState;
+	const [loading, setLoading] = useState<boolean>(false);
+	const { language, phrases, directusAccessToken, directusBaseEndpoint } = settingCtx.settingState;
 	const successPage = questionCtx.questionState.successPage as PagePayloadInterface;
 	const errorPage = questionCtx.questionState.errorPage as PagePayloadInterface;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -64,8 +67,30 @@ function StateKid({ state }: Props): React.ReactElement {
 		navigation.navigate("SplashScreen");
 	}
 
-	function resubmitResponse(): Promise<void> {
+	async function resubmitResponse(): Promise<void> {
+		try {
+			setLoading(true);
 
+			// throw new Error("testing error page");
+			await submitResponse(
+				responseCtx.responses,
+				`${directusBaseEndpoint}/items/response`,
+				directusAccessToken,
+			);
+
+			console.log("done submitting the responses");
+			// introduce a delay
+			responseCtx.resetResponses();
+			await new Promise((resolve) => setTimeout(resolve, 5000));
+			navigation.navigate("SuccessScreen");
+		} catch (error) {
+			await new Promise((resolve) => setTimeout(resolve, 5000));
+			console.log("redirect to the error page");
+			console.log("error: ", error);
+			navigation.navigate("ErrorScreen");
+		} finally {
+			setLoading(false);
+		}
 	}
 
 	function buttonChange(): void {
@@ -79,57 +104,65 @@ function StateKid({ state }: Props): React.ReactElement {
 		} else {
 			setButtonComponent(
 				<BackAndTryAgainNav
-					onPrev={() => settingCtx.prevPage()}
+					onPrev={() => navigation.goBack()}
 					onNext={async () => await resubmitResponse()}
 				/>,
 			);
 		}
 	}
 
-	return (
-		<View style={styles.container}>
-			<BackgroundYellowStroke />
-			<Main>
-				<CenterMain>
-					<Heading
-						customStyle={{
-							color: "#000",
-							fontSize: 32,
-							fontWeight: "bold",
-							textAlign: "center",
-						}}
-					>
-						{translatedPage?.heading}
-					</Heading>
-					<Paragraph
-						customStyle={{
-							color: "#000",
-							fontSize: 20,
-							marginTop: 20,
-						}}
-					>
-						{translatedPage?.description}
-					</Paragraph>
-					<View style={styles.imageContainer}>
-						{/* State Image */}
-						<View style={styles.stateImageContainer}>
-							{state === StateType.Success ? (
-								<SuccessImage width={300} />
-							) : (
-								<ErrorImage width={300} />
-							)}
-						</View>
+	if (!loading) {
+		return (
+			<View style={styles.container}>
+				<BackgroundYellowStroke />
+				<Main>
+					<CenterMain>
+						<Heading
+							customStyle={{
+								color: "#000",
+								fontSize: 32,
+								fontWeight: "bold",
+								textAlign: "center",
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								color: "#000",
+								fontSize: 20,
+								marginTop: 20,
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+						<View style={styles.imageContainer}>
+							{/* State Image */}
+							<View style={styles.stateImageContainer}>
+								{state === StateType.Success ? (
+									<SuccessImage width={300} />
+								) : (
+									<ErrorImage width={300} />
+								)}
+							</View>
 
-						{/* State Icon */}
-						<View style={styles.stateIconContainer}>
-							{state === StateType.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
+							{/* State Icon */}
+							<View style={styles.stateIconContainer}>
+								{state === StateType.Success ? (
+									<CheckMark />
+								) : (
+									<ErrorMark style={styles.errorMark} />
+								)}
+							</View>
 						</View>
-					</View>
-				</CenterMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-			</Main>
-		</View>
-	);
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenKid />;
+	}
 }
 
 const styles = StyleSheet.create({
@@ -156,8 +189,8 @@ const styles = StyleSheet.create({
 	},
 	errorMark: {
 		top: 40,
-		left:-45,
-	}
+		left: -45,
+	},
 });
 
 export default StateKid;
