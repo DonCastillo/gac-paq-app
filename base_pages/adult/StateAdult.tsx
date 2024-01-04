@@ -13,10 +13,14 @@ import { QuestionContext } from "store/questions";
 import type PagePayloadInterface from "interface/directus/page-payload";
 import type PageInterface from "interface/page";
 import type QuestionDropdownInterface from "interface/question_dropdown";
+import { useNavigation } from "@react-navigation/native";
 import Images from "styles/images";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import BGLinearGradient from "components/BGLinearGradient";
+import { ResponseContext } from "store/responses";
+import { submitResponse } from "utils/api";
+import LoadingScreenAdult from "./LoadingScreenAdult";
 
 interface Props {
 	state: StateType;
@@ -25,13 +29,17 @@ interface Props {
 function StateAdult({ state }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const questionCtx = useContext(QuestionContext);
-	const { language, phrases, colorTheme } = settingCtx.settingState;
+	const responseCtx = useContext(ResponseContext);
+	const [loading, setLoading] = useState<boolean>(false);
+	const { language, phrases, colorTheme, directusAccessToken, directusBaseEndpoint } =
+		settingCtx.settingState;
 	const successPage = questionCtx.questionState.successPage as PagePayloadInterface;
 	const errorPage = questionCtx.questionState.errorPage as PagePayloadInterface;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<
 		PageInterface | QuestionDropdownInterface | null | null
 	>(null);
+	const navigation = useNavigation();
 
 	const ErrorImage = Images.adults.graphics.error_image;
 	const SuccessImage = Images.adults.graphics.success_image;
@@ -56,19 +64,50 @@ function StateAdult({ state }: Props): React.ReactElement {
 		}
 	}
 
+	function resetApp(): void {
+		settingCtx.setCurrentPage(1);
+		settingCtx.setColorTheme(0);
+		navigation.navigate("SplashScreen");
+	}
+
+	async function resubmitResponse(): Promise<void> {
+		try {
+			setLoading(true);
+
+			await submitResponse(
+				responseCtx.responses,
+				`${directusBaseEndpoint}/items/response`,
+				directusAccessToken,
+			);
+
+			console.log("done submitting the responses");
+			// introduce a delay
+			responseCtx.resetResponses();
+			await new Promise((resolve) => setTimeout(resolve, 5000));
+			navigation.navigate("SuccessScreen");
+		} catch (error) {
+			await new Promise((resolve) => setTimeout(resolve, 5000));
+			console.log("redirect to the error page");
+			console.log("error: ", error);
+			navigation.navigate("ErrorScreen");
+		} finally {
+			setLoading(false);
+		}
+	}
+
 	function buttonChange(): void {
 		if (state === StateType.Success) {
 			setButtonComponent(
 				<FWBtnShadowed
 					label={phrases.done}
-					onPress={() => console.log("Clicking done xxx ...")}
+					onPress={resetApp}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndTryAgainNav
-					onPrev={() => console.log("Prev")}
-					onNext={async () => console.log("Next")}
+					onPrev={() => navigation.goBack()}
+					onNext={async () => await resubmitResponse()}
 				/>,
 			);
 		}
@@ -77,43 +116,47 @@ function StateAdult({ state }: Props): React.ReactElement {
 	console.log("SuccessImage: ", SuccessImage);
 	console.log("ErrorImage: ", ErrorImage);
 
-	return (
-		<View style={styles.container}>
-			<BGLinearGradient />
-			<ImageBackground
-				source={SuccessImage}
-				resizeMode="cover"
-				style={styles.bgImage}
-			></ImageBackground>
-			<Main>
-				<CenterMain>
-					<View style={styles.stateIconContainer}>
-						{state === StateType.Success ? <CheckMark /> : <ErrorMark />}
-					</View>
-					<Heading
-						customStyle={{
-							color: "white",
-							fontSize: 70,
-							marginBottom: 50,
-							textAlign: "center",
-						}}
-					>
-						{translatedPage?.heading.toLowerCase()}
-					</Heading>
-					<Paragraph
-						customStyle={{
-							color: "white",
-							fontSize: 15,
-							lineHeight: 17,
-						}}
-					>
-						{translatedPage?.description}
-					</Paragraph>
-				</CenterMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-			</Main>
-		</View>
-	);
+	if (!loading) {
+		return (
+			<View style={styles.container}>
+				<BGLinearGradient />
+				<ImageBackground
+					source={SuccessImage}
+					resizeMode="cover"
+					style={styles.bgImage}
+				></ImageBackground>
+				<Main>
+					<CenterMain>
+						<View style={styles.stateIconContainer}>
+							{state === StateType.Success ? <CheckMark /> : <ErrorMark />}
+						</View>
+						<Heading
+							customStyle={{
+								color: "white",
+								fontSize: 70,
+								marginBottom: 50,
+								textAlign: "center",
+							}}
+						>
+							{translatedPage?.heading.toLowerCase()}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								color: "white",
+								fontSize: 15,
+								lineHeight: 17,
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenAdult />;
+	}
 }
 
 const styles = StyleSheet.create({

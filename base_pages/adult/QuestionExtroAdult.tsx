@@ -60,6 +60,8 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		try {
 			setLoading(true);
 
+			// throw new Error("testing error page");
+
 			await submitResponse(
 				responseCtx.responses,
 				`${directusBaseEndpoint}/items/response`,
