@@ -14,6 +14,7 @@ import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
+import { useNavigation } from "@react-navigation/native";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -24,6 +25,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const navigation = useNavigation();
 
 	console.log(translatedPage);
 	console.log("isFinal: ", isFinal);
@@ -66,11 +68,14 @@ export default function QuestionExtroAdult(): React.ReactElement {
 
 			console.log("done submitting the responses");
 			// introduce a delay
+			responseCtx.resetResponses();
 			await new Promise((resolve) => setTimeout(resolve, 5000));
+			navigation.navigate("SuccessScreen");
 		} catch (error) {
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			console.log("redirect to the error page");
 			console.log("error: ", error);
+			navigation.navigate("ErrorScreen");
 		} finally {
 			setLoading(false);
 		}
