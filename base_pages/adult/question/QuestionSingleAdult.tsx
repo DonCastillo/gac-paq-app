@@ -12,7 +12,6 @@ import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
-import SingleNav from "components/adults/navigation/SingleNav";
 import QuestionContainer from "components/adults/QuestionContainer";
 import { optionText } from "utils/options";
 import QuestionRadio from "components/adults/QuestionRadio";
@@ -24,23 +23,14 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
 
 export default function QuestionSingleAdult(): React.ReactElement {
-	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-
-	const { language, currentPage, currentPageNumber, buttons } = settingCtx.settingState;
+	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
-
-	useEffect(() => {
-		console.log("use effect here... heres the responses: ", responses);
-		const theresResponse = Object.keys(responses).length > 0;
-		setProceed(theresResponse);
-	}, [responses]);
 
 	useEffect(() => {
 		const response = responseCtx.responses;
@@ -52,17 +42,42 @@ export default function QuestionSingleAdult(): React.ReactElement {
 
 	// set button component dynamically
 	useEffect(() => {
-		if (currentPageNumber > 0) {
+		if (currentPageNumber > 1) {
 			setButtonComponent(
 				<BackAndNextNav
+					key={"both"}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
 		} else {
-			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+			setButtonComponent(
+				<BackAndNextNav
+					key={"next"}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
 		}
 	}, [currentPageNumber]);
+
+	useEffect(() => {
+		if (selectedValue !== null) {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"both"}
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"prev"}
+					onPrev={() => settingCtx.prevPage()}
+				/>,
+			);
+		}
+	}, [selectedValue]);
 
 	/**
 	 * temporarily store the initial selection
@@ -73,6 +88,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			label: currentPage.page.name,
 			answer: value,
 		});
+		setSelectedValue(value);
 
 		// set mode
 		// if(currentPage.page.name === "Who's taking this questionnaire?") {

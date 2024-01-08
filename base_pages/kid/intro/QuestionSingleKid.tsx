@@ -94,6 +94,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			label: currentPage.page.name,
 			answer: value,
 		});
+		setSelectedValue(value);
 
 		// set mode
 		// if(currentPage.page.name === "Who's taking this questionnaire?") {
