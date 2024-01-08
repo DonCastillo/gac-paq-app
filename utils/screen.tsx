@@ -30,15 +30,16 @@ function getScreen(
 	if (mode === undefined && screenType === ScreenType.Language) return <GenericLanguage />;
 	else if (mode === Mode.Adult && screenType === ScreenType.Language) return <LanguageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Language) return <LanguageKid />;
+	// regular page screens
+	else if (mode === undefined && screenType === ScreenType.Page) return <GenericPage />;
+	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;
+	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
+	
 	// all intro screens are generic
-	else if (sectionType === SectionType.Intro && screenType === ScreenType.Page)
-		return <GenericPage />;
 	else if (sectionType === SectionType.Intro && screenType === ScreenType.SingleCheckbox)
 		return <GenericSingleCheckbox />;
 	else if (sectionType === SectionType.Intro && screenType === ScreenType.SingleQuestion)
 		return <GenericSingleQuestion />;
-	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;
-	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
 	else if (
 		mode === Mode.Adult &&
 		screenType === ScreenType.SingleQuestion &&
