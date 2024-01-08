@@ -23,10 +23,8 @@ import DeviceType from "constants/device_type";
 import PhraseLabel from "constants/phrase_label";
 
 export default function QuestionSingleKid(): React.ReactElement {
-	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
@@ -36,12 +34,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
-	useEffect(() => {
-		console.log("use effect here... heres the responses: ", responses);
-		const theresResponse = Object.keys(responses).length > 0;
-		setProceed(theresResponse);
-	}, [responses]);
 
+	// fetch response for this question
 	useEffect(() => {
 		const response = responseCtx.responses;
 		const currentPageNumber = settingCtx.settingState.currentPageNumber;
@@ -65,17 +59,42 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	// set button component dynamically
 	useEffect(() => {
-		if (currentPageNumber > 0) {
+		if (currentPageNumber > 1) {
 			setButtonComponent(
 				<BackAndNextNav
+					key={"both"}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
 		} else {
-			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+			setButtonComponent(
+				<BackAndNextNav
+					key={"next"}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
 		}
 	}, [currentPageNumber]);
+
+	useEffect(() => {
+		if (selectedValue !== null) {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"both"}
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"prev"}
+					onPrev={() => settingCtx.prevPage()}
+				/>,
+			);
+		}
+	}, [selectedValue]);
 
 	/**
 	 * temporarily store the initial selection
@@ -86,6 +105,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			label: currentPage.page.name,
 			answer: value,
 		});
+		setSelectedValue(value);
 
 		// set mode
 		// if(currentPage.page.name === "Who's taking this questionnaire?") {

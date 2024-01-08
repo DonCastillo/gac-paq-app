@@ -17,9 +17,7 @@ import { getResponse } from "utils/response";
 import { getIntroductoryBackground } from "utils/background";
 
 export default function QuestionSingleKid(): React.ReactElement {
-	const [responses, setResponses] = useState<Record<string, string | null>>({});
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
-	const [proceed, setProceed] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
@@ -37,22 +35,42 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	// set button component dynamically
 	useEffect(() => {
-		if (currentPageNumber > 0) {
+		if (currentPageNumber > 1) {
 			setButtonComponent(
 				<BackAndNextNav
+					key={"both"}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
 		} else {
-			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+			setButtonComponent(
+				<BackAndNextNav
+					key={"next"}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
 		}
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		const theresResponse = Object.keys(responses).length > 0;
-		setProceed(theresResponse);
-	}, [responses]);
+		if (selectedValue !== null) {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"both"}
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"prev"}
+					onPrev={() => settingCtx.prevPage()}
+				/>,
+			);
+		}
+	}, [selectedValue]);
 
 	useEffect(() => {
 		// console.log("getting response....")
