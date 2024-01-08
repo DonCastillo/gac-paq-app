@@ -7,24 +7,39 @@ import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
 import { ResponseContext } from "store/responses";
 import { QuestionContext } from "store/questions";
-import { translateButton } from "utils/translate";
+import { translateButton, translatePhrase } from "utils/translate";
 import ButtonLabel from "constants/button_label";
 import SingleNav from "components/kid/navigation/SingleNav";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
+import { translate } from "utils/page";
+import PhraseLabel from "constants/phrase_label";
+import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 
 export default function LanguageAdult(): React.ReactElement {
-	console.log("LanguageAdult.tsx: LanguageAdult()");
-	const [languageSelected, setLanguageSelected] = useState<boolean>(false);
-	const LABEL = "What is your preferred language?";
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
-	const { language, buttons } = settingCtx.settingState;
-	const { backButton, completeButton, continueButton, goButton, nextButton, startedButton } =
-		questionCtx.questionState;
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const translatedPage = translate(currentPage.page.translations, language);
 
+	const {
+		backButton,
+		completeButton,
+		continueButton,
+		goButton,
+		nextButton,
+		startedButton,
+		agreementPhrase,
+		donePhrase,
+		dontKnowPhrase,
+		introductionPhrase,
+		tryAgainPhrase,
+	} = questionCtx.questionState;
+
+	// translate phrases and buttons
 	useEffect(() => {
 		settingCtx.translateButtons({
 			back: translateButton(backButton, language) ?? ButtonLabel.Back,
@@ -34,25 +49,46 @@ export default function LanguageAdult(): React.ReactElement {
 			next: translateButton(nextButton, language) ?? ButtonLabel.Next,
 			started: translateButton(startedButton, language) ?? ButtonLabel.Started,
 		});
-	}, [language, languageSelected]);
+		settingCtx.translatePhrases({
+			agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
+			done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
+			dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
+			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
+			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
+		});
+	}, [language]);
+
+	// set selected value
+	useEffect(() => {
+		setSelectedValue(language);
+	}, [currentPageNumber]);
+
+	// set language default
+	useEffect(() => {
+		const response = responseCtx.responses;
+		if (Object.keys(response).length === 0) {
+			responseCtx.addResponse({
+				pageNumber: currentPage.pageNumber,
+				label: currentPage.page.name,
+				answer: language,
+			});
+		}
+	}, []);
 
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
 			settingCtx.setLanguage(value);
 			responseCtx.addResponse({
-				pageNumber: 0,
-				label: LABEL,
+				pageNumber: currentPage.pageNumber,
+				label: currentPage.page.name,
 				answer: value,
 			});
-			setLanguageSelected(true);
+			setSelectedValue(value);
 		} else {
-			setLanguageSelected(false);
+			setSelectedValue(null);
 		}
 	}
 
-	function nextPage(): void {
-		settingCtx.nextPage();
-	}
 
 	return (
 		<View style={styles.container}>
@@ -66,21 +102,16 @@ export default function LanguageAdult(): React.ReactElement {
 								fontWeight: "bold",
 							}}
 						>
-							{LABEL}
+							{translatedPage?.heading.toLowerCase()}
 						</QuestionLabel>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}
-							selectedValue={language}
+							selectedValue={selectedValue}
 						/>
 					</QuestionContainer>
 				</CenterMain>
 				<Navigation>
-					{languageSelected && (
-						<SingleNav
-							label={buttons?.continue}
-							onPress={nextPage}
-						/>
-					)}
+					{selectedValue !== null && <BackAndNextNav onNext={() => settingCtx.nextPage()} />}
 				</Navigation>
 			</Main>
 		</View>
