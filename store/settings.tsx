@@ -67,7 +67,7 @@ const defaultPhrase: phraseInterface = {
 	tryAgain: PhraseLabel.TryAgain,
 };
 
-const DEFAULT_MODE = Mode.Kid;
+const DEFAULT_MODE = undefined;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
@@ -83,19 +83,34 @@ const INITIAL_STATE = {
 	phrases: defaultPhrase,
 	totalPage: null,
 	colorTheme: {
-		color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
-		color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200,
-		grad100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad100,
-		grad200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad200,
-		grad300: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad300,
-		grad400: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad400,
+		color100:
+			DEFAULT_MODE === undefined ? "#E09F57" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
+		color200:
+			DEFAULT_MODE === undefined ? "#E09F57" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200,
+		grad100:
+			DEFAULT_MODE === undefined ? "#FBD183" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad100,
+		grad200:
+			DEFAULT_MODE === undefined ? "#F66966" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad200,
+		grad300:
+			DEFAULT_MODE === undefined ? "#D3688A" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad300,
+		grad400:
+			DEFAULT_MODE === undefined ? "#B36EB4" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad400,
 	},
 	pages: [],
 };
 
+// {
+// 	color100: "#E09F57",
+// 	color200: "#E09F57",
+// 	grad100: "#FBD183",
+// 	grad200: "#F66966",
+// 	grad300: "#D3688A",
+// 	grad400: "#B36EB4",
+// },
+
 export const SettingContext = createContext({
 	settingState: INITIAL_STATE,
-	setMode: (newMode: Mode.Adult | Mode.Kid) => {},
+	setMode: (newMode: Mode.Adult | Mode.Kid | undefined) => {},
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
 	setColorTheme: (colorIndex: number) => {},
@@ -127,6 +142,7 @@ function settingReducer(state: any, action: any): any {
 				directusAccessToken: action.payload,
 			};
 		case "SET_COLOR_THEME": {
+			if (state.mode === undefined) return state;
 			const newColor = Colors[state.mode][action.payload % TOTAL_COLORS];
 			return {
 				...state,

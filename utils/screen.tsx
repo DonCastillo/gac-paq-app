@@ -22,13 +22,14 @@ import GenericSingleCheckbox from "base_pages/generic/GenericSingleCheckbox";
 import GenericSingleQuestion from "base_pages/generic/GenericSingleQuestion";
 
 function getScreen(
-	mode: Mode | string,
+	mode: Mode | string | undefined,
 	screenType: ScreenType | string,
 	sectionType?: SectionType | string,
 ): React.ReactElement {
 	// all language screens are generic
-	if (mode === Mode.Adult && screenType === ScreenType.Language) return <GenericLanguage />;
-	else if (mode === Mode.Kid && screenType === ScreenType.Language) return <GenericLanguage />;
+	if (mode === undefined && screenType === ScreenType.Language) return <GenericLanguage />;
+	else if (mode === Mode.Adult && screenType === ScreenType.Language) return <LanguageAdult />;
+	else if (mode === Mode.Kid && screenType === ScreenType.Language) return <LanguageKid />;
 	// all intro screens are generic
 	else if (sectionType === SectionType.Intro && screenType === ScreenType.Page)
 		return <GenericPage />;

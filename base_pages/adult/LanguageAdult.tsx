@@ -9,7 +9,6 @@ import { ResponseContext } from "store/responses";
 import { QuestionContext } from "store/questions";
 import { translateButton, translatePhrase } from "utils/translate";
 import ButtonLabel from "constants/button_label";
-import SingleNav from "components/kid/navigation/SingleNav";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";

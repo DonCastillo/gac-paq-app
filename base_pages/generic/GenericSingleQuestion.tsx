@@ -17,10 +17,9 @@ import QuestionRadio from "components/adults/QuestionRadio";
 import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionInput from "components/adults/QuestionInput";
+import Mode from "constants/mode";
 
 export default function GenericSingleQuestion(): React.ReactElement {
-	const [responses, setResponses] = useState<Record<string, string | null>>({});
-	const [proceed, setProceed] = useState<boolean>(false);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
@@ -29,11 +28,6 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
-
-	useEffect(() => {
-		const theresResponse = Object.keys(responses).length > 0;
-		setProceed(theresResponse);
-	}, [responses]);
 
 	// set selected value
 	useEffect(() => {
@@ -57,13 +51,13 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		}
 
 		// set mode
-		// if(currentPage.page.name === "Who's taking this questionnaire?") {
-		//     if (value === "child") {
-		//         settingCtx.setMode(Mode.Kid);
-		//     } else {
-		//         settingCtx.setMode(Mode.Adult);
-		//     }
-		// }
+		if(currentPage.page.name === "Who's taking this questionnaire?") {
+		    if (value === "child") {
+		        settingCtx.setMode(Mode.Kid);
+		    } else {
+		        settingCtx.setMode(Mode.Adult);
+		    }
+		}
 	}
 
 	if (questionType === QuestionType.QuestionDropdown) {
