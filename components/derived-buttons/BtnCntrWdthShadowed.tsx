@@ -14,8 +14,8 @@ function BtnCntrWdthShadowed({ label, onPress, colorTheme }: Props): React.React
 			customStyle={{
 				backgroundColor: "#fff",
 				borderWidth: 3,
-				borderColor: colorTheme ?? "#FFCB66",
-				shadowColor: colorTheme ?? "#FFCB66",
+				borderColor: colorTheme ?? "#fff",
+				shadowColor: colorTheme ?? "#fff",
 				shadowOffset: {
 					width: 5,
 					height: 5,

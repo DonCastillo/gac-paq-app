@@ -6,11 +6,10 @@ import ButtonIcon from "components/buttons/ButtonIcon";
 interface Props {
 	onPrev?: () => void;
 	onNext?: () => void;
-	buttonColor?: string;
+	colorTheme?: string;
 }
 
-function BackAndNextNav({ onPrev, onNext, buttonColor }: Props): React.ReactElement {
-	console.log("buttonColor", buttonColor);
+function BackAndNextNav({ onPrev, onNext, colorTheme }: Props): React.ReactElement {
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
@@ -44,7 +43,7 @@ function BackAndNextNav({ onPrev, onNext, buttonColor }: Props): React.ReactElem
 				<ButtonIcon
 					name="arrow-left"
 					type="font-awesome"
-					color={buttonColor ?? "#fff"}
+					color={colorTheme ?? "#fff"}
 					onPress={() => onPrev !== undefined && onPrev()}
 				/>
 			)}
@@ -53,7 +52,7 @@ function BackAndNextNav({ onPrev, onNext, buttonColor }: Props): React.ReactElem
 				<ButtonIcon
 					name="arrow-right"
 					type="font-awesome"
-					color={buttonColor ?? "#fff"}
+					color={colorTheme ?? "#fff"}
 					onPress={() => onNext !== undefined && onNext()}
 				/>
 			)}

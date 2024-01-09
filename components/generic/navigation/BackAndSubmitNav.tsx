@@ -3,32 +3,20 @@ import type { FlexStyle } from "react-native";
 import { SettingContext } from "store/settings";
 import React, { useContext, useEffect, useState } from "react";
 import ButtonIcon from "components/buttons/ButtonIcon";
-import ScreenType from "constants/screen_type";
-import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
 import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed";
 
 interface Props {
 	onPrev?: () => void;
 	onNext?: () => Promise<void>;
+	colorTheme?: string;
 }
 
-function BackAndSubmitNav({ onPrev, onNext }: Props): React.ReactElement {
+function BackAndSubmitNav({ onPrev, onNext, colorTheme }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
-	const [buttonColor, setButtonColor] = useState<string>("#fff");
-	const { colorTheme, currentPageNumber, currentPage, buttons } = settingCtx.settingState;
-	const { color100 } = colorTheme;
-
-	// set button color dynamically
-	useEffect(() => {
-		const currentScreen: ScreenType | null = currentPage.screen ?? null;
-		setButtonColor(color100);
-		if (currentScreen === ScreenType.IntroQuestion) {
-			setButtonColor("#fff");
-		}
-	}, [currentPageNumber, currentPage]);
+	const { buttons } = settingCtx.settingState;
 
 	// determine whether to show prev, next, or both buttons
 	useEffect(() => {
@@ -59,7 +47,7 @@ function BackAndSubmitNav({ onPrev, onNext }: Props): React.ReactElement {
 				<ButtonIcon
 					name="arrow-left"
 					type="font-awesome"
-					color={"#FFCB66"}
+					color={colorTheme ?? "#fff"}
 					onPress={() => onPrev !== undefined && onPrev()}
 				/>
 			)}
@@ -68,6 +56,7 @@ function BackAndSubmitNav({ onPrev, onNext }: Props): React.ReactElement {
 				<BtnCntrWdthShadowed
 					label={buttons?.complete}
 					onPress={async () => onNext !== undefined && onNext()}
+					colorTheme={colorTheme ?? "#fff"}
 				/>
 			)}
 		</View>

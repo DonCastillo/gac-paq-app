@@ -37,6 +37,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 		if (isFinal === true) {
 			setButtonComponent(
 				<BackAndSubmitNav
+					colorTheme="#FFCB66"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={async () => await submitResponseHandler()}
 				/>,
@@ -45,12 +46,18 @@ export default function QuestionExtroKid(): React.ReactElement {
 			if (currentPageNumber > 0) {
 				setButtonComponent(
 					<BackAndNextNav
+						colorTheme="#FFCB66"
 						onPrev={() => settingCtx.prevPage()}
 						onNext={() => settingCtx.nextPage()}
 					/>,
 				);
 			} else {
-				setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+				setButtonComponent(
+					<BackAndNextNav
+						colorTheme="#FFCB66"
+						onNext={() => settingCtx.nextPage()}
+					/>,
+				);
 			}
 		}
 	}, [currentPageNumber]);
@@ -58,6 +65,8 @@ export default function QuestionExtroKid(): React.ReactElement {
 	async function submitResponseHandler(): Promise<void> {
 		try {
 			setLoading(true);
+
+			// throw new Error("testing error page");
 
 			await submitResponse(
 				responseCtx.responses,

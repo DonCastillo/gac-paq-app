@@ -41,7 +41,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
-					buttonColor={color100}
+					colorTheme={color100}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -50,7 +50,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"next"}
-					buttonColor={color100}
+					colorTheme={color100}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
@@ -62,7 +62,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
-					buttonColor={color100}
+					colorTheme={color100}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -71,7 +71,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"prev"}
-					buttonColor={color100}
+					colorTheme={color100}
 					onPrev={() => settingCtx.prevPage()}
 				/>,
 			);

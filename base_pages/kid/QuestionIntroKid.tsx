@@ -6,7 +6,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -16,12 +16,20 @@ export default function QuestionIntroKid(): React.ReactElement {
 		if (currentPageNumber > 0) {
 			setButtonComponent(
 				<BackAndNextNav
+					key={"both"}
+					colorTheme="#fff"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
 		} else {
-			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+			setButtonComponent(
+				<BackAndNextNav
+					key={"next"}
+					colorTheme="#fff"
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
 		}
 	}, [currentPageNumber]);
 

@@ -4,17 +4,18 @@ import FullWidthButton from "components/buttons/FullWidthButton";
 interface Props {
 	label: string;
 	onPress: () => void;
+	colorTheme?: string;
 }
 
-function FWBtnShadowed({ label, onPress }: Props): React.ReactElement {
+function FWBtnShadowed({ label, onPress, colorTheme }: Props): React.ReactElement {
 	return (
 		<FullWidthButton
 			onPress={onPress}
 			customStyle={{
 				backgroundColor: "#fff",
 				borderWidth: 3,
-				borderColor: "#FFCB66",
-				shadowColor: "#FFCB66",
+				borderColor: colorTheme ?? "#fff",
+				shadowColor: colorTheme ?? "#fff",
 				shadowOffset: {
 					width: 5,
 					height: 5,

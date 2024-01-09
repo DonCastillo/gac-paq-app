@@ -7,9 +7,10 @@ import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed"
 interface Props {
 	onPrev: () => void;
 	onNext: () => Promise<void>;
+	colorTheme?: string;
 }
 
-function BackAndTryAgainNav({ onPrev, onNext }: Props): React.ReactElement {
+function BackAndTryAgainNav({ onPrev, onNext, colorTheme }: Props): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { phrases } = settingCtx.settingState;
 
@@ -18,13 +19,14 @@ function BackAndTryAgainNav({ onPrev, onNext }: Props): React.ReactElement {
 			<ButtonIcon
 				name="arrow-left"
 				type="font-awesome"
-				color={"#FFCB66"}
+				color={colorTheme ?? "#fff"}
 				onPress={() => onPrev !== undefined && onPrev()}
 			/>
 
 			<BtnCntrWdthShadowed
 				label={phrases?.tryAgain}
 				onPress={async () => onPrev !== undefined && onNext()}
+				colorTheme={colorTheme ?? "#fff"}
 			/>
 		</View>
 	);

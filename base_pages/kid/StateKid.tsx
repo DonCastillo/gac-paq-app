@@ -99,11 +99,13 @@ function StateKid({ state }: Props): React.ReactElement {
 				<FWBtnShadowed
 					label={phrases.done}
 					onPress={resetApp}
+					colorTheme="#FFCB66"
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndTryAgainNav
+					colorTheme="#FFCB66"
 					onPrev={() => navigation.goBack()}
 					onNext={async () => await resubmitResponse()}
 				/>,

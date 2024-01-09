@@ -95,14 +95,14 @@ export default function SingleCheckboxKid(): React.ReactElement {
 					{checked ? (
 						<BackAndNextNav
 							key={"both"}
-							buttonColor={color100}
+							colorTheme={color100}
 							onPrev={() => settingCtx.prevPage()}
 							onNext={() => settingCtx.nextPage()}
 						/>
 					) : (
 						<BackAndNextNav
 							key={"prev"}
-							buttonColor={color100}
+							colorTheme={color100}
 							onPrev={() => settingCtx.prevPage()}
 						/>
 					)}

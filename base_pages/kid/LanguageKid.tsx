@@ -116,7 +116,7 @@ export default function LanguageKid(): React.ReactElement {
 				<Navigation>
 					{selectedValue !== null && (
 						<BackAndNextNav
-							buttonColor={color100}
+							colorTheme={color100}
 							onNext={() => settingCtx.nextPage()}
 						/>
 					)}
