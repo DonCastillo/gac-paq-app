@@ -20,9 +20,9 @@ export default function LanguageKid(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
-
 	const {
 		backButton,
 		completeButton,
@@ -114,7 +114,12 @@ export default function LanguageKid(): React.ReactElement {
 					</View>
 				</TopMain>
 				<Navigation>
-					{selectedValue !== null && <BackAndNextNav onNext={() => settingCtx.nextPage()} />}
+					{selectedValue !== null && (
+						<BackAndNextNav
+							buttonColor={color100}
+							onNext={() => settingCtx.nextPage()}
+						/>
+					)}
 				</Navigation>
 			</Main>
 		</View>

@@ -29,12 +29,20 @@ export default function PageKid(): React.ReactElement {
 		if (currentPageNumber > 0) {
 			setButtonComponent(
 				<BackAndNextNav
+					key={"both"}
+					buttonColor={color100}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
 		} else {
-			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+			setButtonComponent(
+				<BackAndNextNav
+					key={"next"}
+					buttonColor={color100}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
 		}
 	}, [currentPageNumber]);
 

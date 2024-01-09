@@ -18,7 +18,7 @@ export default function SingleCheckboxKid(): React.ReactElement {
 	console.log("SingleCheckboxKid");
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [checked, setChecked] = useState(false);
@@ -94,14 +94,16 @@ export default function SingleCheckboxKid(): React.ReactElement {
 				<Navigation>
 					{checked ? (
 						<BackAndNextNav
-							key={"Checked"}
+							key={"both"}
+							buttonColor={color100}
 							onPrev={() => settingCtx.prevPage()}
 							onNext={() => settingCtx.nextPage()}
 						/>
 					) : (
 						<BackAndNextNav
+							key={"prev"}
+							buttonColor={color100}
 							onPrev={() => settingCtx.prevPage()}
-							key={"Unchecked"}
 						/>
 					)}
 				</Navigation>
