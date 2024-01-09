@@ -1,6 +1,6 @@
 const GeneralStyle = {
 	general: {
-		extroColor: "#e3a324"
+		extroColor: "#e3a324",
 	},
 	kid: {
 		field: {

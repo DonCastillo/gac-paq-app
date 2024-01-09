@@ -36,26 +36,43 @@ function getScreen(
 	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
 	// single checkbox screens
-	else if (mode === undefined && sectionType === SectionType.Intro && screenType === ScreenType.SingleCheckbox)
+	else if (
+		mode === undefined &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleCheckbox
+	)
 		return <GenericSingleCheckbox />;
-	else if (mode === Mode.Adult && sectionType === SectionType.Intro && screenType === ScreenType.SingleCheckbox)
+	else if (
+		mode === Mode.Adult &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleCheckbox
+	)
 		return <GenericSingleCheckbox />;
-	else if (mode === Mode.Kid && sectionType === SectionType.Intro && screenType === ScreenType.SingleCheckbox)
+	else if (
+		mode === Mode.Kid &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleCheckbox
+	)
 		return <SingleCheckboxKid />;
-	
-	else if (sectionType === SectionType.Intro && screenType === ScreenType.SingleQuestion)
+	// question intro
+	else if (
+		mode === undefined &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleQuestion
+	)
 		return <GenericSingleQuestion />;
 	else if (
 		mode === Mode.Adult &&
-		screenType === ScreenType.SingleQuestion &&
-		sectionType === SectionType.Intro
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleQuestion
 	)
 		return <IntroQuestionSingleAdult />;
 	else if (
 		mode === Mode.Kid &&
-		screenType === ScreenType.SingleQuestion &&
-		sectionType === SectionType.Intro
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleQuestion
 	)
+		// question question
 		return <IntroQuestionSingleKid />;
 	else if (
 		mode === Mode.Adult &&

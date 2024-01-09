@@ -10,11 +10,12 @@ import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
 import QuestionSelect from "components/kid/QuestionSelect";
 import { ResponseContext } from "store/responses";
-import QuestionText from "components/kid/QuestionText";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionSelectRegion from "components/kid/QuestionSelectRegion";
 import { getResponse } from "utils/response";
 import { getIntroductoryBackground } from "utils/background";
+import QuestionInput from "components/kid/QuestionInput";
+import Mode from "constants/mode";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -73,17 +74,11 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}, [selectedValue]);
 
 	useEffect(() => {
-		// console.log("getting response....")
 		const response = responseCtx.responses;
-		const currentPageNumber = settingCtx.settingState.currentPageNumber;
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
-			// console.log("++++++++")
-			console.log("saved question: ", currentPage.page.name);
-			console.log("saved response: ", getResponse(currentPageNumber, response));
-			// console.log("++++++++")
 		}
-	}, [settingCtx.settingState.currentPageNumber]);
+	}, [currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
@@ -97,13 +92,13 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setSelectedValue(value);
 
 		// set mode
-		// if(currentPage.page.name === "Who's taking this questionnaire?") {
-		//     if (value === "child") {
-		//         settingCtx.setMode(Mode.Kid);
-		//     } else {
-		//         settingCtx.setMode(Mode.Adult);
-		//     }
-		// }
+		if (currentPage.page.name === "Who's taking this questionnaire?") {
+			if (value === "child") {
+				settingCtx.setMode(Mode.Kid);
+			} else {
+				settingCtx.setMode(Mode.Adult);
+			}
+		}
 	}
 
 	if (questionType === QuestionType.QuestionDropdown) {
@@ -121,13 +116,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 				selectedValue={selectedValue}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionText) {
-		console.log("question text");
+	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
-			<QuestionText
-				fields={translatedPage?.fields}
-				onChange={changeHandler}
+			<QuestionInput
 				selectedValue={selectedValue}
+				placeholder={translatedPage?.placeholder}
+				onChange={changeHandler}
 			/>
 		);
 	} else {

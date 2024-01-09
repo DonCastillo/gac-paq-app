@@ -51,12 +51,12 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		}
 
 		// set mode
-		if(currentPage.page.name === "Who's taking this questionnaire?") {
-		    if (value === "child") {
-		        settingCtx.setMode(Mode.Kid);
-		    } else {
-		        settingCtx.setMode(Mode.Adult);
-		    }
+		if (currentPage.page.name === "Who's taking this questionnaire?") {
+			if (value === "child") {
+				settingCtx.setMode(Mode.Kid);
+			} else {
+				settingCtx.setMode(Mode.Adult);
+			}
 		}
 	}
 

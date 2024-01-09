@@ -63,7 +63,7 @@ function BackAndSubmitNav({ onPrev, onNext }: Props): React.ReactElement {
 					onPress={() => onPrev !== undefined && onPrev()}
 				/>
 			)}
-			
+
 			{hasNext && (
 				<BtnCntrWdthShadowed
 					label={buttons?.complete}

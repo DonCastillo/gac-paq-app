@@ -39,7 +39,6 @@ export default function GenericLanguage(): React.ReactElement {
 		tryAgainPhrase,
 	} = questionCtx.questionState;
 
-
 	// translate phrases and buttons
 	useEffect(() => {
 		settingCtx.translateButtons({

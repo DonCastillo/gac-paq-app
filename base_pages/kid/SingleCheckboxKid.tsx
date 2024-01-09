@@ -76,7 +76,7 @@ export default function SingleCheckboxKid(): React.ReactElement {
 						>
 							{translatedPage?.description}
 						</Paragraph>
-                        <View style={styles.checkboxContainer}>
+						<View style={styles.checkboxContainer}>
 							<CheckBox
 								checked={checked}
 								title={translatedPage?.checkbox_label}
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 	},
-    checkboxContainer: {
+	checkboxContainer: {
 		marginTop: 20,
 	},
 });

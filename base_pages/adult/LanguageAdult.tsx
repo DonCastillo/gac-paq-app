@@ -88,7 +88,6 @@ export default function LanguageAdult(): React.ReactElement {
 		}
 	}
 
-
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />

@@ -34,11 +34,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
-
 	// fetch response for this question
 	useEffect(() => {
 		const response = responseCtx.responses;
-		const currentPageNumber = settingCtx.settingState.currentPageNumber;
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
 		}
