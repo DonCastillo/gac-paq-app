@@ -18,27 +18,28 @@ import QuestionRadio from "components/adults/QuestionRadio";
 import QuestionRadioImage from "components/adults/QuestionRadioImage";
 import { getResponse } from "utils/response";
 import { intToString, stringToInt } from "utils/translate";
-import QuestionText from "components/adults/QuestionText";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
+import QuestionInput from "components/adults/QuestionInput";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
+
 	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
+	// fetch response for this question
 	useEffect(() => {
 		const response = responseCtx.responses;
-		const currentPageNumber = settingCtx.settingState.currentPageNumber;
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
 		}
-	}, [settingCtx.settingState.currentPageNumber]);
+	}, [currentPageNumber]);
 
 	// set button component dynamically
 	useEffect(() => {
@@ -46,6 +47,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
+					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -54,6 +56,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"next"}
+					colorTheme="#FFF"
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
@@ -65,6 +68,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
+					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -73,6 +77,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"prev"}
+					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 				/>,
 			);
@@ -89,15 +94,6 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			answer: value,
 		});
 		setSelectedValue(value);
-
-		// set mode
-		// if(currentPage.page.name === "Who's taking this questionnaire?") {
-		//     if (value === "child") {
-		//         settingCtx.setMode(Mode.Kid);
-		//     } else {
-		//         settingCtx.setMode(Mode.Adult);
-		//     }
-		// }
 	}
 
 	if (questionType === QuestionType.QuestionRadio) {
@@ -135,11 +131,11 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionText) {
+	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
-			<QuestionText
+			<QuestionInput
 				selectedValue={selectedValue}
-				fields={translatedPage?.fields}
+				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}
 			/>
 		);

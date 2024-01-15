@@ -10,7 +10,6 @@ import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
 import QuestionSelect from "components/kid/QuestionSelect";
 import { ResponseContext } from "store/responses";
-import QuestionText from "components/kid/QuestionText";
 import QuestionTitle from "components/kid/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
 import QuestionSlider from "components/kid/QuestionSlider";
@@ -21,6 +20,7 @@ import { intToString, stringToInt } from "utils/translate";
 import { getQuestionBackground } from "utils/background";
 import DeviceType from "constants/device_type";
 import PhraseLabel from "constants/phrase_label";
+import QuestionInput from "components/kid/QuestionInput";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -109,15 +109,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 			answer: value,
 		});
 		setSelectedValue(value);
-
-		// set mode
-		// if(currentPage.page.name === "Who's taking this questionnaire?") {
-		//     if (value === "child") {
-		//         settingCtx.setMode(Mode.Kid);
-		//     } else {
-		//         settingCtx.setMode(Mode.Adult);
-		//     }
-		// }
 	}
 
 	if (questionType === QuestionType.QuestionDropdown) {
@@ -161,12 +152,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 				}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionText) {
+	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
-			<QuestionText
-				fields={translatedPage?.fields}
-				onChange={changeHandler}
+			<QuestionInput
 				selectedValue={selectedValue}
+				placeholder={translatedPage?.placeholder}
+				onChange={changeHandler}
 			/>
 		);
 	} else {
