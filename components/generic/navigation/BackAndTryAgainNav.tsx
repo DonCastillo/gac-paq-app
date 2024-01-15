@@ -26,7 +26,7 @@ function BackAndTryAgainNav({ onPrev, onNext, colorTheme }: Props): React.ReactE
 			<BtnCntrWdthShadowed
 				label={phrases?.tryAgain}
 				onPress={async () => onPrev !== undefined && onNext()}
-				colorTheme={colorTheme ?? "#fff"}
+				colorTheme={"#FFCB66"}
 			/>
 		</View>
 	);

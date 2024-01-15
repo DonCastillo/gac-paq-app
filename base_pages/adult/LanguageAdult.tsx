@@ -109,7 +109,12 @@ export default function LanguageAdult(): React.ReactElement {
 					</QuestionContainer>
 				</CenterMain>
 				<Navigation>
-					{selectedValue !== null && <BackAndNextNav onNext={() => settingCtx.nextPage()} />}
+					{selectedValue !== null && (
+						<BackAndNextNav
+							colorTheme={"#FFF"}
+							onNext={() => settingCtx.nextPage()}
+						/>
+					)}
 				</Navigation>
 			</Main>
 		</View>

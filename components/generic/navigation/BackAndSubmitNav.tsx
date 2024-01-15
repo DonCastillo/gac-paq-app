@@ -56,7 +56,7 @@ function BackAndSubmitNav({ onPrev, onNext, colorTheme }: Props): React.ReactEle
 				<BtnCntrWdthShadowed
 					label={buttons?.complete}
 					onPress={async () => onNext !== undefined && onNext()}
-					colorTheme={colorTheme ?? "#fff"}
+					colorTheme={"#FFCB66"}
 				/>
 			)}
 		</View>

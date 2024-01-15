@@ -19,12 +19,20 @@ export default function QuestionIntroAdult(): React.ReactElement {
 		if (currentPageNumber > 0) {
 			setButtonComponent(
 				<BackAndNextNav
+					key={"both"}
+					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
 		} else {
-			setButtonComponent(<BackAndNextNav onNext={() => settingCtx.nextPage()} />);
+			setButtonComponent(
+				<BackAndNextNav
+					key={"next"}
+					colorTheme="#FFF"
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
 		}
 	}, [currentPageNumber]);
 

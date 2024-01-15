@@ -101,6 +101,7 @@ function StateAdult({ state }: Props): React.ReactElement {
 				<FWBtnShadowed
 					label={phrases.done}
 					onPress={resetApp}
+					colorTheme="#FFCB66"
 				/>,
 			);
 		} else {
@@ -108,6 +109,7 @@ function StateAdult({ state }: Props): React.ReactElement {
 				<BackAndTryAgainNav
 					onPrev={() => navigation.goBack()}
 					onNext={async () => await resubmitResponse()}
+					colorTheme="#FFF"
 				/>,
 			);
 		}
