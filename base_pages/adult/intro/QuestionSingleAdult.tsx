@@ -19,6 +19,7 @@ import { QuestionContext } from "store/questions";
 import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Mode from "constants/mode";
+import QuestionInput from "components/adults/QuestionInput";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -126,11 +127,11 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				}}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionText) {
+	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
-			<QuestionText
+			<QuestionInput
 				selectedValue={selectedValue}
-				fields={translatedPage?.fields}
+				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}
 			/>
 		);
