@@ -27,7 +27,7 @@ export default function PageAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
-					colorTheme={color100}
+					colorTheme={"#FFF"}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -36,7 +36,7 @@ export default function PageAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"next"}
-					colorTheme={color100}
+					colorTheme={"#FFF"}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);

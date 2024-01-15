@@ -4,10 +4,10 @@ const kidColor: ColorInterface[] = [
 	{
 		color100: "#E09F57",
 		color200: "#E09F57",
-		grad100: "#FBD183",
-		grad200: "#F66966",
-		grad300: "#D3688A",
-		grad400: "#B36EB4",
+		// grad100: "#FBD183",
+		// grad200: "#F66966",
+		// grad300: "#D3688A",
+		// grad400: "#B36EB4",
 	},
 	{
 		color100: "#A6E771",
@@ -48,9 +48,9 @@ const adultColor: ColorInterface[] = [
 		color100: "#E09F57",
 		color200: "#E09F57",
 		grad100: "#FBD183",
-		grad200: "#F66966",
-		grad300: "#D3688A",
-		grad400: "#B36EB4",
+		grad200: "#F77F30",
+		grad300: "#F5552C",
+		grad400: "#CB5B5A",
 	},
 	{
 		color100: "#A6E771",
