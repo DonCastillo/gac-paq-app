@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
@@ -8,21 +8,40 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import BGLinearGradient from "components/BGLinearGradient";
-import SingleNav from "components/adults/navigation/SingleNav";
 import Toolbar from "components/adults/Toolbar";
+import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 
 export default function PageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, buttons } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
-	console.log("currentPage: ", JSON.stringify(currentPage));
+	console.log("Page Adult ...");
 
-	function pressHandler(): void {
-		console.log("press handler: ");
-		settingCtx.nextPage();
-	}
+	// set button component dynamically
+	useEffect(() => {
+		if (currentPageNumber > 0) {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"both"}
+					colorTheme={color100}
+					onPrev={() => settingCtx.prevPage()}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		} else {
+			setButtonComponent(
+				<BackAndNextNav
+					key={"next"}
+					colorTheme={color100}
+					onNext={() => settingCtx.nextPage()}
+				/>,
+			);
+		}
+	}, [currentPageNumber]);
 
 	function renderToolbar(): React.ReactElement {
 		if (currentPage.section === "intro" && currentPage.sectionPageNumber === 1) {
@@ -58,12 +77,7 @@ export default function PageAdult(): React.ReactElement {
 						{translatedPage?.description}
 					</Paragraph>
 				</CenterMain>
-				<Navigation>
-					<SingleNav
-						label={buttons?.continue}
-						onPress={pressHandler}
-					/>
-				</Navigation>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
 		</View>
 	);
