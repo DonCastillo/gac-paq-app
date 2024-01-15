@@ -18,6 +18,7 @@ import Toolbar from "components/adults/Toolbar";
 import { QuestionContext } from "store/questions";
 import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import Mode from "constants/mode";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -32,12 +33,15 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
+	console.log("Question Single Adult ....")
+
 	// set button component dynamically
 	useEffect(() => {
 		if (currentPageNumber > 1) {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
+					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -46,6 +50,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"next"}
+					colorTheme="#FFF"
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
@@ -57,6 +62,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
+					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -65,6 +71,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"prev"}
+					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 				/>,
 			);
@@ -72,17 +79,11 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	}, [selectedValue]);
 
 	useEffect(() => {
-		// console.log("getting response....")
 		const response = responseCtx.responses;
-		const currentPageNumber = settingCtx.settingState.currentPageNumber;
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(getResponse(currentPageNumber, response));
-			// console.log("++++++++")
-			console.log("saved question: ", currentPage.page.name);
-			console.log("saved response: ", getResponse(currentPageNumber, response));
-			// console.log("++++++++")
 		}
-	}, [settingCtx.settingState.currentPageNumber]);
+	}, [currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
@@ -96,13 +97,13 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		setSelectedValue(value);
 
 		// set mode
-		// if(currentPage.page.name === "Who's taking this questionnaire?") {
-		//     if (value === "child") {
-		//         settingCtx.setMode(Mode.Kid);
-		//     } else {
-		//         settingCtx.setMode(Mode.Adult);
-		//     }
-		// }
+		if (currentPage.page.name === "Who's taking this questionnaire?") {
+			if (value === "child") {
+				settingCtx.setMode(Mode.Kid);
+			} else {
+				settingCtx.setMode(Mode.Adult);
+			}
+		}
 	}
 
 	if (questionType === QuestionType.QuestionDropdown) {
