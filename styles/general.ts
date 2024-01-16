@@ -37,7 +37,6 @@ const GeneralStyle = {
 			height: "auto",
 			width: "100%",
 			backgroundColor: "white",
-			maxHeight: 450,
 			padding: 20,
 			shadowColor: "#000",
 			shadowOffset: {
