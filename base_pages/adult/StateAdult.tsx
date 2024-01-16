@@ -65,8 +65,10 @@ function StateAdult({ state }: Props): React.ReactElement {
 	}
 
 	function resetApp(): void {
+		settingCtx.setMode(undefined);
 		settingCtx.setCurrentPage(1);
 		settingCtx.setColorTheme(0);
+		settingCtx.setLanguage("en-CA");
 		navigation.navigate("SplashScreen");
 	}
 

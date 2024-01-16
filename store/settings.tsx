@@ -68,6 +68,7 @@ const defaultPhrase: phraseInterface = {
 };
 
 const DEFAULT_MODE = undefined;
+// const DEFAULT_MODE = Mode.Adult;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
@@ -142,7 +143,19 @@ function settingReducer(state: any, action: any): any {
 				directusAccessToken: action.payload,
 			};
 		case "SET_COLOR_THEME": {
-			if (state.mode === undefined) return state;
+			if (state.mode === undefined) {
+				return {
+					...state,
+					colorTheme: {
+						color100: "#E09F57",
+						color200: "#E09F57",
+						grad100: "#FBD183",
+						grad200: "#F66966",
+						grad300: "#D3688A",
+						grad400: "#B36EB4",
+					},
+				};
+			}
 			const newColor = Colors[state.mode][action.payload % TOTAL_COLORS];
 			return {
 				...state,
