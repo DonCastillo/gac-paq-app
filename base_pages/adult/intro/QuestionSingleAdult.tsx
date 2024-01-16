@@ -13,7 +13,6 @@ import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { optionRegion, optionText } from "utils/options";
-import QuestionText from "components/adults/QuestionText";
 import Toolbar from "components/adults/Toolbar";
 import { QuestionContext } from "store/questions";
 import { getResponse } from "utils/response";
@@ -33,8 +32,6 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
-
-	console.log("Question Single Adult ....")
 
 	// set button component dynamically
 	useEffect(() => {
