@@ -7,26 +7,29 @@ import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
+import BGLinearGradient from "components/BGLinearGradient";
+import Toolbar from "components/adults/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { getIntroductoryBackground } from "utils/background";
 import ScrollContainer from "components/ScrollContainer";
+import { CheckBox } from "@rneui/themed";
 import { ResponseContext } from "store/responses";
 import { getResponse } from "utils/response";
-import { CheckBox } from "@rneui/themed";
 
-export default function SingleCheckboxKid(): React.ReactElement {
+export default function SingleCheckboxAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [checked, setChecked] = useState(false);
-	const [background, setBackground] = useState<React.ReactElement | null>(null);
 
-	// set background screen dynamically
-	useEffect(() => {
-		setBackground(getIntroductoryBackground(currentPageNumber));
-	}, [currentPageNumber]);
+	function renderToolbar(): React.ReactElement {
+		if (currentPage.section === "intro" && currentPage.sectionPageNumber === 1) {
+			return <></>;
+		} else {
+			return <Toolbar />;
+		}
+	}
 
 	useEffect(() => {
 		const response = responseCtx.responses;
@@ -49,14 +52,15 @@ export default function SingleCheckboxKid(): React.ReactElement {
 	}, [checked]);
 
 	return (
-		<View style={styles.container}>
-			{background !== null && background}
+		<View style={[styles.container, { backgroundColor: color100 }]}>
+			<BGLinearGradient />
 			<Main>
+				{renderToolbar()}
 				<CenterMain>
 					<ScrollContainer>
 						<Heading
 							customStyle={{
-								color: color100,
+								color: "white",
 								fontSize: 40,
 								marginBottom: 50,
 								textAlign: "center",
@@ -66,9 +70,9 @@ export default function SingleCheckboxKid(): React.ReactElement {
 						</Heading>
 						<Paragraph
 							customStyle={{
-								color: color100,
+								color: "white",
 								fontSize: 15,
-								lineHeight: 20,
+								lineHeight: 17,
 							}}
 						>
 							{translatedPage?.description}
@@ -80,9 +84,9 @@ export default function SingleCheckboxKid(): React.ReactElement {
 								center={true}
 								onPress={() => setChecked(!checked)}
 								containerStyle={{ backgroundColor: "transparent" }}
-								textStyle={{ color: color100 }}
-								checkedColor={color100}
-								uncheckedColor={color100}
+								textStyle={{ color: "white" }}
+								checkedColor="white"
+								uncheckedColor="white"
 								size={30}
 							/>
 						</View>
@@ -91,16 +95,14 @@ export default function SingleCheckboxKid(): React.ReactElement {
 				<Navigation>
 					{checked ? (
 						<BackAndNextNav
-							key={"both"}
-							colorTheme={color100}
+							key={"Checked"}
 							onPrev={() => settingCtx.prevPage()}
 							onNext={() => settingCtx.nextPage()}
 						/>
 					) : (
 						<BackAndNextNav
-							key={"prev"}
-							colorTheme={color100}
 							onPrev={() => settingCtx.prevPage()}
+							key={"Unchecked"}
 						/>
 					)}
 				</Navigation>
@@ -112,8 +114,10 @@ export default function SingleCheckboxKid(): React.ReactElement {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		backgroundColor: "#fff",
 		alignItems: "center",
 		justifyContent: "center",
+		position: "relative",
 	},
 	checkboxContainer: {
 		marginTop: 20,

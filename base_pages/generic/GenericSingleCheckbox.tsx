@@ -33,7 +33,6 @@ export default function GenericSingleCheckbox(): React.ReactElement {
 
 	useEffect(() => {
 		const response = responseCtx.responses;
-		const currentPageNumber = settingCtx.settingState.currentPageNumber;
 		if (Object.keys(response).length > 0) {
 			const responseHere = getResponse(currentPageNumber, response);
 			if (responseHere === "agree") {

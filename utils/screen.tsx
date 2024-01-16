@@ -19,6 +19,7 @@ import GenericPage from "base_pages/generic/GenericPage";
 import GenericSingleCheckbox from "base_pages/generic/GenericSingleCheckbox";
 import GenericSingleQuestion from "base_pages/generic/GenericSingleQuestion";
 import SingleCheckboxKid from "base_pages/kid/SingleCheckboxKid";
+import SingleCheckboxAdult from "base_pages/adult/SingleCheckboxAdult";
 
 function getScreen(
 	mode: Mode | string | undefined,
@@ -45,7 +46,7 @@ function getScreen(
 		sectionType === SectionType.Intro &&
 		screenType === ScreenType.SingleCheckbox
 	)
-		return <GenericSingleCheckbox />;
+		return <SingleCheckboxAdult />;
 	else if (
 		mode === Mode.Kid &&
 		sectionType === SectionType.Intro &&
