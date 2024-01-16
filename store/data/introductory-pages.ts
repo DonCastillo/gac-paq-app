@@ -22,13 +22,13 @@ const IntroductoryPages:
 	  >
 	| [] = [
 	LanguagePage,
+	AgePage,
 	WelcomePage,
 	AboutPage,
-	// ConfidentialityPage,
-	// ParticipantIDPage,
-	// AccelerometerPage,
-	// AgePage,
-	// DemographicPage,
+	ConfidentialityPage,
+	ParticipantIDPage,
+	AccelerometerPage,
+	DemographicPage,
 ];
 
 export default IntroductoryPages;
