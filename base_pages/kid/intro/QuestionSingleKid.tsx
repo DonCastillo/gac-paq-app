@@ -109,6 +109,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionSelect
+				key={currentPageNumber}
 				options={translatedPage?.choices}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
@@ -117,6 +118,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionRegion) {
 		questionComponent = (
 			<QuestionSelectRegion
+				key={currentPageNumber}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 			/>
@@ -124,6 +126,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}

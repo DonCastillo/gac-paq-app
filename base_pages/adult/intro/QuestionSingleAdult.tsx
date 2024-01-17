@@ -107,6 +107,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionRadio
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
@@ -117,6 +118,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionRegion) {
 		questionComponent = (
 			<QuestionRadio
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				options={optionRegion(regionsOptions)}
 				onSelect={(value: string) => {
@@ -127,6 +129,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}

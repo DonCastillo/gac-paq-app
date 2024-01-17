@@ -99,6 +99,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	if (questionType === QuestionType.QuestionRadio) {
 		questionComponent = (
 			<QuestionRadio
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
@@ -109,6 +110,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionRadioImage) {
 		questionComponent = (
 			<QuestionRadioImage
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				options={translatedPage?.choices}
 				onChange={changeHandler}
@@ -117,6 +119,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionSlider) {
 		questionComponent = (
 			<QuestionSlider
+				key={currentPageNumber}
 				onChange={(value: number | null | PhraseLabel.DontKnow) => {
 					if (typeof value === "number" && Number.isInteger(value)) {
 						changeHandler(intToString(value));
@@ -134,6 +137,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}

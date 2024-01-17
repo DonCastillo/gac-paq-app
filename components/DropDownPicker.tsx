@@ -21,7 +21,7 @@ export default function DropDownSelector({
 	dropdownMinHeight = 280,
 }: DropDownSelectorPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage } = settingCtx.settingState;
+	const { colorTheme, currentPageNumber } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [open, setOpen] = useState<boolean>(false);
 	const [value, setValue] = useState<string | null>(selectedValue);
@@ -31,13 +31,13 @@ export default function DropDownSelector({
 		if (items !== options) {
 			setItems(options);
 		}
-	}, [currentPage]);
+	}, [currentPageNumber]);
 
 	useEffect(() => {
 		if (value !== selectedValue) {
 			setValue(selectedValue);
 		}
-	}, [currentPage, selectedValue]);
+	}, [currentPageNumber, selectedValue]);
 
 	return (
 		<>
