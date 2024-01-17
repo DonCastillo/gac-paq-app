@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import React, { useContext, useState, useEffect } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
@@ -19,81 +19,71 @@ export default function QuestionRadioImage({
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 
+	const optionPressedStyle = {
+		backgroundColor: color100,
+		borderColor: color100,
+	};
+
 	useEffect(() => {
 		if (selected !== selectedValue) {
 			setSelected(selectedValue);
 		}
 	}, [currentPage, selectedValue]);
 
-	const optionPressedStyle = {
-		backgroundColor: color100,
-		borderColor: color100,
-	};
-
-	function selectHandler(value: string): void {
-		if (value === selected) {
-			setSelected(null);
-			onChange(null);
-		} else {
+	function selectHandler(value: string | null): void {
+		if (value !== "" && value !== null && value !== undefined) {
 			setSelected(value);
 			onChange(value);
+		} else {
+			setSelected(null);
+			onChange(null);
 		}
 	}
 
 	function renderImage(image: string, image_default: any): React.ReactElement {
-		const ImageComponent = image_default;
-		if (image_default === null || image_default === undefined) {
-			return <></>;
+		let ImageComponent = <></>;
+		if (image !== "") {
+			const url = `http://localhost:8055/assets/${image}?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5`;
+			ImageComponent = (
+				<Image
+					style={styles.optionImage}
+					source={{ uri: url }}
+					resizeMode="cover"
+				/>
+			);
+		} else {
+			ImageComponent = (
+				<Image
+					style={styles.optionImage}
+					source={image_default.uri}
+					resizeMode="cover"
+				/>
+			);
 		}
-		return (
-			<ImageComponent
-				height={150}
-				width={150}
-				padding={0}
-				margin={0}
-			/>
-		);
-		// return (
-		//     <View>
-		//         {/* <image_default height={100} width={100} /> */}
-		//         {/* <image_default /> */}
-		//         <Text>Don</Text>
-		//     </View>
-		// );
 
-		// if (image) {
-		//     ImageComponent = (
-		//         <Image
-		//             source={{
-		//                 uri: `http://localhost:8055/assets/${image}?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5`,
-		//             }}
-		//             style={{ height: 100, width: 100, resizeMode: "contain" }}
-		//         />
-		//     );
-		// }
+		return ImageComponent;
 	}
 
 	function renderOption({ item }): React.ReactElement {
-		const { image_kid, image_kid_default, text, value } = item.image_choices_id;
+		const { image_adult, image_adult_default, text, value } = item.image_choices_id;
+
 		return (
 			<Pressable
 				style={[
 					styles.optionContainer,
-					selected === value ? optionPressedStyle : styles.optionUnpressed,
+					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => {
 					selectHandler(value);
 				}}
 			>
-				<View style={styles.imageContainer}>{renderImage(image_kid, image_kid_default)}</View>
-				<Text
-					style={[
-						styles.optionText,
-						selected === value ? styles.textPressed : styles.textUnpressed,
-					]}
-				>
-					{text}
-				</Text>
+				<View style={styles.optionImageContainer}>
+					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
+					{renderImage(image_adult, image_adult_default)}
+				</View>
+				<View style={styles.optionTextContainer}>
+					<Text>{text}</Text>
+				</View>
 			</Pressable>
 		);
 	}
@@ -114,48 +104,52 @@ export default function QuestionRadioImage({
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: -20,
+		// marginTop: 5,
+		// backgroundColor: "pink"
 	},
-	imageContainer: {
+	imageFilter: {
+		position: "absolute",
+		top: 0,
+		left: 0,
+		width: "100%",
+		height: "100%",
+		opacity: 0.75,
+		zIndex: 1,
+	},
+	optionImageContainer: {
 		justifyContent: "center",
 		alignItems: "center",
+		position: "relative",
+		flex: 1,
+		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
 	},
 	optionContainer: {
-		flexDirection: "column",
-		justifyContent: "center",
-		alignItems: "center",
-		flex: 1,
-		height: 160,
-		width: "100%",
-		maxWidth: 150,
-		margin: 5,
-		marginTop: 0,
-		padding: 10,
-		borderWidth: GeneralStyle.kid.field.borderWidth,
-		borderColor: GeneralStyle.kid.field.borderColor,
-		borderRadius: GeneralStyle.kid.field.borderRadius,
-		marginBottom: GeneralStyle.kid.field.marginBottom,
-		paddingVertical: GeneralStyle.kid.field.paddingVertical,
-		paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+		...GeneralStyle.adult.optionImageContainer,
 	},
 	optionImage: {
-		height: 100,
-		width: 100,
+		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		position: "absolute",
+		top: 0,
+		left: 0,
+		height: "100%",
+		width: "100%",
 	},
-	optionText: {
-		fontWeight: GeneralStyle.kid.field.fontWeight,
-		fontSize: GeneralStyle.kid.field.fontSize - 6,
-		textAlign: "center",
-		marginTop: -15,
+	optionTextContainer: {
+		borderBottomLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		borderBottomRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		paddingVertical: 5,
+		paddingHorizontal: 7,
+		minHeight: 60,
 	},
 	optionUnpressed: {
 		backgroundColor: "#fff",
-		borderColor: "#000",
 	},
 	textPressed: {
-		color: "#fff",
+		// color: "#fff",
 	},
 	textUnpressed: {
-		color: "#000",
+		// color: "#000",
 	},
 });

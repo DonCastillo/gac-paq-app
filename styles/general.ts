@@ -1,3 +1,7 @@
+// for the kids, field border should be 3
+// border should be color 100 (light color)
+// nav should be color200 (dark)
+
 const GeneralStyle = {
 	general: {
 		extroColor: "#e3a324",
@@ -6,7 +10,7 @@ const GeneralStyle = {
 		field: {
 			fontSize: 18,
 			fontWeight: "400",
-			borderWidth: 2,
+			borderWidth: 3,
 			borderRadius: 10,
 			paddingHorizontal: 20,
 			// paddingVertical: 3,
@@ -15,6 +19,13 @@ const GeneralStyle = {
 			marginBottom: 15,
 			marginTop: 15,
 			borderColor: "#000",
+		},
+		inactiveField: {
+			borderColor: "#ABABAB",
+			backgroundColor: "#FFF",
+		},
+		inactiveText: {
+			color: "#ABABAB",
 		},
 	},
 	adult: {
@@ -58,12 +69,13 @@ const GeneralStyle = {
 		},
 		optionImageContainer: {
 			backgroundColor: "#fff",
-			height: 150,
+			maxHeight: 150,
 			flex: 1,
 			width: "100%",
-			maxWidth: 130,
+			maxWidth: 150,
+			aspectRatio: 1 / 1,
 			borderRadius: 5,
-			marginLeft: 10,
+			marginRight: 10,
 			marginBottom: 10,
 			shadowColor: "#000",
 			shadowOffset: {

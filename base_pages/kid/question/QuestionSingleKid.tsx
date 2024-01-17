@@ -30,7 +30,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 
 	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
-	const { color100 } = colorTheme;
+	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
@@ -62,7 +62,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
-					colorTheme={color100}
+					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -71,7 +71,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"next"}
-					colorTheme={color100}
+					colorTheme={color200}
 					onNext={() => settingCtx.nextPage()}
 				/>,
 			);
@@ -83,7 +83,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
-					colorTheme={color100}
+					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
 				/>,
@@ -92,7 +92,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"prev"}
-					colorTheme={color100}
+					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
 				/>,
 			);

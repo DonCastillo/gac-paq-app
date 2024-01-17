@@ -5,7 +5,7 @@ import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 
 const FONT_SIZE = 16;
-const BORDER_WIDTH = 2;
+const BORDER_WIDTH = 3;
 
 interface DropDownSelectorPropsInterface {
 	options: QuestionRadioItemInterface[];

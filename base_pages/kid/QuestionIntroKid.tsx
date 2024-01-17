@@ -7,7 +7,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
@@ -44,7 +44,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 				resizeMode="cover"
 				style={styles.image}
 			></ImageBackground>
-			<View style={[styles.headingPanel, { backgroundColor: color100 }]}>
+			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
 				<ScrollView style={styles.headingPanelTop}>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
 					<Text style={styles.headingText}>{translatedPage?.heading}</Text>

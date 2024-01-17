@@ -38,11 +38,11 @@ export default function QuestionSlider({
 	}
 
 	function isColor100(value: number | PhraseLabel.DontKnow): string {
-		return isNumber(value) ? color100 : "#fff";
+		return isNumber(value) ? color100 : GeneralStyle.kid.inactiveField.borderColor;
 	}
 
 	function isColor200(value: number | PhraseLabel.DontKnow): string {
-		return isNumber(value) ? color200 : "#fff";
+		return isNumber(value) ? color200 : GeneralStyle.kid.inactiveField.borderColor;
 	}
 
 	function setSliderValue(value: number | PhraseLabel.DontKnow): number | undefined {
@@ -68,23 +68,18 @@ export default function QuestionSlider({
 				minimumTrackTintColor={isColor200(value)}
 				maximumTrackTintColor={isColor100(value)}
 				trackStyle={styles.trackStyle}
-				thumbStyle={[
-					styles.thumbStyle,
-					{
-						backgroundColor: isColor100(value),
-					},
-				]}
+				thumbStyle={{ backgroundColor: isColor200(value) }}
 				thumbProps={{
 					children: (
 						<View
 							style={[
 								styles.tooltip,
 								{
-									backgroundColor: isColor100(value),
+									backgroundColor: isColor200(value),
 								},
 							]}
 						>
-							<Text style={[styles.tooltipText, { color: isNumber(value) ? "#fff" : "#000" }]}>
+							<Text style={[styles.tooltipText, { color: isNumber(value) ? "#fff" : "#fff" }]}>
 								{isNumber(value) ? value : 0}
 							</Text>
 						</View>
@@ -97,7 +92,7 @@ export default function QuestionSlider({
 				<Pressable
 					style={[
 						styles.optionContainer,
-						value === PhraseLabel.DontKnow ? optionPressedStyle : styles.optionUnpressed,
+						value === PhraseLabel.DontKnow ? optionPressedStyle : GeneralStyle.kid.inactiveField,
 					]}
 					onPress={() => {
 						changeHandler(PhraseLabel.DontKnow);
@@ -106,7 +101,7 @@ export default function QuestionSlider({
 					<Text
 						style={[
 							styles.optionText,
-							value === PhraseLabel.DontKnow ? styles.textPressed : styles.textUnpressed,
+							value === PhraseLabel.DontKnow ? styles.textPressed : GeneralStyle.kid.inactiveText,
 						]}
 					>
 						{phrases?.dontKnow}
@@ -126,20 +121,15 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 		borderRadius: GeneralStyle.kid.field.borderRadius,
-		borderWidth: GeneralStyle.kid.field.borderWidth,
-		padding: 3,
+		paddingVertical: 6,
+		paddingHorizontal: 4,
 	},
 	tooltipText: {
 		fontSize: GeneralStyle.kid.field.fontSize + 5,
 	},
 	trackStyle: {
-		height: 10,
+		height: 15,
 		borderRadius: GeneralStyle.kid.field.borderRadius,
-		borderColor: "#000",
-		borderWidth: GeneralStyle.kid.field.borderWidth,
-	},
-	thumbStyle: {
-		borderWidth: GeneralStyle.kid.field.borderWidth,
 	},
 	optionContainer: {
 		borderWidth: GeneralStyle.kid.field.borderWidth,
