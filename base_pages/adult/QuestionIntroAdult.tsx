@@ -2,10 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import { View, ImageBackground, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
-import SingleNav from "components/adults/navigation/SingleNav";
-import Toolbar from "components/adults/Toolbar";
 import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import Main from "components/Main";
+import BottomMain from "components/orientation/BottomMain";
+import Navigation from "components/Navigation";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -48,14 +49,16 @@ export default function QuestionIntroAdult(): React.ReactElement {
 				resizeMode="cover"
 				style={styles.image}
 			></ImageBackground>
-			<Toolbar />
 			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
-				<ScrollView style={styles.headingPanelTop}>
+				<ScrollView>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
 					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
 				</ScrollView>
-				<View style={styles.headingPanelBottom}>{buttonComponent !== null && buttonComponent}</View>
 			</View>
+			<Main>
+				<BottomMain></BottomMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
 		</View>
 	);
 }
@@ -63,12 +66,17 @@ export default function QuestionIntroAdult(): React.ReactElement {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		width: "100%",
-		height: "100%",
+		alignItems: "center",
+		justifyContent: "center",
 		position: "relative",
 	},
 	image: {
 		flex: 1,
+		position: "absolute",
+		top:0,
+		left: 0,
+		width: "100%",
+		height:"100%",
 		justifyContent: "center",
 	},
 	toolbar: {
@@ -77,20 +85,21 @@ const styles = StyleSheet.create({
 		width: "100%",
 	},
 	headingPanel: {
-		paddingHorizontal: 20,
+		paddingHorizontal: 60,
 		position: "absolute",
 		bottom: 0,
 		width: "100%",
-		height: "45%",
-		flex: 1,
+		minHeight: 250,
+		height: "auto",
 		borderTopRightRadius: 45,
 		borderTopLeftRadius: 45,
-		paddingTop: 40,
-		paddingBottom: 50,
+		paddingTop: 20,
+		paddingBottom: 30,
 	},
 	headingSubText: {
 		textAlign: "center",
 		color: "#fff",
+		fontSize: 20
 	},
 	headingText: {
 		textAlign: "center",
