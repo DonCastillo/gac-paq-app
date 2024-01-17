@@ -3,11 +3,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import Main from "components/Main";
+import BottomMain from "components/orientation/BottomMain";
+import Navigation from "components/Navigation";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
@@ -45,12 +48,17 @@ export default function QuestionIntroKid(): React.ReactElement {
 				style={styles.image}
 			></ImageBackground>
 			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
-				<ScrollView style={styles.headingPanelTop}>
+				<ScrollView>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
 					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
 				</ScrollView>
-				<View style={styles.headingPanelBottom}>{buttonComponent !== null && buttonComponent}</View>
 			</View>
+			<Main>
+				<BottomMain></BottomMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
+			
+
 		</View>
 	);
 }
@@ -58,27 +66,35 @@ export default function QuestionIntroKid(): React.ReactElement {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		width: "100%",
+		alignItems: "center",
+		justifyContent: "center",
+		position: "relative",
 	},
 	image: {
 		flex: 1,
+		position: "absolute",
+		top:0,
+		left: 0,
+		width: "100%",
+		height:"100%",
 		justifyContent: "center",
 	},
 	headingPanel: {
-		paddingHorizontal: 20,
+		paddingHorizontal: 60,
 		position: "absolute",
 		bottom: 0,
 		width: "100%",
-		height: "45%",
-		flex: 1,
+		minHeight: 250,
+		height: "auto",
 		borderTopRightRadius: 45,
 		borderTopLeftRadius: 45,
-		paddingTop: 40,
-		paddingBottom: 50,
+		paddingTop: 20,
+		paddingBottom: 30,
 	},
 	headingSubText: {
 		textAlign: "center",
 		color: "#fff",
+		fontSize: 20
 	},
 	headingText: {
 		textAlign: "center",
@@ -87,14 +103,5 @@ const styles = StyleSheet.create({
 		fontSize: 32,
 		fontWeight: "bold",
 		height: "100%",
-	},
-	headingPanelTop: {
-		flex: 1,
-	},
-	headingPanelBottom: {
-		flex: 1,
-		alignItems: "center",
-		justifyContent: "flex-end",
-		paddingHorizontal: 20,
 	},
 });
