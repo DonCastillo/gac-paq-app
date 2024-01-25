@@ -1,7 +1,6 @@
 enum Mode {
-    Adult = 'adult',
-    Kid = 'kid'
+	Adult = "adult",
+	Kid = "kid",
 }
-
 
 export default Mode;

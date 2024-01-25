@@ -1,8 +1,8 @@
-import ScreenType from "../../constants/screen_type";
-import QuestionTextInterface from "../question_text";
+import type ScreenType from "constants/screen_type";
+import type QuestionTextInterface from "interface/question_text";
 
 export default interface QuestionTextPayloadInterface {
-    name?: string | null,
-    type: ScreenType.Question,
-    translations: QuestionTextInterface[]
+	name?: string | null;
+	type: ScreenType.SingleQuestion;
+	translations: QuestionTextInterface[];
 }

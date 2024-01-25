@@ -1,34 +1,62 @@
-import RegionInterface from "../../interface/region";
+import type RegionInterface from "interface/region";
 
 const Regions: RegionInterface[] = [
-    {
-        id: 1,
-        sort: null,
-        title: "United States",
-        code: "US",
-        flag_code: null,
-    },
-    {
-        id: 2,
-        sort: null,
-        title: "Canada",
-        code: "CA",
-        flag_code: null,
-    },
-    {
-        id: 3,
-        sort: null,
-        title: "Mexico",
-        code: "MX",
-        flag_code: null,
-    },
-    {
-        id: 4,
-        sort: null,
-        title: "Japan",
-        code: "JP",
-        flag_code: null,
-    },
+	{
+		title: "Brazil",
+		code: "BR",
+	},
+	{
+		title: "Canada",
+		code: "CA",
+	},
+	{
+		title: "China",
+		code: "CN",
+	},
+	{
+		title: "Colombia",
+		code: "CO",
+	},
+	{
+		title: "India",
+		code: "IN",
+	},
+	{
+		title: "Malawi",
+		code: "MW",
+	},
+	{
+		title: "Mexico",
+		code: "MX",
+	},
+	{
+		title: "Nepal",
+		code: "NP",
+	},
+	{
+		title: "Nigeria",
+		code: "NG",
+	},
+	{
+		title: "Papua New Guinea",
+		code: "PG",
+	},
+	{
+		title: "Spain",
+		code: "ES",
+	},
+	{
+		title: "Sweden",
+		code: "SE",
+	},
+	{
+		title: "Thailand",
+		code: "TH",
+	},
+	{
+		title: "United Arab Emirates",
+		code: "AE",
+	},
 ];
 
 export default Regions;

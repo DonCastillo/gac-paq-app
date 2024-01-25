@@ -1,6 +1,6 @@
 enum QuestionField {
-    QuestionFieldText = 'text',
-    QuestionFieldNumber = 'number'
+	QuestionFieldText = "text",
+	QuestionFieldNumber = "number",
 }
 
 export default QuestionField;

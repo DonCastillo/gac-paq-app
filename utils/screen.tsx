@@ -1,41 +1,133 @@
-import PageAdult from "../base-pages/adult/PageAdult";
-import QuestionAdult from "../base-pages/adult/QuestionAdult";
-import QuestionExtroAdult from "../base-pages/adult/QuestionExtroAdult";
-import QuestionIntroAdult from "../base-pages/adult/QuestionIntroAdult";
-import SplashAdult from "../base-pages/adult/SplashAdult";
-import PageKid from "../base-pages/kid/PageKid";
-import QuestionExtroKid from "../base-pages/kid/QuestionExtroKid";
-import QuestionIntroKid from "../base-pages/kid/QuestionIntroKid";
-import QuestionKid from "../base-pages/kid/QuestionKid";
-import SplashKid from "../base-pages/kid/SplashKid";
-import Mode from "../constants/mode";
-import ScreenType from "../constants/screen_type";
+import React from "react";
+import PageAdult from "base_pages/adult/PageAdult";
+import QuestionExtroAdult from "base_pages/adult/QuestionExtroAdult";
+import QuestionIntroAdult from "base_pages/adult/QuestionIntroAdult";
+import PageKid from "base_pages/kid/PageKid";
+import QuestionExtroKid from "base_pages/kid/QuestionExtroKid";
+import QuestionIntroKid from "base_pages/kid/QuestionIntroKid";
+import IntroQuestionSingleKid from "base_pages/kid/intro/QuestionSingleKid";
+import IntroQuestionSingleAdult from "base_pages/adult/intro/QuestionSingleAdult";
+import QuestionQuestionSingleKid from "base_pages/kid/question/QuestionSingleKid";
+import QuestionQuestionSingleAdult from "base_pages/adult/question/QuestionSingleAdult";
+import Mode from "constants/mode";
+import ScreenType from "constants/screen_type";
+import SectionType from "constants/section_type";
+import LanguageKid from "base_pages/kid/LanguageKid";
+import LanguageAdult from "base_pages/adult/LanguageAdult";
+import GenericLanguage from "base_pages/generic/GenericLanguage";
+import GenericPage from "base_pages/generic/GenericPage";
+import GenericSingleCheckbox from "base_pages/generic/GenericSingleCheckbox";
+import GenericSingleQuestion from "base_pages/generic/GenericSingleQuestion";
+import SingleCheckboxKid from "base_pages/kid/SingleCheckboxKid";
+import SingleCheckboxAdult from "base_pages/adult/SingleCheckboxAdult";
 
-
-function getScreen(mode: Mode | string, screenType: ScreenType) {
-    if (mode === Mode.Adult && screenType === ScreenType.Splash)
-        return SplashAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.Page)
-        return PageAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.Question)
-        return QuestionAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)
-        return QuestionIntroAdult;
-    else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)
-        return QuestionExtroAdult;
-    else if (mode === Mode.Kid && screenType === ScreenType.Splash)
-        return SplashKid;
-    else if (mode === Mode.Kid && screenType === ScreenType.Page)
-        return PageKid;
-    else if (mode === Mode.Kid && screenType === ScreenType.Question)
-        return QuestionKid;
-    else if (mode === Mode.Kid && screenType === ScreenType.IntroQuestion)
-        return QuestionIntroKid;
-    else if (mode === Mode.Kid && screenType === ScreenType.ExtroQuestion)
-        return QuestionExtroKid;
-    else
-        return <></>
-    
+function getScreen(
+	mode: Mode | string | undefined,
+	screenType: ScreenType | string,
+	sectionType?: SectionType | string,
+): React.ReactElement {
+	// all language screens are generic
+	if (mode === undefined && screenType === ScreenType.Language) return <GenericLanguage />;
+	else if (mode === Mode.Adult && screenType === ScreenType.Language) return <LanguageAdult />;
+	else if (mode === Mode.Kid && screenType === ScreenType.Language) return <LanguageKid />;
+	// regular page screens
+	else if (mode === undefined && screenType === ScreenType.Page) return <GenericPage />;
+	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;
+	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
+	// single checkbox screens
+	else if (
+		mode === undefined &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleCheckbox
+	)
+		return <GenericSingleCheckbox />;
+	else if (
+		mode === Mode.Adult &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleCheckbox
+	)
+		return <SingleCheckboxAdult />;
+	else if (
+		mode === Mode.Kid &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleCheckbox
+	)
+		return <SingleCheckboxKid />;
+	// question intro
+	else if (
+		mode === undefined &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <GenericSingleQuestion />;
+	else if (
+		mode === Mode.Adult &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <IntroQuestionSingleAdult />;
+	else if (
+		mode === Mode.Kid &&
+		sectionType === SectionType.Intro &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <IntroQuestionSingleKid />;
+	// question question
+	else if (
+		mode === undefined &&
+		sectionType === SectionType.Question &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <QuestionQuestionSingleAdult />;
+	else if (
+		mode === Mode.Adult &&
+		sectionType === SectionType.Question &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <QuestionQuestionSingleAdult />;
+	else if (
+		mode === Mode.Kid &&
+		sectionType === SectionType.Question &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <QuestionQuestionSingleKid />;
+	// question section intro
+	else if (mode === undefined && screenType === ScreenType.IntroQuestion)
+		return <QuestionIntroAdult />;
+	else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)
+		return <QuestionIntroAdult />;
+	else if (mode === Mode.Kid && screenType === ScreenType.IntroQuestion)
+		return <QuestionIntroKid />;
+	// question section extro
+	else if (mode === undefined && screenType === ScreenType.ExtroQuestion)
+		return <QuestionExtroAdult />;
+	else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)
+		return <QuestionExtroAdult />;
+	else if (mode === Mode.Kid && screenType === ScreenType.ExtroQuestion)
+		return <QuestionExtroKid />;
+	else return <></>;
 }
 
-export { getScreen };
+function getScreenType(screenType: string): ScreenType {
+	if (screenType === "page") {
+		return ScreenType.Page;
+	} else if (screenType === "language") {
+		return ScreenType.Language;
+	} else if (screenType === "region") {
+		return ScreenType.Region;
+	} else if (screenType === "splash") {
+		return ScreenType.Splash;
+	} else if (screenType === "question_single") {
+		return ScreenType.SingleQuestion;
+	} else if (screenType === "question_intro") {
+		return ScreenType.IntroQuestion;
+	} else if (screenType === "question_extro") {
+		return ScreenType.ExtroQuestion;
+	} else if (screenType === "single_checkbox") {
+		return ScreenType.SingleCheckbox;
+	} else {
+		return ScreenType.Page;
+	}
+}
+
+export { getScreen, getScreenType };

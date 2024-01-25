@@ -1,33 +1,41 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import { useFonts } from 'expo-font';
-import Colors from "../../styles/kids/Colors";
+import { useFonts } from "expo-font";
+import Colors from "styles/kids/Colors";
+import { DefaultStyle } from "styles/general";
+import React from "react";
 
-export default function FullWidthButton({ children, onPress, customStyle = {} }) {
-    return (
-        <View style={[style.container, customStyle]}>
-            <Pressable onPress={onPress}>
-                <Text style={[style.buttonText]}>{children}</Text>
-            </Pressable>
-        </View>
-    );
+interface Props {
+	children: React.ReactNode;
+	onPress: () => void;
+	textStyle?: any;
+	customStyle?: any;
 }
 
-
+function FullWidthButton({ children, onPress, textStyle, customStyle }: Props): React.ReactElement {
+	return (
+		<View style={[style.container, customStyle]}>
+			<Pressable onPress={onPress}>
+				<Text style={[style.buttonText, textStyle]}>{children}</Text>
+			</Pressable>
+		</View>
+	);
+}
 
 const style = StyleSheet.create({
-    container: {
-        backgroundColor: "white",
-        paddingHorizontal: 20,
-        paddingVertical: 15,
-        borderRadius: 10,
-        // marginVertical: 15,
-        width: '90%',
-    },
-    buttonText: {
-        color: 'white',
-        textAlign: 'center',
-        fontSize: 18,
-        lineHeight: 27,
-        fontWeight: 'bold',
-    }
-})
+	container: {
+		backgroundColor: DefaultStyle.button.backgroundColor,
+		paddingHorizontal: DefaultStyle.button.paddingHorizontal,
+		paddingVertical: DefaultStyle.button.paddingVertical,
+		borderRadius: DefaultStyle.button.borderRadius,
+		width: "100%",
+	},
+	buttonText: {
+		color: DefaultStyle.button.color,
+		textAlign: DefaultStyle.button.textAlign,
+		fontSize: DefaultStyle.button.fontSize,
+		lineHeight: DefaultStyle.button.lineHeight,
+		fontWeight: DefaultStyle.button.fontWeight,
+	},
+});
+
+export default FullWidthButton;

@@ -1,41 +1,26 @@
-import { Text, View, Image, StyleSheet } from "react-native";
-import {useState} from 'react';
-import DropDownPicker from "react-native-dropdown-picker";
-import Colors from "../../styles/kids/Colors";
+import React from "react";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
+import DropDownSelector from "components/DropDownPicker";
+import { optionText } from "utils/options";
+import type { OptionInterface } from "utils/options";
 
-console.log('hellollklml')
-export default function QuestionSelect({ options }) {
-    console.log('choices: ', options)
-    const [open, setOpen] = useState(false);
-    const [value, setValue] = useState(null);
-    const [items, setItems] = useState(options);
-
-    console.log(options)
-
-    return (
-        <DropDownPicker
-            style={styles.container}
-            open={open}
-            value={value}
-            items={items}
-            setOpen={setOpen}
-            setValue={setValue}
-            setItems={setItems}
-        />
-    );
+interface QuestionSelectPropsInterface {
+	options: OptionInterface[];
+	onChange: (value: string) => void;
+	selectedValue: string | null;
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        borderColor: Colors.introBorderColor,
-        borderWidth: 2,
-        backgroundColor: "#fff",
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    headingContainer: {
-        marginBottom: 60,
-    },
-});
+export default function QuestionSelect({
+	options,
+	onChange,
+	selectedValue,
+}: QuestionSelectPropsInterface): React.ReactElement {
+	const rawItems: QuestionRadioItemInterface[] = optionText(options);
+	return (
+		<DropDownSelector
+			options={rawItems}
+			selectedValue={selectedValue}
+			onSelect={onChange}
+		/>
+	);
+}
