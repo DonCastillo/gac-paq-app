@@ -1,8 +1,8 @@
 import { FlatList } from "react-native";
-import RadioOption from "./item/RadioOption";
+import RadioOption from "components/adults/item/RadioOption";
 import React, { useContext, useEffect, useState } from "react";
-import type QuestionRadioItemInterface from "../../interface/question_radio_item";
-import { SettingContext } from "../../store/settings";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
+import { SettingContext } from "store/settings";
 
 interface QuestionRadioPropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -18,7 +18,6 @@ export default function QuestionRadio({
 	const settingCtx = useContext(SettingContext);
 	const { currentPage } = settingCtx.settingState;
 	const [value, setValue] = useState<string | null>(selectedValue);
-	console.log("options: ", options);
 
 	function pressHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {

@@ -1,4 +1,4 @@
-import type ButtonInterface from "../../../interface/button";
+import type ButtonInterface from "interface/button";
 
 const BackButton: ButtonInterface[] = [
 	{
@@ -6,8 +6,8 @@ const BackButton: ButtonInterface[] = [
 		back_button_id: 1,
 		label: "Back",
 		languages_id: {
-			name: "English",
-			lang_code: "en-US",
+			name: "English - Canada",
+			lang_code: "en-CA",
 		},
 	},
 	{
@@ -15,7 +15,7 @@ const BackButton: ButtonInterface[] = [
 		back_button_id: 1,
 		label: "Volver",
 		languages_id: {
-			name: "Spanish",
+			name: "Spanish - Spain",
 			lang_code: "es-ES",
 		},
 	},
@@ -24,8 +24,8 @@ const BackButton: ButtonInterface[] = [
 		back_button_id: 1,
 		label: "Retour",
 		languages_id: {
-			name: "French",
-			lang_code: "fr-FR",
+			name: "French - Canada",
+			lang_code: "fr-CA",
 		},
 	},
 ];

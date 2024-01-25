@@ -1,5 +1,5 @@
-import type PageInterface from "../interface/page";
-import type QuestionDropdownInterface from "../interface/question_dropdown";
+import type PageInterface from "interface/page";
+import type QuestionDropdownInterface from "interface/question_dropdown";
 
 function translate(
 	translationArray: PageInterface[] | QuestionDropdownInterface[],

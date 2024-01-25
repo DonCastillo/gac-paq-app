@@ -1,4 +1,4 @@
-import type RegionInterface from "../../interface/region";
+import type RegionInterface from "interface/region";
 
 const Regions: RegionInterface[] = [
 	{

@@ -1,35 +1,27 @@
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import { DefaultStyle } from "../../styles/general";
+import { DefaultStyle } from "styles/general";
 
-interface ButtonContainerWidthProps {
+interface Props {
 	children?: React.ReactNode;
 	onPress?: () => void;
-	borderColor?: string;
-	textColor?: string;
-	bgColor?: string;
+	textStyle?: any;
+	customStyle?: any;
 }
 
-export default function ButtonContainerWidth({
+function ButtonContainerWidth({
 	children,
 	onPress,
-	borderColor,
-	textColor,
-	bgColor,
-}: ButtonContainerWidthProps): React.ReactElement {
+	textStyle,
+	customStyle,
+}: Props): React.ReactElement {
 	return (
 		<View>
 			<Pressable
 				onPress={onPress}
-				style={[
-					style.container,
-					{
-						borderColor,
-						backgroundColor: bgColor,
-					},
-				]}
+				style={[style.container, customStyle]}
 			>
-				<Text style={[style.buttonText, { color: textColor }]}>{children}</Text>
+				<Text style={[style.buttonText, textStyle]}>{children}</Text>
 			</Pressable>
 		</View>
 	);
@@ -52,3 +44,5 @@ const style = StyleSheet.create({
 		lineHeight: DefaultStyle.button.lineHeight,
 	},
 });
+
+export default ButtonContainerWidth;

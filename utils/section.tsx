@@ -1,4 +1,4 @@
-import SectionType from "../constants/section_type";
+import SectionType from "constants/section_type";
 
 function getSectionType(sectionType: string): SectionType {
 	if (sectionType === "intro") {

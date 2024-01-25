@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { SettingContext } from "../store/settings";
-import { getScreen, getScreenType } from "../utils/screen";
-import { getSectionType } from "../utils/section";
-import ScreenType from "../constants/screen_type";
+import { SettingContext } from "store/settings";
+import { getScreen, getScreenType } from "utils/screen";
+import { getSectionType } from "utils/section";
+import ScreenType from "constants/screen_type";
 
 export default function RegularPageScreen(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -15,7 +15,8 @@ export default function RegularPageScreen(): React.ReactElement {
 		let tempComponent = <></>;
 
 		if (currentPageNumber === 0) {
-			tempComponent = getScreen(mode, ScreenType.Language);
+			settingCtx.nextPage();
+			// tempComponent = getScreen(mode, ScreenType.Language);
 		} else {
 			if (pageType !== null && sectionType !== null) {
 				tempComponent = getScreen(mode, pageType, sectionType);
@@ -29,9 +30,15 @@ export default function RegularPageScreen(): React.ReactElement {
 	}
 
 	useEffect(() => {
+		console.log("---------");
+		console.log("CURRENT PAGE NUMBER: ", currentPageNumber);
+		console.log("MODE: ", mode);
+		console.log("PAGE TYPE: ", pageType);
+		console.log("SECTION TYPE ", sectionType);
+		console.log("mode changed ...");
 		changeComponent();
 		changeColor();
-	}, [currentPageNumber, currentPage]);
+	}, [currentPageNumber, currentPage, mode]);
 
 	return <>{component}</>;
 }

@@ -1,8 +1,7 @@
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { GeneralStyle } from "../../../styles/general";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import { GeneralStyle } from "styles/general";
 import React, { useContext, useEffect, useState } from "react";
-import { SettingContext } from "../../../store/settings";
-import { Svg } from "react-native-svg";
+import { SettingContext } from "store/settings";
 
 interface RadioOptionPropsInterface {
 	label: string;
@@ -23,8 +22,8 @@ export default function RadioOption({
 	const { color100 } = settingCtx.settingState.colorTheme;
 	const [optionValue, setOptionValue] = useState<string>(value);
 
-	console.log("option value: ", value);
-	console.log("option optionValue: ", optionValue);
+	// console.log("option value: ", value);
+	// console.log("option optionValue: ", optionValue);
 
 	function pressHandler(): void {
 		if (selected) {
@@ -65,6 +64,7 @@ const styles = StyleSheet.create({
 		...GeneralStyle.adult.optionContainer,
 		alignItems: "center",
 		flexDirection: "row",
+		width: "100%",
 	},
 	radioButton: {
 		height: 25,

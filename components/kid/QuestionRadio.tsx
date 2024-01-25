@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { GeneralStyle } from "../../styles/general";
-import { SettingContext } from "../../store/settings";
-import type { OptionInterface } from "../../utils/options";
+import { GeneralStyle } from "styles/general";
+import { SettingContext } from "store/settings";
+import type { OptionInterface } from "utils/options";
 
 interface QuestionRadioPropsInterface {
 	options: OptionInterface[];
@@ -28,7 +28,6 @@ export default function QuestionRadio({
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
-		borderColor: color100,
 	};
 
 	function selectHandler(value: string): void {
@@ -52,6 +51,7 @@ export default function QuestionRadio({
 								<Pressable
 									style={[
 										styles.optionContainer,
+										{ borderColor: color100 },
 										selected === item.value ? optionPressedStyle : styles.optionUnpressed,
 									]}
 									onPress={() => {
@@ -93,8 +93,7 @@ const styles = StyleSheet.create({
 		fontSize: GeneralStyle.kid.field.fontSize,
 	},
 	optionUnpressed: {
-		backgroundColor: "#fff",
-		borderColor: "#000",
+		backgroundColor: "#FFF",
 	},
 	textPressed: {
 		color: "#fff",

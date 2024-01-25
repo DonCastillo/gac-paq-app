@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Images } from "../../../../styles/images";
-import AbsoluteFullScreenContainer from "../AbsoluteFullScreenContainer";
+import Images from "styles/images/index";
+import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
 export default function BackgroundOne(): React.ReactElement {
-	const CarrotWhole = Images.kid.background_image_5;
-	const CarrotBite = Images.kid.background_image_6;
+	const CarrotWhole = Images.kids.graphics.background_image_5;
+	const CarrotBite = Images.kids.graphics.background_image_6;
 	return (
 		<AbsoluteFullScreenContainer>
 			<CarrotWhole

@@ -1,4 +1,5 @@
-import type ButtonInterface from "../interface/button";
+import type ButtonInterface from "interface/button";
+import type PhraseInterface from "interface/phrase";
 
 function translateButton(buttons: ButtonInterface[], langCode: string | null): string | null {
 	if (langCode === null || langCode === undefined || langCode === "") return null;
@@ -14,6 +15,23 @@ function translateButton(buttons: ButtonInterface[], langCode: string | null): s
 		return null;
 	} else {
 		return translatedButton?.label;
+	}
+}
+
+function translatePhrase(phrases: PhraseInterface[], langCode: string | null): string | null {
+	if (langCode === null || langCode === undefined || langCode === "") return null;
+	if (phrases.length === 0) return null;
+
+	const translatedPhrase = phrases.find((phrase: PhraseInterface) => {
+		const phraseLanguage = phrase?.languages_id?.lang_code?.toLowerCase();
+		const langCodeLowercase = langCode?.toLowerCase();
+		return phraseLanguage === langCodeLowercase;
+	});
+
+	if (translatedPhrase === undefined || translatedPhrase === null) {
+		return null;
+	} else {
+		return translatedPhrase?.label;
 	}
 }
 
@@ -35,4 +53,4 @@ function intToString(value: number | null): string {
 	return value.toString();
 }
 
-export { translateButton, stringToInt, intToString };
+export { translateButton, translatePhrase, stringToInt, intToString };

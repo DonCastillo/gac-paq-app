@@ -1,10 +1,11 @@
 import React, { createContext, useReducer } from "react";
-import Mode from "../constants/mode";
-import Colors from "./data/colors";
-import { getPage } from "../utils/page";
-import type ScreenType from "../constants/screen_type";
-import type SectionType from "../constants/section_type";
-import ButtonLabel from "../constants/button_label";
+import Mode from "constants/mode";
+import Colors from "store/data/colors";
+import { getPage } from "utils/page";
+import type ScreenType from "constants/screen_type";
+import type SectionType from "constants/section_type";
+import ButtonLabel from "constants/button_label";
+import PhraseLabel from "constants/phrase_label";
 
 /**
  * by default the app should be set as:
@@ -26,6 +27,14 @@ interface buttonInterface {
 	go: string;
 	next: string;
 	started: string;
+}
+
+interface phraseInterface {
+	agreement: string;
+	done: string;
+	dontKnow: string;
+	introduction: string;
+	tryAgain: string;
 }
 
 const defaultPage: pageInterface = {
@@ -50,34 +59,59 @@ const defaultButton: buttonInterface = {
 	started: ButtonLabel.Started,
 };
 
-const DEFAULT_MODE = Mode.Kid;
+const defaultPhrase: phraseInterface = {
+	agreement: PhraseLabel.Agreement,
+	done: PhraseLabel.Done,
+	dontKnow: PhraseLabel.DontKnow,
+	introduction: PhraseLabel.Introduction,
+	tryAgain: PhraseLabel.TryAgain,
+};
+
+const DEFAULT_MODE = undefined;
+// const DEFAULT_MODE = Mode.Kid;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
 const INITIAL_STATE = {
 	mode: DEFAULT_MODE,
-	language: "en-US",
+	language: "en-CA",
 	directusAccessToken: "kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5",
 	directusBaseEndpoint: "http://localhost:8055",
 	currentPageNumber: 0,
 	currentPage: defaultPage,
 	nextPage: defaultPage,
 	buttons: defaultButton,
+	phrases: defaultPhrase,
 	totalPage: null,
 	colorTheme: {
-		color100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
-		color200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200,
-		grad100: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad100,
-		grad200: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad200,
-		grad300: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad300,
-		grad400: Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad400,
+		color100:
+			DEFAULT_MODE === undefined ? "#E09F57" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color100,
+		color200:
+			DEFAULT_MODE === undefined ? "#E09F57" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].color200,
+		grad100:
+			DEFAULT_MODE === undefined ? "#FBD183" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad100,
+		grad200:
+			DEFAULT_MODE === undefined ? "#F66966" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad200,
+		grad300:
+			DEFAULT_MODE === undefined ? "#D3688A" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad300,
+		grad400:
+			DEFAULT_MODE === undefined ? "#B36EB4" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad400,
 	},
 	pages: [],
 };
 
+// {
+// 	color100: "#E09F57",
+// 	color200: "#E09F57",
+// 	grad100: "#FBD183",
+// 	grad200: "#F66966",
+// 	grad300: "#D3688A",
+// 	grad400: "#B36EB4",
+// },
+
 export const SettingContext = createContext({
 	settingState: INITIAL_STATE,
-	setMode: (newMode: Mode.Adult | Mode.Kid) => {},
+	setMode: (newMode: Mode.Adult | Mode.Kid | undefined) => {},
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
 	setColorTheme: (colorIndex: number) => {},
@@ -86,7 +120,9 @@ export const SettingContext = createContext({
 	addPage: (obj: pageInterface) => {},
 	initializeNextPage: () => {},
 	initializeCurrentPage: () => {},
+	setCurrentPage: (pageNumber: number) => {},
 	translateButtons: (obj: buttonInterface) => {},
+	translatePhrases: (obj: phraseInterface) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -107,6 +143,19 @@ function settingReducer(state: any, action: any): any {
 				directusAccessToken: action.payload,
 			};
 		case "SET_COLOR_THEME": {
+			if (state.mode === undefined) {
+				return {
+					...state,
+					colorTheme: {
+						color100: "#E09F57",
+						color200: "#E09F57",
+						grad100: "#FBD183",
+						grad200: "#F66966",
+						grad300: "#D3688A",
+						grad400: "#B36EB4",
+					},
+				};
+			}
 			const newColor = Colors[state.mode][action.payload % TOTAL_COLORS];
 			return {
 				...state,
@@ -159,10 +208,25 @@ function settingReducer(state: any, action: any): any {
 				nextPage,
 			};
 		}
+		case "SET_CURRENT_PAGE": {
+			let finalPageNumber = state.currentPageNumber;
+			if (action.payload <= 0) finalPageNumber = 0;
+			else if (action.payload > state.pages.length) finalPageNumber = state.pages.length;
+			else finalPageNumber = action.payload;
+			return {
+				...state,
+				currentPageNumber: finalPageNumber,
+			};
+		}
 		case "SET_BUTTONS":
 			return {
 				...state,
 				buttons: action.payload,
+			};
+		case "SET_PHRASES":
+			return {
+				...state,
+				phrases: action.payload,
 			};
 		default:
 			return state;
@@ -190,6 +254,9 @@ export default function SettingContextProvider({
 		});
 		dispatch({
 			type: "SET_BUTTONS",
+		});
+		dispatch({
+			type: "SET_PHRASES",
 		});
 	}
 
@@ -238,9 +305,26 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function setCurrentPage(pageNumber: number): void {
+		dispatch({
+			type: "SET_CURRENT_PAGE",
+			payload: pageNumber,
+		});
+		dispatch({
+			type: "INITIALIZE_CURRENT_PAGE",
+		});
+	}
+
 	function translateButtons(obj: buttonInterface): void {
 		dispatch({
 			type: "SET_BUTTONS",
+			payload: obj,
+		});
+	}
+
+	function translatePhrases(obj: phraseInterface): void {
+		dispatch({
+			type: "SET_PHRASES",
 			payload: obj,
 		});
 	}
@@ -256,7 +340,9 @@ export default function SettingContextProvider({
 		addPage,
 		initializeNextPage,
 		initializeCurrentPage,
+		setCurrentPage,
 		translateButtons,
+		translatePhrases,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

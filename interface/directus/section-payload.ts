@@ -1,5 +1,5 @@
-import type ScreenType from "../../constants/screen_type";
-import type SectionInterface from "../section";
+import type ScreenType from "constants/screen_type";
+import type SectionInterface from "interface/section";
 
 export default interface SectionPayloadInterface {
 	heading?: string | null;

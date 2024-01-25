@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type QuestionRadioPayloadInterface from "../../../../interface/directus/question-radio-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S1Q4: QuestionRadioPayloadInterface = {
 	name: "Question 4: How long are your physical education classes?",
@@ -33,8 +33,8 @@ const S1Q4: QuestionRadioPayloadInterface = {
 				},
 			],
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -65,7 +65,7 @@ const S1Q4: QuestionRadioPayloadInterface = {
 				},
 			],
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -97,8 +97,8 @@ const S1Q4: QuestionRadioPayloadInterface = {
 				},
 			],
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

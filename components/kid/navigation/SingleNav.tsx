@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import FullWidthButton from "../../buttons/FullWidthButton";
-import { SettingContext } from "../../../store/settings";
+import FullWidthButton from "components/buttons/FullWidthButton";
+import { SettingContext } from "store/settings";
 
 SingleNav.propTypes = {
 	label: PropTypes.string,

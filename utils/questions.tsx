@@ -1,23 +1,29 @@
-import Mode from "../constants/mode";
-import QuestionType from "../constants/question_type";
-import QuestionDropdownInterface from "../interface/question_dropdown";
+import Mode from "constants/mode";
+import QuestionType from "constants/question_type";
 
-function getQuestionType(questionPage: {}) {
-	if (questionPage.hasOwnProperty("question_dropdown_id")) {
+function getQuestionType(questionPage: any): QuestionType {
+	if (Object.prototype.hasOwnProperty.call(questionPage, "question_dropdown_id") === true) {
 		return QuestionType.QuestionDropdown;
-	} else if (questionPage.hasOwnProperty("question_text_id")) {
+	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_text_id") === true) {
 		return QuestionType.QuestionText;
-	} else if (questionPage.hasOwnProperty("question_slider_id")) {
+	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_input_id") === true) {
+		return QuestionType.QuestionInput;
+	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_slider_id") === true) {
 		return QuestionType.QuestionSlider;
-	} else if (questionPage.hasOwnProperty("question_radio_id")) {
+	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_radio_id") === true) {
 		return QuestionType.QuestionRadio;
-	} else if (questionPage.hasOwnProperty("question_checkbox_id")) {
+	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_checkbox_id") === true) {
 		return QuestionType.QuestionCheckbox;
-	} else if (questionPage.hasOwnProperty("question_radio_image_id")) {
+	} else if (
+		Object.prototype.hasOwnProperty.call(questionPage, "question_radio_image_id") === true
+	) {
 		return QuestionType.QuestionRadioImage;
-	} else if (questionPage.hasOwnProperty("region_question_dropdown_id")) {
+	} else if (
+		Object.prototype.hasOwnProperty.call(questionPage, "region_question_dropdown_id") === true
+	) {
 		return QuestionType.QuestionRegion;
 	} else {
+		return QuestionType.QuestionInput;
 	}
 }
 

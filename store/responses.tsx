@@ -1,14 +1,16 @@
 import React, { createContext, useReducer } from "react";
-import type ResponseInterface from "../interface/response";
+import type ResponseInterface from "interface/response";
 
 interface ResponseContextInterface {
 	responses: Record<string, ResponseInterface>;
 	addResponse: (response: ResponseInterface) => void;
+	resetResponses: () => void;
 }
 
 export const ResponseContext = createContext<ResponseContextInterface>({
 	responses: {},
 	addResponse: (response: ResponseInterface) => {},
+	resetResponses: () => {},
 });
 
 function responseReducer(state: any, action: any): any {
@@ -23,6 +25,9 @@ function responseReducer(state: any, action: any): any {
 				...state,
 				[action.payload.label]: newResponse,
 			};
+		}
+		case "RESET_RESPONSES": {
+			return {};
 		}
 		default:
 			return state;
@@ -43,9 +48,16 @@ export default function ResponseContextProvider({
 		});
 	}
 
+	function resetResponses(): void {
+		dispatch({
+			type: "RESET_RESPONSES",
+		});
+	}
+
 	const value: any = {
 		responses,
 		addResponse,
+		resetResponses,
 	};
 
 	return <ResponseContext.Provider value={value}>{children}</ResponseContext.Provider>;

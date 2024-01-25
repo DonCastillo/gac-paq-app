@@ -1,7 +1,7 @@
 import { Pressable, SafeAreaView, StyleSheet, View } from "react-native";
 import { Icon } from "@rneui/themed";
 import React, { useContext } from "react";
-import { SettingContext } from "../../store/settings";
+import { SettingContext } from "store/settings";
 
 const ICON_SIZE = 30;
 
@@ -18,33 +18,15 @@ export default function Toolbar(): React.ReactElement {
 	}
 
 	return (
-		<SafeAreaView style={styles.safearea}>
-			<View style={styles.container}>
-				<Pressable
-					style={styles.button}
-					onPress={backHandler}
-				>
-					<Icon
-						name="west"
-						size={ICON_SIZE}
-						color={"#fff"}
-						containerStyle={styles.icon}
-					/>
-				</Pressable>
-
-				<Pressable
-					style={styles.button}
-					onPress={audioHandler}
-				>
-					<Icon
-						name="volume-up"
-						size={ICON_SIZE}
-						color={"#fff"}
-						containerStyle={styles.icon}
-					/>
-				</Pressable>
-			</View>
-		</SafeAreaView>
+		<View style={styles.container}>
+			<Icon
+				name="volume-up"
+				size={ICON_SIZE}
+				color={"#fff"}
+				containerStyle={styles.icon}
+				onPress={audioHandler}
+			/>
+		</View>
 	);
 }
 
@@ -52,16 +34,16 @@ const styles = StyleSheet.create({
 	container: {
 		paddingVertical: 10,
 		paddingHorizontal: 20,
-		justifyContent: "space-between",
+		justifyContent: "flex-end",
 		alignItems: "center",
 		flexDirection: "row",
 	},
 	safearea: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		right: 0,
-		zIndex: 99,
+		// position: "absolute",
+		// top: 0,
+		// left: 0,
+		// right: 0,
+		// zIndex: 99,
 	},
 	icon: {},
 	button: {

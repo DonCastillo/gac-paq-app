@@ -1,63 +1,48 @@
-import type QuestionTextPayloadInterface from "../../../interface/directus/question-text-payload";
-import QuestionField from "../../../constants/question_field";
-import ScreenType from "../../../constants/screen_type";
+import QuestionField from "constants/question_field";
+import ScreenType from "constants/screen_type";
+import type QuestionInputPayloadInterface from "interface/directus/question-input-payload";
 
-const AccelerometerPage: QuestionTextPayloadInterface = {
-	name: "What is your Accelerometer Serial Number?",
+const AccelerometerPage: QuestionInputPayloadInterface = {
+	name: "Please enter your Accelerometer ID",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 5,
-			question_text_id: 5,
-			heading: "What is your Accelerometer Serial Number?",
-			label: "What is your Accelerometer Serial Number?",
-			fields: [
-				{
-					type: QuestionField.QuestionFieldText,
-					label: "Serial number",
-					name: "Serial number",
-				},
-			],
+			question_input_id: 5,
+			heading: "Please enter your Accelerometer ID",
+			label: "Please enter your Accelerometer ID",
+			placeholder: "Accelerometer ID Serial Number",
+			type: "text",
 			sort: null,
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
-			id: 6,
-			question_text_id: 5,
-			heading: "¿Cuál es el número de serie de tu acelerómetro?",
-			label: "¿Cuál es el número de serie de tu acelerómetro?",
-			fields: [
-				{
-					type: QuestionField.QuestionFieldText,
-					label: "Número de serie",
-					name: "Serial number",
-				},
-			],
+			id: 5,
+			question_input_id: 5,
+			heading: "Por favor, ingrese su ID de acelerómetro.",
+			label: "Por favor, ingrese su ID de acelerómetro.",
+			placeholder: "Número de serie del ID del acelerómetro.",
+			type: "text",
 			sort: null,
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
 		{
-			id: 7,
-			question_text_id: 5,
-			heading: "Quel est le numéro de série de votre accéléromètre ?",
-			label: "Quel est le numéro de série de votre accéléromètre ?",
-			fields: [
-				{
-					type: QuestionField.QuestionFieldText,
-					label: "Numéro de série",
-					name: "Serial number",
-				},
-			],
+			id: 5,
+			question_input_id: 5,
+			heading: "Veuillez saisir votre ID d'accéléromètre.",
+			label: "Veuillez saisir votre ID d'accéléromètre.",
+			placeholder: "Numéro de série de l'ID de l'accéléromètre.",
+			type: "text",
 			sort: null,
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

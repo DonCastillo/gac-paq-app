@@ -1,5 +1,5 @@
-import ScreenType from "../../../../constants/screen_type";
-import type QuestionSliderPayloadInterface from "../../../../interface/directus/question-slider-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionSliderPayloadInterface from "interface/directus/question-slider-payload";
 
 const S1Q3: QuestionSliderPayloadInterface = {
 	name: "Question 3: How many physical education classes did you have in the past week?",
@@ -11,8 +11,8 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			heading: "Question 3",
 			label: "How many physical education classes did you have in the past week?",
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -21,7 +21,7 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			heading: "Pregunta 3",
 			label: "¿Cuántas clases de educación física tuviste la semana pasada?",
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -31,8 +31,8 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			heading: "Question 3",
 			label: "Combien de cours d'éducation physique avez-vous eu la semaine dernière ?",
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

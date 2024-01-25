@@ -1,4 +1,4 @@
-import type ColorInterface from "../../interface/color";
+import type ColorInterface from "interface/color";
 
 const kidColor: ColorInterface[] = [
 	{
@@ -42,11 +42,11 @@ const kidColor: ColorInterface[] = [
 const adultColor: ColorInterface[] = [
 	{
 		color100: "#E09F57",
-		color200: "#FF7512",
-		grad100: "#E09F57",
-		grad200: "#FF7512",
-		grad300: "#F15C16",
-		grad400: "#D84F0F",
+		color200: "#E09F57",
+		grad100: "#FBD183",
+		grad200: "#F77F30",
+		grad300: "#F5552C",
+		grad400: "#CB5B5A",
 	},
 	{
 		color100: "#A6E771",

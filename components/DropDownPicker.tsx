@@ -1,11 +1,11 @@
 import { StyleSheet, Text } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
-import { SettingContext } from "../store/settings";
-import type QuestionRadioItemInterface from "../interface/question_radio_item";
+import { SettingContext } from "store/settings";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
 
 const FONT_SIZE = 16;
-const BORDER_WIDTH = 2;
+const BORDER_WIDTH = 3;
 
 interface DropDownSelectorPropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -21,7 +21,7 @@ export default function DropDownSelector({
 	dropdownMinHeight = 280,
 }: DropDownSelectorPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage } = settingCtx.settingState;
+	const { colorTheme, currentPageNumber } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [open, setOpen] = useState<boolean>(false);
 	const [value, setValue] = useState<string | null>(selectedValue);
@@ -31,13 +31,13 @@ export default function DropDownSelector({
 		if (items !== options) {
 			setItems(options);
 		}
-	}, [currentPage]);
+	}, [currentPageNumber]);
 
 	useEffect(() => {
 		if (value !== selectedValue) {
 			setValue(selectedValue);
 		}
-	}, [currentPage, selectedValue]);
+	}, [currentPageNumber, selectedValue]);
 
 	return (
 		<>

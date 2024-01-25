@@ -1,5 +1,5 @@
-import ScreenType from "../../../constants/screen_type";
-import type QuestionDropdownPayloadInterface from "../../../interface/directus/question-dropdown-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 
 const LocationPage: QuestionDropdownPayloadInterface = {
 	name: "Where are you?",
@@ -11,8 +11,8 @@ const LocationPage: QuestionDropdownPayloadInterface = {
 			heading: "Where are you?",
 			label: "Where are you?",
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -21,7 +21,7 @@ const LocationPage: QuestionDropdownPayloadInterface = {
 			heading: "¿Dónde estás?",
 			label: "¿Dónde estás?",
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -31,8 +31,8 @@ const LocationPage: QuestionDropdownPayloadInterface = {
 			heading: "Où es-tu?",
 			label: "Où es-tu?",
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],

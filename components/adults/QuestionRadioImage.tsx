@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { GeneralStyle } from "../../styles/general";
-import { SettingContext } from "../../store/settings";
-import type QuestionRadioItemInterface from "../../interface/question_radio_item";
+import { GeneralStyle } from "styles/general";
+import { SettingContext } from "store/settings";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -24,6 +24,12 @@ export default function QuestionRadioImage({
 		backgroundColor: color100,
 	};
 
+	useEffect(() => {
+		if (selected !== selectedValue) {
+			setSelected(selectedValue);
+		}
+	}, [currentPage, selectedValue]);
+
 	function selectHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
 			setSelected(value);
@@ -33,12 +39,6 @@ export default function QuestionRadioImage({
 			onChange(null);
 		}
 	}
-
-	useEffect(() => {
-		if (selected !== selectedValue) {
-			setSelected(selectedValue);
-		}
-	}, [currentPage, selectedValue]);
 
 	function renderImage(image: string, image_default: any): React.ReactElement {
 		let ImageComponent = <></>;

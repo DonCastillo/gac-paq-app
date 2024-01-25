@@ -1,5 +1,5 @@
-import ScreenType from "../../../constants/screen_type";
-import type QuestionDropdownPayloadInterface from "../../../interface/directus/question-dropdown-payload";
+import ScreenType from "constants/screen_type";
+import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 
 const AgePage: QuestionDropdownPayloadInterface = {
 	name: "Who's taking this questionnaire?",
@@ -12,8 +12,12 @@ const AgePage: QuestionDropdownPayloadInterface = {
 			label: "Who's taking this questionnaire?",
 			choices: [
 				{
-					text: "Child / Teen",
+					text: "Child",
 					value: "child",
+				},
+				{
+					text: "Teen",
+					value: "teen",
 				},
 				{
 					text: "Parent",
@@ -21,8 +25,8 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			],
 			languages_id: {
-				name: "English",
-				lang_code: "en-US",
+				name: "English - Canada",
+				lang_code: "en-CA",
 			},
 		},
 		{
@@ -32,8 +36,12 @@ const AgePage: QuestionDropdownPayloadInterface = {
 			label: "¿Quién está contestando este cuestionario?",
 			choices: [
 				{
-					text: "Niño / Adolescente",
+					text: "Niño",
 					value: "child",
+				},
+				{
+					text: "Adolescente",
+					value: "teen",
 				},
 				{
 					text: "Padre / Madre",
@@ -41,7 +49,7 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			],
 			languages_id: {
-				name: "Spanish",
+				name: "Spanish - Spain",
 				lang_code: "es-ES",
 			},
 		},
@@ -52,8 +60,12 @@ const AgePage: QuestionDropdownPayloadInterface = {
 			label: "Qui remplit ce questionnaire ?",
 			choices: [
 				{
-					text: "Enfant / Adolescent",
+					text: "Enfant",
 					value: "child",
+				},
+				{
+					text: "Adolescent",
+					value: "teen",
 				},
 				{
 					text: "Parent",
@@ -61,8 +73,8 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			],
 			languages_id: {
-				name: "French",
-				lang_code: "fr-FR",
+				name: "French - Canada",
+				lang_code: "fr-CA",
 			},
 		},
 	],
