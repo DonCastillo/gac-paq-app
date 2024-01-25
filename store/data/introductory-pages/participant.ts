@@ -1,5 +1,6 @@
 import ScreenType from "constants/screen_type";
 import type QuestionInputPayloadInterface from "interface/directus/question-input-payload";
+import Images from "styles/images";
 
 const ParticipantIDPage: QuestionInputPayloadInterface = {
 	name: "Please enter your Participant ID",
@@ -17,33 +18,43 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 				name: "English - Canada",
 				lang_code: "en-CA",
 			},
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant
+				},
+				adult: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant
+				}
+			}
 		},
-		{
-			id: 5,
-			question_input_id: 5,
-			heading: "Por favor, ingrese su ID de participante.",
-			label: "Por favor, ingrese su ID de participante.",
-			placeholder: "Número de serie del ID del participante.",
-			type: "text",
-			sort: null,
-			languages_id: {
-				name: "Spanish - Spain",
-				lang_code: "es-ES",
-			},
-		},
-		{
-			id: 5,
-			question_input_id: 5,
-			heading: "Veuillez saisir votre ID de participant.",
-			label: "Veuillez saisir votre ID de participant.",
-			placeholder: "Número de serie del ID del participante.",
-			type: "text",
-			sort: null,
-			languages_id: {
-				name: "French - Canada",
-				lang_code: "fr-CA",
-			},
-		},
+		// {
+		// 	id: 5,
+		// 	question_input_id: 5,
+		// 	heading: "Por favor, ingrese su ID de participante.",
+		// 	label: "Por favor, ingrese su ID de participante.",
+		// 	placeholder: "Número de serie del ID del participante.",
+		// 	type: "text",
+		// 	sort: null,
+		// 	languages_id: {
+		// 		name: "Spanish - Spain",
+		// 		lang_code: "es-ES",
+		// 	},
+		// },
+		// {
+		// 	id: 5,
+		// 	question_input_id: 5,
+		// 	heading: "Veuillez saisir votre ID de participant.",
+		// 	label: "Veuillez saisir votre ID de participant.",
+		// 	placeholder: "Número de serie del ID del participante.",
+		// 	type: "text",
+		// 	sort: null,
+		// 	languages_id: {
+		// 		name: "French - Canada",
+		// 		lang_code: "fr-CA",
+		// 	},
+		// },
 	],
 };
 

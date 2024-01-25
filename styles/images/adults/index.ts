@@ -3,8 +3,8 @@ import Section from "styles/images/adults/section";
 import Extro from "styles/images/adults/extro";
 
 const AdultImages = {
+	graphics: Graphics,
 	section: Section,
 	extro: Extro,
-	graphics: Graphics,
 };
 export default AdultImages;

@@ -3,8 +3,8 @@ import Doodles from "styles/images/kids/doodles";
 import Section from "styles/images/kids/section";
 
 const KidImages = {
-	doodles: Doodles,
 	graphics: Graphics,
 	section: Section,
+	doodles: Doodles
 };
 export default KidImages;
