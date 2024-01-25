@@ -63,6 +63,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionRadio
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
@@ -73,6 +74,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}
