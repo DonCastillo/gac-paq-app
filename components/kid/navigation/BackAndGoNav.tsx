@@ -1,50 +1,57 @@
-import { View, Text, StyleSheet } from "react-native";
-import ButtonContainerWidth from "../../buttons/ButtonContainerWidth";
-import { SettingContext } from "../../../store/settings";
-import { useContext } from "react";
+import { View, StyleSheet } from "react-native";
+import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
+import { SettingContext } from "store/settings";
+import React, { useContext } from "react";
 
-export default function BackAndGoNav() {
-    const settingCtx = useContext(SettingContext);
-    const { colorTheme, buttons } = settingCtx.settingState;
-    const { color100, color200 } = colorTheme;
+export default function BackAndGoNav(): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
+	const { colorTheme, buttons } = settingCtx.settingState;
+	const { color100 } = colorTheme;
 
-    function prevPage() {
-        settingCtx.prevPage();
-    }
+	function prevPage(): void {
+		settingCtx.prevPage();
+	}
 
-    function nextPage() {
-        settingCtx.nextPage();
-    }
+	function nextPage(): void {
+		settingCtx.nextPage();
+	}
 
-    return (
-        <View style={styles.bottomNavigation}>
-            <ButtonContainerWidth
-                onPress={prevPage}
-                borderColor={color100}
-                bgColor={"#fff"}
-                textColor={color100}
-            >
-                {buttons?.back}
-            </ButtonContainerWidth>
+	return (
+		<View style={styles.bottomNavigation}>
+			<ButtonContainerWidth
+				onPress={prevPage}
+				customStyle={{
+					borderColor: color100,
+					backgroundColor: "#fff",
+				}}
+				textStyle={{
+					color: color100,
+				}}
+			>
+				{buttons?.back}
+			</ButtonContainerWidth>
 
-            <ButtonContainerWidth
-                onPress={nextPage}
-                borderColor={color100}
-                bgColor={color100}
-                textColor={"#fff"}
-            >
-                {buttons?.next}
-            </ButtonContainerWidth>
-        </View>
-    );
+			<ButtonContainerWidth
+				onPress={nextPage}
+				customStyle={{
+					borderColor: color100,
+					backgroundColor: color100,
+				}}
+				textStyle={{
+					color: "#fff",
+				}}
+			>
+				{buttons?.next}
+			</ButtonContainerWidth>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    bottomNavigation: {
-        width: "100%",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-        // backgroundColor: "pink",
-    },
+	bottomNavigation: {
+		width: "100%",
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between",
+	},
 });

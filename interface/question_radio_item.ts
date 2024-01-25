@@ -1,9 +1,8 @@
-import { ReactElement } from "react";
-import { Image } from "react-native";
-import { Svg } from "react-native-svg";
+import { type ReactElement } from "react";
+import { type Image } from "react-native";
 
 export default interface QuestionRadioItemInterface {
-    label: string;
-    value: string;
-    icon?: ReactElement<Image> | SVGElement;
+	label: string;
+	value: string;
+	icon?: ReactElement<Image> | SVGElement | any;
 }

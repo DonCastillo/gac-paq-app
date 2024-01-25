@@ -1,10 +1,10 @@
-import LanguageInterface from "./language";
+import type LanguageInterface from "interface/language";
 
 export default interface ExtroInterface {
-    id?: string | number | null,
-    extro_section_id?: string | number | null,    
-    heading: string;
-    subheading: string | null;
-    image: string | null;
-    languages_id?: LanguageInterface | {}
-};
+	id?: string | number;
+	extro_section_id?: string | number;
+	heading: string;
+	subheading: string | null;
+	image: string | null;
+	languages_id?: LanguageInterface | null;
+}

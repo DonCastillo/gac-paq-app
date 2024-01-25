@@ -1,45 +1,42 @@
-import ScreenType from "../../../constants/screen_type";
-import PagePayloadInterface from "../../../interface/directus/page-payload";
+import ScreenType from "constants/screen_type";
+import type PagePayloadInterface from "interface/directus/page-payload";
 
 const GreatJobPage: PagePayloadInterface = {
-    title: "Great Job",
-    name: "Great Job",
-    type: ScreenType.Page,
-    translations: [
-        {
-            id: 7,
-            pages_id: 3,
-            heading: "Great Job",
-            button_text: "Let's get started",
-            description: null,
-            languages_id: {
-                name: "English",
-                lang_code: "en-US",
-            },
-        },
-        {
-            id: 8,
-            pages_id: 3,
-            heading: " ¡Excelente trabajo!",
-            button_text: "¡Comencemos!",
-            description: null,
-            languages_id: {
-                name: "Spanish",
-                lang_code: "es-ES",
-            },
-        },
-        {
-            id: 9,
-            pages_id: 3,
-            heading: "Excellent travail",
-            button_text: "Commençons!",
-            description: null,
-            languages_id: {
-                name: "French",
-                lang_code: "fr-FR",
-            },
-        },
-    ],
+	title: "Great Job",
+	name: "Great Job",
+	type: ScreenType.Page,
+	translations: [
+		{
+			id: 7,
+			pages_id: 3,
+			heading: "Great Job",
+			description: null,
+			languages_id: {
+				name: "English - Canada",
+				lang_code: "en-CA",
+			},
+		},
+		{
+			id: 8,
+			pages_id: 3,
+			heading: " ¡Excelente trabajo!",
+			description: null,
+			languages_id: {
+				name: "Spanish - Spain",
+				lang_code: "es-ES",
+			},
+		},
+		{
+			id: 9,
+			pages_id: 3,
+			heading: "Excellent travail",
+			description: null,
+			languages_id: {
+				name: "French - Canada",
+				lang_code: "fr-CA",
+			},
+		},
+	],
 };
 
 export default GreatJobPage;

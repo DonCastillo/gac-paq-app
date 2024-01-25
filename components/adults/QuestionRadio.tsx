@@ -1,28 +1,52 @@
 import { FlatList } from "react-native";
-import QuestionRadioItemInterface from "../../interface/question_radio_item";
-import RadioOption from "./item/RadioOption";
-import { useState } from "react";
+import RadioOption from "components/adults/item/RadioOption";
+import React, { useContext, useEffect, useState } from "react";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
+import { SettingContext } from "store/settings";
 
-export default function QuestionRadio({ options, onSelect }) {
-    const [selectedValue, setSelectedValue] =  useState(null)
+interface QuestionRadioPropsInterface {
+	options: QuestionRadioItemInterface[];
+	onSelect: (value: string | null) => void;
+	selectedValue: string | null;
+}
 
-    function pressHandler(value: string) {
-        setSelectedValue(value);
-        onSelect(value);
-    }
+export default function QuestionRadio({
+	options,
+	onSelect,
+	selectedValue,
+}: QuestionRadioPropsInterface): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
+	const { currentPage } = settingCtx.settingState;
+	const [value, setValue] = useState<string | null>(selectedValue);
 
-    return (
-        <FlatList
-            data={options}
-            renderItem={({ item }) => (
-                <RadioOption
-                    {...item}
-                    onPress={pressHandler}
-                    selected={item.value === selectedValue}
-                />
-            )}
-            persistentScrollbar={true}
-            showsVerticalScrollIndicator={true}
-        />
-    );
+	function pressHandler(value: string | null): void {
+		if (value !== "" && value !== null && value !== undefined) {
+			setValue(value);
+			onSelect(value);
+		} else {
+			setValue(null);
+			onSelect(null);
+		}
+	}
+
+	useEffect(() => {
+		if (value !== selectedValue) {
+			setValue(selectedValue);
+		}
+	}, [currentPage, selectedValue]);
+
+	return (
+		<FlatList
+			data={options}
+			renderItem={({ item }) => (
+				<RadioOption
+					{...item}
+					onPress={pressHandler}
+					selected={item.value === value}
+				/>
+			)}
+			persistentScrollbar={true}
+			showsVerticalScrollIndicator={true}
+		/>
+	);
 }

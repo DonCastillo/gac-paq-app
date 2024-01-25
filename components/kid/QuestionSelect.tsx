@@ -1,16 +1,26 @@
-import QuestionRadioItemInterface from "../../interface/question_radio_item";
-import DropDownSelector from "../DropDownPicker";
+import React from "react";
+import type QuestionRadioItemInterface from "interface/question_radio_item";
+import DropDownSelector from "components/DropDownPicker";
+import { optionText } from "utils/options";
+import type { OptionInterface } from "utils/options";
 
-export default function QuestionSelect({ options, onChange }) {
-    const rawItems: QuestionRadioItemInterface[] = options.map((option) => {
-        return { label: option.text, value: option.value };
-    });
+interface QuestionSelectPropsInterface {
+	options: OptionInterface[];
+	onChange: (value: string) => void;
+	selectedValue: string | null;
+}
 
-    return (
-        <DropDownSelector
-            options={rawItems}
-            selectedValue={""}
-            onSelect={onChange}
-        />
-    );
+export default function QuestionSelect({
+	options,
+	onChange,
+	selectedValue,
+}: QuestionSelectPropsInterface): React.ReactElement {
+	const rawItems: QuestionRadioItemInterface[] = optionText(options);
+	return (
+		<DropDownSelector
+			options={rawItems}
+			selectedValue={selectedValue}
+			onSelect={onChange}
+		/>
+	);
 }

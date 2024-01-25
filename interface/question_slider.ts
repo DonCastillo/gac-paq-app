@@ -1,10 +1,9 @@
-import LanguageInterface from "./language";
-
+import type LanguageInterface from "interface/language";
 
 export default interface QuestionSliderInterface {
-    id?: string | number | null,
-    question_slider_id?: string | number | null,
-    heading: string;
-    label: string;
-    languages_id?: LanguageInterface;
+	id?: string | number;
+	question_slider_id?: string | number;
+	heading: string;
+	label: string;
+	languages_id?: LanguageInterface | null;
 }

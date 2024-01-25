@@ -1,18 +1,18 @@
-import LanguageInterface from "./language";
-import QuestionField from "../constants/question_field";
+import type LanguageInterface from "interface/language";
+import type QuestionField from "constants/question_field";
 
 interface Field {
-    type: QuestionField.QuestionFieldText | QuestionField.QuestionFieldNumber;
-    label: string;
-    name: string;
+	type: QuestionField.QuestionFieldText | QuestionField.QuestionFieldNumber;
+	label: string;
+	name: string;
 }
 
 export default interface QuestionTextInterface {
-    id?: string | number | null,
-    question_text_id?: string | number | null,
-    sort?: number | null,
-    heading: string;
-    label: string;
-    fields: Field[];
-    languages_id?: LanguageInterface;
+	id?: string | number;
+	question_text_id?: string | number;
+	sort?: number | null;
+	heading: string;
+	label: string;
+	fields: Field[];
+	languages_id?: LanguageInterface | null;
 }
