@@ -40,7 +40,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (currentPageNumber > 1) {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"bothCurrentPage"}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}
@@ -61,7 +61,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (selectedValue !== null) {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"bothSelectedValue"}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
 					onNext={() => settingCtx.nextPage()}

@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import type Mode from "constants/mode";
+import Mode from "constants/mode";
 import Colors from "store/data/colors";
 import { getPage } from "utils/page";
 import type ScreenType from "constants/screen_type";
@@ -68,7 +68,7 @@ const defaultPhrase: phraseInterface = {
 };
 
 const DEFAULT_MODE = undefined;
-// const DEFAULT_MODE = Mode.Adult;
+// const DEFAULT_MODE = Mode.Kid;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 

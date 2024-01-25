@@ -22,12 +22,12 @@ const IntroductoryPages:
 	  >
 	| [] = [
 	LanguagePage,
-	AgePage,
 	WelcomePage,
 	AboutPage,
 	ConfidentialityPage,
 	ParticipantIDPage,
 	AccelerometerPage,
+	AgePage,
 	DemographicPage,
 ];
 
