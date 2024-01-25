@@ -20,6 +20,6 @@ const IntroductoryPages:
 			| QuestionTextPayloadInterface
 			| SingleCheckboxPayloadInterface
 	  >
-	| [] = [LanguagePage, AboutPage, ParticipantIDPage, AccelerometerPage, AgePage, DemographicPage];
+	| [] = [LanguagePage, AboutPage, ParticipantIDPage, AgePage, DemographicPage];
 
 export default IntroductoryPages;

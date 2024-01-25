@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -15,6 +15,7 @@ import BGLinearGradient from "components/BGLinearGradient";
 import { translate } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
+import ImageBackdrop from "components/ImageBackdrop";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -92,11 +93,10 @@ export default function GenericLanguage(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
-			<ImageBackground
+			<ImageBackdrop
 				source={translatedPage?.images?.adult?.phone}
-				resizeMode="cover"
-				style={styles.bgImage}
-			></ImageBackground>
+				key={currentPageNumber}
+			/>
 			<Main>
 				<CenterMain>
 					<QuestionContainer>
@@ -127,12 +127,5 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
-	},
-	bgImage: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		height: "100%",
-		width: "100%",
 	},
 });

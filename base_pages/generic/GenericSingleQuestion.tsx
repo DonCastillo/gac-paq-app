@@ -18,6 +18,7 @@ import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionInput from "components/adults/QuestionInput";
 import Mode from "constants/mode";
+import ImageBackdrop from "components/ImageBackdrop";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -87,6 +88,10 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
+			<ImageBackdrop
+				source={translatedPage?.images?.adult?.phone}
+				key={currentPageNumber}
+			/>
 			<Main>
 				<Toolbar />
 				<CenterMain>
