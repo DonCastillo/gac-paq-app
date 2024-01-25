@@ -18,13 +18,13 @@ const LanguagePage: QuestionDropdownPayloadInterface = {
 			images: {
 				kid: {
 					phone: Images.generic.pages.phone.language,
-					tablet: Images.generic.pages.tablet.language
+					tablet: Images.generic.pages.tablet.language,
 				},
 				adult: {
 					phone: Images.generic.pages.phone.language,
-					tablet: Images.generic.pages.tablet.language
-				}
-			}
+					tablet: Images.generic.pages.tablet.language,
+				},
+			},
 		},
 		// {
 		// 	id: 2,

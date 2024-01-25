@@ -11,5 +11,5 @@ export default interface QuestionInputInterface {
 	placeholder: string;
 	type: "text" | "number";
 	languages_id?: LanguageInterface | null;
-	images?: ImageInterface
+	images?: ImageInterface;
 }

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { ImageBackground, StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -92,6 +92,11 @@ export default function GenericLanguage(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
+			<ImageBackground
+				source={translatedPage?.images?.adult?.phone}
+				resizeMode="cover"
+				style={styles.bgImage}
+			></ImageBackground>
 			<Main>
 				<CenterMain>
 					<QuestionContainer>
@@ -122,5 +127,12 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
+	},
+	bgImage: {
+		position: "absolute",
+		top: 0,
+		left: 0,
+		height: "100%",
+		width: "100%",
 	},
 });

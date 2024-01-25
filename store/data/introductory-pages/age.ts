@@ -32,13 +32,13 @@ const AgePage: QuestionDropdownPayloadInterface = {
 			images: {
 				kid: {
 					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode
+					tablet: Images.generic.pages.tablet.mode,
 				},
 				adult: {
 					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode
-				}
-			}
+					tablet: Images.generic.pages.tablet.mode,
+				},
+			},
 		},
 		// {
 		// 	id: 5,

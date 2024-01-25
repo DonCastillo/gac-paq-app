@@ -7,5 +7,5 @@ export default interface QuestionDropdownLanguageInterface {
 	heading: string;
 	label: string;
 	languages_id?: LanguageInterface | null;
-	images?: ImageInterface
+	images?: ImageInterface;
 }

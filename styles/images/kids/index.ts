@@ -5,6 +5,6 @@ import Section from "styles/images/kids/section";
 const KidImages = {
 	graphics: Graphics,
 	section: Section,
-	doodles: Doodles
+	doodles: Doodles,
 };
 export default KidImages;

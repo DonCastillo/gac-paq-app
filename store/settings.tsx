@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import Mode from "constants/mode";
+import type Mode from "constants/mode";
 import Colors from "store/data/colors";
 import { getPage } from "utils/page";
 import type ScreenType from "constants/screen_type";
