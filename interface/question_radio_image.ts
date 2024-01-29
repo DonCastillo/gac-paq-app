@@ -6,10 +6,7 @@ interface Choice {
 		sort?: number | null;
 		text: string;
 		value: string;
-		image_kid: string | null;
-		image_adult: string | null;
-		image_kid_default?: string;
-		image_adult_default?: string;
+		image: string;
 	};
 }
 

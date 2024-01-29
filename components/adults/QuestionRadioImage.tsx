@@ -16,7 +16,7 @@ export default function QuestionRadioImage({
 	selectedValue,
 }: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage } = settingCtx.settingState;
+	const { colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 
@@ -40,43 +40,34 @@ export default function QuestionRadioImage({
 		}
 	}
 
-	function renderImage(image: string, image_default: any): React.ReactElement {
+	function renderImage(image: string): React.ReactElement {
 		let ImageComponent = <></>;
-		if (image !== "") {
-			const url = `http://localhost:8055/assets/${image}?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5`;
-			ImageComponent = (
-				<Image
-					style={styles.optionImage}
-					source={{ uri: url }}
-					resizeMode="cover"
-				/>
-			);
-		} else {
-			ImageComponent = (
-				<Image
-					style={styles.optionImage}
-					source={image_default.uri}
-					resizeMode="cover"
-				/>
-			);
-		}
-
+		ImageComponent = (
+			<Image
+				style={styles.optionImage}
+				source={image}
+				resizeMode="cover"
+			/>
+		);
 		return ImageComponent;
 	}
 
 	function renderOption({ item }): React.ReactElement {
-		const { image_adult, image_adult_default, text, value } = item.image_choices_id;
+		const { image, text, value } = item.image_choices_id;
 
 		return (
 			<Pressable
-				style={styles.optionContainer}
+				style={[
+					styles.optionContainer,
+					selected === value && { borderColor: color100, borderWidth: 1 },
+				]}
 				onPress={() => {
 					selectHandler(value);
 				}}
 			>
 				<View style={styles.optionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
-					{renderImage(image_adult, image_adult_default)}
+					{renderImage(image)}
 				</View>
 				<View style={styles.optionTextContainer}>
 					<Text>{text}</Text>
@@ -93,6 +84,7 @@ export default function QuestionRadioImage({
 					data={options}
 					renderItem={renderOption}
 					numColumns={2}
+					key={currentPageNumber}
 				/>
 			</View>
 		</SafeAreaView>
@@ -109,7 +101,7 @@ const styles = StyleSheet.create({
 		left: 0,
 		width: "100%",
 		height: "100%",
-		opacity: 0.55,
+		opacity: 0.75,
 		zIndex: 1,
 	},
 	optionImageContainer: {
