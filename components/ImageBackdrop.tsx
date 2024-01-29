@@ -3,13 +3,14 @@ import { ImageBackground, StyleSheet } from "react-native";
 
 interface Props {
 	source: any;
+	opacity?: number;
 }
-export default function ImageBackdrop({ source }: Props): React.ReactElement {
+export default function ImageBackdrop({ source, opacity }: Props): React.ReactElement {
 	return (
 		<ImageBackground
 			source={source}
 			resizeMode="cover"
-			style={styles.bgImage}
+			style={[styles.bgImage, { opacity: opacity ?? 1 }]}
 		></ImageBackground>
 	);
 }
