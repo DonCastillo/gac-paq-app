@@ -6,6 +6,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Main from "components/Main";
 import BottomMain from "components/orientation/BottomMain";
 import Navigation from "components/Navigation";
+import ImageBackdrop from "components/ImageBackdrop";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -36,17 +37,12 @@ export default function QuestionIntroKid(): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-	const image = {
-		uri: currentPage.page.image_mobile,
-	};
-
 	return (
 		<View style={styles.container}>
-			<ImageBackground
-				source={image}
-				resizeMode="cover"
-				style={styles.image}
-			></ImageBackground>
+			<ImageBackdrop
+				source={translatedPage?.images?.kid?.phone}
+				key={currentPageNumber}
+			/>
 			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
 				<ScrollView>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
