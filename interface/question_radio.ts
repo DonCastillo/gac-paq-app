@@ -10,6 +10,8 @@ export default interface QuestionRadioInterface {
 	question_radio_id?: string | number;
 	heading: string;
 	label: string;
+	adult_label: string;
+	kid_label: string;
 	choices: Choice[];
 	languages_id?: LanguageInterface | null;
 }

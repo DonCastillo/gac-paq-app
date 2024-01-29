@@ -17,7 +17,7 @@ const Extro = {
     },
     section_5: {
         phone: require("assets/images/adult/section5/phone-adult-extro.png"),
-        tablet: require("assets/images/adult/section5/tablet-adult-extro.png"),
+        tablet: require("assets/images/adult/section5/tablet-adult-extro.jpg"),
     },
     section_6: {
         phone: require("assets/images/adult/section6/phone-adult-extro.png"),

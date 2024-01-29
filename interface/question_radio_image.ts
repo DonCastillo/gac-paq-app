@@ -18,6 +18,8 @@ export default interface QuestionRadioImageInterface {
 	question_radio_image_id?: string | number;
 	heading: string;
 	label: string;
+	kid_label: string;
+	adult_label: string;
 	choices: Choice[];
 	languages_id?: LanguageInterface | null;
 }

@@ -10,6 +10,8 @@ const S1Q1: QuestionRadioPayloadInterface = {
 			question_radio_id: 3,
 			heading: "Question 1",
 			label: "Did you attend school in the past week?",
+			kid_label: "Did you attend school in the past week?",
+			adult_label: "Did your child attend school in the past week?",
 			choices: [
 				{
 					text: "Yes",
@@ -23,48 +25,8 @@ const S1Q1: QuestionRadioPayloadInterface = {
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
-			},
-		},
-		{
-			id: 38,
-			question_radio_id: 3,
-			heading: "Pregunta 1",
-			label: "¿Asististe a la escuela la semana pasada?",
-			choices: [
-				{
-					text: "Sí",
-					value: "yes",
-				},
-				{
-					text: "No",
-					value: "no",
-				},
-			],
-			languages_id: {
-				name: "Spanish - Spain",
-				lang_code: "es-ES",
-			},
-		},
-		{
-			id: 39,
-			question_radio_id: 3,
-			heading: "Question 1",
-			label: "Avez-vous fréquenté l'école la semaine dernière ?",
-			choices: [
-				{
-					text: "Oui",
-					value: "yes",
-				},
-				{
-					text: "Non",
-					value: "no",
-				},
-			],
-			languages_id: {
-				name: "French - Canada",
-				lang_code: "fr-CA",
-			},
-		},
+			}
+		}
 	],
 };
 

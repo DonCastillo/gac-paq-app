@@ -1,158 +1,40 @@
 import ScreenType from "constants/screen_type";
-import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
-import Images from "styles/images/index";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
-const S2Q3: QuestionRadioImagePayloadInterface = {
-	name: "Question 10: Which of the following shows what you do most of the time while volunteering and/or working?",
+const S2Q3: QuestionRadioPayloadInterface = {
+	name: "Question 10: On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 7,
-			question_radio_image_id: 3,
-			label:
-				"Which of the following shows what you do most of the time while volunteering and/or working? ",
+			question_radio_id: 3,
+			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			heading: "Question 10",
 			choices: [
 				{
-					image_choices_id: {
-						id: 19,
-						sort: null,
-						text: "Mostly not moving",
-						value: "0.1",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_not_moving,
-						image_adult_default: Images.adults.graphics.mostly_not_moving,
-					},
+					text: "15 minutes or less per day",
+					value: "15 minutes or less per day",
 				},
 				{
-					image_choices_id: {
-						id: 20,
-						sort: null,
-						text: "Mostly easy effort",
-						value: "0.3",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_easy_effort,
-						image_adult_default: Images.adults.graphics.mostly_easy_effort,
-					},
+					text: "16-30 minutes per day",
+					value: "16-30 minutes per day",
 				},
 				{
-					image_choices_id: {
-						id: 21,
-						sort: null,
-						text: "Mostly medium or hard effort",
-						value: "0.5",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_medium,
-						image_adult_default: Images.adults.graphics.mostly_medium,
-					},
+					text: "31-60 minutes per day",
+					value: "31-60 minutes per day",
+				},
+				{
+					text: "Over 60 minutes per day",
+					value: "Over 60 minutes per day",
 				},
 			],
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
 			},
-		},
-		{
-			id: 8,
-			question_radio_image_id: 3,
-			label:
-				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras haces voluntariado y/o trabajas?",
-			heading: "Pregunta 10",
-			choices: [
-				{
-					image_choices_id: {
-						id: 22,
-						sort: null,
-						text: "Principalmente sin actividad física",
-						value: "0.1",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_not_moving,
-						image_adult_default: Images.adults.graphics.mostly_not_moving,
-					},
-				},
-				{
-					image_choices_id: {
-						id: 23,
-						sort: null,
-						text: "Principalmente esfuerzo suave",
-						value: "0.3",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_easy_effort,
-						image_adult_default: Images.adults.graphics.mostly_easy_effort,
-					},
-				},
-				{
-					image_choices_id: {
-						id: 24,
-						sort: null,
-						text: "Principalmente esfuerzo medio o fuerte",
-						value: "0.5",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_medium,
-						image_adult_default: Images.adults.graphics.mostly_medium,
-					},
-				},
-			],
-			languages_id: {
-				name: "Spanish - Spain",
-				lang_code: "es-ES",
-			},
-		},
-		{
-			id: 9,
-			question_radio_image_id: 3,
-			label:
-				"Laquelle des options suivantes montre ce que vous faites la plupart du temps pendant que vous faites du bénévolat et/ou travaillez ?",
-			heading: "Question 10",
-			choices: [
-				{
-					image_choices_id: {
-						id: 25,
-						sort: null,
-						text: "Principalement sans bouger",
-						value: "0.1",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_not_moving,
-						image_adult_default: Images.adults.graphics.mostly_not_moving,
-					},
-				},
-				{
-					image_choices_id: {
-						id: 26,
-						sort: null,
-						text: "Principalement faible effort",
-						value: "0.3",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_easy_effort,
-						image_adult_default: Images.adults.graphics.mostly_easy_effort,
-					},
-				},
-				{
-					image_choices_id: {
-						id: 27,
-						sort: null,
-						text: "Principalement effort moyen ou intense",
-						value: "0.5",
-						image_kid: "30ae2e6a-ef8f-43f3-a32e-1040410d16e3",
-						image_adult: "607b231c-f6d0-439d-8b0a-a8e873457ed9",
-						image_kid_default: Images.kids.graphics.mostly_medium,
-						image_adult_default: Images.adults.graphics.mostly_medium,
-					},
-				},
-			],
-			languages_id: {
-				name: "French - Canada",
-				lang_code: "fr-CA",
-			},
-		},
+		}
 	],
 };
 

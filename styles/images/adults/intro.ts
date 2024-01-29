@@ -1,7 +1,7 @@
 const Intro = {
     section_1: {
         phone: require("assets/images/adult/section1/phone-adult-intro.png"),
-        tablet: require("assets/images/adult/section1/tablet-adult-intro.png"),
+        tablet: require("assets/images/adult/section1/tablet-adult-intro.jpg"),
     },
     section_2: {
         phone: require("assets/images/adult/section2/phone-adult-intro.png"),
@@ -24,7 +24,7 @@ const Intro = {
         tablet: require("assets/images/adult/section6/tablet-adult-intro.png"),
     },
     section_7: {
-        phone: require("assets/images/adult/section7/phone-adult-intro.png"),
+        phone: require("assets/images/adult/section7/phone-adult-intro.jpg"),
         tablet: require("assets/images/adult/section7/tablet-adult-intro.png"),
     }
 };
