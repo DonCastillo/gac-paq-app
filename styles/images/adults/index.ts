@@ -1,10 +1,10 @@
 import Graphics from "styles/images/adults/graphics";
-import Section from "styles/images/adults/section";
+import Intro from "styles/images/adults/intro";
 import Extro from "styles/images/adults/extro";
 
 const AdultImages = {
 	graphics: Graphics,
-	section: Section,
+	intro: Intro,
 	extro: Extro,
 };
 export default AdultImages;
