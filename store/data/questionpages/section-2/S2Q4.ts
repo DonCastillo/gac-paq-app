@@ -2,7 +2,6 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
 import Images from "styles/images";
 
-
 const S2Q4: QuestionRadioImagePayloadInterface = {
 	name: "Question 11:	Which of the following images shows what you do most of the time during your chores?",
 	type: ScreenType.SingleQuestion,
@@ -10,9 +9,12 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 		{
 			id: 7,
 			question_radio_image_id: 3,
-			label: "Which of the following images shows what you do most of the time during your chores? ",
-			kid_label: "Which of the following images shows what you do most of the time during your chores? ",
-			adult_label: "Which of the following images resembles what your child does most of the time during their chores?",
+			label:
+				"Which of the following images shows what you do most of the time during your chores? ",
+			kid_label:
+				"Which of the following images shows what you do most of the time during your chores? ",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time during their chores?",
 			heading: "Question 11",
 			choices: [
 				{
@@ -56,7 +58,7 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 				name: "English - Canada",
 				lang_code: "en-CA",
 			},
-		}
+		},
 	],
 };
 

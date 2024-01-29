@@ -39,7 +39,7 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					tablet: Images.generic.pages.tablet.mode,
 				},
 			},
-		}
+		},
 	],
 };
 

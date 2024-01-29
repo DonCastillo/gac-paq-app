@@ -25,8 +25,8 @@ const S1Q1: QuestionRadioPayloadInterface = {
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
-			}
-		}
+			},
+		},
 	],
 };
 

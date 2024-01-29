@@ -10,8 +10,10 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 			id: 4,
 			question_radio_image_id: 2,
 			label: "Which of the following images shows what you do most of the time during your breaks?",
-			kid_label: "Which of the following images shows what you do most of the time during your breaks? ",
-			adult_label: "Which of the following images resembles what your child does most of the time during their breaks?",
+			kid_label:
+				"Which of the following images shows what you do most of the time during your breaks? ",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time during their breaks?",
 			heading: "Question 7",
 			choices: [
 				{
@@ -55,7 +57,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				name: "English - Canada",
 				lang_code: "en-CA",
 			},
-		}
+		},
 	],
 };
 

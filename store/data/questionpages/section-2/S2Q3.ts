@@ -8,9 +8,12 @@ const S2Q3: QuestionRadioPayloadInterface = {
 		{
 			id: 7,
 			question_radio_id: 3,
-			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			label:
+				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label:
+				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label:
+				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			heading: "Question 10",
 			choices: [
 				{
@@ -34,7 +37,7 @@ const S2Q3: QuestionRadioPayloadInterface = {
 				name: "English - Canada",
 				lang_code: "en-CA",
 			},
-		}
+		},
 	],
 };
 

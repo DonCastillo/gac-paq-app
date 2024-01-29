@@ -16,7 +16,7 @@ const S1Q3: QuestionSliderPayloadInterface = {
 				name: "English - Canada",
 				lang_code: "en-CA",
 			},
-		}
+		},
 	],
 };
 

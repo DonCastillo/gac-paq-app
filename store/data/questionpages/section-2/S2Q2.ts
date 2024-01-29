@@ -46,7 +46,7 @@ const S2Q2: QuestionRadioPayloadInterface = {
 				name: "English - Canada",
 				lang_code: "en-CA",
 			},
-		}
+		},
 	],
 };
 

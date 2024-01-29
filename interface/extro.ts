@@ -7,5 +7,5 @@ export default interface ExtroInterface {
 	heading: string;
 	subheading: string | null;
 	languages_id?: LanguageInterface | null;
-	images?: ImageInterface
+	images?: ImageInterface;
 }

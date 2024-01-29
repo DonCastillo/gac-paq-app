@@ -1,4 +1,4 @@
-import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
