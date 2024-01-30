@@ -33,11 +33,17 @@ import S4Q7 from "./questionpages/section-4/S4Q7";
 import S4Q8 from "./questionpages/section-4/S4Q8";
 import S4Q9 from "./questionpages/section-4/S4Q9";
 import S4Extro from "./questionpages/section-4/S4Extro";
+import S5Intro from "./questionpages/section-5/S5Intro";
+import S5Extro from "./questionpages/section-5/S5Extro";
+import S5Q1 from "./questionpages/section-5/S5Q1";
+import S5Q2 from "./questionpages/section-5/S5Q2";
+import S5Q3 from "./questionpages/section-5/S5Q3";
 
 const Section1 = [S1Intro, S1Q1, S1Q2, S1Q3, S1Q4, S1Q5, S1Q6, S1Q7, S1Extro];
 const Section2 = [S2Intro, S2Q1, S2Q2, S2Q3, S2Q4, S2Extro];
 const Section3 = [S3Intro, S3Q1, S3Q2, S3Q3, S3Extro];
 const Section4 = [S4Intro, S4Q1, S4Q2, S4Q3, S4Q4, S4Q5, S4Q6, S4Q7, S4Q8, S4Q9, S4Extro];
+const Section5 = [S5Intro, S5Q1, S5Q2, S5Q3, S5Extro]
 
 const QuestionPages:
 	| Array<
@@ -46,6 +52,6 @@ const QuestionPages:
 			| QuestionSliderPayloadInterface
 			| ExtroPayloadInterface
 	  >
-	| [] = [...Section4, ...Section1, ...Section2, ...Section3];
+	| [] = [...Section4, ...Section5, ...Section1, ...Section2, ...Section3];
 
 export default QuestionPages;
