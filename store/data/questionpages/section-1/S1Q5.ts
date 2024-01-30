@@ -43,16 +43,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 						value: "0.5",
 						image: Images.general.options.physical_education.medium_effort,
 					},
-				},
-				{
-					image_choices_id: {
-						id: 4,
-						sort: null,
-						text: "Mostly medium or hard effort",
-						value: "0.6",
-						image: Images.general.options.physical_education.medium_effort,
-					},
-				},
+				}
 			],
 			languages_id: {
 				name: "English - Canada",

@@ -17,11 +17,27 @@ import S2Q2 from "store/data/questionpages/section-2/S2Q2";
 import S2Q3 from "store/data/questionpages/section-2/S2Q3";
 import S2Extro from "store/data/questionpages/section-2/S2Extro";
 import S2Q4 from "./questionpages/section-2/S2Q4";
+import S3Intro from "./questionpages/section-3/S3Intro";
+import S3Extro from "./questionpages/section-3/S3Extro";
+import S3Q1 from "./questionpages/section-3/S3Q1";
+import S3Q3 from "./questionpages/section-3/S3Q3";
+import S3Q2 from "./questionpages/section-3/S3Q2";
+import S4Intro from "./questionpages/section-4/S4Intro";
+import S4Q1 from "./questionpages/section-4/S4Q1";
+import S4Q2 from "./questionpages/section-4/S4Q2";
+import S4Q3 from "./questionpages/section-4/S4Q3";
+import S4Q4 from "./questionpages/section-4/S4Q4";
+import S4Q5 from "./questionpages/section-4/S4Q5";
+import S4Q6 from "./questionpages/section-4/S4Q6";
+import S4Q7 from "./questionpages/section-4/S4Q7";
+import S4Q8 from "./questionpages/section-4/S4Q8";
+import S4Q9 from "./questionpages/section-4/S4Q9";
+import S4Extro from "./questionpages/section-4/S4Extro";
 
 const Section1 = [S1Intro, S1Q1, S1Q2, S1Q3, S1Q4, S1Q5, S1Q6, S1Q7, S1Extro];
 const Section2 = [S2Intro, S2Q1, S2Q2, S2Q3, S2Q4, S2Extro];
-const Section3 = [S2Intro, S2Q1, S2Q2, S2Q3, S2Extro];
-const Section4 = [S2Intro, S2Q1, S2Q2, S2Q3, S2Extro];
+const Section3 = [S3Intro, S3Q1, S3Q2, S3Q3, S3Extro];
+const Section4 = [S4Intro, S4Q1, S4Q2, S4Q3, S4Q4, S4Q5, S4Q6, S4Q7, S4Q8, S4Q9, S4Extro];
 
 const QuestionPages:
 	| Array<
@@ -30,6 +46,6 @@ const QuestionPages:
 			| QuestionSliderPayloadInterface
 			| ExtroPayloadInterface
 	  >
-	| [] = [...Section1, ...Section2];
+	| [] = [...Section4, ...Section1, ...Section2, ...Section3];
 
 export default QuestionPages;
