@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -25,8 +25,13 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
@@ -102,7 +107,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage?.label}
+							{questionLabel}
 						</QuestionLabel>
 						{questionType === QuestionType.QuestionInput &&
 							Object.prototype.hasOwnProperty.call(translatedPage, "sublabel") === true &&

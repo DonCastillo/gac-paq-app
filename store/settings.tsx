@@ -68,7 +68,7 @@ const defaultPhrase: phraseInterface = {
 };
 
 const DEFAULT_MODE = undefined;
-// const DEFAULT_MODE = Mode.Kid;
+// const DEFAULT_MODE = Mode.Adult;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 

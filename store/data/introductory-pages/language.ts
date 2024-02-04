@@ -11,6 +11,8 @@ const LanguagePage: QuestionDropdownPayloadInterface = {
 			heading: "What language do you speak & Where are you?",
 			language_question_dropdown_id: 1,
 			label: "What language do you speak & Where are you?",
+			kid_label: "What language do you speak & Where are you?",
+			adult_label: "What language do you speak & Where are you?",
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
@@ -26,26 +28,6 @@ const LanguagePage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
-		// {
-		// 	id: 2,
-		// 	heading: "¿Qué idioma hablas y dónde estás?",
-		// 	language_question_dropdown_id: 1,
-		// 	label: "¿Qué idioma hablas y dónde estás?",
-		// 	languages_id: {
-		// 		name: "Spanish - Spain",
-		// 		lang_code: "es-ES",
-		// 	},
-		// },
-		// {
-		// 	id: 3,
-		// 	heading: "Quelle langue parles-tu et où es-tu ?",
-		// 	language_question_dropdown_id: 1,
-		// 	label: "Quelle langue parles-tu et où es-tu ?",
-		// 	languages_id: {
-		// 		name: "French - Canada",
-		// 		lang_code: "fr-CA",
-		// 	},
-		// },
 	],
 };
 

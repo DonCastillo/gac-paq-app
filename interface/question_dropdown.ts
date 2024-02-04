@@ -11,6 +11,8 @@ export default interface QuestionDropdownInterface {
 	question_dropdown_id?: string | number;
 	heading: string;
 	label: string;
+	kid_label: string;
+	adult_label: string;
 	choices: Choice[];
 	languages_id?: LanguageInterface | null;
 	images?: ImageInterface;

@@ -12,7 +12,7 @@ import ButtonLabel from "constants/button_label";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
 import ImageBackdrop from "components/ImageBackdrop";
@@ -22,9 +22,13 @@ export default function GenericLanguage(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-
-	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 
 	const {
 		backButton,
@@ -106,7 +110,7 @@ export default function GenericLanguage(): React.ReactElement {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage?.heading.toLowerCase()}
+							{questionLabel}
 						</QuestionLabel>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}

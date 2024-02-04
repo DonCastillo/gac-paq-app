@@ -2,29 +2,29 @@ import ScreenType from "constants/screen_type";
 import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 import Images from "styles/images";
 
-const AgePage: QuestionDropdownPayloadInterface = {
-	name: "Who's taking this questionnaire?",
+const GenderAdult: QuestionDropdownPayloadInterface = {
+	name: "Gender Adult",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 4,
 			question_dropdown_id: 2,
-			heading: "Who's taking this questionnaire?",
-			label: "Who's taking this questionnaire?",
-			kid_label: "Who's taking this questionnaire?",
-			adult_label: "Who's taking this questionnaire?",
+			heading: "What is your child's sex?",
+			label: "What is your child's sex?",
+			kid_label: "What is your child's sex?",
+			adult_label: "What is your child's sex?",
 			choices: [
 				{
-					text: "Child",
-					value: "child",
+					text: "Female",
+					value: "Female",
 				},
 				{
-					text: "Teen",
-					value: "teen",
+					text: "Male",
+					value: "Male",
 				},
 				{
-					text: "Parent",
-					value: "adult",
+					text: "Prefer not to answer",
+					value: "Prefer not to answer",
 				},
 			],
 			languages_id: {
@@ -45,4 +45,4 @@ const AgePage: QuestionDropdownPayloadInterface = {
 	],
 };
 
-export default AgePage;
+export default GenderAdult;

@@ -11,6 +11,8 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 			question_dropdown_id: 3,
 			heading: "How old are you?",
 			label: "How old are you?",
+			kid_label: "How old are you?",
+			adult_label: "How old are you?",
 			choices: [
 				{
 					text: "Under 10 years old",
@@ -40,54 +42,6 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
-		// {
-		// 	id: 8,
-		// 	question_dropdown_id: 3,
-		// 	heading: "¿Cuántos años tienes?",
-		// 	label: "¿Cuántos años tienes?",
-		// 	choices: [
-		// 		{
-		// 			text: "Menor de 10 años",
-		// 			value: "Under 10 years old",
-		// 		},
-		// 		{
-		// 			text: "10 - 14 años",
-		// 			value: "10 - 14 years old",
-		// 		},
-		// 		{
-		// 			text: "15 - 17 años",
-		// 			value: "15 - 17 years old",
-		// 		},
-		// 	],
-		// 	languages_id: {
-		// 		name: "Spanish - Spain",
-		// 		lang_code: "es-ES",
-		// 	},
-		// },
-		// {
-		// 	id: 9,
-		// 	question_dropdown_id: 3,
-		// 	heading: "Quel âge avez-vous ?",
-		// 	label: "Quel âge avez-vous ?",
-		// 	choices: [
-		// 		{
-		// 			text: "Moins de 10 ans",
-		// 			value: "Under 10 years old",
-		// 		},
-		// 		{
-		// 			text: "10 à 14 ans",
-		// 			value: "10 - 14 years old",
-		// 		},
-		// 		{
-		// 			text: "15 à 17 ans",
-		// 			value: "15 - 17 years old",
-		// 		},
-		// 	],
-		// 	languages_id: {
-		// 		name: "French - Canada",
-		// 		lang_code: "fr-CA",
-		// 	},
-		// },
 	],
 };
 

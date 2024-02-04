@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -27,9 +27,14 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const regionsOptions = questionCtx.questionState.regionOption;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
@@ -152,7 +157,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage?.label}
+							{questionLabel}
 						</QuestionLabel>
 						{questionComponent}
 					</QuestionContainer>

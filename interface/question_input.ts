@@ -7,6 +7,8 @@ export default interface QuestionInputInterface {
 	sort?: number | null;
 	heading: string;
 	label: string;
+	kid_label: string;
+	adult_label: string;
 	sublabel?: string | null;
 	placeholder: string;
 	type: "text" | "number";

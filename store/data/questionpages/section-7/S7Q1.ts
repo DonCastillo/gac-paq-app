@@ -9,10 +9,8 @@ const S7Q1: QuestionRadioPayloadInterface = {
 			id: 10,
 			question_radio_id: 8,
 			heading: "Question 23",
-			label:
-				"In the past week, on a normal day, how much time do you spend outdoors?",
-			kid_label:
-				"In the past week, on a normal day, how much time do you spend outdoors?",
+			label: "In the past week, on a normal day, how much time do you spend outdoors?",
+			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
 			adult_label:
 				"In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [

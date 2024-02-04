@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
@@ -29,9 +29,14 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
@@ -184,7 +189,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 								marginBottom: 10,
 							}}
 						>
-							{translatedPage?.label}
+							{questionLabel}
 						</QuestionLabel>
 						<View style={styles.questionContainer}>{questionComponent}</View>
 					</View>

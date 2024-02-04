@@ -61,6 +61,14 @@ const QuestionPages:
 			| QuestionSliderPayloadInterface
 			| ExtroPayloadInterface
 	  >
-	| [] = [...Section7, ...Section6, ...Section4, ...Section5, ...Section1, ...Section2, ...Section3];
+	| [] = [
+	...Section7,
+	...Section6,
+	...Section4,
+	...Section5,
+	...Section1,
+	...Section2,
+	...Section3,
+];
 
 export default QuestionPages;

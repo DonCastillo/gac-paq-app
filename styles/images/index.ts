@@ -12,7 +12,7 @@ const Images = {
 	general: {
 		error: ErrorSVG,
 		check: CheckSVG,
-		options: OptionImage
+		options: OptionImage,
 	},
 };
 
