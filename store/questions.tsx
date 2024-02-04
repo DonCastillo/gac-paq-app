@@ -21,12 +21,15 @@ import IntroductionPhrase from "store/data/phrase/introduction";
 import TryAgainPhrase from "store/data/phrase/try-again";
 import SuccessPage from "store/data/state-pages/success";
 import ErrorPage from "store/data/state-pages/error";
+import { AdultExtroductoryPages, KidExtroductoryPages } from "./data/extroductory-pages";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
 	languageOption: Languages,
 	introductoryPages: IntroductoryPages,
 	questionPages: QuestionPages,
+	kidExtroPages: KidExtroductoryPages,
+	adultExtroPages: AdultExtroductoryPages,
 	backButton: BackButton,
 	completeButton: CompleteButton,
 	continueButton: ContinueButton,
@@ -47,6 +50,8 @@ export const QuestionContext = createContext({
 		regionOption: [],
 		languageOption: [],
 		introductoryPages: [],
+		kidExtroPages: [],
+		adultExtroPages: [],
 		questionPages: [],
 		backButton: [],
 		completeButton: [],

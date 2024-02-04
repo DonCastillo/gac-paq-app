@@ -1,17 +1,17 @@
 import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
-const ParentEthnicities: QuestionRadioPayloadInterface = {
-	name: "What is your ethnicity?",
+const ChildEthnicities: QuestionRadioPayloadInterface = {
+	name: "What is your child's ethnicity?",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 10,
 			question_radio_id: 8,
 			heading: "Question 23",
-			label: "What is your ethnicity?",
-			kid_label: "What is your ethnicity?",
-			adult_label: "What is your ethnicity?",
+			label: "What is your child's ethnicity?",
+			kid_label: "What is your child's ethnicity?",
+			adult_label: "What is your child's ethnicity?",
 			choices: [
 				{
 					text: "Asian",
@@ -50,4 +50,4 @@ const ParentEthnicities: QuestionRadioPayloadInterface = {
 	],
 };
 
-export default ParentEthnicities;
+export default ChildEthnicities;

@@ -60,6 +60,7 @@ function AppWrapper(): React.ReactElement {
 		let sectionNumber = 0;
 		let sectionPageNumber = 1;
 
+		// load introductory pages
 		console.log("load intro pages...");
 		introductoryPages.forEach((page, sectionIndex) => {
 			settingCtx.addPage({
@@ -72,6 +73,7 @@ function AppWrapper(): React.ReactElement {
 			});
 		});
 
+		// load section question pages
 		console.log("load question and section pages...");
 		questionPages.forEach((page) => {
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
@@ -88,6 +90,8 @@ function AppWrapper(): React.ReactElement {
 				sectionPageNumber: sectionPageNumber++,
 			});
 		});
+
+		//
 	}, []);
 
 	return (

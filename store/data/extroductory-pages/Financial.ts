@@ -1,7 +1,7 @@
 import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
-const Education: QuestionRadioPayloadInterface = {
+const Financial: QuestionRadioPayloadInterface = {
 	name: "How difficult or easy is it for you to meet the financial needs of your family?",
 	type: ScreenType.SingleQuestion,
 	translations: [
@@ -47,4 +47,4 @@ const Education: QuestionRadioPayloadInterface = {
 	],
 };
 
-export default Education;
+export default Financial;
