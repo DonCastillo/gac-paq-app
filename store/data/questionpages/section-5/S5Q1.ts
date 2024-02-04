@@ -20,7 +20,7 @@ const S5Q1: QuestionRadioPayloadInterface = {
 				{
 					text: "No",
 					value: "No",
-				}
+				},
 			],
 			languages_id: {
 				name: "English - Canada",

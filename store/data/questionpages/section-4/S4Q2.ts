@@ -1,7 +1,6 @@
 import ScreenType from "constants/screen_type";
 import type QuestionSliderPayloadInterface from "interface/directus/question-slider-payload";
 
-
 const S4Q2: QuestionSliderPayloadInterface = {
 	name: "Question 15b: How many days did you use this mode in the past week?",
 	type: ScreenType.SingleQuestion,

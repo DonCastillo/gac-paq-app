@@ -11,7 +11,8 @@ const S3Q2: QuestionRadioPayloadInterface = {
 			heading: "Question 13",
 			label: "In the past week, how many hours have you spent volunteering and/or working?",
 			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
-			adult_label: "In the past week, how many hours did your child spent volunteering and/or working?",
+			adult_label:
+				"In the past week, how many hours did your child spent volunteering and/or working?",
 			choices: [
 				{
 					text: "0 hours per week",

@@ -1,7 +1,6 @@
 import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
-
 const S5Q3: QuestionRadioPayloadInterface = {
 	name: "Question 20: On the days that you do these activities during the past week, how long did it usually last?",
 	type: ScreenType.SingleQuestion,
@@ -10,9 +9,12 @@ const S5Q3: QuestionRadioPayloadInterface = {
 			id: 7,
 			question_radio_id: 5,
 			heading: "Question 15c",
-			label: "On the days that you do these activities during the past week, how long did it usually last?",
-			kid_label: "On the days that you do these activities during the past week, how long did it usually last?",
-			adult_label: "On the days that your child did these activities during the past week, how long did it usually last?",
+			label:
+				"On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label:
+				"On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label:
+				"On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
 					text: "30 minutes or less per day",

@@ -22,7 +22,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Mostly not moving",
 						value: "0.1",
-						image: Images.general.options.breaks.not_moving
+						image: Images.general.options.breaks.not_moving,
 					},
 				},
 				{
@@ -31,7 +31,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Mostly easy effort",
 						value: "0.3",
-						image: Images.general.options.breaks.easy_effort
+						image: Images.general.options.breaks.easy_effort,
 					},
 				},
 				{
@@ -40,7 +40,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Mostly medium or hard effort",
 						value: "0.5",
-						image: Images.general.options.breaks.medium_effort
+						image: Images.general.options.breaks.medium_effort,
 					},
 				},
 			],

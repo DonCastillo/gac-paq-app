@@ -21,7 +21,7 @@ const S4Extro: ExtroPayloadInterface = {
 					tablet: Images.adults.extro.section_4.tablet,
 				},
 			},
-		}
+		},
 	],
 };
 

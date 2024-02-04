@@ -10,8 +10,10 @@ const S4Q4: QuestionRadioPayloadInterface = {
 			question_radio_id: 8,
 			heading: "Question 16",
 			label: "How did you go to work in the past week? (Select the mode that you used the most).",
-			kid_label: "How did you go to work in the past week? (Select the mode that you used the most).",
-			adult_label: "How did your child go to work in the past week? (Select the mode that your child used the most).",
+			kid_label:
+				"How did you go to work in the past week? (Select the mode that you used the most).",
+			adult_label:
+				"How did your child go to work in the past week? (Select the mode that your child used the most).",
 			choices: [
 				{
 					text: "Walking",

@@ -9,9 +9,12 @@ const S4Q8: QuestionRadioPayloadInterface = {
 			id: 11,
 			question_radio_id: 9,
 			heading: "Question 13",
-			label: "How many days did you walk [wheel] to places other than school or work in the past week? ",
-			kid_label: "How many days did you walk [wheel] to places other than school or work in the past week? ",
-			adult_label: "How many days did your child walk [wheel] to places other than school or work in the past week?",
+			label:
+				"How many days did you walk [wheel] to places other than school or work in the past week? ",
+			kid_label:
+				"How many days did you walk [wheel] to places other than school or work in the past week? ",
+			adult_label:
+				"How many days did your child walk [wheel] to places other than school or work in the past week?",
 			choices: [
 				{
 					text: "1 Day",
