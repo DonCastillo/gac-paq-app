@@ -23,6 +23,9 @@ function AppWrapper(): React.ReactElement {
 
 	const introductoryPages = questionCtx.questionState.introductoryPages;
 	const questionPages = questionCtx.questionState.questionPages;
+	const kidExtroPages = questionCtx.questionState.kidExtroPages;
+	const adultExtroPages = questionCtx.questionState.adultExtroPages;
+	const feedbackExtroPages = questionCtx.questionState.feedbackExtroPages;
 
 	function SplashScreen(): React.ReactElement {
 		return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;
@@ -91,7 +94,19 @@ function AppWrapper(): React.ReactElement {
 			});
 		});
 
-		//
+		// load extroductory pages (feedback pages exist in both kid and adult mode)
+		sectionNumber++;
+		console.log("load extro pages");
+		feedbackExtroPages.forEach((page) => {
+			settingCtx.addPage({
+				pageNumber: pageNumber++,
+				page,
+				screen: page.type,
+				section: SectionType.Extro,
+				sectionNumber,
+				sectionPageNumber: sectionPageNumber++,
+			});
+		});
 	}, []);
 
 	return (

@@ -15,7 +15,7 @@ export interface pageInterface {
 	screen: ScreenType | null;
 	page: any | null;
 	pageNumber: number | null;
-	section: SectionType.Intro | SectionType.Question | null;
+	section: SectionType.Intro | SectionType.Question | SectionType.Extro | null;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;
 }
