@@ -19,11 +19,13 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionInput from "components/adults/QuestionInput";
 import Mode from "constants/mode";
 import ImageBackdrop from "components/ImageBackdrop";
+import { QuestionContext } from "store/questions";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
+	const questionCtx = useContext(QuestionContext);
 
 	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
@@ -60,8 +62,16 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		if (currentPage.page.name === "Who's taking this questionnaire?") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
+				settingCtx.addExtroPages([
+					...questionCtx.questionState.kidExtroPages,
+					...questionCtx.questionState.feedbackExtroPages,
+				]);
 			} else {
 				settingCtx.setMode(Mode.Adult);
+				settingCtx.addExtroPages([
+					...questionCtx.questionState.adultExtroPages,
+					...questionCtx.questionState.feedbackExtroPages,
+				]);
 			}
 		}
 	}

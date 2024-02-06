@@ -1,16 +1,24 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 import type Mode from "constants/mode";
 import Colors from "store/data/colors";
 import { getPage } from "utils/page";
 import type ScreenType from "constants/screen_type";
-import type SectionType from "constants/section_type";
+import SectionType from "constants/section_type";
 import ButtonLabel from "constants/button_label";
 import PhraseLabel from "constants/phrase_label";
-
+import type SectionPayloadInterface from "interface/directus/section-payload";
+import type ExtroPayloadInterface from "interface/directus/extro-payload";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
 /**
  * by default the app should be set as:
  *      mode: kid,
  */
+type rawPageInterface =
+	| SectionPayloadInterface
+	| ExtroPayloadInterface
+	| QuestionRadioPayloadInterface
+	| QuestionRadioImagePayloadInterface;
 export interface pageInterface {
 	screen: ScreenType | null;
 	page: any | null;
@@ -123,6 +131,8 @@ export const SettingContext = createContext({
 	setCurrentPage: (pageNumber: number) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
+	removeExtroPages: () => {},
+	addExtroPages: (pages: rawPageInterface[]) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -228,6 +238,32 @@ function settingReducer(state: any, action: any): any {
 				...state,
 				phrases: action.payload,
 			};
+		case "REMOVE_EXTRO_PAGES": {
+			const pagesWithoutExtros = state.pages.filter((page: any) => {
+				return page.section !== SectionType.Extro;
+			});
+			return {
+				...state,
+				pages: pagesWithoutExtros,
+			};
+		}
+		case "ADD_EXTRO_PAGES": {
+			const numberOfPages = state.pages.length;
+			const lastPage = state.pages[numberOfPages - 1];
+			let lastPageNumber = lastPage.pageNumber;
+			const lastSectionNumber = lastPage.sectionNumber;
+			const newExtroPages = action.payload.map((page: rawPageInterface, index: number) => {
+				return {
+					pageNumber: ++lastPageNumber,
+					page,
+					screen: page.type,
+					section: SectionType.Extro,
+					sectionNumber: lastSectionNumber + 1,
+					sectionPageNumber: ++index,
+				};
+			});
+			return { ...state, pages: [...state.pages, ...newExtroPages] };
+		}
 		default:
 			return state;
 	}
@@ -329,6 +365,22 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function removeExtroPages(): void {
+		dispatch({
+			type: "REMOVE_EXTRO_PAGES",
+		});
+	}
+
+	function addExtroPages(pages: rawPageInterface[]): void {
+		dispatch({
+			type: "REMOVE_EXTRO_PAGES",
+		});
+		dispatch({
+			type: "ADD_EXTRO_PAGES",
+			payload: pages,
+		});
+	}
+
 	const value: any = {
 		settingState,
 		setMode,
@@ -343,6 +395,8 @@ export default function SettingContextProvider({
 		setCurrentPage,
 		translateButtons,
 		translatePhrases,
+		removeExtroPages,
+		addExtroPages,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

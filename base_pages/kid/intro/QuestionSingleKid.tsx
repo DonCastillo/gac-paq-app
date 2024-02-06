@@ -16,6 +16,7 @@ import { getResponse } from "utils/response";
 import { getIntroductoryBackground } from "utils/background";
 import QuestionInput from "components/kid/QuestionInput";
 import Mode from "constants/mode";
+import { QuestionContext } from "store/questions";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -23,6 +24,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
+	const questionCtx = useContext(QuestionContext);
 
 	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const { color200 } = colorTheme;
@@ -90,6 +92,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
+
 	/**
 	 * temporarily store the initial selection
 	 */
@@ -105,8 +108,16 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (currentPage.page.name === "Who's taking this questionnaire?") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
+				settingCtx.addExtroPages([
+					...questionCtx.questionState.kidExtroPages,
+					...questionCtx.questionState.feedbackExtroPages,
+				]);
 			} else {
 				settingCtx.setMode(Mode.Adult);
+				settingCtx.addExtroPages([
+					...questionCtx.questionState.adultExtroPages,
+					...questionCtx.questionState.feedbackExtroPages,
+				]);
 			}
 		}
 	}
