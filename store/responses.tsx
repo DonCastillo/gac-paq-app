@@ -20,10 +20,20 @@ function responseReducer(state: any, action: any): any {
 				label: action.payload.label,
 				answer: action.payload.answer,
 				pageNumber: action.payload.pageNumber,
+				mode: action.payload.mode,
+				sectionNumber: action.payload.sectionNumber,
+				sectionPageNumber: action.payload.sectionPageNumber,
 			};
+
+			let propertyName = "";
+			if (newResponse.sectionNumber !== null && newResponse.sectionPageNumber !== null) {
+				propertyName = `[${newResponse.mode}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
+			} else {
+				propertyName = `[${newResponse.mode}][${newResponse.label}]`;
+			}
 			return {
 				...state,
-				[action.payload.label]: newResponse,
+				[propertyName]: newResponse,
 			};
 		}
 		case "RESET_RESPONSES": {

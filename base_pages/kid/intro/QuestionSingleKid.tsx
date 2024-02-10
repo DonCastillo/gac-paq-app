@@ -92,7 +92,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-
 	/**
 	 * temporarily store the initial selection
 	 */
