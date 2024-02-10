@@ -77,6 +77,7 @@ export default function GenericLanguage(): React.ReactElement {
 				answer: language,
 				pageNumber: currentPage.pageNumber,
 				mode,
+				section: currentPage.section,
 				sectionNumber: currentPage.sectionNumber,
 				sectionPageNumber: currentPage.sectionPageNumber,
 			});
@@ -91,6 +92,7 @@ export default function GenericLanguage(): React.ReactElement {
 				answer: value,
 				pageNumber: currentPage.pageNumber,
 				mode,
+				section: currentPage.section,
 				sectionNumber: currentPage.sectionNumber,
 				sectionPageNumber: currentPage.sectionPageNumber,
 			});

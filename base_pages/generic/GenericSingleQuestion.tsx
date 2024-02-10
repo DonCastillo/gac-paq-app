@@ -53,6 +53,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				answer: value,
 				pageNumber: currentPage.pageNumber,
 				mode,
+				section: currentPage.section,
 				sectionNumber: currentPage.sectionNumber,
 				sectionPageNumber: currentPage.sectionPageNumber,
 			});
