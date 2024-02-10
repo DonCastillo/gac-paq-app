@@ -49,9 +49,12 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
 			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
 				label: currentPage.page.name,
 				answer: value,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
 			});
 			setSelectedValue(value);
 		} else {
