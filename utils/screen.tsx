@@ -110,6 +110,25 @@ function getScreen(
 		screenType === ScreenType.SingleQuestion
 	)
 		return <QuestionQuestionSingleKid />;
+	// question feedback
+	else if (
+		mode === undefined &&
+		sectionType === SectionType.Feedback &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <QuestionQuestionSingleAdult />;
+	else if (
+		mode === Mode.Adult &&
+		sectionType === SectionType.Feedback &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <QuestionQuestionSingleAdult />;
+	else if (
+		mode === Mode.Kid &&
+		sectionType === SectionType.Feedback &&
+		screenType === ScreenType.SingleQuestion
+	)
+		return <QuestionQuestionSingleKid />;
 	// question section intro
 	else if (mode === undefined && screenType === ScreenType.IntroQuestion)
 		return <QuestionIntroAdult />;

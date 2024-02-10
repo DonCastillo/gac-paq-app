@@ -103,16 +103,12 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		if (currentPage.page.name === "Who's taking this questionnaire?") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
-				settingCtx.addExtroPages([
-					...questionCtx.questionState.kidExtroPages,
-					...questionCtx.questionState.feedbackExtroPages,
-				]);
+				settingCtx.addExtroPages([...questionCtx.questionState.kidExtroPages]);
+				settingCtx.addFeedbackPages([...questionCtx.questionState.feedbackExtroPages]);
 			} else {
 				settingCtx.setMode(Mode.Adult);
-				settingCtx.addExtroPages([
-					...questionCtx.questionState.adultExtroPages,
-					...questionCtx.questionState.feedbackExtroPages,
-				]);
+				settingCtx.addExtroPages([...questionCtx.questionState.adultExtroPages]);
+				settingCtx.addFeedbackPages([...questionCtx.questionState.feedbackExtroPages]);
 			}
 		}
 	}
