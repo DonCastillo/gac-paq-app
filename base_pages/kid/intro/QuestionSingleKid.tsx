@@ -97,9 +97,13 @@ export default function QuestionSingleKid(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
-			pageNumber: currentPage.pageNumber,
 			label: currentPage.page.name,
 			answer: value,
+			pageNumber: currentPage.pageNumber,
+			mode,
+			section: currentPage.section,
+			sectionNumber: currentPage.sectionNumber,
+			sectionPageNumber: currentPage.sectionPageNumber,
 		});
 		setSelectedValue(value);
 

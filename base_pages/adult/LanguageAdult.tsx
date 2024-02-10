@@ -71,9 +71,13 @@ export default function LanguageAdult(): React.ReactElement {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length === 0) {
 			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
 				label: currentPage.page.name,
 				answer: language,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				section: currentPage.section,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
 			});
 		}
 	}, []);
@@ -82,9 +86,13 @@ export default function LanguageAdult(): React.ReactElement {
 		if (value !== "" && value !== null && value !== undefined) {
 			settingCtx.setLanguage(value);
 			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
 				label: currentPage.page.name,
 				answer: value,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				section: currentPage.section,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
 			});
 			setSelectedValue(value);
 		} else {
