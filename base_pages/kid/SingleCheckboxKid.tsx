@@ -17,7 +17,7 @@ import { CheckBox } from "@rneui/themed";
 export default function SingleCheckboxKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [checked, setChecked] = useState(false);
@@ -31,7 +31,13 @@ export default function SingleCheckboxKid(): React.ReactElement {
 	useEffect(() => {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length > 0) {
-			const responseHere = getResponse(currentPageNumber, response);
+			const responseHere = getResponse(
+				mode,
+				currentPage.section,
+				currentPage.sectionNumber,
+				currentPage.sectionPageNumber,
+				response,
+			);
 			if (responseHere === "agree") {
 				setChecked(true);
 			} else {
@@ -42,9 +48,13 @@ export default function SingleCheckboxKid(): React.ReactElement {
 
 	useEffect(() => {
 		responseCtx.addResponse({
-			pageNumber: currentPage.pageNumber,
 			label: currentPage.page.name,
 			answer: checked ? "agree" : "disagree",
+			pageNumber: currentPage.pageNumber,
+			mode,
+			section: currentPage.section,
+			sectionNumber: currentPage.sectionNumber,
+			sectionPageNumber: currentPage.sectionPageNumber,
 		});
 	}, [checked]);
 
