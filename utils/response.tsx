@@ -1,15 +1,27 @@
+import type Mode from "constants/mode";
+import SectionType from "constants/section_type";
 import type ResponseInterface from "interface/response";
 
 function getResponse(
-	pageNumber: number,
+	mode: Mode.Kid | Mode.Adult | undefined,
+	section: string | null,
+	sectionNumber: number | null,
+	sectionPageNumber: number | null,
 	responses: Record<string, ResponseInterface>,
 ): string | null {
-	if (pageNumber < 0) return null;
+	if (section === null) return null;
+	if (sectionNumber === null) return null;
+	if (sectionPageNumber === null) return null;
 	if (Object.keys(responses).length === 0) return null;
 
-	const response = Object.values(responses).find((responseObj: ResponseInterface) => {
-		return responseObj.pageNumber === pageNumber;
-	});
+	let labelLookup = "";
+	if (section === SectionType.Extro) {
+		labelLookup = `[${mode}][${section}][${sectionNumber}][${sectionPageNumber}]`;
+	} else {
+		labelLookup = `[${section}][${sectionNumber}][${sectionPageNumber}]`;
+	}
+
+	const response = responses[labelLookup];
 
 	if (response === undefined || response === null) {
 		return null;

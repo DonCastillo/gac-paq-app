@@ -84,7 +84,15 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	useEffect(() => {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse(currentPageNumber, response));
+			setSelectedValue(
+				getResponse(
+					mode,
+					currentPage.section,
+					currentPage.sectionNumber,
+					currentPage.sectionPageNumber,
+					response,
+				),
+			);
 		}
 	}, [currentPageNumber]);
 
@@ -93,9 +101,13 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
-			pageNumber: currentPage.pageNumber,
 			label: currentPage.page.name,
 			answer: value,
+			pageNumber: currentPage.pageNumber,
+			mode,
+			section: currentPage.section,
+			sectionNumber: currentPage.sectionNumber,
+			sectionPageNumber: currentPage.sectionPageNumber,
 		});
 		setSelectedValue(value);
 
@@ -103,16 +115,16 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		if (currentPage.page.name === "Who's taking this questionnaire?") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
-				settingCtx.addExtroPages([
-					...questionCtx.questionState.kidExtroPages,
-					...questionCtx.questionState.feedbackExtroPages,
-				]);
+				settingCtx.addExtroFeedbackPages(
+					[...questionCtx.questionState.kidExtroPages],
+					[...questionCtx.questionState.feedbackExtroPages],
+				);
 			} else {
 				settingCtx.setMode(Mode.Adult);
-				settingCtx.addExtroPages([
-					...questionCtx.questionState.adultExtroPages,
-					...questionCtx.questionState.feedbackExtroPages,
-				]);
+				settingCtx.addExtroFeedbackPages(
+					[...questionCtx.questionState.adultExtroPages],
+					[...questionCtx.questionState.feedbackExtroPages],
+				);
 			}
 		}
 	}

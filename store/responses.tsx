@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import type ResponseInterface from "interface/response";
+import SectionType from "constants/section_type";
 
 interface ResponseContextInterface {
 	responses: Record<string, ResponseInterface>;
@@ -20,10 +21,23 @@ function responseReducer(state: any, action: any): any {
 				label: action.payload.label,
 				answer: action.payload.answer,
 				pageNumber: action.payload.pageNumber,
+				mode: action.payload.mode,
+				section: action.payload.section,
+				sectionNumber: action.payload.sectionNumber,
+				sectionPageNumber: action.payload.sectionPageNumber,
 			};
+
+			let propertyName = "";
+
+			if (newResponse.section === SectionType.Extro) {
+				propertyName = `[${newResponse.mode}][${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
+			} else {
+				propertyName = `[${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
+			}
+
 			return {
 				...state,
-				[action.payload.label]: newResponse,
+				[propertyName]: newResponse,
 			};
 		}
 		case "RESET_RESPONSES": {

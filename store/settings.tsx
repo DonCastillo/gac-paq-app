@@ -131,8 +131,7 @@ export const SettingContext = createContext({
 	setCurrentPage: (pageNumber: number) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
-	removeExtroPages: () => {},
-	addExtroPages: (pages: rawPageInterface[]) => {},
+	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -247,6 +246,15 @@ function settingReducer(state: any, action: any): any {
 				pages: pagesWithoutExtros,
 			};
 		}
+		case "REMOVE_FEEDBACK_PAGES": {
+			const pagesWithoutFeedback = state.pages.filter((page: any) => {
+				return page.section !== SectionType.Feedback;
+			});
+			return {
+				...state,
+				pages: pagesWithoutFeedback,
+			};
+		}
 		case "ADD_EXTRO_PAGES": {
 			const numberOfPages = state.pages.length;
 			const lastPage = state.pages[numberOfPages - 1];
@@ -263,6 +271,23 @@ function settingReducer(state: any, action: any): any {
 				};
 			});
 			return { ...state, pages: [...state.pages, ...newExtroPages] };
+		}
+		case "ADD_FEEDBACK_PAGES": {
+			const numberOfPages = state.pages.length;
+			const lastPage = state.pages[numberOfPages - 1];
+			let lastPageNumber = lastPage.pageNumber;
+			const lastSectionNumber = lastPage.sectionNumber;
+			const newFeedbackPages = action.payload.map((page: rawPageInterface, index: number) => {
+				return {
+					pageNumber: ++lastPageNumber,
+					page,
+					screen: page.type,
+					section: SectionType.Feedback,
+					sectionNumber: lastSectionNumber + 1,
+					sectionPageNumber: ++index,
+				};
+			});
+			return { ...state, pages: [...state.pages, ...newFeedbackPages] };
 		}
 		default:
 			return state;
@@ -365,19 +390,23 @@ export default function SettingContextProvider({
 		});
 	}
 
-	function removeExtroPages(): void {
+	function addExtroFeedbackPages(
+		extroPages: rawPageInterface[],
+		feedbackPages: rawPageInterface[],
+	): void {
 		dispatch({
 			type: "REMOVE_EXTRO_PAGES",
 		});
-	}
-
-	function addExtroPages(pages: rawPageInterface[]): void {
 		dispatch({
-			type: "REMOVE_EXTRO_PAGES",
+			type: "REMOVE_FEEDBACK_PAGES",
 		});
 		dispatch({
 			type: "ADD_EXTRO_PAGES",
-			payload: pages,
+			payload: extroPages,
+		});
+		dispatch({
+			type: "ADD_FEEDBACK_PAGES",
+			payload: feedbackPages,
 		});
 	}
 
@@ -395,8 +424,7 @@ export default function SettingContextProvider({
 		setCurrentPage,
 		translateButtons,
 		translatePhrases,
-		removeExtroPages,
-		addExtroPages,
+		addExtroFeedbackPages,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

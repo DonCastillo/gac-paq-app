@@ -94,17 +94,17 @@ function AppWrapper(): React.ReactElement {
 			});
 		});
 
-		// load extroductory pages (feedback pages exist in both kid and adult mode)
+		// load feedback
 		sectionNumber++;
-		console.log("load extro pages");
-		feedbackExtroPages.forEach((page) => {
+		console.log("load feedback pages");
+		feedbackExtroPages.forEach((page, sectionIndex) => {
 			settingCtx.addPage({
 				pageNumber: pageNumber++,
 				page,
 				screen: page.type,
-				section: SectionType.Extro,
+				section: SectionType.Feedback,
 				sectionNumber,
-				sectionPageNumber: sectionPageNumber++,
+				sectionPageNumber: ++sectionIndex,
 			});
 		});
 	}, []);
