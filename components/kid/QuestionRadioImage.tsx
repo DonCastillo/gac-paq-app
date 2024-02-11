@@ -40,32 +40,20 @@ export default function QuestionRadioImage({
 		}
 	}
 
-	function renderImage(image: string, image_default: any): React.ReactElement {
+	function renderImage(image: string): React.ReactElement {
 		let ImageComponent = <></>;
-		if (image !== "") {
-			const url = `http://localhost:8055/assets/${image}?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5`;
-			ImageComponent = (
-				<Image
-					style={styles.optionImage}
-					source={{ uri: url }}
-					resizeMode="cover"
-				/>
-			);
-		} else {
-			ImageComponent = (
-				<Image
-					style={styles.optionImage}
-					source={image_default.uri}
-					resizeMode="cover"
-				/>
-			);
-		}
-
+		ImageComponent = (
+			<Image
+				style={styles.optionImage}
+				source={image}
+				resizeMode="cover"
+			/>
+		);
 		return ImageComponent;
 	}
 
 	function renderOption({ item }): React.ReactElement {
-		const { image_adult, image_adult_default, text, value } = item.image_choices_id;
+		const { image, text, value } = item.image_choices_id;
 
 		return (
 			<Pressable
@@ -79,7 +67,7 @@ export default function QuestionRadioImage({
 			>
 				<View style={styles.optionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
-					{renderImage(image_adult, image_adult_default)}
+					{renderImage(image)}
 				</View>
 				<View style={styles.optionTextContainer}>
 					<Text>{text}</Text>

@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { View, StyleSheet, ImageBackground } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import Main from "components/Main";
@@ -15,6 +15,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import { useNavigation } from "@react-navigation/native";
+import ImageBackdrop from "components/ImageBackdrop";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -26,12 +27,6 @@ export default function QuestionExtroAdult(): React.ReactElement {
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const navigation = useNavigation();
-
-	console.log(translatedPage);
-	console.log("isFinal: ", isFinal);
-
-	const bgImageURL =
-		"http://localhost:8055/assets/607b231c-f6d0-439d-8b0a-a8e873457ed9?access_token=kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5";
 
 	// set button component dynamically
 	useEffect(() => {
@@ -74,16 +69,11 @@ export default function QuestionExtroAdult(): React.ReactElement {
 				`${directusBaseEndpoint}/items/response`,
 				directusAccessToken,
 			);
-
-			console.log("done submitting the responses");
-			// introduce a delay
 			responseCtx.resetResponses();
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			navigation.navigate("SuccessScreen");
 		} catch (error) {
 			await new Promise((resolve) => setTimeout(resolve, 5000));
-			console.log("redirect to the error page");
-			console.log("error: ", error);
 			navigation.navigate("ErrorScreen");
 		} finally {
 			setLoading(false);
@@ -94,11 +84,11 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />
-				<ImageBackground
-					source={{ uri: bgImageURL }}
-					resizeMode="cover"
-					style={styles.bgImage}
-				></ImageBackground>
+				<ImageBackdrop
+					source={translatedPage?.images?.adult?.phone}
+					key={currentPageNumber}
+					opacity={0.2}
+				/>
 				<Main>
 					<Toolbar />
 					<CenterMain>

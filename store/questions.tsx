@@ -21,12 +21,20 @@ import IntroductionPhrase from "store/data/phrase/introduction";
 import TryAgainPhrase from "store/data/phrase/try-again";
 import SuccessPage from "store/data/state-pages/success";
 import ErrorPage from "store/data/state-pages/error";
+import {
+	AdultExtroductoryPages,
+	FeedbackExtroductoryPages,
+	KidExtroductoryPages,
+} from "./data/extroductory-pages";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
 	languageOption: Languages,
 	introductoryPages: IntroductoryPages,
 	questionPages: QuestionPages,
+	kidExtroPages: KidExtroductoryPages,
+	adultExtroPages: AdultExtroductoryPages,
+	feedbackExtroPages: FeedbackExtroductoryPages,
 	backButton: BackButton,
 	completeButton: CompleteButton,
 	continueButton: ContinueButton,
@@ -47,6 +55,9 @@ export const QuestionContext = createContext({
 		regionOption: [],
 		languageOption: [],
 		introductoryPages: [],
+		kidExtroPages: [],
+		adultExtroPages: [],
+		feedbackExtroPages: [],
 		questionPages: [],
 		backButton: [],
 		completeButton: [],
@@ -88,14 +99,14 @@ function questionReducer(state: any, action: any): any {
 				introductoryPages: action.payload,
 			};
 		case "IDENTIFY_LAST_SECTION_EXTRO_PAGE": {
-			const questionsPages = state.questionPages;
-			const lastSectionExtroIndex = questionsPages.findLastIndex((page: any) => {
+			const feedbackExtroPages = state.feedbackExtroPages;
+			const lastSectionExtroIndex = feedbackExtroPages.findLastIndex((page: any) => {
 				return page.type === ScreenType.ExtroQuestion;
 			});
-			questionsPages[lastSectionExtroIndex].isFinal = true;
+			feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
 			return {
 				...state,
-				questionPages: questionsPages,
+				feedbackExtroPages,
 			};
 		}
 		default:

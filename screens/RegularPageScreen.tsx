@@ -35,7 +35,7 @@ export default function RegularPageScreen(): React.ReactElement {
 		console.log("MODE: ", mode);
 		console.log("PAGE TYPE: ", pageType);
 		console.log("SECTION TYPE ", sectionType);
-		console.log("mode changed ...");
+		console.log("CURRENT PAGE ", JSON.stringify(currentPage, null, 2));
 		changeComponent();
 		changeColor();
 	}, [currentPageNumber, currentPage, mode]);
