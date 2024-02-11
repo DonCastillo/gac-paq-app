@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S4Q4: QuestionRadioPayloadInterface = {
-	name: "Question 16:	How did your child go to work in the past week? (Select the mode that your child used the most).",
+	name: "Question 16:	How did you go to work in the past week? (Select the mode that you used the most).",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{

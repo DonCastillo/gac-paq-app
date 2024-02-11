@@ -10,7 +10,7 @@ const S4Extro: ExtroPayloadInterface = {
 			id: 1,
 			extro_section_id: 1,
 			heading: "Section Complete!",
-			subheading: "Only six more to go!",
+			subheading: "Only three more to go!",
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",

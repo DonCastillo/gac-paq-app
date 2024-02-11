@@ -8,7 +8,7 @@ const S5Q3: QuestionRadioPayloadInterface = {
 		{
 			id: 7,
 			question_radio_id: 5,
-			heading: "Question 15c",
+			heading: "Question 20",
 			label:
 				"On the days that you do these activities during the past week, how long did it usually last?",
 			kid_label:

@@ -14,7 +14,7 @@ const S4Q7: QuestionRadioPayloadInterface = {
 			kid_label:
 				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to you.",
 			adult_label:
-				"17.	In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to your child.",
+				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to your child.",
 			choices: [
 				{
 					text: "Yes, I walked",

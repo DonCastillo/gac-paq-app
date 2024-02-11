@@ -2,16 +2,16 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S4Q1: QuestionRadioPayloadInterface = {
-	name: "Question 15:	How did you go to school in the past week? (Select the mode that you used the most)",
+	name: "Question 15:	How did you go to school in the past week?",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 10,
 			question_radio_id: 8,
 			heading: "Question 15",
-			label: "How did you go to school in the past week? (Select the mode that you used the most).",
+			label: "How did you go to school in the past week?",
 			kid_label:
-				"How did you go to school in the past week? (Select the mode that you used the most).",
+				"How did you go to school in the past week?",
 			adult_label:
 				"How did your child go to school in the past week? (Select the mode that your child used the most).",
 			choices: [
