@@ -131,8 +131,7 @@ export const SettingContext = createContext({
 	setCurrentPage: (pageNumber: number) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
-	addExtroPages: (pages: rawPageInterface[]) => {},
-	addFeedbackPages: (pages: rawPageInterface[]) => {},
+	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -391,23 +390,23 @@ export default function SettingContextProvider({
 		});
 	}
 
-	function addExtroPages(pages: rawPageInterface[]): void {
+	function addExtroFeedbackPages(
+		extroPages: rawPageInterface[],
+		feedbackPages: rawPageInterface[],
+	): void {
 		dispatch({
 			type: "REMOVE_EXTRO_PAGES",
 		});
 		dispatch({
-			type: "ADD_EXTRO_PAGES",
-			payload: pages,
-		});
-	}
-
-	function addFeedbackPages(pages: rawPageInterface[]): void {
-		dispatch({
 			type: "REMOVE_FEEDBACK_PAGES",
 		});
 		dispatch({
+			type: "ADD_EXTRO_PAGES",
+			payload: extroPages,
+		});
+		dispatch({
 			type: "ADD_FEEDBACK_PAGES",
-			payload: pages,
+			payload: feedbackPages,
 		});
 	}
 
@@ -425,8 +424,7 @@ export default function SettingContextProvider({
 		setCurrentPage,
 		translateButtons,
 		translatePhrases,
-		addExtroPages,
-		addFeedbackPages,
+		addExtroFeedbackPages,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;
