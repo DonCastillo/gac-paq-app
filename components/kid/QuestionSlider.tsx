@@ -8,24 +8,29 @@ import PhraseLabel from "constants/phrase_label";
 interface QuestionSliderPropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
 	selectedValue: number | PhraseLabel.DontKnow;
+	maxValue?: number;
 }
 
 export default function QuestionSlider({
 	onChange,
 	selectedValue,
+	maxValue
 }: QuestionSliderPropsInterface): React.ReactElement {
 	console.log("slider ...");
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, phrases } = settingCtx.settingState;
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState<number | PhraseLabel.DontKnow>(selectedValue ?? 0);
-	const MAX_VALUE = 20;
+	const [maxVal, setMaxVal] = useState<number>(maxValue ?? 10);
 
 	useEffect(() => {
 		if (value !== selectedValue) {
 			setValue(selectedValue);
 		}
-	}, [currentPage, selectedValue]);
+		if(maxValue !== maxVal) {
+			setMaxVal(maxValue ?? 10);
+		}
+	}, [currentPage, selectedValue, maxValue]);
 
 	function changeHandler(value: number | PhraseLabel.DontKnow): void {
 		setValue(value);
@@ -61,7 +66,7 @@ export default function QuestionSlider({
 			{/** slider */}
 			<Slider
 				minimumValue={0}
-				maximumValue={MAX_VALUE}
+				maximumValue={maxVal}
 				step={1}
 				value={setSliderValue(value)}
 				onValueChange={changeHandler}

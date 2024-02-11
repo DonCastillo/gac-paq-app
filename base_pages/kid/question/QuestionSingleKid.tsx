@@ -159,6 +159,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		questionComponent = (
 			<QuestionSlider
 				key={currentPageNumber}
+				maxValue={translatedPage?.max_value}
 				onChange={(value: number | null | PhraseLabel.DontKnow) => {
 					if (typeof value === "number" && Number.isInteger(value)) {
 						changeHandler(intToString(value));
