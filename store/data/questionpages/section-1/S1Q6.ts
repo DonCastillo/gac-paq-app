@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S1Q6: QuestionRadioPayloadInterface = {
-	name: "Question 6: On a normal school day, how much break time do you have? (including recess/breaks/lunch)",
+	name: "Question 6: On a normal school day, how much break time do you have?",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
@@ -10,7 +10,7 @@ const S1Q6: QuestionRadioPayloadInterface = {
 			question_radio_id: 7,
 			heading: "Question 6",
 			label:
-				"On a normal school day, how much break time do you have? (including recess/breaks/lunch)",
+				"On a normal school day, how much break time do you have?",
 			kid_label: "On a normal school day, how much break time do you have?",
 			adult_label: "On a normal school day, how much break time does your child have?",
 			choices: [
