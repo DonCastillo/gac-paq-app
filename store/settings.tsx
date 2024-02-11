@@ -1,21 +1,29 @@
-import React, { createContext, useReducer } from "react";
-import Mode from "constants/mode";
+import React, { createContext, useContext, useReducer } from "react";
+import type Mode from "constants/mode";
 import Colors from "store/data/colors";
 import { getPage } from "utils/page";
 import type ScreenType from "constants/screen_type";
-import type SectionType from "constants/section_type";
+import SectionType from "constants/section_type";
 import ButtonLabel from "constants/button_label";
 import PhraseLabel from "constants/phrase_label";
-
+import type SectionPayloadInterface from "interface/directus/section-payload";
+import type ExtroPayloadInterface from "interface/directus/extro-payload";
+import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
 /**
  * by default the app should be set as:
  *      mode: kid,
  */
+type rawPageInterface =
+	| SectionPayloadInterface
+	| ExtroPayloadInterface
+	| QuestionRadioPayloadInterface
+	| QuestionRadioImagePayloadInterface;
 export interface pageInterface {
 	screen: ScreenType | null;
 	page: any | null;
 	pageNumber: number | null;
-	section: SectionType.Intro | SectionType.Question | null;
+	section: SectionType.Intro | SectionType.Question | SectionType.Extro | null;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;
 }
@@ -68,7 +76,7 @@ const defaultPhrase: phraseInterface = {
 };
 
 const DEFAULT_MODE = undefined;
-// const DEFAULT_MODE = Mode.Kid;
+// const DEFAULT_MODE = Mode.Adult;
 const DEFAULT_COLOR_INDEX = 0;
 const TOTAL_COLORS = 8;
 
@@ -123,6 +131,7 @@ export const SettingContext = createContext({
 	setCurrentPage: (pageNumber: number) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
+	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -228,6 +237,58 @@ function settingReducer(state: any, action: any): any {
 				...state,
 				phrases: action.payload,
 			};
+		case "REMOVE_EXTRO_PAGES": {
+			const pagesWithoutExtros = state.pages.filter((page: any) => {
+				return page.section !== SectionType.Extro;
+			});
+			return {
+				...state,
+				pages: pagesWithoutExtros,
+			};
+		}
+		case "REMOVE_FEEDBACK_PAGES": {
+			const pagesWithoutFeedback = state.pages.filter((page: any) => {
+				return page.section !== SectionType.Feedback;
+			});
+			return {
+				...state,
+				pages: pagesWithoutFeedback,
+			};
+		}
+		case "ADD_EXTRO_PAGES": {
+			const numberOfPages = state.pages.length;
+			const lastPage = state.pages[numberOfPages - 1];
+			let lastPageNumber = lastPage.pageNumber;
+			const lastSectionNumber = lastPage.sectionNumber;
+			const newExtroPages = action.payload.map((page: rawPageInterface, index: number) => {
+				return {
+					pageNumber: ++lastPageNumber,
+					page,
+					screen: page.type,
+					section: SectionType.Extro,
+					sectionNumber: lastSectionNumber + 1,
+					sectionPageNumber: ++index,
+				};
+			});
+			return { ...state, pages: [...state.pages, ...newExtroPages] };
+		}
+		case "ADD_FEEDBACK_PAGES": {
+			const numberOfPages = state.pages.length;
+			const lastPage = state.pages[numberOfPages - 1];
+			let lastPageNumber = lastPage.pageNumber;
+			const lastSectionNumber = lastPage.sectionNumber;
+			const newFeedbackPages = action.payload.map((page: rawPageInterface, index: number) => {
+				return {
+					pageNumber: ++lastPageNumber,
+					page,
+					screen: page.type,
+					section: SectionType.Feedback,
+					sectionNumber: lastSectionNumber + 1,
+					sectionPageNumber: ++index,
+				};
+			});
+			return { ...state, pages: [...state.pages, ...newFeedbackPages] };
+		}
 		default:
 			return state;
 	}
@@ -329,6 +390,26 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function addExtroFeedbackPages(
+		extroPages: rawPageInterface[],
+		feedbackPages: rawPageInterface[],
+	): void {
+		dispatch({
+			type: "REMOVE_EXTRO_PAGES",
+		});
+		dispatch({
+			type: "REMOVE_FEEDBACK_PAGES",
+		});
+		dispatch({
+			type: "ADD_EXTRO_PAGES",
+			payload: extroPages,
+		});
+		dispatch({
+			type: "ADD_FEEDBACK_PAGES",
+			payload: feedbackPages,
+		});
+	}
+
 	const value: any = {
 		settingState,
 		setMode,
@@ -343,6 +424,7 @@ export default function SettingContextProvider({
 		setCurrentPage,
 		translateButtons,
 		translatePhrases,
+		addExtroFeedbackPages,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

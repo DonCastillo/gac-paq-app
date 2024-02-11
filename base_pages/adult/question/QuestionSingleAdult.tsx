@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -28,16 +28,29 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 	let questionComponent = <></>;
 
 	// fetch response for this question
 	useEffect(() => {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse(currentPageNumber, response));
+			setSelectedValue(
+				getResponse(
+					mode,
+					currentPage.section,
+					currentPage.sectionNumber,
+					currentPage.sectionPageNumber,
+					response,
+				),
+			);
 		}
 	}, [currentPageNumber]);
 
@@ -89,9 +102,13 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
-			pageNumber: currentPage.pageNumber,
 			label: currentPage.page.name,
 			answer: value,
+			pageNumber: currentPage.pageNumber,
+			mode,
+			section: currentPage.section,
+			sectionNumber: currentPage.sectionNumber,
+			sectionPageNumber: currentPage.sectionPageNumber,
 		});
 		setSelectedValue(value);
 	}
@@ -160,7 +177,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage?.label}
+							{questionLabel}
 						</QuestionLabel>
 						{questionComponent}
 					</QuestionContainer>

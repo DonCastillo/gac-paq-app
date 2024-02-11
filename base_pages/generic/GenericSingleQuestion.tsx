@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -18,14 +18,22 @@ import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionInput from "components/adults/QuestionInput";
 import Mode from "constants/mode";
+import ImageBackdrop from "components/ImageBackdrop";
+import { QuestionContext } from "store/questions";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
+	const questionCtx = useContext(QuestionContext);
 
-	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
@@ -33,7 +41,15 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	useEffect(() => {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse(currentPageNumber, response));
+			setSelectedValue(
+				getResponse(
+					mode,
+					currentPage.section,
+					currentPage.sectionNumber,
+					currentPage.sectionPageNumber,
+					response,
+				),
+			);
 		}
 	}, [currentPageNumber]);
 
@@ -41,9 +57,13 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
 			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
 				label: currentPage.page.name,
 				answer: value,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				section: currentPage.section,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
 			});
 			setSelectedValue(value);
 		} else {
@@ -54,8 +74,16 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		if (currentPage.page.name === "Who's taking this questionnaire?") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
+				settingCtx.addExtroFeedbackPages(
+					[...questionCtx.questionState.kidExtroPages],
+					[...questionCtx.questionState.feedbackExtroPages],
+				);
 			} else {
 				settingCtx.setMode(Mode.Adult);
+				settingCtx.addExtroFeedbackPages(
+					[...questionCtx.questionState.adultExtroPages],
+					[...questionCtx.questionState.feedbackExtroPages],
+				);
 			}
 		}
 	}
@@ -63,6 +91,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionRadio
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				options={optionText(translatedPage?.choices)}
 				onSelect={(value: string) => {
@@ -73,6 +102,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
+				key={currentPageNumber}
 				selectedValue={selectedValue}
 				placeholder={translatedPage?.placeholder}
 				onChange={changeHandler}
@@ -85,6 +115,10 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
+			<ImageBackdrop
+				source={translatedPage?.images?.adult?.phone}
+				key={currentPageNumber}
+			/>
 			<Main>
 				<Toolbar />
 				<CenterMain>
@@ -95,7 +129,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage?.label}
+							{questionLabel}
 						</QuestionLabel>
 						{questionType === QuestionType.QuestionInput &&
 							Object.prototype.hasOwnProperty.call(translatedPage, "sublabel") === true &&

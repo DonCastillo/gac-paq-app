@@ -13,12 +13,12 @@ const Languages: LanguageInterface[] = [
 		flag_code: "CA",
 		lang_code: "en-CA",
 	},
-	{
-		sort: 3,
-		name: "French - Canada",
-		flag_code: "CA",
-		lang_code: "fr-CA",
-	},
+	// {
+	// 	sort: 3,
+	// 	name: "French - Canada",
+	// 	flag_code: "CA",
+	// 	lang_code: "fr-CA",
+	// },
 	// {
 	// 	sort: 4,
 	// 	name: "Chinese - China",
@@ -97,12 +97,12 @@ const Languages: LanguageInterface[] = [
 	// 	flag_code: "PG",
 	// 	lang_code: "en-PG",
 	// },
-	{
-		sort: 17,
-		name: "Spanish - Spain",
-		flag_code: "ES",
-		lang_code: "es-ES",
-	},
+	// {
+	// 	sort: 17,
+	// 	name: "Spanish - Spain",
+	// 	flag_code: "ES",
+	// 	lang_code: "es-ES",
+	// },
 	// {
 	// 	sort: 18,
 	// 	name: "Swedish - Sweden",
