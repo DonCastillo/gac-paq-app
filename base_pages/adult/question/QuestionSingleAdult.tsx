@@ -42,7 +42,15 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	useEffect(() => {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse(currentPageNumber, response));
+			setSelectedValue(
+				getResponse(
+					mode,
+					currentPage.section,
+					currentPage.sectionNumber,
+					currentPage.sectionPageNumber,
+					response,
+				),
+			);
 		}
 	}, [currentPageNumber]);
 
