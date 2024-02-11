@@ -16,26 +16,6 @@ const GreatJobPage: PagePayloadInterface = {
 				lang_code: "en-CA",
 			},
 		},
-		{
-			id: 8,
-			pages_id: 3,
-			heading: " ¡Excelente trabajo!",
-			description: null,
-			languages_id: {
-				name: "Spanish - Spain",
-				lang_code: "es-ES",
-			},
-		},
-		{
-			id: 9,
-			pages_id: 3,
-			heading: "Excellent travail",
-			description: null,
-			languages_id: {
-				name: "French - Canada",
-				lang_code: "fr-CA",
-			},
-		},
 	],
 };
 

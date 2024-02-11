@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
@@ -16,6 +16,7 @@ import { getResponse } from "utils/response";
 import { getIntroductoryBackground } from "utils/background";
 import QuestionInput from "components/kid/QuestionInput";
 import Mode from "constants/mode";
+import { QuestionContext } from "store/questions";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -23,10 +24,16 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
+	const questionCtx = useContext(QuestionContext);
 
-	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
 
@@ -81,7 +88,15 @@ export default function QuestionSingleKid(): React.ReactElement {
 	useEffect(() => {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse(currentPageNumber, response));
+			setSelectedValue(
+				getResponse(
+					mode,
+					currentPage.section,
+					currentPage.sectionNumber,
+					currentPage.sectionPageNumber,
+					response,
+				),
+			);
 		}
 	}, [currentPageNumber]);
 
@@ -90,9 +105,13 @@ export default function QuestionSingleKid(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
-			pageNumber: currentPage.pageNumber,
 			label: currentPage.page.name,
 			answer: value,
+			pageNumber: currentPage.pageNumber,
+			mode,
+			section: currentPage.section,
+			sectionNumber: currentPage.sectionNumber,
+			sectionPageNumber: currentPage.sectionPageNumber,
 		});
 		setSelectedValue(value);
 
@@ -100,8 +119,16 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (currentPage.page.name === "Who's taking this questionnaire?") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
+				settingCtx.addExtroFeedbackPages(
+					[...questionCtx.questionState.kidExtroPages],
+					[...questionCtx.questionState.feedbackExtroPages],
+				);
 			} else {
 				settingCtx.setMode(Mode.Adult);
+				settingCtx.addExtroFeedbackPages(
+					[...questionCtx.questionState.adultExtroPages],
+					[...questionCtx.questionState.feedbackExtroPages],
+				);
 			}
 		}
 	}
@@ -147,7 +174,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 								fontSize: 33,
 							}}
 						>
-							{translatedPage?.heading}
+							{questionLabel}
 						</QuestionLabel>
 						{questionComponent}
 					</View>

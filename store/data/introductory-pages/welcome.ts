@@ -17,28 +17,6 @@ const WelcomePage: PagePayloadInterface = {
 				lang_code: "en-CA",
 			},
 		},
-		{
-			id: 2,
-			pages_id: 1,
-			heading: "¡Bienvenido!",
-			description:
-				"La actividad física es esencial para el desarrollo saludable de los niños, sin embargo, el 80% de los jóvenes no son lo suficientemente activos y carecemos de información sobre los niveles de actividad de los niños pequeños.",
-			languages_id: {
-				name: "Spanish - Spain",
-				lang_code: "es-ES",
-			},
-		},
-		{
-			id: 3,
-			pages_id: 1,
-			heading: "Bienvenue !",
-			description:
-				"L'activité physique est essentielle pour le développement sain de l'enfant, pourtant 80 % des jeunes ne sont pas assez actifs et nous manquons d'informations sur les niveaux d'activité des jeunes enfants.",
-			languages_id: {
-				name: "French - Canada",
-				lang_code: "fr-CA",
-			},
-		},
 	],
 };
 

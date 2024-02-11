@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { StyleSheet, View } from "react-native";
+import { ImageBackground, StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import Main from "components/Main";
@@ -29,6 +29,11 @@ export default function GenericPage(): React.ReactElement {
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />
+			{/* <ImageBackground
+				source={{ uri: bgImageURL }}
+				resizeMode="cover"
+				style={styles.bgImage}
+			></ImageBackground> */}
 			<Main>
 				{renderToolbar()}
 				<CenterMain>
@@ -39,9 +44,10 @@ export default function GenericPage(): React.ReactElement {
 								fontSize: 40,
 								marginBottom: 50,
 								textAlign: "center",
+								// backgroundColor: "pink",
 							}}
 						>
-							{translatedPage?.heading.toLowerCase()}
+							{translatedPage?.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{

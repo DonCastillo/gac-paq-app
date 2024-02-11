@@ -1,4 +1,5 @@
 import type LanguageInterface from "interface/language";
+import type ImageInterface from "./images";
 
 export default interface SectionInterface {
 	id?: string | number;
@@ -6,4 +7,5 @@ export default interface SectionInterface {
 	heading: string;
 	subheading: string;
 	languages_id?: LanguageInterface | null;
+	images?: ImageInterface;
 }

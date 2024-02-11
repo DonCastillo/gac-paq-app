@@ -12,18 +12,23 @@ import ButtonLabel from "constants/button_label";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
-import { translate } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
+import ImageBackdrop from "components/ImageBackdrop";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-
-	const { language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
+	const questionLabel = translateQuestionLabel(
+		translatedPage?.kid_label,
+		translatedPage?.adult_label,
+		mode,
+	);
 
 	const {
 		backButton,
@@ -68,9 +73,13 @@ export default function GenericLanguage(): React.ReactElement {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length === 0) {
 			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
 				label: currentPage.page.name,
 				answer: language,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				section: currentPage.section,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
 			});
 		}
 	}, []);
@@ -79,9 +88,13 @@ export default function GenericLanguage(): React.ReactElement {
 		if (value !== "" && value !== null && value !== undefined) {
 			settingCtx.setLanguage(value);
 			responseCtx.addResponse({
-				pageNumber: currentPage.pageNumber,
 				label: currentPage.page.name,
 				answer: value,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				section: currentPage.section,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
 			});
 			setSelectedValue(value);
 		} else {
@@ -92,6 +105,10 @@ export default function GenericLanguage(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
+			<ImageBackdrop
+				source={translatedPage?.images?.adult?.phone}
+				key={currentPageNumber}
+			/>
 			<Main>
 				<CenterMain>
 					<QuestionContainer>
@@ -101,7 +118,7 @@ export default function GenericLanguage(): React.ReactElement {
 								fontWeight: "bold",
 							}}
 						>
-							{translatedPage?.heading.toLowerCase()}
+							{questionLabel}
 						</QuestionLabel>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}

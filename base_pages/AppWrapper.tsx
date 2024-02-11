@@ -23,6 +23,9 @@ function AppWrapper(): React.ReactElement {
 
 	const introductoryPages = questionCtx.questionState.introductoryPages;
 	const questionPages = questionCtx.questionState.questionPages;
+	const kidExtroPages = questionCtx.questionState.kidExtroPages;
+	const adultExtroPages = questionCtx.questionState.adultExtroPages;
+	const feedbackExtroPages = questionCtx.questionState.feedbackExtroPages;
 
 	function SplashScreen(): React.ReactElement {
 		return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;
@@ -60,6 +63,7 @@ function AppWrapper(): React.ReactElement {
 		let sectionNumber = 0;
 		let sectionPageNumber = 1;
 
+		// load introductory pages
 		console.log("load intro pages...");
 		introductoryPages.forEach((page, sectionIndex) => {
 			settingCtx.addPage({
@@ -72,6 +76,7 @@ function AppWrapper(): React.ReactElement {
 			});
 		});
 
+		// load section question pages
 		console.log("load question and section pages...");
 		questionPages.forEach((page) => {
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
@@ -86,6 +91,20 @@ function AppWrapper(): React.ReactElement {
 				section: SectionType.Question,
 				sectionNumber,
 				sectionPageNumber: sectionPageNumber++,
+			});
+		});
+
+		// load feedback
+		sectionNumber++;
+		console.log("load feedback pages");
+		feedbackExtroPages.forEach((page, sectionIndex) => {
+			settingCtx.addPage({
+				pageNumber: pageNumber++,
+				page,
+				screen: page.type,
+				section: SectionType.Feedback,
+				sectionNumber,
+				sectionPageNumber: ++sectionIndex,
 			});
 		});
 	}, []);

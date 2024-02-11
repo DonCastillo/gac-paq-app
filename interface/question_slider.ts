@@ -5,5 +5,7 @@ export default interface QuestionSliderInterface {
 	question_slider_id?: string | number;
 	heading: string;
 	label: string;
+	kid_label: string;
+	adult_label: string;
 	languages_id?: LanguageInterface | null;
 }

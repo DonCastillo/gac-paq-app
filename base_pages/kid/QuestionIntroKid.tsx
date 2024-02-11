@@ -1,4 +1,4 @@
-import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
@@ -6,6 +6,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Main from "components/Main";
 import BottomMain from "components/orientation/BottomMain";
 import Navigation from "components/Navigation";
+import ImageBackdrop from "components/ImageBackdrop";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -36,17 +37,12 @@ export default function QuestionIntroKid(): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-	const image = {
-		uri: currentPage.page.image_mobile,
-	};
-
 	return (
 		<View style={styles.container}>
-			<ImageBackground
-				source={image}
-				resizeMode="cover"
-				style={styles.image}
-			></ImageBackground>
+			<ImageBackdrop
+				source={translatedPage?.images?.kid?.phone}
+				key={currentPageNumber}
+			/>
 			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
 				<ScrollView>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
@@ -57,8 +53,6 @@ export default function QuestionIntroKid(): React.ReactElement {
 				<BottomMain></BottomMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
-			
-
 		</View>
 	);
 }
@@ -73,10 +67,10 @@ const styles = StyleSheet.create({
 	image: {
 		flex: 1,
 		position: "absolute",
-		top:0,
+		top: 0,
 		left: 0,
 		width: "100%",
-		height:"100%",
+		height: "100%",
 		justifyContent: "center",
 	},
 	headingPanel: {
@@ -94,7 +88,7 @@ const styles = StyleSheet.create({
 	headingSubText: {
 		textAlign: "center",
 		color: "#fff",
-		fontSize: 20
+		fontSize: 20,
 	},
 	headingText: {
 		textAlign: "center",
