@@ -9,8 +9,7 @@ const S1Q6: QuestionRadioPayloadInterface = {
 			id: 9,
 			question_radio_id: 7,
 			heading: "Question 6",
-			label:
-				"On a normal school day, how much break time do you have?",
+			label: "On a normal school day, how much break time do you have?",
 			kid_label: "On a normal school day, how much break time do you have?",
 			adult_label: "On a normal school day, how much break time does your child have?",
 			choices: [
