@@ -14,7 +14,7 @@ interface QuestionSliderPropsInterface {
 export default function QuestionSlider({
 	onChange,
 	selectedValue,
-	maxValue
+	maxValue,
 }: QuestionSliderPropsInterface): React.ReactElement {
 	console.log("slider ...");
 	const settingCtx = useContext(SettingContext);
@@ -27,7 +27,7 @@ export default function QuestionSlider({
 		if (value !== selectedValue) {
 			setValue(selectedValue);
 		}
-		if(maxValue !== maxVal) {
+		if (maxValue !== maxVal) {
 			setMaxVal(maxValue ?? 10);
 		}
 	}, [currentPage, selectedValue, maxValue]);

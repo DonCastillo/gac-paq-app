@@ -1,31 +1,36 @@
 import { StyleSheet } from "react-native";
 import React from "react";
+import { StarsBlue, StarsPurple } from "components/svgs/kid/doodles";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
-import { StrokeYellow } from "components/svgs/kid/doodles";
 
 interface PropsInterface {
 	fillColor: string;
 }
 
-export default function GenericBackgroundStroke({ fillColor }: PropsInterface): React.ReactElement {
+export default function GenericBackgroundStars({ fillColor }: PropsInterface): React.ReactElement {
 	return (
 		<AbsoluteFullScreenContainer>
-			<StrokeYellow
+			<StarsBlue
 				fill={fillColor}
-				height={500}
-				style={styles.stroke}
+				style={styles.left}
+			/>
+			<StarsPurple
+				fill={fillColor}
+				style={styles.right}
 			/>
 		</AbsoluteFullScreenContainer>
 	);
 }
 
 const styles = StyleSheet.create({
-	stroke: {
+	left: {
 		position: "absolute",
-		bottom: "10%",
-		left: "0%",
-		right: "0%",
-		maxHeight: "100%",
-		transform: [{ translateX: -90 }],
+		bottom: "18%",
+		left: "-10%",
+	},
+	right: {
+		position: "absolute",
+		top: "0%",
+		right: "-10%",
 	},
 });

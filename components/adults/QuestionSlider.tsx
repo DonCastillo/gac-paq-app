@@ -27,7 +27,7 @@ export default function QuestionSlider({
 		if (value !== selectedValue) {
 			setValue(selectedValue);
 		}
-		if(maxValue !== maxVal) {
+		if (maxValue !== maxVal) {
 			setMaxVal(maxValue ?? 10);
 		}
 	}, [currentPage, selectedValue, maxValue]);

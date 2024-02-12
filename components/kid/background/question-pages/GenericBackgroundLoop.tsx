@@ -1,18 +1,17 @@
 import { StyleSheet } from "react-native";
 import React from "react";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
-import { StrokeYellow } from "components/svgs/kid/doodles";
+import { LoopPink } from "components/svgs/kid/doodles";
 
 interface PropsInterface {
 	fillColor: string;
 }
 
-export default function GenericBackgroundStroke({ fillColor }: PropsInterface): React.ReactElement {
+export default function GenericBackgroundLoop({ fillColor }: PropsInterface): React.ReactElement {
 	return (
 		<AbsoluteFullScreenContainer>
-			<StrokeYellow
+			<LoopPink
 				fill={fillColor}
-				height={500}
 				style={styles.stroke}
 			/>
 		</AbsoluteFullScreenContainer>
@@ -22,10 +21,8 @@ export default function GenericBackgroundStroke({ fillColor }: PropsInterface): 
 const styles = StyleSheet.create({
 	stroke: {
 		position: "absolute",
-		bottom: "10%",
+		bottom: "0%",
 		left: "0%",
 		right: "0%",
-		maxHeight: "100%",
-		transform: [{ translateX: -90 }],
 	},
 });
