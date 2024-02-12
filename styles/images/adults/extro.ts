@@ -9,15 +9,15 @@ const Extro = {
 	},
 	section_3: {
 		phone: require("assets/images/adult/section3/phone-adult-extro.png"),
-		tablet: require("assets/images/adult/section3/phone-adult-extro.png"),
+		tablet: require("assets/images/adult/section3/tablet-adult-extro.png"),
 	},
 	section_4: {
-		phone: require("assets/images/adult/section4/tablet-adult-extro.png"),
+		phone: require("assets/images/adult/section4/phone-adult-extro.png"),
 		tablet: require("assets/images/adult/section4/tablet-adult-extro.png"),
 	},
 	section_5: {
 		phone: require("assets/images/adult/section5/phone-adult-extro.png"),
-		tablet: require("assets/images/adult/section5/tablet-adult-extro.jpg"),
+		tablet: require("assets/images/adult/section5/tablet-adult-extro.png"),
 	},
 	section_6: {
 		phone: require("assets/images/adult/section6/phone-adult-extro.png"),

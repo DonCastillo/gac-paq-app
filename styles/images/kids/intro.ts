@@ -12,11 +12,11 @@ const Intro = {
 		tablet: require("assets/images/kids/section3/tablet-kid-intro.png"),
 	},
 	section_4: {
-		phone: require("assets/images/kids/section4/tablet-kid-intro.jpg"),
-		tablet: require("assets/images/kids/section4/tablet-kid-intro.jpg"),
+		phone: require("assets/images/kids/section4/phone-kid-intro.png"),
+		tablet: require("assets/images/kids/section4/tablet-kid-intro.png"),
 	},
 	section_5: {
-		phone: require("assets/images/kids/section5/tablet-kid-intro.png"),
+		phone: require("assets/images/kids/section5/phone-kid-intro.png"),
 		tablet: require("assets/images/kids/section5/tablet-kid-intro.png"),
 	},
 	section_6: {
@@ -25,7 +25,7 @@ const Intro = {
 	},
 	section_7: {
 		phone: require("assets/images/kids/section7/phone-kid-intro.png"),
-		tablet: require("assets/images/kids/section7/tablet-kid-intro.jpg"),
+		tablet: require("assets/images/kids/section7/tablet-kid-intro.png"),
 	},
 };
 
