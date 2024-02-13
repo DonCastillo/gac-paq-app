@@ -1,3 +1,11 @@
+import CarSVG from "assets/images/general/transportation/car.svg";
+import PublicTransportationSVG from "assets/images/general/transportation/public_transport.svg";
+import SchoolBusSVG from "assets/images/general/transportation/school_bus.svg";
+import SkateboardSVG from "assets/images/general/transportation/skateboard.svg";
+import SittingSVG from "assets/images/kids/graphics/sitting.svg";
+import WalkingSVG from "assets/images/kids/graphics/small_walking.svg";
+import NeutralSVG from "assets/images/kids/graphics/neutral_pose.svg";
+
 const GenericImages = {
 	pages: {
 		phone: {
@@ -12,6 +20,15 @@ const GenericImages = {
 			mode: require("assets/images/generic/tablet/3.png"),
 			age: require("assets/images/generic/tablet/4.png"),
 		},
+	},
+	transportation: {
+		walking: WalkingSVG,
+		wheeling: SkateboardSVG,
+		car: CarSVG,
+		school_bus: SchoolBusSVG,
+		public_transit: PublicTransportationSVG,
+		staying_home: SittingSVG,
+		other: NeutralSVG,
 	},
 };
 

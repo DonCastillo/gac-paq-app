@@ -1,5 +1,6 @@
 import ScreenType from "constants/screen_type";
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
+import Images from "styles/images";
 
 const S4Q1: QuestionRadioImagePayloadInterface = {
 	name: "Question 15:	How did you go to school in the past week?",
@@ -20,7 +21,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Walking",
 						value: "Walking",
-						image: "",
+						image: Images.generic.transportation.walking,
 					},
 				},
 				{
@@ -29,7 +30,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Wheeling (for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades)",
 						value: "Wheeling",
-						image: "",
+						image: Images.generic.transportation.wheeling,
 					},
 				},
 				{
@@ -38,7 +39,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "School bus",
 						value: "School bus",
-						image: "",
+						image: Images.generic.transportation.school_bus,
 					},
 				},
 				{
@@ -47,7 +48,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Public transit (for example, bus, train, tramway, subway, boat)",
 						value: "Public transit",
-						image: "",
+						image: Images.generic.transportation.public_transit,
 					},
 				},
 				{
@@ -56,7 +57,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Car, taxi, truck, or motorcycle",
 						value: "Car, taxi, truck, or motorcycle",
-						image: "",
+						image: Images.generic.transportation.car,
 					},
 				},
 			],
