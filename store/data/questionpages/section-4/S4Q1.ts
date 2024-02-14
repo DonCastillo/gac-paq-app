@@ -60,6 +60,15 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						image: Images.generic.transportation.car,
 					},
 				},
+				{
+					image_choices_id: {
+						id: 3,
+						sort: null,
+						text: "Other",
+						value: "Other",
+						image: Images.generic.transportation.other,
+					},
+				},
 			],
 			languages_id: {
 				name: "English - Canada",

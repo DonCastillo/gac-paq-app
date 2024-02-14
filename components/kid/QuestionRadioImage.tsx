@@ -44,6 +44,7 @@ export default function QuestionRadioImage({
 
 	function renderImage(image: string | Svg): React.ReactElement {
 		if (typeof image === "string") {
+			// Other formats
 			let ImageComponent = <></>;
 			ImageComponent = (
 				<Image
@@ -54,18 +55,24 @@ export default function QuestionRadioImage({
 			);
 			return ImageComponent;
 		} else {
+			// SVGs
 			const ImageComponent = image;
-			return <ImageComponent style={{ maxWidth: 100 }} />;
+			if(options.length <= 4) {
+				return <ImageComponent style={{ maxWidth: 100 }} />;
+			}else{
+				return <ImageComponent style={{ maxWidth: 50, minHeight: 50, marginRight: 10 }} />
+			}
+
 		}
 	}
 
-	function renderOption({ item }): React.ReactElement {
+	function blockRenderOption({ item }): React.ReactElement {
 		const { image, text, value } = item.image_choices_id;
 
 		return (
 			<Pressable
 				style={[
-					styles.optionContainer,
+					styles.blockOptionContainer,
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => {
@@ -83,24 +90,69 @@ export default function QuestionRadioImage({
 		);
 	}
 
+	function listRenderOption({ item }): React.ReactElement {
+		const { image, text, value } = item.image_choices_id;
+
+		return (
+			<View>
+				<Pressable
+					style={[
+						styles.listOptionContainer,
+						{ flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingVertical: 3  },
+						{ borderColor: color100 },
+						selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
+					]}
+					onPress={() => {
+						selectHandler(value);
+					}}
+				>
+					{renderImage(image)}
+					<Text
+						style={[styles.optionText, selected === value ? { color: "#fff" } : { color: "#000" }]}
+					>
+						{text}
+					</Text>
+				</Pressable>
+			</View>
+		);
+	}
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
-				<FlatList
-					style={[]}
-					data={options}
-					renderItem={renderOption}
-					numColumns={2}
-				/>
+				{options.length <= 4 ? (
+					<FlatList
+						style={[]}
+						data={options}
+						renderItem={blockRenderOption}
+						numColumns={2}
+					/>
+				) : (
+					<FlatList
+						data={options}
+						renderItem={listRenderOption}
+					/>
+				)}
 			</View>
 		</SafeAreaView>
 	);
 }
 
 const styles = StyleSheet.create({
+	listOptionContainer: {
+		borderWidth: GeneralStyle.kid.field.borderWidth,
+		borderColor: GeneralStyle.kid.field.borderColor,
+		borderRadius: GeneralStyle.kid.field.borderRadius,
+		marginBottom: GeneralStyle.kid.field.marginBottom,
+		paddingVertical: GeneralStyle.kid.field.paddingVertical,
+		paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+	},
+	blockOptionContainer: {
+		...GeneralStyle.adult.optionImageContainer,
+	},
 	container: {
 		// marginTop: 5,
-		// backgroundColor: "pink"
+		// backgroundColor: "pink",
 	},
 	imageFilter: {
 		position: "absolute",
@@ -119,9 +171,7 @@ const styles = StyleSheet.create({
 		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
 		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
 	},
-	optionContainer: {
-		...GeneralStyle.adult.optionImageContainer,
-	},
+
 	optionImage: {
 		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
 		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
@@ -130,6 +180,10 @@ const styles = StyleSheet.create({
 		left: 0,
 		height: "100%",
 		width: "100%",
+	},
+	optionText: {
+		fontWeight: GeneralStyle.kid.field.fontWeight,
+		fontSize: GeneralStyle.kid.field.fontSize,
 	},
 	optionTextContainer: {
 		borderBottomLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
@@ -142,9 +196,9 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 	},
 	textPressed: {
-		// color: "#fff",
+		color: "#fff",
 	},
 	textUnpressed: {
-		// color: "#000",
+		color: "#000",
 	},
 });
