@@ -23,7 +23,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Strongly dissatisfied",
 						value: "Strongly dissatisfied",
-						image: Images.general.options.physical_education.not_moving,
+						image: Images.generic.rating.very_dissatisfied,
 					},
 				},
 				{
@@ -32,7 +32,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Dissatisfied",
 						value: "Dissatisfied",
-						image: Images.general.options.physical_education.easy_effort,
+						image: Images.generic.rating.dissatisfied
 					},
 				},
 				{
@@ -41,7 +41,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Neutral",
 						value: "Neutral",
-						image: Images.general.options.physical_education.medium_effort,
+						image: Images.generic.rating.neutral,
 					},
 				},
 				{
@@ -50,7 +50,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Satisfied",
 						value: "Satisfied",
-						image: Images.general.options.physical_education.medium_effort,
+						image: Images.generic.rating.satisfied,
 					},
 				},
 				{
@@ -59,7 +59,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Strongly Satisfied",
 						value: "Strongly Satisfied",
-						image: Images.general.options.physical_education.medium_effort,
+						image: Images.generic.rating.very_satisfied,
 					},
 				},
 			],

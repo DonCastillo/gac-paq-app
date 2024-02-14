@@ -1,3 +1,9 @@
+import VeryDissatisfiedSVG from "assets/images/general/ratings/very_dissatisfied.svg";
+import DissatisfiedSVG from "assets/images/general/ratings/dissatisfied.svg";
+import NeutralSVG from "assets/images/general/ratings/neutral.svg";
+import SatisfiedSVG from "assets/images/general/ratings/satisfied.svg";
+import VerySatisfiedSVG from "assets/images/general/ratings/very_satisfied.svg";
+
 const GenericImages = {
 	pages: {
 		phone: {
@@ -13,6 +19,13 @@ const GenericImages = {
 			age: require("assets/images/generic/tablet/4.png"),
 		},
 	},
+	rating: {
+		very_dissatisfied: VeryDissatisfiedSVG,
+		dissatisfied: DissatisfiedSVG,
+		neutral: NeutralSVG,
+		satisfied: SatisfiedSVG,
+		very_satisfied: VerySatisfiedSVG,
+	}
 };
 
 export default GenericImages;
