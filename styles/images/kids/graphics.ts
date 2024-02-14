@@ -14,6 +14,13 @@ import CarrotSVG from "assets/images/kids/graphics/carrot.svg";
 import CarrotBiteSVG from "assets/images/kids/graphics/carrot_bite.svg";
 import EmptyBasket from "assets/images/kids/graphics/empty_basket.svg";
 import RabbitFaceSVG from "assets/images/kids/logo.svg";
+import CarSVG from "assets/images/kids/transportation/car.svg";
+import PublicTransportationSVG from "assets/images/kids/transportation/public_transport.svg";
+import SchoolBusSVG from "assets/images/kids/transportation/school_bus.svg";
+import SkateboardSVG from "assets/images/kids/transportation/skateboard.svg";
+import SittingTransportationSVG from "assets/images/kids/graphics/sitting.svg";
+import WalkingSVG from "assets/images/kids/transportation/small_walking.svg";
+import NeutralSVG from "assets/images/kids/transportation/neutral_pose.svg";
 
 const Graphics = {
 	mostly_not_moving: SittingSVG,
@@ -34,6 +41,15 @@ const Graphics = {
 	splash_image: RabbitFaceSVG,
 	success_image: RabbitFaceSVG,
 	error_image: SurprisedPoseSVG,
+	transportation: {
+		walking: WalkingSVG,
+		wheeling: SkateboardSVG,
+		car: CarSVG,
+		school_bus: SchoolBusSVG,
+		public_transit: PublicTransportationSVG,
+		staying_home: SittingTransportationSVG,
+		other: NeutralSVG,
+	},
 };
 
 export default Graphics;

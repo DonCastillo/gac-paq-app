@@ -21,7 +21,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Walking",
 						value: "Walking",
-						image: Images.generic.transportation.walking,
+						image: Images.kids.graphics.transportation.walking,
 					},
 				},
 				{
@@ -30,7 +30,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Wheeling",
 						value: "Wheeling",
-						image: Images.generic.transportation.wheeling,
+						image: Images.kids.graphics.transportation.wheeling,
 					},
 				},
 				{
@@ -39,7 +39,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "School bus",
 						value: "School bus",
-						image: Images.generic.transportation.school_bus,
+						image: Images.kids.graphics.transportation.school_bus,
 					},
 				},
 				{
@@ -48,7 +48,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Public transit",
 						value: "Public transit",
-						image: Images.generic.transportation.public_transit,
+						image: Images.kids.graphics.transportation.public_transit,
 					},
 				},
 				{
@@ -57,7 +57,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Car, taxi, truck, or motorcycle",
 						value: "Car, taxi, truck, or motorcycle",
-						image: Images.generic.transportation.car,
+						image: Images.kids.graphics.transportation.car,
 					},
 				},
 				{
@@ -66,7 +66,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Other",
 						value: "Other",
-						image: Images.generic.transportation.other,
+						image: Images.kids.graphics.transportation.other,
 					},
 				},
 			],

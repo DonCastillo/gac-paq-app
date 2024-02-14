@@ -57,12 +57,11 @@ export default function QuestionRadioImage({
 		} else {
 			// SVGs
 			const ImageComponent = image;
-			if(options.length <= 4) {
+			if (options.length <= 4) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
-			}else{
-				return <ImageComponent style={{ maxWidth: 50, minHeight: 50, marginRight: 10 }} />
+			} else {
+				return <ImageComponent style={{ maxWidth: 50, minHeight: 50, marginRight: 10 }} />;
 			}
-
 		}
 	}
 
@@ -98,7 +97,7 @@ export default function QuestionRadioImage({
 				<Pressable
 					style={[
 						styles.listOptionContainer,
-						{ flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingVertical: 3  },
+						{ flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingVertical: 3 },
 						{ borderColor: color100 },
 						selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
 					]}
