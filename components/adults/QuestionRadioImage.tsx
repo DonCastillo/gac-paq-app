@@ -1,8 +1,10 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
+import type { ImageStyle, StyleProp } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
+import type { Svg } from "react-native-svg";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -40,16 +42,21 @@ export default function QuestionRadioImage({
 		}
 	}
 
-	function renderImage(image: string): React.ReactElement {
-		let ImageComponent = <></>;
-		ImageComponent = (
-			<Image
-				style={styles.optionImage}
-				source={image}
-				resizeMode="cover"
-			/>
-		);
-		return ImageComponent;
+	function renderImage(image: string | Svg): React.ReactElement {
+		if (typeof image === "string") {
+			let ImageComponent = <></>;
+			ImageComponent = (
+				<Image
+					style={styles.optionImage as StyleProp<ImageStyle>}
+					source={image} // Convert the image to ImageSourcePropType
+					resizeMode="cover"
+				/>
+			);
+			return ImageComponent;
+		} else {
+			const ImageComponent = image;
+			return <ImageComponent style={{ maxWidth: 100 }} />;
+		}
 	}
 
 	function renderOption({ item }): React.ReactElement {

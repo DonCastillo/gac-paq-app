@@ -3,8 +3,8 @@ import PublicTransportationSVG from "assets/images/general/transportation/public
 import SchoolBusSVG from "assets/images/general/transportation/school_bus.svg";
 import SkateboardSVG from "assets/images/general/transportation/skateboard.svg";
 import SittingSVG from "assets/images/kids/graphics/sitting.svg";
-import WalkingSVG from "assets/images/kids/graphics/small_walking.svg";
-import NeutralSVG from "assets/images/kids/graphics/neutral_pose.svg";
+import WalkingSVG from "assets/images/general/transportation/small_walking.svg";
+import NeutralSVG from "assets/images/general/transportation/neutral_pose.svg";
 
 const GenericImages = {
 	pages: {
