@@ -23,7 +23,12 @@ export interface pageInterface {
 	screen: ScreenType | null;
 	page: any | null;
 	pageNumber: number | null;
-	section: SectionType.Intro | SectionType.Question | SectionType.Extro | null;
+	section:
+		| SectionType.Intro
+		| SectionType.Question
+		| SectionType.Extro
+		| SectionType.Feedback
+		| null;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;
 }

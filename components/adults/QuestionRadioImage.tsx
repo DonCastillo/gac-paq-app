@@ -43,19 +43,37 @@ export default function QuestionRadioImage({
 	}
 
 	function renderImage(image: string | Svg): React.ReactElement {
-		if (typeof image === "string") {
+		console.log("image", typeof image);
+		if (typeof image === "number") {
+			// Other formats
 			let ImageComponent = <></>;
-			ImageComponent = (
-				<Image
-					style={styles.optionImage as StyleProp<ImageStyle>}
-					source={image} // Convert the image to ImageSourcePropType
-					resizeMode="cover"
-				/>
-			);
+			if (options.length <= 5) {
+				ImageComponent = (
+					<Image
+						style={styles.optionImage as StyleProp<ImageStyle>}
+						source={image} // Convert the image to ImageSourcePropType
+						resizeMode="cover"
+					/>
+				);
+			} else {
+				ImageComponent = (
+					<Image
+						style={{ height: 50, width: 50, marginRight: 10 }}
+						source={image} // Convert the image to ImageSourcePropType
+						resizeMode="cover"
+					/>
+				);
+			}
+
 			return ImageComponent;
 		} else {
+			// SVGs
 			const ImageComponent = image;
-			return <ImageComponent style={{ maxWidth: 100 }} />;
+			if (options.length <= 5) {
+				return <ImageComponent style={{ maxWidth: 100 }} />;
+			} else {
+				return <ImageComponent style={{ maxWidth: 50, minHeight: 50, marginRight: 10 }} />;
+			}
 		}
 	}
 

@@ -9,13 +9,13 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 		{
 			id: 1,
 			question_radio_image_id: 1,
+			heading: "Feedback",
 			label:
 				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
 			kid_label:
 				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
 			adult_label:
 				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
-			heading: "Question 5",
 			choices: [
 				{
 					image_choices_id: {
@@ -46,7 +46,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 				{
 					image_choices_id: {
-						id: 3,
+						id: 4,
 						sort: null,
 						text: "Satisfied",
 						value: "Satisfied",
@@ -55,7 +55,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 				{
 					image_choices_id: {
-						id: 3,
+						id: 5,
 						sort: null,
 						text: "Strongly Satisfied",
 						value: "Strongly Satisfied",
