@@ -32,7 +32,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Dissatisfied",
 						value: "Dissatisfied",
-						image: Images.generic.rating.dissatisfied
+						image: Images.generic.rating.dissatisfied,
 					},
 				},
 				{

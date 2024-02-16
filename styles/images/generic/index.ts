@@ -25,7 +25,7 @@ const GenericImages = {
 		neutral: NeutralSVG,
 		satisfied: SatisfiedSVG,
 		very_satisfied: VerySatisfiedSVG,
-	}
+	},
 };
 
 export default GenericImages;

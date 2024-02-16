@@ -114,6 +114,7 @@ export default function GenericLanguage(): React.ReactElement {
 					<QuestionContainer>
 						<QuestionLabel
 							textStyle={{
+								fontFamily: "PoppinsMedium",
 								fontSize: 25,
 								fontWeight: "bold",
 							}}
