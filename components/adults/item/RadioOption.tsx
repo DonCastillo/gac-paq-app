@@ -22,9 +22,6 @@ export default function RadioOption({
 	const { color100 } = settingCtx.settingState.colorTheme;
 	const [optionValue, setOptionValue] = useState<string>(value);
 
-	// console.log("option value: ", value);
-	// console.log("option optionValue: ", optionValue);
-
 	function pressHandler(): void {
 		if (selected) {
 			onPress(null);
@@ -61,18 +58,13 @@ export default function RadioOption({
 }
 const styles = StyleSheet.create({
 	container: {
-		...GeneralStyle.adult.optionContainer,
 		alignItems: "center",
 		flexDirection: "row",
 		width: "100%",
+		...GeneralStyle.adult.radioContainer,
 	},
 	radioButton: {
-		height: 25,
-		width: 25,
-		marginRight: 15,
-		borderRadius: 25 / 2,
-		borderColor: "#D8D8D8",
-		borderWidth: 2,
+		...GeneralStyle.adult.radioButton,
 	},
 
 	labelContainer: {
@@ -83,11 +75,10 @@ const styles = StyleSheet.create({
 		flexWrap: "nowrap",
 	},
 	labelText: {
-		...GeneralStyle.adult.optionText,
 		flexWrap: "wrap",
 		flex: 1,
+		...GeneralStyle.adult.radioText,
 	},
-
 	labelImage: {
 		marginRight: 10,
 	},

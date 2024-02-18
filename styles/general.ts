@@ -1,6 +1,19 @@
 // for the kids, field border should be 3
 // border should be color 100 (light color)
+
+import { horizontalScale } from "utils/responsive";
+
 // nav should be color200 (dark)
+const Font = {
+	PoppinsBold: "PoppinsBold",
+	PoppinsMedium: "PoppinsMedium",
+	PoppinsRegular: "PoppinsRegular",
+	SpaceBold: "SpaceBold",
+	SpaceLight: "SpaceLight",
+	SpaceMedium: "SpaceMedium",
+	SpaceRegular: "SpaceRegular",
+	SpaceSemiBold: "SpaceSemiBold",
+};
 
 const GeneralStyle = {
 	general: {
@@ -29,6 +42,43 @@ const GeneralStyle = {
 		},
 	},
 	adult: {
+		questionContainer: {
+			borderRadius: 25,
+			maxWidth: 500,
+			backgroundColor: "white",
+			paddingHorizontal: 30,
+			paddingVertical: 20,
+			shadowColor: "#000",
+			shadowOffset: {
+				width: 3,
+				height: 8,
+			},
+			shadowOpacity: 0.3,
+			shadowRadius: 5,
+		},
+		questionLabel: {
+			fontSize: 25,
+			fontFamily: Font.PoppinsMedium,
+			fontWeight: "bold",
+		},
+		radioContainer: {
+			paddingVertical: 4,
+			paddingHorizontal: 10,
+			marginBottom: 5,
+			flex: 1,
+		},
+		radioButton: {
+			height: 25,
+			width: 25,
+			marginRight: 15,
+			borderRadius: 25 / 2,
+			borderColor: "#D8D8D8",
+			borderWidth: 2,
+		},
+		radioText: {
+			fontSize: 18,
+			fontFamily: Font.SpaceRegular
+		},
 		field: {
 			fontSize: 18,
 			fontWeight: "400",
@@ -42,31 +92,8 @@ const GeneralStyle = {
 			marginTop: 15,
 			borderColor: "#C5C5C5",
 		},
-		questionContainer: {
-			// maxHeight: 450,
-			borderRadius: 20,
-			height: "auto",
-			width: "100%",
-			backgroundColor: "white",
-			padding: 20,
-			shadowColor: "#000",
-			shadowOffset: {
-				width: 0.5,
-				height: 1,
-			},
-			shadowOpacity: 0.2,
-			shadowRadius: 2,
-		},
-		optionContainer: {
-			paddingVertical: 4,
-			paddingHorizontal: 10,
-			marginBottom: 5,
-			width: "100%",
-			flex: 1,
-		},
-		optionText: {
-			fontSize: 16,
-		},
+		
+		
 		optionImageContainer: {
 			backgroundColor: "#fff",
 			width: "100%",
@@ -103,4 +130,4 @@ const DefaultStyle = {
 	},
 };
 
-export { GeneralStyle, DefaultStyle };
+export { GeneralStyle, DefaultStyle, Font };

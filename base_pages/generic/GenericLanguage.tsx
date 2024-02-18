@@ -16,6 +16,8 @@ import { translate, translateQuestionLabel } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
 import ImageBackdrop from "components/ImageBackdrop";
+import { getWidth, horizontalScale } from "utils/responsive";
+import { GeneralStyle } from "styles/general";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -112,13 +114,7 @@ export default function GenericLanguage(): React.ReactElement {
 			<Main>
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionLabel
-							textStyle={{
-								fontFamily: "PoppinsMedium",
-								fontSize: 25,
-								fontWeight: "bold",
-							}}
-						>
+						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>
 						<QuestionSelectLanguageAdult
