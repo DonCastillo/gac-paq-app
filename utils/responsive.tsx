@@ -28,7 +28,6 @@ function isTab(): boolean {
 	}
 }
 
-
 function getDeviceInfo(orientationInfo): DeviceInterface {
 	let orientation = OrientationType.Portrait;
 	switch (orientationInfo) {
@@ -59,7 +58,7 @@ async function getInitialDeviceInfo(): Promise<DeviceInterface> {
 }
 
 function horizontalScale(size: number, width: number = BASE_WIDTH): number {
-	const newSize = size * (getWidth() / BASE_WIDTH);
+	const newSize = size * (width / BASE_WIDTH);
 	if (getOS() === "ios") {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize));
 	} else {
@@ -68,14 +67,21 @@ function horizontalScale(size: number, width: number = BASE_WIDTH): number {
 }
 
 function verticalScale(size: number, height: number = BASE_HEIGHT): number {
-	const newSize = size * (getHeight() / BASE_HEIGHT);
+	const newSize = size * (height / BASE_HEIGHT);
 	if (getOS() === "ios") {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize));
 	} else {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
 	}
 }
-
+function moderateScale(size: number, width: number = BASE_HEIGHT, factor: number = 0.5): number {
+	const newSize = size + (horizontalScale(size, width) - size) * factor;
+	if (getOS() === "ios") {
+		return Math.round(PixelRatio.roundToNearestPixel(newSize));
+	} else {
+		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
+	}
+}
 
 // function isScreenHeight770(): boolean {
 // 	if (getHeight() > 740 && getHeight() < 760) {
@@ -85,9 +91,4 @@ function verticalScale(size: number, height: number = BASE_HEIGHT): number {
 // 	}
 // }
 
-export {
-	getDeviceInfo,
-	getInitialDeviceInfo,
-	horizontalScale,
-	verticalScale,
-};
+export { getDeviceInfo, getInitialDeviceInfo, horizontalScale, verticalScale, moderateScale };

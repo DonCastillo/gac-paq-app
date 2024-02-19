@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import Main from "components/Main";
@@ -11,9 +11,11 @@ import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ScrollContainer from "components/ScrollContainer";
+import { GeneralStyle } from "styles/general";
 
 export default function GenericPage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
+	const { device } = settingCtx.settingState;
 	const { language, colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
@@ -29,31 +31,24 @@ export default function GenericPage(): React.ReactElement {
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />
-			{/* <ImageBackground
-				source={{ uri: bgImageURL }}
-				resizeMode="cover"
-				style={styles.bgImage}
-			></ImageBackground> */}
 			<Main>
 				{renderToolbar()}
 				<CenterMain>
 					<ScrollContainer>
 						<Heading
 							customStyle={{
-								color: "white",
-								fontSize: 40,
-								marginBottom: 50,
-								textAlign: "center",
-								// backgroundColor: "pink",
+								...GeneralStyle.adult.pageHeading,
+								fontSize: device.isTablet ? 80 : 50,
+								lineHeight: device.isTablet ? 100 : 70,
 							}}
 						>
 							{translatedPage?.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
-								color: "white",
-								fontSize: 15,
-								lineHeight: 17,
+								...GeneralStyle.adult.pageParagraph,
+								fontSize: device.isTablet ? 20 : 15,
+								lineHeight: device.isTablet ? 25 : 19,
 							}}
 						>
 							{translatedPage?.description}

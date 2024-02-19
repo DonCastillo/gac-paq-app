@@ -59,7 +59,6 @@ function AppWrapper(): React.ReactElement {
 		};
 	}, []);
 
-
 	function SplashScreen(): React.ReactElement {
 		return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;
 	}

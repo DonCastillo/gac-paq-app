@@ -20,6 +20,7 @@ import QuestionInput from "components/adults/QuestionInput";
 import Mode from "constants/mode";
 import ImageBackdrop from "components/ImageBackdrop";
 import { QuestionContext } from "store/questions";
+import { GeneralStyle } from "styles/general";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -123,12 +124,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionLabel
-							textStyle={{
-								fontSize: 25,
-								fontWeight: "bold",
-							}}
-						>
+						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>
 						{questionType === QuestionType.QuestionInput &&

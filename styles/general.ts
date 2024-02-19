@@ -1,9 +1,9 @@
 // for the kids, field border should be 3
 // border should be color 100 (light color)
 
-import { horizontalScale } from "utils/responsive";
-
 // nav should be color200 (dark)
+const DARK_TEXT_COLOR = "#333333";
+
 const Font = {
 	PoppinsBold: "PoppinsBold",
 	PoppinsMedium: "PoppinsMedium",
@@ -44,7 +44,7 @@ const GeneralStyle = {
 	adult: {
 		questionContainer: {
 			borderRadius: 25,
-			maxWidth: 500,
+			maxWidth: 700,
 			backgroundColor: "white",
 			paddingHorizontal: 30,
 			paddingVertical: 20,
@@ -60,6 +60,7 @@ const GeneralStyle = {
 			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
 			fontWeight: "bold",
+			color: DARK_TEXT_COLOR,
 		},
 		radioContainer: {
 			paddingVertical: 4,
@@ -77,7 +78,26 @@ const GeneralStyle = {
 		},
 		radioText: {
 			fontSize: 18,
-			fontFamily: Font.SpaceRegular
+			fontFamily: Font.SpaceRegular,
+			color: DARK_TEXT_COLOR,
+		},
+		pageHeading: {
+			color: "white",
+			fontSize: 40,
+			marginBottom: 50,
+			textAlign: "center",
+			fontFamily: Font.PoppinsBold,
+			// maxWidth: 700,
+			// backgroundColor: "green",
+		},
+		pageParagraph: {
+			color: "white",
+			// backgroundColor: "green",
+			fontFamily: Font.PoppinsMedium,
+			fontSize: 15,
+			lineHeight: 17,
+			maxWidth: 800,
+			textAlign: "left",
 		},
 		field: {
 			fontSize: 18,
@@ -92,8 +112,7 @@ const GeneralStyle = {
 			marginTop: 15,
 			borderColor: "#C5C5C5",
 		},
-		
-		
+
 		optionImageContainer: {
 			backgroundColor: "#fff",
 			width: "100%",
