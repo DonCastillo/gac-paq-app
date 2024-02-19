@@ -10,6 +10,8 @@ import type SectionPayloadInterface from "interface/directus/section-payload";
 import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
+import OrientationType from "constants/orientation_type";
+import type DeviceInterface from "interface/dimensions";
 /**
  * by default the app should be set as:
  *      mode: kid,
@@ -83,10 +85,18 @@ const defaultPhrase: phraseInterface = {
 const DEFAULT_MODE = undefined;
 // const DEFAULT_MODE = Mode.Adult;
 const DEFAULT_COLOR_INDEX = 0;
+const DEFAULT_DEVICE: DeviceInterface = {
+	screenWidth: 0,
+	screenHeight: 0,
+	orientation: OrientationType.Portrait,
+	isTablet: false,
+	platform: "",
+};
 const TOTAL_COLORS = 8;
 
 const INITIAL_STATE = {
 	mode: DEFAULT_MODE,
+	device: DEFAULT_DEVICE,
 	language: "en-CA",
 	directusAccessToken: "kaTCPGRRqTCp18GmHkECCKNeMcY5Vwa5",
 	directusBaseEndpoint: "http://localhost:8055",
@@ -125,6 +135,7 @@ const INITIAL_STATE = {
 export const SettingContext = createContext({
 	settingState: INITIAL_STATE,
 	setMode: (newMode: Mode.Adult | Mode.Kid | undefined) => {},
+	setDevice: (newDevice: DeviceInterface) => {},
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
 	setColorTheme: (colorIndex: number) => {},
@@ -145,6 +156,11 @@ function settingReducer(state: any, action: any): any {
 			return {
 				...state,
 				mode: action.payload,
+			};
+		case "SET_DEVICE":
+			return {
+				...state,
+				device: action.payload,
 			};
 		case "SET_LANGUAGE":
 			return {
@@ -313,6 +329,13 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function setDevice(newDevice: DeviceInterface): void {
+		dispatch({
+			type: "SET_DEVICE",
+			payload: newDevice,
+		});
+	}
+
 	function setLanguage(newLanguage: string): void {
 		dispatch({
 			type: "SET_LANGUAGE",
@@ -418,6 +441,7 @@ export default function SettingContextProvider({
 	const value: any = {
 		settingState,
 		setMode,
+		setDevice,
 		setLanguage,
 		setDirectusAccessToken,
 		setColorTheme,

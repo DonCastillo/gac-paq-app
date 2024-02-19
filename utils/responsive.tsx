@@ -1,54 +1,93 @@
+import OrientationType from "constants/orientation_type";
+import type DeviceInterface from "interface/dimensions";
 import { Dimensions, Platform, PixelRatio } from "react-native";
-const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
+import * as ScreenOrientation from "expo-screen-orientation";
+
 const BASE_WIDTH = 375;
 const BASE_HEIGHT = 812;
-const scaleHorizontal = SCREEN_WIDTH / BASE_WIDTH;
-const scaleVertical = SCREEN_HEIGHT / BASE_HEIGHT;
 
 function getWidth(): number {
-	return SCREEN_WIDTH;
+	const { width } = Dimensions.get("window");
+	return width;
 }
 
 function getHeight(): number {
-	return SCREEN_HEIGHT;
+	const { height } = Dimensions.get("window");
+	return height;
 }
 
 function getOS(): string {
 	return Platform.OS;
 }
 
-function horizontalScale(size: number): number {
-	const newSize = size * scaleHorizontal;
-	if (getOS() === "ios") {
-		return Math.round(PixelRatio.roundToNearestPixel(newSize));
-	} else {
-		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
-	}
-}
-
-function verticalScale(size: number): number {
-	const newSize = size * scaleVertical;
-	if (getOS() === "ios") {
-		return Math.round(PixelRatio.roundToNearestPixel(newSize));
-	} else {
-		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
-	}
-}
-
 function isTab(): boolean {
-	if (SCREEN_WIDTH > 550) {
+	if (getWidth() > 550) {
 		return true;
 	} else {
 		return false;
 	}
 }
 
-function isScreenHeight770(): boolean {
-	if (SCREEN_HEIGHT > 740 && SCREEN_HEIGHT < 760) {
-		return true;
+
+function getDeviceInfo(orientationInfo): DeviceInterface {
+	let orientation = OrientationType.Portrait;
+	switch (orientationInfo) {
+		case 1:
+		case 2:
+			orientation = OrientationType.Portrait;
+			break;
+		case 3:
+		case 4:
+			orientation = OrientationType.Landscape;
+			break;
+		default:
+			orientation = OrientationType.Portrait;
+			break;
+	}
+	return {
+		screenWidth: getWidth(),
+		screenHeight: getHeight(),
+		orientation,
+		platform: getOS(),
+		isTablet: isTab(),
+	};
+}
+
+async function getInitialDeviceInfo(): Promise<DeviceInterface> {
+	const orientation = await ScreenOrientation.getOrientationAsync();
+	return getDeviceInfo(orientation);
+}
+
+function horizontalScale(size: number, width: number = BASE_WIDTH): number {
+	const newSize = size * (getWidth() / BASE_WIDTH);
+	if (getOS() === "ios") {
+		return Math.round(PixelRatio.roundToNearestPixel(newSize));
 	} else {
-		return false;
+		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
 	}
 }
 
-export { getWidth, getHeight, getOS, horizontalScale, verticalScale, isTab, isScreenHeight770 };
+function verticalScale(size: number, height: number = BASE_HEIGHT): number {
+	const newSize = size * (getHeight() / BASE_HEIGHT);
+	if (getOS() === "ios") {
+		return Math.round(PixelRatio.roundToNearestPixel(newSize));
+	} else {
+		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
+	}
+}
+
+
+// function isScreenHeight770(): boolean {
+// 	if (getHeight() > 740 && getHeight() < 760) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+export {
+	getDeviceInfo,
+	getInitialDeviceInfo,
+	horizontalScale,
+	verticalScale,
+};

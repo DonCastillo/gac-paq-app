@@ -13,7 +13,10 @@ import { loadLanguagesOffline, loadRegionsOffline } from "utils/load";
 import GenericSplash from "base_pages/generic/GenericSplash";
 import StateKid from "base_pages/kid/StateKid";
 import StateType from "constants/state_type";
-import StateAdult from "base_pages/adult//StateAdult";
+import StateAdult from "base_pages/adult/StateAdult";
+import * as ScreenOrientation from "expo-screen-orientation";
+import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive";
+import type DeviceInterface from "interface/dimensions";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,9 +37,28 @@ function AppWrapper(): React.ReactElement {
 
 	const introductoryPages = questionCtx.questionState.introductoryPages;
 	const questionPages = questionCtx.questionState.questionPages;
-	const kidExtroPages = questionCtx.questionState.kidExtroPages;
-	const adultExtroPages = questionCtx.questionState.adultExtroPages;
 	const feedbackExtroPages = questionCtx.questionState.feedbackExtroPages;
+
+	// set device dimensions
+	useEffect(() => {
+		const getInitialDeviceInfoAsync = async (): Promise<DeviceInterface> => {
+			return await getInitialDeviceInfo();
+		};
+		getInitialDeviceInfoAsync()
+			.then((initialDeviceInfo) => settingCtx.setDevice(initialDeviceInfo))
+			.catch(console.error);
+
+		const orientationListener = ScreenOrientation.addOrientationChangeListener(
+			(orientationInfo) => {
+				const newDeviceInfo = getDeviceInfo(orientationInfo.orientationInfo.orientation);
+				settingCtx.setDevice(newDeviceInfo);
+			},
+		);
+		return () => {
+			ScreenOrientation.removeOrientationChangeListener(orientationListener);
+		};
+	}, []);
+
 
 	function SplashScreen(): React.ReactElement {
 		return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;
