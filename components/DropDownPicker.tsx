@@ -1,11 +1,9 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
-
-const FONT_SIZE = 16;
-const BORDER_WIDTH = 3;
+import { GeneralStyle } from "styles/general";
 
 interface DropDownSelectorPropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -65,8 +63,8 @@ export default function DropDownSelector({
 				onChangeValue={(value: string) => onSelect(value)}
 				// onSelectItem={(item) => onSelect(item.value ?? null)}
 				textStyle={{
-					fontSize: FONT_SIZE,
-					fontWeight: "bold",
+					fontWeight: "400",
+					...GeneralStyle.kid.dropdownPickerText,
 				}}
 			/>
 		</>
@@ -76,32 +74,25 @@ export default function DropDownSelector({
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		borderWidth: BORDER_WIDTH,
-		borderRadius: 10,
 		width: "100%",
 		alignItems: "center",
 		justifyContent: "center",
-		minHeight: 60,
-		fontSize: FONT_SIZE,
+		...GeneralStyle.kid.dropdownPickerContainer,
 	},
 	listItemContainerStyle: {
-		height: 60,
+		...GeneralStyle.kid.dropdownPickerListItemContainer,
 	},
 	dropdownContainer: {
-		marginTop: 5,
-		borderWidth: BORDER_WIDTH,
-		// minHeight: 280,
-	},
-	headingContainer: {
-		marginBottom: 60,
+		marginTop: 10,
+		...GeneralStyle.kid.dropdownPickerListContainer,
 	},
 	iconContainer: {},
 	listItemLabelStyle: {
 		fontWeight: "400",
-		fontSize: FONT_SIZE,
+		...GeneralStyle.kid.dropdownPickerListLabel,
 	},
 	labelStyle: {
 		fontWeight: "400",
-		fontSize: FONT_SIZE,
+		...GeneralStyle.kid.dropdownPickerListLabelChosen,
 	},
 });

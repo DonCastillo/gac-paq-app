@@ -9,10 +9,11 @@ import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "utils/background";
+import { GeneralStyle } from "styles/general";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
@@ -54,18 +55,19 @@ export default function PageKid(): React.ReactElement {
 					<Heading
 						customStyle={{
 							color: color100,
-							fontSize: 50,
-							marginBottom: 50,
-							textAlign: "center",
+							...GeneralStyle.kid.pageHeading,
+							fontSize: device.isTablet ? 80 : 50,
+							lineHeight: device.isTablet ? 100 : 70,
 						}}
 					>
-						{translatedPage?.heading.toLowerCase()}
+						{translatedPage?.heading}
 					</Heading>
 					<Paragraph
 						customStyle={{
 							color: color100,
-							fontSize: 15,
-							lineHeight: 20,
+							...GeneralStyle.kid.pageParagraph,
+							fontSize: device.isTablet ? 20 : 15,
+							lineHeight: device.isTablet ? 25 : 19,
 						}}
 					>
 						{translatedPage?.description}

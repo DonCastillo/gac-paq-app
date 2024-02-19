@@ -3,6 +3,9 @@
 
 // nav should be color200 (dark)
 const DARK_TEXT_COLOR = "#333333";
+const DEFAULT_BORDER_WIDTH = 3;
+const DEFAULT_BORDER_RADIUS = 10;
+const DEFAULT_OPTION_FONT_SIZE = 18;
 
 const Font = {
 	PoppinsBold: "PoppinsBold",
@@ -39,6 +42,53 @@ const GeneralStyle = {
 		},
 		inactiveText: {
 			color: "#ABABAB",
+		},
+		introQuestionContainer: {
+			maxWidth: 500,
+		},
+		introQuestionLabel: {
+			fontSize: 25,
+			fontFamily: Font.PoppinsMedium,
+			color: DARK_TEXT_COLOR,
+			// backgroundColor: "red",
+		},
+		dropdownPickerContainer: {
+			borderWidth: DEFAULT_BORDER_WIDTH,
+			borderRadius: DEFAULT_BORDER_RADIUS,
+			minHeight: 60,
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			// backgroundColor: "red",
+		},
+		dropdownPickerListItemContainer: {
+			height: 60,
+		},
+		dropdownPickerListContainer: {
+			borderWidth: DEFAULT_BORDER_WIDTH,
+		},
+		dropdownPickerListLabel: {
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			fontFamily: Font.PoppinsRegular,
+		},
+		dropdownPickerListLabelChosen: {
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			fontFamily: Font.PoppinsRegular,
+		},
+		dropdownPickerText: {
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			fontFamily: Font.PoppinsRegular,
+		},
+		pageHeading: {
+			fontSize: 40,
+			marginBottom: 50,
+			textAlign: "center",
+			fontFamily: Font.PoppinsBold,
+		},
+		pageParagraph: {
+			fontFamily: Font.PoppinsMedium,
+			fontSize: 15,
+			lineHeight: 17,
+			maxWidth: 800,
+			textAlign: "center",
 		},
 	},
 	adult: {

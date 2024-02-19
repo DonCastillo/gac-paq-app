@@ -14,13 +14,16 @@ import { QuestionContext } from "store/questions";
 import ButtonLabel from "constants/button_label";
 import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
+import { GeneralStyle } from "styles/general";
+import { verticalScale } from "utils/responsive";
 
 export default function LanguageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
+		settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -112,12 +115,15 @@ export default function LanguageKid(): React.ReactElement {
 			{background !== null && background}
 			<Main>
 				<TopMain>
-					<View>
-						<QuestionLabel
-							textStyle={{
-								fontSize: 25,
-							}}
-						>
+					<View
+						style={[
+							GeneralStyle.kid.introQuestionContainer,
+							{
+								marginVertical: verticalScale(60, device.screenHeight),
+							},
+						]}
+					>
+						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
 							{questionLabel}
 						</QuestionLabel>
 						<QuestionSelectLanguage
