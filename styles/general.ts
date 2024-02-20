@@ -75,11 +75,17 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		questionQuestionLabel: {
-			fontSize: 25,
-			fontFamily: Font.PoppinsMedium,
+			fontSize: 23,
+			fontFamily: Font.PoppinsBold,
 			color: DARK_TEXT_COLOR,
-			// backgroundColor: "red",
 		},
+		questionQuestionTitle: {
+			marginVertical: 5,
+			fontFamily: Font.SpaceLight,
+			fontSize: 18,
+			color: DARK_TEXT_COLOR,
+		},
+
 		dropdownPickerContainer: {
 			borderWidth: DEFAULT_BORDER_WIDTH,
 			borderRadius: DEFAULT_BORDER_RADIUS,
@@ -117,6 +123,18 @@ const GeneralStyle = {
 			lineHeight: 17,
 			maxWidth: 800,
 			textAlign: "center",
+		},
+		optionContainer: {
+			borderWidth: DEFAULT_BORDER_WIDTH,
+			borderRadius: DEFAULT_BORDER_RADIUS,
+			paddingHorizontal: 20,
+			paddingVertical: 14,
+			marginBottom: 15,
+			// backgroundColor: "orange",
+		},
+		optionText: {
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			fontFamily: Font.SpaceRegular,
 		},
 	},
 	adult: {

@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { OptionInterface } from "utils/options";
+import { horizontalScale } from "utils/responsive";
 
 interface QuestionRadioPropsInterface {
 	options: OptionInterface[];
@@ -16,7 +17,7 @@ export default function QuestionRadio({
 	selectedValue,
 }: QuestionRadioPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage } = settingCtx.settingState;
+	const { currentPageNumber, colorTheme, currentPage, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 
@@ -40,10 +41,19 @@ export default function QuestionRadio({
 		}
 	}
 
+	const COLUMN_THRESHOLD = 4;
+	const enableColumnWrap = device.isTablet && options.length > COLUMN_THRESHOLD;
+	const twoColumns = enableColumnWrap ? 2 : 1;
+	const adjustWidth = enableColumnWrap ? horizontalScale(150, device.screenWidth) : "100%";
+	const adjustMarginRight = enableColumnWrap ? horizontalScale(10, device.screenWidth) : 0;
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
 				<FlatList
+					horizontal={false}
+					numColumns={twoColumns}
+					key={currentPageNumber}
 					data={options}
 					renderItem={({ item }) => {
 						return (
@@ -51,7 +61,11 @@ export default function QuestionRadio({
 								<Pressable
 									style={[
 										styles.optionContainer,
-										{ borderColor: color100 },
+										{
+											borderColor: color100,
+											width: adjustWidth,
+											marginRight: adjustMarginRight,
+										},
 										selected === item.value ? optionPressedStyle : styles.optionUnpressed,
 									]}
 									onPress={() => {
@@ -77,20 +91,13 @@ export default function QuestionRadio({
 }
 
 const styles = StyleSheet.create({
-	container: {
-		// backgroundColor: "orange",
-	},
+	container: {},
 	optionContainer: {
-		borderWidth: GeneralStyle.kid.field.borderWidth,
-		borderColor: GeneralStyle.kid.field.borderColor,
-		borderRadius: GeneralStyle.kid.field.borderRadius,
-		marginBottom: GeneralStyle.kid.field.marginBottom,
-		paddingVertical: GeneralStyle.kid.field.paddingVertical,
-		paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+		...GeneralStyle.kid.optionContainer,
+		width: "100%",
 	},
 	optionText: {
-		fontWeight: GeneralStyle.kid.field.fontWeight,
-		fontSize: GeneralStyle.kid.field.fontSize,
+		...GeneralStyle.kid.optionText,
 	},
 	optionUnpressed: {
 		backgroundColor: "#FFF",

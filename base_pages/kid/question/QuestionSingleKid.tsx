@@ -21,6 +21,8 @@ import { getQuestionBackground } from "utils/background";
 import DeviceType from "constants/device_type";
 import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/kid/QuestionInput";
+import { GeneralStyle } from "styles/general";
+import { verticalScale } from "utils/responsive";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -29,7 +31,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
+		settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -192,14 +195,20 @@ export default function QuestionSingleKid(): React.ReactElement {
 			{background !== null && background}
 			<Main>
 				<TopMain>
-					<View>
+					<View
+						style={[
+							{
+								marginVertical: verticalScale(30, device.screenHeight),
+							},
+						]}
+					>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
 						<QuestionLabel
 							textStyle={{
-								fontSize: 20,
+								...GeneralStyle.kid.questionQuestionLabel,
 							}}
 							customStyle={{
-								marginBottom: 10,
+								marginBottom: 0,
 							}}
 						>
 							{questionLabel}

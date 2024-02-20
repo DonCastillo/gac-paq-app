@@ -173,13 +173,13 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<TopMain>
 					<View
 						style={[
-							GeneralStyle.kid.questionQuestionContainer,
+							GeneralStyle.kid.introQuestionContainer,
 							{
 								marginVertical: verticalScale(60, device.screenHeight),
 							},
 						]}
 					>
-						<QuestionLabel textStyle={GeneralStyle.kid.questionQuestionLabel}>
+						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
 							{questionLabel}
 						</QuestionLabel>
 						{questionComponent}
@@ -196,8 +196,5 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
-	},
-	innerContainer: {
-		marginTop: 50,
 	},
 });
