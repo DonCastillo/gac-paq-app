@@ -10,7 +10,7 @@ const S6Extro: ExtroPayloadInterface = {
 			id: 1,
 			extro_section_id: 1,
 			heading: "Section Complete!",
-			subheading: "",
+			subheading: "Only one more to go!",
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",

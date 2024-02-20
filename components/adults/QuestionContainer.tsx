@@ -14,5 +14,7 @@ export default function QuestionContainer({ children }): React.ReactElement {
 const styles = StyleSheet.create({
 	container: {
 		...GeneralStyle.adult.questionContainer,
+		height: "auto",
+		width: "100%",
 	},
 });

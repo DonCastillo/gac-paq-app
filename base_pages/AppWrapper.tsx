@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React, { useContext, useEffect } from "react";
+import { useFonts } from "expo-font";
 import { SettingContext } from "store/settings";
 import { QuestionContext } from "store/questions";
 import RegularPageScreen from "screens/RegularPageScreen";
@@ -12,20 +13,51 @@ import { loadLanguagesOffline, loadRegionsOffline } from "utils/load";
 import GenericSplash from "base_pages/generic/GenericSplash";
 import StateKid from "base_pages/kid/StateKid";
 import StateType from "constants/state_type";
-import StateAdult from "base_pages/adult//StateAdult";
+import StateAdult from "base_pages/adult/StateAdult";
+import * as ScreenOrientation from "expo-screen-orientation";
+import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive";
+import type DeviceInterface from "interface/dimensions";
 
 const Stack = createNativeStackNavigator();
 
 function AppWrapper(): React.ReactElement {
+	const [fontsLoaded] = useFonts({
+		PoppinsBold: require("assets/fonts/poppins/Poppins-Bold.ttf"),
+		PoppinsMedium: require("assets/fonts/poppins/Poppins-Medium.ttf"),
+		PoppinsRegular: require("assets/fonts/poppins/Poppins-Regular.ttf"),
+		SpaceBold: require("assets/fonts/space-grotesk/SpaceGrotesk-Bold.ttf"),
+		SpaceLight: require("assets/fonts/space-grotesk/SpaceGrotesk-Light.ttf"),
+		SpaceMedium: require("assets/fonts/space-grotesk/SpaceGrotesk-Medium.ttf"),
+		SpaceRegular: require("assets/fonts/space-grotesk/SpaceGrotesk-Regular.ttf"),
+		SpaceSemiBold: require("assets/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf"),
+	});
 	const settingCtx = useContext(SettingContext);
 	const questionCtx = useContext(QuestionContext);
 	const { mode } = settingCtx.settingState;
 
 	const introductoryPages = questionCtx.questionState.introductoryPages;
 	const questionPages = questionCtx.questionState.questionPages;
-	const kidExtroPages = questionCtx.questionState.kidExtroPages;
-	const adultExtroPages = questionCtx.questionState.adultExtroPages;
 	const feedbackExtroPages = questionCtx.questionState.feedbackExtroPages;
+
+	// set device dimensions
+	useEffect(() => {
+		const getInitialDeviceInfoAsync = async (): Promise<DeviceInterface> => {
+			return await getInitialDeviceInfo();
+		};
+		getInitialDeviceInfoAsync()
+			.then((initialDeviceInfo) => settingCtx.setDevice(initialDeviceInfo))
+			.catch(console.error);
+
+		const orientationListener = ScreenOrientation.addOrientationChangeListener(
+			(orientationInfo) => {
+				const newDeviceInfo = getDeviceInfo(orientationInfo.orientationInfo.orientation);
+				settingCtx.setDevice(newDeviceInfo);
+			},
+		);
+		return () => {
+			ScreenOrientation.removeOrientationChangeListener(orientationListener);
+		};
+	}, []);
 
 	function SplashScreen(): React.ReactElement {
 		return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;

@@ -16,13 +16,14 @@ import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import { useNavigation } from "@react-navigation/native";
 import ImageBackdrop from "components/ImageBackdrop";
+import { getImageBackground } from "utils/background";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const { language, currentPage, currentPageNumber, directusAccessToken, directusBaseEndpoint } =
+	const { mode, language, currentPage, currentPageNumber, directusAccessToken, directusBaseEndpoint, device } =
 		settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
@@ -85,7 +86,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 			<View style={styles.container}>
 				<BGLinearGradient />
 				<ImageBackdrop
-					source={translatedPage?.images?.adult?.phone}
+					source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
 					key={currentPageNumber}
 					opacity={0.2}
 				/>

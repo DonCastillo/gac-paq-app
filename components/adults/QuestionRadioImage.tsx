@@ -1,8 +1,10 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
+import type { ImageStyle, StyleProp } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
+import type { Svg } from "react-native-svg";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -40,16 +42,39 @@ export default function QuestionRadioImage({
 		}
 	}
 
-	function renderImage(image: string): React.ReactElement {
-		let ImageComponent = <></>;
-		ImageComponent = (
-			<Image
-				style={styles.optionImage}
-				source={image}
-				resizeMode="cover"
-			/>
-		);
-		return ImageComponent;
+	function renderImage(image: string | Svg): React.ReactElement {
+		console.log("image", typeof image);
+		if (typeof image === "number") {
+			// Other formats
+			let ImageComponent = <></>;
+			if (options.length <= 5) {
+				ImageComponent = (
+					<Image
+						style={styles.optionImage as StyleProp<ImageStyle>}
+						source={image} // Convert the image to ImageSourcePropType
+						resizeMode="cover"
+					/>
+				);
+			} else {
+				ImageComponent = (
+					<Image
+						style={{ height: 50, width: 50, marginRight: 10 }}
+						source={image} // Convert the image to ImageSourcePropType
+						resizeMode="cover"
+					/>
+				);
+			}
+
+			return ImageComponent;
+		} else {
+			// SVGs
+			const ImageComponent = image;
+			if (options.length <= 5) {
+				return <ImageComponent style={{ maxWidth: 100 }} />;
+			} else {
+				return <ImageComponent style={{ maxWidth: 50, minHeight: 50, marginRight: 10 }} />;
+			}
+		}
 	}
 
 	function renderOption({ item }): React.ReactElement {

@@ -15,7 +15,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				"Which of the following images shows what you do most of the time while volunteering and/or working?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
-			heading: "Question 11",
+			heading: "Question 14",
 			choices: [
 				{
 					image_choices_id: {

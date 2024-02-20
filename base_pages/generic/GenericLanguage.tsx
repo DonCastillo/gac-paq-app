@@ -16,13 +16,15 @@ import { translate, translateQuestionLabel } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
 import ImageBackdrop from "components/ImageBackdrop";
+import { GeneralStyle } from "styles/general";
+import { getImageBackground } from "utils/background";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -102,22 +104,19 @@ export default function GenericLanguage(): React.ReactElement {
 		}
 	}
 
+	console.log("type of image: ", typeof translatedPage?.images?.adult?.phone);
+
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={translatedPage?.images?.adult?.phone}
+				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
 				key={currentPageNumber}
 			/>
 			<Main>
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionLabel
-							textStyle={{
-								fontSize: 25,
-								fontWeight: "bold",
-							}}
-						>
+						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>
 						<QuestionSelectLanguageAdult

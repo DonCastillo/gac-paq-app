@@ -17,6 +17,8 @@ import { getIntroductoryBackground } from "utils/background";
 import QuestionInput from "components/kid/QuestionInput";
 import Mode from "constants/mode";
 import { QuestionContext } from "store/questions";
+import { GeneralStyle } from "styles/general";
+import { verticalScale } from "utils/responsive";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -26,7 +28,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
+		settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -168,12 +171,15 @@ export default function QuestionSingleKid(): React.ReactElement {
 			{background !== null && background}
 			<Main>
 				<TopMain>
-					<View style={styles.innerContainer}>
-						<QuestionLabel
-							textStyle={{
-								fontSize: 33,
-							}}
-						>
+					<View
+						style={[
+							GeneralStyle.kid.introQuestionContainer,
+							{
+								marginVertical: verticalScale(60, device.screenHeight),
+							},
+						]}
+					>
+						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
 							{questionLabel}
 						</QuestionLabel>
 						{questionComponent}
@@ -190,8 +196,5 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
-	},
-	innerContainer: {
-		marginTop: 50,
 	},
 });

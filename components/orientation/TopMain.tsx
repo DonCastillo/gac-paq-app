@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 		flex: 7,
 		flexDirection: "column",
 		justifyContent: "flex-start",
-		alignItems: "stretch",
+		alignItems: "center",
 		width: "100%",
 		height: "100%",
 		paddingHorizontal: 20,

@@ -7,10 +7,12 @@ import Main from "components/Main";
 import BottomMain from "components/orientation/BottomMain";
 import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
+import { GeneralStyle } from "styles/general";
+import { getImageBackground } from "utils/background";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme, device } = settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -40,10 +42,19 @@ export default function QuestionIntroKid(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<ImageBackdrop
-				source={translatedPage?.images?.kid?.phone}
+				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
 				key={currentPageNumber}
 			/>
-			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
+			<View
+				style={[
+					styles.headingPanel,
+					{
+						backgroundColor: color200,
+						maxWidth: device.isTablet ? 400 : "100%",
+						minHeight: device.isTablet ? "100%" : 250,
+					},
+				]}
+			>
 				<ScrollView>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
 					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
@@ -74,28 +85,18 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	headingPanel: {
-		paddingHorizontal: 60,
 		position: "absolute",
-		bottom: 0,
 		width: "100%",
-		minHeight: 250,
 		height: "auto",
-		borderTopRightRadius: 45,
-		borderTopLeftRadius: 45,
-		paddingTop: 20,
-		paddingBottom: 30,
+		...GeneralStyle.general.sectionIntroPanel,
 	},
 	headingSubText: {
 		textAlign: "center",
-		color: "#fff",
-		fontSize: 20,
+		...GeneralStyle.general.sectionIntroHeading,
 	},
 	headingText: {
 		textAlign: "center",
-		paddingTop: 20,
-		color: "#fff",
-		fontSize: 32,
-		fontWeight: "bold",
 		height: "100%",
+		...GeneralStyle.general.sectionIntroSubheading,
 	},
 });
