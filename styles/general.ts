@@ -21,6 +21,25 @@ const Font = {
 const GeneralStyle = {
 	general: {
 		extroColor: "#e3a324",
+		sectionIntroPanel: {
+			paddingHorizontal: 60,
+			bottom: 0,
+			borderTopRightRadius: 45,
+			borderTopLeftRadius: 45,
+			paddingTop: 20,
+			paddingBottom: 30,
+		},
+		sectionIntroHeading: {
+			color: "#fff",
+			fontFamily: Font.PoppinsRegular,
+			fontSize: 20,
+		},
+		sectionIntroSubheading: {
+			paddingTop: 20,
+			color: "#fff",
+			fontSize: 32,
+			fontFamily: Font.PoppinsBold,
+		},
 	},
 	kid: {
 		field: {
@@ -47,6 +66,15 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		introQuestionLabel: {
+			fontSize: 25,
+			fontFamily: Font.PoppinsMedium,
+			color: DARK_TEXT_COLOR,
+			// backgroundColor: "red",
+		},
+		questionQuestionContainer: {
+			maxWidth: 500,
+		},
+		questionQuestionLabel: {
 			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
 			color: DARK_TEXT_COLOR,
