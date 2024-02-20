@@ -3,13 +3,11 @@ import React from "react";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 import { StrokeYellow } from "components/svgs/kid/doodles";
 
-interface GenericBackgroundStrokePropsInterface {
+interface PropsInterface {
 	fillColor: string;
 }
 
-export default function GenericBackgroundStroke({
-	fillColor,
-}: GenericBackgroundStrokePropsInterface): React.ReactElement {
+export default function GenericBackgroundStroke({ fillColor }: PropsInterface): React.ReactElement {
 	return (
 		<AbsoluteFullScreenContainer>
 			<StrokeYellow

@@ -8,11 +8,11 @@ const Intro = {
 		tablet: require("assets/images/adult/section2/tablet-adult-intro.png"),
 	},
 	section_3: {
-		phone: require("assets/images/adult/section3/tablet-adult-intro.png"),
+		phone: require("assets/images/adult/section3/phone-adult-intro.png"),
 		tablet: require("assets/images/adult/section3/tablet-adult-intro.png"),
 	},
 	section_4: {
-		phone: require("assets/images/adult/section4/tablet-adult-intro.png"),
+		phone: require("assets/images/adult/section4/phone-adult-intro.png"),
 		tablet: require("assets/images/adult/section4/tablet-adult-intro.png"),
 	},
 	section_5: {
@@ -24,7 +24,7 @@ const Intro = {
 		tablet: require("assets/images/adult/section6/tablet-adult-intro.png"),
 	},
 	section_7: {
-		phone: require("assets/images/adult/section7/phone-adult-intro.jpg"),
+		phone: require("assets/images/adult/section7/phone-adult-intro.png"),
 		tablet: require("assets/images/adult/section7/tablet-adult-intro.png"),
 	},
 };

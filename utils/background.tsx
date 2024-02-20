@@ -12,6 +12,37 @@ import GenericBackgroundStroke from "components/kid/background/question-pages/Ge
 import BackgroundRight from "components/kid/background/question-pages/BackgroundRight";
 import BackgroundCenter from "components/kid/background/question-pages/BackgroundCenter";
 import Images from "styles/images/index";
+import GenericBackgroundStars from "components/kid/background/question-pages/GenericBackgroundStars";
+import GenericBackgroundLoop from "components/kid/background/question-pages/GenericBackgroundLoop";
+import Mode from "constants/mode";
+import type ImageInterface from "interface/images";
+
+function getImageBackground(
+	images: ImageInterface,
+	mode: Mode.Kid | Mode.Adult | undefined,
+	isTablet: boolean,
+): any | null {
+	console.log("images: ", images);
+	console.log("mode: ", mode);
+	console.log("isTablet: ", isTablet);
+
+	if (mode === Mode.Adult && isTablet) {
+		return images?.adult?.tablet;
+	} else if (mode === Mode.Adult && !isTablet) {
+		return images?.adult?.phone;
+	} else if (mode === Mode.Kid && isTablet) {
+		return images?.kid?.tablet;
+	} else if (mode === Mode.Kid && !isTablet) {
+		return images?.kid?.phone;
+	} else if (mode === undefined && isTablet) {
+		return images?.kid?.tablet;
+	} else if (mode === undefined && !isTablet) {
+		return images?.kid?.phone;
+	} else {
+		return null;
+	}
+}
+
 function getIntroductoryBackground(pageNumber: number): React.ReactElement {
 	switch (pageNumber % 6) {
 		case 0:
@@ -46,15 +77,44 @@ function getQuestionBackground(
 	deviceType = deviceType ?? DeviceType.Mobile;
 	fillColor = fillColor ?? "white";
 
+	// strokes
 	if (sectionNumber === 1 && sectionPageNumber === 2) {
 		return <GenericBackgroundStroke fillColor={fillColor} />;
-	} else if (sectionNumber === 1 && questionType === QuestionType.QuestionSlider) {
+	} else if (sectionNumber === 1 && sectionPageNumber === 6) {
+		return <GenericBackgroundStars fillColor={fillColor} />;
+	} else if (sectionNumber === 2 && sectionPageNumber === 4) {
+		return <GenericBackgroundStroke fillColor={fillColor} />;
+	} else if (sectionNumber === 3 && sectionPageNumber === 4) {
+		return <GenericBackgroundStars fillColor={fillColor} />;
+	} else if (sectionNumber === 4 && sectionPageNumber === 3) {
+		return <GenericBackgroundLoop fillColor={fillColor} />;
+	} else if (sectionNumber === 4 && sectionPageNumber === 6) {
+		return <GenericBackgroundLoop fillColor={fillColor} />;
+	} else if (sectionNumber === 4 && sectionPageNumber === 9) {
+		return <GenericBackgroundLoop fillColor={fillColor} />;
+	} else if (sectionNumber === 5 && sectionPageNumber === 2) {
+		return <GenericBackgroundStroke fillColor={fillColor} />;
+	} else if (sectionNumber === 5 && sectionPageNumber === 4) {
+		return <GenericBackgroundStars fillColor={fillColor} />;
+	} else if (sectionNumber === 6 && sectionPageNumber === 2) {
+		return <GenericBackgroundStars fillColor={fillColor} />;
+	}
+	// graphics
+	else if (sectionNumber === 1 && sectionPageNumber === 4) {
 		return <BackgroundRight svg={Images.kids.graphics.mostly_medium} />;
 	} else if (sectionNumber === 2 && sectionPageNumber === 2) {
+		return <BackgroundRight svg={Images.kids.graphics.chores} />;
+	} else if (sectionNumber === 3 && sectionPageNumber === 2) {
 		return <BackgroundCenter svg={Images.kids.graphics.volunteer_club} />;
+	} else if (sectionNumber === 4 && sectionPageNumber === 4) {
+		return <BackgroundRight svg={Images.kids.graphics.wink_pose} />;
+	} else if (sectionNumber === 4 && sectionPageNumber === 7) {
+		return <BackgroundRight svg={Images.kids.graphics.wink_pose} />;
+	} else if (sectionNumber === 4 && sectionPageNumber === 10) {
+		return <BackgroundRight svg={Images.kids.graphics.wink_pose} />;
 	} else {
 		return <></>;
 	}
 }
 
-export { getIntroductoryBackground, getQuestionBackground };
+export { getIntroductoryBackground, getQuestionBackground, getImageBackground };

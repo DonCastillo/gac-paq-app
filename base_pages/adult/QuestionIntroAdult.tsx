@@ -8,10 +8,11 @@ import Main from "components/Main";
 import BottomMain from "components/orientation/BottomMain";
 import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
+import { getImageBackground } from "utils/background";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber, buttons } = settingCtx.settingState;
+	const { mode, language, colorTheme, currentPage, currentPageNumber, buttons, device } = settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -42,7 +43,7 @@ export default function QuestionIntroAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={translatedPage?.images?.adult?.phone}
+				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
 				key={currentPageNumber}
 			/>
 			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>

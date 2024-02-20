@@ -8,7 +8,7 @@ const S4Q9: QuestionRadioPayloadInterface = {
 		{
 			id: 7,
 			question_radio_id: 5,
-			heading: "Question 15c",
+			heading: "Question 17c",
 			label:
 				"On a normal day, how much time did you walk [wheel] to places other than school or work?",
 			kid_label:

@@ -9,13 +9,13 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 		{
 			id: 1,
 			question_radio_image_id: 1,
+			heading: "Feedback",
 			label:
 				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
 			kid_label:
 				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
 			adult_label:
 				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
-			heading: "Question 5",
 			choices: [
 				{
 					image_choices_id: {
@@ -23,7 +23,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Strongly dissatisfied",
 						value: "Strongly dissatisfied",
-						image: Images.general.options.physical_education.not_moving,
+						image: Images.generic.rating.very_dissatisfied,
 					},
 				},
 				{
@@ -32,7 +32,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Dissatisfied",
 						value: "Dissatisfied",
-						image: Images.general.options.physical_education.easy_effort,
+						image: Images.generic.rating.dissatisfied,
 					},
 				},
 				{
@@ -41,25 +41,25 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Neutral",
 						value: "Neutral",
-						image: Images.general.options.physical_education.medium_effort,
+						image: Images.generic.rating.neutral,
 					},
 				},
 				{
 					image_choices_id: {
-						id: 3,
+						id: 4,
 						sort: null,
 						text: "Satisfied",
 						value: "Satisfied",
-						image: Images.general.options.physical_education.medium_effort,
+						image: Images.generic.rating.satisfied,
 					},
 				},
 				{
 					image_choices_id: {
-						id: 3,
+						id: 5,
 						sort: null,
 						text: "Strongly Satisfied",
 						value: "Strongly Satisfied",
-						image: Images.general.options.physical_education.medium_effort,
+						image: Images.generic.rating.very_satisfied,
 					},
 				},
 			],

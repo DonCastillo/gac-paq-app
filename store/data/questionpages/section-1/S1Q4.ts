@@ -9,7 +9,7 @@ const S1Q4: QuestionRadioPayloadInterface = {
 			id: 7,
 			question_radio_id: 5,
 			heading: "Question 4",
-			label: "How long are your physical education classes",
+			label: "How long are your physical education classes?",
 			kid_label: "How long are your physical education classes?",
 			adult_label: "How long are your child's physical education classes?",
 			choices: [
