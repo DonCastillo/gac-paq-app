@@ -4,6 +4,7 @@ import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label";
+import { horizontalScale } from "utils/responsive";
 
 interface QuestionSliderPropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -18,7 +19,7 @@ export default function QuestionSlider({
 }: QuestionSliderPropsInterface): React.ReactElement {
 	console.log("slider ...");
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, phrases } = settingCtx.settingState;
+	const { colorTheme, currentPage, phrases, device } = settingCtx.settingState;
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState<number | PhraseLabel.DontKnow>(selectedValue ?? 0);
 	const [maxVal, setMaxVal] = useState<number>(maxValue ?? 10);
@@ -97,6 +98,7 @@ export default function QuestionSlider({
 				<Pressable
 					style={[
 						styles.optionContainer,
+						{ maxWidth: device.isTablet ? horizontalScale(150, device.screenWidth) : "100%" },
 						value === PhraseLabel.DontKnow ? optionPressedStyle : GeneralStyle.kid.inactiveField,
 					]}
 					onPress={() => {
@@ -119,34 +121,29 @@ export default function QuestionSlider({
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: GeneralStyle.kid.field.marginTop + 20,
+		marginTop: 40,
 	},
 	tooltip: {
 		bottom: 50,
 		justifyContent: "center",
 		alignItems: "center",
-		borderRadius: GeneralStyle.kid.field.borderRadius,
+		borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 		paddingVertical: 6,
 		paddingHorizontal: 4,
 	},
 	tooltipText: {
-		fontSize: GeneralStyle.kid.field.fontSize + 5,
+		fontSize: 23,
 	},
 	trackStyle: {
 		height: 15,
-		borderRadius: GeneralStyle.kid.field.borderRadius,
+		borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 	},
 	optionContainer: {
-		borderWidth: GeneralStyle.kid.field.borderWidth,
-		borderColor: GeneralStyle.kid.field.borderColor,
-		borderRadius: GeneralStyle.kid.field.borderRadius,
-		marginBottom: GeneralStyle.kid.field.marginBottom,
-		paddingVertical: GeneralStyle.kid.field.paddingVertical,
-		paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+		...GeneralStyle.kid.optionContainer,
+		width: "100%",
 	},
 	optionText: {
-		fontWeight: GeneralStyle.kid.field.fontWeight,
-		fontSize: GeneralStyle.kid.field.fontSize,
+		...GeneralStyle.kid.optionText,
 	},
 	optionUnpressed: {
 		backgroundColor: "#fff",

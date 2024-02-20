@@ -43,16 +43,16 @@ export default function QuestionRadio({
 
 	const COLUMN_THRESHOLD = 4;
 	const enableColumnWrap = device.isTablet && options.length > COLUMN_THRESHOLD;
-	const twoColumns = enableColumnWrap ? 2 : 1;
-	const adjustWidth = enableColumnWrap ? horizontalScale(150, device.screenWidth) : "100%";
-	const adjustMarginRight = enableColumnWrap ? horizontalScale(10, device.screenWidth) : 0;
+	const numColumn = enableColumnWrap ? 2 : 1;
+	const adjustWidth = device.isTablet ? horizontalScale(150, device.screenWidth) : "100%";
+	const adjustMarginRight = device.isTablet ? horizontalScale(10, device.screenWidth) : 0;
 
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
 				<FlatList
 					horizontal={false}
-					numColumns={twoColumns}
+					numColumns={numColumn}
 					key={currentPageNumber}
 					data={options}
 					renderItem={({ item }) => {
@@ -64,7 +64,9 @@ export default function QuestionRadio({
 										{
 											borderColor: color100,
 											width: adjustWidth,
+											// width: "100%",
 											marginRight: adjustMarginRight,
+											// backgroundColor: "pink"
 										},
 										selected === item.value ? optionPressedStyle : styles.optionUnpressed,
 									]}

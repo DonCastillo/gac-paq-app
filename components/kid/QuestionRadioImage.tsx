@@ -4,6 +4,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
+import { horizontalScale, verticalScale } from "utils/responsive";
 
 interface QuestionRadioImagePropsInterface {
 	options: any[];
@@ -17,9 +18,11 @@ export default function QuestionRadioImage({
 	selectedValue,
 }: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage } = settingCtx.settingState;
+	const { colorTheme, currentPage, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
+	console.log("screen width: ", device.screenWidth);
+	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
@@ -43,7 +46,6 @@ export default function QuestionRadioImage({
 	}
 
 	function renderImage(image: string | Svg): React.ReactElement {
-		console.log("image", typeof image);
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
@@ -79,24 +81,34 @@ export default function QuestionRadioImage({
 
 	function blockRenderOption({ item }): React.ReactElement {
 		const { image, text, value } = item.image_choices_id;
-		console.log(item);
-
+		console.log("image width: ", device.screenWidth / numColumn);
+		const imageWidth = horizontalScale(300, device.screenWidth) / numColumn;
+		// const imageHeight = verticalScale(300, device.screenWidth) / numColumn;
+		// imageWidth = horizontalScale(imageWidth, device.screenWidth);
 		return (
 			<Pressable
 				style={[
 					styles.blockOptionContainer,
+					{
+						maxWidth: imageWidth,
+						aspectRatio: 1 / 1,
+						marginRight: horizontalScale(10, device.screenWidth),
+						marginTop: verticalScale(10, device.screenHeight),
+						marginBottom: 0,
+						marginLeft: 0,
+					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => {
 					selectHandler(value);
 				}}
 			>
-				<View style={styles.optionImageContainer}>
+				<View style={styles.blockOptionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(image)}
 				</View>
-				<View style={styles.optionTextContainer}>
-					<Text>{text}</Text>
+				<View style={styles.blockOptionLabelContainer}>
+					<Text style={styles.blockOptionLabelText}>{text}</Text>
 				</View>
 			</Pressable>
 		);
@@ -104,7 +116,6 @@ export default function QuestionRadioImage({
 
 	function listRenderOption({ item }): React.ReactElement {
 		const { image, text, value } = item.image_choices_id;
-		console.log("item ", item);
 		return (
 			<View>
 				<Pressable
@@ -120,7 +131,10 @@ export default function QuestionRadioImage({
 				>
 					{renderImage(image)}
 					<Text
-						style={[styles.optionText, selected === value ? { color: "#fff" } : { color: "#000" }]}
+						style={[
+							styles.listOptionLabelText,
+							selected === value ? { color: "#fff" } : { color: "#000" },
+						]}
 					>
 						{text}
 					</Text>
@@ -134,10 +148,11 @@ export default function QuestionRadioImage({
 			<View>
 				{options.length <= 5 ? (
 					<FlatList
-						style={[]}
+						// style={[{ backgroundColor: "green", flexDirection: "row", justifyContent: "center" }]}
 						data={options}
 						renderItem={blockRenderOption}
-						numColumns={2}
+						numColumns={numColumn}
+						key={numColumn}
 					/>
 				) : (
 					<FlatList
@@ -152,41 +167,25 @@ export default function QuestionRadioImage({
 
 const styles = StyleSheet.create({
 	listOptionContainer: {
-		borderWidth: GeneralStyle.kid.field.borderWidth,
-		borderColor: GeneralStyle.kid.field.borderColor,
-		borderRadius: GeneralStyle.kid.field.borderRadius,
-		marginBottom: GeneralStyle.kid.field.marginBottom,
-		paddingVertical: GeneralStyle.kid.field.paddingVertical,
-		paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+		...GeneralStyle.kid.optionContainer,
 	},
 	blockOptionContainer: {
-		...GeneralStyle.adult.optionImageContainer,
+		...GeneralStyle.kid.blockOptionContainer,
 	},
-	container: {
-		// marginTop: 5,
-		// backgroundColor: "pink",
-	},
+	container: {},
 	imageFilter: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		width: "100%",
-		height: "100%",
-		opacity: 0.75,
-		zIndex: 1,
+		...GeneralStyle.general.imageFilter,
 	},
-	optionImageContainer: {
+	blockOptionImageContainer: {
 		justifyContent: "center",
 		alignItems: "center",
 		position: "relative",
 		flex: 1,
-		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		...GeneralStyle.kid.blockOptionImageContainer,
 	},
 
 	optionImage: {
-		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		...GeneralStyle.kid.optionImage,
 		position: "absolute",
 		top: 0,
 		left: 0,
@@ -194,15 +193,16 @@ const styles = StyleSheet.create({
 		width: "100%",
 	},
 	optionText: {
-		fontWeight: GeneralStyle.kid.field.fontWeight,
-		fontSize: GeneralStyle.kid.field.fontSize,
+		...GeneralStyle.kid.optionText,
 	},
-	optionTextContainer: {
-		borderBottomLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderBottomRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		paddingVertical: 5,
-		paddingHorizontal: 7,
-		minHeight: 60,
+	blockOptionLabelContainer: {
+		...GeneralStyle.kid.blockImageLabelContainer,
+	},
+	listOptionLabelText: {
+		...GeneralStyle.kid.optionImageLabelText,
+	},
+	blockOptionLabelText: {
+		...GeneralStyle.kid.optionImageLabelText,
 	},
 	optionUnpressed: {
 		backgroundColor: "#fff",

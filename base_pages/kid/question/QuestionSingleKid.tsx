@@ -199,6 +199,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 						style={[
 							{
 								marginVertical: verticalScale(30, device.screenHeight),
+								// backgroundColor: "pink",
+								paddingHorizontal: device.isTablet ? 30 : 0,
 							},
 						]}
 					>

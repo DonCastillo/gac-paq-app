@@ -166,6 +166,5 @@ const styles = StyleSheet.create({
 		color: "black",
 		fontSize: 17,
 		marginBottom: 10,
-		backgroundColor: "pink",
 	},
 });
