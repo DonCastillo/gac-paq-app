@@ -14,6 +14,35 @@ import BackgroundCenter from "components/kid/background/question-pages/Backgroun
 import Images from "styles/images/index";
 import GenericBackgroundStars from "components/kid/background/question-pages/GenericBackgroundStars";
 import GenericBackgroundLoop from "components/kid/background/question-pages/GenericBackgroundLoop";
+import Mode from "constants/mode";
+import type ImageInterface from "interface/images";
+
+function getImageBackground(
+	images: ImageInterface,
+	mode: Mode.Kid | Mode.Adult | undefined,
+	isTablet: boolean,
+): any | null {
+	console.log("images: ", images);
+	console.log("mode: ", mode);
+	console.log("isTablet: ", isTablet);
+
+	if (mode === Mode.Adult && isTablet) {
+		return images?.adult?.tablet;
+	} else if (mode === Mode.Adult && !isTablet) {
+		return images?.adult?.phone;
+	} else if (mode === Mode.Kid && isTablet) {
+		return images?.kid?.tablet;
+	} else if (mode === Mode.Kid && !isTablet) {
+		return images?.kid?.phone;
+	} else if (mode === undefined && isTablet) {
+		return images?.kid?.tablet;
+	} else if (mode === undefined && !isTablet) {
+		return images?.kid?.phone;
+	} else {
+		return null;
+	}
+}
+
 function getIntroductoryBackground(pageNumber: number): React.ReactElement {
 	switch (pageNumber % 6) {
 		case 0:
@@ -88,4 +117,4 @@ function getQuestionBackground(
 	}
 }
 
-export { getIntroductoryBackground, getQuestionBackground };
+export { getIntroductoryBackground, getQuestionBackground, getImageBackground };
