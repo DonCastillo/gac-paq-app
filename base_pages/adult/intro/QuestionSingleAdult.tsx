@@ -19,6 +19,7 @@ import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Mode from "constants/mode";
 import QuestionInput from "components/adults/QuestionInput";
+import { GeneralStyle } from "styles/general";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -171,12 +172,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionLabel
-							textStyle={{
-								fontSize: 25,
-								fontWeight: "bold",
-							}}
-						>
+						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>
 						{questionComponent}
