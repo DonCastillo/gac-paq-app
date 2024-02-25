@@ -93,11 +93,11 @@ const styles = StyleSheet.create({
 	},
 	headingSubText: {
 		textAlign: "center",
-		...GeneralStyle.general.sectionIntroHeading,
+		...GeneralStyle.general.sectionIntroSubheading,
 	},
 	headingText: {
 		textAlign: "center",
 		height: "100%",
-		...GeneralStyle.general.sectionIntroSubheading,
+		...GeneralStyle.general.sectionIntroHeading,
 	},
 });

@@ -27,18 +27,18 @@ const GeneralStyle = {
 			borderTopRightRadius: 45,
 			borderTopLeftRadius: 45,
 			paddingTop: 20,
-			paddingBottom: 30,
+			paddingBottom: 80,
 		},
 		sectionIntroHeading: {
-			color: "#fff",
-			fontFamily: Font.PoppinsRegular,
-			fontSize: 20,
-		},
-		sectionIntroSubheading: {
 			paddingTop: 20,
 			color: "#fff",
 			fontSize: 32,
 			fontFamily: Font.PoppinsBold,
+		},
+		sectionIntroSubheading: {
+			color: "#fff",
+			fontFamily: Font.PoppinsRegular,
+			fontSize: 20,
 		},
 		imageFilter: {
 			position: "absolute",
