@@ -23,8 +23,15 @@ export default function QuestionExtroAdult(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const { mode, language, currentPage, currentPageNumber, directusAccessToken, directusBaseEndpoint, device } =
-		settingCtx.settingState;
+	const {
+		mode,
+		language,
+		currentPage,
+		currentPageNumber,
+		directusAccessToken,
+		directusBaseEndpoint,
+		device,
+	} = settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const navigation = useNavigation();

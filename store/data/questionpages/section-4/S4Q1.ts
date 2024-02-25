@@ -21,7 +21,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Walking",
 						value: "Walking",
-						image: Images.kids.graphics.transportation.walking,
+						images: {
+							kid: Images.kids.options.transportation.walking,
+							adult: Images.adults.options.transportation.walking,
+						},
 					},
 				},
 				{
@@ -30,7 +33,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Wheeling",
 						value: "Wheeling",
-						image: Images.kids.graphics.transportation.wheeling,
+						images: {
+							kid: Images.kids.options.transportation.wheeling,
+							adult: Images.adults.options.transportation.wheeling,
+						},
 					},
 				},
 				{
@@ -39,7 +45,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "School bus",
 						value: "School bus",
-						image: Images.kids.graphics.transportation.school_bus,
+						images: {
+							kid: Images.kids.options.transportation.school_bus,
+							adult: Images.adults.options.transportation.school_bus,
+						},
 					},
 				},
 				{
@@ -48,7 +57,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Public transit",
 						value: "Public transit",
-						image: Images.kids.graphics.transportation.public_transit,
+						images: {
+							kid: Images.kids.options.transportation.public_transit,
+							adult: Images.adults.options.transportation.public_transit,
+						},
 					},
 				},
 				{
@@ -57,7 +69,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Car, taxi, truck, or motorcycle",
 						value: "Car, taxi, truck, or motorcycle",
-						image: Images.kids.graphics.transportation.car,
+						images: {
+							kid: Images.kids.options.transportation.car,
+							adult: Images.adults.options.transportation.car,
+						},
 					},
 				},
 				{
@@ -66,7 +81,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Other",
 						value: "Other",
-						image: Images.kids.graphics.transportation.other,
+						images: {
+							kid: Images.kids.options.transportation.other,
+							adult: Images.adults.options.transportation.other,
+						},
 					},
 				},
 			],

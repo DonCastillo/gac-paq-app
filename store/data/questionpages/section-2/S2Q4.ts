@@ -23,7 +23,10 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Mostly not moving",
 						value: "0.1",
-						image: Images.general.options.chores.not_moving,
+						images: {
+							kid: Images.kids.options.chores.not_moving,
+							adult: Images.adults.options.chores.not_moving,
+						},
 					},
 				},
 				{
@@ -32,7 +35,10 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Mostly easy effort",
 						value: "0.3",
-						image: Images.general.options.chores.easy_effort,
+						images: {
+							kid: Images.kids.options.chores.easy_effort,
+							adult: Images.adults.options.chores.easy_effort,
+						},
 					},
 				},
 				{
@@ -41,7 +47,10 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Mostly medium or hard effort",
 						value: "0.5",
-						image: Images.general.options.chores.medium_effort,
+						images: {
+							kid: Images.kids.options.chores.medium_effort,
+							adult: Images.adults.options.chores.medium_effort,
+						},
 					},
 				},
 			],

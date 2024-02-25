@@ -23,7 +23,10 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Strongly dissatisfied",
 						value: "Strongly dissatisfied",
-						image: Images.generic.rating.very_dissatisfied,
+						images: {
+							kid: Images.generic.rating.very_dissatisfied,
+							adult: Images.generic.rating.very_dissatisfied,
+						},
 					},
 				},
 				{
@@ -32,7 +35,10 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Dissatisfied",
 						value: "Dissatisfied",
-						image: Images.generic.rating.dissatisfied,
+						images: {
+							kid: Images.generic.rating.dissatisfied,
+							adult: Images.generic.rating.dissatisfied,
+						},
 					},
 				},
 				{
@@ -41,7 +47,10 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Neutral",
 						value: "Neutral",
-						image: Images.generic.rating.neutral,
+						images: {
+							kid: Images.generic.rating.neutral,
+							adult: Images.generic.rating.neutral,
+						},
 					},
 				},
 				{
@@ -50,7 +59,10 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Satisfied",
 						value: "Satisfied",
-						image: Images.generic.rating.satisfied,
+						images: {
+							kid: Images.generic.rating.satisfied,
+							adult: Images.generic.rating.satisfied,
+						},
 					},
 				},
 				{
@@ -59,7 +71,10 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 						sort: null,
 						text: "Strongly Satisfied",
 						value: "Strongly Satisfied",
-						image: Images.generic.rating.very_satisfied,
+						images: {
+							kid: Images.generic.rating.very_satisfied,
+							adult: Images.generic.rating.very_satisfied,
+						},
 					},
 				},
 			],
