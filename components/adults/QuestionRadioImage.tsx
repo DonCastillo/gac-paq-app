@@ -5,6 +5,7 @@ import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type { Svg } from "react-native-svg";
+import { getOptionImage } from "utils/background";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -18,7 +19,7 @@ export default function QuestionRadioImage({
 	selectedValue,
 }: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { colorTheme, currentPage, currentPageNumber, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 
@@ -78,7 +79,8 @@ export default function QuestionRadioImage({
 	}
 
 	function renderOption({ item }): React.ReactElement {
-		const { image, text, value } = item.image_choices_id;
+		const { images, text, value } = item.image_choices_id;
+		const imageByMode = getOptionImage(images, mode);
 
 		return (
 			<Pressable
@@ -92,7 +94,7 @@ export default function QuestionRadioImage({
 			>
 				<View style={styles.optionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
-					{renderImage(image)}
+					{renderImage(imageByMode)}
 				</View>
 				<View style={styles.optionTextContainer}>
 					<Text>{text}</Text>

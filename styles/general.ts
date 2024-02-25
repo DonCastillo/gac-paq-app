@@ -229,17 +229,14 @@ const GeneralStyle = {
 			marginBottom: 50,
 			textAlign: "center",
 			fontFamily: Font.PoppinsBold,
-			// maxWidth: 700,
-			// backgroundColor: "green",
 		},
 		pageParagraph: {
 			color: "white",
-			// backgroundColor: "green",
 			fontFamily: Font.PoppinsMedium,
 			fontSize: 15,
 			lineHeight: 17,
 			maxWidth: 800,
-			textAlign: "left",
+			textAlign: "center",
 		},
 		field: {
 			fontSize: 18,

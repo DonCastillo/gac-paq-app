@@ -5,6 +5,7 @@ import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
 import { horizontalScale, verticalScale } from "utils/responsive";
+import { getOptionImage } from "utils/background";
 
 interface QuestionRadioImagePropsInterface {
 	options: any[];
@@ -18,7 +19,7 @@ export default function QuestionRadioImage({
 	selectedValue,
 }: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device } = settingCtx.settingState;
+	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	console.log("screen width: ", device.screenWidth);
@@ -80,9 +81,10 @@ export default function QuestionRadioImage({
 	}
 
 	function blockRenderOption({ item }): React.ReactElement {
-		const { image, text, value } = item.image_choices_id;
+		const { images, text, value } = item.image_choices_id;
 		console.log("image width: ", device.screenWidth / numColumn);
 		const imageWidth = horizontalScale(300, device.screenWidth) / numColumn;
+		const imageByMode = getOptionImage(images, mode);
 		// const imageHeight = verticalScale(300, device.screenWidth) / numColumn;
 		// imageWidth = horizontalScale(imageWidth, device.screenWidth);
 		return (
@@ -105,7 +107,7 @@ export default function QuestionRadioImage({
 			>
 				<View style={styles.blockOptionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
-					{renderImage(image)}
+					{renderImage(imageByMode)}
 				</View>
 				<View style={styles.blockOptionLabelContainer}>
 					<Text style={styles.blockOptionLabelText}>{text}</Text>
@@ -115,7 +117,9 @@ export default function QuestionRadioImage({
 	}
 
 	function listRenderOption({ item }): React.ReactElement {
-		const { image, text, value } = item.image_choices_id;
+		const { images, text, value } = item.image_choices_id;
+		const imageByMode = getOptionImage(images, mode);
+
 		return (
 			<View>
 				<Pressable
@@ -129,7 +133,7 @@ export default function QuestionRadioImage({
 						selectHandler(value);
 					}}
 				>
-					{renderImage(image)}
+					{renderImage(imageByMode)}
 					<Text
 						style={[
 							styles.listOptionLabelText,
