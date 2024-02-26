@@ -7,6 +7,8 @@ import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type { Svg } from "react-native-svg";
 import { getOptionImage } from "utils/background";
 import { horizontalScale, verticalScale } from "utils/responsive";
+import RadioOption from "./item/RadioOption";
+import Mode from "constants/mode";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -53,7 +55,7 @@ export default function QuestionRadioImage({
 				ImageComponent = (
 					<Image
 						style={styles.optionImage as StyleProp<ImageStyle>}
-						source={image} // Convert the image to ImageSourcePropType
+						source={image}
 						resizeMode="cover"
 					/>
 				);
@@ -61,7 +63,7 @@ export default function QuestionRadioImage({
 				ImageComponent = (
 					<Image
 						style={{ height: 50, width: 50, marginRight: 10 }}
-						source={image} // Convert the image to ImageSourcePropType
+						source={image}
 						resizeMode="cover"
 					/>
 				);
@@ -89,7 +91,7 @@ export default function QuestionRadioImage({
 				style={[
 					styles.blockOptionContainer,
 					{
-						maxWidth: imageWidth, 
+						maxWidth: imageWidth,
 						aspectRatio: 1 / 1,
 						marginTop: verticalScale(10, device.screenHeight),
 						marginBottom: 0,
@@ -114,33 +116,18 @@ export default function QuestionRadioImage({
 
 	function listRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		const imageByMode = getOptionImage(images, mode);
+		const imageByMode = getOptionImage(images, Mode.Adult);
 
 		return (
-			// <View>
-			// 	<Pressable
-			// 		style={[
-			// 			styles.listOptionContainer,
-			// 			{ flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingVertical: 3 },
-			// 			{ borderColor: color100 },
-			// 			selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
-			// 		]}
-			// 		onPress={() => {
-			// 			selectHandler(value);
-			// 		}}
-			// 	>
-			// 		{renderImage(imageByMode)}
-			// 		<Text
-			// 			style={[
-			// 				styles.listOptionLabelText,
-			// 				selected === value ? { color: "#fff" } : { color: "#000" },
-			// 			]}
-			// 		>
-			// 			{text}
-			// 		</Text>
-			// 	</Pressable>
-			// </View>
-			<></>
+			<View style={{ backgroundColor: "white", paddingVertical: 2, marginBottom: 2 }}>
+				<RadioOption
+					label={text}
+					value={value}
+					onPress={() => selectHandler(value)}
+					selected={selected === value}
+					image={imageByMode}
+				/>
+			</View>
 		);
 	}
 
@@ -156,6 +143,7 @@ export default function QuestionRadioImage({
 					/>
 				) : (
 					<FlatList
+						horizontal={false}
 						data={options}
 						renderItem={listRenderOption}
 					/>

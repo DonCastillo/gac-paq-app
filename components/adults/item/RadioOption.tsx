@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View, Image } from "react-native";
 import { GeneralStyle } from "styles/general";
 import React, { useContext, useEffect, useState } from "react";
 import { SettingContext } from "store/settings";
@@ -6,7 +6,7 @@ import { SettingContext } from "store/settings";
 interface RadioOptionPropsInterface {
 	label: string;
 	value: string;
-	icon?: React.ReactElement;
+	image?: any;
 	onPress: (value: string | null) => void;
 	selected: boolean;
 }
@@ -14,13 +14,14 @@ interface RadioOptionPropsInterface {
 export default function RadioOption({
 	label,
 	value,
-	icon,
+	image,
 	onPress,
 	selected = false,
 }: RadioOptionPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { color100 } = settingCtx.settingState.colorTheme;
 	const [optionValue, setOptionValue] = useState<string>(value);
+	console.log("image: ", image);
 
 	function pressHandler(): void {
 		if (selected) {
@@ -50,7 +51,16 @@ export default function RadioOption({
 				]}
 			></View>
 			<View style={styles.labelContainer}>
-				{icon !== undefined && icon !== null && <View style={styles.labelImage}>{icon()}</View>}
+				{image !== undefined && image !== undefined && typeof image === "function" && (
+					<View style={styles.svgImage}>{image()}</View>
+				)}
+				{image !== undefined && image !== undefined && typeof image === "number" && (
+					<Image
+						source={image}
+						style={styles.nonSvgImage}
+						resizeMode="contain"
+					/>
+				)}
 				<Text style={styles.labelText}>{label}</Text>
 			</View>
 		</Pressable>
@@ -76,10 +86,19 @@ const styles = StyleSheet.create({
 	},
 	labelText: {
 		flexWrap: "wrap",
+		flexDirection: "row",
+		width: "100%",
 		flex: 1,
 		...GeneralStyle.adult.radioText,
 	},
-	labelImage: {
-		marginRight: 10,
+	svgImage: {
+		marginRight: 15,
+		height: 50,
+		width: 50,
+	},
+	nonSvgImage: {
+		marginRight: 15,
+		height: 50,
+		width: 50,
 	},
 });
