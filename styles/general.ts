@@ -51,6 +51,14 @@ const GeneralStyle = {
 			opacity: 0.75,
 			zIndex: 1,
 		},
+		inlineOptionImage: {
+			height: "100%",
+			width: "100%",
+			minHeight: 50,
+			maxWidth: 50,
+			marginRight: 15,
+			aspectRatio: 1,
+		},
 	},
 	kid: {
 		field: {

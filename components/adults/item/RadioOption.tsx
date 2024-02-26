@@ -92,13 +92,9 @@ const styles = StyleSheet.create({
 		...GeneralStyle.adult.radioText,
 	},
 	svgImage: {
-		marginRight: 15,
-		height: 50,
-		width: 50,
+		...GeneralStyle.general.inlineOptionImage,
 	},
 	nonSvgImage: {
-		marginRight: 15,
-		height: 50,
-		width: 50,
+		...GeneralStyle.general.inlineOptionImage,
 	},
 });

@@ -62,7 +62,7 @@ export default function QuestionRadioImage({
 			} else {
 				ImageComponent = (
 					<Image
-						style={{ height: 50, width: 50, marginRight: 10 }}
+						style={GeneralStyle.general.inlineOptionImage}
 						source={image}
 						resizeMode="cover"
 					/>
@@ -76,7 +76,7 @@ export default function QuestionRadioImage({
 			if (options.length <= 5) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
-				return <ImageComponent style={{ maxWidth: 50, minHeight: 50, marginRight: 10 }} />;
+				return <ImageComponent style={GeneralStyle.general.inlineOptionImage} />;
 			}
 		}
 	}
