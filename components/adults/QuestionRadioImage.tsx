@@ -6,6 +6,7 @@ import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type { Svg } from "react-native-svg";
 import { getOptionImage } from "utils/background";
+import { horizontalScale, verticalScale } from "utils/responsive";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -19,9 +20,10 @@ export default function QuestionRadioImage({
 	selectedValue,
 }: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, currentPageNumber, mode } = settingCtx.settingState;
+	const { colorTheme, currentPage, currentPageNumber, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
+	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
@@ -44,7 +46,6 @@ export default function QuestionRadioImage({
 	}
 
 	function renderImage(image: string | Svg): React.ReactElement {
-		console.log("image", typeof image);
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
@@ -78,49 +79,112 @@ export default function QuestionRadioImage({
 		}
 	}
 
-	function renderOption({ item }): React.ReactElement {
+	function blockRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
+		const imageWidth = horizontalScale(260, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(images, mode);
 
 		return (
 			<Pressable
 				style={[
-					styles.optionContainer,
+					styles.blockOptionContainer,
+					{
+						maxWidth: imageWidth, 
+						aspectRatio: 1 / 1,
+						marginTop: verticalScale(10, device.screenHeight),
+						marginBottom: 0,
+						marginLeft: 0,
+					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => {
 					selectHandler(value);
 				}}
 			>
-				<View style={styles.optionImageContainer}>
+				<View style={styles.blockOptionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(imageByMode)}
 				</View>
-				<View style={styles.optionTextContainer}>
-					<Text>{text}</Text>
+				<View style={styles.blockOptionLabelContainer}>
+					<Text style={styles.blockOptionLabelText}>{text}</Text>
 				</View>
 			</Pressable>
+		);
+	}
+
+	function listRenderOption({ item }): React.ReactElement {
+		const { images, text, value } = item.image_choices_id;
+		const imageByMode = getOptionImage(images, mode);
+
+		return (
+			// <View>
+			// 	<Pressable
+			// 		style={[
+			// 			styles.listOptionContainer,
+			// 			{ flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingVertical: 3 },
+			// 			{ borderColor: color100 },
+			// 			selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
+			// 		]}
+			// 		onPress={() => {
+			// 			selectHandler(value);
+			// 		}}
+			// 	>
+			// 		{renderImage(imageByMode)}
+			// 		<Text
+			// 			style={[
+			// 				styles.listOptionLabelText,
+			// 				selected === value ? { color: "#fff" } : { color: "#000" },
+			// 			]}
+			// 		>
+			// 			{text}
+			// 		</Text>
+			// 	</Pressable>
+			// </View>
+			<></>
 		);
 	}
 
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
-				<FlatList
-					style={[]}
-					data={options}
-					renderItem={renderOption}
-					numColumns={2}
-					key={currentPageNumber}
-				/>
+				{options.length <= 5 ? (
+					<FlatList
+						data={options}
+						renderItem={blockRenderOption}
+						numColumns={numColumn}
+						key={numColumn}
+					/>
+				) : (
+					<FlatList
+						data={options}
+						renderItem={listRenderOption}
+					/>
+				)}
 			</View>
 		</SafeAreaView>
 	);
 }
 
 const styles = StyleSheet.create({
+	blockOptionContainer: {
+		...GeneralStyle.adult.blockOptionContainer,
+	},
+	blockOptionImageContainer: {
+		justifyContent: "center",
+		alignItems: "center",
+		position: "relative",
+		flex: 1,
+		...GeneralStyle.adult.blockOptionImageContainer,
+	},
+	blockOptionLabelContainer: {
+		...GeneralStyle.adult.blockImageLabelContainer,
+	},
+	blockOptionLabelText: {
+		...GeneralStyle.adult.optionImageLabelText,
+	},
 	container: {
 		// marginTop: 5,
+		// backgroundColor: "pink",
 	},
 	imageFilter: {
 		position: "absolute",

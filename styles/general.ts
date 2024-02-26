@@ -151,7 +151,6 @@ const GeneralStyle = {
 		blockOptionContainer: {
 			backgroundColor: "#fff",
 			width: "100%",
-			height: "100%",
 			flex: 1,
 			height: 150,
 			maxWidth: 140,
@@ -265,6 +264,37 @@ const GeneralStyle = {
 			},
 			shadowOpacity: 0.2,
 			shadowRadius: 2,
+		},
+		blockOptionContainer: {
+			backgroundColor: "#fff",
+			width: "100%",
+			flex: 1,
+			height: 150,
+			maxWidth: 140,
+			borderRadius: 5,
+			marginRight: 10,
+			marginBottom: 10,
+			shadowColor: "#000",
+			shadowOffset: {
+				width: 0.5,
+				height: 1,
+			},
+			shadowOpacity: 0.2,
+			shadowRadius: 2,
+		},
+		blockImageLabelContainer: {
+			borderBottomLeftRadius: 5,
+			borderBottomRightRadius: 5,
+			paddingVertical: 5,
+			paddingHorizontal: 7,
+		},
+		blockOptionImageContainer: {
+			borderTopLeftRadius: 5,
+			borderTopRightRadius: 5,
+		},
+		optionImageLabelText: {
+			fontSize: 13,
+			fontFamily: Font.SpaceRegular,
 		},
 	},
 };

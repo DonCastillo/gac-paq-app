@@ -22,7 +22,6 @@ export default function QuestionRadioImage({
 	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
-	console.log("screen width: ", device.screenWidth);
 	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
 
 	const optionPressedStyle = {
@@ -152,7 +151,6 @@ export default function QuestionRadioImage({
 			<View>
 				{options.length <= 5 ? (
 					<FlatList
-						// style={[{ backgroundColor: "green", flexDirection: "row", justifyContent: "center" }]}
 						data={options}
 						renderItem={blockRenderOption}
 						numColumns={numColumn}
