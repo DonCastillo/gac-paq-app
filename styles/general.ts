@@ -2,10 +2,12 @@
 // border should be color 100 (light color)
 
 // nav should be color200 (dark)
-const DARK_TEXT_COLOR = "#333333";
+const DARK_COLOR = "#333333";
+const INACTIVE_COLOR = "#D8D8D8";
 const DEFAULT_BORDER_WIDTH = 3;
 const DEFAULT_BORDER_RADIUS = 10;
 const DEFAULT_OPTION_FONT_SIZE = 18;
+const DEFAULT_FIELD_MIN_HEIGHT = 60;
 
 const Font = {
 	PoppinsBold: "PoppinsBold",
@@ -52,24 +54,19 @@ const GeneralStyle = {
 	},
 	kid: {
 		field: {
-			fontSize: 18,
-			fontWeight: "400",
-			borderWidth: 3,
-			borderRadius: 10,
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			borderWidth: DEFAULT_BORDER_WIDTH,
+			borderRadius: DEFAULT_BORDER_RADIUS,
 			paddingHorizontal: 20,
-			// paddingVertical: 3,
 			paddingVertical: 14,
-			minHeight: 60,
-			marginBottom: 15,
-			marginTop: 15,
-			borderColor: "#000",
+			backgroundColor: "#fff",
 		},
 		inactiveField: {
-			borderColor: "#ABABAB",
+			borderColor: INACTIVE_COLOR,
 			backgroundColor: "#FFF",
 		},
 		inactiveText: {
-			color: "#ABABAB",
+			color: "#000",
 		},
 		introQuestionContainer: {
 			maxWidth: 500,
@@ -77,8 +74,7 @@ const GeneralStyle = {
 		introQuestionLabel: {
 			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
-			color: DARK_TEXT_COLOR,
-			// backgroundColor: "red",
+			color: DARK_COLOR,
 		},
 		questionQuestionContainer: {
 			maxWidth: 500,
@@ -86,21 +82,20 @@ const GeneralStyle = {
 		questionQuestionLabel: {
 			fontSize: 23,
 			fontFamily: Font.PoppinsBold,
-			color: DARK_TEXT_COLOR,
+			color: DARK_COLOR,
 		},
 		questionQuestionTitle: {
 			marginVertical: 5,
 			fontFamily: Font.SpaceLight,
 			fontSize: 18,
-			color: DARK_TEXT_COLOR,
+			color: DARK_COLOR,
 		},
 
 		dropdownPickerContainer: {
 			borderWidth: DEFAULT_BORDER_WIDTH,
 			borderRadius: DEFAULT_BORDER_RADIUS,
-			minHeight: 60,
+			minHeight: DEFAULT_FIELD_MIN_HEIGHT,
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
-			// backgroundColor: "red",
 		},
 		dropdownPickerListItemContainer: {
 			height: 60,
@@ -139,7 +134,6 @@ const GeneralStyle = {
 			paddingHorizontal: 20,
 			paddingVertical: 14,
 			marginBottom: 15,
-			// backgroundColor: "orange",
 		},
 
 		optionText: {
@@ -202,7 +196,7 @@ const GeneralStyle = {
 			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
 			fontWeight: "bold",
-			color: DARK_TEXT_COLOR,
+			color: DARK_COLOR,
 		},
 		radioContainer: {
 			paddingVertical: 4,
@@ -215,13 +209,13 @@ const GeneralStyle = {
 			width: 25,
 			marginRight: 15,
 			borderRadius: 25 / 2,
-			borderColor: "#D8D8D8",
+			borderColor: INACTIVE_COLOR,
 			borderWidth: 2,
 		},
 		radioText: {
 			fontSize: 18,
 			fontFamily: Font.SpaceRegular,
-			color: DARK_TEXT_COLOR,
+			color: DARK_COLOR,
 		},
 		pageHeading: {
 			color: "white",
@@ -239,17 +233,20 @@ const GeneralStyle = {
 			textAlign: "center",
 		},
 		field: {
-			fontSize: 18,
-			fontWeight: "400",
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
 			borderWidth: 2,
 			borderRadius: 4,
-			paddingHorizontal: 15,
-			// paddingVertical: 3,
-			paddingVertical: 10,
-			minHeight: 60,
-			marginBottom: 15,
-			marginTop: 15,
 			borderColor: "#C5C5C5",
+			paddingHorizontal: 15,
+			paddingVertical: 10,
+			backgroundColor: "#fff",
+		},
+		inactiveField: {
+			borderColor: INACTIVE_COLOR,
+			backgroundColor: "#FFF",
+		},
+		inactiveText: {
+			color: "#ABABAB",
 		},
 
 		optionImageContainer: {
@@ -273,6 +270,12 @@ const GeneralStyle = {
 };
 
 const DefaultStyle = {
+	darkColor: DARK_COLOR,
+	inactiveColor: INACTIVE_COLOR,
+	defaultBorderWidth: DEFAULT_BORDER_WIDTH,
+	defaultBorderRadius: DEFAULT_BORDER_RADIUS,
+	defaultOptionFontSize: DEFAULT_OPTION_FONT_SIZE,
+	defaultFieldMinHeight: DEFAULT_FIELD_MIN_HEIGHT,
 	button: {
 		paddingHorizontal: 20,
 		paddingVertical: 15,

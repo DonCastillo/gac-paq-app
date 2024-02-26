@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { GeneralStyle } from "styles/general";
+import { DefaultStyle, GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label";
@@ -43,11 +43,11 @@ export default function QuestionSlider({
 	}
 
 	function isColor100(value: number | PhraseLabel.DontKnow): string {
-		return isNumber(value) ? color100 : "#D8D8D8";
+		return isNumber(value) ? color100 : GeneralStyle.adult.inactiveField.borderColor;
 	}
 
 	function isColor200(value: number | PhraseLabel.DontKnow): string {
-		return isNumber(value) ? color200 : "#D8D8D8";
+		return isNumber(value) ? color200 : GeneralStyle.adult.inactiveField.borderColor;
 	}
 
 	function setSliderValue(value: number | PhraseLabel.DontKnow): number | undefined {
@@ -91,6 +91,7 @@ export default function QuestionSlider({
 			{/** i don't know */}
 			<View style={{ marginTop: 20 }}>
 				<FlatList
+					scrollEnabled={false}
 					data={[{ label: phrases?.dontKnow, value: PhraseLabel.DontKnow }]}
 					renderItem={({ item }) => (
 						<RadioOption
@@ -107,46 +108,46 @@ export default function QuestionSlider({
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: GeneralStyle.adult.field.marginTop + 20,
+		marginTop: 40,
 	},
 	tooltip: {
 		bottom: 50,
-		left: -5,
+		left: -8,
 		height: 40,
 		width: 40,
 		justifyContent: "center",
 		alignItems: "center",
-		borderRadius: GeneralStyle.kid.field.borderRadius,
+		borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 		padding: 3,
 	},
 	tooltipUnselected: {
-		backgroundColor: "#D8D8D8",
+		backgroundColor: DefaultStyle.inactiveColor,
 	},
 	tooltipText: {
-		fontSize: GeneralStyle.adult.field.fontSize + 5,
+		fontSize: 23,
 		color: "#fff",
 	},
 	tooltipTextUnselected: {
-		backgroundColor: "#D8D8D8",
+		backgroundColor: DefaultStyle.inactiveColor,
 	},
 	trackStyle: {
 		height: 5,
-		borderRadius: GeneralStyle.adult.field.borderRadius,
+		borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 	},
 	trackStyleUnselected: {
-		backgroundColor: "#D8D8D8",
+		backgroundColor: DefaultStyle.inactiveColor,
 	},
 	thumbStyle: {
 		height: 25,
 		width: 25,
 	},
 	thumbStyleUnselected: {
-		backgroundColor: "#D8D8D8",
+		backgroundColor: DefaultStyle.inactiveColor,
 	},
 	textPressed: {
 		color: "#fff",
 	},
 	textUnpressed: {
-		color: "#D8D8D8",
+		color: DefaultStyle.inactiveColor,
 	},
 });
