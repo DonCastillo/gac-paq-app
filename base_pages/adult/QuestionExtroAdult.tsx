@@ -17,14 +17,22 @@ import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import { useNavigation } from "@react-navigation/native";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
+import { GeneralStyle } from "styles/general";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const { mode, language, currentPage, currentPageNumber, directusAccessToken, directusBaseEndpoint, device } =
-		settingCtx.settingState;
+	const {
+		mode,
+		language,
+		currentPage,
+		currentPageNumber,
+		directusAccessToken,
+		directusBaseEndpoint,
+		device,
+	} = settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const navigation = useNavigation();
@@ -95,18 +103,18 @@ export default function QuestionExtroAdult(): React.ReactElement {
 					<CenterMain>
 						<Heading
 							customStyle={{
-								color: "white",
-								fontSize: 40,
-								fontWeight: "bold",
-								textAlign: "center",
+								...GeneralStyle.adult.pageHeading,
+								fontSize: device.isTablet ? 65 : 50,
+								lineHeight: device.isTablet ? 75 : 60,
 							}}
 						>
 							{translatedPage?.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
-								color: "#fff",
-								fontSize: 20,
+								...GeneralStyle.adult.pageParagraph,
+								fontSize: device.isTablet ? 25 : 23,
+								lineHeight: device.isTablet ? 30 : 25,
 							}}
 						>
 							{translatedPage?.subheading}

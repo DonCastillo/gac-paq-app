@@ -9,10 +9,12 @@ import BottomMain from "components/orientation/BottomMain";
 import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
+import { GeneralStyle } from "styles/general";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { mode, language, colorTheme, currentPage, currentPageNumber, buttons, device } = settingCtx.settingState;
+	const { mode, language, colorTheme, currentPage, currentPageNumber, device } =
+		settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -46,7 +48,16 @@ export default function QuestionIntroAdult(): React.ReactElement {
 				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
 				key={currentPageNumber}
 			/>
-			<View style={[styles.headingPanel, { backgroundColor: color200 }]}>
+			<View
+				style={[
+					styles.headingPanel,
+					{
+						backgroundColor: color200,
+						maxWidth: device.isTablet ? 400 : "100%",
+						minHeight: device.isTablet ? "100%" : 250,
+					},
+				]}
+			>
 				<ScrollView>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
 					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
@@ -82,37 +93,18 @@ const styles = StyleSheet.create({
 		width: "100%",
 	},
 	headingPanel: {
-		paddingHorizontal: 60,
 		position: "absolute",
-		bottom: 0,
 		width: "100%",
-		minHeight: 250,
 		height: "auto",
-		borderTopRightRadius: 45,
-		borderTopLeftRadius: 45,
-		paddingTop: 20,
-		paddingBottom: 30,
+		...GeneralStyle.general.sectionIntroPanel,
 	},
 	headingSubText: {
 		textAlign: "center",
-		color: "#fff",
-		fontSize: 20,
+		...GeneralStyle.general.sectionIntroSubheading,
 	},
 	headingText: {
 		textAlign: "center",
-		paddingTop: 20,
-		color: "#fff",
-		fontSize: 32,
-		fontWeight: "bold",
 		height: "100%",
-	},
-	headingPanelTop: {
-		flex: 1,
-	},
-	headingPanelBottom: {
-		flex: 1,
-		alignItems: "center",
-		justifyContent: "flex-end",
-		paddingHorizontal: 20,
+		...GeneralStyle.general.sectionIntroHeading,
 	},
 });

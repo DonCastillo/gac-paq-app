@@ -10,10 +10,11 @@ import Navigation from "components/Navigation";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import { GeneralStyle } from "styles/general";
 
 export default function PageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	const { color100 } = colorTheme;
@@ -59,19 +60,18 @@ export default function PageAdult(): React.ReactElement {
 				<CenterMain>
 					<Heading
 						customStyle={{
-							color: "white",
-							fontSize: 70,
-							marginBottom: 50,
-							textAlign: "center",
+							...GeneralStyle.adult.pageHeading,
+							fontSize: device.isTablet ? 80 : 50,
+							lineHeight: device.isTablet ? 100 : 70,
 						}}
 					>
-						{translatedPage?.heading.toLowerCase()}
+						{translatedPage?.heading}
 					</Heading>
 					<Paragraph
 						customStyle={{
-							color: "white",
-							fontSize: 15,
-							lineHeight: 17,
+							...GeneralStyle.adult.pageParagraph,
+							fontSize: device.isTablet ? 20 : 15,
+							lineHeight: device.isTablet ? 25 : 19,
 						}}
 					>
 						{translatedPage?.description}

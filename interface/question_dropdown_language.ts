@@ -1,5 +1,5 @@
 import type LanguageInterface from "interface/language";
-import type ImageInterface from "interface/images";
+import type { ImageDeviceInterface } from "interface/images";
 
 export default interface QuestionDropdownLanguageInterface {
 	id?: string | number;
@@ -9,5 +9,5 @@ export default interface QuestionDropdownLanguageInterface {
 	adult_label: string;
 	kid_label: string;
 	languages_id?: LanguageInterface | null;
-	images?: ImageInterface;
+	images?: ImageDeviceInterface;
 }

@@ -1,5 +1,5 @@
 import type LanguageInterface from "interface/language";
-import type ImageInterface from "interface/images";
+import type { ImageDeviceInterface } from "interface/images";
 
 interface Choice {
 	text: string;
@@ -15,5 +15,5 @@ export default interface QuestionDropdownInterface {
 	adult_label: string;
 	choices: Choice[];
 	languages_id?: LanguageInterface | null;
-	images?: ImageInterface;
+	images?: ImageDeviceInterface;
 }

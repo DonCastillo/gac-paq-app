@@ -4,7 +4,12 @@ interface DeviceInterface {
 	tablet: string;
 }
 
-export default interface ImageInterface {
+export interface ImageModeInterface {
+	kid?: string;
+	adult?: string;
+}
+
+export interface ImageDeviceInterface {
 	kid?: DeviceInterface;
 	adult?: DeviceInterface;
 }
