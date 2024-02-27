@@ -183,6 +183,18 @@ const GeneralStyle = {
 			borderTopLeftRadius: 5,
 			borderTopRightRadius: 5,
 		},
+		extroPageHeading: {
+			color: "#000",
+			textAlign: "center",
+			fontFamily: Font.SpaceBold,
+			marginBottom: 20,
+		},
+		extroPageParagraph: {
+			color: "#000",
+			textAlign: "center",
+			fontFamily: Font.PoppinsMedium,
+			marginBottom: 20,
+		},
 	},
 	adult: {
 		questionContainer: {
