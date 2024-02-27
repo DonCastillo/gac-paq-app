@@ -10,7 +10,7 @@ import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
 import QuestionSelect from "components/kid/QuestionSelect";
 import { ResponseContext } from "store/responses";
-import QuestionTitle from "components/kid/QuestionTitle";
+import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
 import QuestionSlider from "components/kid/QuestionSlider";
 import QuestionRadioImage from "components/kid/QuestionRadioImage";

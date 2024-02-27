@@ -5,6 +5,10 @@ import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type { Svg } from "react-native-svg";
+import { getOptionImage } from "utils/background";
+import { horizontalScale, verticalScale } from "utils/responsive";
+import RadioOption from "./item/RadioOption";
+import Mode from "constants/mode";
 
 interface QuestionRadioImagePropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -18,9 +22,10 @@ export default function QuestionRadioImage({
 	selectedValue,
 }: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
+	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
@@ -43,7 +48,6 @@ export default function QuestionRadioImage({
 	}
 
 	function renderImage(image: string | Svg): React.ReactElement {
-		console.log("image", typeof image);
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
@@ -51,15 +55,15 @@ export default function QuestionRadioImage({
 				ImageComponent = (
 					<Image
 						style={styles.optionImage as StyleProp<ImageStyle>}
-						source={image} // Convert the image to ImageSourcePropType
+						source={image}
 						resizeMode="cover"
 					/>
 				);
 			} else {
 				ImageComponent = (
 					<Image
-						style={{ height: 50, width: 50, marginRight: 10 }}
-						source={image} // Convert the image to ImageSourcePropType
+						style={GeneralStyle.general.inlineOptionImage}
+						source={image}
 						resizeMode="cover"
 					/>
 				);
@@ -72,97 +76,110 @@ export default function QuestionRadioImage({
 			if (options.length <= 5) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
-				return <ImageComponent style={{ maxWidth: 50, minHeight: 50, marginRight: 10 }} />;
+				return <ImageComponent style={GeneralStyle.general.inlineOptionImage} />;
 			}
 		}
 	}
 
-	function renderOption({ item }): React.ReactElement {
-		const { image, text, value } = item.image_choices_id;
+	function blockRenderOption({ item }): React.ReactElement {
+		const { images, text, value } = item.image_choices_id;
+		const imageWidth = horizontalScale(260, device.screenWidth) / numColumn;
+		const imageByMode = getOptionImage(images, mode);
 
 		return (
 			<Pressable
 				style={[
-					styles.optionContainer,
+					styles.blockOptionContainer,
+					{
+						maxWidth: imageWidth,
+						aspectRatio: 1 / 1,
+						marginTop: verticalScale(10, device.screenHeight),
+						marginBottom: 0,
+						marginLeft: 0,
+					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => {
 					selectHandler(value);
 				}}
 			>
-				<View style={styles.optionImageContainer}>
+				<View style={styles.blockOptionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
-					{renderImage(image)}
+					{renderImage(imageByMode)}
 				</View>
-				<View style={styles.optionTextContainer}>
-					<Text>{text}</Text>
+				<View style={styles.blockOptionLabelContainer}>
+					<Text style={styles.blockOptionLabelText}>{text}</Text>
 				</View>
 			</Pressable>
+		);
+	}
+
+	function listRenderOption({ item }): React.ReactElement {
+		const { images, text, value } = item.image_choices_id;
+		const imageByMode = getOptionImage(images, mode);
+
+		return (
+			<View style={{ backgroundColor: "white", paddingVertical: 2, marginBottom: 2 }}>
+				<RadioOption
+					label={text}
+					value={value}
+					onPress={() => selectHandler(value)}
+					selected={selected === value}
+					image={imageByMode}
+				/>
+			</View>
 		);
 	}
 
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
-				<FlatList
-					style={[]}
-					data={options}
-					renderItem={renderOption}
-					numColumns={2}
-					key={currentPageNumber}
-				/>
+				{options.length <= 5 ? (
+					<FlatList
+						data={options}
+						renderItem={blockRenderOption}
+						numColumns={numColumn}
+						key={numColumn}
+					/>
+				) : (
+					<FlatList
+						horizontal={false}
+						data={options}
+						renderItem={listRenderOption}
+					/>
+				)}
 			</View>
 		</SafeAreaView>
 	);
 }
 
 const styles = StyleSheet.create({
-	container: {
-		// marginTop: 5,
+	blockOptionContainer: {
+		...GeneralStyle.adult.blockOptionContainer,
 	},
-	imageFilter: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		width: "100%",
-		height: "100%",
-		opacity: 0.75,
-		zIndex: 1,
-	},
-	optionImageContainer: {
+	blockOptionImageContainer: {
 		justifyContent: "center",
 		alignItems: "center",
 		position: "relative",
 		flex: 1,
-		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		...GeneralStyle.adult.blockOptionImageContainer,
 	},
-	optionContainer: {
-		...GeneralStyle.adult.optionImageContainer,
+	blockOptionLabelContainer: {
+		...GeneralStyle.adult.blockImageLabelContainer,
+	},
+	blockOptionLabelText: {
+		...GeneralStyle.adult.optionImageLabelText,
+	},
+	container: {},
+	imageFilter: {
+		...GeneralStyle.general.imageFilter,
 	},
 	optionImage: {
-		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		...GeneralStyle.kid.optionImage,
 		position: "absolute",
 		top: 0,
 		left: 0,
 		height: "100%",
 		width: "100%",
-	},
-	optionTextContainer: {
-		borderBottomLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderBottomRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		paddingVertical: 5,
-		paddingHorizontal: 7,
-		minHeight: 60,
-	},
-	optionUnpressed: {
-		backgroundColor: "#fff",
-	},
-	textPressed: {
-		// color: "#fff",
-	},
-	textUnpressed: {
-		// color: "#000",
 	},
 });

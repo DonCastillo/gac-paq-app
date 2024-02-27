@@ -1,5 +1,5 @@
 import type LanguageInterface from "interface/language";
-import type ImageInterface from "interface/images";
+import type { ImageDeviceInterface } from "interface/images";
 
 export default interface QuestionInputInterface {
 	id?: string | number;
@@ -13,5 +13,5 @@ export default interface QuestionInputInterface {
 	placeholder: string;
 	type: "text" | "number";
 	languages_id?: LanguageInterface | null;
-	images?: ImageInterface;
+	images?: ImageDeviceInterface;
 }

@@ -15,10 +15,10 @@ import Images from "styles/images/index";
 import GenericBackgroundStars from "components/kid/background/question-pages/GenericBackgroundStars";
 import GenericBackgroundLoop from "components/kid/background/question-pages/GenericBackgroundLoop";
 import Mode from "constants/mode";
-import type ImageInterface from "interface/images";
+import type { ImageDeviceInterface, ImageModeInterface } from "interface/images";
 
 function getImageBackground(
-	images: ImageInterface,
+	images: ImageDeviceInterface,
 	mode: Mode.Kid | Mode.Adult | undefined,
 	isTablet: boolean,
 ): any | null {
@@ -38,6 +38,19 @@ function getImageBackground(
 		return images?.kid?.tablet;
 	} else if (mode === undefined && !isTablet) {
 		return images?.kid?.phone;
+	} else {
+		return null;
+	}
+}
+
+function getOptionImage(
+	images: ImageModeInterface,
+	mode: Mode.Kid | Mode.Adult | undefined,
+): any | null {
+	if (mode === Mode.Adult) {
+		return images?.adult;
+	} else if (mode === Mode.Kid) {
+		return images?.kid;
 	} else {
 		return null;
 	}
@@ -117,4 +130,4 @@ function getQuestionBackground(
 	}
 }
 
-export { getIntroductoryBackground, getQuestionBackground, getImageBackground };
+export { getIntroductoryBackground, getQuestionBackground, getImageBackground, getOptionImage };

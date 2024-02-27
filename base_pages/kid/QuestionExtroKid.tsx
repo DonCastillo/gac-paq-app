@@ -15,6 +15,8 @@ import BackgroundYellowStroke from "components/kid/background/question-pages/Bac
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
+import { GeneralStyle } from "styles/general";
+import { verticalScale } from "utils/responsive";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
@@ -22,15 +24,19 @@ export default function QuestionExtroKid(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const { language, currentPage, currentPageNumber, directusAccessToken, directusBaseEndpoint } =
-		settingCtx.settingState;
+	const {
+		language,
+		currentPage,
+		currentPageNumber,
+		directusAccessToken,
+		directusBaseEndpoint,
+		device,
+	} = settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const ImageComponent = Images.kids.graphics.extro_question_page;
 	const navigation = useNavigation();
 
-	console.log(translatedPage);
-	console.log("isFinal: ", isFinal);
 
 	// set button component dynamically
 	useEffect(() => {
@@ -97,26 +103,28 @@ export default function QuestionExtroKid(): React.ReactElement {
 					<CenterMain>
 						<Heading
 							customStyle={{
-								color: "#000",
-								fontSize: 32,
-								fontWeight: "bold",
-								textAlign: "center",
+								...GeneralStyle.kid.extroPageHeading,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: device.isTablet ? 50 : 40,
+								lineHeight: device.isTablet ? 55 : 45,
 							}}
 						>
 							{translatedPage?.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
-								color: "#000",
-								fontSize: 20,
+								...GeneralStyle.kid.extroPageParagraph,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: device.isTablet ? 25 : 20,
+								lineHeight: device.isTablet ? 35 : 27,
 							}}
 						>
 							{translatedPage?.subheading}
 						</Paragraph>
 						<View style={styles.imageContainer}>
 							<ImageComponent
-								height={400}
-								width={300}
+								backgroundColor={"red"}
+								height={verticalScale(320, device.screenHeight)}
 								padding={0}
 								margin={0}
 							/>

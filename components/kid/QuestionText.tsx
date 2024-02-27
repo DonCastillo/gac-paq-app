@@ -46,12 +46,7 @@ export default function QuestionText({
 
 const styles = StyleSheet.create({
 	container: {
-		borderWidth: GeneralStyle.kid.field.borderWidth,
-		borderRadius: GeneralStyle.kid.field.borderRadius,
-		fontSize: GeneralStyle.kid.field.fontSize,
-		paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
-		paddingVertical: GeneralStyle.kid.field.paddingVertical,
-		backgroundColor: "#fff",
+		...GeneralStyle.kid.field,
 		width: "100%",
 		alignItems: "center",
 		justifyContent: "center",
