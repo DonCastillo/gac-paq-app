@@ -22,6 +22,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
+import QuestionTitle from "components/generic/QuestionTitle";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -173,6 +174,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
+						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
 						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>
