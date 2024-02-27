@@ -22,7 +22,7 @@ export default function QuestionRadioImage({
 	selectedValue,
 }: QuestionRadioImagePropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, currentPageNumber, device, mode } = settingCtx.settingState;
+	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
@@ -116,7 +116,7 @@ export default function QuestionRadioImage({
 
 	function listRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		const imageByMode = getOptionImage(images, Mode.Adult);
+		const imageByMode = getOptionImage(images, mode);
 
 		return (
 			<View style={{ backgroundColor: "white", paddingVertical: 2, marginBottom: 2 }}>
@@ -170,53 +170,16 @@ const styles = StyleSheet.create({
 	blockOptionLabelText: {
 		...GeneralStyle.adult.optionImageLabelText,
 	},
-	container: {
-		// marginTop: 5,
-		// backgroundColor: "pink",
-	},
+	container: {},
 	imageFilter: {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		width: "100%",
-		height: "100%",
-		opacity: 0.75,
-		zIndex: 1,
-	},
-	optionImageContainer: {
-		justifyContent: "center",
-		alignItems: "center",
-		position: "relative",
-		flex: 1,
-		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-	},
-	optionContainer: {
-		...GeneralStyle.adult.optionImageContainer,
+		...GeneralStyle.general.imageFilter,
 	},
 	optionImage: {
-		borderTopLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderTopRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
+		...GeneralStyle.kid.optionImage,
 		position: "absolute",
 		top: 0,
 		left: 0,
 		height: "100%",
 		width: "100%",
-	},
-	optionTextContainer: {
-		borderBottomLeftRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		borderBottomRightRadius: GeneralStyle.adult.optionImageContainer.borderRadius,
-		paddingVertical: 5,
-		paddingHorizontal: 7,
-		minHeight: 60,
-	},
-	optionUnpressed: {
-		backgroundColor: "#fff",
-	},
-	textPressed: {
-		// color: "#fff",
-	},
-	textUnpressed: {
-		// color: "#000",
 	},
 });
