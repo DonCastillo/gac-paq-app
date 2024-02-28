@@ -132,7 +132,7 @@ function AppWrapper(): React.ReactElement {
 		// load default extro pages (kids)
 		sectionNumber++;
 		kidExtroPages.forEach((page, sectionIndex) => {
-			if(getScreenType(page.type) === ScreenType.IntroQuestion) {
+			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
 				questionCtx.addSectionPage(page);
 			}
 			settingCtx.addPage({
@@ -148,7 +148,7 @@ function AppWrapper(): React.ReactElement {
 		// load feedback pages
 		sectionNumber++;
 		feedbackExtroPages.forEach((page, sectionIndex) => {
-			if(getScreenType(page.type) === ScreenType.IntroQuestion) {
+			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
 				questionCtx.addSectionPage(page);
 			}
 			settingCtx.addPage({

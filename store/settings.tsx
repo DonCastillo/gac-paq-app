@@ -261,10 +261,10 @@ function settingReducer(state: any, action: any): any {
 				phrases: action.payload,
 			};
 		case "SET_SECTION_TITLES":
-				return {
-					...state,
-					sectionTitles: action.payload,
-				};
+			return {
+				...state,
+				sectionTitles: action.payload,
+			};
 		case "REMOVE_EXTRO_PAGES": {
 			const pagesWithoutExtros = state.pages.filter((page: any) => {
 				return page.section !== SectionType.Extro;
@@ -450,7 +450,6 @@ export default function SettingContextProvider({
 			type: "SET_SECTION_TITLES",
 			payload: sectionTitles,
 		});
-	
 	}
 
 	const value: any = {

@@ -1,17 +1,29 @@
-import { Pressable, SafeAreaView, StyleSheet, View } from "react-native";
+import { Pressable, SafeAreaView, StyleSheet, View, Text } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { SettingContext } from "store/settings";
+import { GeneralStyle } from "styles/general";
 
 const ICON_SIZE = 30;
 
-export default function Toolbar(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
+interface PropsInterface {
+	sectionTitle?: string;
+}
 
-	function backHandler(): void {
-		console.log("back pressed from the toolbar");
-		settingCtx.prevPage();
-	}
+export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
+	const { currentPageNumber, currentPage, sectionTitles } = settingCtx.settingState;
+	const [title, setTitle] = useState<string>(sectionTitle ?? "");
+
+	useEffect(() => {
+		if (title === sectionTitle) return;
+		if (currentPage.sectionNumber !== null) {
+			setTitle(sectionTitles[currentPage.sectionNumber] ?? "");
+		} else {
+			setTitle("");
+		}
+	}, [currentPageNumber]);
+
 
 	function audioHandler(): void {
 		console.log("audio pressed from the toolbar");
@@ -19,6 +31,7 @@ export default function Toolbar(): React.ReactElement {
 
 	return (
 		<View style={styles.container}>
+			<Text style={GeneralStyle.adult.topHeaderSectionTitle}>{title}</Text>
 			<Icon
 				name="volume-up"
 				size={ICON_SIZE}
@@ -34,7 +47,7 @@ const styles = StyleSheet.create({
 	container: {
 		paddingVertical: 10,
 		paddingHorizontal: 20,
-		justifyContent: "flex-end",
+		justifyContent: "space-between",
 		alignItems: "center",
 		flexDirection: "row",
 	},

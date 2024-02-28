@@ -197,6 +197,12 @@ const GeneralStyle = {
 		},
 	},
 	adult: {
+		topHeaderSectionTitle: {
+			fontFamily: Font.PoppinsRegular,
+			fontSize: 22,
+			color: "#fff",
+			// backgroundColor: "lightblue",
+		},
 		questionContainer: {
 			borderRadius: 25,
 			maxWidth: 700,

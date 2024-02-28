@@ -37,22 +37,24 @@ function translatePhrase(phrases: PhraseInterface[], langCode: string | null): s
 	}
 }
 
-function translateSectionHeading(sectionPages: SectionPayloadInterface[], langCode: string | null): string[] {
+function translateSectionHeading(
+	sectionPages: SectionPayloadInterface[],
+	langCode: string | null,
+): string[] {
 	if (langCode === null || langCode === undefined || langCode === "") return [];
 	if (sectionPages.length === 0) return [];
 
 	const translatedSectionTitles = sectionPages.map((sectionPage: SectionPayloadInterface) => {
 		const translations = sectionPage?.translations;
-		const translatedPhrase = translations.find(translation => {
+		const translatedPhrase = translations.find((translation) => {
 			const sectionTitleLanguage = translation?.languages_id?.lang_code?.toLowerCase();
 			const langCodeLowercase = langCode?.toLowerCase();
 			return sectionTitleLanguage === langCodeLowercase;
-		})
-		if(translatedPhrase === undefined || translatedPhrase === null) return "";
+		});
+		if (translatedPhrase === undefined || translatedPhrase === null) return "";
 		return translatedPhrase?.heading;
-	})
+	});
 	return translatedSectionTitles;
-
 }
 
 function stringToInt(value: string | null): number {

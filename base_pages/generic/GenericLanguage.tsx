@@ -44,7 +44,7 @@ export default function GenericLanguage(): React.ReactElement {
 		dontKnowPhrase,
 		introductionPhrase,
 		tryAgainPhrase,
-		sectionPages
+		sectionPages,
 	} = questionCtx.questionState;
 
 	// translate phrases and buttons

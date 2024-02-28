@@ -49,7 +49,7 @@ const INITIAL_STATE = {
 	tryAgainPhrase: TryAgainPhrase,
 	successPage: SuccessPage,
 	errorPage: ErrorPage,
-	sectionPages: []
+	sectionPages: [],
 };
 
 export const QuestionContext = createContext({
@@ -114,11 +114,11 @@ function questionReducer(state: any, action: any): any {
 			};
 		}
 		case "ADD_SECTION_PAGE": {
-			console.log("action.payload: ", action.payload)
+			console.log("action.payload: ", action.payload);
 			return {
 				...state,
-				sectionPages: [...state.sectionPages, action.payload]
-			}
+				sectionPages: [...state.sectionPages, action.payload],
+			};
 		}
 		default:
 			return state;
@@ -166,7 +166,7 @@ export default function QuestionContextProvider({
 		dispatch({
 			type: "ADD_SECTION_PAGE",
 			payload: sectionPage,
-		})
+		});
 	}
 
 	const value: any = {
@@ -175,7 +175,7 @@ export default function QuestionContextProvider({
 		setLanguageOption,
 		setIntroductoryPages,
 		identifyLastSectionExtroPage,
-		addSectionPage
+		addSectionPage,
 	};
 
 	return <QuestionContext.Provider value={value}>{children}</QuestionContext.Provider>;
