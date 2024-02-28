@@ -1,5 +1,7 @@
 import type ButtonInterface from "interface/button";
+import type SectionPayloadInterface from "interface/directus/section-payload";
 import type PhraseInterface from "interface/phrase";
+import SectionInterface from "interface/section";
 
 function translateButton(buttons: ButtonInterface[], langCode: string | null): string | null {
 	if (langCode === null || langCode === undefined || langCode === "") return null;
@@ -35,6 +37,24 @@ function translatePhrase(phrases: PhraseInterface[], langCode: string | null): s
 	}
 }
 
+function translateSectionHeading(sectionPages: SectionPayloadInterface[], langCode: string | null): string[] {
+	if (langCode === null || langCode === undefined || langCode === "") return [];
+	if (sectionPages.length === 0) return [];
+
+	const translatedSectionTitles = sectionPages.map((sectionPage: SectionPayloadInterface) => {
+		const translations = sectionPage?.translations;
+		const translatedPhrase = translations.find(translation => {
+			const sectionTitleLanguage = translation?.languages_id?.lang_code?.toLowerCase();
+			const langCodeLowercase = langCode?.toLowerCase();
+			return sectionTitleLanguage === langCodeLowercase;
+		})
+		if(translatedPhrase === undefined || translatedPhrase === null) return "";
+		return translatedPhrase?.heading;
+	})
+	return translatedSectionTitles;
+
+}
+
 function stringToInt(value: string | null): number {
 	if (value === null || value === undefined || value === "") {
 		return 0;
@@ -53,4 +73,4 @@ function intToString(value: number | null): string {
 	return value.toString();
 }
 
-export { translateButton, translatePhrase, stringToInt, intToString };
+export { translateButton, translatePhrase, translateSectionHeading, stringToInt, intToString };

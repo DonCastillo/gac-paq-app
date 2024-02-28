@@ -7,7 +7,7 @@ import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
 import { ResponseContext } from "store/responses";
 import { QuestionContext } from "store/questions";
-import { translateButton, translatePhrase } from "utils/translate";
+import { translateButton, translatePhrase, translateSectionHeading } from "utils/translate";
 import ButtonLabel from "constants/button_label";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
@@ -44,6 +44,7 @@ export default function GenericLanguage(): React.ReactElement {
 		dontKnowPhrase,
 		introductionPhrase,
 		tryAgainPhrase,
+		sectionPages
 	} = questionCtx.questionState;
 
 	// translate phrases and buttons
@@ -56,6 +57,8 @@ export default function GenericLanguage(): React.ReactElement {
 			next: translateButton(nextButton, language) ?? ButtonLabel.Next,
 			started: translateButton(startedButton, language) ?? ButtonLabel.Started,
 		});
+		// translate "Introduction"
+		// translate "Feedback"
 		settingCtx.translatePhrases({
 			agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
 			done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
@@ -63,6 +66,11 @@ export default function GenericLanguage(): React.ReactElement {
 			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
 			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
 		});
+		// translate the section headings
+		const translatedSectionTitles = translateSectionHeading(sectionPages, language);
+		console.log("translatedSectionTitles: ", translatedSectionTitles);
+		// will make "Introduction" and "Feedback" translated in the future
+		settingCtx.setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]);
 	}, [language]);
 
 	// set selected value

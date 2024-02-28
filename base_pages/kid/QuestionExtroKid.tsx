@@ -37,7 +37,6 @@ export default function QuestionExtroKid(): React.ReactElement {
 	const ImageComponent = Images.kids.graphics.extro_question_page;
 	const navigation = useNavigation();
 
-
 	// set button component dynamically
 	useEffect(() => {
 		if (isFinal === true) {
