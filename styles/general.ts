@@ -61,6 +61,11 @@ const GeneralStyle = {
 		},
 	},
 	kid: {
+		topHeaderSectionTitle: {
+			fontFamily: Font.SpaceRegular,
+			fontSize: 22,
+			color: "#000",
+		},
 		field: {
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
 			borderWidth: DEFAULT_BORDER_WIDTH,
@@ -201,7 +206,6 @@ const GeneralStyle = {
 			fontFamily: Font.PoppinsRegular,
 			fontSize: 22,
 			color: "#fff",
-			// backgroundColor: "lightblue",
 		},
 		questionContainer: {
 			borderRadius: 25,

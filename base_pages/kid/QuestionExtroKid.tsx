@@ -17,6 +17,7 @@ import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import Toolbar from "components/kid/Toolbar";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
@@ -99,6 +100,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 			<View style={styles.container}>
 				<BackgroundYellowStroke />
 				<Main>
+					<Toolbar />
 					<CenterMain>
 						<Heading
 							customStyle={{

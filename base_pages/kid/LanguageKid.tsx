@@ -16,6 +16,7 @@ import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import Toolbar from "components/kid/Toolbar";
 
 export default function LanguageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -114,6 +115,7 @@ export default function LanguageKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<Toolbar />
 				<TopMain>
 					<View
 						style={[

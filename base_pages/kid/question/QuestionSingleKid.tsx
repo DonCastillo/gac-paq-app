@@ -23,6 +23,7 @@ import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import Toolbar from "components/kid/Toolbar";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -194,11 +195,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<Toolbar />
 				<TopMain>
 					<View
 						style={[
 							{
-								marginVertical: verticalScale(30, device.screenHeight),
+								marginVertical: verticalScale(5, device.screenHeight),
 								// backgroundColor: "pink",
 								paddingHorizontal: device.isTablet ? 30 : 0,
 							},

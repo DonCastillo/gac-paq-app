@@ -10,6 +10,7 @@ import Navigation from "components/Navigation";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
+import Toolbar from "components/kid/Toolbar";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -51,6 +52,7 @@ export default function PageKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<Toolbar />
 				<CenterMain>
 					<Heading
 						customStyle={{
