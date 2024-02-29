@@ -171,7 +171,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
-				<Toolbar key={currentPageNumber} />
+				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>

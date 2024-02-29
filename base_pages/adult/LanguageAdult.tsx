@@ -15,6 +15,7 @@ import BGLinearGradient from "components/BGLinearGradient";
 import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
+import Toolbar from "components/adults/Toolbar";
 
 export default function LanguageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -104,6 +105,7 @@ export default function LanguageAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
+				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionLabel

@@ -10,6 +10,7 @@ import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
+import Toolbar from "components/adults/Toolbar";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

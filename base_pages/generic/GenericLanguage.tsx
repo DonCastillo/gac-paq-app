@@ -18,6 +18,7 @@ import PhraseLabel from "constants/phrase_label";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
+import Toolbar from "components/adults/Toolbar";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -122,6 +123,7 @@ export default function GenericLanguage(): React.ReactElement {
 				key={currentPageNumber}
 			/>
 			<Main>
+				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>

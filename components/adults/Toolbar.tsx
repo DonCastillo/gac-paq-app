@@ -12,7 +12,7 @@ interface PropsInterface {
 
 export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { currentPageNumber, currentPage, sectionTitles } = settingCtx.settingState;
+	const { currentPageNumber, currentPage, sectionTitles, device } = settingCtx.settingState;
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
 
 	useEffect(() => {
@@ -24,14 +24,17 @@ export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactEl
 		}
 	}, [currentPageNumber]);
 
-
 	function audioHandler(): void {
 		console.log("audio pressed from the toolbar");
 	}
 
 	return (
 		<View style={styles.container}>
-			<Text style={GeneralStyle.adult.topHeaderSectionTitle}>{title}</Text>
+			<Text
+				style={[GeneralStyle.adult.topHeaderSectionTitle, { fontSize: device.isTablet ? 20 : 18 }]}
+			>
+				{title}
+			</Text>
 			<Icon
 				name="volume-up"
 				size={ICON_SIZE}

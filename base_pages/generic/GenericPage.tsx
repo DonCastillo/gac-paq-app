@@ -20,19 +20,11 @@ export default function GenericPage(): React.ReactElement {
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
-	function renderToolbar(): React.ReactElement {
-		if (currentPage.section === "intro" && currentPage.sectionPageNumber === 1) {
-			return <></>;
-		} else {
-			return <Toolbar />;
-		}
-	}
-
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />
 			<Main>
-				{renderToolbar()}
+				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>
 						<Heading
