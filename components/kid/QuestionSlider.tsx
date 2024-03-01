@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
@@ -94,7 +94,7 @@ export default function QuestionSlider({
 			/>
 
 			{/** i don't know */}
-			<View style={{ marginTop: 20 }}>
+			<ScrollView style={{ marginTop: 20 }}>
 				<Pressable
 					style={[
 						styles.optionContainer,
@@ -114,14 +114,17 @@ export default function QuestionSlider({
 						{phrases?.dontKnow}
 					</Text>
 				</Pressable>
-			</View>
+			</ScrollView>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: 40,
+		flex: 1,
+		paddingTop:50,
+		maxHeight: "100%",
+		position: "relative",
 	},
 	tooltip: {
 		bottom: 50,

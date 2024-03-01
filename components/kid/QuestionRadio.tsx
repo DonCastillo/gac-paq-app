@@ -54,7 +54,7 @@ export default function QuestionRadio({
 					horizontal={false}
 					numColumns={numColumn}
 					key={currentPageNumber}
-					data={options}
+					data={[...options]}
 					renderItem={({ item }) => {
 						return (
 							<View>
@@ -64,9 +64,7 @@ export default function QuestionRadio({
 										{
 											borderColor: color100,
 											width: adjustWidth,
-											// width: "100%",
 											marginRight: adjustMarginRight,
-											// backgroundColor: "pink"
 										},
 										selected === item.value ? optionPressedStyle : styles.optionUnpressed,
 									]}
@@ -93,7 +91,11 @@ export default function QuestionRadio({
 }
 
 const styles = StyleSheet.create({
-	container: {},
+	container: {
+		flex: 1,
+		maxHeight: "100%",
+		overflow: "hidden",
+	},
 	optionContainer: {
 		...GeneralStyle.kid.optionContainer,
 		width: "100%",
