@@ -200,6 +200,11 @@ const GeneralStyle = {
 			fontFamily: Font.PoppinsMedium,
 			marginBottom: 20,
 		},
+		questionComponentContainer: {
+			marginTop: 25,
+			flex: 1,
+			minWidth: "100%"
+		}
 	},
 	adult: {
 		topHeaderSectionTitle: {

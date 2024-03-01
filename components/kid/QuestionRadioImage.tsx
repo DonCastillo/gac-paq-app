@@ -151,14 +151,15 @@ export default function QuestionRadioImage({
 			<View>
 				{options.length <= 5 ? (
 					<FlatList
-						data={options}
+						initialNumToRender={4}
+						data={[...options]}
 						renderItem={blockRenderOption}
 						numColumns={numColumn}
 						key={numColumn}
 					/>
 				) : (
 					<FlatList
-						data={options}
+						data={[...options]}
 						renderItem={listRenderOption}
 					/>
 				)}
@@ -174,7 +175,12 @@ const styles = StyleSheet.create({
 	blockOptionContainer: {
 		...GeneralStyle.kid.blockOptionContainer,
 	},
-	container: {},
+	container: {
+		flex: 1,
+		maxHeight: "100%",
+		// backgroundColor: "pink",
+		overflow: "hidden",
+	},
 	imageFilter: {
 		...GeneralStyle.general.imageFilter,
 	},

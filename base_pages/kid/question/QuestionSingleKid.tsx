@@ -201,8 +201,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 						style={[
 							{
 								marginVertical: verticalScale(5, device.screenHeight),
-								// backgroundColor: "pink",
 								paddingHorizontal: device.isTablet ? 30 : 0,
+								...styles.mainContainer,
 							},
 						]}
 					>
@@ -210,6 +210,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 						<QuestionLabel
 							textStyle={{
 								...GeneralStyle.kid.questionQuestionLabel,
+								fontSize: device.isTablet ? 23 : 19,
+								lineHeight: device.isTablet ? 30 : 22,
 							}}
 							customStyle={{
 								marginBottom: 0,
@@ -217,7 +219,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 						>
 							{questionLabel}
 						</QuestionLabel>
-						<View style={styles.questionContainer}>{questionComponent}</View>
+						<View style={styles.questionComponentContainer}>{questionComponent}</View>
 					</View>
 				</TopMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
@@ -233,7 +235,11 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		position: "relative",
 	},
-	questionContainer: {
-		marginTop: 25,
+	mainContainer: {
+		maxHeight: "100%",
+		flex: 1,
+	},
+	questionComponentContainer: {
+		...GeneralStyle.kid.questionComponentContainer,
 	},
 });
