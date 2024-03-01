@@ -4,6 +4,7 @@ import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { GeneralStyle } from "styles/general";
+import { verticalScale } from "utils/responsive";
 
 interface DropDownSelectorPropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -19,7 +20,7 @@ export default function DropDownSelector({
 	dropdownMinHeight = 280,
 }: DropDownSelectorPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPageNumber } = settingCtx.settingState;
+	const { colorTheme, currentPageNumber, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [open, setOpen] = useState<boolean>(false);
 	const [value, setValue] = useState<string | null>(selectedValue);
@@ -56,10 +57,10 @@ export default function DropDownSelector({
 					styles.dropdownContainer,
 					{
 						borderColor: color100,
-						minHeight: dropdownMinHeight ?? 280,
+						minHeight: verticalScale(dropdownMinHeight, device.screenHeight) ?? 280,
 					},
 				]}
-				listItemContainerStyle={styles.listItemContainerStyle}
+				listItemContainerStyle={[styles.listItemContainerStyle]}
 				onChangeValue={(value: string) => onSelect(value)}
 				// onSelectItem={(item) => onSelect(item.value ?? null)}
 				textStyle={{

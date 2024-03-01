@@ -122,7 +122,7 @@ export default function QuestionSlider({
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		paddingTop:50,
+		paddingTop: 50,
 		maxHeight: "100%",
 		position: "relative",
 	},

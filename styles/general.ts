@@ -203,8 +203,8 @@ const GeneralStyle = {
 		questionComponentContainer: {
 			marginTop: 25,
 			flex: 1,
-			minWidth: "100%"
-		}
+			minWidth: "100%",
+		},
 	},
 	adult: {
 		topHeaderSectionTitle: {
