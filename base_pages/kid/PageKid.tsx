@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import Main from "components/Main";
@@ -64,16 +64,25 @@ export default function PageKid(): React.ReactElement {
 					>
 						{translatedPage?.heading}
 					</Heading>
-					<Paragraph
-						customStyle={{
-							color: color100,
-							...GeneralStyle.kid.pageParagraph,
-							fontSize: device.isTablet ? 20 : 15,
-							lineHeight: device.isTablet ? 25 : 19,
-						}}
+
+					<ScrollView
+						contentContainerStyle={[
+							styles.mainContainer,
+							{ flexGrow: device.platform === "android" ? 1 : 0 },
+						]}
+						centerContent={true}
 					>
-						{translatedPage?.description}
-					</Paragraph>
+						<Paragraph
+							customStyle={{
+								color: color100,
+								...GeneralStyle.kid.pageParagraph,
+								fontSize: device.isTablet ? 20 : 15,
+								lineHeight: device.isTablet ? 25 : 19,
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+					</ScrollView>
 				</CenterMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
@@ -87,5 +96,10 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		alignItems: "center",
 		justifyContent: "center",
+	},
+	mainContainer: {
+		minWidth: "100%",
+		justifyContent: "center",
+		alignItems: "center",
 	},
 });

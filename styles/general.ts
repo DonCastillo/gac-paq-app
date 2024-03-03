@@ -130,7 +130,7 @@ const GeneralStyle = {
 		},
 		pageHeading: {
 			fontSize: 40,
-			marginBottom: 50,
+			marginBottom: 20,
 			textAlign: "center",
 			fontFamily: Font.PoppinsBold,
 		},
@@ -140,6 +140,7 @@ const GeneralStyle = {
 			lineHeight: 17,
 			maxWidth: 800,
 			textAlign: "center",
+			// backgroundColor: "pink"
 		},
 		optionContainer: {
 			borderWidth: DEFAULT_BORDER_WIDTH,

@@ -177,14 +177,15 @@ export default function QuestionSingleKid(): React.ReactElement {
 						style={[
 							GeneralStyle.kid.introQuestionContainer,
 							{
-								marginVertical: verticalScale(60, device.screenHeight),
+								marginVertical: verticalScale(40, device.screenHeight),
+								...styles.mainContainer,
 							},
 						]}
 					>
 						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
 							{questionLabel}
 						</QuestionLabel>
-						{questionComponent}
+						<View style={styles.questionComponentContainer}>{questionComponent}</View>
 					</View>
 				</TopMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
@@ -198,5 +199,12 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
+	},
+	mainContainer: {
+		minHeight: "100%",
+		flex: 1,
+	},
+	questionComponentContainer: {
+		...GeneralStyle.kid.questionComponentContainer,
 	},
 });
