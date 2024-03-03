@@ -201,7 +201,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 						style={[
 							{
 								marginVertical: verticalScale(5, device.screenHeight),
-								paddingHorizontal: device.isTablet ? 30 : 0,
+								paddingHorizontal: device.isTablet ? 20 : 0,
 								...styles.mainContainer,
 							},
 						]}

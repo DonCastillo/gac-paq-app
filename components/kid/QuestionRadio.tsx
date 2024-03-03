@@ -45,7 +45,6 @@ export default function QuestionRadio({
 	const enableColumnWrap = device.isTablet && options.length > COLUMN_THRESHOLD;
 	const numColumn = enableColumnWrap ? 2 : 1;
 	const adjustWidth = device.isTablet ? horizontalScale(150, device.screenWidth) : "100%";
-	const adjustMarginRight = device.isTablet ? horizontalScale(10, device.screenWidth) : 0;
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -65,7 +64,6 @@ export default function QuestionRadio({
 										{
 											borderColor: color100,
 											width: adjustWidth,
-											marginRight: adjustMarginRight,
 										},
 										selected === item.value ? optionPressedStyle : styles.optionUnpressed,
 									]}
@@ -95,7 +93,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		maxHeight: "100%",
-		overflow: "hidden",
 	},
 	optionContainer: {
 		...GeneralStyle.kid.optionContainer,

@@ -93,10 +93,6 @@ export default function QuestionRadioImage({
 					{
 						maxWidth: imageWidth,
 						aspectRatio: 1 / 1,
-						marginRight: horizontalScale(10, device.screenWidth),
-						marginTop: verticalScale(10, device.screenHeight),
-						marginBottom: 0,
-						marginLeft: 0,
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}

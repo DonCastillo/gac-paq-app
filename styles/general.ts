@@ -147,7 +147,8 @@ const GeneralStyle = {
 			borderRadius: DEFAULT_BORDER_RADIUS,
 			paddingHorizontal: 20,
 			paddingVertical: 14,
-			marginBottom: 15,
+			marginBottom: 10,
+			marginRight: 10,
 		},
 
 		optionText: {
