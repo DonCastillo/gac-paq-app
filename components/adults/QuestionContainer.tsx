@@ -1,14 +1,21 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
 import { StyleSheet, View } from "react-native";
+import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
+import { verticalScale } from "utils/responsive";
 
-QuestionContainer.propTypes = {
-	children: PropTypes.node,
-};
+interface PropsInterface {
+	children: React.ReactNode;
+}
 
-export default function QuestionContainer({ children }): React.ReactElement {
-	return <View style={styles.container}>{children}</View>;
+export default function QuestionContainer({ children }: PropsInterface): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
+	const { device } = settingCtx.settingState;
+	return (
+		<View style={[styles.container, { maxHeight: verticalScale(450, device.screenHeight) }]}>
+			{children}
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({

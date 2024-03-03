@@ -125,7 +125,13 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
+						<QuestionLabel
+							textStyle={{
+								...GeneralStyle.adult.questionLabel,
+								fontSize: device.isTablet ? 23 : 20,
+								lineHeight: device.isTablet ? 30 : 25,
+							}}
+						>
 							{questionLabel}
 						</QuestionLabel>
 						{questionType === QuestionType.QuestionInput &&
