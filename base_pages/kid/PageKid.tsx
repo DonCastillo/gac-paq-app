@@ -11,6 +11,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
 import Toolbar from "components/kid/Toolbar";
+import ScrollContainer from "components/ScrollContainer";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -54,24 +55,18 @@ export default function PageKid(): React.ReactElement {
 			<Main>
 				<Toolbar />
 				<CenterMain>
-					<Heading
-						customStyle={{
-							color: color100,
-							...GeneralStyle.kid.pageHeading,
-							fontSize: device.isTablet ? 80 : 50,
-							lineHeight: device.isTablet ? 100 : 70,
-						}}
-					>
-						{translatedPage?.heading}
-					</Heading>
+					<ScrollContainer>
+						<Heading
+							customStyle={{
+								color: color100,
+								...GeneralStyle.kid.pageHeading,
+								fontSize: device.isTablet ? 80 : 50,
+								lineHeight: device.isTablet ? 100 : 70,
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
 
-					<ScrollView
-						contentContainerStyle={[
-							styles.mainContainer,
-							{ flexGrow: device.platform === "android" ? 1 : 0 },
-						]}
-						centerContent={true}
-					>
 						<Paragraph
 							customStyle={{
 								color: color100,
@@ -82,7 +77,7 @@ export default function PageKid(): React.ReactElement {
 						>
 							{translatedPage?.description}
 						</Paragraph>
-					</ScrollView>
+					</ScrollContainer>
 				</CenterMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
@@ -96,10 +91,5 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		alignItems: "center",
 		justifyContent: "center",
-	},
-	mainContainer: {
-		minWidth: "100%",
-		justifyContent: "center",
-		alignItems: "center",
 	},
 });

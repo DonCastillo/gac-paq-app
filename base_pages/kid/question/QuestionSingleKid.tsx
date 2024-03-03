@@ -210,8 +210,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 						<QuestionLabel
 							textStyle={{
 								...GeneralStyle.kid.questionQuestionLabel,
-								fontSize: device.isTablet ? 23 : 19,
-								lineHeight: device.isTablet ? 30 : 22,
 							}}
 							customStyle={{
 								marginBottom: 0,

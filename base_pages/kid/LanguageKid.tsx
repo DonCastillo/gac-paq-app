@@ -126,7 +126,7 @@ export default function LanguageKid(): React.ReactElement {
 							},
 						]}
 					>
-						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
+						<QuestionLabel textStyle={{ ...GeneralStyle.kid.introQuestionLabel }}>
 							{questionLabel}
 						</QuestionLabel>
 

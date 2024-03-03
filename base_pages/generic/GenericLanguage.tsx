@@ -129,8 +129,6 @@ export default function GenericLanguage(): React.ReactElement {
 						<QuestionLabel
 							textStyle={{
 								...GeneralStyle.adult.questionLabel,
-								fontSize: device.isTablet ? 23 : 20,
-								lineHeight: device.isTablet ? 30 : 25,
 							}}
 						>
 							{questionLabel}
