@@ -52,6 +52,7 @@ export default function QuestionRadio({
 			<View>
 				<FlatList
 					horizontal={false}
+					bounces={false}
 					numColumns={numColumn}
 					key={currentPageNumber}
 					data={[...options]}

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import PropTypes from "prop-types";
+import { SettingContext } from "store/settings";
 
 QuestionLabel.propTypes = {
 	children: PropTypes.node,
@@ -13,9 +14,22 @@ export default function QuestionLabel({
 	customStyle = {},
 	textStyle = {},
 }): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
+	const { device } = settingCtx.settingState;
 	return (
 		<View style={[styles.container, customStyle]}>
-			<Text style={[styles.text, textStyle]}>{children}</Text>
+			<Text
+				style={[
+					styles.text,
+					textStyle,
+					{
+						fontSize: device.isTablet ? 23 : 20,
+						lineHeight: device.isTablet ? 30 : 25,
+					},
+				]}
+			>
+				{children}
+			</Text>
 		</View>
 	);
 }
@@ -31,6 +45,5 @@ const styles = StyleSheet.create({
 		width: "100%",
 		flex: 1,
 		flexWrap: "wrap",
-		fontSize: 24,
 	},
 });

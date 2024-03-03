@@ -156,11 +156,13 @@ export default function QuestionRadioImage({
 						renderItem={blockRenderOption}
 						numColumns={numColumn}
 						key={numColumn}
+						bounces={false}
 					/>
 				) : (
 					<FlatList
 						data={[...options]}
 						renderItem={listRenderOption}
+						bounces={false}
 					/>
 				)}
 			</View>
