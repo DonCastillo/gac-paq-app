@@ -17,7 +17,7 @@ export default function QuestionRadio({
 	selectedValue,
 }: QuestionRadioPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { currentPageNumber, colorTheme, currentPage, device } = settingCtx.settingState;
+	const { colorTheme, currentPage, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 
@@ -41,10 +41,9 @@ export default function QuestionRadio({
 		}
 	}
 
-	const COLUMN_THRESHOLD = 4;
-	const enableColumnWrap = device.isTablet && options.length > COLUMN_THRESHOLD;
+	const enableColumnWrap = device.isTablet && device.orientation === "landscape";
 	const numColumn = enableColumnWrap ? 2 : 1;
-	const adjustWidth = device.isTablet ? horizontalScale(150, device.screenWidth) : "100%";
+	const adjustWidth = enableColumnWrap ? horizontalScale(150, device.screenWidth) : "100%";
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -53,7 +52,7 @@ export default function QuestionRadio({
 					horizontal={false}
 					bounces={false}
 					numColumns={numColumn}
-					key={currentPageNumber}
+					key={enableColumnWrap.toString()}
 					data={[...options]}
 					renderItem={({ item }) => {
 						return (
