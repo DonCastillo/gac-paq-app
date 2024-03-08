@@ -38,6 +38,11 @@ export default function QuestionRadio({
 	return (
 		<FlatList
 			data={options}
+			contentContainerStyle={{
+				flexGrow: 1,
+				justifyContent: "flex-start",
+				flexDirection: "column",
+			}}
 			renderItem={({ item }) => (
 				<RadioOption
 					{...item}

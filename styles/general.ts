@@ -238,7 +238,7 @@ const GeneralStyle = {
 			paddingVertical: 4,
 			paddingHorizontal: 10,
 			marginBottom: 5,
-			flex: 1,
+			// flex: 1,
 		},
 		radioButton: {
 			height: 25,
@@ -252,6 +252,12 @@ const GeneralStyle = {
 			fontSize: 18,
 			fontFamily: Font.SpaceRegular,
 			color: DARK_COLOR,
+			maxWidth: "100%",
+			flexWrap: "wrap",
+			height: "100%",
+			// flexShrink: 1,
+			// flex: 1,
+			// flexGrow: 1,
 		},
 		pageHeading: {
 			color: "white",

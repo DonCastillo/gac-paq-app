@@ -16,6 +16,7 @@ import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Toolbar from "components/adults/Toolbar";
+import { GeneralStyle } from "styles/general";
 
 export default function LanguageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -110,8 +111,7 @@ export default function LanguageAdult(): React.ReactElement {
 					<QuestionContainer>
 						<QuestionLabel
 							textStyle={{
-								fontSize: 25,
-								fontWeight: "bold",
+								...GeneralStyle.adult.questionLabel,
 							}}
 						>
 							{questionLabel}

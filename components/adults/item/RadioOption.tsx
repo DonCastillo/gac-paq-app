@@ -61,7 +61,9 @@ export default function RadioOption({
 						resizeMode="contain"
 					/>
 				)}
-				<Text style={styles.labelText}>{label}</Text>
+				<Text style={styles.labelText}>
+					{label}
+				</Text>
 			</View>
 		</Pressable>
 	);
@@ -71,6 +73,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		flexDirection: "row",
 		width: "100%",
+		height: "auto",
 		...GeneralStyle.adult.radioContainer,
 	},
 	radioButton: {
@@ -83,12 +86,11 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		flexWrap: "nowrap",
+		maxHeight: "100%",
 	},
 	labelText: {
-		flexWrap: "wrap",
 		flexDirection: "row",
 		width: "100%",
-		flex: 1,
 		...GeneralStyle.adult.radioText,
 	},
 	svgImage: {
