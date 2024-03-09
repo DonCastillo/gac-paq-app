@@ -129,18 +129,14 @@ const GeneralStyle = {
 			fontFamily: Font.PoppinsRegular,
 		},
 		pageHeading: {
-			fontSize: 40,
 			marginBottom: 20,
 			textAlign: "center",
 			fontFamily: Font.PoppinsBold,
 		},
 		pageParagraph: {
 			fontFamily: Font.PoppinsMedium,
-			fontSize: 15,
-			lineHeight: 17,
 			maxWidth: 800,
 			textAlign: "center",
-			// backgroundColor: "pink"
 		},
 		optionContainer: {
 			borderWidth: DEFAULT_BORDER_WIDTH,
@@ -217,7 +213,6 @@ const GeneralStyle = {
 		questionContainer: {
 			borderRadius: 25,
 			maxWidth: 700,
-			backgroundColor: "white",
 			paddingHorizontal: 30,
 			paddingVertical: 20,
 			shadowColor: "#000",
@@ -261,16 +256,13 @@ const GeneralStyle = {
 		},
 		pageHeading: {
 			color: "white",
-			fontSize: 40,
-			marginBottom: 50,
+			marginBottom: 20,
 			textAlign: "center",
 			fontFamily: Font.PoppinsBold,
 		},
 		pageParagraph: {
 			color: "white",
 			fontFamily: Font.PoppinsMedium,
-			fontSize: 15,
-			lineHeight: 17,
 			maxWidth: 800,
 			textAlign: "center",
 		},

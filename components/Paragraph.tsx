@@ -1,25 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { SettingContext } from "store/settings";
 
-import PropTypes from "prop-types";
+interface PropsInterface {
+	children: React.ReactNode;
+	customStyle?: object;
+}
 
-export default function Paragraph({ children, customStyle = {} }): React.ReactElement {
+export default function Paragraph({
+	children,
+	customStyle = {},
+}: PropsInterface): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
+	const { device } = settingCtx.settingState;
 	return (
 		<View>
-			<Text style={[styles.text, customStyle]}>{children}</Text>
+			<Text
+				style={[
+					styles.text,
+					{
+						fontSize: device.isTablet ? 20 : 15,
+						lineHeight: device.isTablet ? 25 : 19,
+					},
+					customStyle,
+				]}
+			>
+				{children}
+			</Text>
 		</View>
 	);
 }
 
-Paragraph.propTypes = {
-	children: PropTypes.node,
-	customStyle: PropTypes.object,
-};
-
 const styles = StyleSheet.create({
 	text: {
-		fontWeight: 500,
-		fontSize: 100,
 		color: "white",
 		textAlign: "center",
 		paddingHorizontal: 10,

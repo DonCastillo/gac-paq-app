@@ -61,9 +61,7 @@ export default function RadioOption({
 						resizeMode="contain"
 					/>
 				)}
-				<Text style={styles.labelText}>
-					{label}
-				</Text>
+				<Text style={styles.labelText}>{label}</Text>
 			</View>
 		</Pressable>
 	);

@@ -61,8 +61,6 @@ export default function PageAdult(): React.ReactElement {
 					<Heading
 						customStyle={{
 							...GeneralStyle.adult.pageHeading,
-							fontSize: device.isTablet ? 80 : 50,
-							lineHeight: device.isTablet ? 100 : 70,
 						}}
 					>
 						{translatedPage?.heading}
@@ -70,8 +68,6 @@ export default function PageAdult(): React.ReactElement {
 					<Paragraph
 						customStyle={{
 							...GeneralStyle.adult.pageParagraph,
-							fontSize: device.isTablet ? 20 : 15,
-							lineHeight: device.isTablet ? 25 : 19,
 						}}
 					>
 						{translatedPage?.description}

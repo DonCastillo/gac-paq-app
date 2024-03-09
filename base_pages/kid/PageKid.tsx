@@ -60,8 +60,6 @@ export default function PageKid(): React.ReactElement {
 							customStyle={{
 								color: color100,
 								...GeneralStyle.kid.pageHeading,
-								fontSize: device.isTablet ? 80 : 50,
-								lineHeight: device.isTablet ? 100 : 70,
 							}}
 						>
 							{translatedPage?.heading}
@@ -71,8 +69,6 @@ export default function PageKid(): React.ReactElement {
 							customStyle={{
 								color: color100,
 								...GeneralStyle.kid.pageParagraph,
-								fontSize: device.isTablet ? 20 : 15,
-								lineHeight: device.isTablet ? 25 : 19,
 							}}
 						>
 							{translatedPage?.description}
