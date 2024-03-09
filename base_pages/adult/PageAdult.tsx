@@ -11,10 +11,11 @@ import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { GeneralStyle } from "styles/general";
+import ScrollContainer from "components/ScrollContainer";
 
 export default function PageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	const { color100 } = colorTheme;
@@ -44,34 +45,28 @@ export default function PageAdult(): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-	function renderToolbar(): React.ReactElement {
-		if (currentPage.section === "intro" && currentPage.sectionPageNumber === 1) {
-			return <></>;
-		} else {
-			return <Toolbar />;
-		}
-	}
-
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />
 			<Main>
-				{renderToolbar()}
+				<Toolbar />
 				<CenterMain>
-					<Heading
-						customStyle={{
-							...GeneralStyle.adult.pageHeading,
-						}}
-					>
-						{translatedPage?.heading}
-					</Heading>
-					<Paragraph
-						customStyle={{
-							...GeneralStyle.adult.pageParagraph,
-						}}
-					>
-						{translatedPage?.description}
-					</Paragraph>
+					<ScrollContainer>
+						<Heading
+							customStyle={{
+								...GeneralStyle.adult.pageHeading,
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								...GeneralStyle.adult.pageParagraph,
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+					</ScrollContainer>
 				</CenterMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>

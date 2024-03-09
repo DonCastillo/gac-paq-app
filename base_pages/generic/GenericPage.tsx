@@ -15,7 +15,6 @@ import { GeneralStyle } from "styles/general";
 
 export default function GenericPage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
 	const { language, colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
