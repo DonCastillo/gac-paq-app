@@ -208,9 +208,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 					>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
 						<QuestionLabel
-							textStyle={{
-								...GeneralStyle.kid.questionQuestionLabel,
-							}}
+							textStyle={GeneralStyle.kid.questionQuestionLabel}
 							customStyle={{
 								marginBottom: 0,
 							}}

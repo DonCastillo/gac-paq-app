@@ -28,7 +28,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const regionsOptions = questionCtx.questionState.regionOption;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
