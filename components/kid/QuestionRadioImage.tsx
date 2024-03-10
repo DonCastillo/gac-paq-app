@@ -81,11 +81,9 @@ export default function QuestionRadioImage({
 
 	function blockRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		console.log("image width: ", device.screenWidth / numColumn);
 		const imageWidth = horizontalScale(300, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(images, mode);
-		// const imageHeight = verticalScale(300, device.screenWidth) / numColumn;
-		// imageWidth = horizontalScale(imageWidth, device.screenWidth);
+
 		return (
 			<Pressable
 				style={[
@@ -176,7 +174,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		maxHeight: "100%",
-		// backgroundColor: "pink",
 		overflow: "hidden",
 	},
 	imageFilter: {

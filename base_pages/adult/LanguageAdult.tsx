@@ -109,12 +109,8 @@ export default function LanguageAdult(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionLabel
-							textStyle={{
-								...GeneralStyle.adult.questionLabel,
-							}}
-						>
-							{questionLabel}
+						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
+							{questionLabel} Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fuga error repellat asperiores sequi veniam laboriosam magni quisquam! Consequatur voluptate tenetur eaque. Tempore consequatur quis maxime libero, voluptatibus dolores! Maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fuga error repellat asperiores sequi veniam laboriosam magni quisquam! Consequatur voluptate tenetur eaque.
 						</QuestionLabel>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}

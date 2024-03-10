@@ -12,7 +12,7 @@ export default function QuestionContainer({ children }: PropsInterface): React.R
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 	return (
-		<View style={[styles.container, { maxHeight: verticalScale(450, device.screenHeight) }]}>
+		<View style={[styles.container, { maxHeight: verticalScale(500, device.screenHeight) }]}>
 			{children}
 		</View>
 	);
