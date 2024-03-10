@@ -81,7 +81,7 @@ export default function QuestionRadioImage({
 
 	function blockRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		const imageWidth = horizontalScale(300, device.screenWidth) / numColumn;
+		const imageWidth = horizontalScale(299, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(images, mode);
 
 		return (

@@ -23,5 +23,6 @@ const styles = StyleSheet.create({
 		...GeneralStyle.adult.questionContainer,
 		height: "auto",
 		width: "100%",
+		elevation: 8,
 	},
 });

@@ -83,7 +83,8 @@ export default function QuestionRadioImage({
 
 	function blockRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		const imageWidth = horizontalScale(250, device.screenWidth) / numColumn;
+		const baseWidth = device.orientation === "landscape" || !device.isTablet ? 250 : 270;
+		const imageWidth = horizontalScale(baseWidth, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(images, mode);
 
 		return (
@@ -129,12 +130,14 @@ export default function QuestionRadioImage({
 	}
 
 	return (
-		<SafeAreaView style={[styles.container, {maxHeight: verticalScale(300, device.screenHeight)} ]}>
+		<SafeAreaView
+			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
+		>
 			<View>
 				{options.length <= 5 ? (
 					<FlatList
 						initialNumToRender={4}
-						data={[...options]}
+						data={[options[0], options[1], options[2]]}
 						renderItem={blockRenderOption}
 						numColumns={numColumn}
 						key={numColumn}
@@ -142,7 +145,6 @@ export default function QuestionRadioImage({
 					/>
 				) : (
 					<FlatList
-						horizontal={false}
 						data={[...options]}
 						renderItem={listRenderOption}
 						bounces={false}
@@ -156,6 +158,7 @@ export default function QuestionRadioImage({
 const styles = StyleSheet.create({
 	blockOptionContainer: {
 		...GeneralStyle.adult.blockOptionContainer,
+
 	},
 	blockOptionImageContainer: {
 		justifyContent: "center",
@@ -170,7 +173,7 @@ const styles = StyleSheet.create({
 	blockOptionLabelText: {
 		...GeneralStyle.adult.optionImageLabelText,
 	},
-	container: { },
+	container: {},
 	imageFilter: {
 		...GeneralStyle.general.imageFilter,
 	},

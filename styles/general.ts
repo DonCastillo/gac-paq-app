@@ -8,6 +8,8 @@ const DEFAULT_BORDER_WIDTH = 3;
 const DEFAULT_BORDER_RADIUS = 10;
 const DEFAULT_OPTION_FONT_SIZE = 18;
 const DEFAULT_FIELD_MIN_HEIGHT = 60;
+const DEFAULT_ELEVATION = 2;
+const DEFAULT_SHADOW_COLOR = "#000";
 
 const Font = {
 	PoppinsBold: "PoppinsBold",
@@ -160,6 +162,7 @@ const GeneralStyle = {
 			borderTopRightRadius: 5,
 		},
 		blockOptionContainer: {
+			elevation: DEFAULT_ELEVATION,
 			backgroundColor: "#fff",
 			width: "100%",
 			flex: 1,
@@ -216,7 +219,7 @@ const GeneralStyle = {
 			maxWidth: 700,
 			paddingHorizontal: 30,
 			paddingVertical: 20,
-			shadowColor: "#000",
+			shadowColor: DEFAULT_SHADOW_COLOR,
 			shadowOffset: {
 				width: 3,
 				height: 8,
@@ -284,6 +287,7 @@ const GeneralStyle = {
 			color: "#ABABAB",
 		},
 		blockOptionContainer: {
+			elevation: DEFAULT_ELEVATION,
 			backgroundColor: "#fff",
 			width: "100%",
 			flex: 1,
@@ -324,6 +328,7 @@ const DefaultStyle = {
 	defaultBorderRadius: DEFAULT_BORDER_RADIUS,
 	defaultOptionFontSize: DEFAULT_OPTION_FONT_SIZE,
 	defaultFieldMinHeight: DEFAULT_FIELD_MIN_HEIGHT,
+	defaultShadowColor: DEFAULT_SHADOW_COLOR,
 	button: {
 		paddingHorizontal: 20,
 		paddingVertical: 15,
