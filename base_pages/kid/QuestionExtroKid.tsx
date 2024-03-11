@@ -74,11 +74,11 @@ export default function QuestionExtroKid(): React.ReactElement {
 
 			// throw new Error("testing error page");
 
-			await submitResponse(
-				responseCtx.responses,
-				`${directusBaseEndpoint}/items/response`,
-				directusAccessToken,
-			);
+			// await submitResponse(
+			// 	responseCtx.responses,
+			// 	`${directusBaseEndpoint}/items/response`,
+			// 	directusAccessToken,
+			// );
 
 			console.log("done submitting the responses");
 			// introduce a delay
