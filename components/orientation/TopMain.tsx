@@ -20,5 +20,6 @@ const styles = StyleSheet.create({
 		height: "100%",
 		paddingHorizontal: 20,
 		paddingTop: 20,
+		overflow: "hidden",
 	},
 });

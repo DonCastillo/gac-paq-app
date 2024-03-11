@@ -125,7 +125,6 @@ function StateKid({ state }: Props): React.ReactElement {
 							customStyle={{
 								color: "#000",
 								fontSize: 32,
-								fontWeight: "bold",
 								textAlign: "center",
 							}}
 						>

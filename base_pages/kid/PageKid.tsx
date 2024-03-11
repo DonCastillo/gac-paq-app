@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import Main from "components/Main";
@@ -10,6 +10,8 @@ import Navigation from "components/Navigation";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
+import Toolbar from "components/kid/Toolbar";
+import ScrollContainer from "components/ScrollContainer";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -51,27 +53,27 @@ export default function PageKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<Toolbar />
 				<CenterMain>
-					<Heading
-						customStyle={{
-							color: color100,
-							...GeneralStyle.kid.pageHeading,
-							fontSize: device.isTablet ? 80 : 50,
-							lineHeight: device.isTablet ? 100 : 70,
-						}}
-					>
-						{translatedPage?.heading}
-					</Heading>
-					<Paragraph
-						customStyle={{
-							color: color100,
-							...GeneralStyle.kid.pageParagraph,
-							fontSize: device.isTablet ? 20 : 15,
-							lineHeight: device.isTablet ? 25 : 19,
-						}}
-					>
-						{translatedPage?.description}
-					</Paragraph>
+					<ScrollContainer>
+						<Heading
+							customStyle={{
+								color: color100,
+								...GeneralStyle.kid.pageHeading,
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+
+						<Paragraph
+							customStyle={{
+								color: color100,
+								...GeneralStyle.kid.pageParagraph,
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+					</ScrollContainer>
 				</CenterMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>

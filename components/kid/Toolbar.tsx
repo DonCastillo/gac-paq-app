@@ -31,14 +31,15 @@ export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactEl
 	return (
 		<View style={styles.container}>
 			<Text
-				style={[GeneralStyle.adult.topHeaderSectionTitle, { fontSize: device.isTablet ? 20 : 18 }]}
+				style={[GeneralStyle.kid.topHeaderSectionTitle, { fontSize: device.isTablet ? 20 : 18 }]}
 			>
 				{title}
 			</Text>
 			<Icon
-				name="volume-up"
+				name="volume-2"
 				size={ICON_SIZE}
-				color={"#fff"}
+				type={"simple-line-icon"}
+				color={"#000"}
 				containerStyle={styles.icon}
 				onPress={audioHandler}
 			/>

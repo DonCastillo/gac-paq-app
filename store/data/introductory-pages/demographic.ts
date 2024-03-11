@@ -9,7 +9,7 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 		{
 			id: 7,
 			question_dropdown_id: 3,
-			heading: "How old are you?",
+			heading: "Welcome!",
 			label: "How old are you?",
 			kid_label: "How old are you?",
 			adult_label: "How old are you?",

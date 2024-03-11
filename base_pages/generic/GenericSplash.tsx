@@ -31,13 +31,7 @@ export default function GenericSplash(): JSX.Element {
 					<View style={styles.imageContainer}>
 						<Logo />
 					</View>
-					<Heading
-						customStyle={{
-							fontWeight: "bold",
-						}}
-					>
-						gacpaq
-					</Heading>
+					<Heading customStyle={{}}>gacpaq</Heading>
 					<Paragraph
 						customStyle={{
 							color: "#fff",

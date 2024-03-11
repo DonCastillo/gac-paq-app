@@ -15,31 +15,20 @@ import { GeneralStyle } from "styles/general";
 
 export default function GenericPage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
 	const { language, colorTheme, currentPage } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
-
-	function renderToolbar(): React.ReactElement {
-		if (currentPage.section === "intro" && currentPage.sectionPageNumber === 1) {
-			return <></>;
-		} else {
-			return <Toolbar />;
-		}
-	}
 
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />
 			<Main>
-				{renderToolbar()}
+				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>
 						<Heading
 							customStyle={{
 								...GeneralStyle.adult.pageHeading,
-								fontSize: device.isTablet ? 80 : 50,
-								lineHeight: device.isTablet ? 100 : 70,
 							}}
 						>
 							{translatedPage?.heading}
@@ -47,8 +36,6 @@ export default function GenericPage(): React.ReactElement {
 						<Paragraph
 							customStyle={{
 								...GeneralStyle.adult.pageParagraph,
-								fontSize: device.isTablet ? 20 : 15,
-								lineHeight: device.isTablet ? 25 : 19,
 							}}
 						>
 							{translatedPage?.description}

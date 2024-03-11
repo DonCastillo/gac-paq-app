@@ -16,6 +16,7 @@ import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import Toolbar from "components/kid/Toolbar";
 
 export default function LanguageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -114,22 +115,27 @@ export default function LanguageKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<Toolbar />
 				<TopMain>
 					<View
 						style={[
 							GeneralStyle.kid.introQuestionContainer,
 							{
-								marginVertical: verticalScale(60, device.screenHeight),
+								marginVertical: verticalScale(40, device.screenHeight),
+								...styles.mainContainer,
 							},
 						]}
 					>
-						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
+						<QuestionLabel textStyle={{ ...GeneralStyle.kid.introQuestionLabel }}>
 							{questionLabel}
 						</QuestionLabel>
-						<QuestionSelectLanguage
-							onChange={changeHandler}
-							selectedValue={language}
-						/>
+
+						<View style={styles.questionComponentContainer}>
+							<QuestionSelectLanguage
+								onChange={changeHandler}
+								selectedValue={language}
+							/>
+						</View>
 					</View>
 				</TopMain>
 				<Navigation>
@@ -151,5 +157,12 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		position: "relative",
+	},
+	mainContainer: {
+		minHeight: "100%",
+		flex: 1,
+	},
+	questionComponentContainer: {
+		...GeneralStyle.kid.questionComponentContainer,
 	},
 });

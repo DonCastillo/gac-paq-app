@@ -26,6 +26,7 @@ import {
 	FeedbackExtroductoryPages,
 	KidExtroductoryPages,
 } from "./data/extroductory-pages";
+import type SectionPayloadInterface from "interface/directus/section-payload";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
@@ -48,6 +49,7 @@ const INITIAL_STATE = {
 	tryAgainPhrase: TryAgainPhrase,
 	successPage: SuccessPage,
 	errorPage: ErrorPage,
+	sectionPages: [],
 };
 
 export const QuestionContext = createContext({
@@ -72,6 +74,7 @@ export const QuestionContext = createContext({
 		tryAgainPhrase: [],
 		successPage: {},
 		errorPage: {},
+		sectionPages: [],
 	},
 	identifyLastSectionExtroPage: () => {},
 	setRegionOption: (newRegionOptions: RegionInterface[]) => {},
@@ -79,6 +82,7 @@ export const QuestionContext = createContext({
 	setIntroductoryPages: (
 		newIntroductoryPages: Array<PagePayloadInterface | QuestionDropdownPayloadInterface> | [],
 	) => {},
+	addSectionPage: (sectionPage: SectionPayloadInterface) => {},
 });
 
 function questionReducer(state: any, action: any): any {
@@ -107,6 +111,13 @@ function questionReducer(state: any, action: any): any {
 			return {
 				...state,
 				feedbackExtroPages,
+			};
+		}
+		case "ADD_SECTION_PAGE": {
+			console.log("action.payload: ", action.payload);
+			return {
+				...state,
+				sectionPages: [...state.sectionPages, action.payload],
 			};
 		}
 		default:
@@ -150,12 +161,21 @@ export default function QuestionContextProvider({
 		});
 	}
 
+	function addSectionPage(sectionPage: SectionPayloadInterface): void {
+		// console.log("sectionPage: ", sectionPage)
+		dispatch({
+			type: "ADD_SECTION_PAGE",
+			payload: sectionPage,
+		});
+	}
+
 	const value: any = {
 		questionState,
 		setRegionOption,
 		setLanguageOption,
 		setIntroductoryPages,
 		identifyLastSectionExtroPage,
+		addSectionPage,
 	};
 
 	return <QuestionContext.Provider value={value}>{children}</QuestionContext.Provider>;

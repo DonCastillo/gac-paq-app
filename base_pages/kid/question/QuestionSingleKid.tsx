@@ -23,6 +23,7 @@ import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import Toolbar from "components/kid/Toolbar";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -194,28 +195,27 @@ export default function QuestionSingleKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<Toolbar />
 				<TopMain>
 					<View
 						style={[
 							{
-								marginVertical: verticalScale(30, device.screenHeight),
-								// backgroundColor: "pink",
-								paddingHorizontal: device.isTablet ? 30 : 0,
+								marginVertical: verticalScale(5, device.screenHeight),
+								paddingHorizontal: device.isTablet ? 20 : 0,
+								...styles.mainContainer,
 							},
 						]}
 					>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
 						<QuestionLabel
-							textStyle={{
-								...GeneralStyle.kid.questionQuestionLabel,
-							}}
+							textStyle={GeneralStyle.kid.questionQuestionLabel}
 							customStyle={{
 								marginBottom: 0,
 							}}
 						>
 							{questionLabel}
 						</QuestionLabel>
-						<View style={styles.questionContainer}>{questionComponent}</View>
+						<View style={styles.questionComponentContainer}>{questionComponent}</View>
 					</View>
 				</TopMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
@@ -231,7 +231,11 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		position: "relative",
 	},
-	questionContainer: {
-		marginTop: 25,
+	mainContainer: {
+		maxHeight: "100%",
+		flex: 1,
+	},
+	questionComponentContainer: {
+		...GeneralStyle.kid.questionComponentContainer,
 	},
 });

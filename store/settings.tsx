@@ -105,6 +105,7 @@ const INITIAL_STATE = {
 	nextPage: defaultPage,
 	buttons: defaultButton,
 	phrases: defaultPhrase,
+	sectionTitles: [],
 	totalPage: null,
 	colorTheme: {
 		color100:
@@ -148,6 +149,7 @@ export const SettingContext = createContext({
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
 	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
+	setSectionTitles: (sectionTitles: string[]) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -257,6 +259,11 @@ function settingReducer(state: any, action: any): any {
 			return {
 				...state,
 				phrases: action.payload,
+			};
+		case "SET_SECTION_TITLES":
+			return {
+				...state,
+				sectionTitles: action.payload,
 			};
 		case "REMOVE_EXTRO_PAGES": {
 			const pagesWithoutExtros = state.pages.filter((page: any) => {
@@ -438,6 +445,13 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function setSectionTitles(sectionTitles: string[]): void {
+		dispatch({
+			type: "SET_SECTION_TITLES",
+			payload: sectionTitles,
+		});
+	}
+
 	const value: any = {
 		settingState,
 		setMode,
@@ -454,6 +468,7 @@ export default function SettingContextProvider({
 		translateButtons,
 		translatePhrases,
 		addExtroFeedbackPages,
+		setSectionTitles,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;
