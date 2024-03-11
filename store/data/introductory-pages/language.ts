@@ -8,7 +8,7 @@ const LanguagePage: QuestionDropdownPayloadInterface = {
 	translations: [
 		{
 			id: 1,
-			heading: "What language do you speak & Where are you?",
+			heading: "Welcome!",
 			language_question_dropdown_id: 1,
 			label: "What language do you speak & Where are you?",
 			kid_label: "What language do you speak & Where are you?",

@@ -22,6 +22,7 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
+import QuestionTitle from "components/generic/QuestionTitle";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -125,6 +126,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
+						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
 						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>

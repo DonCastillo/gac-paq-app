@@ -9,14 +9,22 @@ QuestionTitle.propTypes = {
 
 export default function QuestionTitle({ children }): React.ReactElement {
 	return (
-		<View>
+		<View style={styles.container}>
 			<Text style={{ ...styles.text }}>{children}</Text>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
+	container: {
+		width: "100%",
+		flexDirection: "row",
+	},
 	text: {
 		...GeneralStyle.kid.questionQuestionTitle,
+		flex: 1,
+		width: "100%",
+		flexWrap: "wrap",
+		marginBottom: 10,
 	},
 });

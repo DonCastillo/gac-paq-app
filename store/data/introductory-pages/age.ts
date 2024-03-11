@@ -9,7 +9,7 @@ const AgePage: QuestionDropdownPayloadInterface = {
 		{
 			id: 4,
 			question_dropdown_id: 2,
-			heading: "Who's taking this questionnaire?",
+			heading: "Welcome!",
 			label: "Who's taking this questionnaire?",
 			kid_label: "Who's taking this questionnaire?",
 			adult_label: "Who's taking this questionnaire?",

@@ -19,6 +19,7 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
 import Toolbar from "components/adults/Toolbar";
+import QuestionTitle from "components/generic/QuestionTitle";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -126,6 +127,7 @@ export default function GenericLanguage(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
+						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
 						<QuestionLabel
 							textStyle={{
 								...GeneralStyle.adult.questionLabel,
