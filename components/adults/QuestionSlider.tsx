@@ -91,6 +91,7 @@ export default function QuestionSlider({
 			{/** i don't know */}
 			<View style={{ marginTop: 20 }}>
 				<FlatList
+					bounces={false}
 					scrollEnabled={true}
 					data={[{ label: phrases?.dontKnow, value: PhraseLabel.DontKnow }]}
 					renderItem={({ item }) => (

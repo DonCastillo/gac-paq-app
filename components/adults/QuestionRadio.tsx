@@ -37,6 +37,7 @@ export default function QuestionRadio({
 
 	return (
 		<FlatList
+			bounces={false}
 			data={options}
 			contentContainerStyle={{
 				flexGrow: 1,

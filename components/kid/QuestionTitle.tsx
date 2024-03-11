@@ -10,7 +10,7 @@ QuestionTitle.propTypes = {
 export default function QuestionTitle({ children }): React.ReactElement {
 	return (
 		<View>
-			<Text style={{ ...styles.text, fontWeight: "bold" }}>{children}</Text>
+			<Text style={{ ...styles.text }}>{children}</Text>
 		</View>
 	);
 }

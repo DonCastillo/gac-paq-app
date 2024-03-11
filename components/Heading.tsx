@@ -33,7 +33,6 @@ export default function Heading({
 
 const styles = StyleSheet.create({
 	text: {
-		fontWeight: "bold",
 		color: "white",
 		flexWrap: "wrap",
 	},

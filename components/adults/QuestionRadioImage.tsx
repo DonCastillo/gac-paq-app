@@ -158,7 +158,6 @@ export default function QuestionRadioImage({
 const styles = StyleSheet.create({
 	blockOptionContainer: {
 		...GeneralStyle.adult.blockOptionContainer,
-
 	},
 	blockOptionImageContainer: {
 		justifyContent: "center",

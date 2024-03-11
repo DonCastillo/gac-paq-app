@@ -64,7 +64,6 @@ export default function DropDownSelector({
 				onChangeValue={(value: string) => onSelect(value)}
 				// onSelectItem={(item) => onSelect(item.value ?? null)}
 				textStyle={{
-					fontWeight: "400",
 					...GeneralStyle.kid.dropdownPickerText,
 				}}
 			/>
@@ -89,11 +88,9 @@ const styles = StyleSheet.create({
 	},
 	iconContainer: {},
 	listItemLabelStyle: {
-		fontWeight: "400",
 		...GeneralStyle.kid.dropdownPickerListLabel,
 	},
 	labelStyle: {
-		fontWeight: "400",
 		...GeneralStyle.kid.dropdownPickerListLabelChosen,
 	},
 });

@@ -230,7 +230,6 @@ const GeneralStyle = {
 		questionLabel: {
 			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
-			fontWeight: "bold",
 			color: DARK_COLOR,
 		},
 		radioContainer: {
@@ -336,7 +335,6 @@ const DefaultStyle = {
 		borderWidth: 2,
 		fontSize: 18,
 		textAlign: "center",
-		fontWeight: "bold",
 		color: "#fff",
 		backgroundColor: "#fff",
 		lineHeight: 27,
