@@ -37,6 +37,7 @@ function AppWrapper(): React.ReactElement {
 
 	const introductoryPages = questionCtx.questionState.introductoryPages;
 	const questionPages = questionCtx.questionState.questionPages;
+	const kidExtroPages = questionCtx.questionState.kidExtroPages;
 	const feedbackExtroPages = questionCtx.questionState.feedbackExtroPages;
 
 	// set device dimensions
@@ -112,6 +113,8 @@ function AppWrapper(): React.ReactElement {
 		console.log("load question and section pages...");
 		questionPages.forEach((page) => {
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
+				questionCtx.addSectionPage(page);
+				// console.log("page: ", page);
 				sectionPageNumber = 1;
 				sectionNumber++;
 			}
@@ -126,10 +129,28 @@ function AppWrapper(): React.ReactElement {
 			});
 		});
 
-		// load feedback
+		// load default extro pages (kids)
 		sectionNumber++;
-		console.log("load feedback pages");
+		kidExtroPages.forEach((page, sectionIndex) => {
+			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
+				questionCtx.addSectionPage(page);
+			}
+			settingCtx.addPage({
+				pageNumber: pageNumber++,
+				page,
+				screen: page.type,
+				section: SectionType.Extro,
+				sectionNumber,
+				sectionPageNumber: ++sectionIndex,
+			});
+		});
+
+		// load feedback pages
+		sectionNumber++;
 		feedbackExtroPages.forEach((page, sectionIndex) => {
+			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
+				questionCtx.addSectionPage(page);
+			}
 			settingCtx.addPage({
 				pageNumber: pageNumber++,
 				page,

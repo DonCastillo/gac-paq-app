@@ -1,25 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
+import { SettingContext } from "store/settings";
 
-export default function Heading({ children, customStyle = {} }): React.ReactElement {
+interface PropsInterface {
+	children: React.ReactNode;
+	customStyle?: object;
+}
+
+export default function Heading({
+	children,
+	customStyle = {},
+}: PropsInterface): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
+	const { device } = settingCtx.settingState;
 	return (
 		<View>
-			<Text style={[styles.text, customStyle]}>{children}</Text>
+			<Text
+				style={[
+					styles.text,
+					{
+						fontSize: device.isTablet ? 80 : 50,
+						lineHeight: device.isTablet ? 100 : 70,
+					},
+					customStyle,
+				]}
+			>
+				{children}
+			</Text>
 		</View>
 	);
 }
 
-Heading.propTypes = {
-	children: PropTypes.node,
-	customStyle: PropTypes.object,
-};
-
 const styles = StyleSheet.create({
 	text: {
-		fontWeight: "bold",
 		color: "white",
 		flexWrap: "wrap",
-		fontSize: 100,
 	},
 });

@@ -9,7 +9,7 @@ const AccelerometerPage: QuestionInputPayloadInterface = {
 		{
 			id: 5,
 			question_input_id: 5,
-			heading: "Please enter your Accelerometer ID",
+			heading: "Welcome!",
 			label: "Please enter your Accelerometer ID",
 			kid_label: "Please enter your Accelerometer ID",
 			adult_label: "Please enter your Accelerometer ID",

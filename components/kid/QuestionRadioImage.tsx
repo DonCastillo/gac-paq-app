@@ -81,11 +81,9 @@ export default function QuestionRadioImage({
 
 	function blockRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		console.log("image width: ", device.screenWidth / numColumn);
-		const imageWidth = horizontalScale(300, device.screenWidth) / numColumn;
+		const imageWidth = horizontalScale(299, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(images, mode);
-		// const imageHeight = verticalScale(300, device.screenWidth) / numColumn;
-		// imageWidth = horizontalScale(imageWidth, device.screenWidth);
+
 		return (
 			<Pressable
 				style={[
@@ -93,10 +91,6 @@ export default function QuestionRadioImage({
 					{
 						maxWidth: imageWidth,
 						aspectRatio: 1 / 1,
-						marginRight: horizontalScale(10, device.screenWidth),
-						marginTop: verticalScale(10, device.screenHeight),
-						marginBottom: 0,
-						marginLeft: 0,
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
@@ -151,15 +145,18 @@ export default function QuestionRadioImage({
 			<View>
 				{options.length <= 5 ? (
 					<FlatList
-						data={options}
+						initialNumToRender={4}
+						data={[...options]}
 						renderItem={blockRenderOption}
 						numColumns={numColumn}
 						key={numColumn}
+						bounces={false}
 					/>
 				) : (
 					<FlatList
-						data={options}
+						data={[...options]}
 						renderItem={listRenderOption}
+						bounces={false}
 					/>
 				)}
 			</View>
@@ -174,7 +171,11 @@ const styles = StyleSheet.create({
 	blockOptionContainer: {
 		...GeneralStyle.kid.blockOptionContainer,
 	},
-	container: {},
+	container: {
+		flex: 1,
+		maxHeight: "100%",
+		overflow: "hidden",
+	},
 	imageFilter: {
 		...GeneralStyle.general.imageFilter,
 	},

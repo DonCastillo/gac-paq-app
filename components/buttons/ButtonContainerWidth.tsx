@@ -40,7 +40,6 @@ const style = StyleSheet.create({
 		color: DefaultStyle.button.color,
 		textAlign: DefaultStyle.button.textAlign,
 		fontSize: DefaultStyle.button.fontSize,
-		fontWeight: DefaultStyle.button.fontWeight,
 		lineHeight: DefaultStyle.button.lineHeight,
 	},
 });

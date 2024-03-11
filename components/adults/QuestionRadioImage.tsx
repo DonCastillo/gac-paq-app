@@ -25,7 +25,7 @@ export default function QuestionRadioImage({
 	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
-	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
+	const numColumn = device.isTablet ? 3 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
@@ -83,7 +83,8 @@ export default function QuestionRadioImage({
 
 	function blockRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		const imageWidth = horizontalScale(260, device.screenWidth) / numColumn;
+		const baseWidth = device.orientation === "landscape" || !device.isTablet ? 250 : 270;
+		const imageWidth = horizontalScale(baseWidth, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(images, mode);
 
 		return (
@@ -93,9 +94,6 @@ export default function QuestionRadioImage({
 					{
 						maxWidth: imageWidth,
 						aspectRatio: 1 / 1,
-						marginTop: verticalScale(10, device.screenHeight),
-						marginBottom: 0,
-						marginLeft: 0,
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
@@ -132,20 +130,24 @@ export default function QuestionRadioImage({
 	}
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<SafeAreaView
+			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
+		>
 			<View>
 				{options.length <= 5 ? (
 					<FlatList
-						data={options}
+						initialNumToRender={4}
+						data={[options[0], options[1], options[2]]}
 						renderItem={blockRenderOption}
 						numColumns={numColumn}
 						key={numColumn}
+						bounces={false}
 					/>
 				) : (
 					<FlatList
-						horizontal={false}
-						data={options}
+						data={[...options]}
 						renderItem={listRenderOption}
+						bounces={false}
 					/>
 				)}
 			</View>

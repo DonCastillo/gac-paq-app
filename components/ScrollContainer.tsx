@@ -10,7 +10,7 @@ export default function ScrollContainer({
 	children,
 }: ScrollContainerPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { currentPageNumber } = settingCtx.settingState;
+	const { currentPageNumber, device } = settingCtx.settingState;
 	const [offset, setOffset] = useState({ x: 0, y: 0 });
 
 	useEffect(() => {
@@ -23,7 +23,11 @@ export default function ScrollContainer({
 			centerContent={true}
 			alwaysBounceVertical={false}
 			bounces={false}
-			contentContainerStyle={{}}
+			contentContainerStyle={{
+				flexGrow: device.platform === "android" ? 1 : 0,
+				justifyContent: "center",
+				alignItems: "center",
+			}}
 		>
 			{children}
 		</ScrollView>

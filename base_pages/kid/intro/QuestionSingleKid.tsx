@@ -19,6 +19,7 @@ import Mode from "constants/mode";
 import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import Toolbar from "components/kid/Toolbar";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -170,19 +171,21 @@ export default function QuestionSingleKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<Toolbar />
 				<TopMain>
 					<View
 						style={[
 							GeneralStyle.kid.introQuestionContainer,
 							{
-								marginVertical: verticalScale(60, device.screenHeight),
+								marginVertical: verticalScale(40, device.screenHeight),
+								...styles.mainContainer,
 							},
 						]}
 					>
 						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
 							{questionLabel}
 						</QuestionLabel>
-						{questionComponent}
+						<View style={styles.questionComponentContainer}>{questionComponent}</View>
 					</View>
 				</TopMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
@@ -196,5 +199,12 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
+	},
+	mainContainer: {
+		minHeight: "100%",
+		flex: 1,
+	},
+	questionComponentContainer: {
+		...GeneralStyle.kid.questionComponentContainer,
 	},
 });

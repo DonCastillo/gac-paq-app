@@ -30,7 +30,6 @@ export default function SplashAdult(): React.ReactElement {
 				<BottomMain>
 					<Heading
 						customStyle={{
-							fontWeight: "bold",
 							textAlign: "center",
 							fontSize: 90,
 						}}

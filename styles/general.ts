@@ -8,6 +8,8 @@ const DEFAULT_BORDER_WIDTH = 3;
 const DEFAULT_BORDER_RADIUS = 10;
 const DEFAULT_OPTION_FONT_SIZE = 18;
 const DEFAULT_FIELD_MIN_HEIGHT = 60;
+const DEFAULT_ELEVATION = 2;
+const DEFAULT_SHADOW_COLOR = "#000";
 
 const Font = {
 	PoppinsBold: "PoppinsBold",
@@ -61,6 +63,11 @@ const GeneralStyle = {
 		},
 	},
 	kid: {
+		topHeaderSectionTitle: {
+			fontFamily: Font.SpaceRegular,
+			fontSize: 22,
+			color: "#000",
+		},
 		field: {
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
 			borderWidth: DEFAULT_BORDER_WIDTH,
@@ -124,15 +131,12 @@ const GeneralStyle = {
 			fontFamily: Font.PoppinsRegular,
 		},
 		pageHeading: {
-			fontSize: 40,
-			marginBottom: 50,
+			marginBottom: 20,
 			textAlign: "center",
 			fontFamily: Font.PoppinsBold,
 		},
 		pageParagraph: {
 			fontFamily: Font.PoppinsMedium,
-			fontSize: 15,
-			lineHeight: 17,
 			maxWidth: 800,
 			textAlign: "center",
 		},
@@ -141,7 +145,8 @@ const GeneralStyle = {
 			borderRadius: DEFAULT_BORDER_RADIUS,
 			paddingHorizontal: 20,
 			paddingVertical: 14,
-			marginBottom: 15,
+			marginBottom: 10,
+			marginRight: 10,
 		},
 
 		optionText: {
@@ -157,6 +162,7 @@ const GeneralStyle = {
 			borderTopRightRadius: 5,
 		},
 		blockOptionContainer: {
+			elevation: DEFAULT_ELEVATION,
 			backgroundColor: "#fff",
 			width: "100%",
 			flex: 1,
@@ -195,15 +201,25 @@ const GeneralStyle = {
 			fontFamily: Font.PoppinsMedium,
 			marginBottom: 20,
 		},
+		questionComponentContainer: {
+			marginTop: 25,
+			flex: 1,
+			minWidth: "100%",
+		},
 	},
 	adult: {
+		topHeaderSectionTitle: {
+			fontFamily: Font.PoppinsRegular,
+			fontSize: 22,
+			color: "#fff",
+		},
 		questionContainer: {
+			backgroundColor: "#fff",
 			borderRadius: 25,
 			maxWidth: 700,
-			backgroundColor: "white",
 			paddingHorizontal: 30,
 			paddingVertical: 20,
-			shadowColor: "#000",
+			shadowColor: DEFAULT_SHADOW_COLOR,
 			shadowOffset: {
 				width: 3,
 				height: 8,
@@ -214,14 +230,13 @@ const GeneralStyle = {
 		questionLabel: {
 			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
-			fontWeight: "bold",
 			color: DARK_COLOR,
 		},
 		radioContainer: {
 			paddingVertical: 4,
 			paddingHorizontal: 10,
 			marginBottom: 5,
-			flex: 1,
+			// flex: 1,
 		},
 		radioButton: {
 			height: 25,
@@ -235,19 +250,22 @@ const GeneralStyle = {
 			fontSize: 18,
 			fontFamily: Font.SpaceRegular,
 			color: DARK_COLOR,
+			maxWidth: "100%",
+			flexWrap: "wrap",
+			height: "100%",
+			// flexShrink: 1,
+			// flex: 1,
+			// flexGrow: 1,
 		},
 		pageHeading: {
 			color: "white",
-			fontSize: 40,
-			marginBottom: 50,
+			marginBottom: 20,
 			textAlign: "center",
 			fontFamily: Font.PoppinsBold,
 		},
 		pageParagraph: {
 			color: "white",
 			fontFamily: Font.PoppinsMedium,
-			fontSize: 15,
-			lineHeight: 17,
 			maxWidth: 800,
 			textAlign: "center",
 		},
@@ -268,6 +286,7 @@ const GeneralStyle = {
 			color: "#ABABAB",
 		},
 		blockOptionContainer: {
+			elevation: DEFAULT_ELEVATION,
 			backgroundColor: "#fff",
 			width: "100%",
 			flex: 1,
@@ -308,6 +327,7 @@ const DefaultStyle = {
 	defaultBorderRadius: DEFAULT_BORDER_RADIUS,
 	defaultOptionFontSize: DEFAULT_OPTION_FONT_SIZE,
 	defaultFieldMinHeight: DEFAULT_FIELD_MIN_HEIGHT,
+	defaultShadowColor: DEFAULT_SHADOW_COLOR,
 	button: {
 		paddingHorizontal: 20,
 		paddingVertical: 15,
@@ -315,7 +335,6 @@ const DefaultStyle = {
 		borderWidth: 2,
 		fontSize: 18,
 		textAlign: "center",
-		fontWeight: "bold",
 		color: "#fff",
 		backgroundColor: "#fff",
 		lineHeight: 27,

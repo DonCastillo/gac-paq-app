@@ -34,7 +34,6 @@ const style = StyleSheet.create({
 		textAlign: DefaultStyle.button.textAlign,
 		fontSize: DefaultStyle.button.fontSize,
 		lineHeight: DefaultStyle.button.lineHeight,
-		fontWeight: DefaultStyle.button.fontWeight,
 	},
 });
 

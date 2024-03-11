@@ -20,6 +20,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Mode from "constants/mode";
 import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
+import QuestionTitle from "components/generic/QuestionTitle";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -28,7 +29,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const regionsOptions = questionCtx.questionState.regionOption;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -172,6 +173,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
+						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
 						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>

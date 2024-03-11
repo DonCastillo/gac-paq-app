@@ -9,7 +9,7 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 		{
 			id: 5,
 			question_input_id: 5,
-			heading: "Please enter your Participant ID",
+			heading: "Welcome!",
 			label: "Please enter your Participant ID",
 			kid_label: "Please enter your Participant ID",
 			adult_label: "Please enter your Participant ID",
