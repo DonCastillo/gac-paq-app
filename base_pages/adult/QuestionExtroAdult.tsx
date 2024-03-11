@@ -73,11 +73,11 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		try {
 			setLoading(true);
 
-			await submitResponse(
-				responseCtx.responses,
-				`${directusBaseEndpoint}/items/response`,
-				directusAccessToken,
-			);
+			// await submitResponse(
+			// 	responseCtx.responses,
+			// 	`${directusBaseEndpoint}/items/response`,
+			// 	directusAccessToken,
+			// );
 			responseCtx.resetResponses();
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			navigation.navigate("SuccessScreen");
