@@ -19,6 +19,10 @@ function getQuestionType(questionPage: any): QuestionType {
 	) {
 		return QuestionType.QuestionRadioImage;
 	} else if (
+		Object.prototype.hasOwnProperty.call(questionPage, "question_satisfaction_image_id") === true
+	) {
+		return QuestionType.QuestionSatisfactionImage;
+	} else if (
 		Object.prototype.hasOwnProperty.call(questionPage, "region_question_dropdown_id") === true
 	) {
 		return QuestionType.QuestionRegion;

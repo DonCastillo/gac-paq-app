@@ -1,36 +1,34 @@
 {
-  "expo": {
-    "name": "gacpaq-app",
-    "slug": "gacpaq-app",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/images/Logo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#E09F57"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.uleth.gacpaq"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "11d18dae-7a98-46a2-a619-8efdc31cc2a5"
-      }
-    }
-  }
+	"expo": {
+		"name": "gacpaq-app",
+		"slug": "gacpaq-app",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"splash": {
+			"image": "./assets/images/Logo.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#E09F57"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"package": "com.uleth.gacpaq"
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "11d18dae-7a98-46a2-a619-8efdc31cc2a5"
+			}
+		}
+	}
 }

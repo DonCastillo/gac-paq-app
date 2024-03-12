@@ -24,6 +24,7 @@ import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/Toolbar";
+import QuestionSatisfactionImage from "components/kid/QuestionSatisfactionImage";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -42,6 +43,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		mode,
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
+	console.log("questionType", questionType);
 	let questionComponent = <></>;
 
 	// fetch response for this question
@@ -153,6 +155,15 @@ export default function QuestionSingleKid(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionRadioImage) {
 		questionComponent = (
 			<QuestionRadioImage
+				key={currentPageNumber}
+				options={translatedPage?.choices}
+				onChange={changeHandler}
+				selectedValue={selectedValue}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionSatisfactionImage) {
+		questionComponent = (
+			<QuestionSatisfactionImage
 				key={currentPageNumber}
 				options={translatedPage?.choices}
 				onChange={changeHandler}

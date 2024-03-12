@@ -16,6 +16,7 @@ interface Choice {
 export default interface QuestionRadioImageInterface {
 	id?: string | number;
 	question_radio_image_id?: string | number;
+	question_satisfaction_image_id?: string | number;
 	heading: string;
 	label: string;
 	kid_label: string;
