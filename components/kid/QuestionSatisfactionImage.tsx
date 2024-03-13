@@ -24,11 +24,6 @@ export default function QuestionSatisfactionImage({
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const numColumn = device.isTablet ? 5 : 3;
 
-	const optionPressedStyle = {
-		backgroundColor: color100,
-		borderColor: color100,
-	};
-
 	useEffect(() => {
 		if (selected !== selectedValue) {
 			setSelected(selectedValue);
@@ -87,14 +82,17 @@ export default function QuestionSatisfactionImage({
 						paddingHorizontal:
 							horizontalScale(device.isTablet ? 10 : 0, device.screenWidth) / numColumn,
 					},
-					// selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => {
 					selectHandler(value);
 				}}
 			>
-				<View style={styles.blockOptionImageContainer}>
-					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
+				<View
+					style={[
+						styles.blockOptionImageContainer,
+						selected === value && { backgroundColor: color100 },
+					]}
+				>
 					{renderImage(imageByMode)}
 				</View>
 			</Pressable>
@@ -109,7 +107,6 @@ export default function QuestionSatisfactionImage({
 					contentContainerStyle={{
 						alignItems: "center",
 					}}
-					// data={[...options, ...options, ...options, ...options, ...options]}
 					data={[...options]}
 					renderItem={blockRenderOption}
 					numColumns={numColumn}
@@ -143,7 +140,6 @@ const styles = StyleSheet.create({
 		...GeneralStyle.general.imageFilter,
 	},
 	blockOptionImageContainer: {
-		backgroundColor: "red",
 		padding: 5,
 		borderRadius: 999,
 	},
