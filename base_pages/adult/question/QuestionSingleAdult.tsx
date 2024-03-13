@@ -23,6 +23,7 @@ import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
+import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionImage";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -133,6 +134,15 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				selectedValue={selectedValue}
 				options={translatedPage?.choices}
 				onChange={changeHandler}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionSatisfactionImage) {
+		questionComponent = (
+			<QuestionSatisfactionImage
+				key={currentPageNumber}
+				options={translatedPage?.choices}
+				onChange={changeHandler}
+				selectedValue={selectedValue}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionSlider) {

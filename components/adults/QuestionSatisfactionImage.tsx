@@ -1,9 +1,8 @@
 import { View, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useContext, useState, useEffect } from "react";
-import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
-import { horizontalScale } from "utils/responsive";
+import { horizontalScale, verticalScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
 
 interface PropsInterface {
@@ -60,8 +59,12 @@ export default function QuestionSatisfactionImage({
 					style={{
 						width: "100%",
 						height: "100%",
-						maxWidth: horizontalScale(250, device.screenWidth) / numColumn,
-						maxHeight: horizontalScale(250, device.screenWidth) / numColumn,
+						maxWidth:
+							horizontalScale(device.orientation === "landscape" ? 190 : 210, device.screenWidth) /
+							numColumn,
+						maxHeight:
+							horizontalScale(device.orientation === "landscape" ? 190 : 210, device.screenWidth) /
+							numColumn,
 						aspectRatio: 1 / 1,
 					}}
 				/>
@@ -79,7 +82,9 @@ export default function QuestionSatisfactionImage({
 					styles.blockOptionContainer,
 					{
 						paddingHorizontal:
-							horizontalScale(device.isTablet ? 10 : 0, device.screenWidth) / numColumn,
+							horizontalScale(device.isTablet ? 3 : 0, device.screenWidth) / numColumn,
+						paddingVertical:
+							horizontalScale(device.isTablet ? 5 : 0, device.screenWidth) / numColumn,
 					},
 				]}
 				onPress={() => {
@@ -99,10 +104,12 @@ export default function QuestionSatisfactionImage({
 	}
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<SafeAreaView
+			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
+		>
 			<View style={{}}>
 				<FlatList
-					style={{ width: "100%", flex: 1 }}
+					style={{ width: "100%" }}
 					contentContainerStyle={{
 						alignItems: "center",
 					}}
@@ -118,30 +125,15 @@ export default function QuestionSatisfactionImage({
 }
 
 const styles = StyleSheet.create({
-	listOptionContainer: {
-		...GeneralStyle.kid.optionContainer,
-	},
 	blockOptionContainer: {
 		alignItems: "center",
 		justifyContent: "center",
-		margin: 5,
+		margin: 1,
 	},
-	container: {
-		flex: 1,
-		maxHeight: "100%",
-		overflow: "hidden",
-		justifyContent: "center",
-		alignItems: "center",
-		width: "100%",
-		marginTop: 20,
-	},
-	imageFilter: {
-		...GeneralStyle.general.imageFilter,
-	},
+	container: {},
 	blockOptionImageContainer: {
 		padding: 5,
 		borderRadius: 100,
 	},
-
 	optionImage: {},
 });
