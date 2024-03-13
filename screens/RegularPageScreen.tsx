@@ -3,6 +3,7 @@ import { SettingContext } from "store/settings";
 import { getScreen, getScreenType } from "utils/screen";
 import { getSectionType } from "utils/section";
 import ScreenType from "constants/screen_type";
+import DismissKeyboard from "components/DismissKeyboard";
 
 export default function RegularPageScreen(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -40,5 +41,5 @@ export default function RegularPageScreen(): React.ReactElement {
 		changeColor();
 	}, [currentPageNumber, currentPage, mode]);
 
-	return <>{component}</>;
+	return <DismissKeyboard>{component}</DismissKeyboard>;
 }

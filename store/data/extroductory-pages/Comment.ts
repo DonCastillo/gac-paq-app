@@ -1,23 +1,21 @@
 import ScreenType from "constants/screen_type";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import type QuestionTextareaPayloadInterface from "interface/directus/question-textarea-payload";
 
-const Comment: QuestionRadioPayloadInterface = {
+const Comment: QuestionTextareaPayloadInterface = {
 	name: "Comment",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 10,
-			question_radio_id: 8,
-			heading: "Question 23",
-			label: "Comment",
-			kid_label: "Comment",
-			adult_label: "Comment",
-			choices: [
-				{
-					text: "Asian",
-					value: "Asian",
-				},
-			],
+			question_textarea_id: 8,
+			heading: "Feedback",
+			label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			placeholder: "Enter your comment here",
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",

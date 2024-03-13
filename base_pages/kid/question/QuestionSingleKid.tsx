@@ -25,6 +25,7 @@ import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/Toolbar";
 import QuestionSatisfactionImage from "components/kid/QuestionSatisfactionImage";
+import QuestionTextarea from "components/kid/QuestionTextarea";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -36,7 +37,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
 	const { color200 } = colorTheme;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
@@ -192,6 +193,15 @@ export default function QuestionSingleKid(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
+				key={currentPageNumber}
+				selectedValue={selectedValue}
+				placeholder={translatedPage?.placeholder}
+				onChange={changeHandler}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionTextarea) {
+		questionComponent = (
+			<QuestionTextarea
 				key={currentPageNumber}
 				selectedValue={selectedValue}
 				placeholder={translatedPage?.placeholder}
