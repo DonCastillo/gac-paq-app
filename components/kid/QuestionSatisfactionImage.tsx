@@ -141,6 +141,10 @@ const styles = StyleSheet.create({
 	blockOptionImageContainer: {
 		padding: 5,
 		borderRadius: 100,
+		borderTopLeftRadius: 100,
+		borderTopRightRadius: 100,
+		borderBottomLeftRadius: 100,
+		borderBottomRightRadius: 100,
 	},
 
 	optionImage: {},
