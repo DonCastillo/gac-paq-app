@@ -24,6 +24,7 @@ import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionImage";
+import QuestionTextarea from "components/adults/QuestionTextarea";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -167,6 +168,15 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	} else if (questionType === QuestionType.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
+				key={currentPageNumber}
+				selectedValue={selectedValue}
+				placeholder={translatedPage?.placeholder}
+				onChange={changeHandler}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionTextarea) {
+		questionComponent = (
+			<QuestionTextarea
 				key={currentPageNumber}
 				selectedValue={selectedValue}
 				placeholder={translatedPage?.placeholder}
