@@ -216,7 +216,6 @@ const GeneralStyle = {
 		questionContainer: {
 			backgroundColor: "#fff",
 			borderRadius: 25,
-			maxWidth: 700,
 			paddingHorizontal: 30,
 			paddingVertical: 20,
 			shadowColor: DEFAULT_SHADOW_COLOR,

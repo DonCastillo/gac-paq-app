@@ -16,8 +16,7 @@ export default function QuestionTextarea({
 	placeholder,
 }: QuestionInputPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { colorTheme, device } = settingCtx.settingState;
-	const { color100 } = colorTheme;
+	const { device } = settingCtx.settingState;
 
 	function changeHandler(value: string): void {
 		onChange(value);
@@ -26,10 +25,7 @@ export default function QuestionTextarea({
 	return (
 		<View>
 			<TextInput
-				style={[
-					styles.container,
-					{ height: verticalScale(230, device.screenHeight) },
-				]}
+				style={[styles.container, { height: verticalScale(180, device.screenHeight) }]}
 				autoCapitalize="none"
 				autoCorrect={false}
 				onChangeText={changeHandler}
@@ -47,9 +43,11 @@ const styles = StyleSheet.create({
 	container: {
 		...GeneralStyle.adult.field,
 		maxWidth: "100%",
+		// backgroundColor: "pink",
 		padding: 10,
 		textAlignVertical: "top",
 		textAlign: "left",
+		flexWrap: "wrap",
 		fontFamily: Font.PoppinsRegular,
 	},
 });
