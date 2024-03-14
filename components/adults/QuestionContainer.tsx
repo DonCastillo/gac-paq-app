@@ -11,13 +11,18 @@ interface PropsInterface {
 export default function QuestionContainer({ children }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
+
+	const maxWidth = horizontalScale(
+		device.orientation === "landscape" ? 250 : device.isTablet ? 300 : 350,
+		device.screenWidth,
+	);
 	return (
 		<View
 			style={[
 				styles.container,
 				{
 					maxHeight: verticalScale(500, device.screenHeight),
-					maxWidth: horizontalScale(300, device.screenWidth),
+					maxWidth,
 				},
 			]}
 		>
