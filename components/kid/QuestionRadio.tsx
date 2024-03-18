@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, TextInput } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { OptionInterface } from "utils/options";
@@ -21,6 +21,7 @@ export default function QuestionRadio({
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const otherInputRef = useRef<TextInput>(null);
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -32,9 +33,11 @@ export default function QuestionRadio({
 		setIsOtherSelected(selected?.toLowerCase() === "other");
 	}, [selected]);
 
-	const optionPressedStyle = {
-		backgroundColor: color100,
-	};
+	useEffect(() => {
+		if (isOtherSelected) {
+			otherInputRef?.current?.focus();
+		}
+	}, [isOtherSelected]);
 
 	function selectHandler(value: string): void {
 		if (value === selected) {
@@ -49,8 +52,6 @@ export default function QuestionRadio({
 	const enableColumnWrap = device.isTablet && device.orientation === "landscape";
 	const numColumn = enableColumnWrap ? 2 : 1;
 	const adjustWidth = enableColumnWrap ? horizontalScale(150, device.screenWidth) : "100%";
-
-	// const otherPressedStyle = isOtherSelected ? {} : {};
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -103,7 +104,7 @@ export default function QuestionRadio({
 										</Text>
 									</Pressable>
 									{/* Other Fields */}
-									{item.value.toLowerCase() === "other" && isOtherSelected && (
+									{item.value.toString().toLowerCase() === "other" && isOtherSelected && (
 										<View
 											style={{
 												backgroundColor: "white",
@@ -111,6 +112,7 @@ export default function QuestionRadio({
 											}}
 										>
 											<TextInput
+												ref={otherInputRef}
 												style={{
 													paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
 													paddingVertical: GeneralStyle.kid.field.paddingVertical,

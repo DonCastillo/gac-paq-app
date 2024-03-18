@@ -1,11 +1,21 @@
-import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
+import {
+	View,
+	Text,
+	StyleSheet,
+	Pressable,
+	FlatList,
+	SafeAreaView,
+	Image,
+	TextInput,
+} from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
-import { horizontalScale, verticalScale } from "utils/responsive";
+import { horizontalScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
+import { hasOtherOption } from "utils/options";
 
 interface QuestionRadioImagePropsInterface {
 	options: any[];
@@ -22,6 +32,9 @@ export default function QuestionRadioImage({
 	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
+	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const otherInputRef = useRef<TextInput>(null);
+
 	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
 
 	const optionPressedStyle = {
@@ -34,6 +47,16 @@ export default function QuestionRadioImage({
 			setSelected(selectedValue);
 		}
 	}, [currentPage, selectedValue]);
+
+	useEffect(() => {
+		setIsOtherSelected(selected?.toLowerCase() === "other");
+	}, [selected]);
+
+	useEffect(() => {
+		if (isOtherSelected) {
+			otherInputRef?.current?.focus();
+		}
+	}, [isOtherSelected]);
 
 	function selectHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
@@ -74,7 +97,7 @@ export default function QuestionRadioImage({
 			if (options.length <= 5) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
-				return <ImageComponent style={GeneralStyle.general.inlineOptionImage} />;
+				return <ImageComponent style={{ ...GeneralStyle.general.inlineOptionImage }} />;
 			}
 		}
 	}
@@ -109,17 +132,37 @@ export default function QuestionRadioImage({
 		);
 	}
 
+	/** if the option contains value called "other", it will be displayed as a list */
 	function listRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
 
 		return (
-			<View>
+			<View
+				style={{
+					backgroundColor: "red",
+					borderWidth: GeneralStyle.kid.optionContainer.borderWidth,
+					borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
+					marginRight: GeneralStyle.kid.optionContainer.marginRight,
+					marginBottom: GeneralStyle.kid.optionContainer.marginBottom,
+					borderColor: color100,
+					overflow: "hidden",
+				}}
+			>
+				{/* Option Button */}
 				<Pressable
 					style={[
-						styles.listOptionContainer,
-						{ flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingVertical: 3 },
-						{ borderColor: color100 },
+						{
+							flexDirection: "row",
+							flexWrap: "nowrap",
+							alignItems: "center",
+							paddingVertical: 4,
+							paddingHorizontal: GeneralStyle.kid.optionContainer.paddingHorizontal,
+						},
+						isOtherSelected && {
+							borderBottomLeftRadius: 0,
+							borderBottomRightRadius: 0,
+						},
 						selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
 					]}
 					onPress={() => {
@@ -130,12 +173,33 @@ export default function QuestionRadioImage({
 					<Text
 						style={[
 							styles.listOptionLabelText,
+							{
+								fontSize: GeneralStyle.kid.optionImageLabelText.fontSize,
+							},
 							selected === value ? { color: "#fff" } : { color: "#000" },
 						]}
 					>
 						{text}
 					</Text>
 				</Pressable>
+
+				{/* Other Field */}
+				{value.toString().toLowerCase() === "other" && isOtherSelected && (
+					<View style={{ backgroundColor: "white", overflow: "hidden" }}>
+						<TextInput
+							ref={otherInputRef}
+							style={{
+								paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+								paddingVertical: GeneralStyle.kid.field.paddingVertical,
+								fontSize: GeneralStyle.kid.field.fontSize,
+							}}
+							autoCapitalize="none"
+							autoCorrect={false}
+							onChangeText={() => console.log("entering other value")}
+							placeholder="Please Specify"
+						/>
+					</View>
+				)}
 			</View>
 		);
 	}
@@ -143,7 +207,7 @@ export default function QuestionRadioImage({
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
-				{options.length <= 5 ? (
+				{options.length <= 5 || !hasOtherOption(options) ? (
 					<FlatList
 						initialNumToRender={4}
 						data={[...options]}
@@ -154,8 +218,11 @@ export default function QuestionRadioImage({
 					/>
 				) : (
 					<FlatList
+						horizontal={false}
+						removeClippedSubviews={false}
 						data={[...options]}
 						renderItem={listRenderOption}
+						contentContainerStyle={{ paddingBottom: 20 }}
 						bounces={false}
 					/>
 				)}
@@ -167,6 +234,7 @@ export default function QuestionRadioImage({
 const styles = StyleSheet.create({
 	listOptionContainer: {
 		...GeneralStyle.kid.optionContainer,
+		overflow: "hidden",
 	},
 	blockOptionContainer: {
 		...GeneralStyle.kid.blockOptionContainer,
@@ -203,6 +271,9 @@ const styles = StyleSheet.create({
 	},
 	listOptionLabelText: {
 		...GeneralStyle.kid.optionImageLabelText,
+		// backgroundColor: "green",
+		flex: 1,
+		flexWrap: "wrap",
 	},
 	blockOptionLabelText: {
 		...GeneralStyle.kid.optionImageLabelText,

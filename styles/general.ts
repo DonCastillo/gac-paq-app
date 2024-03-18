@@ -7,6 +7,7 @@ const INACTIVE_COLOR = "#D8D8D8";
 const DEFAULT_BORDER_WIDTH = 3;
 const DEFAULT_BORDER_RADIUS = 10;
 const DEFAULT_OPTION_FONT_SIZE = 18;
+const DEFAULT_OPTION_SUB_FONT_SIZE = 16;
 const DEFAULT_FIELD_MIN_HEIGHT = 60;
 const DEFAULT_ELEVATION = 2;
 const DEFAULT_SHADOW_COLOR = "#000";
@@ -147,6 +148,7 @@ const GeneralStyle = {
 			paddingVertical: 14,
 			marginBottom: 10,
 			marginRight: 10,
+			fontFamily: Font.SpaceSemiBold,
 		},
 
 		optionText: {
@@ -154,7 +156,7 @@ const GeneralStyle = {
 			fontFamily: Font.SpaceRegular,
 		},
 		optionImageLabelText: {
-			fontSize: 13,
+			fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.SpaceRegular,
 		},
 		optionImage: {

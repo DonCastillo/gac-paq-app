@@ -1,5 +1,10 @@
 import React, { useContext } from "react";
-import { Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback, View } from "react-native";
+import {
+	Keyboard,
+	KeyboardAvoidingView,
+	TouchableWithoutFeedback,
+	View,
+} from "react-native";
 import { SettingContext } from "store/settings";
 
 interface PropsInterface {

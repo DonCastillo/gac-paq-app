@@ -1,6 +1,6 @@
 import type LanguageInterface from "interface/language";
 
-interface Choice {
+export interface QuestionRadioImageChoiceInterface {
 	image_choices_id: {
 		id?: number | string;
 		sort?: number | null;
@@ -13,7 +13,7 @@ interface Choice {
 	};
 }
 
-export default interface QuestionRadioImageInterface {
+export interface QuestionRadioImageInterface {
 	id?: string | number;
 	question_radio_image_id?: string | number;
 	question_satisfaction_image_id?: string | number;
@@ -21,6 +21,6 @@ export default interface QuestionRadioImageInterface {
 	label: string;
 	kid_label: string;
 	adult_label: string;
-	choices: Choice[];
+	choices: QuestionRadioImageChoiceInterface[];
 	languages_id?: LanguageInterface | null;
 }
