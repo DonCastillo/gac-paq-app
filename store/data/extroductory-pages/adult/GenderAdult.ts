@@ -23,6 +23,10 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 					value: "Male",
 				},
 				{
+					text: "Other",
+					value: "Other",
+				},
+				{
 					text: "Prefer not to answer",
 					value: "Prefer not to answer",
 				},

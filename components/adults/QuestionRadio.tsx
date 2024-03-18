@@ -37,12 +37,15 @@ export default function QuestionRadio({
 
 	return (
 		<FlatList
+			removeClippedSubviews={false}
+			horizontal={false}
 			bounces={false}
-			data={options}
+			data={[...options]}
 			contentContainerStyle={{
 				flexGrow: 1,
 				justifyContent: "flex-start",
 				flexDirection: "column",
+				paddingBottom: 20,
 			}}
 			renderItem={({ item }) => (
 				<RadioOption

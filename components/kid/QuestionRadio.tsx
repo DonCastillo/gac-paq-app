@@ -106,7 +106,7 @@ export default function QuestionRadio({
 											{item.text}
 										</Text>
 									</Pressable>
-									{/* Other Fields */}
+									{/* Other Field */}
 									{item.value.toString().toLowerCase() === "other" && (
 										<View
 											style={[
