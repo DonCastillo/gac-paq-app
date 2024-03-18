@@ -33,12 +33,6 @@ export default function QuestionRadio({
 		setIsOtherSelected(selected?.toLowerCase() === "other");
 	}, [selected]);
 
-	useEffect(() => {
-		if (isOtherSelected) {
-			otherInputRef?.current?.focus();
-		}
-	}, [isOtherSelected]);
-
 	function selectHandler(value: string): void {
 		if (value === selected) {
 			setSelected(null);
@@ -46,6 +40,14 @@ export default function QuestionRadio({
 		} else {
 			setSelected(value);
 			onChange(value);
+		}
+
+		// automatically focus on other input field if "other" is selected
+		if (value?.toString().toLowerCase() === "other") {
+			setIsOtherSelected(true);
+			otherInputRef?.current?.focus();
+		} else {
+			setIsOtherSelected(false);
 		}
 	}
 
@@ -57,6 +59,7 @@ export default function QuestionRadio({
 		<SafeAreaView style={styles.container}>
 			<View>
 				<FlatList
+					removeClippedSubviews={false}
 					horizontal={false}
 					bounces={false}
 					numColumns={numColumn}
@@ -104,19 +107,22 @@ export default function QuestionRadio({
 										</Text>
 									</Pressable>
 									{/* Other Fields */}
-									{item.value.toString().toLowerCase() === "other" && isOtherSelected && (
+									{item.value.toString().toLowerCase() === "other" && (
 										<View
-											style={{
-												backgroundColor: "white",
-												overflow: "hidden",
-											}}
+											style={[
+												{
+													backgroundColor: "white",
+													overflow: "hidden",
+													display: isOtherSelected ? "flex" : "none",
+													paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+												},
+											]}
 										>
 											<TextInput
 												ref={otherInputRef}
 												style={{
-													paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
-													paddingVertical: GeneralStyle.kid.field.paddingVertical,
 													fontSize: GeneralStyle.kid.field.fontSize,
+													paddingVertical: GeneralStyle.kid.field.paddingVertical,
 												}}
 												autoCapitalize="none"
 												autoCorrect={false}

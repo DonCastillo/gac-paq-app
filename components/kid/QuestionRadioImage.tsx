@@ -52,12 +52,6 @@ export default function QuestionRadioImage({
 		setIsOtherSelected(selected?.toLowerCase() === "other");
 	}, [selected]);
 
-	useEffect(() => {
-		if (isOtherSelected) {
-			otherInputRef?.current?.focus();
-		}
-	}, [isOtherSelected]);
-
 	function selectHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
 			setSelected(value);
@@ -65,6 +59,14 @@ export default function QuestionRadioImage({
 		} else {
 			setSelected(null);
 			onChange(null);
+		}
+
+		// automatically focus on other input field if "other" is selected
+		if (value?.toString().toLowerCase() === "other") {
+			setIsOtherSelected(true);
+			otherInputRef?.current?.focus();
+		} else {
+			setIsOtherSelected(false);
 		}
 	}
 
@@ -184,14 +186,20 @@ export default function QuestionRadioImage({
 				</Pressable>
 
 				{/* Other Field */}
-				{value.toString().toLowerCase() === "other" && isOtherSelected && (
-					<View style={{ backgroundColor: "white", overflow: "hidden" }}>
+				{value.toString().toLowerCase() === "other" && (
+					<View
+						style={{
+							backgroundColor: "white",
+							overflow: "hidden",
+							display: isOtherSelected ? "flex" : "none",
+							paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
+						}}
+					>
 						<TextInput
 							ref={otherInputRef}
 							style={{
-								paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
-								paddingVertical: GeneralStyle.kid.field.paddingVertical,
 								fontSize: GeneralStyle.kid.field.fontSize,
+								paddingVertical: GeneralStyle.kid.field.paddingVertical,
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}
