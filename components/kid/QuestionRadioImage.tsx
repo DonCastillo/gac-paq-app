@@ -230,7 +230,6 @@ export default function QuestionRadioImage({
 						removeClippedSubviews={false}
 						data={[...options]}
 						renderItem={listRenderOption}
-						contentContainerStyle={{ paddingBottom: 20 }}
 						bounces={false}
 					/>
 				)}

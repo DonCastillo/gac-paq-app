@@ -1,4 +1,13 @@
-import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
+import {
+	View,
+	Text,
+	StyleSheet,
+	Pressable,
+	FlatList,
+	SafeAreaView,
+	Image,
+	Keyboard,
+} from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
@@ -8,10 +17,11 @@ import type { Svg } from "react-native-svg";
 import { getOptionImage } from "utils/background";
 import { horizontalScale, verticalScale } from "utils/responsive";
 import RadioOption from "./item/RadioOption";
-import Mode from "constants/mode";
+import type Mode from "constants/mode";
+import { hasOtherOption } from "utils/options";
 
 interface QuestionRadioImagePropsInterface {
-	options: QuestionRadioItemInterface[];
+	options: any[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
@@ -117,7 +127,7 @@ export default function QuestionRadioImage({
 		const imageByMode = getOptionImage(images, mode);
 
 		return (
-			<View style={{ backgroundColor: "white", paddingVertical: 2, marginBottom: 2 }}>
+			<View style={{ paddingVertical: 2, marginBottom: 2 }}>
 				<RadioOption
 					label={text}
 					value={value}
@@ -134,10 +144,10 @@ export default function QuestionRadioImage({
 			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
 		>
 			<View>
-				{options.length <= 5 ? (
+				{options.length <= 5 || !hasOtherOption(options) ? (
 					<FlatList
 						initialNumToRender={4}
-						data={[options[0], options[1], options[2]]}
+						data={[...options]}
 						renderItem={blockRenderOption}
 						numColumns={numColumn}
 						key={numColumn}
@@ -145,8 +155,11 @@ export default function QuestionRadioImage({
 					/>
 				) : (
 					<FlatList
+						horizontal={false}
+						removeClippedSubviews={false}
 						data={[...options]}
 						renderItem={listRenderOption}
+						contentContainerStyle={{}}
 						bounces={false}
 					/>
 				)}
