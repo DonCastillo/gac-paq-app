@@ -22,6 +22,6 @@ const AdultExtroductoryPages = [
 	Education,
 	Financial,
 ];
-const FeedbackExtroductoryPages = [Satisfaction, AppExtro];
+const FeedbackExtroductoryPages = [Satisfaction, Comment, AppExtro];
 
 export { KidExtroductoryPages, AdultExtroductoryPages, FeedbackExtroductoryPages };
