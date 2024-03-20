@@ -2,6 +2,7 @@ import React from "react";
 import type LanguageInterface from "interface/language";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type RegionInterface from "interface/region";
+import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
 
 export interface OptionInterface {
 	text: string;
@@ -62,4 +63,10 @@ function optionLanguage(options: LanguageInterface[]): QuestionRadioItemInterfac
 	});
 }
 
-export { optionText, optionRegion, optionLanguage };
+function hasOtherOption(radioImageOptions: QuestionRadioImageChoiceInterface[]): boolean {
+	return radioImageOptions.some(
+		(option) => option.image_choices_id.value.toString().toLowerCase() === "other",
+	);
+}
+
+export { optionText, optionRegion, optionLanguage, hasOtherOption };

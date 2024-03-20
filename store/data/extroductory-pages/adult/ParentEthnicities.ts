@@ -34,8 +34,8 @@ const ParentEthnicities: QuestionRadioPayloadInterface = {
 					value: "White or Caucasian",
 				},
 				{
-					text: "Other, please specify",
-					value: "Other, please specify",
+					text: "Other",
+					value: "Other",
 				},
 				{
 					text: "Prefer not to say",

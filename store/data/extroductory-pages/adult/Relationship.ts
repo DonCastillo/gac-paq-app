@@ -34,8 +34,8 @@ const Relationship: QuestionRadioPayloadInterface = {
 					value: "Tutor or guardian",
 				},
 				{
-					text: "Other, please specify",
-					value: "Other, please specify",
+					text: "Other",
+					value: "Other",
 				},
 				{
 					text: "Prefer not to answer",

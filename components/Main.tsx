@@ -1,19 +1,18 @@
 import React from "react";
 import { View, StyleSheet, SafeAreaView } from "react-native";
-import PropTypes from "prop-types";
 
-export default function Main({ children, customStyle = {} }): React.ReactElement {
+interface PropsInterface {
+	children: React.ReactNode;
+	customStyle?: object;
+}
+
+export default function Main({ children, customStyle = {} }: PropsInterface): React.ReactElement {
 	return (
 		<SafeAreaView>
 			<View style={[styles.container, customStyle]}>{children}</View>
 		</SafeAreaView>
 	);
 }
-
-Main.propTypes = {
-	children: PropTypes.node,
-	customStyle: PropTypes.object,
-};
 
 const styles = StyleSheet.create({
 	container: {

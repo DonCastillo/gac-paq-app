@@ -1,6 +1,5 @@
 import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
-import Images from "styles/images";
 
 const GenderAdult: QuestionRadioPayloadInterface = {
 	name: "Gender Adult",
@@ -21,6 +20,10 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 				{
 					text: "Male",
 					value: "Male",
+				},
+				{
+					text: "Other",
+					value: "Other",
 				},
 				{
 					text: "Prefer not to answer",
