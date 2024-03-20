@@ -8,7 +8,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 	translations: [
 		{
 			id: 1,
-			question_radio_image_id: 1,
+			question_satisfaction_image_id: 1,
 			heading: "Feedback",
 			label:
 				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",

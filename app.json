@@ -19,10 +19,16 @@
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
-			}
+			},
+			"package": "com.uleth.gacpaq"
 		},
 		"web": {
 			"favicon": "./assets/favicon.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "11d18dae-7a98-46a2-a619-8efdc31cc2a5"
+			}
 		}
 	}
 }

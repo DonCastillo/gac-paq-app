@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Keyboard } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -23,10 +23,12 @@ import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
-
+import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionImage";
+import QuestionTextarea from "components/adults/QuestionTextarea";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const [isKeyboardOpen, setIsKeyboardOpen] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
@@ -39,6 +41,30 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		mode,
 	);
 	let questionComponent = <></>;
+
+	useEffect(() => {
+		const keyboardDidShow = Keyboard.addListener("keyboardDidShow", () => {
+			setIsKeyboardOpen(true);
+		});
+		const keyboardDidHide = Keyboard.addListener("keyboardDidHide", () => {
+			setIsKeyboardOpen(false);
+		});
+
+		const keyboardWillHide = Keyboard.addListener("keyboardWillHide", () => {
+			setIsKeyboardOpen(false);
+		});
+
+		const keyboardWillShow = Keyboard.addListener("keyboardWillShow", () => {
+			setIsKeyboardOpen(true);
+		});
+
+		return () => {
+			keyboardDidShow.remove();
+			keyboardDidHide.remove();
+			keyboardWillHide.remove();
+			keyboardWillShow.remove();
+		};
+	}, []);
 
 	// fetch response for this question
 	useEffect(() => {
@@ -135,6 +161,15 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				onChange={changeHandler}
 			/>
 		);
+	} else if (questionType === QuestionType.QuestionSatisfactionImage) {
+		questionComponent = (
+			<QuestionSatisfactionImage
+				key={currentPageNumber}
+				options={translatedPage?.choices}
+				onChange={changeHandler}
+				selectedValue={selectedValue}
+			/>
+		);
 	} else if (questionType === QuestionType.QuestionSlider) {
 		questionComponent = (
 			<QuestionSlider
@@ -163,6 +198,15 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				onChange={changeHandler}
 			/>
 		);
+	} else if (questionType === QuestionType.QuestionTextarea) {
+		questionComponent = (
+			<QuestionTextarea
+				key={currentPageNumber}
+				selectedValue={selectedValue}
+				placeholder={translatedPage?.placeholder}
+				onChange={changeHandler}
+			/>
+		);
 	} else {
 		questionComponent = <></>;
 	}
@@ -171,17 +215,19 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
-				<Toolbar />
+				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
-							{questionLabel}
-						</QuestionLabel>
+						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
+						{!isKeyboardOpen && (
+							<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
+								{questionLabel}
+							</QuestionLabel>
+						)}
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				{!isKeyboardOpen && <Navigation>{buttonComponent !== null && buttonComponent}</Navigation>}
 			</Main>
 		</View>
 	);

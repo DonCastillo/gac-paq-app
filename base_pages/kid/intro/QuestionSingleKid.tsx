@@ -32,7 +32,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
 	const { color200 } = colorTheme;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,

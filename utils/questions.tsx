@@ -8,6 +8,8 @@ function getQuestionType(questionPage: any): QuestionType {
 		return QuestionType.QuestionText;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_input_id") === true) {
 		return QuestionType.QuestionInput;
+	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_textarea_id") === true) {
+		return QuestionType.QuestionTextarea;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_slider_id") === true) {
 		return QuestionType.QuestionSlider;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_radio_id") === true) {
@@ -18,6 +20,10 @@ function getQuestionType(questionPage: any): QuestionType {
 		Object.prototype.hasOwnProperty.call(questionPage, "question_radio_image_id") === true
 	) {
 		return QuestionType.QuestionRadioImage;
+	} else if (
+		Object.prototype.hasOwnProperty.call(questionPage, "question_satisfaction_image_id") === true
+	) {
+		return QuestionType.QuestionSatisfactionImage;
 	} else if (
 		Object.prototype.hasOwnProperty.call(questionPage, "region_question_dropdown_id") === true
 	) {
