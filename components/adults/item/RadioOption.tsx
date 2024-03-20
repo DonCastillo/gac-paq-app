@@ -96,7 +96,7 @@ export default function RadioOption({
 						borderWidth: GeneralStyle.adult.field.borderWidth,
 						borderRadius: GeneralStyle.adult.field.borderRadius,
 						borderColor: GeneralStyle.adult.field.borderColor,
-						marginBottom: 5
+						marginBottom: 5,
 					}}
 				>
 					<TextInput
