@@ -46,7 +46,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 		mode,
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
-	console.log("questionType", questionType);
 	let questionComponent = <></>;
 
 	useEffect(() => {
@@ -125,7 +124,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		if (selectedValue !== null) {
+		if (selectedValue !== null && selectedValue !== "") {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}

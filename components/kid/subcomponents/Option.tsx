@@ -52,9 +52,6 @@ export default function Option({
 					]}
 					onPress={() => {
 						selectHandler(value);
-						if (value?.toString().toLowerCase() === "other") {
-							otherInputRef?.current?.focus();
-						}
 					}}
 				>
 					<Text
