@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Keyboard } from "react-native";
+import { StyleSheet, View, Keyboard, Text } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -26,6 +26,7 @@ import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/Toolbar";
 import QuestionSatisfactionImage from "components/kid/QuestionSatisfactionImage";
 import QuestionTextarea from "components/kid/QuestionTextarea";
+import QuestionCheckbox from "components/kid/QuestionCheckbox";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -163,6 +164,15 @@ export default function QuestionSingleKid(): React.ReactElement {
 	if (questionType === QuestionType.QuestionDropdown) {
 		questionComponent = (
 			<QuestionSelect
+				key={currentPageNumber}
+				options={translatedPage?.choices}
+				onChange={changeHandler}
+				selectedValue={selectedValue}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionCheckbox) {
+		questionComponent = (
+			<QuestionCheckbox
 				key={currentPageNumber}
 				options={translatedPage?.choices}
 				onChange={changeHandler}

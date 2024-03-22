@@ -1,22 +1,22 @@
-import { View, StyleSheet, FlatList, SafeAreaView } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import { View, StyleSheet, FlatList, SafeAreaView, type TextInput } from "react-native";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { OptionInterface } from "utils/options";
 import { horizontalScale } from "utils/responsive";
 import Option from "./subcomponents/Option";
 
-interface QuestionRadioPropsInterface {
+interface PropsInterface {
 	options: OptionInterface[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionRadio({
+export default function QuestionCheckbox({
 	options,
 	onChange,
 	selectedValue,
-}: QuestionRadioPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;

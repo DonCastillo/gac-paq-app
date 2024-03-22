@@ -1,13 +1,13 @@
 import ScreenType from "constants/screen_type";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
 
-const S4Q7: QuestionRadioPayloadInterface = {
+const S4Q7: QuestionCheckboxPayloadInterface = {
 	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to you.",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 10,
-			question_radio_id: 8,
+			question_checkbox_id: 8,
 			heading: "Question 17",
 			label:
 				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to you.",
