@@ -30,7 +30,6 @@ export default function QuestionCheckbox({
 		}
 	}, [currentPage, selectedValue]);
 
-
 	function initializeSelectedValue(): string[] {
 		return selectedValue === "" || selectedValue === null ? [] : selectedValue.split(SEPARATOR);
 	}
@@ -76,7 +75,7 @@ export default function QuestionCheckbox({
 					bounces={false}
 					numColumns={numColumn}
 					key={enableColumnWrap.toString()}
-					data={[...options]}
+					data={[...options, ...options, { text: "Other", value: "Other" }]}
 					contentContainerStyle={{ paddingBottom: 20 }}
 					renderItem={({ item }) => {
 						return (

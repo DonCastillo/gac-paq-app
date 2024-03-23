@@ -64,13 +64,13 @@ export default function Option({
 					</Text>
 				</Pressable>
 				{/* Other Field */}
-				{value.toString().toLowerCase() === "other" && (
+				{value.toString().toLowerCase() === "other" && isOtherSelected && (
 					<View
 						style={[
 							{
 								backgroundColor: "white",
 								overflow: "hidden",
-								display: isOtherSelected ? "flex" : "none",
+								display: "flex",
 								paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
 							},
 						]}
@@ -80,6 +80,9 @@ export default function Option({
 							style={{
 								fontSize: GeneralStyle.kid.field.fontSize,
 								paddingVertical: GeneralStyle.kid.field.paddingVertical,
+							}}
+							onLayout={(event) => {
+								otherInputRef?.current?.focus();
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}
