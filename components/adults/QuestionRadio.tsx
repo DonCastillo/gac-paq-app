@@ -40,9 +40,6 @@ export default function QuestionRadio({
 	}, [selected]);
 
 	function pressHandler(value: string | null): void {
-		// if (value !== "" && value !== null && value !== undefined) return;
-
-		// activate other field if "other" is selected
 		if (value?.toString().toLowerCase() === "other") {
 			setAutoFocusOtherField(true);
 		}

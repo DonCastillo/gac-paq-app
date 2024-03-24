@@ -1,26 +1,15 @@
-import {
-	View,
-	Text,
-	StyleSheet,
-	Pressable,
-	FlatList,
-	SafeAreaView,
-	Image,
-	Keyboard,
-} from "react-native";
+import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type { Svg } from "react-native-svg";
 import { getOptionImage } from "utils/background";
 import { horizontalScale, verticalScale } from "utils/responsive";
 import RadioOption from "./subcomponents/RadioOption";
-import type Mode from "constants/mode";
 import { hasOtherOption } from "utils/options";
 
-interface QuestionRadioImagePropsInterface {
+interface PropsInterface {
 	options: any[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
@@ -30,16 +19,22 @@ export default function QuestionRadioImage({
 	options,
 	onChange,
 	selectedValue,
-}: QuestionRadioImagePropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
+	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(true);
 	const numColumn = device.isTablet ? 3 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 	};
+
+	useState(() => {
+		setAutoFocusOtherField(false);
+	});
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -47,13 +42,23 @@ export default function QuestionRadioImage({
 		}
 	}, [currentPage, selectedValue]);
 
-	function selectHandler(value: string | null): void {
-		if (value !== "" && value !== null && value !== undefined) {
-			setSelected(value);
-			onChange(value);
+	useEffect(() => {
+		if (selected?.toString().toLowerCase() === "other") {
+			setIsOtherSelected(true);
 		} else {
-			setSelected(null);
+			setIsOtherSelected(false);
+		}
+	}, [selected]);
+
+	function selectHandler(value: string | null): void {
+		if (value?.toString().toLowerCase() === "other") {
+			setAutoFocusOtherField(true);
+		}
+
+		if (selectedValue === value) {
 			onChange(null);
+		} else {
+			onChange(value);
 		}
 	}
 
@@ -107,9 +112,7 @@ export default function QuestionRadioImage({
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
-				onPress={() => {
-					selectHandler(value);
-				}}
+				onPress={() => selectHandler(value)}
 			>
 				<View style={styles.blockOptionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
@@ -131,9 +134,11 @@ export default function QuestionRadioImage({
 				<RadioOption
 					label={text}
 					value={value}
-					onPress={() => selectHandler(value)}
-					selected={selected === value}
 					image={imageByMode}
+					selected={selected !== null && selected === value}
+					onPress={() => selectHandler(value)}
+					isOtherSelected={isOtherSelected}
+					autofocusOtherField={autofocusOtherField}
 				/>
 			</View>
 		);
@@ -155,12 +160,13 @@ export default function QuestionRadioImage({
 					/>
 				) : (
 					<FlatList
-						horizontal={false}
 						removeClippedSubviews={false}
+						horizontal={false}
 						data={[...options]}
 						renderItem={listRenderOption}
-						contentContainerStyle={{}}
 						bounces={false}
+						persistentScrollbar={true}
+						showsVerticalScrollIndicator={true}
 					/>
 				)}
 			</View>
