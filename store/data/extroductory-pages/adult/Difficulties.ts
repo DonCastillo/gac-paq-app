@@ -1,13 +1,13 @@
 import ScreenType from "constants/screen_type";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
 
-const Difficulties: QuestionRadioPayloadInterface = {
+const Difficulties: QuestionCheckboxPayloadInterface = {
 	name: "Please indicate if your child has difficulties with any of the following in their daily activities (select all that apply)",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 10,
-			question_radio_id: 8,
+			question_checkbox_id: 8,
 			heading: "Question 23",
 			label:
 				"Please indicate if your child has difficulties with any of the following in their daily activities (select all that apply)",

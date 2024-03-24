@@ -69,7 +69,7 @@ export default function QuestionCheckbox({
 			removeClippedSubviews={false}
 			horizontal={false}
 			bounces={false}
-			data={[...options, { label: "Other", value: "Other" }]}
+			data={[...options]}
 			contentContainerStyle={{
 				flexGrow: 1,
 				justifyContent: "flex-start",
