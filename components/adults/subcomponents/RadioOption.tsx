@@ -4,7 +4,7 @@ import React, { useContext, useRef } from "react";
 import { SettingContext } from "store/settings";
 import { G } from "react-native-svg";
 
-interface RadioOptionPropsInterface {
+interface PropsInterface {
 	label: string;
 	value: string;
 	image?: any;
@@ -22,7 +22,7 @@ export default function RadioOption({
 	selected = false,
 	isOtherSelected = false,
 	autofocusOtherField = false,
-}: RadioOptionPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { color100 } = settingCtx.settingState.colorTheme;
 	const otherInputRef = useRef<TextInput>(null);

@@ -22,6 +22,11 @@ export default function QuestionRadio({
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
+
+	useState(() => {
+		setAutoFocusOtherField(false);
+	});
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -30,23 +35,22 @@ export default function QuestionRadio({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		setIsOtherSelected(selected?.toLowerCase() === "other");
-	}, [selected]);
-
-	function selectHandler(value: string): void {
-		if (value === selected) {
-			setSelected(null);
-			onChange(null);
-		} else {
-			setSelected(value);
-			onChange(value);
-		}
-
-		// automatically focus on other input field if "other" is selected
-		if (value?.toString().toLowerCase() === "other") {
+		if (selected?.toString().toLowerCase() === "other") {
 			setIsOtherSelected(true);
 		} else {
 			setIsOtherSelected(false);
+		}
+	}, [selected]);
+
+	function selectHandler(value: string): void {
+		if (value?.toString().toLowerCase() === "other") {
+			setAutoFocusOtherField(true);
+		}
+
+		if (selectedValue === value) {
+			onChange(null);
+		} else {
+			onChange(value);
 		}
 	}
 
@@ -75,6 +79,7 @@ export default function QuestionRadio({
 								color={color100}
 								width={adjustWidth}
 								isOtherSelected={isOtherSelected}
+								autofocusOtherField={autofocusOtherField}
 							/>
 						);
 					}}

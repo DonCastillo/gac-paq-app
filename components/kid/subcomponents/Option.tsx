@@ -1,9 +1,8 @@
-import React, { useContext, useRef } from "react";
+import React, { useRef } from "react";
 import { Pressable, TextInput, View, Text } from "react-native";
-import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
 
-interface ProposInterface {
+interface PropsInterface {
 	text: string;
 	value: string;
 	selected: boolean;
@@ -11,6 +10,7 @@ interface ProposInterface {
 	color: string;
 	width?: string | number;
 	isOtherSelected?: boolean;
+	autofocusOtherField?: boolean;
 }
 
 export default function Option({
@@ -21,7 +21,8 @@ export default function Option({
 	color,
 	width = "100%",
 	isOtherSelected = false,
-}: ProposInterface): React.ReactElement {
+	autofocusOtherField = false,
+}: PropsInterface): React.ReactElement {
 	const otherInputRef = useRef<TextInput>(null);
 
 	return (
@@ -80,7 +81,9 @@ export default function Option({
 								paddingVertical: GeneralStyle.kid.field.paddingVertical,
 							}}
 							onLayout={(event) => {
-								otherInputRef?.current?.focus();
+								if (autofocusOtherField) {
+									otherInputRef?.current?.focus();
+								}
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}

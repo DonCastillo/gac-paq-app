@@ -20,7 +20,7 @@ export default function QuestionCheckbox({
 	const { currentPage } = settingCtx.settingState;
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
-	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(true);
+	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 
 	useState(() => {
 		setAutoFocusOtherField(false);

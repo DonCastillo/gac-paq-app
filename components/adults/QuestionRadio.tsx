@@ -19,7 +19,7 @@ export default function QuestionRadio({
 	const { currentPage } = settingCtx.settingState;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
-	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(true);
+	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 
 	useState(() => {
 		setAutoFocusOtherField(false);
