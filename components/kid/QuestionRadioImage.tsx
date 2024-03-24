@@ -17,7 +17,7 @@ import { horizontalScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
 import { hasOtherOption } from "utils/options";
 
-interface QuestionRadioImagePropsInterface {
+interface PropsInterface {
 	options: any[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
@@ -27,20 +27,24 @@ export default function QuestionRadioImage({
 	options,
 	onChange,
 	selectedValue,
-}: QuestionRadioImagePropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 	const otherInputRef = useRef<TextInput>(null);
-
 	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 		borderColor: color100,
 	};
+
+	useState(() => {
+		setAutoFocusOtherField(false);
+	});
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -49,24 +53,22 @@ export default function QuestionRadioImage({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		setIsOtherSelected(selected?.toLowerCase() === "other");
+		if (selected?.toString().toLowerCase() === "other") {
+			setIsOtherSelected(true);
+		} else {
+			setIsOtherSelected(false);
+		}
 	}, [selected]);
 
 	function selectHandler(value: string | null): void {
-		if (value !== "" && value !== null && value !== undefined) {
-			setSelected(value);
-			onChange(value);
-		} else {
-			setSelected(null);
-			onChange(null);
+		if (value?.toString().toLowerCase() === "other") {
+			setAutoFocusOtherField(true);
 		}
 
-		// automatically focus on other input field if "other" is selected
-		if (value?.toString().toLowerCase() === "other") {
-			setIsOtherSelected(true);
-			otherInputRef?.current?.focus();
+		if (selectedValue === value) {
+			onChange(null);
 		} else {
-			setIsOtherSelected(false);
+			onChange(value);
 		}
 	}
 
@@ -119,9 +121,7 @@ export default function QuestionRadioImage({
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
-				onPress={() => {
-					selectHandler(value);
-				}}
+				onPress={() => selectHandler(value)}
 			>
 				<View style={styles.blockOptionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
@@ -142,7 +142,6 @@ export default function QuestionRadioImage({
 		return (
 			<View
 				style={{
-					backgroundColor: "red",
 					borderWidth: GeneralStyle.kid.optionContainer.borderWidth,
 					borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 					marginRight: GeneralStyle.kid.optionContainer.marginRight,
@@ -167,9 +166,7 @@ export default function QuestionRadioImage({
 						},
 						selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
 					]}
-					onPress={() => {
-						selectHandler(value);
-					}}
+					onPress={() => selectHandler(value)}
 				>
 					{renderImage(imageByMode)}
 					<Text
@@ -186,12 +183,12 @@ export default function QuestionRadioImage({
 				</Pressable>
 
 				{/* Other Field */}
-				{value.toString().toLowerCase() === "other" && (
+				{value.toString().toLowerCase() === "other" && isOtherSelected && (
 					<View
 						style={{
 							backgroundColor: "white",
 							overflow: "hidden",
-							display: isOtherSelected ? "flex" : "none",
+							display: "flex",
 							paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
 						}}
 					>
@@ -200,6 +197,11 @@ export default function QuestionRadioImage({
 							style={{
 								fontSize: GeneralStyle.kid.field.fontSize,
 								paddingVertical: GeneralStyle.kid.field.paddingVertical,
+							}}
+							onLayout={(event) => {
+								if (autofocusOtherField) {
+									otherInputRef?.current?.focus();
+								}
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}
