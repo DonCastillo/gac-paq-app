@@ -6,7 +6,7 @@ import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label";
 import RadioOption from "components/adults/subcomponents/RadioOption";
 
-interface QuestionSliderPropsInterface {
+interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
 	selectedValue: number | PhraseLabel.DontKnow;
 	maxValue?: number;
@@ -16,12 +16,18 @@ export default function QuestionSlider({
 	onChange,
 	selectedValue,
 	maxValue,
-}: QuestionSliderPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, phrases } = settingCtx.settingState;
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState<number | PhraseLabel.DontKnow>(selectedValue ?? 0);
 	const [maxVal, setMaxVal] = useState<number>(maxValue ?? 10);
+
+	useEffect(() => {
+		if (selectedValue === -1) {
+			changeHandler(0);
+		}
+	});
 
 	useEffect(() => {
 		if (value !== selectedValue) {
@@ -65,6 +71,7 @@ export default function QuestionSlider({
 				step={1}
 				value={setSliderValue(value)}
 				onValueChange={changeHandler}
+				onSlidingStart={changeHandler}
 				minimumTrackTintColor={isColor200(value)}
 				maximumTrackTintColor={isColor100(value)}
 				trackStyle={[styles.trackStyle, !isNumber(value) && styles.trackStyleUnselected]}
