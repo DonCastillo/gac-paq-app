@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { SettingContext } from "store/settings";
 import { G } from "react-native-svg";
 
@@ -10,6 +10,8 @@ interface RadioOptionPropsInterface {
 	image?: any;
 	onPress: (value: string | null) => void;
 	selected: boolean;
+	isOtherSelected?: boolean;
+	autofocusOtherField?: boolean;
 }
 
 export default function RadioOption({
@@ -18,47 +20,19 @@ export default function RadioOption({
 	image,
 	onPress,
 	selected = false,
+	isOtherSelected = false,
+	autofocusOtherField = false,
 }: RadioOptionPropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { color100 } = settingCtx.settingState.colorTheme;
-	const [optionValue, setOptionValue] = useState<string>(value);
-	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const otherInputRef = useRef<TextInput>(null);
-
-	useEffect(() => {
-		if (optionValue !== value) {
-			setOptionValue(value);
-		}
-	}, [value]);
-
-	useEffect(() => {
-		setIsOtherSelected(selected && optionValue?.toLowerCase() === "other");
-	}, [selected, optionValue]);
-
-	function pressHandler(): void {
-		if (selected) {
-			onPress(null);
-		} else {
-			onPress(optionValue);
-		}
-
-		console.log("optionValue: ", optionValue);
-		// automatically focus on other input field if "other" is selected
-		if (optionValue?.toString().toLowerCase() === "other") {
-			setIsOtherSelected(true);
-			// console.log("otherInputRef: ", otherInputRef);
-			otherInputRef?.current?.focus();
-		} else {
-			setIsOtherSelected(false);
-		}
-	}
 
 	return (
 		<View style={{ marginBottom: 0 }}>
 			{/* Option Container */}
 			<Pressable
 				style={styles.container}
-				onPress={pressHandler}
+				onPress={() => onPress(value)}
 			>
 				<View
 					style={[
@@ -87,11 +61,11 @@ export default function RadioOption({
 			</Pressable>
 
 			{/* Other Field */}
-			{optionValue.toString().toLowerCase() === "other" && (
+			{value.toString().toLowerCase() === "other" && isOtherSelected && (
 				<View
 					style={{
 						overflow: "hidden",
-						display: selected ? "flex" : "none",
+						display: "flex",
 						paddingHorizontal: GeneralStyle.adult.field.paddingHorizontal,
 						borderWidth: GeneralStyle.adult.field.borderWidth,
 						borderRadius: GeneralStyle.adult.field.borderRadius,
@@ -107,6 +81,11 @@ export default function RadioOption({
 							width: "100%",
 							alignItems: "center",
 							justifyContent: "center",
+						}}
+						onLayout={(event) => {
+							if (autofocusOtherField) {
+								otherInputRef?.current?.focus();
+							}
 						}}
 						autoCapitalize="none"
 						autoCorrect={false}

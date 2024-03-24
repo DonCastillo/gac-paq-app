@@ -2,7 +2,7 @@ import { FlatList } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { SettingContext } from "store/settings";
-import CheckboxOption from "./subcomponents/CheckboxOption";
+import CheckboxOption from "components/adults/subcomponents/CheckboxOption";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -45,7 +45,7 @@ export default function QuestionCheckbox({
 	}
 
 	function arrayHasOther(arr: string[]): boolean {
-		return arr.map((item) => item.toLowerCase()).includes("other");
+		return arr.map((item) => item.toString().toLowerCase()).includes("other");
 	}
 
 	function pressHandler(value: string | null): void {
