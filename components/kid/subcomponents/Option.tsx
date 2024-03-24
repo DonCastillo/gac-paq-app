@@ -50,9 +50,7 @@ export default function Option({
 							borderBottomRightRadius: 0,
 						},
 					]}
-					onPress={() => {
-						selectHandler(value);
-					}}
+					onPress={() => selectHandler(value)}
 				>
 					<Text
 						style={{

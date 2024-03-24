@@ -1,5 +1,5 @@
 import { FlatList } from "react-native";
-import RadioOption from "components/adults/item/RadioOption";
+import RadioOption from "components/adults/subcomponents/RadioOption";
 import React, { useContext, useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { SettingContext } from "store/settings";

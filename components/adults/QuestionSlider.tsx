@@ -4,7 +4,7 @@ import { DefaultStyle, GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label";
-import RadioOption from "components/adults/item/RadioOption";
+import RadioOption from "components/adults/subcomponents/RadioOption";
 
 interface QuestionSliderPropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;

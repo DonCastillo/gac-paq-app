@@ -25,6 +25,7 @@ import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionImage";
 import QuestionTextarea from "components/adults/QuestionTextarea";
+import QuestionCheckbox from "components/adults/QuestionCheckbox";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -144,6 +145,17 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	if (questionType === QuestionType.QuestionRadio) {
 		questionComponent = (
 			<QuestionRadio
+				key={currentPageNumber}
+				selectedValue={selectedValue}
+				options={optionText(translatedPage?.choices)}
+				onSelect={(value: string) => {
+					changeHandler(value);
+				}}
+			/>
+		);
+	} else if (questionType === QuestionType.QuestionCheckbox) {
+		questionComponent = (
+			<QuestionCheckbox
 				key={currentPageNumber}
 				selectedValue={selectedValue}
 				options={optionText(translatedPage?.choices)}

@@ -16,7 +16,7 @@ import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type { Svg } from "react-native-svg";
 import { getOptionImage } from "utils/background";
 import { horizontalScale, verticalScale } from "utils/responsive";
-import RadioOption from "./item/RadioOption";
+import RadioOption from "./subcomponents/RadioOption";
 import type Mode from "constants/mode";
 import { hasOtherOption } from "utils/options";
 
