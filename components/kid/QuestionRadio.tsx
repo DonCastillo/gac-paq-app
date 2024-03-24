@@ -6,7 +6,7 @@ import type { OptionInterface } from "utils/options";
 import { horizontalScale } from "utils/responsive";
 import Option from "./subcomponents/Option";
 
-interface QuestionRadioPropsInterface {
+interface PropsInterface {
 	options: OptionInterface[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
@@ -16,7 +16,7 @@ export default function QuestionRadio({
 	options,
 	onChange,
 	selectedValue,
-}: QuestionRadioPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;

@@ -1,4 +1,4 @@
-import { View, StyleSheet, FlatList, SafeAreaView, Keyboard } from "react-native";
+import { View, StyleSheet, FlatList, SafeAreaView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
@@ -23,6 +23,11 @@ export default function QuestionCheckbox({
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
+
+	useState(() => {
+		setAutoFocusOtherField(false);
+	});
 
 	useEffect(() => {
 		if (JSON.stringify(selected) !== JSON.stringify(selectedValue)) {
@@ -30,21 +35,28 @@ export default function QuestionCheckbox({
 		}
 	}, [currentPage, selectedValue]);
 
+	useEffect(() => {
+		if (arrayHasOther(selected)) {
+			setIsOtherSelected(true);
+		} else {
+			setIsOtherSelected(false);
+		}
+	}, [selected]);
+
 	function initializeSelectedValue(): string[] {
 		return selectedValue === "" || selectedValue === null ? [] : selectedValue.split(SEPARATOR);
 	}
 
 	function arrayHasOther(arr: string[]): boolean {
-		return arr.map((item) => item.toLowerCase()).includes("other");
+		return arr.map((item) => item.toString().toLowerCase()).includes("other");
 	}
 
 	function selectHandler(value: string): void {
-		if (selected !== null) {
-			if (selected.includes(value)) {
-				setSelected((s) => s.filter((item) => item !== value));
-			} else {
-				setSelected((s) => [...s, value]);
-			}
+		if (value === "" || value === null || value === undefined) return;
+
+		// activate other field if "other" is selected
+		if (value.toString().toLowerCase() === "other") {
+			setAutoFocusOtherField(true);
 		}
 
 		const tempSelectedValue = initializeSelectedValue();
@@ -52,13 +64,6 @@ export default function QuestionCheckbox({
 			onChange(tempSelectedValue.filter((item) => item !== value).join(SEPARATOR));
 		} else {
 			onChange([...tempSelectedValue, value].join(SEPARATOR));
-		}
-
-		// automatically focus on other input field if "other" is selected
-		if (value?.toString().toLowerCase() === "other" && !arrayHasOther(selected)) {
-			setIsOtherSelected(true);
-		} else {
-			setIsOtherSelected(false);
 		}
 	}
 
@@ -75,7 +80,7 @@ export default function QuestionCheckbox({
 					bounces={false}
 					numColumns={numColumn}
 					key={enableColumnWrap.toString()}
-					data={[...options, ...options, { text: "Other", value: "Other" }]}
+					data={[...options]}
 					contentContainerStyle={{ paddingBottom: 20 }}
 					renderItem={({ item }) => {
 						return (
@@ -87,6 +92,7 @@ export default function QuestionCheckbox({
 								color={color100}
 								width={adjustWidth}
 								isOtherSelected={isOtherSelected}
+								autofocusOtherField={autofocusOtherField}
 							/>
 						);
 					}}
