@@ -1,4 +1,4 @@
-import { Pressable, SafeAreaView, StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Icon } from "@rneui/themed";
 import React, { useContext, useState, useEffect } from "react";
 import { SettingContext } from "store/settings";
@@ -56,11 +56,6 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 	},
 	safearea: {
-		// position: "absolute",
-		// top: 0,
-		// left: 0,
-		// right: 0,
-		// zIndex: 99,
 	},
 	icon: {},
 	button: {
