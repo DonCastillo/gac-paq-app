@@ -17,7 +17,7 @@ import PhraseLabel from "constants/phrase_label";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/subcomponents/Toolbar";
-import ProgressBar from "components/kid/subcomponents/ProgressBar";
+import ProgressBar from "components/generic/ProgressBar";
 
 export default function LanguageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

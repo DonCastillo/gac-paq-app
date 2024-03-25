@@ -9,7 +9,7 @@ import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
 import { ResponseContext } from "store/responses";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import { optionText } from "utils/options";
@@ -23,6 +23,7 @@ import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
 import QuestionTitle from "components/generic/QuestionTitle";
+import ProgressBar from "components/generic/ProgressBar";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -30,7 +31,8 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device, sectionTotalPages } =
+		settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -123,6 +125,14 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				key={currentPageNumber}
 			/>
 			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+					}
+					filledColor={"#FFF"}
+					unfilledColor={"#d6d4d2" + "A6"}
+				/>
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>

@@ -20,7 +20,7 @@ import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/subcomponents/Toolbar";
-import ProgressBar from "components/kid/subcomponents/ProgressBar";
+import ProgressBar from "components/generic/ProgressBar";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);

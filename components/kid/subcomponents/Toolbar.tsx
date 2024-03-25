@@ -55,8 +55,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		flexDirection: "row",
 	},
-	safearea: {
-	},
+	safearea: {},
 	icon: {},
 	button: {
 		paddingHorizontal: 20,

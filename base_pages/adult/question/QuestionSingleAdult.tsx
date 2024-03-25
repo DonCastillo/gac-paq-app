@@ -10,7 +10,7 @@ import QuestionType from "constants/question_type";
 import { ResponseContext } from "store/responses";
 import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import { optionText } from "utils/options";
@@ -26,6 +26,7 @@ import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionImage";
 import QuestionTextarea from "components/adults/QuestionTextarea";
 import QuestionCheckbox from "components/adults/QuestionCheckbox";
+import ProgressBar from "components/generic/ProgressBar";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -33,7 +34,8 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { mode, language, currentPage, currentPageNumber, sectionTitles } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, sectionTitles, sectionTotalPages } =
+		settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	const questionLabel = translateQuestionLabel(
@@ -227,6 +229,16 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
+				{!isKeyboardOpen && (
+					<ProgressBar
+						currentSectionPage={currentPage.sectionPageNumber}
+						sectionPageTotal={
+							currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+						}
+						filledColor={"#FFF"}
+						unfilledColor={"#d6d4d2" + "A6"}
+					/>
+				)}
 				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>

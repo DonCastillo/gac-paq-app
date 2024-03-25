@@ -18,15 +18,17 @@ import PhraseLabel from "constants/phrase_label";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import QuestionTitle from "components/generic/QuestionTitle";
+import ProgressBar from "components/generic/ProgressBar";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device, sectionTotalPages } =
+		settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -124,6 +126,14 @@ export default function GenericLanguage(): React.ReactElement {
 				key={currentPageNumber}
 			/>
 			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+					}
+					filledColor={"#FFF"}
+					unfilledColor={"#d6d4d2" + "A6"}
+				/>
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>

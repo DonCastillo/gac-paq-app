@@ -12,7 +12,7 @@ import { getIntroductoryBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ScrollContainer from "components/ScrollContainer";
-import ProgressBar from "components/kid/subcomponents/ProgressBar";
+import ProgressBar from "components/generic/ProgressBar";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);

@@ -13,7 +13,7 @@ import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { optionRegion, optionText } from "utils/options";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import { QuestionContext } from "store/questions";
 import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -21,6 +21,7 @@ import Mode from "constants/mode";
 import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
+import ProgressBar from "components/generic/ProgressBar";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -29,7 +30,8 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device, sectionTotalPages } =
+		settingCtx.settingState;
 	const regionsOptions = questionCtx.questionState.regionOption;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -170,6 +172,14 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+					}
+					filledColor={"#FFF"}
+					unfilledColor={"#d6d4d2" + "A6"}
+				/>
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>

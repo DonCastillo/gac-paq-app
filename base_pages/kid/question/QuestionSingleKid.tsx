@@ -27,7 +27,7 @@ import Toolbar from "components/kid/subcomponents/Toolbar";
 import QuestionSatisfactionImage from "components/kid/QuestionSatisfactionImage";
 import QuestionTextarea from "components/kid/QuestionTextarea";
 import QuestionCheckbox from "components/kid/QuestionCheckbox";
-import ProgressBar from "components/kid/subcomponents/ProgressBar";
+import ProgressBar from "components/generic/ProgressBar";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
