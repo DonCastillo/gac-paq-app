@@ -5,7 +5,7 @@ import DropDownSelector from "components/DropDownPicker";
 import { QuestionContext } from "store/questions";
 import { optionLanguage } from "utils/options";
 
-interface QuestionSelectLanguagePropsInterface {
+interface PropsInterface {
 	onChange: (value: string) => void;
 	selectedValue: string | null;
 }
@@ -13,7 +13,7 @@ interface QuestionSelectLanguagePropsInterface {
 export default function QuestionSelectLanguage({
 	selectedValue,
 	onChange,
-}: QuestionSelectLanguagePropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const questionCtx = useContext(QuestionContext);
 	const options: LanguageInterface[] = questionCtx.questionState.languageOption;
 	const itemsRaw: QuestionRadioItemInterface[] = optionLanguage(options);

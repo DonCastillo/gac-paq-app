@@ -16,16 +16,17 @@ import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
-import Toolbar from "components/kid/Toolbar";
+import Toolbar from "components/kid/subcomponents/Toolbar";
+import ProgressBar from "components/kid/subcomponents/ProgressBar";
 
 export default function LanguageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
+	const { mode, language, currentPage, currentPageNumber, colorTheme, sectionTotalPages, device } =
 		settingCtx.settingState;
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -115,6 +116,14 @@ export default function LanguageKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+					}
+					filledColor={color100}
+					unfilledColor={color200 + "4D"}
+				/>
 				<Toolbar />
 				<TopMain>
 					<View

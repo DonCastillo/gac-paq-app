@@ -19,7 +19,8 @@ import Mode from "constants/mode";
 import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
-import Toolbar from "components/kid/Toolbar";
+import Toolbar from "components/kid/subcomponents/Toolbar";
+import ProgressBar from "components/kid/subcomponents/ProgressBar";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -29,9 +30,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
+	const { mode, language, currentPage, currentPageNumber, colorTheme, device, sectionTotalPages } =
 		settingCtx.settingState;
-	const { color200 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -171,6 +172,14 @@ export default function QuestionSingleKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+					}
+					filledColor={color100}
+					unfilledColor={color200 + "4D"}
+				/>
 				<Toolbar />
 				<TopMain>
 					<View

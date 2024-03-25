@@ -10,16 +10,18 @@ import Navigation from "components/Navigation";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
-import Toolbar from "components/kid/Toolbar";
+import Toolbar from "components/kid/subcomponents/Toolbar";
 import ScrollContainer from "components/ScrollContainer";
+import ProgressBar from "components/kid/subcomponents/ProgressBar";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber, sectionTotalPages, device } =
+		settingCtx.settingState;
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
 	// set background screen dynamically
@@ -53,7 +55,16 @@ export default function PageKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+					}
+					filledColor={color100}
+					unfilledColor={color200 + "4D"}
+				/>
 				<Toolbar />
+
 				<CenterMain>
 					<ScrollContainer>
 						<Heading

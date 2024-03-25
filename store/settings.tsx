@@ -106,6 +106,7 @@ const INITIAL_STATE = {
 	buttons: defaultButton,
 	phrases: defaultPhrase,
 	sectionTitles: [],
+	sectionTotalPages: {},
 	totalPage: null,
 	colorTheme: {
 		color100:
@@ -150,6 +151,7 @@ export const SettingContext = createContext({
 	translatePhrases: (obj: phraseInterface) => {},
 	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
 	setSectionTitles: (sectionTitles: string[]) => {},
+	setSectionTotalPages: (sectionNumber: number, totalPages: number) => {},
 });
 
 function settingReducer(state: any, action: any): any {
@@ -265,6 +267,14 @@ function settingReducer(state: any, action: any): any {
 				...state,
 				sectionTitles: action.payload,
 			};
+		case "SET_SECTION_TOTAL_PAGES":
+			return {
+				...state,
+				sectionTotalPages: {
+					...state.sectionTotalPages,
+					[action.payload.sectionNumber]: action.payload.totalPages,
+				},
+			};
 		case "REMOVE_EXTRO_PAGES": {
 			const pagesWithoutExtros = state.pages.filter((page: any) => {
 				return page.section !== SectionType.Extro;
@@ -288,34 +298,50 @@ function settingReducer(state: any, action: any): any {
 			const lastPage = state.pages[numberOfPages - 1];
 			let lastPageNumber = lastPage.pageNumber;
 			const lastSectionNumber = lastPage.sectionNumber;
+			const nextSectionNumber = lastSectionNumber + 1;
+			let sectionPageNumber = 0;
 			const newExtroPages = action.payload.map((page: rawPageInterface, index: number) => {
+				sectionPageNumber = ++index;
 				return {
 					pageNumber: ++lastPageNumber,
 					page,
 					screen: page.type,
 					section: SectionType.Extro,
-					sectionNumber: lastSectionNumber + 1,
-					sectionPageNumber: ++index,
+					sectionNumber: nextSectionNumber,
+					sectionPageNumber,
 				};
 			});
-			return { ...state, pages: [...state.pages, ...newExtroPages] };
+
+			return {
+				...state,
+				sectionTotalPages: { ...state.sectionTotalPages, [nextSectionNumber]: sectionPageNumber },
+				pages: [...state.pages, ...newExtroPages],
+			};
 		}
 		case "ADD_FEEDBACK_PAGES": {
 			const numberOfPages = state.pages.length;
 			const lastPage = state.pages[numberOfPages - 1];
 			let lastPageNumber = lastPage.pageNumber;
 			const lastSectionNumber = lastPage.sectionNumber;
+			const nextSectionNumber = lastSectionNumber + 1;
+			let sectionPageNumber = 0;
+
 			const newFeedbackPages = action.payload.map((page: rawPageInterface, index: number) => {
+				sectionPageNumber = ++index;
 				return {
 					pageNumber: ++lastPageNumber,
 					page,
 					screen: page.type,
 					section: SectionType.Feedback,
-					sectionNumber: lastSectionNumber + 1,
-					sectionPageNumber: ++index,
+					sectionNumber: nextSectionNumber,
+					sectionPageNumber,
 				};
 			});
-			return { ...state, pages: [...state.pages, ...newFeedbackPages] };
+			return {
+				...state,
+				sectionTotalPages: { ...state.sectionTotalPages, [nextSectionNumber]: sectionPageNumber },
+				pages: [...state.pages, ...newFeedbackPages],
+			};
 		}
 		default:
 			return state;
@@ -452,6 +478,13 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function setSectionTotalPages(sectionNumber: number, totalPages: number): void {
+		dispatch({
+			type: "SET_SECTION_TOTAL_PAGES",
+			payload: { sectionNumber, totalPages },
+		});
+	}
+
 	const value: any = {
 		settingState,
 		setMode,
@@ -469,6 +502,7 @@ export default function SettingContextProvider({
 		translatePhrases,
 		addExtroFeedbackPages,
 		setSectionTitles,
+		setSectionTotalPages,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

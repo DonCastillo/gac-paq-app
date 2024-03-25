@@ -98,23 +98,29 @@ function AppWrapper(): React.ReactElement {
 
 		// load introductory pages
 		console.log("load intro pages...");
-		introductoryPages.forEach((page, sectionIndex) => {
+		introductoryPages.forEach((page: any, sectionIndex: number) => {
+			const sectionPageNumber = ++sectionIndex;
+
+			// add page to section
 			settingCtx.addPage({
 				pageNumber: pageNumber++,
 				page,
 				screen: page.type,
 				sectionNumber,
 				section: SectionType.Intro,
-				sectionPageNumber: ++sectionIndex,
+				sectionPageNumber,
 			});
+
+			// add section total pages
+			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
 		});
 
 		// load section question pages
 		console.log("load question and section pages...");
-		questionPages.forEach((page) => {
+		questionPages.forEach((page: any) => {
+			// add page to section
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
 				questionCtx.addSectionPage(page);
-				// console.log("page: ", page);
 				sectionPageNumber = 1;
 				sectionNumber++;
 			}
@@ -125,40 +131,58 @@ function AppWrapper(): React.ReactElement {
 				screen: page.type,
 				section: SectionType.Question,
 				sectionNumber,
-				sectionPageNumber: sectionPageNumber++,
+				sectionPageNumber,
 			});
+
+			// add section total pages
+			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			sectionPageNumber++;
 		});
 
 		// load default extro pages (kids)
 		sectionNumber++;
-		kidExtroPages.forEach((page, sectionIndex) => {
+		kidExtroPages.forEach((page: any, sectionIndex: number) => {
+			const sectionPageNumber = ++sectionIndex;
+
+			// add page to section
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
 				questionCtx.addSectionPage(page);
 			}
+
 			settingCtx.addPage({
 				pageNumber: pageNumber++,
 				page,
 				screen: page.type,
 				section: SectionType.Extro,
 				sectionNumber,
-				sectionPageNumber: ++sectionIndex,
+				sectionPageNumber,
 			});
+
+			// add section total pages
+			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
 		});
 
 		// load feedback pages
 		sectionNumber++;
-		feedbackExtroPages.forEach((page, sectionIndex) => {
+		feedbackExtroPages.forEach((page: any, sectionIndex: number) => {
+			const sectionPageNumber = ++sectionIndex;
+
+			// add page to section
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
 				questionCtx.addSectionPage(page);
 			}
+
 			settingCtx.addPage({
 				pageNumber: pageNumber++,
 				page,
 				screen: page.type,
 				section: SectionType.Feedback,
 				sectionNumber,
-				sectionPageNumber: ++sectionIndex,
+				sectionPageNumber,
 			});
+
+			// add section total pages
+			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
 		});
 	}, []);
 
