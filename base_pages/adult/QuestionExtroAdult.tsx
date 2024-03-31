@@ -18,7 +18,7 @@ import { useNavigation } from "@react-navigation/native";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
-import ProgressBar from "components/generic/ProgressBar";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -33,7 +33,6 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		directusAccessToken,
 		directusBaseEndpoint,
 		device,
-		sectionTotalPages,
 	} = settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
@@ -101,14 +100,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 					opacity={0.2}
 				/>
 				<Main>
-					<ProgressBar
-						currentSectionPage={currentPage.sectionPageNumber}
-						sectionPageTotal={
-							currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
-						}
-						filledColor={"#FFF"}
-						unfilledColor={"#d6d4d2" + "A6"}
-					/>
+					<ProgressBarAdult />
 					<Toolbar />
 					<CenterMain>
 						<Heading

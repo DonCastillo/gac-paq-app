@@ -12,12 +12,11 @@ import Toolbar from "components/adults/subcomponents/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { GeneralStyle } from "styles/general";
 import ScrollContainer from "components/ScrollContainer";
-import ProgressBar from "components/generic/ProgressBar";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 
 export default function PageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber, sectionTotalPages } =
-		settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	const { color100 } = colorTheme;
@@ -51,14 +50,7 @@ export default function PageAdult(): React.ReactElement {
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />
 			<Main>
-				<ProgressBar
-					currentSectionPage={currentPage.sectionPageNumber}
-					sectionPageTotal={
-						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
-					}
-					filledColor={"#FFF"}
-					unfilledColor={"#d6d4d2" + "A6"}
-				/>
+				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>

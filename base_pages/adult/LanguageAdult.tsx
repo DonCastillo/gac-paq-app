@@ -18,15 +18,14 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
-import ProgressBar from "components/generic/ProgressBar";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 
 export default function LanguageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { mode, language, currentPage, currentPageNumber, colorTheme, sectionTotalPages } =
-		settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -110,14 +109,7 @@ export default function LanguageAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
-				<ProgressBar
-					currentSectionPage={currentPage.sectionPageNumber}
-					sectionPageTotal={
-						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
-					}
-					filledColor={"#FFF"}
-					unfilledColor={"#d6d4d2" + "A6"}
-				/>
+				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>

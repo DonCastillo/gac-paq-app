@@ -26,7 +26,7 @@ import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionImage";
 import QuestionTextarea from "components/adults/QuestionTextarea";
 import QuestionCheckbox from "components/adults/QuestionCheckbox";
-import ProgressBar from "components/generic/ProgressBar";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -34,8 +34,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { mode, language, currentPage, currentPageNumber, sectionTitles, sectionTotalPages } =
-		settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	const questionLabel = translateQuestionLabel(
@@ -229,16 +228,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
-				{!isKeyboardOpen && (
-					<ProgressBar
-						currentSectionPage={currentPage.sectionPageNumber}
-						sectionPageTotal={
-							currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
-						}
-						filledColor={"#FFF"}
-						unfilledColor={"#d6d4d2" + "A6"}
-					/>
-				)}
+				{!isKeyboardOpen && <ProgressBarAdult />}
 				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>

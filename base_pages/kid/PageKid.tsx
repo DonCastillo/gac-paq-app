@@ -12,16 +12,15 @@ import { getIntroductoryBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ScrollContainer from "components/ScrollContainer";
-import ProgressBar from "components/generic/ProgressBar";
+import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 
 export default function PageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber, sectionTotalPages, device } =
-		settingCtx.settingState;
+	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
-	const { color100, color200 } = colorTheme;
+	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
 	// set background screen dynamically
@@ -55,14 +54,7 @@ export default function PageKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
-				<ProgressBar
-					currentSectionPage={currentPage.sectionPageNumber}
-					sectionPageTotal={
-						currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
-					}
-					filledColor={color100}
-					unfilledColor={color200 + "4D"}
-				/>
+				<ProgressBarKid />
 				<Toolbar />
 
 				<CenterMain>
