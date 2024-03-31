@@ -18,9 +18,10 @@ export default function ProgressBar({
 }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
+
 	if (currentSectionPage !== null && sectionPageTotal !== null) {
 		return (
-			<View style={styles.container}>
+			<View style={[styles.container, { paddingHorizontal: 20 }]}>
 				<Progress.Bar
 					style={{ width: "100%" }}
 					progress={currentSectionPage / sectionPageTotal}
@@ -42,5 +43,6 @@ export default function ProgressBar({
 const styles = StyleSheet.create({
 	container: {
 		marginVertical: 5,
+		width: "100%",
 	},
 });

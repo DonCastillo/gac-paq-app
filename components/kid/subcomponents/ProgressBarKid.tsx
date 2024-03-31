@@ -12,8 +12,8 @@ export default function ProgressBarKid(): React.ReactElement {
 			sectionPageTotal={
 				currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
 			}
-			filledColor={color100}
-			unfilledColor={color200 + "4D"}
+			filledColor={color200}
+			unfilledColor={color100 + "26"}
 		/>
 	);
 }
