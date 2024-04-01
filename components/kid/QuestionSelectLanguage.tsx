@@ -8,11 +8,15 @@ import { optionLanguage } from "utils/options";
 interface PropsInterface {
 	onChange: (value: string) => void;
 	selectedValue: string | null;
+	dropdownOpen: boolean;
+	setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function QuestionSelectLanguage({
 	selectedValue,
 	onChange,
+	dropdownOpen,
+	setDropdownOpen,
 }: PropsInterface): React.ReactElement {
 	const questionCtx = useContext(QuestionContext);
 	const options: LanguageInterface[] = questionCtx.questionState.languageOption;
@@ -23,6 +27,8 @@ export default function QuestionSelectLanguage({
 			options={[...itemsRaw]}
 			selectedValue={selectedValue}
 			onSelect={onChange}
+			dropdownOpen={dropdownOpen}
+			setDropdownOpen={setDropdownOpen}
 		/>
 	);
 }

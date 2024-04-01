@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Keyboard, Text } from "react-native";
+import { StyleSheet, View, Keyboard } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -8,7 +8,6 @@ import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
-import QuestionSelect from "components/kid/QuestionSelect";
 import { ResponseContext } from "store/responses";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
@@ -161,16 +160,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setSelectedValue(value);
 	}
 
-	if (questionType === QuestionType.QuestionDropdown) {
-		questionComponent = (
-			<QuestionSelect
-				key={currentPageNumber}
-				options={translatedPage?.choices}
-				onChange={changeHandler}
-				selectedValue={selectedValue}
-			/>
-		);
-	} else if (questionType === QuestionType.QuestionCheckbox) {
+	if (questionType === QuestionType.QuestionCheckbox) {
 		questionComponent = (
 			<QuestionCheckbox
 				key={currentPageNumber}

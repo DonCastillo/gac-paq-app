@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
 import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -24,6 +24,7 @@ export default function LanguageKid(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
 	const { color100 } = colorTheme;
@@ -52,6 +53,7 @@ export default function LanguageKid(): React.ReactElement {
 	// set background screen dynamically
 	useEffect(() => {
 		setBackground(getIntroductoryBackground(currentPageNumber));
+		setDropdownOpen(false);
 	}, [currentPageNumber]);
 
 	// translate phrases and buttons
@@ -113,43 +115,48 @@ export default function LanguageKid(): React.ReactElement {
 	}
 
 	return (
-		<View style={styles.container}>
-			{background !== null && background}
-			<Main>
-				<ProgressBarKid />
-				<Toolbar />
-				<TopMain>
-					<View
-						style={[
-							GeneralStyle.kid.introQuestionContainer,
-							{
-								marginVertical: verticalScale(40, device.screenHeight),
-								...styles.mainContainer,
-							},
-						]}
-					>
-						<QuestionLabel textStyle={{ ...GeneralStyle.kid.introQuestionLabel }}>
-							{questionLabel}
-						</QuestionLabel>
+		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					<ProgressBarKid />
+					<Toolbar />
+					<TopMain>
+						<View
+							style={[
+								GeneralStyle.kid.introQuestionContainer,
+								{
+									marginVertical: verticalScale(40, device.screenHeight),
+									...styles.mainContainer,
+								},
+							]}
+						>
+							<QuestionLabel textStyle={{ ...GeneralStyle.kid.introQuestionLabel }}>
+								{questionLabel}
+							</QuestionLabel>
 
-						<View style={styles.questionComponentContainer}>
-							<QuestionSelectLanguage
-								onChange={changeHandler}
-								selectedValue={language}
-							/>
+							<View style={styles.questionComponentContainer}>
+								<QuestionSelectLanguage
+									key={currentPageNumber}
+									onChange={changeHandler}
+									selectedValue={language}
+									dropdownOpen={dropdownOpen}
+									setDropdownOpen={setDropdownOpen}
+								/>
+							</View>
 						</View>
-					</View>
-				</TopMain>
-				<Navigation>
-					{selectedValue !== null && (
-						<BackAndNextNav
-							colorTheme={color100}
-							onNext={() => settingCtx.nextPage()}
-						/>
-					)}
-				</Navigation>
-			</Main>
-		</View>
+					</TopMain>
+					<Navigation>
+						{selectedValue !== null && (
+							<BackAndNextNav
+								colorTheme={color100}
+								onNext={() => settingCtx.nextPage()}
+							/>
+						)}
+					</Navigation>
+				</Main>
+			</View>
+		</TouchableWithoutFeedback>
 	);
 }
 

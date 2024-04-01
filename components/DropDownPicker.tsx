@@ -1,15 +1,17 @@
 import { StyleSheet } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 
-interface DropDownSelectorPropsInterface {
+interface PropsInterface {
 	options: QuestionRadioItemInterface[];
 	selectedValue: string | null;
 	onSelect: (value: string) => void;
+	dropdownOpen: boolean;
+	setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 	dropdownMinHeight?: number;
 }
 
@@ -17,12 +19,13 @@ export default function DropDownSelector({
 	options,
 	selectedValue,
 	onSelect,
+	dropdownOpen,
+	setDropdownOpen,
 	dropdownMinHeight = 280,
-}: DropDownSelectorPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPageNumber, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;
-	const [open, setOpen] = useState<boolean>(false);
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<QuestionRadioItemInterface[]>(options);
 
@@ -44,10 +47,10 @@ export default function DropDownSelector({
 				style={[styles.container, { borderColor: color100 }]}
 				showTickIcon={true}
 				placeholder="Select"
-				open={open}
+				open={dropdownOpen}
 				value={value}
 				items={items}
-				setOpen={setOpen}
+				setOpen={setDropdownOpen}
 				setValue={setValue}
 				setItems={setItems}
 				listItemLabelStyle={styles.listItemLabelStyle}
@@ -66,6 +69,7 @@ export default function DropDownSelector({
 				textStyle={{
 					...GeneralStyle.kid.dropdownPickerText,
 				}}
+				onClose={() => console.log("Closed ....")}
 			/>
 		</>
 	);
@@ -78,6 +82,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		...GeneralStyle.kid.dropdownPickerContainer,
+		backgroundColor: "pink",
 	},
 	listItemContainerStyle: {
 		...GeneralStyle.kid.dropdownPickerListItemContainer,

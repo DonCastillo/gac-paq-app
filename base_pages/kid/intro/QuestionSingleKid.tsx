@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -26,6 +26,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
@@ -45,6 +46,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	// set background screen dynamically
 	useEffect(() => {
 		setBackground(getIntroductoryBackground(currentPageNumber));
+		setDropdownOpen(false);
 	}, [currentPageNumber]);
 
 	// set button component dynamically
@@ -145,6 +147,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 				options={translatedPage?.choices}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
+				dropdownOpen={dropdownOpen}
+				setDropdownOpen={setDropdownOpen}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionRegion) {
@@ -153,6 +157,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 				key={currentPageNumber}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
+				dropdownOpen={dropdownOpen}
+				setDropdownOpen={setDropdownOpen}
 			/>
 		);
 	} else if (questionType === QuestionType.QuestionInput) {
@@ -169,30 +175,32 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}
 
 	return (
-		<View style={styles.container}>
-			{background !== null && background}
-			<Main>
-				<ProgressBarKid />
-				<Toolbar />
-				<TopMain>
-					<View
-						style={[
-							GeneralStyle.kid.introQuestionContainer,
-							{
-								marginVertical: verticalScale(40, device.screenHeight),
-								...styles.mainContainer,
-							},
-						]}
-					>
-						<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
-							{questionLabel}
-						</QuestionLabel>
-						<View style={styles.questionComponentContainer}>{questionComponent}</View>
-					</View>
-				</TopMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-			</Main>
-		</View>
+		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					<ProgressBarKid />
+					<Toolbar />
+					<TopMain>
+						<View
+							style={[
+								GeneralStyle.kid.introQuestionContainer,
+								{
+									marginVertical: verticalScale(40, device.screenHeight),
+									...styles.mainContainer,
+								},
+							]}
+						>
+							<QuestionLabel textStyle={GeneralStyle.kid.introQuestionLabel}>
+								{questionLabel}
+							</QuestionLabel>
+							<View style={styles.questionComponentContainer}>{questionComponent}</View>
+						</View>
+					</TopMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		</TouchableWithoutFeedback>
 	);
 }
 
