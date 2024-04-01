@@ -5,6 +5,8 @@ export default interface QuestionSliderInterface {
 	question_slider_id?: string | number;
 	heading: string;
 	label: string;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
 	max_value: number;
 	kid_label: string;
 	adult_label: string;

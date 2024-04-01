@@ -9,7 +9,8 @@ export default interface QuestionTextareaInterface {
 	label: string;
 	kid_label: string;
 	adult_label: string;
-	sublabel?: string | null;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
 	placeholder?: string;
 	languages_id?: LanguageInterface | null;
 	images?: ImageDeviceInterface;

@@ -9,7 +9,8 @@ export default interface QuestionInputInterface {
 	label: string;
 	kid_label: string;
 	adult_label: string;
-	sublabel?: string | null;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
 	placeholder: string;
 	type: "text" | "number";
 	languages_id?: LanguageInterface | null;

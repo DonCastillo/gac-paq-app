@@ -10,6 +10,8 @@ export default interface QuestionCheckboxInterface {
 	question_checkbox_id?: string | number;
 	heading: string;
 	label: string;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
 	adult_label: string;
 	kid_label: string;
 	choices: Choice[];

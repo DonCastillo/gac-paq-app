@@ -65,11 +65,9 @@ export default function DropDownSelector({
 				]}
 				listItemContainerStyle={[styles.listItemContainerStyle]}
 				onChangeValue={(value: string) => onSelect(value)}
-				// onSelectItem={(item) => onSelect(item.value ?? null)}
 				textStyle={{
 					...GeneralStyle.kid.dropdownPickerText,
 				}}
-				onClose={() => console.log("Closed ....")}
 			/>
 		</>
 	);
