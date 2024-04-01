@@ -21,11 +21,11 @@ export default function QuestionLabel({
 			<Text
 				style={[
 					styles.text,
-					textStyle,
 					{
 						fontSize: device.isTablet ? 23 : 20,
 						lineHeight: device.isTablet ? 30 : 25,
 					},
+					textStyle,
 				]}
 			>
 				{children}
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
 	container: {
 		width: "100%",
 		flexDirection: "row",
-		marginBottom: 20,
 	},
 	text: {
 		textAlign: "left",

@@ -13,6 +13,8 @@ export default interface QuestionDropdownInterface {
 	label: string;
 	kid_label: string;
 	adult_label: string;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
 	choices: Choice[];
 	languages_id?: LanguageInterface | null;
 	images?: ImageDeviceInterface;

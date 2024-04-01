@@ -24,6 +24,7 @@ import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -36,6 +37,11 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
@@ -132,13 +138,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>
-						{questionType === QuestionType.QuestionInput &&
-							Object.prototype.hasOwnProperty.call(translatedPage, "sublabel") === true &&
-							translatedPage?.sublabel !== undefined &&
-							translatedPage?.sublabel !== null &&
-							translatedPage?.sublabel !== "" && (
-								<Text style={styles.sublabel}>{translatedPage?.sublabel}</Text>
-							)}
+						<QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

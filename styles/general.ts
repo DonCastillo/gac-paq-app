@@ -88,7 +88,7 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		introQuestionLabel: {
-			fontSize: 25,
+			// fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
 			color: DARK_COLOR,
 		},
@@ -96,7 +96,7 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		questionQuestionLabel: {
-			fontSize: 23,
+			// fontSize: 23,
 			fontFamily: Font.PoppinsBold,
 			color: DARK_COLOR,
 		},
@@ -229,7 +229,6 @@ const GeneralStyle = {
 			shadowRadius: 5,
 		},
 		questionLabel: {
-			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
 			color: DARK_COLOR,
 		},

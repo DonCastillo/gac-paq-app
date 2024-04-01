@@ -22,6 +22,7 @@ import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -36,6 +37,11 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
@@ -179,6 +185,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
 							{questionLabel}
 						</QuestionLabel>
+						<QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

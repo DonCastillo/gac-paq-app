@@ -21,6 +21,7 @@ import { getImageBackground } from "utils/background";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -32,6 +33,11 @@ export default function GenericLanguage(): React.ReactElement {
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 
@@ -137,6 +143,7 @@ export default function GenericLanguage(): React.ReactElement {
 						>
 							{questionLabel}
 						</QuestionLabel>
+						<QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}
 							selectedValue={selectedValue}

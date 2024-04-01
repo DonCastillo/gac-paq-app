@@ -27,6 +27,7 @@ import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionIma
 import QuestionTextarea from "components/adults/QuestionTextarea";
 import QuestionCheckbox from "components/adults/QuestionCheckbox";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -40,6 +41,11 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 	let questionComponent = <></>;
@@ -238,6 +244,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 								{questionLabel}
 							</QuestionLabel>
 						)}
+						{!isKeyboardOpen && <QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>}
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

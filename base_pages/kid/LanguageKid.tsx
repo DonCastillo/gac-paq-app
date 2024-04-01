@@ -18,6 +18,7 @@ import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function LanguageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -32,6 +33,11 @@ export default function LanguageKid(): React.ReactElement {
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 	const {
@@ -134,7 +140,7 @@ export default function LanguageKid(): React.ReactElement {
 							<QuestionLabel textStyle={{ ...GeneralStyle.kid.introQuestionLabel }}>
 								{questionLabel}
 							</QuestionLabel>
-
+							<QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>
 							<View style={styles.questionComponentContainer}>
 								<QuestionSelectLanguage
 									key={currentPageNumber}
