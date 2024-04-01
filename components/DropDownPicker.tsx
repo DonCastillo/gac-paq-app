@@ -82,7 +82,6 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		...GeneralStyle.kid.dropdownPickerContainer,
-		backgroundColor: "pink",
 	},
 	listItemContainerStyle: {
 		...GeneralStyle.kid.dropdownPickerListItemContainer,
