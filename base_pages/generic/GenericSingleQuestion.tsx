@@ -135,10 +135,15 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
+						<QuestionLabel
+							textStyle={GeneralStyle.adult.questionLabel}
+							customStyle={{ marginBottom: 7 }}
+						>
 							{questionLabel}
 						</QuestionLabel>
-						<QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>
+						<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+							{questionSubLabel}
+						</QuestionSubLabel>
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

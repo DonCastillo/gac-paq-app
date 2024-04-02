@@ -5,9 +5,15 @@ import { GeneralStyle } from "styles/general";
 
 interface PropsInterface {
 	children: React.ReactNode;
+	customStyle?: object;
+	textStyle?: object;
 }
 
-export default function QuestionSubLabel({ children }: PropsInterface): React.ReactElement {
+export default function QuestionSubLabel({
+	children,
+	customStyle = {},
+	textStyle = {},
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 
@@ -18,11 +24,9 @@ export default function QuestionSubLabel({ children }: PropsInterface): React.Re
 					...GeneralStyle.adult.questionLabel,
 					fontSize: device.isTablet ? 17 : 14,
 					lineHeight: device.isTablet ? 21 : 18,
+					...textStyle,
 				}}
-				customStyle={{
-					marginTop: 10,
-					marginBottom: 20,
-				}}
+				customStyle={{ ...customStyle, backgroundColor: "lightblue" }}
 			>
 				{children}
 			</QuestionLabel>

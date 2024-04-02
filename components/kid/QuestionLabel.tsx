@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
 import { StyleSheet, View, Text } from "react-native";
-import PropTypes from "prop-types";
 import { SettingContext } from "store/settings";
 
-QuestionLabel.propTypes = {
-	children: PropTypes.node,
-	customStyle: PropTypes.object,
-	textStyle: PropTypes.object,
-};
+interface PropsInterface {
+	children: React.ReactNode;
+	customStyle?: object;
+	textStyle?: object;
+}
 
 export default function QuestionLabel({
 	children,
 	customStyle = {},
 	textStyle = {},
-}): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 	return (
@@ -38,6 +37,7 @@ const styles = StyleSheet.create({
 	container: {
 		width: "100%",
 		flexDirection: "row",
+		backgroundColor: "orange",
 	},
 	text: {
 		textAlign: "left",
