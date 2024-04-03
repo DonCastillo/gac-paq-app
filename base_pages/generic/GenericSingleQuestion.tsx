@@ -33,6 +33,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const questionCtx = useContext(QuestionContext);
 
 	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { isKeyboardOpen } = device;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -130,20 +131,25 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				key={currentPageNumber}
 			/>
 			<Main>
-				<ProgressBarAdult />
-				<Toolbar />
+				{!isKeyboardOpen && <ProgressBarAdult />}
+				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel
-							textStyle={GeneralStyle.adult.questionLabel}
-							customStyle={{ marginBottom: 7 }}
-						>
-							{questionLabel}
-						</QuestionLabel>
-						<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
-							{questionSubLabel}
-						</QuestionSubLabel>
+						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
+						<View style={{ marginBottom: 13 }}>
+							<QuestionLabel
+								textStyle={GeneralStyle.adult.questionLabel}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{questionLabel}
+							</QuestionLabel>
+							{!isKeyboardOpen && (
+								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							)}
+						</View>
+
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

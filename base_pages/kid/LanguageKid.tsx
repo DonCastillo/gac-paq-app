@@ -137,10 +137,18 @@ export default function LanguageKid(): React.ReactElement {
 								},
 							]}
 						>
-							<QuestionLabel textStyle={{ ...GeneralStyle.kid.introQuestionLabel }}>
-								{questionLabel}
-							</QuestionLabel>
-							<QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>
+							<View style={{ marginBottom: 9 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.kid.introQuestionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
+
 							<View style={styles.questionComponentContainer}>
 								<QuestionSelectLanguage
 									key={currentPageNumber}

@@ -21,12 +21,14 @@ export default function QuestionSubLabel({
 		return (
 			<QuestionLabel
 				textStyle={{
-					...GeneralStyle.adult.questionLabel,
-					fontSize: device.isTablet ? 17 : 14,
-					lineHeight: device.isTablet ? 21 : 18,
+					...GeneralStyle.adult.questionSubLabel,
+					fontSize: device.isTablet ? 17 : 13,
+					lineHeight: device.isTablet ? 21 : 17,
 					...textStyle,
 				}}
-				customStyle={{ ...customStyle, backgroundColor: "lightblue" }}
+				customStyle={{
+					...customStyle,
+				}}
 			>
 				{children}
 			</QuestionLabel>

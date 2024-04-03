@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Keyboard } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -31,11 +31,11 @@ import QuestionSubLabel from "components/generic/QuestionSubLabel";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const [isKeyboardOpen, setIsKeyboardOpen] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { isKeyboardOpen } = device;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	const questionLabel = translateQuestionLabel(
@@ -49,30 +49,6 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		mode,
 	);
 	let questionComponent = <></>;
-
-	useEffect(() => {
-		const keyboardDidShow = Keyboard.addListener("keyboardDidShow", () => {
-			setIsKeyboardOpen(true);
-		});
-		const keyboardDidHide = Keyboard.addListener("keyboardDidHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillHide = Keyboard.addListener("keyboardWillHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillShow = Keyboard.addListener("keyboardWillShow", () => {
-			setIsKeyboardOpen(true);
-		});
-
-		return () => {
-			keyboardDidShow.remove();
-			keyboardDidHide.remove();
-			keyboardWillHide.remove();
-			keyboardWillShow.remove();
-		};
-	}, []);
 
 	// fetch response for this question
 	useEffect(() => {
@@ -240,11 +216,18 @@ export default function QuestionSingleAdult(): React.ReactElement {
 					<QuestionContainer>
 						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
 						{!isKeyboardOpen && (
-							<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
-								{questionLabel}
-							</QuestionLabel>
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.adult.questionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
 						)}
-						{!isKeyboardOpen && <QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>}
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

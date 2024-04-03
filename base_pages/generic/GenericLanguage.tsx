@@ -136,15 +136,17 @@ export default function GenericLanguage(): React.ReactElement {
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel
-							textStyle={GeneralStyle.adult.questionLabel}
-							customStyle={{ marginBottom: 7 }}
-						>
-							{questionLabel}
-						</QuestionLabel>
-						<QuestionSubLabel customStyle={{ marginBottom: 2 }}>
-							{questionSubLabel}
-						</QuestionSubLabel>
+						<View style={{ marginBottom: 13 }}>
+							<QuestionLabel
+								textStyle={GeneralStyle.adult.questionLabel}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{questionLabel}
+							</QuestionLabel>
+							<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+								{questionSubLabel}
+							</QuestionSubLabel>
+						</View>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}
 							selectedValue={selectedValue}

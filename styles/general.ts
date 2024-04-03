@@ -204,7 +204,7 @@ const GeneralStyle = {
 			marginBottom: 20,
 		},
 		questionComponentContainer: {
-			marginTop: 25,
+			// marginTop: 10,
 			flex: 1,
 			minWidth: "100%",
 		},
@@ -230,6 +230,10 @@ const GeneralStyle = {
 		},
 		questionLabel: {
 			fontFamily: Font.PoppinsMedium,
+			color: DARK_COLOR,
+		},
+		questionSubLabel: {
+			fontFamily: Font.PoppinsRegular,
 			color: DARK_COLOR,
 		},
 		radioContainer: {

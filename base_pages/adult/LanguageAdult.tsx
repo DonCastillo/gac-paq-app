@@ -120,10 +120,17 @@ export default function LanguageAdult(): React.ReactElement {
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
-							{questionLabel}
-						</QuestionLabel>
-						<QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>
+						<View style={{ marginBottom: 13 }}>
+							<QuestionLabel
+								textStyle={GeneralStyle.adult.questionLabel}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{questionLabel}
+							</QuestionLabel>
+							<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+								{questionSubLabel}
+							</QuestionSubLabel>
+						</View>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}
 							selectedValue={selectedValue}

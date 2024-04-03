@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { SettingContext } from "store/settings";
 
 interface ScrollContainerPropsInterface {
@@ -27,9 +27,10 @@ export default function ScrollContainer({
 				flexGrow: device.platform === "android" ? 1 : 0,
 				justifyContent: "center",
 				alignItems: "center",
+				backgroundColor: "pink",
 			}}
 		>
-			{children}
+			<View onStartShouldSetResponder={() => true}>{children}</View>
 		</ScrollView>
 	);
 }

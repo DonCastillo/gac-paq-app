@@ -33,12 +33,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const [isKeyboardOpen, setIsKeyboardOpen] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
+	const { isKeyboardOpen } = device;
 	const { color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -53,30 +53,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
-
-	useEffect(() => {
-		const keyboardDidShow = Keyboard.addListener("keyboardDidShow", () => {
-			setIsKeyboardOpen(true);
-		});
-		const keyboardDidHide = Keyboard.addListener("keyboardDidHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillHide = Keyboard.addListener("keyboardWillHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillShow = Keyboard.addListener("keyboardWillShow", () => {
-			setIsKeyboardOpen(true);
-		});
-
-		return () => {
-			keyboardDidShow.remove();
-			keyboardDidHide.remove();
-			keyboardWillHide.remove();
-			keyboardWillShow.remove();
-		};
-	}, []);
 
 	// fetch response for this question
 	useEffect(() => {
@@ -262,16 +238,20 @@ export default function QuestionSingleKid(): React.ReactElement {
 					>
 						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
 						{!isKeyboardOpen && (
-							<QuestionLabel
-								textStyle={GeneralStyle.kid.questionQuestionLabel}
-								customStyle={{
-									marginBottom: 0,
-								}}
-							>
-								{questionLabel}
-							</QuestionLabel>
+							<View style={{ marginBottom: 9 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.kid.questionQuestionLabel}
+									customStyle={{
+										marginBottom: 7,
+									}}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
 						)}
-						{!isKeyboardOpen && <QuestionSubLabel>{questionSubLabel}</QuestionSubLabel>}
 						<View style={styles.questionComponentContainer}>{questionComponent}</View>
 					</View>
 				</TopMain>
