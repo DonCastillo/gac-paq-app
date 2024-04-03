@@ -91,6 +91,7 @@ const DEFAULT_DEVICE: DeviceInterface = {
 	orientation: OrientationType.Portrait,
 	isTablet: false,
 	platform: "",
+	isKeyboardOpen: false,
 };
 const TOTAL_COLORS = 8;
 
@@ -147,6 +148,7 @@ export const SettingContext = createContext({
 	initializeNextPage: () => {},
 	initializeCurrentPage: () => {},
 	setCurrentPage: (pageNumber: number) => {},
+	setKeyboardState: (isKeyboardOpen: boolean) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
 	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
@@ -273,6 +275,14 @@ function settingReducer(state: any, action: any): any {
 				sectionTotalPages: {
 					...state.sectionTotalPages,
 					[action.payload.sectionNumber]: action.payload.totalPages,
+				},
+			};
+		case "SET_KEYBOARD_STATE":
+			return {
+				...state,
+				device: {
+					...state.device,
+					isKeyboardOpen: action.payload,
 				},
 			};
 		case "REMOVE_EXTRO_PAGES": {
@@ -485,6 +495,13 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function setKeyboardState(isKeyboardOpen: boolean): void {
+		dispatch({
+			type: "SET_KEYBOARD_STATE",
+			payload: isKeyboardOpen,
+		});
+	}
+
 	const value: any = {
 		settingState,
 		setMode,
@@ -503,6 +520,7 @@ export default function SettingContextProvider({
 		addExtroFeedbackPages,
 		setSectionTitles,
 		setSectionTotalPages,
+		setKeyboardState,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

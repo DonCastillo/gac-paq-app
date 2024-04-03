@@ -49,6 +49,7 @@ function getDeviceInfo(orientationInfo): DeviceInterface {
 		orientation,
 		platform: getOS(),
 		isTablet: isTab(),
+		isKeyboardOpen: false,
 	};
 }
 
