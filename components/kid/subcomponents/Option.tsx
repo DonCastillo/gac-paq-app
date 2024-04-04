@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { Pressable, TextInput, View, Text } from "react-native";
+import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
+import { moderateScale } from "utils/responsive";
 
 interface PropsInterface {
 	text: string;
@@ -23,7 +25,9 @@ export default function Option({
 	isOtherSelected = false,
 	autofocusOtherField = false,
 }: PropsInterface): React.ReactElement {
+	const settingCtx = useContext(SettingContext);
 	const otherInputRef = useRef<TextInput>(null);
+	const { device } = settingCtx.settingState;
 
 	return (
 		<View>
@@ -42,8 +46,8 @@ export default function Option({
 				<Pressable
 					style={[
 						{
-							paddingHorizontal: GeneralStyle.kid.optionContainer.paddingHorizontal,
-							paddingVertical: GeneralStyle.kid.optionContainer.paddingVertical,
+							paddingVertical: moderateScale(8, device.screenHeight),
+							paddingHorizontal: moderateScale(20, device.screenWidth),
 							backgroundColor: selected ? color : "#fff",
 						},
 						isOtherSelected && {
@@ -56,10 +60,19 @@ export default function Option({
 					<Text
 						style={{
 							...GeneralStyle.kid.optionText,
+							fontSize: moderateScale(
+								device.isTablet ? 14 : 14,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							lineHeight: moderateScale(
+								device.isTablet ? 18 : 18,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
 							color: selected ? "#fff" : "#000",
 						}}
 					>
 						{text}
+						{/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. */}
 					</Text>
 				</Pressable>
 				{/* Other Field */}

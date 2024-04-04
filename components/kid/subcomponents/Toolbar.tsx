@@ -3,6 +3,7 @@ import { Icon } from "@rneui/themed";
 import React, { useContext, useState, useEffect } from "react";
 import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
+import { moderateScale } from "utils/responsive";
 
 const ICON_SIZE = 30;
 
@@ -29,9 +30,21 @@ export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactEl
 	}
 
 	return (
-		<View style={styles.container}>
+		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
 			<Text
-				style={[GeneralStyle.kid.topHeaderSectionTitle, { fontSize: device.isTablet ? 20 : 18 }]}
+				style={[
+					GeneralStyle.kid.topHeaderSectionTitle,
+					{
+						fontSize: moderateScale(
+							device.isTablet ? 13 : 13,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
+						lineHeight: moderateScale(
+							device.isTablet ? 16 : 16,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
+					},
+				]}
 			>
 				{title}
 			</Text>

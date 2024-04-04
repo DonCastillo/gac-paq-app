@@ -13,7 +13,7 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
-import { horizontalScale } from "utils/responsive";
+import { horizontalScale, moderateScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
 import { hasOtherOption } from "utils/options";
 
@@ -87,7 +87,17 @@ export default function QuestionRadioImage({
 			} else {
 				ImageComponent = (
 					<Image
-						style={GeneralStyle.general.inlineOptionImage}
+						style={{
+							...GeneralStyle.general.inlineOptionImage,
+							maxWidth: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							minHeight: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
 						source={image}
 						resizeMode="cover"
 					/>
@@ -101,7 +111,21 @@ export default function QuestionRadioImage({
 			if (options.length <= 5) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
-				return <ImageComponent style={{ ...GeneralStyle.general.inlineOptionImage }} />;
+				return (
+					<ImageComponent
+						style={{
+							...GeneralStyle.general.inlineOptionImage,
+							maxWidth: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							minHeight: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					/>
+				);
 			}
 		}
 	}
@@ -173,7 +197,15 @@ export default function QuestionRadioImage({
 						style={[
 							styles.listOptionLabelText,
 							{
-								fontSize: GeneralStyle.kid.optionImageLabelText.fontSize,
+								// fontSize: GeneralStyle.kid.optionImageLabelText.fontSize,
+								fontSize: moderateScale(
+									device.isTablet ? 14 : 14,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 18 : 18,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
 							},
 							selected === value ? { color: "#fff" } : { color: "#000" },
 						]}
