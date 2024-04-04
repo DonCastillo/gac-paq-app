@@ -28,18 +28,10 @@ export default function GenericPage(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>
-						<Heading
-							customStyle={{
-								...GeneralStyle.adult.pageHeading,
-							}}
-						>
+						<Heading customStyle={GeneralStyle.adult.pageHeading}>
 							{translatedPage?.heading}
 						</Heading>
-						<Paragraph
-							customStyle={{
-								...GeneralStyle.adult.pageParagraph,
-							}}
-						>
+						<Paragraph customStyle={GeneralStyle.adult.pageParagraph}>
 							{translatedPage?.description}
 						</Paragraph>
 					</ScrollContainer>

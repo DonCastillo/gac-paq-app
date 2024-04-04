@@ -27,7 +27,6 @@ export default function ScrollContainer({
 				flexGrow: device.platform === "android" ? 1 : 0,
 				justifyContent: "center",
 				alignItems: "center",
-				backgroundColor: "pink",
 			}}
 		>
 			<View onStartShouldSetResponder={() => true}>{children}</View>

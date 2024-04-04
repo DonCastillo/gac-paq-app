@@ -2,6 +2,7 @@ import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-nativ
 import { GeneralStyle } from "styles/general";
 import React, { useContext, useRef } from "react";
 import { SettingContext } from "store/settings";
+import { moderateScale } from "utils/responsive";
 
 interface PropsInterface {
 	label: string;
@@ -23,7 +24,8 @@ export default function CheckboxOption({
 	autofocusOtherField = false,
 }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { color100 } = settingCtx.settingState.colorTheme;
+	const { colorTheme, device } = settingCtx.settingState;
+	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 
 	return (
@@ -45,18 +47,56 @@ export default function CheckboxOption({
 				<View style={styles.labelContainer}>
 					{/* Icon */}
 					{image !== undefined && image !== null && typeof image === "function" && (
-						<View style={styles.svgImage}>{image()}</View>
+						<View
+							style={{
+								...styles.svgImage,
+								maxWidth: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								maxHeight: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
+						>
+							{image()}
+						</View>
 					)}
 					{image !== undefined && image !== null && typeof image === "number" && (
 						<Image
 							source={image}
-							style={styles.nonSvgImage}
+							style={{
+								...styles.nonSvgImage,
+								maxWidth: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								minHeight: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
 							resizeMode="contain"
 						/>
 					)}
 
 					{/* Label */}
-					<Text style={styles.labelText}>{label}</Text>
+					<Text
+						style={{
+							...styles.labelText,
+							fontSize: moderateScale(
+								device.isTablet ? 14 : 16,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							lineHeight: moderateScale(
+								device.isTablet ? 18 : 20,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					>
+						{label}
+					</Text>
 				</View>
 			</Pressable>
 

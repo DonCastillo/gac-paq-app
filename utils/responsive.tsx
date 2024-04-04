@@ -75,13 +75,29 @@ function verticalScale(size: number, height: number = BASE_HEIGHT): number {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
 	}
 }
-function moderateScale(size: number, width: number = BASE_HEIGHT, factor: number = 0.5): number {
+function moderateScale(
+	size: number,
+	width: number = BASE_WIDTH,
+	minSize: number = 16,
+	maxSize: number = 60,
+): number {
+	const factor = 0.5;
 	const newSize = size + (horizontalScale(size, width) - size) * factor;
+	let finalSize = newSize;
 	if (getOS() === "ios") {
-		return Math.round(PixelRatio.roundToNearestPixel(newSize));
+		finalSize = Math.round(PixelRatio.roundToNearestPixel(newSize));
 	} else {
-		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
+		finalSize = Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
 	}
+
+	return finalSize;
+	// if (finalSize < minSize) {
+	// 	return minSize;
+	// } else if (finalSize > maxSize) {
+	// 	return maxSize;
+	// } else {
+	// 	return finalSize;
+	// }
 }
 
 // function isScreenHeight770(): boolean {

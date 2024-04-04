@@ -61,6 +61,7 @@ const GeneralStyle = {
 			maxWidth: 50,
 			marginRight: 15,
 			aspectRatio: 1,
+			// backgroundColor: "purple",
 		},
 	},
 	kid: {
@@ -257,6 +258,7 @@ const GeneralStyle = {
 			maxWidth: "100%",
 			flexWrap: "wrap",
 			height: "100%",
+			// backgroundColor: "pink",
 			// flexShrink: 1,
 			// flex: 1,
 			// flexGrow: 1,

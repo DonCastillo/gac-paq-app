@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { StyleSheet, View } from "react-native";
 import * as Progress from "react-native-progress";
 import { SettingContext } from "store/settings";
+import { moderateScale } from "utils/responsive";
 
 interface PropsInterface {
 	currentSectionPage: number | null;
@@ -26,7 +27,10 @@ export default function ProgressBar({
 					style={{ width: "100%" }}
 					progress={currentSectionPage / sectionPageTotal}
 					width={null}
-					height={device.isTablet ? 10 : 7}
+					height={moderateScale(
+						device.isTablet ? 4 : 4,
+						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					)}
 					color={filledColor}
 					unfilledColor={unfilledColor}
 					borderWidth={0}
