@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
+import { Keyboard, StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -181,7 +181,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}
 
 	return (
-		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
+		<TouchableWithoutFeedback
+			onPress={() => {
+				setDropdownOpen(false);
+				Keyboard.dismiss();
+			}}
+		>
 			<View style={styles.container}>
 				{background !== null && background}
 				<Main>
