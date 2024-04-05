@@ -4,7 +4,7 @@ import DropDownPicker from "react-native-dropdown-picker";
 import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { moderateScale, verticalScale } from "utils/responsive";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -12,7 +12,7 @@ interface PropsInterface {
 	onSelect: (value: string) => void;
 	dropdownOpen: boolean;
 	setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
-	dropdownMinHeight?: number;
+	dropdownMinHeight?: number | "100%";
 }
 
 export default function DropDownSelector({
@@ -21,7 +21,7 @@ export default function DropDownSelector({
 	onSelect,
 	dropdownOpen,
 	setDropdownOpen,
-	dropdownMinHeight = 280,
+	dropdownMinHeight = "100%",
 }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPageNumber, device } = settingCtx.settingState;
@@ -55,18 +55,42 @@ export default function DropDownSelector({
 				setItems={setItems}
 				listItemLabelStyle={styles.listItemLabelStyle}
 				labelStyle={styles.labelStyle}
-				iconContainerStyle={styles.iconContainer}
+				iconContainerStyle={{
+					...styles.iconContainer,
+					height: moderateScale(
+						device.isTablet ? 25 : 30,
+						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					),
+					width: moderateScale(
+						device.isTablet ? 25 : 30,
+						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					),
+				}}
 				dropDownContainerStyle={[
 					styles.dropdownContainer,
 					{
 						borderColor: color100,
-						minHeight: verticalScale(dropdownMinHeight, device.screenHeight) ?? 280,
+						minHeight: dropdownMinHeight,
 					},
 				]}
-				listItemContainerStyle={[styles.listItemContainerStyle]}
+				listItemContainerStyle={{
+					...styles.listItemContainerStyle,
+					height: moderateScale(
+						device.isTablet ? 35 : 45,
+						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					),
+				}}
 				onChangeValue={(value: string) => onSelect(value)}
 				textStyle={{
 					...GeneralStyle.kid.dropdownPickerText,
+					fontSize: moderateScale(
+						device.isTablet ? 12 : 16,
+						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					),
+					lineHeight: moderateScale(
+						device.isTablet ? 16 : 20,
+						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					),
 				}}
 			/>
 		</>

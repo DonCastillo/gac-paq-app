@@ -25,11 +25,11 @@ export default function QuestionLabel({
 						// fontSize: device.isTablet ? 23 : 20,
 						// lineHeight: device.isTablet ? 30 : 25,
 						fontSize: moderateScale(
-							device.isTablet ? 15 : 15,
+							device.isTablet ? 15 : 19,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 						),
 						lineHeight: moderateScale(
-							device.isTablet ? 20 : 20,
+							device.isTablet ? 20 : 24,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 						),
 						// backgroundColor: "blue"

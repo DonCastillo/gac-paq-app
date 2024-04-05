@@ -48,8 +48,8 @@ function optionLanguage(options: LanguageInterface[]): QuestionRadioItemInterfac
 				value: lang_code,
 				icon: () => (
 					<FlagComponent
-						height={50}
-						width={50}
+						height={"100%"}
+						width={"100%"}
 						padding={0}
 						margin={0}
 					/>

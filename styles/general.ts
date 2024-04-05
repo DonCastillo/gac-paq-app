@@ -115,21 +115,21 @@ const GeneralStyle = {
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
 		},
 		dropdownPickerListItemContainer: {
-			height: 60,
+			// height: 60,
 		},
 		dropdownPickerListContainer: {
 			borderWidth: DEFAULT_BORDER_WIDTH,
 		},
 		dropdownPickerListLabel: {
-			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		dropdownPickerListLabelChosen: {
-			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		dropdownPickerText: {
-			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		pageHeading: {

@@ -61,18 +61,17 @@ export default function Option({
 						style={{
 							...GeneralStyle.kid.optionText,
 							fontSize: moderateScale(
-								device.isTablet ? 14 : 14,
+								device.isTablet ? 14 : 16,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							lineHeight: moderateScale(
-								device.isTablet ? 18 : 18,
+								device.isTablet ? 18 : 20,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							color: selected ? "#fff" : "#000",
 						}}
 					>
 						{text}
-						{/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. */}
 					</Text>
 				</Pressable>
 				{/* Other Field */}
