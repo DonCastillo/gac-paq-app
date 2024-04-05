@@ -5,7 +5,7 @@ import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
 import { getOptionImage } from "utils/background";
-import { horizontalScale, verticalScale } from "utils/responsive";
+import { horizontalScale, moderateScale, verticalScale } from "utils/responsive";
 import RadioOption from "./subcomponents/RadioOption";
 import { hasOtherOption } from "utils/options";
 
@@ -119,7 +119,21 @@ export default function QuestionRadioImage({
 					{renderImage(imageByMode)}
 				</View>
 				<View style={styles.blockOptionLabelContainer}>
-					<Text style={styles.blockOptionLabelText}>{text}</Text>
+					<Text
+						style={{
+							...styles.blockOptionLabelText,
+							fontSize: moderateScale(
+								device.isTablet ? 10 : 12,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							lineHeight: moderateScale(
+								device.isTablet ? 13 : 15,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					>
+						{text}
+					</Text>
 				</View>
 			</Pressable>
 		);

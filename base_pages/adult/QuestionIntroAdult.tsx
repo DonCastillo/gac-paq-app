@@ -11,6 +11,7 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
 import Toolbar from "components/adults/subcomponents/Toolbar";
+import { moderateScale } from "utils/responsive";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -55,13 +56,27 @@ export default function QuestionIntroAdult(): React.ReactElement {
 					{
 						backgroundColor: color200,
 						maxWidth: device.isTablet ? 400 : "100%",
-						minHeight: device.isTablet ? "100%" : 250,
+						minHeight: device.isTablet ? "100%" : 220,
 					},
 				]}
 			>
 				<ScrollView>
 					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
-					<Text style={styles.headingText}>{translatedPage?.heading}</Text>
+					<Text
+						style={{
+							...styles.headingText,
+							fontSize: moderateScale(
+								device.isTablet ? 20 : 27,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							lineHeight: moderateScale(
+								device.isTablet ? 25 : 32,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					>
+						{translatedPage?.heading}
+					</Text>
 				</ScrollView>
 			</View>
 			<Main>

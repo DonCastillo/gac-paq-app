@@ -152,7 +152,21 @@ export default function QuestionRadioImage({
 					{renderImage(imageByMode)}
 				</View>
 				<View style={styles.blockOptionLabelContainer}>
-					<Text style={styles.blockOptionLabelText}>{text}</Text>
+					<Text
+						style={{
+							...styles.blockOptionLabelText,
+							fontSize: moderateScale(
+								device.isTablet ? 12 : 14,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							lineHeight: moderateScale(
+								device.isTablet ? 17 : 19,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					>
+						{text}
+					</Text>
 				</View>
 			</Pressable>
 		);

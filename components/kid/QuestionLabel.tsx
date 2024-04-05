@@ -22,8 +22,6 @@ export default function QuestionLabel({
 				style={[
 					styles.text,
 					{
-						// fontSize: device.isTablet ? 23 : 20,
-						// lineHeight: device.isTablet ? 30 : 25,
 						fontSize: moderateScale(
 							device.isTablet ? 15 : 19,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
@@ -32,7 +30,6 @@ export default function QuestionLabel({
 							device.isTablet ? 20 : 24,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 						),
-						// backgroundColor: "blue"
 					},
 					textStyle,
 				]}

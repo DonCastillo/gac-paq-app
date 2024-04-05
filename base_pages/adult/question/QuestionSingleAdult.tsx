@@ -28,6 +28,7 @@ import QuestionTextarea from "components/adults/QuestionTextarea";
 import QuestionCheckbox from "components/adults/QuestionCheckbox";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { moderateScale } from "utils/responsive";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -218,7 +219,17 @@ export default function QuestionSingleAdult(): React.ReactElement {
 						{!isKeyboardOpen && (
 							<View style={{ marginBottom: 13 }}>
 								<QuestionLabel
-									textStyle={GeneralStyle.adult.questionLabel}
+									textStyle={{
+										...GeneralStyle.adult.questionLabel,
+										fontSize: moderateScale(
+											device.isTablet ? 15 : 15,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+										lineHeight: moderateScale(
+											device.isTablet ? 20 : 20,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+									}}
 									customStyle={{ marginBottom: 7 }}
 								>
 									{questionLabel}
