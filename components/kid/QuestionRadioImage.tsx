@@ -15,7 +15,7 @@ import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
 import { horizontalScale, moderateScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
-import { hasOtherOption } from "utils/options";
+import { getUserSpecifiedOther, hasOtherOption, isOtherOption } from "utils/options";
 
 interface PropsInterface {
 	options: any[];
@@ -53,15 +53,16 @@ export default function QuestionRadioImage({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		if (selected?.toString().toLowerCase() === "other") {
+		if (isOtherOption(selected)) {
 			setIsOtherSelected(true);
 		} else {
 			setIsOtherSelected(false);
 		}
 	}, [selected]);
 
+
 	function selectHandler(value: string | null): void {
-		if (value?.toString().toLowerCase() === "other") {
+		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
 
@@ -176,6 +177,9 @@ export default function QuestionRadioImage({
 	function listRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
+		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected))
+		// console.log("value: ", value)
+		// console.log("x: ", x)
 
 		return (
 			<View
@@ -195,14 +199,14 @@ export default function QuestionRadioImage({
 							flexDirection: "row",
 							flexWrap: "nowrap",
 							alignItems: "center",
-							paddingVertical: 4,
-							paddingHorizontal: GeneralStyle.kid.optionContainer.paddingHorizontal,
+							paddingVertical: moderateScale(5, device.screenHeight),
+							paddingHorizontal: moderateScale(20, device.screenWidth),
 						},
 						isOtherSelected && {
 							borderBottomLeftRadius: 0,
 							borderBottomRightRadius: 0,
 						},
-						selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
+						isSelected ? { backgroundColor: color100 } : { backgroundColor: "#fff" }
 					]}
 					onPress={() => selectHandler(value)}
 				>
@@ -221,7 +225,7 @@ export default function QuestionRadioImage({
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
 							},
-							selected === value ? { color: "#fff" } : { color: "#000" },
+							isSelected ? { color: "#fff" } : { color: "#000" },
 						]}
 					>
 						{text}
@@ -229,7 +233,7 @@ export default function QuestionRadioImage({
 				</Pressable>
 
 				{/* Other Field */}
-				{value.toString().toLowerCase() === "other" && isOtherSelected && (
+				{isOtherOption(value) && isOtherSelected && (
 					<View
 						style={{
 							backgroundColor: "white",
@@ -251,7 +255,10 @@ export default function QuestionRadioImage({
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}
-							onChangeText={() => console.log("entering other value")}
+							onChangeText={(value) => {
+								selectHandler(`other (${value})`)
+							}}
+							defaultValue={getUserSpecifiedOther(value, selected)}
 							placeholder="Please Specify"
 						/>
 					</View>

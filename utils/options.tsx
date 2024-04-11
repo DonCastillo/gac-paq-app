@@ -69,4 +69,24 @@ function hasOtherOption(radioImageOptions: QuestionRadioImageChoiceInterface[]):
 	);
 }
 
-export { optionText, optionRegion, optionLanguage, hasOtherOption };
+function isOtherOption(value: string | null): boolean {
+	const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
+	if(value === null) return false;
+	const lowerString = value?.toString().toLowerCase();
+	return lowerString === "other" || HAS_OTHER_REGEX.test(lowerString ?? "");
+}
+
+function getUserSpecifiedOther(value: string | null, selected: string | null): string {
+	console.log(value, selected);
+	const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
+	if(value === null) return "";
+	if(selected === null) return "";
+	if(value === selected) return "";
+	const match = HAS_OTHER_REGEX.exec(selected);
+	console.log(match);
+
+	if(match === null) return "";
+	return match[1];
+	
+}
+export { optionText, optionRegion, optionLanguage, hasOtherOption, isOtherOption, getUserSpecifiedOther };
