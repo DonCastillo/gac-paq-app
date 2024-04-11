@@ -44,7 +44,7 @@ export default function RegularPageScreen(): React.ReactElement {
 
 	return (
 		<KeyboardSafeview>
-			<View style={{ flex: 1 }}>{component}</View>
+			<View style={{ flex: 1, backgroundColor: "white" }}>{component}</View>
 		</KeyboardSafeview>
 	);
 }

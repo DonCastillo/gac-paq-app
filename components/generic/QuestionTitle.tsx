@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import PropTypes from "prop-types";
 import { Text, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
@@ -9,7 +9,7 @@ QuestionTitle.propTypes = {
 	children: PropTypes.node,
 };
 
-export default function QuestionTitle({ children }): React.ReactElement {
+function QuestionTitle({ children }): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 	return (
@@ -32,6 +32,8 @@ export default function QuestionTitle({ children }): React.ReactElement {
 		</View>
 	);
 }
+
+export default memo(QuestionTitle);
 
 const styles = StyleSheet.create({
 	container: {

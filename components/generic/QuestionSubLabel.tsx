@@ -1,5 +1,5 @@
 import QuestionLabel from "components/kid/QuestionLabel";
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive";
@@ -10,7 +10,7 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-export default function QuestionSubLabel({
+function QuestionSubLabel({
 	children,
 	customStyle = {},
 	textStyle = {},
@@ -46,3 +46,5 @@ export default function QuestionSubLabel({
 		return <></>;
 	}
 }
+
+export default memo(QuestionSubLabel);

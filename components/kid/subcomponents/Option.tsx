@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { memo, useContext, useRef } from "react";
 import { Pressable, TextInput, View, Text } from "react-native";
 import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
@@ -15,7 +15,7 @@ interface PropsInterface {
 	autofocusOtherField?: boolean;
 }
 
-export default function Option({
+function Option({
 	text,
 	value,
 	selected,
@@ -108,3 +108,5 @@ export default function Option({
 		</View>
 	);
 }
+
+export default memo(Option);

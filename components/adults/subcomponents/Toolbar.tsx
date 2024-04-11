@@ -1,6 +1,6 @@
 import { Pressable, SafeAreaView, StyleSheet, View, Text } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, memo } from "react";
 import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive";
@@ -11,7 +11,7 @@ interface PropsInterface {
 	sectionTitle?: string;
 }
 
-export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
+function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { currentPageNumber, currentPage, sectionTitles, device } = settingCtx.settingState;
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
@@ -58,6 +58,8 @@ export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactEl
 		</View>
 	);
 }
+
+export default memo(Toolbar);
 
 const styles = StyleSheet.create({
 	container: {

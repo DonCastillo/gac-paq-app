@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { StyleSheet, View } from "react-native";
 import * as Progress from "react-native-progress";
 import { SettingContext } from "store/settings";
@@ -11,7 +11,7 @@ interface PropsInterface {
 	unfilledColor?: string;
 }
 
-export default function ProgressBar({
+function ProgressBar({
 	currentSectionPage,
 	sectionPageTotal,
 	filledColor = "#fff",
@@ -43,6 +43,8 @@ export default function ProgressBar({
 		return <></>;
 	}
 }
+
+export default memo(ProgressBar);
 
 const styles = StyleSheet.create({
 	container: {

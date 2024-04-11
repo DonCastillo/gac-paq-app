@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import React from "react";
+import React, { memo } from "react";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 import { LoopPink } from "components/svgs/kid/doodles";
 
@@ -7,7 +7,7 @@ interface PropsInterface {
 	fillColor: string;
 }
 
-export default function GenericBackgroundLoop({ fillColor }: PropsInterface): React.ReactElement {
+function GenericBackgroundLoop({ fillColor }: PropsInterface): React.ReactElement {
 	return (
 		<AbsoluteFullScreenContainer>
 			<LoopPink
@@ -17,6 +17,8 @@ export default function GenericBackgroundLoop({ fillColor }: PropsInterface): Re
 		</AbsoluteFullScreenContainer>
 	);
 }
+
+export default memo(GenericBackgroundLoop);
 
 const styles = StyleSheet.create({
 	stroke: {

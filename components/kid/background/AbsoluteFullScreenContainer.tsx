@@ -1,13 +1,15 @@
-import React from "react";
+import React, { memo } from "react";
 import { View, StyleSheet } from "react-native";
 
-export default function AbsoluteFullScreenContainer({
+function AbsoluteFullScreenContainer({
 	children,
 }: {
 	children: React.ReactNode;
 }): React.ReactElement {
 	return <View style={styles.container}>{children}</View>;
 }
+
+export default memo(AbsoluteFullScreenContainer);
 
 const styles = StyleSheet.create({
 	container: {

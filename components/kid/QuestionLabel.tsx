@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { SettingContext } from "store/settings";
 import { moderateScale } from "utils/responsive";
@@ -9,7 +9,7 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-export default function QuestionLabel({
+function QuestionLabel({
 	children,
 	customStyle = {},
 	textStyle = {},
@@ -39,6 +39,10 @@ export default function QuestionLabel({
 		</View>
 	);
 }
+
+export default memo(QuestionLabel, (prevProps, nextProps) => {
+	return JSON.stringify(prevProps) === JSON.stringify(nextProps);
+});
 
 const styles = StyleSheet.create({
 	container: {

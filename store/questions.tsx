@@ -114,7 +114,6 @@ function questionReducer(state: any, action: any): any {
 			};
 		}
 		case "ADD_SECTION_PAGE": {
-			console.log("action.payload: ", action.payload);
 			return {
 				...state,
 				sectionPages: [...state.sectionPages, action.payload],
@@ -162,7 +161,6 @@ export default function QuestionContextProvider({
 	}
 
 	function addSectionPage(sectionPage: SectionPayloadInterface): void {
-		// console.log("sectionPage: ", sectionPage)
 		dispatch({
 			type: "ADD_SECTION_PAGE",
 			payload: sectionPage,
