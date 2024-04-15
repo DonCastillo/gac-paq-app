@@ -15,7 +15,12 @@ import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
 import { horizontalScale, moderateScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
-import { getUserSpecifiedOther, hasOtherOption, isOtherOption } from "utils/options";
+import {
+	getUserSpecifiedOther,
+	hasOtherOption,
+	isOtherOption,
+	isOtherWithSpecifiedValue,
+} from "utils/options";
 
 interface PropsInterface {
 	options: any[];
@@ -60,16 +65,47 @@ export default function QuestionRadioImage({
 		}
 	}, [selected]);
 
-
 	function selectHandler(value: string | null): void {
+		if (value === "" || value === null || value === undefined) return;
+
 		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
 
-		if (selectedValue === value) {
-			onChange(null);
+		// check if the other option in the format "other" or "other (xxxxx)" is selected
+		if (isOtherOption(value)) {
+			// if "Other" or "other" is selected
+			if (value.toString().toLowerCase() === "other") {
+				if (isOtherOption(selected)) {
+					// if "Other", "other", "other (xxxx)" is already selected, remove all
+					onChange(null);
+					return;
+				} else {
+					// if not add it
+					onChange(value);
+					return;
+				}
+			}
+
+			// if "other (xxxxx)" is selected
+			if (isOtherWithSpecifiedValue(value)) {
+				const specificValue = getUserSpecifiedOther("", value);
+
+				// if there is a value specified with "other" and it is not empty
+				if (specificValue.trim() !== "") {
+					// add it
+					onChange(value);
+				} else {
+					// add "Other"
+					onChange("Other");
+				}
+			}
 		} else {
-			onChange(value);
+			if (selected === value) {
+				onChange(null);
+			} else {
+				onChange(value);
+			}
 		}
 	}
 
@@ -177,7 +213,7 @@ export default function QuestionRadioImage({
 	function listRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
-		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected))
+		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
 		// console.log("value: ", value)
 		// console.log("x: ", x)
 
@@ -206,7 +242,7 @@ export default function QuestionRadioImage({
 							borderBottomLeftRadius: 0,
 							borderBottomRightRadius: 0,
 						},
-						isSelected ? { backgroundColor: color100 } : { backgroundColor: "#fff" }
+						isSelected ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
 					]}
 					onPress={() => selectHandler(value)}
 				>
@@ -256,7 +292,7 @@ export default function QuestionRadioImage({
 							autoCapitalize="none"
 							autoCorrect={false}
 							onChangeText={(value) => {
-								selectHandler(`other (${value})`)
+								selectHandler(`other (${value})`);
 							}}
 							defaultValue={getUserSpecifiedOther(value, selected)}
 							placeholder="Please Specify"
