@@ -2,6 +2,7 @@ import React, { memo, useContext, useRef } from "react";
 import { Pressable, TextInput, View, Text } from "react-native";
 import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
+import { getUserSpecifiedOther, isOtherOption } from "utils/options";
 import { moderateScale } from "utils/responsive";
 
 interface PropsInterface {
@@ -13,6 +14,7 @@ interface PropsInterface {
 	width?: string | number;
 	isOtherSelected?: boolean;
 	autofocusOtherField?: boolean;
+	defaultOtherInputValue?: string;
 }
 
 function Option({
@@ -24,6 +26,7 @@ function Option({
 	width = "100%",
 	isOtherSelected = false,
 	autofocusOtherField = false,
+	defaultOtherInputValue,
 }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const otherInputRef = useRef<TextInput>(null);
@@ -75,7 +78,7 @@ function Option({
 					</Text>
 				</Pressable>
 				{/* Other Field */}
-				{value.toString().toLowerCase() === "other" && isOtherSelected && (
+				{isOtherOption(value) && isOtherSelected && (
 					<View
 						style={[
 							{
@@ -99,7 +102,10 @@ function Option({
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}
-							onChangeText={() => console.log("entering other value")}
+							onChangeText={(value) => {
+								selectHandler(`other (${value})`);
+							}}
+							defaultValue={defaultOtherInputValue}
 							placeholder="Please Specify"
 						/>
 					</View>

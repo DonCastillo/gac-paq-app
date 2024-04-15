@@ -2,7 +2,12 @@ import { View, StyleSheet, FlatList, SafeAreaView } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
-import type { OptionInterface } from "utils/options";
+import {
+	getUserSpecifiedOther,
+	isOtherOption,
+	isOtherWithSpecifiedValue,
+	type OptionInterface,
+} from "utils/options";
 import { horizontalScale } from "utils/responsive";
 import Option from "./subcomponents/Option";
 
@@ -35,22 +40,54 @@ export default function QuestionRadio({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		if (selected?.toString().toLowerCase() === "other") {
+		if (isOtherOption(selected)) {
 			setIsOtherSelected(true);
 		} else {
 			setIsOtherSelected(false);
 		}
 	}, [selected]);
 
-	function selectHandler(value: string): void {
-		if (value?.toString().toLowerCase() === "other") {
+	function selectHandler(value: string | null): void {
+		if (value === "" || value === null || value === undefined) return;
+
+		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
 
-		if (selectedValue === value) {
-			onChange(null);
+		// check if the other option in the format "other" or "other (xxxxx)" is selected
+		if (isOtherOption(value)) {
+			// if "Other" or "other" is selected
+			if (value.toString().toLowerCase() === "other") {
+				if (isOtherOption(selected)) {
+					// if "Other", "other", "other (xxxx)" is already selected, remove all
+					onChange(null);
+					return;
+				} else {
+					// if not add it
+					onChange(value);
+					return;
+				}
+			}
+
+			// if "other (xxxxx)" is selected
+			if (isOtherWithSpecifiedValue(value)) {
+				const specificValue = getUserSpecifiedOther("", value);
+
+				// if there is a value specified with "other" and it is not empty
+				if (specificValue.trim() !== "") {
+					// add it
+					onChange(value);
+				} else {
+					// add "Other"
+					onChange("Other");
+				}
+			}
 		} else {
-			onChange(value);
+			if (selected === value) {
+				onChange(null);
+			} else {
+				onChange(value);
+			}
 		}
 	}
 
@@ -74,12 +111,15 @@ export default function QuestionRadio({
 							<Option
 								text={item.text}
 								value={item.value}
-								selected={selected === item.value}
+								selected={
+									selected === item.value || (isOtherOption(item.value) && isOtherOption(selected))
+								}
 								selectHandler={selectHandler}
 								color={color100}
 								width={adjustWidth}
 								isOtherSelected={isOtherSelected}
 								autofocusOtherField={autofocusOtherField}
+								defaultOtherInputValue={getUserSpecifiedOther(item.value, selected)}
 							/>
 						);
 					}}
