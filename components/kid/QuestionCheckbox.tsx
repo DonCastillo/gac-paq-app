@@ -126,8 +126,9 @@ export default function QuestionCheckbox({
 								text={item.text}
 								value={item.value}
 								selected={
-									(selected !== null && selected?.includes(item.value)) ||
-									(isOtherOption(item.value) && arrayHasOther(selected))
+									selected !== null &&
+									(selected?.includes(item.value) ||
+										(isOtherOption(item.value) && arrayHasOther(selected)))
 								}
 								selectHandler={selectHandler}
 								color={color100}

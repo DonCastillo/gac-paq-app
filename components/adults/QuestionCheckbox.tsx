@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { SettingContext } from "store/settings";
 import CheckboxOption from "components/adults/subcomponents/CheckboxOption";
+import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue } from "utils/options";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -45,22 +46,54 @@ export default function QuestionCheckbox({
 	}
 
 	function arrayHasOther(arr: string[]): boolean {
-		return arr.map((item) => item.toString().toLowerCase()).includes("other");
+		return arr.some(isOtherOption);
 	}
 
 	function pressHandler(value: string | null): void {
 		if (value === "" || value === null || value === undefined) return;
 
 		// activate other field if "other" is selected
-		if (value.toString().toLowerCase() === "other") {
+		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
 
-		const tempSelectedValue = initializeSelectedValue();
-		if (tempSelectedValue.includes(value)) {
-			onSelect(tempSelectedValue.filter((item) => item !== value).join(SEPARATOR));
+		const existingSelectedValue = initializeSelectedValue();
+
+		// check if the other option in the format "other" or "other (xxxxx)" is selected
+		if (isOtherOption(value)) {
+			// if "Other" or "other" is selected
+			if (value.toString().toLowerCase() === "other") {
+				if (arrayHasOther(existingSelectedValue)) {
+					// if "Other", "other", "other (xxxx)" is already selected, remove all
+					onSelect(existingSelectedValue.filter((item) => !isOtherOption(item)).join(SEPARATOR));
+					return;
+				} else {
+					// if not add it
+					onSelect([...existingSelectedValue, value].join(SEPARATOR));
+					return;
+				}
+			}
+
+			// if "other (xxxxx)" is selected
+			if (isOtherWithSpecifiedValue(value)) {
+				const withoutOther = existingSelectedValue.filter((item) => !isOtherOption(item));
+				const specificValue = getUserSpecifiedOther("", value);
+
+				// if there is a value specified with "other" and it is not empty
+				if (specificValue.trim() !== "") {
+					// add it
+					onSelect([...withoutOther, value].join(SEPARATOR));
+				} else {
+					// add "Other"
+					onSelect([...withoutOther, "Other"].join(SEPARATOR));
+				}
+			}
 		} else {
-			onSelect([...tempSelectedValue, value].join(SEPARATOR));
+			if (existingSelectedValue.includes(value)) {
+				onSelect(existingSelectedValue.filter((item) => item !== value).join(SEPARATOR));
+			} else {
+				onSelect([...existingSelectedValue, value].join(SEPARATOR));
+			}
 		}
 	}
 
@@ -79,7 +112,11 @@ export default function QuestionCheckbox({
 			renderItem={({ item }) => (
 				<CheckboxOption
 					{...item}
-					selected={selected !== null && selected.includes(item.value)}
+					selected={
+						selected !== null &&
+						(selected?.includes(item.value) ||
+							(isOtherOption(item.value) && arrayHasOther(selected)))
+					}
 					onPress={pressHandler}
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}

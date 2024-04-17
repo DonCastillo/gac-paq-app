@@ -3,6 +3,7 @@ import { GeneralStyle } from "styles/general";
 import React, { useContext, useRef } from "react";
 import { SettingContext } from "store/settings";
 import { moderateScale } from "utils/responsive";
+import { isOtherOption } from "utils/options";
 
 interface PropsInterface {
 	label: string;
@@ -12,6 +13,7 @@ interface PropsInterface {
 	selected: boolean;
 	isOtherSelected?: boolean;
 	autofocusOtherField?: boolean;
+	defaultOtherInputValue?: string;
 }
 
 export default function CheckboxOption({
@@ -22,6 +24,7 @@ export default function CheckboxOption({
 	selected = false,
 	isOtherSelected = false,
 	autofocusOtherField = false,
+	defaultOtherInputValue,
 }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, device } = settingCtx.settingState;
@@ -101,7 +104,7 @@ export default function CheckboxOption({
 			</Pressable>
 
 			{/* Other Field */}
-			{value.toString().toLowerCase() === "other" && isOtherSelected && (
+			{isOtherOption(value) && isOtherSelected && (
 				<View
 					style={{
 						overflow: "hidden",
@@ -129,7 +132,10 @@ export default function CheckboxOption({
 						}}
 						autoCapitalize="none"
 						autoCorrect={false}
-						onChangeText={() => console.log("entering other value")}
+						onChangeText={(value) => {
+							onPress(`other (${value})`);
+						}}
+						defaultValue={defaultOtherInputValue}
 						placeholder={"Please Specify"}
 					/>
 				</View>
