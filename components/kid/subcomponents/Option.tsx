@@ -77,6 +77,7 @@ function Option({
 						{text}
 					</Text>
 				</Pressable>
+
 				{/* Other Field */}
 				{isOtherOption(value) && isOtherSelected && (
 					<View

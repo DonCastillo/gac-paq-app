@@ -7,7 +7,12 @@ import type { Svg } from "react-native-svg";
 import { getOptionImage } from "utils/background";
 import { horizontalScale, moderateScale, verticalScale } from "utils/responsive";
 import RadioOption from "./subcomponents/RadioOption";
-import { hasOtherOption } from "utils/options";
+import {
+	getUserSpecifiedOther,
+	hasOtherOption,
+	isOtherOption,
+	isOtherWithSpecifiedValue,
+} from "utils/options";
 
 interface PropsInterface {
 	options: any[];
@@ -43,7 +48,7 @@ export default function QuestionRadioImage({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		if (selected?.toString().toLowerCase() === "other") {
+		if (isOtherOption(selected)) {
 			setIsOtherSelected(true);
 		} else {
 			setIsOtherSelected(false);
@@ -51,14 +56,46 @@ export default function QuestionRadioImage({
 	}, [selected]);
 
 	function selectHandler(value: string | null): void {
-		if (value?.toString().toLowerCase() === "other") {
+		if (value === "" || value === null || value === undefined) return;
+
+		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
 
-		if (selectedValue === value) {
-			onChange(null);
+		// check if the other option in the format "other" or "other (xxxxx)" is selected
+		if (isOtherOption(value)) {
+			// if "Other" or "other" is selected
+			if (value.toString().toLowerCase() === "other") {
+				if (isOtherOption(selected)) {
+					// if "Other", "other", "other (xxxx)" is already selected, remove all
+					onChange(null);
+					return;
+				} else {
+					// if not add it
+					onChange(value);
+					return;
+				}
+			}
+
+			// if "other (xxxxx)" is selected
+			if (isOtherWithSpecifiedValue(value)) {
+				const specificValue = getUserSpecifiedOther("", value);
+
+				// if there is a value specified with "other" and it is not empty
+				if (specificValue.trim() !== "") {
+					// add it
+					onChange(value);
+				} else {
+					// add "Other"
+					onChange("Other");
+				}
+			}
 		} else {
-			onChange(value);
+			if (selected === value) {
+				onChange(null);
+			} else {
+				onChange(value);
+			}
 		}
 	}
 
@@ -142,6 +179,7 @@ export default function QuestionRadioImage({
 	function listRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
+		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
 
 		return (
 			<View style={{ paddingVertical: 2, marginBottom: 2 }}>
@@ -149,10 +187,12 @@ export default function QuestionRadioImage({
 					label={text}
 					value={value}
 					image={imageByMode}
-					selected={selected !== null && selected === value}
-					onPress={() => selectHandler(value)}
+					selected={isSelected}
+					onPress={(enteredValue) => selectHandler(enteredValue)}
+					// onPress={(enteredValue) => console.log("enteredValue: ", enteredValue)}
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
+					defaultOtherInputValue={getUserSpecifiedOther(value, selected)}
 				/>
 			</View>
 		);

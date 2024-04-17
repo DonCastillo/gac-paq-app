@@ -4,6 +4,7 @@ import React, { useContext, useRef } from "react";
 import { SettingContext } from "store/settings";
 import { G } from "react-native-svg";
 import { moderateScale } from "utils/responsive";
+import { isOtherOption } from "utils/options";
 
 interface PropsInterface {
 	label: string;
@@ -13,6 +14,7 @@ interface PropsInterface {
 	selected: boolean;
 	isOtherSelected?: boolean;
 	autofocusOtherField?: boolean;
+	defaultOtherInputValue?: string;
 }
 
 export default function RadioOption({
@@ -23,6 +25,7 @@ export default function RadioOption({
 	selected = false,
 	isOtherSelected = false,
 	autofocusOtherField = false,
+	defaultOtherInputValue,
 }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device, colorTheme } = settingCtx.settingState;
@@ -101,7 +104,7 @@ export default function RadioOption({
 			</Pressable>
 
 			{/* Other Field */}
-			{value.toString().toLowerCase() === "other" && isOtherSelected && (
+			{isOtherOption(value) && isOtherSelected && (
 				<View
 					style={{
 						overflow: "hidden",
@@ -129,7 +132,10 @@ export default function RadioOption({
 						}}
 						autoCapitalize="none"
 						autoCorrect={false}
-						onChangeText={() => console.log("entering other value")}
+						onChangeText={(value) => {
+							onPress(`other (${value})`);
+						}}
+						defaultValue={defaultOtherInputValue}
 						placeholder={"Please Specify"}
 					/>
 				</View>
