@@ -188,8 +188,7 @@ export default function QuestionRadioImage({
 					value={value}
 					image={imageByMode}
 					selected={isSelected}
-					onPress={(enteredValue) => selectHandler(enteredValue)}
-					// onPress={(enteredValue) => console.log("enteredValue: ", enteredValue)}
+					onPress={selectHandler}
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={getUserSpecifiedOther(value, selected)}

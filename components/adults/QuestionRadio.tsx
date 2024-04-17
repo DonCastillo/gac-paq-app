@@ -3,6 +3,7 @@ import RadioOption from "components/adults/subcomponents/RadioOption";
 import React, { useContext, useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { SettingContext } from "store/settings";
+import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue } from "utils/options";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -32,7 +33,7 @@ export default function QuestionRadio({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		if (selected?.toString().toLowerCase() === "other") {
+		if (isOtherOption(selected)) {
 			setIsOtherSelected(true);
 		} else {
 			setIsOtherSelected(false);
@@ -40,14 +41,46 @@ export default function QuestionRadio({
 	}, [selected]);
 
 	function pressHandler(value: string | null): void {
-		if (value?.toString().toLowerCase() === "other") {
+		if (value === "" || value === null || value === undefined) return;
+
+		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
 
-		if (selectedValue === value) {
-			onSelect(null);
+		// check if the other option in the format "other" or "other (xxxxx)" is selected
+		if (isOtherOption(value)) {
+			// if "Other" or "other" is selected
+			if (value.toString().toLowerCase() === "other") {
+				if (isOtherOption(selected)) {
+					// if "Other", "other", "other (xxxx)" is already selected, remove all
+					onSelect(null);
+					return;
+				} else {
+					// if not add it
+					onSelect(value);
+					return;
+				}
+			}
+
+			// if "other (xxxxx)" is selected
+			if (isOtherWithSpecifiedValue(value)) {
+				const specificValue = getUserSpecifiedOther("", value);
+
+				// if there is a value specified with "other" and it is not empty
+				if (specificValue.trim() !== "") {
+					// add it
+					onSelect(value);
+				} else {
+					// add "Other"
+					onSelect("Other");
+				}
+			}
 		} else {
-			onSelect(value);
+			if (selected === value) {
+				onSelect(null);
+			} else {
+				onSelect(value);
+			}
 		}
 	}
 
@@ -66,10 +99,14 @@ export default function QuestionRadio({
 			renderItem={({ item }) => (
 				<RadioOption
 					{...item}
-					selected={selected !== null && item.value === selected}
+					selected={
+						selected !== null &&
+						(selected === item.value || (isOtherOption(item.value) && isOtherOption(selected)))
+					}
 					onPress={pressHandler}
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
+					defaultOtherInputValue={getUserSpecifiedOther(item.value, selected)}
 				/>
 			)}
 			persistentScrollbar={true}

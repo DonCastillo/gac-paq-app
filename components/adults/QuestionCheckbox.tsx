@@ -3,7 +3,12 @@ import React, { useContext, useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { SettingContext } from "store/settings";
 import CheckboxOption from "components/adults/subcomponents/CheckboxOption";
-import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue } from "utils/options";
+import {
+	extractUserSpecifiedOtherFromArray,
+	getUserSpecifiedOther,
+	isOtherOption,
+	isOtherWithSpecifiedValue,
+} from "utils/options";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -120,6 +125,7 @@ export default function QuestionCheckbox({
 					onPress={pressHandler}
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
+					defaultOtherInputValue={extractUserSpecifiedOtherFromArray(selected)}
 				/>
 			)}
 			persistentScrollbar={true}

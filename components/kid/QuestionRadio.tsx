@@ -112,7 +112,9 @@ export default function QuestionRadio({
 								text={item.text}
 								value={item.value}
 								selected={
-									selected === item.value || (isOtherOption(item.value) && isOtherOption(selected))
+									selected !== null &&
+									(selected === item.value ||
+										(isOtherOption(item.value) && isOtherOption(selected)))
 								}
 								selectHandler={selectHandler}
 								color={color100}

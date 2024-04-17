@@ -214,8 +214,6 @@ export default function QuestionRadioImage({
 		const { images, text, value } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
-		// console.log("value: ", value)
-		// console.log("x: ", x)
 
 		return (
 			<View
