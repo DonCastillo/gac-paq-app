@@ -19,6 +19,7 @@ import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
+import { sanitizeResponse } from "utils/response";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
@@ -83,7 +84,12 @@ export default function QuestionExtroKid(): React.ReactElement {
 			// 	`${directusBaseEndpoint}/items/response`,
 			// 	directusAccessToken,
 			// );
-
+			// console.log("submitting the responses");
+			// console.log("pre-processed responses: ", responseCtx.responses);
+			// console.log(
+			// 	"post-processed ",
+			// 	sanitizeResponse(responseCtx.responses, settingCtx.settingState.mode),
+			// );
 			console.log("done submitting the responses");
 			// introduce a delay
 			responseCtx.resetResponses();

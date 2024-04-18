@@ -30,22 +30,43 @@ function getResponse(
 	}
 }
 
-function sanitizeResponse(responses: Record<string, ResponseInterface>): Record<string, string> {
-	const sanitizedResponse: Record<string, string> = {};
-	let payloadValues = Object.values(responses);
-	payloadValues = payloadValues.map((responseObj: ResponseInterface) => {
-		return {
-			pageNumber: responseObj.pageNumber,
-			label: responseObj.label,
-			answer: responseObj.answer,
-		};
-	});
+function sanitizeResponse(
+	responses: Record<string, ResponseInterface>,
+	mode: Mode.Adult | Mode.Kid | undefined,
+): Record<string, string> | Record<string, Record<string, string>> {
+	const sanitizedResponse: Record<string, string> | Record<string, Record<string, string>> = {};
 
-	payloadValues.forEach(({ label, answer }) => {
-		if (answer !== null) {
-			sanitizedResponse[label] = answer;
+	// FILTER RESPONSES
+	sanitizedResponse.questions = {};
+
+	for (const [key, value] of Object.entries(responses)) {
+		// remove empty answers
+		if (value.answer === null || value.answer === "" || value.answer === undefined) continue;
+
+		// get all answers from the intros
+		if (value.section === SectionType.Intro) {
+			sanitizedResponse[value.label ?? key] = value.answer;
 		}
-	});
+
+		// get all answers from the questions
+		if (value.section === SectionType.Question) {
+			sanitizedResponse.questions = {
+				...sanitizedResponse.questions,
+				[value.label ?? key]: value.answer,
+			};
+		}
+
+		// get all answers from the feedback
+		if (value.section === SectionType.Feedback) {
+			sanitizedResponse[value.label ?? key] = value.answer;
+		}
+
+		// get all answers from the extros that match the current mode
+		if (value.section === SectionType.Extro && value.mode === mode) {
+			sanitizedResponse[value.label ?? key] = value.answer;
+		}
+	}
+
 	return sanitizedResponse;
 }
 export { getResponse, sanitizeResponse };
