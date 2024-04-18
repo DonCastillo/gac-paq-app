@@ -17,7 +17,9 @@ import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
-import Toolbar from "components/kid/Toolbar";
+import Toolbar from "components/kid/subcomponents/Toolbar";
+import ProgressBar from "components/generic/ProgressBar";
+import { sanitizeResponse } from "utils/response";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
@@ -31,8 +33,11 @@ export default function QuestionExtroKid(): React.ReactElement {
 		currentPageNumber,
 		directusAccessToken,
 		directusBaseEndpoint,
+		colorTheme,
 		device,
+		sectionTotalPages,
 	} = settingCtx.settingState;
+	const { color100, color200 } = colorTheme;
 	const isFinal = currentPage.page.isFinal;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const ImageComponent = Images.kids.graphics.extro_question_page;
@@ -79,7 +84,12 @@ export default function QuestionExtroKid(): React.ReactElement {
 			// 	`${directusBaseEndpoint}/items/response`,
 			// 	directusAccessToken,
 			// );
-
+			// console.log("submitting the responses");
+			// console.log("pre-processed responses: ", responseCtx.responses);
+			// console.log(
+			// 	"post-processed ",
+			// 	sanitizeResponse(responseCtx.responses, settingCtx.settingState.mode),
+			// );
 			console.log("done submitting the responses");
 			// introduce a delay
 			responseCtx.resetResponses();
@@ -100,7 +110,16 @@ export default function QuestionExtroKid(): React.ReactElement {
 			<View style={styles.container}>
 				<BackgroundYellowStroke />
 				<Main>
+					<ProgressBar
+						currentSectionPage={currentPage.sectionPageNumber}
+						sectionPageTotal={
+							currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+						}
+						filledColor={"#FFCB66"}
+						unfilledColor={"#FFCB66" + "4D"}
+					/>
 					<Toolbar />
+
 					<CenterMain>
 						<Heading
 							customStyle={{

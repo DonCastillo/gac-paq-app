@@ -1,13 +1,13 @@
 import ScreenType from "constants/screen_type";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
 
-const ChildEthnicities: QuestionRadioPayloadInterface = {
+const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 	name: "What is your child's ethnicity?",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 10,
-			question_radio_id: 8,
+			question_checkbox_id: 8,
 			heading: "Question 23",
 			label: "What is your child's ethnicity?",
 			kid_label: "What is your child's ethnicity?",

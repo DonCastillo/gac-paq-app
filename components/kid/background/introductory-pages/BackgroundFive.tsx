@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { StyleSheet } from "react-native";
 import Images from "styles/images/index";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
-export default function BackgroundFive(): React.ReactElement {
+function BackgroundFive(): React.ReactElement {
 	const CarrotWhole = Images.kids.graphics.background_image_5;
 	const CarrotBite = Images.kids.graphics.background_image_6;
 	return (
@@ -21,6 +21,8 @@ export default function BackgroundFive(): React.ReactElement {
 		</AbsoluteFullScreenContainer>
 	);
 }
+
+export default memo(BackgroundFive);
 
 const styles = StyleSheet.create({
 	carrotWholeTop: {

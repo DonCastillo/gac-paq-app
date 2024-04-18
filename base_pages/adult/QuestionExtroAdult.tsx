@@ -9,7 +9,7 @@ import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import { submitResponse } from "utils/api";
 import { ResponseContext } from "store/responses";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
@@ -18,6 +18,7 @@ import { useNavigation } from "@react-navigation/native";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -99,6 +100,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 					opacity={0.2}
 				/>
 				<Main>
+					<ProgressBarAdult />
 					<Toolbar />
 					<CenterMain>
 						<Heading

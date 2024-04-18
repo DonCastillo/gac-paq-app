@@ -1,5 +1,5 @@
 import ScreenType from "constants/screen_type";
-import type ExtroPayloadInterface from "interface/directus/AppExtro-payload";
+import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import Images from "styles/images";
 
 const AppExtro: ExtroPayloadInterface = {

@@ -59,7 +59,7 @@ function translateSectionHeading(
 
 function stringToInt(value: string | null): number {
 	if (value === null || value === undefined || value === "") {
-		return 0;
+		return -1;
 	}
 	const parsedValue = parseInt(value);
 	if (isNaN(parsedValue)) return 0;

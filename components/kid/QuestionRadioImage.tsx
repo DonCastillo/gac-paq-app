@@ -13,11 +13,16 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
-import { horizontalScale } from "utils/responsive";
+import { horizontalScale, moderateScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
-import { hasOtherOption } from "utils/options";
+import {
+	getUserSpecifiedOther,
+	hasOtherOption,
+	isOtherOption,
+	isOtherWithSpecifiedValue,
+} from "utils/options";
 
-interface QuestionRadioImagePropsInterface {
+interface PropsInterface {
 	options: any[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
@@ -27,20 +32,24 @@ export default function QuestionRadioImage({
 	options,
 	onChange,
 	selectedValue,
-}: QuestionRadioImagePropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 	const otherInputRef = useRef<TextInput>(null);
-
 	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 		borderColor: color100,
 	};
+
+	useState(() => {
+		setAutoFocusOtherField(false);
+	});
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -49,24 +58,54 @@ export default function QuestionRadioImage({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		setIsOtherSelected(selected?.toLowerCase() === "other");
+		if (isOtherOption(selected)) {
+			setIsOtherSelected(true);
+		} else {
+			setIsOtherSelected(false);
+		}
 	}, [selected]);
 
 	function selectHandler(value: string | null): void {
-		if (value !== "" && value !== null && value !== undefined) {
-			setSelected(value);
-			onChange(value);
-		} else {
-			setSelected(null);
-			onChange(null);
+		if (value === "" || value === null || value === undefined) return;
+
+		if (isOtherOption(value)) {
+			setAutoFocusOtherField(true);
 		}
 
-		// automatically focus on other input field if "other" is selected
-		if (value?.toString().toLowerCase() === "other") {
-			setIsOtherSelected(true);
-			otherInputRef?.current?.focus();
+		// check if the other option in the format "other" or "other (xxxxx)" is selected
+		if (isOtherOption(value)) {
+			// if "Other" or "other" is selected
+			if (value.toString().toLowerCase() === "other") {
+				if (isOtherOption(selected)) {
+					// if "Other", "other", "other (xxxx)" is already selected, remove all
+					onChange(null);
+					return;
+				} else {
+					// if not add it
+					onChange(value);
+					return;
+				}
+			}
+
+			// if "other (xxxxx)" is selected
+			if (isOtherWithSpecifiedValue(value)) {
+				const specificValue = getUserSpecifiedOther("", value);
+
+				// if there is a value specified with "other" and it is not empty
+				if (specificValue.trim() !== "") {
+					// add it
+					onChange(value);
+				} else {
+					// add "Other"
+					onChange("Other");
+				}
+			}
 		} else {
-			setIsOtherSelected(false);
+			if (selected === value) {
+				onChange(null);
+			} else {
+				onChange(value);
+			}
 		}
 	}
 
@@ -85,7 +124,17 @@ export default function QuestionRadioImage({
 			} else {
 				ImageComponent = (
 					<Image
-						style={GeneralStyle.general.inlineOptionImage}
+						style={{
+							...GeneralStyle.general.inlineOptionImage,
+							maxWidth: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							minHeight: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
 						source={image}
 						resizeMode="cover"
 					/>
@@ -99,7 +148,21 @@ export default function QuestionRadioImage({
 			if (options.length <= 5) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
-				return <ImageComponent style={{ ...GeneralStyle.general.inlineOptionImage }} />;
+				return (
+					<ImageComponent
+						style={{
+							...GeneralStyle.general.inlineOptionImage,
+							maxWidth: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							minHeight: moderateScale(
+								device.isTablet ? 30 : 30,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					/>
+				);
 			}
 		}
 	}
@@ -119,16 +182,28 @@ export default function QuestionRadioImage({
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
-				onPress={() => {
-					selectHandler(value);
-				}}
+				onPress={() => selectHandler(value)}
 			>
 				<View style={styles.blockOptionImageContainer}>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(imageByMode)}
 				</View>
 				<View style={styles.blockOptionLabelContainer}>
-					<Text style={styles.blockOptionLabelText}>{text}</Text>
+					<Text
+						style={{
+							...styles.blockOptionLabelText,
+							fontSize: moderateScale(
+								device.isTablet ? 12 : 14,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							lineHeight: moderateScale(
+								device.isTablet ? 17 : 19,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					>
+						{text}
+					</Text>
 				</View>
 			</Pressable>
 		);
@@ -138,11 +213,11 @@ export default function QuestionRadioImage({
 	function listRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
+		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
 
 		return (
 			<View
 				style={{
-					backgroundColor: "red",
 					borderWidth: GeneralStyle.kid.optionContainer.borderWidth,
 					borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 					marginRight: GeneralStyle.kid.optionContainer.marginRight,
@@ -158,27 +233,33 @@ export default function QuestionRadioImage({
 							flexDirection: "row",
 							flexWrap: "nowrap",
 							alignItems: "center",
-							paddingVertical: 4,
-							paddingHorizontal: GeneralStyle.kid.optionContainer.paddingHorizontal,
+							paddingVertical: moderateScale(5, device.screenHeight),
+							paddingHorizontal: moderateScale(20, device.screenWidth),
 						},
 						isOtherSelected && {
 							borderBottomLeftRadius: 0,
 							borderBottomRightRadius: 0,
 						},
-						selected === value ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
+						isSelected ? { backgroundColor: color100 } : { backgroundColor: "#fff" },
 					]}
-					onPress={() => {
-						selectHandler(value);
-					}}
+					onPress={() => selectHandler(value)}
 				>
 					{renderImage(imageByMode)}
 					<Text
 						style={[
 							styles.listOptionLabelText,
 							{
-								fontSize: GeneralStyle.kid.optionImageLabelText.fontSize,
+								// fontSize: GeneralStyle.kid.optionImageLabelText.fontSize,
+								fontSize: moderateScale(
+									device.isTablet ? 14 : 14,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 18 : 18,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
 							},
-							selected === value ? { color: "#fff" } : { color: "#000" },
+							isSelected ? { color: "#fff" } : { color: "#000" },
 						]}
 					>
 						{text}
@@ -186,12 +267,12 @@ export default function QuestionRadioImage({
 				</Pressable>
 
 				{/* Other Field */}
-				{value.toString().toLowerCase() === "other" && (
+				{isOtherOption(value) && isOtherSelected && (
 					<View
 						style={{
 							backgroundColor: "white",
 							overflow: "hidden",
-							display: isOtherSelected ? "flex" : "none",
+							display: "flex",
 							paddingHorizontal: GeneralStyle.kid.field.paddingHorizontal,
 						}}
 					>
@@ -201,9 +282,17 @@ export default function QuestionRadioImage({
 								fontSize: GeneralStyle.kid.field.fontSize,
 								paddingVertical: GeneralStyle.kid.field.paddingVertical,
 							}}
+							onLayout={(event) => {
+								if (autofocusOtherField) {
+									otherInputRef?.current?.focus();
+								}
+							}}
 							autoCapitalize="none"
 							autoCorrect={false}
-							onChangeText={() => console.log("entering other value")}
+							onChangeText={(value) => {
+								selectHandler(`other (${value})`);
+							}}
+							defaultValue={getUserSpecifiedOther(value, selected)}
 							placeholder="Please Specify"
 						/>
 					</View>

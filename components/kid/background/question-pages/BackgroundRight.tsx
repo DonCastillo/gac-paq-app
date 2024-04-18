@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { StyleSheet } from "react-native";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
-export default function BackgroundRight({
+function BackgroundRight({
 	svg,
 	height,
 	width,
@@ -22,6 +22,8 @@ export default function BackgroundRight({
 		</AbsoluteFullScreenContainer>
 	);
 }
+
+export default memo(BackgroundRight);
 
 const styles = StyleSheet.create({
 	right: {

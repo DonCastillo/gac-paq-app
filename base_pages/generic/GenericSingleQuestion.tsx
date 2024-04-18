@@ -9,7 +9,7 @@ import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
 import { ResponseContext } from "store/responses";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import { optionText } from "utils/options";
@@ -23,6 +23,8 @@ import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
 import QuestionTitle from "components/generic/QuestionTitle";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -31,10 +33,16 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const questionCtx = useContext(QuestionContext);
 
 	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { isKeyboardOpen } = device;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
@@ -123,20 +131,25 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				key={currentPageNumber}
 			/>
 			<Main>
-				<Toolbar />
+				{!isKeyboardOpen && <ProgressBarAdult />}
+				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
-							{questionLabel}
-						</QuestionLabel>
-						{questionType === QuestionType.QuestionInput &&
-							Object.prototype.hasOwnProperty.call(translatedPage, "sublabel") === true &&
-							translatedPage?.sublabel !== undefined &&
-							translatedPage?.sublabel !== null &&
-							translatedPage?.sublabel !== "" && (
-								<Text style={styles.sublabel}>{translatedPage?.sublabel}</Text>
+						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
+						<View style={{ marginBottom: 13 }}>
+							<QuestionLabel
+								textStyle={GeneralStyle.adult.questionLabel}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{questionLabel}
+							</QuestionLabel>
+							{!isKeyboardOpen && (
+								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
 							)}
+						</View>
+
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

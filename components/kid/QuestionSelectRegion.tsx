@@ -8,11 +8,15 @@ import { optionRegion } from "utils/options";
 interface QuestionSelectRegionProps {
 	onChange: (value: string) => void;
 	selectedValue: string | null;
+	dropdownOpen: boolean;
+	setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function QuestionSelectRegion({
 	selectedValue,
 	onChange,
+	dropdownOpen,
+	setDropdownOpen,
 }: QuestionSelectRegionProps): React.ReactElement {
 	const questionCtx = useContext(QuestionContext);
 	const { regionOption } = questionCtx.questionState;
@@ -24,6 +28,8 @@ export default function QuestionSelectRegion({
 			options={[...itemsRaw]}
 			selectedValue={selectedValue}
 			onSelect={onChange}
+			dropdownOpen={dropdownOpen}
+			setDropdownOpen={setDropdownOpen}
 		/>
 	);
 }

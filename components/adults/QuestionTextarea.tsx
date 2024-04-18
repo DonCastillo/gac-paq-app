@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
 	container: {
 		...GeneralStyle.adult.field,
 		maxWidth: "100%",
-		// backgroundColor: "pink",
 		padding: 10,
 		textAlignVertical: "top",
 		textAlign: "left",

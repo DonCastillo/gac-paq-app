@@ -13,7 +13,7 @@ import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { optionRegion, optionText } from "utils/options";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import { QuestionContext } from "store/questions";
 import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -21,6 +21,8 @@ import Mode from "constants/mode";
 import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -29,12 +31,17 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const regionsOptions = questionCtx.questionState.regionOption;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
@@ -170,13 +177,22 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
+				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
-							{questionLabel}
-						</QuestionLabel>
+						<View style={{ marginBottom: 13 }}>
+							<QuestionLabel
+								textStyle={GeneralStyle.adult.questionLabel}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{questionLabel}
+							</QuestionLabel>
+							<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+								{questionSubLabel}
+							</QuestionSubLabel>
+						</View>
 						{questionComponent}
 					</QuestionContainer>
 				</CenterMain>

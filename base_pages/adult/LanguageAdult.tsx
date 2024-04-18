@@ -15,22 +15,30 @@ import BGLinearGradient from "components/BGLinearGradient";
 import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function LanguageAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
 		mode,
 	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
+		mode,
+	);
+	const { color100, color200 } = colorTheme;
 	const {
 		backButton,
 		completeButton,
@@ -107,13 +115,22 @@ export default function LanguageAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
+				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
-							{questionLabel}
-						</QuestionLabel>
+						<View style={{ marginBottom: 13 }}>
+							<QuestionLabel
+								textStyle={GeneralStyle.adult.questionLabel}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{questionLabel}
+							</QuestionLabel>
+							<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+								{questionSubLabel}
+							</QuestionSubLabel>
+						</View>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}
 							selectedValue={selectedValue}

@@ -5,5 +5,6 @@ export default interface DeviceInterface {
 	screenHeight: number;
 	orientation: OrientationType.Portrait | OrientationType.Landscape;
 	isTablet: boolean;
+	isKeyboardOpen: boolean;
 	platform: string;
 }

@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import {
+	extractUserSpecifiedOtherFromArray,
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
@@ -17,15 +18,16 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-export default function QuestionRadio({
+export default function QuestionCheckbox({
 	options,
 	onChange,
 	selectedValue,
 }: PropsInterface): React.ReactElement {
+	const SEPARATOR = " | ";
 	const settingCtx = useContext(SettingContext);
 	const { colorTheme, currentPage, device } = settingCtx.settingState;
 	const { color100 } = colorTheme;
-	const [selected, setSelected] = useState<string | null>(selectedValue);
+	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 
@@ -34,59 +36,71 @@ export default function QuestionRadio({
 	});
 
 	useEffect(() => {
-		if (selected !== selectedValue) {
-			setSelected(selectedValue);
+		if (JSON.stringify(selected) !== JSON.stringify(selectedValue)) {
+			setSelected(initializeSelectedValue());
 		}
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		if (isOtherOption(selected)) {
+		if (arrayHasOther(selected)) {
 			setIsOtherSelected(true);
 		} else {
 			setIsOtherSelected(false);
 		}
 	}, [selected]);
 
-	function selectHandler(value: string | null): void {
+	function initializeSelectedValue(): string[] {
+		return selectedValue === "" || selectedValue === null ? [] : selectedValue.split(SEPARATOR);
+	}
+
+	function arrayHasOther(arr: string[]): boolean {
+		return arr.some(isOtherOption);
+	}
+
+	function selectHandler(value: string): void {
 		if (value === "" || value === null || value === undefined) return;
 
+		// activate other field if "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
+
+		const existingSelectedValue = initializeSelectedValue();
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
 			// if "Other" or "other" is selected
 			if (value.toString().toLowerCase() === "other") {
-				if (isOtherOption(selected)) {
+				if (arrayHasOther(existingSelectedValue)) {
 					// if "Other", "other", "other (xxxx)" is already selected, remove all
-					onChange(null);
+					onChange(existingSelectedValue.filter((item) => !isOtherOption(item)).join(SEPARATOR));
 					return;
 				} else {
 					// if not add it
-					onChange(value);
+					onChange([...existingSelectedValue, value].join(SEPARATOR));
 					return;
 				}
 			}
 
 			// if "other (xxxxx)" is selected
 			if (isOtherWithSpecifiedValue(value)) {
+				const withoutOther = existingSelectedValue.filter((item) => !isOtherOption(item));
 				const specificValue = getUserSpecifiedOther("", value);
 
 				// if there is a value specified with "other" and it is not empty
 				if (specificValue.trim() !== "") {
 					// add it
-					onChange(value);
+					onChange([...withoutOther, value].join(SEPARATOR));
 				} else {
 					// add "Other"
-					onChange("Other");
+					onChange([...withoutOther, "Other"].join(SEPARATOR));
 				}
 			}
 		} else {
-			if (selected === value) {
-				onChange(null);
+			if (existingSelectedValue.includes(value)) {
+				onChange(existingSelectedValue.filter((item) => item !== value).join(SEPARATOR));
 			} else {
-				onChange(value);
+				onChange([...existingSelectedValue, value].join(SEPARATOR));
 			}
 		}
 	}
@@ -113,15 +127,15 @@ export default function QuestionRadio({
 								value={item.value}
 								selected={
 									selected !== null &&
-									(selected === item.value ||
-										(isOtherOption(item.value) && isOtherOption(selected)))
+									(selected?.includes(item.value) ||
+										(isOtherOption(item.value) && arrayHasOther(selected)))
 								}
 								selectHandler={selectHandler}
 								color={color100}
 								width={adjustWidth}
 								isOtherSelected={isOtherSelected}
 								autofocusOtherField={autofocusOtherField}
-								defaultOtherInputValue={getUserSpecifiedOther(item.value, selected)}
+								defaultOtherInputValue={extractUserSpecifiedOtherFromArray(selected)}
 							/>
 						);
 					}}

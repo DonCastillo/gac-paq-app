@@ -1,8 +1,9 @@
 import { Pressable, SafeAreaView, StyleSheet, View, Text } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, memo } from "react";
 import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
+import { moderateScale } from "utils/responsive";
 
 const ICON_SIZE = 30;
 
@@ -10,7 +11,7 @@ interface PropsInterface {
 	sectionTitle?: string;
 }
 
-export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
+function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { currentPageNumber, currentPage, sectionTitles, device } = settingCtx.settingState;
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
@@ -29,23 +30,36 @@ export default function Toolbar({ sectionTitle }: PropsInterface): React.ReactEl
 	}
 
 	return (
-		<View style={styles.container}>
+		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
 			<Text
-				style={[GeneralStyle.kid.topHeaderSectionTitle, { fontSize: device.isTablet ? 20 : 18 }]}
+				style={[
+					GeneralStyle.adult.topHeaderSectionTitle,
+					{
+						fontSize: moderateScale(
+							device.isTablet ? 13 : 13,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
+						lineHeight: moderateScale(
+							device.isTablet ? 16 : 16,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
+					},
+				]}
 			>
 				{title}
 			</Text>
 			<Icon
-				name="volume-2"
+				name="volume-up"
 				size={ICON_SIZE}
-				type={"simple-line-icon"}
-				color={"#000"}
+				color={"#fff"}
 				containerStyle={styles.icon}
 				onPress={audioHandler}
 			/>
 		</View>
 	);
 }
+
+export default memo(Toolbar);
 
 const styles = StyleSheet.create({
 	container: {
@@ -54,13 +68,6 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 		alignItems: "center",
 		flexDirection: "row",
-	},
-	safearea: {
-		// position: "absolute",
-		// top: 0,
-		// left: 0,
-		// right: 0,
-		// zIndex: 99,
 	},
 	icon: {},
 	button: {

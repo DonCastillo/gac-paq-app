@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Icon } from "@rneui/themed";
 
 interface Props {
@@ -21,4 +21,6 @@ function ButtonIcon({ type, color, name, size, onPress }: Props): React.ReactEle
 	);
 }
 
-export default ButtonIcon;
+export default memo(ButtonIcon, (prevProps, nextProps) => {
+	return JSON.stringify(prevProps) === JSON.stringify(nextProps);
+});

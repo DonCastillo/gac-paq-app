@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { StyleSheet, View, Text } from "react-native";
-import PropTypes from "prop-types";
 import { SettingContext } from "store/settings";
+import { moderateScale } from "utils/responsive";
 
-QuestionLabel.propTypes = {
-	children: PropTypes.node,
-	customStyle: PropTypes.object,
-	textStyle: PropTypes.object,
-};
+interface PropsInterface {
+	children: React.ReactNode;
+	customStyle?: object;
+	textStyle?: object;
+}
 
-export default function QuestionLabel({
+function QuestionLabel({
 	children,
 	customStyle = {},
 	textStyle = {},
-}): React.ReactElement {
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 	return (
@@ -21,11 +21,17 @@ export default function QuestionLabel({
 			<Text
 				style={[
 					styles.text,
-					textStyle,
 					{
-						fontSize: device.isTablet ? 23 : 20,
-						lineHeight: device.isTablet ? 30 : 25,
+						fontSize: moderateScale(
+							device.isTablet ? 15 : 19,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
+						lineHeight: moderateScale(
+							device.isTablet ? 20 : 24,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
 					},
+					textStyle,
 				]}
 			>
 				{children}
@@ -34,11 +40,14 @@ export default function QuestionLabel({
 	);
 }
 
+export default memo(QuestionLabel, (prevProps, nextProps) => {
+	return JSON.stringify(prevProps) === JSON.stringify(nextProps);
+});
+
 const styles = StyleSheet.create({
 	container: {
 		width: "100%",
 		flexDirection: "row",
-		marginBottom: 20,
 	},
 	text: {
 		textAlign: "left",

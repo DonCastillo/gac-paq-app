@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Keyboard } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -10,7 +10,7 @@ import QuestionType from "constants/question_type";
 import { ResponseContext } from "store/responses";
 import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import { optionText } from "utils/options";
@@ -25,14 +25,18 @@ import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionSatisfactionImage from "components/adults/QuestionSatisfactionImage";
 import QuestionTextarea from "components/adults/QuestionTextarea";
+import QuestionCheckbox from "components/adults/QuestionCheckbox";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { moderateScale } from "utils/responsive";
 export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const [isKeyboardOpen, setIsKeyboardOpen] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
-	const { mode, language, currentPage, currentPageNumber, sectionTitles } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const { isKeyboardOpen } = device;
 	const translatedPage = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	const questionLabel = translateQuestionLabel(
@@ -40,31 +44,12 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		translatedPage?.adult_label,
 		mode,
 	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
+		mode,
+	);
 	let questionComponent = <></>;
-
-	useEffect(() => {
-		const keyboardDidShow = Keyboard.addListener("keyboardDidShow", () => {
-			setIsKeyboardOpen(true);
-		});
-		const keyboardDidHide = Keyboard.addListener("keyboardDidHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillHide = Keyboard.addListener("keyboardWillHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillShow = Keyboard.addListener("keyboardWillShow", () => {
-			setIsKeyboardOpen(true);
-		});
-
-		return () => {
-			keyboardDidShow.remove();
-			keyboardDidHide.remove();
-			keyboardWillHide.remove();
-			keyboardWillShow.remove();
-		};
-	}, []);
 
 	// fetch response for this question
 	useEffect(() => {
@@ -152,6 +137,17 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				}}
 			/>
 		);
+	} else if (questionType === QuestionType.QuestionCheckbox) {
+		questionComponent = (
+			<QuestionCheckbox
+				key={currentPageNumber}
+				selectedValue={selectedValue}
+				options={optionText(translatedPage?.choices)}
+				onSelect={(value: string) => {
+					changeHandler(value);
+				}}
+			/>
+		);
 	} else if (questionType === QuestionType.QuestionRadioImage) {
 		questionComponent = (
 			<QuestionRadioImage
@@ -215,14 +211,33 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<Main>
+				{!isKeyboardOpen && <ProgressBarAdult />}
 				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>
 						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
 						{!isKeyboardOpen && (
-							<QuestionLabel textStyle={GeneralStyle.adult.questionLabel}>
-								{questionLabel}
-							</QuestionLabel>
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={{
+										...GeneralStyle.adult.questionLabel,
+										fontSize: moderateScale(
+											device.isTablet ? 15 : 15,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+										lineHeight: moderateScale(
+											device.isTablet ? 20 : 20,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+									}}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
 						)}
 						{questionComponent}
 					</QuestionContainer>

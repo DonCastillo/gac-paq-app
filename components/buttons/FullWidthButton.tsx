@@ -1,8 +1,6 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import { useFonts } from "expo-font";
-import Colors from "styles/kids/Colors";
 import { DefaultStyle } from "styles/general";
-import React from "react";
+import React, { memo } from "react";
 
 interface Props {
 	children: React.ReactNode;
@@ -37,4 +35,6 @@ const style = StyleSheet.create({
 	},
 });
 
-export default FullWidthButton;
+export default memo(FullWidthButton, (prevProps, nextProps) => {
+	return JSON.stringify(prevProps) === JSON.stringify(nextProps);
+});

@@ -19,6 +19,8 @@ export interface QuestionRadioImageInterface {
 	question_satisfaction_image_id?: string | number;
 	heading: string;
 	label: string;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
 	kid_label: string;
 	adult_label: string;
 	choices: QuestionRadioImageChoiceInterface[];

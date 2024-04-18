@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
 import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -16,13 +16,16 @@ import { translate, translateQuestionLabel } from "utils/page";
 import PhraseLabel from "constants/phrase_label";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
-import Toolbar from "components/kid/Toolbar";
+import Toolbar from "components/kid/subcomponents/Toolbar";
+import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function LanguageKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
 	const { color100 } = colorTheme;
@@ -30,6 +33,11 @@ export default function LanguageKid(): React.ReactElement {
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 	const {
@@ -51,6 +59,7 @@ export default function LanguageKid(): React.ReactElement {
 	// set background screen dynamically
 	useEffect(() => {
 		setBackground(getIntroductoryBackground(currentPageNumber));
+		setDropdownOpen(false);
 	}, [currentPageNumber]);
 
 	// translate phrases and buttons
@@ -112,42 +121,56 @@ export default function LanguageKid(): React.ReactElement {
 	}
 
 	return (
-		<View style={styles.container}>
-			{background !== null && background}
-			<Main>
-				<Toolbar />
-				<TopMain>
-					<View
-						style={[
-							GeneralStyle.kid.introQuestionContainer,
-							{
-								marginVertical: verticalScale(40, device.screenHeight),
-								...styles.mainContainer,
-							},
-						]}
-					>
-						<QuestionLabel textStyle={{ ...GeneralStyle.kid.introQuestionLabel }}>
-							{questionLabel}
-						</QuestionLabel>
+		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					<ProgressBarKid />
+					<Toolbar />
+					<TopMain>
+						<View
+							style={[
+								GeneralStyle.kid.introQuestionContainer,
+								{
+									marginVertical: verticalScale(40, device.screenHeight),
+									...styles.mainContainer,
+								},
+							]}
+						>
+							<View style={{ marginBottom: 9 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.kid.introQuestionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
 
-						<View style={styles.questionComponentContainer}>
-							<QuestionSelectLanguage
-								onChange={changeHandler}
-								selectedValue={language}
-							/>
+							<View style={styles.questionComponentContainer}>
+								<QuestionSelectLanguage
+									key={currentPageNumber}
+									onChange={changeHandler}
+									selectedValue={language}
+									dropdownOpen={dropdownOpen}
+									setDropdownOpen={setDropdownOpen}
+								/>
+							</View>
 						</View>
-					</View>
-				</TopMain>
-				<Navigation>
-					{selectedValue !== null && (
-						<BackAndNextNav
-							colorTheme={color100}
-							onNext={() => settingCtx.nextPage()}
-						/>
-					)}
-				</Navigation>
-			</Main>
-		</View>
+					</TopMain>
+					<Navigation>
+						{selectedValue !== null && (
+							<BackAndNextNav
+								colorTheme={color100}
+								onNext={() => settingCtx.nextPage()}
+							/>
+						)}
+					</Navigation>
+				</Main>
+			</View>
+		</TouchableWithoutFeedback>
 	);
 }
 
