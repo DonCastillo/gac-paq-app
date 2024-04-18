@@ -21,7 +21,7 @@ export default function QuestionContainer({ children }: PropsInterface): React.R
 			style={[
 				styles.container,
 				{
-					maxHeight: verticalScale(500, device.screenHeight),
+					maxHeight: verticalScale(600, device.screenHeight),
 					maxWidth,
 				},
 			]}

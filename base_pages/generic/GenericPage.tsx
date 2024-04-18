@@ -8,10 +8,11 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ScrollContainer from "components/ScrollContainer";
 import { GeneralStyle } from "styles/general";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 
 export default function GenericPage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -23,21 +24,14 @@ export default function GenericPage(): React.ReactElement {
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />
 			<Main>
+				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>
-						<Heading
-							customStyle={{
-								...GeneralStyle.adult.pageHeading,
-							}}
-						>
+						<Heading customStyle={GeneralStyle.adult.pageHeading}>
 							{translatedPage?.heading}
 						</Heading>
-						<Paragraph
-							customStyle={{
-								...GeneralStyle.adult.pageParagraph,
-							}}
-						>
+						<Paragraph customStyle={GeneralStyle.adult.pageParagraph}>
 							{translatedPage?.description}
 						</Paragraph>
 					</ScrollContainer>

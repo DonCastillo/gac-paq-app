@@ -3,6 +3,7 @@ import type LanguageInterface from "interface/language";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type RegionInterface from "interface/region";
 import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
+const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
 
 export interface OptionInterface {
 	text: string;
@@ -48,8 +49,8 @@ function optionLanguage(options: LanguageInterface[]): QuestionRadioItemInterfac
 				value: lang_code,
 				icon: () => (
 					<FlagComponent
-						height={50}
-						width={50}
+						height={"100%"}
+						width={"100%"}
 						padding={0}
 						margin={0}
 					/>
@@ -69,4 +70,61 @@ function hasOtherOption(radioImageOptions: QuestionRadioImageChoiceInterface[]):
 	);
 }
 
-export { optionText, optionRegion, optionLanguage, hasOtherOption };
+/**
+ *
+ * @param value
+ * @description Check if the value follows format of "other (xxxxx)"
+ * @returns
+ */
+function isOtherWithSpecifiedValue(value: string | null): boolean {
+	if (value === null) return false;
+	const lowerString = value?.toString().toLowerCase();
+	return HAS_OTHER_REGEX.test(lowerString ?? "");
+}
+
+/**
+ *
+ * @param value
+ * @description Check if the value is "other" or "other (xxxxx)"
+ * @returns boolean
+ */
+function isOtherOption(value: string | null): boolean {
+	const lowerString = value?.toString().toLowerCase();
+	return isOtherWithSpecifiedValue(value) || lowerString === "other";
+}
+
+/**
+ *
+ * @param selected like ["option1", "option2", "other (xxxxx)"]
+ * @description Extract the word from "other (xxxxx)"
+ * @returns extracted word from "other (xxxxx)"
+ */
+function extractUserSpecifiedOtherFromArray(selected: string[]): string {
+	if (selected === null || selected.length === 0) return "";
+	const otherWithSpecifiedValue = selected.find(isOtherWithSpecifiedValue);
+	const match = HAS_OTHER_REGEX.exec(otherWithSpecifiedValue ?? "");
+
+	if (match === null) return "";
+	return match[1];
+}
+
+function getUserSpecifiedOther(value: string | null, selected: string | null): string {
+	if (value === null) return "";
+	if (selected === null) return "";
+	if (value === selected) return "";
+	const match = HAS_OTHER_REGEX.exec(selected);
+
+	if (match === null) return "";
+	return match[1];
+}
+
+export {
+	optionText,
+	optionRegion,
+	optionLanguage,
+	hasOtherOption,
+	isOtherOption,
+	getUserSpecifiedOther,
+	isOtherWithSpecifiedValue,
+	extractUserSpecifiedOtherFromArray,
+};

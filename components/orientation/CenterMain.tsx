@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
 		width: "100%",
 		height: "100%",
 		paddingHorizontal: 20,
-		paddingTop: 30,
-		// backgroundColor: "pink"
+		paddingTop: 5,
 		overflow: "hidden",
 	},
 });

@@ -8,7 +8,6 @@ import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
-import QuestionSelect from "components/kid/QuestionSelect";
 import { ResponseContext } from "store/responses";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
@@ -23,20 +22,23 @@ import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
-import Toolbar from "components/kid/Toolbar";
+import Toolbar from "components/kid/subcomponents/Toolbar";
 import QuestionSatisfactionImage from "components/kid/QuestionSatisfactionImage";
 import QuestionTextarea from "components/kid/QuestionTextarea";
+import QuestionCheckbox from "components/kid/QuestionCheckbox";
+import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const [isKeyboardOpen, setIsKeyboardOpen] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
 
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
+	const { isKeyboardOpen } = device;
 	const { color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -44,33 +46,13 @@ export default function QuestionSingleKid(): React.ReactElement {
 		translatedPage?.adult_label,
 		mode,
 	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
+		mode,
+	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
-	console.log("questionType", questionType);
 	let questionComponent = <></>;
-
-	useEffect(() => {
-		const keyboardDidShow = Keyboard.addListener("keyboardDidShow", () => {
-			setIsKeyboardOpen(true);
-		});
-		const keyboardDidHide = Keyboard.addListener("keyboardDidHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillHide = Keyboard.addListener("keyboardWillHide", () => {
-			setIsKeyboardOpen(false);
-		});
-
-		const keyboardWillShow = Keyboard.addListener("keyboardWillShow", () => {
-			setIsKeyboardOpen(true);
-		});
-
-		return () => {
-			keyboardDidShow.remove();
-			keyboardDidHide.remove();
-			keyboardWillHide.remove();
-			keyboardWillShow.remove();
-		};
-	}, []);
 
 	// fetch response for this question
 	useEffect(() => {
@@ -124,7 +106,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		if (selectedValue !== null) {
+		if (selectedValue !== null && selectedValue !== "") {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
@@ -160,9 +142,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setSelectedValue(value);
 	}
 
-	if (questionType === QuestionType.QuestionDropdown) {
+	if (questionType === QuestionType.QuestionCheckbox) {
 		questionComponent = (
-			<QuestionSelect
+			<QuestionCheckbox
 				key={currentPageNumber}
 				options={translatedPage?.choices}
 				onChange={changeHandler}
@@ -241,7 +223,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 		<View style={styles.container}>
 			{background !== null && background}
 			<Main>
+				{!isKeyboardOpen && <ProgressBarKid />}
 				{!isKeyboardOpen && <Toolbar />}
+
 				<TopMain>
 					<View
 						style={[
@@ -254,14 +238,19 @@ export default function QuestionSingleKid(): React.ReactElement {
 					>
 						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
 						{!isKeyboardOpen && (
-							<QuestionLabel
-								textStyle={GeneralStyle.kid.questionQuestionLabel}
-								customStyle={{
-									marginBottom: 0,
-								}}
-							>
-								{questionLabel}
-							</QuestionLabel>
+							<View style={{ marginBottom: 9 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.kid.questionQuestionLabel}
+									customStyle={{
+										marginBottom: 7,
+									}}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
 						)}
 						<View style={styles.questionComponentContainer}>{questionComponent}</View>
 					</View>

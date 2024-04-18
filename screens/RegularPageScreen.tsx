@@ -4,6 +4,7 @@ import { getScreen, getScreenType } from "utils/screen";
 import { getSectionType } from "utils/section";
 import ScreenType from "constants/screen_type";
 import KeyboardSafeview from "components/KeyboardSafeview";
+import { View } from "react-native";
 
 export default function RegularPageScreen(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -31,15 +32,19 @@ export default function RegularPageScreen(): React.ReactElement {
 	}
 
 	useEffect(() => {
-		console.log("---------");
-		console.log("CURRENT PAGE NUMBER: ", currentPageNumber);
-		console.log("MODE: ", mode);
-		console.log("PAGE TYPE: ", pageType);
-		console.log("SECTION TYPE ", sectionType);
-		console.log("CURRENT PAGE ", JSON.stringify(currentPage, null, 2));
+		// console.log("---------");
+		// console.log("CURRENT PAGE NUMBER: ", currentPageNumber);
+		// console.log("MODE: ", mode);
+		// console.log("PAGE TYPE: ", pageType);
+		// console.log("SECTION TYPE ", sectionType);
+		// console.log("CURRENT PAGE ", JSON.stringify(currentPage, null, 2));
 		changeComponent();
 		changeColor();
 	}, [currentPageNumber, currentPage, mode]);
 
-	return <KeyboardSafeview>{component}</KeyboardSafeview>;
+	return (
+		<KeyboardSafeview>
+			<View style={{ flex: 1, backgroundColor: "white" }}>{component}</View>
+		</KeyboardSafeview>
+	);
 }

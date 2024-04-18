@@ -61,6 +61,7 @@ const GeneralStyle = {
 			maxWidth: 50,
 			marginRight: 15,
 			aspectRatio: 1,
+			// backgroundColor: "purple",
 		},
 	},
 	kid: {
@@ -88,7 +89,7 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		introQuestionLabel: {
-			fontSize: 25,
+			// fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
 			color: DARK_COLOR,
 		},
@@ -96,7 +97,7 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		questionQuestionLabel: {
-			fontSize: 23,
+			// fontSize: 23,
 			fontFamily: Font.PoppinsBold,
 			color: DARK_COLOR,
 		},
@@ -114,21 +115,21 @@ const GeneralStyle = {
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
 		},
 		dropdownPickerListItemContainer: {
-			height: 60,
+			// height: 60,
 		},
 		dropdownPickerListContainer: {
 			borderWidth: DEFAULT_BORDER_WIDTH,
 		},
 		dropdownPickerListLabel: {
-			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		dropdownPickerListLabelChosen: {
-			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		dropdownPickerText: {
-			fontSize: DEFAULT_OPTION_FONT_SIZE,
+			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		pageHeading: {
@@ -204,7 +205,7 @@ const GeneralStyle = {
 			marginBottom: 20,
 		},
 		questionComponentContainer: {
-			marginTop: 25,
+			// marginTop: 10,
 			flex: 1,
 			minWidth: "100%",
 		},
@@ -229,8 +230,11 @@ const GeneralStyle = {
 			shadowRadius: 5,
 		},
 		questionLabel: {
-			fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
+			color: DARK_COLOR,
+		},
+		questionSubLabel: {
+			fontFamily: Font.PoppinsRegular,
 			color: DARK_COLOR,
 		},
 		radioContainer: {
@@ -254,6 +258,7 @@ const GeneralStyle = {
 			maxWidth: "100%",
 			flexWrap: "wrap",
 			height: "100%",
+			// backgroundColor: "pink",
 			// flexShrink: 1,
 			// flex: 1,
 			// flexGrow: 1,

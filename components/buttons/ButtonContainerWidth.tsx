@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { DefaultStyle } from "styles/general";
 
@@ -44,4 +44,6 @@ const style = StyleSheet.create({
 	},
 });
 
-export default ButtonContainerWidth;
+export default memo(ButtonContainerWidth, (prevProps, nextProps) => {
+	return JSON.stringify(prevProps) === JSON.stringify(nextProps);
+});

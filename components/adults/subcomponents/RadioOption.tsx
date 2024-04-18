@@ -1,15 +1,20 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { SettingContext } from "store/settings";
 import { G } from "react-native-svg";
+import { moderateScale } from "utils/responsive";
+import { isOtherOption } from "utils/options";
 
-interface RadioOptionPropsInterface {
+interface PropsInterface {
 	label: string;
 	value: string;
 	image?: any;
 	onPress: (value: string | null) => void;
 	selected: boolean;
+	isOtherSelected?: boolean;
+	autofocusOtherField?: boolean;
+	defaultOtherInputValue?: string;
 }
 
 export default function RadioOption({
@@ -18,47 +23,21 @@ export default function RadioOption({
 	image,
 	onPress,
 	selected = false,
-}: RadioOptionPropsInterface): React.ReactElement {
+	isOtherSelected = false,
+	autofocusOtherField = false,
+	defaultOtherInputValue,
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { color100 } = settingCtx.settingState.colorTheme;
-	const [optionValue, setOptionValue] = useState<string>(value);
-	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
+	const { device, colorTheme } = settingCtx.settingState;
+	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
-
-	useEffect(() => {
-		if (optionValue !== value) {
-			setOptionValue(value);
-		}
-	}, [value]);
-
-	useEffect(() => {
-		setIsOtherSelected(selected && optionValue?.toLowerCase() === "other");
-	}, [selected, optionValue]);
-
-	function pressHandler(): void {
-		if (selected) {
-			onPress(null);
-		} else {
-			onPress(optionValue);
-		}
-
-		console.log("optionValue: ", optionValue);
-		// automatically focus on other input field if "other" is selected
-		if (optionValue?.toString().toLowerCase() === "other") {
-			setIsOtherSelected(true);
-			// console.log("otherInputRef: ", otherInputRef);
-			otherInputRef?.current?.focus();
-		} else {
-			setIsOtherSelected(false);
-		}
-	}
 
 	return (
 		<View style={{ marginBottom: 0 }}>
 			{/* Option Container */}
 			<Pressable
 				style={styles.container}
-				onPress={pressHandler}
+				onPress={() => onPress(value)}
 			>
 				<View
 					style={[
@@ -71,27 +50,65 @@ export default function RadioOption({
 				<View style={styles.labelContainer}>
 					{/* Icon */}
 					{image !== undefined && image !== undefined && typeof image === "function" && (
-						<View style={styles.svgImage}>{image()}</View>
+						<View
+							style={{
+								...styles.svgImage,
+								maxWidth: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								maxHeight: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
+						>
+							{image()}
+						</View>
 					)}
 					{image !== undefined && image !== undefined && typeof image === "number" && (
 						<Image
 							source={image}
-							style={styles.nonSvgImage}
+							style={{
+								...styles.nonSvgImage,
+								maxWidth: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								minHeight: moderateScale(
+									device.isTablet ? 30 : 30,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
 							resizeMode="contain"
 						/>
 					)}
 
 					{/* Label */}
-					<Text style={styles.labelText}>{label}</Text>
+					<Text
+						style={{
+							...styles.labelText,
+							fontSize: moderateScale(
+								device.isTablet ? 14 : 16,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+							lineHeight: moderateScale(
+								device.isTablet ? 18 : 20,
+								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							),
+						}}
+					>
+						{label}
+					</Text>
 				</View>
 			</Pressable>
 
 			{/* Other Field */}
-			{optionValue.toString().toLowerCase() === "other" && (
+			{isOtherOption(value) && isOtherSelected && (
 				<View
 					style={{
 						overflow: "hidden",
-						display: selected ? "flex" : "none",
+						display: "flex",
 						paddingHorizontal: GeneralStyle.adult.field.paddingHorizontal,
 						borderWidth: GeneralStyle.adult.field.borderWidth,
 						borderRadius: GeneralStyle.adult.field.borderRadius,
@@ -108,9 +125,17 @@ export default function RadioOption({
 							alignItems: "center",
 							justifyContent: "center",
 						}}
+						onLayout={(event) => {
+							if (autofocusOtherField) {
+								otherInputRef?.current?.focus();
+							}
+						}}
 						autoCapitalize="none"
 						autoCorrect={false}
-						onChangeText={() => console.log("entering other value")}
+						onChangeText={(value) => {
+							onPress(`other (${value})`);
+						}}
+						defaultValue={defaultOtherInputValue}
 						placeholder={"Please Specify"}
 					/>
 				</View>

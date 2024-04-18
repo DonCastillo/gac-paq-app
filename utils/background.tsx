@@ -22,10 +22,6 @@ function getImageBackground(
 	mode: Mode.Kid | Mode.Adult | undefined,
 	isTablet: boolean,
 ): any | null {
-	console.log("images: ", images);
-	console.log("mode: ", mode);
-	console.log("isTablet: ", isTablet);
-
 	if (mode === Mode.Adult && isTablet) {
 		return images?.adult?.tablet;
 	} else if (mode === Mode.Adult && !isTablet) {

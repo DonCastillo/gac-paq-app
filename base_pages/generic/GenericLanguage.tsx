@@ -18,8 +18,10 @@ import PhraseLabel from "constants/phrase_label";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
-import Toolbar from "components/adults/Toolbar";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 import QuestionTitle from "components/generic/QuestionTitle";
+import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import QuestionSubLabel from "components/generic/QuestionSubLabel";
 
 export default function GenericLanguage(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -31,6 +33,11 @@ export default function GenericLanguage(): React.ReactElement {
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
+		mode,
+	);
+	const questionSubLabel = translateQuestionLabel(
+		translatedPage?.kid_sublabel,
+		translatedPage?.adult_sublabel,
 		mode,
 	);
 
@@ -124,17 +131,22 @@ export default function GenericLanguage(): React.ReactElement {
 				key={currentPageNumber}
 			/>
 			<Main>
+				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
-						<QuestionLabel
-							textStyle={{
-								...GeneralStyle.adult.questionLabel,
-							}}
-						>
-							{questionLabel}
-						</QuestionLabel>
+						<View style={{ marginBottom: 13 }}>
+							<QuestionLabel
+								textStyle={GeneralStyle.adult.questionLabel}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{questionLabel}
+							</QuestionLabel>
+							<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+								{questionSubLabel}
+							</QuestionSubLabel>
+						</View>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}
 							selectedValue={selectedValue}

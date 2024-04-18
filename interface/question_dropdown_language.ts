@@ -8,6 +8,8 @@ export default interface QuestionDropdownLanguageInterface {
 	label: string;
 	adult_label: string;
 	kid_label: string;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
 	languages_id?: LanguageInterface | null;
 	images?: ImageDeviceInterface;
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { SettingContext } from "store/settings";
+import { moderateScale } from "utils/responsive";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -19,8 +20,16 @@ export default function Paragraph({
 				style={[
 					styles.text,
 					{
-						fontSize: device.isTablet ? 20 : 15,
-						lineHeight: device.isTablet ? 25 : 19,
+						// fontSize: device.isTablet ? 20 : 15,
+						// lineHeight: device.isTablet ? 25 : 19,
+						fontSize: moderateScale(
+							device.isTablet ? 15 : 15,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
+						lineHeight: moderateScale(
+							device.isTablet ? 19 : 19,
+							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+						),
 					},
 					customStyle,
 				]}

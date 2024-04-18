@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { SettingContext } from "store/settings";
 
 interface ScrollContainerPropsInterface {
@@ -29,7 +29,7 @@ export default function ScrollContainer({
 				alignItems: "center",
 			}}
 		>
-			{children}
+			<View onStartShouldSetResponder={() => true}>{children}</View>
 		</ScrollView>
 	);
 }

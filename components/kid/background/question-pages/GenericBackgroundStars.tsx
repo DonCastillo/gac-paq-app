@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import React from "react";
+import React, { memo } from "react";
 import { StarsBlue, StarsPurple } from "components/svgs/kid/doodles";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
@@ -7,7 +7,7 @@ interface PropsInterface {
 	fillColor: string;
 }
 
-export default function GenericBackgroundStars({ fillColor }: PropsInterface): React.ReactElement {
+function GenericBackgroundStars({ fillColor }: PropsInterface): React.ReactElement {
 	return (
 		<AbsoluteFullScreenContainer>
 			<StarsBlue
@@ -21,6 +21,8 @@ export default function GenericBackgroundStars({ fillColor }: PropsInterface): R
 		</AbsoluteFullScreenContainer>
 	);
 }
+
+export default memo(GenericBackgroundStars);
 
 const styles = StyleSheet.create({
 	left: {

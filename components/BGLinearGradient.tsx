@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { SettingContext } from "store/settings";
 
-export default function BGLinearGradient(): React.ReactElement {
+function BGLinearGradient(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { grad100, grad200, grad300, grad400 } = settingCtx.settingState.colorTheme;
 
@@ -17,6 +17,8 @@ export default function BGLinearGradient(): React.ReactElement {
 		/>
 	);
 }
+
+export default memo(BGLinearGradient);
 
 const styles = StyleSheet.create({
 	bgGradient: {
