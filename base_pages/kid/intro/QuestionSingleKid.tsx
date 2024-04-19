@@ -129,7 +129,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setSelectedValue(value);
 
 		// set mode
-		if (currentPage.page.name === "Who's taking this questionnaire?") {
+		if (currentPage.page.name === "mode") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
 				settingCtx.addExtroFeedbackPages(

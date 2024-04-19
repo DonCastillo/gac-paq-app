@@ -79,22 +79,27 @@ export default function QuestionExtroKid(): React.ReactElement {
 
 			// throw new Error("testing error page");
 
-			// await submitResponse(
-			// 	responseCtx.responses,
-			// 	`${directusBaseEndpoint}/items/response`,
-			// 	directusAccessToken,
-			// );
+			const sanitizedResponses = sanitizeResponse(
+				responseCtx.responses,
+				settingCtx.settingState.mode,
+			);
+			console.log("sanitized responses: ", sanitizedResponses);
+			await submitResponse(
+				sanitizedResponses,
+				`${directusBaseEndpoint}/items/response`,
+				directusAccessToken,
+			);
 			// console.log("submitting the responses");
 			// console.log("pre-processed responses: ", responseCtx.responses);
 			// console.log(
 			// 	"post-processed ",
 			// 	sanitizeResponse(responseCtx.responses, settingCtx.settingState.mode),
 			// );
-			console.log("done submitting the responses");
+			// console.log("done submitting the responses");
 			// introduce a delay
-			responseCtx.resetResponses();
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			// responseCtx.resetResponses();
+			// await new Promise((resolve) => setTimeout(resolve, 5000));
+			// navigation.navigate("SuccessScreen");
 		} catch (error) {
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			console.log("redirect to the error page");

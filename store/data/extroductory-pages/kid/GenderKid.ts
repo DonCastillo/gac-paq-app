@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const GenderKid: QuestionRadioPayloadInterface = {
-	name: "Gender Kid",
+	name: "child_sex",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{

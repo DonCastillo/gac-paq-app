@@ -3,7 +3,7 @@ import type QuestionDropdownPayloadInterface from "interface/directus/question-d
 import Images from "styles/images";
 
 const LanguagePage: QuestionDropdownPayloadInterface = {
-	name: "What language do you speak & Where are you?",
+	name: "language_location",
 	type: ScreenType.Language,
 	translations: [
 		{

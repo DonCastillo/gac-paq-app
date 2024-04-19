@@ -33,8 +33,10 @@ function getResponse(
 function sanitizeResponse(
 	responses: Record<string, ResponseInterface>,
 	mode: Mode.Adult | Mode.Kid | undefined,
-): Record<string, string> | Record<string, Record<string, string>> {
-	const sanitizedResponse: Record<string, string> | Record<string, Record<string, string>> = {};
+): Record<string, string | string[]> | Record<string, Record<string, string | string[]>> {
+	const sanitizedResponse:
+		| Record<string, string | string[]>
+		| Record<string, Record<string, string | string[]>> = {};
 
 	// FILTER RESPONSES
 	sanitizedResponse.questions = {};
@@ -50,10 +52,19 @@ function sanitizeResponse(
 
 		// get all answers from the questions
 		if (value.section === SectionType.Question) {
-			sanitizedResponse.questions = {
-				...sanitizedResponse.questions,
-				[value.label ?? key]: value.answer,
-			};
+			const label = (value.label ?? key).replace(/(\r\n|\n|\r)/g, "");
+			if (value.answer.includes(" | ")) {
+				console.log("value.answer: ", value.answer.split(" | "));
+				sanitizedResponse.questions = {
+					...sanitizedResponse.questions,
+					[label]: value.answer.split(" | "),
+				};
+			} else {
+				sanitizedResponse.questions = {
+					...sanitizedResponse.questions,
+					[label]: value.answer,
+				};
+			}
 		}
 
 		// get all answers from the feedback
@@ -63,7 +74,11 @@ function sanitizeResponse(
 
 		// get all answers from the extros that match the current mode
 		if (value.section === SectionType.Extro && value.mode === mode) {
-			sanitizedResponse[value.label ?? key] = value.answer;
+			if (value.answer.includes(" | ")) {
+				sanitizedResponse[value.label ?? key] = value.answer.split(" | ");
+			} else {
+				sanitizedResponse[value.label ?? key] = value.answer;
+			}
 		}
 	}
 

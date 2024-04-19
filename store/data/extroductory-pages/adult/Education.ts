@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const Education: QuestionRadioPayloadInterface = {
-	name: "What is the highest level of education completed by a member of your household?",
+	name: "highest_level_of_education",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{

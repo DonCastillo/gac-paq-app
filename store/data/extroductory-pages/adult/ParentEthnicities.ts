@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
 
 const ParentEthnicities: QuestionCheckboxPayloadInterface = {
-	name: "What is your ethnicity?",
+	name: "parent_ethnicity",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{

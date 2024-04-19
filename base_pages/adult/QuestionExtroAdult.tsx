@@ -19,6 +19,7 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import { sanitizeResponse } from "utils/response";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -74,14 +75,19 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		try {
 			setLoading(true);
 
-			// await submitResponse(
-			// 	responseCtx.responses,
-			// 	`${directusBaseEndpoint}/items/response`,
-			// 	directusAccessToken,
-			// );
-			responseCtx.resetResponses();
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			const sanitizedResponses = sanitizeResponse(
+				responseCtx.responses,
+				settingCtx.settingState.mode,
+			);
+			console.log("sanitized responses: ", sanitizedResponses);
+			await submitResponse(
+				sanitizedResponses,
+				`${directusBaseEndpoint}/items/response`,
+				directusAccessToken,
+			);
+			// responseCtx.resetResponses();
+			// await new Promise((resolve) => setTimeout(resolve, 5000));
+			// navigation.navigate("SuccessScreen");
 		} catch (error) {
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			navigation.navigate("ErrorScreen");

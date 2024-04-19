@@ -3,7 +3,7 @@ import type QuestionDropdownPayloadInterface from "interface/directus/question-d
 import Images from "styles/images";
 
 const AgePage: QuestionDropdownPayloadInterface = {
-	name: "Who's taking this questionnaire?",
+	name: "mode",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
