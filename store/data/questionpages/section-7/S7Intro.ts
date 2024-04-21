@@ -3,6 +3,7 @@ import type SectionPayloadInterface from "interface/directus/section-payload";
 import Images from "styles/images";
 
 const S7Intro: SectionPayloadInterface = {
+	ident: "outdoors_intro",
 	heading: "Outdoors",
 	type: ScreenType.IntroQuestion,
 	translations: [
