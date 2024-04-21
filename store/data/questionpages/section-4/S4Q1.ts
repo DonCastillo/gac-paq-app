@@ -3,7 +3,7 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import Images from "styles/images";
 
 const S4Q1: QuestionRadioImagePayloadInterface = {
-	ident: "transportation_intro",
+	ident: "transportation_1",
 	name: "Question 15:	How did you go to school in the past week?",
 	type: ScreenType.SingleQuestion,
 	translations: [

@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S3Q2: QuestionRadioPayloadInterface = {
-	ident: "work_intro",
+	ident: "work_2",
 	name: "Question 13: In the past week, how many hours have you spent volunteering and/or working?",
 	type: ScreenType.SingleQuestion,
 	translations: [

@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S4Q9: QuestionRadioPayloadInterface = {
-	ident: "transportation_intro",
+	ident: "transportation_9",
 	name: "Question 17c: On a normal day, how much time did you walk [wheel] to places other than school or work?",
 	type: ScreenType.SingleQuestion,
 	translations: [

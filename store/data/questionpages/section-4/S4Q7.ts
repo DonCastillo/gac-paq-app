@@ -2,7 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
 
 const S4Q7: QuestionCheckboxPayloadInterface = {
-	ident: "transportation_intro",
+	ident: "transportation_7",
 	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to you.",
 	type: ScreenType.SingleQuestion,
 	translations: [
