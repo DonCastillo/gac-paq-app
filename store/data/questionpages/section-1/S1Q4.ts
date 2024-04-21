@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S1Q4: QuestionRadioPayloadInterface = {
+	ident: "school_4",
 	name: "Question 4: How long are your physical education classes?",
 	type: ScreenType.SingleQuestion,
 	translations: [

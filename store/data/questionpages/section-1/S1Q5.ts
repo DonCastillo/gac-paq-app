@@ -3,6 +3,7 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import Images from "styles/images/index";
 
 const S1Q5: QuestionRadioImagePayloadInterface = {
+	ident: "school_5",
 	name: "Question 5: Which of the following images shows what you do most of the time in physical education class?",
 	type: ScreenType.SingleQuestion,
 	translations: [
