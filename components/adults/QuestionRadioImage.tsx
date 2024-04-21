@@ -144,7 +144,7 @@ export default function QuestionRadioImage({
 				style={[
 					styles.blockOptionContainer,
 					{
-						maxWidth: imageWidth,
+						width: imageWidth,
 						aspectRatio: 1 / 1,
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
