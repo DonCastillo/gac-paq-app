@@ -48,9 +48,11 @@ function translateQuestionLabel(
 }
 
 function getPage(currentPageNumber: number, pages: any[]): any {
-	return pages.find((page) => {
-		return page.pageNumber === currentPageNumber;
-	});
+	// return pages.find((page) => {
+	// 	return page.pageNumber === currentPageNumber;
+	// });
+
+	return pages[currentPageNumber];
 }
 
 export { translate, translateQuestionLabel, getPage };

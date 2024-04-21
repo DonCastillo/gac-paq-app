@@ -102,8 +102,8 @@ function AppWrapper(): React.ReactElement {
 			const sectionPageNumber = ++sectionIndex;
 
 			// add page to section
-			settingCtx.addPage({
-				pageNumber: pageNumber++,
+			settingCtx.addPage(pageNumber, {
+				pageNumber,
 				page,
 				screen: page.type,
 				sectionNumber,
@@ -113,6 +113,7 @@ function AppWrapper(): React.ReactElement {
 
 			// add section total pages
 			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			pageNumber++;
 		});
 
 		// load section question pages
@@ -125,8 +126,8 @@ function AppWrapper(): React.ReactElement {
 				sectionNumber++;
 			}
 
-			settingCtx.addPage({
-				pageNumber: pageNumber++,
+			settingCtx.addPage(pageNumber, {
+				pageNumber,
 				page,
 				screen: page.type,
 				section: SectionType.Question,
@@ -137,6 +138,7 @@ function AppWrapper(): React.ReactElement {
 			// add section total pages
 			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
 			sectionPageNumber++;
+			pageNumber++;
 		});
 
 		// load default extro pages (kids)
@@ -149,8 +151,8 @@ function AppWrapper(): React.ReactElement {
 				questionCtx.addSectionPage(page);
 			}
 
-			settingCtx.addPage({
-				pageNumber: pageNumber++,
+			settingCtx.addPage(pageNumber, {
+				pageNumber,
 				page,
 				screen: page.type,
 				section: SectionType.Extro,
@@ -160,6 +162,7 @@ function AppWrapper(): React.ReactElement {
 
 			// add section total pages
 			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			pageNumber++;
 		});
 
 		// load feedback pages
@@ -172,8 +175,8 @@ function AppWrapper(): React.ReactElement {
 				questionCtx.addSectionPage(page);
 			}
 
-			settingCtx.addPage({
-				pageNumber: pageNumber++,
+			settingCtx.addPage(pageNumber, {
+				pageNumber,
 				page,
 				screen: page.type,
 				section: SectionType.Feedback,
@@ -183,6 +186,7 @@ function AppWrapper(): React.ReactElement {
 
 			// add section total pages
 			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			pageNumber++;
 		});
 	}, []);
 
@@ -198,7 +202,6 @@ function AppWrapper(): React.ReactElement {
 					name="SplashScreen"
 					component={SplashScreen}
 				/>
-
 				<Stack.Screen
 					name="RegularPageScreen"
 					component={RegularPageScreen}

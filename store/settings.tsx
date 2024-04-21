@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useReducer } from "react";
 import type Mode from "constants/mode";
 import Colors from "store/data/colors";
 import { getPage } from "utils/page";
@@ -123,7 +123,8 @@ const INITIAL_STATE = {
 		grad400:
 			DEFAULT_MODE === undefined ? "#B36EB4" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad400,
 	},
-	pages: [],
+	pages: {},
+	history: [],
 };
 
 // {
@@ -142,10 +143,12 @@ export const SettingContext = createContext({
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
 	setColorTheme: (colorIndex: number) => {},
+	skipPage: (pageNumber: number) => {},
 	nextPage: () => {},
 	prevPage: () => {},
-	addPage: (obj: pageInterface) => {},
-	initializeNextPage: () => {},
+	addPage: (key: number, obj: pageInterface) => {},
+	reset: () => {},
+	// initializeNextPage: () => {},
 	initializeCurrentPage: () => {},
 	setCurrentPage: (pageNumber: number) => {},
 	setKeyboardState: (isKeyboardOpen: boolean) => {},
@@ -198,29 +201,57 @@ function settingReducer(state: any, action: any): any {
 				colorTheme: newColor,
 			};
 		}
-		case "NEXT_PAGE": {
-			const currentpageNumber1 = state.currentPageNumber + 1;
-			const currentPage1 = getPage(currentpageNumber1, state.pages);
-			const nextPage1 = getPage(currentpageNumber1 + 1, state.pages);
+		case "SKIP_PAGE": {
+			let currentPageNumber = action.payload;
+			let newHistory = [...state.history];
+
+			if (currentPageNumber <= 0) {
+				currentPageNumber = 1;
+			}
+
+			// update history
+			newHistory = [...(new Set([...newHistory, currentPageNumber].sort((a, b) => a - b)))];
+			newHistory = newHistory.filter(pageNum => pageNum <= currentPageNumber);
+
+			// update current page
+			const currentPage = getPage(currentPageNumber, state.pages);
 			return {
 				...state,
-				currentPageNumber: currentpageNumber1,
-				currentPage: currentPage1,
-				nextPage: nextPage1,
+				currentPageNumber,
+				currentPage,
+				history: [...newHistory],
+			};
+		}
+		case "NEXT_PAGE": {
+			const currentPageNumber = state.currentPageNumber + 1;
+			const newHistory = new Set([...state.history, currentPageNumber].sort((a, b) => a - b));
+			const currentPage = getPage(currentPageNumber, state.pages);
+			return {
+				...state,
+				currentPageNumber,
+				currentPage,
+				history: [...newHistory],
 			};
 		}
 		case "PREV_PAGE": {
 			if (state.currentPageNumber <= 0) {
 				return state;
 			}
-			const currentpageNumber2 = state.currentPageNumber - 1;
-			const currentPage2 = getPage(currentpageNumber2, state.pages);
-			const nextPage2 = getPage(state.currentPageNumber, state.pages);
+			if (state.history.length <= 0) {
+				return state;
+			}
+			const newHistory = [...state.history];
+			newHistory.pop(); // remove current page
+			const currentPageNumber =
+				newHistory !== undefined && newHistory !== null && newHistory.length > 0
+					? newHistory.at(-1)
+					: 1; // remove previous page
+			const currentPage = getPage(currentPageNumber, state.pages);
 			return {
 				...state,
-				currentPageNumber: currentpageNumber2,
-				currentPage: currentPage2,
-				nextPage: nextPage2,
+				currentPageNumber,
+				currentPage,
+				history: [...newHistory],
 			};
 		}
 		case "SET_TOTAL_PAGE":
@@ -228,11 +259,12 @@ function settingReducer(state: any, action: any): any {
 				...state,
 				totalPage: action.payload,
 			};
-		case "ADD_PAGE":
+		case "ADD_PAGE": {
 			return {
 				...state,
-				pages: [...state.pages, action.payload],
+				pages: { ...state.pages, [action.payload.key]: action.payload.obj },
 			};
+		}
 		case "INITIALIZE_CURRENT_PAGE": {
 			const currentPageNumber = state.currentPageNumber;
 			const currentPage = getPage(state.currentPageNumber, state.pages);
@@ -365,7 +397,7 @@ export default function SettingContextProvider({
 }): React.ReactElement {
 	const [settingState, dispatch] = useReducer(settingReducer, INITIAL_STATE);
 
-	function setMode(newMode: Mode.Adult | Mode.Kid): void {
+	function setMode(newMode: Mode.Adult | Mode.Kid | undefined): void {
 		dispatch({
 			type: "SET_MODE",
 			payload: newMode,
@@ -418,18 +450,44 @@ export default function SettingContextProvider({
 		});
 	}
 
-	function addPage(obj: pageInterface): void {
+	function skipPage(pageNumber: number): void {
 		dispatch({
-			type: "ADD_PAGE",
-			payload: obj,
+			type: "SKIP_PAGE",
+			payload: pageNumber,
 		});
 	}
 
-	function initializeNextPage(): void {
+	function addPage(key: number, obj: pageInterface): void {
 		dispatch({
-			type: "INITIALIZE_NEXT_PAGE",
+			type: "ADD_PAGE",
+			payload: { key, obj },
 		});
 	}
+
+	function reset(): void {
+		dispatch({
+			type: "SET_MODE",
+			payload: undefined,
+		});
+		dispatch({
+			type: "SKIP_PAGE",
+			payload: 1,
+		});
+		dispatch({
+			type: "SET_COLOR_THEME",
+			payload: 0,
+		});
+		dispatch({
+			type: "SET_LANGUAGE",
+			payload: "en-CA",
+		})
+	}
+
+	// function initializeNextPage(): void {
+	// 	dispatch({
+	// 		type: "INITIALIZE_NEXT_PAGE",
+	// 	});
+	// }
 
 	function initializeCurrentPage(): void {
 		dispatch({
@@ -509,10 +567,12 @@ export default function SettingContextProvider({
 		setLanguage,
 		setDirectusAccessToken,
 		setColorTheme,
+		reset,
+		skipPage,
 		nextPage,
 		prevPage,
 		addPage,
-		initializeNextPage,
+		// initializeNextPage,
 		initializeCurrentPage,
 		setCurrentPage,
 		translateButtons,
