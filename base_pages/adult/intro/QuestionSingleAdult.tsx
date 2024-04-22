@@ -110,6 +110,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
+			ident: currentPage.page.ident,
 			label: currentPage.page.name,
 			answer: value,
 			pageNumber: currentPage.pageNumber,
@@ -121,20 +122,13 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		setSelectedValue(value);
 
 		// set mode
-		if (currentPage.page.name === "mode") {
+		if (currentPage.page.ident === "mode") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
-				settingCtx.addExtroFeedbackPages(
-					[...questionCtx.questionState.kidExtroPages],
-					[...questionCtx.questionState.feedbackExtroPages],
-				);
 			} else {
 				settingCtx.setMode(Mode.Adult);
-				settingCtx.addExtroFeedbackPages(
-					[...questionCtx.questionState.adultExtroPages],
-					[...questionCtx.questionState.feedbackExtroPages],
-				);
 			}
+			settingCtx.reloadExtroFeedbackPages();
 		}
 	}
 

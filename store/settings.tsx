@@ -1,5 +1,5 @@
-import React, { createContext, useReducer } from "react";
-import type Mode from "constants/mode";
+import React, { createContext, useContext, useReducer } from "react";
+import Mode from "constants/mode";
 import Colors from "store/data/colors";
 import { getPage } from "utils/page";
 import type ScreenType from "constants/screen_type";
@@ -12,6 +12,7 @@ import type QuestionRadioPayloadInterface from "interface/directus/question-radi
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
 import OrientationType from "constants/orientation_type";
 import type DeviceInterface from "interface/dimensions";
+import { QuestionContext } from "./questions";
 /**
  * by default the app should be set as:
  *      mode: kid,
@@ -149,12 +150,12 @@ export const SettingContext = createContext({
 	addPage: (key: number, obj: pageInterface) => {},
 	reset: () => {},
 	// initializeNextPage: () => {},
-	initializeCurrentPage: () => {},
-	setCurrentPage: (pageNumber: number) => {},
+	// initializeCurrentPage: () => {},
+	// setCurrentPage: (pageNumber: number) => {},
 	setKeyboardState: (isKeyboardOpen: boolean) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
-	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
+	reloadExtroFeedbackPages: () => {},
 	setSectionTitles: (sectionTitles: string[]) => {},
 	setSectionTotalPages: (sectionNumber: number, totalPages: number) => {},
 });
@@ -210,15 +211,17 @@ function settingReducer(state: any, action: any): any {
 			}
 
 			// update history
-			newHistory = [...(new Set([...newHistory, currentPageNumber].sort((a, b) => a - b)))];
-			newHistory = newHistory.filter(pageNum => pageNum <= currentPageNumber);
+			newHistory = [...new Set([...newHistory, currentPageNumber].sort((a, b) => a - b))];
+			newHistory = newHistory.filter((pageNum) => pageNum <= currentPageNumber);
 
 			// update current page
 			const currentPage = getPage(currentPageNumber, state.pages);
+			const nextPage = getPage(currentPageNumber + 1, state.pages);
 			return {
 				...state,
 				currentPageNumber,
 				currentPage,
+				nextPage,
 				history: [...newHistory],
 			};
 		}
@@ -226,10 +229,12 @@ function settingReducer(state: any, action: any): any {
 			const currentPageNumber = state.currentPageNumber + 1;
 			const newHistory = new Set([...state.history, currentPageNumber].sort((a, b) => a - b));
 			const currentPage = getPage(currentPageNumber, state.pages);
+			const nextPage = getPage(currentPageNumber + 1, state.pages);
 			return {
 				...state,
 				currentPageNumber,
 				currentPage,
+				nextPage,
 				history: [...newHistory],
 			};
 		}
@@ -247,10 +252,12 @@ function settingReducer(state: any, action: any): any {
 					? newHistory.at(-1)
 					: 1; // remove previous page
 			const currentPage = getPage(currentPageNumber, state.pages);
+			const nextPage = getPage(currentPageNumber + 1, state.pages);
 			return {
 				...state,
 				currentPageNumber,
 				currentPage,
+				nextPage,
 				history: [...newHistory],
 			};
 		}
@@ -263,27 +270,6 @@ function settingReducer(state: any, action: any): any {
 			return {
 				...state,
 				pages: { ...state.pages, [action.payload.key]: action.payload.obj },
-			};
-		}
-		case "INITIALIZE_CURRENT_PAGE": {
-			const currentPageNumber = state.currentPageNumber;
-			const currentPage = getPage(state.currentPageNumber, state.pages);
-			const nextPage = getPage(state.currentPageNumber + 1, state.pages);
-			return {
-				...state,
-				currentPageNumber,
-				currentPage,
-				nextPage,
-			};
-		}
-		case "SET_CURRENT_PAGE": {
-			let finalPageNumber = state.currentPageNumber;
-			if (action.payload <= 0) finalPageNumber = 0;
-			else if (action.payload > state.pages.length) finalPageNumber = state.pages.length;
-			else finalPageNumber = action.payload;
-			return {
-				...state,
-				currentPageNumber: finalPageNumber,
 			};
 		}
 		case "SET_BUTTONS":
@@ -318,7 +304,7 @@ function settingReducer(state: any, action: any): any {
 				},
 			};
 		case "REMOVE_EXTRO_PAGES": {
-			const pagesWithoutExtros = state.pages.filter((page: any) => {
+			const pagesWithoutExtros = Object.values(state.pages).filter((page: any) => {
 				return page.section !== SectionType.Extro;
 			});
 			return {
@@ -327,7 +313,7 @@ function settingReducer(state: any, action: any): any {
 			};
 		}
 		case "REMOVE_FEEDBACK_PAGES": {
-			const pagesWithoutFeedback = state.pages.filter((page: any) => {
+			const pagesWithoutFeedback = Object.values(state.pages).filter((page: any) => {
 				return page.section !== SectionType.Feedback;
 			});
 			return {
@@ -335,54 +321,89 @@ function settingReducer(state: any, action: any): any {
 				pages: pagesWithoutFeedback,
 			};
 		}
-		case "ADD_EXTRO_PAGES": {
-			const numberOfPages = state.pages.length;
-			const lastPage = state.pages[numberOfPages - 1];
-			let lastPageNumber = lastPage.pageNumber;
-			const lastSectionNumber = lastPage.sectionNumber;
-			const nextSectionNumber = lastSectionNumber + 1;
-			let sectionPageNumber = 0;
-			const newExtroPages = action.payload.map((page: rawPageInterface, index: number) => {
-				sectionPageNumber = ++index;
-				return {
-					pageNumber: ++lastPageNumber,
-					page,
-					screen: page.type,
-					section: SectionType.Extro,
-					sectionNumber: nextSectionNumber,
-					sectionPageNumber,
-				};
-			});
+		case "RELOAD_EXTRO_FEEDBACK_PAGES": {
+			console.log("RELOAD_EXTRO_FEEDBACK_PAGES");
+			// console.log(state.pages);
+			let newPages = {};
+			let newSectionTotalPages = {};
 
-			return {
-				...state,
-				sectionTotalPages: { ...state.sectionTotalPages, [nextSectionNumber]: sectionPageNumber },
-				pages: [...state.pages, ...newExtroPages],
+			// remove all extro and feedback pages
+			for (const [key, page] of Object.entries(state.pages)) {
+				if (
+					(page as any).section === SectionType.Extro ||
+					(page as any).section === SectionType.Feedback
+				) {
+					continue;
+				} else {
+					newPages = { ...newPages, [key]: page };
+				}
+			}
+
+			const lastPagesIndex = parseInt(Object.keys(newPages).at(-1) ?? "1");
+			const lastPage = newPages[lastPagesIndex];
+			let lastPageNumber = lastPage.pageNumber;
+			let lastSectionNumber = lastPage.sectionNumber;
+			let finalExtroPages = [];
+			let finalFeedbackPages = [];
+
+			// load all extro pages
+			lastSectionNumber++;
+			if (state.mode === Mode.Kid) {
+				finalExtroPages = action.payload.kidsExtro.map((page: rawPageInterface, index: number) => {
+					return {
+						pageNumber: ++lastPageNumber,
+						page,
+						screen: page.type,
+						section: SectionType.Extro,
+						sectionNumber: lastSectionNumber,
+						sectionPageNumber: ++index,
+					};
+				});
+			} else {
+				finalExtroPages = action.payload.adultExtro.map((page: rawPageInterface, index: number) => {
+					return {
+						pageNumber: ++lastPageNumber,
+						page,
+						screen: page.type,
+						section: SectionType.Extro,
+						sectionNumber: lastSectionNumber,
+						sectionPageNumber: ++index,
+					};
+				});
+			}
+			newSectionTotalPages = {
+				...newSectionTotalPages,
+				[lastSectionNumber]: finalExtroPages.length,
 			};
-		}
-		case "ADD_FEEDBACK_PAGES": {
-			const numberOfPages = state.pages.length;
-			const lastPage = state.pages[numberOfPages - 1];
-			let lastPageNumber = lastPage.pageNumber;
-			const lastSectionNumber = lastPage.sectionNumber;
-			const nextSectionNumber = lastSectionNumber + 1;
-			let sectionPageNumber = 0;
 
-			const newFeedbackPages = action.payload.map((page: rawPageInterface, index: number) => {
-				sectionPageNumber = ++index;
+			// load all feedback pages
+			lastSectionNumber++;
+			finalFeedbackPages = action.payload.feedback.map((page: rawPageInterface, index: number) => {
 				return {
 					pageNumber: ++lastPageNumber,
 					page,
 					screen: page.type,
 					section: SectionType.Feedback,
-					sectionNumber: nextSectionNumber,
-					sectionPageNumber,
+					sectionNumber: lastSectionNumber,
+					sectionPageNumber: ++index,
 				};
 			});
+			newSectionTotalPages = {
+				...newSectionTotalPages,
+				[lastSectionNumber]: finalFeedbackPages.length,
+			};
+
+			finalExtroPages.forEach((page: pageInterface) => {
+				newPages = { ...newPages, [page.pageNumber ?? 1]: page };
+			});
+			finalFeedbackPages.forEach((page: pageInterface) => {
+				newPages = { ...newPages, [page.pageNumber ?? 1]: page };
+			});
+
 			return {
 				...state,
-				sectionTotalPages: { ...state.sectionTotalPages, [nextSectionNumber]: sectionPageNumber },
-				pages: [...state.pages, ...newFeedbackPages],
+				pages: newPages,
+				sectionTotalPages: { ...state.sectionTotalPages, ...newSectionTotalPages },
 			};
 		}
 		default:
@@ -396,6 +417,7 @@ export default function SettingContextProvider({
 	children: React.ReactNode;
 }): React.ReactElement {
 	const [settingState, dispatch] = useReducer(settingReducer, INITIAL_STATE);
+	const questionCtx = useContext(QuestionContext);
 
 	function setMode(newMode: Mode.Adult | Mode.Kid | undefined): void {
 		dispatch({
@@ -480,28 +502,6 @@ export default function SettingContextProvider({
 		dispatch({
 			type: "SET_LANGUAGE",
 			payload: "en-CA",
-		})
-	}
-
-	// function initializeNextPage(): void {
-	// 	dispatch({
-	// 		type: "INITIALIZE_NEXT_PAGE",
-	// 	});
-	// }
-
-	function initializeCurrentPage(): void {
-		dispatch({
-			type: "INITIALIZE_CURRENT_PAGE",
-		});
-	}
-
-	function setCurrentPage(pageNumber: number): void {
-		dispatch({
-			type: "SET_CURRENT_PAGE",
-			payload: pageNumber,
-		});
-		dispatch({
-			type: "INITIALIZE_CURRENT_PAGE",
 		});
 	}
 
@@ -519,23 +519,14 @@ export default function SettingContextProvider({
 		});
 	}
 
-	function addExtroFeedbackPages(
-		extroPages: rawPageInterface[],
-		feedbackPages: rawPageInterface[],
-	): void {
+	function reloadExtroFeedbackPages(): void {
 		dispatch({
-			type: "REMOVE_EXTRO_PAGES",
-		});
-		dispatch({
-			type: "REMOVE_FEEDBACK_PAGES",
-		});
-		dispatch({
-			type: "ADD_EXTRO_PAGES",
-			payload: extroPages,
-		});
-		dispatch({
-			type: "ADD_FEEDBACK_PAGES",
-			payload: feedbackPages,
+			type: "RELOAD_EXTRO_FEEDBACK_PAGES",
+			payload: {
+				adultExtro: questionCtx.questionState.adultExtroPages,
+				kidsExtro: questionCtx.questionState.kidExtroPages,
+				feedback: questionCtx.questionState.feedbackExtroPages,
+			},
 		});
 	}
 
@@ -572,12 +563,9 @@ export default function SettingContextProvider({
 		nextPage,
 		prevPage,
 		addPage,
-		// initializeNextPage,
-		initializeCurrentPage,
-		setCurrentPage,
 		translateButtons,
 		translatePhrases,
-		addExtroFeedbackPages,
+		reloadExtroFeedbackPages,
 		setSectionTitles,
 		setSectionTotalPages,
 		setKeyboardState,

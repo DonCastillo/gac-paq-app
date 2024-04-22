@@ -51,6 +51,7 @@ export default function GenericSingleCheckbox(): React.ReactElement {
 
 	useEffect(() => {
 		responseCtx.addResponse({
+			ident: currentPage.page.ident,
 			label: currentPage.page.name,
 			answer: checked ? "agree" : "disagree",
 			pageNumber: currentPage.pageNumber,

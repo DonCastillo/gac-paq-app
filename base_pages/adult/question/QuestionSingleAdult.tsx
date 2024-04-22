@@ -115,6 +115,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
+			ident: currentPage.page.ident,
 			label: currentPage.page.name,
 			answer: value,
 			pageNumber: currentPage.pageNumber,

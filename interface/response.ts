@@ -1,6 +1,7 @@
 import type Mode from "constants/mode";
 
 export default interface ResponseInterface {
+	ident: string;
 	label: string;
 	answer: string | null;
 	pageNumber: number | null;

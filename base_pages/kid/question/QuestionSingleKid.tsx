@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Keyboard } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -131,6 +131,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
+			ident: currentPage.page.ident,
 			label: currentPage.page.name,
 			answer: value,
 			pageNumber: currentPage.pageNumber,
