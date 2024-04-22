@@ -3,7 +3,9 @@ import type SectionPayloadInterface from "interface/directus/section-payload";
 import Images from "styles/images";
 
 const SocialEconomicsIntro: SectionPayloadInterface = {
+	ident: "social_economics_intro",
 	heading: "Social Economics",
+
 	type: ScreenType.IntroQuestion,
 	translations: [
 		{

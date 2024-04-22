@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionTextareaPayloadInterface from "interface/directus/question-textarea-payload";
 
 const Comment: QuestionTextareaPayloadInterface = {
+	ident: "app_use_comment",
 	name: "app_use_comment",
 	type: ScreenType.SingleQuestion,
 	translations: [

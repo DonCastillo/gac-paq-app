@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
 
 const Difficulties: QuestionCheckboxPayloadInterface = {
+	ident: "child_difficulties",
 	name: "child_difficulties",
 	type: ScreenType.SingleQuestion,
 	translations: [

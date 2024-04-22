@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const Financial: QuestionRadioPayloadInterface = {
+	ident: "difficulty_to_meet_financial_needs",
 	name: "difficulty_to_meet_financial_needs",
 	type: ScreenType.SingleQuestion,
 	translations: [

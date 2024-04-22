@@ -10,9 +10,10 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 		{
 			id: 4,
 			question_radio_image_id: 2,
-			label: "Which of the following images shows what you do most of the time during your breaks?",
+			label:
+				"Which of the following pictures looks like what you do most of the time during your breaks?",
 			kid_label:
-				"Which of the following images shows what you do most of the time during your breaks? ",
+				"Which of the following pictures looks like what you do most of the time during your breaks? ",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time during their breaks?",
 			heading: "Question 7",
@@ -21,7 +22,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 10,
 						sort: null,
-						text: "Mostly not moving",
+						text: "Not moving",
 						value: "0.1",
 						images: {
 							kid: Images.kids.options.breaks.not_moving,
@@ -33,7 +34,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 11,
 						sort: null,
-						text: "Mostly easy effort",
+						text: "Easy effort",
 						value: "0.3",
 						images: {
 							kid: Images.kids.options.breaks.easy_effort,
@@ -45,7 +46,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 12,
 						sort: null,
-						text: "Mostly medium or hard effort",
+						text: "Medium or hard effort",
 						value: "0.5",
 						images: {
 							kid: Images.kids.options.breaks.medium_effort,
