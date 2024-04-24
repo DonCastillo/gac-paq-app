@@ -3,6 +3,7 @@ import type SectionPayloadInterface from "interface/directus/section-payload";
 import Images from "styles/images";
 
 const S6Intro: SectionPayloadInterface = {
+	ident: "play_intro",
 	heading: "Play or Free Time",
 	type: ScreenType.IntroQuestion,
 	translations: [

@@ -3,7 +3,8 @@ import type QuestionInputPayloadInterface from "interface/directus/question-inpu
 import Images from "styles/images";
 
 const ParticipantIDPage: QuestionInputPayloadInterface = {
-	name: "Please enter your Participant ID",
+	ident: "participant_id",
+	name: "participant_id",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{

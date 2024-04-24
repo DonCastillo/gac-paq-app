@@ -19,6 +19,7 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import { sanitizeResponse } from "utils/response";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -43,7 +44,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		if (isFinal === true) {
 			setButtonComponent(
 				<BackAndSubmitNav
-					key={"prev"}
+					key={"prev" + currentPageNumber}
 					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={async () => await submitResponseHandler()}
@@ -53,17 +54,18 @@ export default function QuestionExtroAdult(): React.ReactElement {
 			if (currentPageNumber > 0) {
 				setButtonComponent(
 					<BackAndNextNav
-						key={"both"}
+						key={"both" + currentPageNumber}
 						colorTheme="#FFF"
 						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
+						onNext={() => settingCtx.proceedPage()}
 					/>,
 				);
 			} else {
 				setButtonComponent(
 					<BackAndNextNav
+						key={"next" + currentPageNumber}
 						colorTheme="#FFF"
-						onNext={() => settingCtx.nextPage()}
+						onNext={() => settingCtx.proceedPage()}
 					/>,
 				);
 			}
@@ -74,8 +76,13 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		try {
 			setLoading(true);
 
+			const sanitizedResponses = sanitizeResponse(
+				responseCtx.responses,
+				settingCtx.settingState.mode,
+			);
+			console.log("sanitized responses: ", sanitizedResponses);
 			// await submitResponse(
-			// 	responseCtx.responses,
+			// 	sanitizedResponses,
 			// 	`${directusBaseEndpoint}/items/response`,
 			// 	directusAccessToken,
 			// );

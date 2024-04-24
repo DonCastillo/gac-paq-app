@@ -144,7 +144,7 @@ export default function QuestionRadioImage({
 				style={[
 					styles.blockOptionContainer,
 					{
-						maxWidth: imageWidth,
+						width: imageWidth,
 						aspectRatio: 1 / 1,
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
@@ -202,7 +202,7 @@ export default function QuestionRadioImage({
 			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
 		>
 			<View>
-				{options.length <= 5 || !hasOtherOption(options) ? (
+				{options.length <= 4 || !hasOtherOption(options) ? (
 					<FlatList
 						initialNumToRender={4}
 						data={[...options]}

@@ -48,6 +48,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 		if (isFinal === true) {
 			setButtonComponent(
 				<BackAndSubmitNav
+					key={"prev" + currentPageNumber}
 					colorTheme="#FFCB66"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={async () => await submitResponseHandler()}
@@ -57,16 +58,18 @@ export default function QuestionExtroKid(): React.ReactElement {
 			if (currentPageNumber > 0) {
 				setButtonComponent(
 					<BackAndNextNav
+						key={"both" + currentPageNumber}
 						colorTheme="#FFCB66"
 						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
+						onNext={() => settingCtx.proceedPage()}
 					/>,
 				);
 			} else {
 				setButtonComponent(
 					<BackAndNextNav
+						key={"next" + currentPageNumber}
 						colorTheme="#FFCB66"
-						onNext={() => settingCtx.nextPage()}
+						onNext={() => settingCtx.proceedPage()}
 					/>,
 				);
 			}
@@ -79,19 +82,15 @@ export default function QuestionExtroKid(): React.ReactElement {
 
 			// throw new Error("testing error page");
 
+			const sanitizedResponses = sanitizeResponse(
+				responseCtx.responses,
+				settingCtx.settingState.mode,
+			);
 			// await submitResponse(
-			// 	responseCtx.responses,
+			// 	sanitizedResponses,
 			// 	`${directusBaseEndpoint}/items/response`,
 			// 	directusAccessToken,
 			// );
-			// console.log("submitting the responses");
-			// console.log("pre-processed responses: ", responseCtx.responses);
-			// console.log(
-			// 	"post-processed ",
-			// 	sanitizeResponse(responseCtx.responses, settingCtx.settingState.mode),
-			// );
-			console.log("done submitting the responses");
-			// introduce a delay
 			responseCtx.resetResponses();
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			navigation.navigate("SuccessScreen");

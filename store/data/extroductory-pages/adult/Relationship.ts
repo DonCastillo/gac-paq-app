@@ -2,7 +2,8 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const Relationship: QuestionRadioPayloadInterface = {
-	name: "What is your relationship to the child?",
+	ident: "relationship_to_the_child",
+	name: "relationship_to_the_child",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{

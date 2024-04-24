@@ -91,6 +91,7 @@ export default function LanguageKid(): React.ReactElement {
 		const response = responseCtx.responses;
 		if (Object.keys(response).length === 0) {
 			responseCtx.addResponse({
+				ident: currentPage.page.ident,
 				label: currentPage.page.name,
 				answer: language,
 				pageNumber: currentPage.pageNumber,
@@ -106,6 +107,7 @@ export default function LanguageKid(): React.ReactElement {
 		if (value !== "" && value !== null && value !== undefined) {
 			settingCtx.setLanguage(value);
 			responseCtx.addResponse({
+				ident: currentPage.page.ident,
 				label: currentPage.page.name,
 				answer: value,
 				pageNumber: currentPage.pageNumber,

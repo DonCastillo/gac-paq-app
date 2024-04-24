@@ -3,6 +3,7 @@ import type SectionPayloadInterface from "interface/directus/section-payload";
 import Images from "styles/images";
 
 const S5Intro: SectionPayloadInterface = {
+	ident: "organized_intro",
 	heading: "Organized Activities",
 	type: ScreenType.IntroQuestion,
 	translations: [

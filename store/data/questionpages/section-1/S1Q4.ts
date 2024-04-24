@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S1Q4: QuestionRadioPayloadInterface = {
+	ident: "school_4",
 	name: "Question 4: How long are your physical education classes?",
 	type: ScreenType.SingleQuestion,
 	translations: [
@@ -14,24 +15,24 @@ const S1Q4: QuestionRadioPayloadInterface = {
 			adult_label: "How long are your child's physical education classes?",
 			choices: [
 				{
-					text: "Less than 30 minutes",
-					value: "Less than 30 minutes",
+					text: "Less than 30 minutes per class",
+					value: "Less than 30 minutes per class",
 				},
 				{
-					text: "30-45 minutes",
-					value: "30-45 minutes",
+					text: "30-45 minutes per class",
+					value: "30-45 minutes per class",
 				},
 				{
-					text: "46-60 minutes",
-					value: "46-60 minutes",
+					text: "46-60 minutes per class",
+					value: "46-60 minutes per class",
 				},
 				{
-					text: "Over 60 minutes",
-					value: "Over 60 minutes",
+					text: "Over 60 minutes per class",
+					value: "Over 60 minutes per class",
 				},
 				{
-					text: "I don't know",
-					value: "I don't know",
+					text: "Don't know",
+					value: "Don't know",
 				},
 			],
 			languages_id: {

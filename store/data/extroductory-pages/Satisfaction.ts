@@ -3,7 +3,8 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import Images from "styles/images/index";
 
 const Satisfaction: QuestionRadioImagePayloadInterface = {
-	name: "How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
+	ident: "app_use_satisfaction",
+	name: "app_use_satisfaction",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
