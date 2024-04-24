@@ -44,7 +44,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		if (isFinal === true) {
 			setButtonComponent(
 				<BackAndSubmitNav
-					key={"prev"}
+					key={"prev" + currentPageNumber}
 					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
 					onNext={async () => await submitResponseHandler()}
@@ -54,17 +54,18 @@ export default function QuestionExtroAdult(): React.ReactElement {
 			if (currentPageNumber > 0) {
 				setButtonComponent(
 					<BackAndNextNav
-						key={"both"}
+						key={"both" + currentPageNumber}
 						colorTheme="#FFF"
 						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
+						onNext={() => settingCtx.proceedPage()}
 					/>,
 				);
 			} else {
 				setButtonComponent(
 					<BackAndNextNav
+						key={"next" + currentPageNumber}
 						colorTheme="#FFF"
-						onNext={() => settingCtx.nextPage()}
+						onNext={() => settingCtx.proceedPage()}
 					/>,
 				);
 			}

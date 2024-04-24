@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
 import Mode from "constants/mode";
 import Colors from "store/data/colors";
-import { getPage } from "utils/page";
+import { getPage, skipTo } from "utils/page";
 import type ScreenType from "constants/screen_type";
 import SectionType from "constants/section_type";
 import ButtonLabel from "constants/button_label";
@@ -13,6 +13,8 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import OrientationType from "constants/orientation_type";
 import type DeviceInterface from "interface/dimensions";
 import { QuestionContext } from "./questions";
+import { getResponseByIdent } from "utils/response";
+import { ResponseContext } from "./responses";
 /**
  * by default the app should be set as:
  *      mode: kid,
@@ -148,10 +150,8 @@ export const SettingContext = createContext({
 	nextPage: () => {},
 	prevPage: () => {},
 	addPage: (key: number, obj: pageInterface) => {},
+	proceedPage: () => {},
 	reset: () => {},
-	// initializeNextPage: () => {},
-	// initializeCurrentPage: () => {},
-	// setCurrentPage: (pageNumber: number) => {},
 	setKeyboardState: (isKeyboardOpen: boolean) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
@@ -322,8 +322,6 @@ function settingReducer(state: any, action: any): any {
 			};
 		}
 		case "RELOAD_EXTRO_FEEDBACK_PAGES": {
-			console.log("RELOAD_EXTRO_FEEDBACK_PAGES");
-			// console.log(state.pages);
 			let newPages = {};
 			let newSectionTotalPages = {};
 
@@ -418,6 +416,7 @@ export default function SettingContextProvider({
 }): React.ReactElement {
 	const [settingState, dispatch] = useReducer(settingReducer, INITIAL_STATE);
 	const questionCtx = useContext(QuestionContext);
+	const responseCtx = useContext(ResponseContext);
 
 	function setMode(newMode: Mode.Adult | Mode.Kid | undefined): void {
 		dispatch({
@@ -519,6 +518,24 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function proceedPage(): void {
+		const currentIdent = settingState.currentPage.page.ident;
+		const nextIdent = settingState.nextPage.page.ident;
+		const answerValue = getResponseByIdent(currentIdent, responseCtx.responses) ?? null;
+		const skipToPageNumber = skipTo(
+			currentIdent,
+			nextIdent,
+			answerValue,
+			settingState.pages,
+			responseCtx.responses,
+		);
+		if (skipToPageNumber > 0) {
+			skipPage(skipToPageNumber);
+		} else {
+			nextPage();
+		}
+	}
+
 	function reloadExtroFeedbackPages(): void {
 		dispatch({
 			type: "RELOAD_EXTRO_FEEDBACK_PAGES",
@@ -563,6 +580,7 @@ export default function SettingContextProvider({
 		nextPage,
 		prevPage,
 		addPage,
+		proceedPage,
 		translateButtons,
 		translatePhrases,
 		reloadExtroFeedbackPages,

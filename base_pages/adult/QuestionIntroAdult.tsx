@@ -10,11 +10,11 @@ import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import { moderateScale } from "utils/responsive";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
+
 	const { mode, language, colorTheme, currentPage, currentPageNumber, device } =
 		settingCtx.settingState;
 	const { color200 } = colorTheme;
@@ -26,18 +26,18 @@ export default function QuestionIntroAdult(): React.ReactElement {
 		if (currentPageNumber > 0) {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"both" + currentPageNumber}
 					colorTheme="#FFF"
 					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"next"}
+					key={"next" + currentPageNumber}
 					colorTheme="#FFF"
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		}

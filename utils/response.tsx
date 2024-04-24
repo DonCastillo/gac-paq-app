@@ -30,6 +30,19 @@ function getResponse(
 	}
 }
 
+function getResponseByIdent(
+	ident: string,
+	responses: Record<string, ResponseInterface>,
+): string | null {
+	if (ident === null || ident === "") return null;
+	if (Object.keys(responses).length === 0) return null;
+	const finalResponse = Object.values(responses).find((response) => response.ident === ident);
+	if (finalResponse === undefined || finalResponse === null) {
+		return null;
+	}
+	return finalResponse.answer;
+}
+
 function sanitizeResponse(
 	responses: Record<string, ResponseInterface>,
 	mode: Mode.Adult | Mode.Kid | undefined,
@@ -84,4 +97,4 @@ function sanitizeResponse(
 
 	return sanitizedResponse;
 }
-export { getResponse, sanitizeResponse };
+export { getResponse, sanitizeResponse, getResponseByIdent };
