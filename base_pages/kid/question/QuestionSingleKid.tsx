@@ -88,18 +88,18 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (currentPageNumber > 1) {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"both" + selectedValue}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"next"}
+					key={"next" + selectedValue}
 					colorTheme={color200}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		}
@@ -109,16 +109,16 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (selectedValue !== null && selectedValue !== "") {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"both" + selectedValue}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"prev"}
+					key={"prev" + selectedValue}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
 				/>,

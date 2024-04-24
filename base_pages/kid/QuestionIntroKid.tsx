@@ -24,18 +24,18 @@ export default function QuestionIntroKid(): React.ReactElement {
 		if (currentPageNumber > 0) {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"both" + currentPageNumber}
 					colorTheme="#fff"
 					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"next"}
+					key={"next" + currentPageNumber}
 					colorTheme="#fff"
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		}
