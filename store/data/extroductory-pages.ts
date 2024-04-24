@@ -9,11 +9,12 @@ import GenderKid from "./extroductory-pages/kid/GenderKid";
 import Satisfaction from "./extroductory-pages/Satisfaction";
 import Comment from "./extroductory-pages/Comment";
 import AppExtro from "./extroductory-pages/AppExtro";
-import SocialEconomicsIntro from "./extroductory-pages/SocialEconomicsIntro";
+import SocialEconomicsIntroKid from "./extroductory-pages/kid/SocialEconomicsIntroKid";
+import SocialEconomicsIntroAdult from "./extroductory-pages/adult/SocialEconomicsIntroAdult";
 
-const KidExtroductoryPages = [SocialEconomicsIntro, GenderKid];
+const KidExtroductoryPages = [SocialEconomicsIntroKid, GenderKid];
 const AdultExtroductoryPages = [
-	SocialEconomicsIntro,
+	SocialEconomicsIntroAdult,
 	GenderAdult,
 	Difficulties,
 	ChildEthnicities,

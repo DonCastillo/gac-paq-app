@@ -33,7 +33,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 2,
 						sort: null,
-						text: "Wheeling (for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades)",
+						text: "Wheeling",
 						value: "Wheeling",
 						images: {
 							kid: Images.kids.options.transportation.wheeling,
@@ -45,7 +45,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 3,
 						sort: null,
-						text: "Public transit (for example, bus, train, tramway, subway, boat)",
+						text: "Public transit",
 						value: "Public transit",
 						images: {
 							kid: Images.kids.options.transportation.public_transit,

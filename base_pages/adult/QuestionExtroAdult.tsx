@@ -81,14 +81,14 @@ export default function QuestionExtroAdult(): React.ReactElement {
 				settingCtx.settingState.mode,
 			);
 			console.log("sanitized responses: ", sanitizedResponses);
-			await submitResponse(
-				sanitizedResponses,
-				`${directusBaseEndpoint}/items/response`,
-				directusAccessToken,
-			);
-			// responseCtx.resetResponses();
-			// await new Promise((resolve) => setTimeout(resolve, 5000));
-			// navigation.navigate("SuccessScreen");
+			// await submitResponse(
+			// 	sanitizedResponses,
+			// 	`${directusBaseEndpoint}/items/response`,
+			// 	directusAccessToken,
+			// );
+			responseCtx.resetResponses();
+			await new Promise((resolve) => setTimeout(resolve, 5000));
+			navigation.navigate("SuccessScreen");
 		} catch (error) {
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			navigation.navigate("ErrorScreen");
