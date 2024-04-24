@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const Education: QuestionRadioPayloadInterface = {
+	ident: "highest_level_of_education",
 	name: "highest_level_of_education",
 	type: ScreenType.SingleQuestion,
 	translations: [

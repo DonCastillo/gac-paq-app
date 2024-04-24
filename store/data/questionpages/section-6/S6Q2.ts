@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S6Q2: QuestionRadioPayloadInterface = {
+	ident: "play_2",
 	name: "Question 22: In the past week, how many days per week did you do activities that make your muscles stronger?",
 	type: ScreenType.SingleQuestion,
 	translations: [

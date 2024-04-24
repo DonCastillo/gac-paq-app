@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Keyboard } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -88,18 +88,18 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (currentPageNumber > 1) {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"both" + selectedValue}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"next"}
+					key={"next" + selectedValue}
 					colorTheme={color200}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		}
@@ -109,16 +109,16 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (selectedValue !== null && selectedValue !== "") {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"both"}
+					key={"both" + selectedValue}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => settingCtx.proceedPage()}
 				/>,
 			);
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
-					key={"prev"}
+					key={"prev" + selectedValue}
 					colorTheme={color200}
 					onPrev={() => settingCtx.prevPage()}
 				/>,
@@ -131,6 +131,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
+			ident: currentPage.page.ident,
 			label: currentPage.page.name,
 			answer: value,
 			pageNumber: currentPage.pageNumber,

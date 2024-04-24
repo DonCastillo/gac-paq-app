@@ -3,6 +3,7 @@ import type QuestionDropdownPayloadInterface from "interface/directus/question-d
 import Images from "styles/images";
 
 const AgePage: QuestionDropdownPayloadInterface = {
+	ident: "mode",
 	name: "mode",
 	type: ScreenType.SingleQuestion,
 	translations: [

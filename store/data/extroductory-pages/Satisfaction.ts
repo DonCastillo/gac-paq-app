@@ -3,6 +3,7 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import Images from "styles/images/index";
 
 const Satisfaction: QuestionRadioImagePayloadInterface = {
+	ident: "app_use_satisfaction",
 	name: "app_use_satisfaction",
 	type: ScreenType.SingleQuestion,
 	translations: [

@@ -16,7 +16,6 @@ import { getResponse } from "utils/response";
 import { getIntroductoryBackground } from "utils/background";
 import QuestionInput from "components/kid/QuestionInput";
 import Mode from "constants/mode";
-import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/subcomponents/Toolbar";
@@ -30,7 +29,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-	const questionCtx = useContext(QuestionContext);
 
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
@@ -118,6 +116,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	 */
 	function changeHandler(value: string | null): void {
 		responseCtx.addResponse({
+			ident: currentPage.page.ident,
 			label: currentPage.page.name,
 			answer: value,
 			pageNumber: currentPage.pageNumber,
@@ -129,20 +128,13 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setSelectedValue(value);
 
 		// set mode
-		if (currentPage.page.name === "mode") {
+		if (currentPage.page.ident === "mode") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
-				settingCtx.addExtroFeedbackPages(
-					[...questionCtx.questionState.kidExtroPages],
-					[...questionCtx.questionState.feedbackExtroPages],
-				);
 			} else {
 				settingCtx.setMode(Mode.Adult);
-				settingCtx.addExtroFeedbackPages(
-					[...questionCtx.questionState.adultExtroPages],
-					[...questionCtx.questionState.feedbackExtroPages],
-				);
 			}
+			settingCtx.reloadExtroFeedbackPages();
 		}
 	}
 

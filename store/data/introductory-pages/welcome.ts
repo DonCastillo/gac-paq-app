@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type PagePayloadInterface from "interface/directus/page-payload";
 
 const WelcomePage: PagePayloadInterface = {
+	ident: "welcome",
 	title: "Welcome Page",
 	name: "Welcome Page",
 	type: ScreenType.Page,

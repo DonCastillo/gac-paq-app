@@ -3,18 +3,19 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import Images from "styles/images";
 
 const S4Q4: QuestionRadioImagePayloadInterface = {
-	name: "Question 16:	How did you go to work in the past week? (Select the mode that you used the most).",
+	ident: "transportation_4",
+	name: "Question 16:	How did you go to work in the past week?",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
 			id: 10,
 			question_radio_image_id: 8,
 			heading: "Question 16",
-			label: "How did you go to work in the past week? (Select the mode that you used the most).",
-			kid_label:
-				"How did you go to work in the past week? (Select the mode that you used the most).",
-			adult_label:
-				"How did your child go to work in the past week? (Select the mode that your child used the most).",
+			label: "How did you go to work in the past week?",
+			kid_label: "How did you go to work in the past week?",
+			adult_label: "How did your child go to work in the past week?",
+			kid_sublabel: "Select the mode that you used the most.",
+			adult_sublabel: "Select the mode that your child used the most.",
 			choices: [
 				{
 					image_choices_id: {
@@ -37,18 +38,6 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 						images: {
 							kid: Images.kids.options.transportation.wheeling,
 							adult: Images.adults.options.transportation.wheeling,
-						},
-					},
-				},
-				{
-					image_choices_id: {
-						id: 3,
-						sort: null,
-						text: "School bus",
-						value: "School bus",
-						images: {
-							kid: Images.kids.options.transportation.school_bus,
-							adult: Images.adults.options.transportation.school_bus,
 						},
 					},
 				},
@@ -80,7 +69,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 3,
 						sort: null,
-						text: "Other",
+						text: "Other, which one?",
 						value: "Other",
 						images: {
 							kid: Images.kids.options.transportation.other,

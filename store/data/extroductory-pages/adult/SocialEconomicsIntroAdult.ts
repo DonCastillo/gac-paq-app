@@ -2,16 +2,17 @@ import ScreenType from "constants/screen_type";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import Images from "styles/images";
 
-const S7Intro: SectionPayloadInterface = {
-	ident: "outdoors_intro",
-	heading: "Outdoors",
+const SocialEconomicsIntroAdult: SectionPayloadInterface = {
+	ident: "about_your_family",
+	heading: "About You",
+
 	type: ScreenType.IntroQuestion,
 	translations: [
 		{
 			id: 4,
 			question_section_id: 3,
-			heading: "Outdoors",
-			subheading: "Section 7",
+			heading: "About Your Family",
+			subheading: "Section 8",
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
@@ -30,4 +31,4 @@ const S7Intro: SectionPayloadInterface = {
 	],
 };
 
-export default S7Intro;
+export default SocialEconomicsIntroAdult;

@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S7Q1: QuestionRadioPayloadInterface = {
+	ident: "outdoors_1",
 	name: "Question 23:	In the past week, on a normal day, how much time do you spend outdoors?",
 	type: ScreenType.SingleQuestion,
 	translations: [

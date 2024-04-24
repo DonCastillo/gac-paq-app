@@ -3,6 +3,7 @@ import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import Images from "styles/images";
 
 const S4Extro: ExtroPayloadInterface = {
+	ident: "transportation_extro",
 	name: "Section 4 Extro",
 	type: ScreenType.ExtroQuestion,
 	translations: [

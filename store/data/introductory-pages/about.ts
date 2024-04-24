@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type PagePayloadInterface from "interface/directus/page-payload";
 
 const AboutPage: PagePayloadInterface = {
+	ident: "welcome",
 	title: "Welcome To GAC-PAQ",
 	name: "Welcome To GAC-PAQ",
 	type: ScreenType.Page,

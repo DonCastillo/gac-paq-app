@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S4Q6: QuestionRadioPayloadInterface = {
+	ident: "transportation_6",
 	name: "Question 16c: How long does it normally take you to go to work?",
 	type: ScreenType.SingleQuestion,
 	translations: [

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
-import type Mode from "constants/mode";
+import Mode from "constants/mode";
 import Colors from "store/data/colors";
-import { getPage } from "utils/page";
+import { getPage, skipTo } from "utils/page";
 import type ScreenType from "constants/screen_type";
 import SectionType from "constants/section_type";
 import ButtonLabel from "constants/button_label";
@@ -12,6 +12,9 @@ import type QuestionRadioPayloadInterface from "interface/directus/question-radi
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
 import OrientationType from "constants/orientation_type";
 import type DeviceInterface from "interface/dimensions";
+import { QuestionContext } from "./questions";
+import { getResponseByIdent } from "utils/response";
+import { ResponseContext } from "./responses";
 /**
  * by default the app should be set as:
  *      mode: kid,
@@ -123,7 +126,8 @@ const INITIAL_STATE = {
 		grad400:
 			DEFAULT_MODE === undefined ? "#B36EB4" : Colors[DEFAULT_MODE][DEFAULT_COLOR_INDEX].grad400,
 	},
-	pages: [],
+	pages: {},
+	history: [],
 };
 
 // {
@@ -142,16 +146,16 @@ export const SettingContext = createContext({
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
 	setColorTheme: (colorIndex: number) => {},
+	skipPage: (pageNumber: number) => {},
 	nextPage: () => {},
 	prevPage: () => {},
-	addPage: (obj: pageInterface) => {},
-	initializeNextPage: () => {},
-	initializeCurrentPage: () => {},
-	setCurrentPage: (pageNumber: number) => {},
+	addPage: (key: number, obj: pageInterface) => {},
+	proceedPage: () => {},
+	reset: () => {},
 	setKeyboardState: (isKeyboardOpen: boolean) => {},
 	translateButtons: (obj: buttonInterface) => {},
 	translatePhrases: (obj: phraseInterface) => {},
-	addExtroFeedbackPages: (extroPages: rawPageInterface[], feedbackPages: rawPageInterface[]) => {},
+	reloadExtroFeedbackPages: () => {},
 	setSectionTitles: (sectionTitles: string[]) => {},
 	setSectionTotalPages: (sectionNumber: number, totalPages: number) => {},
 });
@@ -198,29 +202,63 @@ function settingReducer(state: any, action: any): any {
 				colorTheme: newColor,
 			};
 		}
-		case "NEXT_PAGE": {
-			const currentpageNumber1 = state.currentPageNumber + 1;
-			const currentPage1 = getPage(currentpageNumber1, state.pages);
-			const nextPage1 = getPage(currentpageNumber1 + 1, state.pages);
+		case "SKIP_PAGE": {
+			let currentPageNumber = action.payload;
+			let newHistory = [...state.history];
+
+			if (currentPageNumber <= 0) {
+				currentPageNumber = 1;
+			}
+
+			// update history
+			newHistory = [...new Set([...newHistory, currentPageNumber].sort((a, b) => a - b))];
+			newHistory = newHistory.filter((pageNum) => pageNum <= currentPageNumber);
+
+			// update current page
+			const currentPage = getPage(currentPageNumber, state.pages);
+			const nextPage = getPage(currentPageNumber + 1, state.pages);
 			return {
 				...state,
-				currentPageNumber: currentpageNumber1,
-				currentPage: currentPage1,
-				nextPage: nextPage1,
+				currentPageNumber,
+				currentPage,
+				nextPage,
+				history: [...newHistory],
+			};
+		}
+		case "NEXT_PAGE": {
+			const currentPageNumber = state.currentPageNumber + 1;
+			const newHistory = new Set([...state.history, currentPageNumber].sort((a, b) => a - b));
+			const currentPage = getPage(currentPageNumber, state.pages);
+			const nextPage = getPage(currentPageNumber + 1, state.pages);
+			return {
+				...state,
+				currentPageNumber,
+				currentPage,
+				nextPage,
+				history: [...newHistory],
 			};
 		}
 		case "PREV_PAGE": {
 			if (state.currentPageNumber <= 0) {
 				return state;
 			}
-			const currentpageNumber2 = state.currentPageNumber - 1;
-			const currentPage2 = getPage(currentpageNumber2, state.pages);
-			const nextPage2 = getPage(state.currentPageNumber, state.pages);
+			if (state.history.length <= 0) {
+				return state;
+			}
+			const newHistory = [...state.history];
+			newHistory.pop(); // remove current page
+			const currentPageNumber =
+				newHistory !== undefined && newHistory !== null && newHistory.length > 0
+					? newHistory.at(-1)
+					: 1; // remove previous page
+			const currentPage = getPage(currentPageNumber, state.pages);
+			const nextPage = getPage(currentPageNumber + 1, state.pages);
 			return {
 				...state,
-				currentPageNumber: currentpageNumber2,
-				currentPage: currentPage2,
-				nextPage: nextPage2,
+				currentPageNumber,
+				currentPage,
+				nextPage,
+				history: [...newHistory],
 			};
 		}
 		case "SET_TOTAL_PAGE":
@@ -228,30 +266,10 @@ function settingReducer(state: any, action: any): any {
 				...state,
 				totalPage: action.payload,
 			};
-		case "ADD_PAGE":
+		case "ADD_PAGE": {
 			return {
 				...state,
-				pages: [...state.pages, action.payload],
-			};
-		case "INITIALIZE_CURRENT_PAGE": {
-			const currentPageNumber = state.currentPageNumber;
-			const currentPage = getPage(state.currentPageNumber, state.pages);
-			const nextPage = getPage(state.currentPageNumber + 1, state.pages);
-			return {
-				...state,
-				currentPageNumber,
-				currentPage,
-				nextPage,
-			};
-		}
-		case "SET_CURRENT_PAGE": {
-			let finalPageNumber = state.currentPageNumber;
-			if (action.payload <= 0) finalPageNumber = 0;
-			else if (action.payload > state.pages.length) finalPageNumber = state.pages.length;
-			else finalPageNumber = action.payload;
-			return {
-				...state,
-				currentPageNumber: finalPageNumber,
+				pages: { ...state.pages, [action.payload.key]: action.payload.obj },
 			};
 		}
 		case "SET_BUTTONS":
@@ -286,7 +304,7 @@ function settingReducer(state: any, action: any): any {
 				},
 			};
 		case "REMOVE_EXTRO_PAGES": {
-			const pagesWithoutExtros = state.pages.filter((page: any) => {
+			const pagesWithoutExtros = Object.values(state.pages).filter((page: any) => {
 				return page.section !== SectionType.Extro;
 			});
 			return {
@@ -295,7 +313,7 @@ function settingReducer(state: any, action: any): any {
 			};
 		}
 		case "REMOVE_FEEDBACK_PAGES": {
-			const pagesWithoutFeedback = state.pages.filter((page: any) => {
+			const pagesWithoutFeedback = Object.values(state.pages).filter((page: any) => {
 				return page.section !== SectionType.Feedback;
 			});
 			return {
@@ -303,54 +321,87 @@ function settingReducer(state: any, action: any): any {
 				pages: pagesWithoutFeedback,
 			};
 		}
-		case "ADD_EXTRO_PAGES": {
-			const numberOfPages = state.pages.length;
-			const lastPage = state.pages[numberOfPages - 1];
-			let lastPageNumber = lastPage.pageNumber;
-			const lastSectionNumber = lastPage.sectionNumber;
-			const nextSectionNumber = lastSectionNumber + 1;
-			let sectionPageNumber = 0;
-			const newExtroPages = action.payload.map((page: rawPageInterface, index: number) => {
-				sectionPageNumber = ++index;
-				return {
-					pageNumber: ++lastPageNumber,
-					page,
-					screen: page.type,
-					section: SectionType.Extro,
-					sectionNumber: nextSectionNumber,
-					sectionPageNumber,
-				};
-			});
+		case "RELOAD_EXTRO_FEEDBACK_PAGES": {
+			let newPages = {};
+			let newSectionTotalPages = {};
 
-			return {
-				...state,
-				sectionTotalPages: { ...state.sectionTotalPages, [nextSectionNumber]: sectionPageNumber },
-				pages: [...state.pages, ...newExtroPages],
+			// remove all extro and feedback pages
+			for (const [key, page] of Object.entries(state.pages)) {
+				if (
+					(page as any).section === SectionType.Extro ||
+					(page as any).section === SectionType.Feedback
+				) {
+					continue;
+				} else {
+					newPages = { ...newPages, [key]: page };
+				}
+			}
+
+			const lastPagesIndex = parseInt(Object.keys(newPages).at(-1) ?? "1");
+			const lastPage = newPages[lastPagesIndex];
+			let lastPageNumber = lastPage.pageNumber;
+			let lastSectionNumber = lastPage.sectionNumber;
+			let finalExtroPages = [];
+			let finalFeedbackPages = [];
+
+			// load all extro pages
+			lastSectionNumber++;
+			if (state.mode === Mode.Kid) {
+				finalExtroPages = action.payload.kidsExtro.map((page: rawPageInterface, index: number) => {
+					return {
+						pageNumber: ++lastPageNumber,
+						page,
+						screen: page.type,
+						section: SectionType.Extro,
+						sectionNumber: lastSectionNumber,
+						sectionPageNumber: ++index,
+					};
+				});
+			} else {
+				finalExtroPages = action.payload.adultExtro.map((page: rawPageInterface, index: number) => {
+					return {
+						pageNumber: ++lastPageNumber,
+						page,
+						screen: page.type,
+						section: SectionType.Extro,
+						sectionNumber: lastSectionNumber,
+						sectionPageNumber: ++index,
+					};
+				});
+			}
+			newSectionTotalPages = {
+				...newSectionTotalPages,
+				[lastSectionNumber]: finalExtroPages.length,
 			};
-		}
-		case "ADD_FEEDBACK_PAGES": {
-			const numberOfPages = state.pages.length;
-			const lastPage = state.pages[numberOfPages - 1];
-			let lastPageNumber = lastPage.pageNumber;
-			const lastSectionNumber = lastPage.sectionNumber;
-			const nextSectionNumber = lastSectionNumber + 1;
-			let sectionPageNumber = 0;
 
-			const newFeedbackPages = action.payload.map((page: rawPageInterface, index: number) => {
-				sectionPageNumber = ++index;
+			// load all feedback pages
+			lastSectionNumber++;
+			finalFeedbackPages = action.payload.feedback.map((page: rawPageInterface, index: number) => {
 				return {
 					pageNumber: ++lastPageNumber,
 					page,
 					screen: page.type,
 					section: SectionType.Feedback,
-					sectionNumber: nextSectionNumber,
-					sectionPageNumber,
+					sectionNumber: lastSectionNumber,
+					sectionPageNumber: ++index,
 				};
 			});
+			newSectionTotalPages = {
+				...newSectionTotalPages,
+				[lastSectionNumber]: finalFeedbackPages.length,
+			};
+
+			finalExtroPages.forEach((page: pageInterface) => {
+				newPages = { ...newPages, [page.pageNumber ?? 1]: page };
+			});
+			finalFeedbackPages.forEach((page: pageInterface) => {
+				newPages = { ...newPages, [page.pageNumber ?? 1]: page };
+			});
+
 			return {
 				...state,
-				sectionTotalPages: { ...state.sectionTotalPages, [nextSectionNumber]: sectionPageNumber },
-				pages: [...state.pages, ...newFeedbackPages],
+				pages: newPages,
+				sectionTotalPages: { ...state.sectionTotalPages, ...newSectionTotalPages },
 			};
 		}
 		default:
@@ -364,8 +415,10 @@ export default function SettingContextProvider({
 	children: React.ReactNode;
 }): React.ReactElement {
 	const [settingState, dispatch] = useReducer(settingReducer, INITIAL_STATE);
+	const questionCtx = useContext(QuestionContext);
+	const responseCtx = useContext(ResponseContext);
 
-	function setMode(newMode: Mode.Adult | Mode.Kid): void {
+	function setMode(newMode: Mode.Adult | Mode.Kid | undefined): void {
 		dispatch({
 			type: "SET_MODE",
 			payload: newMode,
@@ -418,32 +471,36 @@ export default function SettingContextProvider({
 		});
 	}
 
-	function addPage(obj: pageInterface): void {
+	function skipPage(pageNumber: number): void {
 		dispatch({
-			type: "ADD_PAGE",
-			payload: obj,
-		});
-	}
-
-	function initializeNextPage(): void {
-		dispatch({
-			type: "INITIALIZE_NEXT_PAGE",
-		});
-	}
-
-	function initializeCurrentPage(): void {
-		dispatch({
-			type: "INITIALIZE_CURRENT_PAGE",
-		});
-	}
-
-	function setCurrentPage(pageNumber: number): void {
-		dispatch({
-			type: "SET_CURRENT_PAGE",
+			type: "SKIP_PAGE",
 			payload: pageNumber,
 		});
+	}
+
+	function addPage(key: number, obj: pageInterface): void {
 		dispatch({
-			type: "INITIALIZE_CURRENT_PAGE",
+			type: "ADD_PAGE",
+			payload: { key, obj },
+		});
+	}
+
+	function reset(): void {
+		dispatch({
+			type: "SET_MODE",
+			payload: undefined,
+		});
+		dispatch({
+			type: "SKIP_PAGE",
+			payload: 1,
+		});
+		dispatch({
+			type: "SET_COLOR_THEME",
+			payload: 0,
+		});
+		dispatch({
+			type: "SET_LANGUAGE",
+			payload: "en-CA",
 		});
 	}
 
@@ -461,23 +518,32 @@ export default function SettingContextProvider({
 		});
 	}
 
-	function addExtroFeedbackPages(
-		extroPages: rawPageInterface[],
-		feedbackPages: rawPageInterface[],
-	): void {
+	function proceedPage(): void {
+		const currentIdent = settingState.currentPage.page.ident;
+		const nextIdent = settingState.nextPage.page.ident;
+		const answerValue = getResponseByIdent(currentIdent, responseCtx.responses) ?? null;
+		const skipToPageNumber = skipTo(
+			currentIdent,
+			nextIdent,
+			answerValue,
+			settingState.pages,
+			responseCtx.responses,
+		);
+		if (skipToPageNumber > 0) {
+			skipPage(skipToPageNumber);
+		} else {
+			nextPage();
+		}
+	}
+
+	function reloadExtroFeedbackPages(): void {
 		dispatch({
-			type: "REMOVE_EXTRO_PAGES",
-		});
-		dispatch({
-			type: "REMOVE_FEEDBACK_PAGES",
-		});
-		dispatch({
-			type: "ADD_EXTRO_PAGES",
-			payload: extroPages,
-		});
-		dispatch({
-			type: "ADD_FEEDBACK_PAGES",
-			payload: feedbackPages,
+			type: "RELOAD_EXTRO_FEEDBACK_PAGES",
+			payload: {
+				adultExtro: questionCtx.questionState.adultExtroPages,
+				kidsExtro: questionCtx.questionState.kidExtroPages,
+				feedback: questionCtx.questionState.feedbackExtroPages,
+			},
 		});
 	}
 
@@ -509,15 +575,15 @@ export default function SettingContextProvider({
 		setLanguage,
 		setDirectusAccessToken,
 		setColorTheme,
+		reset,
+		skipPage,
 		nextPage,
 		prevPage,
 		addPage,
-		initializeNextPage,
-		initializeCurrentPage,
-		setCurrentPage,
+		proceedPage,
 		translateButtons,
 		translatePhrases,
-		addExtroFeedbackPages,
+		reloadExtroFeedbackPages,
 		setSectionTitles,
 		setSectionTotalPages,
 		setKeyboardState,

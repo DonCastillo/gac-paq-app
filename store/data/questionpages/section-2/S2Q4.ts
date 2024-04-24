@@ -3,6 +3,7 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import Images from "styles/images";
 
 const S2Q4: QuestionRadioImagePayloadInterface = {
+	ident: "household_4",
 	name: "Question 11:	Which of the following images shows what you do most of the time during your chores?",
 	type: ScreenType.SingleQuestion,
 	translations: [
@@ -10,9 +11,9 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 			id: 7,
 			question_radio_image_id: 3,
 			label:
-				"Which of the following images shows what you do most of the time during your chores? ",
+				"Which of the following pictures looks like what you do most of the time during your chores? ",
 			kid_label:
-				"Which of the following images shows what you do most of the time during your chores? ",
+				"Which of the following pictures looks like what you do most of the time during your chores? ",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time during their chores?",
 			heading: "Question 11",
@@ -21,7 +22,7 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 1,
 						sort: null,
-						text: "Mostly not moving",
+						text: "Not moving",
 						value: "0.1",
 						images: {
 							kid: Images.kids.options.chores.not_moving,
@@ -33,7 +34,7 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 2,
 						sort: null,
-						text: "Mostly easy effort",
+						text: "Easy effort",
 						value: "0.3",
 						images: {
 							kid: Images.kids.options.chores.easy_effort,
@@ -45,7 +46,7 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 3,
 						sort: null,
-						text: "Mostly medium or hard effort",
+						text: "Medium or hard effort",
 						value: "0.5",
 						images: {
 							kid: Images.kids.options.chores.medium_effort,

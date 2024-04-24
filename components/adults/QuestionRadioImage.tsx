@@ -202,7 +202,7 @@ export default function QuestionRadioImage({
 			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
 		>
 			<View>
-				{options.length <= 5 || !hasOtherOption(options) ? (
+				{options.length <= 4 || !hasOtherOption(options) ? (
 					<FlatList
 						initialNumToRender={4}
 						data={[...options]}
