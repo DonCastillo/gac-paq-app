@@ -2,7 +2,8 @@ import ScreenType from "constants/screen_type";
 import type QuestionTextareaPayloadInterface from "interface/directus/question-textarea-payload";
 
 const Comment: QuestionTextareaPayloadInterface = {
-	name: "Comment",
+	ident: "app_use_comment",
+	name: "app_use_comment",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
@@ -15,6 +16,8 @@ const Comment: QuestionTextareaPayloadInterface = {
 				"Do you have any comments or suggestions about the app or the questions that we asked?",
 			adult_label:
 				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_sublabel: "If yes, please write them in the box below",
+			adult_sublabel: "If yes, please write them in the box below",
 			placeholder: "Enter your comment here",
 			languages_id: {
 				name: "English - Canada",

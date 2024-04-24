@@ -2,6 +2,7 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S1Q2: QuestionRadioPayloadInterface = {
+	ident: "school_2",
 	name: "Question 2: How many days did you attend school in the past week?",
 	type: ScreenType.SingleQuestion,
 	translations: [

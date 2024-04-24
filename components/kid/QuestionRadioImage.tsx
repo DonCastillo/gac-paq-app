@@ -169,7 +169,7 @@ export default function QuestionRadioImage({
 
 	function blockRenderOption({ item }): React.ReactElement {
 		const { images, text, value } = item.image_choices_id;
-		const imageWidth = horizontalScale(299, device.screenWidth) / numColumn;
+		const imageWidth = horizontalScale(280, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(images, mode);
 
 		return (
@@ -304,7 +304,7 @@ export default function QuestionRadioImage({
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
-				{options.length <= 5 || !hasOtherOption(options) ? (
+				{options.length <= 4 || !hasOtherOption(options) ? (
 					<FlatList
 						initialNumToRender={4}
 						data={[...options]}

@@ -3,6 +3,7 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import Images from "styles/images";
 
 const S4Q1: QuestionRadioImagePayloadInterface = {
+	ident: "transportation_1",
 	name: "Question 15:	How did you go to school in the past week?",
 	type: ScreenType.SingleQuestion,
 	translations: [
@@ -12,8 +13,9 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 			heading: "Question 15",
 			label: "How did you go to school in the past week?",
 			kid_label: "How did you go to school in the past week?",
-			adult_label:
-				"How did your child go to school in the past week? (Select the mode that your child used the most).",
+			adult_label: "How did your child go to school in the past week?",
+			kid_sublabel: "Select the mode that you used the most.",
+			adult_sublabel: "Select the mode that your child used the most.",
 			choices: [
 				{
 					image_choices_id: {
@@ -79,8 +81,22 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 3,
 						sort: null,
-						text: "Other",
+						text: "Other, which one?",
 						value: "Other",
+						images: {
+							kid: Images.kids.options.transportation.other,
+							adult: Images.adults.options.transportation.other,
+						},
+					},
+				},
+				{
+					image_choices_id: {
+						id: 3,
+						sort: null,
+						text: "My child stays at home for school",
+						adult_text: "My child stays at home for school",
+						kid_text: "I stay at home for school",
+						value: "Stay home for school",
 						images: {
 							kid: Images.kids.options.transportation.other,
 							adult: Images.adults.options.transportation.other,

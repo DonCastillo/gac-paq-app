@@ -18,6 +18,7 @@ function responseReducer(state: any, action: any): any {
 	switch (action.type) {
 		case "ADD_RESPONSE": {
 			const newResponse = {
+				ident: action.payload.ident,
 				label: action.payload.label,
 				answer: action.payload.answer,
 				pageNumber: action.payload.pageNumber,

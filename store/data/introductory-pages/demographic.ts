@@ -3,7 +3,8 @@ import type QuestionDropdownPayloadInterface from "interface/directus/question-d
 import Images from "styles/images";
 
 const DemographicPage: QuestionDropdownPayloadInterface = {
-	name: "How old are you?",
+	ident: "child_age",
+	name: "child_age",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
@@ -16,15 +17,15 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 			choices: [
 				{
 					text: "Under 10 years old",
-					value: "Under 10 years old",
+					value: "9",
 				},
 				{
 					text: "10 - 14 years old",
-					value: "10 - 14 years old",
+					value: "10",
 				},
 				{
 					text: "15 - 17 years old",
-					value: "15 - 17 years old",
+					value: "15",
 				},
 			],
 			languages_id: {

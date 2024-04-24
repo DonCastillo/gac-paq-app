@@ -3,6 +3,7 @@ import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import Images from "styles/images";
 
 const AppExtro: ExtroPayloadInterface = {
+	ident: "survey_app_extro",
 	name: "Survey AppExtro",
 	type: ScreenType.ExtroQuestion,
 	translations: [

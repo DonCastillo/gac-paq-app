@@ -3,6 +3,7 @@ import type SectionPayloadInterface from "interface/directus/section-payload";
 import Images from "styles/images";
 
 const S2Intro: SectionPayloadInterface = {
+	ident: "household_intro",
 	heading: "Household Chores",
 	type: ScreenType.IntroQuestion,
 	translations: [

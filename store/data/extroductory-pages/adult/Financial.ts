@@ -2,7 +2,8 @@ import ScreenType from "constants/screen_type";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const Financial: QuestionRadioPayloadInterface = {
-	name: "How difficult or easy is it for you to meet the financial needs of your family?",
+	ident: "difficulty_to_meet_financial_needs",
+	name: "difficulty_to_meet_financial_needs",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{

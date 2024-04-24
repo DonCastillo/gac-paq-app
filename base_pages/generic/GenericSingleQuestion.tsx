@@ -68,6 +68,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
 			responseCtx.addResponse({
+				ident: currentPage.page.ident,
 				label: currentPage.page.name,
 				answer: value,
 				pageNumber: currentPage.pageNumber,
@@ -82,20 +83,13 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		}
 
 		// set mode
-		if (currentPage.page.name === "Who's taking this questionnaire?") {
+		if (currentPage.page.ident === "mode") {
 			if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
-				settingCtx.addExtroFeedbackPages(
-					[...questionCtx.questionState.kidExtroPages],
-					[...questionCtx.questionState.feedbackExtroPages],
-				);
 			} else {
 				settingCtx.setMode(Mode.Adult);
-				settingCtx.addExtroFeedbackPages(
-					[...questionCtx.questionState.adultExtroPages],
-					[...questionCtx.questionState.feedbackExtroPages],
-				);
 			}
+			settingCtx.reloadExtroFeedbackPages();
 		}
 	}
 
