@@ -16,6 +16,8 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				"How did you go to work in the past week? (Select the mode that you used the most).",
 			adult_label:
 				"How did your child go to work in the past week? (Select the mode that your child used the most).",
+			kid_sublabel: "Select the mode that you used the most.",
+			adult_sublabel: "Select the mode that your child used the most.",
 			choices: [
 				{
 					image_choices_id: {
@@ -33,7 +35,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 2,
 						sort: null,
-						text: "Wheeling",
+						text: "Wheeling (for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades)",
 						value: "Wheeling",
 						images: {
 							kid: Images.kids.options.transportation.wheeling,
@@ -45,19 +47,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 3,
 						sort: null,
-						text: "School bus",
-						value: "School bus",
-						images: {
-							kid: Images.kids.options.transportation.school_bus,
-							adult: Images.adults.options.transportation.school_bus,
-						},
-					},
-				},
-				{
-					image_choices_id: {
-						id: 3,
-						sort: null,
-						text: "Public transit",
+						text: "Public transit (for example, bus, train, tramway, subway, boat)",
 						value: "Public transit",
 						images: {
 							kid: Images.kids.options.transportation.public_transit,
@@ -81,7 +71,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 3,
 						sort: null,
-						text: "Other",
+						text: "Other, which one?",
 						value: "Other",
 						images: {
 							kid: Images.kids.options.transportation.other,

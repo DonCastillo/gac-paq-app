@@ -16,24 +16,24 @@ const S3Q2: QuestionRadioPayloadInterface = {
 				"In the past week, how many hours did your child spent volunteering and/or working?",
 			choices: [
 				{
-					text: "0 hours per week",
-					value: "0 hours per week",
+					text: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
 				},
 				{
-					text: "1-9 hours per week",
-					value: "1-9 hours per week",
+					text: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
 				},
 				{
-					text: "10-19 hours per week",
-					value: "10-19 hours per week",
+					text: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
 				},
 				{
-					text: "20-29 hours per week",
-					value: "20-29 hours per week",
+					text: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
 				},
 				{
-					text: "30 or more per week",
-					value: "30 or more per week",
+					text: "4 hours or more per day",
+					value: "4 hours or more per day",
 				},
 			],
 			languages_id: {

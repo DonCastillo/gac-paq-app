@@ -16,11 +16,11 @@ const S5Q1: QuestionRadioPayloadInterface = {
 			choices: [
 				{
 					text: "Yes",
-					value: "Yes",
+					value: "yes",
 				},
 				{
 					text: "No",
-					value: "No",
+					value: "no",
 				},
 			],
 			languages_id: {

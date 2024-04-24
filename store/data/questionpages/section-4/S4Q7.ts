@@ -3,7 +3,7 @@ import type QuestionCheckboxPayloadInterface from "interface/directus/question-c
 
 const S4Q7: QuestionCheckboxPayloadInterface = {
 	ident: "transportation_7",
-	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to you.",
+	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
@@ -11,11 +11,13 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 			question_checkbox_id: 8,
 			heading: "Question 17",
 			label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to you.",
+				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			kid_label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to you.",
+				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			adult_label:
-				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)? Please select all responses that apply to your child.",
+				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_sublabel: "Please select all responses that apply to you.",
+			adult_sublabel: "Please select all responses that apply to your child.",
 			choices: [
 				{
 					text: "Yes, I walked",
