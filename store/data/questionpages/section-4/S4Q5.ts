@@ -12,7 +12,7 @@ const S4Q5: QuestionRadioPayloadInterface = {
 			heading: "Question 16b",
 			label: "How many days did you use this mode in the past week?",
 			kid_label: "How many days did you use this mode in the past week?",
-			adult_label: "How many days did your child use this mode in the past week? ",
+			adult_label: "How many days did your child use this mode in the past week?",
 			choices: [
 				{
 					text: "1 Day",

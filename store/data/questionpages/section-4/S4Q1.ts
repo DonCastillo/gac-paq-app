@@ -13,8 +13,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 			heading: "Question 15",
 			label: "How did you go to school in the past week?",
 			kid_label: "How did you go to school in the past week?",
-			adult_label:
-				"How did your child go to school in the past week? (Select the mode that your child used the most).",
+			adult_label: "How did your child go to school in the past week?",
 			kid_sublabel: "Select the mode that you used the most.",
 			adult_sublabel: "Select the mode that your child used the most.",
 			choices: [
