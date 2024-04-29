@@ -69,7 +69,8 @@ function skipTo(
 	pages: Record<number, object>,
 	responses: Record<string, ResponseInterface>,
 ): number {
-	console.log("currentIdent", currentIdent);
+	console.log("currentIdent xx", currentIdent);
+	console.log("finalAnswer xx", answer);
 	const finalAnswer = answer?.toString().toLowerCase();
 	if (currentIdent === "school_1" && finalAnswer === "no") {
 		return getPageNumberBasedOnIdent("school_extro", pages);
@@ -91,6 +92,8 @@ function skipTo(
 		} else if (work_1_answer === "no") {
 			return getPageNumberBasedOnIdent("transportation_7", pages);
 		}
+	} else if (currentIdent === "transportation_1" && finalAnswer === "stay home for school") {
+		return getPageNumberBasedOnIdent("transportation_4", pages);
 	} else if (currentIdent === "organized_1" && finalAnswer === "no") {
 		return getPageNumberBasedOnIdent("organized_extro", pages);
 	}
