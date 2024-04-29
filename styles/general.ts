@@ -181,7 +181,7 @@ const GeneralStyle = {
 			},
 			shadowOpacity: 0.2,
 			shadowRadius: 2,
-		},		
+		},
 		blockImageLabelContainer: {
 			borderBottomLeftRadius: 5,
 			borderBottomRightRadius: 5,

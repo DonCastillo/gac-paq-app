@@ -39,6 +39,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 							kid: Images.kids.options.transportation.wheeling,
 							adult: Images.adults.options.transportation.wheeling,
 						},
+						sublabel: {
+							kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+							adult: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						}
 					},
 				},
 				{
@@ -63,6 +67,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 							kid: Images.kids.options.transportation.public_transit,
 							adult: Images.adults.options.transportation.public_transit,
 						},
+						sublabel: {
+							kid: "for example, bus, train, tramway, subway, boat",
+							adult: "for example, bus, train, tramway, subway, boat",
+						}
 					},
 				},
 				{
@@ -94,13 +102,15 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						id: 3,
 						sort: null,
 						text: "My child stays at home for school",
-						adult_text: "My child stays at home for school",
-						kid_text: "I stay at home for school",
 						value: "Stay home for school",
 						images: {
 							kid: Images.kids.options.transportation.other,
 							adult: Images.adults.options.transportation.other,
 						},
+						text_translations: {
+							kid: "I stay at home for school",
+							adult: "My child stays at home for school",
+						}
 					},
 				},
 			],

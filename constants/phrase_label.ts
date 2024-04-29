@@ -1,7 +1,7 @@
 enum PhraseLabel {
 	Agreement = "Yes, I Understand & Agree.",
 	Done = "Done",
-	DontKnow = "I don't know",
+	DontKnow = "Don't know",
 	Introduction = "Introduction",
 	TryAgain = "Try Again",
 }
