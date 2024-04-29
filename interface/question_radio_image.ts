@@ -13,11 +13,11 @@ export interface QuestionRadioImageChoiceInterface {
 		sublabel?: {
 			kid: string;
 			adult: string;
-		}
-		text_translations?: {
+		};
+		text_mode?: {
 			kid: string;
 			adult: string;
-		}
+		};
 	};
 }
 

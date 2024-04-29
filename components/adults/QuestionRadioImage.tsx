@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
-import { getOptionImage } from "utils/background";
+import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background";
 import { horizontalScale, moderateScale, verticalScale } from "utils/responsive";
 import RadioOption from "./subcomponents/RadioOption";
 import {
@@ -103,7 +103,7 @@ export default function QuestionRadioImage({
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
-			if (options.length <= 5) {
+			if (options.length <= 4) {
 				ImageComponent = (
 					<Image
 						style={styles.optionImage as StyleProp<ImageStyle>}
@@ -125,7 +125,7 @@ export default function QuestionRadioImage({
 		} else {
 			// SVGs
 			const ImageComponent = image;
-			if (options.length <= 5) {
+			if (options.length <= 4) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
 				return <ImageComponent style={GeneralStyle.general.inlineOptionImage} />;
@@ -177,9 +177,11 @@ export default function QuestionRadioImage({
 	}
 
 	function listRenderOption({ item }): React.ReactElement {
-		const { images, text, value } = item.image_choices_id;
+		const { images, text, value, sublabel, text_mode } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
+		const optionText = getOptionText(text, text_mode, mode);
+		const optionSublabel = getOptionSubLabel(sublabel, mode);
 
 		return (
 			<View style={{ paddingVertical: 2, marginBottom: 2 }}>
@@ -192,6 +194,8 @@ export default function QuestionRadioImage({
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={getUserSpecifiedOther(value, selected)}
+					optionLabel={optionText ?? undefined}
+					optionSublabel={optionSublabel ?? undefined}
 				/>
 			</View>
 		);

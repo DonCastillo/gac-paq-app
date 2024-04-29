@@ -160,6 +160,10 @@ const GeneralStyle = {
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.SpaceRegular,
 		},
+		optionImageSubLabelText: {
+			fontSize: DEFAULT_OPTION_FONT_SIZE - 2,
+			fontFamily: Font.SpaceRegular,
+		},
 		optionImage: {
 			borderTopLeftRadius: 5,
 			borderTopRightRadius: 5,

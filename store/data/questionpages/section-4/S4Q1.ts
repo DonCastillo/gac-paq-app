@@ -41,8 +41,9 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						},
 						sublabel: {
 							kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
-							adult: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
-						}
+							adult:
+								"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						},
 					},
 				},
 				{
@@ -70,7 +71,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 						sublabel: {
 							kid: "for example, bus, train, tramway, subway, boat",
 							adult: "for example, bus, train, tramway, subway, boat",
-						}
+						},
 					},
 				},
 				{
@@ -101,16 +102,16 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					image_choices_id: {
 						id: 3,
 						sort: null,
-						text: "My child stays at home for school",
+						text: "Stay home for school",
 						value: "Stay home for school",
 						images: {
-							kid: Images.kids.options.transportation.other,
-							adult: Images.adults.options.transportation.other,
+							kid: Images.kids.options.transportation.staying_home,
+							adult: Images.adults.options.transportation.staying_home,
 						},
-						text_translations: {
+						text_mode: {
 							kid: "I stay at home for school",
 							adult: "My child stays at home for school",
-						}
+						},
 					},
 				},
 			],

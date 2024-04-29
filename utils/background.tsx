@@ -52,6 +52,39 @@ function getOptionImage(
 	}
 }
 
+function getOptionText(
+	origOptionText: string,
+	optionTextObj: { kid: string; adult: string },
+	mode: Mode.Kid | Mode.Adult | undefined,
+): string | null {
+	if (optionTextObj === undefined || optionTextObj === null) return origOptionText;
+	if (mode === undefined || mode === null) return origOptionText;
+
+	if (mode === Mode.Kid) {
+		return optionTextObj.kid ?? origOptionText;
+	} else if (mode === Mode.Adult) {
+		return optionTextObj.adult ?? origOptionText;
+	} else {
+		return origOptionText;
+	}
+}
+
+function getOptionSubLabel(
+	subLabelObj: { kid: string; adult: string },
+	mode: Mode.Kid | Mode.Adult | undefined,
+): string | null {
+	if (subLabelObj === undefined || subLabelObj === null) return null;
+	if (mode === undefined || mode === null) return null;
+
+	if (mode === Mode.Kid) {
+		return subLabelObj.kid ?? null;
+	} else if (mode === Mode.Adult) {
+		return subLabelObj.adult ?? null;
+	} else {
+		return null;
+	}
+}
+
 function getIntroductoryBackground(pageNumber: number): React.ReactElement {
 	switch (pageNumber % 6) {
 		case 0:
@@ -126,4 +159,11 @@ function getQuestionBackground(
 	}
 }
 
-export { getIntroductoryBackground, getQuestionBackground, getImageBackground, getOptionImage };
+export {
+	getIntroductoryBackground,
+	getQuestionBackground,
+	getImageBackground,
+	getOptionImage,
+	getOptionText,
+	getOptionSubLabel,
+};
