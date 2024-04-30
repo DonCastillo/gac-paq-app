@@ -54,15 +54,36 @@ export default function QuestionCheckbox({
 		return arr.some(isOtherOption);
 	}
 
+	function everyNotAnswer(value: string): boolean {
+		const finalValue = value.toString().toLowerCase();
+		return !["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
+	}
+
+	function someNotAnswer(value: string): boolean {
+		const finalValue = value.toString().toLowerCase();
+		return ["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
+	}
+
 	function pressHandler(value: string | null): void {
+		let finalSelected = "";
+		let existingSelectedValue = initializeSelectedValue();
+
 		if (value === "" || value === null || value === undefined) return;
 
-		// activate other field if "other" is selected
+		// activate other field if "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
 			setAutoFocusOtherField(true);
 		}
 
-		const existingSelectedValue = initializeSelectedValue();
+		// if value is "prefer not to answer" or" prefer not to say" or "none of the above" reset existing value and add this
+		if (someNotAnswer(value)) {
+			finalSelected = value;
+			onSelect(finalSelected);
+			return;
+		} else {
+			// remove "prefer not to answer" or "prefer not to say" or "none of the above" if it is selected
+			existingSelectedValue = existingSelectedValue.filter(everyNotAnswer);
+		}
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
@@ -70,12 +91,12 @@ export default function QuestionCheckbox({
 			if (value.toString().toLowerCase() === "other") {
 				if (arrayHasOther(existingSelectedValue)) {
 					// if "Other", "other", "other (xxxx)" is already selected, remove all
-					onSelect(existingSelectedValue.filter((item) => !isOtherOption(item)).join(SEPARATOR));
-					return;
+					finalSelected = existingSelectedValue
+						.filter((item) => !isOtherOption(item))
+						.join(SEPARATOR);
 				} else {
 					// if not add it
-					onSelect([...existingSelectedValue, value].join(SEPARATOR));
-					return;
+					finalSelected = [...existingSelectedValue, value].join(SEPARATOR);
 				}
 			}
 
@@ -87,19 +108,21 @@ export default function QuestionCheckbox({
 				// if there is a value specified with "other" and it is not empty
 				if (specificValue.trim() !== "") {
 					// add it
-					onSelect([...withoutOther, value].join(SEPARATOR));
+					finalSelected = [...withoutOther, value].join(SEPARATOR);
 				} else {
 					// add "Other"
-					onSelect([...withoutOther, "Other"].join(SEPARATOR));
+					finalSelected = [...withoutOther, "Other"].join(SEPARATOR);
 				}
 			}
 		} else {
 			if (existingSelectedValue.includes(value)) {
-				onSelect(existingSelectedValue.filter((item) => item !== value).join(SEPARATOR));
+				finalSelected = existingSelectedValue.filter((item) => item !== value).join(SEPARATOR);
 			} else {
-				onSelect([...existingSelectedValue, value].join(SEPARATOR));
+				finalSelected = [...existingSelectedValue, value].join(SEPARATOR);
 			}
 		}
+
+		onSelect(finalSelected);
 	}
 
 	return (

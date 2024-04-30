@@ -57,7 +57,7 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 				},
 				{
 					text: "None of the above, they don't have difficulties",
-					value: "None of the above, they don't have difficulties",
+					value: "None of the above",
 				},
 			],
 			languages_id: {
