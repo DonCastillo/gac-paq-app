@@ -141,7 +141,7 @@ const INITIAL_STATE = {
 
 export const SettingContext = createContext({
 	settingState: INITIAL_STATE,
-	setMode: (newMode: Mode.Adult | Mode.Kid | undefined) => {},
+	setMode: (newMode: Mode.Adult | Mode.Kid | Mode.Teen | undefined) => {},
 	setDevice: (newDevice: DeviceInterface) => {},
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
@@ -346,7 +346,7 @@ function settingReducer(state: any, action: any): any {
 
 			// load all extro pages
 			lastSectionNumber++;
-			if (state.mode === Mode.Kid) {
+			if (state.mode === Mode.Kid || state.mode === Mode.Teen) {
 				finalExtroPages = action.payload.kidsExtro.map((page: rawPageInterface, index: number) => {
 					return {
 						pageNumber: ++lastPageNumber,
@@ -418,7 +418,7 @@ export default function SettingContextProvider({
 	const questionCtx = useContext(QuestionContext);
 	const responseCtx = useContext(ResponseContext);
 
-	function setMode(newMode: Mode.Adult | Mode.Kid | undefined): void {
+	function setMode(newMode: Mode.Adult | Mode.Kid | Mode.Teen | undefined): void {
 		dispatch({
 			type: "SET_MODE",
 			payload: newMode,

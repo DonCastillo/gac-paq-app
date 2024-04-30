@@ -19,10 +19,10 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					text: "Child",
 					value: "child",
 				},
-				// {
-				// 	text: "Teen",
-				// 	value: "teen",
-				// },
+				{
+					text: "Teen",
+					value: "teen",
+				},
 				{
 					text: "Parent",
 					value: "adult",
@@ -34,6 +34,10 @@ const AgePage: QuestionDropdownPayloadInterface = {
 			},
 			images: {
 				kid: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				teen: {
 					phone: Images.generic.pages.phone.mode,
 					tablet: Images.generic.pages.tablet.mode,
 				},
