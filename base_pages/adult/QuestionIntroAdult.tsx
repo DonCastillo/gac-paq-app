@@ -18,7 +18,7 @@ export default function QuestionIntroAdult(): React.ReactElement {
 	const { mode, language, colorTheme, currentPage, currentPageNumber, device } =
 		settingCtx.settingState;
 	const { color200 } = colorTheme;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// set button component dynamically

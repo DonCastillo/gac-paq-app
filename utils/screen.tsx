@@ -28,11 +28,13 @@ function getScreen(
 ): React.ReactElement {
 	// all language screens are generic
 	if (mode === undefined && screenType === ScreenType.Language) return <GenericLanguage />;
-	else if (mode === Mode.Adult && screenType === ScreenType.Language) return <LanguageAdult />;
+	else if ((mode === Mode.Adult || mode === Mode.Teen) && screenType === ScreenType.Language)
+		return <LanguageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Language) return <LanguageKid />;
 	// regular page screens
 	else if (mode === undefined && screenType === ScreenType.Page) return <GenericPage />;
-	else if (mode === Mode.Adult && screenType === ScreenType.Page) return <PageAdult />;
+	else if ((mode === Mode.Adult || mode === Mode.Teen) && screenType === ScreenType.Page)
+		return <PageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
 	// single checkbox screens
 	else if (
@@ -42,7 +44,7 @@ function getScreen(
 	)
 		return <GenericSingleCheckbox />;
 	else if (
-		mode === Mode.Adult &&
+		(mode === Mode.Adult || mode === Mode.Teen) &&
 		sectionType === SectionType.Intro &&
 		screenType === ScreenType.SingleCheckbox
 	)
@@ -61,7 +63,7 @@ function getScreen(
 	)
 		return <GenericSingleQuestion />;
 	else if (
-		mode === Mode.Adult &&
+		(mode === Mode.Adult || mode === Mode.Teen) &&
 		sectionType === SectionType.Intro &&
 		screenType === ScreenType.SingleQuestion
 	)
@@ -80,7 +82,7 @@ function getScreen(
 	)
 		return <QuestionQuestionSingleAdult />;
 	else if (
-		mode === Mode.Adult &&
+		(mode === Mode.Adult || mode === Mode.Teen) &&
 		sectionType === SectionType.Question &&
 		screenType === ScreenType.SingleQuestion
 	)
@@ -99,7 +101,7 @@ function getScreen(
 	)
 		return <QuestionQuestionSingleAdult />;
 	else if (
-		mode === Mode.Adult &&
+		(mode === Mode.Adult || mode === Mode.Teen) &&
 		sectionType === SectionType.Extro &&
 		screenType === ScreenType.SingleQuestion
 	)
@@ -118,7 +120,7 @@ function getScreen(
 	)
 		return <QuestionQuestionSingleAdult />;
 	else if (
-		mode === Mode.Adult &&
+		(mode === Mode.Adult || mode === Mode.Teen) &&
 		sectionType === SectionType.Feedback &&
 		screenType === ScreenType.SingleQuestion
 	)
@@ -132,14 +134,14 @@ function getScreen(
 	// question section intro
 	else if (mode === undefined && screenType === ScreenType.IntroQuestion)
 		return <QuestionIntroAdult />;
-	else if (mode === Mode.Adult && screenType === ScreenType.IntroQuestion)
+	else if ((mode === Mode.Adult || mode === Mode.Teen) && screenType === ScreenType.IntroQuestion)
 		return <QuestionIntroAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.IntroQuestion)
 		return <QuestionIntroKid />;
 	// question section extro
 	else if (mode === undefined && screenType === ScreenType.ExtroQuestion)
 		return <QuestionExtroAdult />;
-	else if (mode === Mode.Adult && screenType === ScreenType.ExtroQuestion)
+	else if ((mode === Mode.Adult || mode === Mode.Teen) && screenType === ScreenType.ExtroQuestion)
 		return <QuestionExtroAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.ExtroQuestion)
 		return <QuestionExtroKid />;

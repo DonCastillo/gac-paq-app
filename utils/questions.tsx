@@ -32,5 +32,4 @@ function getQuestionType(questionPage: any): QuestionType {
 	}
 }
 
-
 export { getQuestionType };

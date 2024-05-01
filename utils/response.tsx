@@ -2,8 +2,10 @@ import type Mode from "constants/mode";
 import SectionType from "constants/section_type";
 import type ResponseInterface from "interface/response";
 
+type modeType = Mode.Kid | Mode.Adult | Mode.Teen | undefined;
+
 function getResponse(
-	mode: Mode.Kid | Mode.Adult | undefined,
+	mode: modeType,
 	section: string | null,
 	sectionNumber: number | null,
 	sectionPageNumber: number | null,
@@ -45,7 +47,7 @@ function getResponseByIdent(
 
 function sanitizeResponse(
 	responses: Record<string, ResponseInterface>,
-	mode: Mode.Adult | Mode.Kid | undefined,
+	mode: modeType,
 ): Record<string, string | string[]> | Record<string, Record<string, string | string[]>> {
 	const sanitizedResponse:
 		| Record<string, string | string[]>

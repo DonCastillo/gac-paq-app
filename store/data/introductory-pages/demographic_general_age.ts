@@ -3,8 +3,8 @@ import type QuestionDropdownPayloadInterface from "interface/directus/question-d
 import Images from "styles/images";
 
 const DemographicPage: QuestionDropdownPayloadInterface = {
-	ident: "general_age",
-	name: "general_age",
+	ident: "age",
+	name: "age",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
@@ -54,7 +54,7 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 				{
 					text: "17 years old",
 					value: "17",
-				}
+				},
 			],
 			languages_id: {
 				name: "English - Canada",

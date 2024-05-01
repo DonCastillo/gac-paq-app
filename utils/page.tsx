@@ -18,7 +18,7 @@ type TranslateFuncType =
 
 type LangCodeType = string | null;
 type QuestionLabelType = string | undefined;
-type ModeType = Mode.Kid | Mode.Adult | undefined;
+type ModeType = Mode.Kid | Mode.Adult | Mode.Teen | undefined;
 
 function translate(translationArr: TranslationArrType, langCode: LangCodeType): TranslateFuncType {
 	if (langCode === null || langCode === undefined || langCode === "") return null;

@@ -25,6 +25,10 @@ const S2Intro: SectionPayloadInterface = {
 					phone: Images.adults.intro.section_2.phone,
 					tablet: Images.adults.intro.section_2.tablet,
 				},
+				teen: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
 			},
 		},
 	],

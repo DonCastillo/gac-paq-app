@@ -117,6 +117,7 @@ const adultColor: ColorInterface[] = [
 const Colors = {
 	kid: kidColor,
 	adult: adultColor,
+	teen: adultColor,
 };
 
 export default Colors;

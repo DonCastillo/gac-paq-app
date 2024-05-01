@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -32,7 +32,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 
 	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const { isKeyboardOpen } = device;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
@@ -84,9 +84,9 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		if (currentPage.page.ident === "mode") {
 			if (value === "adult") {
 				settingCtx.setMode(Mode.Adult);
-			} else if (value === "kid") {
+			} else if (value === "child") {
 				settingCtx.setMode(Mode.Kid);
-			} else if  (value === "teen") {
+			} else if (value === "teen") {
 				settingCtx.setMode(Mode.Teen);
 			} else {
 				settingCtx.setMode(undefined);

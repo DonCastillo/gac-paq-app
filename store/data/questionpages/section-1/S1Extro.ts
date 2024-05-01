@@ -21,6 +21,10 @@ const S1Extro: ExtroPayloadInterface = {
 					phone: Images.adults.extro.section_1.phone,
 					tablet: Images.adults.extro.section_1.tablet,
 				},
+				teen: {
+					phone: Images.adults.extro.section_1.phone,
+					tablet: Images.adults.extro.section_1.tablet,
+				},
 			},
 		},
 	],
