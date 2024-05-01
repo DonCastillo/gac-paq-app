@@ -9,7 +9,7 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 		{
 			id: 10,
 			question_checkbox_id: 8,
-			heading: "Question 23",
+			heading: "Question 25",
 			label:
 				"Please indicate if your child has difficulties with any of the following in their daily activities.",
 			kid_label:

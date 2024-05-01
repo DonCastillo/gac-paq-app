@@ -9,7 +9,7 @@ const GenderKid: QuestionRadioPayloadInterface = {
 		{
 			id: 4,
 			question_radio_id: 2,
-			heading: "",
+			heading: "Question 24",
 			label: "Are you a…",
 			kid_label: "Are you a…",
 			adult_label: "Are you a…",

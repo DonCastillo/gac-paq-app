@@ -9,7 +9,7 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 		{
 			id: 10,
 			question_checkbox_id: 8,
-			heading: "Question 23",
+			heading: "Question 26",
 			label: "What is your child's ethnicity?",
 			kid_label: "What is your child's ethnicity?",
 			adult_label: "What is your child's ethnicity?",
