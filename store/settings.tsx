@@ -460,7 +460,6 @@ export default function SettingContextProvider({
 			type: "SET_MODE",
 			payload: newMode,
 		});
-		
 	}
 
 	function setDevice(newDevice: DeviceInterface): void {
