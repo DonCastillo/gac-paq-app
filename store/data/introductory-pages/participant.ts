@@ -26,6 +26,10 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 					phone: Images.generic.pages.phone.participant,
 					tablet: Images.generic.pages.tablet.participant,
 				},
+				teen: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant,
+				},
 				adult: {
 					phone: Images.generic.pages.phone.participant,
 					tablet: Images.generic.pages.tablet.participant,

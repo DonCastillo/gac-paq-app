@@ -23,6 +23,10 @@ const LanguagePage: QuestionDropdownPayloadInterface = {
 					phone: Images.generic.pages.phone.language,
 					tablet: Images.generic.pages.tablet.language,
 				},
+				teen: {
+					phone: Images.generic.pages.phone.language,
+					tablet: Images.generic.pages.tablet.language,
+				},
 				adult: {
 					phone: Images.generic.pages.phone.language,
 					tablet: Images.generic.pages.tablet.language,

@@ -27,7 +27,7 @@ export default function LanguageAdult(): React.ReactElement {
 	const questionCtx = useContext(QuestionContext);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,

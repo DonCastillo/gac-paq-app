@@ -1,4 +1,3 @@
-import Mode from "constants/mode";
 import QuestionType from "constants/question_type";
 
 function getQuestionType(questionPage: any): QuestionType {
@@ -33,20 +32,4 @@ function getQuestionType(questionPage: any): QuestionType {
 	}
 }
 
-function getQuestionComponent(mode: Mode | string, questionType: QuestionType) {
-	if (mode === Mode.Adult && questionType === QuestionType.QuestionCheckbox) return <></>;
-	else if (mode === Mode.Adult && questionType === QuestionType.QuestionDropdown) return <></>;
-	else if (mode === Mode.Adult && questionType === QuestionType.QuestionRadio) return <></>;
-	else if (mode === Mode.Adult && questionType === QuestionType.QuestionRadioImage) return <></>;
-	else if (mode === Mode.Adult && questionType === QuestionType.QuestionSlider) return <></>;
-	else if (mode === Mode.Adult && questionType === QuestionType.QuestionText) return <></>;
-	else if (mode === Mode.Kid && questionType === QuestionType.QuestionCheckbox) return <></>;
-	else if (mode === Mode.Kid && questionType === QuestionType.QuestionDropdown) return <></>;
-	else if (mode === Mode.Kid && questionType === QuestionType.QuestionRadio) return <></>;
-	else if (mode === Mode.Kid && questionType === QuestionType.QuestionRadioImage) return <></>;
-	else if (mode === Mode.Kid && questionType === QuestionType.QuestionSlider) return <></>;
-	else if (mode === Mode.Kid && questionType === QuestionType.QuestionText) return <></>;
-	else return <></>;
-}
-
-export { getQuestionType, getQuestionComponent };
+export { getQuestionType };

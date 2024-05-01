@@ -130,18 +130,9 @@ const INITIAL_STATE = {
 	history: [],
 };
 
-// {
-// 	color100: "#E09F57",
-// 	color200: "#E09F57",
-// 	grad100: "#FBD183",
-// 	grad200: "#F66966",
-// 	grad300: "#D3688A",
-// 	grad400: "#B36EB4",
-// },
-
 export const SettingContext = createContext({
 	settingState: INITIAL_STATE,
-	setMode: (newMode: Mode.Adult | Mode.Kid | undefined) => {},
+	setMode: (newMode: Mode.Adult | Mode.Kid | Mode.Teen | undefined) => {},
 	setDevice: (newDevice: DeviceInterface) => {},
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
@@ -346,7 +337,7 @@ function settingReducer(state: any, action: any): any {
 
 			// load all extro pages
 			lastSectionNumber++;
-			if (state.mode === Mode.Kid) {
+			if (state.mode === Mode.Kid || state.mode === Mode.Teen) {
 				finalExtroPages = action.payload.kidsExtro.map((page: rawPageInterface, index: number) => {
 					return {
 						pageNumber: ++lastPageNumber,
@@ -404,6 +395,24 @@ function settingReducer(state: any, action: any): any {
 				sectionTotalPages: { ...state.sectionTotalPages, ...newSectionTotalPages },
 			};
 		}
+		case "SWAP_AGE": {
+			const agePage = action.payload;
+			const newPages = state.pages;
+
+			for (const [key, value] of Object.entries(newPages)) {
+				if (value?.page?.ident === "age") {
+					newPages[key] = {
+						...value,
+						page: agePage,
+					};
+					return {
+						...state,
+						pages: newPages,
+					};
+				}
+			}
+			return state;
+		}
 		default:
 			return state;
 	}
@@ -418,7 +427,35 @@ export default function SettingContextProvider({
 	const questionCtx = useContext(QuestionContext);
 	const responseCtx = useContext(ResponseContext);
 
-	function setMode(newMode: Mode.Adult | Mode.Kid | undefined): void {
+	function setMode(newMode: Mode.Adult | Mode.Kid | Mode.Teen | undefined): void {
+		// set age page based on mode
+		if (newMode === Mode.Adult) {
+			dispatch({
+				type: "SWAP_AGE",
+				payload: questionCtx.questionState.adultAgePage,
+			});
+		}
+		if (newMode === Mode.Kid) {
+			dispatch({
+				type: "SWAP_AGE",
+				payload: questionCtx.questionState.kidAgePage,
+			});
+		}
+		if (newMode === Mode.Teen) {
+			dispatch({
+				type: "SWAP_AGE",
+				payload: questionCtx.questionState.teenAgePage,
+			});
+		}
+
+		// clear responses
+		responseCtx.clearResponseByIdent("age");
+		responseCtx.clearUnansweredResponses();
+		responseCtx.clearQuestionResponses();
+		responseCtx.clearExtroResponses();
+		responseCtx.clearFeedbackResponses();
+
+		// set mode
 		dispatch({
 			type: "SET_MODE",
 			payload: newMode,

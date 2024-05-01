@@ -37,7 +37,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 
 	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const { isKeyboardOpen } = device;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,

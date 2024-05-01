@@ -18,7 +18,7 @@ type TranslateFuncType =
 
 type LangCodeType = string | null;
 type QuestionLabelType = string | undefined;
-type ModeType = Mode.Kid | Mode.Adult | undefined;
+type ModeType = Mode.Kid | Mode.Adult | Mode.Teen | undefined;
 
 function translate(translationArr: TranslationArrType, langCode: LangCodeType): TranslateFuncType {
 	if (langCode === null || langCode === undefined || langCode === "") return null;
@@ -78,13 +78,19 @@ function skipTo(
 		return getPageNumberBasedOnIdent("school_6", pages);
 	} else if (currentIdent === "household_1" && finalAnswer === "no") {
 		return getPageNumberBasedOnIdent("household_extro", pages);
+	} else if (currentIdent === "household_extro") {
+		const age = getResponseByIdent("age", responses);
+		const finalAge = age !== "" && age !== undefined && age !== null ? parseInt(age) : -1;
+		if (finalAge !== -1 && [12, 13, 14, 15, 16, 17].includes(finalAge)) {
+			return getPageNumberBasedOnIdent("work_intro", pages);
+		} else {
+			return getPageNumberBasedOnIdent("transportation_intro", pages);
+		}
 	} else if (currentIdent === "work_1" && finalAnswer === "no") {
 		return getPageNumberBasedOnIdent("work_extro", pages);
 	} else if (currentIdent === "transportation_intro") {
 		const school_1_answer = getResponseByIdent("school_1", responses);
 		const work_1_answer = getResponseByIdent("work_1", responses);
-		console.log("school_1_answer", school_1_answer);
-		console.log("work_1_answer", work_1_answer);
 		if (school_1_answer === "no" && work_1_answer === "no") {
 			return getPageNumberBasedOnIdent("transportation_7", pages);
 		} else if (school_1_answer === "no") {

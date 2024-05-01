@@ -27,6 +27,9 @@ import {
 	KidExtroductoryPages,
 } from "./data/extroductory-pages";
 import type SectionPayloadInterface from "interface/directus/section-payload";
+import DemographicAdultPage from "./data/introductory-pages/demographic_adult";
+import DemographicTeenPage from "./data/introductory-pages/demographic_teen_age";
+import DemographicKidPage from "./data/introductory-pages/demographic_kid_age";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
@@ -35,6 +38,9 @@ const INITIAL_STATE = {
 	questionPages: QuestionPages,
 	kidExtroPages: KidExtroductoryPages,
 	adultExtroPages: AdultExtroductoryPages,
+	kidAgePage: DemographicKidPage,
+	teenAgePage: DemographicTeenPage,
+	adultAgePage: DemographicAdultPage,
 	feedbackExtroPages: FeedbackExtroductoryPages,
 	backButton: BackButton,
 	completeButton: CompleteButton,
@@ -59,6 +65,9 @@ export const QuestionContext = createContext({
 		introductoryPages: [],
 		kidExtroPages: [],
 		adultExtroPages: [],
+		kidAgePage: {},
+		teenAgePage: {},
+		adultAgePage: {},
 		feedbackExtroPages: [],
 		questionPages: [],
 		backButton: [],
