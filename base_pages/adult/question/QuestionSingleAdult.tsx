@@ -90,7 +90,10 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		if (selectedValue !== null) {
+		if (
+			(selectedValue !== null && selectedValue !== "") ||
+			currentPage?.page?.ident === "app_use_comment"
+		) {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both" + selectedValue}

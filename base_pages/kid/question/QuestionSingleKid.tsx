@@ -106,7 +106,10 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		if (selectedValue !== null && selectedValue !== "") {
+		if (
+			(selectedValue !== null && selectedValue !== "") ||
+			currentPage?.page?.ident === "app_use_comment"
+		) {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both" + selectedValue}
