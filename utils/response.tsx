@@ -35,12 +35,23 @@ function getResponse(
 function getResponseByIdent(
 	ident: string,
 	responses: Record<string, ResponseInterface>,
-): string | null {
+): string | string[] | null {
 	if (ident === null || ident === "") return null;
 	if (Object.keys(responses).length === 0) return null;
 	const finalResponse = Object.values(responses).find((response) => response.ident === ident);
 	if (finalResponse === undefined || finalResponse === null) {
 		return null;
+	}
+	if (
+		finalResponse.answer === null ||
+		finalResponse.answer === "" ||
+		finalResponse.answer === undefined
+	) {
+		return null;
+	}
+
+	if (finalResponse.answer?.includes(" | ")) {
+		return finalResponse.answer.split(" | ");
 	}
 	return finalResponse.answer;
 }

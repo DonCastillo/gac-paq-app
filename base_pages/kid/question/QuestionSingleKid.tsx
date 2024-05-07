@@ -41,7 +41,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const { isKeyboardOpen } = device;
 	const { color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
-	const questionLabel = translateQuestionLabel(
+	let questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
 		mode,
@@ -53,6 +53,19 @@ export default function QuestionSingleKid(): React.ReactElement {
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
+
+	// change labels if in question 17
+	if (
+		[
+			"transportation_7",
+			"transportation_8",
+			"transportation_9",
+			"transportation_10",
+			"transportation_11",
+		].includes(currentPage.page.ident)
+	) {
+		questionLabel = settingCtx.getQuestion17Label();
+	}
 
 	// fetch response for this question
 	useEffect(() => {

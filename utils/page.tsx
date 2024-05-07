@@ -64,14 +64,19 @@ function getPageNumberBasedOnIdent(ident: string, pages: Record<number, any>): n
 
 function skipTo(
 	currentIdent: string,
-	nextIdent: string,
-	answer: string | null,
+	answer: string | string[] | null,
 	pages: Record<number, object>,
 	responses: Record<string, ResponseInterface>,
 ): number {
-	console.log("currentIdent xx", currentIdent);
-	console.log("finalAnswer xx", answer);
-	const finalAnswer = answer?.toString().toLowerCase();
+	let finalAnswer: string | string[] | null = null;
+	if (Array.isArray(answer)) {
+		finalAnswer = answer.length > 0 ? answer.map((ans) => ans.toString().toLowerCase()) : null;
+	} else if (typeof answer === "string") {
+		finalAnswer = answer !== "" ? answer.toString().toLowerCase() : null;
+	} else {
+		finalAnswer = null;
+	}
+
 	if (currentIdent === "school_1" && finalAnswer === "no") {
 		return getPageNumberBasedOnIdent("school_extro", pages);
 	} else if (currentIdent === "school_3" && finalAnswer === "0") {
@@ -80,7 +85,8 @@ function skipTo(
 		return getPageNumberBasedOnIdent("household_extro", pages);
 	} else if (currentIdent === "household_extro") {
 		const age = getResponseByIdent("age", responses);
-		const finalAge = age !== "" && age !== undefined && age !== null ? parseInt(age) : -1;
+		const finalAge =
+			age !== "" && age !== undefined && age !== null && !Array.isArray(age) ? parseInt(age) : -1;
 		if (finalAge !== -1 && [12, 13, 14, 15, 16, 17].includes(finalAge)) {
 			return getPageNumberBasedOnIdent("work_intro", pages);
 		} else {
@@ -89,17 +95,49 @@ function skipTo(
 	} else if (currentIdent === "work_1" && finalAnswer === "no") {
 		return getPageNumberBasedOnIdent("work_extro", pages);
 	} else if (currentIdent === "transportation_intro") {
-		const school_1_answer = getResponseByIdent("school_1", responses);
-		const work_1_answer = getResponseByIdent("work_1", responses);
-		if (school_1_answer === "no" && work_1_answer === "no") {
+		const attendedSchool = getResponseByIdent("school_1", responses)?.toString().toLowerCase();
+		const attendedWork = getResponseByIdent("work_1", responses)?.toString().toLowerCase();
+		if (
+			["no", null, undefined].includes(attendedSchool) &&
+			["no", null, undefined].includes(attendedWork)
+		) {
 			return getPageNumberBasedOnIdent("transportation_7", pages);
-		} else if (school_1_answer === "no") {
+		} else if (attendedWork === "yes" && ["no", null, undefined].includes(attendedSchool)) {
 			return getPageNumberBasedOnIdent("transportation_4", pages);
-		} else if (work_1_answer === "no") {
-			return getPageNumberBasedOnIdent("transportation_7", pages);
+		} else if (attendedSchool === "yes" && ["no", null, undefined].includes(attendedWork)) {
+			return getPageNumberBasedOnIdent("transportation_1", pages);
 		}
 	} else if (currentIdent === "transportation_1" && finalAnswer === "stay home for school") {
-		return getPageNumberBasedOnIdent("transportation_4", pages);
+		const attendedWork = getResponseByIdent("work_1", responses)?.toString().toLowerCase();
+		if (attendedWork === "yes") {
+			return getPageNumberBasedOnIdent("transportation_4", pages);
+		}
+		return getPageNumberBasedOnIdent("transportation_7", pages);
+	} else if (currentIdent === "transportation_3") {
+		const attendedWork = getResponseByIdent("work_1", responses)?.toString().toLowerCase();
+		if (attendedWork === "yes") {
+			return getPageNumberBasedOnIdent("transportation_4", pages);
+		}
+		return getPageNumberBasedOnIdent("transportation_7", pages);
+	} else if (currentIdent === "transportation_7") {
+		if (finalAnswer !== null && finalAnswer?.includes("no")) {
+			return getPageNumberBasedOnIdent("transportation_extro", pages);
+		} else if (finalAnswer !== null && finalAnswer?.includes("walked")) {
+			return getPageNumberBasedOnIdent("transportation_8", pages);
+		} else if (finalAnswer !== null && finalAnswer?.includes("wheeled")) {
+			return getPageNumberBasedOnIdent("transportation_10", pages);
+		}
+	} else if (currentIdent === "transportation_9") {
+		let transpoMode = getResponseByIdent("transportation_7", responses);
+		transpoMode = Array.isArray(transpoMode)
+			? transpoMode?.map((transmode) => transmode.toLowerCase())
+			: null;
+
+		if (transpoMode !== null && transpoMode?.includes("wheeled")) {
+			return getPageNumberBasedOnIdent("transportation_10", pages);
+		} else {
+			return getPageNumberBasedOnIdent("transportation_extro", pages);
+		}
 	} else if (currentIdent === "organized_1" && finalAnswer === "no") {
 		return getPageNumberBasedOnIdent("organized_extro", pages);
 	}

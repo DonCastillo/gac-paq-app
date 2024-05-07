@@ -3,6 +3,10 @@ import type LanguageInterface from "interface/language";
 interface Choice {
 	text: string;
 	value: string;
+	text_mode?: {
+		kid: string;
+		adult: string;
+	};
 }
 
 export default interface QuestionCheckboxInterface {

@@ -1,7 +1,7 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
-import { skipTo, translate, translateQuestionLabel } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -39,7 +39,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const { isKeyboardOpen } = device;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
-	const questionLabel = translateQuestionLabel(
+	let questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
 		mode,
@@ -50,6 +50,19 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		mode,
 	);
 	let questionComponent = <></>;
+
+	// change labels if in question 17
+	if (
+		[
+			"transportation_7",
+			"transportation_8",
+			"transportation_9",
+			"transportation_10",
+			"transportation_11",
+		].includes(currentPage.page.ident)
+	) {
+		questionLabel = settingCtx.getQuestion17Label();
+	}
 
 	// fetch response for this question
 	useEffect(() => {
