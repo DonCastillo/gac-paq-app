@@ -33,7 +33,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 
 	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
 	const regionsOptions = questionCtx.questionState.regionOption;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
@@ -123,10 +123,14 @@ export default function QuestionSingleAdult(): React.ReactElement {
 
 		// set mode
 		if (currentPage.page.ident === "mode") {
-			if (value === "child") {
-				settingCtx.setMode(Mode.Kid);
-			} else {
+			if (value === "adult") {
 				settingCtx.setMode(Mode.Adult);
+			} else if (value === "child") {
+				settingCtx.setMode(Mode.Kid);
+			} else if (value === "teen") {
+				settingCtx.setMode(Mode.Teen);
+			} else {
+				settingCtx.setMode(undefined);
 			}
 			settingCtx.reloadExtroFeedbackPages();
 		}

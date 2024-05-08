@@ -39,6 +39,11 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 							kid: Images.kids.options.transportation.wheeling,
 							adult: Images.adults.options.transportation.wheeling,
 						},
+						sublabel: {
+							kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+							adult:
+								"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						},
 					},
 				},
 				{
@@ -50,6 +55,10 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 						images: {
 							kid: Images.kids.options.transportation.public_transit,
 							adult: Images.adults.options.transportation.public_transit,
+						},
+						sublabel: {
+							kid: "example: bus, train, tramway, subway, boat",
+							adult: "example: bus, train, tramway, subway, boat",
 						},
 					},
 				},

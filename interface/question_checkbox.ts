@@ -1,8 +1,12 @@
 import type LanguageInterface from "interface/language";
 
-interface Choice {
+export interface ChoiceInterface {
 	text: string;
 	value: string;
+	text_mode?: {
+		kid: string;
+		adult: string;
+	};
 }
 
 export default interface QuestionCheckboxInterface {
@@ -14,6 +18,6 @@ export default interface QuestionCheckboxInterface {
 	adult_sublabel?: string;
 	adult_label: string;
 	kid_label: string;
-	choices: Choice[];
+	choices: ChoiceInterface[];
 	languages_id?: LanguageInterface | null;
 }

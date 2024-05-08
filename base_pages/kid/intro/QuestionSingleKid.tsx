@@ -129,10 +129,14 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 		// set mode
 		if (currentPage.page.ident === "mode") {
-			if (value === "child") {
-				settingCtx.setMode(Mode.Kid);
-			} else {
+			if (value === "adult") {
 				settingCtx.setMode(Mode.Adult);
+			} else if (value === "child") {
+				settingCtx.setMode(Mode.Kid);
+			} else if (value === "teen") {
+				settingCtx.setMode(Mode.Teen);
+			} else {
+				settingCtx.setMode(undefined);
 			}
 			settingCtx.reloadExtroFeedbackPages();
 		}

@@ -25,6 +25,10 @@ const S3Intro: SectionPayloadInterface = {
 					phone: Images.adults.intro.section_3.phone,
 					tablet: Images.adults.intro.section_3.tablet,
 				},
+				teen: {
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
+				},
 			},
 		},
 	],

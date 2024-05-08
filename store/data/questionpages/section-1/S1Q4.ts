@@ -19,12 +19,12 @@ const S1Q4: QuestionRadioPayloadInterface = {
 					value: "Less than 30 minutes per class",
 				},
 				{
-					text: "30-45 minutes per class",
-					value: "30-45 minutes per class",
+					text: "30 - 45 minutes per class",
+					value: "30 - 45 minutes per class",
 				},
 				{
-					text: "46-60 minutes per class",
-					value: "46-60 minutes per class",
+					text: "46 - 60 minutes per class",
+					value: "46 - 60 minutes per class",
 				},
 				{
 					text: "Over 60 minutes per class",

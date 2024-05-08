@@ -4,7 +4,7 @@ const DontKnowPhrase: PhraseInterface[] = [
 	{
 		id: 1,
 		dont_know_phrase_id: 1,
-		label: "I don't know",
+		label: "Don't know",
 		languages_id: {
 			name: "English - Canada",
 			lang_code: "en-CA",

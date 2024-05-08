@@ -14,7 +14,7 @@ import { GeneralStyle } from "styles/general";
 import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
 import { horizontalScale, moderateScale } from "utils/responsive";
-import { getOptionImage } from "utils/background";
+import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background";
 import {
 	getUserSpecifiedOther,
 	hasOtherOption,
@@ -113,7 +113,7 @@ export default function QuestionRadioImage({
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
-			if (options.length <= 5) {
+			if (options.length <= 4) {
 				ImageComponent = (
 					<Image
 						style={styles.optionImage as StyleProp<ImageStyle>}
@@ -145,7 +145,7 @@ export default function QuestionRadioImage({
 		} else {
 			// SVGs
 			const ImageComponent = image;
-			if (options.length <= 5) {
+			if (options.length <= 4) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
 				return (
@@ -153,11 +153,11 @@ export default function QuestionRadioImage({
 						style={{
 							...GeneralStyle.general.inlineOptionImage,
 							maxWidth: moderateScale(
-								device.isTablet ? 30 : 30,
+								device.isTablet ? 50 : 50,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							minHeight: moderateScale(
-								device.isTablet ? 30 : 30,
+								device.isTablet ? 50 : 50,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 						}}
@@ -211,9 +211,11 @@ export default function QuestionRadioImage({
 
 	/** if the option contains value called "other", it will be displayed as a list */
 	function listRenderOption({ item }): React.ReactElement {
-		const { images, text, value } = item.image_choices_id;
+		const { images, text, value, sublabel, text_mode } = item.image_choices_id;
 		const imageByMode = getOptionImage(images, mode);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
+		const optionText = getOptionText(text, text_mode, mode);
+		const optionSublabel = getOptionSubLabel(sublabel, mode);
 
 		return (
 			<View
@@ -233,6 +235,7 @@ export default function QuestionRadioImage({
 							flexDirection: "row",
 							flexWrap: "nowrap",
 							alignItems: "center",
+
 							paddingVertical: moderateScale(5, device.screenHeight),
 							paddingHorizontal: moderateScale(20, device.screenWidth),
 						},
@@ -245,25 +248,54 @@ export default function QuestionRadioImage({
 					onPress={() => selectHandler(value)}
 				>
 					{renderImage(imageByMode)}
-					<Text
-						style={[
-							styles.listOptionLabelText,
-							{
-								// fontSize: GeneralStyle.kid.optionImageLabelText.fontSize,
-								fontSize: moderateScale(
-									device.isTablet ? 14 : 14,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								lineHeight: moderateScale(
-									device.isTablet ? 18 : 18,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-							},
-							isSelected ? { color: "#fff" } : { color: "#000" },
-						]}
+					<View
+						style={{
+							flex: 1,
+							flexDirection: "column",
+							justifyContent: "center",
+						}}
 					>
-						{text}
-					</Text>
+						{optionText !== null && (
+							<Text
+								style={[
+									styles.listOptionLabelText,
+									{
+										fontSize: moderateScale(
+											device.isTablet ? 14 : 14,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+										lineHeight: moderateScale(
+											device.isTablet ? 18 : 18,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+									},
+									isSelected ? { color: "#fff" } : { color: "#000" },
+								]}
+							>
+								{optionText}
+							</Text>
+						)}
+						{optionSublabel !== null && (
+							<Text
+								style={[
+									styles.listOptionSubLabelText,
+									{
+										fontSize: moderateScale(
+											device.isTablet ? 12 : 12,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+										lineHeight: moderateScale(
+											device.isTablet ? 16 : 16,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+									},
+									isSelected ? { color: "#fff" } : { color: "#000" },
+								]}
+							>
+								{optionSublabel}
+							</Text>
+						)}
+					</View>
 				</Pressable>
 
 				{/* Other Field */}
@@ -367,9 +399,16 @@ const styles = StyleSheet.create({
 	},
 	listOptionLabelText: {
 		...GeneralStyle.kid.optionImageLabelText,
-		// backgroundColor: "green",
-		flex: 1,
 		flexWrap: "wrap",
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	listOptionSubLabelText: {
+		...GeneralStyle.kid.optionImageSubLabelText,
+		flexWrap: "wrap",
+		flexDirection: "column",
+		alignItems: "center",
 	},
 	blockOptionLabelText: {
 		...GeneralStyle.kid.optionImageLabelText,

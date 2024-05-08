@@ -22,12 +22,12 @@ const S2Q3: QuestionRadioPayloadInterface = {
 					value: "15 minutes or less per day",
 				},
 				{
-					text: "16-30 minutes per day",
-					value: "16-30 minutes per day",
+					text: "16 - 30 minutes per day",
+					value: "16 - 30 minutes per day",
 				},
 				{
-					text: "31-60 minutes per day",
-					value: "31-60 minutes per day",
+					text: "31 - 60 minutes per day",
+					value: "31 - 60 minutes per day",
 				},
 				{
 					text: "Over 60 minutes per day",

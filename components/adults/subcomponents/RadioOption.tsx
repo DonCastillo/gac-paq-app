@@ -15,6 +15,8 @@ interface PropsInterface {
 	isOtherSelected?: boolean;
 	autofocusOtherField?: boolean;
 	defaultOtherInputValue?: string;
+	optionLabel?: string;
+	optionSublabel?: string;
 }
 
 export default function RadioOption({
@@ -26,6 +28,8 @@ export default function RadioOption({
 	isOtherSelected = false,
 	autofocusOtherField = false,
 	defaultOtherInputValue,
+	optionLabel,
+	optionSublabel,
 }: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device, colorTheme } = settingCtx.settingState;
@@ -84,22 +88,45 @@ export default function RadioOption({
 						/>
 					)}
 
-					{/* Label */}
-					<Text
-						style={{
-							...styles.labelText,
-							fontSize: moderateScale(
-								device.isTablet ? 14 : 16,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? 18 : 20,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-						}}
-					>
-						{label}
-					</Text>
+					<View style={{ flex: 1 }}>
+						{/* Label */}
+						<Text
+							style={{
+								...styles.labelText,
+								fontSize: moderateScale(
+									device.isTablet ? 14 : 16,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 18 : 20,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
+						>
+							{optionLabel !== "" && optionLabel !== undefined && optionLabel !== null
+								? optionLabel
+								: label}
+						</Text>
+
+						{/* Sublabel */}
+						{optionSublabel !== "" && optionSublabel !== undefined && optionSublabel !== null && (
+							<Text
+								style={{
+									...styles.labelText,
+									fontSize: moderateScale(
+										device.isTablet ? 12 : 12,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+									lineHeight: moderateScale(
+										device.isTablet ? 16 : 16,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+								}}
+							>
+								{optionSublabel}
+							</Text>
+						)}
+					</View>
 				</View>
 			</Pressable>
 
@@ -166,6 +193,7 @@ const styles = StyleSheet.create({
 	labelText: {
 		flexDirection: "row",
 		width: "100%",
+		flex: 1,
 		...GeneralStyle.adult.radioText,
 	},
 	svgImage: {

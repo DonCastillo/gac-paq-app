@@ -27,6 +27,12 @@ import {
 	KidExtroductoryPages,
 } from "./data/extroductory-pages";
 import type SectionPayloadInterface from "interface/directus/section-payload";
+import DemographicAdultPage from "./data/introductory-pages/demographic_adult";
+import DemographicTeenPage from "./data/introductory-pages/demographic_teen_age";
+import DemographicKidPage from "./data/introductory-pages/demographic_kid_age";
+import Transportation7 from "./data/questionpages/section-4/transportation_7/S4Q7a";
+import Transportation8_10 from "./data/questionpages/section-4/transportation_7/S4Q8_10";
+import Transportation9_11 from "./data/questionpages/section-4/transportation_7/S4Q9_11";
 
 const INITIAL_STATE = {
 	regionOption: Regions,
@@ -35,6 +41,9 @@ const INITIAL_STATE = {
 	questionPages: QuestionPages,
 	kidExtroPages: KidExtroductoryPages,
 	adultExtroPages: AdultExtroductoryPages,
+	kidAgePage: DemographicKidPage,
+	teenAgePage: DemographicTeenPage,
+	adultAgePage: DemographicAdultPage,
 	feedbackExtroPages: FeedbackExtroductoryPages,
 	backButton: BackButton,
 	completeButton: CompleteButton,
@@ -49,6 +58,9 @@ const INITIAL_STATE = {
 	tryAgainPhrase: TryAgainPhrase,
 	successPage: SuccessPage,
 	errorPage: ErrorPage,
+	Transportation7,
+	Transportation8_10,
+	Transportation9_11,
 	sectionPages: [],
 };
 
@@ -59,6 +71,9 @@ export const QuestionContext = createContext({
 		introductoryPages: [],
 		kidExtroPages: [],
 		adultExtroPages: [],
+		kidAgePage: {},
+		teenAgePage: {},
+		adultAgePage: {},
 		feedbackExtroPages: [],
 		questionPages: [],
 		backButton: [],
@@ -74,6 +89,9 @@ export const QuestionContext = createContext({
 		tryAgainPhrase: [],
 		successPage: {},
 		errorPage: {},
+		Transportation7: {},
+		Transportation8_10: {},
+		Transportation9_11: {},
 		sectionPages: [],
 	},
 	identifyLastSectionExtroPage: () => {},

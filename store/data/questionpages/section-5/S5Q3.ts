@@ -22,16 +22,16 @@ const S5Q3: QuestionRadioPayloadInterface = {
 					value: "30 minutes or less per day",
 				},
 				{
-					text: "31-60 minutes per day",
-					value: "31-60 minutes per day",
+					text: "31 to 60 minutes per day",
+					value: "31 to 60 minutes per day",
 				},
 				{
-					text: "1-1.5 hours per day",
-					value: "1-1.5 hours per day",
+					text: "1 to 1 and a half hours per day",
+					value: "1 to 1 and a half hours per day",
 				},
 				{
-					text: "More than 1.5 hours per day",
-					value: "More than 1.5 hours per day",
+					text: "More than 1 and a half hours per day",
+					value: "More than 1 and a half hours per day",
 				},
 			],
 			languages_id: {

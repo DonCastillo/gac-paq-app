@@ -28,6 +28,7 @@ import QuestionTextarea from "components/kid/QuestionTextarea";
 import QuestionCheckbox from "components/kid/QuestionCheckbox";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { optionTextMode } from "utils/options";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -41,7 +42,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const { isKeyboardOpen } = device;
 	const { color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
-	const questionLabel = translateQuestionLabel(
+	let questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
 		mode,
@@ -53,6 +54,19 @@ export default function QuestionSingleKid(): React.ReactElement {
 	);
 	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
 	let questionComponent = <></>;
+
+	// change labels if in question 17
+	if (
+		[
+			"transportation_7",
+			"transportation_8",
+			"transportation_9",
+			"transportation_10",
+			"transportation_11",
+		].includes(currentPage.page.ident)
+	) {
+		questionLabel = settingCtx.getQuestion17Label();
+	}
 
 	// fetch response for this question
 	useEffect(() => {
@@ -106,7 +120,10 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		if (selectedValue !== null && selectedValue !== "") {
+		if (
+			(selectedValue !== null && selectedValue !== "") ||
+			currentPage?.page?.ident === "app_use_comment"
+		) {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both" + selectedValue}
@@ -147,7 +164,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		questionComponent = (
 			<QuestionCheckbox
 				key={currentPageNumber}
-				options={translatedPage?.choices}
+				options={optionTextMode(translatedPage?.choices, mode)}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 			/>

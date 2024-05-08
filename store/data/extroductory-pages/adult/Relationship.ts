@@ -9,7 +9,7 @@ const Relationship: QuestionRadioPayloadInterface = {
 		{
 			id: 10,
 			question_radio_id: 8,
-			heading: "Question 23",
+			heading: "Question 28",
 			label: "What is your relationship to the child?",
 			kid_label: "What is your relationship to the child?",
 			adult_label: "What is your relationship to the child?",

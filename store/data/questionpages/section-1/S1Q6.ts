@@ -23,16 +23,16 @@ const S1Q6: QuestionRadioPayloadInterface = {
 					value: "0 minutes",
 				},
 				{
-					text: "1-15 minutes",
-					value: "1-15 minutes",
+					text: "1 - 15 minutes",
+					value: "1 - 15 minutes",
 				},
 				{
-					text: "16-30 minutes",
-					value: "16-30 minutes",
+					text: "16 - 30 minutes",
+					value: "16 - 30 minutes",
 				},
 				{
-					text: "31-60 minutes",
-					value: "31-60 minutes",
+					text: "31 - 60 minutes",
+					value: "31 - 60 minutes",
 				},
 				{
 					text: "More than 60 minutes",

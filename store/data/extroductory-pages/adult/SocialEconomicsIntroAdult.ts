@@ -26,6 +26,10 @@ const SocialEconomicsIntroAdult: SectionPayloadInterface = {
 					phone: Images.adults.intro.section_7.phone,
 					tablet: Images.adults.intro.section_7.tablet,
 				},
+				teen: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
 			},
 		},
 	],

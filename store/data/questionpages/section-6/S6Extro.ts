@@ -21,6 +21,10 @@ const S6Extro: ExtroPayloadInterface = {
 					phone: Images.adults.extro.section_6.phone,
 					tablet: Images.adults.extro.section_6.tablet,
 				},
+				teen: {
+					phone: Images.adults.extro.section_6.phone,
+					tablet: Images.adults.extro.section_6.tablet,
+				},
 			},
 		},
 	],

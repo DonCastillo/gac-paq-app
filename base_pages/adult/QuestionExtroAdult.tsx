@@ -36,7 +36,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		device,
 	} = settingCtx.settingState;
 	const isFinal = currentPage.page.isFinal;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const navigation = useNavigation();
 
 	// set button component dynamically
