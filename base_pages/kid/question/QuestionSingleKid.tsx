@@ -28,6 +28,7 @@ import QuestionTextarea from "components/kid/QuestionTextarea";
 import QuestionCheckbox from "components/kid/QuestionCheckbox";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { optionTextMode } from "utils/options";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -163,7 +164,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		questionComponent = (
 			<QuestionCheckbox
 				key={currentPageNumber}
-				options={translatedPage?.choices}
+				options={optionTextMode(translatedPage?.choices, mode)}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 			/>

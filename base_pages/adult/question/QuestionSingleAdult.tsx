@@ -13,7 +13,7 @@ import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
-import { optionText } from "utils/options";
+import { optionRadioItemMode, optionText, optionTextMode } from "utils/options";
 import QuestionRadio from "components/adults/QuestionRadio";
 import QuestionRadioImage from "components/adults/QuestionRadioImage";
 import { getResponse } from "utils/response";
@@ -159,7 +159,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			<QuestionCheckbox
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				options={optionText(translatedPage?.choices)}
+				options={optionRadioItemMode(translatedPage.choices, mode)}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}

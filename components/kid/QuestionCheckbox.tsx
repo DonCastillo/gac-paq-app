@@ -11,9 +11,10 @@ import {
 } from "utils/options";
 import { horizontalScale } from "utils/responsive";
 import Option from "./subcomponents/Option";
+import type { ChoiceInterface } from "interface/question_checkbox";
 
 interface PropsInterface {
-	options: OptionInterface[];
+	options: ChoiceInterface[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
@@ -59,11 +60,19 @@ export default function QuestionCheckbox({
 
 	function everyNotAnswer(value: string): boolean {
 		const finalValue = value.toString().toLowerCase();
+		const currentPageIdent = currentPage?.page.ident;
+		if (currentPageIdent === "transportation_7" && finalValue === "no") {
+			return false;
+		}
 		return !["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
 	}
 
 	function someNotAnswer(value: string): boolean {
 		const finalValue = value.toString().toLowerCase();
+		const currentPageIdent = currentPage?.page.ident;
+		if (currentPageIdent === "transportation_7" && finalValue === "no") {
+			return true;
+		}
 		return ["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
 	}
 
