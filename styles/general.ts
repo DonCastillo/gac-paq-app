@@ -243,7 +243,7 @@ const GeneralStyle = {
 		},
 		radioContainer: {
 			paddingVertical: 4,
-			paddingHorizontal: 10,
+			// paddingHorizontal: 10,
 			marginBottom: 5,
 			// flex: 1,
 		},
