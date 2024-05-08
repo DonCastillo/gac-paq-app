@@ -19,7 +19,7 @@ import type { ImageDeviceInterface, ImageModeInterface } from "interface/images"
 
 function getImageBackground(
 	images: ImageDeviceInterface,
-	mode: Mode.Kid | Mode.Adult | undefined,
+	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
 	isTablet: boolean,
 ): any | null {
 	if (mode === Mode.Adult && isTablet) {
@@ -30,6 +30,10 @@ function getImageBackground(
 		return images?.kid?.tablet;
 	} else if (mode === Mode.Kid && !isTablet) {
 		return images?.kid?.phone;
+	} else if (mode === Mode.Teen && isTablet) {
+		return images?.teen?.tablet;
+	} else if (mode === Mode.Teen && !isTablet) {
+		return images?.teen?.phone;
 	} else if (mode === undefined && isTablet) {
 		return images?.kid?.tablet;
 	} else if (mode === undefined && !isTablet) {
@@ -41,12 +45,47 @@ function getImageBackground(
 
 function getOptionImage(
 	images: ImageModeInterface,
-	mode: Mode.Kid | Mode.Adult | undefined,
+	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
 ): any | null {
 	if (mode === Mode.Adult) {
 		return images?.adult;
 	} else if (mode === Mode.Kid) {
 		return images?.kid;
+	} else if (mode === Mode.Teen) {
+		return images?.teen ?? images?.adult;
+	} else {
+		return null;
+	}
+}
+
+function getOptionText(
+	origOptionText: string,
+	optionTextObj: { kid: string; adult: string },
+	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
+): string | null {
+	if (optionTextObj === undefined || optionTextObj === null) return origOptionText;
+	if (mode === undefined || mode === null) return origOptionText;
+
+	if (mode === Mode.Kid || mode === Mode.Teen) {
+		return optionTextObj.kid ?? origOptionText;
+	} else if (mode === Mode.Adult) {
+		return optionTextObj.adult ?? origOptionText;
+	} else {
+		return origOptionText;
+	}
+}
+
+function getOptionSubLabel(
+	subLabelObj: { kid: string; adult: string },
+	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
+): string | null {
+	if (subLabelObj === undefined || subLabelObj === null) return null;
+	if (mode === undefined || mode === null) return null;
+
+	if (mode === Mode.Kid || mode === Mode.Teen) {
+		return subLabelObj.kid ?? null;
+	} else if (mode === Mode.Adult) {
+		return subLabelObj.adult ?? null;
 	} else {
 		return null;
 	}
@@ -126,4 +165,11 @@ function getQuestionBackground(
 	}
 }
 
-export { getIntroductoryBackground, getQuestionBackground, getImageBackground, getOptionImage };
+export {
+	getIntroductoryBackground,
+	getQuestionBackground,
+	getImageBackground,
+	getOptionImage,
+	getOptionText,
+	getOptionSubLabel,
+};

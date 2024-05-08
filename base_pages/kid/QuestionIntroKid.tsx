@@ -9,14 +9,14 @@ import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
-import { moderateScale, verticalScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive";
 
 export default function QuestionIntroKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
 		settingCtx.settingState;
 	const { color200 } = colorTheme;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// set button component dynamically

@@ -21,11 +21,19 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 			choices: [
 				{
 					text: "Yes, I walked",
-					value: "Yes, I walked",
+					value: "Walked",
+					text_mode: {
+						kid: "Yes, I walked",
+						adult: "Yes, they walked",
+					},
 				},
 				{
 					text: "Yes, I wheeled",
-					value: "Yes, I wheeled",
+					value: "Wheeled",
+					text_mode: {
+						kid: "Yes, I wheeled",
+						adult: "Yes, they wheeled",
+					},
 				},
 				{
 					text: "No",

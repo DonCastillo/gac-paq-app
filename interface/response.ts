@@ -5,7 +5,7 @@ export default interface ResponseInterface {
 	label: string;
 	answer: string | null;
 	pageNumber: number | null;
-	mode: Mode.Adult | Mode.Kid | undefined;
+	mode: Mode.Adult | Mode.Kid | Mode.Teen | undefined;
 	section: string | null;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;

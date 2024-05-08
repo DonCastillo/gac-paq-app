@@ -39,7 +39,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 	} = settingCtx.settingState;
 	const { color100, color200 } = colorTheme;
 	const isFinal = currentPage.page.isFinal;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const ImageComponent = Images.kids.graphics.extro_question_page;
 	const navigation = useNavigation();
 
@@ -170,7 +170,5 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		marginTop: 20,
 		width: "100%",
-		// marginLeft: -40,
-		// backgroundColor: "blue"
 	},
 });

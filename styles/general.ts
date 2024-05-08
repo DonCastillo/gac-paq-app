@@ -160,6 +160,10 @@ const GeneralStyle = {
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.SpaceRegular,
 		},
+		optionImageSubLabelText: {
+			fontSize: DEFAULT_OPTION_FONT_SIZE - 2,
+			fontFamily: Font.SpaceRegular,
+		},
 		optionImage: {
 			borderTopLeftRadius: 5,
 			borderTopRightRadius: 5,
@@ -181,7 +185,7 @@ const GeneralStyle = {
 			},
 			shadowOpacity: 0.2,
 			shadowRadius: 2,
-		},		
+		},
 		blockImageLabelContainer: {
 			borderBottomLeftRadius: 5,
 			borderBottomRightRadius: 5,
@@ -239,7 +243,7 @@ const GeneralStyle = {
 		},
 		radioContainer: {
 			paddingVertical: 4,
-			paddingHorizontal: 10,
+			// paddingHorizontal: 10,
 			marginBottom: 5,
 			// flex: 1,
 		},

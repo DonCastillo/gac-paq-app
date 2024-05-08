@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
@@ -19,7 +19,6 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionInput from "components/adults/QuestionInput";
 import Mode from "constants/mode";
 import ImageBackdrop from "components/ImageBackdrop";
-import { QuestionContext } from "store/questions";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
 import QuestionTitle from "components/generic/QuestionTitle";
@@ -30,11 +29,10 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const settingCtx = useContext(SettingContext);
 	const responseCtx = useContext(ResponseContext);
-	const questionCtx = useContext(QuestionContext);
 
 	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
 	const { isKeyboardOpen } = device;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
 		translatedPage?.adult_label,
@@ -84,10 +82,14 @@ export default function GenericSingleQuestion(): React.ReactElement {
 
 		// set mode
 		if (currentPage.page.ident === "mode") {
-			if (value === "child") {
-				settingCtx.setMode(Mode.Kid);
-			} else {
+			if (value === "adult") {
 				settingCtx.setMode(Mode.Adult);
+			} else if (value === "child") {
+				settingCtx.setMode(Mode.Kid);
+			} else if (value === "teen") {
+				settingCtx.setMode(Mode.Teen);
+			} else {
+				settingCtx.setMode(undefined);
 			}
 			settingCtx.reloadExtroFeedbackPages();
 		}

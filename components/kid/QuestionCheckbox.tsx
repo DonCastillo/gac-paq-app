@@ -11,9 +11,10 @@ import {
 } from "utils/options";
 import { horizontalScale } from "utils/responsive";
 import Option from "./subcomponents/Option";
+import type { ChoiceInterface } from "interface/question_checkbox";
 
 interface PropsInterface {
-	options: OptionInterface[];
+	options: ChoiceInterface[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
@@ -57,7 +58,28 @@ export default function QuestionCheckbox({
 		return arr.some(isOtherOption);
 	}
 
+	function everyNotAnswer(value: string): boolean {
+		const finalValue = value.toString().toLowerCase();
+		const currentPageIdent = currentPage?.page.ident;
+		if (currentPageIdent === "transportation_7" && finalValue === "no") {
+			return false;
+		}
+		return !["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
+	}
+
+	function someNotAnswer(value: string): boolean {
+		const finalValue = value.toString().toLowerCase();
+		const currentPageIdent = currentPage?.page.ident;
+		if (currentPageIdent === "transportation_7" && finalValue === "no") {
+			return true;
+		}
+		return ["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
+	}
+
 	function selectHandler(value: string): void {
+		let finalSelected = "";
+		let existingSelectedValue = initializeSelectedValue();
+
 		if (value === "" || value === null || value === undefined) return;
 
 		// activate other field if "other" or "other (xxxxx)" is selected
@@ -65,7 +87,15 @@ export default function QuestionCheckbox({
 			setAutoFocusOtherField(true);
 		}
 
-		const existingSelectedValue = initializeSelectedValue();
+		// if value is "prefer not to answer" or" prefer not to say" or "none of the above" reset existing value and add this
+		if (someNotAnswer(value)) {
+			finalSelected = value;
+			onChange(finalSelected);
+			return;
+		} else {
+			// remove "prefer not to answer" or "prefer not to say" or "none of the above" if it is selected
+			existingSelectedValue = existingSelectedValue.filter(everyNotAnswer);
+		}
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
@@ -73,12 +103,12 @@ export default function QuestionCheckbox({
 			if (value.toString().toLowerCase() === "other") {
 				if (arrayHasOther(existingSelectedValue)) {
 					// if "Other", "other", "other (xxxx)" is already selected, remove all
-					onChange(existingSelectedValue.filter((item) => !isOtherOption(item)).join(SEPARATOR));
-					return;
+					finalSelected = existingSelectedValue
+						.filter((item) => !isOtherOption(item))
+						.join(SEPARATOR);
 				} else {
 					// if not add it
-					onChange([...existingSelectedValue, value].join(SEPARATOR));
-					return;
+					finalSelected = [...existingSelectedValue, value].join(SEPARATOR);
 				}
 			}
 
@@ -90,19 +120,20 @@ export default function QuestionCheckbox({
 				// if there is a value specified with "other" and it is not empty
 				if (specificValue.trim() !== "") {
 					// add it
-					onChange([...withoutOther, value].join(SEPARATOR));
+					finalSelected = [...withoutOther, value].join(SEPARATOR);
 				} else {
 					// add "Other"
-					onChange([...withoutOther, "Other"].join(SEPARATOR));
+					finalSelected = [...withoutOther, "Other"].join(SEPARATOR);
 				}
 			}
 		} else {
 			if (existingSelectedValue.includes(value)) {
-				onChange(existingSelectedValue.filter((item) => item !== value).join(SEPARATOR));
+				finalSelected = existingSelectedValue.filter((item) => item !== value).join(SEPARATOR);
 			} else {
-				onChange([...existingSelectedValue, value].join(SEPARATOR));
+				finalSelected = [...existingSelectedValue, value].join(SEPARATOR);
 			}
 		}
+		onChange(finalSelected);
 	}
 
 	const enableColumnWrap = device.isTablet && device.orientation === "landscape";

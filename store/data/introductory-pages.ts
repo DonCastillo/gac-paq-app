@@ -6,7 +6,7 @@ import AboutPage from "store/data/introductory-pages/about";
 import AccelerometerPage from "store/data/introductory-pages/accelerometer";
 import AgePage from "store/data/introductory-pages/age";
 import ConfidentialityPage from "store/data/introductory-pages/confidentiality";
-import DemographicPage from "store/data/introductory-pages/demographic";
+import DemographicPage from "store/data/introductory-pages/demographic_general_age";
 import GreatJobPage from "store/data/introductory-pages/great-job";
 import LanguagePage from "store/data/introductory-pages/language";
 import LocationPage from "store/data/introductory-pages/location";

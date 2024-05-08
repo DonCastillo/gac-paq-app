@@ -2,8 +2,10 @@ import type Mode from "constants/mode";
 import SectionType from "constants/section_type";
 import type ResponseInterface from "interface/response";
 
+type modeType = Mode.Kid | Mode.Adult | Mode.Teen | undefined;
+
 function getResponse(
-	mode: Mode.Kid | Mode.Adult | undefined,
+	mode: modeType,
 	section: string | null,
 	sectionNumber: number | null,
 	sectionPageNumber: number | null,
@@ -33,19 +35,30 @@ function getResponse(
 function getResponseByIdent(
 	ident: string,
 	responses: Record<string, ResponseInterface>,
-): string | null {
+): string | string[] | null {
 	if (ident === null || ident === "") return null;
 	if (Object.keys(responses).length === 0) return null;
 	const finalResponse = Object.values(responses).find((response) => response.ident === ident);
 	if (finalResponse === undefined || finalResponse === null) {
 		return null;
 	}
+	if (
+		finalResponse.answer === null ||
+		finalResponse.answer === "" ||
+		finalResponse.answer === undefined
+	) {
+		return null;
+	}
+
+	if (finalResponse.answer?.includes(" | ")) {
+		return finalResponse.answer.split(" | ");
+	}
 	return finalResponse.answer;
 }
 
 function sanitizeResponse(
 	responses: Record<string, ResponseInterface>,
-	mode: Mode.Adult | Mode.Kid | undefined,
+	mode: modeType,
 ): Record<string, string | string[]> | Record<string, Record<string, string | string[]>> {
 	const sanitizedResponse:
 		| Record<string, string | string[]>

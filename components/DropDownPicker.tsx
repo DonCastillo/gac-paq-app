@@ -71,6 +71,7 @@ export default function DropDownSelector({
 					{
 						borderColor: color100,
 						minHeight: dropdownMinHeight,
+						maxHeight: 250,
 					},
 				]}
 				listItemContainerStyle={{

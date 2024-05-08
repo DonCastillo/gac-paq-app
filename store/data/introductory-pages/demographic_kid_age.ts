@@ -2,9 +2,9 @@ import ScreenType from "constants/screen_type";
 import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 import Images from "styles/images";
 
-const DemographicPage: QuestionDropdownPayloadInterface = {
-	ident: "child_age",
-	name: "child_age",
+const DemographicKidPage: QuestionDropdownPayloadInterface = {
+	ident: "age",
+	name: "age",
 	type: ScreenType.SingleQuestion,
 	translations: [
 		{
@@ -16,16 +16,24 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 			adult_label: "How old are you?",
 			choices: [
 				{
-					text: "Under 10 years old",
+					text: "8 years old",
+					value: "8",
+				},
+				{
+					text: "9 years old",
 					value: "9",
 				},
 				{
-					text: "10 - 14 years old",
+					text: "10 years old",
 					value: "10",
 				},
 				{
-					text: "15 - 17 years old",
-					value: "15",
+					text: "11 years old",
+					value: "11",
+				},
+				{
+					text: "12 years old",
+					value: "12",
 				},
 			],
 			languages_id: {
@@ -34,6 +42,10 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 			},
 			images: {
 				kid: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				teen: {
 					phone: Images.generic.pages.phone.age,
 					tablet: Images.generic.pages.tablet.age,
 				},
@@ -46,4 +58,4 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 	],
 };
 
-export default DemographicPage;
+export default DemographicKidPage;

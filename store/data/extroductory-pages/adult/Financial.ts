@@ -9,7 +9,7 @@ const Financial: QuestionRadioPayloadInterface = {
 		{
 			id: 10,
 			question_radio_id: 8,
-			heading: "Question 23",
+			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			adult_label:

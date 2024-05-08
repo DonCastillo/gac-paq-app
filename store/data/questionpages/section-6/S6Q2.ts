@@ -18,6 +18,10 @@ const S6Q2: QuestionRadioPayloadInterface = {
 				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
 			choices: [
 				{
+					text: "0 Days",
+					value: "0",
+				},
+				{
 					text: "1 Day",
 					value: "1",
 				},

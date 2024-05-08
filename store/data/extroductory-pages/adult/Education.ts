@@ -9,7 +9,7 @@ const Education: QuestionRadioPayloadInterface = {
 		{
 			id: 10,
 			question_radio_id: 8,
-			heading: "Question 23",
+			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
 			adult_label:

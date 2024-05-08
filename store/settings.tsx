@@ -15,6 +15,11 @@ import type DeviceInterface from "interface/dimensions";
 import { QuestionContext } from "./questions";
 import { getResponseByIdent } from "utils/response";
 import { ResponseContext } from "./responses";
+import type {
+	Transportation7Interface,
+	Transportation8_10Interface,
+	Transportation9_11Interface,
+} from "interface/question17";
 /**
  * by default the app should be set as:
  *      mode: kid,
@@ -130,18 +135,9 @@ const INITIAL_STATE = {
 	history: [],
 };
 
-// {
-// 	color100: "#E09F57",
-// 	color200: "#E09F57",
-// 	grad100: "#FBD183",
-// 	grad200: "#F66966",
-// 	grad300: "#D3688A",
-// 	grad400: "#B36EB4",
-// },
-
 export const SettingContext = createContext({
 	settingState: INITIAL_STATE,
-	setMode: (newMode: Mode.Adult | Mode.Kid | undefined) => {},
+	setMode: (newMode: Mode.Adult | Mode.Kid | Mode.Teen | undefined) => {},
 	setDevice: (newDevice: DeviceInterface) => {},
 	setLanguage: (newLanguage: string) => {},
 	setDirectusAccessToken: (newToken: string) => {},
@@ -158,6 +154,7 @@ export const SettingContext = createContext({
 	reloadExtroFeedbackPages: () => {},
 	setSectionTitles: (sectionTitles: string[]) => {},
 	setSectionTotalPages: (sectionNumber: number, totalPages: number) => {},
+	getQuestion17Label: () => "",
 });
 
 function settingReducer(state: any, action: any): any {
@@ -346,7 +343,7 @@ function settingReducer(state: any, action: any): any {
 
 			// load all extro pages
 			lastSectionNumber++;
-			if (state.mode === Mode.Kid) {
+			if (state.mode === Mode.Kid || state.mode === Mode.Teen) {
 				finalExtroPages = action.payload.kidsExtro.map((page: rawPageInterface, index: number) => {
 					return {
 						pageNumber: ++lastPageNumber,
@@ -404,6 +401,24 @@ function settingReducer(state: any, action: any): any {
 				sectionTotalPages: { ...state.sectionTotalPages, ...newSectionTotalPages },
 			};
 		}
+		case "SWAP_AGE": {
+			const agePage = action.payload;
+			const newPages = state.pages;
+
+			for (const [key, value] of Object.entries(newPages)) {
+				if (value?.page?.ident === "age") {
+					newPages[key] = {
+						...value,
+						page: agePage,
+					};
+					return {
+						...state,
+						pages: newPages,
+					};
+				}
+			}
+			return state;
+		}
 		default:
 			return state;
 	}
@@ -418,7 +433,35 @@ export default function SettingContextProvider({
 	const questionCtx = useContext(QuestionContext);
 	const responseCtx = useContext(ResponseContext);
 
-	function setMode(newMode: Mode.Adult | Mode.Kid | undefined): void {
+	function setMode(newMode: Mode.Adult | Mode.Kid | Mode.Teen | undefined): void {
+		// set age page based on mode
+		if (newMode === Mode.Adult) {
+			dispatch({
+				type: "SWAP_AGE",
+				payload: questionCtx.questionState.adultAgePage,
+			});
+		}
+		if (newMode === Mode.Kid) {
+			dispatch({
+				type: "SWAP_AGE",
+				payload: questionCtx.questionState.kidAgePage,
+			});
+		}
+		if (newMode === Mode.Teen) {
+			dispatch({
+				type: "SWAP_AGE",
+				payload: questionCtx.questionState.teenAgePage,
+			});
+		}
+
+		// clear responses
+		responseCtx.clearResponseByIdent("age");
+		responseCtx.clearUnansweredResponses();
+		responseCtx.clearQuestionResponses();
+		responseCtx.clearExtroResponses();
+		responseCtx.clearFeedbackResponses();
+
+		// set mode
 		dispatch({
 			type: "SET_MODE",
 			payload: newMode,
@@ -520,11 +563,9 @@ export default function SettingContextProvider({
 
 	function proceedPage(): void {
 		const currentIdent = settingState.currentPage.page.ident;
-		const nextIdent = settingState.nextPage.page.ident;
 		const answerValue = getResponseByIdent(currentIdent, responseCtx.responses) ?? null;
 		const skipToPageNumber = skipTo(
 			currentIdent,
-			nextIdent,
 			answerValue,
 			settingState.pages,
 			responseCtx.responses,
@@ -568,6 +609,63 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function getQuestion17Label(): string {
+		const language = settingState.language ?? "en-CA";
+		const mode = settingState.mode === Mode.Adult ? Mode.Adult : Mode.Kid;
+		const currentIdent = settingState.currentPage.page.ident;
+
+		let attendedSchool = getResponseByIdent("school_1", responseCtx.responses);
+		let attendedWork = getResponseByIdent("work_1", responseCtx.responses);
+
+		attendedSchool = attendedSchool !== null ? attendedSchool.toString().toLowerCase() : null;
+		attendedWork = attendedWork !== null ? attendedWork.toString().toLowerCase() : null;
+		let attendance = "both";
+
+		if (attendedSchool === "yes" && attendedWork === "yes") {
+			attendance = "both";
+		} else if (attendedSchool === "yes") {
+			attendance = "school";
+		} else if (attendedWork === "yes") {
+			attendance = "work";
+		} else {
+			attendance = "none";
+		}
+
+		if (currentIdent === "transportation_7") {
+			console.log("here is transportation_7");
+			const questionLabels: Transportation7Interface = questionCtx.questionState.Transportation7;
+			console.log("7: ", questionLabels);
+			console.log("7: ", language, mode, attendance);
+			return questionLabels[language][mode][attendance] ?? "";
+		}
+
+		if (currentIdent === "transportation_8") {
+			const questionLabels: Transportation8_10Interface =
+				questionCtx.questionState.Transportation8_10;
+			return questionLabels[language][mode].walk[attendance] ?? "";
+		}
+
+		if (currentIdent === "transportation_9") {
+			const questionLabels: Transportation9_11Interface =
+				questionCtx.questionState.Transportation9_11;
+			return questionLabels[language][mode].walk[attendance] ?? "";
+		}
+
+		if (currentIdent === "transportation_10") {
+			const questionLabels: Transportation8_10Interface =
+				questionCtx.questionState.Transportation8_10;
+			return questionLabels[language][mode].wheel[attendance] ?? "";
+		}
+
+		if (currentIdent === "transportation_11") {
+			const questionLabels: Transportation9_11Interface =
+				questionCtx.questionState.Transportation9_11;
+			return questionLabels[language][mode].wheel[attendance] ?? "";
+		}
+
+		return "";
+	}
+
 	const value: any = {
 		settingState,
 		setMode,
@@ -587,6 +685,7 @@ export default function SettingContextProvider({
 		setSectionTitles,
 		setSectionTotalPages,
 		setKeyboardState,
+		getQuestion17Label,
 	};
 
 	return <SettingContext.Provider value={value}>{children}</SettingContext.Provider>;

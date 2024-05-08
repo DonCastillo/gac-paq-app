@@ -19,12 +19,12 @@ const S4Q3: QuestionRadioPayloadInterface = {
 					value: "10 minutes or less",
 				},
 				{
-					text: "11-20 minutes",
-					value: "11-20 minutes",
+					text: "11 - 20 minutes",
+					value: "11 - 20 minutes",
 				},
 				{
-					text: "21-30 minutes",
-					value: "21-30 minutes",
+					text: "21 - 30 minutes",
+					value: "21 - 30 minutes",
 				},
 				{
 					text: "More than 30 minutes",

@@ -3,11 +3,72 @@ import type LanguageInterface from "interface/language";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type RegionInterface from "interface/region";
 import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
+import type { ChoiceInterface } from "interface/question_checkbox";
+import Mode from "constants/mode";
 const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
 
 export interface OptionInterface {
 	text: string;
 	value: string;
+}
+
+function optionTextMode(options: ChoiceInterface[], mode: Mode | undefined): ChoiceInterface[] {
+	if (mode === undefined) {
+		return options;
+	}
+
+	const hasTextMode = options.some((option) => option.text_mode !== undefined);
+	if (!hasTextMode) {
+		return options;
+	}
+
+	if (mode === Mode.Adult) {
+		return options.map((option) => {
+			return { text: option.text_mode?.adult ?? option.text, value: option.value };
+		});
+	}
+
+	if (mode === Mode.Kid || mode === Mode.Teen) {
+		return options.map((option) => {
+			return { text: option.text_mode?.kid ?? option.text, value: option.value };
+		});
+	}
+
+	return options;
+}
+
+function optionRadioItemMode(
+	options: ChoiceInterface[],
+	mode: Mode | undefined,
+): QuestionRadioItemInterface[] {
+	if (mode === undefined) {
+		return options.map((option) => {
+			return { ...option, label: option.text, value: option.value };
+		});
+	}
+
+	const hasTextMode = options.some((option) => option.text_mode !== undefined);
+	if (!hasTextMode) {
+		return options.map((option) => {
+			return { ...option, label: option.text, value: option.value };
+		});
+	}
+
+	if (mode === Mode.Adult) {
+		return options.map((option) => {
+			return { ...option, label: option.text_mode?.adult ?? option.text, value: option.value };
+		});
+	}
+
+	if (mode === Mode.Kid || mode === Mode.Teen) {
+		return options.map((option) => {
+			return { ...option, label: option.text_mode?.kid ?? option.text, value: option.value };
+		});
+	}
+
+	return options.map((option) => {
+		return { ...option, label: option.text, value: option.value };
+	});
 }
 
 function optionText(options: OptionInterface[]): QuestionRadioItemInterface[] {
@@ -120,6 +181,7 @@ function getUserSpecifiedOther(value: string | null, selected: string | null): s
 
 export {
 	optionText,
+	optionTextMode,
 	optionRegion,
 	optionLanguage,
 	hasOtherOption,
@@ -127,4 +189,5 @@ export {
 	getUserSpecifiedOther,
 	isOtherWithSpecifiedValue,
 	extractUserSpecifiedOtherFromArray,
+	optionRadioItemMode,
 };

@@ -11,12 +11,11 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 			id: 1,
 			question_satisfaction_image_id: 1,
 			heading: "Feedback",
-			label:
-				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
-			kid_label:
-				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
-			adult_label:
-				"How satisfied are you with the app? Click on the image (emoji) that best represents your satisfaction.",
+			label: "How satisfied are you with the app?",
+			kid_label: "How satisfied are you with the app?",
+			adult_label: "How satisfied are you with the app?",
+			adult_sublabel: "Click on the image (emoji) that best represents your satisfaction.",
+			kid_sublabel: "Click on the image (emoji) that best represents your satisfaction.",
 			choices: [
 				{
 					image_choices_id: {
