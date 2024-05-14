@@ -40,7 +40,7 @@ export default function QuestionRadioImage({
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 	const otherInputRef = useRef<TextInput>(null);
-	const numColumn = device.isTablet && device.orientation === "landscape" ? 3 : 2;
+	const numColumn = device.isTablet && device.orientation === "landscape" ? 4 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
