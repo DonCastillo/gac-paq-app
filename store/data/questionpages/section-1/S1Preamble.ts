@@ -1,17 +1,21 @@
 import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import type PreamblePayloadInterface from "interface/directus/preamble-payload";
 import Images from "styles/images";
 
-const S1Intro: SectionPayloadInterface = {
+const S1Preamble: PreamblePayloadInterface = {
 	ident: "school_preamble",
 	heading: "School Activities",
-	type: ScreenType.IntroQuestion,
+	type: ScreenType.Preamble,
 	translations: [
 		{
 			id: 2,
 			heading: "School Activities",
 			subheading: "Section 1",
-			description: "This section is about what you do during normal school hours, for example during physical education classes, recess, and lunch time.",
+			description: {
+				kid: "This section is about what you do during normal school hours, for example during physical education classes, recess, and lunch time.",
+				adult:
+					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
+			},
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
@@ -34,4 +38,4 @@ const S1Intro: SectionPayloadInterface = {
 	],
 };
 
-export default S1Intro;
+export default S1Preamble;

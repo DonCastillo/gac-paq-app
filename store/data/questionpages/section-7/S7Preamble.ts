@@ -1,18 +1,22 @@
 import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import type PreamblePayloadInterface from "interface/directus/preamble-payload";
 import Images from "styles/images";
 
-const S7Intro: SectionPayloadInterface = {
-	ident: "outdoors_intro",
+const S7Preamble: PreamblePayloadInterface = {
+	ident: "outdoors_preamble",
 	heading: "Outdoors",
-	type: ScreenType.IntroQuestion,
+	type: ScreenType.Preamble,
 	translations: [
 		{
 			id: 4,
 			question_section_id: 3,
 			heading: "Outdoors",
 			subheading: "Section 7",
-			description: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+			description: {
+				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+				adult:
+					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+			},
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
@@ -35,4 +39,4 @@ const S7Intro: SectionPayloadInterface = {
 	],
 };
 
-export default S7Intro;
+export default S7Preamble;

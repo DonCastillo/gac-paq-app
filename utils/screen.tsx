@@ -165,6 +165,8 @@ function getScreenType(screenType: string): ScreenType {
 		return ScreenType.ExtroQuestion;
 	} else if (screenType === "single_checkbox") {
 		return ScreenType.SingleCheckbox;
+	} else if (screenType === "preamble") {
+		return ScreenType.Preamble;
 	} else {
 		return ScreenType.Page;
 	}

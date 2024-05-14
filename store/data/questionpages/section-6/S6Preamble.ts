@@ -1,18 +1,22 @@
 import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import type PreamblePayloadInterface from "interface/directus/preamble-payload";
 import Images from "styles/images";
 
-const S6Intro: SectionPayloadInterface = {
-	ident: "play_intro",
+const S6Preamble: PreamblePayloadInterface = {
+	ident: "play_preamble",
 	heading: "Play or Free Time",
-	type: ScreenType.IntroQuestion,
+	type: ScreenType.Preamble,
 	translations: [
 		{
 			id: 4,
 			question_section_id: 3,
 			heading: "Play or Free Time",
 			subheading: "Section 6",
-			description: "This includes all the physical activity that you do during your play or free time. This does not include organized activities or break times in school.",
+			description: {
+				kid: "This includes all the physical activity that you do during your play or free time. This does not include organized activities or break times in school.",
+				adult:
+					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use.",
+			},
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
@@ -35,4 +39,4 @@ const S6Intro: SectionPayloadInterface = {
 	],
 };
 
-export default S6Intro;
+export default S6Preamble;
