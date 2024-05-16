@@ -12,6 +12,7 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import BackgroundPreamble from "components/kid/background/question-pages/BackgroundPreamble";
+import ScrollContainer from "components/ScrollContainer";
 
 export default function PreambleKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -27,26 +28,28 @@ export default function PreambleKid(): React.ReactElement {
 				<ProgressBarKid />
 				<Toolbar />
 				<CenterMain>
-					<Heading
-						customStyle={{
-							...GeneralStyle.kid.extroPageHeading,
-							maxWidth: device.isTablet ? 600 : "100%",
-							fontSize: device.isTablet ? 50 : 40,
-							lineHeight: device.isTablet ? 55 : 45,
-						}}
-					>
-						{translatedPage?.heading}
-					</Heading>
-					<Paragraph
-						customStyle={{
-							...GeneralStyle.kid.extroPageParagraph,
-							maxWidth: device.isTablet ? 600 : "100%",
-							fontSize: device.isTablet ? 25 : 20,
-							lineHeight: device.isTablet ? 35 : 27,
-						}}
-					>
-						{description}
-					</Paragraph>
+					<ScrollContainer>
+						<Heading
+							customStyle={{
+								...GeneralStyle.kid.extroPageHeading,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: device.isTablet ? 40 : 30,
+								lineHeight: device.isTablet ? 45 : 35,
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								...GeneralStyle.kid.extroPageParagraph,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: device.isTablet ? 23 : 18,
+								lineHeight: device.isTablet ? 33 : 25,
+							}}
+						>
+							{description}
+						</Paragraph>
+					</ScrollContainer>
 				</CenterMain>
 				<Navigation>
 					<BackAndNextNav
