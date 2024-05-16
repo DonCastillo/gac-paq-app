@@ -16,6 +16,7 @@ import { getImageBackground } from "utils/background";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import { moderateScale } from "utils/responsive";
+import ScrollContainer from "components/ScrollContainer";
 
 export default function PreambleAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
@@ -34,35 +35,37 @@ export default function PreambleAdult(): React.ReactElement {
 				key={currentPageNumber}
 			/>
 			<Main>
-				{!isKeyboardOpen && <ProgressBarAdult />}
-				{!isKeyboardOpen && <Toolbar />}
+				<ProgressBarAdult />
+				<Toolbar />
 				<CenterMain>
 					<QuestionContainer customStyle={{ backgroundColor: color200 }}>
-						<QuestionTitle
-							customStyle={{ marginBottom: 10 }}
-							textStyle={{ color: "#fff" }}
-						>
-							{translatedPage?.heading}
-						</QuestionTitle>
-						<QuestionLabel
-							textStyle={[
-								GeneralStyle.adult.questionLabel,
-								{
-									color: "#fff",
-									fontSize: moderateScale(
-										device.isTablet ? 15 : 17,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-									lineHeight: moderateScale(
-										device.isTablet ? 20 : 22,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-								},
-							]}
-							customStyle={{ marginBottom: 7 }}
-						>
-							{description}
-						</QuestionLabel>
+						<ScrollContainer>
+							<QuestionTitle
+								customStyle={{ marginBottom: 10 }}
+								textStyle={{ color: "#fff" }}
+							>
+								{translatedPage?.heading}
+							</QuestionTitle>
+							<QuestionLabel
+								textStyle={[
+									GeneralStyle.adult.questionLabel,
+									{
+										color: "#fff",
+										fontSize: moderateScale(
+											device.isTablet ? 15 : 17,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+										lineHeight: moderateScale(
+											device.isTablet ? 20 : 22,
+											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+										),
+									},
+								]}
+								customStyle={{ marginBottom: 7 }}
+							>
+								{description}
+							</QuestionLabel>
+						</ScrollContainer>
 					</QuestionContainer>
 				</CenterMain>
 				<Navigation>
