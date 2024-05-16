@@ -637,7 +637,8 @@ export default function SettingContextProvider({
 			const age = responseCtx.getResponseByIdent("age");
 			const finalAge =
 				age !== "" && age !== undefined && age !== null && !Array.isArray(age) ? parseInt(age) : -1;
-			if ((finalAge !== -1 && [12, 13, 14, 15, 16, 17].includes(finalAge)) && mode === Mode.Adult) {
+			const isTeen = [12, 13, 14, 15, 16, 17].includes(finalAge);
+			if (((finalAge !== -1 && isTeen) && mode === Mode.Adult) || isTeen) {
 				return getPageNumberBasedOnIdent("work_intro", pages);
 			} else {
 				return getPageNumberBasedOnIdent("transportation_intro", pages);
