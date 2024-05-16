@@ -6,9 +6,13 @@ import { horizontalScale, verticalScale } from "utils/responsive";
 
 interface PropsInterface {
 	children: React.ReactNode;
+	customStyle?: object;
 }
 
-export default function QuestionContainer({ children }: PropsInterface): React.ReactElement {
+export default function QuestionContainer({
+	children,
+	customStyle,
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 
@@ -24,6 +28,7 @@ export default function QuestionContainer({ children }: PropsInterface): React.R
 					maxHeight: verticalScale(600, device.screenHeight),
 					maxWidth,
 				},
+				customStyle,
 			]}
 		>
 			{children}

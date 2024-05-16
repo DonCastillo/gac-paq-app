@@ -126,39 +126,39 @@ function getQuestionBackground(
 	fillColor = fillColor ?? "white";
 
 	// strokes
-	if (sectionNumber === 1 && sectionPageNumber === 2) {
+	if (sectionNumber === 1 && sectionPageNumber === 3) {
 		return <GenericBackgroundStroke fillColor={fillColor} />;
-	} else if (sectionNumber === 1 && sectionPageNumber === 6) {
+	} else if (sectionNumber === 1 && sectionPageNumber === 7) {
 		return <GenericBackgroundStars fillColor={fillColor} />;
-	} else if (sectionNumber === 2 && sectionPageNumber === 4) {
+	} else if (sectionNumber === 2 && sectionPageNumber === 5) {
 		return <GenericBackgroundStroke fillColor={fillColor} />;
-	} else if (sectionNumber === 3 && sectionPageNumber === 4) {
+	} else if (sectionNumber === 3 && sectionPageNumber === 5) {
 		return <GenericBackgroundStars fillColor={fillColor} />;
-	} else if (sectionNumber === 4 && sectionPageNumber === 3) {
+	} else if (sectionNumber === 4 && sectionPageNumber === 4) {
 		return <GenericBackgroundLoop fillColor={fillColor} />;
-	} else if (sectionNumber === 4 && sectionPageNumber === 6) {
+	} else if (sectionNumber === 4 && sectionPageNumber === 7) {
 		return <GenericBackgroundLoop fillColor={fillColor} />;
-	} else if (sectionNumber === 4 && sectionPageNumber === 9) {
+	} else if (sectionNumber === 4 && sectionPageNumber === 10) {
 		return <GenericBackgroundLoop fillColor={fillColor} />;
-	} else if (sectionNumber === 5 && sectionPageNumber === 2) {
+	} else if (sectionNumber === 5 && sectionPageNumber === 3) {
 		return <GenericBackgroundStroke fillColor={fillColor} />;
-	} else if (sectionNumber === 5 && sectionPageNumber === 4) {
+	} else if (sectionNumber === 5 && sectionPageNumber === 5) {
 		return <GenericBackgroundStars fillColor={fillColor} />;
-	} else if (sectionNumber === 6 && sectionPageNumber === 2) {
+	} else if (sectionNumber === 6 && sectionPageNumber === 3) {
 		return <GenericBackgroundStars fillColor={fillColor} />;
 	}
 	// graphics
-	else if (sectionNumber === 1 && sectionPageNumber === 4) {
+	else if (sectionNumber === 1 && sectionPageNumber === 5) {
 		return <BackgroundRight svg={Images.kids.graphics.mostly_medium} />;
-	} else if (sectionNumber === 2 && sectionPageNumber === 2) {
+	} else if (sectionNumber === 2 && sectionPageNumber === 3) {
 		return <BackgroundRight svg={Images.kids.graphics.chores} />;
-	} else if (sectionNumber === 3 && sectionPageNumber === 2) {
+	} else if (sectionNumber === 3 && sectionPageNumber === 3) {
 		return <BackgroundCenter svg={Images.kids.graphics.volunteer_club} />;
-	} else if (sectionNumber === 4 && sectionPageNumber === 4) {
+	} else if (sectionNumber === 4 && sectionPageNumber === 5) {
 		return <BackgroundRight svg={Images.kids.graphics.wink_pose} />;
-	} else if (sectionNumber === 4 && sectionPageNumber === 7) {
+	} else if (sectionNumber === 4 && sectionPageNumber === 8) {
 		return <BackgroundRight svg={Images.kids.graphics.wink_pose} />;
-	} else if (sectionNumber === 4 && sectionPageNumber === 10) {
+	} else if (sectionNumber === 4 && sectionPageNumber === 11) {
 		return <BackgroundRight svg={Images.kids.graphics.wink_pose} />;
 	} else {
 		return <></>;

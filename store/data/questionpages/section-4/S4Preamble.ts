@@ -1,18 +1,21 @@
 import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import type PreamblePayloadInterface from "interface/directus/preamble-payload";
 import Images from "styles/images";
 
-const S4Intro: SectionPayloadInterface = {
-	ident: "transportation_intro",
+const S4Preamble: PreamblePayloadInterface = {
+	ident: "transportation_preamble",
 	heading: "Transportation",
-	type: ScreenType.IntroQuestion,
+	type: ScreenType.Preamble,
 	translations: [
 		{
 			id: 4,
 			question_section_id: 3,
 			heading: "Transportation",
 			subheading: "Section 4",
-			description: "This section is about how you go to different places.",
+			description: {
+				kid: "This section is about how you go to different places.",
+				adult: "This section is about how your child goes to different places.",
+			},
 			languages_id: {
 				name: "English - Canada",
 				lang_code: "en-CA",
@@ -35,4 +38,4 @@ const S4Intro: SectionPayloadInterface = {
 	],
 };
 
-export default S4Intro;
+export default S4Preamble;
