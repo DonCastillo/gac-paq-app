@@ -20,7 +20,7 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					value: "child",
 				},
 				{
-					text: "Teen",
+					text: "Adolescent",
 					value: "teen",
 				},
 				{
