@@ -21,7 +21,7 @@ const Options = {
 	},
 	transportation: {
 		walking: require("assets/images/adult/transportation/walking.png"),
-		wheeling: require("assets/images/adult/transportation/wheeling.png"),
+		wheeling: require("assets/images/adult/transportation/bike.png"),
 		car: require("assets/images/adult/transportation/car.png"),
 		school_bus: require("assets/images/adult/transportation/school_bus.png"),
 		public_transit: require("assets/images/adult/transportation/public_transport.png"),

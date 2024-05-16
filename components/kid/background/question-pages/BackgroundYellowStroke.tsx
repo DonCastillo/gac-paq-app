@@ -1,10 +1,9 @@
 import React, { memo } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import Images from "styles/images/index";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
 function BackgroundYellowStroke(): React.ReactElement {
-	const YellowStrokeLG = Images.kids.doodles.yellow_stroke_lg;
 	const YellowStroke = Images.kids.doodles.yellow_stroke;
 	return (
 		<AbsoluteFullScreenContainer>

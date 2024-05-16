@@ -11,6 +11,7 @@ const Images = {
 	general: {
 		error: ErrorSVG,
 		check: CheckSVG,
+		donotknow: require("assets/images/general/options/do-not-know.png"),
 	},
 };
 

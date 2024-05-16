@@ -301,7 +301,7 @@ const GeneralStyle = {
 			width: "100%",
 			flex: 1,
 			height: 150,
-			maxWidth: 140,
+			maxWidth: 190,
 			borderRadius: 5,
 			marginRight: 10,
 			marginBottom: 10,

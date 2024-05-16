@@ -31,10 +31,6 @@ const DemographicKidPage: QuestionDropdownPayloadInterface = {
 					text: "11 years old",
 					value: "11",
 				},
-				{
-					text: "12 years old",
-					value: "12",
-				},
 			],
 			languages_id: {
 				name: "English - Canada",
