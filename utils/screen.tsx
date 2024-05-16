@@ -20,6 +20,8 @@ import GenericSingleCheckbox from "base_pages/generic/GenericSingleCheckbox";
 import GenericSingleQuestion from "base_pages/generic/GenericSingleQuestion";
 import SingleCheckboxKid from "base_pages/kid/SingleCheckboxKid";
 import SingleCheckboxAdult from "base_pages/adult/SingleCheckboxAdult";
+import PreambleKid from "base_pages/kid/PreambleKid";
+import PreambleAdult from "base_pages/adult/PreambleAdult";
 
 function getScreen(
 	mode: Mode | string | undefined,
@@ -74,6 +76,26 @@ function getScreen(
 		screenType === ScreenType.SingleQuestion
 	)
 		return <IntroQuestionSingleKid />;
+	// preamble
+	else if (
+		mode === undefined &&
+		sectionType === SectionType.Question &&
+		screenType === ScreenType.Preamble
+	) {
+		return <PreambleAdult />;
+	} else if (
+		mode === Mode.Kid &&
+		sectionType === SectionType.Question &&
+		screenType === ScreenType.Preamble
+	) {
+		return <PreambleKid />;
+	} else if (
+		(mode === Mode.Adult || mode === Mode.Teen) &&
+		sectionType === SectionType.Question &&
+		screenType === ScreenType.Preamble
+	) {
+		return <PreambleAdult />;
+	}
 	// question question
 	else if (
 		mode === undefined &&

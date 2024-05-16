@@ -17,6 +17,7 @@ import StateAdult from "base_pages/adult/StateAdult";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive";
 import type DeviceInterface from "interface/dimensions";
+import { ResponseContext } from "store/responses";
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +34,7 @@ function AppWrapper(): React.ReactElement {
 	});
 	const settingCtx = useContext(SettingContext);
 	const questionCtx = useContext(QuestionContext);
+	const resposeCtx = useContext(ResponseContext);
 	const { mode } = settingCtx.settingState;
 
 	const introductoryPages = questionCtx.questionState.introductoryPages;
@@ -81,6 +83,8 @@ function AppWrapper(): React.ReactElement {
 	}
 
 	useEffect(() => {
+		// clear all responses
+		resposeCtx.resetResponses();
 		// load offline regions
 		const regions = loadRegionsOffline();
 		questionCtx.setRegionOption(regions);
