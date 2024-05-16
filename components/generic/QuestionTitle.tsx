@@ -1,19 +1,24 @@
 import React, { memo, useContext } from "react";
-import PropTypes from "prop-types";
 import { Text, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive";
 import { SettingContext } from "store/settings";
 
-QuestionTitle.propTypes = {
-	children: PropTypes.node,
-};
+interface PropsInterface {
+	children: React.ReactNode;
+	customStyle?: object;
+	textStyle?: object;
+}
 
-function QuestionTitle({ children }): React.ReactElement {
+function QuestionTitle({
+	children,
+	customStyle = {},
+	textStyle = {},
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 	return (
-		<View style={styles.container}>
+		<View style={[styles.container, customStyle]}>
 			<Text
 				style={{
 					...styles.text,
@@ -25,6 +30,7 @@ function QuestionTitle({ children }): React.ReactElement {
 						device.isTablet ? 18 : 18,
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
+					...textStyle,
 				}}
 			>
 				{children}
@@ -39,7 +45,6 @@ const styles = StyleSheet.create({
 	container: {
 		width: "100%",
 		flexDirection: "row",
-		// backgroundColor: "green"
 	},
 	text: {
 		...GeneralStyle.kid.questionQuestionTitle,

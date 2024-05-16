@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
 import Mode from "constants/mode";
 import Colors from "store/data/colors";
-import { getPage, skipTo } from "utils/page";
+import { getPage, getPageNumberBasedOnIdent } from "utils/page";
 import type ScreenType from "constants/screen_type";
 import SectionType from "constants/section_type";
 import ButtonLabel from "constants/button_label";
@@ -13,7 +13,6 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import OrientationType from "constants/orientation_type";
 import type DeviceInterface from "interface/dimensions";
 import { QuestionContext } from "./questions";
-import { getResponseByIdent } from "utils/response";
 import { ResponseContext } from "./responses";
 import type {
 	Transportation7Interface,
@@ -561,22 +560,6 @@ export default function SettingContextProvider({
 		});
 	}
 
-	function proceedPage(): void {
-		const currentIdent = settingState.currentPage.page.ident;
-		const answerValue = getResponseByIdent(currentIdent, responseCtx.responses) ?? null;
-		const skipToPageNumber = skipTo(
-			currentIdent,
-			answerValue,
-			settingState.pages,
-			responseCtx.responses,
-		);
-		if (skipToPageNumber > 0) {
-			skipPage(skipToPageNumber);
-		} else {
-			nextPage();
-		}
-	}
-
 	function reloadExtroFeedbackPages(): void {
 		dispatch({
 			type: "RELOAD_EXTRO_FEEDBACK_PAGES",
@@ -609,13 +592,176 @@ export default function SettingContextProvider({
 		});
 	}
 
+	function skipTo(answer: string | string[] | null): number {
+		const currentIdent = settingState.currentPage.page.ident;
+		const pages = settingState.pages;
+		const mode = settingState.mode;
+
+		let finalAnswer: string | string[] | null = null;
+		if (Array.isArray(answer)) {
+			finalAnswer = answer.length > 0 ? answer.map((ans) => ans.toString().toLowerCase()) : null;
+		} else if (typeof answer === "string") {
+			finalAnswer = answer !== "" ? answer.toString().toLowerCase() : null;
+		} else {
+			finalAnswer = null;
+		}
+
+		// if responder indicates they did not attend school, skip entire SCHOOL section
+		if (currentIdent === "school_1" && finalAnswer === "no") {
+			responseCtx.clearResponseByIdent("school_2");
+			responseCtx.clearResponseByIdent("school_3");
+			responseCtx.clearResponseByIdent("school_4");
+			responseCtx.clearResponseByIdent("school_5");
+			responseCtx.clearResponseByIdent("school_6");
+			responseCtx.clearResponseByIdent("school_7");
+			return getPageNumberBasedOnIdent("school_extro", pages);
+		}
+
+		// if responder indicates they attended 0 physical educ classes, skip questions regarding physical educ
+		if (currentIdent === "school_3" && finalAnswer === "0") {
+			responseCtx.clearResponseByIdent("school_4");
+			responseCtx.clearResponseByIdent("school_5");
+			return getPageNumberBasedOnIdent("school_6", pages);
+		}
+
+		// if responder indicates they did not do active chores, skip entire HOUSEHOLD section
+		if (currentIdent === "household_1" && finalAnswer === "no") {
+			responseCtx.clearResponseByIdent("household_2");
+			responseCtx.clearResponseByIdent("household_3");
+			responseCtx.clearResponseByIdent("household_4");
+			return getPageNumberBasedOnIdent("household_extro", pages);
+		}
+
+		// if responder age is between 12-17 or is an adult/parent, answer WORK section
+		if (currentIdent === "household_extro") {
+			const age = responseCtx.getResponseByIdent("age");
+			const finalAge =
+				age !== "" && age !== undefined && age !== null && !Array.isArray(age) ? parseInt(age) : -1;
+			const isTeen = [12, 13, 14, 15, 16, 17].includes(finalAge);
+			if (((finalAge !== -1 && isTeen) && mode === Mode.Adult) || isTeen) {
+				return getPageNumberBasedOnIdent("work_intro", pages);
+			} else {
+				return getPageNumberBasedOnIdent("transportation_intro", pages);
+			}
+		}
+
+		// if responder indicates they did not work, skip entire WORK section
+		if (currentIdent === "work_1" && finalAnswer === "no") {
+			responseCtx.clearResponseByIdent("work_2");
+			responseCtx.clearResponseByIdent("work_3");
+			return getPageNumberBasedOnIdent("work_extro", pages);
+		}
+
+		// if in transportation intro
+		if (currentIdent === "transportation_preamble") {
+			const attendedSchool = responseCtx.getResponseByIdent("school_1")?.toString().toLowerCase();
+			const attendedWork = responseCtx.getResponseByIdent("work_1")?.toString().toLowerCase();
+
+			// if responder did not attend school or work, skip transportation questions related to school and work
+			if (
+				["no", null, undefined].includes(attendedSchool) &&
+				["no", null, undefined].includes(attendedWork)
+			) {
+				responseCtx.clearResponseByIdent("transportation_1");
+				responseCtx.clearResponseByIdent("transportation_2");
+				responseCtx.clearResponseByIdent("transportation_3");
+				responseCtx.clearResponseByIdent("transportation_4");
+				responseCtx.clearResponseByIdent("transportation_5");
+				responseCtx.clearResponseByIdent("transportation_6");
+				return getPageNumberBasedOnIdent("transportation_7", pages);
+			} else if (attendedWork === "yes" && ["no", null, undefined].includes(attendedSchool)) {
+				responseCtx.clearResponseByIdent("transportation_1");
+				responseCtx.clearResponseByIdent("transportation_2");
+				responseCtx.clearResponseByIdent("transportation_3");
+				return getPageNumberBasedOnIdent("transportation_4", pages);
+			} else if (attendedSchool === "yes" && ["no", null, undefined].includes(attendedWork)) {
+				responseCtx.clearResponseByIdent("transportation_4");
+				responseCtx.clearResponseByIdent("transportation_5");
+				responseCtx.clearResponseByIdent("transportation_6");
+				return getPageNumberBasedOnIdent("transportation_1", pages);
+			}
+		}
+
+		// if responder indicates they stayed home for school, skip transportation questions related to school
+		if (currentIdent === "transportation_1" && finalAnswer === "stay home for school") {
+			const attendedWork = responseCtx.getResponseByIdent("work_1")?.toString().toLowerCase();
+			responseCtx.clearResponseByIdent("transportation_2");
+			responseCtx.clearResponseByIdent("transportation_3");
+			if (attendedWork === "yes") {
+				return getPageNumberBasedOnIdent("transportation_4", pages);
+			}
+			return getPageNumberBasedOnIdent("transportation_7", pages);
+		}
+
+		if (currentIdent === "transportation_3") {
+			const attendedWork = responseCtx.getResponseByIdent("work_1")?.toString().toLowerCase();
+			if (attendedWork === "yes") {
+				return getPageNumberBasedOnIdent("transportation_4", pages);
+			}
+			return getPageNumberBasedOnIdent("transportation_7", pages);
+		}
+
+		// if responder is in the transportation question asking if they wheel/walk to go to school/work
+		if (currentIdent === "transportation_7") {
+			// clear responses
+			if (finalAnswer === null) {
+				responseCtx.clearResponseByIdent("transportation_8");
+				responseCtx.clearResponseByIdent("transportation_9");
+				responseCtx.clearResponseByIdent("transportation_10");
+				responseCtx.clearResponseByIdent("transportation_11");
+			}
+			if (finalAnswer !== null && finalAnswer?.includes("no")) {
+				responseCtx.clearResponseByIdent("transportation_8");
+				responseCtx.clearResponseByIdent("transportation_9");
+				responseCtx.clearResponseByIdent("transportation_10");
+				responseCtx.clearResponseByIdent("transportation_11");
+			} else if (finalAnswer !== null && !finalAnswer?.includes("walked")) {
+				responseCtx.clearResponseByIdent("transportation_8");
+				responseCtx.clearResponseByIdent("transportation_9");
+			} else if (finalAnswer !== null && !finalAnswer?.includes("wheeled")) {
+				responseCtx.clearResponseByIdent("transportation_10");
+				responseCtx.clearResponseByIdent("transportation_11");
+			}
+
+			// skip pages
+			if (finalAnswer !== null && finalAnswer?.includes("no")) {
+				return getPageNumberBasedOnIdent("transportation_extro", pages);
+			} else if (finalAnswer !== null && finalAnswer?.includes("walked")) {
+				return getPageNumberBasedOnIdent("transportation_8", pages);
+			} else if (finalAnswer !== null && finalAnswer?.includes("wheeled")) {
+				return getPageNumberBasedOnIdent("transportation_10", pages);
+			}
+		}
+
+		if (currentIdent === "transportation_9") {
+			let transpoMode = responseCtx.getResponseByIdent("transportation_7");
+			transpoMode = Array.isArray(transpoMode)
+				? transpoMode?.map((transmode) => transmode.toLowerCase())
+				: null;
+
+			if (transpoMode !== null && transpoMode?.includes("wheeled")) {
+				return getPageNumberBasedOnIdent("transportation_10", pages);
+			} else {
+				return getPageNumberBasedOnIdent("transportation_extro", pages);
+			}
+		}
+
+		// if responder indicates they are not involved in organized activities, skip entire ORGANIZED section
+		if (currentIdent === "organized_1" && finalAnswer === "no") {
+			responseCtx.clearResponseByIdent("organized_2");
+			responseCtx.clearResponseByIdent("organized_3");
+			return getPageNumberBasedOnIdent("organized_extro", pages);
+		}
+		return 0;
+	}
+
 	function getQuestion17Label(): string {
 		const language = settingState.language ?? "en-CA";
 		const mode = settingState.mode === Mode.Adult ? Mode.Adult : Mode.Kid;
 		const currentIdent = settingState.currentPage.page.ident;
 
-		let attendedSchool = getResponseByIdent("school_1", responseCtx.responses);
-		let attendedWork = getResponseByIdent("work_1", responseCtx.responses);
+		let attendedSchool = responseCtx.getResponseByIdent("school_1");
+		let attendedWork = responseCtx.getResponseByIdent("work_1");
 
 		attendedSchool = attendedSchool !== null ? attendedSchool.toString().toLowerCase() : null;
 		attendedWork = attendedWork !== null ? attendedWork.toString().toLowerCase() : null;
@@ -664,6 +810,18 @@ export default function SettingContextProvider({
 		}
 
 		return "";
+	}
+
+	function proceedPage(): void {
+		const currentIdent = settingState.currentPage.page.ident;
+		const answerValue = responseCtx.getResponseByIdent(currentIdent) ?? null;
+		const skipToPageNumber = skipTo(answerValue);
+		if (skipToPageNumber > 0) {
+			console.log("responses: ", responseCtx);
+			skipPage(skipToPageNumber);
+		} else {
+			nextPage();
+		}
 	}
 
 	const value: any = {

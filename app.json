@@ -1,19 +1,20 @@
 {
 	"expo": {
-		"name": "gacpaq-app",
+		"name": "The Global Adolescent and Children Activity Questionnaire App",
 		"slug": "gacpaq-app",
-		"version": "1.0.0",
+		"version": "2.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
 		"splash": {
-			"image": "./assets/images/Logo.png",
+			"image": "./assets/splash-icon.png",
 			"resizeMode": "contain",
-			"backgroundColor": "#E09F57"
+			"backgroundColor": "#ffffff"
 		},
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
-			"supportsTablet": true
+			"supportsTablet": true,
+			"requireFullScreen": true
 		},
 		"android": {
 			"adaptiveIcon": {
@@ -22,13 +23,18 @@
 			},
 			"package": "com.uleth.gacpaq"
 		},
-		"web": {
-			"favicon": "./assets/favicon.png"
-		},
 		"extra": {
 			"eas": {
 				"projectId": "11d18dae-7a98-46a2-a619-8efdc31cc2a5"
 			}
-		}
+		},
+		"plugins": [
+			[
+				"expo-screen-orientation",
+				{
+					"initialOrientation": "PORTRAIT_UP"
+				}
+			]
+		]
 	}
 }

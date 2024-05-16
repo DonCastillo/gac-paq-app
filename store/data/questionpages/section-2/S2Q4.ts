@@ -54,6 +54,18 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 						},
 					},
 				},
+				{
+					image_choices_id: {
+						id: 3,
+						sort: null,
+						text: "Don't know",
+						value: "0",
+						images: {
+							kid: Images.general.donotknow,
+							adult: Images.general.donotknow,
+						},
+					},
+				},
 			],
 			languages_id: {
 				name: "English - Canada",

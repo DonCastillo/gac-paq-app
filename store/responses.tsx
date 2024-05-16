@@ -12,6 +12,7 @@ export interface ResponseContextInterface {
 	clearIntroResponses: () => void;
 	clearFeedbackResponses: () => void;
 	clearExtroResponses: () => void;
+	getResponseByIdent: (ident: string) => string | string[] | null;
 }
 
 export const ResponseContext = createContext<ResponseContextInterface>({
@@ -24,6 +25,7 @@ export const ResponseContext = createContext<ResponseContextInterface>({
 	clearIntroResponses: () => {},
 	clearFeedbackResponses: () => {},
 	clearExtroResponses: () => {},
+	getResponseByIdent: () => null,
 });
 
 function responseReducer(state: Record<string, ResponseInterface>, action: any): any {
@@ -129,6 +131,29 @@ export default function ResponseContextProvider({
 		});
 	}
 
+	function getResponseByIdent(ident: string): string | string[] | null {
+		if (ident === null || ident === "") return null;
+		if (Object.keys(responses).length === 0) return null;
+		const finalResponse: ResponseInterface | undefined = Object.values(responses).find(
+			(response: ResponseInterface) => response?.ident === ident,
+		) as ResponseInterface;
+		if (finalResponse === undefined || finalResponse === null) {
+			return null;
+		}
+		if (
+			finalResponse?.answer === null ||
+			finalResponse?.answer === "" ||
+			finalResponse?.answer === undefined
+		) {
+			return null;
+		}
+
+		if (finalResponse?.answer?.includes(" | ")) {
+			return finalResponse?.answer.split(" | ");
+		}
+		return finalResponse?.answer;
+	}
+
 	function resetResponses(): void {
 		dispatch({
 			type: "RESET_RESPONSES",
@@ -182,6 +207,7 @@ export default function ResponseContextProvider({
 		clearIntroResponses,
 		clearFeedbackResponses,
 		clearExtroResponses,
+		getResponseByIdent,
 	};
 
 	return <ResponseContext.Provider value={value}>{children}</ResponseContext.Provider>;
