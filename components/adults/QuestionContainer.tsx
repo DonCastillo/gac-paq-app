@@ -9,7 +9,10 @@ interface PropsInterface {
 	customStyle?: object;
 }
 
-export default function QuestionContainer({ children, customStyle }: PropsInterface): React.ReactElement {
+export default function QuestionContainer({
+	children,
+	customStyle,
+}: PropsInterface): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
 	const { device } = settingCtx.settingState;
 
@@ -25,7 +28,7 @@ export default function QuestionContainer({ children, customStyle }: PropsInterf
 					maxHeight: verticalScale(600, device.screenHeight),
 					maxWidth,
 				},
-				customStyle
+				customStyle,
 			]}
 		>
 			{children}

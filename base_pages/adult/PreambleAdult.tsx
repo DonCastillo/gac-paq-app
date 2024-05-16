@@ -19,7 +19,8 @@ import { moderateScale } from "utils/responsive";
 
 export default function PreambleAdult(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { mode, language, currentPage, currentPageNumber, device, colorTheme } = settingCtx.settingState;
+	const { mode, language, currentPage, currentPageNumber, device, colorTheme } =
+		settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const { isKeyboardOpen } = device;
 	const translatedPage: any = translate(currentPage.page.translations, language);
@@ -36,7 +37,7 @@ export default function PreambleAdult(): React.ReactElement {
 				{!isKeyboardOpen && <ProgressBarAdult />}
 				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
-					<QuestionContainer customStyle={{backgroundColor: color200}}>
+					<QuestionContainer customStyle={{ backgroundColor: color200 }}>
 						<QuestionTitle
 							customStyle={{ marginBottom: 10 }}
 							textStyle={{ color: "#fff" }}

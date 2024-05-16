@@ -32,7 +32,6 @@ function getResponse(
 	}
 }
 
-
 function sanitizeResponse(
 	responses: Record<string, ResponseInterface>,
 	mode: modeType,

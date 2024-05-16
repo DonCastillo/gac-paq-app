@@ -4,69 +4,54 @@ import { SettingContext } from "store/settings";
 import { translate, translateText } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
-import QuestionLabel from "components/kid/QuestionLabel";
-import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/subcomponents/Toolbar";
+import Toolbar from "components/kid/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
-import QuestionContainer from "components/adults/QuestionContainer";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
-import { getImageBackground } from "utils/background";
-import QuestionTitle from "components/generic/QuestionTitle";
-import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import { moderateScale } from "utils/responsive";
+import Heading from "components/Heading";
+import Paragraph from "components/Paragraph";
+import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
+import BackgroundPreamble from "components/kid/background/question-pages/BackgroundPreamble";
 
 export default function PreambleKid(): React.ReactElement {
 	const settingCtx = useContext(SettingContext);
-	const { mode, language, currentPage, currentPageNumber, device, colorTheme } = settingCtx.settingState;
-	const { color200 } = colorTheme;
-	const { isKeyboardOpen } = device;
+	const { mode, language, currentPage, device, colorTheme } = settingCtx.settingState;
+	const { color100, color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const description = translateText(mode, translatedPage?.description);
 
 	return (
 		<View style={styles.container}>
-			<BGLinearGradient />
-			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
-				key={currentPageNumber}
-			/>
+			<BackgroundPreamble fillColor={(color100 ?? "#fff") + "B3"} />
 			<Main>
-				{!isKeyboardOpen && <ProgressBarAdult />}
-				{!isKeyboardOpen && <Toolbar />}
+				<ProgressBarKid />
+				<Toolbar />
 				<CenterMain>
-					<QuestionContainer customStyle={{backgroundColor: color200}}>
-						<QuestionTitle
-							customStyle={{ marginBottom: 10 }}
-							textStyle={{ color: "#fff" }}
-						>
-							{translatedPage?.heading}
-						</QuestionTitle>
-						<QuestionLabel
-							textStyle={[
-								GeneralStyle.adult.questionLabel,
-								{
-									color: "#fff",
-									fontSize: moderateScale(
-										device.isTablet ? 15 : 17,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-									lineHeight: moderateScale(
-										device.isTablet ? 20 : 22,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-								},
-							]}
-							customStyle={{ marginBottom: 7 }}
-						>
-							{description}
-						</QuestionLabel>
-					</QuestionContainer>
+					<Heading
+						customStyle={{
+							...GeneralStyle.kid.extroPageHeading,
+							maxWidth: device.isTablet ? 600 : "100%",
+							fontSize: device.isTablet ? 50 : 40,
+							lineHeight: device.isTablet ? 55 : 45,
+						}}
+					>
+						{translatedPage?.heading}
+					</Heading>
+					<Paragraph
+						customStyle={{
+							...GeneralStyle.kid.extroPageParagraph,
+							maxWidth: device.isTablet ? 600 : "100%",
+							fontSize: device.isTablet ? 25 : 20,
+							lineHeight: device.isTablet ? 35 : 27,
+						}}
+					>
+						{description}
+					</Paragraph>
 				</CenterMain>
 				<Navigation>
 					<BackAndNextNav
 						key={"WithValue"}
+						colorTheme={color200}
 						onPrev={() => settingCtx.prevPage()}
 						onNext={() => settingCtx.nextPage()}
 					/>
@@ -77,14 +62,21 @@ export default function PreambleKid(): React.ReactElement {
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: "center",
-		justifyContent: "center",
-	},
 	sublabel: {
 		color: "black",
 		fontSize: 17,
 		marginBottom: 10,
+	},
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		position: "relative",
+	},
+	imageContainer: {
+		justifyContent: "center",
+		alignItems: "center",
+		marginTop: 20,
+		width: "100%",
 	},
 });
