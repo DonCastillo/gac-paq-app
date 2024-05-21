@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
-import { Icon } from "@rneui/themed";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -19,22 +17,24 @@ import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import BGLinearGradient from "components/BGLinearGradient";
 import { ResponseContext } from "store/responses";
-import { submitResponse } from "utils/api";
 import LoadingScreenAdult from "./LoadingScreenAdult";
+import { useDispatch, useSelector } from "react-redux";
+import { getLanguage, getPhrases, reset } from "store/settings/settingsSlice";
+import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
+import { resetResponses } from "store/responses/responsesSlice";
 
 interface Props {
 	state: StateType;
 }
 
 function StateAdult({ state }: Props): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const questionCtx = useContext(QuestionContext);
-	const responseCtx = useContext(ResponseContext);
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const phrases = useSelector(getPhrases);
+	const successPage = useSelector(getSuccessPage) as PagePayloadInterface;
+	const errorPage = useSelector(getErrorPage) as PagePayloadInterface;
+
 	const [loading, setLoading] = useState<boolean>(false);
-	const { language, phrases, colorTheme, directusAccessToken, directusBaseEndpoint } =
-		settingCtx.settingState;
-	const successPage = questionCtx.questionState.successPage as PagePayloadInterface;
-	const errorPage = questionCtx.questionState.errorPage as PagePayloadInterface;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<
 		PageInterface | QuestionDropdownInterface | null | null
@@ -45,10 +45,6 @@ function StateAdult({ state }: Props): React.ReactElement {
 	const SuccessImage = Images.adults.graphics.success_image;
 	const ErrorMark = Images.general.error;
 	const CheckMark = Images.general.check;
-	const ICON_SIZE = 200;
-	const MARK_SIZE = 300;
-
-	// const translatedPage = translate(currentPage.page.translations, language);
 
 	// set image, state icon, and state page on state change
 	useEffect(() => {
@@ -65,7 +61,7 @@ function StateAdult({ state }: Props): React.ReactElement {
 	}
 
 	function resetApp(): void {
-		settingCtx.reset();
+		dispatch(reset());
 		navigation.navigate("SplashScreen");
 	}
 
@@ -73,15 +69,15 @@ function StateAdult({ state }: Props): React.ReactElement {
 		try {
 			setLoading(true);
 
-			await submitResponse(
-				responseCtx.responses,
-				`${directusBaseEndpoint}/items/response`,
-				directusAccessToken,
-			);
+			// await submitResponse(
+			// 	responseCtx.responses,
+			// 	`${directusBaseEndpoint}/items/response`,
+			// 	directusAccessToken,
+			// );
 
 			console.log("done submitting the responses");
 			// introduce a delay
-			responseCtx.resetResponses();
+			dispatch(resetResponses());
 			await new Promise((resolve) => setTimeout(resolve, 5000));
 			navigation.navigate("SuccessScreen");
 		} catch (error) {

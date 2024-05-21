@@ -1,20 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
-import { ResponseContext } from "store/responses";
 import BGLinearGradient from "components/BGLinearGradient";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { optionRegion, optionText } from "utils/options";
 import Toolbar from "components/adults/subcomponents/Toolbar";
-import { QuestionContext } from "store/questions";
 import { getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Mode from "constants/mode";
@@ -23,16 +20,31 @@ import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getLanguage,
+	getMode,
+	nextPage,
+	prevPage,
+	setMode,
+} from "store/settings/settingsSlice";
+import { getRegionOption } from "store/questions/questionsSlice";
+import { getAllResponses, newResponse } from "store/responses/responsesSlice";
+import { reloadExtroFeedbackPages } from "utils/load";
 
 export default function QuestionSingleAdult(): React.ReactElement {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const mode = useSelector(getMode);
+
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
-	const questionCtx = useContext(QuestionContext);
 
-	const { mode, language, currentPage, currentPageNumber } = settingCtx.settingState;
-	const regionsOptions = questionCtx.questionState.regionOption;
+	const regionsOptions = useSelector(getRegionOption);
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -54,8 +66,8 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"both"}
 					colorTheme="#FFF"
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		} else {
@@ -63,7 +75,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"next"}
 					colorTheme="#FFF"
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		}
@@ -75,8 +87,8 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"both"}
 					colorTheme="#FFF"
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		} else {
@@ -84,14 +96,14 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"prev"}
 					colorTheme="#FFF"
-					onPrev={() => settingCtx.prevPage()}
+					onPrev={() => dispatch(prevPage())}
 				/>,
 			);
 		}
 	}, [selectedValue]);
 
 	useEffect(() => {
-		const response = responseCtx.responses;
+		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(
 				getResponse(
@@ -109,30 +121,32 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		responseCtx.addResponse({
-			ident: currentPage.page.ident,
-			label: currentPage.page.name,
-			answer: value,
-			pageNumber: currentPage.pageNumber,
-			mode,
-			section: currentPage.section,
-			sectionNumber: currentPage.sectionNumber,
-			sectionPageNumber: currentPage.sectionPageNumber,
-		});
+		dispatch(
+			newResponse({
+				ident: currentPage.page.ident,
+				label: currentPage.page.name,
+				answer: value,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				section: currentPage.section,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
+			}),
+		);
 		setSelectedValue(value);
 
 		// set mode
 		if (currentPage.page.ident === "mode") {
 			if (value === "adult") {
-				settingCtx.setMode(Mode.Adult);
+				dispatch(setMode(Mode.Adult));
 			} else if (value === "child") {
-				settingCtx.setMode(Mode.Kid);
+				dispatch(setMode(Mode.Kid));
 			} else if (value === "teen") {
-				settingCtx.setMode(Mode.Teen);
+				dispatch(setMode(Mode.Teen));
 			} else {
-				settingCtx.setMode(undefined);
+				dispatch(setMode(undefined));
 			}
-			settingCtx.reloadExtroFeedbackPages();
+			reloadExtroFeedbackPages();
 		}
 	}
 

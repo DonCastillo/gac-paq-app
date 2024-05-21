@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate, translateText } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -13,10 +12,26 @@ import Paragraph from "components/Paragraph";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import BackgroundPreamble from "components/kid/background/question-pages/BackgroundPreamble";
 import ScrollContainer from "components/ScrollContainer";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getDevice,
+	getLanguage,
+	getMode,
+	nextPage,
+	prevPage,
+} from "store/settings/settingsSlice";
 
 export default function PreambleKid(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { mode, language, currentPage, device, colorTheme } = settingCtx.settingState;
+	const dispatch = useDispatch();
+
+	const mode = useSelector(getMode);
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
+
 	const { color100, color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const description = translateText(mode, translatedPage?.description);
@@ -55,8 +70,8 @@ export default function PreambleKid(): React.ReactElement {
 					<BackAndNextNav
 						key={"WithValue"}
 						colorTheme={color200}
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => dispatch(nextPage())}
 					/>
 				</Navigation>
 			</Main>

@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
@@ -13,10 +12,23 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { GeneralStyle } from "styles/general";
 import ScrollContainer from "components/ScrollContainer";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getLanguage,
+	nextPage,
+	prevPage,
+} from "store/settings/settingsSlice";
 
 export default function PageAdult(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const colorTheme = useSelector(getColorTheme);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	const { color100 } = colorTheme;
@@ -31,8 +43,8 @@ export default function PageAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"both"}
 					colorTheme={"#FFF"}
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		} else {
@@ -40,7 +52,7 @@ export default function PageAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"next"}
 					colorTheme={"#FFF"}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		}

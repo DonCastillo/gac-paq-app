@@ -1,12 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
-import { ResponseContext } from "store/responses";
-import { QuestionContext } from "store/questions";
 import { translateButton, translatePhrase } from "utils/translate";
 import ButtonLabel from "constants/button_label";
 import CenterMain from "components/orientation/CenterMain";
@@ -20,13 +17,53 @@ import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getLanguage,
+	getMode,
+	nextPage,
+	setButtons,
+	setLanguage,
+	setPhrases,
+} from "store/settings/settingsSlice";
+import { getAllResponses, newResponse } from "store/responses/responsesSlice";
+import {
+	getAgreementPhrase,
+	getBackButton,
+	getCompleteButton,
+	getContinueButton,
+	getDonePhrase,
+	getDontKnowPhrase,
+	getGoButton,
+	getIntroductionPhrase,
+	getNextButton,
+	getStartedButton,
+	getTryAgainPhrase,
+} from "store/questions/questionsSlice";
 
 export default function LanguageAdult(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
-	const questionCtx = useContext(QuestionContext);
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const mode = useSelector(getMode);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+
+	// buttons
+	const backButton = useSelector(getBackButton);
+	const completeButton = useSelector(getCompleteButton);
+	const continueButton = useSelector(getContinueButton);
+	const goButton = useSelector(getGoButton);
+	const nextButton = useSelector(getNextButton);
+	const startedButton = useSelector(getStartedButton);
+	const agreementPhrase = useSelector(getAgreementPhrase);
+	const donePhrase = useSelector(getDonePhrase);
+	const dontKnowPhrase = useSelector(getDontKnowPhrase);
+	const introductionPhrase = useSelector(getIntroductionPhrase);
+	const tryAgainPhrase = useSelector(getTryAgainPhrase);
+
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const { mode, language, currentPage, currentPageNumber, colorTheme } = settingCtx.settingState;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -38,38 +75,29 @@ export default function LanguageAdult(): React.ReactElement {
 		translatedPage?.adult_sublabel,
 		mode,
 	);
-	const { color100, color200 } = colorTheme;
-	const {
-		backButton,
-		completeButton,
-		continueButton,
-		goButton,
-		nextButton,
-		startedButton,
-		agreementPhrase,
-		donePhrase,
-		dontKnowPhrase,
-		introductionPhrase,
-		tryAgainPhrase,
-	} = questionCtx.questionState;
 
 	// translate phrases and buttons
 	useEffect(() => {
-		settingCtx.translateButtons({
-			back: translateButton(backButton, language) ?? ButtonLabel.Back,
-			complete: translateButton(completeButton, language) ?? ButtonLabel.Complete,
-			continue: translateButton(continueButton, language) ?? ButtonLabel.Continue,
-			go: translateButton(goButton, language) ?? ButtonLabel.Go,
-			next: translateButton(nextButton, language) ?? ButtonLabel.Next,
-			started: translateButton(startedButton, language) ?? ButtonLabel.Started,
-		});
-		settingCtx.translatePhrases({
-			agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
-			done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
-			dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
-			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
-			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
-		});
+		dispatch(
+			setButtons({
+				back: translateButton(backButton, language) ?? ButtonLabel.Back,
+				complete: translateButton(completeButton, language) ?? ButtonLabel.Complete,
+				continue: translateButton(continueButton, language) ?? ButtonLabel.Continue,
+				go: translateButton(goButton, language) ?? ButtonLabel.Go,
+				next: translateButton(nextButton, language) ?? ButtonLabel.Next,
+				started: translateButton(startedButton, language) ?? ButtonLabel.Started,
+			}),
+		);
+
+		dispatch(
+			setPhrases({
+				agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
+				done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
+				dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
+				introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
+				tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
+			}),
+		);
 	}, [language]);
 
 	// set selected value
@@ -79,34 +107,38 @@ export default function LanguageAdult(): React.ReactElement {
 
 	// set language default
 	useEffect(() => {
-		const response = responseCtx.responses;
+		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length === 0) {
-			responseCtx.addResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: language,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			});
+			dispatch(
+				newResponse({
+					ident: currentPage.page.ident,
+					label: currentPage.page.name,
+					answer: language,
+					pageNumber: currentPage.pageNumber,
+					mode,
+					section: currentPage.section,
+					sectionNumber: currentPage.sectionNumber,
+					sectionPageNumber: currentPage.sectionPageNumber,
+				}),
+			);
 		}
 	}, []);
 
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
-			settingCtx.setLanguage(value);
-			responseCtx.addResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: value,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			});
+			dispatch(setLanguage(value));
+			dispatch(
+				newResponse({
+					ident: currentPage.page.ident,
+					label: currentPage.page.name,
+					answer: value,
+					pageNumber: currentPage.pageNumber,
+					mode,
+					section: currentPage.section,
+					sectionNumber: currentPage.sectionNumber,
+					sectionPageNumber: currentPage.sectionPageNumber,
+				}),
+			);
 			setSelectedValue(value);
 		} else {
 			setSelectedValue(null);
@@ -143,7 +175,7 @@ export default function LanguageAdult(): React.ReactElement {
 					{selectedValue !== null && (
 						<BackAndNextNav
 							colorTheme={"#FFF"}
-							onNext={() => settingCtx.nextPage()}
+							onNext={() => dispatch(nextPage())}
 						/>
 					)}
 				</Navigation>

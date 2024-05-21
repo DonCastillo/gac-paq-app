@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -9,10 +8,11 @@ import ProgressBar from "components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
 import { Logo } from "components/svgs/kid";
 import BGLinearGradient from "components/BGLinearGradient";
+import { useSelector } from "react-redux";
+import { getColorTheme } from "store/settings/settingsSlice";
 
 export default function GenericSplash(): JSX.Element {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const navigation = useNavigation();
 

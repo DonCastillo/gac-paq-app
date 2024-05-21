@@ -7,7 +7,6 @@ import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
-import { ResponseContext } from "store/responses";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
@@ -24,13 +23,31 @@ import { getImageBackground } from "utils/background";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	getMode,
+	nextPage,
+	prevPage,
+	setMode,
+} from "store/settings/settingsSlice";
+import { reloadExtroFeedbackPages } from "utils/load";
+import { getAllResponses, newResponse } from "store/responses/responsesSlice";
 
 export default function GenericSingleQuestion(): React.ReactElement {
-	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
+	const dispatch = useDispatch();
 
-	const { mode, language, currentPage, currentPageNumber, device } = settingCtx.settingState;
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const mode = useSelector(getMode);
+	const device = useSelector(getDevice);
+
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+
 	const { isKeyboardOpen } = device;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
@@ -48,7 +65,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 
 	// set selected value
 	useEffect(() => {
-		const response = responseCtx.responses;
+		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(
 				getResponse(
@@ -65,16 +82,18 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	// save response
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
-			responseCtx.addResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: value,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			});
+			dispatch(
+				newResponse({
+					ident: currentPage.page.ident,
+					label: currentPage.page.name,
+					answer: value,
+					pageNumber: currentPage.pageNumber,
+					mode,
+					section: currentPage.section,
+					sectionNumber: currentPage.sectionNumber,
+					sectionPageNumber: currentPage.sectionPageNumber,
+				}),
+			);
 			setSelectedValue(value);
 		} else {
 			setSelectedValue(null);
@@ -83,15 +102,15 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		// set mode
 		if (currentPage.page.ident === "mode") {
 			if (value === "adult") {
-				settingCtx.setMode(Mode.Adult);
+				dispatch(setMode(Mode.Adult));
 			} else if (value === "child") {
-				settingCtx.setMode(Mode.Kid);
+				dispatch(setMode(Mode.Kid));
 			} else if (value === "teen") {
-				settingCtx.setMode(Mode.Teen);
+				dispatch(setMode(Mode.Teen));
 			} else {
-				settingCtx.setMode(undefined);
+				dispatch(setMode(undefined));
 			}
-			settingCtx.reloadExtroFeedbackPages();
+			reloadExtroFeedbackPages();
 		}
 	}
 
@@ -153,13 +172,13 @@ export default function GenericSingleQuestion(): React.ReactElement {
 					{selectedValue !== null ? (
 						<BackAndNextNav
 							key={"WithValue"}
-							onPrev={() => settingCtx.prevPage()}
-							onNext={() => settingCtx.nextPage()}
+							onPrev={() => dispatch(prevPage())}
+							onNext={() => dispatch(nextPage())}
 						/>
 					) : (
 						<BackAndNextNav
 							key={"WithoutValue"}
-							onPrev={() => settingCtx.prevPage()}
+							onPrev={() => dispatch(prevPage())}
 						/>
 					)}
 				</Navigation>

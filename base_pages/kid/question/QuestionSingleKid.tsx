@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -8,7 +7,6 @@ import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions";
 import QuestionType from "constants/question_type";
-import { ResponseContext } from "store/responses";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
 import QuestionSlider from "components/kid/QuestionSlider";
@@ -29,16 +27,33 @@ import QuestionCheckbox from "components/kid/QuestionCheckbox";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
 import { optionTextMode } from "utils/options";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	getMode,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { getQuestion17Label } from "utils/label";
+import { getAllResponses, newResponse } from "store/responses/responsesSlice";
+import { proceedPage } from "utils/navigation";
 
 export default function QuestionSingleKid(): React.ReactElement {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const colorTheme = useSelector(getColorTheme);
+	const mode = useSelector(getMode);
+	const device = useSelector(getDevice);
+
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
 
-	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
-		settingCtx.settingState;
 	const { isKeyboardOpen } = device;
 	const { color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
@@ -65,12 +80,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 			"transportation_11",
 		].includes(currentPage.page.ident)
 	) {
-		questionLabel = settingCtx.getQuestion17Label();
+		questionLabel = getQuestion17Label();
 	}
 
 	// fetch response for this question
 	useEffect(() => {
-		const response = responseCtx.responses;
+		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(
 				getResponse(
@@ -104,8 +119,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"both" + selectedValue}
 					colorTheme={color200}
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.proceedPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		} else {
@@ -113,7 +128,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"next" + selectedValue}
 					colorTheme={color200}
-					onNext={() => settingCtx.proceedPage()}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		}
@@ -128,8 +143,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"both" + selectedValue}
 					colorTheme={color200}
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.proceedPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		} else {
@@ -137,7 +152,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"prev" + selectedValue}
 					colorTheme={color200}
-					onPrev={() => settingCtx.prevPage()}
+					onPrev={() => dispatch(prevPage())}
 				/>,
 			);
 		}
@@ -147,16 +162,18 @@ export default function QuestionSingleKid(): React.ReactElement {
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		responseCtx.addResponse({
-			ident: currentPage.page.ident,
-			label: currentPage.page.name,
-			answer: value,
-			pageNumber: currentPage.pageNumber,
-			mode,
-			section: currentPage.section,
-			sectionNumber: currentPage.sectionNumber,
-			sectionPageNumber: currentPage.sectionPageNumber,
-		});
+		dispatch(
+			newResponse({
+				ident: currentPage.page.ident,
+				label: currentPage.page.name,
+				answer: value,
+				pageNumber: currentPage.pageNumber,
+				mode,
+				section: currentPage.section,
+				sectionNumber: currentPage.sectionNumber,
+				sectionPageNumber: currentPage.sectionPageNumber,
+			}),
+		);
 		setSelectedValue(value);
 	}
 

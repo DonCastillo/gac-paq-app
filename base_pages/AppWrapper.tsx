@@ -1,9 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
-import { SettingContext } from "store/settings";
-import { QuestionContext } from "store/questions";
 import RegularPageScreen from "screens/RegularPageScreen";
 import SectionType from "constants/section_type";
 import { getScreenType } from "utils/screen";
@@ -17,30 +15,35 @@ import StateAdult from "base_pages/adult/StateAdult";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive";
 import type DeviceInterface from "interface/dimensions";
-import { ResponseContext } from "store/responses";
+import fonts from "styles/fonts";
+import { useDispatch, useSelector } from "react-redux";
+import { addPage, getMode, setDevice, setSectionTotalPages } from "store/settings/settingsSlice";
+import { printSetting } from "utils/sample";
+import {
+	getFeedbackExtroPages,
+	getIntroductoryPages,
+	getKidExtroPages,
+	getQuestionPages,
+	setRegionOption,
+	setLanguageOption,
+	identifyLastSectionExtroPage,
+	addSectionPage,
+} from "store/questions/questionsSlice";
+import { resetResponses } from "store/responses/responsesSlice";
 
 const Stack = createNativeStackNavigator();
 
 function AppWrapper(): React.ReactElement {
-	const [fontsLoaded] = useFonts({
-		PoppinsBold: require("assets/fonts/poppins/Poppins-Bold.ttf"),
-		PoppinsMedium: require("assets/fonts/poppins/Poppins-Medium.ttf"),
-		PoppinsRegular: require("assets/fonts/poppins/Poppins-Regular.ttf"),
-		SpaceBold: require("assets/fonts/space-grotesk/SpaceGrotesk-Bold.ttf"),
-		SpaceLight: require("assets/fonts/space-grotesk/SpaceGrotesk-Light.ttf"),
-		SpaceMedium: require("assets/fonts/space-grotesk/SpaceGrotesk-Medium.ttf"),
-		SpaceRegular: require("assets/fonts/space-grotesk/SpaceGrotesk-Regular.ttf"),
-		SpaceSemiBold: require("assets/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf"),
-	});
-	const settingCtx = useContext(SettingContext);
-	const questionCtx = useContext(QuestionContext);
-	const resposeCtx = useContext(ResponseContext);
-	const { mode } = settingCtx.settingState;
+	const [fontsLoaded] = useFonts(fonts);
+	const dispatch = useDispatch();
+	const introductoryPages = useSelector(getIntroductoryPages);
+	const questionPages = useSelector(getQuestionPages);
+	const kidExtroPages = useSelector(getKidExtroPages);
+	const feedbackExtroPages = useSelector(getFeedbackExtroPages);
+	const mode = useSelector(getMode);
 
-	const introductoryPages = questionCtx.questionState.introductoryPages;
-	const questionPages = questionCtx.questionState.questionPages;
-	const kidExtroPages = questionCtx.questionState.kidExtroPages;
-	const feedbackExtroPages = questionCtx.questionState.feedbackExtroPages;
+	printSetting();
+	// printQuestion();
 
 	// set device dimensions
 	useEffect(() => {
@@ -48,13 +51,13 @@ function AppWrapper(): React.ReactElement {
 			return await getInitialDeviceInfo();
 		};
 		getInitialDeviceInfoAsync()
-			.then((initialDeviceInfo) => settingCtx.setDevice(initialDeviceInfo))
+			.then((initialDeviceInfo) => dispatch(setDevice(initialDeviceInfo)))
 			.catch(console.error);
 
 		const orientationListener = ScreenOrientation.addOrientationChangeListener(
 			(orientationInfo) => {
 				const newDeviceInfo = getDeviceInfo(orientationInfo.orientationInfo.orientation);
-				settingCtx.setDevice(newDeviceInfo);
+				dispatch(setDevice(newDeviceInfo));
 			},
 		);
 		return () => {
@@ -84,17 +87,17 @@ function AppWrapper(): React.ReactElement {
 
 	useEffect(() => {
 		// clear all responses
-		resposeCtx.resetResponses();
+		dispatch(resetResponses());
 		// load offline regions
 		const regions = loadRegionsOffline();
-		questionCtx.setRegionOption(regions);
+		dispatch(setRegionOption(regions));
 
 		// load offline languages
 		const languages = loadLanguagesOffline();
-		questionCtx.setLanguageOption(languages);
+		dispatch(setLanguageOption(languages));
 
 		// determine the last section extro page
-		questionCtx.identifyLastSectionExtroPage();
+		dispatch(identifyLastSectionExtroPage());
 
 		let pageNumber = 1;
 		let sectionNumber = 0;
@@ -106,17 +109,21 @@ function AppWrapper(): React.ReactElement {
 			const sectionPageNumber = ++sectionIndex;
 
 			// add page to section
-			settingCtx.addPage(pageNumber, {
-				pageNumber,
-				page,
-				screen: page.type,
-				sectionNumber,
-				section: SectionType.Intro,
-				sectionPageNumber,
-			});
-
+			dispatch(
+				addPage({
+					key: pageNumber,
+					page: {
+						pageNumber,
+						page,
+						screen: page.type,
+						sectionNumber,
+						section: SectionType.Intro,
+						sectionPageNumber,
+					},
+				}),
+			);
 			// add section total pages
-			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 			pageNumber++;
 		});
 
@@ -125,22 +132,27 @@ function AppWrapper(): React.ReactElement {
 		questionPages.forEach((page: any) => {
 			// add page to section
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
-				questionCtx.addSectionPage(page);
+				dispatch(addSectionPage(page));
 				sectionPageNumber = 1;
 				sectionNumber++;
 			}
 
-			settingCtx.addPage(pageNumber, {
-				pageNumber,
-				page,
-				screen: page.type,
-				section: SectionType.Question,
-				sectionNumber,
-				sectionPageNumber,
-			});
+			dispatch(
+				addPage({
+					key: pageNumber,
+					page: {
+						pageNumber,
+						page,
+						screen: page.type,
+						section: SectionType.Question,
+						sectionNumber,
+						sectionPageNumber,
+					},
+				}),
+			);
 
 			// add section total pages
-			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 			sectionPageNumber++;
 			pageNumber++;
 		});
@@ -152,20 +164,25 @@ function AppWrapper(): React.ReactElement {
 
 			// add page to section
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
-				questionCtx.addSectionPage(page);
+				dispatch(addSectionPage(page));
 			}
 
-			settingCtx.addPage(pageNumber, {
-				pageNumber,
-				page,
-				screen: page.type,
-				section: SectionType.Extro,
-				sectionNumber,
-				sectionPageNumber,
-			});
+			dispatch(
+				addPage({
+					key: pageNumber,
+					page: {
+						pageNumber,
+						page,
+						screen: page.type,
+						section: SectionType.Extro,
+						sectionNumber,
+						sectionPageNumber,
+					},
+				}),
+			);
 
 			// add section total pages
-			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 			pageNumber++;
 		});
 
@@ -176,20 +193,25 @@ function AppWrapper(): React.ReactElement {
 
 			// add page to section
 			if (getScreenType(page.type) === ScreenType.IntroQuestion) {
-				questionCtx.addSectionPage(page);
+				dispatch(addSectionPage(page));
 			}
 
-			settingCtx.addPage(pageNumber, {
-				pageNumber,
-				page,
-				screen: page.type,
-				section: SectionType.Feedback,
-				sectionNumber,
-				sectionPageNumber,
-			});
+			dispatch(
+				addPage({
+					key: pageNumber,
+					page: {
+						pageNumber,
+						page,
+						screen: page.type,
+						section: SectionType.Feedback,
+						sectionNumber,
+						sectionPageNumber,
+					},
+				}),
+			);
 
 			// add section total pages
-			settingCtx.setSectionTotalPages(sectionNumber, sectionPageNumber);
+			dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 			pageNumber++;
 		});
 	}, []);
@@ -220,6 +242,7 @@ function AppWrapper(): React.ReactElement {
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
+		// <></>
 	);
 }
 

@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
-import { SettingContext } from "store/settings";
+import React, { useEffect, useState } from "react";
 import { translate } from "utils/page";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Main from "components/Main";
@@ -10,11 +9,27 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
 import { moderateScale } from "utils/responsive";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	getMode,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { proceedPage } from "utils/navigation";
 
 export default function QuestionIntroKid(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
-		settingCtx.settingState;
+	const dispatch = useDispatch();
+	const mode = useSelector(getMode);
+	const language = useSelector(getLanguage);
+	const colorTheme = useSelector(getColorTheme);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
+
 	const { color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -26,8 +41,8 @@ export default function QuestionIntroKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"both" + currentPageNumber}
 					colorTheme="#fff"
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.proceedPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		} else {
@@ -35,7 +50,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"next" + currentPageNumber}
 					colorTheme="#fff"
-					onNext={() => settingCtx.proceedPage()}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		}

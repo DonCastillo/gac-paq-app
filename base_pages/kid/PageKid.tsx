@@ -13,10 +13,23 @@ import { GeneralStyle } from "styles/general";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ScrollContainer from "components/ScrollContainer";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getLanguage,
+	nextPage,
+	prevPage,
+} from "store/settings/settingsSlice";
 
 export default function PageKid(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage, currentPageNumber } = settingCtx.settingState;
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const colorTheme = useSelector(getColorTheme);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
@@ -35,8 +48,8 @@ export default function PageKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"both"}
 					colorTheme={color100}
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		} else {
@@ -44,7 +57,7 @@ export default function PageKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"next"}
 					colorTheme={color100}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		}

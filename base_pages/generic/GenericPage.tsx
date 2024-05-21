@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
@@ -13,10 +12,21 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ScrollContainer from "components/ScrollContainer";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getLanguage,
+	nextPage,
+	prevPage,
+} from "store/settings/settingsSlice";
 
 export default function GenericPage(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { language, colorTheme, currentPage } = settingCtx.settingState;
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const colorTheme = useSelector(getColorTheme);
+	const currentPage = useSelector(getCurrentPage);
+
 	const { color100 } = colorTheme;
 	const translatedPage = translate(currentPage.page.translations, language);
 
@@ -38,8 +48,8 @@ export default function GenericPage(): React.ReactElement {
 				</CenterMain>
 				<Navigation>
 					<BackAndNextNav
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => dispatch(nextPage())}
 					/>
 				</Navigation>
 			</Main>

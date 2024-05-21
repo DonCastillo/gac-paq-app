@@ -1,6 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate } from "utils/page";
 import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -11,12 +10,27 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	getMode,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { proceedPage } from "utils/navigation";
 
 export default function QuestionIntroAdult(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
+	const dispatch = useDispatch();
+	const mode = useSelector(getMode);
+	const language = useSelector(getLanguage);
+	const colorTheme = useSelector(getColorTheme);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
 
-	const { mode, language, colorTheme, currentPage, currentPageNumber, device } =
-		settingCtx.settingState;
 	const { color200 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -28,8 +42,8 @@ export default function QuestionIntroAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"both" + currentPageNumber}
 					colorTheme="#FFF"
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.proceedPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		} else {
@@ -37,7 +51,7 @@ export default function QuestionIntroAdult(): React.ReactElement {
 				<BackAndNextNav
 					key={"next" + currentPageNumber}
 					colorTheme="#FFF"
-					onNext={() => settingCtx.proceedPage()}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		}

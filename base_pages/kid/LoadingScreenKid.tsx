@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { StyleSheet, View, Image } from "react-native";
-import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
