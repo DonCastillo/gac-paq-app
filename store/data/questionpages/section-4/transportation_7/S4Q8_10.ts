@@ -1,4 +1,6 @@
-const Transportation8_10 = {
+import type { Transportation8_10Interface } from "interface/question17";
+
+const Transportation8_10: Transportation8_10Interface = {
 	"en-CA": {
 		kid: {
 			wheel: {

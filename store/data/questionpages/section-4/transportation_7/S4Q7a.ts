@@ -1,4 +1,6 @@
-const Transportation7 = {
+import type { Transportation7Interface } from "interface/question17";
+
+const Transportation7: Transportation7Interface = {
 	"en-CA": {
 		kid: {
 			none: "In the past week, did you walk or wheel to go to places (for example, a friend's house, a park, a shop)?",

@@ -22,16 +22,16 @@ const S1Preamble: PreamblePayloadInterface = {
 			},
 			images: {
 				kid: {
-					phone: Images.kids.intro.section_1.phone,
-					tablet: Images.kids.intro.section_1.tablet,
+					phone: "",
+					tablet: "",
 				},
 				adult: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
+					phone: "",
+					tablet: "",
 				},
 				teen: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
+					phone: "",
+					tablet: "",
 				},
 			},
 		},
