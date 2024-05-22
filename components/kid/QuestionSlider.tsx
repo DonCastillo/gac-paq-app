@@ -5,6 +5,8 @@ import { SettingContext } from "store/settings";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label";
 import { horizontalScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getPhrases, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -17,8 +19,10 @@ export default function QuestionSlider({
 	selectedValue,
 	maxValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, phrases, device } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
+	const phrases = useSelector(getPhrases);
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState<number | PhraseLabel.DontKnow>(selectedValue ?? 0);
 	const [maxVal, setMaxVal] = useState<number>(maxValue ?? 10);

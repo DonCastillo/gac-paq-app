@@ -21,6 +21,9 @@ import {
 	isOtherOption,
 	isOtherWithSpecifiedValue,
 } from "utils/options";
+import { useSelector } from "react-redux";
+
+import { getMode, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: any[];
@@ -33,8 +36,10 @@ export default function QuestionRadioImage({
 	onChange,
 	selectedValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
+	const mode = useSelector(getMode);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);

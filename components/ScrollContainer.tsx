@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollView, View } from "react-native";
-import { SettingContext } from "store/settings";
+import { useSelector } from "react-redux";
+import { getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
 
 interface ScrollContainerPropsInterface {
 	children: React.ReactNode;
@@ -9,8 +10,8 @@ interface ScrollContainerPropsInterface {
 export default function ScrollContainer({
 	children,
 }: ScrollContainerPropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { currentPageNumber, device } = settingCtx.settingState;
+	const device = useSelector(getDevice);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const [offset, setOffset] = useState({ x: 0, y: 0 });
 
 	useEffect(() => {

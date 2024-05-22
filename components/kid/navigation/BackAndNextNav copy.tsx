@@ -1,9 +1,10 @@
 import { View, StyleSheet } from "react-native";
 import type { FlexStyle } from "react-native";
 import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
-import { SettingContext } from "store/settings";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon } from "@rneui/themed";
+import { useSelector } from "react-redux";
+import { getButtons, getColorTheme } from "store/settings/settingsSlice";
 
 interface BackAndNextNavProps {
 	onPrev?: () => void;
@@ -14,11 +15,12 @@ export default function BackAndNextNav({
 	onPrev,
 	onNext,
 }: BackAndNextNavProps): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
+	const colorTheme = useSelector(getColorTheme);
+	const buttons = useSelector(getButtons);
+
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
-	const { colorTheme, buttons } = settingCtx.settingState;
 	const { color100 } = colorTheme;
 
 	useEffect(() => {

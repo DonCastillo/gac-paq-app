@@ -12,6 +12,8 @@ import {
 import { horizontalScale } from "utils/responsive";
 import Option from "./subcomponents/Option";
 import type { ChoiceInterface } from "interface/question_checkbox";
+import { useSelector } from "react-redux";
+import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: ChoiceInterface[];
@@ -25,8 +27,10 @@ export default function QuestionCheckbox({
 	selectedValue,
 }: PropsInterface): React.ReactElement {
 	const SEPARATOR = " | ";
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
+
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);

@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { SettingContext } from "store/settings";
+import React from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import { Font, GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getColorTheme, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -15,8 +16,8 @@ export default function QuestionTextarea({
 	selectedValue,
 	placeholder,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, device } = settingCtx.settingState;
+	const colorTheme = useSelector(getColorTheme);
+	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 
 	function changeHandler(value: string): void {

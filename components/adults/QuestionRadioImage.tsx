@@ -1,8 +1,7 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
-import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
 import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background";
 import { horizontalScale, moderateScale, verticalScale } from "utils/responsive";
@@ -13,6 +12,8 @@ import {
 	isOtherOption,
 	isOtherWithSpecifiedValue,
 } from "utils/options";
+import { useSelector } from "react-redux";
+import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: any[];
@@ -25,8 +26,11 @@ export default function QuestionRadioImage({
 	onChange,
 	selectedValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
+	const mode = useSelector(getMode);
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
+
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);

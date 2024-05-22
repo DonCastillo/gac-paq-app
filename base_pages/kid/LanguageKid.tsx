@@ -52,6 +52,7 @@ export default function LanguageKid(): React.ReactElement {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
+	const response = useSelector(getAllResponses);
 
 	// buttons
 	const backButton = useSelector(getBackButton);
@@ -119,7 +120,6 @@ export default function LanguageKid(): React.ReactElement {
 
 	// set language default
 	useEffect(() => {
-		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length === 0) {
 			dispatch(
 				newResponse({

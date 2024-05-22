@@ -45,6 +45,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
+	const response = useSelector(getAllResponses);
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
@@ -65,7 +66,6 @@ export default function GenericSingleQuestion(): React.ReactElement {
 
 	// set selected value
 	useEffect(() => {
-		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(
 				getResponse(

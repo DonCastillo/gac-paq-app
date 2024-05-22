@@ -1,9 +1,15 @@
-import { Pressable, SafeAreaView, StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useContext, useState, useEffect, memo } from "react";
-import { SettingContext } from "store/settings";
+import React, { useState, useEffect, memo } from "react";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getSectionTitles,
+} from "store/settings/settingsSlice";
 
 const ICON_SIZE = 30;
 
@@ -12,8 +18,11 @@ interface PropsInterface {
 }
 
 function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { currentPageNumber, currentPage, sectionTitles, device } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const sectionTitles = useSelector(getSectionTitles);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
 
 	useEffect(() => {

@@ -95,28 +95,7 @@ const responsesSlice = createSlice({
 		},
 	},
 	selectors: {
-		selectAllResponses: (state): Record<string, ResponseInterface> => state,
-		selectResponseByIdent: (state, ident: string): string | string[] | null => {
-			if (ident === null || ident === "") return null;
-			if (Object.keys(state).length === 0) return null;
-			const finalResponse: ResponseInterface | undefined = Object.values(state).find(
-				(response: ResponseInterface) => response?.ident === ident,
-			) as ResponseInterface;
-			if (finalResponse === undefined || finalResponse === null) {
-				return null;
-			}
-			if (
-				finalResponse?.answer === null ||
-				finalResponse?.answer === "" ||
-				finalResponse?.answer === undefined
-			) {
-				return null;
-			}
-			if (finalResponse?.answer?.includes(" | ")) {
-				return finalResponse?.answer.split(" | ");
-			}
-			return finalResponse?.answer;
-		},
+		getAllResponses: (state): Record<string, ResponseInterface> => state,
 	},
 });
 
@@ -130,4 +109,7 @@ export const {
 	clearExtroResponses,
 	resetResponses,
 } = responsesSlice.actions;
+
+export const { getAllResponses } = responsesSlice.selectors;
+
 export default responsesSlice.reducer;

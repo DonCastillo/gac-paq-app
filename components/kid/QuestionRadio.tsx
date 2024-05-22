@@ -10,6 +10,8 @@ import {
 } from "utils/options";
 import { horizontalScale } from "utils/responsive";
 import Option from "./subcomponents/Option";
+import { useSelector } from "react-redux";
+import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: OptionInterface[];
@@ -22,8 +24,9 @@ export default function QuestionRadio({
 	onChange,
 	selectedValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);

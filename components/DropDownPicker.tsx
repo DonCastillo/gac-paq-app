@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
-import { SettingContext } from "store/settings";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { GeneralStyle } from "styles/general";
-import { moderateScale, verticalScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getColorTheme, getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -23,8 +24,9 @@ export default function DropDownSelector({
 	setDropdownOpen,
 	dropdownMinHeight = "100%",
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPageNumber, device } = settingCtx.settingState;
+	const colorTheme = useSelector(getColorTheme);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<QuestionRadioItemInterface[]>(options);

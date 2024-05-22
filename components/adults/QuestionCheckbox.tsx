@@ -1,7 +1,6 @@
 import { FlatList } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
-import { SettingContext } from "store/settings";
 import CheckboxOption from "components/adults/subcomponents/CheckboxOption";
 import {
 	extractUserSpecifiedOtherFromArray,
@@ -9,6 +8,8 @@ import {
 	isOtherOption,
 	isOtherWithSpecifiedValue,
 } from "utils/options";
+import { useSelector } from "react-redux";
+import { getCurrentPage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -22,8 +23,7 @@ export default function QuestionCheckbox({
 	selectedValue,
 }: PropsInterface): React.ReactElement {
 	const SEPARATOR = " | ";
-	const settingCtx = useContext(SettingContext);
-	const { currentPage } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);

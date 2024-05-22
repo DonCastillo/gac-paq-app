@@ -40,6 +40,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
+	const response = useSelector(getAllResponses);
 
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -103,7 +104,6 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	}, [selectedValue]);
 
 	useEffect(() => {
-		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(
 				getResponse(

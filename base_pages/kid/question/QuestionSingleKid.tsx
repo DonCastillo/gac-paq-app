@@ -49,6 +49,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
+	const response = useSelector(getAllResponses);
 
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -85,7 +86,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	// fetch response for this question
 	useEffect(() => {
-		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length > 0) {
 			setSelectedValue(
 				getResponse(

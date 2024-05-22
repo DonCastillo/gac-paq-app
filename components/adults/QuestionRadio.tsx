@@ -1,9 +1,10 @@
 import { FlatList } from "react-native";
 import RadioOption from "components/adults/subcomponents/RadioOption";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
-import { SettingContext } from "store/settings";
 import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue } from "utils/options";
+import { useSelector } from "react-redux";
+import { getCurrentPage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: QuestionRadioItemInterface[];
@@ -16,8 +17,7 @@ export default function QuestionRadio({
 	onSelect,
 	selectedValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { currentPage } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);

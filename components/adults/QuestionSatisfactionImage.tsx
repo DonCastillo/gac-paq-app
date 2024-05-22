@@ -1,9 +1,11 @@
 import { View, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
-import React, { useContext, useState, useEffect } from "react";
-import { SettingContext } from "store/settings";
+import React, { useState, useEffect } from "react";
 import { horizontalScale, verticalScale } from "utils/responsive";
 import { getOptionImage } from "utils/background";
+import { useSelector } from "react-redux";
+
+import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: any[];
@@ -16,8 +18,10 @@ export default function QuestionSatisfactionImage({
 	onChange,
 	selectedValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
+	const mode = useSelector(getMode);
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const numColumn = device.isTablet ? 5 : 3;

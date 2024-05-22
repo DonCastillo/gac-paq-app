@@ -1,6 +1,7 @@
 import type Mode from "constants/mode";
 import SectionType from "constants/section_type";
 import type ResponseInterface from "interface/response";
+import { store } from "store/store";
 
 type modeType = Mode.Kid | Mode.Adult | Mode.Teen | undefined;
 
@@ -86,4 +87,28 @@ function sanitizeResponse(
 
 	return sanitizedResponse;
 }
-export { getResponse, sanitizeResponse };
+
+const getResponseByIdent = (ident: string): string | string[] | null => {
+	const responses = store.getState().responses;
+	if (ident === null || ident === "") return null;
+	if (Object.keys(responses).length === 0) return null;
+
+	const finalResponse: ResponseInterface | undefined = Object.values(responses).find(
+		(response: ResponseInterface) => response?.ident === ident,
+	) as ResponseInterface;
+	if (finalResponse === undefined || finalResponse === null) {
+		return null;
+	}
+	if (
+		finalResponse?.answer === null ||
+		finalResponse?.answer === "" ||
+		finalResponse?.answer === undefined
+	) {
+		return null;
+	}
+	if (finalResponse?.answer?.includes(" | ")) {
+		return finalResponse?.answer.split(" | ");
+	}
+	return finalResponse?.answer;
+};
+export { getResponse, sanitizeResponse, getResponseByIdent };

@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { SettingContext } from "store/settings";
 import { moderateScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -12,8 +13,8 @@ export default function Heading({
 	children,
 	customStyle = {},
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+	const device = useSelector(getDevice);
+
 	return (
 		<View>
 			<Text

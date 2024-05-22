@@ -16,10 +16,7 @@ import LanguageKid from "base_pages/kid/LanguageKid";
 import LanguageAdult from "base_pages/adult/LanguageAdult";
 import GenericLanguage from "base_pages/generic/GenericLanguage";
 import GenericPage from "base_pages/generic/GenericPage";
-import GenericSingleCheckbox from "base_pages/generic/GenericSingleCheckbox";
 import GenericSingleQuestion from "base_pages/generic/GenericSingleQuestion";
-import SingleCheckboxKid from "base_pages/kid/SingleCheckboxKid";
-import SingleCheckboxAdult from "base_pages/adult/SingleCheckboxAdult";
 import PreambleKid from "base_pages/kid/PreambleKid";
 import PreambleAdult from "base_pages/adult/PreambleAdult";
 
@@ -38,25 +35,6 @@ function getScreen(
 	else if ((mode === Mode.Adult || mode === Mode.Teen) && screenType === ScreenType.Page)
 		return <PageAdult />;
 	else if (mode === Mode.Kid && screenType === ScreenType.Page) return <PageKid />;
-	// single checkbox screens
-	else if (
-		mode === undefined &&
-		sectionType === SectionType.Intro &&
-		screenType === ScreenType.SingleCheckbox
-	)
-		return <GenericSingleCheckbox />;
-	else if (
-		(mode === Mode.Adult || mode === Mode.Teen) &&
-		sectionType === SectionType.Intro &&
-		screenType === ScreenType.SingleCheckbox
-	)
-		return <SingleCheckboxAdult />;
-	else if (
-		mode === Mode.Kid &&
-		sectionType === SectionType.Intro &&
-		screenType === ScreenType.SingleCheckbox
-	)
-		return <SingleCheckboxKid />;
 	// question intro
 	else if (
 		mode === undefined &&

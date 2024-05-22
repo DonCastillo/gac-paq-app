@@ -1,8 +1,9 @@
-import React, { memo, useContext } from "react";
+import React, { memo } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive";
-import { SettingContext } from "store/settings";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -15,8 +16,8 @@ function QuestionTitle({
 	customStyle = {},
 	textStyle = {},
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+	const device = useSelector(getDevice);
+
 	return (
 		<View style={[styles.container, customStyle]}>
 			<Text

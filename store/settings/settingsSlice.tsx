@@ -4,7 +4,7 @@ import defaultDevice from "./defaultDevice";
 import defaultPage from "./defaultPage";
 import phraseSetting from "./defaultPhrase";
 import defaultColor from "./defaultColor";
-import Mode from "constants/mode";
+import type Mode from "constants/mode";
 import type DeviceInterface from "interface/dimensions";
 import type { PageInterface } from "./defaultPage";
 import type ColorInterface from "interface/color";
@@ -20,7 +20,7 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import defaultButton from "./defaultButton";
 
 type ModeType = Mode.Adult | Mode.Kid | Mode.Teen | undefined;
-type RawPageType =
+export type RawPageType =
 	| SectionPayloadInterface
 	| ExtroPayloadInterface
 	| QuestionRadioPayloadInterface
@@ -69,6 +69,7 @@ const settingsSlice = createSlice({
 	} satisfies SettingsInterface,
 	reducers: {
 		setMode: (state, action: PayloadAction<ModeType>) => {
+			console.log("redux change of mode");
 			state.mode = action.payload;
 		},
 		setDevice: (state, action: PayloadAction<DeviceInterface>) => {
@@ -138,9 +139,12 @@ const settingsSlice = createSlice({
 			state.nextPage = nextPage;
 			state.history = [...newHistory];
 		},
-		addPage: (state, action: PayloadAction<{ key: number; obj: PageInterface }>) => {
-			const { key, obj } = action.payload;
-			state.pages = { ...state.pages, [key]: obj };
+		addPage: (state, action: PayloadAction<{ key: number; page: PageInterface }>) => {
+			const { key, page } = action.payload;
+			state.pages = { ...state.pages, [key]: page };
+		},
+		setPage: (state, action: PayloadAction<Record<number, PageInterface>>) => {
+			state.pages = { ...state.pages, ...action.payload };
 		},
 		setButtons: (state, action: PayloadAction<ButtonInterface>) => {
 			state.buttons = action.payload;
@@ -173,92 +177,115 @@ const settingsSlice = createSlice({
 			});
 			state.pages = pagesWithoutFeedback;
 		},
-		reloadExtroFeedbackPages: (
-			state,
-			action: PayloadAction<{ adultExtro: any; kidsExtro: any; feedback: any }>,
-		) => {
-			let newPages = {};
-			let newSectionTotalPages = {};
+		// reloadExtroFeedbackPages: (
+		// 	state,
+		// 	action: PayloadAction<{ adultExtro: any; kidsExtro: any; feedback: any }>,
+		// ) => {
+		// 	let newPages = {};
+		// 	let newSectionTotalPages = {};
 
-			// remove all extro and feedback pages
-			for (const [key, page] of Object.entries(state.pages)) {
-				if (
-					(page as any).section === SectionType.Extro ||
-					(page as any).section === SectionType.Feedback
-				) {
-					continue;
-				} else {
-					newPages = { ...newPages, [key]: page };
-				}
-			}
+		// 	// remove all extro and feedback pages
+		// 	for (const [key, page] of Object.entries(state.pages)) {
+		// 		if (
+		// 			(page as any).section === SectionType.Extro ||
+		// 			(page as any).section === SectionType.Feedback
+		// 		) {
+		// 			continue;
+		// 		} else {
+		// 			newPages = { ...newPages, [key]: page };
+		// 		}
+		// 	}
 
-			const lastPagesIndex = parseInt(Object.keys(newPages).at(-1) ?? "1");
-			const lastPage = newPages[lastPagesIndex];
-			let lastPageNumber = lastPage.pageNumber;
-			let lastSectionNumber = lastPage.sectionNumber;
-			let finalExtroPages = [];
-			let finalFeedbackPages = [];
+		// 	const lastPagesIndex = parseInt(Object.keys(newPages).at(-1) ?? "1");
+		// 	const lastPage = newPages[lastPagesIndex];
+		// 	let lastPageNumber = lastPage.pageNumber;
+		// 	let lastSectionNumber = lastPage.sectionNumber;
+		// 	let finalExtroPages = [];
+		// 	let finalFeedbackPages = [];
 
-			// load all extro pages
-			lastSectionNumber++;
-			if (state.mode === Mode.Kid || state.mode === Mode.Teen) {
-				finalExtroPages = action.payload.kidsExtro.map((page: RawPageType, index: number) => {
-					return {
-						pageNumber: ++lastPageNumber,
-						page,
-						screen: page.type,
-						section: SectionType.Extro,
-						sectionNumber: lastSectionNumber,
-						sectionPageNumber: ++index,
-					};
-				});
-			} else {
-				finalExtroPages = action.payload.adultExtro.map((page: RawPageType, index: number) => {
-					return {
-						pageNumber: ++lastPageNumber,
-						page,
-						screen: page.type,
-						section: SectionType.Extro,
-						sectionNumber: lastSectionNumber,
-						sectionPageNumber: ++index,
-					};
-				});
-			}
-			newSectionTotalPages = {
-				...newSectionTotalPages,
-				[lastSectionNumber]: finalExtroPages.length,
-			};
+		// 	// load all extro pages
+		// 	lastSectionNumber++;
+		// 	if (state.mode === Mode.Kid || state.mode === Mode.Teen) {
+		// 		finalExtroPages = action.payload.kidsExtro.map((page: RawPageType, index: number) => {
+		// 			return {
+		// 				pageNumber: ++lastPageNumber,
+		// 				page,
+		// 				screen: page.type,
+		// 				section: SectionType.Extro,
+		// 				sectionNumber: lastSectionNumber,
+		// 				sectionPageNumber: ++index,
+		// 			};
+		// 		});
+		// 	} else {
+		// 		finalExtroPages = action.payload.adultExtro.map((page: RawPageType, index: number) => {
+		// 			return {
+		// 				pageNumber: ++lastPageNumber,
+		// 				page,
+		// 				screen: page.type,
+		// 				section: SectionType.Extro,
+		// 				sectionNumber: lastSectionNumber,
+		// 				sectionPageNumber: ++index,
+		// 			};
+		// 		});
+		// 	}
+		// 	newSectionTotalPages = {
+		// 		...newSectionTotalPages,
+		// 		[lastSectionNumber]: finalExtroPages.length,
+		// 	};
 
-			// load all feedback pages
-			lastSectionNumber++;
-			finalFeedbackPages = action.payload.feedback.map((page: RawPageType, index: number) => {
-				return {
-					pageNumber: ++lastPageNumber,
-					page,
-					screen: page.type,
-					section: SectionType.Feedback,
-					sectionNumber: lastSectionNumber,
-					sectionPageNumber: ++index,
-				};
-			});
-			newSectionTotalPages = {
-				...newSectionTotalPages,
-				[lastSectionNumber]: finalFeedbackPages.length,
-			};
+		// 	// load all feedback pages
+		// 	lastSectionNumber++;
+		// 	finalFeedbackPages = action.payload.feedback.map((page: RawPageType, index: number) => {
+		// 		return {
+		// 			pageNumber: ++lastPageNumber,
+		// 			page,
+		// 			screen: page.type,
+		// 			section: SectionType.Feedback,
+		// 			sectionNumber: lastSectionNumber,
+		// 			sectionPageNumber: ++index,
+		// 		};
+		// 	});
+		// 	newSectionTotalPages = {
+		// 		...newSectionTotalPages,
+		// 		[lastSectionNumber]: finalFeedbackPages.length,
+		// 	};
 
-			finalExtroPages.forEach((page: PageInterface) => {
-				newPages = { ...newPages, [page.pageNumber ?? 1]: page };
-			});
-			finalFeedbackPages.forEach((page: PageInterface) => {
-				newPages = { ...newPages, [page.pageNumber ?? 1]: page };
-			});
+		// 	finalExtroPages.forEach((page: PageInterface) => {
+		// 		newPages = { ...newPages, [page.pageNumber ?? 1]: page };
+		// 	});
+		// 	finalFeedbackPages.forEach((page: PageInterface) => {
+		// 		newPages = { ...newPages, [page.pageNumber ?? 1]: page };
+		// 	});
 
-			state.pages = newPages;
-			state.sectionTotalPages = { ...state.sectionTotalPages, ...newSectionTotalPages };
+		// 	state.pages = newPages;
+		// 	state.sectionTotalPages = { ...state.sectionTotalPages, ...newSectionTotalPages };
+		// },
+		reset: (state) => {
+			settingsSlice.actions.setMode(undefined);
+			settingsSlice.actions.skipPage(1);
+			settingsSlice.actions.setColorTheme(0);
+			settingsSlice.actions.setLanguage("en-CA");
 		},
 	},
+	selectors: {
+		getMode: (state: SettingsInterface) => state.mode,
+		getDevice: (state: SettingsInterface) => state.device,
+		getLanguage: (state: SettingsInterface) => state.language,
+		getDirectusAccessToken: (state: SettingsInterface) => state.directusAccessToken,
+		getColorTheme: (state: SettingsInterface) => state.colorTheme,
+		getCurrentPageNumber: (state: SettingsInterface) => state.currentPageNumber,
+		getCurrentPage: (state: SettingsInterface) => state.currentPage,
+		getNextPage: (state: SettingsInterface) => state.nextPage,
+		getButtons: (state: SettingsInterface) => state.buttons,
+		getPhrases: (state: SettingsInterface) => state.phrases,
+		getSectionTitles: (state: SettingsInterface) => state.sectionTitles,
+		getSectionTotalPages: (state: SettingsInterface) => state.sectionTotalPages,
+		getPages: (state: SettingsInterface) => state.pages,
+		getHistory: (state: SettingsInterface) => state.history,
+		getSetting: (state: SettingsInterface) => state,
+		getDirectusBaseEndpoint: (state: SettingsInterface) => state.directusBaseEndpoint,
+	},
 });
-
 
 export const {
 	setMode,
@@ -270,6 +297,7 @@ export const {
 	nextPage,
 	prevPage,
 	addPage,
+	setPage,
 	setButtons,
 	setPhrases,
 	setSectionTitles,
@@ -277,7 +305,27 @@ export const {
 	setKeyboardState,
 	removeExtroPages,
 	removeFeedbackPages,
-	reloadExtroFeedbackPages,
+	// reloadExtroFeedbackPages,
+	reset,
 } = settingsSlice.actions;
+
+export const {
+	getSetting,
+	getMode,
+	getDevice,
+	getLanguage,
+	getDirectusAccessToken,
+	getColorTheme,
+	getCurrentPageNumber,
+	getCurrentPage,
+	getNextPage,
+	getButtons,
+	getPhrases,
+	getSectionTitles,
+	getSectionTotalPages,
+	getPages,
+	getHistory,
+	getDirectusBaseEndpoint,
+} = settingsSlice.selectors;
 
 export default settingsSlice.reducer;

@@ -1,8 +1,9 @@
 import QuestionLabel from "components/kid/QuestionLabel";
-import React, { memo, useContext } from "react";
-import { SettingContext } from "store/settings";
+import React, { memo } from "react";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -15,16 +16,13 @@ function QuestionSubLabel({
 	customStyle = {},
 	textStyle = {},
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+	const device = useSelector(getDevice);
 
 	if (children !== null && children !== undefined && children !== "") {
 		return (
 			<QuestionLabel
 				textStyle={{
 					...GeneralStyle.adult.questionSubLabel,
-					// fontSize: device.isTablet ? 17 : 13,
-					// lineHeight: device.isTablet ? 21 : 17,
 					fontSize: moderateScale(
 						device.isTablet ? 12 : 12,
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,

@@ -49,6 +49,7 @@ export default function LanguageAdult(): React.ReactElement {
 	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const response = useSelector(getAllResponses);
 
 	// buttons
 	const backButton = useSelector(getBackButton);
@@ -107,7 +108,6 @@ export default function LanguageAdult(): React.ReactElement {
 
 	// set language default
 	useEffect(() => {
-		const response = useSelector(getAllResponses);
 		if (Object.keys(response).length === 0) {
 			dispatch(
 				newResponse({

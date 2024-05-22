@@ -33,6 +33,11 @@ import type PagePayloadInterface from "interface/directus/page-payload";
 import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 import ScreenType from "constants/screen_type";
 import type SectionPayloadInterface from "interface/directus/section-payload";
+import type {
+	Transportation7Interface,
+	Transportation8_10Interface,
+	Transportation9_11Interface,
+} from "interface/question17";
 
 const questionsSlice = createSlice({
 	name: "questions",
@@ -60,11 +65,11 @@ const questionsSlice = createSlice({
 		tryAgainPhrase: TryAgainPhrase,
 		successPage: SuccessPage,
 		errorPage: ErrorPage,
-		Transportation7,
-		Transportation8_10,
-		Transportation9_11,
+		Transportation7: Transportation7 satisfies Transportation7Interface,
+		Transportation8_10: Transportation8_10 satisfies Transportation8_10Interface,
+		Transportation9_11: Transportation9_11 satisfies Transportation9_11Interface,
 		sectionPages: [],
-	},
+	} satisfies any,
 	reducers: {
 		setRegionOption: (state: any, action: PayloadAction<RegionInterface[]>) => {
 			state.regionOption = action.payload;
@@ -90,6 +95,35 @@ const questionsSlice = createSlice({
 			state.sectionPages.push(action.payload);
 		},
 	},
+	selectors: {
+		getRegionOption: (state: any) => state.regionOption,
+		getLanguageOption: (state: any) => state.languageOption,
+		getIntroductoryPages: (state: any) => state.introductoryPages,
+		getQuestionPages: (state: any) => state.questionPages,
+		getKidExtroPages: (state: any) => state.kidExtroPages,
+		getAdultExtroPages: (state: any) => state.adultExtroPages,
+		getKidAgePage: (state: any) => state.kidAgePage,
+		getTeenAgePage: (state: any) => state.teenAgePage,
+		getAdultAgePage: (state: any) => state.adultAgePage,
+		getFeedbackExtroPages: (state: any) => state.feedbackExtroPages,
+		getBackButton: (state: any) => state.backButton,
+		getCompleteButton: (state: any) => state.completeButton,
+		getContinueButton: (state: any) => state.continueButton,
+		getGoButton: (state: any) => state.goButton,
+		getNextButton: (state: any) => state.nextButton,
+		getStartedButton: (state: any) => state.startedButton,
+		getAgreementPhrase: (state: any) => state.agreementPhrase,
+		getDonePhrase: (state: any) => state.donePhrase,
+		getDontKnowPhrase: (state: any) => state.dontKnowPhrase,
+		getIntroductionPhrase: (state: any) => state.introductionPhrase,
+		getTryAgainPhrase: (state: any) => state.tryAgainPhrase,
+		getSuccessPage: (state: any) => state.successPage,
+		getErrorPage: (state: any) => state.errorPage,
+		getTransportation7: (state: any) => state.Transportation7,
+		getTransportation8_10: (state: any) => state.Transportation8_10,
+		getTransportation9_11: (state: any) => state.Transportation9_11,
+		getSectionPages: (state: any) => state.sectionPages,
+	},
 });
 export const {
 	setRegionOption,
@@ -98,4 +132,35 @@ export const {
 	identifyLastSectionExtroPage,
 	addSectionPage,
 } = questionsSlice.actions;
+
+export const {
+	getSectionPages,
+	getRegionOption,
+	getLanguageOption,
+	getIntroductoryPages,
+	getQuestionPages,
+	getKidExtroPages,
+	getAdultExtroPages,
+	getKidAgePage,
+	getTeenAgePage,
+	getAdultAgePage,
+	getFeedbackExtroPages,
+	getBackButton,
+	getCompleteButton,
+	getContinueButton,
+	getGoButton,
+	getNextButton,
+	getStartedButton,
+	getAgreementPhrase,
+	getDonePhrase,
+	getDontKnowPhrase,
+	getIntroductionPhrase,
+	getTryAgainPhrase,
+	getSuccessPage,
+	getErrorPage,
+	getTransportation7,
+	getTransportation8_10,
+	getTransportation9_11,
+} = questionsSlice.selectors;
+
 export default questionsSlice.reducer;

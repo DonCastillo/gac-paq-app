@@ -1,10 +1,12 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DefaultStyle, GeneralStyle } from "styles/general";
-import { SettingContext } from "store/settings";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label";
 import RadioOption from "components/adults/subcomponents/RadioOption";
+import { useSelector } from "react-redux";
+
+import { getPhrases, getColorTheme, getCurrentPage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -17,8 +19,9 @@ export default function QuestionSlider({
 	selectedValue,
 	maxValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, phrases } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
+	const colorTheme = useSelector(getColorTheme);
+	const phrases = useSelector(getPhrases);
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState<number | PhraseLabel.DontKnow>(selectedValue ?? 0);
 	const [maxVal, setMaxVal] = useState<number>(maxValue ?? 10);

@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { TextInput, View, StyleSheet, ScrollView, Text } from "react-native";
-import { SettingContext } from "store/settings";
+import React from "react";
+import { TextInput, View, StyleSheet } from "react-native";
 import { Font, GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 
 interface QuestionInputPropsInterface {
 	onChange: (value: string) => void;
@@ -15,8 +16,7 @@ export default function QuestionTextarea({
 	selectedValue,
 	placeholder,
 }: QuestionInputPropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+	const device = useSelector(getDevice);
 
 	function changeHandler(value: string): void {
 		onChange(value);

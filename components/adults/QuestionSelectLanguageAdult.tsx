@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import type LanguageInterface from "interface/language";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import QuestionRadio from "components/adults/QuestionRadio";
-import { QuestionContext } from "store/questions";
 import { optionLanguage } from "utils/options";
+import { useSelector } from "react-redux";
+import { getLanguageOption } from "store/questions/questionsSlice";
 
 interface QuestionSelectLanguageAdultPropsInterface {
 	onChange: (value: string | null) => void;
@@ -15,8 +15,7 @@ export default function QuestionSelectLanguageAdult({
 	onChange,
 	selectedValue,
 }: QuestionSelectLanguageAdultPropsInterface): React.ReactElement {
-	const questionCtx = useContext(QuestionContext);
-	const options: LanguageInterface[] = questionCtx.questionState.languageOption;
+	const options: LanguageInterface[] = useSelector(getLanguageOption);
 	const itemsRaw: QuestionRadioItemInterface[] = optionLanguage(options);
 
 	function selectHandler(value: string | null): void {

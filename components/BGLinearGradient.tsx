@@ -1,11 +1,12 @@
-import React, { memo, useContext } from "react";
+import React, { memo } from "react";
 import { StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { SettingContext } from "store/settings";
+import { useSelector } from "react-redux";
+import { getColorTheme } from "store/settings/settingsSlice";
 
 function BGLinearGradient(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { grad100, grad200, grad300, grad400 } = settingCtx.settingState.colorTheme;
+	const colorTheme = useSelector(getColorTheme);
+	const { grad100, grad200, grad300, grad400 } = colorTheme;
 
 	return (
 		<LinearGradient

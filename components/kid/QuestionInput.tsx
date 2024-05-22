@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
-import { SettingContext } from "store/settings";
-import { TextInput, View, StyleSheet, ScrollView } from "react-native";
+import React from "react";
+import { TextInput, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
+import { useSelector } from "react-redux";
+import { getColorTheme } from "store/settings/settingsSlice";
 
 interface QuestionInputPropsInterface {
 	onChange: (value: string) => void;
@@ -14,8 +15,7 @@ export default function QuestionInput({
 	selectedValue,
 	placeholder,
 }: QuestionInputPropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 
 	function changeHandler(value: string): void {

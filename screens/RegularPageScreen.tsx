@@ -1,14 +1,23 @@
-import React, { useContext, useEffect, useState } from "react";
-import { SettingContext } from "store/settings";
+import React, { useEffect, useState } from "react";
 import { getScreen, getScreenType } from "utils/screen";
 import { getSectionType } from "utils/section";
 import ScreenType from "constants/screen_type";
 import KeyboardSafeview from "components/KeyboardSafeview";
 import { View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getMode,
+	nextPage,
+	setColorTheme,
+} from "store/settings/settingsSlice";
 
 export default function RegularPageScreen(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { currentPage, currentPageNumber, mode } = settingCtx.settingState;
+	const dispatch = useDispatch();
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const mode = useSelector(getMode);
 	const pageType = currentPage.screen !== null ? getScreenType(currentPage.screen) : null;
 	const sectionType = currentPage.section !== null ? getSectionType(currentPage.section) : null;
 	const [component, setComponent] = useState<React.ReactElement>(<></>);
@@ -17,7 +26,7 @@ export default function RegularPageScreen(): React.ReactElement {
 		let tempComponent = <></>;
 
 		if (currentPageNumber === 0) {
-			settingCtx.nextPage();
+			dispatch(nextPage());
 			// tempComponent = getScreen(mode, ScreenType.Language);
 		} else {
 			if (pageType !== null && sectionType !== null) {
@@ -28,7 +37,7 @@ export default function RegularPageScreen(): React.ReactElement {
 	}
 
 	function changeColor(): void {
-		settingCtx.setColorTheme(currentPage.sectionNumber ?? 0);
+		dispatch(setColorTheme(currentPage.sectionNumber ?? 0));
 	}
 
 	useEffect(() => {

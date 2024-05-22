@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import type LanguageInterface from "interface/language";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import DropDownSelector from "components/DropDownPicker";
-import { QuestionContext } from "store/questions";
 import { optionLanguage } from "utils/options";
 import { verticalScale } from "utils/responsive";
-import { SettingContext } from "store/settings";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
+import { getLanguageOption } from "store/questions/questionsSlice";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -20,10 +21,8 @@ export default function QuestionSelectLanguage({
 	dropdownOpen,
 	setDropdownOpen,
 }: PropsInterface): React.ReactElement {
-	const questionCtx = useContext(QuestionContext);
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
-	const options: LanguageInterface[] = questionCtx.questionState.languageOption;
+	const device = useSelector(getDevice);
+	const options: LanguageInterface[] = useSelector(getLanguageOption);
 	const itemsRaw: QuestionRadioItemInterface[] = optionLanguage(options);
 
 	return (

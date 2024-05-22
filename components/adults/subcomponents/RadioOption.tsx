@@ -1,10 +1,10 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
-import React, { useContext, useRef } from "react";
-import { SettingContext } from "store/settings";
-import { G } from "react-native-svg";
+import React, { useRef } from "react";
 import { moderateScale } from "utils/responsive";
 import { isOtherOption } from "utils/options";
+import { useSelector } from "react-redux";
+import { getColorTheme, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;
@@ -31,8 +31,8 @@ export default function RadioOption({
 	optionLabel,
 	optionSublabel,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device, colorTheme } = settingCtx.settingState;
+	const colorTheme = useSelector(getColorTheme);
+	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 

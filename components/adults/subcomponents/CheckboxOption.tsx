@@ -1,9 +1,10 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
-import React, { useContext, useRef } from "react";
-import { SettingContext } from "store/settings";
+import React, { useRef } from "react";
 import { moderateScale } from "utils/responsive";
 import { isOtherOption } from "utils/options";
+import { useSelector } from "react-redux";
+import { getColorTheme, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;
@@ -26,8 +27,8 @@ export default function CheckboxOption({
 	autofocusOtherField = false,
 	defaultOtherInputValue,
 }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, device } = settingCtx.settingState;
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 
