@@ -9,4 +9,7 @@ export const store = configureStore({
 		questions: questionsSlice,
 		settings: settingsSlice,
 	},
+	middleware: getDefaultMiddleware => getDefaultMiddleware({
+		serializableCheck: false,
+	}),
 });
