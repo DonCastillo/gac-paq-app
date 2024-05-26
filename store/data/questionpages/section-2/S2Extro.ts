@@ -18,12 +18,12 @@ const S2Extro: ExtroPayloadInterface = {
 			},
 			images: {
 				adult: {
-					phone: "",
-					tablet: "",
+					phone: Images.adults.extro.section_2.phone,
+					tablet: Images.adults.extro.section_2.tablet,
 				},
 				teen: {
-					phone: "",
-					tablet: "",
+					phone: Images.adults.extro.section_2.phone,
+					tablet: Images.adults.extro.section_2.tablet,
 				},
 			},
 		},

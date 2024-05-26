@@ -110,9 +110,6 @@ function StateAdult({ state }: Props): React.ReactElement {
 		}
 	}
 
-	console.log("SuccessImage: ", SuccessImage);
-	console.log("ErrorImage: ", ErrorImage);
-
 	if (!loading) {
 		return (
 			<View style={styles.container}>

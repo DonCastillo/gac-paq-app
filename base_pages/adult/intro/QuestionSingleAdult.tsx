@@ -32,7 +32,7 @@ import {
 } from "store/settings/settingsSlice";
 import { getRegionOption } from "store/questions/questionsSlice";
 import { getAllResponses, newResponse } from "store/responses/responsesSlice";
-import { reloadExtroFeedbackPages } from "utils/load";
+import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const dispatch = useDispatch();

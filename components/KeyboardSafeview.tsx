@@ -1,31 +1,31 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback, View } from "react-native";
-import { SettingContext } from "store/settings";
+import { useDispatch, useSelector } from "react-redux";
+import { getDevice, setKeyboardState } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;
 }
 
 export default function KeyboardSafeview({ children }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { settingState, setKeyboardState } = settingCtx;
-	const { device } = settingState;
+	const dispatch = useDispatch();
+	const device = useSelector(getDevice);
 
 	useEffect(() => {
 		const keyboardDidShow = Keyboard.addListener("keyboardDidShow", () => {
-			setKeyboardState(true);
+			dispatch(setKeyboardState(true));
 		});
 
 		const keyboardDidHide = Keyboard.addListener("keyboardDidHide", () => {
-			setKeyboardState(false);
+			dispatch(setKeyboardState(false));
 		});
 
 		const keyboardWillHide = Keyboard.addListener("keyboardWillHide", () => {
-			setKeyboardState(false);
+			dispatch(setKeyboardState(false));
 		});
 
 		const keyboardWillShow = Keyboard.addListener("keyboardWillShow", () => {
-			setKeyboardState(true);
+			dispatch(setKeyboardState(true));
 		});
 
 		return () => {

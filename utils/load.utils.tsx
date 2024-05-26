@@ -1,0 +1,28 @@
+import type RegionInterface from "interface/region";
+import type LanguageInterface from "interface/language";
+import { FlagIcons } from "styles/flags";
+import Regions from "store/data/regions";
+import Languages from "store/data/languages";
+
+const loadRegionsOffline = (): RegionInterface[] => {
+	return Regions.map((region: RegionInterface) => {
+		return {
+			...region,
+			flag: region.code !== "" ? FlagIcons[region.code.toLowerCase()] : null,
+		};
+	});
+};
+
+const loadLanguagesOffline = (): LanguageInterface[] => {
+	return Languages.map((language: LanguageInterface) => {
+		return {
+			...language,
+			flag:
+				language.flag_code !== "" && language.flag_code !== undefined
+					? FlagIcons[language.flag_code.toLowerCase()]
+					: null,
+		};
+	});
+};
+
+export { loadRegionsOffline, loadLanguagesOffline };

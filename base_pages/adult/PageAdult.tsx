@@ -34,8 +34,6 @@ export default function PageAdult(): React.ReactElement {
 	const { color100 } = colorTheme;
 	const translatedPage: any = translate(currentPage.page.translations, language);
 
-	console.log("Page Adult ...");
-
 	// set button component dynamically
 	useEffect(() => {
 		if (currentPageNumber > 0) {

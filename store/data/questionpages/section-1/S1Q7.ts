@@ -25,8 +25,8 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 						text: "Not moving",
 						value: "0.1",
 						images: {
-							kid: "",
-							adult: "",
+							kid: Images.kids.options.breaks.not_moving,
+							adult: Images.adults.options.breaks.not_moving,
 						},
 					},
 				},
@@ -37,8 +37,8 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 						text: "Easy effort",
 						value: "0.3",
 						images: {
-							kid: "",
-							adult: "",
+							kid: Images.kids.options.breaks.easy_effort,
+							adult: Images.adults.options.breaks.easy_effort,
 						},
 					},
 				},
@@ -49,8 +49,8 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 						text: "Medium or hard effort",
 						value: "0.5",
 						images: {
-							kid: "",
-							adult: "",
+							kid: Images.kids.options.breaks.medium_effort,
+							adult: Images.adults.options.breaks.medium_effort,
 						},
 					},
 				},
@@ -61,8 +61,8 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 						text: "Don't know",
 						value: "0",
 						images: {
-							kid: "",
-							adult: "",
+							kid: Images.general.donotknow,
+							adult: Images.general.donotknow,
 						},
 					},
 				},

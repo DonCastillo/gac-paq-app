@@ -34,8 +34,8 @@ import {
 	prevPage,
 	setMode,
 } from "store/settings/settingsSlice";
-import { reloadExtroFeedbackPages } from "utils/load";
 import { getAllResponses, newResponse } from "store/responses/responsesSlice";
+import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const dispatch = useDispatch();

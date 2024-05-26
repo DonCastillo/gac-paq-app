@@ -13,8 +13,8 @@ interface PropsInterface {
 }
 
 function ProgressBar({
-	currentSectionPage,
-	sectionPageTotal,
+	currentSectionPage = 1,
+	sectionPageTotal = 1,
 	filledColor = "#fff",
 	unfilledColor = "rgba(255, 255, 255, 0.82)",
 }: PropsInterface): React.ReactElement {

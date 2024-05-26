@@ -32,7 +32,7 @@ import {
 	setMode,
 } from "store/settings/settingsSlice";
 import { getAllResponses, newResponse } from "store/responses/responsesSlice";
-import { reloadExtroFeedbackPages } from "utils/load";
+import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const dispatch = useDispatch();

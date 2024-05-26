@@ -1,4 +1,4 @@
-import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import Regions from "store/data/regions";
 import Languages from "store/data/languages";
 import IntroductoryPages from "store/data/introductory-pages";
@@ -27,17 +27,12 @@ import ErrorPage from "store/data/state-pages/error";
 import Transportation7 from "store/data/questionpages/section-4/transportation_7/S4Q7a";
 import Transportation8_10 from "store/data/questionpages/section-4/transportation_7/S4Q8_10";
 import Transportation9_11 from "store/data/questionpages/section-4/transportation_7/S4Q9_11";
-import type RegionInterface from "interface/region";
-import type LanguageInterface from "interface/language";
-import type PagePayloadInterface from "interface/directus/page-payload";
-import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
 import type {
 	Transportation7Interface,
 	Transportation8_10Interface,
 	Transportation9_11Interface,
 } from "interface/question17";
+import reducersActions from "./questionsReducers";
 
 const questionsSlice = createSlice({
 	name: "questions",
@@ -71,29 +66,11 @@ const questionsSlice = createSlice({
 		sectionPages: [],
 	} satisfies any,
 	reducers: {
-		setRegionOption: (state: any, action: PayloadAction<RegionInterface[]>) => {
-			state.regionOption = action.payload;
-		},
-		setLanguageOption: (state: any, action: PayloadAction<LanguageInterface[]>) => {
-			state.languageOption = action.payload;
-		},
-		setIntroductoryPages: (
-			state: any,
-			action: PayloadAction<Array<PagePayloadInterface | QuestionDropdownPayloadInterface>>,
-		) => {
-			state.introductoryPages = action.payload;
-		},
-		identifyLastSectionExtroPage: (state: any) => {
-			const feedbackExtroPages = state.feedbackExtroPages;
-			const lastSectionExtroIndex = feedbackExtroPages.findLastIndex((page: any) => {
-				return page.type === ScreenType.ExtroQuestion;
-			});
-			feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
-			state.feedbackExtroPages = feedbackExtroPages;
-		},
-		addSectionPage: (state: any, action: PayloadAction<SectionPayloadInterface>) => {
-			state.sectionPages.push(action.payload);
-		},
+		setRegionOption: reducersActions.setRegionOption,
+		setLanguageOption: reducersActions.setLanguageOption,
+		setIntroductoryPages: reducersActions.setIntroductoryPages,
+		identifyLastSectionExtroPage: reducersActions.identifyLastSectionExtroPage,
+		addSectionPage: reducersActions.addSectionPage,
 	},
 	selectors: {
 		getRegionOption: (state: any) => state.regionOption,

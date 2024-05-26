@@ -1,98 +1,19 @@
-import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
-import SectionType from "constants/section_type";
+import { createSlice } from "@reduxjs/toolkit";
 import type ResponseInterface from "interface/response";
+import reducersActions from "./responsesReducers";
 
 const responsesSlice = createSlice({
 	name: "responses",
 	initialState: {} satisfies Record<string, ResponseInterface>,
 	reducers: {
-		newResponse: (state, action: PayloadAction<ResponseInterface>) => {
-			const newResponse = {
-				ident: action.payload.ident,
-				label: action.payload.label,
-				answer: action.payload.answer,
-				pageNumber: action.payload.pageNumber,
-				mode: action.payload.mode,
-				section: action.payload.section,
-				sectionNumber: action.payload.sectionNumber,
-				sectionPageNumber: action.payload.sectionPageNumber,
-			};
-			let propertyName = "";
-
-			if (newResponse.section === SectionType.Extro) {
-				propertyName = `[${newResponse.mode}][${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
-			} else {
-				propertyName = `[${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
-			}
-			state[propertyName] = newResponse;
-		},
-		clearResponseByIdent: (state, action: PayloadAction<string>) => {
-			const newState = {};
-			for (const [key, value] of Object.entries(state)) {
-				const responseValue = value as ResponseInterface;
-				if (responseValue.ident !== action.payload) {
-					newState[key] = value;
-				}
-			}
-			state = newState;
-		},
-		clearUnansweredResponses: (state) => {
-			const newState = {};
-			for (const [key, value] of Object.entries(state)) {
-				const responseValue = value as ResponseInterface;
-				if (
-					responseValue.answer !== null &&
-					responseValue.answer !== "" &&
-					responseValue.answer !== undefined
-				) {
-					newState[key] = value;
-				}
-			}
-			state = newState;
-		},
-		clearQuestionResponses: (state) => {
-			const newState = {};
-			for (const [key, value] of Object.entries(state)) {
-				const responseValue = value as ResponseInterface;
-				if (responseValue.section !== SectionType.Question) {
-					newState[key] = value;
-				}
-			}
-			state = newState;
-		},
-		clearIntroResponses: (state) => {
-			const newState = {};
-			for (const [key, value] of Object.entries(state)) {
-				const responseValue = value as ResponseInterface;
-				if (responseValue.section !== SectionType.Intro) {
-					newState[key] = value;
-				}
-			}
-			state = newState;
-		},
-		clearFeedbackResponses: (state) => {
-			const newState = {};
-			for (const [key, value] of Object.entries(state)) {
-				const responseValue = value as ResponseInterface;
-				if (responseValue.section !== SectionType.Feedback) {
-					newState[key] = value;
-				}
-			}
-			state = newState;
-		},
-		clearExtroResponses: (state) => {
-			const newState = {};
-			for (const [key, value] of Object.entries(state)) {
-				const responseValue = value as ResponseInterface;
-				if (responseValue.section !== SectionType.Extro) {
-					newState[key] = value;
-				}
-			}
-			state = newState;
-		},
-		resetResponses: (state) => {
-			state = {};
-		},
+		newResponse: reducersActions.newResponse,
+		clearResponseByIdent: reducersActions.clearResponseByIdent,
+		clearUnansweredResponses: reducersActions.clearUnansweredResponses,
+		clearQuestionResponses: reducersActions.clearQuestionResponses,
+		clearIntroResponses: reducersActions.clearIntroResponses,
+		clearFeedbackResponses: reducersActions.clearFeedbackResponses,
+		clearExtroResponses: reducersActions.clearExtroResponses,
+		resetResponses: reducersActions.resetResponses,
 	},
 	selectors: {
 		getAllResponses: (state): Record<string, ResponseInterface> => state,

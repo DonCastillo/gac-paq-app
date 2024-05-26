@@ -22,16 +22,16 @@ const S4Preamble: PreamblePayloadInterface = {
 			},
 			images: {
 				kid: {
-					phone: "",
-					tablet: "",
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
 				},
 				adult: {
-					phone: "",
-					tablet: "",
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
 				},
 				teen: {
-					phone: "",
-					tablet: "",
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
 				},
 			},
 		},

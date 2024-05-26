@@ -14,7 +14,8 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true,
-			"requireFullScreen": true
+			"requireFullScreen": true,
+			"bundleIdentifier": "com.uleth.gacpaq"
 		},
 		"android": {
 			"adaptiveIcon": {

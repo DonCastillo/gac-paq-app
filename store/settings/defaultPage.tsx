@@ -1,5 +1,7 @@
-import type ScreenType from "constants/screen_type";
-import type SectionType from "constants/section_type";
+import ScreenType from "constants/screen_type";
+import SectionType from "constants/section_type";
+import AboutPage from "store/data/introductory-pages/about";
+import LanguagePage from "store/data/introductory-pages/language";
 
 export interface PageInterface {
 	screen: ScreenType | null;
@@ -15,17 +17,20 @@ export interface PageInterface {
 	sectionPageNumber: number | null;
 }
 
-const defaultPage: PageInterface = {
-	page: {
-		name: null,
-		type: null,
-		translations: [],
-	},
-	pageNumber: null,
-	screen: null,
-	section: null,
-	sectionNumber: null,
-	sectionPageNumber: null,
+export const currentDefaultPage: PageInterface = {
+	page: LanguagePage,
+	pageNumber: 1,
+	screen: ScreenType.Language,
+	section: SectionType.Intro,
+	sectionNumber: 0,
+	sectionPageNumber: 1,
 };
 
-export default defaultPage;
+export const nextDefaultPage: PageInterface = {
+	page: AboutPage,
+	pageNumber: 2,
+	screen: ScreenType.Page,
+	section: SectionType.Intro,
+	sectionNumber: 0,
+	sectionPageNumber: 2,
+};

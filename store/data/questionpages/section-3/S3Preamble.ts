@@ -23,16 +23,16 @@ const S3Preamble: PreamblePayloadInterface = {
 			},
 			images: {
 				kid: {
-					phone: "",
-					tablet: "",
+					phone: Images.kids.intro.section_3.phone,
+					tablet: Images.kids.intro.section_3.tablet,
 				},
 				adult: {
-					phone: "",
-					tablet: "",
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
 				},
 				teen: {
-					phone: "",
-					tablet: "",
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
 				},
 			},
 		},

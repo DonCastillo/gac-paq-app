@@ -148,28 +148,4 @@ function getScreen(
 	else return <></>;
 }
 
-function getScreenType(screenType: string): ScreenType {
-	if (screenType === "page") {
-		return ScreenType.Page;
-	} else if (screenType === "language") {
-		return ScreenType.Language;
-	} else if (screenType === "region") {
-		return ScreenType.Region;
-	} else if (screenType === "splash") {
-		return ScreenType.Splash;
-	} else if (screenType === "question_single") {
-		return ScreenType.SingleQuestion;
-	} else if (screenType === "question_intro") {
-		return ScreenType.IntroQuestion;
-	} else if (screenType === "question_extro") {
-		return ScreenType.ExtroQuestion;
-	} else if (screenType === "single_checkbox") {
-		return ScreenType.SingleCheckbox;
-	} else if (screenType === "preamble") {
-		return ScreenType.Preamble;
-	} else {
-		return ScreenType.Page;
-	}
-}
-
-export { getScreen, getScreenType };
+export { getScreen };
