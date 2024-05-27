@@ -1,21 +1,19 @@
-import type Mode from "constants/mode";
 import SectionType from "constants/section_type";
 import type ResponseInterface from "interface/response";
+import type { FinalResponseType } from "interface/union.type";
+import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
 import { store } from "store/store";
+import { falsyValue } from "./utils.utils";
 
-type modeType = Mode.Kid | Mode.Adult | Mode.Teen | undefined;
+const getResponse = (): string | null => {
+	const { currentPage } = store.getState().settings;
+	const mode = store.getState().settings.mode;
+	const section = currentPage.section;
+	const sectionNumber = currentPage.sectionNumber;
+	const sectionPageNumber = currentPage.sectionPageNumber;
+	const responses = store.getState().responses as Record<string, ResponseInterface>;
 
-function getResponse(
-	mode: modeType,
-	section: string | null,
-	sectionNumber: number | null,
-	sectionPageNumber: number | null,
-	responses: Record<string, ResponseInterface>,
-): string | null {
-	if (section === null) return null;
-	if (sectionNumber === null) return null;
-	if (sectionPageNumber === null) return null;
-	if (Object.keys(responses).length === 0) return null;
+	if (Object.keys(responses).length <= 0) return null;
 
 	let labelLookup = "";
 	if (section === SectionType.Extro) {
@@ -23,26 +21,24 @@ function getResponse(
 	} else {
 		labelLookup = `[${section}][${sectionNumber}][${sectionPageNumber}]`;
 	}
-
 	const response = responses[labelLookup];
-
-	if (response === undefined || response === null) {
+	if (falsyValue(response) || falsyValue(response?.answer)) {
 		return null;
 	} else {
 		return response.answer;
 	}
-}
+};
 
-function sanitizeResponse(
-	responses: Record<string, ResponseInterface>,
-	mode: modeType,
-): Record<string, string | string[]> | Record<string, Record<string, string | string[]>> {
-	const sanitizedResponse:
-		| Record<string, string | string[]>
-		| Record<string, Record<string, string | string[]>> = {};
+function sanitizeResponse(): FinalResponseType {
+	const sanitizedResponse: FinalResponseType = {};
+	const mode = store.getState().settings.mode;
+	const responses = store.getState().responses as Record<string, ResponseInterface>;
 
 	// FILTER RESPONSES
 	sanitizedResponse.questions = {};
+
+	// remove empty answers
+	store.dispatch(clearUnansweredResponses());
 
 	for (const [key, value] of Object.entries(responses)) {
 		// remove empty answers
@@ -57,7 +53,6 @@ function sanitizeResponse(
 		if (value.section === SectionType.Question) {
 			const label = (value.label ?? key).replace(/(\r\n|\n|\r)/g, "");
 			if (value.answer.includes(" | ")) {
-				console.log("value.answer: ", value.answer.split(" | "));
 				sanitizedResponse.questions = {
 					...sanitizedResponse.questions,
 					[label]: value.answer.split(" | "),
@@ -90,25 +85,40 @@ function sanitizeResponse(
 
 const getResponseByIdent = (ident: string): string | string[] | null => {
 	const responses = store.getState().responses;
-	if (ident === null || ident === "") return null;
+	if (falsyValue(ident)) return null;
 	if (Object.keys(responses).length === 0) return null;
 
 	const finalResponse: ResponseInterface | undefined = Object.values(responses).find(
 		(response: ResponseInterface) => response?.ident === ident,
 	) as ResponseInterface;
-	if (finalResponse === undefined || finalResponse === null) {
+
+	if (falsyValue(finalResponse) || falsyValue(finalResponse?.answer)) {
 		return null;
 	}
+
 	if (
-		finalResponse?.answer === null ||
-		finalResponse?.answer === "" ||
-		finalResponse?.answer === undefined
+		finalResponse?.answer !== null &&
+		finalResponse?.answer !== undefined &&
+		finalResponse?.answer.includes(" | ")
 	) {
-		return null;
-	}
-	if (finalResponse?.answer?.includes(" | ")) {
 		return finalResponse?.answer.split(" | ");
 	}
 	return finalResponse?.answer;
 };
-export { getResponse, sanitizeResponse, getResponseByIdent };
+
+const addResponse = (value: string | null): void => {
+	const { currentPage } = store.getState().settings;
+	store.dispatch(
+		newResponse({
+			ident: currentPage.page.ident,
+			label: currentPage.page.name,
+			answer: value,
+			pageNumber: currentPage.pageNumber,
+			mode: store.getState().settings.mode,
+			section: currentPage.section,
+			sectionNumber: currentPage.sectionNumber,
+			sectionPageNumber: currentPage.sectionPageNumber,
+		}),
+	);
+};
+export { getResponse, sanitizeResponse, getResponseByIdent, addResponse };

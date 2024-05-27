@@ -38,7 +38,6 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { getQuestion17Label } from "utils/label";
-import { getAllResponses, newResponse } from "store/responses/responsesSlice";
 import { proceedPage } from "utils/navigation";
 
 export default function QuestionSingleKid(): React.ReactElement {
@@ -49,7 +48,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
-	const response = useSelector(getAllResponses);
 
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);

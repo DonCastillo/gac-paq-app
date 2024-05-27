@@ -27,7 +27,7 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation";
-import { getAllResponses, resetResponses } from "store/responses/responsesSlice";
+import { resetResponses } from "store/responses/responsesSlice";
 
 export default function QuestionExtroAdult(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -36,7 +36,6 @@ export default function QuestionExtroAdult(): React.ReactElement {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
-	const allResponses = useSelector(getAllResponses);
 
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -82,7 +81,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		try {
 			setLoading(true);
 
-			const sanitizedResponses = sanitizeResponse(allResponses, mode);
+			const sanitizedResponses = sanitizeResponse();
 			console.log("sanitized responses: ", sanitizedResponses);
 			// await submitResponse(
 			// 	sanitizedResponses,

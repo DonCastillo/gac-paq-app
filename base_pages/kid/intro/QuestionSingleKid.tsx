@@ -13,7 +13,6 @@ import QuestionSelectRegion from "components/kid/QuestionSelectRegion";
 import { addResponse, getResponse } from "utils/response";
 import { getIntroductoryBackground } from "utils/background";
 import QuestionInput from "components/kid/QuestionInput";
-import Mode from "constants/mode";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive";
 import Toolbar from "components/kid/subcomponents/Toolbar";
@@ -29,10 +28,7 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
-	setMode,
 } from "store/settings/settingsSlice";
-import { getAllResponses, newResponse } from "store/responses/responsesSlice";
-import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
 import { changeMode } from "utils/mode.utils";
 
 export default function QuestionSingleKid(): React.ReactElement {
@@ -43,7 +39,6 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
-	const response = useSelector(getAllResponses);
 
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);

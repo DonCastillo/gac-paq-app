@@ -15,7 +15,6 @@ import QuestionRadio from "components/adults/QuestionRadio";
 import { addResponse, getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionInput from "components/adults/QuestionInput";
-import Mode from "constants/mode";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background";
@@ -31,10 +30,7 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
-	setMode,
 } from "store/settings/settingsSlice";
-import { getAllResponses, newResponse } from "store/responses/responsesSlice";
-import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
 import { changeMode } from "utils/mode.utils";
 
 export default function GenericSingleQuestion(): React.ReactElement {
@@ -45,7 +41,6 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
-	const response = useSelector(getAllResponses);
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 

@@ -36,7 +36,6 @@ import {
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { getAllResponses, newResponse } from "store/responses/responsesSlice";
 import { proceedPage } from "utils/navigation";
 import { getQuestion17Label } from "utils/label";
 

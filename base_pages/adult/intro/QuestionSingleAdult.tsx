@@ -14,7 +14,6 @@ import { optionRegion, optionText } from "utils/options";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { addResponse, getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import Mode from "constants/mode";
 import QuestionInput from "components/adults/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
@@ -28,11 +27,8 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
-	setMode,
 } from "store/settings/settingsSlice";
 import { getRegionOption } from "store/questions/questionsSlice";
-import { getAllResponses, newResponse } from "store/responses/responsesSlice";
-import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
 import { changeMode } from "utils/mode.utils";
 
 export default function QuestionSingleAdult(): React.ReactElement {
@@ -41,7 +37,6 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
-	const response = useSelector(getAllResponses);
 
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);

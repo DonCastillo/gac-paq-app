@@ -5,6 +5,9 @@ import type QuestionRadioPayloadInterface from "interface/directus/question-radi
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
 
 export type ModeType = Mode.Adult | Mode.Teen | Mode.Kid | undefined;
+export type FinalResponseType =
+	| Record<string, string | string[]>
+	| Record<string, Record<string, string | string[]>>;
 export type RawPageType =
 	| SectionPayloadInterface
 	| ExtroPayloadInterface

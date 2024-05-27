@@ -23,24 +23,21 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getLanguage,
-	getMode,
 	getSectionTotalPages,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation";
-import { getAllResponses, resetResponses } from "store/responses/responsesSlice";
+import { resetResponses } from "store/responses/responsesSlice";
 
 export default function QuestionExtroKid(): React.ReactElement {
 	console.log("question extro kid ...");
 	const dispatch = useDispatch();
 
-	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
-	const allResponses = useSelector(getAllResponses);
 
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -89,7 +86,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 
 			// throw new Error("testing error page");
 
-			const sanitizedResponses = sanitizeResponse(allResponses, mode);
+			const sanitizedResponses = sanitizeResponse();
 			console.log("sanitized responses: ", sanitizedResponses);
 			// await submitResponse(
 			// 	sanitizedResponses,
