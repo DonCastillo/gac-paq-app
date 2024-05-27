@@ -67,15 +67,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	// set selected value
 	useEffect(() => {
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(
-				getResponse(
-					mode,
-					currentPage.section,
-					currentPage.sectionNumber,
-					currentPage.sectionPageNumber,
-					response,
-				),
-			);
+			setSelectedValue(getResponse());
 		}
 	}, [currentPageNumber]);
 

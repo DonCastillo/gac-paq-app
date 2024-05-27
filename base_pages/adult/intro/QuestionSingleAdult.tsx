@@ -106,15 +106,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 
 	useEffect(() => {
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(
-				getResponse(
-					mode,
-					currentPage.section,
-					currentPage.sectionNumber,
-					currentPage.sectionPageNumber,
-					response,
-				),
-			);
+			setSelectedValue(getResponse());
 		}
 	}, [currentPageNumber]);
 

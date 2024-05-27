@@ -87,15 +87,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	// fetch response for this question
 	useEffect(() => {
 		if (Object.keys(response).length > 0) {
-			setSelectedValue(
-				getResponse(
-					mode,
-					currentPage.section,
-					currentPage.sectionNumber,
-					currentPage.sectionPageNumber,
-					response,
-				),
-			);
+			setSelectedValue(getResponse());
 		}
 	}, [currentPageNumber]);
 
