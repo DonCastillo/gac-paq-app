@@ -1,5 +1,5 @@
 import type LanguageInterface from "interface/language";
-import type QuestionField from "constants/question_field";
+import type QuestionField from "constants/question_field.enum";
 
 interface Field {
 	type: QuestionField.QuestionFieldText | QuestionField.QuestionFieldNumber;
