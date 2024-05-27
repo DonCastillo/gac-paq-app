@@ -66,9 +66,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 
 	// set selected value
 	useEffect(() => {
-		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse());
-		}
+		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
 	// save response

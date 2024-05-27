@@ -115,9 +115,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}, [selectedValue]);
 
 	useEffect(() => {
-		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse());
-		}
+		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
 	/**

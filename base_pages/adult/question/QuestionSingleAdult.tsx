@@ -81,10 +81,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 
 	// fetch response for this question
 	useEffect(() => {
-		const response = useSelector(getAllResponses);
-		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse());
-		}
+		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
 	// set button component dynamically

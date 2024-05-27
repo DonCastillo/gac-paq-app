@@ -86,9 +86,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 
 	// fetch response for this question
 	useEffect(() => {
-		if (Object.keys(response).length > 0) {
-			setSelectedValue(getResponse());
-		}
+		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
 	// set background screen dynamically
