@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
-import { translate } from "utils/page";
+import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -13,10 +13,10 @@ import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import { useNavigation } from "@react-navigation/native";
 import ImageBackdrop from "components/ImageBackdrop";
-import { getImageBackground } from "utils/background";
+import { getImageBackground } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import { sanitizeResponse } from "utils/response";
+import { sanitizeResponse } from "utils/response.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
@@ -26,7 +26,7 @@ import {
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { proceedPage } from "utils/navigation";
+import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
 
 export default function QuestionExtroAdult(): React.ReactElement {

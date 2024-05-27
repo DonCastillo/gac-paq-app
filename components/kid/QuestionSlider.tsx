@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
-import { SettingContext } from "store/settings";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label";
-import { horizontalScale } from "utils/responsive";
+import { horizontalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getPhrases, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 

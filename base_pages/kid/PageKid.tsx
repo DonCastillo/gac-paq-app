@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { getIntroductoryBackground } from "utils/background";
+import { getIntroductoryBackground } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ScrollContainer from "components/ScrollContainer";

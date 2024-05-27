@@ -6,29 +6,29 @@ import * as ScreenOrientation from "expo-screen-orientation";
 const BASE_WIDTH = 375;
 const BASE_HEIGHT = 812;
 
-function getWidth(): number {
+const getWidth = (): number => {
 	const { width } = Dimensions.get("window");
 	return width;
-}
+};
 
-function getHeight(): number {
+const getHeight = (): number => {
 	const { height } = Dimensions.get("window");
 	return height;
-}
+};
 
-function getOS(): string {
+const getOS = (): string => {
 	return Platform.OS;
-}
+};
 
-function isTab(): boolean {
+const isTab = (): boolean => {
 	if (getWidth() > 550) {
 		return true;
 	} else {
 		return false;
 	}
-}
+};
 
-function getDeviceInfo(orientationInfo): DeviceInterface {
+const getDeviceInfo = (orientationInfo): DeviceInterface => {
 	let orientation = OrientationType.Portrait;
 	switch (orientationInfo) {
 		case 1:
@@ -51,36 +51,36 @@ function getDeviceInfo(orientationInfo): DeviceInterface {
 		isTablet: isTab(),
 		isKeyboardOpen: false,
 	};
-}
+};
 
-async function getInitialDeviceInfo(): Promise<DeviceInterface> {
+const getInitialDeviceInfo = async (): Promise<DeviceInterface> => {
 	const orientation = await ScreenOrientation.getOrientationAsync();
 	return getDeviceInfo(orientation);
-}
+};
 
-function horizontalScale(size: number, width: number = BASE_WIDTH): number {
+const horizontalScale = (size: number, width: number = BASE_WIDTH): number => {
 	const newSize = size * (width / BASE_WIDTH);
 	if (getOS() === "ios") {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize));
 	} else {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
 	}
-}
+};
 
-function verticalScale(size: number, height: number = BASE_HEIGHT): number {
+const verticalScale = (size: number, height: number = BASE_HEIGHT): number => {
 	const newSize = size * (height / BASE_HEIGHT);
 	if (getOS() === "ios") {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize));
 	} else {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
 	}
-}
-function moderateScale(
+};
+const moderateScale = (
 	size: number,
 	width: number = BASE_WIDTH,
 	minSize: number = 16,
 	maxSize: number = 60,
-): number {
+): number => {
 	const factor = 0.5;
 	const newSize = size + (horizontalScale(size, width) - size) * factor;
 	let finalSize = newSize;
@@ -91,21 +91,6 @@ function moderateScale(
 	}
 
 	return finalSize;
-	// if (finalSize < minSize) {
-	// 	return minSize;
-	// } else if (finalSize > maxSize) {
-	// 	return maxSize;
-	// } else {
-	// 	return finalSize;
-	// }
-}
-
-// function isScreenHeight770(): boolean {
-// 	if (getHeight() > 740 && getHeight() < 760) {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// }
+};
 
 export { getDeviceInfo, getInitialDeviceInfo, horizontalScale, verticalScale, moderateScale };

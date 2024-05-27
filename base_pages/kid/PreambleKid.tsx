@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateText } from "utils/page";
+import { translate, translateText } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import Toolbar from "components/kid/subcomponents/Toolbar";

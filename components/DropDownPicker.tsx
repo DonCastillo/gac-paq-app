@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
 

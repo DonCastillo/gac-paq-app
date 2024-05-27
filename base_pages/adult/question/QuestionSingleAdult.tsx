@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateQuestionLabel } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions";
+import { getQuestionType } from "utils/questions.utils";
 import QuestionType from "constants/question_type";
 import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
-import { optionRadioItemMode, optionText } from "utils/options";
+import { optionRadioItemMode, optionText } from "utils/options.utils";
 import QuestionRadio from "components/adults/QuestionRadio";
 import QuestionRadioImage from "components/adults/QuestionRadioImage";
-import { addResponse, getResponse } from "utils/response";
-import { intToString, stringToInt } from "utils/translate";
+import { addResponse, getResponse } from "utils/response.utils";
+import { intToString, stringToInt } from "utils/translate.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/adults/QuestionInput";
@@ -26,7 +26,7 @@ import QuestionTextarea from "components/adults/QuestionTextarea";
 import QuestionCheckbox from "components/adults/QuestionCheckbox";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
@@ -36,8 +36,8 @@ import {
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { proceedPage } from "utils/navigation";
-import { getQuestion17Label } from "utils/label";
+import { proceedPage } from "utils/navigation.utils";
+import { getQuestion17Label } from "utils/label.utils";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const dispatch = useDispatch();

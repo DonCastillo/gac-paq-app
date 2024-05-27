@@ -1,6 +1,6 @@
 import defaultColor from "./defaultColor";
 import Colors from "store/data/colors";
-import { getPage } from "utils/page";
+import { getPage } from "utils/page.utils";
 import SectionType from "constants/section_type";
 import type {
 	SetModeFuncType,

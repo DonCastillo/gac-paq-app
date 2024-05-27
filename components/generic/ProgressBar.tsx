@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import * as Progress from "react-native-progress";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 
 interface PropsInterface {
 	currentSectionPage: number | null;

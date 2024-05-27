@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { translate } from "utils/page";
+import { translate } from "utils/page.utils";
 import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Main from "components/Main";
 import BottomMain from "components/orientation/BottomMain";
 import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
-import { getImageBackground } from "utils/background";
+import { getImageBackground } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getColorTheme,
@@ -20,7 +20,7 @@ import {
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { proceedPage } from "utils/navigation";
+import { proceedPage } from "utils/navigation.utils";
 
 export default function QuestionIntroAdult(): React.ReactElement {
 	const dispatch = useDispatch();

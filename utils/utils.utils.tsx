@@ -1,5 +1,5 @@
 const falsyValue = (value: any): boolean => {
-	return [undefined, null, ""].includes(value);
+	return value === undefined || value === null || value === "";
 };
 
 export { falsyValue };

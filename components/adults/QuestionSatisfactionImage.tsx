@@ -1,8 +1,8 @@
 import { View, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useState, useEffect } from "react";
-import { horizontalScale, verticalScale } from "utils/responsive";
-import { getOptionImage } from "utils/background";
+import { horizontalScale, verticalScale } from "utils/responsive.utils";
+import { getOptionImage } from "utils/background.utils";
 import { useSelector } from "react-redux";
 
 import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";

@@ -1,9 +1,8 @@
 import type ButtonInterface from "interface/button";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import type PhraseInterface from "interface/phrase";
-import SectionInterface from "interface/section";
 
-function translateButton(buttons: ButtonInterface[], langCode: string | null): string | null {
+const translateButton = (buttons: ButtonInterface[], langCode: string | null): string | null => {
 	if (langCode === null || langCode === undefined || langCode === "") return null;
 	if (buttons.length === 0) return null;
 
@@ -18,9 +17,9 @@ function translateButton(buttons: ButtonInterface[], langCode: string | null): s
 	} else {
 		return translatedButton?.label;
 	}
-}
+};
 
-function translatePhrase(phrases: PhraseInterface[], langCode: string | null): string | null {
+const translatePhrase = (phrases: PhraseInterface[], langCode: string | null): string | null => {
 	if (langCode === null || langCode === undefined || langCode === "") return null;
 	if (phrases.length === 0) return null;
 
@@ -35,12 +34,12 @@ function translatePhrase(phrases: PhraseInterface[], langCode: string | null): s
 	} else {
 		return translatedPhrase?.label;
 	}
-}
+};
 
-function translateSectionHeading(
+const translateSectionHeading = (
 	sectionPages: SectionPayloadInterface[],
 	langCode: string | null,
-): string[] {
+): string[] => {
 	if (langCode === null || langCode === undefined || langCode === "") return [];
 	if (sectionPages.length === 0) return [];
 
@@ -55,9 +54,9 @@ function translateSectionHeading(
 		return translatedPhrase?.heading;
 	});
 	return translatedSectionTitles;
-}
+};
 
-function stringToInt(value: string | null): number {
+const stringToInt = (value: string | null): number => {
 	if (value === null || value === undefined || value === "") {
 		return -1;
 	}
@@ -65,14 +64,14 @@ function stringToInt(value: string | null): number {
 	if (isNaN(parsedValue)) return 0;
 	if (parsedValue < 0) return 0;
 	return parsedValue;
-}
+};
 
-function intToString(value: number | null): string {
+const intToString = (value: number | null): string => {
 	if (value === null || value === undefined) {
 		return "0";
 	}
 	if (value < 0) return "0";
 	return value.toString();
-}
+};
 
 export { translateButton, translatePhrase, translateSectionHeading, stringToInt, intToString };

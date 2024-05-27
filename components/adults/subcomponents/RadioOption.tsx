@@ -1,8 +1,8 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
 import React, { useRef } from "react";
-import { moderateScale } from "utils/responsive";
-import { isOtherOption } from "utils/options";
+import { moderateScale } from "utils/responsive.utils";
+import { isOtherOption } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getDevice } from "store/settings/settingsSlice";
 

@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
 import RegularPageScreen from "screens/RegularPageScreen";
 import * as ScreenOrientation from "expo-screen-orientation";
-import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive";
+import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive.utils";
 import type DeviceInterface from "interface/dimensions";
 import fonts from "styles/fonts";
 import { useDispatch, useSelector } from "react-redux";

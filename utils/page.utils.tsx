@@ -1,24 +1,8 @@
 import Mode from "constants/mode";
-import type PageInterface from "interface/page";
-import type QuestionDropdownInterface from "interface/question_dropdown";
-import type QuestionDropdownLanguageInterface from "interface/question_dropdown_language";
-import type ResponseInterface from "interface/response";
-import { getResponseByIdent } from "./response";
-
-type TranslationArrType =
-	| PageInterface[]
-	| QuestionDropdownInterface[]
-	| QuestionDropdownLanguageInterface[];
-
-type TranslateFuncType =
-	| PageInterface
-	| QuestionDropdownInterface
-	| QuestionDropdownLanguageInterface
-	| null;
+import type { ModeType, TranslateFuncType, TranslationArrType } from "interface/union.type";
 
 type LangCodeType = string | null;
 type QuestionLabelType = string | undefined;
-type ModeType = Mode.Kid | Mode.Adult | Mode.Teen | undefined;
 
 function translate(translationArr: TranslationArrType, langCode: LangCodeType): TranslateFuncType {
 	if (langCode === null || langCode === undefined || langCode === "") return null;

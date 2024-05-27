@@ -3,15 +3,15 @@ import type { ImageStyle, StyleProp } from "react-native";
 import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import type { Svg } from "react-native-svg";
-import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background";
-import { horizontalScale, moderateScale, verticalScale } from "utils/responsive";
+import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background.utils";
+import { horizontalScale, moderateScale, verticalScale } from "utils/responsive.utils";
 import RadioOption from "./subcomponents/RadioOption";
 import {
 	getUserSpecifiedOther,
 	hasOtherOption,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-} from "utils/options";
+} from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
 

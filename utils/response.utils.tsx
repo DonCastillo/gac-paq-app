@@ -29,7 +29,7 @@ const getResponse = (): string | null => {
 	}
 };
 
-function sanitizeResponse(): FinalResponseType {
+const sanitizeResponse = (): FinalResponseType => {
 	const sanitizedResponse: FinalResponseType = {};
 	const mode = store.getState().settings.mode;
 	const responses = store.getState().responses as Record<string, ResponseInterface>;
@@ -81,7 +81,7 @@ function sanitizeResponse(): FinalResponseType {
 	}
 
 	return sanitizedResponse;
-}
+};
 
 const getResponseByIdent = (ident: string): string | string[] | null => {
 	const responses = store.getState().responses;

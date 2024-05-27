@@ -2,7 +2,7 @@ import { StyleSheet, View, Text } from "react-native";
 import { Icon } from "@rneui/themed";
 import React, { useState, useEffect, memo } from "react";
 import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import {
 	getCurrentPage,

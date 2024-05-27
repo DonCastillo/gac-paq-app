@@ -2,7 +2,11 @@ import { FlatList } from "react-native";
 import RadioOption from "components/adults/subcomponents/RadioOption";
 import React, { useEffect, useState } from "react";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
-import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue } from "utils/options";
+import {
+	getUserSpecifiedOther,
+	isOtherOption,
+	isOtherWithSpecifiedValue,
+} from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getCurrentPage } from "store/settings/settingsSlice";
 

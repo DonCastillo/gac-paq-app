@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateText } from "utils/page";
+import { translate, translateText } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -11,10 +11,10 @@ import QuestionContainer from "components/adults/QuestionContainer";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
-import { getImageBackground } from "utils/background";
+import { getImageBackground } from "utils/background.utils";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 import ScrollContainer from "components/ScrollContainer";
 import { useDispatch, useSelector } from "react-redux";
 import {

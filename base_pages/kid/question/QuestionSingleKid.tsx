@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateQuestionLabel } from "utils/page";
+import { translate, translateQuestionLabel } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions";
+import { getQuestionType } from "utils/questions.utils";
 import QuestionType from "constants/question_type";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
 import QuestionSlider from "components/kid/QuestionSlider";
 import QuestionRadioImage from "components/kid/QuestionRadioImage";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { addResponse, getResponse } from "utils/response";
-import { intToString, stringToInt } from "utils/translate";
-import { getQuestionBackground } from "utils/background";
+import { addResponse, getResponse } from "utils/response.utils";
+import { intToString, stringToInt } from "utils/translate.utils";
+import { getQuestionBackground } from "utils/background.utils";
 import DeviceType from "constants/device_type";
 import PhraseLabel from "constants/phrase_label";
 import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import QuestionSatisfactionImage from "components/kid/QuestionSatisfactionImage";
 import QuestionTextarea from "components/kid/QuestionTextarea";
 import QuestionCheckbox from "components/kid/QuestionCheckbox";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
-import { optionTextMode } from "utils/options";
+import { optionTextMode } from "utils/options.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getColorTheme,
@@ -37,8 +37,8 @@ import {
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { getQuestion17Label } from "utils/label";
-import { proceedPage } from "utils/navigation";
+import { getQuestion17Label } from "utils/label.utils";
+import { proceedPage } from "utils/navigation.utils";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const dispatch = useDispatch();

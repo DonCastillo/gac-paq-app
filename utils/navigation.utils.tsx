@@ -1,7 +1,7 @@
 import { nextPage, skipPage } from "store/settings/settingsSlice";
-import { getResponseByIdent } from "./response";
+import { getResponseByIdent } from "./response.utils";
 import { clearResponseByIdent } from "store/responses/responsesSlice";
-import { getPageNumberBasedOnIdent } from "./page";
+import { getPageNumberBasedOnIdent } from "./page.utils";
 import Mode from "constants/mode";
 import { store } from "store/store";
 

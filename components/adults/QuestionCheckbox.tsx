@@ -7,7 +7,7 @@ import {
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-} from "utils/options";
+} from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getCurrentPage } from "store/settings/settingsSlice";
 

@@ -16,12 +16,13 @@ import GenericBackgroundStars from "components/kid/background/question-pages/Gen
 import GenericBackgroundLoop from "components/kid/background/question-pages/GenericBackgroundLoop";
 import Mode from "constants/mode";
 import type { ImageDeviceInterface, ImageModeInterface } from "interface/images";
+import type { ModeType } from "interface/union.type";
 
-function getImageBackground(
+const getImageBackground = (
 	images: ImageDeviceInterface,
-	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
+	mode: ModeType,
 	isTablet: boolean,
-): any | null {
+): any | null => {
 	if (mode === Mode.Adult && isTablet) {
 		return images?.adult?.tablet;
 	} else if (mode === Mode.Adult && !isTablet) {
@@ -41,12 +42,9 @@ function getImageBackground(
 	} else {
 		return null;
 	}
-}
+};
 
-function getOptionImage(
-	images: ImageModeInterface,
-	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
-): any | null {
+const getOptionImage = (images: ImageModeInterface, mode: ModeType): any | null => {
 	if (mode === Mode.Adult) {
 		return images?.adult;
 	} else if (mode === Mode.Kid) {
@@ -56,13 +54,13 @@ function getOptionImage(
 	} else {
 		return null;
 	}
-}
+};
 
-function getOptionText(
+const getOptionText = (
 	origOptionText: string,
 	optionTextObj: { kid: string; adult: string },
-	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
-): string | null {
+	mode: ModeType,
+): string | null => {
 	if (optionTextObj === undefined || optionTextObj === null) return origOptionText;
 	if (mode === undefined || mode === null) return origOptionText;
 
@@ -73,12 +71,12 @@ function getOptionText(
 	} else {
 		return origOptionText;
 	}
-}
+};
 
-function getOptionSubLabel(
+const getOptionSubLabel = (
 	subLabelObj: { kid: string; adult: string },
-	mode: Mode.Kid | Mode.Adult | Mode.Teen | undefined,
-): string | null {
+	mode: ModeType,
+): string | null => {
 	if (subLabelObj === undefined || subLabelObj === null) return null;
 	if (mode === undefined || mode === null) return null;
 
@@ -89,9 +87,9 @@ function getOptionSubLabel(
 	} else {
 		return null;
 	}
-}
+};
 
-function getIntroductoryBackground(pageNumber: number): React.ReactElement {
+const getIntroductoryBackground = (pageNumber: number): React.ReactElement => {
 	switch (pageNumber % 6) {
 		case 0:
 			return <BackgroundOne />;
@@ -110,15 +108,15 @@ function getIntroductoryBackground(pageNumber: number): React.ReactElement {
 		default:
 			return <BackgroundOne />;
 	}
-}
+};
 
-function getQuestionBackground(
+const getQuestionBackground = (
 	sectionNumber: number | null,
 	sectionPageNumber: number | null,
 	questionType: QuestionType | null | undefined,
 	deviceType: DeviceType | null,
 	fillColor: string | null,
-): React.ReactElement {
+): React.ReactElement => {
 	sectionNumber = (sectionNumber ?? 0) % 8;
 	sectionPageNumber = sectionPageNumber ?? 0;
 	questionType = questionType ?? QuestionType.QuestionText;
@@ -163,7 +161,7 @@ function getQuestionBackground(
 	} else {
 		return <></>;
 	}
-}
+};
 
 export {
 	getIntroductoryBackground,

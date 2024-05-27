@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 

@@ -2,7 +2,7 @@ import React from "react";
 import type LanguageInterface from "interface/language";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import QuestionRadio from "components/adults/QuestionRadio";
-import { optionLanguage } from "utils/options";
+import { optionLanguage } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getLanguageOption } from "store/questions/questionsSlice";
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
-import { translate } from "utils/page";
+import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -13,10 +13,10 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
-import { sanitizeResponse } from "utils/response";
+import { sanitizeResponse } from "utils/response.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
@@ -26,7 +26,7 @@ import {
 	getSectionTotalPages,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { proceedPage } from "utils/navigation";
+import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
 
 export default function QuestionExtroKid(): React.ReactElement {

@@ -1,7 +1,7 @@
 import React from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import { Font, GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { verticalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 

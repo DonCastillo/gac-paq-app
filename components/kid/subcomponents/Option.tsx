@@ -1,8 +1,8 @@
 import React, { memo, useRef } from "react";
 import { Pressable, TextInput, View, Text } from "react-native";
 import { GeneralStyle } from "styles/general";
-import { isOtherOption } from "utils/options";
-import { moderateScale } from "utils/responsive";
+import { isOtherOption } from "utils/options.utils";
+import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 
 import { getDevice } from "store/settings/settingsSlice";

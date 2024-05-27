@@ -1,10 +1,10 @@
 import axios from "axios";
 
-async function submitResponse(
+const submitResponse = async (
 	responses: Record<string, string> | Record<string, Record<string, string>>,
 	endpoint: string,
 	accessToken: string,
-): Promise<boolean> {
+): Promise<boolean> => {
 	return new Promise((resolve, reject) => {
 		axios
 			.post(endpoint, responses, {
@@ -20,6 +20,6 @@ async function submitResponse(
 				reject(error);
 			});
 	});
-}
+};
 
 export { submitResponse };

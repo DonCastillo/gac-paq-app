@@ -1,6 +1,6 @@
 import Mode from "constants/mode";
 import { store } from "store/store";
-import { getResponseByIdent } from "./response";
+import { getResponseByIdent } from "./response.utils";
 import type {
 	Transportation7Interface,
 	Transportation8_10Interface,

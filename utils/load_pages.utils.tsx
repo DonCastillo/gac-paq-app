@@ -1,14 +1,21 @@
 import type { PageInterface } from "store/settings/defaultPage";
-import type { RawPageType } from "interface/union.type";
+import type { ModeType, RawPageType } from "interface/union.type";
 import { store } from "store/store";
-import { resetResponses } from "store/responses/responsesSlice";
+import {
+	clearExtroResponses,
+	clearFeedbackResponses,
+	clearQuestionResponses,
+	clearResponseByIdent,
+	clearUnansweredResponses,
+	resetResponses,
+} from "store/responses/responsesSlice";
 import {
 	addSectionPage,
 	identifyLastSectionExtroPage,
 	setLanguageOption,
 	setRegionOption,
 } from "store/questions/questionsSlice";
-import { addPage, setPage, setSectionTotalPages } from "store/settings/settingsSlice";
+import { addPage, setPage, addSectionTotalPages } from "store/settings/settingsSlice";
 import { loadLanguagesOffline, loadRegionsOffline } from "./load.utils";
 import ScreenType from "constants/screen_type";
 import SectionType from "constants/section_type";
@@ -59,7 +66,7 @@ const loadApp = (): void => {
 			}),
 		);
 		// add section total pages
-		store.dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
+		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		pageNumber++;
 	});
 
@@ -88,7 +95,7 @@ const loadApp = (): void => {
 		);
 
 		// add section total pages
-		store.dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
+		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		sectionPageNumber++;
 		pageNumber++;
 	});
@@ -118,7 +125,7 @@ const loadApp = (): void => {
 		);
 
 		// add section total pages
-		store.dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
+		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		pageNumber++;
 	});
 
@@ -147,9 +154,46 @@ const loadApp = (): void => {
 		);
 
 		// add section total pages
-		store.dispatch(setSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
+		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		pageNumber++;
 	});
+
+	console.log("done loading pages...");
+};
+
+const loadAgePage = (mode: ModeType): void => {
+	// change age page
+	const allPages: Record<number, PageInterface> = store.getState().settings.pages;
+	let newPages: Record<number, PageInterface> = {};
+
+	let agePage = store.getState().questions.kidAgePage;
+
+	if (mode === Mode.Adult) {
+		agePage = store.getState().questions.adultAgePage;
+	}
+	if (mode === Mode.Teen) {
+		agePage = store.getState().questions.teenAgePage;
+	}
+	if (mode === Mode.Kid) {
+		agePage = store.getState().questions.kidAgePage;
+	}
+
+	for (const [key, page] of Object.entries(allPages)) {
+		if (page?.page?.ident === "age") {
+			newPages = { ...newPages, [key]: { ...page, page: agePage } };
+		} else {
+			newPages = { ...newPages, [key]: page };
+		}
+	}
+
+	store.dispatch(setPage(newPages));
+
+	// clear responses
+	store.dispatch(clearResponseByIdent("age"));
+	store.dispatch(clearUnansweredResponses());
+	store.dispatch(clearQuestionResponses());
+	store.dispatch(clearExtroResponses());
+	store.dispatch(clearFeedbackResponses());
 };
 
 const reloadExtroFeedbackPages = (): void => {
@@ -238,8 +282,8 @@ const reloadExtroFeedbackPages = (): void => {
 
 	store.dispatch(setPage(newPages));
 	for (const [key, value] of Object.entries(newSectionTotalPages)) {
-		store.dispatch(setSectionTotalPages({ sectionNumber: parseInt(key), totalPages: value }));
+		store.dispatch(addSectionTotalPages({ sectionNumber: parseInt(key), totalPages: value }));
 	}
 };
 
-export { loadApp, reloadExtroFeedbackPages };
+export { loadApp, loadAgePage, reloadExtroFeedbackPages };

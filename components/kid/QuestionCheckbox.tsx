@@ -1,15 +1,13 @@
 import { View, StyleSheet, FlatList, SafeAreaView } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
-import { SettingContext } from "store/settings";
 import {
 	extractUserSpecifiedOtherFromArray,
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-	type OptionInterface,
-} from "utils/options";
-import { horizontalScale } from "utils/responsive";
+} from "utils/options.utils";
+import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
 import type { ChoiceInterface } from "interface/question_checkbox";
 import { useSelector } from "react-redux";

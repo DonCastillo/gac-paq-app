@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { GeneralStyle } from "styles/general";
-import { horizontalScale, verticalScale } from "utils/responsive";
+import { horizontalScale, verticalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 

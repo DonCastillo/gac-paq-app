@@ -3,7 +3,7 @@ import DropDownSelector from "components/DropDownPicker";
 import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { QuestionContext } from "store/questions";
 import type RegionInterface from "interface/region";
-import { optionRegion } from "utils/options";
+import { optionRegion } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getRegionOption } from "store/questions/questionsSlice";
 

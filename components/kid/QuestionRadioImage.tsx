@@ -9,18 +9,17 @@ import {
 	TextInput,
 } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
-import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
-import { horizontalScale, moderateScale } from "utils/responsive";
-import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background";
+import { horizontalScale, moderateScale } from "utils/responsive.utils";
+import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background.utils";
 import {
 	getUserSpecifiedOther,
 	hasOtherOption,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-} from "utils/options";
+} from "utils/options.utils";
 import { useSelector } from "react-redux";
 
 import { getMode, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
