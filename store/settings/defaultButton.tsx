@@ -1,15 +1,7 @@
-import ButtonLabel from "constants/button_label.enum";
+import ButtonLabel from "constants/button_label.enum"
+import type { ButtonPayloadInterface } from "interface/button";
 
-export interface ButtonInterface {
-	back: string;
-	complete: string;
-	continue: string;
-	go: string;
-	next: string;
-	started: string;
-}
-
-const defaultButton: ButtonInterface = {
+const defaultButton: ButtonPayloadInterface = {
 	back: ButtonLabel.Back,
 	complete: ButtonLabel.Complete,
 	continue: ButtonLabel.Continue,

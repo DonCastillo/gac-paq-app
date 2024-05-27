@@ -3,7 +3,6 @@ import type { ModeType } from "interface/union.type";
 import { type SettingsInterface } from "store/settings/settingsSlice";
 import { type PayloadAction } from "@reduxjs/toolkit";
 import type DeviceInterface from "./dimensions";
-import { type ButtonInterface } from "store/settings/defaultButton";
 import { type PageInterface } from "store/settings/defaultPage";
 import { type PhraseInterface } from "store/settings/defaultPhrase";
 import type RegionInterface from "interface/region";
@@ -12,6 +11,7 @@ import type ResponseInterface from "interface/response";
 import type PagePayloadInterface from "interface/directus/page-payload";
 import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 import type SectionPayloadInterface from "./directus/section-payload";
+import type { ButtonPayloadInterface } from "./button";
 
 
 export type ScreenByModeFuncType = (mode: ModeType) => React.ReactElement;
@@ -23,7 +23,7 @@ export type SetDeviceFuncType = (state: SettingsInterface, action: PayloadAction
 export type SetLanguageFuncType = (state: SettingsInterface, action: PayloadAction<string>) => void;
 export type SetDirectusFuncType = (state: SettingsInterface, action: PayloadAction<string>) => void;
 export type SetColorThemeFuncType = (state: SettingsInterface, action: PayloadAction<number>) => void;
-export type SetButtonsFuncType = (state: SettingsInterface, action: PayloadAction<ButtonInterface>) => void;
+export type SetButtonsFuncType = (state: SettingsInterface, action: PayloadAction<ButtonPayloadInterface>) => void;
 export type SetPhrasesFuncType = (state: SettingsInterface, action: PayloadAction<PhraseInterface>) => void;
 export type SetSectionTitlesFuncType = (state: SettingsInterface, action: PayloadAction<string[]>) => void;
 export type SkipPageFuncType = (state: SettingsInterface, action: PayloadAction<number>) => void;

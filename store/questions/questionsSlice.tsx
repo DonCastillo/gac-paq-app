@@ -33,6 +33,7 @@ import type {
 	Transportation9_11Interface,
 } from "interface/question17";
 import reducersActions from "./questionsReducers";
+import type { LangButtonInterface } from "interface/button";
 
 const questionsSlice = createSlice({
 	name: "questions",
@@ -47,12 +48,12 @@ const questionsSlice = createSlice({
 		teenAgePage: DemographicTeenPage,
 		adultAgePage: DemographicAdultPage,
 		feedbackExtroPages: FeedbackExtroductoryPages,
-		backButton: BackButton,
-		completeButton: CompleteButton,
-		continueButton: ContinueButton,
-		goButton: GoButton,
-		nextButton: NextButton,
-		startedButton: StartedButton,
+		backButton: BackButton satisfies LangButtonInterface,
+		completeButton: CompleteButton satisfies LangButtonInterface,
+		continueButton: ContinueButton satisfies LangButtonInterface,
+		goButton: GoButton satisfies LangButtonInterface,
+		nextButton: NextButton satisfies LangButtonInterface,
+		startedButton: StartedButton satisfies LangButtonInterface,
 		agreementPhrase: AgreementPhrase,
 		donePhrase: DonePhrase,
 		dontKnowPhrase: DontKnowPhrase,

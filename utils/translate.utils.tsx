@@ -1,23 +1,35 @@
-import type ButtonInterface from "interface/button";
+import type { LangButtonInterface } from "interface/button";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import type PhraseInterface from "interface/phrase";
 
-const translateButton = (buttons: ButtonInterface[], langCode: string | null): string | null => {
-	if (langCode === null || langCode === undefined || langCode === "") return null;
-	if (buttons.length === 0) return null;
 
-	const translatedButton = buttons.find((button: ButtonInterface) => {
-		const buttonLanguage = button?.languages_id?.lang_code?.toLowerCase();
-		const langCodeLowercase = langCode?.toLowerCase();
-		return buttonLanguage === langCodeLowercase;
-	});
 
+const translateButton = (langButtons: LangButtonInterface, langCode: string): string => {
+	const translatedButton = langButtons[langCode];
 	if (translatedButton === undefined || translatedButton === null) {
-		return null;
-	} else {
-		return translatedButton?.label;
+		return langButtons["en-CA"].label;
 	}
-};
+	return translatedButton.label;
+}
+
+
+
+// const translateButton = (buttons: ButtonInterface[], langCode: string | null): string | null => {
+// 	if (langCode === null || langCode === undefined || langCode === "") return null;
+// 	if (buttons.length === 0) return null;
+
+// 	const translatedButton = buttons.find((button: ButtonInterface) => {
+// 		const buttonLanguage = button?.languages_id?.lang_code?.toLowerCase();
+// 		const langCodeLowercase = langCode?.toLowerCase();
+// 		return buttonLanguage === langCodeLowercase;
+// 	});
+
+// 	if (translatedButton === undefined || translatedButton === null) {
+// 		return null;
+// 	} else {
+// 		return translatedButton?.label;
+// 	}
+// };
 
 const translatePhrase = (phrases: PhraseInterface[], langCode: string | null): string | null => {
 	if (langCode === null || langCode === undefined || langCode === "") return null;

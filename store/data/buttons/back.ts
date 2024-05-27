@@ -1,33 +1,16 @@
-import type ButtonInterface from "interface/button";
+import type { LangButtonInterface } from "interface/button";
 
-const BackButton: ButtonInterface[] = [
-	{
-		id: 1,
-		back_button_id: 1,
+
+const BackButton: LangButtonInterface = {
+	"en-CA": {
 		label: "Back",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		back_button_id: 1,
+	"es-ES": {
 		label: "Volver",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		back_button_id: 1,
+	"fr-CA": {
 		label: "Retour",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+}
 
 export default BackButton;
