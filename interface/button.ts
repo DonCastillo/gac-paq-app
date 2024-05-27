@@ -1,7 +1,7 @@
 export interface ButtonInterface {
 	label: string;
 }
-export type LangButtonInterface = Record<string, ButtonInterface>
+export type LangButtonInterface = Record<string, ButtonInterface>;
 
 export interface ButtonPayloadInterface {
 	back: string;

@@ -1,14 +1,7 @@
 import PhraseLabel from "constants/phrase_label.enum";
+import type { PhrasePayloadInterface } from "interface/phrase";
 
-export interface PhraseInterface {
-	agreement: string;
-	done: string;
-	dontKnow: string;
-	introduction: string;
-	tryAgain: string;
-}
-
-const defaultPhrase: PhraseInterface = {
+const defaultPhrase: PhrasePayloadInterface = {
 	agreement: PhraseLabel.Agreement,
 	done: PhraseLabel.Done,
 	dontKnow: PhraseLabel.DontKnow,

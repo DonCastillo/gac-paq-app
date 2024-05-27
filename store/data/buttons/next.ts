@@ -1,6 +1,5 @@
 import type { LangButtonInterface } from "interface/button";
 
-
 const NextButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Next",
@@ -12,6 +11,5 @@ const NextButton: LangButtonInterface = {
 		label: "Suivant",
 	},
 };
-
 
 export default NextButton;

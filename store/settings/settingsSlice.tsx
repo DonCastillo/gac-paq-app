@@ -5,12 +5,12 @@ import defaultColor from "./defaultColor";
 import type DeviceInterface from "interface/dimensions";
 import type { PageInterface } from "./defaultPage";
 import type ColorInterface from "interface/color";
-import type { PhraseInterface } from "./defaultPhrase";
 import defaultButton from "./defaultButton";
 import defaultPhrase from "./defaultPhrase";
 import type { ModeType } from "interface/union.type";
 import reducersActions from "./settingsReducers";
 import type { ButtonPayloadInterface } from "interface/button";
+import type { PhrasePayloadInterface } from "interface/phrase";
 
 export interface SettingsInterface {
 	mode: ModeType;
@@ -22,7 +22,7 @@ export interface SettingsInterface {
 	currentPage: PageInterface;
 	nextPage: PageInterface;
 	buttons: ButtonPayloadInterface;
-	phrases: PhraseInterface;
+	phrases: PhrasePayloadInterface;
 	sectionTitles: string[];
 	sectionTotalPages: Record<number, number>;
 	totalPage: any;

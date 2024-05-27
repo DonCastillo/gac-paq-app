@@ -1,33 +1,15 @@
-import type PhraseInterface from "interface/phrase";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const DontKnowPhrase: PhraseInterface[] = [
-	{
-		id: 1,
-		dont_know_phrase_id: 1,
+const DontKnowPhrase: LangPhraseInterface = {
+	"en-CA": {
 		label: "Don't know",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		dont_know_phrase_id: 1,
+	"es-ES": {
 		label: "No sé",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		dont_know_phrase_id: 1,
+	"fr-CA": {
 		label: "Je ne sais pas",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+};
 
 export default DontKnowPhrase;

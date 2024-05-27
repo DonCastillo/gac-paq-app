@@ -4,14 +4,12 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
-import { translateButton, translatePhrase, translateSectionHeading } from "utils/translate.utils";
-import ButtonLabel from "constants/button_label.enum";
+import { translateSectionHeading } from "utils/translate.utils";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
 import { translate, translateQuestionLabel } from "utils/page.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import PhraseLabel from "constants/phrase_label.enum";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background.utils";
@@ -26,27 +24,13 @@ import {
 	getLanguage,
 	getMode,
 	nextPage,
-	setButtons,
 	setLanguage,
-	setPhrases,
 	getDevice,
 	setSectionTitles,
 } from "store/settings/settingsSlice";
-import { getAllResponses, newResponse } from "store/responses/responsesSlice";
-import {
-	getAgreementPhrase,
-	getBackButton,
-	getCompleteButton,
-	getContinueButton,
-	getDonePhrase,
-	getDontKnowPhrase,
-	getGoButton,
-	getIntroductionPhrase,
-	getNextButton,
-	getSectionPages,
-	getStartedButton,
-	getTryAgainPhrase,
-} from "store/questions/questionsSlice";
+import { getSectionPages } from "store/questions/questionsSlice";
+import { loadButtons, loadPhrases } from "utils/load.utils";
+import { addResponse } from "utils/response.utils";
 
 export default function GenericLanguage(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -56,20 +40,6 @@ export default function GenericLanguage(): React.ReactElement {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const sectionPages = useSelector(getSectionPages);
-	const response = useSelector(getAllResponses);
-
-	// buttons
-	const backButton = useSelector(getBackButton);
-	const completeButton = useSelector(getCompleteButton);
-	const continueButton = useSelector(getContinueButton);
-	const goButton = useSelector(getGoButton);
-	const nextButton = useSelector(getNextButton);
-	const startedButton = useSelector(getStartedButton);
-	const agreementPhrase = useSelector(getAgreementPhrase);
-	const donePhrase = useSelector(getDonePhrase);
-	const dontKnowPhrase = useSelector(getDontKnowPhrase);
-	const introductionPhrase = useSelector(getIntroductionPhrase);
-	const tryAgainPhrase = useSelector(getTryAgainPhrase);
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const translatedPage = translate(currentPage.page.translations, language);
@@ -86,27 +56,9 @@ export default function GenericLanguage(): React.ReactElement {
 
 	// translate phrases and buttons
 	useEffect(() => {
-		dispatch(
-			setButtons({
-				back: translateButton(backButton, language) ?? ButtonLabel.Back,
-				complete: translateButton(completeButton, language) ?? ButtonLabel.Complete,
-				continue: translateButton(continueButton, language) ?? ButtonLabel.Continue,
-				go: translateButton(goButton, language) ?? ButtonLabel.Go,
-				next: translateButton(nextButton, language) ?? ButtonLabel.Next,
-				started: translateButton(startedButton, language) ?? ButtonLabel.Started,
-			}),
-		);
-		// translate "Introduction"
-		// translate "Feedback"
-		dispatch(
-			setPhrases({
-				agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
-				done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
-				dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
-				introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
-				tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
-			}),
-		);
+		loadButtons();
+		loadPhrases();
+
 		// translate the section headings
 		const translatedSectionTitles = translateSectionHeading(sectionPages, language);
 		console.log("translatedSectionTitles: ", translatedSectionTitles);
@@ -121,37 +73,13 @@ export default function GenericLanguage(): React.ReactElement {
 
 	// set language default
 	useEffect(() => {
-		if (Object.keys(response).length === 0) {
-			dispatch(
-				newResponse({
-					ident: currentPage.page.ident,
-					label: currentPage.page.name,
-					answer: language,
-					pageNumber: currentPage.pageNumber,
-					mode,
-					section: currentPage.section,
-					sectionNumber: currentPage.sectionNumber,
-					sectionPageNumber: currentPage.sectionPageNumber,
-				}),
-			);
-		}
+		addResponse(language);
 	}, []);
 
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
 			dispatch(setLanguage(value));
-			dispatch(
-				newResponse({
-					ident: currentPage.page.ident,
-					label: currentPage.page.name,
-					answer: value,
-					pageNumber: currentPage.pageNumber,
-					mode,
-					section: currentPage.section,
-					sectionNumber: currentPage.sectionNumber,
-					sectionPageNumber: currentPage.sectionPageNumber,
-				}),
-			);
+			addResponse(value);
 			setSelectedValue(value);
 		} else {
 			setSelectedValue(null);

@@ -1,6 +1,5 @@
 import type { LangButtonInterface } from "interface/button";
 
-
 const ContinueButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Continue",
@@ -12,6 +11,5 @@ const ContinueButton: LangButtonInterface = {
 		label: "Continuer",
 	},
 };
-
 
 export default ContinueButton;

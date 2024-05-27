@@ -34,6 +34,7 @@ import type {
 } from "interface/question17";
 import reducersActions from "./questionsReducers";
 import type { LangButtonInterface } from "interface/button";
+import type { LangPhraseInterface } from "interface/phrase";
 
 const questionsSlice = createSlice({
 	name: "questions",
@@ -54,11 +55,11 @@ const questionsSlice = createSlice({
 		goButton: GoButton satisfies LangButtonInterface,
 		nextButton: NextButton satisfies LangButtonInterface,
 		startedButton: StartedButton satisfies LangButtonInterface,
-		agreementPhrase: AgreementPhrase,
-		donePhrase: DonePhrase,
-		dontKnowPhrase: DontKnowPhrase,
-		introductionPhrase: IntroductionPhrase,
-		tryAgainPhrase: TryAgainPhrase,
+		agreementPhrase: AgreementPhrase satisfies LangPhraseInterface,
+		donePhrase: DonePhrase satisfies LangPhraseInterface,
+		dontKnowPhrase: DontKnowPhrase satisfies LangPhraseInterface,
+		introductionPhrase: IntroductionPhrase satisfies LangPhraseInterface,
+		tryAgainPhrase: TryAgainPhrase satisfies LangPhraseInterface,
 		successPage: SuccessPage,
 		errorPage: ErrorPage,
 		Transportation7: Transportation7 satisfies Transportation7Interface,

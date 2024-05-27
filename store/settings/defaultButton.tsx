@@ -1,4 +1,4 @@
-import ButtonLabel from "constants/button_label.enum"
+import ButtonLabel from "constants/button_label.enum";
 import type { ButtonPayloadInterface } from "interface/button";
 
 const defaultButton: ButtonPayloadInterface = {

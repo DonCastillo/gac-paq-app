@@ -10,7 +10,6 @@ const StartedButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Bouton Commencer",
 	},
-}
-
+};
 
 export default StartedButton;

@@ -1,8 +1,6 @@
 import type { LangButtonInterface } from "interface/button";
+import type { LangPhraseInterface } from "interface/phrase";
 import type SectionPayloadInterface from "interface/directus/section-payload";
-import type PhraseInterface from "interface/phrase";
-
-
 
 const translateButton = (langButtons: LangButtonInterface, langCode: string): string => {
 	const translatedButton = langButtons[langCode];
@@ -10,42 +8,14 @@ const translateButton = (langButtons: LangButtonInterface, langCode: string): st
 		return langButtons["en-CA"].label;
 	}
 	return translatedButton.label;
-}
+};
 
-
-
-// const translateButton = (buttons: ButtonInterface[], langCode: string | null): string | null => {
-// 	if (langCode === null || langCode === undefined || langCode === "") return null;
-// 	if (buttons.length === 0) return null;
-
-// 	const translatedButton = buttons.find((button: ButtonInterface) => {
-// 		const buttonLanguage = button?.languages_id?.lang_code?.toLowerCase();
-// 		const langCodeLowercase = langCode?.toLowerCase();
-// 		return buttonLanguage === langCodeLowercase;
-// 	});
-
-// 	if (translatedButton === undefined || translatedButton === null) {
-// 		return null;
-// 	} else {
-// 		return translatedButton?.label;
-// 	}
-// };
-
-const translatePhrase = (phrases: PhraseInterface[], langCode: string | null): string | null => {
-	if (langCode === null || langCode === undefined || langCode === "") return null;
-	if (phrases.length === 0) return null;
-
-	const translatedPhrase = phrases.find((phrase: PhraseInterface) => {
-		const phraseLanguage = phrase?.languages_id?.lang_code?.toLowerCase();
-		const langCodeLowercase = langCode?.toLowerCase();
-		return phraseLanguage === langCodeLowercase;
-	});
-
+const translatePhrase = (langPhrases: LangPhraseInterface, langCode: string): string => {
+	const translatedPhrase = langPhrases[langCode];
 	if (translatedPhrase === undefined || translatedPhrase === null) {
-		return null;
-	} else {
-		return translatedPhrase?.label;
+		return langPhrases["en-CA"].label;
 	}
+	return translatedPhrase.label;
 };
 
 const translateSectionHeading = (

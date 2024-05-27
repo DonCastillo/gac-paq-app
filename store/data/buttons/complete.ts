@@ -1,6 +1,5 @@
 import type { LangButtonInterface } from "interface/button";
 
-
 const CompleteButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Complete",
@@ -11,8 +10,6 @@ const CompleteButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Complet",
 	},
-
-}
-
+};
 
 export default CompleteButton;

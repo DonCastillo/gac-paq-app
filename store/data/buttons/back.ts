@@ -1,6 +1,5 @@
 import type { LangButtonInterface } from "interface/button";
 
-
 const BackButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Back",
@@ -11,6 +10,6 @@ const BackButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Retour",
 	},
-}
+};
 
 export default BackButton;

@@ -1,6 +1,5 @@
 import type { LangButtonInterface } from "interface/button";
 
-
 const GoButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Go",
@@ -11,7 +10,6 @@ const GoButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Aller",
 	},
-}
-
+};
 
 export default GoButton;
