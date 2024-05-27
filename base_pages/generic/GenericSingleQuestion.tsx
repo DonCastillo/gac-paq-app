@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -13,7 +12,7 @@ import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import { optionText } from "utils/options";
 import QuestionRadio from "components/adults/QuestionRadio";
-import { getResponse } from "utils/response";
+import { addResponse, getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionInput from "components/adults/QuestionInput";
 import Mode from "constants/mode";
@@ -36,6 +35,7 @@ import {
 } from "store/settings/settingsSlice";
 import { getAllResponses, newResponse } from "store/responses/responsesSlice";
 import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
+import { changeMode } from "utils/mode.utils";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -82,18 +82,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	// save response
 	function changeHandler(value: string | null): void {
 		if (value !== "" && value !== null && value !== undefined) {
-			dispatch(
-				newResponse({
-					ident: currentPage.page.ident,
-					label: currentPage.page.name,
-					answer: value,
-					pageNumber: currentPage.pageNumber,
-					mode,
-					section: currentPage.section,
-					sectionNumber: currentPage.sectionNumber,
-					sectionPageNumber: currentPage.sectionPageNumber,
-				}),
-			);
+			addResponse(value);
 			setSelectedValue(value);
 		} else {
 			setSelectedValue(null);
@@ -101,16 +90,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 
 		// set mode
 		if (currentPage.page.ident === "mode") {
-			if (value === "adult") {
-				dispatch(setMode(Mode.Adult));
-			} else if (value === "child") {
-				dispatch(setMode(Mode.Kid));
-			} else if (value === "teen") {
-				dispatch(setMode(Mode.Teen));
-			} else {
-				dispatch(setMode(undefined));
-			}
-			reloadExtroFeedbackPages();
+			changeMode(value);
 		}
 	}
 

@@ -12,7 +12,7 @@ import QuestionRadio from "components/kid/QuestionRadio";
 import QuestionSlider from "components/kid/QuestionSlider";
 import QuestionRadioImage from "components/kid/QuestionRadioImage";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { getResponse } from "utils/response";
+import { addResponse, getResponse } from "utils/response";
 import { intToString, stringToInt } from "utils/translate";
 import { getQuestionBackground } from "utils/background";
 import DeviceType from "constants/device_type";
@@ -162,18 +162,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		dispatch(
-			newResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: value,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			}),
-		);
+		addResponse(value);
 		setSelectedValue(value);
 	}
 

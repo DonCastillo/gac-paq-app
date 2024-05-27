@@ -14,7 +14,7 @@ import QuestionContainer from "components/adults/QuestionContainer";
 import { optionRadioItemMode, optionText } from "utils/options";
 import QuestionRadio from "components/adults/QuestionRadio";
 import QuestionRadioImage from "components/adults/QuestionRadioImage";
-import { getResponse } from "utils/response";
+import { addResponse, getResponse } from "utils/response";
 import { intToString, stringToInt } from "utils/translate";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label";
@@ -145,18 +145,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		dispatch(
-			newResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: value,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			}),
-		);
+		addResponse(value);
 		setSelectedValue(value);
 	}
 

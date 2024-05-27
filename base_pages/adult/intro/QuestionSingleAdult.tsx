@@ -12,7 +12,7 @@ import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { optionRegion, optionText } from "utils/options";
 import Toolbar from "components/adults/subcomponents/Toolbar";
-import { getResponse } from "utils/response";
+import { addResponse, getResponse } from "utils/response";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Mode from "constants/mode";
 import QuestionInput from "components/adults/QuestionInput";
@@ -33,6 +33,7 @@ import {
 import { getRegionOption } from "store/questions/questionsSlice";
 import { getAllResponses, newResponse } from "store/responses/responsesSlice";
 import { reloadExtroFeedbackPages } from "utils/load_pages.utils";
+import { changeMode } from "utils/mode.utils";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -121,32 +122,12 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	 * temporarily store the initial selection
 	 */
 	function changeHandler(value: string | null): void {
-		dispatch(
-			newResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: value,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			}),
-		);
+		addResponse(value);
 		setSelectedValue(value);
 
 		// set mode
 		if (currentPage.page.ident === "mode") {
-			if (value === "adult") {
-				dispatch(setMode(Mode.Adult));
-			} else if (value === "child") {
-				dispatch(setMode(Mode.Kid));
-			} else if (value === "teen") {
-				dispatch(setMode(Mode.Teen));
-			} else {
-				dispatch(setMode(undefined));
-			}
-			reloadExtroFeedbackPages();
+			changeMode(value);
 		}
 	}
 

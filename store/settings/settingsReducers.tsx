@@ -20,9 +20,6 @@ import type {
 } from "interface/function.type";
 const TOTAL_COLORS = 8;
 
-/** Function Types */
-
-/** Function Definition */
 const setMode: SetModeFuncType = (state, action) => {
 	state.mode = action.payload;
 };

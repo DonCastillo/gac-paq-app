@@ -24,10 +24,10 @@ export interface SettingsInterface {
 	buttons: ButtonInterface;
 	phrases: PhraseInterface;
 	sectionTitles: string[];
-	sectionTotalPages: Record<string, number>;
+	sectionTotalPages: Record<number, number>;
 	totalPage: any;
 	colorTheme: ColorInterface;
-	pages: Record<string, any>;
+	pages: Record<number, any>;
 	history: number[];
 }
 
