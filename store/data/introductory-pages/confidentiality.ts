@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type";
+import ScreenType from "constants/screen_type.enum";
 import type SingleCheckboxPayloadInterface from "interface/directus/single-checkbox-payload";
 
 const ConfidentialityPage: SingleCheckboxPayloadInterface = {

@@ -1,4 +1,4 @@
-import SectionType from "constants/section_type";
+import SectionType from "constants/section_type.enum";
 import type {
 	ClearResponseByIdentFuncType,
 	NewResponseFuncType,

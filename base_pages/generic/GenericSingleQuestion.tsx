@@ -5,7 +5,7 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions.utils";
-import QuestionType from "constants/question_type";
+import QuestionType from "constants/question_type.enum";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";

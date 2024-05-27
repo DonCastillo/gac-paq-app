@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import type ResponseInterface from "interface/response";
-import SectionType from "constants/section_type";
+import SectionType from "constants/section_type.enum";
 
 export interface ResponseContextInterface {
 	responses: Record<string, ResponseInterface>;

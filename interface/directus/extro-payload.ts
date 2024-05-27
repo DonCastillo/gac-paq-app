@@ -1,4 +1,4 @@
-import type ScreenType from "constants/screen_type";
+import type ScreenType from "constants/screen_type.enum";
 import type ExtroInterface from "interface/extro";
 
 export default interface ExtroPayloadInterface {

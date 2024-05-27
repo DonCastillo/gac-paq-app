@@ -2,8 +2,8 @@ import React from "react";
 import StateAdult from "base_pages/adult/StateAdult";
 import GenericSplash from "base_pages/generic/GenericSplash";
 import StateKid from "base_pages/kid/StateKid";
-import Mode from "constants/mode";
-import StateType from "constants/state_type";
+import Mode from "constants/mode.enum";
+import StateType from "constants/state_type.enum";
 import type { ScreenByModeFuncType } from "interface/function.type";
 
 const SplashScreen: ScreenByModeFuncType = (mode) => {

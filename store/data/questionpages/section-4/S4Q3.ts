@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type";
+import ScreenType from "constants/screen_type.enum";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 
 const S4Q3: QuestionRadioPayloadInterface = {

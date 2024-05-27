@@ -1,4 +1,4 @@
-import type ScreenType from "constants/screen_type";
+import type ScreenType from "constants/screen_type.enum";
 import type { QuestionRadioImageInterface } from "interface/question_radio_image";
 
 export default interface QuestionRadioImagePayloadInterface {

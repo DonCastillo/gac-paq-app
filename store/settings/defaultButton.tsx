@@ -1,4 +1,4 @@
-import ButtonLabel from "constants/button_label";
+import ButtonLabel from "constants/button_label.enum";
 
 export interface ButtonInterface {
 	back: string;

@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, FlatList } from "react-native";
 import React, { useEffect, useState } from "react";
 import { DefaultStyle, GeneralStyle } from "styles/general";
 import { Slider } from "@rneui/themed";
-import PhraseLabel from "constants/phrase_label";
+import PhraseLabel from "constants/phrase_label.enum";
 import RadioOption from "components/adults/subcomponents/RadioOption";
 import { useSelector } from "react-redux";
 

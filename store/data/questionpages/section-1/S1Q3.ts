@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type";
+import ScreenType from "constants/screen_type.enum";
 import type QuestionSliderPayloadInterface from "interface/directus/question-slider-payload";
 
 const S1Q3: QuestionSliderPayloadInterface = {

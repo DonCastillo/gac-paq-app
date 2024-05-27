@@ -1,4 +1,4 @@
-import type Mode from "constants/mode";
+import type Mode from "constants/mode.enum";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";

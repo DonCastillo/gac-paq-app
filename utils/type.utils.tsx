@@ -1,5 +1,5 @@
-import ScreenType from "constants/screen_type";
-import SectionType from "constants/section_type";
+import ScreenType from "constants/screen_type.enum";
+import SectionType from "constants/section_type.enum";
 
 const getScreenType = (screenType: string): ScreenType => {
 	if (screenType === "page") {

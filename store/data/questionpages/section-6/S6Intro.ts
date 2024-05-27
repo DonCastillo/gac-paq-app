@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type";
+import ScreenType from "constants/screen_type.enum";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import Images from "styles/images";
 

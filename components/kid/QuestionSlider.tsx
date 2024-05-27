@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { Slider } from "@rneui/themed";
-import PhraseLabel from "constants/phrase_label";
+import PhraseLabel from "constants/phrase_label.enum";
 import { horizontalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getPhrases, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";

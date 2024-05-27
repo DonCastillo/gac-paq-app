@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type";
+import ScreenType from "constants/screen_type.enum";
 import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
 
 const Difficulties: QuestionCheckboxPayloadInterface = {

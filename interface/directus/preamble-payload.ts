@@ -1,4 +1,4 @@
-import type ScreenType from "constants/screen_type";
+import type ScreenType from "constants/screen_type.enum";
 import type PreambleInterface from "interface/preamble";
 
 export default interface PreamblePayloadInterface {

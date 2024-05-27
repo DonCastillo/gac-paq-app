@@ -1,4 +1,4 @@
-import type ScreenType from "constants/screen_type";
+import type ScreenType from "constants/screen_type.enum";
 import type QuestionDropdownInterface from "interface/question_dropdown";
 import type QuestionDropdownLanguageInterface from "interface/question_dropdown_language";
 

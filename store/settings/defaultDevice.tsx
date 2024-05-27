@@ -1,4 +1,4 @@
-import OrientationType from "constants/orientation_type";
+import OrientationType from "constants/orientation_type.enum";
 import type DeviceInterface from "interface/dimensions";
 
 const defaultDevice: DeviceInterface = {

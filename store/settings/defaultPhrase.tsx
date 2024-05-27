@@ -1,4 +1,4 @@
-import PhraseLabel from "constants/phrase_label";
+import PhraseLabel from "constants/phrase_label.enum";
 
 export interface PhraseInterface {
 	agreement: string;

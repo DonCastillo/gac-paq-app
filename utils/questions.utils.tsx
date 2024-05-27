@@ -1,4 +1,4 @@
-import QuestionType from "constants/question_type";
+import QuestionType from "constants/question_type.enum";
 
 function getQuestionType(questionPage: any): QuestionType {
 	if (Object.prototype.hasOwnProperty.call(questionPage, "question_dropdown_id") === true) {

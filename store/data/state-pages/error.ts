@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type";
+import ScreenType from "constants/screen_type.enum";
 import type PagePayloadInterface from "interface/directus/page-payload";
 
 const ErrorPage: PagePayloadInterface = {

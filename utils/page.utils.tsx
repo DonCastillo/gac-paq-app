@@ -1,4 +1,4 @@
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 import type { ModeType, TranslateFuncType, TranslationArrType } from "interface/union.type";
 
 type LangCodeType = string | null;

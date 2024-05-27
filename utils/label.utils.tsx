@@ -1,4 +1,4 @@
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 import { store } from "store/store";
 import { getResponseByIdent } from "./response.utils";
 import type {

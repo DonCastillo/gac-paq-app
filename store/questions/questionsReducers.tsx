@@ -5,7 +5,7 @@ import type {
 	QuestionsFuncType,
 	AddSectionPageFuncType,
 } from "interface/function.type";
-import ScreenType from "constants/screen_type";
+import ScreenType from "constants/screen_type.enum";
 
 const setRegionOption: SetRegionOptionFuncType = (state, action) => {
 	state.regionOption = action.payload;

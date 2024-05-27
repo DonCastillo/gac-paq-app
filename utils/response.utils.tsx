@@ -1,4 +1,4 @@
-import SectionType from "constants/section_type";
+import SectionType from "constants/section_type.enum";
 import type ResponseInterface from "interface/response";
 import type { FinalResponseType } from "interface/union.type";
 import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";

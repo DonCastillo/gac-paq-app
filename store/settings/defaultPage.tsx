@@ -1,5 +1,5 @@
-import ScreenType from "constants/screen_type";
-import SectionType from "constants/section_type";
+import ScreenType from "constants/screen_type.enum";
+import SectionType from "constants/section_type.enum";
 import AboutPage from "store/data/introductory-pages/about";
 import LanguagePage from "store/data/introductory-pages/language";
 

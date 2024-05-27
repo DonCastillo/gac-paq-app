@@ -1,4 +1,4 @@
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 import { setMode } from "store/settings/settingsSlice";
 import { store } from "store/store";
 import { loadAgePage, reloadExtroFeedbackPages } from "./load_pages.utils";

@@ -6,15 +6,15 @@ import BackgroundFour from "components/kid/background/introductory-pages/Backgro
 import BackgroundFive from "components/kid/background/introductory-pages/BackgroundFive";
 import BackgroundSix from "components/kid/background/introductory-pages/BackgroundSix";
 import BackgroundSeven from "components/kid/background/introductory-pages/BackgroundSeven";
-import QuestionType from "constants/question_type";
-import DeviceType from "constants/device_type";
+import QuestionType from "constants/question_type.enum";
+import DeviceType from "constants/device_type.enum";
 import GenericBackgroundStroke from "components/kid/background/question-pages/GenericBackgroundStroke";
 import BackgroundRight from "components/kid/background/question-pages/BackgroundRight";
 import BackgroundCenter from "components/kid/background/question-pages/BackgroundCenter";
 import Images from "styles/images/index";
 import GenericBackgroundStars from "components/kid/background/question-pages/GenericBackgroundStars";
 import GenericBackgroundLoop from "components/kid/background/question-pages/GenericBackgroundLoop";
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 import type { ImageDeviceInterface, ImageModeInterface } from "interface/images";
 import type { ModeType } from "interface/union.type";
 

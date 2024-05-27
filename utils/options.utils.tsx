@@ -4,7 +4,7 @@ import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type RegionInterface from "interface/region";
 import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
 import type { ChoiceInterface } from "interface/question_checkbox";
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
 
 export interface OptionInterface {

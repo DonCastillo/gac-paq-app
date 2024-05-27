@@ -1,16 +1,16 @@
 import React, { createContext, useContext, useReducer } from "react";
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 import Colors from "store/data/colors";
-import { getPage, getPageNumberBasedOnIdent } from "utils/page";
-import type ScreenType from "constants/screen_type";
-import SectionType from "constants/section_type";
-import ButtonLabel from "constants/button_label";
-import PhraseLabel from "constants/phrase_label";
+import { getPage, getPageNumberBasedOnIdent } from "utils/page.utils";
+import type ScreenType from "constants/screen_type.enum";
+import SectionType from "constants/section_type.enum";
+import ButtonLabel from "constants/button_label.enum";
+import PhraseLabel from "constants/phrase_label.enum";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
-import OrientationType from "constants/orientation_type";
+import OrientationType from "constants/orientation_type.enum";
 import type DeviceInterface from "interface/dimensions";
 import { QuestionContext } from "./questions";
 import { ResponseContext } from "./responses";
@@ -778,10 +778,7 @@ export default function SettingContextProvider({
 		}
 
 		if (currentIdent === "transportation_7") {
-			console.log("here is transportation_7");
 			const questionLabels: Transportation7Interface = questionCtx.questionState.Transportation7;
-			console.log("7: ", questionLabels);
-			console.log("7: ", language, mode, attendance);
 			return questionLabels[language][mode][attendance] ?? "";
 		}
 
@@ -817,7 +814,6 @@ export default function SettingContextProvider({
 		const answerValue = responseCtx.getResponseByIdent(currentIdent) ?? null;
 		const skipToPageNumber = skipTo(answerValue);
 		if (skipToPageNumber > 0) {
-			console.log("responses: ", responseCtx);
 			skipPage(skipToPageNumber);
 		} else {
 			nextPage();

@@ -1,4 +1,4 @@
-import OrientationType from "constants/orientation_type";
+import OrientationType from "constants/orientation_type.enum";
 import type DeviceInterface from "interface/dimensions";
 import { Dimensions, Platform, PixelRatio } from "react-native";
 import * as ScreenOrientation from "expo-screen-orientation";

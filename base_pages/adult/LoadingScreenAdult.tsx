@@ -4,7 +4,7 @@ import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
 import Colors from "store/data/colors";
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 
 export default function LoadingScreenAdult(): React.ReactElement {
 	const color100 = Colors[Mode.Adult][0].color100;

@@ -6,7 +6,7 @@ import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions.utils";
-import QuestionType from "constants/question_type";
+import QuestionType from "constants/question_type.enum";
 import QuestionSelect from "components/kid/QuestionSelect";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionSelectRegion from "components/kid/QuestionSelectRegion";

@@ -2,7 +2,7 @@ import { nextPage, skipPage } from "store/settings/settingsSlice";
 import { getResponseByIdent } from "./response.utils";
 import { clearResponseByIdent } from "store/responses/responsesSlice";
 import { getPageNumberBasedOnIdent } from "./page.utils";
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 import { store } from "store/store";
 
 const proceedPage = (): void => {

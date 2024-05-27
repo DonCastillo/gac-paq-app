@@ -1,4 +1,4 @@
-import type ScreenType from "constants/screen_type";
+import type ScreenType from "constants/screen_type.enum";
 import type SingleCheckboxInterface from "interface/single_checkbox";
 
 export default interface SingleCheckboxPayloadInterface {

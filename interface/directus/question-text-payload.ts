@@ -1,4 +1,4 @@
-import type ScreenType from "constants/screen_type";
+import type ScreenType from "constants/screen_type.enum";
 import type QuestionTextInterface from "interface/question_text";
 
 export default interface QuestionTextPayloadInterface {

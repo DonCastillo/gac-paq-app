@@ -17,9 +17,9 @@ import {
 } from "store/questions/questionsSlice";
 import { addPage, setPage, addSectionTotalPages } from "store/settings/settingsSlice";
 import { loadLanguagesOffline, loadRegionsOffline } from "./load.utils";
-import ScreenType from "constants/screen_type";
-import SectionType from "constants/section_type";
-import Mode from "constants/mode";
+import ScreenType from "constants/screen_type.enum";
+import SectionType from "constants/section_type.enum";
+import Mode from "constants/mode.enum";
 import { getScreenType } from "utils/type.utils";
 
 const loadApp = (): void => {
