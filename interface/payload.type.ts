@@ -35,6 +35,20 @@ export interface QuestionDropdownLanguageInterface {
 	images?: ImageDeviceInterface;
 }
 
+export interface QuestionInputInterface {
+	type: QuestionType.QuestionInput;
+	heading: string;
+	label: string;
+	kid_label: string;
+	adult_label: string;
+	kid_sublabel?: string;
+	adult_sublabel?: string;
+	placeholder: string;
+	images?: ImageDeviceInterface;
+}
+
+
+
 /** Translations */
 export type LangPageInterface = Record<string, PageInterface>;
 export type LangQuestionDropdownInterface = Record<string, QuestionDropdownInterface>;
@@ -42,6 +56,7 @@ export type LangQuestionDropdownLanguageInterface = Record<
 	string,
 	QuestionDropdownLanguageInterface
 >;
+export type LangQuestionInputInterface = Record<string, QuestionInputInterface>;
 
 /** Payload */
 export interface PagePayloadInterface {
@@ -64,4 +79,11 @@ export interface QuestionDropdownPayloadLanguageInterface {
 	name: string;
 	type: ScreenType.Language;
 	translations: LangQuestionDropdownLanguageInterface;
+}
+
+export interface QuestionInputPayloadInterface {
+	ident: string;
+	name: string;
+	type: ScreenType.SingleQuestion;
+	translations: LangQuestionInputInterface;
 }
