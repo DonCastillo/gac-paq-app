@@ -1,23 +1,17 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
+import type { QuestionDropdownPayloadLanguageInterface } from "interface/payload.type";
 import Images from "styles/images";
 
-const LanguagePage: QuestionDropdownPayloadInterface = {
+const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 	ident: "language_location",
 	name: "language_location",
 	type: ScreenType.Language,
-	translations: [
-		{
-			id: 1,
+	translations: {
+		"en-CA": {
 			heading: "Welcome!",
-			language_question_dropdown_id: 1,
 			label: "What language do you speak & Where are you?",
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.generic.pages.phone.language,
@@ -33,7 +27,7 @@ const LanguagePage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
-	],
+	},
 };
 
 export default LanguagePage;

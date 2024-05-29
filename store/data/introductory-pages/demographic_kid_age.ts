@@ -1,15 +1,15 @@
+import QuestionType from "constants/question_type.enum";
 import ScreenType from "constants/screen_type.enum";
-import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
+import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const DemographicKidPage: QuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 7,
-			question_dropdown_id: 3,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionDropdown,
 			heading: "Welcome!",
 			label: "How old are you?",
 			kid_label: "How old are you?",
@@ -32,10 +32,6 @@ const DemographicKidPage: QuestionDropdownPayloadInterface = {
 					value: "11",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.generic.pages.phone.age,
@@ -51,7 +47,7 @@ const DemographicKidPage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
-	],
+	},
 };
 
 export default DemographicKidPage;

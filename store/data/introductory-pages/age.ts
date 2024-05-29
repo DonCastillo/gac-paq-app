@@ -1,15 +1,15 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const AgePage: QuestionDropdownPayloadInterface = {
 	ident: "mode",
 	name: "mode",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 4,
-			question_dropdown_id: 2,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionDropdown,
 			heading: "Welcome!",
 			label: "Who's taking this questionnaire?",
 			kid_label: "Who's taking this questionnaire?",
@@ -28,10 +28,6 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					value: "adult",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.generic.pages.phone.mode,
@@ -47,7 +43,7 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
-	],
+	},
 };
 
 export default AgePage;

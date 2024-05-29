@@ -6,8 +6,20 @@ import type QuestionRadioImagePayloadInterface from "interface/directus/question
 import type PageInterface from "interface/page";
 import type QuestionDropdownInterface from "interface/question_dropdown";
 import type QuestionDropdownLanguageInterface from "interface/question_dropdown_language";
+import type QuestionTextPayloadInterface from "interface/directus/question-text-payload";
+import type {
+	PagePayloadInterface,
+	QuestionDropdownPayloadInterface,
+	QuestionDropdownPayloadLanguageInterface,
+} from "interface/payload.type";
 
 export type ModeType = Mode.Adult | Mode.Teen | Mode.Kid | undefined;
+export type IntroductoryPagesType = Array<
+	| PagePayloadInterface
+	| QuestionDropdownPayloadInterface
+	| QuestionDropdownPayloadLanguageInterface
+	| QuestionTextPayloadInterface
+>;
 export type FinalResponseType =
 	| Record<string, string | string[]>
 	| Record<string, Record<string, string | string[]>>;
