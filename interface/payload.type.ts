@@ -92,6 +92,16 @@ export interface SectionInterface {
 	images?: ImageDeviceInterface;
 }
 
+export interface PreambleInterface {
+	heading: string;
+	subheading: string;
+	description: {
+		kid: string;
+		adult: string;
+	};
+	images?: ImageDeviceInterface;
+}
+
 export interface ExtroInterface {
 	heading: string;
 	subheading: string | null;
@@ -109,6 +119,7 @@ export type LangQuestionRadioInterface = Record<string, QuestionRadioInterface>;
 export type LangQuestionTextareaInterface = Record<string, QuestionTextareaInterface>;
 export type LangQuestionRadioImageInterface = Record<string, QuestionRadioImageInterface>;
 export type LangSectionInterface = Record<string, SectionInterface>;
+export type LangPreambleInterface = Record<string, PreambleInterface>;
 export type LangExtroInterface = Record<string, ExtroInterface>;
 
 /** Payload */
@@ -177,6 +188,13 @@ export interface SectionPayloadInterface {
 	translations: LangSectionInterface;
 }
 
+export interface PreamblePayloadInterface {
+	ident: string;
+	heading: string;
+	type: ScreenType.Preamble;
+	translations: LangPreambleInterface;
+}
+
 export interface ExtroPayloadInterface {
 	ident: string;
 	name: string;
@@ -184,4 +202,6 @@ export interface ExtroPayloadInterface {
 	type: ScreenType.ExtroQuestion;
 	translations: LangExtroInterface;
 }
+
+
 
