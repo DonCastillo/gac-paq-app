@@ -1,21 +1,15 @@
 import ScreenType from "constants/screen_type.enum";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S5Intro: SectionPayloadInterface = {
 	ident: "organized_intro",
 	heading: "Organized Activities",
 	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	translations: {
+		"en-CA": {
 			heading: "Organized Activities",
 			subheading: "Section 5",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.kids.intro.section_5.phone,
@@ -31,7 +25,7 @@ const S5Intro: SectionPayloadInterface = {
 				},
 			},
 		},
-	],
+	},
 };
 
 export default S5Intro;

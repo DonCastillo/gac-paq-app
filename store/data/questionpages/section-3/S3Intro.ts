@@ -1,21 +1,15 @@
 import ScreenType from "constants/screen_type.enum";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S3Intro: SectionPayloadInterface = {
 	ident: "work_intro",
 	heading: "Work",
 	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	translations: {
+		"en-CA": {
 			heading: "Work",
 			subheading: "Section 3",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.kids.intro.section_3.phone,
@@ -31,7 +25,7 @@ const S3Intro: SectionPayloadInterface = {
 				},
 			},
 		},
-	],
+	},
 };
 
 export default S3Intro;

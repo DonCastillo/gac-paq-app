@@ -172,7 +172,7 @@ export interface QuestionRadioImagePayloadInterface {
 
 export interface SectionPayloadInterface {
 	ident: string;
-	heading?: string | null;
+	heading: string;
 	type: ScreenType.IntroQuestion;
 	translations: LangSectionInterface;
 }

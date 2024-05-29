@@ -1,21 +1,15 @@
 import ScreenType from "constants/screen_type.enum";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S2Intro: SectionPayloadInterface = {
 	ident: "household_intro",
 	heading: "Household Chores",
 	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	translations: {
+		"en-CA": {
 			heading: "Household Chores",
 			subheading: "Section 2",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.kids.intro.section_2.phone,
@@ -31,7 +25,7 @@ const S2Intro: SectionPayloadInterface = {
 				},
 			},
 		},
-	],
+	},
 };
 
 export default S2Intro;
