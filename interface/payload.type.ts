@@ -179,7 +179,7 @@ export interface SectionPayloadInterface {
 
 export interface ExtroPayloadInterface {
 	ident: string;
-	name?: string | null;
+	name: string;
 	isFinal?: boolean;
 	type: ScreenType.ExtroQuestion;
 	translations: LangExtroInterface;

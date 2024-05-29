@@ -1,21 +1,15 @@
 import ScreenType from "constants/screen_type.enum";
-import type ExtroPayloadInterface from "interface/directus/extro-payload";
+import type { ExtroPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S3Extro: ExtroPayloadInterface = {
 	ident: "work_extro",
 	name: "Section 3 Extro",
 	type: ScreenType.ExtroQuestion,
-	translations: [
-		{
-			id: 1,
-			extro_section_id: 1,
+	translations: {
+		"en-CA": {
 			heading: "Section Complete!",
 			subheading: "Only four more to go!",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				adult: {
 					phone: Images.adults.extro.section_3.phone,
@@ -27,7 +21,7 @@ const S3Extro: ExtroPayloadInterface = {
 				},
 			},
 		},
-	],
+	},
 };
 
 export default S3Extro;
