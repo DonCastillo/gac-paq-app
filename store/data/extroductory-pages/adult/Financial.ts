@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const Financial: QuestionRadioPayloadInterface = {
 	ident: "difficulty_to_meet_financial_needs",
 	name: "difficulty_to_meet_financial_needs",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
@@ -40,12 +40,8 @@ const Financial: QuestionRadioPayloadInterface = {
 					value: "Prefer not to answer",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default Financial;

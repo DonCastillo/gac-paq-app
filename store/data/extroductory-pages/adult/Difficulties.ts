@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
 const Difficulties: QuestionCheckboxPayloadInterface = {
 	ident: "child_difficulties",
 	name: "child_difficulties",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_checkbox_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionCheckbox,
 			heading: "Question 25",
 			label:
 				"Please indicate if your child has difficulties with any of the following in their daily activities.",
@@ -60,12 +60,8 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 					value: "None of the above",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default Difficulties;

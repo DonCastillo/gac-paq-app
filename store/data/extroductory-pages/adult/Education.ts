@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const Education: QuestionRadioPayloadInterface = {
 	ident: "highest_level_of_education",
 	name: "highest_level_of_education",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
@@ -40,12 +40,8 @@ const Education: QuestionRadioPayloadInterface = {
 					value: "Prefer not to answer",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default Education;

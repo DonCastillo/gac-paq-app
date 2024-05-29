@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const GenderKid: QuestionRadioPayloadInterface = {
 	ident: "child_sex_entered_by_child",
 	name: "child_sex",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 4,
-			question_radio_id: 2,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 24",
 			label: "Are you a…",
 			kid_label: "Are you a…",
@@ -31,12 +31,8 @@ const GenderKid: QuestionRadioPayloadInterface = {
 					value: "Prefer not to answer",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default GenderKid;

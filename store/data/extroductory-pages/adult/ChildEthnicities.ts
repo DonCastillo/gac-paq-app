@@ -1,14 +1,14 @@
+import QuestionType from "constants/question_type.enum";
 import ScreenType from "constants/screen_type.enum";
-import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
+import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
 const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 	ident: "child_ethnicity",
 	name: "child_ethnicity",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_checkbox_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionCheckbox,
 			heading: "Question 26",
 			label: "What is your child's ethnicity?",
 			kid_label: "What is your child's ethnicity?",
@@ -43,12 +43,8 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 					value: "Prefer not to say",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default ChildEthnicities;

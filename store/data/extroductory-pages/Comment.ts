@@ -1,15 +1,16 @@
+import QuestionType from "constants/question_type.enum";
 import ScreenType from "constants/screen_type.enum";
-import type QuestionTextareaPayloadInterface from "interface/directus/question-textarea-payload";
+import type { QuestionTextareaPayloadInterface } from "interface/payload.type";
 
 const Comment: QuestionTextareaPayloadInterface = {
 	ident: "app_use_comment",
 	name: "app_use_comment",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_textarea_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionTextarea,
 			heading: "Feedback",
+			placeholder: "Enter your comment here",
 			label:
 				"Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_label:
@@ -18,13 +19,8 @@ const Comment: QuestionTextareaPayloadInterface = {
 				"Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
-			placeholder: "Enter your comment here",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default Comment;

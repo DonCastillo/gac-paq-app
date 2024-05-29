@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const Relationship: QuestionRadioPayloadInterface = {
 	ident: "relationship_to_the_child",
 	name: "relationship_to_the_child",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 28",
 			label: "What is your relationship to the child?",
 			kid_label: "What is your relationship to the child?",
@@ -43,12 +43,8 @@ const Relationship: QuestionRadioPayloadInterface = {
 					value: "Prefer not to answer",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default Relationship;
