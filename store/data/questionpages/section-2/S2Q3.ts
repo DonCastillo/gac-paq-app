@@ -35,7 +35,7 @@ const S2Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
-	}
+	},
 };
 
 export default S2Q3;

@@ -52,7 +52,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
-	}
+	},
 };
 
 export default S1Q7;

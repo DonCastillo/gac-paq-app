@@ -24,7 +24,7 @@ const S2Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
-	}
+	},
 };
 
 export default S2Q1;

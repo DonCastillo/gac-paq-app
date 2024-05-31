@@ -49,10 +49,10 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 						kid: Images.general.donotknow,
 						adult: Images.general.donotknow,
 					},
-				}
+				},
 			],
 		},
-	}
+	},
 };
 
 export default S1Q5;

@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S3Q2: QuestionRadioPayloadInterface = {
 	ident: "work_2",
 	name: "Question 13: In the past week, how many hours have you spent volunteering and/or working?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 11,
-			question_radio_id: 9,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 13",
 			label: "In the past week, how many hours have you spent volunteering and/or working?",
 			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
@@ -36,12 +36,8 @@ const S3Q2: QuestionRadioPayloadInterface = {
 					value: "4 hours or more per day",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S3Q2;
