@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S2Q2: QuestionRadioPayloadInterface = {
 	ident: "household_2",
 	name: "Question 9: How many days did you do chores during the past week?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 11,
-			question_radio_id: 9,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 9",
 			label: "How many days did you do chores during the past week?",
 			kid_label: "How many days did you do chores during the past week?",
@@ -43,12 +43,8 @@ const S2Q2: QuestionRadioPayloadInterface = {
 					value: "7",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	}
 };
 
 export default S2Q2;

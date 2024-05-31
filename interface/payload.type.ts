@@ -88,7 +88,7 @@ export interface QuestionTextareaInterface extends BasePayloadInterface {
 }
 
 export interface QuestionRadioImageInterface extends BasePayloadInterface {
-	type: QuestionType.QuestionSatisfactionImage;
+	type: QuestionType.QuestionSatisfactionImage | QuestionType.QuestionRadioImage;
 	heading: string;
 	choices: ChoiceImage[];
 }
