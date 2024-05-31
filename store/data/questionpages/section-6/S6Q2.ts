@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S6Q2: QuestionRadioPayloadInterface = {
 	ident: "play_2",
 	name: "Question 22: In the past week, how many days per week did you do activities that make your muscles stronger?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 1,
-			question_radio_id: 2,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 22",
 			label:
 				"In the past week, how many days per week did you do activities that make your muscles stronger?",
@@ -50,12 +50,8 @@ const S6Q2: QuestionRadioPayloadInterface = {
 					value: "7",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S6Q2;

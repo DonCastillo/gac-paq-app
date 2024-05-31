@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S6Q1: QuestionRadioPayloadInterface = {
 	ident: "play_1",
 	name: "Question 21:	In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 21",
 			label:
 				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
@@ -42,12 +42,8 @@ const S6Q1: QuestionRadioPayloadInterface = {
 					value: "4 hours or more per day",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S6Q1;
