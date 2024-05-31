@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q8: QuestionRadioPayloadInterface = {
 	ident: "transportation_8",
 	name: "Question 17b: How many days did you walk to places other than school or work in the past week?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionRadio,

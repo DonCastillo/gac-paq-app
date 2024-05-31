@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
@@ -6,7 +6,7 @@ import Images from "styles/images";
 const S4Q1: QuestionRadioImagePayloadInterface = {
 	ident: "transportation_1",
 	name: "Question 15:	How did you go to school in the past week?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionRadioImage,

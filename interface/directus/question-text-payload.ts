@@ -1,8 +1,8 @@
-import type ScreenType from "constants/screen_type.enum";
+import type Screen from "constants/screen.enum";
 import type QuestionTextInterface from "interface/question_text";
 
 export default interface QuestionTextPayloadInterface {
 	name?: string | null;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: QuestionTextInterface[];
 }

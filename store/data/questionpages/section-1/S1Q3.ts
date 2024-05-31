@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionSliderPayloadInterface } from "interface/payload.type";
 
 const S1Q3: QuestionSliderPayloadInterface = {
 	ident: "school_3",
 	name: "Question 3: How many physical education classes did you have in the past week?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionSlider,

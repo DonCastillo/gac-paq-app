@@ -1,9 +1,9 @@
-import type ScreenType from "constants/screen_type.enum";
+import type Screen from "constants/screen.enum";
 import type { QuestionRadioImageInterface } from "interface/question_radio_image";
 
 export default interface QuestionRadioImagePayloadInterface {
 	ident?: string;
 	name?: string | null;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: QuestionRadioImageInterface[];
 }

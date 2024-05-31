@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
 const S4Q7: QuestionCheckboxPayloadInterface = {
 	ident: "transportation_7",
 	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionCheckbox,

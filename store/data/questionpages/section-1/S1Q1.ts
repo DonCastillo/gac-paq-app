@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S1Q1: QuestionRadioPayloadInterface = {
 	ident: "school_1",
 	name: "Question 1: Did you attend school in the past week?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionRadio,

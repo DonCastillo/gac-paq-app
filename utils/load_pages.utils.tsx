@@ -17,7 +17,7 @@ import {
 } from "store/questions/questionsSlice";
 import { addPage, setPage, addSectionTotalPages } from "store/settings/settingsSlice";
 import { loadLanguagesOffline, loadRegionsOffline } from "./load.utils";
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import SectionType from "constants/section_type.enum";
 import Mode from "constants/mode.enum";
 import { getScreenType } from "utils/type.utils";
@@ -74,7 +74,7 @@ const loadApp = (): void => {
 	console.log("load question and section pages...");
 	questionPages.forEach((page: any) => {
 		// add page to section
-		if (getScreenType(page.type) === ScreenType.IntroQuestion) {
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
 			store.dispatch(addSectionPage(page));
 			sectionPageNumber = 1;
 			sectionNumber++;
@@ -106,7 +106,7 @@ const loadApp = (): void => {
 		const sectionPageNumber = ++sectionIndex;
 
 		// add page to section
-		if (getScreenType(page.type) === ScreenType.IntroQuestion) {
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
 			store.dispatch(addSectionPage(page));
 		}
 
@@ -135,7 +135,7 @@ const loadApp = (): void => {
 		const sectionPageNumber = ++sectionIndex;
 
 		// add page to section
-		if (getScreenType(page.type) === ScreenType.IntroQuestion) {
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
 			store.dispatch(addSectionPage(page));
 		}
 

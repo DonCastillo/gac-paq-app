@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S3Q1: QuestionRadioPayloadInterface = {
 	ident: "work_1",
 	name: "Question 12: In the past week, did you volunteer or work?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionRadio,

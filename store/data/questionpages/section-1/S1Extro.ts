@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import type { ExtroPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S1Extro: ExtroPayloadInterface = {
 	ident: "school_extro",
 	name: "Section 1 Extro",
-	type: ScreenType.ExtroQuestion,
+	type: Screen.ExtroQuestion,
 	translations: {
 		"en-CA": {
 			heading: "Section Complete!",

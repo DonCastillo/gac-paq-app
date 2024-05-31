@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import type { PagePayloadInterface } from "interface/payload.type";
 
 const AboutPage: PagePayloadInterface = {
 	ident: "welcome",
 	title: "Welcome To GAC-PAQ",
 	name: "Welcome To GAC-PAQ",
-	type: ScreenType.Page,
+	type: Screen.Page,
 	translations: {
 		"en-CA": {
 			heading: "Welcome To \nGAC-PAQ",

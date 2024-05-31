@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer } from "react";
 import Mode from "constants/mode.enum";
 import Colors from "store/data/colors";
 import { getPage, getPageNumberBasedOnIdent } from "utils/page.utils";
-import type ScreenType from "constants/screen_type.enum";
+import type Screen from "constants/screen.enum";
 import SectionType from "constants/section_type.enum";
 import ButtonLabel from "constants/button_label.enum";
 import PhraseLabel from "constants/phrase_label.enum";
@@ -29,7 +29,7 @@ type rawPageInterface =
 	| QuestionRadioPayloadInterface
 	| QuestionRadioImagePayloadInterface;
 export interface pageInterface {
-	screen: ScreenType | null;
+	screen: Screen | null;
 	page: any | null;
 	pageNumber: number | null;
 	section:

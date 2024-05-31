@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
@@ -6,7 +6,7 @@ import Images from "styles/images";
 const S3Q3: QuestionRadioImagePayloadInterface = {
 	ident: "work_3",
 	name: "Question 14:	Which of the following images shows what you do most of the time while volunteering and/or working?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionRadioImage,

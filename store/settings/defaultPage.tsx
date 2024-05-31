@@ -1,12 +1,12 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import SectionType from "constants/section_type.enum";
 import AboutPage from "store/data/introductory-pages/about";
 import LanguagePage from "store/data/introductory-pages/language";
 
 export interface PageInterface {
-	screen: ScreenType | null;
 	page: any | null;
 	pageNumber: number | null;
+	screen: Screen | null;
 	section:
 		| SectionType.Intro
 		| SectionType.Question
@@ -20,7 +20,7 @@ export interface PageInterface {
 export const currentDefaultPage: PageInterface = {
 	page: LanguagePage,
 	pageNumber: 1,
-	screen: ScreenType.Language,
+	screen: Screen.Language,
 	section: SectionType.Intro,
 	sectionNumber: 0,
 	sectionPageNumber: 1,
@@ -29,7 +29,7 @@ export const currentDefaultPage: PageInterface = {
 export const nextDefaultPage: PageInterface = {
 	page: AboutPage,
 	pageNumber: 2,
-	screen: ScreenType.Page,
+	screen: Screen.Page,
 	section: SectionType.Intro,
 	sectionNumber: 0,
 	sectionPageNumber: 2,

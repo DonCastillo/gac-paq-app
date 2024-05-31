@@ -1,4 +1,4 @@
-enum ScreenType {
+enum Screen {
 	Splash = "splash",
 	Page = "page",
 	Language = "language",
@@ -10,4 +10,4 @@ enum ScreenType {
 	SingleCheckbox = "single_checkbox",
 }
 
-export default ScreenType;
+export default Screen;

@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
 const Difficulties: QuestionCheckboxPayloadInterface = {
 	ident: "child_difficulties",
 	name: "child_difficulties",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionCheckbox,

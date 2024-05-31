@@ -13,7 +13,7 @@ import ContinueButton from "store/data/buttons/continue";
 import GoButton from "store/data/buttons/go";
 import NextButton from "store/data/buttons/next";
 import StartedButton from "store/data/buttons/started";
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import AgreementPhrase from "store/data/phrase/agreement";
 import DonePhrase from "store/data/phrase/done";
 import DontKnowPhrase from "store/data/phrase/dont-know";
@@ -123,7 +123,7 @@ function questionReducer(state: any, action: any): any {
 		case "IDENTIFY_LAST_SECTION_EXTRO_PAGE": {
 			const feedbackExtroPages = state.feedbackExtroPages;
 			const lastSectionExtroIndex = feedbackExtroPages.findLastIndex((page: any) => {
-				return page.type === ScreenType.ExtroQuestion;
+				return page.type === Screen.ExtroQuestion;
 			});
 			feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
 			return {

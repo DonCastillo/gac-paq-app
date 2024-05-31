@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import type { PagePayloadInterface } from "interface/payload.type";
 
 const ErrorPage: PagePayloadInterface = {
 	ident: "error_page",
 	title: "Error Page",
 	name: "Error Page",
-	type: ScreenType.Page,
+	type: Screen.Page,
 	translations: {
 		"en-CA": {
 			heading: "Error",

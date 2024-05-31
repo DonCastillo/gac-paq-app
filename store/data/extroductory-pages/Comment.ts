@@ -1,11 +1,11 @@
 import QuestionType from "constants/question_type.enum";
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import type { QuestionTextareaPayloadInterface } from "interface/payload.type";
 
 const Comment: QuestionTextareaPayloadInterface = {
 	ident: "app_use_comment",
 	name: "app_use_comment",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionTextarea,

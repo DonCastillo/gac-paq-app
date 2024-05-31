@@ -1,10 +1,10 @@
-import type ScreenType from "constants/screen_type.enum";
+import type Screen from "constants/screen.enum";
 import type QuestionDropdownInterface from "interface/question_dropdown";
 import type QuestionDropdownLanguageInterface from "interface/question_dropdown_language";
 
 export default interface QuestionDropdownPayloadInterface {
 	ident?: string;
 	name?: string | null;
-	type: ScreenType.SingleQuestion | ScreenType.Region | ScreenType.Language;
+	type: Screen.SingleQuestion | Screen.Region | Screen.Language;
 	translations: QuestionDropdownInterface[] | QuestionDropdownLanguageInterface[];
 }

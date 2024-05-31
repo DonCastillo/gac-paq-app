@@ -1,4 +1,4 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import QuestionType from "constants/question_type.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
 import Images from "styles/images/index";
@@ -6,7 +6,7 @@ import Images from "styles/images/index";
 const S1Q5: QuestionRadioImagePayloadInterface = {
 	ident: "school_5",
 	name: "Question 5: Which of the following images shows what you do most of the time in physical education class?",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionSatisfactionImage,

@@ -1,12 +1,12 @@
 import QuestionType from "constants/question_type.enum";
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
 import Images from "styles/images/index";
 
 const Satisfaction: QuestionRadioImagePayloadInterface = {
 	ident: "app_use_satisfaction",
 	name: "app_use_satisfaction",
-	type: ScreenType.SingleQuestion,
+	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: QuestionType.QuestionSatisfactionImage,

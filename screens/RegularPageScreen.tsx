@@ -27,7 +27,7 @@ export default function RegularPageScreen(): React.ReactElement {
 
 		if (currentPageNumber === 0) {
 			dispatch(nextPage());
-			// tempComponent = getScreen(mode, ScreenType.Language);
+			// tempComponent = getScreen(mode, Screen.Language);
 		} else {
 			if (pageType !== null && sectionType !== null) {
 				tempComponent = getScreen(mode, pageType, sectionType);

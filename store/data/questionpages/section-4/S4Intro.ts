@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S4Intro: SectionPayloadInterface = {
 	ident: "transportation_intro",
 	heading: "Transportation",
-	type: ScreenType.IntroQuestion,
+	type: Screen.IntroQuestion,
 	translations: {
 		"en-CA": {
 			heading: "Transportation",

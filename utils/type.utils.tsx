@@ -1,27 +1,27 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import SectionType from "constants/section_type.enum";
 
 const getScreenType = (screenType: string): ScreenType => {
 	if (screenType === "page") {
-		return ScreenType.Page;
+		return Screen.Page;
 	} else if (screenType === "language") {
-		return ScreenType.Language;
+		return Screen.Language;
 	} else if (screenType === "region") {
-		return ScreenType.Region;
+		return Screen.Region;
 	} else if (screenType === "splash") {
-		return ScreenType.Splash;
+		return Screen.Splash;
 	} else if (screenType === "question_single") {
-		return ScreenType.SingleQuestion;
+		return Screen.SingleQuestion;
 	} else if (screenType === "question_intro") {
-		return ScreenType.IntroQuestion;
+		return Screen.IntroQuestion;
 	} else if (screenType === "question_extro") {
-		return ScreenType.ExtroQuestion;
+		return Screen.ExtroQuestion;
 	} else if (screenType === "single_checkbox") {
-		return ScreenType.SingleCheckbox;
+		return Screen.SingleCheckbox;
 	} else if (screenType === "preamble") {
-		return ScreenType.Preamble;
+		return Screen.Preamble;
 	} else {
-		return ScreenType.Page;
+		return Screen.Page;
 	}
 };
 

@@ -1,11 +1,11 @@
-import ScreenType from "constants/screen_type.enum";
+import Screen from "constants/screen.enum";
 import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const SocialEconomicsIntroKid: SectionPayloadInterface = {
 	ident: "about_you",
 	heading: "About You",
-	type: ScreenType.IntroQuestion,
+	type: Screen.IntroQuestion,
 	translations: {
 		"en-CA": {
 			heading: "About You",

@@ -1,5 +1,5 @@
 import type QuestionType from "constants/question_type.enum";
-import type ScreenType from "constants/screen_type.enum";
+import type Screen from "constants/screen.enum";
 import type { ImageDeviceInterface } from "interface/images";
 
 export interface Choice {
@@ -135,77 +135,77 @@ export interface PagePayloadInterface {
 	ident: string;
 	title: string;
 	name: string;
-	type: ScreenType.Page;
+	type: Screen.Page;
 	translations: LangPageInterface;
 }
 
 export interface QuestionDropdownPayloadInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: LangQuestionDropdownInterface;
 }
 
 export interface QuestionDropdownPayloadLanguageInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.Language;
+	type: Screen.Language;
 	translations: LangQuestionDropdownLanguageInterface;
 }
 
 export interface QuestionInputPayloadInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: LangQuestionInputInterface;
 }
 
 export interface QuestionCheckboxPayloadInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: LangQuestionCheckboxInterface;
 }
 
 export interface QuestionRadioPayloadInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: LangQuestionRadioInterface;
 }
 
 export interface QuestionSliderPayloadInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: LangQuestionSliderInterface;
 }
 
 export interface QuestionTextareaPayloadInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: LangQuestionTextareaInterface;
 }
 
 export interface QuestionRadioImagePayloadInterface {
 	ident: string;
 	name: string;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: LangQuestionRadioImageInterface;
 }
 
 export interface SectionPayloadInterface {
 	ident: string;
 	heading: string;
-	type: ScreenType.IntroQuestion;
+	type: Screen.IntroQuestion;
 	translations: LangSectionInterface;
 }
 
 export interface PreamblePayloadInterface {
 	ident: string;
 	heading: string;
-	type: ScreenType.Preamble;
+	type: Screen.Preamble;
 	translations: LangPreambleInterface;
 }
 
@@ -213,7 +213,7 @@ export interface ExtroPayloadInterface {
 	ident: string;
 	name: string;
 	isFinal?: boolean;
-	type: ScreenType.ExtroQuestion;
+	type: Screen.ExtroQuestion;
 	translations: LangExtroInterface;
 }
 
