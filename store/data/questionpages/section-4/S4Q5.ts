@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q5: QuestionRadioPayloadInterface = {
 	ident: "transportation_5",
 	name: "Question 16b: How many days did you use this mode in the past week?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 11,
-			question_radio_id: 9,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 16b",
 			label: "How many days did you use this mode in the past week?",
 			kid_label: "How many days did you use this mode in the past week?",
@@ -43,12 +43,8 @@ const S4Q5: QuestionRadioPayloadInterface = {
 					value: "7",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S4Q5;

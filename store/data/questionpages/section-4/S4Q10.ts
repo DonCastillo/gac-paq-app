@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q10: QuestionRadioPayloadInterface = {
 	ident: "transportation_10",
 	name: "Question 17d: How many days did you wheel to places other than school or work in the past week?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 11,
-			question_radio_id: 9,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 17d",
 			label: "How many days did you wheel to places other than school or work in the past week?",
 			kid_label:
@@ -45,12 +45,8 @@ const S4Q10: QuestionRadioPayloadInterface = {
 					value: "7",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S4Q10;

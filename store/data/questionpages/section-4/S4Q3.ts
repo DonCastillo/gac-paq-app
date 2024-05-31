@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q3: QuestionRadioPayloadInterface = {
 	ident: "transportation_3",
 	name: "Question 15c: How long does it normally take you to go to school?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 7,
-			question_radio_id: 5,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 15c",
 			label: "How long does it normally take you to go to school?",
 			kid_label: "How long does it normally take you to go to school?",
@@ -31,12 +31,8 @@ const S4Q3: QuestionRadioPayloadInterface = {
 					value: "More than 30 minutes",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S4Q3;

@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
 const S4Q7: QuestionCheckboxPayloadInterface = {
 	ident: "transportation_7",
 	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_checkbox_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionCheckbox,
 			heading: "Question 17",
 			label:
 				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
@@ -40,12 +40,8 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 					value: "No",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S4Q7;
