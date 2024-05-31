@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S7Q1: QuestionRadioPayloadInterface = {
 	ident: "outdoors_1",
 	name: "Question 23:	In the past week, on a normal day, how much time do you spend outdoors?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 23",
 			label: "In the past week, on a normal day, how much time do you spend outdoors?",
 			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
@@ -40,12 +40,8 @@ const S7Q1: QuestionRadioPayloadInterface = {
 					value: "4 hours or more per day",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S7Q1;
