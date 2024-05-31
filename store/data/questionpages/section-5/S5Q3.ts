@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S5Q3: QuestionRadioPayloadInterface = {
 	ident: "organized_3",
 	name: "Question 20: On the days that you do these activities during the past week, how long did it usually last?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 7,
-			question_radio_id: 5,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 20",
 			label:
 				"On the days that you do these activities during the past week, how long did it usually last?",
@@ -34,12 +34,8 @@ const S5Q3: QuestionRadioPayloadInterface = {
 					value: "More than 1 and a half hours per day",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S5Q3;

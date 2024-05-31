@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S5Q1: QuestionRadioPayloadInterface = {
 	ident: "organized_1",
 	name: "Question 18:	Did you do any organized activities during the past week?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 18",
 			label: "Did you do any organized activities during the past week?",
 			kid_label: "Did you do any organized activities during the past week?",
@@ -23,12 +23,8 @@ const S5Q1: QuestionRadioPayloadInterface = {
 					value: "no",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S5Q1;
