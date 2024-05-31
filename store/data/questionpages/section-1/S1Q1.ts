@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S1Q1: QuestionRadioPayloadInterface = {
 	ident: "school_1",
 	name: "Question 1: Did you attend school in the past week?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 3,
-			question_radio_id: 3,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 1",
 			label: "Did you attend school in the past week?",
 			kid_label: "Did you attend school in the past week?",
@@ -23,12 +23,8 @@ const S1Q1: QuestionRadioPayloadInterface = {
 					value: "no",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S1Q1;

@@ -73,6 +73,13 @@ export interface QuestionRadioInterface extends BasePayloadInterface{
 	choices: Choice[];
 }
 
+export interface QuestionSliderInterface extends BasePayloadInterface{
+	type: QuestionType.QuestionSlider;
+	heading: string;
+	max_value: number;
+}
+
+
 export interface QuestionTextareaInterface extends BasePayloadInterface { 
 	type: QuestionType.QuestionTextarea;
 	heading: string;
@@ -118,6 +125,7 @@ export type LangQuestionCheckboxInterface = Record<string, QuestionCheckboxInter
 export type LangQuestionRadioInterface = Record<string, QuestionRadioInterface>;
 export type LangQuestionTextareaInterface = Record<string, QuestionTextareaInterface>;
 export type LangQuestionRadioImageInterface = Record<string, QuestionRadioImageInterface>;
+export type LangQuestionSliderInterface = Record<string, QuestionSliderInterface>;
 export type LangSectionInterface = Record<string, SectionInterface>;
 export type LangPreambleInterface = Record<string, PreambleInterface>;
 export type LangExtroInterface = Record<string, ExtroInterface>;
@@ -166,6 +174,13 @@ export interface QuestionRadioPayloadInterface {
 	translations: LangQuestionRadioInterface;
 }
 
+export interface QuestionSliderPayloadInterface {
+	ident: string;
+	name: string;
+	type: ScreenType.SingleQuestion;
+	translations: LangQuestionSliderInterface;
+}
+
 export interface QuestionTextareaPayloadInterface {
 	ident: string;
 	name: string;
@@ -179,7 +194,6 @@ export interface QuestionRadioImagePayloadInterface {
 	type: ScreenType.SingleQuestion;
 	translations: LangQuestionRadioImageInterface;
 }
-
 
 export interface SectionPayloadInterface {
 	ident: string;

@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S1Q2: QuestionRadioPayloadInterface = {
 	ident: "school_2",
 	name: "Question 2: How many days did you attend school in the past week?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 6,
-			question_radio_id: 4,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 2",
 			label: "How many days did you attend school in the past week?",
 			kid_label: "How many days did you attend school in the past week?",
@@ -43,12 +43,8 @@ const S1Q2: QuestionRadioPayloadInterface = {
 					value: "7",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S1Q2;

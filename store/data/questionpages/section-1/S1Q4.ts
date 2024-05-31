@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S1Q4: QuestionRadioPayloadInterface = {
 	ident: "school_4",
 	name: "Question 4: How long are your physical education classes?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 7,
-			question_radio_id: 5,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 4",
 			label: "How long are your physical education classes?",
 			kid_label: "How long are your physical education classes?",
@@ -35,12 +35,8 @@ const S1Q4: QuestionRadioPayloadInterface = {
 					value: "Don't know",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S1Q4;

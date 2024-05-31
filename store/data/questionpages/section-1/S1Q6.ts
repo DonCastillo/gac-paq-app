@@ -1,14 +1,14 @@
 import ScreenType from "constants/screen_type.enum";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import QuestionType from "constants/question_type.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S1Q6: QuestionRadioPayloadInterface = {
 	ident: "school_6",
 	name: "Question 6: On a normal school day, how much break time do you have?",
 	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 9,
-			question_radio_id: 7,
+	translations: {
+		"en-CA": {
+			type: QuestionType.QuestionRadio,
 			heading: "Question 6",
 			label: "On a normal school day, how much break time do you have?",
 			kid_label: "On a normal school day, how much break time do you have?",
@@ -43,12 +43,8 @@ const S1Q6: QuestionRadioPayloadInterface = {
 					value: "Don't know",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+	},
 };
 
 export default S1Q6;
