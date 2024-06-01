@@ -3,6 +3,7 @@ import type Screen from "constants/screen.enum";
 import { type ReactElement } from "react";
 import { type Image } from "react-native";
 import type { ImageDeviceInterface } from "interface/images";
+import { type ModeType } from "./union.type";
 
 export interface Choice {
 	label: string;
@@ -35,6 +36,18 @@ export interface ChoiceIcon {
 	value: string;
 	icon?: ReactElement<Image> | SVGElement | any;
 }
+
+export interface ResponseInterface {
+	ident: string;
+	label: string;
+	answer: string | null;
+	pageNumber: number | null;
+	mode: ModeType;
+	section: string | null;
+	sectionNumber: number | null;
+	sectionPageNumber: number | null;
+}
+
 
 export interface PageInterface {
 	heading: string;

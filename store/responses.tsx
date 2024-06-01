@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import type ResponseInterface from "interface/response";
+import type { ResponseInterface } from "interface/payload.type";
 import Section from "constants/section.enum";
 
 export interface ResponseContextInterface {

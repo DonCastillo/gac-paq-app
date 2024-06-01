@@ -6,7 +6,7 @@ import type DeviceInterface from "./dimensions";
 import { type PageInterface } from "store/settings/defaultPage";
 import type RegionInterface from "interface/region";
 import type LanguageInterface from "interface/language";
-import type ResponseInterface from "interface/response";
+import type { ResponseInterface } from "interface/payload.type";
 import type PagePayloadInterface from "interface/directus/page-payload";
 import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 import type SectionPayloadInterface from "./directus/section-payload";

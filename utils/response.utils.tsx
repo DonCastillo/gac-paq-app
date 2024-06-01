@@ -1,5 +1,5 @@
 import Section from "constants/section.enum";
-import type ResponseInterface from "interface/response";
+import type { ResponseInterface } from "interface/payload.type";
 import type { FinalResponseType } from "interface/union.type";
 import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
 import { store } from "store/store";
@@ -96,11 +96,7 @@ const getResponseByIdent = (ident: string): string | string[] | null => {
 		return null;
 	}
 
-	if (
-		finalResponse?.answer !== null &&
-		finalResponse?.answer !== undefined &&
-		finalResponse?.answer.includes(" | ")
-	) {
+	if (finalResponse?.answer?.includes(" | ")) {
 		return finalResponse?.answer.split(" | ");
 	}
 	return finalResponse?.answer;
