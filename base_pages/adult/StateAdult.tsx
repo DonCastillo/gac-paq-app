@@ -6,7 +6,7 @@ import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
-import StateType from "constants/state_type.enum";
+import State from "constants/state.enum";
 import { QuestionContext } from "store/questions";
 import type PagePayloadInterface from "interface/directus/page-payload";
 import type PageInterface from "interface/page";
@@ -24,7 +24,7 @@ import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
 import { resetResponses } from "store/responses/responsesSlice";
 
 interface Props {
-	state: StateType;
+	state: State;
 }
 
 function StateAdult({ state }: Props): React.ReactElement {
@@ -53,7 +53,7 @@ function StateAdult({ state }: Props): React.ReactElement {
 	}, [state]);
 
 	function statePageChange(): void {
-		if (state === StateType.Success) {
+		if (state === State.Success) {
 			setTranslatedPage(translate(successPage.translations, language));
 		} else {
 			setTranslatedPage(translate(errorPage.translations, language));
@@ -91,7 +91,7 @@ function StateAdult({ state }: Props): React.ReactElement {
 	}
 
 	function buttonChange(): void {
-		if (state === StateType.Success) {
+		if (state === State.Success) {
 			setButtonComponent(
 				<FWBtnShadowed
 					label={phrases.done}
@@ -122,7 +122,7 @@ function StateAdult({ state }: Props): React.ReactElement {
 				<Main>
 					<CenterMain>
 						<View style={styles.stateIconContainer}>
-							{state === StateType.Success ? <CheckMark /> : <ErrorMark />}
+							{state === State.Success ? <CheckMark /> : <ErrorMark />}
 						</View>
 						<Heading
 							customStyle={{

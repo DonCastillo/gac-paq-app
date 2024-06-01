@@ -6,7 +6,7 @@ import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
-import StateType from "constants/state_type.enum";
+import State from "constants/state.enum";
 import type PagePayloadInterface from "interface/directus/page-payload";
 import type PageInterface from "interface/page";
 import type QuestionDropdownInterface from "interface/question_dropdown";
@@ -28,7 +28,7 @@ import { resetResponses, selectAllResponses } from "store/responses/responsesSli
 import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
 
 interface Props {
-	state: StateType;
+	state: State;
 }
 
 function StateKid({ state }: Props): React.ReactElement {
@@ -57,7 +57,7 @@ function StateKid({ state }: Props): React.ReactElement {
 	}, [state]);
 
 	function statePageChange(): void {
-		if (state === StateType.Success) {
+		if (state === State.Success) {
 			setTranslatedPage(translate(successPage.translations, language));
 		} else {
 			setTranslatedPage(translate(errorPage.translations, language));
@@ -97,7 +97,7 @@ function StateKid({ state }: Props): React.ReactElement {
 	}
 
 	function buttonChange(): void {
-		if (state === StateType.Success) {
+		if (state === State.Success) {
 			setButtonComponent(
 				<FWBtnShadowed
 					label={phrases.done}
@@ -143,7 +143,7 @@ function StateKid({ state }: Props): React.ReactElement {
 						<View style={styles.imageContainer}>
 							{/* State Image */}
 							<View style={styles.stateImageContainer}>
-								{state === StateType.Success ? (
+								{state === State.Success ? (
 									<SuccessImage width={300} />
 								) : (
 									<ErrorImage width={300} />
@@ -152,11 +152,7 @@ function StateKid({ state }: Props): React.ReactElement {
 
 							{/* State Icon */}
 							<View style={styles.stateIconContainer}>
-								{state === StateType.Success ? (
-									<CheckMark />
-								) : (
-									<ErrorMark style={styles.errorMark} />
-								)}
+								{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
 							</View>
 						</View>
 					</CenterMain>

@@ -1,6 +1,6 @@
-enum StateType {
+enum State {
 	Success = "success",
 	Error = "error",
 }
 
-export default StateType;
+export default State;
