@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import SectionType from "constants/section_type.enum";
+import Section from "constants/section.enum";
 
-const getScreenType = (screenType: string): ScreenType => {
+const getScreenType = (screenType: string): Screen => {
 	if (screenType === "page") {
 		return Screen.Page;
 	} else if (screenType === "language") {
@@ -25,13 +25,13 @@ const getScreenType = (screenType: string): ScreenType => {
 	}
 };
 
-const getSectionType = (sectionType: string): SectionType => {
+const getSectionType = (sectionType: string): Section => {
 	if (sectionType === "intro") {
-		return SectionType.Intro;
+		return Section.Intro;
 	} else if (sectionType === "extro") {
-		return SectionType.Extro;
+		return Section.Extro;
 	} else {
-		return SectionType.Question;
+		return Section.Question;
 	}
 };
 

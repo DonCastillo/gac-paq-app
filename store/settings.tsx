@@ -3,7 +3,7 @@ import Mode from "constants/mode.enum";
 import Colors from "store/data/colors";
 import { getPage, getPageNumberBasedOnIdent } from "utils/page.utils";
 import type Screen from "constants/screen.enum";
-import SectionType from "constants/section_type.enum";
+import Section from "constants/section.enum";
 import ButtonLabel from "constants/button_label.enum";
 import PhraseLabel from "constants/phrase_label.enum";
 import type SectionPayloadInterface from "interface/directus/section-payload";
@@ -32,12 +32,7 @@ export interface pageInterface {
 	screen: Screen | null;
 	page: any | null;
 	pageNumber: number | null;
-	section:
-		| SectionType.Intro
-		| SectionType.Question
-		| SectionType.Extro
-		| SectionType.Feedback
-		| null;
+	section: Section.Intro | Section.Question | Section.Extro | Section.Feedback | null;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;
 }
@@ -301,7 +296,7 @@ function settingReducer(state: any, action: any): any {
 			};
 		case "REMOVE_EXTRO_PAGES": {
 			const pagesWithoutExtros = Object.values(state.pages).filter((page: any) => {
-				return page.section !== SectionType.Extro;
+				return page.section !== Section.Extro;
 			});
 			return {
 				...state,
@@ -310,7 +305,7 @@ function settingReducer(state: any, action: any): any {
 		}
 		case "REMOVE_FEEDBACK_PAGES": {
 			const pagesWithoutFeedback = Object.values(state.pages).filter((page: any) => {
-				return page.section !== SectionType.Feedback;
+				return page.section !== Section.Feedback;
 			});
 			return {
 				...state,
@@ -323,10 +318,7 @@ function settingReducer(state: any, action: any): any {
 
 			// remove all extro and feedback pages
 			for (const [key, page] of Object.entries(state.pages)) {
-				if (
-					(page as any).section === SectionType.Extro ||
-					(page as any).section === SectionType.Feedback
-				) {
+				if ((page as any).section === Section.Extro || (page as any).section === Section.Feedback) {
 					continue;
 				} else {
 					newPages = { ...newPages, [key]: page };
@@ -348,7 +340,7 @@ function settingReducer(state: any, action: any): any {
 						pageNumber: ++lastPageNumber,
 						page,
 						screen: page.type,
-						section: SectionType.Extro,
+						section: Section.Extro,
 						sectionNumber: lastSectionNumber,
 						sectionPageNumber: ++index,
 					};
@@ -359,7 +351,7 @@ function settingReducer(state: any, action: any): any {
 						pageNumber: ++lastPageNumber,
 						page,
 						screen: page.type,
-						section: SectionType.Extro,
+						section: Section.Extro,
 						sectionNumber: lastSectionNumber,
 						sectionPageNumber: ++index,
 					};
@@ -377,7 +369,7 @@ function settingReducer(state: any, action: any): any {
 					pageNumber: ++lastPageNumber,
 					page,
 					screen: page.type,
-					section: SectionType.Feedback,
+					section: Section.Feedback,
 					sectionNumber: lastSectionNumber,
 					sectionPageNumber: ++index,
 				};

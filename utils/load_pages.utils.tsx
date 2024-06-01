@@ -18,7 +18,7 @@ import {
 import { addPage, setPage, addSectionTotalPages } from "store/settings/settingsSlice";
 import { loadLanguagesOffline, loadRegionsOffline } from "./load.utils";
 import Screen from "constants/screen.enum";
-import SectionType from "constants/section_type.enum";
+import Section from "constants/section.enum";
 import Mode from "constants/mode.enum";
 import { getScreenType } from "utils/type.utils";
 
@@ -60,7 +60,7 @@ const loadApp = (): void => {
 					page,
 					screen: page.type,
 					sectionNumber,
-					section: SectionType.Intro,
+					section: Section.Intro,
 					sectionPageNumber,
 				},
 			}),
@@ -87,7 +87,7 @@ const loadApp = (): void => {
 					pageNumber,
 					page,
 					screen: page.type,
-					section: SectionType.Question,
+					section: Section.Question,
 					sectionNumber,
 					sectionPageNumber,
 				},
@@ -117,7 +117,7 @@ const loadApp = (): void => {
 					pageNumber,
 					page,
 					screen: page.type,
-					section: SectionType.Extro,
+					section: Section.Extro,
 					sectionNumber,
 					sectionPageNumber,
 				},
@@ -146,7 +146,7 @@ const loadApp = (): void => {
 					pageNumber,
 					page,
 					screen: page.type,
-					section: SectionType.Feedback,
+					section: Section.Feedback,
 					sectionNumber,
 					sectionPageNumber,
 				},
@@ -208,10 +208,7 @@ const reloadExtroFeedbackPages = (): void => {
 
 	// remove all extro and feedback pages
 	for (const [key, page] of Object.entries(allPages)) {
-		if (
-			(page as any).section === SectionType.Extro ||
-			(page as any).section === SectionType.Feedback
-		) {
+		if ((page as any).section === Section.Extro || (page as any).section === Section.Feedback) {
 			continue;
 		} else {
 			newPages = { ...newPages, [key]: page };
@@ -234,7 +231,7 @@ const reloadExtroFeedbackPages = (): void => {
 				pageNumber: ++lastPageNumber,
 				page,
 				screen: page.type,
-				section: SectionType.Extro,
+				section: Section.Extro,
 				sectionNumber: lastSectionNumber,
 				sectionPageNumber: ++index,
 			};
@@ -245,7 +242,7 @@ const reloadExtroFeedbackPages = (): void => {
 				pageNumber: ++lastPageNumber,
 				page,
 				screen: page.type,
-				section: SectionType.Extro,
+				section: Section.Extro,
 				sectionNumber: lastSectionNumber,
 				sectionPageNumber: ++index,
 			};
@@ -263,7 +260,7 @@ const reloadExtroFeedbackPages = (): void => {
 			pageNumber: ++lastPageNumber,
 			page,
 			screen: page.type,
-			section: SectionType.Feedback,
+			section: Section.Feedback,
 			sectionNumber: lastSectionNumber,
 			sectionPageNumber: ++index,
 		};

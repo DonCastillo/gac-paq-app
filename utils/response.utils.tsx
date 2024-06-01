@@ -1,4 +1,4 @@
-import SectionType from "constants/section_type.enum";
+import Section from "constants/section.enum";
 import type ResponseInterface from "interface/response";
 import type { FinalResponseType } from "interface/union.type";
 import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
@@ -16,7 +16,7 @@ const getResponse = (): string | null => {
 	if (Object.keys(responses).length <= 0) return null;
 
 	let labelLookup = "";
-	if (section === SectionType.Extro) {
+	if (section === Section.Extro) {
 		labelLookup = `[${mode}][${section}][${sectionNumber}][${sectionPageNumber}]`;
 	} else {
 		labelLookup = `[${section}][${sectionNumber}][${sectionPageNumber}]`;
@@ -45,12 +45,12 @@ const sanitizeResponse = (): FinalResponseType => {
 		if (value.answer === null || value.answer === "" || value.answer === undefined) continue;
 
 		// get all answers from the intros
-		if (value.section === SectionType.Intro) {
+		if (value.section === Section.Intro) {
 			sanitizedResponse[value.label ?? key] = value.answer;
 		}
 
 		// get all answers from the questions
-		if (value.section === SectionType.Question) {
+		if (value.section === Section.Question) {
 			const label = (value.label ?? key).replace(/(\r\n|\n|\r)/g, "");
 			if (value.answer.includes(" | ")) {
 				sanitizedResponse.questions = {
@@ -66,12 +66,12 @@ const sanitizeResponse = (): FinalResponseType => {
 		}
 
 		// get all answers from the feedback
-		if (value.section === SectionType.Feedback) {
+		if (value.section === Section.Feedback) {
 			sanitizedResponse[value.label ?? key] = value.answer;
 		}
 
 		// get all answers from the extros that match the current mode
-		if (value.section === SectionType.Extro && value.mode === mode) {
+		if (value.section === Section.Extro && value.mode === mode) {
 			if (value.answer.includes(" | ")) {
 				sanitizedResponse[value.label ?? key] = value.answer.split(" | ");
 			} else {

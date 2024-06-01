@@ -1,7 +1,7 @@
 import defaultColor from "./defaultColor";
 import Colors from "store/data/colors";
 import { getPage } from "utils/page.utils";
-import SectionType from "constants/section_type.enum";
+import Section from "constants/section.enum";
 import type {
 	SetModeFuncType,
 	SetDeviceFuncType,
@@ -130,14 +130,14 @@ const setKeyboardState: SetKeyboardState = (state, action) => {
 
 const removeExtroPages: SettingsFuncType = (state) => {
 	const pagesWithoutExtros = Object.values(state.pages).filter((page: any) => {
-		return page.section !== SectionType.Extro;
+		return page.section !== Section.Extro;
 	});
 	state.pages = pagesWithoutExtros;
 };
 
 const removeFeedbackPages: SettingsFuncType = (state) => {
 	const pagesWithoutFeedback = Object.values(state.pages).filter((page: any) => {
-		return page.section !== SectionType.Feedback;
+		return page.section !== Section.Feedback;
 	});
 	state.pages = pagesWithoutFeedback;
 };

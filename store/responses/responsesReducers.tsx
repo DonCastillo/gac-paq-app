@@ -1,4 +1,4 @@
-import SectionType from "constants/section_type.enum";
+import Section from "constants/section.enum";
 import type {
 	ClearResponseByIdentFuncType,
 	NewResponseFuncType,
@@ -19,7 +19,7 @@ const newResponse: NewResponseFuncType = (state, action) => {
 	};
 	let propertyName = "";
 
-	if (newResponse.section === SectionType.Extro) {
+	if (newResponse.section === Section.Extro) {
 		propertyName = `[${newResponse.mode}][${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
 	} else {
 		propertyName = `[${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
@@ -57,7 +57,7 @@ const clearQuestionResponses: ResponsesFuncType = (state) => {
 	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
 		const responseValue = value;
-		if (responseValue.section !== SectionType.Question) {
+		if (responseValue.section !== Section.Question) {
 			newState[key] = value;
 		}
 	}
@@ -68,7 +68,7 @@ const clearIntroResponses: ResponsesFuncType = (state) => {
 	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
 		const responseValue = value;
-		if (responseValue.section !== SectionType.Intro) {
+		if (responseValue.section !== Section.Intro) {
 			newState[key] = value;
 		}
 	}
@@ -79,7 +79,7 @@ const clearFeedbackResponses: ResponsesFuncType = (state) => {
 	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
 		const responseValue = value;
-		if (responseValue.section !== SectionType.Feedback) {
+		if (responseValue.section !== Section.Feedback) {
 			newState[key] = value;
 		}
 	}
@@ -90,7 +90,7 @@ const clearExtroResponses: ResponsesFuncType = (state) => {
 	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
 		const responseValue = value;
-		if (responseValue.section !== SectionType.Extro) {
+		if (responseValue.section !== Section.Extro) {
 			newState[key] = value;
 		}
 	}
