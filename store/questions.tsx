@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import type RegionInterface from "interface/region";
+import type { RegionInterface } from "interface/payload.type";
 import type LanguageInterface from "interface/language";
 import Regions from "store/data/regions";
 import Languages from "store/data/languages";

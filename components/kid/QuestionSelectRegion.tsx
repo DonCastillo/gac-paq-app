@@ -1,10 +1,9 @@
 import React from "react";
 import DropDownSelector from "components/DropDownPicker";
-import type RegionInterface from "interface/region";
 import { optionRegion } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getRegionOption } from "store/questions/questionsSlice";
-import type { ChoiceIcon } from "interface/payload.type";
+import type { ChoiceIcon, RegionInterface } from "interface/payload.type";
 
 interface QuestionSelectRegionProps {
 	onChange: (value: string) => void;

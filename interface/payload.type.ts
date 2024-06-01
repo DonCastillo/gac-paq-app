@@ -4,6 +4,8 @@ import { type ReactElement } from "react";
 import { type Image } from "react-native";
 import type { ImageDeviceInterface } from "interface/images";
 import { type ModeType } from "./union.type";
+import type { Svg } from "react-native-svg";
+
 
 export interface Choice {
 	label: string;
@@ -37,6 +39,14 @@ export interface ChoiceIcon {
 	icon?: ReactElement<Image> | SVGElement | any;
 }
 
+export interface RegionInterface {
+	title: string;
+	code: string;
+	flag_code?: string;
+	flag?: Svg | null;
+}
+
+
 export interface ResponseInterface {
 	ident: string;
 	label: string;
@@ -48,11 +58,11 @@ export interface ResponseInterface {
 	sectionPageNumber: number | null;
 }
 
-
 export interface PageInterface {
 	heading: string;
 	description: string | null;
 }
+
 
 export interface BasePayloadInterface {
 	label: string;
