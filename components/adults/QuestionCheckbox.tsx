@@ -1,7 +1,7 @@
 import { FlatList } from "react-native";
 import React, { useEffect, useState } from "react";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
 import CheckboxOption from "components/adults/subcomponents/CheckboxOption";
+import type { ChoiceIcon } from "interface/payload.type";
 import {
 	extractUserSpecifiedOtherFromArray,
 	getUserSpecifiedOther,
@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import { getCurrentPage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
-	options: QuestionRadioItemInterface[];
+	options: ChoiceIcon[];
 	onSelect: (value: string | null) => void;
 	selectedValue: string | null;
 }

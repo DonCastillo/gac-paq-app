@@ -1,8 +1,8 @@
 import React from "react";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
 import DropDownSelector from "components/DropDownPicker";
 import { optionText } from "utils/options.utils";
 import type { OptionInterface } from "utils/options.utils";
+import type { ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
 	options: OptionInterface[];
@@ -19,7 +19,7 @@ export default function QuestionSelect({
 	dropdownOpen,
 	setDropdownOpen,
 }: PropsInterface): React.ReactElement {
-	const rawItems: QuestionRadioItemInterface[] = optionText(options);
+	const rawItems: ChoiceIcon[] = optionText(options);
 	return (
 		<DropDownSelector
 			options={rawItems}

@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
+import type { ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: QuestionRadioItemInterface[];
+	options: ChoiceIcon[];
 	selectedValue: string | null;
 	onSelect: (value: string) => void;
 	dropdownOpen: boolean;
@@ -29,7 +29,7 @@ export default function DropDownSelector({
 	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
-	const [items, setItems] = useState<QuestionRadioItemInterface[]>(options);
+	const [items, setItems] = useState<ChoiceIcon[]>(options);
 
 	useEffect(() => {
 		if (items !== options) {

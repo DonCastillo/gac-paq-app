@@ -1,10 +1,12 @@
 import React from "react";
 import type LanguageInterface from "interface/language";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
 import type RegionInterface from "interface/region";
 import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
 import type { ChoiceInterface } from "interface/question_checkbox";
+import type { ChoiceIcon } from "interface/payload.type";
+import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
+
 const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
 
 export interface OptionInterface {
@@ -12,7 +14,7 @@ export interface OptionInterface {
 	value: string;
 }
 
-function optionTextMode(options: ChoiceInterface[], mode: Mode | undefined): ChoiceInterface[] {
+function optionTextMode(options: ChoiceInterface[], mode: ModeType): ChoiceInterface[] {
 	if (mode === undefined) {
 		return options;
 	}
@@ -37,10 +39,7 @@ function optionTextMode(options: ChoiceInterface[], mode: Mode | undefined): Cho
 	return options;
 }
 
-function optionRadioItemMode(
-	options: ChoiceInterface[],
-	mode: Mode | undefined,
-): QuestionRadioItemInterface[] {
+function optionRadioItemMode(options: ChoiceInterface[], mode: ModeType): ChoiceIcon[] {
 	if (mode === undefined) {
 		return options.map((option) => {
 			return { ...option, label: option.text, value: option.value };
@@ -71,13 +70,13 @@ function optionRadioItemMode(
 	});
 }
 
-function optionText(options: OptionInterface[]): QuestionRadioItemInterface[] {
+function optionText(options: OptionInterface[]): ChoiceIcon[] {
 	return options.map(({ text, value }) => {
 		return { label: text, value };
 	});
 }
 
-function optionRegion(options: RegionInterface[]): QuestionRadioItemInterface[] {
+function optionRegion(options: RegionInterface[]): ChoiceIcon[] {
 	return options.map(({ title, code, flag }) => {
 		const FlagComponent = flag;
 		if (FlagComponent !== null || FlagComponent !== undefined) {
@@ -101,7 +100,7 @@ function optionRegion(options: RegionInterface[]): QuestionRadioItemInterface[] 
 	});
 }
 
-function optionLanguage(options: LanguageInterface[]): QuestionRadioItemInterface[] {
+function optionLanguage(options: LanguageInterface[]): ChoiceIcon[] {
 	return options.map(({ name, lang_code, flag }) => {
 		const FlagComponent = flag;
 		if (FlagComponent !== null || FlagComponent !== undefined) {

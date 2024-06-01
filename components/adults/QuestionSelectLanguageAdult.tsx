@@ -1,6 +1,6 @@
 import React from "react";
 import type LanguageInterface from "interface/language";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
+import type { ChoiceIcon } from "interface/payload.type";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { optionLanguage } from "utils/options.utils";
 import { useSelector } from "react-redux";
@@ -16,7 +16,7 @@ export default function QuestionSelectLanguageAdult({
 	selectedValue,
 }: QuestionSelectLanguageAdultPropsInterface): React.ReactElement {
 	const options: LanguageInterface[] = useSelector(getLanguageOption);
-	const itemsRaw: QuestionRadioItemInterface[] = optionLanguage(options);
+	const itemsRaw: ChoiceIcon[] = optionLanguage(options);
 
 	function selectHandler(value: string | null): void {
 		onChange(value);

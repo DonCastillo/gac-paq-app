@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import DropDownSelector from "components/DropDownPicker";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
-import { QuestionContext } from "store/questions";
 import type RegionInterface from "interface/region";
 import { optionRegion } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getRegionOption } from "store/questions/questionsSlice";
+import type { ChoiceIcon } from "interface/payload.type";
 
 interface QuestionSelectRegionProps {
 	onChange: (value: string) => void;
@@ -22,7 +21,7 @@ export default function QuestionSelectRegion({
 }: QuestionSelectRegionProps): React.ReactElement {
 	const regionOption = useSelector(getRegionOption);
 	const options: RegionInterface[] = regionOption;
-	const itemsRaw: QuestionRadioItemInterface[] = optionRegion(options);
+	const itemsRaw: ChoiceIcon[] = optionRegion(options);
 
 	return (
 		<DropDownSelector
