@@ -15,7 +15,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { addResponse, getResponse } from "utils/response.utils";
 import { intToString, stringToInt } from "utils/translate.utils";
 import { getQuestionBackground } from "utils/background.utils";
-import DeviceType from "constants/device_type.enum";
+import Device from "constants/device.enum";
 import PhraseLabel from "constants/phrase_label.enum";
 import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
@@ -94,7 +94,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				currentPage.sectionNumber,
 				currentPage.sectionPageNumber,
 				questionType,
-				DeviceType.Mobile,
+				Device.Mobile,
 				colorTheme.color100,
 			),
 		);

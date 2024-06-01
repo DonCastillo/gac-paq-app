@@ -1,8 +1,8 @@
-enum DeviceType {
+enum Device {
 	Mobile = "mobile",
 	Tablet = "tablet",
 	Laptop = "laptop",
 	Desktop = "desktop",
 }
 
-export default DeviceType;
+export default Device;

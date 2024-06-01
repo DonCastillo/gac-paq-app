@@ -7,7 +7,7 @@ import BackgroundFive from "components/kid/background/introductory-pages/Backgro
 import BackgroundSix from "components/kid/background/introductory-pages/BackgroundSix";
 import BackgroundSeven from "components/kid/background/introductory-pages/BackgroundSeven";
 import Question from "constants/question.enum";
-import DeviceType from "constants/device_type.enum";
+import Device from "constants/device.enum";
 import GenericBackgroundStroke from "components/kid/background/question-pages/GenericBackgroundStroke";
 import BackgroundRight from "components/kid/background/question-pages/BackgroundRight";
 import BackgroundCenter from "components/kid/background/question-pages/BackgroundCenter";
@@ -120,7 +120,7 @@ const getQuestionBackground = (
 	sectionNumber = (sectionNumber ?? 0) % 8;
 	sectionPageNumber = sectionPageNumber ?? 0;
 	questionType = questionType ?? Question.QuestionText;
-	deviceType = deviceType ?? DeviceType.Mobile;
+	deviceType = deviceType ?? Device.Mobile;
 	fillColor = fillColor ?? "white";
 
 	// strokes
