@@ -1,4 +1,4 @@
-enum QuestionType {
+enum Question {
 	QuestionRadio = "question_radio",
 	QuestionSlider = "question_slider",
 	QuestionText = "question_text",
@@ -11,4 +11,4 @@ enum QuestionType {
 	QuestionSatisfactionImage = "question_satisfaction_image",
 }
 
-export default QuestionType;
+export default Question;

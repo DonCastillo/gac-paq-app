@@ -1,4 +1,4 @@
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import type { QuestionInputPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
@@ -9,7 +9,7 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionInput,
+			type: Question.QuestionInput,
 			heading: "Welcome!",
 			label: "Please enter your Participant ID",
 			kid_label: "Please enter your Participant ID",

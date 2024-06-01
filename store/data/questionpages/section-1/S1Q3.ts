@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionSliderPayloadInterface } from "interface/payload.type";
 
 const S1Q3: QuestionSliderPayloadInterface = {
@@ -8,7 +8,7 @@ const S1Q3: QuestionSliderPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionSlider,
+			type: Question.QuestionSlider,
 			heading: "Question 3",
 			label: "How many physical education classes did you have in the past week?",
 			kid_label: "How many physical education classes did you have in the past week?",

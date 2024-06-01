@@ -6,7 +6,7 @@ import BackgroundFour from "components/kid/background/introductory-pages/Backgro
 import BackgroundFive from "components/kid/background/introductory-pages/BackgroundFive";
 import BackgroundSix from "components/kid/background/introductory-pages/BackgroundSix";
 import BackgroundSeven from "components/kid/background/introductory-pages/BackgroundSeven";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import DeviceType from "constants/device_type.enum";
 import GenericBackgroundStroke from "components/kid/background/question-pages/GenericBackgroundStroke";
 import BackgroundRight from "components/kid/background/question-pages/BackgroundRight";
@@ -119,7 +119,7 @@ const getQuestionBackground = (
 ): React.ReactElement => {
 	sectionNumber = (sectionNumber ?? 0) % 8;
 	sectionPageNumber = sectionPageNumber ?? 0;
-	questionType = questionType ?? QuestionType.QuestionText;
+	questionType = questionType ?? Question.QuestionText;
 	deviceType = deviceType ?? DeviceType.Mobile;
 	fillColor = fillColor ?? "white";
 

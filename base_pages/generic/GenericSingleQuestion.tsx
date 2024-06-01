@@ -5,7 +5,7 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions.utils";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
@@ -79,7 +79,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		}
 	}
 
-	if (questionType === QuestionType.QuestionDropdown) {
+	if (questionType === Question.QuestionDropdown) {
 		questionComponent = (
 			<QuestionRadio
 				key={currentPageNumber}
@@ -90,7 +90,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				}}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionInput) {
+	} else if (questionType === Question.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
 				key={currentPageNumber}

@@ -1,34 +1,34 @@
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 
-function getQuestionType(questionPage: any): QuestionType {
+function getQuestionType(questionPage: any): Question {
 	if (Object.prototype.hasOwnProperty.call(questionPage, "question_dropdown_id") === true) {
-		return QuestionType.QuestionDropdown;
+		return Question.QuestionDropdown;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_text_id") === true) {
-		return QuestionType.QuestionText;
+		return Question.QuestionText;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_input_id") === true) {
-		return QuestionType.QuestionInput;
+		return Question.QuestionInput;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_textarea_id") === true) {
-		return QuestionType.QuestionTextarea;
+		return Question.QuestionTextarea;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_slider_id") === true) {
-		return QuestionType.QuestionSlider;
+		return Question.QuestionSlider;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_radio_id") === true) {
-		return QuestionType.QuestionRadio;
+		return Question.QuestionRadio;
 	} else if (Object.prototype.hasOwnProperty.call(questionPage, "question_checkbox_id") === true) {
-		return QuestionType.QuestionCheckbox;
+		return Question.QuestionCheckbox;
 	} else if (
 		Object.prototype.hasOwnProperty.call(questionPage, "question_radio_image_id") === true
 	) {
-		return QuestionType.QuestionRadioImage;
+		return Question.QuestionRadioImage;
 	} else if (
 		Object.prototype.hasOwnProperty.call(questionPage, "question_satisfaction_image_id") === true
 	) {
-		return QuestionType.QuestionSatisfactionImage;
+		return Question.QuestionSatisfactionImage;
 	} else if (
 		Object.prototype.hasOwnProperty.call(questionPage, "region_question_dropdown_id") === true
 	) {
-		return QuestionType.QuestionRegion;
+		return Question.QuestionRegion;
 	} else {
-		return QuestionType.QuestionInput;
+		return Question.QuestionInput;
 	}
 }
 

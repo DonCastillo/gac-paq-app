@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S6Q2: QuestionRadioPayloadInterface = {
@@ -8,7 +8,7 @@ const S6Q2: QuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionRadio,
+			type: Question.QuestionRadio,
 			heading: "Question 22",
 			label:
 				"In the past week, how many days per week did you do activities that make your muscles stronger?",

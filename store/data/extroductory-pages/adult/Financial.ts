@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const Financial: QuestionRadioPayloadInterface = {
@@ -8,7 +8,7 @@ const Financial: QuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionRadio,
+			type: Question.QuestionRadio,
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",

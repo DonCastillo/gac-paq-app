@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
@@ -9,7 +9,7 @@ const DemographicAdultPage: QuestionDropdownPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionDropdown,
+			type: Question.QuestionDropdown,
 			heading: "Welcome!",
 			label: "How old is your child?",
 			kid_label: "How old is your child?",

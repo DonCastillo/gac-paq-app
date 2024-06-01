@@ -6,7 +6,7 @@ import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions.utils";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
 import QuestionSlider from "components/kid/QuestionSlider";
@@ -154,7 +154,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		setSelectedValue(value);
 	}
 
-	if (questionType === QuestionType.QuestionCheckbox) {
+	if (questionType === Question.QuestionCheckbox) {
 		questionComponent = (
 			<QuestionCheckbox
 				key={currentPageNumber}
@@ -163,7 +163,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				selectedValue={selectedValue}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionRadio) {
+	} else if (questionType === Question.QuestionRadio) {
 		questionComponent = (
 			<QuestionRadio
 				key={currentPageNumber}
@@ -172,7 +172,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				selectedValue={selectedValue}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionRadioImage) {
+	} else if (questionType === Question.QuestionRadioImage) {
 		questionComponent = (
 			<QuestionRadioImage
 				key={currentPageNumber}
@@ -181,7 +181,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				selectedValue={selectedValue}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionSatisfactionImage) {
+	} else if (questionType === Question.QuestionSatisfactionImage) {
 		questionComponent = (
 			<QuestionSatisfactionImage
 				key={currentPageNumber}
@@ -190,7 +190,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				selectedValue={selectedValue}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionSlider) {
+	} else if (questionType === Question.QuestionSlider) {
 		questionComponent = (
 			<QuestionSlider
 				key={currentPageNumber}
@@ -209,7 +209,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionInput) {
+	} else if (questionType === Question.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
 				key={currentPageNumber}
@@ -218,7 +218,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				onChange={changeHandler}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionTextarea) {
+	} else if (questionType === Question.QuestionTextarea) {
 		questionComponent = (
 			<QuestionTextarea
 				key={currentPageNumber}

@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q6: QuestionRadioPayloadInterface = {
@@ -8,7 +8,7 @@ const S4Q6: QuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionRadio,
+			type: Question.QuestionRadio,
 			heading: "Question 16c",
 			label: "How long does it normally take you to go to work?",
 			kid_label: "How long does it normally take you to go to work?",

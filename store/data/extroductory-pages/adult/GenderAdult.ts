@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const GenderAdult: QuestionRadioPayloadInterface = {
@@ -8,7 +8,7 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionRadio,
+			type: Question.QuestionRadio,
 			heading: "Question 24",
 			label: "What is your child's sex?",
 			kid_label: "What is your child's sex?",

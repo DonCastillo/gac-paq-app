@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q11: QuestionRadioPayloadInterface = {
@@ -8,7 +8,7 @@ const S4Q11: QuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionRadio,
+			type: Question.QuestionRadio,
 			heading: "Question 17e",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
 			kid_label:

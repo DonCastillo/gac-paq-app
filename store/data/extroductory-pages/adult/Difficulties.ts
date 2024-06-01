@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
 const Difficulties: QuestionCheckboxPayloadInterface = {
@@ -8,7 +8,7 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionCheckbox,
+			type: Question.QuestionCheckbox,
 			heading: "Question 25",
 			label:
 				"Please indicate if your child has difficulties with any of the following in their daily activities.",

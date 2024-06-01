@@ -1,4 +1,4 @@
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
@@ -8,7 +8,7 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionCheckbox,
+			type: Question.QuestionCheckbox,
 			heading: "Question 26",
 			label: "What is your child's ethnicity?",
 			kid_label: "What is your child's ethnicity?",

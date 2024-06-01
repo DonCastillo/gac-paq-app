@@ -1,5 +1,5 @@
 import Screen from "constants/screen.enum";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const Education: QuestionRadioPayloadInterface = {
@@ -8,7 +8,7 @@ const Education: QuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionRadio,
+			type: Question.QuestionRadio,
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",

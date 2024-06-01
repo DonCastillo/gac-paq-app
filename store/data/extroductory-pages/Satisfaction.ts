@@ -1,4 +1,4 @@
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
 import Images from "styles/images/index";
@@ -9,7 +9,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionSatisfactionImage,
+			type: Question.QuestionSatisfactionImage,
 			heading: "Feedback",
 			label: "How satisfied are you with the app?",
 			kid_label: "How satisfied are you with the app?",

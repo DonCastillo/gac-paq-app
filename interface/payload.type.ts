@@ -1,4 +1,4 @@
-import type QuestionType from "constants/question_type.enum";
+import type Question from "constants/question.enum";
 import type Screen from "constants/screen.enum";
 import type { ImageDeviceInterface } from "interface/images";
 
@@ -43,7 +43,7 @@ export interface BasePayloadInterface {
 
 /** Page Block */
 export interface QuestionDropdownInterface extends BasePayloadInterface {
-	type: QuestionType.QuestionDropdown;
+	type: Question.QuestionDropdown;
 	heading: string;
 	choices: Choice[];
 	images?: ImageDeviceInterface;
@@ -55,40 +55,40 @@ export interface QuestionDropdownLanguageInterface extends BasePayloadInterface 
 }
 
 export interface QuestionInputInterface extends BasePayloadInterface {
-	type: QuestionType.QuestionInput;
+	type: Question.QuestionInput;
 	heading: string;
 	placeholder: string;
 	images?: ImageDeviceInterface;
 }
 
 export interface QuestionCheckboxInterface extends BasePayloadInterface{
-	type: QuestionType.QuestionCheckbox;
+	type: Question.QuestionCheckbox;
 	heading: string;
 	choices: Choice[];
 }
 
 export interface QuestionRadioInterface extends BasePayloadInterface{
-	type: QuestionType.QuestionRadio;
+	type: Question.QuestionRadio;
 	heading: string;
 	choices: Choice[];
 }
 
 export interface QuestionSliderInterface extends BasePayloadInterface{
-	type: QuestionType.QuestionSlider;
+	type: Question.QuestionSlider;
 	heading: string;
 	max_value: number;
 }
 
 
 export interface QuestionTextareaInterface extends BasePayloadInterface { 
-	type: QuestionType.QuestionTextarea;
+	type: Question.QuestionTextarea;
 	heading: string;
 	placeholder?: string;
 	images?: ImageDeviceInterface;
 }
 
 export interface QuestionRadioImageInterface extends BasePayloadInterface {
-	type: QuestionType.QuestionSatisfactionImage | QuestionType.QuestionRadioImage;
+	type: Question.QuestionSatisfactionImage | Question.QuestionRadioImage;
 	heading: string;
 	choices: ChoiceImage[];
 }

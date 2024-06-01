@@ -6,7 +6,7 @@ import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import { getQuestionType } from "utils/questions.utils";
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import QuestionSelect from "components/kid/QuestionSelect";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import QuestionSelectRegion from "components/kid/QuestionSelectRegion";
@@ -126,7 +126,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		}
 	}
 
-	if (questionType === QuestionType.QuestionDropdown) {
+	if (questionType === Question.QuestionDropdown) {
 		questionComponent = (
 			<QuestionSelect
 				key={currentPageNumber}
@@ -137,7 +137,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				setDropdownOpen={setDropdownOpen}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionRegion) {
+	} else if (questionType === Question.QuestionRegion) {
 		questionComponent = (
 			<QuestionSelectRegion
 				key={currentPageNumber}
@@ -147,7 +147,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				setDropdownOpen={setDropdownOpen}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionInput) {
+	} else if (questionType === Question.QuestionInput) {
 		questionComponent = (
 			<QuestionInput
 				key={currentPageNumber}

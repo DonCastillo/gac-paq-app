@@ -1,4 +1,4 @@
-import QuestionType from "constants/question_type.enum";
+import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import type { QuestionTextareaPayloadInterface } from "interface/payload.type";
 
@@ -8,7 +8,7 @@ const Comment: QuestionTextareaPayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: QuestionType.QuestionTextarea,
+			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Enter your comment here",
 			label:
