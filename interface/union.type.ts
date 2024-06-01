@@ -1,4 +1,6 @@
 import type Mode from "constants/mode.enum";
+import type Section from "constants/section.enum";
+import type Screen from "constants/screen.enum";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
@@ -13,7 +15,9 @@ import type {
 	QuestionInputPayloadInterface,
 } from "interface/payload.type";
 
-export type ModeType = Mode.Adult | Mode.Teen | Mode.Kid | undefined;
+export type ModeType = Mode | undefined;
+export type SectionType = Section | null;
+export type ScreenType = Screen | null;
 export type IntroductoryPagesType = Array<
 	| PagePayloadInterface
 	| QuestionDropdownPayloadInterface

@@ -3,7 +3,7 @@ import type Screen from "constants/screen.enum";
 import { type ReactElement } from "react";
 import { type Image } from "react-native";
 import type { ImageDeviceInterface } from "interface/images";
-import { type ModeType } from "./union.type";
+import { type ScreenType, type SectionType, type ModeType } from "./union.type";
 import type { Svg } from "react-native-svg";
 
 
@@ -46,7 +46,6 @@ export interface LanguageInterface {
 	flag?: Svg | null;
 }
 
-
 export interface ResponseInterface {
 	ident: string;
 	label: string;
@@ -54,6 +53,15 @@ export interface ResponseInterface {
 	pageNumber: number | null;
 	mode: ModeType;
 	section: string | null;
+	sectionNumber: number | null;
+	sectionPageNumber: number | null;
+}
+
+export interface PageIndexInterface {
+	page: any | null;
+	pageNumber: number | null;
+	screen: ScreenType;
+	section: SectionType;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;
 }

@@ -1,4 +1,3 @@
-import type { PageInterface } from "store/settings/defaultPage";
 import type { ModeType, RawPageType } from "interface/union.type";
 import { store } from "store/store";
 import {
@@ -20,6 +19,7 @@ import Screen from "constants/screen.enum";
 import Section from "constants/section.enum";
 import Mode from "constants/mode.enum";
 import { getScreenType } from "utils/type.utils";
+import type { PageIndexInterface } from "interface/payload.type";
 
 const loadApp = (): void => {
 	const introductoryPages = store.getState().questions.introductoryPages;
@@ -158,8 +158,8 @@ const loadApp = (): void => {
 
 const loadAgePage = (mode: ModeType): void => {
 	// change age page
-	const allPages: Record<number, PageInterface> = store.getState().settings.pages;
-	let newPages: Record<number, PageInterface> = {};
+	const allPages: Record<number, PageIndexInterface> = store.getState().settings.pages;
+	let newPages: Record<number, PageIndexInterface> = {};
 
 	let agePage = store.getState().questions.kidAgePage;
 
@@ -198,7 +198,7 @@ const reloadExtroFeedbackPages = (): void => {
 	const allPages = store.getState().settings.pages;
 	const mode = store.getState().settings.mode;
 
-	let newPages: Record<number, PageInterface> = {};
+	let newPages: Record<number, PageIndexInterface> = {};
 	let newSectionTotalPages: Record<number, number> = {};
 
 	// remove all extro and feedback pages
@@ -211,12 +211,12 @@ const reloadExtroFeedbackPages = (): void => {
 	}
 
 	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
-	const lastPage: PageInterface = newPages[lastPagesIndex];
+	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
 
 	let lastPageNumber: number = lastPage.pageNumber ?? 1;
 	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
 	let finalExtroPages: any[] = [];
-	let finalFeedbackPages: PageInterface[] = [];
+	let finalFeedbackPages: PageIndexInterface[] = [];
 
 	// load all extro pages
 	lastSectionNumber++;
@@ -265,10 +265,10 @@ const reloadExtroFeedbackPages = (): void => {
 		[lastSectionNumber]: finalFeedbackPages.length,
 	};
 
-	finalExtroPages.forEach((page: PageInterface) => {
+	finalExtroPages.forEach((page: PageIndexInterface) => {
 		newPages = { ...newPages, [page.pageNumber ?? 1]: page };
 	});
-	finalFeedbackPages.forEach((page: PageInterface) => {
+	finalFeedbackPages.forEach((page: PageIndexInterface) => {
 		newPages = { ...newPages, [page.pageNumber ?? 1]: page };
 	});
 

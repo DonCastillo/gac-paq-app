@@ -3,7 +3,6 @@ import defaultDevice from "./defaultDevice";
 import { currentDefaultPage, nextDefaultPage } from "./defaultPage";
 import defaultColor from "./defaultColor";
 import type DeviceInterface from "interface/dimensions";
-import type { PageInterface } from "./defaultPage";
 import type ColorInterface from "interface/color";
 import defaultButton from "./defaultButton";
 import defaultPhrase from "./defaultPhrase";
@@ -11,6 +10,7 @@ import type { ModeType } from "interface/union.type";
 import reducersActions from "./settingsReducers";
 import type { ButtonPayloadInterface } from "interface/button";
 import type { PhrasePayloadInterface } from "interface/phrase";
+import type { PageIndexInterface } from "interface/payload.type";
 
 export interface SettingsInterface {
 	mode: ModeType;
@@ -19,8 +19,8 @@ export interface SettingsInterface {
 	directusAccessToken: string;
 	directusBaseEndpoint: string;
 	currentPageNumber: number;
-	currentPage: PageInterface;
-	nextPage: PageInterface;
+	currentPage: PageIndexInterface;
+	nextPage: PageIndexInterface;
 	buttons: ButtonPayloadInterface;
 	phrases: PhrasePayloadInterface;
 	sectionTitles: string[];
