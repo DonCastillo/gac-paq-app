@@ -1,5 +1,5 @@
-import type LanguageInterface from "interface/language";
 import type ImageInterface from "./images";
+import type { LanguageInterface } from "interface/payload.type";
 
 export default interface ExtroInterface {
 	id?: string | number;

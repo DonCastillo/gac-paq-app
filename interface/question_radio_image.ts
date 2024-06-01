@@ -1,4 +1,4 @@
-import type LanguageInterface from "interface/language";
+import type { LanguageInterface } from "interface/payload.type";
 
 export interface QuestionRadioImageChoiceInterface {
 	image_choices_id: {

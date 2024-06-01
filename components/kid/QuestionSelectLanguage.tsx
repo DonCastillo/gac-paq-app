@@ -1,12 +1,11 @@
 import React from "react";
-import type LanguageInterface from "interface/language";
 import DropDownSelector from "components/DropDownPicker";
 import { optionLanguage } from "utils/options.utils";
 import { verticalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 import { getLanguageOption } from "store/questions/questionsSlice";
-import type { ChoiceIcon } from "interface/payload.type";
+import type { ChoiceIcon, LanguageInterface } from "interface/payload.type";
 
 interface PropsInterface {
 	onChange: (value: string) => void;

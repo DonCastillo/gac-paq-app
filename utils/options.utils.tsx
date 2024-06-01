@@ -1,8 +1,7 @@
 import React from "react";
-import type LanguageInterface from "interface/language";
 import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
 import type { ChoiceInterface } from "interface/question_checkbox";
-import type { ChoiceIcon, RegionInterface } from "interface/payload.type";
+import type { ChoiceIcon, RegionInterface, LanguageInterface } from "interface/payload.type";
 import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 

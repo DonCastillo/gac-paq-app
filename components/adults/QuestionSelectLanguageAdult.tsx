@@ -1,6 +1,5 @@
 import React from "react";
-import type LanguageInterface from "interface/language";
-import type { ChoiceIcon } from "interface/payload.type";
+import type { ChoiceIcon, LanguageInterface } from "interface/payload.type";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { optionLanguage } from "utils/options.utils";
 import { useSelector } from "react-redux";

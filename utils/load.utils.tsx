@@ -1,4 +1,3 @@
-import type LanguageInterface from "interface/language";
 import { FlagIcons } from "styles/flags";
 import Regions from "store/data/regions";
 import Languages from "store/data/languages";
@@ -7,7 +6,7 @@ import { setButtons, setPhrases } from "store/settings/settingsSlice";
 import { translateButton, translatePhrase } from "./translate.utils";
 import ButtonLabel from "constants/button_label.enum";
 import PhraseLabel from "constants/phrase_label.enum";
-import type { RegionInterface } from "interface/payload.type";
+import type { RegionInterface, LanguageInterface } from "interface/payload.type";
 
 const loadRegionsOffline = (): RegionInterface[] => {
 	return Regions.map((region: RegionInterface) => {

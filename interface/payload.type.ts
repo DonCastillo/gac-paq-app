@@ -46,6 +46,13 @@ export interface RegionInterface {
 	flag?: Svg | null;
 }
 
+export interface LanguageInterface {
+	name: string;
+	flag_code?: string;
+	lang_code: string;
+	flag?: Svg | null;
+}
+
 
 export interface ResponseInterface {
 	ident: string;
