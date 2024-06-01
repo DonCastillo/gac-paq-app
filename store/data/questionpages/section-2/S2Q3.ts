@@ -18,19 +18,19 @@ const S2Q3: QuestionRadioPayloadInterface = {
 				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			choices: [
 				{
-					text: "15 minutes or less per day",
+					label: "15 minutes or less per day",
 					value: "15 minutes or less per day",
 				},
 				{
-					text: "16 - 30 minutes per day",
+					label: "16 - 30 minutes per day",
 					value: "16 - 30 minutes per day",
 				},
 				{
-					text: "31 - 60 minutes per day",
+					label: "31 - 60 minutes per day",
 					value: "31 - 60 minutes per day",
 				},
 				{
-					text: "Over 60 minutes per day",
+					label: "Over 60 minutes per day",
 					value: "Over 60 minutes per day",
 				},
 			],

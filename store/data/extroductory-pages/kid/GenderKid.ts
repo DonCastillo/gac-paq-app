@@ -15,19 +15,19 @@ const GenderKid: QuestionRadioPayloadInterface = {
 			adult_label: "Are you a…",
 			choices: [
 				{
-					text: "Boy",
+					label: "Boy",
 					value: "Boy",
 				},
 				{
-					text: "Girl",
+					label: "Girl",
 					value: "Girl",
 				},
 				{
-					text: "Other",
+					label: "Other",
 					value: "Other",
 				},
 				{
-					text: "Prefer not to answer",
+					label: "Prefer not to answer",
 					value: "Prefer not to answer",
 				},
 			],

@@ -16,15 +16,15 @@ const AgePage: QuestionDropdownPayloadInterface = {
 			adult_label: "Who's taking this questionnaire?",
 			choices: [
 				{
-					text: "Child",
+					label: "Child",
 					value: "child",
 				},
 				{
-					text: "Adolescent",
+					label: "Adolescent",
 					value: "teen",
 				},
 				{
-					text: "Parent",
+					label: "Parent",
 					value: "adult",
 				},
 			],

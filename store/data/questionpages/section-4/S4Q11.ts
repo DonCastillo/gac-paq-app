@@ -17,19 +17,19 @@ const S4Q11: QuestionRadioPayloadInterface = {
 				"On a normal day, how much time did your child wheel to places other than school or work?",
 			choices: [
 				{
-					text: "10 minutes or less",
+					label: "10 minutes or less",
 					value: "10 minutes or less",
 				},
 				{
-					text: "11 - 20 minutes",
+					label: "11 - 20 minutes",
 					value: "11 - 20 minutes",
 				},
 				{
-					text: "21 - 30 minutes",
+					label: "21 - 30 minutes",
 					value: "21 - 30 minutes",
 				},
 				{
-					text: "More than 30 minutes",
+					label: "More than 30 minutes",
 					value: "More than 30 minutes",
 				},
 			],

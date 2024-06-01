@@ -18,7 +18,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 			adult_sublabel: "Select the mode that your child used the most.",
 			choices: [
 				{
-					text: "Walking",
+					label: "Walking",
 					value: "Walking",
 					images: {
 						kid: Images.kids.options.transportation.walking,
@@ -26,7 +26,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Wheeling",
+					label: "Wheeling",
 					value: "Wheeling",
 					images: {
 						kid: Images.kids.options.transportation.wheeling,
@@ -39,7 +39,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Public transit",
+					label: "Public transit",
 					value: "Public transit",
 					images: {
 						kid: Images.kids.options.transportation.public_transit,
@@ -51,7 +51,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Car, taxi, truck, or motorcycle",
+					label: "Car, taxi, truck, or motorcycle",
 					value: "Car, taxi, truck, or motorcycle",
 					images: {
 						kid: Images.kids.options.transportation.car,
@@ -59,7 +59,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Other, which one?",
+					label: "Other, which one?",
 					value: "Other",
 					images: {
 						kid: Images.kids.options.transportation.other,

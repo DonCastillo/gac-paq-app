@@ -19,27 +19,27 @@ const S1Q6: QuestionRadioPayloadInterface = {
 				"This means recess and lunch breaks. Please add the time together - for example two 15-minute recess/break periods per day and 30 minutes for lunch would be 60 minutes",
 			choices: [
 				{
-					text: "0 minutes",
+					label: "0 minutes",
 					value: "0 minutes",
 				},
 				{
-					text: "1 - 15 minutes",
+					label: "1 - 15 minutes",
 					value: "1 - 15 minutes",
 				},
 				{
-					text: "16 - 30 minutes",
+					label: "16 - 30 minutes",
 					value: "16 - 30 minutes",
 				},
 				{
-					text: "31 - 60 minutes",
+					label: "31 - 60 minutes",
 					value: "31 - 60 minutes",
 				},
 				{
-					text: "More than 60 minutes",
+					label: "More than 60 minutes",
 					value: "More than 60 minutes",
 				},
 				{
-					text: "Don't know",
+					label: "Don't know",
 					value: "Don't know",
 				},
 			],

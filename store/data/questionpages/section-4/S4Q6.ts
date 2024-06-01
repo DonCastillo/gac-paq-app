@@ -15,23 +15,23 @@ const S4Q6: QuestionRadioPayloadInterface = {
 			adult_label: "How long does it normally take your child to go to work?",
 			choices: [
 				{
-					text: "10 minutes or less",
+					label: "10 minutes or less",
 					value: "10 minutes or less",
 				},
 				{
-					text: "11 - 20 minutes",
+					label: "11 - 20 minutes",
 					value: "11 - 20 minutes",
 				},
 				{
-					text: "21 - 30 minutes",
+					label: "21 - 30 minutes",
 					value: "21 - 30 minutes",
 				},
 				{
-					text: "31 - 60 minutes",
+					label: "31 - 60 minutes",
 					value: "31 - 60 minutes",
 				},
 				{
-					text: "More than 60 minutes",
+					label: "More than 60 minutes",
 					value: "More than 60 minutes",
 				},
 			],

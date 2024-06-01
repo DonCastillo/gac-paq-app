@@ -16,27 +16,27 @@ const Financial: QuestionRadioPayloadInterface = {
 				"How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
-					text: "Very difficult",
+					label: "Very difficult",
 					value: "Very difficult",
 				},
 				{
-					text: "Difficult",
+					label: "Difficult",
 					value: "Difficult",
 				},
 				{
-					text: "Neither easy nor difficult",
+					label: "Neither easy nor difficult",
 					value: "Neither easy nor difficult",
 				},
 				{
-					text: "Easy",
+					label: "Easy",
 					value: "Easy",
 				},
 				{
-					text: "Very easy",
+					label: "Very easy",
 					value: "Very easy",
 				},
 				{
-					text: "Prefer not to answer",
+					label: "Prefer not to answer",
 					value: "Prefer not to answer",
 				},
 			],

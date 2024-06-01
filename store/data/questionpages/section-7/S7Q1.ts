@@ -16,27 +16,27 @@ const S7Q1: QuestionRadioPayloadInterface = {
 				"In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [
 				{
-					text: "None",
+					label: "None",
 					value: "None",
 				},
 				{
-					text: "Less than 1 hour per day",
+					label: "Less than 1 hour per day",
 					value: "Less than 1 hour per day",
 				},
 				{
-					text: "1 to less than 2 hours per day",
+					label: "1 to less than 2 hours per day",
 					value: "1 to less than 2 hours per day",
 				},
 				{
-					text: "2 to less than 3 hours per day",
+					label: "2 to less than 3 hours per day",
 					value: "2 to less than 3 hours per day",
 				},
 				{
-					text: "3 to less than 4 hours per day",
+					label: "3 to less than 4 hours per day",
 					value: "3 to less than 4 hours per day",
 				},
 				{
-					text: "4 hours or more per day",
+					label: "4 hours or more per day",
 					value: "4 hours or more per day",
 				},
 			],

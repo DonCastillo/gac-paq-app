@@ -15,31 +15,31 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 			adult_label: "What is your child's ethnicity?",
 			choices: [
 				{
-					text: "Asian",
+					label: "Asian",
 					value: "Asian",
 				},
 				{
-					text: "Black or African American",
+					label: "Black or African American",
 					value: "Black or African American",
 				},
 				{
-					text: "Indigenous",
+					label: "Indigenous",
 					value: "Indigenous",
 				},
 				{
-					text: "Latin American",
+					label: "Latin American",
 					value: "Latin American",
 				},
 				{
-					text: "White or Caucasian",
+					label: "White or Caucasian",
 					value: "White or Caucasian",
 				},
 				{
-					text: "Other",
+					label: "Other",
 					value: "Other",
 				},
 				{
-					text: "Prefer not to say",
+					label: "Prefer not to say",
 					value: "Prefer not to say",
 				},
 			],

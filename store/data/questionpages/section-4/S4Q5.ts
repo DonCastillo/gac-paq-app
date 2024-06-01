@@ -15,31 +15,31 @@ const S4Q5: QuestionRadioPayloadInterface = {
 			adult_label: "How many days did your child use this mode in the past week?",
 			choices: [
 				{
-					text: "1 Day",
+					label: "1 Day",
 					value: "1",
 				},
 				{
-					text: "2 Days",
+					label: "2 Days",
 					value: "2",
 				},
 				{
-					text: "3 Days",
+					label: "3 Days",
 					value: "3",
 				},
 				{
-					text: "4 Days",
+					label: "4 Days",
 					value: "4",
 				},
 				{
-					text: "5 Days",
+					label: "5 Days",
 					value: "5",
 				},
 				{
-					text: "6 Days",
+					label: "6 Days",
 					value: "6",
 				},
 				{
-					text: "7 Days",
+					label: "7 Days",
 					value: "7",
 				},
 			],

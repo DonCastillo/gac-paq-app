@@ -15,23 +15,23 @@ const S1Q4: QuestionRadioPayloadInterface = {
 			adult_label: "How long are your child's physical education classes?",
 			choices: [
 				{
-					text: "Less than 30 minutes per class",
+					label: "Less than 30 minutes per class",
 					value: "Less than 30 minutes per class",
 				},
 				{
-					text: "30 - 45 minutes per class",
+					label: "30 - 45 minutes per class",
 					value: "30 - 45 minutes per class",
 				},
 				{
-					text: "46 - 60 minutes per class",
+					label: "46 - 60 minutes per class",
 					value: "46 - 60 minutes per class",
 				},
 				{
-					text: "Over 60 minutes per class",
+					label: "Over 60 minutes per class",
 					value: "Over 60 minutes per class",
 				},
 				{
-					text: "Don't know",
+					label: "Don't know",
 					value: "Don't know",
 				},
 			],

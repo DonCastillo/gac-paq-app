@@ -20,43 +20,43 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 			adult_sublabel: "Select all that apply",
 			choices: [
 				{
-					text: "Hearing",
+					label: "Hearing",
 					value: "Hearing",
 				},
 				{
-					text: "Seeing",
+					label: "Seeing",
 					value: "Seeing",
 				},
 				{
-					text: "Speech",
+					label: "Speech",
 					value: "Speech",
 				},
 				{
-					text: "Mobility",
+					label: "Mobility",
 					value: "Mobility",
 				},
 				{
-					text: "Agility",
+					label: "Agility",
 					value: "Agility",
 				},
 				{
-					text: "Pain",
+					label: "Pain",
 					value: "Pain",
 				},
 				{
-					text: "Memory",
+					label: "Memory",
 					value: "Memory",
 				},
 				{
-					text: "Other",
+					label: "Other",
 					value: "Other",
 				},
 				{
-					text: "Prefer not to say",
+					label: "Prefer not to say",
 					value: "Prefer not to say",
 				},
 				{
-					text: "None of the above, they don't have difficulties",
+					label: "None of the above, they don't have difficulties",
 					value: "None of the above",
 				},
 			],

@@ -15,11 +15,11 @@ const S2Q1: QuestionRadioPayloadInterface = {
 			adult_label: "In the past week, did your child do active chores or tasks?",
 			choices: [
 				{
-					text: "Yes",
+					label: "Yes",
 					value: "yes",
 				},
 				{
-					text: "No",
+					label: "No",
 					value: "no",
 				},
 			],

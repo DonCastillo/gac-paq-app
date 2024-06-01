@@ -19,7 +19,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				"Which of the following images resembles what your child does most of the time during their breaks?",
 			choices: [
 				{
-					text: "Not moving",
+					label: "Not moving",
 					value: "0.1",
 					images: {
 						kid: Images.kids.options.breaks.not_moving,
@@ -27,7 +27,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Easy effort",
+					label: "Easy effort",
 					value: "0.3",
 					images: {
 						kid: Images.kids.options.breaks.easy_effort,
@@ -35,7 +35,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Medium or hard effort",
+					label: "Medium or hard effort",
 					value: "0.5",
 					images: {
 						kid: Images.kids.options.breaks.medium_effort,
@@ -43,7 +43,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Don't know",
+					label: "Don't know",
 					value: "0",
 					images: {
 						kid: Images.general.donotknow,

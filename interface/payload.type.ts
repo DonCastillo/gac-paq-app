@@ -1,18 +1,20 @@
 import type Question from "constants/question.enum";
 import type Screen from "constants/screen.enum";
+import { type ReactElement } from "react";
+import { type Image } from "react-native";
 import type { ImageDeviceInterface } from "interface/images";
 
 export interface Choice {
-	text: string;
+	label: string;
 	value: string;
-	text_mode?: {
+	label_mode?: {
 		kid: string;
 		adult: string;
 	};
 }
 
 export interface ChoiceImage {
-	text: string;
+	label: string;
 	value: string;
 	images: {
 		kid: string;
@@ -22,10 +24,16 @@ export interface ChoiceImage {
 		kid: string;
 		adult: string;
 	};
-	text_mode?: {
+	label_mode?: {
 		kid: string;
 		adult: string;
 	};
+}
+
+export interface ChoiceIcon {
+	label: string;
+	value: string;
+	icon?: ReactElement<Image> | SVGElement | any;
 }
 
 export interface PageInterface {

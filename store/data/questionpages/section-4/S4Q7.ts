@@ -20,23 +20,23 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 			adult_sublabel: "Please select all responses that apply to your child.",
 			choices: [
 				{
-					text: "Yes, I walked",
+					label: "Yes, I walked",
 					value: "Walked",
-					text_mode: {
+					label_mode: {
 						kid: "Yes, I walked",
 						adult: "Yes, they walked",
 					},
 				},
 				{
-					text: "Yes, I wheeled",
+					label: "Yes, I wheeled",
 					value: "Wheeled",
-					text_mode: {
+					label_mode: {
 						kid: "Yes, I wheeled",
 						adult: "Yes, they wheeled",
 					},
 				},
 				{
-					text: "No",
+					label: "No",
 					value: "No",
 				},
 			],

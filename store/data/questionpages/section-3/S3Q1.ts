@@ -15,11 +15,11 @@ const S3Q1: QuestionRadioPayloadInterface = {
 			adult_label: "In the past week, did your child volunteer or work?",
 			choices: [
 				{
-					text: "Yes",
+					label: "Yes",
 					value: "yes",
 				},
 				{
-					text: "No",
+					label: "No",
 					value: "no",
 				},
 			],

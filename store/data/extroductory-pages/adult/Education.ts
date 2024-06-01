@@ -16,27 +16,27 @@ const Education: QuestionRadioPayloadInterface = {
 				"What is the highest level of education completed by a member of your household?",
 			choices: [
 				{
-					text: "No formal schooling",
+					label: "No formal schooling",
 					value: "No formal schooling",
 				},
 				{
-					text: "Primary school",
+					label: "Primary school",
 					value: "Primary school",
 				},
 				{
-					text: "Secondary or high school",
+					label: "Secondary or high school",
 					value: "Secondary or high school",
 				},
 				{
-					text: "Vocational/college education",
+					label: "Vocational/college education",
 					value: "Vocational/college education",
 				},
 				{
-					text: "Tertiary/university education",
+					label: "Tertiary/university education",
 					value: "Tertiary/university education",
 				},
 				{
-					text: "Prefer not to answer",
+					label: "Prefer not to answer",
 					value: "Prefer not to answer",
 				},
 			],

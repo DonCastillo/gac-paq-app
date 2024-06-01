@@ -15,11 +15,11 @@ const S1Q1: QuestionRadioPayloadInterface = {
 			adult_label: "Did your child attend school in the past week?",
 			choices: [
 				{
-					text: "Yes",
+					label: "Yes",
 					value: "yes",
 				},
 				{
-					text: "No",
+					label: "No",
 					value: "no",
 				},
 			],

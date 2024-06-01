@@ -15,31 +15,31 @@ const Relationship: QuestionRadioPayloadInterface = {
 			adult_label: "What is your relationship to the child?",
 			choices: [
 				{
-					text: "Father",
+					label: "Father",
 					value: "Father",
 				},
 				{
-					text: "Mother",
+					label: "Mother",
 					value: "Mother",
 				},
 				{
-					text: "Grandfather",
+					label: "Grandfather",
 					value: "Grandfather",
 				},
 				{
-					text: "Grandmother",
+					label: "Grandmother",
 					value: "Grandmother",
 				},
 				{
-					text: "Tutor or guardian",
+					label: "Tutor or guardian",
 					value: "Tutor or guardian",
 				},
 				{
-					text: "Other",
+					label: "Other",
 					value: "Other",
 				},
 				{
-					text: "Prefer not to answer",
+					label: "Prefer not to answer",
 					value: "Prefer not to answer",
 				},
 			],

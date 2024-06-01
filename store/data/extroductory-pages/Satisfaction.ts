@@ -18,7 +18,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 			kid_sublabel: "Click on the image (emoji) that best represents your satisfaction.",
 			choices: [
 				{
-					text: "Strongly dissatisfied",
+					label: "Strongly dissatisfied",
 					value: "Strongly dissatisfied",
 					images: {
 						kid: Images.generic.rating.very_dissatisfied,
@@ -26,7 +26,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Dissatisfied",
+					label: "Dissatisfied",
 					value: "Dissatisfied",
 					images: {
 						kid: Images.generic.rating.dissatisfied,
@@ -34,7 +34,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Neutral",
+					label: "Neutral",
 					value: "Neutral",
 					images: {
 						kid: Images.generic.rating.neutral,
@@ -42,7 +42,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Satisfied",
+					label: "Satisfied",
 					value: "Satisfied",
 					images: {
 						kid: Images.generic.rating.satisfied,
@@ -50,7 +50,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					text: "Strongly Satisfied",
+					label: "Strongly Satisfied",
 					value: "Strongly Satisfied",
 					images: {
 						kid: Images.generic.rating.very_satisfied,

@@ -18,19 +18,19 @@ const S5Q3: QuestionRadioPayloadInterface = {
 				"On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
-					text: "30 minutes or less per day",
+					label: "30 minutes or less per day",
 					value: "30 minutes or less per day",
 				},
 				{
-					text: "31 to 60 minutes per day",
+					label: "31 to 60 minutes per day",
 					value: "31 to 60 minutes per day",
 				},
 				{
-					text: "1 to 1 and a half hours per day",
+					label: "1 to 1 and a half hours per day",
 					value: "1 to 1 and a half hours per day",
 				},
 				{
-					text: "More than 1 and a half hours per day",
+					label: "More than 1 and a half hours per day",
 					value: "More than 1 and a half hours per day",
 				},
 			],
