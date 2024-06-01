@@ -4,7 +4,7 @@ import { type SettingsInterface } from "store/settings/settingsSlice";
 import { type PayloadAction } from "@reduxjs/toolkit";
 import type DeviceInterface from "./dimensions";
 import { type PageInterface } from "store/settings/defaultPage";
-import type { ResponseInterface, RegionInterface, LanguageInterface } from "interface/payload.type";
+import type { ResponseInterface, LanguageInterface } from "interface/payload.type";
 import type PagePayloadInterface from "interface/directus/page-payload";
 import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
 import type SectionPayloadInterface from "./directus/section-payload";
@@ -37,7 +37,6 @@ export type ClearResponseByIdentFuncType = (state: Record<string, ResponseInterf
 export type ResponsesFuncType = (state: Record<string, ResponseInterface>) => void;
 
 /** Questions Slice Function Signature */
-export type SetRegionOptionFuncType = (state: any, action: PayloadAction<RegionInterface[]>) => void;
 export type SetLanguageOptionFuncType = (state: any, action: PayloadAction<LanguageInterface[]>) => void;
 export type SetIntroductoryPagesFuncType = (state: any, action: PayloadAction<Array<PagePayloadInterface | QuestionDropdownPayloadInterface>>) => void;
 export type AddSectionPageFuncType = (state: any, action: PayloadAction<SectionPayloadInterface>) => void;

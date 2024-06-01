@@ -10,7 +10,7 @@ import BGLinearGradient from "components/BGLinearGradient";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
-import { optionRegion, optionText } from "utils/options.utils";
+import { optionLanguage, optionText } from "utils/options.utils";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { addResponse, getResponse } from "utils/response.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -28,7 +28,7 @@ import {
 	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { getRegionOption } from "store/questions/questionsSlice";
+import { getLanguageOption } from "store/questions/questionsSlice";
 import { changeMode } from "utils/mode.utils";
 
 export default function QuestionSingleAdult(): React.ReactElement {
@@ -41,7 +41,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
-	const regionsOptions = useSelector(getRegionOption);
+	const languageOptions = useSelector(getLanguageOption);
 	const translatedPage: any = translate(currentPage.page.translations, language);
 	const questionLabel = translateQuestionLabel(
 		translatedPage?.kid_label,
@@ -127,12 +127,12 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				}}
 			/>
 		);
-	} else if (questionType === Question.QuestionRegion) {
+	} else if (questionType === Question.QuestionLanguage) {
 		questionComponent = (
 			<QuestionRadio
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				options={optionRegion(regionsOptions)}
+				options={optionLanguage(languageOptions)}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}

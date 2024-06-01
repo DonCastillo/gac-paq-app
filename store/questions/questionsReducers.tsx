@@ -1,15 +1,10 @@
 import type {
 	SetLanguageOptionFuncType,
-	SetRegionOptionFuncType,
 	SetIntroductoryPagesFuncType,
 	QuestionsFuncType,
 	AddSectionPageFuncType,
 } from "interface/function.type";
 import Screen from "constants/screen.enum";
-
-const setRegionOption: SetRegionOptionFuncType = (state, action) => {
-	state.regionOption = action.payload;
-};
 
 const setLanguageOption: SetLanguageOptionFuncType = (state, action) => {
 	state.languageOption = action.payload;
@@ -33,7 +28,6 @@ const addSectionPage: AddSectionPageFuncType = (state, action) => {
 };
 
 export default {
-	setRegionOption,
 	setLanguageOption,
 	setIntroductoryPages,
 	identifyLastSectionExtroPage,

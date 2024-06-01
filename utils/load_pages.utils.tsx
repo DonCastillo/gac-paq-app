@@ -13,10 +13,9 @@ import {
 	addSectionPage,
 	identifyLastSectionExtroPage,
 	setLanguageOption,
-	setRegionOption,
 } from "store/questions/questionsSlice";
 import { addPage, setPage, addSectionTotalPages } from "store/settings/settingsSlice";
-import { loadLanguagesOffline, loadRegionsOffline } from "./load.utils";
+import { loadLanguagesOffline } from "./load.utils";
 import Screen from "constants/screen.enum";
 import Section from "constants/section.enum";
 import Mode from "constants/mode.enum";
@@ -27,14 +26,10 @@ const loadApp = (): void => {
 	const questionPages = store.getState().questions.questionPages;
 	const kidExtroPages = store.getState().questions.kidExtroPages;
 	const feedbackExtroPages = store.getState().questions.feedbackExtroPages;
-	const regions = loadRegionsOffline();
 	const languages = loadLanguagesOffline();
 
 	// clear all responses
 	store.dispatch(resetResponses());
-
-	// load offline regions
-	store.dispatch(setRegionOption(regions));
 
 	// load offline languages
 	store.dispatch(setLanguageOption(languages));

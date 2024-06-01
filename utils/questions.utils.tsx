@@ -23,10 +23,6 @@ function getQuestionType(questionPage: any): Question {
 		Object.prototype.hasOwnProperty.call(questionPage, "question_satisfaction_image_id") === true
 	) {
 		return Question.QuestionSatisfactionImage;
-	} else if (
-		Object.prototype.hasOwnProperty.call(questionPage, "region_question_dropdown_id") === true
-	) {
-		return Question.QuestionRegion;
 	} else {
 		return Question.QuestionInput;
 	}

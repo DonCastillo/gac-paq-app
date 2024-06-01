@@ -39,13 +39,6 @@ export interface ChoiceIcon {
 	icon?: ReactElement<Image> | SVGElement | any;
 }
 
-export interface RegionInterface {
-	title: string;
-	code: string;
-	flag_code?: string;
-	flag?: Svg | null;
-}
-
 export interface LanguageInterface {
 	name: string;
 	flag_code?: string;
@@ -88,6 +81,7 @@ export interface QuestionDropdownInterface extends BasePayloadInterface {
 }
 
 export interface QuestionDropdownLanguageInterface extends BasePayloadInterface {
+	type: Question.QuestionLanguage;
 	heading: string;
 	images?: ImageDeviceInterface;
 }

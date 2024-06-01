@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Regions from "store/data/regions";
 import Languages from "store/data/languages";
 import IntroductoryPages from "store/data/introductory-pages";
 import QuestionPages from "store/data/question-pages";
@@ -39,7 +38,6 @@ import type { LangPhraseInterface } from "interface/phrase";
 const questionsSlice = createSlice({
 	name: "questions",
 	initialState: {
-		regionOption: Regions,
 		languageOption: Languages,
 		introductoryPages: IntroductoryPages,
 		questionPages: QuestionPages,
@@ -68,14 +66,12 @@ const questionsSlice = createSlice({
 		sectionPages: [],
 	} satisfies any,
 	reducers: {
-		setRegionOption: reducersActions.setRegionOption,
 		setLanguageOption: reducersActions.setLanguageOption,
 		setIntroductoryPages: reducersActions.setIntroductoryPages,
 		identifyLastSectionExtroPage: reducersActions.identifyLastSectionExtroPage,
 		addSectionPage: reducersActions.addSectionPage,
 	},
 	selectors: {
-		getRegionOption: (state: any) => state.regionOption,
 		getLanguageOption: (state: any) => state.languageOption,
 		getIntroductoryPages: (state: any) => state.introductoryPages,
 		getQuestionPages: (state: any) => state.questionPages,
@@ -105,7 +101,6 @@ const questionsSlice = createSlice({
 	},
 });
 export const {
-	setRegionOption,
 	setLanguageOption,
 	setIntroductoryPages,
 	identifyLastSectionExtroPage,
@@ -114,7 +109,6 @@ export const {
 
 export const {
 	getSectionPages,
-	getRegionOption,
 	getLanguageOption,
 	getIntroductoryPages,
 	getQuestionPages,

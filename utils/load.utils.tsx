@@ -1,21 +1,11 @@
 import { FlagIcons } from "styles/flags";
-import Regions from "store/data/regions";
 import Languages from "store/data/languages";
 import { store } from "store/store";
 import { setButtons, setPhrases } from "store/settings/settingsSlice";
 import { translateButton, translatePhrase } from "./translate.utils";
 import ButtonLabel from "constants/button_label.enum";
 import PhraseLabel from "constants/phrase_label.enum";
-import type { RegionInterface, LanguageInterface } from "interface/payload.type";
-
-const loadRegionsOffline = (): RegionInterface[] => {
-	return Regions.map((region: RegionInterface) => {
-		return {
-			...region,
-			flag: region.code !== "" ? FlagIcons[region.code.toLowerCase()] : null,
-		};
-	});
-};
+import type { LanguageInterface } from "interface/payload.type";
 
 const loadLanguagesOffline = (): LanguageInterface[] => {
 	return Languages.map((language: LanguageInterface) => {
@@ -69,4 +59,4 @@ const loadPhrases = (): void => {
 	);
 };
 
-export { loadRegionsOffline, loadLanguagesOffline, loadButtons, loadPhrases };
+export { loadLanguagesOffline, loadButtons, loadPhrases };

@@ -1,7 +1,7 @@
 import React from "react";
 import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
 import type { ChoiceInterface } from "interface/question_checkbox";
-import type { ChoiceIcon, RegionInterface, LanguageInterface } from "interface/payload.type";
+import type { ChoiceIcon, LanguageInterface } from "interface/payload.type";
 import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 
@@ -74,30 +74,6 @@ function optionText(options: OptionInterface[]): ChoiceIcon[] {
 	});
 }
 
-function optionRegion(options: RegionInterface[]): ChoiceIcon[] {
-	return options.map(({ title, code, flag }) => {
-		const FlagComponent = flag;
-		if (FlagComponent !== null || FlagComponent !== undefined) {
-			return {
-				label: title,
-				value: title,
-				icon: () => (
-					<FlagComponent
-						height={50}
-						width={50}
-						padding={0}
-						margin={0}
-					/>
-				),
-			};
-		}
-		return {
-			label: title,
-			value: title,
-		};
-	});
-}
-
 function optionLanguage(options: LanguageInterface[]): ChoiceIcon[] {
 	return options.map(({ name, lang_code, flag }) => {
 		const FlagComponent = flag;
@@ -106,9 +82,15 @@ function optionLanguage(options: LanguageInterface[]): ChoiceIcon[] {
 				label: name,
 				value: lang_code,
 				icon: () => (
+					// <FlagComponent
+					// 	height={"100%"}
+					// 	width={"100%"}
+					// 	padding={0}
+					// 	margin={0}
+					// />
 					<FlagComponent
-						height={"100%"}
-						width={"100%"}
+						height={50}
+						width={50}
 						padding={0}
 						margin={0}
 					/>
@@ -179,7 +161,6 @@ function getUserSpecifiedOther(value: string | null, selected: string | null): s
 export {
 	optionText,
 	optionTextMode,
-	optionRegion,
 	optionLanguage,
 	hasOtherOption,
 	isOtherOption,
