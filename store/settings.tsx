@@ -10,7 +10,7 @@ import type SectionPayloadInterface from "interface/directus/section-payload";
 import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
-import OrientationType from "constants/orientation_type.enum";
+import Orientation from "constants/orientation.enum";
 import type DeviceInterface from "interface/dimensions";
 import { QuestionContext } from "./questions";
 import { ResponseContext } from "./responses";
@@ -90,7 +90,7 @@ const DEFAULT_COLOR_INDEX = 0;
 const DEFAULT_DEVICE: DeviceInterface = {
 	screenWidth: 0,
 	screenHeight: 0,
-	orientation: OrientationType.Portrait,
+	orientation: Orientation.Portrait,
 	isTablet: false,
 	platform: "",
 	isKeyboardOpen: false,

@@ -1,4 +1,4 @@
-import OrientationType from "constants/orientation_type.enum";
+import Orientation from "constants/orientation.enum";
 import type DeviceInterface from "interface/dimensions";
 import { Dimensions, Platform, PixelRatio } from "react-native";
 import * as ScreenOrientation from "expo-screen-orientation";
@@ -29,18 +29,18 @@ const isTab = (): boolean => {
 };
 
 const getDeviceInfo = (orientationInfo): DeviceInterface => {
-	let orientation = OrientationType.Portrait;
+	let orientation = Orientation.Portrait;
 	switch (orientationInfo) {
 		case 1:
 		case 2:
-			orientation = OrientationType.Portrait;
+			orientation = Orientation.Portrait;
 			break;
 		case 3:
 		case 4:
-			orientation = OrientationType.Landscape;
+			orientation = Orientation.Landscape;
 			break;
 		default:
-			orientation = OrientationType.Portrait;
+			orientation = Orientation.Portrait;
 			break;
 	}
 	return {
