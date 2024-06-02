@@ -4,11 +4,14 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
-import { translateSectionHeading } from "utils/translate.utils";
+import {
+	translatePage,
+	translateQuestionLabel,
+	translateSectionHeading,
+} from "utils/translate.utils";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
-import { translate, translateQuestionLabel } from "utils/page.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
@@ -16,7 +19,6 @@ import { getImageBackground } from "utils/background.utils";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import QuestionSubLabel from "components/generic/QuestionSubLabel";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
@@ -28,9 +30,9 @@ import {
 	getDevice,
 	setSectionTitles,
 } from "store/settings/settingsSlice";
-import { getSectionPages } from "store/questions/questionsSlice";
 import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
+import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
 
 export default function GenericLanguage(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -39,18 +41,15 @@ export default function GenericLanguage(): React.ReactElement {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
-	const sectionPages = useSelector(getSectionPages);
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as QuestionDropdownLanguageInterface;
 	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
-		mode,
-	);
-	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
+		translatedPage.kid_label,
+		translatedPage.adult_label,
 		mode,
 	);
 
@@ -60,7 +59,7 @@ export default function GenericLanguage(): React.ReactElement {
 		loadPhrases();
 
 		// translate the section headings
-		const translatedSectionTitles = translateSectionHeading(sectionPages, language);
+		const translatedSectionTitles = translateSectionHeading(language);
 		console.log("translatedSectionTitles: ", translatedSectionTitles);
 		// will make "Introduction" and "Feedback" translated in the future
 		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
@@ -76,7 +75,7 @@ export default function GenericLanguage(): React.ReactElement {
 		addResponse(language);
 	}, []);
 
-	function changeHandler(value: string | null): void {
+	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
 			dispatch(setLanguage(value));
 			addResponse(value);
@@ -84,13 +83,13 @@ export default function GenericLanguage(): React.ReactElement {
 		} else {
 			setSelectedValue(null);
 		}
-	}
+	};
 
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+				source={getImageBackground(translatedPage.images, mode, device.isTablet)}
 				key={currentPageNumber}
 			/>
 			<Main>
@@ -98,7 +97,7 @@ export default function GenericLanguage(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
+						<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 						<View style={{ marginBottom: 13 }}>
 							<QuestionLabel
 								textStyle={GeneralStyle.adult.questionLabel}
@@ -106,9 +105,6 @@ export default function GenericLanguage(): React.ReactElement {
 							>
 								{questionLabel}
 							</QuestionLabel>
-							<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-								{questionSubLabel}
-							</QuestionSubLabel>
 						</View>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}

@@ -7,13 +7,11 @@ import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguag
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
-import { translate, translateQuestionLabel } from "utils/page.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import QuestionSubLabel from "components/generic/QuestionSubLabel";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
@@ -22,9 +20,16 @@ import {
 	getMode,
 	nextPage,
 	setLanguage,
+	setSectionTitles,
 } from "store/settings/settingsSlice";
 import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
+import {
+	translatePage,
+	translateQuestionLabel,
+	translateSectionHeading,
+} from "utils/translate.utils";
+import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 
 export default function LanguageAdult(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -34,15 +39,13 @@ export default function LanguageAdult(): React.ReactElement {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-	const translatedPage: any = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as QuestionDropdownLanguageInterface;
 	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
-		mode,
-	);
-	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
+		translatedPage.kid_label,
+		translatedPage.adult_label,
 		mode,
 	);
 
@@ -50,6 +53,12 @@ export default function LanguageAdult(): React.ReactElement {
 	useEffect(() => {
 		loadButtons();
 		loadPhrases();
+
+		// translate the section headings
+		const translatedSectionTitles = translateSectionHeading(language);
+		console.log("translatedSectionTitles: ", translatedSectionTitles);
+		// will make "Introduction" and "Feedback" translated in the future
+		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
 	}, [language]);
 
 	// set selected value
@@ -62,7 +71,7 @@ export default function LanguageAdult(): React.ReactElement {
 		addResponse(language);
 	}, []);
 
-	function changeHandler(value: string | null): void {
+	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
 			dispatch(setLanguage(value));
 			addResponse(value);
@@ -70,7 +79,7 @@ export default function LanguageAdult(): React.ReactElement {
 		} else {
 			setSelectedValue(null);
 		}
-	}
+	};
 
 	return (
 		<View style={styles.container}>
@@ -88,9 +97,6 @@ export default function LanguageAdult(): React.ReactElement {
 							>
 								{questionLabel}
 							</QuestionLabel>
-							<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-								{questionSubLabel}
-							</QuestionSubLabel>
 						</View>
 						<QuestionSelectLanguageAdult
 							onChange={changeHandler}

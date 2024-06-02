@@ -43,7 +43,7 @@ export interface LanguageInterface {
 	name: string;
 	flag_code?: string;
 	lang_code: string;
-	flag?: Svg | null;
+	flag?: Svg;
 }
 
 export interface ResponseInterface {
@@ -58,12 +58,12 @@ export interface ResponseInterface {
 }
 
 export interface PageIndexInterface {
-	page: AllPageType | null;
-	pageNumber: number | null;
+	page: AllPageType;
+	pageNumber: number;
 	screen: ScreenType;
 	section: SectionType;
-	sectionNumber: number | null;
-	sectionPageNumber: number | null;
+	sectionNumber: number;
+	sectionPageNumber: number;
 }
 
 export interface PageInterface {

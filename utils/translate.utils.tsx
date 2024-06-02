@@ -1,6 +1,25 @@
 import type { LangButtonInterface } from "interface/button";
 import type { LangPhraseInterface } from "interface/phrase";
 import type SectionPayloadInterface from "interface/directus/section-payload";
+import type { ModeType, TranslatedPageType, TranslationType } from "interface/union.type";
+import Mode from "constants/mode.enum";
+import { store } from "store/store";
+import type { SectionInterface } from "interface/payload.type";
+
+const translatePage = (translations: TranslationType, langCode: string): TranslatedPageType => {
+	const translatedPage = translations[langCode];
+	if (translatedPage === undefined || translatedPage === null) {
+		return translations["en-CA"];
+	}
+	return translatedPage;
+};
+
+const translateQuestionLabel = (kidLabel: string, adultLabel: string, mode: ModeType): string => {
+	if (mode === Mode.Adult) {
+		return adultLabel;
+	}
+	return kidLabel;
+};
 
 const translateButton = (langButtons: LangButtonInterface, langCode: string): string => {
 	const translatedButton = langButtons[langCode];
@@ -18,22 +37,16 @@ const translatePhrase = (langPhrases: LangPhraseInterface, langCode: string): st
 	return translatedPhrase.label;
 };
 
-const translateSectionHeading = (
-	sectionPages: SectionPayloadInterface[],
-	langCode: string | null,
-): string[] => {
-	if (langCode === null || langCode === undefined || langCode === "") return [];
+const translateSectionHeading = (langCode: string): string[] => {
+	const sectionPages: SectionPayloadInterface[] = store.getState().questions.sectionPages;
 	if (sectionPages.length === 0) return [];
 
 	const translatedSectionTitles = sectionPages.map((sectionPage: SectionPayloadInterface) => {
-		const translations = sectionPage?.translations;
-		const translatedPhrase = translations.find((translation) => {
-			const sectionTitleLanguage = translation?.languages_id?.lang_code?.toLowerCase();
-			const langCodeLowercase = langCode?.toLowerCase();
-			return sectionTitleLanguage === langCodeLowercase;
-		});
-		if (translatedPhrase === undefined || translatedPhrase === null) return "";
-		return translatedPhrase?.heading;
+		const translatedPage = sectionPage.translations[langCode] as SectionInterface;
+		if (translatedPage === undefined || translatedPage === null) {
+			return sectionPage.translations["en-CA"].heading;
+		}
+		return translatedPage.heading;
 	});
 	return translatedSectionTitles;
 };
@@ -56,4 +69,12 @@ const intToString = (value: number | null): string => {
 	return value.toString();
 };
 
-export { translateButton, translatePhrase, translateSectionHeading, stringToInt, intToString };
+export {
+	translatePage,
+	translateQuestionLabel,
+	translateButton,
+	translatePhrase,
+	translateSectionHeading,
+	stringToInt,
+	intToString,
+};
