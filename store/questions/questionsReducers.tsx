@@ -19,7 +19,9 @@ const identifyLastSectionExtroPage: QuestionsFuncType = (state) => {
 	const lastSectionExtroIndex = feedbackExtroPages.findLastIndex((page: any) => {
 		return page.type === Screen.ExtroQuestion;
 	});
-	feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
+	if (feedbackExtroPages[lastSectionExtroIndex].type === Screen.ExtroQuestion) {
+		feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
+	}
 	state.feedbackExtroPages = feedbackExtroPages;
 };
 

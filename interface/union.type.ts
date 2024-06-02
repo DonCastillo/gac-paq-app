@@ -23,32 +23,55 @@ import type {
 export type ModeType = Mode | undefined;
 export type SectionType = Section | null;
 export type ScreenType = Screen | null;
-export type IntroductoryPagesType = Array<
+
+// introductory pages
+export type IntroductoryPageType =
 	| PagePayloadInterface
 	| QuestionDropdownPayloadInterface
 	| QuestionDropdownPayloadLanguageInterface
-	| QuestionInputPayloadInterface
->;
-export type QuestionPagesType = Array<
+	| QuestionInputPayloadInterface;
+export type IntroductoryPagesType = IntroductoryPageType[];
+
+// question pages
+export type QuestionPageType =
 	| SectionPayloadInterface
 	| PreamblePayloadInterface
-	| QuestionCheckboxInterface
+	| QuestionCheckboxPayloadInterface
 	| QuestionRadioPayloadInterface
 	| QuestionSliderPayloadInterface
 	| QuestionRadioImagePayloadInterface
 	| QuestionCheckboxPayloadInterface
-	| ExtroPayloadInterface
->;
-export type KidExtroductoryPagesType = Array<
-	SectionPayloadInterface | QuestionRadioPayloadInterface
->;
-export type AdultExtroductoryPagesType = Array<
-	SectionPayloadInterface | QuestionRadioPayloadInterface | QuestionCheckboxPayloadInterface
->;
-export type ExtroductoryPagesType = Array<KidExtroductoryPagesType | AdultExtroductoryPagesType>;
-export type FeedbackExtroductoryPagesType = Array<
-	QuestionRadioImagePayloadInterface | QuestionTextareaPayloadInterface | ExtroPayloadInterface
->;
+	| ExtroPayloadInterface;
+export type QuestionPagesType = QuestionPageType[];
+
+// kid extroductory page
+export type KidExtroductoryPageType = SectionPayloadInterface | QuestionRadioPayloadInterface;
+export type KidExtroductoryPagesType = KidExtroductoryPageType[];
+
+// adult extroductory page
+export type AdultExtroductoryPageType =
+	| SectionPayloadInterface
+	| QuestionRadioPayloadInterface
+	| QuestionCheckboxPayloadInterface;
+export type AdultExtroductoryPagesType = AdultExtroductoryPageType[];
+
+// extroductory page
+export type ExtroductoryPageType = KidExtroductoryPageType | AdultExtroductoryPageType;
+export type ExtroductoryPagesType = ExtroductoryPageType[];
+
+export type FeedbackExtroductoryPageType =
+	| QuestionRadioImagePayloadInterface
+	| QuestionTextareaPayloadInterface
+	| ExtroPayloadInterface;
+export type FeedbackExtroductoryPagesType = FeedbackExtroductoryPageType[];
+
+// all pages
+export type AllPageType =
+	| IntroductoryPageType
+	| QuestionPageType
+	| ExtroductoryPageType
+	| FeedbackExtroductoryPageType;
+export type AllPagesType = AllPageType[];
 
 export type FinalResponseType =
 	| Record<string, string | string[]>

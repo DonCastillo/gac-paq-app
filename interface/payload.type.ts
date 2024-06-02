@@ -3,7 +3,7 @@ import type Screen from "constants/screen.enum";
 import { type ReactElement } from "react";
 import { type Image } from "react-native";
 import type { ImageDeviceInterface } from "interface/images";
-import { type ScreenType, type SectionType, type ModeType } from "./union.type";
+import { type ScreenType, type SectionType, type ModeType, type AllPageType } from "./union.type";
 import type { Svg } from "react-native-svg";
 
 
@@ -58,7 +58,7 @@ export interface ResponseInterface {
 }
 
 export interface PageIndexInterface {
-	page: any | null;
+	page: AllPageType | null;
 	pageNumber: number | null;
 	screen: ScreenType;
 	section: SectionType;
@@ -224,6 +224,7 @@ export interface QuestionSliderPayloadInterface {
 export interface QuestionTextareaPayloadInterface {
 	ident: string;
 	name: string;
+	isFinal?: boolean;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionTextareaInterface;
 }
@@ -231,6 +232,7 @@ export interface QuestionTextareaPayloadInterface {
 export interface QuestionRadioImagePayloadInterface {
 	ident: string;
 	name: string;
+	isFinal?: boolean;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionRadioImageInterface;
 }

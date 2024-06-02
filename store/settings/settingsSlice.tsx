@@ -27,7 +27,7 @@ export interface SettingsSliceInterface {
 	sectionTotalPages: Record<number, number>;
 	totalPage: any;
 	colorTheme: ColorInterface;
-	pages: Record<number, any>;
+	pages: Record<number, PageIndexInterface>;
 	history: number[];
 }
 
