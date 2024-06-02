@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateQuestionLabel } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions.utils";
 import Question from "constants/question.enum";
 import QuestionSlider from "components/adults/QuestionSlider";
 import BGLinearGradient from "components/BGLinearGradient";
@@ -38,6 +36,7 @@ import {
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { getQuestion17Label } from "utils/label.utils";
+import { getQuestionType } from "utils/type.utils";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const dispatch = useDispatch();

@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateQuestionLabel } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions.utils";
 import Question from "constants/question.enum";
 import BGLinearGradient from "components/BGLinearGradient";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
-import { optionLanguage, optionText } from "utils/options.utils";
+import { optionLanguage } from "utils/options.utils";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { addResponse, getResponse } from "utils/response.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -30,6 +28,10 @@ import {
 } from "store/settings/settingsSlice";
 import { getLanguageOption } from "store/questions/questionsSlice";
 import { changeMode } from "utils/mode.utils";
+import { getQuestionType } from "utils/type.utils";
+import { translatePage, translateQuestionLabel } from "utils/translate.utils";
+import type { TranslatedIntroQuestionType } from "interface/union.type";
+import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 
 export default function QuestionSingleAdult(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -41,19 +43,25 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
-	const languageOptions = useSelector(getLanguageOption);
-	const translatedPage: any = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as TranslatedIntroQuestionType;
+
 	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
+		translatedPage.kid_label,
+		translatedPage.adult_label,
 		mode,
 	);
+
 	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
+		translatedPage.kid_sublabel ?? "",
+		translatedPage.adult_sublabel ?? "",
 		mode,
 	);
-	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
+
+	const questionType = getQuestionType(translatedPage.type);
+
 	let questionComponent = <></>;
 
 	// set button component dynamically
@@ -106,7 +114,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string | null): void {
+	const changeHandler = (value: string | null): void => {
 		addResponse(value);
 		setSelectedValue(value);
 
@@ -114,20 +122,22 @@ export default function QuestionSingleAdult(): React.ReactElement {
 		if (currentPage.page.ident === "mode") {
 			changeMode(value);
 		}
-	}
+	};
 
 	if (questionType === Question.QuestionDropdown) {
+		const questionCasted = translatedPage as QuestionDropdownInterface;
 		questionComponent = (
 			<QuestionRadio
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				options={optionText(translatedPage?.choices)}
+				options={questionCasted.choices}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}
 			/>
 		);
 	} else if (questionType === Question.QuestionLanguage) {
+		const languageOptions = useSelector(getLanguageOption);
 		questionComponent = (
 			<QuestionRadio
 				key={currentPageNumber}
@@ -139,11 +149,12 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === Question.QuestionInput) {
+		const questionCasted = translatedPage as QuestionInputInterface;
 		questionComponent = (
 			<QuestionInput
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				placeholder={translatedPage?.placeholder}
+				placeholder={questionCasted.placeholder}
 				onChange={changeHandler}
 			/>
 		);
@@ -159,7 +170,7 @@ export default function QuestionSingleAdult(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
+						<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 						<View style={{ marginBottom: 13 }}>
 							<QuestionLabel
 								textStyle={GeneralStyle.adult.questionLabel}

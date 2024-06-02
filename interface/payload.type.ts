@@ -16,9 +16,7 @@ export interface Choice {
 	};
 }
 
-export interface ChoiceImage {
-	label: string;
-	value: string;
+export interface ChoiceImage extends Choice {
 	images: {
 		kid: string;
 		adult: string;
@@ -27,15 +25,9 @@ export interface ChoiceImage {
 		kid: string;
 		adult: string;
 	};
-	label_mode?: {
-		kid: string;
-		adult: string;
-	};
 }
 
-export interface ChoiceIcon {
-	label: string;
-	value: string;
+export interface ChoiceIcon extends Choice {
 	icon?: ReactElement<Image> | SVGElement | any;
 }
 

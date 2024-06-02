@@ -1,7 +1,7 @@
 import { FlatList } from "react-native";
 import RadioOption from "components/adults/subcomponents/RadioOption";
 import React, { useEffect, useState } from "react";
-import type { ChoiceIcon } from "interface/payload.type";
+import type { ChoiceIcon, Choice } from "interface/payload.type";
 
 import {
 	getUserSpecifiedOther,
@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import { getCurrentPage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
-	options: ChoiceIcon[];
+	options: ChoiceIcon[] | Choice[];
 	onSelect: (value: string | null) => void;
 	selectedValue: string | null;
 }

@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateQuestionLabel } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions.utils";
 import Question from "constants/question.enum";
 import BGLinearGradient from "components/BGLinearGradient";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
-import { optionText } from "utils/options.utils";
 import QuestionRadio from "components/adults/QuestionRadio";
 import { addResponse, getResponse } from "utils/response.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -32,10 +29,13 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
+import { translatePage, translateQuestionLabel } from "utils/translate.utils";
+import type { TranslatedIntroQuestionType } from "interface/union.type";
+import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
+import { getQuestionType } from "utils/type.utils";
 
 export default function GenericSingleQuestion(): React.ReactElement {
 	const dispatch = useDispatch();
-
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
@@ -45,18 +45,26 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	const { isKeyboardOpen } = device;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as TranslatedIntroQuestionType;
+
 	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
+		translatedPage.kid_label,
+		translatedPage.adult_label,
 		mode,
 	);
+
 	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
+		translatedPage.kid_sublabel ?? "",
+		translatedPage.adult_sublabel ?? "",
 		mode,
 	);
-	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
+
+	const questionType = getQuestionType(translatedPage.type);
+
 	let questionComponent = <></>;
 
 	// set selected value
@@ -65,7 +73,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 	}, [currentPageNumber]);
 
 	// save response
-	function changeHandler(value: string | null): void {
+	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
 			addResponse(value);
 			setSelectedValue(value);
@@ -77,25 +85,27 @@ export default function GenericSingleQuestion(): React.ReactElement {
 		if (currentPage.page.ident === "mode") {
 			changeMode(value);
 		}
-	}
+	};
 
 	if (questionType === Question.QuestionDropdown) {
+		const questionCasted = translatedPage as QuestionDropdownInterface;
 		questionComponent = (
 			<QuestionRadio
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				options={optionText(translatedPage?.choices)}
+				options={questionCasted.choices}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}
 			/>
 		);
 	} else if (questionType === Question.QuestionInput) {
+		const questionCasted = translatedPage as QuestionInputInterface;
 		questionComponent = (
 			<QuestionInput
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				placeholder={translatedPage?.placeholder}
+				placeholder={questionCasted.placeholder}
 				onChange={changeHandler}
 			/>
 		);
@@ -115,7 +125,7 @@ export default function GenericSingleQuestion(): React.ReactElement {
 				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>
-						{!isKeyboardOpen && <QuestionTitle>{translatedPage?.heading}</QuestionTitle>}
+						{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
 						<View style={{ marginBottom: 13 }}>
 							<QuestionLabel
 								textStyle={GeneralStyle.adult.questionLabel}

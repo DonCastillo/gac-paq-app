@@ -5,7 +5,6 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions.utils";
 import Question from "constants/question.enum";
 import QuestionTitle from "components/generic/QuestionTitle";
 import QuestionRadio from "components/kid/QuestionRadio";
@@ -39,6 +38,7 @@ import {
 } from "store/settings/settingsSlice";
 import { getQuestion17Label } from "utils/label.utils";
 import { proceedPage } from "utils/navigation.utils";
+import { getQuestionType } from "utils/type.utils";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const dispatch = useDispatch();

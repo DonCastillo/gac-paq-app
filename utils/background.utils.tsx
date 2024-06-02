@@ -120,7 +120,7 @@ const getQuestionBackground = (
 ): React.ReactElement => {
 	sectionNumber = (sectionNumber ?? 0) % 8;
 	sectionPageNumber = sectionPageNumber ?? 0;
-	questionType = questionType ?? Question.QuestionText;
+	questionType = questionType ?? Question.QuestionInput;
 	deviceType = deviceType ?? Device.Mobile;
 	fillColor = fillColor ?? "white";
 

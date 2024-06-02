@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Keyboard, StyleSheet, TouchableWithoutFeedback, View } from "react-native";
-import { translate, translateQuestionLabel } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions.utils";
 import Question from "constants/question.enum";
 import QuestionSelect from "components/kid/QuestionSelect";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -30,6 +28,10 @@ import {
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
 import QuestionSelectLanguage from "components/kid/QuestionSelectLanguage";
+import { getQuestionType } from "utils/type.utils";
+import { translatePage, translateQuestionLabel } from "utils/translate.utils";
+import type { TranslatedIntroQuestionType } from "interface/union.type";
+import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -39,25 +41,32 @@ export default function QuestionSingleKid(): React.ReactElement {
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
+	const { color200 } = colorTheme;
 
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
-	const { color200 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as TranslatedIntroQuestionType;
+
 	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
+		translatedPage.kid_label,
+		translatedPage.adult_label,
 		mode,
 	);
+
 	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
+		translatedPage.kid_sublabel ?? "",
+		translatedPage.adult_sublabel ?? "",
 		mode,
 	);
-	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
+
+	const questionType = getQuestionType(translatedPage.type);
+
 	let questionComponent = <></>;
 
 	// set background screen dynamically
@@ -116,7 +125,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string | null): void {
+	const changeHandler = (value: string | null): void => {
 		addResponse(value);
 		setSelectedValue(value);
 
@@ -127,10 +136,11 @@ export default function QuestionSingleKid(): React.ReactElement {
 	}
 
 	if (questionType === Question.QuestionDropdown) {
+		const questionCasted = translatedPage as QuestionDropdownInterface;
 		questionComponent = (
 			<QuestionSelect
 				key={currentPageNumber}
-				options={translatedPage?.choices}
+				options={questionCasted.choices}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 				dropdownOpen={dropdownOpen}
@@ -148,11 +158,12 @@ export default function QuestionSingleKid(): React.ReactElement {
 			/>
 		);
 	} else if (questionType === Question.QuestionInput) {
+		const questionCasted = translatedPage as QuestionInputInterface;
 		questionComponent = (
 			<QuestionInput
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				placeholder={translatedPage?.placeholder}
+				placeholder={questionCasted.placeholder}
 				onChange={changeHandler}
 			/>
 		);

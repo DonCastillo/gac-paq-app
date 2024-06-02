@@ -1,3 +1,4 @@
+import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import Section from "constants/section.enum";
 
@@ -33,4 +34,28 @@ const getSectionType = (sectionType: string): Section => {
 	}
 };
 
-export { getScreenType, getSectionType };
+const getQuestionType = (questionType: string): Question => {
+	if (questionType === "question_radio") {
+		return Question.QuestionRadio;
+	} else if (questionType === "question_slider") {
+		return Question.QuestionSlider;
+	} else if (questionType === "question_input") {
+		return Question.QuestionInput;
+	} else if (questionType === "question_textarea") {
+		return Question.QuestionTextarea;
+	} else if (questionType === "question_checkbox") {
+		return Question.QuestionCheckbox;
+	} else if (questionType === "question_dropdown") {
+		return Question.QuestionDropdown;
+	} else if (questionType === "question_radio_image") {
+		return Question.QuestionRadioImage;
+	} else if (questionType === "question_language") {
+		return Question.QuestionLanguage;
+	} else if (questionType === "question_satisfaction_image") {
+		return Question.QuestionSatisfactionImage;
+	} else {
+		Question.QuestionInput;
+	}
+};
+
+export { getScreenType, getSectionType, getQuestionType };

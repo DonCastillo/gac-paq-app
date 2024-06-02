@@ -59,7 +59,6 @@ export type IntroductoryPagesType = IntroductoryPageType[];
 export type QuestionPageType =
 	| SectionPayloadInterface
 	| PreamblePayloadInterface
-	| QuestionCheckboxPayloadInterface
 	| QuestionRadioPayloadInterface
 	| QuestionSliderPayloadInterface
 	| QuestionRadioImagePayloadInterface
@@ -110,6 +109,39 @@ export type TranslationType =
 	| LangSectionInterface
 	| LangPreambleInterface
 	| LangExtroInterface;
+
+// export type TranslatedIntroductoryPageType =
+// 	| PageInterface
+// 	| QuestionDropdownInterface
+// 	| QuestionDropdownLanguageInterface
+// 	| QuestionInputInterface;
+
+// export type TranslatedQuestionPageType =
+// 	| SectionInterface
+// 	| PreambleInterface
+// 	| QuestionCheckboxInterface
+// 	| QuestionRadioInterface
+// 	| QuestionSliderInterface
+// 	| QuestionRadioImageInterface
+// 	| ExtroInterface;
+
+// export type TranslatedKidExtroductoryPageType = SectionInterface | QuestionRadioInterface;
+// export type TranslatedAdultExtroductoryPageType =
+// 	| SectionInterface
+// 	| QuestionRadioInterface
+// 	| QuestionCheckboxInterface;
+// export type TranslatedExtroductoryPageType =
+// 	| TranslatedKidExtroductoryPageType
+// 	| TranslatedAdultExtroductoryPageType;
+// export type TranslatedFeedbackExtroductoryPageType =
+// 	| QuestionRadioImageInterface
+// 	| QuestionTextareaInterface
+// 	| ExtroInterface;
+
+export type TranslatedIntroQuestionType =
+	| QuestionDropdownInterface
+	| QuestionInputInterface
+	| QuestionDropdownLanguageInterface;
 
 export type TranslatedPageType =
 	| PageInterface

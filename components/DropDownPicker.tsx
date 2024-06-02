@@ -5,10 +5,10 @@ import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
-import type { ChoiceIcon } from "interface/payload.type";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: ChoiceIcon[];
+	options: ChoiceIcon[] | Choice[];
 	selectedValue: string | null;
 	onSelect: (value: string) => void;
 	dropdownOpen: boolean;
@@ -29,7 +29,7 @@ export default function DropDownSelector({
 	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
-	const [items, setItems] = useState<ChoiceIcon[]>(options);
+	const [items, setItems] = useState<ChoiceIcon[] | Choice[]>(options);
 
 	useEffect(() => {
 		if (items !== options) {
