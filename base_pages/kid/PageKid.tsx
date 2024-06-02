@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -21,6 +20,8 @@ import {
 	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
+import { translatePage } from "utils/translate.utils";
+import type { PageInterface } from "interface/payload.type";
 
 export default function PageKid(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -33,7 +34,7 @@ export default function PageKid(): React.ReactElement {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	const { color100 } = colorTheme;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
 
 	// set background screen dynamically
 	useEffect(() => {
@@ -77,7 +78,7 @@ export default function PageKid(): React.ReactElement {
 								...GeneralStyle.kid.pageHeading,
 							}}
 						>
-							{translatedPage?.heading}
+							{translatedPage.heading}
 						</Heading>
 
 						<Paragraph
@@ -86,7 +87,7 @@ export default function PageKid(): React.ReactElement {
 								...GeneralStyle.kid.pageParagraph,
 							}}
 						>
-							{translatedPage?.description}
+							{translatedPage.description}
 						</Paragraph>
 					</ScrollContainer>
 				</CenterMain>

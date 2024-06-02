@@ -39,11 +39,14 @@ import type {
 	PreambleInterface,
 	ExtroInterface,
 } from "interface/payload.type";
+import type Question from "constants/question.enum";
+import type Device from "constants/device.enum";
 
 export type ModeType = Mode | undefined;
 export type SectionType = Section | null;
 export type ScreenType = Screen | null;
-
+export type QuestionType = Question | null;
+export type DeviceType = Device | null;
 // introductory pages
 export type IntroductoryPageType =
 	| PagePayloadInterface

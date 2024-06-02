@@ -11,7 +11,6 @@ import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
-import QuestionSubLabel from "components/generic/QuestionSubLabel";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getColorTheme,
@@ -44,6 +43,8 @@ export default function LanguageKid(): React.ReactElement {
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+	const [background, setBackground] = useState<React.ReactElement | null>(null);
+
 	const { color100 } = colorTheme;
 	const translatedPage = translatePage(
 		currentPage.page.translations,
@@ -54,8 +55,6 @@ export default function LanguageKid(): React.ReactElement {
 		translatedPage.adult_label,
 		mode,
 	);
-
-	const [background, setBackground] = useState<React.ReactElement | null>(null);
 
 	// set background screen dynamically
 	useEffect(() => {

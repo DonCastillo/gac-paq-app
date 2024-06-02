@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -20,6 +19,8 @@ import {
 	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
+import { translatePage } from "utils/translate.utils";
+import type { PageInterface } from "interface/payload.type";
 
 export default function GenericPage(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -28,7 +29,7 @@ export default function GenericPage(): React.ReactElement {
 	const currentPage = useSelector(getCurrentPage);
 
 	const { color100 } = colorTheme;
-	const translatedPage = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
 
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
@@ -38,11 +39,9 @@ export default function GenericPage(): React.ReactElement {
 				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>
-						<Heading customStyle={GeneralStyle.adult.pageHeading}>
-							{translatedPage?.heading}
-						</Heading>
+						<Heading customStyle={GeneralStyle.adult.pageHeading}>{translatedPage.heading}</Heading>
 						<Paragraph customStyle={GeneralStyle.adult.pageParagraph}>
-							{translatedPage?.description}
+							{translatedPage.description}
 						</Paragraph>
 					</ScrollContainer>
 				</CenterMain>

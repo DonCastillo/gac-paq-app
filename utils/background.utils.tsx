@@ -16,7 +16,7 @@ import GenericBackgroundStars from "components/kid/background/question-pages/Gen
 import GenericBackgroundLoop from "components/kid/background/question-pages/GenericBackgroundLoop";
 import Mode from "constants/mode.enum";
 import type { ImageDeviceInterface, ImageModeInterface } from "interface/images";
-import type { ModeType } from "interface/union.type";
+import type { DeviceType, ModeType, QuestionType } from "interface/union.type";
 
 const getImageBackground = (
 	images: ImageDeviceInterface | undefined,
@@ -114,8 +114,8 @@ const getIntroductoryBackground = (pageNumber: number): React.ReactElement => {
 const getQuestionBackground = (
 	sectionNumber: number | null,
 	sectionPageNumber: number | null,
-	questionType: QuestionType | null | undefined,
-	deviceType: DeviceType | null,
+	questionType: QuestionType,
+	deviceType: DeviceType,
 	fillColor: string | null,
 ): React.ReactElement => {
 	sectionNumber = (sectionNumber ?? 0) % 8;
