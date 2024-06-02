@@ -152,8 +152,6 @@ const loadApp = (): void => {
 		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		pageNumber++;
 	});
-
-	console.log("done loading pages...");
 };
 
 const loadAgePage = (mode: ModeType): void => {

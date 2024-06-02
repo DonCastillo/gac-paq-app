@@ -1,7 +1,3 @@
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
-import type QuestionSliderPayloadInterface from "interface/directus/question-slider-payload";
-import type SectionPayloadInterface from "interface/directus/section-payload";
-import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import S1Q2 from "store/data/questionpages/section-1/S1Q2";
 import S1Q3 from "store/data/questionpages/section-1/S1Q3";
 import S1Q4 from "store/data/questionpages/section-1/S1Q4";
@@ -54,9 +50,9 @@ import S4Preamble from "./questionpages/section-4/S4Preamble";
 import S5Preamble from "./questionpages/section-5/S5Preamble";
 import S6Preamble from "./questionpages/section-6/S6Preamble";
 import S7Preamble from "./questionpages/section-7/S7Preamble";
+import { type QuestionPagesType } from "interface/union.type";
 
 const Section1 = [S1Intro, S1Preamble, S1Q1, S1Q2, S1Q3, S1Q4, S1Q5, S1Q6, S1Q7, S1Extro];
-// const Section1 = [S1Intro, S1Q1, S1Q2, S1Extro];
 const Section2 = [S2Intro, S2Preamble, S2Q1, S2Q2, S2Q3, S2Q4, S2Extro];
 const Section3 = [S3Intro, S3Preamble, S3Q1, S3Q2, S3Q3, S3Extro];
 const Section4 = [
@@ -79,14 +75,7 @@ const Section5 = [S5Intro, S5Preamble, S5Q1, S5Q2, S5Q3, S5Extro];
 const Section6 = [S6Intro, S6Preamble, S6Q1, S6Q2, S6Extro];
 const Section7 = [S7Intro, S7Preamble, S7Q1, S7Extro];
 
-const QuestionPages:
-	| Array<
-			| SectionPayloadInterface
-			| QuestionRadioPayloadInterface
-			| QuestionSliderPayloadInterface
-			| ExtroPayloadInterface
-	  >
-	| [] = [
+const QuestionPages: QuestionPagesType = [
 	...Section1,
 	...Section2,
 	...Section3,
