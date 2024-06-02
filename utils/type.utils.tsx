@@ -14,8 +14,6 @@ const getScreenType = (screenType: string): Screen => {
 		return Screen.IntroQuestion;
 	} else if (screenType === "question_extro") {
 		return Screen.ExtroQuestion;
-	} else if (screenType === "single_checkbox") {
-		return Screen.SingleCheckbox;
 	} else if (screenType === "preamble") {
 		return Screen.Preamble;
 	} else {
