@@ -33,7 +33,7 @@ import { translatePage, translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 
-export default function QuestionSingleAdult(): React.ReactElement {
+const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
@@ -189,7 +189,9 @@ export default function QuestionSingleAdult(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default QuestionSingleAdult;
 
 const styles = StyleSheet.create({
 	container: {

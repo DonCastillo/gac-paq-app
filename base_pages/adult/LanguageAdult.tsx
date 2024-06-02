@@ -31,7 +31,7 @@ import {
 } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 
-export default function LanguageAdult(): React.ReactElement {
+const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
@@ -115,8 +115,9 @@ export default function LanguageAdult(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
 
+export default LanguageAdult;
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,

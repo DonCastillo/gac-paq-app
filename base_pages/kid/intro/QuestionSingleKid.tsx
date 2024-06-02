@@ -33,7 +33,7 @@ import { translatePage, translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 
-export default function QuestionSingleKid(): React.ReactElement {
+const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
@@ -133,7 +133,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 		if (currentPage.page.ident === "mode") {
 			changeMode(value);
 		}
-	}
+	};
 
 	if (questionType === Question.QuestionDropdown) {
 		const questionCasted = translatedPage as QuestionDropdownInterface;
@@ -213,7 +213,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 			</View>
 		</TouchableWithoutFeedback>
 	);
-}
+};
+
+export default QuestionSingleKid;
 
 const styles = StyleSheet.create({
 	container: {

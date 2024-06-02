@@ -23,7 +23,7 @@ import {
 import { translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 
-export default function PageKid(): React.ReactElement {
+const PageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
@@ -95,7 +95,9 @@ export default function PageKid(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default PageKid;
 
 const styles = StyleSheet.create({
 	container: {

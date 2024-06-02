@@ -34,7 +34,7 @@ import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 import { getQuestionType } from "utils/type.utils";
 
-export default function GenericSingleQuestion(): React.ReactElement {
+const GenericSingleQuestion = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
@@ -160,7 +160,9 @@ export default function GenericSingleQuestion(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default GenericSingleQuestion;
 
 const styles = StyleSheet.create({
 	container: {

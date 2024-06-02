@@ -32,7 +32,7 @@ import {
 } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 
-export default function LanguageKid(): React.ReactElement {
+const LanguageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
@@ -143,7 +143,9 @@ export default function LanguageKid(): React.ReactElement {
 			</View>
 		</TouchableWithoutFeedback>
 	);
-}
+};
+
+export default LanguageKid;
 
 const styles = StyleSheet.create({
 	container: {

@@ -22,7 +22,7 @@ import {
 import { translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 
-export default function GenericPage(): React.ReactElement {
+const GenericPage = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
@@ -54,7 +54,9 @@ export default function GenericPage(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default GenericPage;
 
 const styles = StyleSheet.create({
 	container: {

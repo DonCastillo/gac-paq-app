@@ -34,7 +34,7 @@ import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
 
-export default function GenericLanguage(): React.ReactElement {
+const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
@@ -118,7 +118,9 @@ export default function GenericLanguage(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default GenericLanguage;
 
 const styles = StyleSheet.create({
 	container: {
