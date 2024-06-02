@@ -5,6 +5,6 @@ import type QuestionDropdownLanguageInterface from "interface/question_dropdown_
 export default interface QuestionDropdownPayloadInterface {
 	ident?: string;
 	name?: string | null;
-	type: Screen.SingleQuestion | Screen.Region | Screen.Language;
+	type: Screen.SingleQuestion | Screen.Language;
 	translations: QuestionDropdownInterface[] | QuestionDropdownLanguageInterface[];
 }

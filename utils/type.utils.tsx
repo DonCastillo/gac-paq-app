@@ -6,8 +6,6 @@ const getScreenType = (screenType: string): Screen => {
 		return Screen.Page;
 	} else if (screenType === "language") {
 		return Screen.Language;
-	} else if (screenType === "region") {
-		return Screen.Region;
 	} else if (screenType === "splash") {
 		return Screen.Splash;
 	} else if (screenType === "question_single") {
@@ -16,8 +14,6 @@ const getScreenType = (screenType: string): Screen => {
 		return Screen.IntroQuestion;
 	} else if (screenType === "question_extro") {
 		return Screen.ExtroQuestion;
-	} else if (screenType === "single_checkbox") {
-		return Screen.SingleCheckbox;
 	} else if (screenType === "preamble") {
 		return Screen.Preamble;
 	} else {
@@ -30,6 +26,8 @@ const getSectionType = (sectionType: string): Section => {
 		return Section.Intro;
 	} else if (sectionType === "extro") {
 		return Section.Extro;
+	} else if (sectionType === "feedback") {
+		return Section.Feedback;
 	} else {
 		return Section.Question;
 	}

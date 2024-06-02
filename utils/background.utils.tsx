@@ -19,10 +19,11 @@ import type { ImageDeviceInterface, ImageModeInterface } from "interface/images"
 import type { ModeType } from "interface/union.type";
 
 const getImageBackground = (
-	images: ImageDeviceInterface,
+	images: ImageDeviceInterface | undefined,
 	mode: ModeType,
 	isTablet: boolean,
 ): any | null => {
+	if (images === undefined) return null;
 	if (mode === Mode.Adult && isTablet) {
 		return images?.adult?.tablet;
 	} else if (mode === Mode.Adult && !isTablet) {

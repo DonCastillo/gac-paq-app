@@ -1,15 +1,10 @@
 import type {
 	SetLanguageOptionFuncType,
-	SetRegionOptionFuncType,
 	SetIntroductoryPagesFuncType,
 	QuestionsFuncType,
 	AddSectionPageFuncType,
 } from "interface/function.type";
 import Screen from "constants/screen.enum";
-
-const setRegionOption: SetRegionOptionFuncType = (state, action) => {
-	state.regionOption = action.payload;
-};
 
 const setLanguageOption: SetLanguageOptionFuncType = (state, action) => {
 	state.languageOption = action.payload;
@@ -24,7 +19,9 @@ const identifyLastSectionExtroPage: QuestionsFuncType = (state) => {
 	const lastSectionExtroIndex = feedbackExtroPages.findLastIndex((page: any) => {
 		return page.type === Screen.ExtroQuestion;
 	});
-	feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
+	if (feedbackExtroPages[lastSectionExtroIndex].type === Screen.ExtroQuestion) {
+		feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
+	}
 	state.feedbackExtroPages = feedbackExtroPages;
 };
 
@@ -33,7 +30,6 @@ const addSectionPage: AddSectionPageFuncType = (state, action) => {
 };
 
 export default {
-	setRegionOption,
 	setLanguageOption,
 	setIntroductoryPages,
 	identifyLastSectionExtroPage,

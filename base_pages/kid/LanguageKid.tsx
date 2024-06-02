@@ -7,7 +7,6 @@ import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguage from "components/kid/QuestionSelectLanguage";
 import { getIntroductoryBackground } from "utils/background.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { translate, translateQuestionLabel } from "utils/page.utils";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
@@ -23,9 +22,16 @@ import {
 	getMode,
 	nextPage,
 	setLanguage,
+	setSectionTitles,
 } from "store/settings/settingsSlice";
 import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
+import {
+	translatePage,
+	translateQuestionLabel,
+	translateSectionHeading,
+} from "utils/translate.utils";
+import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 
 export default function LanguageKid(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -39,15 +45,13 @@ export default function LanguageKid(): React.ReactElement {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 	const { color100 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as QuestionDropdownLanguageInterface;
 	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
-		mode,
-	);
-	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
+		translatedPage.kid_label,
+		translatedPage.adult_label,
 		mode,
 	);
 
@@ -63,6 +67,12 @@ export default function LanguageKid(): React.ReactElement {
 	useEffect(() => {
 		loadButtons();
 		loadPhrases();
+
+		// translate the section headings
+		const translatedSectionTitles = translateSectionHeading(language);
+		console.log("translatedSectionTitles: ", translatedSectionTitles);
+		// will make "Introduction" and "Feedback" translated in the future
+		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
 	}, [language]);
 
 	// set selected value
@@ -75,7 +85,7 @@ export default function LanguageKid(): React.ReactElement {
 		addResponse(language);
 	}, []);
 
-	function changeHandler(value: string | null): void {
+	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
 			dispatch(setLanguage(value));
 			addResponse(value);
@@ -83,7 +93,7 @@ export default function LanguageKid(): React.ReactElement {
 		} else {
 			setSelectedValue(null);
 		}
-	}
+	};
 
 	return (
 		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
@@ -109,9 +119,6 @@ export default function LanguageKid(): React.ReactElement {
 								>
 									{questionLabel}
 								</QuestionLabel>
-								<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-									{questionSubLabel}
-								</QuestionSubLabel>
 							</View>
 
 							<View style={styles.questionComponentContainer}>

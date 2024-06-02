@@ -3,7 +3,7 @@ import type Screen from "constants/screen.enum";
 import { type ReactElement } from "react";
 import { type Image } from "react-native";
 import type { ImageDeviceInterface } from "interface/images";
-import { type ModeType } from "./union.type";
+import { type ScreenType, type SectionType, type ModeType, type AllPageType } from "./union.type";
 import type { Svg } from "react-native-svg";
 
 
@@ -39,20 +39,12 @@ export interface ChoiceIcon {
 	icon?: ReactElement<Image> | SVGElement | any;
 }
 
-export interface RegionInterface {
-	title: string;
-	code: string;
-	flag_code?: string;
-	flag?: Svg | null;
-}
-
 export interface LanguageInterface {
 	name: string;
 	flag_code?: string;
 	lang_code: string;
-	flag?: Svg | null;
+	flag?: Svg;
 }
-
 
 export interface ResponseInterface {
 	ident: string;
@@ -63,6 +55,15 @@ export interface ResponseInterface {
 	section: string | null;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;
+}
+
+export interface PageIndexInterface {
+	page: AllPageType;
+	pageNumber: number;
+	screen: ScreenType;
+	section: SectionType;
+	sectionNumber: number;
+	sectionPageNumber: number;
 }
 
 export interface PageInterface {
@@ -88,6 +89,7 @@ export interface QuestionDropdownInterface extends BasePayloadInterface {
 }
 
 export interface QuestionDropdownLanguageInterface extends BasePayloadInterface {
+	type: Question.QuestionLanguage;
 	heading: string;
 	images?: ImageDeviceInterface;
 }
@@ -222,6 +224,7 @@ export interface QuestionSliderPayloadInterface {
 export interface QuestionTextareaPayloadInterface {
 	ident: string;
 	name: string;
+	isFinal?: boolean;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionTextareaInterface;
 }
@@ -229,6 +232,7 @@ export interface QuestionTextareaPayloadInterface {
 export interface QuestionRadioImagePayloadInterface {
 	ident: string;
 	name: string;
+	isFinal?: boolean;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionRadioImageInterface;
 }

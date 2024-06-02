@@ -1,3 +1,4 @@
+import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import type { QuestionDropdownPayloadLanguageInterface } from "interface/payload.type";
 import Images from "styles/images";
@@ -8,6 +9,7 @@ const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 	type: Screen.Language,
 	translations: {
 		"en-CA": {
+			type: Question.QuestionLanguage,
 			heading: "Welcome!",
 			label: "What language do you speak & Where are you?",
 			kid_label: "What language do you speak & Where are you?",

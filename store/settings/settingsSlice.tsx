@@ -3,7 +3,6 @@ import defaultDevice from "./defaultDevice";
 import { currentDefaultPage, nextDefaultPage } from "./defaultPage";
 import defaultColor from "./defaultColor";
 import type DeviceInterface from "interface/dimensions";
-import type { PageInterface } from "./defaultPage";
 import type ColorInterface from "interface/color";
 import defaultButton from "./defaultButton";
 import defaultPhrase from "./defaultPhrase";
@@ -11,23 +10,24 @@ import type { ModeType } from "interface/union.type";
 import reducersActions from "./settingsReducers";
 import type { ButtonPayloadInterface } from "interface/button";
 import type { PhrasePayloadInterface } from "interface/phrase";
+import type { PageIndexInterface } from "interface/payload.type";
 
-export interface SettingsInterface {
+export interface SettingsSliceInterface {
 	mode: ModeType;
 	device: DeviceInterface;
 	language: string;
 	directusAccessToken: string;
 	directusBaseEndpoint: string;
 	currentPageNumber: number;
-	currentPage: PageInterface;
-	nextPage: PageInterface;
+	currentPage: PageIndexInterface;
+	nextPage: PageIndexInterface;
 	buttons: ButtonPayloadInterface;
 	phrases: PhrasePayloadInterface;
 	sectionTitles: string[];
 	sectionTotalPages: Record<number, number>;
 	totalPage: any;
 	colorTheme: ColorInterface;
-	pages: Record<number, any>;
+	pages: Record<number, PageIndexInterface>;
 	history: number[];
 }
 
@@ -50,7 +50,7 @@ const settingsSlice = createSlice({
 		colorTheme: defaultColor,
 		pages: {},
 		history: [] as number[],
-	} satisfies SettingsInterface,
+	} satisfies SettingsSliceInterface,
 	reducers: {
 		setMode: reducersActions.setMode,
 		setDevice: reducersActions.setDevice,
@@ -72,22 +72,22 @@ const settingsSlice = createSlice({
 		reset: reducersActions.reset,
 	},
 	selectors: {
-		getSetting: (state: SettingsInterface) => state,
-		getMode: (state: SettingsInterface) => state.mode,
-		getDevice: (state: SettingsInterface) => state.device,
-		getLanguage: (state: SettingsInterface) => state.language,
-		getDirectusAccessToken: (state: SettingsInterface) => state.directusAccessToken,
-		getColorTheme: (state: SettingsInterface) => state.colorTheme,
-		getCurrentPageNumber: (state: SettingsInterface) => state.currentPageNumber,
-		getCurrentPage: (state: SettingsInterface) => state.currentPage,
-		getNextPage: (state: SettingsInterface) => state.nextPage,
-		getButtons: (state: SettingsInterface) => state.buttons,
-		getPhrases: (state: SettingsInterface) => state.phrases,
-		getSectionTitles: (state: SettingsInterface) => state.sectionTitles,
-		getSectionTotalPages: (state: SettingsInterface) => state.sectionTotalPages,
-		getPages: (state: SettingsInterface) => state.pages,
-		getHistory: (state: SettingsInterface) => state.history,
-		getDirectusBaseEndpoint: (state: SettingsInterface) => state.directusBaseEndpoint,
+		getSetting: (state: SettingsSliceInterface) => state,
+		getMode: (state: SettingsSliceInterface) => state.mode,
+		getDevice: (state: SettingsSliceInterface) => state.device,
+		getLanguage: (state: SettingsSliceInterface) => state.language,
+		getDirectusAccessToken: (state: SettingsSliceInterface) => state.directusAccessToken,
+		getColorTheme: (state: SettingsSliceInterface) => state.colorTheme,
+		getCurrentPageNumber: (state: SettingsSliceInterface) => state.currentPageNumber,
+		getCurrentPage: (state: SettingsSliceInterface) => state.currentPage,
+		getNextPage: (state: SettingsSliceInterface) => state.nextPage,
+		getButtons: (state: SettingsSliceInterface) => state.buttons,
+		getPhrases: (state: SettingsSliceInterface) => state.phrases,
+		getSectionTitles: (state: SettingsSliceInterface) => state.sectionTitles,
+		getSectionTotalPages: (state: SettingsSliceInterface) => state.sectionTotalPages,
+		getPages: (state: SettingsSliceInterface) => state.pages,
+		getHistory: (state: SettingsSliceInterface) => state.history,
+		getDirectusBaseEndpoint: (state: SettingsSliceInterface) => state.directusBaseEndpoint,
 	},
 });
 

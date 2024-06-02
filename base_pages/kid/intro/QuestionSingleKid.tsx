@@ -9,7 +9,6 @@ import { getQuestionType } from "utils/questions.utils";
 import Question from "constants/question.enum";
 import QuestionSelect from "components/kid/QuestionSelect";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import QuestionSelectRegion from "components/kid/QuestionSelectRegion";
 import { addResponse, getResponse } from "utils/response.utils";
 import { getIntroductoryBackground } from "utils/background.utils";
 import QuestionInput from "components/kid/QuestionInput";
@@ -30,6 +29,7 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
+import QuestionSelectLanguage from "components/kid/QuestionSelectLanguage";
 
 export default function QuestionSingleKid(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -137,9 +137,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 				setDropdownOpen={setDropdownOpen}
 			/>
 		);
-	} else if (questionType === Question.QuestionRegion) {
+	} else if (questionType === Question.QuestionLanguage) {
 		questionComponent = (
-			<QuestionSelectRegion
+			<QuestionSelectLanguage
 				key={currentPageNumber}
 				onChange={changeHandler}
 				selectedValue={selectedValue}

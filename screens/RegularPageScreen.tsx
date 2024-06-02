@@ -27,7 +27,6 @@ export default function RegularPageScreen(): React.ReactElement {
 
 		if (currentPageNumber === 0) {
 			dispatch(nextPage());
-			// tempComponent = getScreen(mode, Screen.Language);
 		} else {
 			if (pageType !== null && sectionType !== null) {
 				tempComponent = getScreen(mode, pageType, sectionType);
@@ -41,12 +40,6 @@ export default function RegularPageScreen(): React.ReactElement {
 	}
 
 	useEffect(() => {
-		// console.log("---------");
-		// console.log("CURRENT PAGE NUMBER: ", currentPageNumber);
-		// console.log("MODE: ", mode);
-		// console.log("PAGE TYPE: ", pageType);
-		// console.log("SECTION TYPE ", sectionType);
-		// console.log("CURRENT PAGE ", JSON.stringify(currentPage, null, 2));
 		changeComponent();
 		changeColor();
 	}, [currentPageNumber, currentPage, mode]);

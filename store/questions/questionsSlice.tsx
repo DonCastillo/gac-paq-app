@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Regions from "store/data/regions";
 import Languages from "store/data/languages";
 import IntroductoryPages from "store/data/introductory-pages";
 import QuestionPages from "store/data/question-pages";
@@ -35,11 +34,52 @@ import type {
 import reducersActions from "./questionsReducers";
 import type { LangButtonInterface } from "interface/button";
 import type { LangPhraseInterface } from "interface/phrase";
+import type {
+	LanguageInterface,
+	PagePayloadInterface,
+	QuestionDropdownPayloadInterface,
+	SectionPayloadInterface,
+} from "interface/payload.type";
+import type {
+	AdultExtroductoryPagesType,
+	FeedbackExtroductoryPagesType,
+	IntroductoryPagesType,
+	KidExtroductoryPagesType,
+	QuestionPagesType,
+} from "interface/union.type";
+
+export interface QuestionSliceInterface {
+	languageOption: LanguageInterface[];
+	introductoryPages: IntroductoryPagesType;
+	questionPages: QuestionPagesType;
+	kidExtroPages: KidExtroductoryPagesType;
+	adultExtroPages: AdultExtroductoryPagesType;
+	kidAgePage: QuestionDropdownPayloadInterface;
+	teenAgePage: QuestionDropdownPayloadInterface;
+	adultAgePage: QuestionDropdownPayloadInterface;
+	feedbackExtroPages: FeedbackExtroductoryPagesType;
+	backButton: LangButtonInterface;
+	completeButton: LangButtonInterface;
+	continueButton: LangButtonInterface;
+	goButton: LangButtonInterface;
+	nextButton: LangButtonInterface;
+	startedButton: LangButtonInterface;
+	agreementPhrase: LangPhraseInterface;
+	donePhrase: LangPhraseInterface;
+	dontKnowPhrase: LangPhraseInterface;
+	introductionPhrase: LangPhraseInterface;
+	tryAgainPhrase: LangPhraseInterface;
+	successPage: PagePayloadInterface;
+	errorPage: PagePayloadInterface;
+	Transportation7: Transportation7Interface;
+	Transportation8_10: Transportation8_10Interface;
+	Transportation9_11: Transportation9_11Interface;
+	sectionPages: SectionPayloadInterface[];
+}
 
 const questionsSlice = createSlice({
 	name: "questions",
 	initialState: {
-		regionOption: Regions,
 		languageOption: Languages,
 		introductoryPages: IntroductoryPages,
 		questionPages: QuestionPages,
@@ -49,63 +89,60 @@ const questionsSlice = createSlice({
 		teenAgePage: DemographicTeenPage,
 		adultAgePage: DemographicAdultPage,
 		feedbackExtroPages: FeedbackExtroductoryPages,
-		backButton: BackButton satisfies LangButtonInterface,
-		completeButton: CompleteButton satisfies LangButtonInterface,
-		continueButton: ContinueButton satisfies LangButtonInterface,
-		goButton: GoButton satisfies LangButtonInterface,
-		nextButton: NextButton satisfies LangButtonInterface,
-		startedButton: StartedButton satisfies LangButtonInterface,
-		agreementPhrase: AgreementPhrase satisfies LangPhraseInterface,
-		donePhrase: DonePhrase satisfies LangPhraseInterface,
-		dontKnowPhrase: DontKnowPhrase satisfies LangPhraseInterface,
-		introductionPhrase: IntroductionPhrase satisfies LangPhraseInterface,
-		tryAgainPhrase: TryAgainPhrase satisfies LangPhraseInterface,
+		backButton: BackButton,
+		completeButton: CompleteButton,
+		continueButton: ContinueButton,
+		goButton: GoButton,
+		nextButton: NextButton,
+		startedButton: StartedButton,
+		agreementPhrase: AgreementPhrase,
+		donePhrase: DonePhrase,
+		dontKnowPhrase: DontKnowPhrase,
+		introductionPhrase: IntroductionPhrase,
+		tryAgainPhrase: TryAgainPhrase,
 		successPage: SuccessPage,
 		errorPage: ErrorPage,
 		Transportation7: Transportation7 satisfies Transportation7Interface,
 		Transportation8_10: Transportation8_10 satisfies Transportation8_10Interface,
 		Transportation9_11: Transportation9_11 satisfies Transportation9_11Interface,
 		sectionPages: [],
-	} satisfies any,
+	} satisfies QuestionSliceInterface,
 	reducers: {
-		setRegionOption: reducersActions.setRegionOption,
 		setLanguageOption: reducersActions.setLanguageOption,
 		setIntroductoryPages: reducersActions.setIntroductoryPages,
 		identifyLastSectionExtroPage: reducersActions.identifyLastSectionExtroPage,
 		addSectionPage: reducersActions.addSectionPage,
 	},
 	selectors: {
-		getRegionOption: (state: any) => state.regionOption,
-		getLanguageOption: (state: any) => state.languageOption,
-		getIntroductoryPages: (state: any) => state.introductoryPages,
-		getQuestionPages: (state: any) => state.questionPages,
-		getKidExtroPages: (state: any) => state.kidExtroPages,
-		getAdultExtroPages: (state: any) => state.adultExtroPages,
-		getKidAgePage: (state: any) => state.kidAgePage,
-		getTeenAgePage: (state: any) => state.teenAgePage,
-		getAdultAgePage: (state: any) => state.adultAgePage,
-		getFeedbackExtroPages: (state: any) => state.feedbackExtroPages,
-		getBackButton: (state: any) => state.backButton,
-		getCompleteButton: (state: any) => state.completeButton,
-		getContinueButton: (state: any) => state.continueButton,
-		getGoButton: (state: any) => state.goButton,
-		getNextButton: (state: any) => state.nextButton,
-		getStartedButton: (state: any) => state.startedButton,
-		getAgreementPhrase: (state: any) => state.agreementPhrase,
-		getDonePhrase: (state: any) => state.donePhrase,
-		getDontKnowPhrase: (state: any) => state.dontKnowPhrase,
-		getIntroductionPhrase: (state: any) => state.introductionPhrase,
-		getTryAgainPhrase: (state: any) => state.tryAgainPhrase,
-		getSuccessPage: (state: any) => state.successPage,
-		getErrorPage: (state: any) => state.errorPage,
-		getTransportation7: (state: any) => state.Transportation7,
-		getTransportation8_10: (state: any) => state.Transportation8_10,
-		getTransportation9_11: (state: any) => state.Transportation9_11,
-		getSectionPages: (state: any) => state.sectionPages,
+		getLanguageOption: (state: QuestionSliceInterface) => state.languageOption,
+		getIntroductoryPages: (state: QuestionSliceInterface) => state.introductoryPages,
+		getQuestionPages: (state: QuestionSliceInterface) => state.questionPages,
+		getKidExtroPages: (state: QuestionSliceInterface) => state.kidExtroPages,
+		getAdultExtroPages: (state: QuestionSliceInterface) => state.adultExtroPages,
+		getKidAgePage: (state: QuestionSliceInterface) => state.kidAgePage,
+		getTeenAgePage: (state: QuestionSliceInterface) => state.teenAgePage,
+		getAdultAgePage: (state: QuestionSliceInterface) => state.adultAgePage,
+		getFeedbackExtroPages: (state: QuestionSliceInterface) => state.feedbackExtroPages,
+		getBackButton: (state: QuestionSliceInterface) => state.backButton,
+		getCompleteButton: (state: QuestionSliceInterface) => state.completeButton,
+		getContinueButton: (state: QuestionSliceInterface) => state.continueButton,
+		getGoButton: (state: QuestionSliceInterface) => state.goButton,
+		getNextButton: (state: QuestionSliceInterface) => state.nextButton,
+		getStartedButton: (state: QuestionSliceInterface) => state.startedButton,
+		getAgreementPhrase: (state: QuestionSliceInterface) => state.agreementPhrase,
+		getDonePhrase: (state: QuestionSliceInterface) => state.donePhrase,
+		getDontKnowPhrase: (state: QuestionSliceInterface) => state.dontKnowPhrase,
+		getIntroductionPhrase: (state: QuestionSliceInterface) => state.introductionPhrase,
+		getTryAgainPhrase: (state: QuestionSliceInterface) => state.tryAgainPhrase,
+		getSuccessPage: (state: QuestionSliceInterface) => state.successPage,
+		getErrorPage: (state: QuestionSliceInterface) => state.errorPage,
+		getTransportation7: (state: QuestionSliceInterface) => state.Transportation7,
+		getTransportation8_10: (state: QuestionSliceInterface) => state.Transportation8_10,
+		getTransportation9_11: (state: QuestionSliceInterface) => state.Transportation9_11,
+		getSectionPages: (state: QuestionSliceInterface) => state.sectionPages,
 	},
 });
 export const {
-	setRegionOption,
 	setLanguageOption,
 	setIntroductoryPages,
 	identifyLastSectionExtroPage,
@@ -114,7 +151,6 @@ export const {
 
 export const {
 	getSectionPages,
-	getRegionOption,
 	getLanguageOption,
 	getIntroductoryPages,
 	getQuestionPages,

@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import type { RegionInterface, LanguageInterface } from "interface/payload.type";
-import Regions from "store/data/regions";
+import type { LanguageInterface } from "interface/payload.type";
 import Languages from "store/data/languages";
 import IntroductoryPages from "store/data/introductory-pages";
 import type PagePayloadInterface from "interface/directus/page-payload";
@@ -34,7 +33,6 @@ import Transportation8_10 from "./data/questionpages/section-4/transportation_7/
 import Transportation9_11 from "./data/questionpages/section-4/transportation_7/S4Q9_11";
 
 const INITIAL_STATE = {
-	regionOption: Regions,
 	languageOption: Languages,
 	introductoryPages: IntroductoryPages,
 	questionPages: QuestionPages,
@@ -65,7 +63,6 @@ const INITIAL_STATE = {
 
 export const QuestionContext = createContext({
 	questionState: {
-		regionOption: [],
 		languageOption: [],
 		introductoryPages: [],
 		kidExtroPages: [],
@@ -94,7 +91,6 @@ export const QuestionContext = createContext({
 		sectionPages: [],
 	},
 	identifyLastSectionExtroPage: () => {},
-	setRegionOption: (newRegionOptions: RegionInterface[]) => {},
 	setLanguageOption: (newLanguageOptions: LanguageInterface[]) => {},
 	setIntroductoryPages: (
 		newIntroductoryPages: Array<PagePayloadInterface | QuestionDropdownPayloadInterface> | [],
@@ -104,11 +100,6 @@ export const QuestionContext = createContext({
 
 function questionReducer(state: any, action: any): any {
 	switch (action.type) {
-		case "SET_REGION_OPTION":
-			return {
-				...state,
-				regionOption: action.payload,
-			};
 		case "SET_LANGUAGE_OPTION":
 			return {
 				...state,
@@ -148,13 +139,6 @@ export default function QuestionContextProvider({
 }): React.ReactElement {
 	const [questionState, dispatch] = useReducer(questionReducer, INITIAL_STATE);
 
-	function setRegionOption(newRegionOptions: RegionInterface[]): void {
-		dispatch({
-			type: "SET_REGION_OPTION",
-			payload: newRegionOptions,
-		});
-	}
-
 	function setLanguageOption(newLanguageOptions: LanguageInterface[]): void {
 		dispatch({
 			type: "SET_LANGUAGE_OPTION",
@@ -186,7 +170,6 @@ export default function QuestionContextProvider({
 
 	const value: any = {
 		questionState,
-		setRegionOption,
 		setLanguageOption,
 		setIntroductoryPages,
 		identifyLastSectionExtroPage,
