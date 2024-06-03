@@ -23,6 +23,7 @@ import {
 } from "store/settings/settingsSlice";
 import { translatePage, translateText } from "utils/translate.utils";
 import type { PreambleInterface } from "interface/payload.type";
+import { proceedPage } from "utils/navigation.utils";
 
 const PreambleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -75,7 +76,7 @@ const PreambleKid = (): React.ReactElement => {
 						key={"WithValue"}
 						colorTheme={color200}
 						onPrev={() => dispatch(prevPage())}
-						onNext={() => dispatch(nextPage())}
+						onNext={() => proceedPage()}
 					/>
 				</Navigation>
 			</Main>

@@ -22,6 +22,7 @@ import {
 } from "store/settings/settingsSlice";
 import { translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
+import { proceedPage } from "utils/navigation.utils";
 
 const PageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -51,7 +52,7 @@ const PageKid = (): React.ReactElement => {
 					key={"both"}
 					colorTheme={color100}
 					onPrev={() => dispatch(prevPage())}
-					onNext={() => dispatch(nextPage())}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		} else {
@@ -59,7 +60,7 @@ const PageKid = (): React.ReactElement => {
 				<BackAndNextNav
 					key={"next"}
 					colorTheme={color100}
-					onNext={() => dispatch(nextPage())}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		}
