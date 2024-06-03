@@ -8,7 +8,6 @@ import BGLinearGradient from "components/BGLinearGradient";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";
-import { optionLanguage } from "utils/options.utils";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { addResponse, getResponse } from "utils/response.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -26,7 +25,6 @@ import {
 	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { getLanguageOption } from "store/questions/questionsSlice";
 import { changeMode } from "utils/mode.utils";
 import { getQuestionType } from "utils/type.utils";
 import { translatePage, translateQuestionLabel } from "utils/translate.utils";

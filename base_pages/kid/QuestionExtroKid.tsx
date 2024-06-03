@@ -82,7 +82,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
-	async function submitResponseHandler(): Promise<void> {
+	const submitResponseHandler = async (): Promise<void> => {
 		try {
 			setLoading(true);
 
@@ -106,7 +106,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 		} finally {
 			setLoading(false);
 		}
-	}
+	};
 
 	if (!loading) {
 		return (

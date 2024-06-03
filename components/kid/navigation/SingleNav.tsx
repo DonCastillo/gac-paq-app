@@ -12,9 +12,9 @@ const SingleNav = ({ label, onPress }: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 
-	function nextPage(): void {
+	const nextPage = (): void => {
 		onPress();
-	}
+	};
 
 	return (
 		<FullWidthButton
@@ -26,7 +26,6 @@ const SingleNav = ({ label, onPress }: PropsInterface): React.ReactElement => {
 			{label}
 		</FullWidthButton>
 	);
-}
-
+};
 
 export default SingleNav;

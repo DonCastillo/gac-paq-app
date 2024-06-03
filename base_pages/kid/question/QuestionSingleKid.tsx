@@ -29,7 +29,7 @@ import QuestionTextarea from "components/kid/QuestionTextarea";
 import QuestionCheckbox from "components/kid/QuestionCheckbox";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
-import { choiceMode, optionTextMode } from "utils/options.utils";
+import { choiceMode } from "utils/options.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getColorTheme,

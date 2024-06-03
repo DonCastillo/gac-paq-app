@@ -10,10 +10,7 @@ interface PropsInterface {
 	customStyle?: object;
 }
 
-export default function QuestionContainer({
-	children,
-	customStyle,
-}: PropsInterface): React.ReactElement {
+const QuestionContainer = ({ children, customStyle }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
 	const maxWidth = horizontalScale(
@@ -34,7 +31,9 @@ export default function QuestionContainer({
 			{children}
 		</View>
 	);
-}
+};
+
+export default QuestionContainer;
 
 const styles = StyleSheet.create({
 	container: {

@@ -27,7 +27,6 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
-import QuestionSelectLanguage from "components/kid/QuestionSelectLanguage";
 import { getQuestionType } from "utils/type.utils";
 import { translatePage, translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";

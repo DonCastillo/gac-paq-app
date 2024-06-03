@@ -19,12 +19,12 @@ import GenericPage from "base_pages/generic/GenericPage";
 import GenericSingleQuestion from "base_pages/generic/GenericSingleQuestion";
 import PreambleKid from "base_pages/kid/PreambleKid";
 import PreambleAdult from "base_pages/adult/PreambleAdult";
-import type { ModeType } from "interface/union.type";
+import type { ModeType, ScreenType, SectionType } from "interface/union.type";
 
 const getScreen = (
 	mode: ModeType,
-	screen: Screen | string,
-	section?: Section | string,
+	screen: ScreenType | string,
+	section: SectionType | string,
 ): React.ReactElement => {
 	// all language screens are generic
 	if (mode === undefined && screen === Screen.Language) return <GenericLanguage />;

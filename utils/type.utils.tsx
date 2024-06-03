@@ -54,7 +54,7 @@ const getQuestionType = (questionType: string): Question => {
 	} else if (questionType === "question_satisfaction_image") {
 		return Question.QuestionSatisfactionImage;
 	} else {
-		Question.QuestionInput;
+		return Question.QuestionInput;
 	}
 };
 

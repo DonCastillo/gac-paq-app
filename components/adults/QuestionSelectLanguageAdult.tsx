@@ -5,15 +5,15 @@ import { optionLanguage } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getLanguageOption } from "store/questions/questionsSlice";
 
-interface QuestionSelectLanguageAdultPropsInterface {
+interface PropsInterface {
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionSelectLanguageAdult({
+const QuestionSelectLanguageAdult = ({
 	onChange,
 	selectedValue,
-}: QuestionSelectLanguageAdultPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const options: LanguageInterface[] = useSelector(getLanguageOption);
 	const itemsRaw: ChoiceIcon[] = optionLanguage(options);
 
@@ -28,4 +28,6 @@ export default function QuestionSelectLanguageAdult({
 			onSelect={selectHandler}
 		/>
 	);
-}
+};
+
+export default QuestionSelectLanguageAdult;

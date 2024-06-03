@@ -1,7 +1,6 @@
 import CarSVG from "assets/images/kids/transportation/car.svg";
 import PublicTransportationSVG from "assets/images/kids/transportation/public_transport.svg";
 import SchoolBusSVG from "assets/images/kids/transportation/school_bus.svg";
-import SkateboardSVG from "assets/images/kids/transportation/skateboard.svg";
 import BikeSVG from "assets/images/kids/transportation/bike.svg";
 import SittingTransportationSVG from "assets/images/kids/graphics/sitting.svg";
 import WalkingSVG from "assets/images/kids/transportation/small_walking.svg";

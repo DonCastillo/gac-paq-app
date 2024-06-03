@@ -14,7 +14,7 @@ import { loadApp } from "utils/load_pages.utils";
 
 const Stack = createNativeStackNavigator();
 
-function AppWrapper(): React.ReactElement {
+const AppWrapper = (): React.ReactElement => {
 	const [fontsLoaded] = useFonts(fonts);
 	const settings = useSelector((state: any) => state.settings);
 	const responses = useSelector((state: any) => state.responses);
@@ -74,6 +74,6 @@ function AppWrapper(): React.ReactElement {
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
-}
+};
 
 export default AppWrapper;

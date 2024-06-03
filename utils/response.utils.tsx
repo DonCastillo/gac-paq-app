@@ -96,8 +96,8 @@ const getResponseByIdent = (ident: string): string | string[] | null => {
 		return null;
 	}
 
-	if (finalResponse?.answer?.includes(" | ")) {
-		return finalResponse?.answer.split(" | ");
+	if (finalResponse?.answer?.includes(" | ") ?? false) {
+		return finalResponse?.answer?.split(" | ") ?? null;
 	}
 	return finalResponse?.answer;
 };

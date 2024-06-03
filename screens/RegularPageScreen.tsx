@@ -12,7 +12,7 @@ import {
 } from "store/settings/settingsSlice";
 import { getScreenType, getSectionType } from "utils/type.utils";
 
-export default function RegularPageScreen(): React.ReactElement {
+const RegularPageScreen = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
@@ -22,7 +22,7 @@ export default function RegularPageScreen(): React.ReactElement {
 	const sectionType = currentPage?.section !== null ? getSectionType(currentPage?.section) : null;
 	const [component, setComponent] = useState<React.ReactElement>(<></>);
 
-	function changeComponent(): void {
+	const changeComponent = (): void => {
 		let tempComponent = <></>;
 
 		if (currentPageNumber === 0) {
@@ -33,11 +33,11 @@ export default function RegularPageScreen(): React.ReactElement {
 			}
 		}
 		setComponent(tempComponent);
-	}
+	};
 
-	function changeColor(): void {
+	const changeColor = (): void => {
 		dispatch(setColorTheme(currentPage.sectionNumber ?? 0));
-	}
+	};
 
 	useEffect(() => {
 		changeComponent();
@@ -49,4 +49,6 @@ export default function RegularPageScreen(): React.ReactElement {
 			<View style={{ flex: 1, backgroundColor: "white" }}>{component}</View>
 		</KeyboardSafeview>
 	);
-}
+};
+
+export default RegularPageScreen;
