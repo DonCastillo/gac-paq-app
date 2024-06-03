@@ -12,9 +12,10 @@ import Option from "./subcomponents/Option";
 import type { ChoiceInterface } from "interface/question_checkbox";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: ChoiceInterface[];
+	options: Choice[] | ChoiceIcon[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }

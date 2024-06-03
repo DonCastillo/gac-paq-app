@@ -6,9 +6,10 @@ import { horizontalScale } from "utils/responsive.utils";
 import { getOptionImage } from "utils/background.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
+import type { Choice, ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
-	options: any[];
+	options: ChoiceImage[] | Choice[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }

@@ -11,9 +11,10 @@ import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: OptionInterface[];
+	options: ChoiceIcon[] | Choice[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }

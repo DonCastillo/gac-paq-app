@@ -23,9 +23,10 @@ import {
 import { useSelector } from "react-redux";
 
 import { getMode, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: any[];
+	options: ChoiceIcon[] | Choice[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }

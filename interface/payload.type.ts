@@ -115,7 +115,7 @@ export interface QuestionSliderInterface extends BasePayloadInterface{
 export interface QuestionTextareaInterface extends BasePayloadInterface { 
 	type: Question.QuestionTextarea;
 	heading: string;
-	placeholder?: string;
+	placeholder: string;
 	images?: ImageDeviceInterface;
 }
 

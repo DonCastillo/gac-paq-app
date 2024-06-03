@@ -17,11 +17,11 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-export default function QuestionRadio({
+const QuestionRadio = ({
 	options,
 	onSelect,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -45,7 +45,7 @@ export default function QuestionRadio({
 		}
 	}, [selected]);
 
-	function pressHandler(value: string | null): void {
+	const pressHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
 
 		if (isOtherOption(value)) {
@@ -87,7 +87,7 @@ export default function QuestionRadio({
 				onSelect(value);
 			}
 		}
-	}
+	};
 
 	return (
 		<FlatList
@@ -118,4 +118,6 @@ export default function QuestionRadio({
 			showsVerticalScrollIndicator={true}
 		/>
 	);
-}
+};
+
+export default QuestionRadio;

@@ -1,7 +1,7 @@
 import React from "react";
 import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
 import type { ChoiceInterface } from "interface/question_checkbox";
-import type { ChoiceIcon, LanguageInterface } from "interface/payload.type";
+import type { Choice, ChoiceIcon, LanguageInterface } from "interface/payload.type";
 import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 
@@ -11,6 +11,37 @@ export interface OptionInterface {
 	text: string;
 	value: string;
 }
+
+const choiceMode = (choices: Choice[] | ChoiceIcon[], mode: ModeType): Choice[] | ChoiceIcon[] => {
+	if (mode === undefined) {
+		return choices.map((choice: Choice | ChoiceIcon) => {
+			return { ...choice, label: choice.label, value: choice.value };
+		});
+	}
+
+	const hasTextMode = choices.some((choice) => choice.label_mode !== undefined);
+	if (!hasTextMode) {
+		return choices.map((choice: Choice | ChoiceIcon) => {
+			return { ...choice, label: choice.label, value: choice.value };
+		});
+	}
+
+	if (mode === Mode.Adult) {
+		return choices.map((choice: Choice | ChoiceIcon) => {
+			return { ...choice, label: choice.label_mode?.adult ?? choice.label, value: choice.value };
+		});
+	}
+
+	if (mode === Mode.Kid || mode === Mode.Teen) {
+		return choices.map((choice: Choice | ChoiceIcon) => {
+			return { ...choice, label: choice.label_mode?.kid ?? choice.label, value: choice.value };
+		});
+	}
+
+	return choices.map((choice: Choice | ChoiceIcon) => {
+		return { ...choice, label: choice.label, value: choice.value };
+	});
+};
 
 function optionTextMode(options: ChoiceInterface[], mode: ModeType): ChoiceInterface[] {
 	if (mode === undefined) {
@@ -37,7 +68,7 @@ function optionTextMode(options: ChoiceInterface[], mode: ModeType): ChoiceInter
 	return options;
 }
 
-function optionRadioItemMode(options: ChoiceInterface[], mode: ModeType): ChoiceIcon[] {
+function optionRadioItemMode(options: Choice[], mode: ModeType): ChoiceIcon[] {
 	if (mode === undefined) {
 		return options.map((option) => {
 			return { ...option, label: option.text, value: option.value };
@@ -168,4 +199,5 @@ export {
 	isOtherWithSpecifiedValue,
 	extractUserSpecifiedOtherFromArray,
 	optionRadioItemMode,
+	choiceMode,
 };

@@ -143,6 +143,15 @@ export type TranslatedIntroQuestionType =
 	| QuestionInputInterface
 	| QuestionDropdownLanguageInterface;
 
+export type TranslatedQuestionQuestionType =
+	| QuestionCheckboxInterface
+	| QuestionRadioInterface
+	| QuestionSliderInterface
+	| QuestionRadioImageInterface
+	| QuestionSliderInterface
+	| QuestionInputInterface
+	| QuestionTextareaInterface;
+
 export type TranslatedPageType =
 	| PageInterface
 	| QuestionDropdownInterface
