@@ -12,12 +12,12 @@ interface PropsInterface {
 	unfilledColor?: string;
 }
 
-function ProgressBar({
+const ProgressBar = ({
 	currentSectionPage = 1,
 	sectionPageTotal = 1,
 	filledColor = "#fff",
 	unfilledColor = "rgba(255, 255, 255, 0.82)",
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
 	console.log("ProgressBar", currentSectionPage, sectionPageTotal);
@@ -44,7 +44,7 @@ function ProgressBar({
 	} else {
 		return <></>;
 	}
-}
+};
 
 export default memo(ProgressBar);
 

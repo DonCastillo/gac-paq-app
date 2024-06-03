@@ -31,7 +31,6 @@ const QuestionRadioImage = ({
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -60,7 +59,7 @@ const QuestionRadioImage = ({
 		}
 	}, [selected]);
 
-	function selectHandler(value: string | null): void {
+	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
 
 		if (isOtherOption(value)) {
@@ -102,9 +101,9 @@ const QuestionRadioImage = ({
 				onChange(value);
 			}
 		}
-	}
+	};
 
-	function renderImage(image: string | Svg): React.ReactElement {
+	const renderImage = (image: string | Svg): React.ReactElement => {
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
@@ -136,7 +135,7 @@ const QuestionRadioImage = ({
 				return <ImageComponent style={GeneralStyle.general.inlineOptionImage} />;
 			}
 		}
-	}
+	};
 
 	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
 		const { images, label, value } = item;

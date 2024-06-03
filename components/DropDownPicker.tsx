@@ -16,14 +16,14 @@ interface PropsInterface {
 	dropdownMinHeight?: number | "100%";
 }
 
-export default function DropDownSelector({
+const DropDownSelector = ({
 	options,
 	selectedValue,
 	onSelect,
 	dropdownOpen,
 	setDropdownOpen,
 	dropdownMinHeight = "100%",
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
@@ -98,7 +98,9 @@ export default function DropDownSelector({
 			/>
 		</>
 	);
-}
+};
+
+export default DropDownSelector;
 
 const styles = StyleSheet.create({
 	container: {

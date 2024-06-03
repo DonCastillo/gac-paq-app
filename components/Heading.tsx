@@ -9,10 +9,7 @@ interface PropsInterface {
 	customStyle?: object;
 }
 
-export default function Heading({
-	children,
-	customStyle = {},
-}: PropsInterface): React.ReactElement {
+const Heading = ({ children, customStyle = {} }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
 	return (
@@ -39,7 +36,9 @@ export default function Heading({
 			</Text>
 		</View>
 	);
-}
+};
+
+export default Heading;
 
 const styles = StyleSheet.create({
 	text: {

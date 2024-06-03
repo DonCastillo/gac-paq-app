@@ -11,7 +11,7 @@ interface Props {
 	colorTheme?: string;
 }
 
-function BtnCntrWdthShadowed({ label, onPress, colorTheme }: Props): React.ReactElement {
+const BtnCntrWdthShadowed = ({ label, onPress, colorTheme }: Props): React.ReactElement => {
 	const device = useSelector(getDevice);
 
 	const ButtonContainerComponent = (
@@ -53,6 +53,6 @@ function BtnCntrWdthShadowed({ label, onPress, colorTheme }: Props): React.React
 	} else {
 		return ButtonContainerComponent;
 	}
-}
+};
 
 export default BtnCntrWdthShadowed;

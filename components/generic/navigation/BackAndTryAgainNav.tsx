@@ -11,7 +11,7 @@ interface Props {
 	colorTheme?: string;
 }
 
-function BackAndTryAgainNav({ onPrev, onNext, colorTheme }: Props): React.ReactElement {
+const BackAndTryAgainNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactElement => {
 	const phrases = useSelector(getPhrases);
 
 	return (
@@ -30,7 +30,7 @@ function BackAndTryAgainNav({ onPrev, onNext, colorTheme }: Props): React.ReactE
 			/>
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	bottomNavigation: {

@@ -1,14 +1,15 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
 
-BottomMain.propTypes = {
-	children: PropTypes.node,
+interface Props {
+	children: React.ReactNode;
+}
+
+const BottomMain = ({ children }: Props): React.ReactElement => {
+	return <View style={styles.container}>{children}</View>;
 };
 
-export default function BottomMain({ children }): React.ReactElement {
-	return <View style={styles.container}>{children}</View>;
-}
+export default BottomMain;
 
 const styles = StyleSheet.create({
 	container: {

@@ -14,9 +14,9 @@ export default function SingleNav({ label, onPress }): React.ReactElement {
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 
-	function nextPage(): void {
+	const nextPage = (): void => {
 		onPress();
-	}
+	};
 
 	return (
 		<FullWidthButton

@@ -11,11 +11,11 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-function QuestionSubLabel({
+const QuestionSubLabel = ({
 	children,
 	customStyle = {},
 	textStyle = {},
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
 	if (children !== null && children !== undefined && children !== "") {
@@ -43,6 +43,6 @@ function QuestionSubLabel({
 	} else {
 		return <></>;
 	}
-}
+};
 
 export default memo(QuestionSubLabel);

@@ -7,7 +7,7 @@ interface PropsInterface {
 	children: React.ReactNode;
 }
 
-export default function KeyboardSafeview({ children }: PropsInterface): React.ReactElement {
+const KeyboardSafeview = ({ children }: PropsInterface): React.ReactElement => {
 	const dispatch = useDispatch();
 	const device = useSelector(getDevice);
 
@@ -46,4 +46,6 @@ export default function KeyboardSafeview({ children }: PropsInterface): React.Re
 			</TouchableWithoutFeedback>
 		</KeyboardAvoidingView>
 	);
-}
+};
+
+export default KeyboardSafeview;

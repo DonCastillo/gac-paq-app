@@ -11,11 +11,11 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-function QuestionTitle({
+const QuestionTitle = ({
 	children,
 	customStyle = {},
 	textStyle = {},
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
 	return (
@@ -38,7 +38,7 @@ function QuestionTitle({
 			</Text>
 		</View>
 	);
-}
+};
 
 export default memo(QuestionTitle);
 

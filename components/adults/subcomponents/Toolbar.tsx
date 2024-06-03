@@ -34,9 +34,9 @@ function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-	function audioHandler(): void {
+	const audioHandler = (): void => {
 		console.log("audio pressed from the toolbar");
-	}
+	};
 
 	return (
 		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>

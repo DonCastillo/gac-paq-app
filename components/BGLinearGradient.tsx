@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useSelector } from "react-redux";
 import { getColorTheme } from "store/settings/settingsSlice";
 
-function BGLinearGradient(): React.ReactElement {
+const BGLinearGradient = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const { grad100, grad200, grad300, grad400 } = colorTheme;
 
@@ -17,7 +17,7 @@ function BGLinearGradient(): React.ReactElement {
 			style={styles.bgGradient}
 		/>
 	);
-}
+};
 
 export default memo(BGLinearGradient);
 

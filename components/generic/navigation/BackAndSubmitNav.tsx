@@ -12,7 +12,7 @@ interface Props {
 	colorTheme?: string;
 }
 
-function BackAndSubmitNav({ onPrev, onNext, colorTheme }: Props): React.ReactElement {
+const BackAndSubmitNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactElement => {
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
@@ -61,7 +61,7 @@ function BackAndSubmitNav({ onPrev, onNext, colorTheme }: Props): React.ReactEle
 			)}
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	bottomNavigation: {

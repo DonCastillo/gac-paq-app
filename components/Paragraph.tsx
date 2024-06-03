@@ -9,10 +9,7 @@ interface PropsInterface {
 	customStyle?: object;
 }
 
-export default function Paragraph({
-	children,
-	customStyle = {},
-}: PropsInterface): React.ReactElement {
+const Paragraph = ({ children, customStyle = {} }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	return (
 		<View>
@@ -36,7 +33,9 @@ export default function Paragraph({
 			</Text>
 		</View>
 	);
-}
+};
+
+export default Paragraph;
 
 const styles = StyleSheet.create({
 	text: {
