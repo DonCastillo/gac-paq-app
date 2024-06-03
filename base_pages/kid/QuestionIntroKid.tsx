@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
-import { translate } from "utils/page.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Main from "components/Main";
 import BottomMain from "components/orientation/BottomMain";
@@ -20,8 +19,10 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
+import { translatePage } from "utils/translate.utils";
+import type { SectionInterface } from "interface/payload.type";
 
-export default function QuestionIntroKid(): React.ReactElement {
+const QuestionIntroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage);
@@ -29,10 +30,13 @@ export default function QuestionIntroKid(): React.ReactElement {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
-
 	const { color200 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+
+	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+
+	// translations
+	const translatedPage = translatePage(currentPage.page.translations, language) as SectionInterface;
 
 	// set button component dynamically
 	useEffect(() => {
@@ -73,7 +77,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 				]}
 			>
 				<ScrollView>
-					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
+					<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
 					<Text
 						style={{
 							...styles.headingText,
@@ -87,7 +91,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 							),
 						}}
 					>
-						{translatedPage?.heading}
+						{translatedPage.heading}
 					</Text>
 				</ScrollView>
 			</View>
@@ -97,7 +101,9 @@ export default function QuestionIntroKid(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default QuestionIntroKid;
 
 const styles = StyleSheet.create({
 	container: {

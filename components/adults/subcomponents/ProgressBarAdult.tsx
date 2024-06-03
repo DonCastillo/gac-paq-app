@@ -1,7 +1,6 @@
 import ProgressBar from "components/generic/ProgressBar";
 import React from "react";
 import { useSelector } from "react-redux";
-import { getSectionPages } from "store/questions/questionsSlice";
 import { getCurrentPage, getSectionTotalPages } from "store/settings/settingsSlice";
 
 export default function ProgressBarAdult(): React.ReactElement {

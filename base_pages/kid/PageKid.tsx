@@ -29,11 +29,13 @@ const PageKid = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const { color100 } = colorTheme;
 
+	// state
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
-	const { color100 } = colorTheme;
+	// translations
 	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
 
 	// set background screen dynamically

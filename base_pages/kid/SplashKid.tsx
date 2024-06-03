@@ -10,7 +10,7 @@ import { Logo } from "components/svgs/kid";
 import { useSelector } from "react-redux";
 import { getColorTheme } from "store/settings/settingsSlice";
 
-export default function SplashKid(): JSX.Element {
+const SplashKid = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const navigation = useNavigation();
@@ -44,7 +44,9 @@ export default function SplashKid(): JSX.Element {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default SplashKid;
 
 const styles = StyleSheet.create({
 	container: {

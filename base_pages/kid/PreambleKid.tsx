@@ -22,18 +22,22 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { translatePage, translateText } from "utils/translate.utils";
+import type { PreambleInterface } from "interface/payload.type";
 
-export default function PreambleKid(): React.ReactElement {
+const PreambleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
-
 	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-
 	const { color100, color200 } = colorTheme;
-	const translatedPage: any = translatePage(currentPage.page.translations, language);
+
+	// translations
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as PreambleInterface;
 	const description = translateText(translatedPage.description, mode);
 
 	return (
@@ -52,7 +56,7 @@ export default function PreambleKid(): React.ReactElement {
 								lineHeight: device.isTablet ? 45 : 35,
 							}}
 						>
-							{translatedPage?.heading}
+							{translatedPage.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
@@ -77,7 +81,9 @@ export default function PreambleKid(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default PreambleKid;
 
 const styles = StyleSheet.create({
 	sublabel: {

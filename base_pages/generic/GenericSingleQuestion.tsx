@@ -75,12 +75,8 @@ const GenericSingleQuestion = (): React.ReactElement => {
 
 	// save response
 	const changeHandler = (value: string | null): void => {
-		if (value !== "" && value !== null && value !== undefined) {
-			addResponse(value);
-			setSelectedValue(value);
-		} else {
-			setSelectedValue(null);
-		}
+		addResponse(value);
+		setSelectedValue(value);
 
 		// set mode
 		if (currentPage.page.ident === "mode") {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
-import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -28,22 +27,25 @@ import {
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
+import { translatePage } from "utils/translate.utils";
+import type { ExtroInterface } from "interface/payload.type";
 
-export default function QuestionExtroKid(): React.ReactElement {
+const QuestionExtroKid = (): React.ReactElement => {
 	console.log("question extro kid ...");
 	const dispatch = useDispatch();
-
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
 
+	// state
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
+	// translations
 	const isFinal = currentPage.page.isFinal;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
 	const ImageComponent = Images.kids.graphics.extro_question_page;
 	const navigation = useNavigation();
 
@@ -132,7 +134,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 								lineHeight: device.isTablet ? 55 : 45,
 							}}
 						>
-							{translatedPage?.heading}
+							{translatedPage.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
@@ -142,7 +144,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 								lineHeight: device.isTablet ? 35 : 27,
 							}}
 						>
-							{translatedPage?.subheading}
+							{translatedPage.subheading}
 						</Paragraph>
 						<View style={styles.imageContainer}>
 							<ImageComponent
@@ -160,7 +162,9 @@ export default function QuestionExtroKid(): React.ReactElement {
 	} else {
 		return <LoadingScreenKid />;
 	}
-}
+};
+
+export default QuestionExtroKid;
 
 const styles = StyleSheet.create({
 	container: {

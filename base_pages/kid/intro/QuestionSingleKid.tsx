@@ -43,11 +43,13 @@ const QuestionSingleKid = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
 
+	// state
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
+	// translations
 	const translatedPage = translatePage(
 		currentPage.page.translations,
 		language,
