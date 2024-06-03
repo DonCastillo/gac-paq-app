@@ -13,11 +13,11 @@ interface PropsInterface {
 	maxValue?: number;
 }
 
-export default function QuestionSlider({
+const QuestionSlider = ({
 	onChange,
 	selectedValue,
 	maxValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
@@ -41,29 +41,29 @@ export default function QuestionSlider({
 		}
 	}, [currentPage, selectedValue, maxValue]);
 
-	function changeHandler(value: number | PhraseLabel.DontKnow): void {
+	const changeHandler = (value: number | PhraseLabel.DontKnow): void => {
 		setValue(value);
 		onChange(value);
-	}
+	};
 
-	function isNumber(value: number | PhraseLabel.DontKnow): boolean {
+	const isNumber = (value: number | PhraseLabel.DontKnow): boolean => {
 		if (value === PhraseLabel.DontKnow) return false;
 		return typeof value === "number" && Number.isInteger(value);
-	}
+	};
 
-	function isColor100(value: number | PhraseLabel.DontKnow): string {
+	const isColor100 = (value: number | PhraseLabel.DontKnow): string => {
 		return isNumber(value) ? color100 : GeneralStyle.kid.inactiveField.borderColor;
-	}
+	};
 
-	function isColor200(value: number | PhraseLabel.DontKnow): string {
+	const isColor200 = (value: number | PhraseLabel.DontKnow): string => {
 		return isNumber(value) ? color200 : GeneralStyle.kid.inactiveField.borderColor;
-	}
+	};
 
-	function setSliderValue(value: number | PhraseLabel.DontKnow): number | undefined {
+	const setSliderValue = (value: number | PhraseLabel.DontKnow): number | undefined => {
 		if (value === PhraseLabel.DontKnow) return undefined;
 		if (isNumber(value) && value >= 0) return value;
 		return undefined;
-	}
+	};
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
@@ -126,7 +126,9 @@ export default function QuestionSlider({
 			</ScrollView>
 		</View>
 	);
-}
+};
+
+export default QuestionSlider;
 
 const styles = StyleSheet.create({
 	container: {

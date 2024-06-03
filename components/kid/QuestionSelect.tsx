@@ -10,13 +10,13 @@ interface PropsInterface {
 	setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function QuestionSelect({
+const QuestionSelect = ({
 	options,
 	onChange,
 	selectedValue,
 	dropdownOpen,
 	setDropdownOpen,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	return (
 		<DropDownSelector
 			options={options}
@@ -26,4 +26,6 @@ export default function QuestionSelect({
 			setDropdownOpen={setDropdownOpen}
 		/>
 	);
-}
+};
+
+export default QuestionSelect;

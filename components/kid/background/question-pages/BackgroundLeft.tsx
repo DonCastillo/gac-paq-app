@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { StyleSheet } from "react-native";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
-function BackgroundLeft({
+const BackgroundLeft = ({
 	svg,
 	height,
 	width,
@@ -10,7 +10,7 @@ function BackgroundLeft({
 	svg: any;
 	height?: number;
 	width?: number;
-}): React.ReactElement {
+}): React.ReactElement => {
 	const SVGImage = svg;
 	return (
 		<AbsoluteFullScreenContainer>
@@ -21,7 +21,7 @@ function BackgroundLeft({
 			/>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(BackgroundLeft);
 

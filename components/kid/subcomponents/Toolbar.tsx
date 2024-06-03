@@ -17,7 +17,7 @@ interface PropsInterface {
 	sectionTitle?: string;
 }
 
-function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
+const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const sectionTitles = useSelector(getSectionTitles);
@@ -34,7 +34,9 @@ function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-	function audioHandler(): void {}
+	const audioHandler = (): void => {
+		console.log("audio pressed from the toolbar");
+	};
 
 	return (
 		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
@@ -65,7 +67,7 @@ function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 			/>
 		</View>
 	);
-}
+};
 
 export default memo(Toolbar);
 

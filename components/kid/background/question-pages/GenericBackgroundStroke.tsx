@@ -7,7 +7,7 @@ interface PropsInterface {
 	fillColor: string;
 }
 
-function GenericBackgroundStroke({ fillColor }: PropsInterface): React.ReactElement {
+const GenericBackgroundStroke = ({ fillColor }: PropsInterface): React.ReactElement => {
 	return (
 		<AbsoluteFullScreenContainer>
 			<StrokeYellow
@@ -17,7 +17,7 @@ function GenericBackgroundStroke({ fillColor }: PropsInterface): React.ReactElem
 			/>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(GenericBackgroundStroke);
 

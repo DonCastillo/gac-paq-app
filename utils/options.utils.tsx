@@ -112,18 +112,18 @@ function optionLanguage(options: LanguageInterface[]): ChoiceIcon[] {
 				label: name,
 				value: lang_code,
 				icon: () => (
-					// <FlagComponent
-					// 	height={"100%"}
-					// 	width={"100%"}
-					// 	padding={0}
-					// 	margin={0}
-					// />
 					<FlagComponent
-						height={50}
-						width={50}
+						height={"100%"}
+						width={"100%"}
 						padding={0}
 						margin={0}
 					/>
+					// <FlagComponent
+					// 	height={50}
+					// 	width={50}
+					// 	padding={0}
+					// 	margin={0}
+					// />
 				),
 			};
 		}

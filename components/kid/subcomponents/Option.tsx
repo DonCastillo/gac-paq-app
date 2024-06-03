@@ -19,7 +19,7 @@ interface PropsInterface {
 	defaultOtherInputValue?: string;
 }
 
-function Option({
+const Option = ({
 	text,
 	value,
 	selected,
@@ -29,7 +29,7 @@ function Option({
 	isOtherSelected = false,
 	autofocusOtherField = false,
 	defaultOtherInputValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const otherInputRef = useRef<TextInput>(null);
 	const device = useSelector(getDevice);
 
@@ -115,6 +115,6 @@ function Option({
 			</View>
 		</View>
 	);
-}
+};
 
 export default memo(Option);

@@ -11,18 +11,18 @@ interface PropsInterface {
 	placeholder: string | null;
 }
 
-export default function QuestionTextarea({
+const QuestionTextarea = ({
 	onChange,
 	selectedValue,
 	placeholder,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 
-	function changeHandler(value: string): void {
+	const changeHandler = (value: string): void => {
 		onChange(value);
-	}
+	};
 
 	return (
 		<View>
@@ -42,7 +42,9 @@ export default function QuestionTextarea({
 			/>
 		</View>
 	);
-}
+};
+
+export default QuestionTextarea;
 
 const styles = StyleSheet.create({
 	container: {

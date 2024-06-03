@@ -14,12 +14,12 @@ interface PropsInterface {
 	setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function QuestionSelectLanguage({
+const QuestionSelectLanguage = ({
 	selectedValue,
 	onChange,
 	dropdownOpen,
 	setDropdownOpen,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const options: LanguageInterface[] = useSelector(getLanguageOption);
 	const itemsRaw: ChoiceIcon[] = optionLanguage(options);
@@ -34,4 +34,6 @@ export default function QuestionSelectLanguage({
 			dropdownMinHeight={verticalScale(300, device.screenHeight)}
 		/>
 	);
-}
+};
+
+export default QuestionSelectLanguage;

@@ -138,18 +138,6 @@ const QuestionSingleAdult = (): React.ReactElement => {
 				}}
 			/>
 		);
-	} else if (questionType === Question.QuestionLanguage) {
-		const languageOptions = useSelector(getLanguageOption);
-		questionComponent = (
-			<QuestionRadio
-				key={currentPageNumber}
-				selectedValue={selectedValue}
-				options={optionLanguage(languageOptions)}
-				onSelect={(value: string) => {
-					changeHandler(value);
-				}}
-			/>
-		);
 	} else if (questionType === Question.QuestionInput) {
 		const questionCasted = translatedPage as QuestionInputInterface;
 		questionComponent = (

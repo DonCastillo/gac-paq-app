@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { StyleSheet, View } from "react-native";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
-function BackgroundCenter({
+const BackgroundCenter = ({
 	svg,
 	height,
 	width,
@@ -10,7 +10,7 @@ function BackgroundCenter({
 	svg: any;
 	height?: number;
 	width?: number;
-}): React.ReactElement {
+}): React.ReactElement => {
 	const SVGImage = svg;
 	return (
 		<AbsoluteFullScreenContainer>
@@ -23,7 +23,7 @@ function BackgroundCenter({
 			</View>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(BackgroundCenter);
 

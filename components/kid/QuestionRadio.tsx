@@ -5,7 +5,6 @@ import {
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-	type OptionInterface,
 } from "utils/options.utils";
 import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
@@ -19,11 +18,11 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-export default function QuestionRadio({
+const QuestionRadio = ({
 	options,
 	onChange,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
@@ -50,7 +49,7 @@ export default function QuestionRadio({
 		}
 	}, [selected]);
 
-	function selectHandler(value: string | null): void {
+	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
 
 		if (isOtherOption(value)) {
@@ -92,7 +91,7 @@ export default function QuestionRadio({
 				onChange(value);
 			}
 		}
-	}
+	};
 
 	const enableColumnWrap = device.isTablet && device.orientation === "landscape";
 	const numColumn = enableColumnWrap ? 2 : 1;
@@ -112,7 +111,7 @@ export default function QuestionRadio({
 					renderItem={({ item }) => {
 						return (
 							<Option
-								text={item.text}
+								text={item.label}
 								value={item.value}
 								selected={
 									selected !== null &&
@@ -132,7 +131,9 @@ export default function QuestionRadio({
 			</View>
 		</SafeAreaView>
 	);
-}
+};
+
+export default QuestionRadio;
 
 const styles = StyleSheet.create({
 	container: {

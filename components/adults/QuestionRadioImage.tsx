@@ -180,6 +180,7 @@ const QuestionRadioImage = ({
 		);
 	};
 
+	/** if the option contains value called "other", it will be displayed as a list */
 	const listRenderOption = (item: ChoiceImage): React.ReactElement => {
 		const { images, label, value, sublabel, label_mode } = item;
 		const imageByMode = getOptionImage(images, mode);

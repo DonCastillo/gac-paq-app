@@ -10,11 +10,11 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-function QuestionLabel({
+const QuestionLabel = ({
 	children,
 	customStyle = {},
 	textStyle = {},
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	return (
 		<View style={[styles.container, customStyle]}>
@@ -38,7 +38,7 @@ function QuestionLabel({
 			</Text>
 		</View>
 	);
-}
+};
 
 export default memo(QuestionLabel, (prevProps, nextProps) => {
 	return JSON.stringify(prevProps) === JSON.stringify(nextProps);

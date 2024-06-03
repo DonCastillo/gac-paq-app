@@ -9,7 +9,6 @@ import {
 } from "utils/options.utils";
 import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
-import type { ChoiceInterface } from "interface/question_checkbox";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
@@ -20,17 +19,17 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-export default function QuestionCheckbox({
+const QuestionCheckbox = ({
 	options,
 	onChange,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const SEPARATOR = " | ";
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-
 	const { color100 } = colorTheme;
+
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -57,29 +56,29 @@ export default function QuestionCheckbox({
 		return selectedValue === "" || selectedValue === null ? [] : selectedValue.split(SEPARATOR);
 	}
 
-	function arrayHasOther(arr: string[]): boolean {
+	const arrayHasOther = (arr: string[]): boolean => {
 		return arr.some(isOtherOption);
-	}
+	};
 
-	function everyNotAnswer(value: string): boolean {
+	const everyNotAnswer = (value: string): boolean => {
 		const finalValue = value.toString().toLowerCase();
 		const currentPageIdent = currentPage?.page.ident;
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return false;
 		}
 		return !["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
-	}
+	};
 
-	function someNotAnswer(value: string): boolean {
+	const someNotAnswer = (value: string): boolean => {
 		const finalValue = value.toString().toLowerCase();
 		const currentPageIdent = currentPage?.page.ident;
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return true;
 		}
 		return ["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
-	}
+	};
 
-	function selectHandler(value: string): void {
+	const selectHandler = (value: string | null): void => {
 		let finalSelected = "";
 		let existingSelectedValue = initializeSelectedValue();
 
@@ -137,7 +136,7 @@ export default function QuestionCheckbox({
 			}
 		}
 		onChange(finalSelected);
-	}
+	};
 
 	const enableColumnWrap = device.isTablet && device.orientation === "landscape";
 	const numColumn = enableColumnWrap ? 2 : 1;
@@ -157,7 +156,7 @@ export default function QuestionCheckbox({
 					renderItem={({ item }) => {
 						return (
 							<Option
-								text={item.text}
+								text={item.label}
 								value={item.value}
 								selected={
 									selected !== null &&
@@ -177,7 +176,9 @@ export default function QuestionCheckbox({
 			</View>
 		</SafeAreaView>
 	);
-}
+};
+
+export default QuestionCheckbox;
 
 const styles = StyleSheet.create({
 	container: {

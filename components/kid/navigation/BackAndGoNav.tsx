@@ -4,7 +4,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getButtons, getColorTheme, nextPage, prevPage } from "store/settings/settingsSlice";
 
-export default function BackAndGoNav(): React.ReactElement {
+const BackAndGoNav = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const colorTheme = useSelector(getColorTheme);
 	const buttons = useSelector(getButtons);
@@ -39,7 +39,9 @@ export default function BackAndGoNav(): React.ReactElement {
 			</ButtonContainerWidth>
 		</View>
 	);
-}
+};
+
+export default BackAndGoNav;
 
 const styles = StyleSheet.create({
 	bottomNavigation: {

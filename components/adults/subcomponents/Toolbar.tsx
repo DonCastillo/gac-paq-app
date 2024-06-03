@@ -17,7 +17,7 @@ interface PropsInterface {
 	sectionTitle?: string;
 }
 
-function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
+const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const sectionTitles = useSelector(getSectionTitles);
@@ -66,7 +66,7 @@ function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 			/>
 		</View>
 	);
-}
+};
 
 export default memo(Toolbar);
 

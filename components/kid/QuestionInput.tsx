@@ -4,23 +4,23 @@ import { GeneralStyle } from "styles/general";
 import { useSelector } from "react-redux";
 import { getColorTheme } from "store/settings/settingsSlice";
 
-interface QuestionInputPropsInterface {
+interface PropsInterface {
 	onChange: (value: string) => void;
 	selectedValue: string | null;
 	placeholder: string | null;
 }
 
-export default function QuestionInput({
+const QuestionInput = ({
 	onChange,
 	selectedValue,
 	placeholder,
-}: QuestionInputPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 
-	function changeHandler(value: string): void {
+	const changeHandler = (value: string): void => {
 		onChange(value);
-	}
+	};
 
 	return (
 		<View>
@@ -34,7 +34,9 @@ export default function QuestionInput({
 			/>
 		</View>
 	);
-}
+};
+
+export default QuestionInput;
 
 const styles = StyleSheet.create({
 	container: {

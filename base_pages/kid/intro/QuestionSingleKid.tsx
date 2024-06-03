@@ -149,16 +149,6 @@ const QuestionSingleKid = (): React.ReactElement => {
 				setDropdownOpen={setDropdownOpen}
 			/>
 		);
-	} else if (questionType === Question.QuestionLanguage) {
-		questionComponent = (
-			<QuestionSelectLanguage
-				key={currentPageNumber}
-				onChange={changeHandler}
-				selectedValue={selectedValue}
-				dropdownOpen={dropdownOpen}
-				setDropdownOpen={setDropdownOpen}
-			/>
-		);
 	} else if (questionType === Question.QuestionInput) {
 		const questionCasted = translatedPage as QuestionInputInterface;
 		questionComponent = (

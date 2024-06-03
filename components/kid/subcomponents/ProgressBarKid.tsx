@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getSectionTotalPages } from "store/settings/settingsSlice";
 
-export default function ProgressBarKid(): React.ReactElement {
+const ProgressBarKid = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
 	const colorTheme = useSelector(getColorTheme);
@@ -19,4 +19,6 @@ export default function ProgressBarKid(): React.ReactElement {
 			unfilledColor={color100 + "26"}
 		/>
 	);
-}
+};
+
+export default ProgressBarKid;

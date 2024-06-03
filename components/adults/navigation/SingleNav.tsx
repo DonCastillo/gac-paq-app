@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 import FullWidthButton from "components/buttons/FullWidthButton";
 import { DefaultStyle } from "styles/general";
 import { useSelector } from "react-redux";
 import { getColorTheme } from "store/settings/settingsSlice";
 
-SingleNav.propTypes = {
-	label: PropTypes.string.isRequired,
-	onPress: PropTypes.func.isRequired,
-};
+interface PropsInterface {
+	label: string;
+	onPress: () => void;
+}
 
-export default function SingleNav({ label, onPress }): React.ReactElement {
+const SingleNav = ({ label, onPress }: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 
@@ -33,4 +32,6 @@ export default function SingleNav({ label, onPress }): React.ReactElement {
 			{label}
 		</FullWidthButton>
 	);
-}
+};
+
+export default SingleNav;

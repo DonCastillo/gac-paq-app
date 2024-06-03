@@ -24,6 +24,7 @@ const QuestionCheckbox = ({
 }: PropsInterface): React.ReactElement => {
 	const SEPARATOR = " | ";
 	const currentPage = useSelector(getCurrentPage);
+
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);

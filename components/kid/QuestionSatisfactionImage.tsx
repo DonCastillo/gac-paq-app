@@ -6,19 +6,19 @@ import { horizontalScale } from "utils/responsive.utils";
 import { getOptionImage } from "utils/background.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
-import type { Choice, ChoiceImage } from "interface/payload.type";
+import type { ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
-	options: ChoiceImage[] | Choice[];
+	options: ChoiceImage[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionSatisfactionImage({
+const QuestionSatisfactionImage = ({
 	options,
 	onChange,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
@@ -33,7 +33,7 @@ export default function QuestionSatisfactionImage({
 		}
 	}, [currentPage, selectedValue]);
 
-	function selectHandler(value: string | null): void {
+	const selectHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
 			setSelected(value);
 			onChange(value);
@@ -41,9 +41,9 @@ export default function QuestionSatisfactionImage({
 			setSelected(null);
 			onChange(null);
 		}
-	}
+	};
 
-	function renderImage(image: string | Svg): React.ReactElement {
+	const renderImage = (image: string | Svg): React.ReactElement => {
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
@@ -71,10 +71,10 @@ export default function QuestionSatisfactionImage({
 				/>
 			);
 		}
-	}
+	};
 
-	function blockRenderOption({ item }): React.ReactElement {
-		const { images, value } = item.image_choices_id;
+	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
+		const { images, value } = item;
 		const imageByMode = getOptionImage(images, mode);
 
 		return (
@@ -100,7 +100,7 @@ export default function QuestionSatisfactionImage({
 				</View>
 			</Pressable>
 		);
-	}
+	};
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -111,7 +111,7 @@ export default function QuestionSatisfactionImage({
 						alignItems: "center",
 					}}
 					data={[...options]}
-					renderItem={blockRenderOption}
+					renderItem={({ item }) => blockRenderOption(item)}
 					numColumns={numColumn}
 					key={numColumn}
 					bounces={false}
@@ -119,7 +119,9 @@ export default function QuestionSatisfactionImage({
 			</View>
 		</SafeAreaView>
 	);
-}
+};
+
+export default QuestionSatisfactionImage;
 
 const styles = StyleSheet.create({
 	listOptionContainer: {
