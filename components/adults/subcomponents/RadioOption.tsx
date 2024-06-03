@@ -19,7 +19,7 @@ interface PropsInterface {
 	optionSublabel?: string;
 }
 
-export default function RadioOption({
+const RadioOption = ({
 	label,
 	value,
 	image,
@@ -30,7 +30,7 @@ export default function RadioOption({
 	defaultOtherInputValue,
 	optionLabel,
 	optionSublabel,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
@@ -169,7 +169,10 @@ export default function RadioOption({
 			)}
 		</View>
 	);
-}
+};
+
+export default RadioOption;
+
 const styles = StyleSheet.create({
 	container: {
 		alignItems: "center",
