@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateText } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import Toolbar from "components/kid/subcomponents/Toolbar";
@@ -22,6 +21,7 @@ import {
 	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
+import { translatePage, translateText } from "utils/translate.utils";
 
 export default function PreambleKid(): React.ReactElement {
 	const dispatch = useDispatch();
@@ -33,8 +33,8 @@ export default function PreambleKid(): React.ReactElement {
 	const colorTheme = useSelector(getColorTheme);
 
 	const { color100, color200 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
-	const description = translateText(mode, translatedPage?.description);
+	const translatedPage: any = translatePage(currentPage.page.translations, language);
+	const description = translateText(translatedPage.description, mode);
 
 	return (
 		<View style={styles.container}>

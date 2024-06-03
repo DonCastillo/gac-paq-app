@@ -6,7 +6,7 @@ import ProgressBar from "components/ProgressBar";
 import Colors from "store/data/colors";
 import Mode from "constants/mode.enum";
 
-export default function LoadingScreenAdult(): React.ReactElement {
+const LoadingScreenAdult = (): React.ReactElement => {
 	const color100 = Colors[Mode.Adult][0].color100;
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
@@ -21,7 +21,9 @@ export default function LoadingScreenAdult(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default LoadingScreenAdult;
 
 const styles = StyleSheet.create({
 	container: {

@@ -27,8 +27,9 @@ const GenericPage = (): React.ReactElement => {
 	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
-
 	const { color100 } = colorTheme;
+
+	// translations
 	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
 
 	return (

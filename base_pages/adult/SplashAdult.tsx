@@ -10,7 +10,7 @@ import BGLinearGradient from "components/BGLinearGradient";
 import { useSelector } from "react-redux";
 import { getColorTheme } from "store/settings/settingsSlice";
 
-export default function SplashAdult(): React.ReactElement {
+const SplashAdult = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const navigation = useNavigation();
@@ -52,7 +52,9 @@ export default function SplashAdult(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default SplashAdult;
 
 const styles = StyleSheet.create({
 	container: {

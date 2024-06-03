@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
-import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -28,21 +27,25 @@ import {
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
+import type { ExtroInterface } from "interface/payload.type";
+import { translatePage } from "utils/translate.utils";
 
-export default function QuestionExtroAdult(): React.ReactElement {
+const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
+	const navigation = useNavigation();
 
+	// state
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
+	// translations
 	const isFinal = currentPage.page.isFinal;
-	const translatedPage: any = translate(currentPage.page.translations, language);
-	const navigation = useNavigation();
+	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
 
 	// set button component dynamically
 	useEffect(() => {
@@ -77,7 +80,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-	async function submitResponseHandler(): Promise<void> {
+	const submitResponseHandler = async (): Promise<void> => {
 		try {
 			setLoading(true);
 
@@ -97,7 +100,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 		} finally {
 			setLoading(false);
 		}
-	}
+	};
 
 	if (!loading) {
 		return (
@@ -119,7 +122,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 								lineHeight: device.isTablet ? 75 : 60,
 							}}
 						>
-							{translatedPage?.heading}
+							{translatedPage.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
@@ -128,7 +131,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 								lineHeight: device.isTablet ? 30 : 25,
 							}}
 						>
-							{translatedPage?.subheading}
+							{translatedPage.subheading}
 						</Paragraph>
 					</CenterMain>
 					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
@@ -138,7 +141,9 @@ export default function QuestionExtroAdult(): React.ReactElement {
 	} else {
 		return <LoadingScreenAdult />;
 	}
-}
+};
+
+export default QuestionExtroAdult;
 
 const styles = StyleSheet.create({
 	container: {

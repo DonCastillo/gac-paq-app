@@ -40,9 +40,11 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 
+	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
+	// translations
 	const translatedPage = translatePage(
 		currentPage.page.translations,
 		language,

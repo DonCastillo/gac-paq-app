@@ -110,34 +110,6 @@ export type TranslationType =
 	| LangPreambleInterface
 	| LangExtroInterface;
 
-// export type TranslatedIntroductoryPageType =
-// 	| PageInterface
-// 	| QuestionDropdownInterface
-// 	| QuestionDropdownLanguageInterface
-// 	| QuestionInputInterface;
-
-// export type TranslatedQuestionPageType =
-// 	| SectionInterface
-// 	| PreambleInterface
-// 	| QuestionCheckboxInterface
-// 	| QuestionRadioInterface
-// 	| QuestionSliderInterface
-// 	| QuestionRadioImageInterface
-// 	| ExtroInterface;
-
-// export type TranslatedKidExtroductoryPageType = SectionInterface | QuestionRadioInterface;
-// export type TranslatedAdultExtroductoryPageType =
-// 	| SectionInterface
-// 	| QuestionRadioInterface
-// 	| QuestionCheckboxInterface;
-// export type TranslatedExtroductoryPageType =
-// 	| TranslatedKidExtroductoryPageType
-// 	| TranslatedAdultExtroductoryPageType;
-// export type TranslatedFeedbackExtroductoryPageType =
-// 	| QuestionRadioImageInterface
-// 	| QuestionTextareaInterface
-// 	| ExtroInterface;
-
 export type TranslatedIntroQuestionType =
 	| QuestionDropdownInterface
 	| QuestionInputInterface
@@ -169,14 +141,3 @@ export type TranslatedPageType =
 export type FinalResponseType =
 	| Record<string, string | string[]>
 	| Record<string, Record<string, string | string[]>>;
-
-export type TranslationArrType =
-	| PageInterface[]
-	| QuestionDropdownInterface[]
-	| QuestionDropdownLanguageInterface[];
-
-export type TranslateFuncType =
-	| PageInterface
-	| QuestionDropdownInterface
-	| QuestionDropdownLanguageInterface
-	| null;

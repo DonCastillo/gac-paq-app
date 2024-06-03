@@ -61,9 +61,11 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const { isKeyboardOpen } = device;
 
+	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
+	// translations
 	const translatedPage = translatePage(
 		currentPage.page.translations,
 		language,

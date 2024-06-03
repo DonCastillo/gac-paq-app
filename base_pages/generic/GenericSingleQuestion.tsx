@@ -41,11 +41,12 @@ const GenericSingleQuestion = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
-
-	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-
 	const { isKeyboardOpen } = device;
 
+	// state
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+
+	// translations
 	const translatedPage = translatePage(
 		currentPage.page.translations,
 		language,

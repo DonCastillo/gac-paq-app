@@ -38,11 +38,15 @@ const LanguageAdult = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 
+	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+
+	// translations
 	const translatedPage = translatePage(
 		currentPage.page.translations,
 		language,
 	) as QuestionDropdownLanguageInterface;
+
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
 		translatedPage.adult_label,
@@ -89,7 +93,7 @@ const LanguageAdult = (): React.ReactElement => {
 				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
-						<QuestionTitle>{translatedPage?.heading}</QuestionTitle>
+						<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 						<View style={{ marginBottom: 13 }}>
 							<QuestionLabel
 								textStyle={GeneralStyle.adult.questionLabel}

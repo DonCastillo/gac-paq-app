@@ -42,11 +42,15 @@ const GenericLanguage = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 
+	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+
+	// translations
 	const translatedPage = translatePage(
 		currentPage.page.translations,
 		language,
 	) as QuestionDropdownLanguageInterface;
+
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
 		translatedPage.adult_label,
@@ -89,7 +93,7 @@ const GenericLanguage = (): React.ReactElement => {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={getImageBackground(translatedPage.images, mode, device.isTablet)}
+				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
 				key={currentPageNumber}
 			/>
 			<Main>

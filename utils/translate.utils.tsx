@@ -51,6 +51,15 @@ const translateSectionHeading = (langCode: string): string[] => {
 	return translatedSectionTitles;
 };
 
+const translateText = (text: { kid: string; adult: string }, mode: ModeType): string => {
+	if (mode === undefined) return "";
+	if (text === undefined || text === null) return "";
+	if (mode === Mode.Adult) return text.adult;
+	if (mode === Mode.Kid) return text.kid;
+	if (mode === Mode.Teen) return text.kid;
+	return "";
+};
+
 const stringToInt = (value: string | null): number => {
 	if (value === null || value === undefined || value === "") {
 		return -1;
@@ -75,6 +84,7 @@ export {
 	translateButton,
 	translatePhrase,
 	translateSectionHeading,
+	translateText,
 	stringToInt,
 	intToString,
 };

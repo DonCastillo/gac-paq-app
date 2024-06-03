@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { translate, translateText } from "utils/page.utils";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -27,20 +26,26 @@ import {
 	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
+import { translatePage, translateText } from "utils/translate.utils";
+import type { PreambleInterface } from "interface/payload.type";
 
-export default function PreambleAdult(): React.ReactElement {
+const PreambleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-
 	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-
 	const { color200 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
-	const description = translateText(mode, translatedPage?.description);
+
+	// translations
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as PreambleInterface;
+
+	const description = translateText(translatedPage.description, mode);
 
 	return (
 		<View style={styles.container}>
@@ -59,7 +64,7 @@ export default function PreambleAdult(): React.ReactElement {
 								customStyle={{ marginBottom: 10 }}
 								textStyle={{ color: "#fff" }}
 							>
-								{translatedPage?.heading}
+								{translatedPage.heading}
 							</QuestionTitle>
 							<QuestionLabel
 								textStyle={[
@@ -93,7 +98,9 @@ export default function PreambleAdult(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default PreambleAdult;
 
 const styles = StyleSheet.create({
 	container: {
