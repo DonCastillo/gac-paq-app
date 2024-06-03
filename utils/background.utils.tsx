@@ -59,7 +59,7 @@ const getOptionImage = (images: ImageModeInterface, mode: ModeType): any | null 
 
 const getOptionText = (
 	origOptionText: string,
-	optionTextObj: { kid: string; adult: string },
+	optionTextObj: { kid: string; adult: string } | undefined,
 	mode: ModeType,
 ): string | null => {
 	if (optionTextObj === undefined || optionTextObj === null) return origOptionText;
@@ -75,7 +75,7 @@ const getOptionText = (
 };
 
 const getOptionSubLabel = (
-	subLabelObj: { kid: string; adult: string },
+	subLabelObj: { kid: string; adult: string } | undefined,
 	mode: ModeType,
 ): string | null => {
 	if (subLabelObj === undefined || subLabelObj === null) return null;

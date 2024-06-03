@@ -5,22 +5,22 @@ import { verticalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 
-interface QuestionInputPropsInterface {
+interface PropsInterface {
 	onChange: (value: string) => void;
 	selectedValue: string | null;
 	placeholder: string | null;
 }
 
-export default function QuestionTextarea({
+const QuestionTextarea = ({
 	onChange,
 	selectedValue,
 	placeholder,
-}: QuestionInputPropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
-	function changeHandler(value: string): void {
+	const changeHandler = (value: string): void => {
 		onChange(value);
-	}
+	};
 
 	return (
 		<View>
@@ -37,7 +37,9 @@ export default function QuestionTextarea({
 			/>
 		</View>
 	);
-}
+};
+
+export default QuestionTextarea;
 
 const styles = StyleSheet.create({
 	container: {

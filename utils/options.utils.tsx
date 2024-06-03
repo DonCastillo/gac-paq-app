@@ -1,7 +1,6 @@
 import React from "react";
-import { type QuestionRadioImageChoiceInterface } from "interface/question_radio_image";
 import type { ChoiceInterface } from "interface/question_checkbox";
-import type { Choice, ChoiceIcon, LanguageInterface } from "interface/payload.type";
+import type { Choice, ChoiceIcon, ChoiceImage, LanguageInterface } from "interface/payload.type";
 import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 
@@ -135,10 +134,8 @@ function optionLanguage(options: LanguageInterface[]): ChoiceIcon[] {
 	});
 }
 
-function hasOtherOption(radioImageOptions: QuestionRadioImageChoiceInterface[]): boolean {
-	return radioImageOptions.some(
-		(option) => option.image_choices_id.value.toString().toLowerCase() === "other",
-	);
+function hasOtherOption(radioImageOptions: ChoiceImage[]): boolean {
+	return radioImageOptions.some((option) => option.value.toString().toLowerCase() === "other");
 }
 
 /**

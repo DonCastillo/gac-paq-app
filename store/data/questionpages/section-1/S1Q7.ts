@@ -9,7 +9,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
-			type: Question.QuestionSatisfactionImage,
+			type: Question.QuestionRadioImage,
 			heading: "Question 7",
 			label:
 				"Which of the following pictures looks like what you do most of the time during your breaks?",

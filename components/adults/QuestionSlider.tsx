@@ -14,11 +14,11 @@ interface PropsInterface {
 	maxValue?: number;
 }
 
-export default function QuestionSlider({
+const QuestionSlider = ({
 	onChange,
 	selectedValue,
 	maxValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const colorTheme = useSelector(getColorTheme);
 	const phrases = useSelector(getPhrases);
@@ -41,29 +41,29 @@ export default function QuestionSlider({
 		}
 	}, [currentPage, selectedValue, maxValue]);
 
-	function changeHandler(value: number | PhraseLabel.DontKnow): void {
+	const changeHandler = (value: number | PhraseLabel.DontKnow): void => {
 		setValue(value);
 		onChange(value);
-	}
+	};
 
-	function isNumber(value: number | PhraseLabel.DontKnow): boolean {
+	const isNumber = (value: number | PhraseLabel.DontKnow): boolean => {
 		if (value === PhraseLabel.DontKnow) return false;
 		return typeof value === "number" && Number.isInteger(value);
-	}
+	};
 
-	function isColor100(value: number | PhraseLabel.DontKnow): string {
+	const isColor100 = (value: number | PhraseLabel.DontKnow): string => {
 		return isNumber(value) ? color100 : GeneralStyle.adult.inactiveField.borderColor;
-	}
+	};
 
-	function isColor200(value: number | PhraseLabel.DontKnow): string {
+	const isColor200 = (value: number | PhraseLabel.DontKnow): string => {
 		return isNumber(value) ? color200 : GeneralStyle.adult.inactiveField.borderColor;
-	}
+	};
 
-	function setSliderValue(value: number | PhraseLabel.DontKnow): number | undefined {
+	const setSliderValue = (value: number | PhraseLabel.DontKnow): number | undefined => {
 		if (value === PhraseLabel.DontKnow) return undefined;
 		if (isNumber(value) && value >= 0) return value;
 		return undefined;
-	}
+	};
 
 	return (
 		<View style={styles.container}>
@@ -108,14 +108,16 @@ export default function QuestionSlider({
 						<RadioOption
 							{...item}
 							selected={value === item.value}
-							onPress={() => changeHandler(item.value)}
+							onPress={() => changeHandler(item.value as PhraseLabel.DontKnow)}
 						/>
 					)}
 				/>
 			</View>
 		</View>
 	);
-}
+};
+
+export default QuestionSlider;
 
 const styles = StyleSheet.create({
 	container: {

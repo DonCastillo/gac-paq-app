@@ -13,9 +13,9 @@ const QuestionInput = ({
 	selectedValue,
 	placeholder,
 }: PropsInterface): React.ReactElement => {
-	function changeHandler(value: string): void {
+	const changeHandler = (value: string): void => {
 		onChange(value);
-	}
+	};
 
 	return (
 		<View>

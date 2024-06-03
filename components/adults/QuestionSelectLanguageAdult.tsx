@@ -17,9 +17,9 @@ export default function QuestionSelectLanguageAdult({
 	const options: LanguageInterface[] = useSelector(getLanguageOption);
 	const itemsRaw: ChoiceIcon[] = optionLanguage(options);
 
-	function selectHandler(value: string | null): void {
+	const selectHandler = (value: string | null): void => {
 		onChange(value);
-	}
+	};
 
 	return (
 		<QuestionRadio

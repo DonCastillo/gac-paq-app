@@ -17,7 +17,7 @@ interface PropsInterface {
 	defaultOtherInputValue?: string;
 }
 
-export default function CheckboxOption({
+const CheckboxOption = ({
 	label,
 	value,
 	image,
@@ -26,7 +26,7 @@ export default function CheckboxOption({
 	isOtherSelected = false,
 	autofocusOtherField = false,
 	defaultOtherInputValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
@@ -143,7 +143,10 @@ export default function CheckboxOption({
 			)}
 		</View>
 	);
-}
+};
+
+export default CheckboxOption;
+
 const styles = StyleSheet.create({
 	container: {
 		alignItems: "center",

@@ -53,7 +53,7 @@ const RadioOption = ({
 				></View>
 				<View style={styles.labelContainer}>
 					{/* Icon */}
-					{image !== undefined && image !== undefined && typeof image === "function" && (
+					{image !== undefined && image !== null && typeof image === "function" && (
 						<View
 							style={{
 								...styles.svgImage,
@@ -70,7 +70,7 @@ const RadioOption = ({
 							{image()}
 						</View>
 					)}
-					{image !== undefined && image !== undefined && typeof image === "number" && (
+					{image !== undefined && image !== null && typeof image === "number" && (
 						<Image
 							source={image}
 							style={{
