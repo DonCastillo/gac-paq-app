@@ -32,6 +32,31 @@ const S4Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 15c",
+			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école? ",
+			kid_label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école? ",
+			adult_label: "Combien de temps faut-il normalement pour aller à l'école de votre enfant?",
+			choices: [
+				{
+					label: "10 minutes ou moins",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Plus de 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		}
 	},
 };
 

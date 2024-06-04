@@ -29,6 +29,36 @@ const Transportation8_10 = {
 			},
 		},
 	},
+	"fr-CA": {
+		kid: {
+			wheel: {
+				none: "Combien de jours as-tu roulé pour te rendre à des endroits la semaine dernière?",
+				school: "Combien de jours as-tu roulé pour te rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours as-tu roulé pour te rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours as-tu roulé pour te rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+			walk: {
+				none: "Combien de jours as-tu marché pour te rendre à des endroits la semaine dernière?",
+				school: "Combien de jours as-tu marché pour te rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours as-tu marché pour te rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours as-tu marché pour te rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits la semaine dernière?",
+				school: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+			walk: {
+				none: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits la semaine dernière?",
+				school: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+		},
+	}
 };
 
 export default Transportation8_10;

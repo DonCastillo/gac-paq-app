@@ -95,7 +95,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 					},
 				},
 			],
-		}
+		},
 	},
 };
 

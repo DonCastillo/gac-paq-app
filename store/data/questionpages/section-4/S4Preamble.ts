@@ -29,6 +29,28 @@ const S4Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			heading: "Transport",
+			subheading: "Section 4",
+			description: {
+				kid: "Cette section porte sur comment tu vas à différents endroits.",
+				adult: "Cette section porte sur la façon dont ton enfant se rend à différents endroits.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+			},
+		},
 	},
 };
 

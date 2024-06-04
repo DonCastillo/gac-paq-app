@@ -88,6 +88,86 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 15",
+			label: "Comment es-tu allé.e de la maison jusqu'à l'école au cours de la dernière semaine?",
+			kid_label: "Comment es-tu allé.e de la maison jusqu'à l'école au cours de la dernière semaine?",
+			adult_label: "Comment ton enfant est-il allé à l'école la semaine dernière?",
+			kid_sublabel: "Sélectionne le moyen principal que tu as utilisé.",
+			adult_sublabel: "Sélectionnez le mode que votre enfant a le plus utilisé.",
+			choices: [
+				{
+					label: "À pied",
+					value: "Walking",
+					images: {
+						kid: Images.kids.options.transportation.walking,
+						adult: Images.adults.options.transportation.walking,
+					},
+				},
+				{
+					label: "En roulant",
+					value: "Wheeling",
+					images: {
+						kid: Images.kids.options.transportation.wheeling,
+						adult: Images.adults.options.transportation.wheeling,
+					},
+					sublabel: {
+						kid: "par exemple, fauteuil roulant, vélo, vélo électrique, planche à roulettes, trottinette, patins à roues alignées",
+						adult:
+							"par exemple, fauteuil roulant, vélo, vélo électrique, planche à roulettes, trottinette, patins à roues alignées",
+					},
+				},
+				{
+					label: "En autobus scolaire",
+					value: "School bus",
+					images: {
+						kid: Images.kids.options.transportation.school_bus,
+						adult: Images.adults.options.transportation.school_bus,
+					},
+				},
+				{
+					label: "En transport en commun",
+					value: "Public transit",
+					images: {
+						kid: Images.kids.options.transportation.public_transit,
+						adult: Images.adults.options.transportation.public_transit,
+					},
+					sublabel: {
+						kid: "par exemple, autobus, train, tramway, métro, bateau",
+						adult: "par exemple, autobus, train, tramway, métro, bateau",
+					},
+				},
+				{
+					label: "En voiture, taxi, camion ou motocyclette",
+					value: "Car, taxi, truck, or motorcycle",
+					images: {
+						kid: Images.kids.options.transportation.car,
+						adult: Images.adults.options.transportation.car,
+					},
+				},
+				{
+					label: "Autre",
+					value: "Other",
+					images: {
+						kid: Images.kids.options.transportation.other,
+						adult: Images.adults.options.transportation.other,
+					},
+				},
+				{
+					label: "Je reste à la maison pour l'école",
+					value: "Stay home for school",
+					images: {
+						kid: Images.kids.options.transportation.staying_home,
+						adult: Images.adults.options.transportation.staying_home,
+					},
+					label_mode: {
+						kid: "Je reste à la maison pour l'école",
+						adult: "Mon enfant reste à la maison pour l'école",
+					},
+				},
+			],
+		}
 	},
 };
 

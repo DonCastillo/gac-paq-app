@@ -25,6 +25,24 @@ const S4Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			heading: "Transport",
+			subheading: "Section 4",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+			},
+		},
 	},
 };
 
