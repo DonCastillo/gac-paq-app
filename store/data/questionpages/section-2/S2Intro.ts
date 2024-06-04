@@ -26,7 +26,7 @@ const S2Intro: SectionPayloadInterface = {
 			},
 		},
 		"fr-CA": {
-			heading: "Tâches ménagères",
+			heading: "Tâches Ménagères",
 			subheading: "Section 2",
 			images: {
 				kid: {

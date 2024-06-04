@@ -52,6 +52,50 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 14",
+			label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu fais du bénévolat et/ou travailles?",
+			kid_label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu fais du bénévolat et/ou travailles?",
+			adult_label:
+				"Laquelle des images suivantes ressemble le plus à ce que votre enfant fait la plupart du temps lorsqu'il fait du bénévolat et/ou qu'il travaille?",
+			choices: [
+				{
+					label: "Pas de mouvement",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.volunteering.not_moving,
+						adult: Images.adults.options.volunteering.not_moving,
+					},
+				},
+				{
+					label: "Peu d'effort",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.volunteering.easy_effort,
+						adult: Images.adults.options.volunteering.easy_effort,
+					},
+				},
+				{
+					label: "Un effort moyen ou intense",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.volunteering.medium_effort,
+						adult: Images.adults.options.volunteering.medium_effort,
+					},
+				},
+				{
+					label: "Je ne sais pas",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		}
 	},
 };
 

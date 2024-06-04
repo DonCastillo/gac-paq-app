@@ -24,6 +24,24 @@ const S3Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 12",
+			label: "Durant la dernière semaine, as-tu fait du bénévolat ou un travail?",
+			kid_label: "Durant la dernière semaine, as-tu fait du bénévolat ou un travail?",
+			adult_label:
+				"Au cours de la dernière semaine, votre enfant a-t-il fait du bénévolat ou travaillé?",
+			choices: [
+				{
+					label: "Oui",
+					value: "yes",
+				},
+				{
+					label: "Non",
+					value: "no",
+				},
+			],
+		},
 	},
 };
 

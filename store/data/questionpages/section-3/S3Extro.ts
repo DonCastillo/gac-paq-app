@@ -21,6 +21,20 @@ const S3Extro: ExtroPayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			heading: "Section Complétée!",
+			subheading: "Il ne reste que quatre questions!",
+			images: {
+				adult: {
+					phone: Images.adults.extro.section_3.phone,
+					tablet: Images.adults.extro.section_3.tablet,
+				},
+				teen: {
+					phone: Images.adults.extro.section_3.phone,
+					tablet: Images.adults.extro.section_3.tablet,
+				},
+			},
+		},
 	},
 };
 

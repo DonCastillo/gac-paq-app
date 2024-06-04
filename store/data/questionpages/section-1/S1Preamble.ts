@@ -30,7 +30,7 @@ const S1Preamble: PreamblePayloadInterface = {
 				},
 			},
 			"fr-CA": {
-				heading: "Activités scolaires",
+				heading: "Activités Scolaires",
 				subheading: "Section 1",
 				description: {
 					kid: "Cette section porte sur les activités que tu fais durant les heures d'école normales, par exemple dans les cours d'éducation physique, les récréations et l'heure du dîner.",
