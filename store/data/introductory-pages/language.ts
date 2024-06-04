@@ -29,6 +29,27 @@ const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			type: Question.QuestionLanguage,
+			heading: "Bienvenue!",
+			label: "Quelle langue parlez-vous et où êtes-vous?",
+			kid_label: "Quelle langue parlez-vous et où êtes-vous?",
+			adult_label: "Quelle langue parlez-vous et où êtes-vous?",
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.language,
+					tablet: Images.generic.pages.tablet.language,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.language,
+					tablet: Images.generic.pages.tablet.language,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.language,
+					tablet: Images.generic.pages.tablet.language,
+				},
+			},
+		},
 	},
 };
 

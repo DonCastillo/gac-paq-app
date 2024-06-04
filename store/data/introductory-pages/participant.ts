@@ -30,6 +30,28 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			type: Question.QuestionInput,
+			heading: "Bienvenue!",
+			label: "Veuillez entrer votre identifiant de participant",
+			kid_label: "Veuillez entrer votre identifiant de participant",
+			adult_label: "Veuillez entrer votre identifiant de participant",
+			placeholder: "Numéro de série de l'identifiant du participant",
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant,
+				},
+			},
+		},
 	},
 };
 

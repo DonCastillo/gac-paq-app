@@ -43,6 +43,41 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			type: Question.QuestionDropdown,
+			heading: "Bienvenue!",
+			label: "Qui remplit ce questionnaire?",
+			kid_label: "Qui remplit ce questionnaire?",
+			adult_label: "Qui remplit ce questionnaire?",
+			choices: [
+				{
+					label: "Enfant",
+					value: "child",
+				},
+				{
+					label: "Adolescent",
+					value: "teen",
+				},
+				{
+					label: "Parent",
+					value: "adult",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+			},
+		},
 	},
 };
 

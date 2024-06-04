@@ -47,6 +47,45 @@ const DemographicKidPage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			type: Question.QuestionDropdown,
+			heading: "Bienvenue!",
+			label: "Quel âge avez-vous?",
+			kid_label: "Quel âge avez-vous?",
+			adult_label: "Quel âge avez-vous?",
+			choices: [
+				{
+					label: "8 ans",
+					value: "8",
+				},
+				{
+					label: "9 ans",
+					value: "9",
+				},
+				{
+					label: "10 ans",
+					value: "10",
+				},
+				{
+					label: "11 ans",
+					value: "11",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+			},
+		},
 	},
 };
 
