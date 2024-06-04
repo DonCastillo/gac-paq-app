@@ -40,7 +40,8 @@ const S4Q6: QuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 16c",
 			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
-			kid_label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
+			kid_label:
+				"Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
 			adult_label: "Combien de temps faut-il normalement pour aller au travail de votre enfant?",
 			choices: [
 				{
@@ -64,7 +65,7 @@ const S4Q6: QuestionRadioPayloadInterface = {
 					value: "More than 60 minutes",
 				},
 			],
-		}
+		},
 	},
 };
 

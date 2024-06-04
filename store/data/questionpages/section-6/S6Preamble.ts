@@ -52,7 +52,7 @@ const S6Preamble: PreamblePayloadInterface = {
 					tablet: Images.adults.intro.section_6.tablet,
 				},
 			},
-		}
+		},
 	},
 };
 

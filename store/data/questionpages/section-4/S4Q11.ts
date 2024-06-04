@@ -37,9 +37,12 @@ const S4Q11: QuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 17e",
-			label: "Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail? ",
-			kid_label: "Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail? ",
-			adult_label: "En une journée normale, combien de temps votre enfant a-t-il roulé pour aller ailleurs que l'école ou le travail?",
+			label:
+				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail? ",
+			kid_label:
+				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail? ",
+			adult_label:
+				"En une journée normale, combien de temps votre enfant a-t-il roulé pour aller ailleurs que l'école ou le travail?",
 			choices: [
 				{
 					label: "10 minutes ou moins",
@@ -58,7 +61,7 @@ const S4Q11: QuestionRadioPayloadInterface = {
 					value: "More than 30 minutes",
 				},
 			],
-		}
+		},
 	},
 };
 

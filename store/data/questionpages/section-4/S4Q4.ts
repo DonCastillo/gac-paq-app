@@ -72,7 +72,8 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 16",
 			label: "Comment es-tu allé.e de la maison jusqu'au travail au cours de la dernière semaine?",
-			kid_label: "Comment es-tu allé.e de la maison jusqu'au travail au cours de la dernière semaine?",
+			kid_label:
+				"Comment es-tu allé.e de la maison jusqu'au travail au cours de la dernière semaine?",
 			adult_label: "Comment votre enfant est-il allé au travail au cours de la dernière semaine?",
 			kid_sublabel: "Sélectionne le moyen principal que tu as utilisé.",
 			adult_sublabel: "Sélectionnez le mode que votre enfant a le plus utilisé.",
@@ -127,7 +128,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					},
 				},
 			],
-		}
+		},
 	},
 };
 

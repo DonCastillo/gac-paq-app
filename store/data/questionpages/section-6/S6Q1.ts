@@ -78,7 +78,7 @@ const S6Q1: QuestionRadioPayloadInterface = {
 					value: "4 hours or more per day",
 				},
 			],
-		}
+		},
 	},
 };
 

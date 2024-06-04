@@ -47,9 +47,12 @@ const S4Q2: QuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 15b",
-			label: "Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
-			kid_label: "Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
-			adult_label: "Combien de jours votre enfant a-t-il utilisé ce mode au cours de la dernière semaine?",
+			label:
+				"Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
+			kid_label:
+				"Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
+			adult_label:
+				"Combien de jours votre enfant a-t-il utilisé ce mode au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 Jour",
@@ -80,7 +83,7 @@ const S4Q2: QuestionRadioPayloadInterface = {
 					value: "7",
 				},
 			],
-		}
+		},
 	},
 };
 

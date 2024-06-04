@@ -36,8 +36,10 @@ const S4Q9: QuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 17c",
-			label: " Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
-			kid_label: " Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
+			label:
+				" Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
+			kid_label:
+				" Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
 			adult_label:
 				"En une journée normale, combien de temps votre enfant a-t-il marché pour aller ailleurs que l'école ou le travail?",
 			choices: [
@@ -58,7 +60,7 @@ const S4Q9: QuestionRadioPayloadInterface = {
 					value: "More than 30 minutes",
 				},
 			],
-		}
+		},
 	},
 };
 

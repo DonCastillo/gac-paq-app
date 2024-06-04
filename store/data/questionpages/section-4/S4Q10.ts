@@ -49,9 +49,12 @@ const S4Q10: QuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 17d",
-			label: "Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
-			kid_label: "Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
-			adult_label: "Combien de jours votre enfant a-t-il utilisé un moyen de transport à roues pour aller ailleurs que l'école ou le travail au cours de la dernière semaine?",
+			label:
+				"Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
+			kid_label:
+				"Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
+			adult_label:
+				"Combien de jours votre enfant a-t-il utilisé un moyen de transport à roues pour aller ailleurs que l'école ou le travail au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 Jour",
@@ -82,7 +85,7 @@ const S4Q10: QuestionRadioPayloadInterface = {
 					value: "7",
 				},
 			],
-		}
+		},
 	},
 };
 

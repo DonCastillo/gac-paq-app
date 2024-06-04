@@ -36,7 +36,8 @@ const S4Q3: QuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 15c",
 			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école? ",
-			kid_label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école? ",
+			kid_label:
+				"Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école? ",
 			adult_label: "Combien de temps faut-il normalement pour aller à l'école de votre enfant?",
 			choices: [
 				{
@@ -56,7 +57,7 @@ const S4Q3: QuestionRadioPayloadInterface = {
 					value: "More than 30 minutes",
 				},
 			],
-		}
+		},
 	},
 };
 

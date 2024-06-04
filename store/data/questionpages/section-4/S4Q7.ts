@@ -74,7 +74,7 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 					value: "No",
 				},
 			],
-		}
+		},
 	},
 };
 

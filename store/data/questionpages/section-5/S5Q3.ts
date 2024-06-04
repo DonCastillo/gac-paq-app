@@ -62,7 +62,7 @@ const S5Q3: QuestionRadioPayloadInterface = {
 					value: "More than 1 and a half hours per day",
 				},
 			],
-		}
+		},
 	},
 };
 
