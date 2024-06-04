@@ -11,11 +11,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "CA",
 		lang_code: "en-CA",
 	},
-	// {
-	// 	name: "French - Canada",
-	// 	flag_code: "CA",
-	// 	lang_code: "fr-CA",
-	// },
+	{
+		name: "French - Canada",
+		flag_code: "CA",
+		lang_code: "fr-CA",
+	},
 	// {
 	// 	name: "Chinese - China",
 	// 	flag_code: "CN",

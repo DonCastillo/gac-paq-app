@@ -32,6 +32,31 @@ const GenderKid: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "Es-tu un…",
+			kid_label: "Es-tu un…",
+			adult_label: "Es-tu un…",
+			choices: [
+				{
+					label: "Garçon",
+					value: "Boy",
+				},
+				{
+					label: "Fille",
+					value: "Girl",
+				},
+				{
+					label: "Autre",
+					value: "Other",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 	},
 };
 
