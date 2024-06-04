@@ -15,6 +15,15 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			adult_label: "How many physical education classes did your child have in the past week?",
 			max_value: 7,
 		},
+		"fr-CA": {
+			type: Question.QuestionSlider,
+			heading: "Question 3",
+			label: "Combien as-tu eu de cours d'éducation physique pendant la dernière semaine?",
+			kid_label: "Combien as-tu eu de cours d'éducation physique pendant la dernière semaine?",
+			adult_label:
+				"Combien de cours d'éducation physique ton enfant a-t-il eu la semaine dernière?",
+			max_value: 7,
+		},
 	},
 };
 

@@ -44,6 +44,44 @@ const S1Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 6",
+			label: "Lors d'une journée d'école normale, combien as-tu de temps de pause?",
+			kid_label: "Lors d'une journée d'école normale, combien as-tu de temps de pause?",
+			adult_label:
+				"Au cours d'une journée normale d'école, combien de temps de pause a ton enfant?",
+			kid_sublabel:
+				"Ici, il faut additionner les durées - par exemple, deux récréations/pauses de 15 minutes par jour et 30 minutes pour dîner donnent 60 minutes.",
+			adult_sublabel:
+				"Ici, il faut additionner les durées - par exemple, deux récréations/pauses de 15 minutes par jour et 30 minutes pour dîner donnent 60 minutes.",
+			choices: [
+				{
+					label: "0 minutes",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 minutes",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 minutes",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutes",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Plus de 60 minutes",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Je ne sais pas",
+					value: "Je ne sais pas",
+				},
+			],
+		},
 	},
 };
 

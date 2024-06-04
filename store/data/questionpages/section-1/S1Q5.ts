@@ -52,6 +52,50 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 5",
+			label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
+			kid_label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
+			adult_label:
+				"Laquelle des images suivantes ressemble le plus à ce que ton enfant fait la plupart du temps en cours d'éducation physique?",
+			choices: [
+				{
+					label: "Pas de mouvement",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.physical_education.not_moving,
+						adult: Images.adults.options.physical_education.not_moving,
+					},
+				},
+				{
+					label: "Peu d'effort",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.physical_education.easy_effort,
+						adult: Images.adults.options.physical_education.easy_effort,
+					},
+				},
+				{
+					label: "Un effort moyen ou intense",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.physical_education.medium_effort,
+						adult: Images.adults.options.physical_education.medium_effort,
+					},
+				},
+				{
+					label: "Je ne sais pas",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		},
 	},
 };
 

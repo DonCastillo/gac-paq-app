@@ -36,6 +36,35 @@ const S1Q4: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 4",
+			label: "Combien de temps durent tes cours d'éducation physique?",
+			kid_label: "Combien de temps durent tes cours d'éducation physique?",
+			adult_label: "Combien de temps durent les cours d'éducation physique de ton enfant?",
+			choices: [
+				{
+					label: "Moins de 30 minutes par cours",
+					value: "Moins de 30 minutes par cours",
+				},
+				{
+					label: "30 - 45 minutes par cours",
+					value: "30 - 45 minutes par cours",
+				},
+				{
+					label: "46 - 60 minutes par cours",
+					value: "46 - 60 minutes par cours",
+				},
+				{
+					label: "Plus de 60 minutes par cours",
+					value: "Plus de 60 minutes par cours",
+				},
+				{
+					label: "Je ne sais pas",
+					value: "Je ne sais pas",
+				},
+			],
+		},
 	},
 };
 

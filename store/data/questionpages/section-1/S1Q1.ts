@@ -24,6 +24,23 @@ const S1Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 1",
+			label: "Es-tu allé.e à l'école au cours de la dernière semaine?",
+			kid_label: "Es-tu allé.e à l'école au cours de la dernière semaine?",
+			adult_label: "Ton enfant a-t-il fréquenté l'école la semaine dernière?",
+			choices: [
+				{
+					label: "Oui",
+					value: "yes",
+				},
+				{
+					label: "Non",
+					value: "no",
+				},
+			],
+		},
 	},
 };
 

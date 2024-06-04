@@ -44,6 +44,43 @@ const S1Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 2",
+			label: "Combien de jours es-tu allé.e à l'école durant la dernière semaine?",
+			kid_label: "Combien de jours es-tu allé.e à l'école durant la dernière semaine?",
+			adult_label: "Combien de jours ton enfant a-t-il fréquenté l'école la semaine dernière?",
+			choices: [
+				{
+					label: "1 jour",
+					value: "1",
+				},
+				{
+					label: "2 jours",
+					value: "2",
+				},
+				{
+					label: "3 jours",
+					value: "3",
+				},
+				{
+					label: "4 jours",
+					value: "4",
+				},
+				{
+					label: "5 jours",
+					value: "5",
+				},
+				{
+					label: "6 jours",
+					value: "6",
+				},
+				{
+					label: "7 jours",
+					value: "7",
+				},
+			],
+		},
 	},
 };
 
