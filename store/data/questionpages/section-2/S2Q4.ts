@@ -52,6 +52,50 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 11",
+			label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu accomplis tes tâches?",
+			kid_label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu accomplis tes tâches?",
+			adult_label:
+				"Laquelle des images suivantes ressemble le plus à ce que votre enfant fait la plupart du temps pendant ses tâches ménagères?",
+			choices: [
+				{
+					label: "Pas de mouvement",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.chores.not_moving,
+						adult: Images.adults.options.chores.not_moving,
+					},
+				},
+				{
+					label: "Peu d'effort",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.chores.easy_effort,
+						adult: Images.adults.options.chores.easy_effort,
+					},
+				},
+				{
+					label: "Un effort moyen ou intense",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.chores.medium_effort,
+						adult: Images.adults.options.chores.medium_effort,
+					},
+				},
+				{
+					label: "Je ne sais pas",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		},
 	},
 };
 

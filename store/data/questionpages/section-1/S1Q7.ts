@@ -95,7 +95,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 					},
 				},
 			],
-		}
+		},
 	},
 };
 

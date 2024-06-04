@@ -30,6 +30,29 @@ const S2Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			heading: "Tâches Ménagères",
+			subheading: "Section 2",
+			description: {
+				kid: "Cette section porte sur les tâches qui exigent que tu sois actif (active). Les exemples incluent faire le ménage, des travaux extérieurs, jardiner et d'autres tâches semblables.",
+				adult:
+					"Cette section porte sur les tâches ménagères ou les tâches qui nécessitent que votre enfant soit actif. Les exemples de tâches ménagères ou de tâches incluent les travaux ménagers, les travaux de jardinage et autres tâches connexes.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_2.phone,
+					tablet: Images.kids.intro.section_2.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+			},
+		},
 	},
 };
 

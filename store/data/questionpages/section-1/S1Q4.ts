@@ -45,23 +45,23 @@ const S1Q4: QuestionRadioPayloadInterface = {
 			choices: [
 				{
 					label: "Moins de 30 minutes par cours",
-					value: "Moins de 30 minutes par cours",
+					value: "Less than 30 minutes per class",
 				},
 				{
 					label: "30 - 45 minutes par cours",
-					value: "30 - 45 minutes par cours",
+					value: "30 - 45 minutes per class",
 				},
 				{
 					label: "46 - 60 minutes par cours",
-					value: "46 - 60 minutes par cours",
+					value: "46 - 60 minutes per class",
 				},
 				{
 					label: "Plus de 60 minutes par cours",
-					value: "Plus de 60 minutes par cours",
+					value: "Over 60 minutes per class",
 				},
 				{
 					label: "Je ne sais pas",
-					value: "Je ne sais pas",
+					value: "Don't know",
 				},
 			],
 		},

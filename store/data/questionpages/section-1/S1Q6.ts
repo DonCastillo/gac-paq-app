@@ -78,7 +78,7 @@ const S1Q6: QuestionRadioPayloadInterface = {
 				},
 				{
 					label: "Je ne sais pas",
-					value: "Je ne sais pas",
+					value: "Don't know",
 				},
 			],
 		},

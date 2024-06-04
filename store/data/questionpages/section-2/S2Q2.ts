@@ -44,6 +44,44 @@ const S2Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 9",
+			label: "Durant combien de jours as-tu fait des tâches au cours de la dernière semaine?",
+			kid_label: "Durant combien de jours as-tu fait des tâches au cours de la dernière semaine?",
+			adult_label:
+				"Combien de jours votre enfant a-t-il fait des tâches ménagères la semaine dernière?",
+			choices: [
+				{
+					label: "1 jour",
+					value: "1",
+				},
+				{
+					label: "2 jours",
+					value: "2",
+				},
+				{
+					label: "3 jours",
+					value: "3",
+				},
+				{
+					label: "4 jours",
+					value: "4",
+				},
+				{
+					label: "5 jours",
+					value: "5",
+				},
+				{
+					label: "6 jours",
+					value: "6",
+				},
+				{
+					label: "7 jours",
+					value: "7",
+				},
+			],
+		},
 	},
 };
 

@@ -25,6 +25,24 @@ const S2Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"fr-CA": {
+			heading: "Tâches ménagères",
+			subheading: "Section 2",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_2.phone,
+					tablet: Images.kids.intro.section_2.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+			},
+		},
 	},
 };
 

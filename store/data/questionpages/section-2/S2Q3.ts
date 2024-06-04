@@ -35,6 +35,34 @@ const S2Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 10",
+			label:
+				"Lors des journées où tu as fait des tâches dans la dernière semaine, combien de temps y as-tu accordé chaque jour?",
+			kid_label:
+				"Lors des journées où tu as fait des tâches dans la dernière semaine, combien de temps y as-tu accordé chaque jour?",
+			adult_label:
+				"Les jours où votre enfant a fait des tâches ménagères la semaine dernière, combien de temps a-t-il passé à faire des tâches ménagères tout au long de la journée?",
+			choices: [
+				{
+					label: "15 minutes ou moins par jour",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minutes par jour",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minutes par jour",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Plus de 60 minutes par jour",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 	},
 };
 

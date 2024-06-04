@@ -18,6 +18,7 @@ import type {
 	SetKeyboardState,
 	SettingsFuncType,
 } from "interface/function.type";
+import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
 
 const setMode: SetModeFuncType = (state, action) => {
@@ -129,14 +130,14 @@ const setKeyboardState: SetKeyboardState = (state, action) => {
 };
 
 const removeExtroPages: SettingsFuncType = (state) => {
-	const pagesWithoutExtros = Object.values(state.pages).filter((page: any) => {
+	const pagesWithoutExtros = Object.values(state.pages).filter((page: PageIndexInterface) => {
 		return page.section !== Section.Extro;
 	});
 	state.pages = pagesWithoutExtros;
 };
 
 const removeFeedbackPages: SettingsFuncType = (state) => {
-	const pagesWithoutFeedback = Object.values(state.pages).filter((page: any) => {
+	const pagesWithoutFeedback = Object.values(state.pages).filter((page: PageIndexInterface) => {
 		return page.section !== Section.Feedback;
 	});
 	state.pages = pagesWithoutFeedback;

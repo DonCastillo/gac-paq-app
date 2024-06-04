@@ -24,6 +24,24 @@ const S2Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 8",
+			label: "Au cours de la dernière semaine, as-tu effectué des tâches actives?",
+			kid_label: "Au cours de la dernière semaine, as-tu effectué des tâches actives?",
+			adult_label:
+				"Au cours de la dernière semaine, votre enfant a-t-il fait des tâches ou des corvées actives?",
+			choices: [
+				{
+					label: "Oui",
+					value: "yes",
+				},
+				{
+					label: "Non",
+					value: "no",
+				},
+			],
+		},
 	},
 };
 
