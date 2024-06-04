@@ -60,7 +60,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 			kid_label:
 				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps durant les pauses?",
 			adult_label:
-				"Laquelle des images suivantes ressemble le plus à ce que votre enfant fait la plupart du temps pendant ses pauses?",
+				"Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps durant les pauses?",
 			choices: [
 				{
 					label: "Pas de mouvement",

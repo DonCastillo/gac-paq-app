@@ -50,7 +50,7 @@ const S1Q6: QuestionRadioPayloadInterface = {
 			label: "Lors d'une journée d'école normale, combien as-tu de temps de pause?",
 			kid_label: "Lors d'une journée d'école normale, combien as-tu de temps de pause?",
 			adult_label:
-				"Au cours d'une journée normale d'école, combien de temps de pause a ton enfant?",
+				"Lors d'une journée d'école normale, combien de temps de pause ton enfant a-t-il (elle)?",
 			kid_sublabel:
 				"Ici, il faut additionner les durées - par exemple, deux récréations/pauses de 15 minutes par jour et 30 minutes pour dîner donnent 60 minutes.",
 			adult_sublabel:

@@ -49,7 +49,8 @@ const S1Q2: QuestionRadioPayloadInterface = {
 			heading: "Question 2",
 			label: "Combien de jours es-tu allé.e à l'école durant la dernière semaine?",
 			kid_label: "Combien de jours es-tu allé.e à l'école durant la dernière semaine?",
-			adult_label: "Combien de jours ton enfant a-t-il fréquenté l'école la semaine dernière?",
+			adult_label:
+				"Combien de jours ton enfant est-il (elle) allé à l'école durant la dernière semaine?",
 			choices: [
 				{
 					label: "1 jour",

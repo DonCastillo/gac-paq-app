@@ -21,7 +21,7 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			label: "Combien as-tu eu de cours d'éducation physique pendant la dernière semaine?",
 			kid_label: "Combien as-tu eu de cours d'éducation physique pendant la dernière semaine?",
 			adult_label:
-				"Combien de cours d'éducation physique ton enfant a-t-il eu la semaine dernière?",
+				"Combien ton enfant a-t-il (elle) eu de cours d'éducation physique pendant la dernière semaine?",
 			max_value: 7,
 		},
 	},

@@ -29,27 +29,27 @@ const S1Preamble: PreamblePayloadInterface = {
 					tablet: Images.adults.intro.section_1.tablet,
 				},
 			},
-			"fr-CA": {
-				heading: "Activités Scolaires",
-				subheading: "Section 1",
-				description: {
-					kid: "Cette section porte sur les activités que tu fais durant les heures d'école normales, par exemple dans les cours d'éducation physique, les récréations et l'heure du dîner.",
-					adult:
-						"Cette section porte sur ce que ton enfant fait pendant les heures normales de classe, par exemple pendant les cours d'éducation physique, la récréation et l'heure du dîner.",
+		},
+		"fr-CA": {
+			heading: "Activités Scolaires",
+			subheading: "Section 1",
+			description: {
+				kid: "Cette section porte sur les activités que tu fais durant les heures d'école normales, par exemple dans les cours d'éducation physique, les récréations et l'heure du dîner.",
+				adult:
+					"Cette section porte sur les activités que ton enfant fait durant les heures d'école normales, par exemple dans les cours d'éducation physique, les récréations et l'heure du dîner.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_1.phone,
+					tablet: Images.kids.intro.section_1.tablet,
 				},
-				images: {
-					kid: {
-						phone: Images.kids.intro.section_1.phone,
-						tablet: Images.kids.intro.section_1.tablet,
-					},
-					adult: {
-						phone: Images.adults.intro.section_1.phone,
-						tablet: Images.adults.intro.section_1.tablet,
-					},
-					teen: {
-						phone: Images.adults.intro.section_1.phone,
-						tablet: Images.adults.intro.section_1.tablet,
-					},
+				adult: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
 				},
 			},
 		},
