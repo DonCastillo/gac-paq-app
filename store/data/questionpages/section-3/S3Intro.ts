@@ -25,6 +25,24 @@ const S3Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "Trabajo",
+			subheading: "Sección 3",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_3.phone,
+					tablet: Images.kids.intro.section_3.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
+				},
+			},
+		},
 		"fr-CA": {
 			heading: "Emploi",
 			subheading: "Section 3",

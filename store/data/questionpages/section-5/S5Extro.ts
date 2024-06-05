@@ -21,6 +21,20 @@ const S5Extro: ExtroPayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "¡Sección Completa!",
+			subheading: "¡Solo faltan dos!",
+			images: {
+				adult: {
+					phone: Images.adults.extro.section_5.phone,
+					tablet: Images.adults.extro.section_5.tablet,
+				},
+				teen: {
+					phone: Images.adults.extro.section_5.phone,
+					tablet: Images.adults.extro.section_5.tablet,
+				},
+			},
+		},
 		"fr-CA": {
 			heading: "Section complète!",
 			subheading: "Il ne reste que deux sections!",

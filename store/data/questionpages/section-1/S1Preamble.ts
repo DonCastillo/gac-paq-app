@@ -4,11 +4,11 @@ import Images from "styles/images";
 
 const S1Preamble: PreamblePayloadInterface = {
 	ident: "school_preamble",
-	heading: "School Activities",
+	heading: "School",
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {
-			heading: "School Activities",
+			heading: "School",
 			subheading: "Section 1",
 			description: {
 				kid: "This section is about what you do during normal school hours, for example during physical education classes, recess, and lunch time.",
@@ -30,8 +30,31 @@ const S1Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "Actividades Escolares",
+			subheading: "Sección 1",
+			description: {
+				kid: "Esta sección trata sobre las actividades que haces durante el horario escolar normal, por ejemplo, durante las clases de educación física, el recreo y la hora del almuerzo.",
+				adult:
+					"Esta sección trata sobre las actividades que tu hijo hace durante el horario escolar normal, por ejemplo, durante las clases de educación física, el recreo y la hora del almuerzo.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_1.phone,
+					tablet: Images.kids.intro.section_1.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+			},
+		},
 		"fr-CA": {
-			heading: "Activités Scolaires",
+			heading: "École",
 			subheading: "Section 1",
 			description: {
 				kid: "Cette section porte sur les activités que tu fais durant les heures d'école normales, par exemple dans les cours d'éducation physique, les récréations et l'heure du dîner.",

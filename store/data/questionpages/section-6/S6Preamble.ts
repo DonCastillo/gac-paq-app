@@ -30,6 +30,29 @@ const S6Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "Jugar o Tiempo Libre",
+			subheading: "Sección 6",
+			description: {
+				kid: "Esta sección incluye toda la actividad física que haces durante tu tiempo libre o de juego. Esto no incluye actividades organizadas o tiempos de descanso en la escuela. Para las próximas preguntas, no incluyas las actividades que acabas de mencionar.",
+				adult:
+					"Esta sección incluye toda la actividad física que tu hijo hace durante su tiempo libre o de juego. Este es el tiempo que tu hijo decide cómo usar. Para las próximas preguntas, no incluyas las actividades que acabas de mencionar.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_6.phone,
+					tablet: Images.kids.intro.section_6.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+			},
+		},
 		"fr-CA": {
 			heading: "Jeu ou temps libres",
 			subheading: "Section 6",

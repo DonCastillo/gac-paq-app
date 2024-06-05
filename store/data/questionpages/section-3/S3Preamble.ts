@@ -30,6 +30,29 @@ const S3Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "Trabajo",
+			subheading: "Sección 3",
+			description: {
+				kid: "Esta sección es sobre el trabajo o el voluntariado fuera de tu casa - diferente de las tareas domésticas. Trabajar sería cuando ganas dinero para ti o tu familia. El voluntariado sería ayudar a otros o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden tener lugar en lugares como una tienda, granja, restaurante, etc. Por favor, responde ambos juntos.",
+				adult:
+					"Esta sección es sobre el trabajo o el voluntariado fuera de la casa de tu hijo - diferente de las tareas domésticas. Trabajar sería cuando tu hijo gana dinero para él o para tu familia. El voluntariado sería ayudar a otros o a una organización de forma gratuita (sin dinero). Por favor, responde ambos juntos.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_3.phone,
+					tablet: Images.kids.intro.section_3.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
+				},
+			},
+		},
 		"fr-CA": {
 			heading: "Emploi",
 			subheading: "Section 3",

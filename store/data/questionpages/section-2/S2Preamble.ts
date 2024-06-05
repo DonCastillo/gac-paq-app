@@ -30,6 +30,29 @@ const S2Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "Tareas del Hogar",
+			subheading: "Sección 2",
+			description: {
+				kid: "Esta sección trata sobre las tareas del hogar que requieren que estés activo. Los ejemplos incluyen hacer la limpieza, el trabajo de jardinería y otras tareas similares.",
+				adult:
+					"Esta sección trata sobre las tareas del hogar que requieren que tu hijo esté activo. Los ejemplos incluyen hacer la limpieza, el trabajo de jardinería y otras tareas similares.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_2.phone,
+					tablet: Images.kids.intro.section_2.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+			},
+		},
 		"fr-CA": {
 			heading: "Tâches Ménagères",
 			subheading: "Section 2",

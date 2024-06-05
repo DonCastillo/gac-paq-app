@@ -21,6 +21,20 @@ const S1Extro: ExtroPayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "¡Sección Completa!",
+			subheading: "¡Solo faltan seis!",
+			images: {
+				adult: {
+					phone: Images.adults.extro.section_1.phone,
+					tablet: Images.adults.extro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.extro.section_1.phone,
+					tablet: Images.adults.extro.section_1.tablet,
+				},
+			},
+		},
 		"fr-CA": {
 			heading: "Section Complète!",
 			subheading: "Il ne reste que six sections!",

@@ -25,6 +25,24 @@ const S2Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			heading: "Tareas del Hogar",
+			subheading: "Sección 2",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_2.phone,
+					tablet: Images.kids.intro.section_2.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+			},
+		},
 		"fr-CA": {
 			heading: "Tâches Ménagères",
 			subheading: "Section 2",
