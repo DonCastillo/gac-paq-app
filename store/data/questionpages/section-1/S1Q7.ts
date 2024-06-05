@@ -52,6 +52,50 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 7",
+			label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
+			kid_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
+			adult_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que hace tu hijo la mayor parte del tiempo durante los recesos?",
+			choices: [
+				{
+					label: "Sin moverte",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.breaks.not_moving,
+						adult: Images.adults.options.breaks.not_moving,
+					},
+				},
+				{
+					label: "Esfuerzo fácil",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.breaks.easy_effort,
+						adult: Images.adults.options.breaks.easy_effort,
+					},
+				},
+				{
+					label: "Esfuerzo medio o fuerte",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.breaks.medium_effort,
+						adult: Images.adults.options.breaks.medium_effort,
+					},
+				},
+				{
+					label: "No sé",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 7",

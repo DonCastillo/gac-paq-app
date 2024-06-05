@@ -24,6 +24,23 @@ const S1Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 1",
+			label: "¿Fuiste a la escuela o colegio la semana pasada?",
+			kid_label: "¿Fuiste a la escuela o colegio la semana pasada?",
+			adult_label: "¿Tu hijo fue a la escuela la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 1",

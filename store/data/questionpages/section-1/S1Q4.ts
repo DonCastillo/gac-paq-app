@@ -36,6 +36,35 @@ const S1Q4: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 4",
+			label: "¿Cuánto tiempo duran tus clases de educación física?",
+			kid_label: "¿Cuánto tiempo duran tus clases de educación física?",
+			adult_label: "¿Cuánto tiempo duran las clases de educación física de tu hijo?",
+			choices: [
+				{
+					label: "Menos de 30 minutos por clase",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 minutos por clase",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 minutos por clase",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Más de 60 minutos por clase",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "No sé",
+					value: "Don't know",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 4",
