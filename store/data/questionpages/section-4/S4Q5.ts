@@ -52,7 +52,7 @@ const S4Q5: QuestionRadioPayloadInterface = {
 			kid_label:
 				"Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
 			adult_label:
-				"Combien de jours votre enfant a-t-il utilisé ce mode au cours de la dernière semaine?",
+				"Combien de jours ton enfant a-t-il (elle) utilisé ce moyen de transport au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 Jour",

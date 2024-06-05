@@ -42,7 +42,8 @@ const S4Q6: QuestionRadioPayloadInterface = {
 			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
 			kid_label:
 				"Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
-			adult_label: "Combien de temps faut-il normalement pour aller au travail de votre enfant?",
+			adult_label:
+				"Combien de temps faut-il, en général, à ton enfant pour se déplacer de la maison jusqu'au travail?",
 			choices: [
 				{
 					label: "10 minutes ou moins",

@@ -51,7 +51,7 @@ const S6Q1: QuestionRadioPayloadInterface = {
 			kid_label:
 				"Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé à jouer activement, juste pour le plaisir?",
 			adult_label:
-				"La semaine dernière, en une journée normale, combien de temps votre enfant a-t-il passé à jouer activement, juste pour le plaisir?",
+				"Durant la dernière semaine, lors d'une journée normale, combien de temps ton enfant a-t-il (elle) passé à jouer activement, juste pour le plaisir?",
 			choices: [
 				{
 					label: "Pas du tout",

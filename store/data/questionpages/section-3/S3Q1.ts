@@ -30,7 +30,7 @@ const S3Q1: QuestionRadioPayloadInterface = {
 			label: "Durant la dernière semaine, as-tu fait du bénévolat ou un travail?",
 			kid_label: "Durant la dernière semaine, as-tu fait du bénévolat ou un travail?",
 			adult_label:
-				"Au cours de la dernière semaine, votre enfant a-t-il fait du bénévolat ou travaillé?",
+				"Durant la dernière semaine, ton enfant a-t-il (elle) fait du bénévolat ou un travail?",
 			choices: [
 				{
 					label: "Oui",

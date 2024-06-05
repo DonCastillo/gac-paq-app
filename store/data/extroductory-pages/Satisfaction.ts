@@ -64,8 +64,8 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 			heading: "Feedback",
 			label: "Quel penses-tu de l'application?",
 			kid_label: "Quel penses-tu de l'application?",
-			adult_label: "How satisfied are you with the app?",
-			adult_sublabel: "Clique sur l'image (émoji) qui représente le mieux ta satisfaction.",
+			adult_label: "Que pensez-vous de l'application?",
+			adult_sublabel: "Cliquez sur l'image (émoji) qui représente le mieux votre satisfaction.",
 			kid_sublabel: "Clique sur l'image (émoji) qui représente le mieux ta satisfaction.",
 			choices: [
 				{

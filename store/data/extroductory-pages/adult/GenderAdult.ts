@@ -28,6 +28,27 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "Quel est le sexe de votre enfant?",
+			kid_label: "Quel est le sexe de votre enfant?",
+			adult_label: "Quel est le sexe de votre enfant?",
+			choices: [
+				{
+					label: "Féminin",
+					value: "Female",
+				},
+				{
+					label: "Masculin",
+					value: "Male",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 	},
 };
 

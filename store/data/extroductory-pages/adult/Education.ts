@@ -41,6 +41,41 @@ const Education: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 29",
+			label: "Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
+			kid_label:
+				"Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
+			adult_label:
+				"Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
+			choices: [
+				{
+					label: "Aucune scolarité",
+					value: "No formal schooling",
+				},
+				{
+					label: "École primaire",
+					value: "Primary school",
+				},
+				{
+					label: "École secondaire",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Éducation collégiale ou technique",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Éducation universitaire",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 	},
 };
 

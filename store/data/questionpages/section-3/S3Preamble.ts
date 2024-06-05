@@ -36,7 +36,7 @@ const S3Preamble: PreamblePayloadInterface = {
 			description: {
 				kid: "Cette section porte sur le travail ou le bénévolat à l'extérieur de ta maison - contrairement aux tâches ménagères. Le travail te permettrait de gagner de l'argent pour toi ou ta famille. Le bénévolat c'est aider d'autres personnes ou une organisation gratuitement (pas d'argent). Le travail et le bénévolat peuvent avoir lieu à des endroits comme un magasin, une ferme, un restaurant, etc. Nous te demandons de répondre pour le travail et le bénévolat en même temps.",
 				adult:
-					"Cette section porte sur le travail ou le bénévolat à l'extérieur de votre domicile - différent des tâches ménagères. Travailler signifie que votre enfant gagne de l'argent pour lui-même ou pour votre famille. Faire du bénévolat signifie aider les autres ou une organisation gratuitement (sans argent). Veuillez répondre aux deux en même temps.",
+					"Cette section porte sur le travail ou le bénévolat à l'extérieur de la maison de ton enfant - contrairement aux tâches ménagères. Le travail permettrait à ton enfant de gagner de l'argent. Le bénévolat impliquerait d'aider d'autres personnes ou une organisation gratuitement (pas d’argent). Nous te demandons de répondre pour le travail et le bénévolat en même temps.",
 			},
 			images: {
 				kid: {

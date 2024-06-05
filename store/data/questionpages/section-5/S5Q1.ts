@@ -30,7 +30,7 @@ const S5Q1: QuestionRadioPayloadInterface = {
 			label: "As-tu participé à une activité organisée au cours de la dernière semaine?",
 			kid_label: "As-tu participé à une activité organisée au cours de la dernière semaine?",
 			adult_label:
-				"Votre enfant a-t-il fait des activités organisées au cours de la dernière semaine?",
+				"Ton enfant a-t-il (elle) participé à une activité organisée au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "Oui",

@@ -43,7 +43,7 @@ const S5Q3: QuestionRadioPayloadInterface = {
 			kid_label:
 				"Lors des journées où tu as fait ces activités au cours de la dernière semaine, combien de temps duraient-elles en général?",
 			adult_label:
-				"Combien de temps duraient généralement ces activités les jours où votre enfant les a faites au cours de la dernière semaine?",
+				"Lors des journées où ton enfant a fait ces activités au cours de la dernière semaine, combien de temps duraient-elles en général?",
 			choices: [
 				{
 					label: "30 minutes ou moins par jour",

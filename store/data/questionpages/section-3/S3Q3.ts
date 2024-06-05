@@ -60,7 +60,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 			kid_label:
 				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu fais du bénévolat et/ou travailles?",
 			adult_label:
-				"Laquelle des images suivantes ressemble le plus à ce que votre enfant fait la plupart du temps lorsqu'il fait du bénévolat et/ou qu'il travaille?",
+				"Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps en travaillant et/ou en faisant du bénévolat?",
 			choices: [
 				{
 					label: "Pas de mouvement",

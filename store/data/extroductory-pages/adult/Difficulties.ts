@@ -61,6 +61,60 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 25",
+			label:
+				"Veuillez indiquer si votre enfant rencontre des difficultés avec n'importe lequel des éléments suivants dans ses activités quotidiennes",
+			kid_label:
+				"Veuillez indiquer si votre enfant rencontre des difficultés avec n'importe lequel des éléments suivants dans ses activités quotidiennes",
+			adult_label:
+				"Veuillez indiquer si votre enfant rencontre des difficultés avec n'importe lequel des éléments suivants dans ses activités quotidiennes",
+			kid_sublabel: "sélectionnez toutes les réponses qui s'appliquent",
+			adult_sublabel: "sélectionnez toutes les réponses qui s'appliquent",
+			choices: [
+				{
+					label: "Audition",
+					value: "Hearing",
+				},
+				{
+					label: "Vision",
+					value: "Seeing",
+				},
+				{
+					label: "Parole",
+					value: "Speech",
+				},
+				{
+					label: "Mobilité",
+					value: "Mobility",
+				},
+				{
+					label: "Agilité",
+					value: "Agility",
+				},
+				{
+					label: "Douleur",
+					value: "Pain",
+				},
+				{
+					label: "Mémoire",
+					value: "Memory",
+				},
+				{
+					label: "Autre",
+					value: "Other",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Aucune de ces réponses, il (elle) n'a pas de difficultés",
+					value: "None of the above",
+				},
+			],
+		},
 	},
 };
 

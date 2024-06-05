@@ -34,9 +34,9 @@ const S7Preamble: PreamblePayloadInterface = {
 			heading: "Temps Passé Dehors",
 			subheading: "Section 7",
 			description: {
-				kid: "Cette section porte sur la quantité de temps que tu passes dehors. Cela peut être à l’école, durant les tâches, le travail, le bénévolat, le transport et tes temps libres. Cela inclus également le temps que tu passes dehors, mais sans bouger (par exemple, en faisant des pique-niques, en lisant ou en étant assis près d’un feu de camp).",
+				kid: "Cette section porte sur la quantité de temps que tu passes dehors. Cela peut être à l'école, durant les tâches, le travail, le bénévolat, le transport et tes temps libres. Cela inclus également le temps que tu passes dehors, mais sans bouger (par exemple, en faisant des pique-niques, en lisant ou en étant assis près d'un feu de camp).",
 				adult:
-					"Cette section concerne le temps que votre enfant passe à l'extérieur. Cela peut être à l'école, pendant les tâches ménagères, le travail et le bénévolat, et le transport, ainsi que pendant son temps libre. Cela inclut également le temps où votre enfant est à l'extérieur, mais ne bouge pas (par exemple, les pique-niques, la lecture, assis près d'un feu).",
+					"Cette section porte sur la quantité de temps que ton enfant passe dehors. Cela peut être à l'école, durant les tâches, le travail, le bénévolat, le transport et les temps libres. Cela inclus également le temps que ton enfant passe dehors, mais sans bouger (par exemple, en faisant des pique-niques, en lisant ou en étant assis près d'un feu de camp)",
 			},
 			images: {
 				kid: {

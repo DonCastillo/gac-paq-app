@@ -41,7 +41,7 @@ const S4Q9: QuestionRadioPayloadInterface = {
 			kid_label:
 				" Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
 			adult_label:
-				"En une journée normale, combien de temps votre enfant a-t-il marché pour aller ailleurs que l'école ou le travail?",
+				"Lors d'une journée normale, combien de temps ton enfant a-t-il (elle) marché [roulé] pour aller à des endroits autres que l'école ou le travail?",
 			choices: [
 				{
 					label: "10 minutes ou moins",

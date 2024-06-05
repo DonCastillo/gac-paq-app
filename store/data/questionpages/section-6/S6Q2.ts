@@ -51,6 +51,50 @@ const S6Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 22",
+			label:
+				"Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
+			kid_label:
+				"Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
+			adult_label:
+				"Au cours de la dernière semaine, combien de jours ton enfant a-t-il (elle) pratiqué des activités qui rendent ses muscles plus forts?",
+			choices: [
+				{
+					label: "0 Jour",
+					value: "0",
+				},
+				{
+					label: "1 Jour",
+					value: "1",
+				},
+				{
+					label: "2 Jours",
+					value: "2",
+				},
+				{
+					label: "3 Jours",
+					value: "3",
+				},
+				{
+					label: "4 Jours",
+					value: "4",
+				},
+				{
+					label: "5 Jours",
+					value: "5",
+				},
+				{
+					label: "6 Jours",
+					value: "6",
+				},
+				{
+					label: "7 Jours",
+					value: "7",
+				},
+			],
+		},
 	},
 };
 

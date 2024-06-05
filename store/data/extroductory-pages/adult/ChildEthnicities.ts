@@ -44,6 +44,43 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 26",
+			label: "Quel est le groupe ethnique de votre enfant?",
+			kid_label: "Quel est le groupe ethnique de votre enfant?",
+			adult_label: "Quel est le groupe ethnique de votre enfant?",
+			choices: [
+				{
+					label: "Asiatique",
+					value: "Asian",
+				},
+				{
+					label: "Noir(e) ou Afro-Américain(e)",
+					value: "Black or African American",
+				},
+				{
+					label: "Autochtone",
+					value: "Indigenous",
+				},
+				{
+					label: "Latino-Américain(e)",
+					value: "Latin American",
+				},
+				{
+					label: "Blanc(he) ou Caucasien(ne)",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Autre",
+					value: "Other",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to say",
+				},
+			],
+		},
 	},
 };
 

@@ -41,6 +41,42 @@ const Financial: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 30",
+			label:
+				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			kid_label:
+				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			adult_label:
+				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			choices: [
+				{
+					label: "Très difficile",
+					value: "Very difficult",
+				},
+				{
+					label: "Difficile",
+					value: "Difficult",
+				},
+				{
+					label: "Ni facile ni difficile",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Facile",
+					value: "Easy",
+				},
+				{
+					label: "Très facile",
+					value: "Very easy",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 	},
 };
 

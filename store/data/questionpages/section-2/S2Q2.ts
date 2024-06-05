@@ -50,7 +50,7 @@ const S2Q2: QuestionRadioPayloadInterface = {
 			label: "Durant combien de jours as-tu fait des tâches au cours de la dernière semaine?",
 			kid_label: "Durant combien de jours as-tu fait des tâches au cours de la dernière semaine?",
 			adult_label:
-				"Combien de jours votre enfant a-t-il fait des tâches ménagères la semaine dernière?",
+				"Durant combien de jours ton enfant a-t-il (elle) fait des tâches au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 jour",

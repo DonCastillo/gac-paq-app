@@ -49,16 +49,16 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 			kid_label:
 				"Au cours de la dernière semaine, as-tu marché ou roulé pour aller à des endroits autres que l'école ou le travail (par exemple, chez un ami, à un parc ou un magasin)?",
 			adult_label:
-				"La semaine dernière, votre enfant a-t-il marché ou roulé pour se rendre à des endroits autres que l'école ou le travail (par exemple, chez un ami, dans un parc, dans un magasin)?",
+				"Au cours de la dernière semaine, ton enfant a-t-il (elle) marché ou roulé pour aller à des endroits autres que l'école ou le travail (par exemple, chez un ami, à un parc ou un magasin)?",
 			kid_sublabel: "Svp, sélectionne toutes les réponses qui s'appliquent à toi.",
-			adult_sublabel: "Veuillez sélectionner toutes les réponses qui s'appliquent à votre enfant.",
+			adult_sublabel: "Svp, sélectionne toutes les réponses qui s'appliquent à ton enfant.",
 			choices: [
 				{
 					label: "Oui, j'ai marché",
 					value: "Walked",
 					label_mode: {
 						kid: "Oui, j'ai marché",
-						adult: "Oui, il/elle a marché",
+						adult: "Oui, il (elle) a marché",
 					},
 				},
 				{
@@ -66,7 +66,7 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 					value: "Wheeled",
 					label_mode: {
 						kid: "Oui, j'ai roulé",
-						adult: "Oui, il/elle a roulé",
+						adult: "Oui, il (elle) a roulé",
 					},
 				},
 				{

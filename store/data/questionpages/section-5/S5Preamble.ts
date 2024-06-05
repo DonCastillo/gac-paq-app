@@ -36,7 +36,7 @@ const S5Preamble: PreamblePayloadInterface = {
 			description: {
 				kid: "Cette section porte sur les activités physiques organisées et les sports. Cela inclus les activités que tu fais avant ou après l'école (par exemple, certaines écoles ont des ligues sportives ou des activités parascolaires). Cela inclus également les ligues sportives et les cours pour des activités comme la natation, la gymnastique, la dance et le karaté en dehors de l'école.",
 				adult:
-					"Cette section porte sur les activités organisées et sportives physiquement actives. Elles comprennent les activités que vous faites en dehors de la journée scolaire (par exemple, certaines écoles ont des ligues sportives ou des activités parascolaires). Elles comprennent également toutes les ligues sportives et les leçons pour des activités comme la natation, la gymnastique, la danse et le karaté en dehors de l'école.",
+					"Cette section porte sur les activités physiques organisées et les sports. Cela inclus les activités que ton enfant fait avant ou après l'école (par exemple, certaines écoles ont des ligues sportives ou des activités parascolaires). Cela inclus également les ligues sportives et les cours pour des activités comme la natation, la gymnastique, la dance et le karaté en dehors de l'école.",
 			},
 			images: {
 				kid: {

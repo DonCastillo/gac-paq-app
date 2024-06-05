@@ -43,7 +43,7 @@ const S2Q3: QuestionRadioPayloadInterface = {
 			kid_label:
 				"Lors des journées où tu as fait des tâches dans la dernière semaine, combien de temps y as-tu accordé chaque jour?",
 			adult_label:
-				"Les jours où votre enfant a fait des tâches ménagères la semaine dernière, combien de temps a-t-il passé à faire des tâches ménagères tout au long de la journée?",
+				"Lors des journées où ton enfant a fait des tâches dans la dernière semaine, combien de temps y a-t-il (elle) accordé chaque jour?",
 			choices: [
 				{
 					label: "15 minutes ou moins par jour",

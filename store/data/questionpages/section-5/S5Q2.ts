@@ -50,7 +50,7 @@ const S5Q2: QuestionRadioPayloadInterface = {
 			label: "Combien de jours as-tu fait ces activités au cours de la dernière semaine?",
 			kid_label: "Combien de jours as-tu fait ces activités au cours de la dernière semaine?",
 			adult_label:
-				"Combien de jours votre enfant a-t-il fait ces activités au cours de la dernière semaine?",
+				"Combien de jours ton enfant a-t-il (elle) fait ces activités au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 Jour",

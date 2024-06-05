@@ -34,7 +34,8 @@ const S4Preamble: PreamblePayloadInterface = {
 			subheading: "Section 4",
 			description: {
 				kid: "Cette section porte sur comment tu vas à différents endroits.",
-				adult: "Cette section porte sur la façon dont ton enfant se rend à différents endroits.",
+				adult:
+					"Cette section porte sur les moyens que ton enfant utilise pour aller à différents endroits.",
 			},
 			images: {
 				kid: {

@@ -45,7 +45,7 @@ const S3Q2: QuestionRadioPayloadInterface = {
 			kid_label:
 				"Durant la dernière semaine, combien d'heures as-tu passées à faire du bénévolat et/ou à travailler?",
 			adult_label:
-				"Au cours de la dernière semaine, combien d'heures votre enfant a-t-il passé à faire du bénévolat et/ou à travailler?",
+				"Durant la dernière semaine, combien d'heures ton enfant a-t-il (elle) passées à faire du bénévolat et/ou à travailler?",
 			choices: [
 				{
 					label: "Moins de 1 heure par jour",

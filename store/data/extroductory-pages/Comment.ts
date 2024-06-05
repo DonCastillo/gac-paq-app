@@ -22,14 +22,14 @@ const Comment: QuestionTextareaPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionTextarea,
-			heading: "Feedback",
+			heading: "Commentaires",
 			placeholder: "Entrez votre commentaire ici",
 			label:
 				"As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
 			kid_label:
 				"As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
 			adult_label:
-				"As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
+				"Avez-vous des commentaires ou suggestions à propos de l'application ou des questions que nous avons posées?",
 			kid_sublabel: "Si oui, veuillez les écrire dans la boîte ci-dessous.",
 			adult_sublabel: "Si oui, veuillez les écrire dans la boîte ci-dessous.",
 		},

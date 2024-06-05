@@ -30,7 +30,7 @@ const S2Q1: QuestionRadioPayloadInterface = {
 			label: "Au cours de la dernière semaine, as-tu effectué des tâches actives?",
 			kid_label: "Au cours de la dernière semaine, as-tu effectué des tâches actives?",
 			adult_label:
-				"Au cours de la dernière semaine, votre enfant a-t-il fait des tâches ou des corvées actives?",
+				"Au cours de la dernière semaine, ton enfant a-t-il (elle) effectué des tâches actives?",
 			choices: [
 				{
 					label: "Oui",

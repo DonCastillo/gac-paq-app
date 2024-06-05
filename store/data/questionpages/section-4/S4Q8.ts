@@ -53,7 +53,7 @@ const S4Q8: QuestionRadioPayloadInterface = {
 			kid_label:
 				"Combien de jours as-tu marché pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
 			adult_label:
-				"Combien de jours votre enfant a-t-il marché pour aller ailleurs que l'école ou le travail au cours de la dernière semaine?",
+				"Combien de jours ton enfant a-t-il (elle) marché pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
 			choices: [
 				{
 					label: "1 Jour",

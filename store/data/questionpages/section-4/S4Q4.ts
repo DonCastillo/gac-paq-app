@@ -74,9 +74,10 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 			label: "Comment es-tu allé.e de la maison jusqu'au travail au cours de la dernière semaine?",
 			kid_label:
 				"Comment es-tu allé.e de la maison jusqu'au travail au cours de la dernière semaine?",
-			adult_label: "Comment votre enfant est-il allé au travail au cours de la dernière semaine?",
+			adult_label:
+				"Comment ton enfant est-il (elle) allé(e) de la maison jusqu'au travail au cours de la dernière semaine?",
 			kid_sublabel: "Sélectionne le moyen principal que tu as utilisé.",
-			adult_sublabel: "Sélectionnez le mode que votre enfant a le plus utilisé.",
+			adult_sublabel: "Sélectionne le moyen principal que ton enfant à utilisé.",
 			choices: [
 				{
 					label: "À pied",

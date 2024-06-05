@@ -31,12 +31,12 @@ const S6Preamble: PreamblePayloadInterface = {
 			},
 		},
 		"fr-CA": {
-			heading: "Jouer ou temps libre",
+			heading: "Jeu ou temps libres",
 			subheading: "Section 6",
 			description: {
 				kid: "Cette section porte sur l'activité physique que tu fais durant tes temps libres. Cela n'inclus pas les activités organisées et les pauses à l'école. Pour répondre aux prochaines questions, n'inclus pas les activités que tu viens de mentionner.",
 				adult:
-					"Cela inclut toutes les activités physiques que votre enfant fait pendant son temps de jeu ou de loisir. C'est le moment où votre enfant décide comment l'utiliser. Pour les prochaines questions, n'inclus pas les activités dont tu viens de nous parler.",
+					"Cette section porte sur l'activité physique que ton enfant fait durant ses temps libres. Ce sont des moments qu'il (elle) peux occuper à sa guise. Pour répondre aux prochaines questions, n'inclus pas les activités que tu viens de mentionner.",
 			},
 			images: {
 				kid: {

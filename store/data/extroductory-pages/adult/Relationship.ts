@@ -44,6 +44,43 @@ const Relationship: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 28",
+			label: "Quel est votre relation avec l'enfant?",
+			kid_label: "Quel est votre relation avec l'enfant?",
+			adult_label: "Quel est votre relation avec l'enfant?",
+			choices: [
+				{
+					label: "Père",
+					value: "Father",
+				},
+				{
+					label: "Mère",
+					value: "Mother",
+				},
+				{
+					label: "Grand-père",
+					value: "Grandfather",
+				},
+				{
+					label: "Grand-mère",
+					value: "Grandmother",
+				},
+				{
+					label: "Tuteur (tutrice) ou gardien(ne)",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Autre",
+					value: "Other",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 	},
 };
 

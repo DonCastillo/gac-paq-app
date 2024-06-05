@@ -49,7 +49,7 @@ const S7Q1: QuestionRadioPayloadInterface = {
 			kid_label:
 				"Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé dehors?",
 			adult_label:
-				"Au cours de la dernière semaine, en moyenne, combien de temps votre enfant passe-t-il à l'extérieur?",
+				"Durant la dernière semaine, lors d'une journée normale, combien de temps ton enfant a-t-il (elle) passé dehors?",
 			choices: [
 				{
 					label: "Pas du tout",
