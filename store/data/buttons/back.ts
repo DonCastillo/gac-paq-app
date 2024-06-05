@@ -10,6 +10,9 @@ const BackButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Retour",
 	},
+	"es-MX": {
+		label: "Volver",
+	},
 };
 
 export default BackButton;

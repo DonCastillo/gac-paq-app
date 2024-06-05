@@ -10,6 +10,9 @@ const NextButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Suivant",
 	},
+	"es-MX": {
+		label: "Siguiente",
+	},
 };
 
 export default NextButton;

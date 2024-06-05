@@ -10,6 +10,9 @@ const ContinueButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Continuer",
 	},
+	"es-MX": {
+		label: "Continuar",
+	},
 };
 
 export default ContinueButton;

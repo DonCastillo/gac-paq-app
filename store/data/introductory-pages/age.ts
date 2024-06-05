@@ -43,6 +43,41 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			type: Question.QuestionDropdown,
+			heading: "¡Bienvenido!",
+			label: "¿Quién está tomando este cuestionario?",
+			kid_label: "¿Quién está tomando este cuestionario?",
+			adult_label: "¿Quién está tomando este cuestionario?",
+			choices: [
+				{
+					label: "Niño",
+					value: "child",
+				},
+				{
+					label: "Adolescente",
+					value: "teen",
+				},
+				{
+					label: "Padre",
+					value: "adult",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+			},
+		},
 		"fr-CA": {
 			type: Question.QuestionDropdown,
 			heading: "Bienvenue!",

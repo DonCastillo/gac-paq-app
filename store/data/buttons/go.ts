@@ -10,6 +10,9 @@ const GoButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Aller",
 	},
+	"es-MX": {
+		label: "Ir",
+	},
 };
 
 export default GoButton;

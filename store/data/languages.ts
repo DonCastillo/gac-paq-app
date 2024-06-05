@@ -41,11 +41,11 @@ const Languages: LanguageInterface[] = [
 	// 	flag_code: "MX",
 	// 	lang_code: "en-MX",
 	// },
-	// {
-	// 	name: "Spanish - Mexico",
-	// 	flag_code: "MX",
-	// 	lang_code: "es-MX",
-	// },
+	{
+		name: "Spanish - Mexico",
+		flag_code: "MX",
+		lang_code: "es-MX",
+	},
 	// {
 	// 	name: "Nepali - Nepal",
 	// 	flag_code: "NP",

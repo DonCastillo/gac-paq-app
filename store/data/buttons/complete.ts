@@ -10,6 +10,9 @@ const CompleteButton: LangButtonInterface = {
 	"fr-CA": {
 		label: "Complet",
 	},
+	"es-MX": {
+		label: "Completar",
+	},
 };
 
 export default CompleteButton;

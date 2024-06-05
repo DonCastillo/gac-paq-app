@@ -55,6 +55,53 @@ const DemographicTeenPage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
+		"es-MX": {
+			type: Question.QuestionDropdown,
+			heading: "¡Bienvenido!",
+			label: "¿Cuántos años tienes?",
+			kid_label: "¿Cuántos años tienes?",
+			adult_label: "¿Cuántos años tienes?",
+			choices: [
+				{
+					label: "12 años",
+					value: "12",
+				},
+				{
+					label: "13 años",
+					value: "13",
+				},
+				{
+					label: "14 años",
+					value: "14",
+				},
+				{
+					label: "15 años",
+					value: "15",
+				},
+				{
+					label: "16 años",
+					value: "16",
+				},
+				{
+					label: "17 años",
+					value: "17",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+			},
+		},
 		"fr-CA": {
 			type: Question.QuestionDropdown,
 			heading: "Bienvenue!",

@@ -12,6 +12,11 @@ const SuccessPage: PagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"es-MX": {
+			heading: "Éxito!",
+			description:
+				"¡Buen trabajo! Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
+		},
 		"es-ES": {
 			heading: "Éxito!",
 			description:

@@ -4,6 +4,9 @@ const AgreementPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Yes, I Understand & Agree.",
 	},
+	"es-MX": {
+		label: "Sí, entiendo y estoy de acuerdo.",
+	},
 	"es-ES": {
 		label: "Sí, entiendo y estoy de acuerdo.",
 	},

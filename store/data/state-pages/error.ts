@@ -11,6 +11,10 @@ const ErrorPage: PagePayloadInterface = {
 			heading: "Error",
 			description: "Oh no, Your answers were not sent.\n\nPlease try again. ",
 		},
+		"es-MX": {
+			heading: "Error",
+			description: "Oh no, tus respuestas no fueron enviadas.\n\nPor favor, inténtalo de nuevo.",
+		},
 		"es-ES": {
 			heading: "Error",
 			description: "Oh no, tus respuestas no fueron enviadas.\n\nPor favor, inténtalo de nuevo.",
