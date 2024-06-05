@@ -34,9 +34,9 @@ const S2Preamble: PreamblePayloadInterface = {
 			heading: "Tareas Del Hogar O Quehaceres",
 			subheading: "Sección 2",
 			description: {
-				kid: "Esta sección trata sobre las tareas del hogar que requieren que estés activo. Los ejemplos incluyen hacer la limpieza, el trabajo de jardinería y otras tareas similares.",
+				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las tareas del hogar, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
 				adult:
-					"Esta sección trata sobre las tareas del hogar que requieren que tu hijo esté activo. Los ejemplos incluyen hacer la limpieza, el trabajo de jardinería y otras tareas similares.",
+					"Esta sección trata de las tareas o quehaceres del hogar que requieren que su hija o hijo sea activo físicamente. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
 			},
 			images: {
 				kid: {

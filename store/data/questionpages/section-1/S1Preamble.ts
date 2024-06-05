@@ -34,9 +34,9 @@ const S1Preamble: PreamblePayloadInterface = {
 			heading: "Escuela O Colegio",
 			subheading: "Sección 1",
 			description: {
-				kid: "Esta sección trata sobre las actividades que haces durante el horario escolar normal, por ejemplo, durante las clases de educación física, el recreo y la hora del almuerzo.",
+				kid: "Esta sección es acerca de lo que haces normalmente durante tu tiempo en la escuela o colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora del refrigerio.",
 				adult:
-					"Esta sección trata sobre las actividades que tu hijo hace durante el horario escolar normal, por ejemplo, durante las clases de educación física, el recreo y la hora del almuerzo.",
+					"Esta sección es acerca de lo que su hija o hijo hace normalmente durante su tiempo en la escuela o el colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora del lunch o refrigerio.",
 			},
 			images: {
 				kid: {

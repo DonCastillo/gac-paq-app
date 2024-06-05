@@ -34,9 +34,9 @@ const S7Preamble: PreamblePayloadInterface = {
 			heading: "Al Aire Libre",
 			subheading: "Sección 7",
 			description: {
-				kid: "Esta sección es sobre la cantidad de tiempo que pasas al aire libre. Esto puede ser en la escuela, durante las tareas, el trabajo y el voluntariado, y el transporte, así como en tu tiempo libre. Esto también incluye el tiempo en que estás al aire libre, pero sin moverte (por ejemplo, picnics, leyendo, sentado junto a un fuego).",
+				kid: "Esta sección trata sobre la cantidad de tiempo que pasas al aire libre. Puede ser en la escuela o colegio, durante las tareas del hogar o quehaceres, el trabajo y el voluntariado, el transporte, así como en tu tiempo libre. También incluye el tiempo que pasas al aire libre, pero sin moverte (por ejemplo, de picnic, leyendo, sentado junto a una fogata).",
 				adult:
-					"Esta sección es sobre la cantidad de tiempo que tu hijo pasa al aire libre. Esto puede ser en la escuela, durante las tareas, el trabajo y el voluntariado, y el transporte, así como en su tiempo libre. Esto también incluye el tiempo en que tu hijo está al aire libre, pero sin moverse (por ejemplo, picnics, leyendo, sentado junto a un fuego).",
+					"Esta sección trata sobre la cantidad de tiempo que pasa al aire libre su hija o hijo. Puede ser en la escuela o colegio, durante las tareas del hogar o quehaceres, el trabajo y el voluntariado, y el transporte, así como en su tiempo libre. También incluye el tiempo que pasa al aire libre, pero sin moverse (por ejemplo, de picnic, leyendo, sentado junto a una fogata).",
 			},
 			images: {
 				kid: {
