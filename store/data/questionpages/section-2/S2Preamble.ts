@@ -31,7 +31,7 @@ const S2Preamble: PreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Tareas del Hogar",
+			heading: "Tareas Del Hogar O Quehaceres",
 			subheading: "Sección 2",
 			description: {
 				kid: "Esta sección trata sobre las tareas del hogar que requieren que estés activo. Los ejemplos incluyen hacer la limpieza, el trabajo de jardinería y otras tareas similares.",

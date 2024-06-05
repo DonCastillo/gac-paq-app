@@ -26,7 +26,7 @@ const S2Intro: SectionPayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Tareas del Hogar",
+			heading: "Tareas Del Hogar O Quehaceres",
 			subheading: "Sección 2",
 			images: {
 				kid: {

@@ -31,7 +31,7 @@ const S1Preamble: PreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Actividades Escolares",
+			heading: "Escuela O Colegio",
 			subheading: "Sección 1",
 			description: {
 				kid: "Esta sección trata sobre las actividades que haces durante el horario escolar normal, por ejemplo, durante las clases de educación física, el recreo y la hora del almuerzo.",

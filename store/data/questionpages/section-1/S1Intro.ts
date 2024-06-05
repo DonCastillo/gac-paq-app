@@ -26,7 +26,7 @@ const S1Intro: SectionPayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Actividades Escolares",
+			heading: "Escuela O Colegio",
 			subheading: "Sección 1",
 			images: {
 				kid: {

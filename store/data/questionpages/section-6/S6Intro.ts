@@ -26,7 +26,7 @@ const S6Intro: SectionPayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Jugar o Tiempo Libre",
+			heading: "Juego O Tiempo Libre",
 			subheading: "Sección 6",
 			images: {
 				kid: {

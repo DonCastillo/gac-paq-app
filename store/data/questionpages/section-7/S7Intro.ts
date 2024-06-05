@@ -26,7 +26,7 @@ const S7Intro: SectionPayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Aire Libre",
+			heading: "Al Aire Libre",
 			subheading: "Sección 7",
 			images: {
 				kid: {
