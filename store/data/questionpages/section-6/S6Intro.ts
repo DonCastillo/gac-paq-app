@@ -25,6 +25,24 @@ const S6Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "自由活动或玩耍的时间",
+			subheading: "第6部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_6.phone,
+					tablet: Images.kids.intro.section_6.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Juego O Tiempo Libre",
 			subheading: "Sección 6",

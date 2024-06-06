@@ -25,6 +25,24 @@ const S1Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "学校",
+			subheading: "第1部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_1.phone,
+					tablet: Images.kids.intro.section_1.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Escuela O Colegio",
 			subheading: "Sección 1",

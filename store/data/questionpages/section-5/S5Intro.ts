@@ -25,6 +25,24 @@ const S5Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "有组织的活动",
+			subheading: "第5部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_5.phone,
+					tablet: Images.kids.intro.section_5.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_5.phone,
+					tablet: Images.adults.intro.section_5.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_5.phone,
+					tablet: Images.adults.intro.section_5.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Actividades Organizadas",
 			subheading: "Sección 5",

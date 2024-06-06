@@ -25,6 +25,24 @@ const S4Intro: SectionPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "交通",
+			subheading: "第4部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Transporte",
 			subheading: "Sección 4",
