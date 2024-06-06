@@ -21,6 +21,20 @@ const S6Extro: ExtroPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "部分完成!",
+			subheading: "只剩下一个!",
+			images: {
+				adult: {
+					phone: Images.adults.extro.section_6.phone,
+					tablet: Images.adults.extro.section_6.tablet,
+				},
+				teen: {
+					phone: Images.adults.extro.section_6.phone,
+					tablet: Images.adults.extro.section_6.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "¡Sección Completa!",
 			subheading: "¡Solo falta una!",
