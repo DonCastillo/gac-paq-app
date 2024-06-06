@@ -4,6 +4,9 @@ const ContinueButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Continue",
 	},
+	"zh-CN": {
+		label: "继续",
+	},
 	"es-ES": {
 		label: "Continuar",
 	},

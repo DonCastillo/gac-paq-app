@@ -71,6 +71,69 @@ const DemographicAdultPage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			type: Question.QuestionDropdown,
+			heading: "欢迎!",
+			label: "你的孩子多大了?",
+			kid_label: "你的孩子多大了?",
+			adult_label: "你的孩子多大了?",
+			choices: [
+				{
+					label: "8岁",
+					value: "8",
+				},
+				{
+					label: "9岁",
+					value: "9",
+				},
+				{
+					label: "10岁",
+					value: "10",
+				},
+				{
+					label: "11岁",
+					value: "11",
+				},
+				{
+					label: "12岁",
+					value: "12",
+				},
+				{
+					label: "13岁",
+					value: "13",
+				},
+				{
+					label: "14岁",
+					value: "14",
+				},
+				{
+					label: "15岁",
+					value: "15",
+				},
+				{
+					label: "16岁",
+					value: "16",
+				},
+				{
+					label: "17岁",
+					value: "17",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+			},
+		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
 			heading: "¡Bienvenido!",
