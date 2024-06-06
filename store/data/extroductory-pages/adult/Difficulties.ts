@@ -61,6 +61,60 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 25",
+			label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			adult_label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_sublabel: "Seleccione todas las opciones que correspondan",
+			adult_sublabel: "Seleccione todas las opciones que correspondan",
+			choices: [
+				{
+					label: "Oír",
+					value: "Hearing",
+				},
+				{
+					label: "Ver",
+					value: "Seeing",
+				},
+				{
+					label: "Hablar ",
+					value: "Speech",
+				},
+				{
+					label: "Movimiento",
+					value: "Mobility",
+				},
+				{
+					label: "Agilidad",
+					value: "Agility",
+				},
+				{
+					label: "Dolor",
+					value: "Pain",
+				},
+				{
+					label: "Memoria",
+					value: "Memory",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Ninguno de los anteriores, no tiene dificultades",
+					value: "None of the above",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",

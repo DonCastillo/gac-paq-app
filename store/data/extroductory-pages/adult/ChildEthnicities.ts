@@ -44,6 +44,43 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 26",
+			label: "¿Cuál es la etnia de tu hijo o hija?",
+			kid_label: "¿Cuál es la etnia de tu hijo o hija?",
+			adult_label: "¿Cuál es la etnia de tu hijo o hija?",
+			choices: [
+				{
+					label: "Asiático",
+					value: "Asian",
+				},
+				{
+					label: "Negro o afroamericano",
+					value: "Black or African American",
+				},
+				{
+					label: "Indígena",
+					value: "Indigenous",
+				},
+				{
+					label: "Latinoamericano",
+					value: "Latin American",
+				},
+				{
+					label: "Blanco o caucásico",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 26",

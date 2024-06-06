@@ -60,7 +60,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 			kid_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			adult_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que hace tu hijo la mayor parte del tiempo mientras trabaja y/o hace trabajo voluntario?",
+				"¿Cuál de las siguientes opciones se parece más a lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
 			choices: [
 				{
 					label: "Sin moverte",

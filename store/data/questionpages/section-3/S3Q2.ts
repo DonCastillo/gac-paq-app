@@ -40,12 +40,10 @@ const S3Q2: QuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 13",
-			label:
-				"¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
-			kid_label:
-				"¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
+			label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
+			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			adult_label:
-				"¿Cuántas horas pasó tu hijo la semana pasada haciendo trabajo voluntario y/o laboral?",
+				"¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando en la última semana?",
 			choices: [
 				{
 					label: "Menos de 1 hora al día",

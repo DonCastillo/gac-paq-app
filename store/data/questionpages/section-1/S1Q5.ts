@@ -60,7 +60,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 			kid_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física? ",
 			adult_label:
-				"¿Cuál de las siguientes imágenes se parece a lo que hace tu hijo la mayor parte del tiempo en la clase de educación física?",
+				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo en la clase de educación física?",
 			choices: [
 				{
 					label: "Sin moverte",

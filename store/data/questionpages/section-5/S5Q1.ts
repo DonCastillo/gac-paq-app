@@ -29,7 +29,7 @@ const S5Q1: QuestionRadioPayloadInterface = {
 			heading: "Pregunta 18",
 			label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
 			kid_label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
-			adult_label: "¿Tu hijo participó en alguna actividad organizada durante la última semana?",
+			adult_label: "¿Su hija o hijo realizó alguna actividad organizada durante la semana pasada?",
 			choices: [
 				{
 					label: "Sí",

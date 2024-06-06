@@ -49,7 +49,7 @@ const S4Q5: QuestionRadioPayloadInterface = {
 			heading: "Question 16b",
 			label: "¿Cuántos días usaste este modo de transporte en la última semana?",
 			kid_label: "¿Cuántos días usaste este modo de transporte en la última semana?",
-			adult_label: "¿Cuántos días tu hijo usó este medio de transporte la semana pasada?",
+			adult_label: "¿Cuántos días usó su hija o hijo este modo de transporte en la última semana?",
 			choices: [
 				{
 					label: "1 Día",

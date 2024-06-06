@@ -49,7 +49,8 @@ const S2Q2: QuestionRadioPayloadInterface = {
 			heading: "Question 9",
 			label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
 			kid_label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
-			adult_label: "¿Cuántos días realizó tareas del hogar tu hijo durante la semana pasada?",
+			adult_label:
+				"¿Cuántos días de la semana pasada realizó su hija o hijo tareas del hogar o quehaceres?",
 			choices: [
 				{
 					label: "1 día",

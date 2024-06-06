@@ -41,7 +41,7 @@ const S1Q4: QuestionRadioPayloadInterface = {
 			heading: "Question 4",
 			label: "¿Cuánto tiempo duran tus clases de educación física?",
 			kid_label: "¿Cuánto tiempo duran tus clases de educación física?",
-			adult_label: "¿Cuánto tiempo duran las clases de educación física de tu hijo?",
+			adult_label: "¿Cuánto tiempo duran las clases de educación física de su hija o hijo?",
 			choices: [
 				{
 					label: "Menos de 30 minutos por clase",

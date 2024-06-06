@@ -59,6 +59,57 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Retroalimentación",
+			label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
+			kid_label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
+			adult_label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
+			adult_sublabel: "Selecciona la imagen (emoji) que mejor represente tu satisfacción.",
+			kid_sublabel: "Selecciona la imagen (emoji) que mejor represente tu satisfacción.",
+			choices: [
+				{
+					label: "Muy insatisfecho",
+					value: "Strongly dissatisfied",
+					images: {
+						kid: Images.generic.rating.very_dissatisfied,
+						adult: Images.generic.rating.very_dissatisfied,
+					},
+				},
+				{
+					label: "Insatisfecho",
+					value: "Dissatisfied",
+					images: {
+						kid: Images.generic.rating.dissatisfied,
+						adult: Images.generic.rating.dissatisfied,
+					},
+				},
+				{
+					label: "Neutral",
+					value: "Neutral",
+					images: {
+						kid: Images.generic.rating.neutral,
+						adult: Images.generic.rating.neutral,
+					},
+				},
+				{
+					label: "Satisfecho",
+					value: "Satisfied",
+					images: {
+						kid: Images.generic.rating.satisfied,
+						adult: Images.generic.rating.satisfied,
+					},
+				},
+				{
+					label: "Muy satisfecho",
+					value: "Strongly Satisfied",
+					images: {
+						kid: Images.generic.rating.very_satisfied,
+						adult: Images.generic.rating.very_satisfied,
+					},
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Feedback",

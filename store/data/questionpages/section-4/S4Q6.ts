@@ -41,7 +41,7 @@ const S4Q6: QuestionRadioPayloadInterface = {
 			heading: "Question 16c",
 			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
-			adult_label: "¿Cuánto tiempo le toma normalmente a tu hijo ir al trabajo?",
+			adult_label: "¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo?",
 			choices: [
 				{
 					label: "10 minutos o menos",

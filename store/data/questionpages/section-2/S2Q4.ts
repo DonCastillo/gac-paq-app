@@ -60,7 +60,7 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 			kid_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
 			adult_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que hace tu hijo la mayor parte del tiempo durante sus tareas?",
+				"¿Cuál de las siguientes imágenes describe lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas del hogar o quehaceres?",
 			choices: [
 				{
 					label: "Sin moverte",

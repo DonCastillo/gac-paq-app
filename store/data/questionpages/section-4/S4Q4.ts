@@ -73,9 +73,9 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 			heading: "Question 16",
 			label: "¿Cómo fuiste a trabajar en la última semana?",
 			kid_label: "¿Cómo fuiste a trabajar en la última semana?",
-			adult_label: "¿Cómo fue tu hijo a trabajar en la última semana?",
+			adult_label: "¿Cómo fue su hija o hijo al trabajo la semana pasada?",
 			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
-			adult_sublabel: "Selecciona el medio que tu hijo utilizó más.",
+			adult_sublabel: "Selecciona el modo de transporte que más utilizó.",
 			choices: [
 				{
 					label: "Caminando",
@@ -118,14 +118,14 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "Otro, ¿cuál?",
+					label: "Otro",
 					value: "Other",
 					images: {
 						kid: Images.kids.options.transportation.other,
 						adult: Images.adults.options.transportation.other,
 					},
 				},
-			]
+			],
 		},
 		"fr-CA": {
 			type: Question.QuestionRadioImage,

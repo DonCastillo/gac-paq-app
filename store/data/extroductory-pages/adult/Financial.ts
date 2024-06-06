@@ -41,6 +41,42 @@ const Financial: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 30",
+			label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			kid_label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			adult_label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			choices: [
+				{
+					label: "Muy difícil",
+					value: "Very difficult",
+				},
+				{
+					label: "Difícil",
+					value: "Difficult",
+				},
+				{
+					label: "Ni fácil ni difícil",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Fácil",
+					value: "Easy",
+				},
+				{
+					label: "Muy fácil",
+					value: "Very easy",
+				},
+				{
+					label: "Prefiero no contestar",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",

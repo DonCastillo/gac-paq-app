@@ -49,7 +49,8 @@ const S5Q2: QuestionRadioPayloadInterface = {
 			heading: "Pregunta 19",
 			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
 			kid_label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
-			adult_label: "¿Cuántos días tu hijo realizó estas actividades durante la última semana?",
+			adult_label:
+				"¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
 			choices: [
 				{
 					label: "1 Día",

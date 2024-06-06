@@ -47,7 +47,7 @@ const S7Q1: QuestionRadioPayloadInterface = {
 			label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
 			kid_label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
 			adult_label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasó tu hijo al aire libre?",
+				"En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo al aire libre?",
 			choices: [
 				{
 					label: "Nada",

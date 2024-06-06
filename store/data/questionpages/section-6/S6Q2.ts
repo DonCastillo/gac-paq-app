@@ -54,10 +54,12 @@ const S6Q2: QuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 22",
-			label: "En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
-			kid_label: "En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			label:
+				"En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			kid_label:
+				"En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
 			adult_label:
-				"¿Cuántos días a la semana tu hijo realizó actividades que fortalecen sus músculos en la última semana?",
+				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
 			choices: [
 				{
 					label: "0 Días",

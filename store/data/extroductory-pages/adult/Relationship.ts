@@ -44,6 +44,46 @@ const Relationship: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 28",
+			label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			choices: [
+				{
+					label: "Papá",
+					value: "Father",
+				},
+				{
+					label: "Mamá",
+					value: "Mother",
+				},
+				{
+					label: "Abuelo",
+					value: "Grandfather",
+				},
+				{
+					label: "Abuela",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 28",

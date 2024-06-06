@@ -43,7 +43,7 @@ const S5Q3: QuestionRadioPayloadInterface = {
 			kid_label:
 				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
 			adult_label:
-				"En los días que tu hijo realizó estas actividades durante la última semana, ¿cuánto tiempo duraron en general?",
+				"En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
 			choices: [
 				{
 					label: "30 minutos o menos al día",

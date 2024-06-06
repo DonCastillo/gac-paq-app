@@ -29,7 +29,7 @@ const S1Q1: QuestionRadioPayloadInterface = {
 			heading: "Question 1",
 			label: "¿Fuiste a la escuela o colegio la semana pasada?",
 			kid_label: "¿Fuiste a la escuela o colegio la semana pasada?",
-			adult_label: "¿Tu hijo fue a la escuela la semana pasada?",
+			adult_label: "¿Fué su hija o hijo a la escuela o colegio la semana pasada?",
 			choices: [
 				{
 					label: "Sí",

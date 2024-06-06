@@ -93,9 +93,9 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 			heading: "Question 15",
 			label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
 			kid_label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
-			adult_label: "¿Cómo fue tu hijo a la escuela la semana pasada?",
-			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
-			adult_sublabel: "Selecciona el medio que tu hijo usó más.",
+			adult_label: "¿Cómo fue su hija o hijo a la escuela o colegio la última semana?",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste.",
+			adult_sublabel: "Seleccione el modo de transporte que más utilizó.",
 			choices: [
 				{
 					label: "Caminando",
@@ -114,8 +114,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					},
 					sublabel: {
 						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
-						adult:
-							"por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
 					},
 				},
 				{
@@ -147,7 +146,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "Otro, ¿cuál?",
+					label: "Otro",
 					value: "Other",
 					images: {
 						kid: Images.kids.options.transportation.other,
@@ -163,10 +162,10 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					},
 					label_mode: {
 						kid: "Recibo educación en casa o asisto a un internado ",
-						adult: "Mi hijo se queda en casa para la escuela",
+						adult: "Mi hija o hijo recibe educación en casa o asiste a un internado",
 					},
 				},
-			]
+			],
 		},
 		"fr-CA": {
 			type: Question.QuestionRadioImage,

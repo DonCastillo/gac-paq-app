@@ -54,7 +54,7 @@ const S4Q10: QuestionRadioPayloadInterface = {
 			kid_label:
 				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			adult_label:
-				"¿Cuántos días rodó tu hijo para ir a lugares distintos del trabajo o la escuela en la última semana?",
+				"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			choices: [
 				{
 					label: "1 Día",

@@ -43,7 +43,7 @@ const S2Q3: QuestionRadioPayloadInterface = {
 			kid_label:
 				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			adult_label:
-				"¿Cuánto tiempo dedicó tu hijo a realizar tareas del hogar durante el día en los días que realizó tareas la semana pasada?",
+				"En los días que su hija o hijo realizó tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasó haciéndolas a lo largo del día?",
 			choices: [
 				{
 					label: "15 minutos o menos al día",

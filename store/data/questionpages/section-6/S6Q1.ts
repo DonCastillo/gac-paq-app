@@ -51,7 +51,7 @@ const S6Q1: QuestionRadioPayloadInterface = {
 			kid_label:
 				"En la última semana, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
 			adult_label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasó tu hijo jugando activamente, solo por diversión?",
+				"En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
 			choices: [
 				{
 					label: "Nada",

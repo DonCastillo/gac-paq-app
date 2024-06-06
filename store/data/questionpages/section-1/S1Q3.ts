@@ -20,7 +20,7 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			heading: "Question 3",
 			label: "¿Cuántas clases de educación física tuviste en la semana pasada?",
 			kid_label: "¿Cuántas clases de educación física tuviste en la semana pasada?",
-			adult_label: "¿Cuántas clases de educación física tuvo tu hijo la semana pasada?",
+			adult_label: "¿Cuántas clases de educación física tuvo su hija o hijo la semana pasada?",
 			max_value: 7,
 		},
 		"fr-CA": {

@@ -60,7 +60,7 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 			kid_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
 			adult_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que hace tu hijo la mayor parte del tiempo durante los recesos?",
+				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo durante sus recreos o descansos?",
 			choices: [
 				{
 					label: "Sin moverte",

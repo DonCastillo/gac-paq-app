@@ -37,7 +37,8 @@ const S4Q3: QuestionRadioPayloadInterface = {
 			heading: "Question 15c",
 			label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
-			adult_label: "¿Cuánto tiempo le toma normalmente a tu hijo ir a la escuela?",
+			adult_label:
+				"¿Normalmente cuánto tiempo necesita su hija o hijo para ir a la escuela o colegio?",
 			choices: [
 				{
 					label: "10 minutos o menos",

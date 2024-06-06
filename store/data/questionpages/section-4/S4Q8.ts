@@ -53,7 +53,7 @@ const S4Q8: QuestionRadioPayloadInterface = {
 			kid_label:
 				"¿Cuántos días caminaste para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			adult_label:
-				"¿Cuántos días caminó tu hijo para ir a lugares distintos del trabajo o la escuela en la última semana?",
+				"¿Cuántos días su hija o hijo caminó para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			choices: [
 				{
 					label: "1 Día",

@@ -41,6 +41,39 @@ const Education: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 29",
+			label: "¿Cuál es el nivel de educación más alto completado por un miembro de su hogar?",
+			kid_label: "¿Cuál es el nivel de educación más alto completado por un miembro de su hogar?",
+			adult_label: "¿Cuál es el nivel de educación más alto completado por un miembro de su hogar?",
+			choices: [
+				{
+					label: "Sin educación formal",
+					value: "No formal schooling",
+				},
+				{
+					label: "Primaria",
+					value: "Primary school",
+				},
+				{
+					label: "Secundaria o bachillerato",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Técnico o tecnólogo",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Profesional o formación universitaria",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
