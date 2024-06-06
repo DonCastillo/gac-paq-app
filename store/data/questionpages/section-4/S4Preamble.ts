@@ -29,6 +29,28 @@ const S4Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "交通",
+			subheading: "第4部分",
+			description: {
+				kid: "本部分是关于一些你如何去不同的地方的问题。",
+				adult: "本部分是关于一些您的孩子如何去不同的地方的问题。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Transporte",
 			subheading: "Sección 4",

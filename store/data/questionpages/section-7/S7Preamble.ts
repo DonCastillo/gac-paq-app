@@ -30,6 +30,29 @@ const S7Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "室外",
+			subheading: "第7部分",
+			description: {
+				kid: "本部分是关于一些你花在室外的时间的问题。这包括学校、家务、工作和志愿服务，交通，以及你的空闲时间，这也包括你在室外但不动的时间(如，野餐，阅读，以及坐在火旁)。",
+				adult:
+					"本部分是关于一些您的孩子花在室外的时间的问题。这包括学校、家务、工作和志愿服务，交通，以及他们的空闲时间，这也包括您的孩子在室外但不动的时间(如，野餐，阅读，以及坐在火旁)。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_7.phone,
+					tablet: Images.kids.intro.section_7.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Al Aire Libre",
 			subheading: "Sección 7",

@@ -30,6 +30,29 @@ const S6Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "自由活动或玩耍的时间",
+			subheading: "第6部分",
+			description: {
+				kid: "本部分是关于一些你在学校外玩耍或空闲时间所做的所有身体活动的问题。这不包括有组织的活动或学校的休息时间。",
+				adult:
+					"本部分是关于一些您的孩子在学校外玩耍或空闲时间所做的所有身体活动的问题。这部分时间是由您的孩子决定如何使用的。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_6.phone,
+					tablet: Images.kids.intro.section_6.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Juego O Tiempo Libre",
 			subheading: "Sección 6",

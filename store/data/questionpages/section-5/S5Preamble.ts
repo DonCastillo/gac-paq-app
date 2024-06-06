@@ -30,6 +30,29 @@ const S5Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "有组织的活动",
+			subheading: "第5部分",
+			description: {
+				kid: "本部分是关于一些课外有组织的身体活动和体育运动的问题，包括课外你参加的一些有组织的活动(如学校的运动队或体育社团、以及课外活动)，还包括任何校外的体育俱乐部、培训班课程的活动，如羽毛球、游泳、舞蹈和跆拳道等。",
+				adult:
+					"本部分是关于一些课外有组织的身体活动和体育运动的问题，包括课外您的孩子参加的一些有组织的活动(如学校的运动队或体育社团、以及课外活动)，还包括任何校外的体育俱乐部、培训班课程的活动，如羽毛球、游泳、舞蹈和跆拳道等。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_5.phone,
+					tablet: Images.kids.intro.section_5.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_5.phone,
+					tablet: Images.adults.intro.section_5.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_5.phone,
+					tablet: Images.adults.intro.section_5.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Actividades Organizadas",
 			subheading: "Sección 5",

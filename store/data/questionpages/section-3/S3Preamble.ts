@@ -30,6 +30,29 @@ const S3Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "工作",
+			subheading: "第3部分",
+			description: {
+				kid: "本部分是关于一些在家之外所做的工作（非家务）或志愿服务的问题。工作是指为自己或家人赚钱。志愿服务是无偿帮助他人或组织(没有收入)。工作和志愿服务可以在商店、农场、餐馆等地方进行。请将工作和志愿服务的情况合并起来回答。",
+				adult:
+					"本部分是关于一些您的孩子在家之外所做的工作（非家务）或志愿服务的问题。工作是指为自己或家人赚钱。志愿服务是无偿帮助他人或组织(没有收入)。请将工作和志愿服务的情况合并起来回答。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_3.phone,
+					tablet: Images.kids.intro.section_3.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_3.phone,
+					tablet: Images.adults.intro.section_3.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Trabajo",
 			subheading: "Sección 3",

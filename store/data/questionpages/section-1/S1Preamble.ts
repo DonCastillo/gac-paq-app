@@ -30,6 +30,28 @@ const S1Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "学校",
+			subheading: "第1部分",
+			description: {
+				kid: "本部分是关于一些你在上学时所做事情的问题，如在上体育课、课间休息和午餐时。",
+				adult: "本部分是关于一些您的孩子在上学时所做事情的问题，如在上体育课、课间休息和午餐时。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_1.phone,
+					tablet: Images.kids.intro.section_1.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Escuela O Colegio",
 			subheading: "Sección 1",

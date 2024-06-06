@@ -30,6 +30,29 @@ const S2Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "家务",
+			subheading: "第2部分",
+			description: {
+				kid: "本部分是关于一些需要你做的家务或在家干的活的问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
+				adult:
+					"本部分是关于一些需要您的孩子做家务或在家干的活的问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_2.phone,
+					tablet: Images.kids.intro.section_2.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_2.phone,
+					tablet: Images.adults.intro.section_2.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Tareas Del Hogar O Quehaceres",
 			subheading: "Sección 2",
