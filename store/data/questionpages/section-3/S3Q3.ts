@@ -52,6 +52,50 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 14",
+			label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			kid_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			adult_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que hace tu hijo la mayor parte del tiempo mientras trabaja y/o hace trabajo voluntario?",
+			choices: [
+				{
+					label: "Sin moverte",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.volunteering.not_moving,
+						adult: Images.adults.options.volunteering.not_moving,
+					},
+				},
+				{
+					label: "Esfuerzo fácil",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.volunteering.easy_effort,
+						adult: Images.adults.options.volunteering.easy_effort,
+					},
+				},
+				{
+					label: "Esfuerzo medio o fuerte",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.volunteering.medium_effort,
+						adult: Images.adults.options.volunteering.medium_effort,
+					},
+				},
+				{
+					label: "No sé",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",

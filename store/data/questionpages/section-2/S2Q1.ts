@@ -24,6 +24,23 @@ const S2Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 8",
+			label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
+			kid_label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
+			adult_label: "¿En la última semana, tu hijo realizó tareas activas?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 8",

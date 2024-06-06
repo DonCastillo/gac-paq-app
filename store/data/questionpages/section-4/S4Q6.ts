@@ -36,6 +36,35 @@ const S4Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 16c",
+			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
+			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
+			adult_label: "¿Cuánto tiempo le toma normalmente a tu hijo ir al trabajo?",
+			choices: [
+				{
+					label: "10 minutos o menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutos",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Más de 60 minutos",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 16c",

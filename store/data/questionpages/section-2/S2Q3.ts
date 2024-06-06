@@ -35,6 +35,34 @@ const S2Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 10",
+			label:
+				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			kid_label:
+				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			adult_label:
+				"¿Cuánto tiempo dedicó tu hijo a realizar tareas del hogar durante el día en los días que realizó tareas la semana pasada?",
+			choices: [
+				{
+					label: "15 minutos o menos al día",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minutos al día",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minutos al día",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Más de 60 minutos al día",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",

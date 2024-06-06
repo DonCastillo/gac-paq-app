@@ -29,6 +29,36 @@ const Transportation8_10 = {
 			},
 		},
 	},
+	"es-MX": {
+		kid: {
+			wheel: {
+				none: "¿Cuántos días rodaste para ir a lugares la semana pasada?",
+				school: "¿Cuántos días rodaste para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días rodaste para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días rodaste para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+			walk: {
+				none: "¿Cuántos días caminaste para ir a lugares la semana pasada?",
+				school: "¿Cuántos días caminaste para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días caminaste para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días caminaste para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "¿Cuántos días tu hijo rodó para ir a lugares la semana pasada?",
+				school: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+			walk: {
+				none: "¿Cuántos días tu hijo caminó para ir a lugares la semana pasada?",
+				school: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+		},
+	},
 	"fr-CA": {
 		kid: {
 			wheel: {

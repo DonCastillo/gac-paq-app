@@ -35,6 +35,34 @@ const S5Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 20",
+			label:
+				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			kid_label:
+				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			adult_label:
+				"En los días que tu hijo realizó estas actividades durante la última semana, ¿cuánto tiempo duraron en general?",
+			choices: [
+				{
+					label: "30 minutos o menos al día",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 - 60 minutos al día",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 a 1:30 horas al día",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Más de 1:30 horas al día",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",

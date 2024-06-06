@@ -44,6 +44,43 @@ const S5Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 19",
+			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
+			kid_label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
+			adult_label: "¿Cuántos días tu hijo realizó estas actividades durante la última semana?",
+			choices: [
+				{
+					label: "1 Día",
+					value: "1",
+				},
+				{
+					label: "2 Días",
+					value: "2",
+				},
+				{
+					label: "3 Días",
+					value: "3",
+				},
+				{
+					label: "4 Días",
+					value: "4",
+				},
+				{
+					label: "5 Días",
+					value: "5",
+				},
+				{
+					label: "6 Días",
+					value: "6",
+				},
+				{
+					label: "7 Días",
+					value: "7",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 19",

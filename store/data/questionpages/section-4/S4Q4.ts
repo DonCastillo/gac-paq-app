@@ -68,6 +68,65 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 16",
+			label: "¿Cómo fuiste a trabajar en la última semana?",
+			kid_label: "¿Cómo fuiste a trabajar en la última semana?",
+			adult_label: "¿Cómo fue tu hijo a trabajar en la última semana?",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
+			adult_sublabel: "Selecciona el medio que tu hijo utilizó más.",
+			choices: [
+				{
+					label: "Caminando",
+					value: "Walking",
+					images: {
+						kid: Images.kids.options.transportation.walking,
+						adult: Images.adults.options.transportation.walking,
+					},
+				},
+				{
+					label: "Sobre ruedas",
+					value: "Wheeling",
+					images: {
+						kid: Images.kids.options.transportation.wheeling,
+						adult: Images.adults.options.transportation.wheeling,
+					},
+					sublabel: {
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+					},
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					images: {
+						kid: Images.kids.options.transportation.public_transit,
+						adult: Images.adults.options.transportation.public_transit,
+					},
+					sublabel: {
+						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+					},
+				},
+				{
+					label: "Automóvil, taxi, camioneta o motocicleta",
+					value: "Car, taxi, truck, or motorcycle",
+					images: {
+						kid: Images.kids.options.transportation.car,
+						adult: Images.adults.options.transportation.car,
+					},
+				},
+				{
+					label: "Otro, ¿cuál?",
+					value: "Other",
+					images: {
+						kid: Images.kids.options.transportation.other,
+						adult: Images.adults.options.transportation.other,
+					},
+				},
+			]
+		},
 		"fr-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 16",

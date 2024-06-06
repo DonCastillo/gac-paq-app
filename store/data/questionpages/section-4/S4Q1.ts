@@ -88,6 +88,86 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 15",
+			label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
+			kid_label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
+			adult_label: "¿Cómo fue tu hijo a la escuela la semana pasada?",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
+			adult_sublabel: "Selecciona el medio que tu hijo usó más.",
+			choices: [
+				{
+					label: "Caminando",
+					value: "Walking",
+					images: {
+						kid: Images.kids.options.transportation.walking,
+						adult: Images.adults.options.transportation.walking,
+					},
+				},
+				{
+					label: "Sobre ruedas",
+					value: "Wheeling",
+					images: {
+						kid: Images.kids.options.transportation.wheeling,
+						adult: Images.adults.options.transportation.wheeling,
+					},
+					sublabel: {
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						adult:
+							"por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+					},
+				},
+				{
+					label: "Autobús escolar",
+					value: "School bus",
+					images: {
+						kid: Images.kids.options.transportation.school_bus,
+						adult: Images.adults.options.transportation.school_bus,
+					},
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					images: {
+						kid: Images.kids.options.transportation.public_transit,
+						adult: Images.adults.options.transportation.public_transit,
+					},
+					sublabel: {
+						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+					},
+				},
+				{
+					label: "Automóvil, taxi, camioneta o motocicleta",
+					value: "Car, taxi, truck, or motorcycle",
+					images: {
+						kid: Images.kids.options.transportation.car,
+						adult: Images.adults.options.transportation.car,
+					},
+				},
+				{
+					label: "Otro, ¿cuál?",
+					value: "Other",
+					images: {
+						kid: Images.kids.options.transportation.other,
+						adult: Images.adults.options.transportation.other,
+					},
+				},
+				{
+					label: "Recibo educación en casa o asisto a un internado ",
+					value: "Stay home for school",
+					images: {
+						kid: Images.kids.options.transportation.staying_home,
+						adult: Images.adults.options.transportation.staying_home,
+					},
+					label_mode: {
+						kid: "Recibo educación en casa o asisto a un internado ",
+						adult: "Mi hijo se queda en casa para la escuela",
+					},
+				},
+			]
+		},
 		"fr-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 15",

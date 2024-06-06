@@ -24,6 +24,23 @@ const S3Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 12",
+			label: "En la última semana, ¿fuiste voluntario o trabajaste?",
+			kid_label: "En la última semana, ¿fuiste voluntario o trabajaste?",
+			adult_label: "¿La semana pasada, tu hijo hizo trabajo voluntario o laboral?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 12",

@@ -41,6 +41,40 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 17",
+			label:
+				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del trabajo, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			kid_label:
+				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del trabajo, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			adult_label:
+				"¿En la última semana, tu hijo caminó o rodó para ir a lugares que no fueran la escuela o el trabajo (por ejemplo, la casa de un amigo, un parque, una tienda)?",
+			kid_sublabel: "Por favor, selecciona todas las respuestas que correspondan",
+			adult_sublabel: "Por favor, selecciona todas las respuestas que correspondan",
+			choices: [
+				{
+					label: "Sí, caminé",
+					value: "Walked",
+					label_mode: {
+						kid: "Sí, caminé",
+						adult: "Sí, caminó",
+					},
+				},
+				{
+					label: "Sí, me desplacé sobre ruedas ",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Sí, me desplacé sobre ruedas ",
+						adult: "Sí, rodó",
+					},
+				},
+				{
+					label: "No",
+					value: "No",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",

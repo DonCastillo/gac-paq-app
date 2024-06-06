@@ -29,6 +29,35 @@ const Transportation9_11 = {
 			},
 		},
 	},
+	"es-MX": {
+		kid: {
+			wheel: {
+				none: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares?",
+				school: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares que no fueran la escuela?",
+				work: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares que no fueran el trabajo?",
+				both: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares que no fueran la escuela o el trabajo?",
+			},
+			walk: {
+				none: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares?",
+				school: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares que no fueran la escuela?",
+				work: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares que no fueran el trabajo?",
+				both: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares que no fueran la escuela o el trabajo?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares?",
+				school: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares que no fueran la escuela?",
+				work: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares que no fueran el trabajo?",
+				both: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares que no fueran la escuela o el trabajo?",
+			},
+			walk: {
+				none: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares?",
+				school: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran la escuela?",
+				work: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran el trabajo?",
+				both: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran la escuela o el trabajo?",
+			}
+	},
 	"fr-CA": {
 		kid: {
 			wheel: {
