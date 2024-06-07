@@ -1,9 +1,9 @@
-import type ScreenType from "constants/screen_type";
+import type Screen from "constants/screen.enum";
 import type QuestionCheckboxInterface from "interface/question_checkbox";
 
 export default interface QuestionCheckboxPayloadInterface {
 	ident?: string;
 	name?: string | null;
-	type: ScreenType.SingleQuestion;
+	type: Screen.SingleQuestion;
 	translations: QuestionCheckboxInterface[];
 }

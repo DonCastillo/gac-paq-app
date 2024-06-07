@@ -1,33 +1,21 @@
-import type PhraseInterface from "interface/phrase";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const IntroductionPhrase: PhraseInterface[] = [
-	{
-		id: 1,
-		introduction_phrase_id: 1,
+const IntroductionPhrase: LangPhraseInterface = {
+	"en-CA": {
 		label: "Introduction",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		introduction_phrase_id: 1,
+	"zh-CN": {
+		label: "介绍",
+	},
+	"es-MX": {
 		label: "Introducción",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		introduction_phrase_id: 1,
+	"es-ES": {
+		label: "Introducción",
+	},
+	"fr-CA": {
 		label: "Introduction",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+};
 
 export default IntroductionPhrase;

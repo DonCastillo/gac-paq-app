@@ -1,14 +1,14 @@
-import ScreenType from "constants/screen_type";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import Screen from "constants/screen.enum";
+import Question from "constants/question.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const Financial: QuestionRadioPayloadInterface = {
 	ident: "difficulty_to_meet_financial_needs",
 	name: "difficulty_to_meet_financial_needs",
-	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	type: Screen.SingleQuestion,
+	translations: {
+		"en-CA": {
+			type: Question.QuestionRadio,
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
@@ -16,36 +16,137 @@ const Financial: QuestionRadioPayloadInterface = {
 				"How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
-					text: "Very difficult",
+					label: "Very difficult",
 					value: "Very difficult",
 				},
 				{
-					text: "Difficult",
+					label: "Difficult",
 					value: "Difficult",
 				},
 				{
-					text: "Neither easy nor difficult",
+					label: "Neither easy nor difficult",
 					value: "Neither easy nor difficult",
 				},
 				{
-					text: "Easy",
+					label: "Easy",
 					value: "Easy",
 				},
 				{
-					text: "Very easy",
+					label: "Very easy",
 					value: "Very easy",
 				},
 				{
-					text: "Prefer not to answer",
+					label: "Prefer not to answer",
 					value: "Prefer not to answer",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第三十题",
+			label: "满足家庭的经济需求对您来说难易程度如何？",
+			kid_label: "满足家庭的经济需求对您来说难易程度如何？",
+			adult_label: "满足家庭的经济需求对您来说难易程度如何？",
+			choices: [
+				{
+					label: "非常困难",
+					value: "Very difficult",
+				},
+				{
+					label: "困难 ",
+					value: "Difficult",
+				},
+				{
+					label: "既不容易也不困难",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "容易",
+					value: "Easy",
+				},
+				{
+					label: "非常容易",
+					value: "Very easy",
+				},
+				{
+					label: "不想回答",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Question 30",
+			label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			kid_label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			adult_label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			choices: [
+				{
+					label: "Muy difícil",
+					value: "Very difficult",
+				},
+				{
+					label: "Difícil",
+					value: "Difficult",
+				},
+				{
+					label: "Ni fácil ni difícil",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Fácil",
+					value: "Easy",
+				},
+				{
+					label: "Muy fácil",
+					value: "Very easy",
+				},
+				{
+					label: "Prefiero no contestar",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 30",
+			label:
+				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			kid_label:
+				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			adult_label:
+				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			choices: [
+				{
+					label: "Très difficile",
+					value: "Very difficult",
+				},
+				{
+					label: "Difficile",
+					value: "Difficult",
+				},
+				{
+					label: "Ni facile ni difficile",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Facile",
+					value: "Easy",
+				},
+				{
+					label: "Très facile",
+					value: "Very easy",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+	},
 };
 
 export default Financial;

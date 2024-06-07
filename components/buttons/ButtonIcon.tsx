@@ -9,7 +9,7 @@ interface Props {
 	onPress: () => void;
 }
 
-function ButtonIcon({ type, color, name, size, onPress }: Props): React.ReactElement {
+const ButtonIcon = ({ type, color, name, size, onPress }: Props): React.ReactElement => {
 	return (
 		<Icon
 			type={type ?? "ionicons"}
@@ -19,7 +19,7 @@ function ButtonIcon({ type, color, name, size, onPress }: Props): React.ReactEle
 			onPress={onPress}
 		/>
 	);
-}
+};
 
 export default memo(ButtonIcon, (prevProps, nextProps) => {
 	return JSON.stringify(prevProps) === JSON.stringify(nextProps);

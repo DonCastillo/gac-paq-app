@@ -1,50 +1,73 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Keyboard, StyleSheet, TouchableWithoutFeedback, View } from "react-native";
-import { SettingContext } from "store/settings";
-import { translate, translateQuestionLabel } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
-import { getQuestionType } from "utils/questions";
-import QuestionType from "constants/question_type";
+import Question from "constants/question.enum";
 import QuestionSelect from "components/kid/QuestionSelect";
-import { ResponseContext } from "store/responses";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import QuestionSelectRegion from "components/kid/QuestionSelectRegion";
-import { getResponse } from "utils/response";
-import { getIntroductoryBackground } from "utils/background";
+import { addResponse, getResponse } from "utils/response.utils";
+import { getIntroductoryBackground } from "utils/background.utils";
 import QuestionInput from "components/kid/QuestionInput";
-import Mode from "constants/mode";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	getMode,
+	nextPage,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { changeMode } from "utils/mode.utils";
+import { getQuestionType } from "utils/type.utils";
+import { translatePage, translateQuestionLabel } from "utils/translate.utils";
+import type { TranslatedIntroQuestionType } from "interface/union.type";
+import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 
-export default function QuestionSingleKid(): React.ReactElement {
+const QuestionSingleKid = (): React.ReactElement => {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const colorTheme = useSelector(getColorTheme);
+	const mode = useSelector(getMode);
+	const device = useSelector(getDevice);
+	const { color200 } = colorTheme;
+
+	// state
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
 
-	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
-		settingCtx.settingState;
-	const { color200 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+	// translations
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as TranslatedIntroQuestionType;
+
 	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
+		translatedPage.kid_label,
+		translatedPage.adult_label,
 		mode,
 	);
+
 	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
+		translatedPage.kid_sublabel ?? "",
+		translatedPage.adult_sublabel ?? "",
 		mode,
 	);
-	const questionType = translatedPage !== null ? getQuestionType(translatedPage) : null;
+
+	const questionType = getQuestionType(translatedPage.type);
+
 	let questionComponent = <></>;
 
 	// set background screen dynamically
@@ -60,8 +83,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"bothCurrentPage"}
 					colorTheme={color200}
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		} else {
@@ -69,7 +92,7 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"next"}
 					colorTheme={color200}
-					onNext={() => settingCtx.nextPage()}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		}
@@ -81,8 +104,8 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"bothSelectedValue"}
 					colorTheme={color200}
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.nextPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => dispatch(nextPage())}
 				/>,
 			);
 		} else {
@@ -90,85 +113,48 @@ export default function QuestionSingleKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"prev"}
 					colorTheme={color200}
-					onPrev={() => settingCtx.prevPage()}
+					onPrev={() => dispatch(prevPage())}
 				/>,
 			);
 		}
 	}, [selectedValue]);
 
 	useEffect(() => {
-		const response = responseCtx.responses;
-		if (Object.keys(response).length > 0) {
-			setSelectedValue(
-				getResponse(
-					mode,
-					currentPage.section,
-					currentPage.sectionNumber,
-					currentPage.sectionPageNumber,
-					response,
-				),
-			);
-		}
+		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
 	 */
-	function changeHandler(value: string | null): void {
-		responseCtx.addResponse({
-			ident: currentPage.page.ident,
-			label: currentPage.page.name,
-			answer: value,
-			pageNumber: currentPage.pageNumber,
-			mode,
-			section: currentPage.section,
-			sectionNumber: currentPage.sectionNumber,
-			sectionPageNumber: currentPage.sectionPageNumber,
-		});
+	const changeHandler = (value: string | null): void => {
+		addResponse(value);
 		setSelectedValue(value);
 
 		// set mode
 		if (currentPage.page.ident === "mode") {
-			if (value === "adult") {
-				settingCtx.setMode(Mode.Adult);
-			} else if (value === "child") {
-				settingCtx.setMode(Mode.Kid);
-			} else if (value === "teen") {
-				settingCtx.setMode(Mode.Teen);
-			} else {
-				settingCtx.setMode(undefined);
-			}
-			settingCtx.reloadExtroFeedbackPages();
+			changeMode(value);
 		}
-	}
+	};
 
-	if (questionType === QuestionType.QuestionDropdown) {
+	if (questionType === Question.QuestionDropdown) {
+		const questionCasted = translatedPage as QuestionDropdownInterface;
 		questionComponent = (
 			<QuestionSelect
 				key={currentPageNumber}
-				options={translatedPage?.choices}
+				options={questionCasted.choices}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 				dropdownOpen={dropdownOpen}
 				setDropdownOpen={setDropdownOpen}
 			/>
 		);
-	} else if (questionType === QuestionType.QuestionRegion) {
-		questionComponent = (
-			<QuestionSelectRegion
-				key={currentPageNumber}
-				onChange={changeHandler}
-				selectedValue={selectedValue}
-				dropdownOpen={dropdownOpen}
-				setDropdownOpen={setDropdownOpen}
-			/>
-		);
-	} else if (questionType === QuestionType.QuestionInput) {
+	} else if (questionType === Question.QuestionInput) {
+		const questionCasted = translatedPage as QuestionInputInterface;
 		questionComponent = (
 			<QuestionInput
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				placeholder={translatedPage?.placeholder}
+				placeholder={questionCasted.placeholder}
 				onChange={changeHandler}
 			/>
 		);
@@ -218,7 +204,9 @@ export default function QuestionSingleKid(): React.ReactElement {
 			</View>
 		</TouchableWithoutFeedback>
 	);
-}
+};
+
+export default QuestionSingleKid;
 
 const styles = StyleSheet.create({
 	container: {

@@ -1,33 +1,21 @@
-import type ButtonInterface from "interface/button";
+import type { LangButtonInterface } from "interface/button";
 
-const StartedButton: ButtonInterface[] = [
-	{
-		id: 1,
-		lets_get_started_button_id: 1,
+const StartedButton: LangButtonInterface = {
+	"en-CA": {
 		label: "Let's Get Started",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		lets_get_started_button_id: 1,
+	"zh-CN": {
+		label: "开始吧",
+	},
+	"es-ES": {
 		label: "Botón Empezar",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		lets_get_started_button_id: 1,
+	"fr-CA": {
 		label: "Bouton Commencer",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+	"es-MX": {
+		label: "Botón Empezar",
+	},
+};
 
 export default StartedButton;

@@ -1,9 +1,15 @@
 import { StyleSheet, View, Text } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useContext, useState, useEffect, memo } from "react";
-import { SettingContext } from "store/settings";
+import React, { useState, useEffect, memo } from "react";
 import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
+import { useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getSectionTitles,
+} from "store/settings/settingsSlice";
 
 const ICON_SIZE = 30;
 
@@ -11,9 +17,12 @@ interface PropsInterface {
 	sectionTitle?: string;
 }
 
-function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { currentPageNumber, currentPage, sectionTitles, device } = settingCtx.settingState;
+const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const sectionTitles = useSelector(getSectionTitles);
+	const device = useSelector(getDevice);
+
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
 
 	useEffect(() => {
@@ -25,7 +34,9 @@ function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 		}
 	}, [currentPageNumber]);
 
-	function audioHandler(): void {}
+	const audioHandler = (): void => {
+		console.log("audio pressed from the toolbar");
+	};
 
 	return (
 		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
@@ -56,7 +67,7 @@ function Toolbar({ sectionTitle }: PropsInterface): React.ReactElement {
 			/>
 		</View>
 	);
-}
+};
 
 export default memo(Toolbar);
 

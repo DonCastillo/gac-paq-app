@@ -1,37 +1,33 @@
-import ScreenType from "constants/screen_type";
-import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
+import Screen from "constants/screen.enum";
+import Question from "constants/question.enum";
+import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const AgePage: QuestionDropdownPayloadInterface = {
 	ident: "mode",
 	name: "mode",
-	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 4,
-			question_dropdown_id: 2,
+	type: Screen.SingleQuestion,
+	translations: {
+		"en-CA": {
+			type: Question.QuestionDropdown,
 			heading: "Welcome!",
 			label: "Who's taking this questionnaire?",
 			kid_label: "Who's taking this questionnaire?",
 			adult_label: "Who's taking this questionnaire?",
 			choices: [
 				{
-					text: "Child",
+					label: "Child",
 					value: "child",
 				},
 				{
-					text: "Adolescent",
+					label: "Adolescent",
 					value: "teen",
 				},
 				{
-					text: "Parent",
+					label: "Parent",
 					value: "adult",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.generic.pages.phone.mode,
@@ -47,7 +43,112 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
-	],
+		"zh-CN": {
+			type: Question.QuestionDropdown,
+			heading: "欢迎!",
+			label: "谁在填写这份问卷?",
+			kid_label: "谁在填写这份问卷?",
+			adult_label: "谁在填写这份问卷?",
+			choices: [
+				{
+					label: "儿童",
+					value: "child",
+				},
+				{
+					label: "青少年",
+					value: "teen",
+				},
+				{
+					label: "家长",
+					value: "adult",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+			},
+		},
+		"es-MX": {
+			type: Question.QuestionDropdown,
+			heading: "¡Bienvenido!",
+			label: "¿Quién está tomando este cuestionario?",
+			kid_label: "¿Quién está tomando este cuestionario?",
+			adult_label: "¿Quién está tomando este cuestionario?",
+			choices: [
+				{
+					label: "Niño",
+					value: "child",
+				},
+				{
+					label: "Adolescente",
+					value: "teen",
+				},
+				{
+					label: "Padre",
+					value: "adult",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+			},
+		},
+		"fr-CA": {
+			type: Question.QuestionDropdown,
+			heading: "Bienvenue!",
+			label: "Qui remplit ce questionnaire?",
+			kid_label: "Qui remplit ce questionnaire?",
+			adult_label: "Qui remplit ce questionnaire?",
+			choices: [
+				{
+					label: "Enfant",
+					value: "child",
+				},
+				{
+					label: "Adolescent",
+					value: "teen",
+				},
+				{
+					label: "Parent",
+					value: "adult",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+			},
+		},
+	},
 };
 
 export default AgePage;

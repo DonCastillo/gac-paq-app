@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
-import type ResponseInterface from "interface/response";
-import SectionType from "constants/section_type";
+import type { ResponseInterface } from "interface/payload.type";
+import Section from "constants/section.enum";
 
 export interface ResponseContextInterface {
 	responses: Record<string, ResponseInterface>;
@@ -44,7 +44,7 @@ function responseReducer(state: Record<string, ResponseInterface>, action: any):
 
 			let propertyName = "";
 
-			if (newResponse.section === SectionType.Extro) {
+			if (newResponse.section === Section.Extro) {
 				propertyName = `[${newResponse.mode}][${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
 			} else {
 				propertyName = `[${newResponse.section}][${newResponse.sectionNumber}][${newResponse.sectionPageNumber}]`;
@@ -76,7 +76,7 @@ function responseReducer(state: Record<string, ResponseInterface>, action: any):
 		case "CLEAR_QUESTION_RESPONSES": {
 			const newState = {};
 			for (const [key, value] of Object.entries(state)) {
-				if (value.section !== SectionType.Question) {
+				if (value.section !== Section.Question) {
 					newState[key] = value;
 				}
 			}
@@ -85,7 +85,7 @@ function responseReducer(state: Record<string, ResponseInterface>, action: any):
 		case "CLEAR_INTRO_RESPONSES": {
 			const newState = {};
 			for (const [key, value] of Object.entries(state)) {
-				if (value.section !== SectionType.Intro) {
+				if (value.section !== Section.Intro) {
 					newState[key] = value;
 				}
 			}
@@ -94,7 +94,7 @@ function responseReducer(state: Record<string, ResponseInterface>, action: any):
 		case "CLEAR_FEEDBACK_RESPONSES": {
 			const newState = {};
 			for (const [key, value] of Object.entries(state)) {
-				if (value.section !== SectionType.Feedback) {
+				if (value.section !== Section.Feedback) {
 					newState[key] = value;
 				}
 			}
@@ -103,7 +103,7 @@ function responseReducer(state: Record<string, ResponseInterface>, action: any):
 		case "CLEAR_EXTRO_RESPONSES": {
 			const newState = {};
 			for (const [key, value] of Object.entries(state)) {
-				if (value.section !== SectionType.Extro) {
+				if (value.section !== Section.Extro) {
 					newState[key] = value;
 				}
 			}

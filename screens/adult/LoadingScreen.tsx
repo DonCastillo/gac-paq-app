@@ -1,16 +1,19 @@
 import React from "react";
 import { Text, View, StyleSheet, ActivityIndicator } from "react-native";
-import PropTypes from "prop-types";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 
-LoadingScreen.propTypes = {
-	text: PropTypes.string,
-	image: PropTypes.string,
-	color: PropTypes.string,
-};
+interface LoadingScreenProps {
+	text: string;
+	image?: string;
+	color?: string;
+}
 
-export default function LoadingScreen({ text, image = "", color = "white" }): React.ReactElement {
+const LoadingScreen = ({
+	text,
+	image = "",
+	color = "white",
+}: LoadingScreenProps): React.ReactElement => {
 	return (
 		<View style={styles.container}>
 			<Main>
@@ -24,7 +27,9 @@ export default function LoadingScreen({ text, image = "", color = "white" }): Re
 			</Main>
 		</View>
 	);
-}
+};
+
+export default LoadingScreen;
 
 const styles = StyleSheet.create({
 	container: {

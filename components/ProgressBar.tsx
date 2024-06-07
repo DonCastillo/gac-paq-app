@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import * as Progress from "react-native-progress";
 
-export default function ProgressBar(): React.ReactElement {
+const ProgressBar = (): React.ReactElement => {
 	return (
 		<View style={styles.container}>
 			<Progress.Bar
@@ -15,7 +15,9 @@ export default function ProgressBar(): React.ReactElement {
 			/>
 		</View>
 	);
-}
+};
+
+export default ProgressBar;
 
 const styles = StyleSheet.create({
 	container: {

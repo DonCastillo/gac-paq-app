@@ -1,7 +1,8 @@
-import React, { memo, useContext } from "react";
+import React, { memo } from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { SettingContext } from "store/settings";
-import { moderateScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
+import { moderateScale } from "utils/responsive.utils";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -9,13 +10,12 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-function QuestionLabel({
+const QuestionLabel = ({
 	children,
 	customStyle = {},
 	textStyle = {},
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const device = useSelector(getDevice);
 	return (
 		<View style={[styles.container, customStyle]}>
 			<Text
@@ -38,7 +38,7 @@ function QuestionLabel({
 			</Text>
 		</View>
 	);
-}
+};
 
 export default memo(QuestionLabel, (prevProps, nextProps) => {
 	return JSON.stringify(prevProps) === JSON.stringify(nextProps);

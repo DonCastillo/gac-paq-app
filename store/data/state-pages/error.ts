@@ -1,42 +1,33 @@
-import ScreenType from "constants/screen_type";
-import type PagePayloadInterface from "interface/directus/page-payload";
+import Screen from "constants/screen.enum";
+import type { PagePayloadInterface } from "interface/payload.type";
 
 const ErrorPage: PagePayloadInterface = {
+	ident: "error_page",
 	title: "Error Page",
 	name: "Error Page",
-	type: ScreenType.Page,
-	translations: [
-		{
-			id: 1,
-			pages_id: 1,
+	type: Screen.Page,
+	translations: {
+		"en-CA": {
 			heading: "Error",
 			description: "Oh no, Your answers were not sent.\n\nPlease try again. ",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-		{
-			id: 2,
-			pages_id: 1,
+		"zh-CN": {
+			heading: "错误",
+			description: "哦，您的答案未发送。\n\n请重试。",
+		},
+		"es-MX": {
 			heading: "Error",
 			description: "Oh no, tus respuestas no fueron enviadas.\n\nPor favor, inténtalo de nuevo.",
-			languages_id: {
-				name: "Spanish - Spain",
-				lang_code: "es-ES",
-			},
 		},
-		{
-			id: 3,
-			pages_id: 1,
+		"es-ES": {
+			heading: "Error",
+			description: "Oh no, tus respuestas no fueron enviadas.\n\nPor favor, inténtalo de nuevo.",
+		},
+		"fr-CA": {
 			heading: "Erreur",
 			description: "Oh non, vos réponses n'ont pas été envoyées.\n\nVeuillez réessayer.",
-			languages_id: {
-				name: "French - Canada",
-				lang_code: "fr-CA",
-			},
 		},
-	],
+	},
 };
 
 export default ErrorPage;

@@ -1,33 +1,21 @@
-import type ButtonInterface from "interface/button";
+import type { LangButtonInterface } from "interface/button";
 
-const ContinueButton: ButtonInterface[] = [
-	{
-		id: 1,
-		continue_button_id: 1,
+const ContinueButton: LangButtonInterface = {
+	"en-CA": {
 		label: "Continue",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		continue_button_id: 1,
+	"zh-CN": {
+		label: "继续",
+	},
+	"es-ES": {
 		label: "Continuar",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		continue_button_id: 1,
+	"fr-CA": {
 		label: "Continuer",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+	"es-MX": {
+		label: "Continuar",
+	},
+};
 
 export default ContinueButton;

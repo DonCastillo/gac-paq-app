@@ -1,14 +1,14 @@
-import ScreenType from "constants/screen_type";
-import type QuestionCheckboxPayloadInterface from "interface/directus/question-checkbox-payload";
+import Screen from "constants/screen.enum";
+import Question from "constants/question.enum";
+import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
 
 const Difficulties: QuestionCheckboxPayloadInterface = {
 	ident: "child_difficulties",
 	name: "child_difficulties",
-	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_checkbox_id: 8,
+	type: Screen.SingleQuestion,
+	translations: {
+		"en-CA": {
+			type: Question.QuestionCheckbox,
 			heading: "Question 25",
 			label:
 				"Please indicate if your child has difficulties with any of the following in their daily activities.",
@@ -20,52 +20,207 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 			adult_sublabel: "Select all that apply",
 			choices: [
 				{
-					text: "Hearing",
+					label: "Hearing",
 					value: "Hearing",
 				},
 				{
-					text: "Seeing",
+					label: "Seeing",
 					value: "Seeing",
 				},
 				{
-					text: "Speech",
+					label: "Speech",
 					value: "Speech",
 				},
 				{
-					text: "Mobility",
+					label: "Mobility",
 					value: "Mobility",
 				},
 				{
-					text: "Agility",
+					label: "Agility",
 					value: "Agility",
 				},
 				{
-					text: "Pain",
+					label: "Pain",
 					value: "Pain",
 				},
 				{
-					text: "Memory",
+					label: "Memory",
 					value: "Memory",
 				},
 				{
-					text: "Other",
+					label: "Other",
 					value: "Other",
 				},
 				{
-					text: "Prefer not to say",
+					label: "Prefer not to say",
 					value: "Prefer not to say",
 				},
 				{
-					text: "None of the above, they don't have difficulties",
+					label: "None of the above, they don't have difficulties",
 					value: "None of the above",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+		"zh-CN": {
+			type: Question.QuestionCheckbox,
+			heading: "第二十五题",
+			label: "请指出您的孩子在日常活动中是否有以下任何困难。",
+			kid_label: "请指出您的孩子在日常活动中是否有以下任何困难。",
+			adult_label: "请指出您的孩子在日常活动中是否有以下任何困难。",
+			kid_sublabel: "选择所有符合的",
+			adult_sublabel: "选择所有符合的",
+			choices: [
+				{
+					label: "听觉",
+					value: "Hearing",
+				},
+				{
+					label: "视觉",
+					value: "Seeing",
+				},
+				{
+					label: "口语",
+					value: "Speech",
+				},
+				{
+					label: "运动",
+					value: "Mobility",
+				},
+				{
+					label: "敏捷",
+					value: "Agility",
+				},
+				{
+					label: "痛觉",
+					value: "Pain",
+				},
+				{
+					label: "记忆",
+					value: "Memory",
+				},
+				{
+					label: "其他",
+					value: "Other",
+				},
+				{
+					label: "不想说",
+					value: "Prefer not to say",
+				},
+				{
+					label: "没有以上任何困难",
+					value: "None of the above",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 25",
+			label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			adult_label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_sublabel: "Seleccione todas las opciones que correspondan",
+			adult_sublabel: "Seleccione todas las opciones que correspondan",
+			choices: [
+				{
+					label: "Oír",
+					value: "Hearing",
+				},
+				{
+					label: "Ver",
+					value: "Seeing",
+				},
+				{
+					label: "Hablar ",
+					value: "Speech",
+				},
+				{
+					label: "Movimiento",
+					value: "Mobility",
+				},
+				{
+					label: "Agilidad",
+					value: "Agility",
+				},
+				{
+					label: "Dolor",
+					value: "Pain",
+				},
+				{
+					label: "Memoria",
+					value: "Memory",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Ninguno de los anteriores, no tiene dificultades",
+					value: "None of the above",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 25",
+			label:
+				"Veuillez indiquer si votre enfant rencontre des difficultés avec n'importe lequel des éléments suivants dans ses activités quotidiennes",
+			kid_label:
+				"Veuillez indiquer si votre enfant rencontre des difficultés avec n'importe lequel des éléments suivants dans ses activités quotidiennes",
+			adult_label:
+				"Veuillez indiquer si votre enfant rencontre des difficultés avec n'importe lequel des éléments suivants dans ses activités quotidiennes",
+			kid_sublabel: "sélectionnez toutes les réponses qui s'appliquent",
+			adult_sublabel: "sélectionnez toutes les réponses qui s'appliquent",
+			choices: [
+				{
+					label: "Audition",
+					value: "Hearing",
+				},
+				{
+					label: "Vision",
+					value: "Seeing",
+				},
+				{
+					label: "Parole",
+					value: "Speech",
+				},
+				{
+					label: "Mobilité",
+					value: "Mobility",
+				},
+				{
+					label: "Agilité",
+					value: "Agility",
+				},
+				{
+					label: "Douleur",
+					value: "Pain",
+				},
+				{
+					label: "Mémoire",
+					value: "Memory",
+				},
+				{
+					label: "Autre",
+					value: "Other",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Aucune de ces réponses, il (elle) n'a pas de difficultés",
+					value: "None of the above",
+				},
+			],
+		},
+	},
 };
 
 export default Difficulties;

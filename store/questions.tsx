@@ -1,7 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import type RegionInterface from "interface/region";
-import type LanguageInterface from "interface/language";
-import Regions from "store/data/regions";
+import type { LanguageInterface } from "interface/payload.type";
 import Languages from "store/data/languages";
 import IntroductoryPages from "store/data/introductory-pages";
 import type PagePayloadInterface from "interface/directus/page-payload";
@@ -13,7 +11,7 @@ import ContinueButton from "store/data/buttons/continue";
 import GoButton from "store/data/buttons/go";
 import NextButton from "store/data/buttons/next";
 import StartedButton from "store/data/buttons/started";
-import ScreenType from "constants/screen_type";
+import Screen from "constants/screen.enum";
 import AgreementPhrase from "store/data/phrase/agreement";
 import DonePhrase from "store/data/phrase/done";
 import DontKnowPhrase from "store/data/phrase/dont-know";
@@ -35,7 +33,6 @@ import Transportation8_10 from "./data/questionpages/section-4/transportation_7/
 import Transportation9_11 from "./data/questionpages/section-4/transportation_7/S4Q9_11";
 
 const INITIAL_STATE = {
-	regionOption: Regions,
 	languageOption: Languages,
 	introductoryPages: IntroductoryPages,
 	questionPages: QuestionPages,
@@ -66,7 +63,6 @@ const INITIAL_STATE = {
 
 export const QuestionContext = createContext({
 	questionState: {
-		regionOption: [],
 		languageOption: [],
 		introductoryPages: [],
 		kidExtroPages: [],
@@ -95,7 +91,6 @@ export const QuestionContext = createContext({
 		sectionPages: [],
 	},
 	identifyLastSectionExtroPage: () => {},
-	setRegionOption: (newRegionOptions: RegionInterface[]) => {},
 	setLanguageOption: (newLanguageOptions: LanguageInterface[]) => {},
 	setIntroductoryPages: (
 		newIntroductoryPages: Array<PagePayloadInterface | QuestionDropdownPayloadInterface> | [],
@@ -105,11 +100,6 @@ export const QuestionContext = createContext({
 
 function questionReducer(state: any, action: any): any {
 	switch (action.type) {
-		case "SET_REGION_OPTION":
-			return {
-				...state,
-				regionOption: action.payload,
-			};
 		case "SET_LANGUAGE_OPTION":
 			return {
 				...state,
@@ -123,7 +113,7 @@ function questionReducer(state: any, action: any): any {
 		case "IDENTIFY_LAST_SECTION_EXTRO_PAGE": {
 			const feedbackExtroPages = state.feedbackExtroPages;
 			const lastSectionExtroIndex = feedbackExtroPages.findLastIndex((page: any) => {
-				return page.type === ScreenType.ExtroQuestion;
+				return page.type === Screen.ExtroQuestion;
 			});
 			feedbackExtroPages[lastSectionExtroIndex].isFinal = true;
 			return {
@@ -148,13 +138,6 @@ export default function QuestionContextProvider({
 	children: React.ReactNode;
 }): React.ReactElement {
 	const [questionState, dispatch] = useReducer(questionReducer, INITIAL_STATE);
-
-	function setRegionOption(newRegionOptions: RegionInterface[]): void {
-		dispatch({
-			type: "SET_REGION_OPTION",
-			payload: newRegionOptions,
-		});
-	}
 
 	function setLanguageOption(newLanguageOptions: LanguageInterface[]): void {
 		dispatch({
@@ -187,7 +170,6 @@ export default function QuestionContextProvider({
 
 	const value: any = {
 		questionState,
-		setRegionOption,
 		setLanguageOption,
 		setIntroductoryPages,
 		identifyLastSectionExtroPage,

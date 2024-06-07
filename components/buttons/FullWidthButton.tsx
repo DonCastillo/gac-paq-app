@@ -9,7 +9,12 @@ interface Props {
 	customStyle?: any;
 }
 
-function FullWidthButton({ children, onPress, textStyle, customStyle }: Props): React.ReactElement {
+const FullWidthButton = ({
+	children,
+	onPress,
+	textStyle,
+	customStyle,
+}: Props): React.ReactElement => {
 	return (
 		<View style={[style.container, customStyle]}>
 			<Pressable onPress={onPress}>
@@ -17,7 +22,7 @@ function FullWidthButton({ children, onPress, textStyle, customStyle }: Props): 
 			</Pressable>
 		</View>
 	);
-}
+};
 
 const style = StyleSheet.create({
 	container: {

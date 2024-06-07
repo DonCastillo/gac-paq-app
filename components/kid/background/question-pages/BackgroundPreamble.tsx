@@ -6,7 +6,7 @@ import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullS
 interface PropsInterface {
 	fillColor: string;
 }
-function BackgroundPreamble({ fillColor }: PropsInterface): React.ReactElement {
+const BackgroundPreamble = ({ fillColor }: PropsInterface): React.ReactElement => {
 	return (
 		<AbsoluteFullScreenContainer>
 			<StarsBlue
@@ -23,7 +23,7 @@ function BackgroundPreamble({ fillColor }: PropsInterface): React.ReactElement {
 			/>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(BackgroundPreamble);
 

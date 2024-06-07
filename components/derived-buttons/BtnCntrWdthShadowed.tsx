@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
-import { SettingContext } from "store/settings";
 import { Shadow } from "react-native-shadow-2";
 import { DefaultStyle } from "styles/general";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 
 interface Props {
 	label: string;
@@ -10,9 +11,8 @@ interface Props {
 	colorTheme?: string;
 }
 
-function BtnCntrWdthShadowed({ label, onPress, colorTheme }: Props): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+const BtnCntrWdthShadowed = ({ label, onPress, colorTheme }: Props): React.ReactElement => {
+	const device = useSelector(getDevice);
 
 	const ButtonContainerComponent = (
 		<ButtonContainerWidth
@@ -53,6 +53,6 @@ function BtnCntrWdthShadowed({ label, onPress, colorTheme }: Props): React.React
 	} else {
 		return ButtonContainerComponent;
 	}
-}
+};
 
 export default BtnCntrWdthShadowed;

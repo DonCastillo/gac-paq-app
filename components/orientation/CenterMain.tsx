@@ -1,13 +1,15 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
 
-CenterMain.propTypes = {
-	children: PropTypes.node,
-};
-export default function CenterMain({ children }): React.ReactElement {
-	return <View style={styles.container}>{children}</View>;
+interface Props {
+	children: React.ReactNode;
 }
+
+const CenterMain = ({ children }: Props): React.ReactElement => {
+	return <View style={styles.container}>{children}</View>;
+};
+
+export default CenterMain;
 
 const styles = StyleSheet.create({
 	container: {

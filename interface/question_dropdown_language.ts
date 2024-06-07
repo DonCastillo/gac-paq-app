@@ -1,4 +1,4 @@
-import type LanguageInterface from "interface/language";
+import type { LanguageInterface } from "interface/payload.type";
 import type { ImageDeviceInterface } from "interface/images";
 
 export default interface QuestionDropdownLanguageInterface {

@@ -1,24 +1,18 @@
-import ScreenType from "constants/screen_type";
-import type PreamblePayloadInterface from "interface/directus/preamble-payload";
+import Screen from "constants/screen.enum";
+import type { PreamblePayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S4Preamble: PreamblePayloadInterface = {
 	ident: "transportation_preamble",
 	heading: "Transportation",
-	type: ScreenType.Preamble,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	type: Screen.Preamble,
+	translations: {
+		"en-CA": {
 			heading: "Transportation",
 			subheading: "Section 4",
 			description: {
 				kid: "This section is about how you go to different places.",
 				adult: "This section is about how your child goes to different places.",
-			},
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
 			},
 			images: {
 				kid: {
@@ -35,7 +29,74 @@ const S4Preamble: PreamblePayloadInterface = {
 				},
 			},
 		},
-	],
+		"zh-CN": {
+			heading: "交通",
+			subheading: "第4部分",
+			description: {
+				kid: "本部分是关于一些你如何去不同的地方的问题。",
+				adult: "本部分是关于一些您的孩子如何去不同的地方的问题。",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+			},
+		},
+		"es-MX": {
+			heading: "Transporte",
+			subheading: "Sección 4",
+			description: {
+				kid: "Esta sección se trata de cómo te desplazas a diferentes lugares.",
+				adult: "Esta sección se trata de cómo su hija o hijo se desplaza a diferentes lugares.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+			},
+		},
+		"fr-CA": {
+			heading: "Transport",
+			subheading: "Section 4",
+			description: {
+				kid: "Cette section porte sur comment tu vas à différents endroits.",
+				adult:
+					"Cette section porte sur les moyens que ton enfant utilise pour aller à différents endroits.",
+			},
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_4.phone,
+					tablet: Images.kids.intro.section_4.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_4.phone,
+					tablet: Images.adults.intro.section_4.tablet,
+				},
+			},
+		},
+	},
 };
 
 export default S4Preamble;

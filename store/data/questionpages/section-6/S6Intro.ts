@@ -1,21 +1,15 @@
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import Screen from "constants/screen.enum";
+import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S6Intro: SectionPayloadInterface = {
 	ident: "play_intro",
 	heading: "Play or Free Time",
-	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	type: Screen.IntroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.kids.intro.section_6.phone,
@@ -31,7 +25,61 @@ const S6Intro: SectionPayloadInterface = {
 				},
 			},
 		},
-	],
+		"zh-CN": {
+			heading: "自由活动或玩耍的时间",
+			subheading: "第6部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_6.phone,
+					tablet: Images.kids.intro.section_6.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+			},
+		},
+		"es-MX": {
+			heading: "Juego O Tiempo Libre",
+			subheading: "Sección 6",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_6.phone,
+					tablet: Images.kids.intro.section_6.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+			},
+		},
+		"fr-CA": {
+			heading: "Jouer ou temps libre",
+			subheading: "Section 6",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_6.phone,
+					tablet: Images.kids.intro.section_6.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_6.phone,
+					tablet: Images.adults.intro.section_6.tablet,
+				},
+			},
+		},
+	},
 };
 
 export default S6Intro;

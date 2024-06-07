@@ -1,20 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
-import { horizontalScale, verticalScale } from "utils/responsive";
+import { horizontalScale, verticalScale } from "utils/responsive.utils";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;
 	customStyle?: object;
 }
 
-export default function QuestionContainer({
-	children,
-	customStyle,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+const QuestionContainer = ({ children, customStyle }: PropsInterface): React.ReactElement => {
+	const device = useSelector(getDevice);
 
 	const maxWidth = horizontalScale(
 		device.orientation === "landscape" ? 250 : device.isTablet ? 300 : 350,
@@ -34,7 +31,9 @@ export default function QuestionContainer({
 			{children}
 		</View>
 	);
-}
+};
+
+export default QuestionContainer;
 
 const styles = StyleSheet.create({
 	container: {

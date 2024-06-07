@@ -1,13 +1,14 @@
 import { StyleSheet } from "react-native";
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import DropDownPicker from "react-native-dropdown-picker";
-import { SettingContext } from "store/settings";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
 import { GeneralStyle } from "styles/general";
-import { moderateScale, verticalScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
+import { useSelector } from "react-redux";
+import { getColorTheme, getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: QuestionRadioItemInterface[];
+	options: ChoiceIcon[] | Choice[];
 	selectedValue: string | null;
 	onSelect: (value: string) => void;
 	dropdownOpen: boolean;
@@ -15,19 +16,20 @@ interface PropsInterface {
 	dropdownMinHeight?: number | "100%";
 }
 
-export default function DropDownSelector({
+const DropDownSelector = ({
 	options,
 	selectedValue,
 	onSelect,
 	dropdownOpen,
 	setDropdownOpen,
 	dropdownMinHeight = "100%",
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPageNumber, device } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const colorTheme = useSelector(getColorTheme);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
-	const [items, setItems] = useState<QuestionRadioItemInterface[]>(options);
+	const [items, setItems] = useState<ChoiceIcon[] | Choice[]>(options);
 
 	useEffect(() => {
 		if (items !== options) {
@@ -96,7 +98,9 @@ export default function DropDownSelector({
 			/>
 		</>
 	);
-}
+};
+
+export default DropDownSelector;
 
 const styles = StyleSheet.create({
 	container: {

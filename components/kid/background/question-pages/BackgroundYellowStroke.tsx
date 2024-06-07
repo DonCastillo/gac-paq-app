@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import Images from "styles/images/index";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
-function BackgroundYellowStroke(): React.ReactElement {
+const BackgroundYellowStroke = (): React.ReactElement => {
 	const YellowStroke = Images.kids.doodles.yellow_stroke;
 	return (
 		<AbsoluteFullScreenContainer>
@@ -13,7 +13,7 @@ function BackgroundYellowStroke(): React.ReactElement {
 			/>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(BackgroundYellowStroke);
 

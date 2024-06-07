@@ -1,33 +1,21 @@
-import type ButtonInterface from "interface/button";
+import type { LangButtonInterface } from "interface/button";
 
-const GoButton: ButtonInterface[] = [
-	{
-		id: 1,
-		go_button_id: 1,
+const GoButton: LangButtonInterface = {
+	"en-CA": {
 		label: "Go",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		go_button_id: 1,
+	"zh-CN": {
+		label: "去",
+	},
+	"es-ES": {
 		label: "Ir",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		go_button_id: 1,
+	"fr-CA": {
 		label: "Aller",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+	"es-MX": {
+		label: "Ir",
+	},
+};
 
 export default GoButton;

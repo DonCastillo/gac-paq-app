@@ -7,7 +7,6 @@ const INACTIVE_COLOR = "#D8D8D8";
 const DEFAULT_BORDER_WIDTH = 3;
 const DEFAULT_BORDER_RADIUS = 10;
 const DEFAULT_OPTION_FONT_SIZE = 18;
-const DEFAULT_OPTION_SUB_FONT_SIZE = 16;
 const DEFAULT_FIELD_MIN_HEIGHT = 60;
 const DEFAULT_ELEVATION = 2;
 const DEFAULT_SHADOW_COLOR = "#000";
@@ -61,7 +60,6 @@ const GeneralStyle = {
 			maxWidth: 50,
 			marginRight: 15,
 			aspectRatio: 1,
-			// backgroundColor: "purple",
 		},
 	},
 	kid: {
@@ -89,7 +87,6 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		introQuestionLabel: {
-			// fontSize: 25,
 			fontFamily: Font.PoppinsMedium,
 			color: DARK_COLOR,
 		},
@@ -97,7 +94,6 @@ const GeneralStyle = {
 			maxWidth: 500,
 		},
 		questionQuestionLabel: {
-			// fontSize: 23,
 			fontFamily: Font.PoppinsBold,
 			color: DARK_COLOR,
 		},
@@ -114,22 +110,17 @@ const GeneralStyle = {
 			minHeight: DEFAULT_FIELD_MIN_HEIGHT,
 			fontSize: DEFAULT_OPTION_FONT_SIZE,
 		},
-		dropdownPickerListItemContainer: {
-			// height: 60,
-		},
+		dropdownPickerListItemContainer: {},
 		dropdownPickerListContainer: {
 			borderWidth: DEFAULT_BORDER_WIDTH,
 		},
 		dropdownPickerListLabel: {
-			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		dropdownPickerListLabelChosen: {
-			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		dropdownPickerText: {
-			// fontSize: DEFAULT_OPTION_FONT_SIZE,
 			fontFamily: Font.PoppinsRegular,
 		},
 		pageHeading: {
@@ -209,7 +200,6 @@ const GeneralStyle = {
 			marginBottom: 20,
 		},
 		questionComponentContainer: {
-			// marginTop: 10,
 			flex: 1,
 			minWidth: "100%",
 		},
@@ -243,9 +233,7 @@ const GeneralStyle = {
 		},
 		radioContainer: {
 			paddingVertical: 4,
-			// paddingHorizontal: 10,
 			marginBottom: 5,
-			// flex: 1,
 		},
 		radioButton: {
 			height: 25,
@@ -262,10 +250,6 @@ const GeneralStyle = {
 			maxWidth: "100%",
 			flexWrap: "wrap",
 			height: "100%",
-			// backgroundColor: "pink",
-			// flexShrink: 1,
-			// flex: 1,
-			// flexGrow: 1,
 		},
 		pageHeading: {
 			color: "white",

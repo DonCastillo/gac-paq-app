@@ -1,20 +1,19 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import ProgressBar from "components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
-import Images from "styles/images/index";
 import { Logo } from "components/svgs/kid";
+import { useSelector } from "react-redux";
+import { getColorTheme } from "store/settings/settingsSlice";
 
-export default function SplashKid(): JSX.Element {
-	const settingCtx = useContext(SettingContext);
-	const { color100 } = settingCtx.settingState.colorTheme;
+const SplashKid = (): React.ReactElement => {
+	const colorTheme = useSelector(getColorTheme);
+	const { color100 } = colorTheme;
 	const navigation = useNavigation();
-	const SplashImage = Images.kids.graphics.splash_image;
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
@@ -30,7 +29,7 @@ export default function SplashKid(): JSX.Element {
 					<View style={styles.imageContainer}>
 						<Logo />
 					</View>
-					<Heading customStyle={{}}>gacpaq</Heading>
+					<Heading>gacpaq</Heading>
 					<Paragraph
 						customStyle={{
 							color: "#fff",
@@ -45,7 +44,9 @@ export default function SplashKid(): JSX.Element {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default SplashKid;
 
 const styles = StyleSheet.create({
 	container: {

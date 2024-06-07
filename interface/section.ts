@@ -1,4 +1,4 @@
-import type LanguageInterface from "interface/language";
+import type { LanguageInterface } from "interface/payload.type";
 import type { ImageDeviceInterface } from "./images";
 
 export default interface SectionInterface {

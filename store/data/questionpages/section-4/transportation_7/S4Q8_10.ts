@@ -29,6 +29,104 @@ const Transportation8_10 = {
 			},
 		},
 	},
+	"zh-CN": {
+		kid: {
+			wheel: {
+				none: "在过去一周里，你有几天骑车去过哪些地方？",
+				school: "在过去一周里，你有几天骑车去过除了学校以外的地方？",
+				work: "在过去一周里，你有几天骑车去过除了工作以外的地方？",
+				both: "在过去一周里，你有几天骑车去过除了学校或工作以外的地方？",
+			},
+			walk: {
+				none: "在过去一周里，你有几天步行去过哪些地方？",
+				school: "在过去一周里，你有几天步行去过除了学校以外的地方？",
+				work: "在过去一周里，你有几天步行去过除了工作以外的地方？",
+				both: "在过去一周里，你有几天步行去过除了学校或工作以外的地方？",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "在过去一周里，你的孩子有几天骑车去过哪些地方？",
+				school: "在过去一周里，你的孩子有几天骑车去过除了学校以外的地方？",
+				work: "在过去一周里，你的孩子有几天骑车去过除了工作以外的地方？",
+				both: "在过去一周里，你的孩子有几天骑车去过除了学校或工作以外的地方？",
+			},
+			walk: {
+				none: "在过去一周里，你的孩子有几天步行去过哪些地方？",
+				school: "在过去一周里，你的孩子有几天步行去过除了学校以外的地方？",
+				work: "在过去一周里，你的孩子有几天步行去过除了工作以外的地方？",
+				both: "在过去一周里，你的孩子有几天步行去过除了学校或工作以外的地方？",
+			},
+		},
+	},
+	"es-MX": {
+		kid: {
+			wheel: {
+				none: "¿Cuántos días rodaste para ir a lugares la semana pasada?",
+				school:
+					"¿Cuántos días rodaste para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días rodaste para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días rodaste para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+			walk: {
+				none: "¿Cuántos días caminaste para ir a lugares la semana pasada?",
+				school:
+					"¿Cuántos días caminaste para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días caminaste para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días caminaste para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "¿Cuántos días tu hijo rodó para ir a lugares la semana pasada?",
+				school:
+					"¿Cuántos días tu hijo rodó para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+			walk: {
+				none: "¿Cuántos días tu hijo caminó para ir a lugares la semana pasada?",
+				school:
+					"¿Cuántos días tu hijo caminó para ir a lugares que no fueran la escuela la semana pasada?",
+				work: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran el trabajo la semana pasada?",
+				both: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
+			},
+		},
+	},
+	"fr-CA": {
+		kid: {
+			wheel: {
+				none: "Combien de jours as-tu roulé pour te rendre à des endroits la semaine dernière?",
+				school:
+					"Combien de jours as-tu roulé pour te rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours as-tu roulé pour te rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours as-tu roulé pour te rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+			walk: {
+				none: "Combien de jours as-tu marché pour te rendre à des endroits la semaine dernière?",
+				school:
+					"Combien de jours as-tu marché pour te rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours as-tu marché pour te rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours as-tu marché pour te rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits la semaine dernière?",
+				school:
+					"Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+			walk: {
+				none: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits la semaine dernière?",
+				school:
+					"Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que l'école la semaine dernière?",
+				work: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que le travail la semaine dernière?",
+				both: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que l'école ou le travail la semaine dernière?",
+			},
+		},
+	},
 };
 
 export default Transportation8_10;

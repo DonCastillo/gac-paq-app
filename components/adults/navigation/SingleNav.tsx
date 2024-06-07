@@ -1,22 +1,21 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import FullWidthButton from "components/buttons/FullWidthButton";
-import { SettingContext } from "store/settings";
 import { DefaultStyle } from "styles/general";
+import { useSelector } from "react-redux";
+import { getColorTheme } from "store/settings/settingsSlice";
 
-SingleNav.propTypes = {
-	label: PropTypes.string.isRequired,
-	onPress: PropTypes.func.isRequired,
-};
+interface PropsInterface {
+	label: string;
+	onPress: () => void;
+}
 
-export default function SingleNav({ label, onPress }): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
+const SingleNav = ({ label, onPress }: PropsInterface): React.ReactElement => {
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 
-	function nextPage(): void {
+	const nextPage = (): void => {
 		onPress();
-	}
+	};
 
 	return (
 		<FullWidthButton
@@ -33,4 +32,6 @@ export default function SingleNav({ label, onPress }): React.ReactElement {
 			{label}
 		</FullWidthButton>
 	);
-}
+};
+
+export default SingleNav;

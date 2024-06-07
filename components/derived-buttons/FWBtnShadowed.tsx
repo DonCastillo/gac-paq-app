@@ -7,7 +7,7 @@ interface Props {
 	colorTheme?: string;
 }
 
-function FWBtnShadowed({ label, onPress, colorTheme }: Props): React.ReactElement {
+const FWBtnShadowed = ({ label, onPress, colorTheme }: Props): React.ReactElement => {
 	return (
 		<FullWidthButton
 			onPress={onPress}
@@ -30,6 +30,6 @@ function FWBtnShadowed({ label, onPress, colorTheme }: Props): React.ReactElemen
 			{label}
 		</FullWidthButton>
 	);
-}
+};
 
 export default FWBtnShadowed;

@@ -1,16 +1,16 @@
 import React, { createContext, useContext, useReducer } from "react";
-import Mode from "constants/mode";
+import Mode from "constants/mode.enum";
 import Colors from "store/data/colors";
-import { getPage, getPageNumberBasedOnIdent } from "utils/page";
-import type ScreenType from "constants/screen_type";
-import SectionType from "constants/section_type";
-import ButtonLabel from "constants/button_label";
-import PhraseLabel from "constants/phrase_label";
+import { getPage, getPageNumberBasedOnIdent } from "utils/page.utils";
+import type Screen from "constants/screen.enum";
+import Section from "constants/section.enum";
+import ButtonLabel from "constants/button_label.enum";
+import PhraseLabel from "constants/phrase_label.enum";
 import type SectionPayloadInterface from "interface/directus/section-payload";
 import type ExtroPayloadInterface from "interface/directus/extro-payload";
 import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
 import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
-import OrientationType from "constants/orientation_type";
+import Orientation from "constants/orientation.enum";
 import type DeviceInterface from "interface/dimensions";
 import { QuestionContext } from "./questions";
 import { ResponseContext } from "./responses";
@@ -29,15 +29,10 @@ type rawPageInterface =
 	| QuestionRadioPayloadInterface
 	| QuestionRadioImagePayloadInterface;
 export interface pageInterface {
-	screen: ScreenType | null;
+	screen: Screen | null;
 	page: any | null;
 	pageNumber: number | null;
-	section:
-		| SectionType.Intro
-		| SectionType.Question
-		| SectionType.Extro
-		| SectionType.Feedback
-		| null;
+	section: Section.Intro | Section.Question | Section.Extro | Section.Feedback | null;
 	sectionNumber: number | null;
 	sectionPageNumber: number | null;
 }
@@ -95,7 +90,7 @@ const DEFAULT_COLOR_INDEX = 0;
 const DEFAULT_DEVICE: DeviceInterface = {
 	screenWidth: 0,
 	screenHeight: 0,
-	orientation: OrientationType.Portrait,
+	orientation: Orientation.Portrait,
 	isTablet: false,
 	platform: "",
 	isKeyboardOpen: false,
@@ -301,7 +296,7 @@ function settingReducer(state: any, action: any): any {
 			};
 		case "REMOVE_EXTRO_PAGES": {
 			const pagesWithoutExtros = Object.values(state.pages).filter((page: any) => {
-				return page.section !== SectionType.Extro;
+				return page.section !== Section.Extro;
 			});
 			return {
 				...state,
@@ -310,7 +305,7 @@ function settingReducer(state: any, action: any): any {
 		}
 		case "REMOVE_FEEDBACK_PAGES": {
 			const pagesWithoutFeedback = Object.values(state.pages).filter((page: any) => {
-				return page.section !== SectionType.Feedback;
+				return page.section !== Section.Feedback;
 			});
 			return {
 				...state,
@@ -323,10 +318,7 @@ function settingReducer(state: any, action: any): any {
 
 			// remove all extro and feedback pages
 			for (const [key, page] of Object.entries(state.pages)) {
-				if (
-					(page as any).section === SectionType.Extro ||
-					(page as any).section === SectionType.Feedback
-				) {
+				if ((page as any).section === Section.Extro || (page as any).section === Section.Feedback) {
 					continue;
 				} else {
 					newPages = { ...newPages, [key]: page };
@@ -348,7 +340,7 @@ function settingReducer(state: any, action: any): any {
 						pageNumber: ++lastPageNumber,
 						page,
 						screen: page.type,
-						section: SectionType.Extro,
+						section: Section.Extro,
 						sectionNumber: lastSectionNumber,
 						sectionPageNumber: ++index,
 					};
@@ -359,7 +351,7 @@ function settingReducer(state: any, action: any): any {
 						pageNumber: ++lastPageNumber,
 						page,
 						screen: page.type,
-						section: SectionType.Extro,
+						section: Section.Extro,
 						sectionNumber: lastSectionNumber,
 						sectionPageNumber: ++index,
 					};
@@ -377,7 +369,7 @@ function settingReducer(state: any, action: any): any {
 					pageNumber: ++lastPageNumber,
 					page,
 					screen: page.type,
-					section: SectionType.Feedback,
+					section: Section.Feedback,
 					sectionNumber: lastSectionNumber,
 					sectionPageNumber: ++index,
 				};
@@ -778,10 +770,7 @@ export default function SettingContextProvider({
 		}
 
 		if (currentIdent === "transportation_7") {
-			console.log("here is transportation_7");
 			const questionLabels: Transportation7Interface = questionCtx.questionState.Transportation7;
-			console.log("7: ", questionLabels);
-			console.log("7: ", language, mode, attendance);
 			return questionLabels[language][mode][attendance] ?? "";
 		}
 
@@ -817,7 +806,6 @@ export default function SettingContextProvider({
 		const answerValue = responseCtx.getResponseByIdent(currentIdent) ?? null;
 		const skipToPageNumber = skipTo(answerValue);
 		if (skipToPageNumber > 0) {
-			console.log("responses: ", responseCtx);
 			skipPage(skipToPageNumber);
 		} else {
 			nextPage();

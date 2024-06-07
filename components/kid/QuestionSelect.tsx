@@ -1,32 +1,31 @@
 import React from "react";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
 import DropDownSelector from "components/DropDownPicker";
-import { optionText } from "utils/options";
-import type { OptionInterface } from "utils/options";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: OptionInterface[];
+	options: Choice[] | ChoiceIcon[];
 	onChange: (value: string) => void;
 	selectedValue: string | null;
 	dropdownOpen: boolean;
 	setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function QuestionSelect({
+const QuestionSelect = ({
 	options,
 	onChange,
 	selectedValue,
 	dropdownOpen,
 	setDropdownOpen,
-}: PropsInterface): React.ReactElement {
-	const rawItems: QuestionRadioItemInterface[] = optionText(options);
+}: PropsInterface): React.ReactElement => {
 	return (
 		<DropDownSelector
-			options={rawItems}
+			options={options}
 			selectedValue={selectedValue}
 			onSelect={onChange}
 			dropdownOpen={dropdownOpen}
 			setDropdownOpen={setDropdownOpen}
 		/>
 	);
-}
+};
+
+export default QuestionSelect;

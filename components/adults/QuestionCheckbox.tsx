@@ -1,29 +1,30 @@
 import { FlatList } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
-import { SettingContext } from "store/settings";
+import React, { useEffect, useState } from "react";
 import CheckboxOption from "components/adults/subcomponents/CheckboxOption";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 import {
 	extractUserSpecifiedOtherFromArray,
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-} from "utils/options";
+} from "utils/options.utils";
+import { useSelector } from "react-redux";
+import { getCurrentPage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
-	options: QuestionRadioItemInterface[];
+	options: ChoiceIcon[] | Choice[];
 	onSelect: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionCheckbox({
+const QuestionCheckbox = ({
 	options,
 	onSelect,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
+}: PropsInterface): React.ReactElement => {
 	const SEPARATOR = " | ";
-	const settingCtx = useContext(SettingContext);
-	const { currentPage } = settingCtx.settingState;
+	const currentPage = useSelector(getCurrentPage);
+
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -50,29 +51,29 @@ export default function QuestionCheckbox({
 		return selectedValue === "" || selectedValue === null ? [] : selectedValue.split(SEPARATOR);
 	}
 
-	function arrayHasOther(arr: string[]): boolean {
+	const arrayHasOther = (arr: string[]): boolean => {
 		return arr.some(isOtherOption);
-	}
+	};
 
-	function everyNotAnswer(value: string): boolean {
+	const everyNotAnswer = (value: string): boolean => {
 		const finalValue = value.toString().toLowerCase();
 		const currentPageIdent = currentPage?.page.ident;
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return false;
 		}
 		return !["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
-	}
+	};
 
-	function someNotAnswer(value: string): boolean {
+	const someNotAnswer = (value: string): boolean => {
 		const finalValue = value.toString().toLowerCase();
 		const currentPageIdent = currentPage?.page.ident;
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return true;
 		}
 		return ["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
-	}
+	};
 
-	function pressHandler(value: string | null): void {
+	const pressHandler = (value: string | null): void => {
 		let finalSelected = "";
 		let existingSelectedValue = initializeSelectedValue();
 
@@ -131,7 +132,7 @@ export default function QuestionCheckbox({
 		}
 
 		onSelect(finalSelected);
-	}
+	};
 
 	return (
 		<FlatList
@@ -163,4 +164,6 @@ export default function QuestionCheckbox({
 			showsVerticalScrollIndicator={true}
 		/>
 	);
-}
+};
+
+export default QuestionCheckbox;

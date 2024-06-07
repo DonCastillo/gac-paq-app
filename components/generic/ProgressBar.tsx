@@ -1,8 +1,9 @@
-import React, { memo, useContext } from "react";
+import React, { memo } from "react";
 import { StyleSheet, View } from "react-native";
 import * as Progress from "react-native-progress";
-import { SettingContext } from "store/settings";
-import { moderateScale } from "utils/responsive";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
+import { moderateScale } from "utils/responsive.utils";
 
 interface PropsInterface {
 	currentSectionPage: number | null;
@@ -11,14 +12,15 @@ interface PropsInterface {
 	unfilledColor?: string;
 }
 
-function ProgressBar({
-	currentSectionPage,
-	sectionPageTotal,
+const ProgressBar = ({
+	currentSectionPage = 1,
+	sectionPageTotal = 1,
 	filledColor = "#fff",
 	unfilledColor = "rgba(255, 255, 255, 0.82)",
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const device = useSelector(getDevice);
+
+	console.log("ProgressBar", currentSectionPage, sectionPageTotal);
 
 	if (currentSectionPage !== null && sectionPageTotal !== null) {
 		return (
@@ -42,7 +44,7 @@ function ProgressBar({
 	} else {
 		return <></>;
 	}
-}
+};
 
 export default memo(ProgressBar);
 

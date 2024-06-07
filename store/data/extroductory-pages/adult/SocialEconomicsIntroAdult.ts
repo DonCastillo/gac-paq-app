@@ -1,22 +1,15 @@
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import Screen from "constants/screen.enum";
+import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const SocialEconomicsIntroAdult: SectionPayloadInterface = {
 	ident: "about_your_family",
 	heading: "About You",
-
-	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	type: Screen.IntroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "About Your Family",
 			subheading: "Section 8",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.kids.intro.section_7.phone,
@@ -32,7 +25,61 @@ const SocialEconomicsIntroAdult: SectionPayloadInterface = {
 				},
 			},
 		},
-	],
+		"zh-CN": {
+			heading: "关于您的家庭",
+			subheading: "第8部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_7.phone,
+					tablet: Images.kids.intro.section_7.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+			},
+		},
+		"es-MX": {
+			heading: "Acerca de tu familia",
+			subheading: "Sección 8",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_7.phone,
+					tablet: Images.kids.intro.section_7.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+			},
+		},
+		"fr-CA": {
+			heading: "À propos de votre famille",
+			subheading: "Section 8",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_7.phone,
+					tablet: Images.kids.intro.section_7.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+			},
+		},
+	},
 };
 
 export default SocialEconomicsIntroAdult;

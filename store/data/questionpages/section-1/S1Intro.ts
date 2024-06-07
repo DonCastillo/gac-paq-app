@@ -1,20 +1,15 @@
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
+import Screen from "constants/screen.enum";
+import type { SectionPayloadInterface } from "interface/payload.type";
 import Images from "styles/images";
 
 const S1Intro: SectionPayloadInterface = {
 	ident: "school_intro",
-	heading: "School Activities",
-	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 2,
-			heading: "School Activities",
+	heading: "School",
+	type: Screen.IntroQuestion,
+	translations: {
+		"en-CA": {
+			heading: "School",
 			subheading: "Section 1",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 			images: {
 				kid: {
 					phone: Images.kids.intro.section_1.phone,
@@ -30,7 +25,61 @@ const S1Intro: SectionPayloadInterface = {
 				},
 			},
 		},
-	],
+		"zh-CN": {
+			heading: "学校",
+			subheading: "第1部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_1.phone,
+					tablet: Images.kids.intro.section_1.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+			},
+		},
+		"es-MX": {
+			heading: "Escuela O Colegio",
+			subheading: "Sección 1",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_1.phone,
+					tablet: Images.kids.intro.section_1.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+			},
+		},
+		"fr-CA": {
+			heading: "École",
+			subheading: "Section 1",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_1.phone,
+					tablet: Images.kids.intro.section_1.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_1.phone,
+					tablet: Images.adults.intro.section_1.tablet,
+				},
+			},
+		},
+	},
 };
 
 export default S1Intro;
