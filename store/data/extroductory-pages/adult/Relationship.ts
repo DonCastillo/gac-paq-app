@@ -44,6 +44,43 @@ const Relationship: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第二十八题",
+			label: "你和您孩子的关系是？",
+			kid_label: "你和您孩子的关系是？",
+			adult_label: "你和您孩子的关系是？",
+			choices: [
+				{
+					label: "父亲",
+					value: "Father",
+				},
+				{
+					label: "母亲",
+					value: "Mother",
+				},
+				{
+					label: "祖父",
+					value: "Grandfather",
+				},
+				{
+					label: "祖母",
+					value: "Grandmother",
+				},
+				{
+					label: "导师或监护人 ",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "其他",
+					value: "Other",
+				},
+				{
+					label: "不想回答",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",

@@ -88,6 +88,85 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadioImage,
+			heading: "问题 15",
+			label: "在过去一周里，你是怎样去学校的?",
+			kid_label: "在过去一周里，你是怎样去学校的?",
+			adult_label: "在过去一周里，您的孩子是怎样去学校的?",
+			kid_sublabel: "选择你最常用的方式.",
+			adult_sublabel: "选择您的孩子最常用的方式.",
+			choices: [
+				{
+					label: "步行",
+					value: "Walking",
+					images: {
+						kid: Images.kids.options.transportation.walking,
+						adult: Images.adults.options.transportation.walking,
+					},
+				},
+				{
+					label: "骑车",
+					value: "Wheeling",
+					images: {
+						kid: Images.kids.options.transportation.wheeling,
+						adult: Images.adults.options.transportation.wheeling,
+					},
+					sublabel: {
+						kid: "如轮椅、自行车、滑板、推式踏板车、轮滑",
+						adult: "如轮椅、自行车、滑板、推式踏板车、轮滑",
+					},
+				},
+				{
+					label: "校车 ",
+					value: "School bus",
+					images: {
+						kid: Images.kids.options.transportation.school_bus,
+						adult: Images.adults.options.transportation.school_bus,
+					},
+				},
+				{
+					label: "公共交通",
+					value: "Public transit",
+					images: {
+						kid: Images.kids.options.transportation.public_transit,
+						adult: Images.adults.options.transportation.public_transit,
+					},
+					sublabel: {
+						kid: "如公交车、火车、有轨电车、地铁、轮渡",
+						adult: "如公交车、火车、有轨电车、地铁、轮渡",
+					},
+				},
+				{
+					label: "私家车、出租车、卡车或摩托车",
+					value: "Car, taxi, truck, or motorcycle",
+					images: {
+						kid: Images.kids.options.transportation.car,
+						adult: Images.adults.options.transportation.car,
+					},
+				},
+				{
+					label: "其他",
+					value: "Other",
+					images: {
+						kid: Images.kids.options.transportation.other,
+						adult: Images.adults.options.transportation.other,
+					},
+				},
+				{
+					label: "居家上学",
+					value: "Stay home for school",
+					images: {
+						kid: Images.kids.options.transportation.staying_home,
+						adult: Images.adults.options.transportation.staying_home,
+					},
+					label_mode: {
+						kid: "居家上学",
+						adult: "我的孩子居家上学",
+					},
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 15",

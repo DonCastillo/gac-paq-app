@@ -24,6 +24,23 @@ const S1Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 1",
+			label: "在过去一周里，你是否上过学？",
+			kid_label: "在过去一周里，你是否上过学？",
+			adult_label: "在过去一周里，您的孩子是否上过学？",
+			choices: [
+				{
+					label: "是",
+					value: "yes",
+				},
+				{
+					label: "否",
+					value: "no",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 1",

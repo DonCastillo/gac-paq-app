@@ -41,6 +41,39 @@ const Financial: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第三十题",
+			label: "满足家庭的经济需求对您来说难易程度如何？",
+			kid_label: "满足家庭的经济需求对您来说难易程度如何？",
+			adult_label: "满足家庭的经济需求对您来说难易程度如何？",
+			choices: [
+				{
+					label: "非常困难",
+					value: "Very difficult",
+				},
+				{
+					label: "困难 ",
+					value: "Difficult",
+				},
+				{
+					label: "既不容易也不困难",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "容易",
+					value: "Easy",
+				},
+				{
+					label: "非常容易",
+					value: "Very easy",
+				},
+				{
+					label: "不想回答",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",

@@ -41,6 +41,39 @@ const Education: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第二十九题",
+			label: "您的家庭成员完成的最高教育水平是？",
+			kid_label: "您的家庭成员完成的最高教育水平是？",
+			adult_label: "您的家庭成员完成的最高教育水平是？",
+			choices: [
+				{
+					label: "没有受过正规教育",
+					value: "No formal schooling",
+				},
+				{
+					label: "小学",
+					value: "Primary school",
+				},
+				{
+					label: "初中或高中",
+					value: "Secondary or high school",
+				},
+				{
+					label: "职业或学院教育",
+					value: "Vocational/college education",
+				},
+				{
+					label: "高等/大学教育",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "不想回答",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 29",

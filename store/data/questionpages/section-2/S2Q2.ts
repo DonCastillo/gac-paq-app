@@ -44,6 +44,43 @@ const S2Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 9",
+			label: "在过去一周里，你有几天在做家务活？",
+			kid_label: "在过去一周里，你有几天在做家务活？",
+			adult_label: "在过去一周里，您的孩子有几天在做家务活？",
+			choices: [
+				{
+					label: "1 天",
+					value: "1",
+				},
+				{
+					label: "2 天",
+					value: "2",
+				},
+				{
+					label: "3 天",
+					value: "3",
+				},
+				{
+					label: "4 天",
+					value: "4",
+				},
+				{
+					label: "5 天",
+					value: "5",
+				},
+				{
+					label: "6 天",
+					value: "6",
+				},
+				{
+					label: "7 天",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 9",

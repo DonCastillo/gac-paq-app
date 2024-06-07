@@ -36,6 +36,35 @@ const S4Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 16c",
+			label: "通常情况下，你采用该交通方式到工作地点需要多长时间？",
+			kid_label: "通常情况下，你采用该交通方式到工作地点需要多长时间？",
+			adult_label: "通常情况下，您的孩子采用上述方式到工作地点需要多长时间？",
+			choices: [
+				{
+					label: "少于或等于10分钟",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11-20分钟",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21-30分钟",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31-60分钟",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "60分钟以上",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 16c",

@@ -37,6 +37,35 @@ const S3Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 13",
+			label: "在过去一周里，你有多少小时做志愿服务和/或工作？",
+			kid_label: "在过去一周里，你有多少小时做志愿服务和/或工作？",
+			adult_label: "在过去一周里，您的孩子有多少小时做志愿服务和/或工作？",
+			choices: [
+				{
+					label: "每天少于1小时 ",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "每天1-2小时",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "每天2-3小时",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "每天3-4小时",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "每天4小时或以上",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 13",

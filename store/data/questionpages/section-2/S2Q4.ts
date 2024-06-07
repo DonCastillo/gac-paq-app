@@ -52,6 +52,47 @@ const S2Q4: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadioImage,
+			heading: "问题 11",
+			label: "以下哪一项显示了你在做家务时的大部分时间在做的事情？",
+			kid_label: "以下哪一项显示了你在做家务时的大部分时间在做的事情？",
+			adult_label: "以下哪一项显示了您的孩子在做家务活时的大部分时间在做的事情？",
+			choices: [
+				{
+					label: "不动",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.chores.not_moving,
+						adult: Images.adults.options.chores.not_moving,
+					},
+				},
+				{
+					label: "低强度",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.chores.easy_effort,
+						adult: Images.adults.options.chores.easy_effort,
+					},
+				},
+				{
+					label: "中等或高强度",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.chores.medium_effort,
+						adult: Images.adults.options.chores.medium_effort,
+					},
+				},
+				{
+					label: "不知道",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",

@@ -46,6 +46,43 @@ const S4Q10: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 17d",
+			label: "在过去一周里，除了上学或工作，您有多少天骑自行车去其他地方？",
+			kid_label: "在过去一周里，除了上学或工作，您有多少天骑自行车去其他地方？",
+			adult_label: "在过去一周里，除了上学或工作，您的孩子有多少天骑自行车去其他地方？",
+			choices: [
+				{
+					label: "1 天",
+					value: "1",
+				},
+				{
+					label: "2 天",
+					value: "2",
+				},
+				{
+					label: "3 天",
+					value: "3",
+				},
+				{
+					label: "4 天",
+					value: "4",
+				},
+				{
+					label: "5 天",
+					value: "5",
+				},
+				{
+					label: "6 天",
+					value: "6",
+				},
+				{
+					label: "7 天",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17d",

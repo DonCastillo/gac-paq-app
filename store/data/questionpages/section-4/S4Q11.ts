@@ -34,6 +34,31 @@ const S4Q11: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 17e",
+			label: "在平常的日子里，除了上学或工作，您骑自行车去其他地方要花多少时间？",
+			kid_label: "在平常的日子里，除了上学或工作，您骑自行车去其他地方要花多少时间？",
+			adult_label: "在平常的日子里，除了上学或工作，您的孩子骑自行车去其他地方要花多少时间？",
+			choices: [
+				{
+					label: "少于或等于10分钟 ",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11-20分钟",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21-30分钟 ",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "30分钟以上",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17e",

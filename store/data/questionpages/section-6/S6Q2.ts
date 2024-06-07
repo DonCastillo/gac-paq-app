@@ -51,6 +51,47 @@ const S6Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第二十二题",
+			label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
+			kid_label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
+			adult_label: "在过去一周里，您的孩子有几天是做一些能让他们变得更强壮的活动？",
+			choices: [
+				{
+					label: "0天",
+					value: "0",
+				},
+				{
+					label: "1天",
+					value: "1",
+				},
+				{
+					label: "2天",
+					value: "2",
+				},
+				{
+					label: "3天",
+					value: "3",
+				},
+				{
+					label: "4天",
+					value: "4",
+				},
+				{
+					label: "5天",
+					value: "5",
+				},
+				{
+					label: "6天",
+					value: "6",
+				},
+				{
+					label: "7天",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 22",

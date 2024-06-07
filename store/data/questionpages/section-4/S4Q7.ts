@@ -41,6 +41,40 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionCheckbox,
+			heading: "问题 17",
+			label:
+				"在过去一周里，你是否采用积极交通方式（如步行和骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
+			kid_label:
+				"在过去一周里，你是否采用积极交通方式（如步行和骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
+			adult_label:
+				"在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
+			kid_sublabel: "请选择所有适用于你的答案。",
+			adult_sublabel: "请选择所有适用于您的孩子的答案。",
+			choices: [
+				{
+					label: "是的，我步行去 ",
+					value: "Walked",
+					label_mode: {
+						kid: "是的，我步行去 ",
+						adult: "是的，他/她步行去",
+					},
+				},
+				{
+					label: "是的，我骑自行车去 ",
+					value: "Wheeled",
+					label_mode: {
+						kid: "是的，我骑自行车去 ",
+						adult: "是的，他/她骑自行车去 ",
+					},
+				},
+				{
+					label: "否",
+					value: "No",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 17",

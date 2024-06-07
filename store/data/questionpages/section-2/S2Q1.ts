@@ -24,6 +24,23 @@ const S2Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 8",
+			label: "在过去一周里，你有参与做家务活吗？",
+			kid_label: "在过去一周里，你有参与做家务活吗？",
+			adult_label: "在过去一周里，您的孩子有参与做家务活吗？",
+			choices: [
+				{
+					label: "是",
+					value: "yes",
+				},
+				{
+					label: "否",
+					value: "no",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 8",

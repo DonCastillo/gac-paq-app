@@ -35,6 +35,31 @@ const S5Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 20",
+			label: "在过去一周里，你在做上述这些活动时，通常每天持续多长时间？",
+			kid_label: "在过去一周里，你在做上述这些活动时，通常每天持续多长时间？",
+			adult_label: "在过去一周里，您的孩子在做上述这些活动时，通常每天持续多长时间？",
+			choices: [
+				{
+					label: "每天少于或等于30分钟",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "每天31-60分钟",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "每天1-1.5小时",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "每天1.5小时以上",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 20",

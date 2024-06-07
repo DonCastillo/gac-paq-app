@@ -61,6 +61,57 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionCheckbox,
+			heading: "第二十五题",
+			label: "请指出您的孩子在日常活动中是否有以下任何困难。",
+			kid_label: "请指出您的孩子在日常活动中是否有以下任何困难。",
+			adult_label: "请指出您的孩子在日常活动中是否有以下任何困难。",
+			kid_sublabel: "选择所有符合的",
+			adult_sublabel: "选择所有符合的",
+			choices: [
+				{
+					label: "听觉",
+					value: "Hearing",
+				},
+				{
+					label: "视觉",
+					value: "Seeing",
+				},
+				{
+					label: "口语",
+					value: "Speech",
+				},
+				{
+					label: "运动",
+					value: "Mobility",
+				},
+				{
+					label: "敏捷",
+					value: "Agility",
+				},
+				{
+					label: "痛觉",
+					value: "Pain",
+				},
+				{
+					label: "记忆",
+					value: "Memory",
+				},
+				{
+					label: "其他",
+					value: "Other",
+				},
+				{
+					label: "不想说",
+					value: "Prefer not to say",
+				},
+				{
+					label: "没有以上任何困难",
+					value: "None of the above",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 25",

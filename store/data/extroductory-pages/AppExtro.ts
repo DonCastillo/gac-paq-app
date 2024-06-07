@@ -21,6 +21,20 @@ const AppExtro: ExtroPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "感谢您完成调查！",
+			subheading: "",
+			images: {
+				adult: {
+					phone: Images.adults.extro.section_7.phone,
+					tablet: Images.adults.extro.section_7.tablet,
+				},
+				teen: {
+					phone: Images.adults.extro.section_7.phone,
+					tablet: Images.adults.extro.section_7.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "¡Gracias por completar la encuesta!",
 			subheading: "",

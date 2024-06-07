@@ -43,6 +43,39 @@ const S6Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第二十一题",
+			label: "在过去一周里，你每天仅仅是为了玩耍而进行的活动平均有多长时间？",
+			kid_label: "在过去一周里，你每天仅仅是为了玩耍而进行的活动平均有多长时间？",
+			adult_label: "在过去的一周里，你的孩子在一个正常的日子里，玩得开心的时间有多少？",
+			choices: [
+				{
+					label: "没有",
+					value: "None",
+				},
+				{
+					label: "每天少于1小时",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "每天1-2 小时",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "每天2-3 小时 ",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "每天3-4小时",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "每天4 小时及以上",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",

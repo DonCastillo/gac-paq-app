@@ -52,6 +52,47 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadioImage,
+			heading: "问题 5",
+			label: "以下哪张图片显示了你在体育课上大部分时间的情况？",
+			kid_label: "以下哪张图片显示了你在体育课上大部分时间的情况？",
+			adult_label: "以下哪张图片显示了您的孩子在体育课上大部分时间的情况？",
+			choices: [
+				{
+					label: "不动",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.physical_education.not_moving,
+						adult: Images.adults.options.physical_education.not_moving,
+					},
+				},
+				{
+					label: "低强度",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.physical_education.easy_effort,
+						adult: Images.adults.options.physical_education.easy_effort,
+					},
+				},
+				{
+					label: "中等或高强度",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.physical_education.medium_effort,
+						adult: Images.adults.options.physical_education.medium_effort,
+					},
+				},
+				{
+					label: "不知道",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",

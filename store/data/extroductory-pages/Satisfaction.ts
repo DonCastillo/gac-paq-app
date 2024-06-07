@@ -59,6 +59,57 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "反馈",
+			label: "你对这款应用满意程度如何?",
+			kid_label: "你对这款应用满意程度如何?",
+			adult_label: "你对这款应用满意程度如何?",
+			adult_sublabel: "点击最能代表你满意度的图片(表情符号)。",
+			kid_sublabel: "点击最能代表你满意度的图片(表情符号)。",
+			choices: [
+				{
+					label: "非常不满意",
+					value: "Strongly dissatisfied",
+					images: {
+						kid: Images.generic.rating.very_dissatisfied,
+						adult: Images.generic.rating.very_dissatisfied,
+					},
+				},
+				{
+					label: "不满意",
+					value: "Dissatisfied",
+					images: {
+						kid: Images.generic.rating.dissatisfied,
+						adult: Images.generic.rating.dissatisfied,
+					},
+				},
+				{
+					label: "中立",
+					value: "Neutral",
+					images: {
+						kid: Images.generic.rating.neutral,
+						adult: Images.generic.rating.neutral,
+					},
+				},
+				{
+					label: "满意",
+					value: "Satisfied",
+					images: {
+						kid: Images.generic.rating.satisfied,
+						adult: Images.generic.rating.satisfied,
+					},
+				},
+				{
+					label: "非常满意",
+					value: "Strongly Satisfied",
+					images: {
+						kid: Images.generic.rating.very_satisfied,
+						adult: Images.generic.rating.very_satisfied,
+					},
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Retroalimentación",

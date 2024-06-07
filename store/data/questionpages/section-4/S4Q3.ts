@@ -32,6 +32,31 @@ const S4Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 15c",
+			label: "通常情况下，你采用该交通方式到学校需要多长时间？ ",
+			kid_label: "通常情况下，你采用该交通方式到学校需要多长时间？ ",
+			adult_label: "通常情况下，您的孩子采用上述方式到学校需要多长时间？",
+			choices: [
+				{
+					label: "少于或等于10分钟",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11-20分钟",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21-30分钟",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "30分钟以上",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 15c",

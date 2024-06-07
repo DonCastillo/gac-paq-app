@@ -32,6 +32,31 @@ const GenderKid: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第二十四题",
+			label: "你的性别...",
+			kid_label: "你的性别...",
+			adult_label: "你的性别...",
+			choices: [
+				{
+					label: "男",
+					value: "Boy",
+				},
+				{
+					label: "女",
+					value: "Girl",
+				},
+				{
+					label: "其他",
+					value: "Other",
+				},
+				{
+					label: "不愿透露",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 24",

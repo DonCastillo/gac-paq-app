@@ -20,6 +20,16 @@ const Comment: QuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"zh-CN": {
+			type: Question.QuestionTextarea,
+			heading: "反馈",
+			placeholder: "在此处输入您的评论",
+			label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
+			kid_label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
+			adult_label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
+			kid_sublabel: "如有，请在下面的方框中填写",
+			adult_sublabel: "如有，请在下面的方框中填写",
+		},
 		"es-MX": {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",

@@ -33,6 +33,31 @@ const S4Q9: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 17c",
+			label: "在平常的日子里，除了上学或上班，你步行去其他地方花费多少时间？",
+			kid_label: "在平常的日子里，除了上学或上班，你步行去其他地方花费多少时间？",
+			adult_label: "在正常的一天里，您的孩子走路去除了学校或工作地点的其他地方需要多长时间？",
+			choices: [
+				{
+					label: "少于或等于10分钟 ",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11-20分钟",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21-30分钟 ",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "30分钟以上",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c",

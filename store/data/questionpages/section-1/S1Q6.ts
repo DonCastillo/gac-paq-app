@@ -44,6 +44,43 @@ const S1Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 6",
+			label: "通常在上学日，在学校时你有多少休息时间？",
+			kid_label: "通常在上学日，在学校时你有多少休息时间？",
+			adult_label: "通常在上学日，在学校时您的孩子有多少休息时间？",
+			kid_sublabel:
+				"包括课间休息和午休时间。请将所有休息时间加在一起——如, 每天两次15分钟的课间休息/午休时间和30分钟的午餐时间一共是60分钟 ",
+			adult_sublabel:
+				"包括课间休息和午休时间。请将所有休息时间加在一起——如, 每天两次15分钟的课间休息/午休时间和30分钟的午餐时间一共是60分钟 ",
+			choices: [
+				{
+					label: "0分钟",
+					value: "0 minutes",
+				},
+				{
+					label: "1-15分钟",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16-30分钟",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31-60分钟",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "60分钟以上",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "不知道",
+					value: "Don't know",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Question 6",

@@ -15,6 +15,21 @@ const Transportation7 = {
 			both: "In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 		},
 	},
+	"zh-CN": {
+		kid: {
+			none: "在过去一周里，你有走路或骑车去过地方（例如，朋友家，公园，商店）吗？",
+			school: "在过去一周里，你有走路或骑车去过除学校以外的地方（例如，朋友家，公园，商店）吗？",
+			work: "在过去一周里，你有走路或骑车去过除工作以外的地方（例如，朋友家，公园，商店）吗？",
+			both: "在过去一周里，你有走路或骑车去过除学校或工作以外的地方（例如，朋友家，公园，商店）吗？",
+		},
+		adult: {
+			none: "在过去一周里，你的孩子有走路或骑车去过地方（例如，朋友家，公园，商店）吗？",
+			school:
+				"在过去一周里，你的孩子有走路或骑车去过除学校以外的地方（例如，朋友家，公园，商店）吗？",
+			work: "在过去一周里，你的孩子有走路或骑车去过除工作以外的地方（例如，朋友家，公园，商店）吗？",
+			both: "在过去一周里，你的孩子有走路或骑车去过除学校或工作以外的地方（例如，朋友家，公园，商店）吗？",
+		},
+	},
 	"es-MX": {
 		kid: {
 			none: "En la última semana, ¿caminaste o rodaste para ir a lugares (por ejemplo, la casa de un amigo, un parque, una tienda)?",

@@ -52,6 +52,47 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadioImage,
+			heading: "问题 7",
+			label: "以下哪张图片是你大部分在学校休息时间里做的？",
+			kid_label: "以下哪张图片是你大部分在学校休息时间里做的？",
+			adult_label: "以下哪张图片是您的孩子大部分在学校休息时间里做的事情？",
+			choices: [
+				{
+					label: "不动",
+					value: "0.1",
+					images: {
+						kid: Images.kids.options.breaks.not_moving,
+						adult: Images.adults.options.breaks.not_moving,
+					},
+				},
+				{
+					label: "低强度",
+					value: "0.3",
+					images: {
+						kid: Images.kids.options.breaks.easy_effort,
+						adult: Images.adults.options.breaks.easy_effort,
+					},
+				},
+				{
+					label: "中等或高强度",
+					value: "0.5",
+					images: {
+						kid: Images.kids.options.breaks.medium_effort,
+						adult: Images.adults.options.breaks.medium_effort,
+					},
+				},
+				{
+					label: "不知道",
+					value: "0",
+					images: {
+						kid: Images.general.donotknow,
+						adult: Images.general.donotknow,
+					},
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 7",

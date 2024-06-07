@@ -25,6 +25,24 @@ const SocialEconomicsIntroAdult: SectionPayloadInterface = {
 				},
 			},
 		},
+		"zh-CN": {
+			heading: "关于您的家庭",
+			subheading: "第8部分",
+			images: {
+				kid: {
+					phone: Images.kids.intro.section_7.phone,
+					tablet: Images.kids.intro.section_7.tablet,
+				},
+				adult: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+				teen: {
+					phone: Images.adults.intro.section_7.phone,
+					tablet: Images.adults.intro.section_7.tablet,
+				},
+			},
+		},
 		"es-MX": {
 			heading: "Acerca de tu familia",
 			subheading: "Sección 8",

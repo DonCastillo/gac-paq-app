@@ -68,6 +68,65 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadioImage,
+			heading: "问题 16",
+			label: "在过去一周里，你是如何去工作地点的？",
+			kid_label: "在过去一周里，你是如何去工作地点的？",
+			adult_label: "在过去一周里，您的孩子是如何去工作地点的？",
+			kid_sublabel: "选择你使用的主要交通方式。",
+			adult_sublabel: "选择您的孩子使用的主要交通方式。",
+			choices: [
+				{
+					label: "步行",
+					value: "Walking",
+					images: {
+						kid: Images.kids.options.transportation.walking,
+						adult: Images.adults.options.transportation.walking,
+					},
+				},
+				{
+					label: "骑车",
+					value: "Wheeling",
+					images: {
+						kid: Images.kids.options.transportation.wheeling,
+						adult: Images.adults.options.transportation.wheeling,
+					},
+					sublabel: {
+						kid: "也包括轮椅、自行车、滑板、推式踏板车、轮滑",
+						adult: "也包括轮椅、自行车、滑板、推式踏板车、轮滑",
+					},
+				},
+				{
+					label: "公共交通",
+					value: "Public transit",
+					images: {
+						kid: Images.kids.options.transportation.public_transit,
+						adult: Images.adults.options.transportation.public_transit,
+					},
+					sublabel: {
+						kid: "如公交车、火车、有轨电车、地铁、轮渡",
+						adult: "如公交车、火车、有轨电车、地铁、轮渡",
+					},
+				},
+				{
+					label: "汽车、卡车或摩托车",
+					value: "Car, taxi, truck, or motorcycle",
+					images: {
+						kid: Images.kids.options.transportation.car,
+						adult: Images.adults.options.transportation.car,
+					},
+				},
+				{
+					label: "其他的",
+					value: "Other",
+					images: {
+						kid: Images.kids.options.transportation.other,
+						adult: Images.adults.options.transportation.other,
+					},
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 16",
