@@ -1,6 +1,5 @@
 import Screen from "constants/screen.enum";
 import type { PreamblePayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S6Preamble: PreamblePayloadInterface = {
 	ident: "play_preamble",
@@ -15,20 +14,6 @@ const S6Preamble: PreamblePayloadInterface = {
 				adult:
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-			},
 		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
@@ -37,20 +22,6 @@ const S6Preamble: PreamblePayloadInterface = {
 				kid: "本部分是关于一些你在学校外玩耍或空闲时间所做的所有身体活动的问题。这不包括有组织的活动或学校的休息时间。",
 				adult:
 					"本部分是关于一些您的孩子在学校外玩耍或空闲时间所做的所有身体活动的问题。这部分时间是由您的孩子决定如何使用的。",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
 			},
 		},
 		"es-MX": {
@@ -61,20 +32,6 @@ const S6Preamble: PreamblePayloadInterface = {
 				adult:
 					"Esto incluye toda la actividad física que realiza su hija o hijo durante su tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio. Para las siguientes preguntas, no incluya las actividades que acaba de informar.",
 			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-			},
 		},
 		"fr-CA": {
 			heading: "Jeu ou temps libres",
@@ -83,20 +40,6 @@ const S6Preamble: PreamblePayloadInterface = {
 				kid: "Cette section porte sur l'activité physique que tu fais durant tes temps libres. Cela n'inclus pas les activités organisées et les pauses à l'école. Pour répondre aux prochaines questions, n'inclus pas les activités que tu viens de mentionner.",
 				adult:
 					"Cette section porte sur l'activité physique que ton enfant fait durant ses temps libres. Ce sont des moments qu'il (elle) peux occuper à sa guise. Pour répondre aux prochaines questions, n'inclus pas les activités que tu viens de mentionner.",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
 			},
 		},
 	},

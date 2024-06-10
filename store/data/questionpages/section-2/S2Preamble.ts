@@ -1,6 +1,5 @@
 import Screen from "constants/screen.enum";
 import type { PreamblePayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S2Preamble: PreamblePayloadInterface = {
 	ident: "household_preamble",
@@ -15,20 +14,6 @@ const S2Preamble: PreamblePayloadInterface = {
 				adult:
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_2.phone,
-					tablet: Images.kids.intro.section_2.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
-			},
 		},
 		"zh-CN": {
 			heading: "家务",
@@ -37,20 +22,6 @@ const S2Preamble: PreamblePayloadInterface = {
 				kid: "本部分是关于一些需要你做的家务或在家干的活的问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
 				adult:
 					"本部分是关于一些需要您的孩子做家务或在家干的活的问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_2.phone,
-					tablet: Images.kids.intro.section_2.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
 			},
 		},
 		"es-MX": {
@@ -61,20 +32,6 @@ const S2Preamble: PreamblePayloadInterface = {
 				adult:
 					"Esta sección trata de las tareas o quehaceres del hogar que requieren que su hija o hijo sea activo físicamente. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
 			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_2.phone,
-					tablet: Images.kids.intro.section_2.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
-			},
 		},
 		"fr-CA": {
 			heading: "Tâches Ménagères",
@@ -83,20 +40,6 @@ const S2Preamble: PreamblePayloadInterface = {
 				kid: "Cette section porte sur les tâches qui exigent que tu sois actif (active). Les exemples incluent faire le ménage, des travaux extérieurs, jardiner et d'autres tâches semblables.",
 				adult:
 					"Cette section porte sur les tâches qui exigent que ton enfant soit actif (active). Les exemples incluent faire le ménage, les travaux extérieurs, jardiner et d'autres tâches semblables.",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_2.phone,
-					tablet: Images.kids.intro.section_2.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_2.phone,
-					tablet: Images.adults.intro.section_2.tablet,
-				},
 			},
 		},
 	},

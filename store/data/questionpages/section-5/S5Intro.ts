@@ -1,6 +1,5 @@
 import Screen from "constants/screen.enum";
 import type { SectionPayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S5Intro: SectionPayloadInterface = {
 	ident: "organized_intro",
@@ -10,74 +9,18 @@ const S5Intro: SectionPayloadInterface = {
 		"en-CA": {
 			heading: "Organized Activities",
 			subheading: "Section 5",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_5.phone,
-					tablet: Images.kids.intro.section_5.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-			},
 		},
 		"zh-CN": {
 			heading: "有组织的活动",
 			subheading: "第5部分",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_5.phone,
-					tablet: Images.kids.intro.section_5.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-			},
 		},
 		"es-MX": {
 			heading: "Actividades Organizadas",
 			subheading: "Sección 5",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_5.phone,
-					tablet: Images.kids.intro.section_5.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-			},
 		},
 		"fr-CA": {
 			heading: "Activités Organisées",
 			subheading: "Section 5",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_5.phone,
-					tablet: Images.kids.intro.section_5.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_5.phone,
-					tablet: Images.adults.intro.section_5.tablet,
-				},
-			},
 		},
 	},
 };

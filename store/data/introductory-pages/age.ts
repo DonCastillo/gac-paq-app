@@ -1,7 +1,6 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
 import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const AgePage: QuestionDropdownPayloadInterface = {
 	ident: "mode",
@@ -28,20 +27,6 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					value: "adult",
 				},
 			],
-			images: {
-				kid: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				teen: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				adult: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-			},
 		},
 		"th-TH": {
 			type: Question.QuestionDropdown,
@@ -63,20 +48,6 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					value: "adult",
 				},
 			],
-			images: {
-				kid: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				teen: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				adult: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-			},
 		},
 		"zh-CN": {
 			type: Question.QuestionDropdown,
@@ -98,20 +69,6 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					value: "adult",
 				},
 			],
-			images: {
-				kid: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				teen: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				adult: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-			},
 		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
@@ -133,20 +90,6 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					value: "adult",
 				},
 			],
-			images: {
-				kid: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				teen: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				adult: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-			},
 		},
 		"fr-CA": {
 			type: Question.QuestionDropdown,
@@ -168,20 +111,6 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					value: "adult",
 				},
 			],
-			images: {
-				kid: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				teen: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-				adult: {
-					phone: Images.generic.pages.phone.mode,
-					tablet: Images.generic.pages.tablet.mode,
-				},
-			},
 		},
 	},
 };

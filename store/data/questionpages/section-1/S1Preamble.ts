@@ -1,6 +1,5 @@
 import Screen from "constants/screen.enum";
 import type { PreamblePayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S1Preamble: PreamblePayloadInterface = {
 	ident: "school_preamble",
@@ -15,20 +14,6 @@ const S1Preamble: PreamblePayloadInterface = {
 				adult:
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_1.phone,
-					tablet: Images.kids.intro.section_1.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-			},
 		},
 		"zh-CN": {
 			heading: "学校",
@@ -36,20 +21,6 @@ const S1Preamble: PreamblePayloadInterface = {
 			description: {
 				kid: "本部分是关于一些你在上学时所做事情的问题，如在上体育课、课间休息和午餐时。",
 				adult: "本部分是关于一些您的孩子在上学时所做事情的问题，如在上体育课、课间休息和午餐时。",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_1.phone,
-					tablet: Images.kids.intro.section_1.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
 			},
 		},
 		"es-MX": {
@@ -60,20 +31,6 @@ const S1Preamble: PreamblePayloadInterface = {
 				adult:
 					"Esta sección es acerca de lo que su hija o hijo hace normalmente durante su tiempo en la escuela o el colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora del lunch o refrigerio.",
 			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_1.phone,
-					tablet: Images.kids.intro.section_1.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-			},
 		},
 		"fr-CA": {
 			heading: "École",
@@ -82,20 +39,6 @@ const S1Preamble: PreamblePayloadInterface = {
 				kid: "Cette section porte sur les activités que tu fais durant les heures d'école normales, par exemple dans les cours d'éducation physique, les récréations et l'heure du dîner.",
 				adult:
 					"Cette section porte sur les activités que ton enfant fait durant les heures d'école normales, par exemple dans les cours d'éducation physique, les récréations et l'heure du dîner.",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_1.phone,
-					tablet: Images.kids.intro.section_1.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
 			},
 		},
 	},

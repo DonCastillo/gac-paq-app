@@ -1,7 +1,6 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
-import Images from "styles/images/index";
 
 const S1Q7: QuestionRadioImagePayloadInterface = {
 	ident: "school_7",
@@ -21,34 +20,22 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Not moving",
 					value: "0.1",
-					images: {
-						kid: Images.kids.options.breaks.not_moving,
-						adult: Images.adults.options.breaks.not_moving,
-					},
+					image_ident: "not_moving",
 				},
 				{
 					label: "Easy effort",
 					value: "0.3",
-					images: {
-						kid: Images.kids.options.breaks.easy_effort,
-						adult: Images.adults.options.breaks.easy_effort,
-					},
+					image_ident: "easy_effort",
 				},
 				{
 					label: "Medium or hard effort",
 					value: "0.5",
-					images: {
-						kid: Images.kids.options.breaks.medium_effort,
-						adult: Images.adults.options.breaks.medium_effort,
-					},
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "Don't know",
 					value: "0",
-					images: {
-						kid: Images.general.donotknow,
-						adult: Images.general.donotknow,
-					},
+					image_ident: "dont_know",
 				},
 			],
 		},
@@ -62,34 +49,22 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				{
 					label: "不动",
 					value: "0.1",
-					images: {
-						kid: Images.kids.options.breaks.not_moving,
-						adult: Images.adults.options.breaks.not_moving,
-					},
+					image_ident: "not_moving",
 				},
 				{
 					label: "低强度",
 					value: "0.3",
-					images: {
-						kid: Images.kids.options.breaks.easy_effort,
-						adult: Images.adults.options.breaks.easy_effort,
-					},
+					image_ident: "easy_effort",
 				},
 				{
 					label: "中等或高强度",
 					value: "0.5",
-					images: {
-						kid: Images.kids.options.breaks.medium_effort,
-						adult: Images.adults.options.breaks.medium_effort,
-					},
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "不知道",
 					value: "0",
-					images: {
-						kid: Images.general.donotknow,
-						adult: Images.general.donotknow,
-					},
+					image_ident: "dont_know",
 				},
 			],
 		},
@@ -106,34 +81,22 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Sin moverte",
 					value: "0.1",
-					images: {
-						kid: Images.kids.options.breaks.not_moving,
-						adult: Images.adults.options.breaks.not_moving,
-					},
+					image_ident: "not_moving",
 				},
 				{
 					label: "Esfuerzo fácil",
 					value: "0.3",
-					images: {
-						kid: Images.kids.options.breaks.easy_effort,
-						adult: Images.adults.options.breaks.easy_effort,
-					},
+					image_ident: "easy_effort",
 				},
 				{
 					label: "Esfuerzo medio o fuerte",
 					value: "0.5",
-					images: {
-						kid: Images.kids.options.breaks.medium_effort,
-						adult: Images.adults.options.breaks.medium_effort,
-					},
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "No sé",
 					value: "0",
-					images: {
-						kid: Images.general.donotknow,
-						adult: Images.general.donotknow,
-					},
+					image_ident: "dont_know",
 				},
 			],
 		},
@@ -150,34 +113,22 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Pas de mouvement",
 					value: "0.1",
-					images: {
-						kid: Images.kids.options.breaks.not_moving,
-						adult: Images.adults.options.breaks.not_moving,
-					},
+					image_ident: "not_moving",
 				},
 				{
 					label: "Peu d'effort",
 					value: "0.3",
-					images: {
-						kid: Images.kids.options.breaks.easy_effort,
-						adult: Images.adults.options.breaks.easy_effort,
-					},
+					image_ident: "easy_effort",
 				},
 				{
 					label: "Un effort moyen ou intense",
 					value: "0.5",
-					images: {
-						kid: Images.kids.options.breaks.medium_effort,
-						adult: Images.adults.options.breaks.medium_effort,
-					},
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "Je ne sais pas",
 					value: "0",
-					images: {
-						kid: Images.general.donotknow,
-						adult: Images.general.donotknow,
-					},
+					image_ident: "dont_know",
 				},
 			],
 		},

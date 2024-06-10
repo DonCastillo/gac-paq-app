@@ -1,6 +1,5 @@
 import Screen from "constants/screen.enum";
 import type { ExtroPayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S7Extro: ExtroPayloadInterface = {
 	ident: "outdoors_extro",
@@ -10,58 +9,18 @@ const S7Extro: ExtroPayloadInterface = {
 		"en-CA": {
 			heading: "Section Complete!",
 			subheading: "",
-			images: {
-				adult: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-				teen: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-			},
 		},
 		"zh-CN": {
 			heading: "部分完成!",
 			subheading: "",
-			images: {
-				adult: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-				teen: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-			},
 		},
 		"es-MX": {
 			heading: "¡Sección Completa!",
 			subheading: "",
-			images: {
-				adult: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-				teen: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-			},
 		},
 		"fr-CA": {
 			heading: "Section 7 Complète!",
 			subheading: "",
-			images: {
-				adult: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-				teen: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-			},
 		},
 	},
 };
