@@ -55,6 +55,53 @@ const DemographicTeenPage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
+		"th-TH": {
+			type: Question.QuestionDropdown,
+			heading: "ยินดีต้อนรับ!",
+			label: "คุณอายุเท่าไร?",
+			kid_label: "คุณอายุเท่าไร?",
+			adult_label: "คุณอายุเท่าไร?",
+			choices: [
+				{
+					label: "12 ปี",
+					value: "12",
+				},
+				{
+					label: "13 ปี",
+					value: "13",
+				},
+				{
+					label: "14 ปี",
+					value: "14",
+				},
+				{
+					label: "15 ปี",
+					value: "15",
+				},
+				{
+					label: "16 ปี",
+					value: "16",
+				},
+				{
+					label: "17 ปี",
+					value: "17",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.age,
+					tablet: Images.generic.pages.tablet.age,
+				},
+			},
+		},
 		"zh-CN": {
 			type: Question.QuestionDropdown,
 			heading: "欢迎!",

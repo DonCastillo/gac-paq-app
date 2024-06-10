@@ -12,6 +12,11 @@ const SuccessPage: PagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"th-TH": {
+			heading: "สำเร็จ!",
+			description:
+				"งานดี! คุณได้ทำแบบสอบถามเสร็จสิ้นแล้ว คำตอบของคุณถูกส่งเรียบร้อยแล้ว\n\nขอบคุณสำหรับความช่วยเหลือของคุณ!",
+		},
 		"zh-CN": {
 			heading: "成功!",
 			description: "干得好！您已完成问卷调查。您的答案已成功发送。\n\n感谢您的帮助！",

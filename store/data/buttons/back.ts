@@ -4,6 +4,9 @@ const BackButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Back",
 	},
+	"th-TH": {
+		label: "ย้อนกลับ",
+	},
 	"zh-CN": {
 		label: "返回",
 	},

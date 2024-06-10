@@ -43,6 +43,41 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			},
 		},
+		"th-TH": {
+			type: Question.QuestionDropdown,
+			heading: "ยินดีต้อนรับ!",
+			label: "ใครกำลังทำแบบสอบถามนี้?",
+			kid_label: "ใครกำลังทำแบบสอบถามนี้?",
+			adult_label: "ใครกำลังทำแบบสอบถามนี้?",
+			choices: [
+				{
+					label: "เด็ก",
+					value: "child",
+				},
+				{
+					label: "วัยรุ่น",
+					value: "teen",
+				},
+				{
+					label: "ผู้ปกครอง",
+					value: "adult",
+				},
+			],
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.mode,
+					tablet: Images.generic.pages.tablet.mode,
+				},
+			},
+		},
 		"zh-CN": {
 			type: Question.QuestionDropdown,
 			heading: "欢迎!",

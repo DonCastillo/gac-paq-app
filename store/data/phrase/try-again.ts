@@ -4,6 +4,9 @@ const TryAgainPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Try Again",
 	},
+	"th-TH": {
+		label: "ลองอีกครั้ง",
+	},
 	"zh-CN": {
 		label: "再试一次",
 	},

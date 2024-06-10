@@ -30,6 +30,28 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 				},
 			},
 		},
+		"th-TH": {
+			type: Question.QuestionInput,
+			heading: "ยินดีต้อนรับ!",
+			label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
+			kid_label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
+			adult_label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
+			placeholder: "หมายเลขซีเรียล ID ผู้เข้าร่วม",
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.participant,
+					tablet: Images.generic.pages.tablet.participant,
+				},
+			},
+		},
 		"zh-CN": {
 			type: Question.QuestionInput,
 			heading: "欢迎!",

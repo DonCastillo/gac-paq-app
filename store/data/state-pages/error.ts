@@ -11,6 +11,10 @@ const ErrorPage: PagePayloadInterface = {
 			heading: "Error",
 			description: "Oh no, Your answers were not sent.\n\nPlease try again. ",
 		},
+		"th-TH": {
+			heading: "ข้อผิดพลาด",
+			description: "อ๊ะ คำตอบของคุณไม่ถูกส่ง\n\nกรุณาลองอีกครั้ง",
+		},
 		"zh-CN": {
 			heading: "错误",
 			description: "哦，您的答案未发送。\n\n请重试。",

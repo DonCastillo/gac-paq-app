@@ -29,6 +29,27 @@ const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 				},
 			},
 		},
+		"th-TH": {
+			type: Question.QuestionLanguage,
+			heading: "ยินดีต้อนรับ!",
+			label: "คุณพูดภาษาอะไรและอยู่ที่ไหน?",
+			kid_label: "คุณพูดภาษาอะไรและอยู่ที่ไหน?",
+			adult_label: "คุณพูดภาษาอะไรและอยู่ที่ไหน?",
+			images: {
+				kid: {
+					phone: Images.generic.pages.phone.language,
+					tablet: Images.generic.pages.tablet.language,
+				},
+				teen: {
+					phone: Images.generic.pages.phone.language,
+					tablet: Images.generic.pages.tablet.language,
+				},
+				adult: {
+					phone: Images.generic.pages.phone.language,
+					tablet: Images.generic.pages.tablet.language,
+				},
+			},
+		},
 		"zh-CN": {
 			type: Question.QuestionLanguage,
 			heading: "欢迎!",

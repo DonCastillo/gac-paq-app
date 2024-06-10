@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import State from "constants/state.enum";
-import type PagePayloadInterface from "interface/directus/page-payload";
 import type PageInterface from "interface/page";
 import type QuestionDropdownInterface from "interface/question_dropdown";
 import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
@@ -26,6 +24,7 @@ import {
 } from "store/settings/settingsSlice";
 import { resetResponses, selectAllResponses } from "store/responses/responsesSlice";
 import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
+import { translatePage as translatePageUtil } from "utils/translate.utils";
 
 interface Props {
 	state: State;
@@ -35,8 +34,8 @@ function StateKid({ state }: Props): React.ReactElement {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
-	const successPage = useSelector(getSuccessPage) as PagePayloadInterface;
-	const errorPage = useSelector(getErrorPage) as PagePayloadInterface;
+	const successPage = useSelector(getSuccessPage);
+	const errorPage = useSelector(getErrorPage);
 
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -58,9 +57,9 @@ function StateKid({ state }: Props): React.ReactElement {
 
 	function statePageChange(): void {
 		if (state === State.Success) {
-			setTranslatedPage(translate(successPage.translations, language));
+			setTranslatedPage(translatePageUtil(successPage.translations, language));
 		} else {
-			setTranslatedPage(translate(errorPage.translations, language));
+			setTranslatedPage(translatePageUtil(errorPage.translations, language));
 		}
 	}
 

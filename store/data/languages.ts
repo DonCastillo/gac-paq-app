@@ -16,11 +16,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "CA",
 		lang_code: "fr-CA",
 	},
-	{
-		name: "Chinese - China",
-		flag_code: "CN",
-		lang_code: "zh-CN",
-	},
+	// {
+	// 	name: "Chinese - China",
+	// 	flag_code: "CN",
+	// 	lang_code: "zh-CN",
+	// },
 	// {
 	// 	name: "Spanish - Colombia",
 	// 	flag_code: "CO",
@@ -41,11 +41,11 @@ const Languages: LanguageInterface[] = [
 	// 	flag_code: "MX",
 	// 	lang_code: "en-MX",
 	// },
-	{
-		name: "Spanish - Mexico",
-		flag_code: "MX",
-		lang_code: "es-MX",
-	},
+	// {
+	// 	name: "Spanish - Mexico",
+	// 	flag_code: "MX",
+	// 	lang_code: "es-MX",
+	// },
 	// {
 	// 	name: "Nepali - Nepal",
 	// 	flag_code: "NP",

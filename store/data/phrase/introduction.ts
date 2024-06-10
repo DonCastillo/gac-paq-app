@@ -4,6 +4,9 @@ const IntroductionPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Introduction",
 	},
+	"th-TH": {
+		label: "บทนำ",
+	},
 	"zh-CN": {
 		label: "介绍",
 	},

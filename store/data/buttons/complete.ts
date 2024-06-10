@@ -4,6 +4,9 @@ const CompleteButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Complete",
 	},
+	"th-TH": {
+		label: "เสร็จสิ้น",
+	},
 	"zh-CN": {
 		label: "完成",
 	},

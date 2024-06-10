@@ -4,6 +4,9 @@ const GoButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Go",
 	},
+	"th-TH": {
+		label: "ไป",
+	},
 	"zh-CN": {
 		label: "去",
 	},

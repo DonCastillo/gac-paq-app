@@ -4,6 +4,9 @@ const NextButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Next",
 	},
+	"th-TH": {
+		label: "ถัดไป",
+	},
 	"zh-CN": {
 		label: "下一个",
 	},

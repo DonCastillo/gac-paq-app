@@ -12,6 +12,11 @@ const AboutPage: PagePayloadInterface = {
 			description:
 				"Our goal is to address the lack of information on activity levels, particularly among young children, and the limitations of current questionnaires that neglect certain types of physical activity. By collecting data on active play, we can compare activity levels within and between countries to identify effective strategies for promoting physical activity. Our study involves expert and public reviews, translations, pilot studies, and a large-scale data collection across diverse urban and rural areas. By comparing our questionnaire data with movement sensors, we aim to create a more accurate global measurement of physical activity, contributing to healthier lifestyles worldwide.",
 		},
+		"th-TH": {
+			heading: "ยินดีต้อนรับสู่ \nGAC-PAQ",
+			description:
+				"เป้าหมายของเราคือการแก้ไขปัญหาการขาดข้อมูลเกี่ยวกับระดับกิจกรรม โดยเฉพาะในเด็กเล็ก และข้อจำกัดของแบบสอบถามในปัจจุบันที่ละเลยประเภทของกิจกรรมทางกายบางประเภท ด้วยการเก็บข้อมูลเกี่ยวกับการเล่นที่กระฉับกระเฉง เราสามารถเปรียบเทียบระดับกิจกรรมภายในและระหว่างประเทศ เพื่อระบุยุทธศาสตร์ที่มีประสิทธิภาพสำหรับส่งเสริมกิจกรรมทางกาย การศึกษาของเราประกอบด้วยการตรวจสอบจากผู้เชี่ยวชาญและสาธารณชน การแปลภาษา การศึกษานำร่อง และการเก็บข้อมูลขนาดใหญ่ในพื้นที่เมืองและชนบทที่หลากหลาย ด้วยการเปรียบเทียบข้อมูลจากแบบสอบถามของเรากับเซ็นเซอร์ตรวจจับการเคลื่อนไหว เรามุ่งหวังที่จะสร้างการวัดระดับกิจกรรมทางกายทั่วโลกที่แม่นยำยิ่งขึ้น ซึ่งจะช่วยส่งเสริมวิถีชีวิตที่มีสุขภาพดีขึ้นทั่วโลก",
+		},
 		"es-MX": {
 			heading: "Bienvenido a \nGAC-PAQ",
 			description:

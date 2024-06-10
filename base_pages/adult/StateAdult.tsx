@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
-import { translate } from "utils/page.utils";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
@@ -22,6 +21,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLanguage, getPhrases, reset } from "store/settings/settingsSlice";
 import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
 import { resetResponses } from "store/responses/responsesSlice";
+import { translatePage as translatePageUtil } from "utils/translate.utils";
 
 interface Props {
 	state: State;
@@ -54,9 +54,9 @@ function StateAdult({ state }: Props): React.ReactElement {
 
 	function statePageChange(): void {
 		if (state === State.Success) {
-			setTranslatedPage(translate(successPage.translations, language));
+			setTranslatedPage(translatePageUtil(successPage.translations, language));
 		} else {
-			setTranslatedPage(translate(errorPage.translations, language));
+			setTranslatedPage(translatePageUtil(errorPage.translations, language));
 		}
 	}
 

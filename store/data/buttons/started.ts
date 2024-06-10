@@ -4,6 +4,9 @@ const StartedButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Let's Get Started",
 	},
+	"th-TH": {
+		label: "เริ่มต้น",
+	},
 	"zh-CN": {
 		label: "开始吧",
 	},

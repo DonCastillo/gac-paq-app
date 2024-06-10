@@ -108,7 +108,8 @@ export type TranslationType =
 	| LangQuestionSliderInterface
 	| LangSectionInterface
 	| LangPreambleInterface
-	| LangExtroInterface;
+	| LangExtroInterface
+	| PagePayloadInterface;
 
 export type TranslatedIntroQuestionType =
 	| QuestionDropdownInterface
