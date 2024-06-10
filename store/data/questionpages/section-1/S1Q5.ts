@@ -21,6 +21,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Not moving",
 					value: "0.1",
+					image_ident: "not_moving",
 					images: {
 						kid: Images.kids.options.physical_education.not_moving,
 						adult: Images.adults.options.physical_education.not_moving,
@@ -29,6 +30,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Easy effort",
 					value: "0.3",
+					image_ident: "easy_effort",
 					images: {
 						kid: Images.kids.options.physical_education.easy_effort,
 						adult: Images.adults.options.physical_education.easy_effort,
@@ -37,6 +39,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Medium or hard effort",
 					value: "0.5",
+					image_ident: "medium_or_hard_effort",
 					images: {
 						kid: Images.kids.options.physical_education.medium_effort,
 						adult: Images.adults.options.physical_education.medium_effort,
@@ -44,6 +47,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				},
 				{
 					label: "Don't know",
+					image_ident: "dont_know",
 					value: "0",
 					images: {
 						kid: Images.general.donotknow,
@@ -150,6 +154,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Pas de mouvement",
 					value: "0.1",
+					image_ident: "not_moving",
 					images: {
 						kid: Images.kids.options.physical_education.not_moving,
 						adult: Images.adults.options.physical_education.not_moving,
@@ -158,6 +163,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Peu d'effort",
 					value: "0.3",
+					image_ident: "easy_effort",
 					images: {
 						kid: Images.kids.options.physical_education.easy_effort,
 						adult: Images.adults.options.physical_education.easy_effort,
@@ -166,6 +172,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Un effort moyen ou intense",
 					value: "0.5",
+					image_ident: "medium_or_hard_effort",
 					images: {
 						kid: Images.kids.options.physical_education.medium_effort,
 						adult: Images.adults.options.physical_education.medium_effort,
@@ -174,6 +181,7 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Je ne sais pas",
 					value: "0",
+					image_ident: "dont_know",
 					images: {
 						kid: Images.general.donotknow,
 						adult: Images.general.donotknow,

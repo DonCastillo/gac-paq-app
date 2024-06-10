@@ -17,6 +17,7 @@ export interface Choice {
 }
 
 export interface ChoiceImage extends Choice {
+	image_ident?: string;
 	images: {
 		kid: string;
 		adult: string;
