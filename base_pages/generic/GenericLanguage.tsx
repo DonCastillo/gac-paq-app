@@ -27,7 +27,6 @@ import {
 	getMode,
 	nextPage,
 	setLanguage,
-	getDevice,
 	setSectionTitles,
 } from "store/settings/settingsSlice";
 import { loadButtons, loadPhrases } from "utils/load.utils";
@@ -40,7 +39,6 @@ const GenericLanguage = (): React.ReactElement => {
 	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const device = useSelector(getDevice);
 
 	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -93,7 +91,7 @@ const GenericLanguage = (): React.ReactElement => {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+				source={getImageBackground()}
 				key={currentPageNumber}
 			/>
 			<Main>

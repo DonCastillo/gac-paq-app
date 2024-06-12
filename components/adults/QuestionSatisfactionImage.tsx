@@ -5,7 +5,7 @@ import { horizontalScale, verticalScale } from "utils/responsive.utils";
 import { getOptionImage } from "utils/background.utils";
 import { useSelector } from "react-redux";
 
-import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
+import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
@@ -19,7 +19,6 @@ const QuestionSatisfactionImage = ({
 	onChange,
 	selectedValue,
 }: PropsInterface): React.ReactElement => {
-	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
@@ -78,8 +77,8 @@ const QuestionSatisfactionImage = ({
 	};
 
 	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
-		const { images, value } = item;
-		const imageByMode = getOptionImage(images, mode);
+		const { image_ident, value } = item;
+		const imageByMode = getOptionImage(image_ident);
 
 		return (
 			<Pressable

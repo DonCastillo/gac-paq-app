@@ -23,7 +23,6 @@ import {
 	getDevice,
 	getLanguage,
 	getMode,
-	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { translatePage, translateText } from "utils/translate.utils";
@@ -52,7 +51,7 @@ const PreambleAdult = (): React.ReactElement => {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+				source={getImageBackground()}
 				key={currentPageNumber}
 			/>
 			<Main>

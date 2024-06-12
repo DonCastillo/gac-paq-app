@@ -16,7 +16,6 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getLanguage,
-	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
@@ -25,7 +24,6 @@ import type { SectionInterface } from "interface/payload.type";
 
 const QuestionIntroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
@@ -65,7 +63,7 @@ const QuestionIntroAdult = (): React.ReactElement => {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+				source={getImageBackground()}
 				key={currentPageNumber}
 			/>
 			<View

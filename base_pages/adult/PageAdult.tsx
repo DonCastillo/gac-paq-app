@@ -17,7 +17,6 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getLanguage,
-	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { translatePage } from "utils/translate.utils";

@@ -18,7 +18,6 @@ import {
 	getDevice,
 	getLanguage,
 	getMode,
-	nextPage,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { translatePage, translateText } from "utils/translate.utils";

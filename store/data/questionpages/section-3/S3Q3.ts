@@ -30,7 +30,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Medium or hard effort",
 					value: "0.5",
-					image_ident: "medium_effort",
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "Don't know",
@@ -59,7 +59,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				{
 					label: "中等或高强度",
 					value: "0.5",
-					image_ident: "medium_effort",
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "不知道",
@@ -91,7 +91,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Esfuerzo medio o fuerte",
 					value: "0.5",
-					image_ident: "medium_effort",
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "No sé",
@@ -123,7 +123,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Un effort moyen ou intense",
 					value: "0.5",
-					image_ident: "medium_effort",
+					image_ident: "medium_or_hard_effort",
 				},
 				{
 					label: "Je ne sais pas",

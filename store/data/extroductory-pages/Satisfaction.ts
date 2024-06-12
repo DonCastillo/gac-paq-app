@@ -1,7 +1,6 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
-import Images from "styles/images/index";
 
 const Satisfaction: QuestionRadioImagePayloadInterface = {
 	ident: "app_use_satisfaction",
