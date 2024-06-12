@@ -114,7 +114,7 @@ const GenericSingleQuestion = (): React.ReactElement => {
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+				source={getImageBackground()}
 				key={currentPageNumber}
 			/>
 			<Main>

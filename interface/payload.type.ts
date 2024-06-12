@@ -2,7 +2,6 @@ import type Question from "constants/question.enum";
 import type Screen from "constants/screen.enum";
 import { type ReactElement } from "react";
 import { type Image } from "react-native";
-import type { ImageDeviceInterface } from "interface/images";
 import { type ScreenType, type SectionType, type ModeType, type AllPageType } from "./union.type";
 import type { Svg } from "react-native-svg";
 
@@ -17,10 +16,7 @@ export interface Choice {
 }
 
 export interface ChoiceImage extends Choice {
-	images: {
-		kid: string;
-		adult: string;
-	};
+	image_ident: string;
 	sublabel?: {
 		kid: string;
 		adult: string;
@@ -77,20 +73,17 @@ export interface QuestionDropdownInterface extends BasePayloadInterface {
 	type: Question.QuestionDropdown;
 	heading: string;
 	choices: Choice[];
-	images?: ImageDeviceInterface;
 }
 
 export interface QuestionDropdownLanguageInterface extends BasePayloadInterface {
 	type: Question.QuestionLanguage;
 	heading: string;
-	images?: ImageDeviceInterface;
 }
 
 export interface QuestionInputInterface extends BasePayloadInterface {
 	type: Question.QuestionInput;
 	heading: string;
 	placeholder: string;
-	images?: ImageDeviceInterface;
 }
 
 export interface QuestionCheckboxInterface extends BasePayloadInterface{
@@ -116,7 +109,6 @@ export interface QuestionTextareaInterface extends BasePayloadInterface {
 	type: Question.QuestionTextarea;
 	heading: string;
 	placeholder: string;
-	images?: ImageDeviceInterface;
 }
 
 export interface QuestionRadioImageInterface extends BasePayloadInterface {
@@ -128,7 +120,6 @@ export interface QuestionRadioImageInterface extends BasePayloadInterface {
 export interface SectionInterface {
 	heading: string;
 	subheading: string;
-	images?: ImageDeviceInterface;
 }
 
 export interface PreambleInterface {
@@ -138,13 +129,11 @@ export interface PreambleInterface {
 		kid: string;
 		adult: string;
 	};
-	images?: ImageDeviceInterface;
 }
 
 export interface ExtroInterface {
 	heading: string;
 	subheading: string | null;
-	images?: ImageDeviceInterface;
 }
 
 

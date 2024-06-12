@@ -22,7 +22,6 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getLanguage,
-	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
@@ -32,7 +31,6 @@ import { translatePage } from "utils/translate.utils";
 
 const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
@@ -107,7 +105,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 			<View style={styles.container}>
 				<BGLinearGradient />
 				<ImageBackdrop
-					source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+					source={getImageBackground()}
 					key={currentPageNumber}
 					opacity={0.2}
 				/>

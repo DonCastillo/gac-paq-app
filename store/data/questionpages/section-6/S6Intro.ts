@@ -1,6 +1,5 @@
 import Screen from "constants/screen.enum";
 import type { SectionPayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S6Intro: SectionPayloadInterface = {
 	ident: "play_intro",
@@ -10,74 +9,18 @@ const S6Intro: SectionPayloadInterface = {
 		"en-CA": {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-			},
 		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
 			subheading: "第6部分",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-			},
 		},
 		"es-MX": {
 			heading: "Juego O Tiempo Libre",
 			subheading: "Sección 6",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-			},
 		},
 		"fr-CA": {
 			heading: "Jouer ou temps libre",
 			subheading: "Section 6",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_6.phone,
-					tablet: Images.kids.intro.section_6.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_6.phone,
-					tablet: Images.adults.intro.section_6.tablet,
-				},
-			},
 		},
 	},
 };

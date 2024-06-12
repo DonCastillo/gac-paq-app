@@ -1,7 +1,6 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S4Q4: QuestionRadioImagePayloadInterface = {
 	ident: "transportation_4",
@@ -20,18 +19,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Walking",
 					value: "Walking",
-					images: {
-						kid: Images.kids.options.transportation.walking,
-						adult: Images.adults.options.transportation.walking,
-					},
+					image_ident: "walking",
 				},
 				{
 					label: "Wheeling",
 					value: "Wheeling",
-					images: {
-						kid: Images.kids.options.transportation.wheeling,
-						adult: Images.adults.options.transportation.wheeling,
-					},
+					image_ident: "wheeling",
 					sublabel: {
 						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
 						adult:
@@ -41,10 +34,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Public transit",
 					value: "Public transit",
-					images: {
-						kid: Images.kids.options.transportation.public_transit,
-						adult: Images.adults.options.transportation.public_transit,
-					},
+					image_ident: "public_transit",
 					sublabel: {
 						kid: "example: bus, train, tramway, subway, boat",
 						adult: "example: bus, train, tramway, subway, boat",
@@ -53,18 +43,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Car, taxi, truck, or motorcycle",
 					value: "Car, taxi, truck, or motorcycle",
-					images: {
-						kid: Images.kids.options.transportation.car,
-						adult: Images.adults.options.transportation.car,
-					},
+					image_ident: "car",
 				},
 				{
 					label: "Other, which one?",
 					value: "Other",
-					images: {
-						kid: Images.kids.options.transportation.other,
-						adult: Images.adults.options.transportation.other,
-					},
+					image_ident: "other",
 				},
 			],
 		},
@@ -80,18 +64,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "步行",
 					value: "Walking",
-					images: {
-						kid: Images.kids.options.transportation.walking,
-						adult: Images.adults.options.transportation.walking,
-					},
+					image_ident: "walking",
 				},
 				{
 					label: "骑车",
 					value: "Wheeling",
-					images: {
-						kid: Images.kids.options.transportation.wheeling,
-						adult: Images.adults.options.transportation.wheeling,
-					},
+					image_ident: "wheeling",
 					sublabel: {
 						kid: "也包括轮椅、自行车、滑板、推式踏板车、轮滑",
 						adult: "也包括轮椅、自行车、滑板、推式踏板车、轮滑",
@@ -100,10 +78,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "公共交通",
 					value: "Public transit",
-					images: {
-						kid: Images.kids.options.transportation.public_transit,
-						adult: Images.adults.options.transportation.public_transit,
-					},
+					image_ident: "public_transit",
 					sublabel: {
 						kid: "如公交车、火车、有轨电车、地铁、轮渡",
 						adult: "如公交车、火车、有轨电车、地铁、轮渡",
@@ -112,18 +87,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "汽车、卡车或摩托车",
 					value: "Car, taxi, truck, or motorcycle",
-					images: {
-						kid: Images.kids.options.transportation.car,
-						adult: Images.adults.options.transportation.car,
-					},
+					image_ident: "car",
 				},
 				{
 					label: "其他的",
 					value: "Other",
-					images: {
-						kid: Images.kids.options.transportation.other,
-						adult: Images.adults.options.transportation.other,
-					},
+					image_ident: "other",
 				},
 			],
 		},
@@ -139,18 +108,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Caminando",
 					value: "Walking",
-					images: {
-						kid: Images.kids.options.transportation.walking,
-						adult: Images.adults.options.transportation.walking,
-					},
+					image_ident: "walking",
 				},
 				{
 					label: "Sobre ruedas",
 					value: "Wheeling",
-					images: {
-						kid: Images.kids.options.transportation.wheeling,
-						adult: Images.adults.options.transportation.wheeling,
-					},
+					image_ident: "wheeling",
 					sublabel: {
 						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
 						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
@@ -159,10 +122,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Transporte público",
 					value: "Public transit",
-					images: {
-						kid: Images.kids.options.transportation.public_transit,
-						adult: Images.adults.options.transportation.public_transit,
-					},
+					image_ident: "public_transit",
 					sublabel: {
 						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
 						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
@@ -171,18 +131,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Automóvil, taxi, camioneta o motocicleta",
 					value: "Car, taxi, truck, or motorcycle",
-					images: {
-						kid: Images.kids.options.transportation.car,
-						adult: Images.adults.options.transportation.car,
-					},
+					image_ident: "car",
 				},
 				{
 					label: "Otro",
 					value: "Other",
-					images: {
-						kid: Images.kids.options.transportation.other,
-						adult: Images.adults.options.transportation.other,
-					},
+					image_ident: "other",
 				},
 			],
 		},
@@ -200,18 +154,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "À pied",
 					value: "Walking",
-					images: {
-						kid: Images.kids.options.transportation.walking,
-						adult: Images.adults.options.transportation.walking,
-					},
+					image_ident: "walking",
 				},
 				{
 					label: "En roulant",
 					value: "Wheeling",
-					images: {
-						kid: Images.kids.options.transportation.wheeling,
-						adult: Images.adults.options.transportation.wheeling,
-					},
+					image_ident: "wheeling",
 					sublabel: {
 						kid: "par exemple, fauteuil roulant, vélo, vélo électrique, planche à roulettes, trottinette, patins à roues alignées",
 						adult:
@@ -221,10 +169,7 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "En transport en commun",
 					value: "Public transit",
-					images: {
-						kid: Images.kids.options.transportation.public_transit,
-						adult: Images.adults.options.transportation.public_transit,
-					},
+					image_ident: "public_transit",
 					sublabel: {
 						kid: "par exemple, autobus, train, tramway, métro, bateau",
 						adult: "par exemple, autobus, train, tramway, métro, bateau",
@@ -233,18 +178,12 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				{
 					label: "En voiture, taxi, camion ou motocyclette",
 					value: "Car, taxi, truck, or motorcycle",
-					images: {
-						kid: Images.kids.options.transportation.car,
-						adult: Images.adults.options.transportation.car,
-					},
+					image_ident: "car",
 				},
 				{
 					label: "Autre, lequel?",
 					value: "Other",
-					images: {
-						kid: Images.kids.options.transportation.other,
-						adult: Images.adults.options.transportation.other,
-					},
+					image_ident: "other",
 				},
 			],
 		},

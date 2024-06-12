@@ -1,7 +1,6 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
-import Images from "styles/images/index";
 
 const Satisfaction: QuestionRadioImagePayloadInterface = {
 	ident: "app_use_satisfaction",
@@ -20,42 +19,27 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Strongly dissatisfied",
 					value: "Strongly dissatisfied",
-					images: {
-						kid: Images.generic.rating.very_dissatisfied,
-						adult: Images.generic.rating.very_dissatisfied,
-					},
+					image_ident: "very_dissatisfied",
 				},
 				{
 					label: "Dissatisfied",
 					value: "Dissatisfied",
-					images: {
-						kid: Images.generic.rating.dissatisfied,
-						adult: Images.generic.rating.dissatisfied,
-					},
+					image_ident: "dissatisfied",
 				},
 				{
 					label: "Neutral",
 					value: "Neutral",
-					images: {
-						kid: Images.generic.rating.neutral,
-						adult: Images.generic.rating.neutral,
-					},
+					image_ident: "neutral",
 				},
 				{
 					label: "Satisfied",
 					value: "Satisfied",
-					images: {
-						kid: Images.generic.rating.satisfied,
-						adult: Images.generic.rating.satisfied,
-					},
+					image_ident: "satisfied",
 				},
 				{
 					label: "Strongly Satisfied",
 					value: "Strongly Satisfied",
-					images: {
-						kid: Images.generic.rating.very_satisfied,
-						adult: Images.generic.rating.very_satisfied,
-					},
+					image_ident: "very_satisfied",
 				},
 			],
 		},
@@ -71,42 +55,27 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				{
 					label: "非常不满意",
 					value: "Strongly dissatisfied",
-					images: {
-						kid: Images.generic.rating.very_dissatisfied,
-						adult: Images.generic.rating.very_dissatisfied,
-					},
+					image_ident: "very_dissatisfied",
 				},
 				{
 					label: "不满意",
 					value: "Dissatisfied",
-					images: {
-						kid: Images.generic.rating.dissatisfied,
-						adult: Images.generic.rating.dissatisfied,
-					},
+					image_ident: "dissatisfied",
 				},
 				{
 					label: "中立",
 					value: "Neutral",
-					images: {
-						kid: Images.generic.rating.neutral,
-						adult: Images.generic.rating.neutral,
-					},
+					image_ident: "neutral",
 				},
 				{
 					label: "满意",
 					value: "Satisfied",
-					images: {
-						kid: Images.generic.rating.satisfied,
-						adult: Images.generic.rating.satisfied,
-					},
+					image_ident: "satisfied",
 				},
 				{
 					label: "非常满意",
 					value: "Strongly Satisfied",
-					images: {
-						kid: Images.generic.rating.very_satisfied,
-						adult: Images.generic.rating.very_satisfied,
-					},
+					image_ident: "very_satisfied",
 				},
 			],
 		},
@@ -122,42 +91,27 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Muy insatisfecho",
 					value: "Strongly dissatisfied",
-					images: {
-						kid: Images.generic.rating.very_dissatisfied,
-						adult: Images.generic.rating.very_dissatisfied,
-					},
+					image_ident: "very_dissatisfied",
 				},
 				{
 					label: "Insatisfecho",
 					value: "Dissatisfied",
-					images: {
-						kid: Images.generic.rating.dissatisfied,
-						adult: Images.generic.rating.dissatisfied,
-					},
+					image_ident: "dissatisfied",
 				},
 				{
 					label: "Neutral",
 					value: "Neutral",
-					images: {
-						kid: Images.generic.rating.neutral,
-						adult: Images.generic.rating.neutral,
-					},
+					image_ident: "neutral",
 				},
 				{
 					label: "Satisfecho",
 					value: "Satisfied",
-					images: {
-						kid: Images.generic.rating.satisfied,
-						adult: Images.generic.rating.satisfied,
-					},
+					image_ident: "satisfied",
 				},
 				{
 					label: "Muy satisfecho",
 					value: "Strongly Satisfied",
-					images: {
-						kid: Images.generic.rating.very_satisfied,
-						adult: Images.generic.rating.very_satisfied,
-					},
+					image_ident: "very_satisfied",
 				},
 			],
 		},
@@ -173,42 +127,27 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				{
 					label: "Très insatisfait",
 					value: "Strongly dissatisfied",
-					images: {
-						kid: Images.generic.rating.very_dissatisfied,
-						adult: Images.generic.rating.very_dissatisfied,
-					},
+					image_ident: "very_dissatisfied",
 				},
 				{
 					label: "Insatisfait",
 					value: "Dissatisfied",
-					images: {
-						kid: Images.generic.rating.dissatisfied,
-						adult: Images.generic.rating.dissatisfied,
-					},
+					image_ident: "dissatisfied",
 				},
 				{
 					label: "Neutre",
 					value: "Neutral",
-					images: {
-						kid: Images.generic.rating.neutral,
-						adult: Images.generic.rating.neutral,
-					},
+					image_ident: "neutral",
 				},
 				{
 					label: "Satisfait",
 					value: "Satisfied",
-					images: {
-						kid: Images.generic.rating.satisfied,
-						adult: Images.generic.rating.satisfied,
-					},
+					image_ident: "satisfied",
 				},
 				{
 					label: "Très satisfait",
 					value: "Strongly Satisfied",
-					images: {
-						kid: Images.generic.rating.very_satisfied,
-						adult: Images.generic.rating.very_satisfied,
-					},
+					image_ident: "very_satisfied",
 				},
 			],
 		},

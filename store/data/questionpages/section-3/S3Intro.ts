@@ -1,6 +1,5 @@
 import Screen from "constants/screen.enum";
 import type { SectionPayloadInterface } from "interface/payload.type";
-import Images from "styles/images";
 
 const S3Intro: SectionPayloadInterface = {
 	ident: "work_intro",
@@ -10,74 +9,18 @@ const S3Intro: SectionPayloadInterface = {
 		"en-CA": {
 			heading: "Work",
 			subheading: "Section 3",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_3.phone,
-					tablet: Images.kids.intro.section_3.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-			},
 		},
 		"zh-CN": {
 			heading: "工作",
 			subheading: "第3部分",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_3.phone,
-					tablet: Images.kids.intro.section_3.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-			},
 		},
 		"es-MX": {
 			heading: "Trabajo",
 			subheading: "Sección 3",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_3.phone,
-					tablet: Images.kids.intro.section_3.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-			},
 		},
 		"fr-CA": {
 			heading: "Emploi",
 			subheading: "Section 3",
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_3.phone,
-					tablet: Images.kids.intro.section_3.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-			},
 		},
 	},
 };

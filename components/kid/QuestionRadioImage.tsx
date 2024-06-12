@@ -173,9 +173,9 @@ const QuestionRadioImage = ({
 	};
 
 	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
-		const { images, label, value } = item;
+		const { image_ident, label, value } = item;
 		const imageWidth = horizontalScale(280, device.screenWidth) / numColumn;
-		const imageByMode = getOptionImage(images, mode);
+		const imageByMode = getOptionImage(image_ident);
 
 		return (
 			<Pressable
@@ -216,8 +216,8 @@ const QuestionRadioImage = ({
 
 	/** if the option contains value called "other", it will be displayed as a list */
 	const listRenderOption = (item: ChoiceImage): React.ReactElement => {
-		const { images, label, value, sublabel, label_mode } = item;
-		const imageByMode = getOptionImage(images, mode);
+		const { image_ident, label, value, sublabel, label_mode } = item;
+		const imageByMode = getOptionImage(image_ident);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
 		const optionText = getOptionText(label, label_mode, mode);
 		const optionSublabel = getOptionSubLabel(sublabel, mode);
