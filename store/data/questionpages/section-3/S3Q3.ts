@@ -6,6 +6,7 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 	ident: "work_3",
 	name: "Question 14:	Which of the following images shows what you do most of the time while volunteering and/or working?",
 	type: Screen.SingleQuestion,
+	column_name: "14.0 Work",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadioImage,

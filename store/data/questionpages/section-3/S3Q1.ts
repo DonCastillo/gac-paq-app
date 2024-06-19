@@ -6,6 +6,7 @@ const S3Q1: QuestionRadioPayloadInterface = {
 	ident: "work_1",
 	name: "Question 12: In the past week, did you volunteer or work?",
 	type: Screen.SingleQuestion,
+	column_name: "12.0 Work",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

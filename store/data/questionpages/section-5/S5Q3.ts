@@ -6,6 +6,7 @@ const S5Q3: QuestionRadioPayloadInterface = {
 	ident: "organized_3",
 	name: "Question 20: On the days that you do these activities during the past week, how long did it usually last?",
 	type: Screen.SingleQuestion,
+	column_name: "20.0 Orga",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

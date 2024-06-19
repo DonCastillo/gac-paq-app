@@ -6,6 +6,7 @@ const S6Q2: QuestionRadioPayloadInterface = {
 	ident: "play_2",
 	name: "Question 22: In the past week, how many days per week did you do activities that make your muscles stronger?",
 	type: Screen.SingleQuestion,
+	column_name: "22.0 Play",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

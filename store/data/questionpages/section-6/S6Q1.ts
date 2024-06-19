@@ -6,6 +6,7 @@ const S6Q1: QuestionRadioPayloadInterface = {
 	ident: "play_1",
 	name: "Question 21:	In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
 	type: Screen.SingleQuestion,
+	column_name: "21.0 Play",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

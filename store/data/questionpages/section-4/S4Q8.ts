@@ -6,6 +6,7 @@ const S4Q8: QuestionRadioPayloadInterface = {
 	ident: "transportation_8",
 	name: "Question 17b: How many days did you walk to places other than school or work in the past week?",
 	type: Screen.SingleQuestion,
+	column_name: "17.B Tran",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
