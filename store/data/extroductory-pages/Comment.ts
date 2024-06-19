@@ -6,6 +6,7 @@ const Comment: QuestionTextareaPayloadInterface = {
 	ident: "app_use_comment",
 	name: "app_use_comment",
 	type: Screen.SingleQuestion,
+	column_name: "32.0 Feed",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionTextarea,

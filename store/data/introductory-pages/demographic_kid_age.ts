@@ -6,6 +6,7 @@ const DemographicKidPage: QuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	type: Screen.SingleQuestion,
+	column_name: "0.D Intr",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionDropdown,

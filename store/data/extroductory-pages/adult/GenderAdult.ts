@@ -6,6 +6,7 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 	ident: "child_sex_entered_by_parent",
 	name: "child_sex",
 	type: Screen.SingleQuestion,
+	column_name: "24.0 Demo",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
