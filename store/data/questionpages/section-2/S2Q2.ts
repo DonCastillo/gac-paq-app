@@ -5,7 +5,7 @@ import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 const S2Q2: QuestionRadioPayloadInterface = {
 	ident: "household_2",
 	name: "Question 9: How many days did you do chores during the past week?",
-	column_name: "9.0 Hous",
+	column_name: "09.0 Hous",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

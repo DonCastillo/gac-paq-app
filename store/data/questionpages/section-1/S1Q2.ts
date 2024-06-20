@@ -5,7 +5,7 @@ import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 const S1Q2: QuestionRadioPayloadInterface = {
 	ident: "school_2",
 	name: "Question 2: How many days did you attend school in the past week?",
-	column_name: "2.0 Scho",
+	column_name: "02.0 Scho",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
