@@ -1,5 +1,12 @@
 import Section from "constants/section.enum";
-import type { ResponseInterface } from "interface/payload.type";
+import type {
+	PageIndexInterface,
+	QuestionCheckboxPayloadInterface,
+	QuestionRadioImagePayloadInterface,
+	QuestionRadioPayloadInterface,
+	QuestionSliderPayloadInterface,
+	ResponseInterface,
+} from "interface/payload.type";
 import type { FinalResponseType } from "interface/union.type";
 import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
 import { store } from "store/store";
@@ -33,6 +40,7 @@ const sanitizeResponse = (): FinalResponseType => {
 	const sanitizedResponse: FinalResponseType = {};
 	const mode = store.getState().settings.mode;
 	const responses = store.getState().responses as Record<string, ResponseInterface>;
+	const pages = store.getState().settings.pages;
 
 	// FILTER RESPONSES
 	sanitizedResponse.questions = {};
@@ -51,7 +59,8 @@ const sanitizeResponse = (): FinalResponseType => {
 
 		// get all answers from the questions
 		if (value.section === Section.Question) {
-			const label = (value.label ?? key).replace(/(\r\n|\n|\r)/g, "");
+			let label = (value.label ?? key).replace(/(\r\n|\n|\r)/g, "");
+			label = label.replace(/(\t)/g, " ");
 			if (value.answer.includes(" | ")) {
 				sanitizedResponse.questions = {
 					...sanitizedResponse.questions,
@@ -80,6 +89,26 @@ const sanitizeResponse = (): FinalResponseType => {
 		}
 	}
 
+	// get all questions and their column names
+	const finalSanitizedQuestions = {};
+	Object.values(pages).forEach((page: PageIndexInterface) => {
+		if (page.section === Section.Question) {
+			const questionPage = page.page as
+				| QuestionRadioPayloadInterface
+				| QuestionSliderPayloadInterface
+				| QuestionRadioImagePayloadInterface
+				| QuestionCheckboxPayloadInterface;
+
+			if (questionPage.column_name !== undefined && questionPage.column_name !== null) {
+				finalSanitizedQuestions[questionPage.column_name] =
+					sanitizedResponse.questions[questionPage.column_name] ?? "";
+			}
+		}
+	});
+
+	sanitizedResponse.questions = finalSanitizedQuestions;
+
+
 	return sanitizedResponse;
 };
 
@@ -96,7 +125,7 @@ const getResponseByIdent = (ident: string): string | string[] | null => {
 		return null;
 	}
 
-	if (finalResponse?.answer?.includes(" | ") ?? false) {
+	if ((finalResponse?.answer as string)?.includes(" | ") ?? false) {
 		return finalResponse?.answer?.split(" | ") ?? null;
 	}
 	return finalResponse?.answer;
@@ -107,7 +136,7 @@ const addResponse = (value: string | null): void => {
 	store.dispatch(
 		newResponse({
 			ident: currentPage.page.ident,
-			label: currentPage.page.name,
+			label: currentPage.page.column_name,
 			answer: value,
 			pageNumber: currentPage.pageNumber,
 			mode: store.getState().settings.mode,
