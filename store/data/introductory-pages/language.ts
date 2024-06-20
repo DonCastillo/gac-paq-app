@@ -6,7 +6,7 @@ const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 	ident: "language_location",
 	name: "language_location",
 	type: Screen.Language,
-	column_name: "0.A Intr",
+	column_name: "language_location",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionLanguage,

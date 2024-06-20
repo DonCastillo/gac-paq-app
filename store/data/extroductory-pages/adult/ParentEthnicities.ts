@@ -6,7 +6,7 @@ const ParentEthnicities: QuestionCheckboxPayloadInterface = {
 	ident: "parent_ethnicity",
 	name: "parent_ethnicity",
 	type: Screen.SingleQuestion,
-	column_name: "27.0 Demo",
+	column_name: "parent_ethnicities",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionCheckbox,

@@ -6,7 +6,7 @@ const AgePage: QuestionDropdownPayloadInterface = {
 	ident: "mode",
 	name: "mode",
 	type: Screen.SingleQuestion,
-	column_name: "0.C Intr",
+	column_name: "mode",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionDropdown,

@@ -6,7 +6,7 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 	ident: "participant_id",
 	name: "participant_id",
 	type: Screen.SingleQuestion,
-	column_name: "0.B Intr",
+	column_name: "participant_id",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionInput,

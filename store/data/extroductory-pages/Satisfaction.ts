@@ -6,7 +6,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 	ident: "app_use_satisfaction",
 	name: "app_use_satisfaction",
 	type: Screen.SingleQuestion,
-	column_name: "31.0 Feed",
+	column_name: "app_satisfaction",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionSatisfactionImage,

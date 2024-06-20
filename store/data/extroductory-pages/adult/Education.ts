@@ -6,7 +6,7 @@ const Education: QuestionRadioPayloadInterface = {
 	ident: "highest_level_of_education",
 	name: "highest_level_of_education",
 	type: Screen.SingleQuestion,
-	column_name: "29.0 Demo",
+	column_name: "education",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
