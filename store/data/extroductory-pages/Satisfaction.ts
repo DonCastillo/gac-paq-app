@@ -38,8 +38,8 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 					image_ident: "satisfied",
 				},
 				{
-					label: "Strongly Satisfied",
-					value: "Strongly Satisfied",
+					label: "Strongly satisfied",
+					value: "Strongly satisfied",
 					image_ident: "very_satisfied",
 				},
 			],
@@ -75,7 +75,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 				{
 					label: "非常满意",
-					value: "Strongly Satisfied",
+					value: "Strongly satisfied",
 					image_ident: "very_satisfied",
 				},
 			],
@@ -111,7 +111,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 				{
 					label: "Muy satisfecho",
-					value: "Strongly Satisfied",
+					value: "Strongly satisfied",
 					image_ident: "very_satisfied",
 				},
 			],
@@ -147,7 +147,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 				{
 					label: "Très satisfait",
-					value: "Strongly Satisfied",
+					value: "Strongly satisfied",
 					image_ident: "very_satisfied",
 				},
 			],

@@ -1,20 +1,15 @@
 import Mode from "constants/mode.enum";
-import { setMode } from "store/settings/settingsSlice";
-import { store } from "store/store";
 import { loadAgePage, reloadExtroFeedbackPages } from "./load_pages.utils";
+import type { ModeType } from "interface/union.type";
 
-const changeMode = (value: string | null): void => {
+const changeMode = (value: string | null | ModeType): void => {
 	if (value === "adult") {
-		store.dispatch(setMode(Mode.Adult));
 		loadAgePage(Mode.Adult);
-	} else if (value === "child") {
-		store.dispatch(setMode(Mode.Kid));
+	} else if (value === "kid") {
 		loadAgePage(Mode.Kid);
 	} else if (value === "teen") {
-		store.dispatch(setMode(Mode.Teen));
 		loadAgePage(Mode.Teen);
 	} else {
-		store.dispatch(setMode(undefined));
 		loadAgePage(Mode.Kid);
 	}
 	reloadExtroFeedbackPages();

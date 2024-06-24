@@ -1,7 +1,6 @@
 import type Mode from "constants/mode.enum";
 import type Section from "constants/section.enum";
 import type Screen from "constants/screen.enum";
-import type PageInterface from "interface/page";
 import type {
 	ExtroPayloadInterface,
 	QuestionDropdownLanguageInterface,
@@ -38,6 +37,7 @@ import type {
 	SectionInterface,
 	PreambleInterface,
 	ExtroInterface,
+	PageInterface,
 } from "interface/payload.type";
 import type Question from "constants/question.enum";
 import type Device from "constants/device.enum";

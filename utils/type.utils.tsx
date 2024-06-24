@@ -1,3 +1,4 @@
+import Mode from "constants/mode.enum";
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
 import Section from "constants/section.enum";
@@ -58,4 +59,15 @@ const getQuestionType = (questionType: string): Question => {
 	}
 };
 
-export { getScreenType, getSectionType, getQuestionType };
+const getModeType = (modeType: string): Mode => {
+	if (modeType === "kid" || modeType === "child") {
+		return Mode.Kid;
+	} else if (modeType === "teen" || modeType === "adolescent") {
+		return Mode.Teen;
+	} else if (modeType === "adult" || modeType === "parent") {
+		return Mode.Adult;
+	}
+	return Mode.Kid;
+};
+
+export { getScreenType, getSectionType, getQuestionType, getModeType };

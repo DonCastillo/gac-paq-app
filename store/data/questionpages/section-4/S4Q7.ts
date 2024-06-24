@@ -38,7 +38,7 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "No",
-					value: "No",
+					value: "no",
 				},
 			],
 		},
@@ -72,7 +72,7 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "否",
-					value: "No",
+					value: "no",
 				},
 			],
 		},
@@ -106,7 +106,7 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "No",
-					value: "No",
+					value: "no",
 				},
 			],
 		},
@@ -140,7 +140,7 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "Non",
-					value: "No",
+					value: "no",
 				},
 			],
 		},

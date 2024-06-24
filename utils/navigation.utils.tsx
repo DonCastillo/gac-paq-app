@@ -33,7 +33,6 @@ const skipTo = (answer: string | string[] | null): number => {
 	// if responder indicates they did not attend school, skip entire SCHOOL section
 	if (currentIdent === "school_1" && finalAnswer === "no") {
 		store.dispatch(clearResponseByIdent("school_2"));
-		store.dispatch(clearResponseByIdent("school_2"));
 		store.dispatch(clearResponseByIdent("school_3"));
 		store.dispatch(clearResponseByIdent("school_4"));
 		store.dispatch(clearResponseByIdent("school_5"));

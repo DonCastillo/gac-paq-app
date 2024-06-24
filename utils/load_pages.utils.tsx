@@ -191,11 +191,13 @@ const loadAgePage = (mode: ModeType): void => {
 		}
 	}
 
+	// reload all pages, because there are pages that depend on the age
 	store.dispatch(setPage(newPages));
 
-	// clear responses
+	// force user to reenter their age when mode changes
 	store.dispatch(clearResponseByIdent("age"));
-	store.dispatch(clearUnansweredResponses());
+
+	// nullify question responses
 	store.dispatch(clearQuestionResponses());
 	store.dispatch(clearExtroResponses());
 	store.dispatch(clearFeedbackResponses());

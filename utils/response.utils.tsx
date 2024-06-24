@@ -108,7 +108,6 @@ const sanitizeResponse = (): FinalResponseType => {
 
 	sanitizedResponse.questions = finalSanitizedQuestions;
 
-
 	return sanitizedResponse;
 };
 

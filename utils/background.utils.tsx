@@ -27,6 +27,8 @@ import PhysicalEducationOptions from "styles/images/options/physical_education";
 import BreaksOptions from "styles/images/options/breaks";
 import ChoresOptions from "styles/images/options/chores";
 import VolunteeringOptions from "styles/images/options/volunteering";
+import type State from "constants/state.enum";
+import StatusBackground from "styles/images/background/status";
 
 const getImageBackground = (): any | null => {
 	const settings = store.getState().settings;
@@ -74,6 +76,15 @@ const getImageBackground = (): any | null => {
 	}
 
 	return null;
+};
+
+const getImageBackgroundStatus = (state: State): any | null => {
+	const settings = store.getState().settings;
+	const language = settings.language ?? "en-CA";
+	const region = language.split("-")[1].toUpperCase();
+	const platform = settings.device.isTablet ? "tablet" : "phone";
+
+	return StatusBackground[region][state][platform];
 };
 
 const getOptionImage = (image_ident: string): any | null => {
@@ -285,6 +296,7 @@ export {
 	getIntroductoryBackground,
 	getQuestionBackground,
 	getImageBackground,
+	getImageBackgroundStatus,
 	getOptionImage,
 	getOptionText,
 	getOptionSubLabel,
