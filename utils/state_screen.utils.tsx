@@ -5,16 +5,20 @@ import StateKid from "base_pages/kid/StateKid";
 import Mode from "constants/mode.enum";
 import State from "constants/state.enum";
 import type { ScreenByModeFuncType } from "interface/function.type";
+import { store } from "store/store";
 
-const SplashScreen: ScreenByModeFuncType = (mode) => {
+const SplashScreen: ScreenByModeFuncType = () => {
+	const mode = store.getState().settings.mode;
 	return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;
 };
 
-const ErrorScreen: ScreenByModeFuncType = (mode) => {
+const ErrorScreen: ScreenByModeFuncType = () => {
+	const mode = store.getState().settings.mode;
 	return mode === Mode.Kid ? <StateKid state={State.Error} /> : <StateAdult state={State.Error} />;
 };
 
-const SuccessScreen: ScreenByModeFuncType = (mode) => {
+const SuccessScreen: ScreenByModeFuncType = () => {
+	const mode = store.getState().settings.mode;
 	return mode === Mode.Kid ? (
 		<StateKid state={State.Success} />
 	) : (

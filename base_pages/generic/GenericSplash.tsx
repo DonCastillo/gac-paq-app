@@ -19,7 +19,7 @@ const GenericSplash = (): React.ReactElement => {
 	useEffect(() => {
 		const timeout = setTimeout(() => {
 			clearInterval(timeout);
-			navigation.navigate("RegularPageScreen");
+			navigation.navigate("RegularPageScreen" as never);
 		}, 3000);
 	});
 

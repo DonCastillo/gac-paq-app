@@ -28,6 +28,7 @@ import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
 import type { ExtroInterface } from "interface/payload.type";
 import { translatePage } from "utils/translate.utils";
+import { submitResponse } from "utils/api.utils";
 
 const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -42,7 +43,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// translations
-	const isFinal = currentPage.page.isFinal;
+	const isFinal = currentPage.page?.isFinal;
 	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
 
 	// set button component dynamically
@@ -81,20 +82,14 @@ const QuestionExtroAdult = (): React.ReactElement => {
 	const submitResponseHandler = async (): Promise<void> => {
 		try {
 			setLoading(true);
-
 			const sanitizedResponses = sanitizeResponse();
-			console.log("sanitized responses: ", sanitizedResponses);
-			// await submitResponse(
-			// 	sanitizedResponses,
-			// 	`${directusBaseEndpoint}/items/response`,
-			// 	directusAccessToken,
-			// );
-			dispatch(resetResponses());
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			await submitResponse(sanitizedResponses);
+
+			// throw new Error("Test error");
+			// dispatch(resetResponses());
+			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("ErrorScreen");
+			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}

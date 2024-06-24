@@ -24,12 +24,14 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
+	setMode,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
-import { getQuestionType } from "utils/type.utils";
+import { getModeType, getQuestionType } from "utils/type.utils";
 import { translatePage, translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
+import Mode from "constants/mode.enum";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -119,8 +121,10 @@ const QuestionSingleAdult = (): React.ReactElement => {
 		setSelectedValue(value);
 
 		// set mode
-		if (currentPage.page.ident === "mode") {
-			changeMode(value);
+		// only triggers a mode change if the respondent actually selects a mode
+		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
+			dispatch(setMode(getModeType(value)));
+			changeMode(getModeType(value));
 		}
 	};
 

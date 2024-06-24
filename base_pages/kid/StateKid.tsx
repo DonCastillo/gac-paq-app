@@ -16,8 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { useDispatch, useSelector } from "react-redux";
 import {
-	getDirectusAccessToken,
-	getDirectusBaseEndpoint,
+	getDevice,
 	getLanguage,
 	getPhrases,
 	reset,
@@ -25,6 +24,11 @@ import {
 import { resetResponses, selectAllResponses } from "store/responses/responsesSlice";
 import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
 import { translatePage as translatePageUtil } from "utils/translate.utils";
+import { LangPageInterface } from "interface/payload.type";
+import { sanitizeResponse } from "utils/response.utils";
+import { submitResponse } from "utils/api.utils";
+import { GeneralStyle } from "styles/general";
+import { moderateScale } from "utils/responsive.utils";
 
 interface Props {
 	state: State;
@@ -36,12 +40,12 @@ function StateKid({ state }: Props): React.ReactElement {
 	const phrases = useSelector(getPhrases);
 	const successPage = useSelector(getSuccessPage);
 	const errorPage = useSelector(getErrorPage);
+	const device = useSelector(getDevice);
+
 
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const [translatedPage, setTranslatedPage] = useState<
-		PageInterface | QuestionDropdownInterface | null | null
-	>(null);
+	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
 
 	const SuccessImage = Images.kids.graphics.success_image;
@@ -55,45 +59,35 @@ function StateKid({ state }: Props): React.ReactElement {
 		buttonChange();
 	}, [state]);
 
-	function statePageChange(): void {
+
+	const statePageChange = (): void => {
 		if (state === State.Success) {
-			setTranslatedPage(translatePageUtil(successPage.translations, language));
+			const pageTranslations: LangPageInterface = successPage.translations;
+			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
 		} else {
-			setTranslatedPage(translatePageUtil(errorPage.translations, language));
+			const pageTranslations: LangPageInterface = errorPage.translations;
+			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
 		}
-	}
+	};
 
 	function resetApp(): void {
-		dispatch(reset());
-		navigation.navigate("SplashScreen");
+		// dispatch(reset());
+		// navigation.navigate("SplashScreen" as never);
 	}
 
-	async function resubmitResponse(): Promise<void> {
+	const resubmitResponse = async (): Promise<void> => {
 		try {
 			setLoading(true);
-
-			// throw new Error("testing error page");
-			// await submitResponse(
-			// 	responseCtx.responses,
-			// 	`${directusBaseEndpoint}/items/response`,
-			// 	directusAccessToken,
-			// );
-
-			console.log("done submitting the responses");
-			// introduce a delay
-
-			dispatch(resetResponses());
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			const sanitizedResponses = sanitizeResponse();
+			await submitResponse(sanitizedResponses);
+			// dispatch(resetResponses());
+			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			console.log("redirect to the error page");
-			console.log("error: ", error);
-			navigation.navigate("ErrorScreen");
+			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}
-	}
+	};
 
 	function buttonChange(): void {
 		if (state === State.Success) {
@@ -124,8 +118,7 @@ function StateKid({ state }: Props): React.ReactElement {
 						<Heading
 							customStyle={{
 								color: "#000",
-								fontSize: 32,
-								textAlign: "center",
+								...GeneralStyle.kid.pageHeading,
 							}}
 						>
 							{translatedPage?.heading}
@@ -133,8 +126,15 @@ function StateKid({ state }: Props): React.ReactElement {
 						<Paragraph
 							customStyle={{
 								color: "#000",
-								fontSize: 20,
-								marginTop: 20,
+								...GeneralStyle.kid.pageParagraph,
+								fontSize: moderateScale(
+									device.isTablet ? 18 : 20,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 23 : 25,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
 							}}
 						>
 							{translatedPage?.description}

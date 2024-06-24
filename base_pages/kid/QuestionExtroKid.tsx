@@ -29,9 +29,9 @@ import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
 import { translatePage } from "utils/translate.utils";
 import type { ExtroInterface } from "interface/payload.type";
+import { submitResponse } from "utils/api.utils";
 
 const QuestionExtroKid = (): React.ReactElement => {
-	console.log("question extro kid ...");
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
@@ -85,24 +85,12 @@ const QuestionExtroKid = (): React.ReactElement => {
 	const submitResponseHandler = async (): Promise<void> => {
 		try {
 			setLoading(true);
-
-			// throw new Error("testing error page");
-
 			const sanitizedResponses = sanitizeResponse();
-			console.log("sanitized responses: ", sanitizedResponses);
-			// await submitResponse(
-			// 	sanitizedResponses,
-			// 	`${directusBaseEndpoint}/items/response`,
-			// 	directusAccessToken,
-			// );
-			dispatch(resetResponses());
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			await submitResponse(sanitizedResponses);
+			// dispatch(resetResponses());
+			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			console.log("redirect to the error page");
-			console.log("error: ", error);
-			navigation.navigate("ErrorScreen");
+			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}
