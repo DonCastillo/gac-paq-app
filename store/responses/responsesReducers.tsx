@@ -28,77 +28,58 @@ const newResponse: NewResponseFuncType = (state, action) => {
 };
 
 const clearResponseByIdent: ClearResponseByIdentFuncType = (state, action) => {
-	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
-		const responseValue = value;
-		if (responseValue.ident !== action.payload) {
-			newState[key] = value;
+		if (value.ident === action.payload) {
+			state[key].answer = null;
+			return;
 		}
 	}
-	state = newState;
 };
 
 const clearUnansweredResponses: ResponsesFuncType = (state) => {
-	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
-		const responseValue = value;
-		if (
-			responseValue.answer !== null &&
-			responseValue.answer !== "" &&
-			responseValue.answer !== undefined
-		) {
-			newState[key] = value;
+		if (value.answer === null || value.answer === "" || value.answer === undefined) {
+			delete state[key];
 		}
 	}
-	state = newState;
 };
 
 const clearQuestionResponses: ResponsesFuncType = (state) => {
-	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
-		const responseValue = value;
-		if (responseValue.section !== Section.Question) {
-			newState[key] = value;
+		if (value.section === Section.Question) {
+			state[key].answer = null;
 		}
 	}
-	state = newState;
 };
 
 const clearIntroResponses: ResponsesFuncType = (state) => {
-	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
-		const responseValue = value;
-		if (responseValue.section !== Section.Intro) {
-			newState[key] = value;
+		if (value.section === Section.Intro) {
+			state[key].answer = null;
 		}
 	}
-	state = newState;
 };
 
 const clearFeedbackResponses: ResponsesFuncType = (state) => {
-	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
-		const responseValue = value;
-		if (responseValue.section !== Section.Feedback) {
-			newState[key] = value;
+		if (value.section === Section.Feedback) {
+			state[key].answer = null;
 		}
 	}
-	state = newState;
 };
 
 const clearExtroResponses: ResponsesFuncType = (state) => {
-	const newState = {};
 	for (const [key, value] of Object.entries(state)) {
-		const responseValue = value;
-		if (responseValue.section !== Section.Extro) {
-			newState[key] = value;
+		if (value.section === Section.Extro) {
+			state[key].answer = null;
 		}
 	}
-	state = newState;
 };
 
 const resetResponses: ResponsesFuncType = (state) => {
-	state = {};
+	for (const [key] of Object.entries(state)) {
+		delete state[key];
+	}
 };
 
 export default {

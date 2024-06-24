@@ -15,10 +15,14 @@ import { loadApp } from "utils/load_pages.utils";
 const Stack = createNativeStackNavigator();
 
 const AppWrapper = (): React.ReactElement => {
-	const [fontsLoaded] = useFonts(fonts);
+	const [fontsLoaded, fontError] = useFonts(fonts);
 	const settings = useSelector((state: any) => state.settings);
 	const responses = useSelector((state: any) => state.responses);
 	const questions = useSelector((state: any) => state.questions);
+
+	console.log("expo admin urlL: ", process.env.EXPO_PUBLIC_ADMIN_API_URL);
+	console.log("expo token: ", process.env.EXPO_PUBLIC_ADMIN_TOKEN);
+	console.log("expo node env: ", process.env);
 
 	const dispatch = useDispatch();
 

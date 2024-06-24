@@ -7,7 +7,6 @@ import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import State from "constants/state.enum";
 import type PageInterface from "interface/page";
-import type QuestionDropdownInterface from "interface/question_dropdown";
 import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
 import Images from "styles/images/index";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
@@ -15,16 +14,11 @@ import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import { useNavigation } from "@react-navigation/native";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { useDispatch, useSelector } from "react-redux";
-import {
-	getDevice,
-	getLanguage,
-	getPhrases,
-	reset,
-} from "store/settings/settingsSlice";
-import { resetResponses, selectAllResponses } from "store/responses/responsesSlice";
+import { getDevice, getLanguage, getPhrases, reset } from "store/settings/settingsSlice";
+import { resetResponses } from "store/responses/responsesSlice";
 import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
 import { translatePage as translatePageUtil } from "utils/translate.utils";
-import { LangPageInterface } from "interface/payload.type";
+import { type LangPageInterface } from "interface/payload.type";
 import { sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { GeneralStyle } from "styles/general";
@@ -42,7 +36,6 @@ function StateKid({ state }: Props): React.ReactElement {
 	const errorPage = useSelector(getErrorPage);
 	const device = useSelector(getDevice);
 
-
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
@@ -59,7 +52,6 @@ function StateKid({ state }: Props): React.ReactElement {
 		buttonChange();
 	}, [state]);
 
-
 	const statePageChange = (): void => {
 		if (state === State.Success) {
 			const pageTranslations: LangPageInterface = successPage.translations;
@@ -71,8 +63,8 @@ function StateKid({ state }: Props): React.ReactElement {
 	};
 
 	function resetApp(): void {
-		// dispatch(reset());
-		// navigation.navigate("SplashScreen" as never);
+		dispatch(reset());
+		navigation.navigate("SplashScreen" as never);
 	}
 
 	const resubmitResponse = async (): Promise<void> => {
@@ -80,7 +72,7 @@ function StateKid({ state }: Props): React.ReactElement {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
 			await submitResponse(sanitizedResponses);
-			// dispatch(resetResponses());
+			dispatch(resetResponses());
 			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
 			navigation.navigate("ErrorScreen" as never);

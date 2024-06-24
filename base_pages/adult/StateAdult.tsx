@@ -63,9 +63,8 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	};
 
 	const resetApp = (): void => {
-		console.log("resetting app inside State Adult ...")
-		// dispatch(reset());
-		// navigation.navigate("SplashScreen" as never);
+		dispatch(reset());
+		navigation.navigate("SplashScreen" as never);
 	};
 
 	const resubmitResponse = async (): Promise<void> => {
@@ -73,7 +72,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
 			await submitResponse(sanitizedResponses);
-			// dispatch(resetResponses());
+			dispatch(resetResponses());
 			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
 			navigation.navigate("ErrorScreen" as never);

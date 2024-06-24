@@ -84,9 +84,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
 			await submitResponse(sanitizedResponses);
-
-			// throw new Error("Test error");
-			// dispatch(resetResponses());
+			dispatch(resetResponses());
 			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
 			navigation.navigate("ErrorScreen" as never);

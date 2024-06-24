@@ -17,7 +17,6 @@ import {
 	clearFeedbackResponses,
 	clearQuestionResponses,
 	clearResponseByIdent,
-	clearUnansweredResponses,
 	resetResponses,
 } from "store/responses/responsesSlice";
 import {
@@ -44,6 +43,8 @@ const loadApp = (): void => {
 	const kidExtroPages: KidExtroductoryPagesType = questions.kidExtroPages;
 	const feedbackExtroPages: FeedbackExtroductoryPagesType = questions.feedbackExtroPages;
 	const languages: LanguageInterface[] = loadLanguagesOffline();
+
+	// DO NOT RESET APP CONFIGURATIONS HERE
 
 	// clear all responses
 	store.dispatch(resetResponses());
