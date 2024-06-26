@@ -156,6 +156,7 @@ export interface PagePayloadInterface {
 	ident: string;
 	title: string;
 	name: string;
+	audio_ident?: string;
 	type: Screen.Page;
 	translations: LangPageInterface;
 }

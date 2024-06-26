@@ -20,6 +20,8 @@ export type SetColorThemeFuncType = (state: SettingsSliceInterface, action: Payl
 export type SetButtonsFuncType = (state: SettingsSliceInterface, action: PayloadAction<ButtonPayloadInterface>) => void;
 export type SetPhrasesFuncType = (state: SettingsSliceInterface, action: PayloadAction<PhrasePayloadInterface>) => void;
 export type SetSectionTitlesFuncType = (state: SettingsSliceInterface, action: PayloadAction<string[]>) => void;
+export type SetNarrationsFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<string, string | null>>) => void;
+export type AddNarrationsFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ident: string, audio_id: string | null}>) => void;
 export type SkipPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;
 export type AddPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ key: number; page: PageIndexInterface }>) => void;
 export type SetPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<number, PageIndexInterface>>) => void;
