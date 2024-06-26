@@ -7,6 +7,7 @@ const S7Q1: QuestionRadioPayloadInterface = {
 	name: "Question 23:	In the past week, on a normal day, how much time do you spend outdoors?",
 	type: Screen.SingleQuestion,
 	column_name: "23.0 Outd",
+	audio_ident: "outdoors_1",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

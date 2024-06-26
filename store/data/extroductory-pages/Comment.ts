@@ -7,6 +7,7 @@ const Comment: QuestionTextareaPayloadInterface = {
 	name: "app_use_comment",
 	type: Screen.SingleQuestion,
 	column_name: "comment",
+	audio_ident: "comment",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionTextarea,

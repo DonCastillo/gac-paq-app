@@ -6,6 +6,7 @@ const S1Q2: QuestionRadioPayloadInterface = {
 	ident: "school_2",
 	name: "Question 2: How many days did you attend school in the past week?",
 	column_name: "02.0 Scho",
+	audio_ident: "school_2",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

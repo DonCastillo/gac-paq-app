@@ -5,6 +5,7 @@ const S5Preamble: PreamblePayloadInterface = {
 	ident: "organized_preamble",
 	heading: "Organized Activities",
 	type: Screen.Preamble,
+	audio_ident: "organized_preamble",
 	translations: {
 		"en-CA": {
 			heading: "Organized Activities",

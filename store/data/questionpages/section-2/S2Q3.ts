@@ -6,6 +6,7 @@ const S2Q3: QuestionRadioPayloadInterface = {
 	ident: "household_3",
 	name: "Question 10: On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
 	column_name: "10.0 Hous",
+	audio_ident: "household_3",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

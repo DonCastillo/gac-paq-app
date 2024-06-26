@@ -7,6 +7,7 @@ const Financial: QuestionRadioPayloadInterface = {
 	name: "difficulty_to_meet_financial_needs",
 	type: Screen.SingleQuestion,
 	column_name: "financial_needs",
+	audio_ident: "financial",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

@@ -164,6 +164,7 @@ export interface PagePayloadInterface {
 export interface QuestionDropdownPayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
 	column_name: string;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionDropdownInterface;
@@ -180,6 +181,7 @@ export interface QuestionDropdownPayloadLanguageInterface {
 export interface QuestionInputPayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
 	column_name: string;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionInputInterface;
@@ -188,6 +190,7 @@ export interface QuestionInputPayloadInterface {
 export interface QuestionCheckboxPayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
 	column_name: string;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionCheckboxInterface;
@@ -196,6 +199,7 @@ export interface QuestionCheckboxPayloadInterface {
 export interface QuestionRadioPayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
 	column_name: string;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionRadioInterface;
@@ -204,6 +208,7 @@ export interface QuestionRadioPayloadInterface {
 export interface QuestionSliderPayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
 	column_name: string;
 	type: Screen.SingleQuestion;
 	translations: LangQuestionSliderInterface;
@@ -212,6 +217,7 @@ export interface QuestionSliderPayloadInterface {
 export interface QuestionTextareaPayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
 	column_name: string;
 	isFinal?: boolean;
 	type: Screen.SingleQuestion;
@@ -221,6 +227,7 @@ export interface QuestionTextareaPayloadInterface {
 export interface QuestionRadioImagePayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
 	column_name: string;
 	isFinal?: boolean;
 	type: Screen.SingleQuestion;
@@ -237,6 +244,7 @@ export interface SectionPayloadInterface {
 export interface PreamblePayloadInterface {
 	ident: string;
 	heading: string;
+	audio_ident?: string;
 	type: Screen.Preamble;
 	translations: LangPreambleInterface;
 }

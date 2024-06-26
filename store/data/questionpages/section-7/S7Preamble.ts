@@ -4,6 +4,7 @@ import type { PreamblePayloadInterface } from "interface/payload.type";
 const S7Preamble: PreamblePayloadInterface = {
 	ident: "outdoors_preamble",
 	heading: "Outdoors",
+	audio_ident: "outdoors_preamble",
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

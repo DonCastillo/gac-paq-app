@@ -6,6 +6,7 @@ const S4Q3: QuestionRadioPayloadInterface = {
 	ident: "transportation_3",
 	name: "Question 15c: How long does it normally take you to go to school?",
 	column_name: "15.C Tran",
+	audio_ident: "transportation_3",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

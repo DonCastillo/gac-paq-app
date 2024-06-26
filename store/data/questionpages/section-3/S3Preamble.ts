@@ -4,6 +4,7 @@ import type { PreamblePayloadInterface } from "interface/payload.type";
 const S3Preamble: PreamblePayloadInterface = {
 	ident: "work_preamble",
 	heading: "Work",
+	audio_ident: "work_preamble",
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

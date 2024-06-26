@@ -6,6 +6,7 @@ const S2Q1: QuestionRadioPayloadInterface = {
 	ident: "household_1",
 	name: "Question 8: In the past week, did you do active chores or tasks?",
 	column_name: "08.0 Hous",
+	audio_ident: "household_1",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

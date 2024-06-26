@@ -6,6 +6,7 @@ const S1Q3: QuestionSliderPayloadInterface = {
 	ident: "school_3",
 	name: "Question 3: How many physical education classes did you have in the past week?",
 	column_name: "03.0 Scho",
+	audio_ident: "school_3",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

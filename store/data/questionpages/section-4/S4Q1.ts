@@ -7,6 +7,7 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 	name: "Question 15:	How did you go to school in the past week?",
 	type: Screen.SingleQuestion,
 	column_name: "15.0 Tran",
+	audio_ident: "transportation_1",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadioImage,

@@ -7,6 +7,7 @@ const S4Q2: QuestionRadioPayloadInterface = {
 	name: "Question 15b: How many days did you use this mode in the past week?",
 	type: Screen.SingleQuestion,
 	column_name: "15.B Tran",
+	audio_ident: "transportation_2",
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

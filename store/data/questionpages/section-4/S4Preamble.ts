@@ -5,6 +5,7 @@ const S4Preamble: PreamblePayloadInterface = {
 	ident: "transportation_preamble",
 	heading: "Transportation",
 	type: Screen.Preamble,
+	audio_ident: "transportation_preamble",
 	translations: {
 		"en-CA": {
 			heading: "Transportation",

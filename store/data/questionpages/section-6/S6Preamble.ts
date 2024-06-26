@@ -4,6 +4,7 @@ import type { PreamblePayloadInterface } from "interface/payload.type";
 const S6Preamble: PreamblePayloadInterface = {
 	ident: "play_preamble",
 	heading: "Play or Free Time",
+	audio_ident: "play_preamble",
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

@@ -6,6 +6,7 @@ const S1Q6: QuestionRadioPayloadInterface = {
 	ident: "school_6",
 	name: "Question 6: On a normal school day, how much break time do you have?",
 	column_name: "06.0 Scho",
+	audio_ident: "school_6",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

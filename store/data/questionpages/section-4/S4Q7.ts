@@ -6,6 +6,7 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 	ident: "transportation_7",
 	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 	column_name: "17.0 Tran",
+	audio_ident: "transportation_7",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

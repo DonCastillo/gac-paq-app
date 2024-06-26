@@ -6,6 +6,7 @@ const S5Q1: QuestionRadioPayloadInterface = {
 	ident: "organized_1",
 	name: "Question 18:	Did you do any organized activities during the past week?",
 	column_name: "18.0 Orga",
+	audio_ident: "organized_1",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

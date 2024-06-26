@@ -5,6 +5,7 @@ import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
 const DemographicKidPage: QuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
+	audio_ident: "child_age",
 	type: Screen.SingleQuestion,
 	column_name: "age",
 	translations: {
