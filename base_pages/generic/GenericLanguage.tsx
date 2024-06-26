@@ -32,6 +32,7 @@ import {
 import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
+import { getNarrationPayload } from "store/settings/settingsThunk.";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -65,6 +66,8 @@ const GenericLanguage = (): React.ReactElement => {
 		console.log("translatedSectionTitles: ", translatedSectionTitles);
 		// will make "Introduction" and "Feedback" translated in the future
 		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
+		// set narration payload
+		dispatch(getNarrationPayload({ mode, language }));
 	}, [language]);
 
 	// set selected value

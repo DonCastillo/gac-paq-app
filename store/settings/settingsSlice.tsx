@@ -11,6 +11,7 @@ import reducersActions from "./settingsReducers";
 import type { ButtonPayloadInterface } from "interface/button";
 import type { PhrasePayloadInterface } from "interface/phrase";
 import type { PageIndexInterface } from "interface/payload.type";
+import { getNarrationPayload } from "./settingsThunk.";
 
 export interface SettingsSliceInterface {
 	mode: ModeType;
@@ -28,6 +29,7 @@ export interface SettingsSliceInterface {
 	totalPage: any;
 	colorTheme: ColorInterface;
 	pages: Record<number, PageIndexInterface>;
+	narrations: Record<string, string | null>;
 	history: number[];
 }
 
@@ -49,6 +51,7 @@ const settingsSlice = createSlice({
 		totalPage: null,
 		colorTheme: defaultColor,
 		pages: {},
+		narrations: {},
 		history: [] as number[],
 	} satisfies SettingsSliceInterface,
 	reducers: {
@@ -64,12 +67,18 @@ const settingsSlice = createSlice({
 		setPage: reducersActions.setPage,
 		setButtons: reducersActions.setButtons,
 		setPhrases: reducersActions.setPhrases,
+		setNarrations: reducersActions.setNarrations,
 		setSectionTitles: reducersActions.setSectionTitles,
 		addSectionTotalPages: reducersActions.addSectionTotalPages,
 		setKeyboardState: reducersActions.setKeyboardState,
 		removeExtroPages: reducersActions.removeExtroPages,
 		removeFeedbackPages: reducersActions.removeFeedbackPages,
 		reset: reducersActions.reset,
+	},
+	extraReducers: (builder) => {
+		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
+			state.narrations = action.payload;
+		});
 	},
 	selectors: {
 		getSetting: (state: SettingsSliceInterface) => state,
@@ -83,6 +92,7 @@ const settingsSlice = createSlice({
 		getNextPage: (state: SettingsSliceInterface) => state.nextPage,
 		getButtons: (state: SettingsSliceInterface) => state.buttons,
 		getPhrases: (state: SettingsSliceInterface) => state.phrases,
+		getNarrations: (state: SettingsSliceInterface) => state.narrations,
 		getSectionTitles: (state: SettingsSliceInterface) => state.sectionTitles,
 		getSectionTotalPages: (state: SettingsSliceInterface) => state.sectionTotalPages,
 		getPages: (state: SettingsSliceInterface) => state.pages,
@@ -124,6 +134,7 @@ export const {
 	getNextPage,
 	getButtons,
 	getPhrases,
+	getNarrations,
 	getSectionTitles,
 	getSectionTotalPages,
 	getPages,

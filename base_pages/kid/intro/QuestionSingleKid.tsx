@@ -33,6 +33,7 @@ import { translatePage, translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 import Mode from "constants/mode.enum";
+import { getNarrationPayload } from "store/settings/settingsThunk.";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -142,6 +143,15 @@ const QuestionSingleKid = (): React.ReactElement => {
 		// set mode
 		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
 			dispatch(setMode(getModeType(value)));
+		}
+
+		// set narration payload
+		if (
+			(currentPage.page.ident === "mode" || currentPage.page.ident === "language_location") &&
+			value !== undefined &&
+			value !== null
+		) {
+			dispatch(getNarrationPayload({ mode: getModeType(value), language }));
 		}
 	};
 

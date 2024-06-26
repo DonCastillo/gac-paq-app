@@ -7,9 +7,9 @@ import type { IntroductoryPagesType } from "interface/union.type";
 
 const IntroductoryPages: IntroductoryPagesType = [
 	LanguagePage,
-	AboutPage,
 	ParticipantIDPage,
 	AgePage,
+	AboutPage,
 	DemographicPage,
 ];
 

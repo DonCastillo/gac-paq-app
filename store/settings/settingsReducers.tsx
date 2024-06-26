@@ -17,6 +17,8 @@ import type {
 	AddSectionTotalPagesFuncType,
 	SetKeyboardState,
 	SettingsFuncType,
+	SetNarrationsFuncType,
+	AddNarrationsFuncType,
 } from "interface/function.type";
 import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
@@ -51,6 +53,15 @@ const setButtons: SetButtonsFuncType = (state, action) => {
 
 const setPhrases: SetPhrasesFuncType = (state, action) => {
 	state.phrases = action.payload;
+};
+
+const setNarrations: SetNarrationsFuncType = (state, action) => {
+	state.narrations = action.payload;
+};
+
+const addNarration: AddNarrationsFuncType = (state, action) => {
+	const { ident, audio_id } = action.payload;
+	state.narrations = { ...state.narrations, [ident]: audio_id };
 };
 
 const setSectionTitles: SetSectionTitlesFuncType = (state, action) => {
@@ -163,6 +174,8 @@ export default {
 	setPage,
 	setButtons,
 	setPhrases,
+	setNarrations,
+	addNarration,
 	setSectionTitles,
 	addSectionTotalPages,
 	setKeyboardState,

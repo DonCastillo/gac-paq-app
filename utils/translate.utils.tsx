@@ -1,10 +1,9 @@
 import type { LangButtonInterface } from "interface/button";
 import type { LangPhraseInterface } from "interface/phrase";
-import type SectionPayloadInterface from "interface/directus/section-payload";
 import type { ModeType, TranslatedPageType, TranslationType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 import { store } from "store/store";
-import type { SectionInterface } from "interface/payload.type";
+import type { SectionPayloadInterface } from "interface/payload.type";
 
 const translatePage = (translations: TranslationType, langCode: string): TranslatedPageType => {
 	const translatedPage = translations[langCode];
@@ -42,7 +41,7 @@ const translateSectionHeading = (langCode: string): string[] => {
 	if (sectionPages.length === 0) return [];
 
 	const translatedSectionTitles = sectionPages.map((sectionPage: SectionPayloadInterface) => {
-		const translatedPage = sectionPage.translations[langCode] as SectionInterface;
+		const translatedPage = sectionPage.translations[langCode];
 		if (translatedPage === undefined || translatedPage === null) {
 			return sectionPage.translations["en-CA"].heading;
 		}

@@ -6,7 +6,6 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import State from "constants/state.enum";
-import type PageInterface from "interface/page";
 import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
 import Images from "styles/images/index";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
@@ -18,7 +17,7 @@ import { getDevice, getLanguage, getPhrases, reset } from "store/settings/settin
 import { resetResponses } from "store/responses/responsesSlice";
 import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
 import { translatePage as translatePageUtil } from "utils/translate.utils";
-import { type LangPageInterface } from "interface/payload.type";
+import type { PageInterface, LangPageInterface } from "interface/payload.type";
 import { sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { GeneralStyle } from "styles/general";
