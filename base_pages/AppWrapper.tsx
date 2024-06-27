@@ -20,9 +20,9 @@ const AppWrapper = (): React.ReactElement => {
 	const responses = useSelector((state: any) => state.responses);
 	const questions = useSelector((state: any) => state.questions);
 
-	console.log("expo admin urlL: ", process.env.EXPO_PUBLIC_ADMIN_API_URL);
-	console.log("expo token: ", process.env.EXPO_PUBLIC_ADMIN_TOKEN);
-	console.log("expo node env: ", process.env);
+	// console.log("expo admin urlL: ", process.env.EXPO_PUBLIC_ADMIN_API_URL);
+	// console.log("expo token: ", process.env.EXPO_PUBLIC_ADMIN_TOKEN);
+	// console.log("expo node env: ", process.env);
 
 	const dispatch = useDispatch();
 

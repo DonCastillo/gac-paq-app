@@ -132,7 +132,6 @@ const GenericSingleQuestion = (): React.ReactElement => {
 			/>
 			<Main>
 				{!isKeyboardOpen && <ProgressBarAdult />}
-				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
 					<QuestionContainer>
 						{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}

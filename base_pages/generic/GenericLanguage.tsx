@@ -99,7 +99,6 @@ const GenericLanguage = (): React.ReactElement => {
 			/>
 			<Main>
 				<ProgressBarAdult />
-				<Toolbar />
 				<CenterMain>
 					<QuestionContainer>
 						<QuestionTitle>{translatedPage.heading}</QuestionTitle>

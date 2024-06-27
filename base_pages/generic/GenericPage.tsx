@@ -37,7 +37,6 @@ const GenericPage = (): React.ReactElement => {
 			<BGLinearGradient />
 			<Main>
 				<ProgressBarAdult />
-				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>
 						<Heading customStyle={GeneralStyle.adult.pageHeading}>{translatedPage.heading}</Heading>
