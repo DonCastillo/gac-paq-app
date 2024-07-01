@@ -216,6 +216,10 @@ const reloadExtroFeedbackPages = (): void => {
 	let newPages: Record<number, PageIndexInterface> = {};
 	let newSectionTotalPages: Record<number, number> = {};
 
+	if (allPages === undefined || allPages === null) {
+		return;
+	}
+
 	// remove all extro and feedback pages
 	for (const [key, page] of Object.entries(allPages)) {
 		if (page.section === Section.Extro || page.section === Section.Feedback) {

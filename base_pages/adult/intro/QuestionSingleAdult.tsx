@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
+	getIsLoading,
 	getLanguage,
 	getMode,
 	nextPage,
@@ -32,6 +33,7 @@ import { translatePage, translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
+import LoadingScreenAdult from "../LoadingScreenAdult";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -39,6 +41,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
+	const isLoading = useSelector(getIsLoading);
 
 	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -163,33 +166,37 @@ const QuestionSingleAdult = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
-	return (
-		<View style={styles.container}>
-			<BGLinearGradient />
-			<Main>
-				<ProgressBarAdult />
-				<Toolbar />
-				<CenterMain>
-					<QuestionContainer>
-						<QuestionTitle>{translatedPage.heading}</QuestionTitle>
-						<View style={{ marginBottom: 13 }}>
-							<QuestionLabel
-								textStyle={GeneralStyle.adult.questionLabel}
-								customStyle={{ marginBottom: 7 }}
-							>
-								{questionLabel}
-							</QuestionLabel>
-							<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
-								{questionSubLabel}
-							</QuestionSubLabel>
-						</View>
-						{questionComponent}
-					</QuestionContainer>
-				</CenterMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-			</Main>
-		</View>
-	);
+	if (!isLoading) {
+		return (
+			<View style={styles.container}>
+				<BGLinearGradient />
+				<Main>
+					<ProgressBarAdult />
+					<Toolbar />
+					<CenterMain>
+						<QuestionContainer>
+							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.adult.questionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
+							{questionComponent}
+						</QuestionContainer>
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenAdult />;
+	}
 };
 
 export default QuestionSingleAdult;

@@ -17,6 +17,7 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	getLanguage,
 	getMode,
 	nextPage,
@@ -31,6 +32,8 @@ import {
 	translateSectionHeading,
 } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
+import { getNarrationPayload } from "store/settings/settingsThunk.";
+import LoadingScreenKid from "./LoadingScreenKid";
 
 const LanguageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -40,6 +43,7 @@ const LanguageKid = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
+	const isLoading = useSelector(getIsLoading);
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
@@ -72,10 +76,13 @@ const LanguageKid = (): React.ReactElement => {
 		console.log("translatedSectionTitles: ", translatedSectionTitles);
 		// will make "Introduction" and "Feedback" translated in the future
 		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
+		// set narration payload
+		dispatch(getNarrationPayload({ mode, language }));
 	}, [language]);
 
 	// set selected value
 	useEffect(() => {
+		console.log("changing the language ...");
 		setSelectedValue(language);
 	}, [currentPageNumber]);
 
@@ -94,55 +101,61 @@ const LanguageKid = (): React.ReactElement => {
 		}
 	};
 
-	return (
-		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
-			<View style={styles.container}>
-				{background !== null && background}
-				<Main>
-					<ProgressBarKid />
-					<Toolbar />
-					<TopMain>
-						<View
-							style={[
-								GeneralStyle.kid.introQuestionContainer,
-								{
-									marginVertical: verticalScale(40, device.screenHeight),
-									...styles.mainContainer,
-								},
-							]}
-						>
-							<View style={{ marginBottom: 9 }}>
-								<QuestionLabel
-									textStyle={GeneralStyle.kid.introQuestionLabel}
-									customStyle={{ marginBottom: 7 }}
-								>
-									{questionLabel}
-								</QuestionLabel>
-							</View>
+	// console.log("isLoading: ", isLoading);
 
-							<View style={styles.questionComponentContainer}>
-								<QuestionSelectLanguage
-									key={currentPageNumber}
-									onChange={changeHandler}
-									selectedValue={language}
-									dropdownOpen={dropdownOpen}
-									setDropdownOpen={setDropdownOpen}
-								/>
+	if (!isLoading) {
+		return (
+			<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
+				<View style={styles.container}>
+					{background !== null && background}
+					<Main>
+						<ProgressBarKid />
+						<Toolbar />
+						<TopMain>
+							<View
+								style={[
+									GeneralStyle.kid.introQuestionContainer,
+									{
+										marginVertical: verticalScale(40, device.screenHeight),
+										...styles.mainContainer,
+									},
+								]}
+							>
+								<View style={{ marginBottom: 9 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.kid.introQuestionLabel}
+										customStyle={{ marginBottom: 7 }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+								</View>
+
+								<View style={styles.questionComponentContainer}>
+									<QuestionSelectLanguage
+										key={currentPageNumber}
+										onChange={changeHandler}
+										selectedValue={language}
+										dropdownOpen={dropdownOpen}
+										setDropdownOpen={setDropdownOpen}
+									/>
+								</View>
 							</View>
-						</View>
-					</TopMain>
-					<Navigation>
-						{selectedValue !== null && (
-							<BackAndNextNav
-								colorTheme={color100}
-								onNext={() => dispatch(nextPage())}
-							/>
-						)}
-					</Navigation>
-				</Main>
-			</View>
-		</TouchableWithoutFeedback>
-	);
+						</TopMain>
+						<Navigation>
+							{selectedValue !== null && (
+								<BackAndNextNav
+									colorTheme={color100}
+									onNext={() => dispatch(nextPage())}
+								/>
+							)}
+						</Navigation>
+					</Main>
+				</View>
+			</TouchableWithoutFeedback>
+		);
+	} else {
+		return <LoadingScreenKid />;
+	}
 };
 
 export default LanguageKid;

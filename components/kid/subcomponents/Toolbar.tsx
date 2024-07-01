@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
 import { Icon } from "@rneui/themed";
 import React, { useState, useEffect, memo } from "react";
 import { GeneralStyle } from "styles/general";
@@ -34,6 +34,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const [sourceSrc, setSourceSrc] = useState<string | null>(null);
 	const [status, setStatus] = useState<AVPlaybackStatus | null>(null);
 	const [sourceType, setSourceType] = useState<"online" | "offline">("online");
+	const [isLoading, setIsLoading] = useState<boolean>(false);
 	let NarrationButtonComponent = <></>;
 
 	useEffect(() => {
@@ -46,8 +47,8 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
-
 	useEffect(() => {
+		setIsLoading(true);
 		const stopSoundOnPageChange = async (): Promise<void> => {
 			if (sound !== null && sound !== undefined) {
 				await stopSound();
@@ -61,18 +62,18 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		// const { sound } = await Audio.Sound.createAsync(require("./../../../assets/audio/P1.wav"), { shouldPlay: true });
 		if (sourceType === "online") {
 			const audioURI = getAudioURI();
-			if (audioURI !== null && (sourceSrc !== audioURI)) {
+			if (audioURI !== null && sourceSrc !== audioURI) {
 				setHasAudio(true);
 				setSourceSrc(audioURI);
 			}
 		}
-
-	}, [currentPageNumber, mode])
+		setIsLoading(false);
+	}, [currentPageNumber, mode]);
 
 	// load sound
 	useEffect(() => {
 		loadSound().catch((error) => {
-			console.error("Error loading sound", error);
+			console.log("Error loading sound", error);
 		});
 
 		if (sound !== null && sound !== undefined) {
@@ -84,7 +85,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 						console.log("Sound unloaded");
 					})
 					.catch((error) => {
-						console.error("Error unloading sound", error);
+						console.log("Error unloading sound", error);
 					});
 			};
 		} else {
@@ -93,12 +94,11 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	}, [sourceSrc, sourceType]);
 
 	useEffect(() => {
-		console.log("sound changed..")
 		if (sound !== null && sound !== undefined) {
 			sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
 				if (status.isLoaded) {
 					if (status.didJustFinish) {
-						console.log("sound finished")
+						console.log("sound finished");
 						stopSound();
 					}
 				}
@@ -106,45 +106,53 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		}
 		updateStatus();
 	}, [sound]);
-	
 
 	// sound status
 	const updateStatus = async (): Promise<void> => {
 		if (sound !== null && sound !== undefined) {
+			setIsLoading(true);
 			const status = await sound.getStatusAsync();
 			setStatus(status);
+			setIsLoading(false);
 		}
 	};
 
 	// load sound
 	const loadSound = async (): Promise<void> => {
 		await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+
 		if (sourceSrc === "" || sourceSrc === null || sourceSrc === undefined) return;
 		if (sourceType === "online") {
+			setIsLoading(true);
 			const { sound } = await Audio.Sound.createAsync({ uri: sourceSrc });
 			setSound(sound);
 			await updateStatus();
+			setIsLoading(false);
 		}
 	};
 
 	// play sound
 	const playSound = async (): Promise<void> => {
 		if (sound !== null && sound !== undefined) {
+			setIsLoading(true);
 			await sound.playAsync();
+			setTimeout(() => {}, 9000);
 			setIsPlaying(true);
 			await updateStatus();
+			setIsLoading(false);
 		}
 	};
 
 	// stop sound
 	const stopSound = async (): Promise<void> => {
 		if (sound !== null && sound !== undefined) {
+			setIsLoading(true);
 			await sound.stopAsync();
 			setIsPlaying(false);
 			await updateStatus();
+			setIsLoading(false);
 		}
 	};
-
 
 	if (hasAudio) {
 		if (isPlaying) {
@@ -191,7 +199,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			>
 				{title}
 			</Text>
-			{NarrationButtonComponent}
+			{!isLoading ? NarrationButtonComponent : <ActivityIndicator size="small" />}
 		</View>
 	);
 };
@@ -205,7 +213,8 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 		alignItems: "center",
 		flexDirection: "row",
-		backgroundColor: "pinkz"
+		height: "100%",
+		maxHeight: 45,
 	},
 	safearea: {},
 	icon: {},

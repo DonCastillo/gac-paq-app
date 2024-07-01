@@ -23,6 +23,7 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	getLanguage,
 	getMode,
 	nextPage,
@@ -35,6 +36,7 @@ import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 import { getModeType, getQuestionType } from "utils/type.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
+import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 
 const GenericSingleQuestion = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -43,6 +45,7 @@ const GenericSingleQuestion = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
+	const isLoading = useSelector(getIsLoading);
 	const { isKeyboardOpen } = device;
 
 	// state
@@ -123,52 +126,56 @@ const GenericSingleQuestion = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
-	return (
-		<View style={styles.container}>
-			<BGLinearGradient />
-			<ImageBackdrop
-				source={getImageBackground()}
-				key={currentPageNumber}
-			/>
-			<Main>
-				{!isKeyboardOpen && <ProgressBarAdult />}
-				<CenterMain>
-					<QuestionContainer>
-						{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
-						<View style={{ marginBottom: 13 }}>
-							<QuestionLabel
-								textStyle={GeneralStyle.adult.questionLabel}
-								customStyle={{ marginBottom: 7 }}
-							>
-								{questionLabel}
-							</QuestionLabel>
-							{!isKeyboardOpen && (
-								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
-									{questionSubLabel}
-								</QuestionSubLabel>
-							)}
-						</View>
+	if (!isLoading) {
+		return (
+			<View style={styles.container}>
+				<BGLinearGradient />
+				<ImageBackdrop
+					source={getImageBackground()}
+					key={currentPageNumber}
+				/>
+				<Main>
+					{!isKeyboardOpen && <ProgressBarAdult />}
+					<CenterMain>
+						<QuestionContainer>
+							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.adult.questionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								{!isKeyboardOpen && (
+									<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+										{questionSubLabel}
+									</QuestionSubLabel>
+								)}
+							</View>
 
-						{questionComponent}
-					</QuestionContainer>
-				</CenterMain>
-				<Navigation>
-					{selectedValue !== null ? (
-						<BackAndNextNav
-							key={"WithValue"}
-							onPrev={() => dispatch(prevPage())}
-							onNext={() => dispatch(nextPage())}
-						/>
-					) : (
-						<BackAndNextNav
-							key={"WithoutValue"}
-							onPrev={() => dispatch(prevPage())}
-						/>
-					)}
-				</Navigation>
-			</Main>
-		</View>
-	);
+							{questionComponent}
+						</QuestionContainer>
+					</CenterMain>
+					<Navigation>
+						{selectedValue !== null ? (
+							<BackAndNextNav
+								key={"WithValue"}
+								onPrev={() => dispatch(prevPage())}
+								onNext={() => dispatch(nextPage())}
+							/>
+						) : (
+							<BackAndNextNav
+								key={"WithoutValue"}
+								onPrev={() => dispatch(prevPage())}
+							/>
+						)}
+					</Navigation>
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenAdult />;
+	}
 };
 
 export default GenericSingleQuestion;

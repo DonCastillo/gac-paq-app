@@ -23,6 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
+	getIsLoading,
 	getLanguage,
 	getMode,
 	nextPage,
@@ -33,6 +34,8 @@ import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
+import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
+import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -40,6 +43,7 @@ const GenericLanguage = (): React.ReactElement => {
 	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const isLoading = useSelector(getIsLoading);
 
 	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -90,38 +94,42 @@ const GenericLanguage = (): React.ReactElement => {
 		}
 	};
 
-	return (
-		<View style={styles.container}>
-			<BGLinearGradient />
-			<ImageBackdrop
-				source={getImageBackground()}
-				key={currentPageNumber}
-			/>
-			<Main>
-				<ProgressBarAdult />
-				<CenterMain>
-					<QuestionContainer>
-						<QuestionTitle>{translatedPage.heading}</QuestionTitle>
-						<View style={{ marginBottom: 13 }}>
-							<QuestionLabel
-								textStyle={GeneralStyle.adult.questionLabel}
-								customStyle={{ marginBottom: 7 }}
-							>
-								{questionLabel}
-							</QuestionLabel>
-						</View>
-						<QuestionSelectLanguageAdult
-							onChange={changeHandler}
-							selectedValue={selectedValue}
-						/>
-					</QuestionContainer>
-				</CenterMain>
-				<Navigation>
-					{selectedValue !== null && <BackAndNextNav onNext={() => dispatch(nextPage())} />}
-				</Navigation>
-			</Main>
-		</View>
-	);
+	if (!isLoading) {
+		return (
+			<View style={styles.container}>
+				<BGLinearGradient />
+				<ImageBackdrop
+					source={getImageBackground()}
+					key={currentPageNumber}
+				/>
+				<Main>
+					<ProgressBarAdult />
+					<CenterMain>
+						<QuestionContainer>
+							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.adult.questionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+							</View>
+							<QuestionSelectLanguageAdult
+								onChange={changeHandler}
+								selectedValue={selectedValue}
+							/>
+						</QuestionContainer>
+					</CenterMain>
+					<Navigation>
+						{selectedValue !== null && <BackAndNextNav onNext={() => dispatch(nextPage())} />}
+					</Navigation>
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenAdult />;
+	}
 };
 
 export default GenericLanguage;

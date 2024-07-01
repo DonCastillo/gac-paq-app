@@ -19,7 +19,6 @@ export const getNarrationPayload = createAsyncThunk(
 		const filterMode = `filter[mode][value]=${finalMode}`;
 		const filterStatus = "filter[status]=published";
 		const endpoint = `${directusBaseEndpoint}/items/narrations?fields=${fields}&limit=${limit}&${filterLanguage}&${filterMode}&${filterStatus}`;
-
 		const narrations = await axios
 			.get(endpoint, {
 				headers: {
@@ -29,6 +28,10 @@ export const getNarrationPayload = createAsyncThunk(
 			})
 			.then((response) => {
 				return response.data.data[0];
+			})
+			.catch((error) => {
+				console.log("Error fetching narrations: ", error);
+				return null;
 			});
 
 		return narrations;

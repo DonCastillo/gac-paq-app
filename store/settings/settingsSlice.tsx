@@ -31,6 +31,7 @@ export interface SettingsSliceInterface {
 	pages: Record<number, PageIndexInterface>;
 	narrations: Record<string, string | null>;
 	history: number[];
+	isLoading: boolean;
 }
 
 const settingsSlice = createSlice({
@@ -53,6 +54,7 @@ const settingsSlice = createSlice({
 		pages: {},
 		narrations: {},
 		history: [] as number[],
+		isLoading: false as boolean,
 	} satisfies SettingsSliceInterface,
 	reducers: {
 		setMode: reducersActions.setMode,
@@ -77,7 +79,19 @@ const settingsSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
+			console.log("getNarrationPayload.fulfilled");
+			state.isLoading = false;
 			state.narrations = action.payload;
+		});
+		builder.addCase(getNarrationPayload.pending, (state) => {
+			console.log("getNarrationPayload.pending");
+			state.isLoading = true;
+			state.narrations = {};
+		});
+		builder.addCase(getNarrationPayload.rejected, (state) => {
+			console.log("getNarrationPayload.rejected");
+			state.isLoading = false;
+			state.narrations = {};
 		});
 	},
 	selectors: {
@@ -98,6 +112,7 @@ const settingsSlice = createSlice({
 		getPages: (state: SettingsSliceInterface) => state.pages,
 		getHistory: (state: SettingsSliceInterface) => state.history,
 		getDirectusBaseEndpoint: (state: SettingsSliceInterface) => state.directusBaseEndpoint,
+		getIsLoading: (state: SettingsSliceInterface) => state.isLoading,
 	},
 });
 
@@ -140,6 +155,7 @@ export const {
 	getPages,
 	getHistory,
 	getDirectusBaseEndpoint,
+	getIsLoading,
 } = settingsSlice.selectors;
 
 export default settingsSlice.reducer;

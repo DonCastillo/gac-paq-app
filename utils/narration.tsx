@@ -9,8 +9,14 @@ const getAudioURI = (): string | null => {
 
 	if (currentPageAudioIdent !== null && currentPageAudioIdent !== undefined) {
 		const audioID = narrations[currentPageAudioIdent];
-		const audioURI = `${directusBaseEndpoint}/assets/${audioID}?access_token=${directusAccessToken}`;
-		return audioURI;
+	try {
+		if (currentPageAudioIdent !== null && currentPageAudioIdent !== undefined) {
+			const audioID = narrations[currentPageAudioIdent];
+			const audioURI = `${directusBaseEndpoint}/assets/${audioID}?access_token=${directusAccessToken}`;
+			return audioURI;
+		}
+	} catch (error) {
+		return null;
 	}
 
 	return null;

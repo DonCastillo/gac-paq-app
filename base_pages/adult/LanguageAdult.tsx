@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
+	getIsLoading,
 	getLanguage,
 	getMode,
 	nextPage,
@@ -30,6 +31,8 @@ import {
 	translateSectionHeading,
 } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
+import { getNarrationPayload } from "store/settings/settingsThunk.";
+import LoadingScreenAdult from "./LoadingScreenAdult";
 
 const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -37,6 +40,7 @@ const LanguageAdult = (): React.ReactElement => {
 	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const isLoading = useSelector(getIsLoading);
 
 	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -63,6 +67,8 @@ const LanguageAdult = (): React.ReactElement => {
 		console.log("translatedSectionTitles: ", translatedSectionTitles);
 		// will make "Introduction" and "Feedback" translated in the future
 		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
+		// set narration payload
+		dispatch(getNarrationPayload({ mode, language }));
 	}, [language]);
 
 	// set selected value
@@ -85,40 +91,44 @@ const LanguageAdult = (): React.ReactElement => {
 		}
 	};
 
-	return (
-		<View style={styles.container}>
-			<BGLinearGradient />
-			<Main>
-				<ProgressBarAdult />
-				<Toolbar />
-				<CenterMain>
-					<QuestionContainer>
-						<QuestionTitle>{translatedPage.heading}</QuestionTitle>
-						<View style={{ marginBottom: 13 }}>
-							<QuestionLabel
-								textStyle={GeneralStyle.adult.questionLabel}
-								customStyle={{ marginBottom: 7 }}
-							>
-								{questionLabel}
-							</QuestionLabel>
-						</View>
-						<QuestionSelectLanguageAdult
-							onChange={changeHandler}
-							selectedValue={selectedValue}
-						/>
-					</QuestionContainer>
-				</CenterMain>
-				<Navigation>
-					{selectedValue !== null && (
-						<BackAndNextNav
-							colorTheme={"#FFF"}
-							onNext={() => dispatch(nextPage())}
-						/>
-					)}
-				</Navigation>
-			</Main>
-		</View>
-	);
+	if (!isLoading) {
+		return (
+			<View style={styles.container}>
+				<BGLinearGradient />
+				<Main>
+					<ProgressBarAdult />
+					<Toolbar />
+					<CenterMain>
+						<QuestionContainer>
+							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.adult.questionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+							</View>
+							<QuestionSelectLanguageAdult
+								onChange={changeHandler}
+								selectedValue={selectedValue}
+							/>
+						</QuestionContainer>
+					</CenterMain>
+					<Navigation>
+						{selectedValue !== null && (
+							<BackAndNextNav
+								colorTheme={"#FFF"}
+								onNext={() => dispatch(nextPage())}
+							/>
+						)}
+					</Navigation>
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenAdult />;
+	}
 };
 
 export default LanguageAdult;
