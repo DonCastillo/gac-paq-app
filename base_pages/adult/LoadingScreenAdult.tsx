@@ -3,20 +3,24 @@ import { StyleSheet, View, Image } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
-import Colors from "store/data/colors";
-import Mode from "constants/mode.enum";
+import { horizontalScale, moderateScale } from "utils/responsive.utils";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 
 const LoadingScreenAdult = (): React.ReactElement => {
-	const color100 = Colors[Mode.Adult][0].color100;
+	const device = useSelector(getDevice);
+	const progressBarTop = moderateScale(device.isTablet ? 10 : -20, device.screenHeight);
 	return (
-		<View style={[styles.container, { backgroundColor: color100 }]}>
+		<View style={[styles.container]}>
 			<Main>
 				<CenterMain>
 					<Image
-						style={styles.logo}
-						source={require("assets/images/Logo.png")}
+						style={[styles.logo, { maxWidth: horizontalScale(250, device.screenWidth) }]}
+						source={require("assets/splash-icon-loading.png")}
 					/>
-					<ProgressBar />
+					<View style={{ marginTop: progressBarTop, backgroundColor: "white" }}>
+						<ProgressBar color="#37383c" />
+					</View>
 				</CenterMain>
 			</Main>
 		</View>
@@ -33,7 +37,10 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	logo: {
-		width: 350,
+		height: "100%",
+		width: "100%",
+		maxHeight: "40%",
 		resizeMode: "contain",
+		opacity: 0.85,
 	},
 });

@@ -3,20 +3,17 @@ import { StyleSheet, View, Image } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
-import Colors from "store/data/colors";
-import Mode from "constants/mode.enum";
 
 const LoadingScreenKid = (): React.ReactElement => {
-	const color100 = Colors[Mode.Kid][0].color100;
 	return (
-		<View style={[styles.container, { backgroundColor: color100 }]}>
+		<View style={[styles.container, { backgroundColor: "white" }]}>
 			<Main>
 				<CenterMain>
 					<Image
 						style={styles.logo}
 						source={require("assets/images/Logo.png")}
 					/>
-					<ProgressBar />
+					<ProgressBar color="#37383c" />
 				</CenterMain>
 			</Main>
 		</View>
@@ -35,5 +32,6 @@ const styles = StyleSheet.create({
 	logo: {
 		width: 350,
 		resizeMode: "contain",
+		marginLeft: 10,
 	},
 });
