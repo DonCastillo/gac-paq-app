@@ -13,8 +13,8 @@ interface PropsInterface {
 const QuestionContainer = ({ children, customStyle }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
-	const maxWidth = horizontalScale(
-		device.orientation === "landscape" ? 250 : device.isTablet ? 300 : 350,
+	const width = horizontalScale(
+		device.orientation === "landscape" ? 250 : device.isTablet ? 290 : 340,
 		device.screenWidth,
 	);
 	return (
@@ -23,7 +23,7 @@ const QuestionContainer = ({ children, customStyle }: PropsInterface): React.Rea
 				styles.container,
 				{
 					maxHeight: verticalScale(600, device.screenHeight),
-					maxWidth,
+					width,
 				},
 				customStyle,
 			]}
