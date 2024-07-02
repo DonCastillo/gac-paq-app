@@ -19,9 +19,6 @@ const ProgressBar = ({
 	unfilledColor = "rgba(255, 255, 255, 0.82)",
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
-
-	console.log("ProgressBar", currentSectionPage, sectionPageTotal);
-
 	if (currentSectionPage !== null && sectionPageTotal !== null) {
 		return (
 			<View style={[styles.container, { paddingHorizontal: 20 }]}>

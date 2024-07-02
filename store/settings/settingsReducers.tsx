@@ -39,6 +39,10 @@ const setDirectusAccessToken: SetDirectusFuncType = (state, action) => {
 	state.directusAccessToken = action.payload;
 };
 
+const setStartDateTime: SettingsFuncType = (state) => {
+	state.startDateTime = new Date();
+};
+
 const setColorTheme: SetColorThemeFuncType = (state, action) => {
 	if (state.mode === undefined) {
 		state.colorTheme = defaultColor;
@@ -182,4 +186,5 @@ export default {
 	removeExtroPages,
 	removeFeedbackPages,
 	reset,
+	setStartDateTime,
 };

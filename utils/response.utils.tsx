@@ -11,6 +11,7 @@ import type { FinalResponseType } from "interface/union.type";
 import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
 import { store } from "store/store";
 import { falsyValue } from "./utils.utils";
+import { setEndDateTime } from "store/settings/settingsSlice";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -39,6 +40,7 @@ const getResponse = (): string | null => {
 const sanitizeResponse = (): FinalResponseType => {
 	const sanitizedResponse: FinalResponseType = {};
 	const mode = store.getState().settings.mode;
+	const usageStartTime = store.getState().settings.startDateTime;
 	const responses = store.getState().responses as Record<string, ResponseInterface>;
 	const pages = store.getState().settings.pages;
 
@@ -47,6 +49,10 @@ const sanitizeResponse = (): FinalResponseType => {
 
 	// remove empty answers
 	store.dispatch(clearUnansweredResponses());
+
+	// record end date time when user is answering the question
+	sanitizedResponse.start_time = usageStartTime !== null ? usageStartTime.toISOString() : "";
+	sanitizedResponse.end_time = new Date().toISOString() ?? "";
 
 	for (const [key, value] of Object.entries(responses)) {
 		// remove empty answers

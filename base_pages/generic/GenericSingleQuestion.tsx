@@ -29,6 +29,7 @@ import {
 	nextPage,
 	prevPage,
 	setMode,
+	setStartDateTime,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
 import { translatePage, translateQuestionLabel } from "utils/translate.utils";
@@ -88,6 +89,16 @@ const GenericSingleQuestion = (): React.ReactElement => {
 		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
 			dispatch(setMode(getModeType(value)));
 			changeMode(getModeType(value));
+		}
+
+		// record start when user is answering questions
+		if (
+			currentPage.page.ident === "participant_id" &&
+			value !== undefined &&
+			value !== null &&
+			value !== ""
+		) {
+			dispatch(setStartDateTime());
 		}
 
 		// narration payload
