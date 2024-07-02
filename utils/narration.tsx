@@ -7,8 +7,8 @@ const getAudioURI = (): string | null => {
 	const directusBaseEndpoint = settings.directusBaseEndpoint;
 	const narrations = settings.narrations;
 
-	if (currentPageAudioIdent !== null && currentPageAudioIdent !== undefined) {
-		const audioID = narrations[currentPageAudioIdent];
+	console.log("audio uri: ", currentPageAudioIdent);
+
 	try {
 		if (currentPageAudioIdent !== null && currentPageAudioIdent !== undefined) {
 			const audioID = narrations[currentPageAudioIdent];

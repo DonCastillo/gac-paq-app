@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDevice } from "store/settings/settingsSlice";
 import { ErrorScreen, SplashScreen, SuccessScreen } from "utils/state_screen.utils";
 import { loadApp } from "utils/load_pages.utils";
+import LoadingScreenAdult from "./adult/LoadingScreenAdult";
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,10 @@ const AppWrapper = (): React.ReactElement => {
 	useEffect(() => {
 		loadApp();
 	}, []);
+
+	if (!fontsLoaded) {
+		return <LoadingScreenAdult />;
+	}
 
 	return (
 		<NavigationContainer>
