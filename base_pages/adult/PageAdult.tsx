@@ -17,9 +17,10 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getLanguage,
+	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { translatePage } from "utils/translate.utils";
+import { translateDescription, translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 
@@ -29,6 +30,7 @@ const PageAdult = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const mode = useSelector(getMode);
 	const { color100 } = colorTheme;
 
 	// state
@@ -36,6 +38,11 @@ const PageAdult = (): React.ReactElement => {
 
 	// translations
 	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
+	const translatedDescription = translateDescription(
+		translatedPage.description ?? "",
+		translatedPage.description_mode,
+		mode,
+	) as string;
 
 	// set button component dynamically
 	useEffect(() => {
@@ -79,7 +86,7 @@ const PageAdult = (): React.ReactElement => {
 								...GeneralStyle.adult.pageParagraph,
 							}}
 						>
-							{translatedPage.description}
+							{translatedDescription}
 						</Paragraph>
 					</ScrollContainer>
 				</CenterMain>

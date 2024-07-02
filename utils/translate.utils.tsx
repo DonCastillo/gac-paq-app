@@ -20,6 +20,23 @@ const translateQuestionLabel = (kidLabel: string, adultLabel: string, mode: Mode
 	return kidLabel;
 };
 
+const translateDescription = (
+	originalDescription: string,
+	descriptionMode: { kid: string; adult: string } | undefined,
+	mode: ModeType,
+): string | null => {
+	if (descriptionMode === undefined || descriptionMode === null) return originalDescription;
+	if (mode === undefined || mode === null) return originalDescription;
+
+	if (mode === Mode.Kid || mode === Mode.Teen) {
+		return descriptionMode.kid ?? originalDescription;
+	} else if (mode === Mode.Adult) {
+		return descriptionMode.adult ?? originalDescription;
+	} else {
+		return originalDescription;
+	}
+};
+
 const translateButton = (langButtons: LangButtonInterface, langCode: string): string => {
 	const translatedButton = langButtons[langCode];
 	if (translatedButton === undefined || translatedButton === null) {
@@ -80,6 +97,7 @@ const intToString = (value: number | null): string => {
 export {
 	translatePage,
 	translateQuestionLabel,
+	translateDescription,
 	translateButton,
 	translatePhrase,
 	translateSectionHeading,

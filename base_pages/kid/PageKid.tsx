@@ -17,9 +17,10 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getLanguage,
+	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { translatePage } from "utils/translate.utils";
+import { translateDescription, translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 
@@ -29,6 +30,7 @@ const PageKid = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const mode = useSelector(getMode);
 	const { color100 } = colorTheme;
 
 	// state
@@ -37,6 +39,11 @@ const PageKid = (): React.ReactElement => {
 
 	// translations
 	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
+	const translatedDescription = translateDescription(
+		translatedPage.description ?? "",
+		translatedPage.description_mode,
+		mode,
+	) as string;
 
 	// set background screen dynamically
 	useEffect(() => {
@@ -71,7 +78,6 @@ const PageKid = (): React.ReactElement => {
 			<Main>
 				<ProgressBarKid />
 				<Toolbar />
-
 				<CenterMain>
 					<ScrollContainer>
 						<Heading
@@ -87,9 +93,10 @@ const PageKid = (): React.ReactElement => {
 							customStyle={{
 								color: color100,
 								...GeneralStyle.kid.pageParagraph,
+								backgroundColor: "white",
 							}}
 						>
-							{translatedPage.description}
+							{translatedDescription}
 						</Paragraph>
 					</ScrollContainer>
 				</CenterMain>

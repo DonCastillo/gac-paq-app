@@ -57,6 +57,10 @@ export interface PageIndexInterface {
 export interface PageInterface {
 	heading: string;
 	description: string | null;
+	description_mode?: {
+		kid: string;
+		adult: string;
+	}
 }
 
 
