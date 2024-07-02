@@ -1,8 +1,9 @@
 import { View, StyleSheet } from "react-native";
-import { SettingContext } from "store/settings";
-import React, { useContext } from "react";
+import React from "react";
 import ButtonIcon from "components/buttons/ButtonIcon";
 import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed";
+import { useSelector } from "react-redux";
+import { getPhrases } from "store/settings/settingsSlice";
 
 interface Props {
 	onPrev: () => void;
@@ -10,9 +11,8 @@ interface Props {
 	colorTheme?: string;
 }
 
-function BackAndTryAgainNav({ onPrev, onNext, colorTheme }: Props): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { phrases } = settingCtx.settingState;
+const BackAndTryAgainNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactElement => {
+	const phrases = useSelector(getPhrases);
 
 	return (
 		<View style={[styles.bottomNavigation, { justifyContent: "space-between" }]}>
@@ -30,7 +30,7 @@ function BackAndTryAgainNav({ onPrev, onNext, colorTheme }: Props): React.ReactE
 			/>
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	bottomNavigation: {

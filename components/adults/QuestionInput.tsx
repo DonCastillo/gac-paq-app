@@ -1,21 +1,21 @@
 import React from "react";
-import { TextInput, View, StyleSheet, ScrollView } from "react-native";
+import { TextInput, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
 
-interface QuestionInputPropsInterface {
+interface PropsInterface {
 	onChange: (value: string) => void;
 	selectedValue: string | null;
 	placeholder: string | null;
 }
 
-export default function QuestionInput({
+const QuestionInput = ({
 	onChange,
 	selectedValue,
 	placeholder,
-}: QuestionInputPropsInterface): React.ReactElement {
-	function changeHandler(value: string): void {
+}: PropsInterface): React.ReactElement => {
+	const changeHandler = (value: string): void => {
 		onChange(value);
-	}
+	};
 
 	return (
 		<View>
@@ -29,7 +29,9 @@ export default function QuestionInput({
 			/>
 		</View>
 	);
-}
+};
+
+export default QuestionInput;
 
 const styles = StyleSheet.create({
 	container: {

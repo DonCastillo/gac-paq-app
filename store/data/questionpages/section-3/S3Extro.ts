@@ -1,33 +1,28 @@
-import ScreenType from "constants/screen_type";
-import type ExtroPayloadInterface from "interface/directus/extro-payload";
-import Images from "styles/images";
+import Screen from "constants/screen.enum";
+import type { ExtroPayloadInterface } from "interface/payload.type";
 
 const S3Extro: ExtroPayloadInterface = {
 	ident: "work_extro",
 	name: "Section 3 Extro",
-	type: ScreenType.ExtroQuestion,
-	translations: [
-		{
-			id: 1,
-			extro_section_id: 1,
+	type: Screen.ExtroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "Section Complete!",
 			subheading: "Only four more to go!",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				adult: {
-					phone: Images.adults.extro.section_3.phone,
-					tablet: Images.adults.extro.section_3.tablet,
-				},
-				teen: {
-					phone: Images.adults.extro.section_3.phone,
-					tablet: Images.adults.extro.section_3.tablet,
-				},
-			},
 		},
-	],
+		"zh-CN": {
+			heading: "部分完成!",
+			subheading: "只剩下四个!",
+		},
+		"es-MX": {
+			heading: "¡Sección Completa!",
+			subheading: "¡Solo faltan cuatro!",
+		},
+		"fr-CA": {
+			heading: "Section Complétée!",
+			subheading: "Il ne reste que quatre questions!",
+		},
+	},
 };
 
 export default S3Extro;

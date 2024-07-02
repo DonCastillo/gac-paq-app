@@ -1,39 +1,49 @@
-import ScreenType from "constants/screen_type";
-import type QuestionDropdownPayloadInterface from "interface/directus/question-dropdown-payload";
-import Images from "styles/images";
+import Question from "constants/question.enum";
+import Screen from "constants/screen.enum";
+import type { QuestionDropdownPayloadLanguageInterface } from "interface/payload.type";
 
-const LanguagePage: QuestionDropdownPayloadInterface = {
+const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 	ident: "language_location",
 	name: "language_location",
-	type: ScreenType.Language,
-	translations: [
-		{
-			id: 1,
+	type: Screen.Language,
+	column_name: "language_location",
+	translations: {
+		"en-CA": {
+			type: Question.QuestionLanguage,
 			heading: "Welcome!",
-			language_question_dropdown_id: 1,
 			label: "What language do you speak & Where are you?",
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				kid: {
-					phone: Images.generic.pages.phone.language,
-					tablet: Images.generic.pages.tablet.language,
-				},
-				teen: {
-					phone: Images.generic.pages.phone.language,
-					tablet: Images.generic.pages.tablet.language,
-				},
-				adult: {
-					phone: Images.generic.pages.phone.language,
-					tablet: Images.generic.pages.tablet.language,
-				},
-			},
 		},
-	],
+		"th-TH": {
+			type: Question.QuestionLanguage,
+			heading: "ยินดีต้อนรับ!",
+			label: "คุณพูดภาษาอะไรและอยู่ที่ไหน?",
+			kid_label: "คุณพูดภาษาอะไรและอยู่ที่ไหน?",
+			adult_label: "คุณพูดภาษาอะไรและอยู่ที่ไหน?",
+		},
+		"zh-CN": {
+			type: Question.QuestionLanguage,
+			heading: "欢迎!",
+			label: "您说什么语言，您在哪里?",
+			kid_label: "您说什么语言，您在哪里?",
+			adult_label: "您说什么语言，您在哪里?",
+		},
+		"es-MX": {
+			type: Question.QuestionLanguage,
+			heading: "¡Bienvenido!",
+			label: "¿Qué idioma hablas y dónde estás?",
+			kid_label: "¿Qué idioma hablas y dónde estás?",
+			adult_label: "¿Qué idioma hablas y dónde estás?",
+		},
+		"fr-CA": {
+			type: Question.QuestionLanguage,
+			heading: "Bienvenue!",
+			label: "Quelle langue parlez-vous et où êtes-vous?",
+			kid_label: "Quelle langue parlez-vous et où êtes-vous?",
+			adult_label: "Quelle langue parlez-vous et où êtes-vous?",
+		},
+	},
 };
 
 export default LanguagePage;

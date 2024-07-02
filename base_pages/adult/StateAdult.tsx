@@ -1,54 +1,49 @@
-import React, { useContext, useEffect, useState } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
-import { Icon } from "@rneui/themed";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
-import StateType from "constants/state_type";
-import { QuestionContext } from "store/questions";
-import type PagePayloadInterface from "interface/directus/page-payload";
-import type PageInterface from "interface/page";
-import type QuestionDropdownInterface from "interface/question_dropdown";
+import State from "constants/state.enum";
 import { useNavigation } from "@react-navigation/native";
 import Images from "styles/images";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import BGLinearGradient from "components/BGLinearGradient";
-import { ResponseContext } from "store/responses";
-import { submitResponse } from "utils/api";
 import LoadingScreenAdult from "./LoadingScreenAdult";
+import { useDispatch, useSelector } from "react-redux";
+import { getDevice, getLanguage, getPhrases, reset } from "store/settings/settingsSlice";
+import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
+import { resetResponses } from "store/responses/responsesSlice";
+import { translatePage as translatePageUtil } from "utils/translate.utils";
+import ImageBackdrop from "components/ImageBackdrop";
+import { getImageBackgroundStatus } from "utils/background.utils";
+import { GeneralStyle } from "styles/general";
+import type { LangPageInterface, PageInterface } from "interface/payload.type";
+import { sanitizeResponse } from "utils/response.utils";
+import { submitResponse } from "utils/api.utils";
+import { moderateScale } from "utils/responsive.utils";
 
 interface Props {
-	state: StateType;
+	state: State;
 }
 
-function StateAdult({ state }: Props): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const questionCtx = useContext(QuestionContext);
-	const responseCtx = useContext(ResponseContext);
+const StateAdult = ({ state }: Props): React.ReactElement => {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const phrases = useSelector(getPhrases);
+	const successPage = useSelector(getSuccessPage);
+	const errorPage = useSelector(getErrorPage);
+	const device = useSelector(getDevice);
+
 	const [loading, setLoading] = useState<boolean>(false);
-	const { language, phrases, colorTheme, directusAccessToken, directusBaseEndpoint } =
-		settingCtx.settingState;
-	const successPage = questionCtx.questionState.successPage as PagePayloadInterface;
-	const errorPage = questionCtx.questionState.errorPage as PagePayloadInterface;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const [translatedPage, setTranslatedPage] = useState<
-		PageInterface | QuestionDropdownInterface | null | null
-	>(null);
+	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
 
-	const ErrorImage = Images.adults.graphics.error_image;
-	const SuccessImage = Images.adults.graphics.success_image;
 	const ErrorMark = Images.general.error;
 	const CheckMark = Images.general.check;
-	const ICON_SIZE = 200;
-	const MARK_SIZE = 300;
-
-	// const translatedPage = translate(currentPage.page.translations, language);
 
 	// set image, state icon, and state page on state change
 	useEffect(() => {
@@ -56,46 +51,37 @@ function StateAdult({ state }: Props): React.ReactElement {
 		buttonChange();
 	}, [state]);
 
-	function statePageChange(): void {
-		if (state === StateType.Success) {
-			setTranslatedPage(translate(successPage.translations, language));
+	const statePageChange = (): void => {
+		if (state === State.Success) {
+			const pageTranslations: LangPageInterface = successPage.translations;
+			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
 		} else {
-			setTranslatedPage(translate(errorPage.translations, language));
+			const pageTranslations: LangPageInterface = errorPage.translations;
+			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
 		}
-	}
+	};
 
-	function resetApp(): void {
-		settingCtx.reset();
-		navigation.navigate("SplashScreen");
-	}
+	const resetApp = (): void => {
+		dispatch(reset());
+		navigation.navigate("SplashScreen" as never);
+	};
 
-	async function resubmitResponse(): Promise<void> {
+	const resubmitResponse = async (): Promise<void> => {
 		try {
 			setLoading(true);
-
-			await submitResponse(
-				responseCtx.responses,
-				`${directusBaseEndpoint}/items/response`,
-				directusAccessToken,
-			);
-
-			console.log("done submitting the responses");
-			// introduce a delay
-			responseCtx.resetResponses();
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			const sanitizedResponses = sanitizeResponse();
+			await submitResponse(sanitizedResponses);
+			dispatch(resetResponses());
+			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			console.log("redirect to the error page");
-			console.log("error: ", error);
-			navigation.navigate("ErrorScreen");
+			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}
-	}
+	};
 
-	function buttonChange(): void {
-		if (state === StateType.Success) {
+	const buttonChange = (): void => {
+		if (state === State.Success) {
 			setButtonComponent(
 				<FWBtnShadowed
 					label={phrases.done}
@@ -112,40 +98,40 @@ function StateAdult({ state }: Props): React.ReactElement {
 				/>,
 			);
 		}
-	}
-
-	console.log("SuccessImage: ", SuccessImage);
-	console.log("ErrorImage: ", ErrorImage);
+	};
 
 	if (!loading) {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />
-				<ImageBackground
-					source={SuccessImage}
-					resizeMode="cover"
-					style={styles.bgImage}
-				></ImageBackground>
+				<ImageBackdrop
+					source={getImageBackgroundStatus(state)}
+					opacity={0.7}
+					key={state.toString()}
+				/>
 				<Main>
 					<CenterMain>
 						<View style={styles.stateIconContainer}>
-							{state === StateType.Success ? <CheckMark /> : <ErrorMark />}
+							{state === State.Success ? <CheckMark /> : <ErrorMark />}
 						</View>
 						<Heading
 							customStyle={{
-								color: "white",
-								fontSize: 70,
-								marginBottom: 50,
-								textAlign: "center",
+								...GeneralStyle.adult.pageHeading,
 							}}
 						>
-							{translatedPage?.heading.toLowerCase()}
+							{translatedPage?.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
-								color: "white",
-								fontSize: 15,
-								lineHeight: 17,
+								...GeneralStyle.adult.pageParagraph,
+								fontSize: moderateScale(
+									device.isTablet ? 18 : 20,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 23 : 25,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
 							}}
 						>
 							{translatedPage?.description}
@@ -158,7 +144,7 @@ function StateAdult({ state }: Props): React.ReactElement {
 	} else {
 		return <LoadingScreenAdult />;
 	}
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -176,6 +162,7 @@ const styles = StyleSheet.create({
 		opacity: 0.7,
 	},
 	stateIconContainer: {
+		width: "100%",
 		justifyContent: "center",
 		alignItems: "center",
 	},

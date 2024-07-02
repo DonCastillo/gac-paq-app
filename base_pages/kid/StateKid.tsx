@@ -1,51 +1,49 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
-import { Icon } from "@rneui/themed";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
-import StateType from "constants/state_type";
-import { QuestionContext } from "store/questions";
-import type PagePayloadInterface from "interface/directus/page-payload";
-import type PageInterface from "interface/page";
-import type QuestionDropdownInterface from "interface/question_dropdown";
+import State from "constants/state.enum";
 import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
 import Images from "styles/images/index";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import { useNavigation } from "@react-navigation/native";
-import { ResponseContext } from "store/responses";
-import { submitResponse } from "utils/api";
 import LoadingScreenKid from "./LoadingScreenKid";
+import { useDispatch, useSelector } from "react-redux";
+import { getDevice, getLanguage, getPhrases, reset } from "store/settings/settingsSlice";
+import { resetResponses } from "store/responses/responsesSlice";
+import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
+import { translatePage as translatePageUtil } from "utils/translate.utils";
+import type { PageInterface, LangPageInterface } from "interface/payload.type";
+import { sanitizeResponse } from "utils/response.utils";
+import { submitResponse } from "utils/api.utils";
+import { GeneralStyle } from "styles/general";
+import { moderateScale } from "utils/responsive.utils";
 
 interface Props {
-	state: StateType;
+	state: State;
 }
 
 function StateKid({ state }: Props): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const questionCtx = useContext(QuestionContext);
-	const responseCtx = useContext(ResponseContext);
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const phrases = useSelector(getPhrases);
+	const successPage = useSelector(getSuccessPage);
+	const errorPage = useSelector(getErrorPage);
+	const device = useSelector(getDevice);
+
 	const [loading, setLoading] = useState<boolean>(false);
-	const { language, phrases, directusAccessToken, directusBaseEndpoint } = settingCtx.settingState;
-	const successPage = questionCtx.questionState.successPage as PagePayloadInterface;
-	const errorPage = questionCtx.questionState.errorPage as PagePayloadInterface;
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const [translatedPage, setTranslatedPage] = useState<
-		PageInterface | QuestionDropdownInterface | null | null
-	>(null);
+	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
 
 	const SuccessImage = Images.kids.graphics.success_image;
 	const ErrorImage = Images.kids.graphics.error_image;
 	const ErrorMark = Images.general.error;
 	const CheckMark = Images.general.check;
-	const MARK_SIZE = 250;
-	// const translatedPage = translate(currentPage.page.translations, language);
 
 	// set image, state icon, and state page on state change
 	useEffect(() => {
@@ -53,47 +51,37 @@ function StateKid({ state }: Props): React.ReactElement {
 		buttonChange();
 	}, [state]);
 
-	function statePageChange(): void {
-		if (state === StateType.Success) {
-			setTranslatedPage(translate(successPage.translations, language));
+	const statePageChange = (): void => {
+		if (state === State.Success) {
+			const pageTranslations: LangPageInterface = successPage.translations;
+			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
 		} else {
-			setTranslatedPage(translate(errorPage.translations, language));
+			const pageTranslations: LangPageInterface = errorPage.translations;
+			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
 		}
-	}
+	};
 
 	function resetApp(): void {
-		settingCtx.reset();
-		navigation.navigate("SplashScreen");
+		dispatch(reset());
+		navigation.navigate("SplashScreen" as never);
 	}
 
-	async function resubmitResponse(): Promise<void> {
+	const resubmitResponse = async (): Promise<void> => {
 		try {
 			setLoading(true);
-
-			// throw new Error("testing error page");
-			await submitResponse(
-				responseCtx.responses,
-				`${directusBaseEndpoint}/items/response`,
-				directusAccessToken,
-			);
-
-			console.log("done submitting the responses");
-			// introduce a delay
-			responseCtx.resetResponses();
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			const sanitizedResponses = sanitizeResponse();
+			await submitResponse(sanitizedResponses);
+			dispatch(resetResponses());
+			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			console.log("redirect to the error page");
-			console.log("error: ", error);
-			navigation.navigate("ErrorScreen");
+			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}
-	}
+	};
 
 	function buttonChange(): void {
-		if (state === StateType.Success) {
+		if (state === State.Success) {
 			setButtonComponent(
 				<FWBtnShadowed
 					label={phrases.done}
@@ -121,8 +109,7 @@ function StateKid({ state }: Props): React.ReactElement {
 						<Heading
 							customStyle={{
 								color: "#000",
-								fontSize: 32,
-								textAlign: "center",
+								...GeneralStyle.kid.pageHeading,
 							}}
 						>
 							{translatedPage?.heading}
@@ -130,8 +117,15 @@ function StateKid({ state }: Props): React.ReactElement {
 						<Paragraph
 							customStyle={{
 								color: "#000",
-								fontSize: 20,
-								marginTop: 20,
+								...GeneralStyle.kid.pageParagraph,
+								fontSize: moderateScale(
+									device.isTablet ? 18 : 20,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 23 : 25,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
 							}}
 						>
 							{translatedPage?.description}
@@ -139,7 +133,7 @@ function StateKid({ state }: Props): React.ReactElement {
 						<View style={styles.imageContainer}>
 							{/* State Image */}
 							<View style={styles.stateImageContainer}>
-								{state === StateType.Success ? (
+								{state === State.Success ? (
 									<SuccessImage width={300} />
 								) : (
 									<ErrorImage width={300} />
@@ -148,11 +142,7 @@ function StateKid({ state }: Props): React.ReactElement {
 
 							{/* State Icon */}
 							<View style={styles.stateIconContainer}>
-								{state === StateType.Success ? (
-									<CheckMark />
-								) : (
-									<ErrorMark style={styles.errorMark} />
-								)}
+								{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
 							</View>
 						</View>
 					</CenterMain>

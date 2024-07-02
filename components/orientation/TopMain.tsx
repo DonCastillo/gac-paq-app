@@ -1,14 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { View, StyleSheet } from "react-native";
 
-TopMain.propTypes = {
-	children: PropTypes.node,
-};
-
-export default function TopMain({ children }): React.ReactElement {
-	return <View style={styles.container}>{children}</View>;
+interface Props {
+	children: React.ReactNode;
 }
+
+const TopMain = ({ children }: Props): React.ReactElement => {
+	return <View style={styles.container}>{children}</View>;
+};
+export default TopMain;
 
 const styles = StyleSheet.create({
 	container: {

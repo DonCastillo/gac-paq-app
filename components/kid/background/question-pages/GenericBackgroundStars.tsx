@@ -7,7 +7,7 @@ interface PropsInterface {
 	fillColor: string;
 }
 
-function GenericBackgroundStars({ fillColor }: PropsInterface): React.ReactElement {
+const GenericBackgroundStars = ({ fillColor }: PropsInterface): React.ReactElement => {
 	return (
 		<AbsoluteFullScreenContainer>
 			<StarsBlue
@@ -20,7 +20,7 @@ function GenericBackgroundStars({ fillColor }: PropsInterface): React.ReactEleme
 			/>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(GenericBackgroundStars);
 

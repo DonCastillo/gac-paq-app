@@ -1,9 +1,11 @@
-import React, { memo, useContext, useRef } from "react";
+import React, { memo, useRef } from "react";
 import { Pressable, TextInput, View, Text } from "react-native";
-import { SettingContext } from "store/settings";
 import { GeneralStyle } from "styles/general";
-import { getUserSpecifiedOther, isOtherOption } from "utils/options";
-import { moderateScale } from "utils/responsive";
+import { isOtherOption } from "utils/options.utils";
+import { moderateScale } from "utils/responsive.utils";
+import { useSelector } from "react-redux";
+
+import { getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	text: string;
@@ -17,7 +19,7 @@ interface PropsInterface {
 	defaultOtherInputValue?: string;
 }
 
-function Option({
+const Option = ({
 	text,
 	value,
 	selected,
@@ -27,10 +29,9 @@ function Option({
 	isOtherSelected = false,
 	autofocusOtherField = false,
 	defaultOtherInputValue,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
+}: PropsInterface): React.ReactElement => {
 	const otherInputRef = useRef<TextInput>(null);
-	const { device } = settingCtx.settingState;
+	const device = useSelector(getDevice);
 
 	return (
 		<View>
@@ -114,6 +115,6 @@ function Option({
 			</View>
 		</View>
 	);
-}
+};
 
 export default memo(Option);

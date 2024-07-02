@@ -6,13 +6,15 @@ interface PropsInterface {
 	customStyle?: object;
 }
 
-export default function Main({ children, customStyle = {} }: PropsInterface): React.ReactElement {
+const Main = ({ children, customStyle = {} }: PropsInterface): React.ReactElement => {
 	return (
 		<SafeAreaView>
 			<View style={[styles.container, customStyle]}>{children}</View>
 		</SafeAreaView>
 	);
-}
+};
+
+export default Main;
 
 const styles = StyleSheet.create({
 	container: {

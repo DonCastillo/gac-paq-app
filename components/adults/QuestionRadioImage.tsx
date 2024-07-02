@@ -1,32 +1,36 @@
 import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
-import { SettingContext } from "store/settings";
 import type { Svg } from "react-native-svg";
-import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background";
-import { horizontalScale, moderateScale, verticalScale } from "utils/responsive";
+import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background.utils";
+import { horizontalScale, moderateScale, verticalScale } from "utils/responsive.utils";
 import RadioOption from "./subcomponents/RadioOption";
 import {
 	getUserSpecifiedOther,
 	hasOtherOption,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-} from "utils/options";
+} from "utils/options.utils";
+import { useSelector } from "react-redux";
+import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
+import type { ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
-	options: any[];
+	options: ChoiceImage[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionRadioImage({
+const QuestionRadioImage = ({
 	options,
 	onChange,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const mode = useSelector(getMode);
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -55,7 +59,7 @@ export default function QuestionRadioImage({
 		}
 	}, [selected]);
 
-	function selectHandler(value: string | null): void {
+	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
 
 		if (isOtherOption(value)) {
@@ -97,9 +101,9 @@ export default function QuestionRadioImage({
 				onChange(value);
 			}
 		}
-	}
+	};
 
-	function renderImage(image: string | Svg): React.ReactElement {
+	const renderImage = (image: string | Svg): React.ReactElement => {
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
@@ -114,7 +118,7 @@ export default function QuestionRadioImage({
 			} else {
 				ImageComponent = (
 					<Image
-						style={GeneralStyle.general.inlineOptionImage}
+						style={GeneralStyle.general.inlineOptionImage as StyleProp<ImageStyle>}
 						source={image}
 						resizeMode="cover"
 					/>
@@ -124,20 +128,20 @@ export default function QuestionRadioImage({
 			return ImageComponent;
 		} else {
 			// SVGs
-			const ImageComponent = image;
+			const ImageComponent = image as any;
 			if (options.length <= 4) {
 				return <ImageComponent style={{ maxWidth: 100 }} />;
 			} else {
 				return <ImageComponent style={GeneralStyle.general.inlineOptionImage} />;
 			}
 		}
-	}
+	};
 
-	function blockRenderOption({ item }): React.ReactElement {
-		const { images, text, value } = item.image_choices_id;
+	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
+		const { image_ident, label, value } = item;
 		const baseWidth = device.orientation === "landscape" || !device.isTablet ? 250 : 270;
 		const imageWidth = horizontalScale(baseWidth, device.screenWidth) / numColumn;
-		const imageByMode = getOptionImage(images, mode);
+		const imageByMode = getOptionImage(image_ident);
 
 		return (
 			<Pressable
@@ -169,24 +173,25 @@ export default function QuestionRadioImage({
 							),
 						}}
 					>
-						{text}
+						{label}
 					</Text>
 				</View>
 			</Pressable>
 		);
-	}
+	};
 
-	function listRenderOption({ item }): React.ReactElement {
-		const { images, text, value, sublabel, text_mode } = item.image_choices_id;
-		const imageByMode = getOptionImage(images, mode);
+	/** if the option contains value called "other", it will be displayed as a list */
+	const listRenderOption = (item: ChoiceImage): React.ReactElement => {
+		const { image_ident, label, value, sublabel, label_mode } = item;
+		const imageByMode = getOptionImage(image_ident);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
-		const optionText = getOptionText(text, text_mode, mode);
+		const optionText = getOptionText(label, label_mode, mode);
 		const optionSublabel = getOptionSubLabel(sublabel, mode);
 
 		return (
 			<View style={{ paddingVertical: 2, marginBottom: 2 }}>
 				<RadioOption
-					label={text}
+					label={label}
 					value={value}
 					image={imageByMode}
 					selected={isSelected}
@@ -199,7 +204,7 @@ export default function QuestionRadioImage({
 				/>
 			</View>
 		);
-	}
+	};
 
 	return (
 		<SafeAreaView
@@ -210,7 +215,7 @@ export default function QuestionRadioImage({
 					<FlatList
 						initialNumToRender={4}
 						data={[...options]}
-						renderItem={blockRenderOption}
+						renderItem={({ item }) => blockRenderOption(item)}
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
@@ -220,7 +225,7 @@ export default function QuestionRadioImage({
 						removeClippedSubviews={false}
 						horizontal={false}
 						data={[...options]}
-						renderItem={listRenderOption}
+						renderItem={({ item }) => listRenderOption(item)}
 						bounces={false}
 						persistentScrollbar={true}
 						showsVerticalScrollIndicator={true}
@@ -229,7 +234,9 @@ export default function QuestionRadioImage({
 			</View>
 		</SafeAreaView>
 	);
-}
+};
+
+export default QuestionRadioImage;
 
 const styles = StyleSheet.create({
 	blockOptionContainer: {

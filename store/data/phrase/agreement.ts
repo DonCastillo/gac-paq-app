@@ -1,33 +1,24 @@
-import type PhraseInterface from "interface/phrase";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const AgreementPhrase: PhraseInterface[] = [
-	{
-		id: 1,
-		agreement_phrase_id: 1,
-		label: "Yes, I Understand & Agree. ",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
+const AgreementPhrase: LangPhraseInterface = {
+	"en-CA": {
+		label: "Yes, I Understand & Agree.",
 	},
-	{
-		id: 2,
-		agreement_phrase_id: 1,
+	"th-TH": {
+		label: "ใช่ ฉันเข้าใจและยอมรับ",
+	},
+	"zh-CN": {
+		label: "是的，我明白并同意。",
+	},
+	"es-MX": {
 		label: "Sí, entiendo y estoy de acuerdo.",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		agreement_phrase_id: 1,
+	"es-ES": {
+		label: "Sí, entiendo y estoy de acuerdo.",
+	},
+	"fr-CA": {
 		label: "Oui, je comprends et j'accepte.",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+};
 
 export default AgreementPhrase;

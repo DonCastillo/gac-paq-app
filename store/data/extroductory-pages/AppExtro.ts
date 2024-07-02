@@ -1,33 +1,28 @@
-import ScreenType from "constants/screen_type";
-import type ExtroPayloadInterface from "interface/directus/extro-payload";
-import Images from "styles/images";
+import Screen from "constants/screen.enum";
+import type { ExtroPayloadInterface } from "interface/payload.type";
 
 const AppExtro: ExtroPayloadInterface = {
 	ident: "survey_app_extro",
 	name: "Survey AppExtro",
-	type: ScreenType.ExtroQuestion,
-	translations: [
-		{
-			id: 1,
-			extro_section_id: 1,
+	type: Screen.ExtroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "Thank you for completing the survey!",
 			subheading: "",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				adult: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-				teen: {
-					phone: Images.adults.extro.section_7.phone,
-					tablet: Images.adults.extro.section_7.tablet,
-				},
-			},
 		},
-	],
+		"zh-CN": {
+			heading: "感谢您完成调查！",
+			subheading: "",
+		},
+		"es-MX": {
+			heading: "¡Gracias por completar la encuesta!",
+			subheading: "",
+		},
+		"fr-CA": {
+			heading: "Merci d'avoir rempli le sondage!",
+			subheading: "",
+		},
+	},
 };
 
 export default AppExtro;

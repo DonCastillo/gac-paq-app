@@ -1,36 +1,28 @@
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
-import Images from "styles/images";
+import Screen from "constants/screen.enum";
+import type { SectionPayloadInterface } from "interface/payload.type";
 
 const S1Intro: SectionPayloadInterface = {
 	ident: "school_intro",
-	heading: "School Activities",
-	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 2,
-			heading: "School Activities",
+	heading: "School",
+	type: Screen.IntroQuestion,
+	translations: {
+		"en-CA": {
+			heading: "School",
 			subheading: "Section 1",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_1.phone,
-					tablet: Images.kids.intro.section_1.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_1.phone,
-					tablet: Images.adults.intro.section_1.tablet,
-				},
-			},
 		},
-	],
+		"zh-CN": {
+			heading: "学校",
+			subheading: "第1部分",
+		},
+		"es-MX": {
+			heading: "Escuela O Colegio",
+			subheading: "Sección 1",
+		},
+		"fr-CA": {
+			heading: "École",
+			subheading: "Section 1",
+		},
+	},
 };
 
 export default S1Intro;

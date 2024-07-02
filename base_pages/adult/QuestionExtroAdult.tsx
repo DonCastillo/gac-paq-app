@@ -1,14 +1,10 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
-import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
-import { submitResponse } from "utils/api";
-import { ResponseContext } from "store/responses";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
@@ -16,28 +12,39 @@ import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import { useNavigation } from "@react-navigation/native";
 import ImageBackdrop from "components/ImageBackdrop";
-import { getImageBackground } from "utils/background";
+import { getImageBackground } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import { sanitizeResponse } from "utils/response";
+import { sanitizeResponse } from "utils/response.utils";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { proceedPage } from "utils/navigation.utils";
+import { resetResponses } from "store/responses/responsesSlice";
+import type { ExtroInterface } from "interface/payload.type";
+import { translatePage } from "utils/translate.utils";
+import { submitResponse } from "utils/api.utils";
 
-export default function QuestionExtroAdult(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
+const QuestionExtroAdult = (): React.ReactElement => {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
+	const navigation = useNavigation();
+
+	// state
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const {
-		mode,
-		language,
-		currentPage,
-		currentPageNumber,
-		directusAccessToken,
-		directusBaseEndpoint,
-		device,
-	} = settingCtx.settingState;
-	const isFinal = currentPage.page.isFinal;
-	const translatedPage: any = translate(currentPage.page.translations, language);
-	const navigation = useNavigation();
+
+	// translations
+	const isFinal = currentPage.page?.isFinal;
+	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
 
 	// set button component dynamically
 	useEffect(() => {
@@ -46,7 +53,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 				<BackAndSubmitNav
 					key={"prev" + currentPageNumber}
 					colorTheme="#FFF"
-					onPrev={() => settingCtx.prevPage()}
+					onPrev={() => dispatch(prevPage())}
 					onNext={async () => await submitResponseHandler()}
 				/>,
 			);
@@ -56,8 +63,8 @@ export default function QuestionExtroAdult(): React.ReactElement {
 					<BackAndNextNav
 						key={"both" + currentPageNumber}
 						colorTheme="#FFF"
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.proceedPage()}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => proceedPage()}
 					/>,
 				);
 			} else {
@@ -65,44 +72,33 @@ export default function QuestionExtroAdult(): React.ReactElement {
 					<BackAndNextNav
 						key={"next" + currentPageNumber}
 						colorTheme="#FFF"
-						onNext={() => settingCtx.proceedPage()}
+						onNext={() => proceedPage()}
 					/>,
 				);
 			}
 		}
 	}, [currentPageNumber]);
 
-	async function submitResponseHandler(): Promise<void> {
+	const submitResponseHandler = async (): Promise<void> => {
 		try {
 			setLoading(true);
-
-			const sanitizedResponses = sanitizeResponse(
-				responseCtx.responses,
-				settingCtx.settingState.mode,
-			);
-			console.log("sanitized responses: ", sanitizedResponses);
-			// await submitResponse(
-			// 	sanitizedResponses,
-			// 	`${directusBaseEndpoint}/items/response`,
-			// 	directusAccessToken,
-			// );
-			responseCtx.resetResponses();
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			const sanitizedResponses = sanitizeResponse();
+			await submitResponse(sanitizedResponses);
+			dispatch(resetResponses());
+			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("ErrorScreen");
+			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}
-	}
+	};
 
 	if (!loading) {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />
 				<ImageBackdrop
-					source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+					source={getImageBackground()}
 					key={currentPageNumber}
 					opacity={0.2}
 				/>
@@ -117,7 +113,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 								lineHeight: device.isTablet ? 75 : 60,
 							}}
 						>
-							{translatedPage?.heading}
+							{translatedPage.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
@@ -126,7 +122,7 @@ export default function QuestionExtroAdult(): React.ReactElement {
 								lineHeight: device.isTablet ? 30 : 25,
 							}}
 						>
-							{translatedPage?.subheading}
+							{translatedPage.subheading}
 						</Paragraph>
 					</CenterMain>
 					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
@@ -136,7 +132,9 @@ export default function QuestionExtroAdult(): React.ReactElement {
 	} else {
 		return <LoadingScreenAdult />;
 	}
-}
+};
+
+export default QuestionExtroAdult;
 
 const styles = StyleSheet.create({
 	container: {

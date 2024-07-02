@@ -1,23 +1,28 @@
 import { FlatList } from "react-native";
 import RadioOption from "components/adults/subcomponents/RadioOption";
-import React, { useContext, useEffect, useState } from "react";
-import type QuestionRadioItemInterface from "interface/question_radio_item";
-import { SettingContext } from "store/settings";
-import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue } from "utils/options";
+import React, { useEffect, useState } from "react";
+import type { ChoiceIcon, Choice } from "interface/payload.type";
+
+import {
+	getUserSpecifiedOther,
+	isOtherOption,
+	isOtherWithSpecifiedValue,
+} from "utils/options.utils";
+import { useSelector } from "react-redux";
+import { getCurrentPage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
-	options: QuestionRadioItemInterface[];
+	options: ChoiceIcon[] | Choice[];
 	onSelect: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionRadio({
+const QuestionRadio = ({
 	options,
 	onSelect,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { currentPage } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const currentPage = useSelector(getCurrentPage);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -40,7 +45,7 @@ export default function QuestionRadio({
 		}
 	}, [selected]);
 
-	function pressHandler(value: string | null): void {
+	const pressHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
 
 		if (isOtherOption(value)) {
@@ -82,7 +87,7 @@ export default function QuestionRadio({
 				onSelect(value);
 			}
 		}
-	}
+	};
 
 	return (
 		<FlatList
@@ -113,4 +118,6 @@ export default function QuestionRadio({
 			showsVerticalScrollIndicator={true}
 		/>
 	);
-}
+};
+
+export default QuestionRadio;

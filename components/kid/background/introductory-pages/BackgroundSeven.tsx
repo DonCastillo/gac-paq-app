@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import Images from "styles/images/index";
 import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
-function BackgroundSeven(): React.ReactElement {
+const BackgroundSeven = (): React.ReactElement => {
 	const CarrotWhole = Images.kids.graphics.background_image_5;
 	const CarrotBite = Images.kids.graphics.background_image_6;
 	return (
@@ -25,7 +25,7 @@ function BackgroundSeven(): React.ReactElement {
 			/>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(BackgroundSeven);
 

@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { SettingContext } from "store/settings";
+import React from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import { Font, GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { verticalScale } from "utils/responsive.utils";
+import { useSelector } from "react-redux";
+import { getColorTheme, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -10,18 +11,18 @@ interface PropsInterface {
 	placeholder: string | null;
 }
 
-export default function QuestionTextarea({
+const QuestionTextarea = ({
 	onChange,
 	selectedValue,
 	placeholder,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, device } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const colorTheme = useSelector(getColorTheme);
+	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 
-	function changeHandler(value: string): void {
+	const changeHandler = (value: string): void => {
 		onChange(value);
-	}
+	};
 
 	return (
 		<View>
@@ -41,7 +42,9 @@ export default function QuestionTextarea({
 			/>
 		</View>
 	);
-}
+};
+
+export default QuestionTextarea;
 
 const styles = StyleSheet.create({
 	container: {

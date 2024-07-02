@@ -1,78 +1,140 @@
-import ScreenType from "constants/screen_type";
-import type QuestionRadioImagePayloadInterface from "interface/directus/question-radio-image-payload";
-import Images from "styles/images/index";
+import Screen from "constants/screen.enum";
+import Question from "constants/question.enum";
+import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
 
 const S1Q5: QuestionRadioImagePayloadInterface = {
 	ident: "school_5",
 	name: "Question 5: Which of the following images shows what you do most of the time in physical education class?",
-	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 1,
-			question_radio_image_id: 1,
+	column_name: "05.0 Scho",
+	audio_ident: "school_5",
+	type: Screen.SingleQuestion,
+	translations: {
+		"en-CA": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 5",
 			label:
 				"Which of the following pictures looks like what you do most of the time in physical education class?",
 			kid_label:
 				"Which of the following pictures looks like what you do most of the time in physical education class?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time in physical education class?",
-			heading: "Question 5",
 			choices: [
 				{
-					image_choices_id: {
-						id: 1,
-						sort: null,
-						text: "Not moving",
-						value: "0.1",
-						images: {
-							kid: Images.kids.options.physical_education.not_moving,
-							adult: Images.adults.options.physical_education.not_moving,
-						},
-					},
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
 				},
 				{
-					image_choices_id: {
-						id: 2,
-						sort: null,
-						text: "Easy effort",
-						value: "0.3",
-						images: {
-							kid: Images.kids.options.physical_education.easy_effort,
-							adult: Images.adults.options.physical_education.easy_effort,
-						},
-					},
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
 				},
 				{
-					image_choices_id: {
-						id: 3,
-						sort: null,
-						text: "Medium or hard effort",
-						value: "0.5",
-						images: {
-							kid: Images.kids.options.physical_education.medium_effort,
-							adult: Images.adults.options.physical_education.medium_effort,
-						},
-					},
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
 				},
 				{
-					image_choices_id: {
-						id: 3,
-						sort: null,
-						text: "Don't know",
-						value: "0",
-						images: {
-							kid: Images.general.donotknow,
-							adult: Images.general.donotknow,
-						},
-					},
+					label: "Don't know",
+					image_ident: "dont_know",
+					value: "0",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+		"zh-CN": {
+			type: Question.QuestionRadioImage,
+			heading: "问题 5",
+			label: "以下哪张图片显示了你在体育课上大部分时间的情况？",
+			kid_label: "以下哪张图片显示了你在体育课上大部分时间的情况？",
+			adult_label: "以下哪张图片显示了您的孩子在体育课上大部分时间的情况？",
+			choices: [
+				{
+					label: "不动",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "低强度",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "中等或高强度",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "不知道",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 5",
+			label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física? ",
+			kid_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física? ",
+			adult_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo en la clase de educación física?",
+			choices: [
+				{
+					label: "Sin moverte",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Esfuerzo fácil",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Esfuerzo medio o fuerte",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "No sé",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 5",
+			label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
+			kid_label:
+				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
+			adult_label:
+				"Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps dans les cours d'éducation physique?",
+			choices: [
+				{
+					label: "Pas de mouvement",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Peu d'effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Un effort moyen ou intense",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Je ne sais pas",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+	},
 };
 
 export default S1Q5;

@@ -1,60 +1,64 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
-import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import TopMain from "components/orientation/TopMain";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguage from "components/kid/QuestionSelectLanguage";
-import { ResponseContext } from "store/responses";
-import { getIntroductoryBackground } from "utils/background";
+import { getIntroductoryBackground } from "utils/background.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import { translateButton, translatePhrase } from "utils/translate";
-import { QuestionContext } from "store/questions";
-import ButtonLabel from "constants/button_label";
-import { translate, translateQuestionLabel } from "utils/page";
-import PhraseLabel from "constants/phrase_label";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
-import QuestionSubLabel from "components/generic/QuestionSubLabel";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getIsLoading,
+	getLanguage,
+	getMode,
+	nextPage,
+	setLanguage,
+	setSectionTitles,
+} from "store/settings/settingsSlice";
+import { loadButtons, loadPhrases } from "utils/load.utils";
+import { addResponse } from "utils/response.utils";
+import {
+	translatePage,
+	translateQuestionLabel,
+	translateSectionHeading,
+} from "utils/translate.utils";
+import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
+import { getNarrationPayload } from "store/settings/settingsThunk.";
+import LoadingScreenKid from "./LoadingScreenKid";
 
-export default function LanguageKid(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
-	const questionCtx = useContext(QuestionContext);
+const LanguageKid = (): React.ReactElement => {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const mode = useSelector(getMode);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const colorTheme = useSelector(getColorTheme);
+	const device = useSelector(getDevice);
+	const isLoading = useSelector(getIsLoading);
+
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
-		settingCtx.settingState;
-	const { color100 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
-	const questionLabel = translateQuestionLabel(
-		translatedPage?.kid_label,
-		translatedPage?.adult_label,
-		mode,
-	);
-	const questionSubLabel = translateQuestionLabel(
-		translatedPage?.kid_sublabel,
-		translatedPage?.adult_sublabel,
-		mode,
-	);
-	const {
-		backButton,
-		completeButton,
-		continueButton,
-		goButton,
-		nextButton,
-		startedButton,
-		agreementPhrase,
-		donePhrase,
-		dontKnowPhrase,
-		introductionPhrase,
-		tryAgainPhrase,
-	} = questionCtx.questionState;
-
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
+
+	const { color100 } = colorTheme;
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as QuestionDropdownLanguageInterface;
+	const questionLabel = translateQuestionLabel(
+		translatedPage.kid_label,
+		translatedPage.adult_label,
+		mode,
+	);
 
 	// set background screen dynamically
 	useEffect(() => {
@@ -64,117 +68,97 @@ export default function LanguageKid(): React.ReactElement {
 
 	// translate phrases and buttons
 	useEffect(() => {
-		settingCtx.translateButtons({
-			back: translateButton(backButton, language) ?? ButtonLabel.Back,
-			complete: translateButton(completeButton, language) ?? ButtonLabel.Complete,
-			continue: translateButton(continueButton, language) ?? ButtonLabel.Continue,
-			go: translateButton(goButton, language) ?? ButtonLabel.Go,
-			next: translateButton(nextButton, language) ?? ButtonLabel.Next,
-			started: translateButton(startedButton, language) ?? ButtonLabel.Started,
-		});
-		settingCtx.translatePhrases({
-			agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
-			done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
-			dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
-			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
-			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
-		});
+		loadButtons();
+		loadPhrases();
+
+		// translate the section headings
+		const translatedSectionTitles = translateSectionHeading(language);
+		console.log("translatedSectionTitles: ", translatedSectionTitles);
+		// will make "Introduction" and "Feedback" translated in the future
+		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
+		// set narration payload
+		dispatch(getNarrationPayload({ mode, language }));
 	}, [language]);
 
 	// set selected value
 	useEffect(() => {
+		console.log("changing the language ...");
 		setSelectedValue(language);
 	}, [currentPageNumber]);
 
 	// set language default
 	useEffect(() => {
-		const response = responseCtx.responses;
-		if (Object.keys(response).length === 0) {
-			responseCtx.addResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: language,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			});
-		}
+		addResponse(language);
 	}, []);
 
-	function changeHandler(value: string | null): void {
+	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
-			settingCtx.setLanguage(value);
-			responseCtx.addResponse({
-				ident: currentPage.page.ident,
-				label: currentPage.page.name,
-				answer: value,
-				pageNumber: currentPage.pageNumber,
-				mode,
-				section: currentPage.section,
-				sectionNumber: currentPage.sectionNumber,
-				sectionPageNumber: currentPage.sectionPageNumber,
-			});
+			dispatch(setLanguage(value));
+			addResponse(value);
 			setSelectedValue(value);
 		} else {
 			setSelectedValue(null);
 		}
-	}
+	};
 
-	return (
-		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
-			<View style={styles.container}>
-				{background !== null && background}
-				<Main>
-					<ProgressBarKid />
-					<Toolbar />
-					<TopMain>
-						<View
-							style={[
-								GeneralStyle.kid.introQuestionContainer,
-								{
-									marginVertical: verticalScale(40, device.screenHeight),
-									...styles.mainContainer,
-								},
-							]}
-						>
-							<View style={{ marginBottom: 9 }}>
-								<QuestionLabel
-									textStyle={GeneralStyle.kid.introQuestionLabel}
-									customStyle={{ marginBottom: 7 }}
-								>
-									{questionLabel}
-								</QuestionLabel>
-								<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-									{questionSubLabel}
-								</QuestionSubLabel>
+	// console.log("isLoading: ", isLoading);
+
+	if (!isLoading) {
+		return (
+			<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
+				<View style={styles.container}>
+					{background !== null && background}
+					<Main>
+						<ProgressBarKid />
+						<Toolbar />
+						<TopMain>
+							<View
+								style={[
+									GeneralStyle.kid.introQuestionContainer,
+									{
+										marginVertical: verticalScale(40, device.screenHeight),
+										...styles.mainContainer,
+									},
+								]}
+							>
+								<View style={{ marginBottom: 9 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.kid.introQuestionLabel}
+										customStyle={{ marginBottom: 7 }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+								</View>
+
+								<View style={styles.questionComponentContainer}>
+									<QuestionSelectLanguage
+										key={currentPageNumber}
+										onChange={changeHandler}
+										selectedValue={language}
+										dropdownOpen={dropdownOpen}
+										setDropdownOpen={setDropdownOpen}
+									/>
+								</View>
 							</View>
-
-							<View style={styles.questionComponentContainer}>
-								<QuestionSelectLanguage
-									key={currentPageNumber}
-									onChange={changeHandler}
-									selectedValue={language}
-									dropdownOpen={dropdownOpen}
-									setDropdownOpen={setDropdownOpen}
+						</TopMain>
+						<Navigation>
+							{selectedValue !== null && (
+								<BackAndNextNav
+									colorTheme={color100}
+									onNext={() => dispatch(nextPage())}
 								/>
-							</View>
-						</View>
-					</TopMain>
-					<Navigation>
-						{selectedValue !== null && (
-							<BackAndNextNav
-								colorTheme={color100}
-								onNext={() => settingCtx.nextPage()}
-							/>
-						)}
-					</Navigation>
-				</Main>
-			</View>
-		</TouchableWithoutFeedback>
-	);
-}
+							)}
+						</Navigation>
+					</Main>
+				</View>
+			</TouchableWithoutFeedback>
+		);
+	} else {
+		return <LoadingScreenKid />;
+	}
+};
+
+export default LanguageKid;
 
 const styles = StyleSheet.create({
 	container: {

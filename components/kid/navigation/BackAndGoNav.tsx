@@ -1,25 +1,19 @@
 import { View, StyleSheet } from "react-native";
 import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
-import { SettingContext } from "store/settings";
-import React, { useContext } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getButtons, getColorTheme, nextPage, prevPage } from "store/settings/settingsSlice";
 
-export default function BackAndGoNav(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, buttons } = settingCtx.settingState;
+const BackAndGoNav = (): React.ReactElement => {
+	const dispatch = useDispatch();
+	const colorTheme = useSelector(getColorTheme);
+	const buttons = useSelector(getButtons);
 	const { color100 } = colorTheme;
-
-	function prevPage(): void {
-		settingCtx.prevPage();
-	}
-
-	function nextPage(): void {
-		settingCtx.nextPage();
-	}
 
 	return (
 		<View style={styles.bottomNavigation}>
 			<ButtonContainerWidth
-				onPress={prevPage}
+				onPress={() => dispatch(prevPage())}
 				customStyle={{
 					borderColor: color100,
 					backgroundColor: "#fff",
@@ -32,7 +26,7 @@ export default function BackAndGoNav(): React.ReactElement {
 			</ButtonContainerWidth>
 
 			<ButtonContainerWidth
-				onPress={nextPage}
+				onPress={() => dispatch(nextPage())}
 				customStyle={{
 					borderColor: color100,
 					backgroundColor: color100,
@@ -45,7 +39,9 @@ export default function BackAndGoNav(): React.ReactElement {
 			</ButtonContainerWidth>
 		</View>
 	);
-}
+};
+
+export default BackAndGoNav;
 
 const styles = StyleSheet.create({
 	bottomNavigation: {

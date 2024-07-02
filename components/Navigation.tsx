@@ -1,16 +1,15 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 
-import PropTypes from "prop-types";
-
-export default function Navigation({ children, customStyle = {} }): React.ReactElement {
-	return <View style={[styles.container, customStyle]}>{children}</View>;
+interface PropsInterface {
+	children: React.ReactNode;
+	customStyle?: object;
 }
-
-Navigation.propTypes = {
-	children: PropTypes.node,
-	customStyle: PropTypes.object,
+const Navigation = ({ children, customStyle = {} }: PropsInterface): React.ReactElement => {
+	return <View style={[styles.container, customStyle]}>{children}</View>;
 };
+
+export default Navigation;
 
 const styles = StyleSheet.create({
 	container: {

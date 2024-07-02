@@ -1,9 +1,10 @@
 import { View, StyleSheet } from "react-native";
 import type { FlexStyle } from "react-native";
-import { SettingContext } from "store/settings";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ButtonIcon from "components/buttons/ButtonIcon";
 import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed";
+import { useSelector } from "react-redux";
+import { getButtons } from "store/settings/settingsSlice";
 
 interface Props {
 	onPrev?: () => void;
@@ -11,12 +12,11 @@ interface Props {
 	colorTheme?: string;
 }
 
-function BackAndSubmitNav({ onPrev, onNext, colorTheme }: Props): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
+const BackAndSubmitNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactElement => {
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
-	const { buttons } = settingCtx.settingState;
+	const buttons = useSelector(getButtons);
 
 	// determine whether to show prev, next, or both buttons
 	useEffect(() => {
@@ -61,7 +61,7 @@ function BackAndSubmitNav({ onPrev, onNext, colorTheme }: Props): React.ReactEle
 			)}
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	bottomNavigation: {

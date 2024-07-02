@@ -1,54 +1,166 @@
-import ScreenType from "constants/screen_type";
-import type QuestionRadioPayloadInterface from "interface/directus/question-radio-payload";
+import Screen from "constants/screen.enum";
+import Question from "constants/question.enum";
+import type { QuestionRadioPayloadInterface } from "interface/payload.type";
 
 const Relationship: QuestionRadioPayloadInterface = {
 	ident: "relationship_to_the_child",
 	name: "relationship_to_the_child",
-	type: ScreenType.SingleQuestion,
-	translations: [
-		{
-			id: 10,
-			question_radio_id: 8,
+	type: Screen.SingleQuestion,
+	column_name: "relationship",
+	audio_ident: "relationship",
+	translations: {
+		"en-CA": {
+			type: Question.QuestionRadio,
 			heading: "Question 28",
 			label: "What is your relationship to the child?",
 			kid_label: "What is your relationship to the child?",
 			adult_label: "What is your relationship to the child?",
 			choices: [
 				{
-					text: "Father",
+					label: "Father",
 					value: "Father",
 				},
 				{
-					text: "Mother",
+					label: "Mother",
 					value: "Mother",
 				},
 				{
-					text: "Grandfather",
+					label: "Grandfather",
 					value: "Grandfather",
 				},
 				{
-					text: "Grandmother",
+					label: "Grandmother",
 					value: "Grandmother",
 				},
 				{
-					text: "Tutor or guardian",
+					label: "Tutor or guardian",
 					value: "Tutor or guardian",
 				},
 				{
-					text: "Other",
+					label: "Other",
 					value: "Other",
 				},
 				{
-					text: "Prefer not to answer",
+					label: "Prefer not to answer",
 					value: "Prefer not to answer",
 				},
 			],
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-	],
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "第二十八题",
+			label: "你和您孩子的关系是？",
+			kid_label: "你和您孩子的关系是？",
+			adult_label: "你和您孩子的关系是？",
+			choices: [
+				{
+					label: "父亲",
+					value: "Father",
+				},
+				{
+					label: "母亲",
+					value: "Mother",
+				},
+				{
+					label: "祖父",
+					value: "Grandfather",
+				},
+				{
+					label: "祖母",
+					value: "Grandmother",
+				},
+				{
+					label: "导师或监护人 ",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "其他",
+					value: "Other",
+				},
+				{
+					label: "不想回答",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 28",
+			label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			choices: [
+				{
+					label: "Papá",
+					value: "Father",
+				},
+				{
+					label: "Mamá",
+					value: "Mother",
+				},
+				{
+					label: "Abuelo",
+					value: "Grandfather",
+				},
+				{
+					label: "Abuela",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 28",
+			label: "Quel est votre relation avec l'enfant?",
+			kid_label: "Quel est votre relation avec l'enfant?",
+			adult_label: "Quel est votre relation avec l'enfant?",
+			choices: [
+				{
+					label: "Père",
+					value: "Father",
+				},
+				{
+					label: "Mère",
+					value: "Mother",
+				},
+				{
+					label: "Grand-père",
+					value: "Grandfather",
+				},
+				{
+					label: "Grand-mère",
+					value: "Grandmother",
+				},
+				{
+					label: "Tuteur (tutrice) ou gardien(ne)",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Autre",
+					value: "Other",
+				},
+				{
+					label: "Préfère ne pas répondre",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+	},
 };
 
 export default Relationship;

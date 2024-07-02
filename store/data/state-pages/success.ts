@@ -1,45 +1,42 @@
-import ScreenType from "constants/screen_type";
-import type PagePayloadInterface from "interface/directus/page-payload";
+import Screen from "constants/screen.enum";
+import type { PagePayloadInterface } from "interface/payload.type";
 
 const SuccessPage: PagePayloadInterface = {
+	ident: "success_page",
 	title: "Success Page",
 	name: "Success Page",
-	type: ScreenType.Page,
-	translations: [
-		{
-			id: 1,
-			pages_id: 1,
+	type: Screen.Page,
+	translations: {
+		"en-CA": {
 			heading: "Success!",
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
 		},
-		{
-			id: 2,
-			pages_id: 1,
+		"th-TH": {
+			heading: "สำเร็จ!",
+			description:
+				"งานดี! คุณได้ทำแบบสอบถามเสร็จสิ้นแล้ว คำตอบของคุณถูกส่งเรียบร้อยแล้ว\n\nขอบคุณสำหรับความช่วยเหลือของคุณ!",
+		},
+		"zh-CN": {
+			heading: "成功!",
+			description: "干得好！您已完成问卷调查。您的答案已成功发送。\n\n感谢您的帮助！",
+		},
+		"es-MX": {
+			heading: "Éxito!",
+			description:
+				"¡Buen trabajo! Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
+		},
+		"es-ES": {
 			heading: "Éxito!",
 			description:
 				"Buen trabajo. Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
-			languages_id: {
-				name: "Spanish - Spain",
-				lang_code: "es-ES",
-			},
 		},
-		{
-			id: 3,
-			pages_id: 1,
+		"fr-CA": {
 			heading: "Succès!",
 			description:
 				"Bon travail. Vous avez terminé le questionnaire. Vos réponses ont été envoyées avec succès.\n\nMerci pour votre aide.",
-			languages_id: {
-				name: "French - Canada",
-				lang_code: "fr-CA",
-			},
 		},
-	],
+	},
 };
 
 export default SuccessPage;
