@@ -86,8 +86,15 @@ const sanitizeResponse = (): FinalResponseType => {
 		}
 
 		// get all answers from the extros that match the current mode
+		// make sure questions whose idents are child_difficulties, child_ethnicity, and parent_ethnicity are sent as arrays
+		// to prevent server error
 		if (value.section === Section.Extro && value.mode === mode) {
-			if (value.answer.includes(" | ")) {
+			if (
+				value.answer.includes(" | ") ||
+				value.ident === "child_difficulties" ||
+				value.ident === "child_ethnicity" ||
+				value.ident === "parent_ethnicity"
+			) {
 				sanitizedResponse[value.label ?? key] = value.answer.split(" | ");
 			} else {
 				sanitizedResponse[value.label ?? key] = value.answer;

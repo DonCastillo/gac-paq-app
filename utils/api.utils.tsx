@@ -25,6 +25,7 @@ const submitResponse = async (responses: FinalResponseType): Promise<boolean> =>
 				resolve(true);
 			})
 			.catch((error) => {
+				console.log("Error submitting response: ", error.message);
 				reject(error);
 			});
 	});

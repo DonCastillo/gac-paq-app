@@ -163,6 +163,7 @@ const reset: SettingsFuncType = (state) => {
 	skipPage(state, { type: "", payload: 1 });
 	setColorTheme(state, { type: "", payload: 0 });
 	setLanguage(state, { type: "", payload: "en-CA" });
+	setStartDateTime(state);
 };
 
 export default {
