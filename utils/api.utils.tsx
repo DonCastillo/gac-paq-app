@@ -3,9 +3,14 @@ import type { FinalResponseType } from "interface/union.type";
 import { store } from "store/store";
 
 const submitResponse = async (responses: FinalResponseType): Promise<boolean> => {
+	console.log("submitting response ...");
 	const settings = store.getState().settings;
 	const endpoint = settings.directusBaseEndpoint + "/items/responses";
 	const accessToken = settings.directusAccessToken;
+
+	console.log("Endpoint: ", endpoint);
+	console.log("Access Token: ", accessToken);
+	console.log("Responses: ", responses);
 
 	return new Promise((resolve, reject) => {
 		axios
@@ -16,6 +21,7 @@ const submitResponse = async (responses: FinalResponseType): Promise<boolean> =>
 				},
 			})
 			.then((response) => {
+				console.log("Response submitted: ", response.data);
 				resolve(true);
 			})
 			.catch((error) => {

@@ -9,7 +9,7 @@ import { store } from "store/store";
 
 const SplashScreen: ScreenByModeFuncType = () => {
 	const mode = store.getState().settings.mode;
-	return mode === Mode.Kid ? <GenericSplash /> : <GenericSplash />;
+	return mode === Mode.Kid ? <GenericSplash key={Mode.Kid} /> : <GenericSplash key={Mode.Adult} />;
 };
 
 const ErrorScreen: ScreenByModeFuncType = () => {
