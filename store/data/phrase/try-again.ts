@@ -1,33 +1,24 @@
-import type PhraseInterface from "interface/phrase";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const TryAgainPhrase: PhraseInterface[] = [
-	{
-		id: 1,
-		try_again_phrase_id: 1,
+const TryAgainPhrase: LangPhraseInterface = {
+	"en-CA": {
 		label: "Try Again",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		try_again_phrase_id: 1,
-		label: "Inténtalo de nuevo.",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
+	"th-TH": {
+		label: "ลองอีกครั้ง",
 	},
-	{
-		id: 3,
-		try_again_phrase_id: 1,
+	"zh-CN": {
+		label: "再试一次",
+	},
+	"es-MX": {
+		label: "Inténtalo de nuevo",
+	},
+	"es-ES": {
+		label: "Inténtalo de nuevo",
+	},
+	"fr-CA": {
 		label: "Essaye encore",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+};
 
 export default TryAgainPhrase;

@@ -3,25 +3,46 @@ import { StyleSheet, View, Image } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
-import Colors from "store/data/colors";
-import Mode from "constants/mode";
+import { horizontalScale, moderateScale } from "utils/responsive.utils";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
+import Paragraph from "components/Paragraph";
 
-export default function LoadingScreenAdult(): React.ReactElement {
-	const color100 = Colors[Mode.Adult][0].color100;
+interface PropsInterface {
+	displayTitle?: boolean;
+}
+
+const LoadingScreenAdult = ({ displayTitle }: PropsInterface): React.ReactElement => {
+	const device = useSelector(getDevice);
+	const progressBarTop = moderateScale(device.isTablet ? 10 : -20, device.screenHeight);
 	return (
-		<View style={[styles.container, { backgroundColor: color100 }]}>
+		<View style={[styles.container]}>
 			<Main>
 				<CenterMain>
 					<Image
-						style={styles.logo}
-						source={require("assets/images/Logo.png")}
+						style={[styles.logo, { maxWidth: horizontalScale(250, device.screenWidth) }]}
+						source={require("assets/splash-icon-loading.png")}
 					/>
-					<ProgressBar />
+					{displayTitle === true && (
+						<Paragraph customStyle={{ color: "#37383c", fontSize: 20, lineHeight: 30 }}>
+							The Global Adolescent and Children Activity Questionnaire
+						</Paragraph>
+					)}
+					<View
+						style={{
+							marginTop: displayTitle === true ? 0 : progressBarTop,
+							backgroundColor: "white",
+						}}
+					>
+						<ProgressBar color="#37383c" />
+					</View>
 				</CenterMain>
 			</Main>
 		</View>
 	);
-}
+};
+
+export default LoadingScreenAdult;
 
 const styles = StyleSheet.create({
 	container: {
@@ -31,7 +52,10 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	logo: {
-		width: 350,
+		height: "100%",
+		width: "100%",
+		maxHeight: "35%",
 		resizeMode: "contain",
+		opacity: 0.85,
 	},
 });

@@ -1,10 +1,10 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
-import React, { useContext, useRef } from "react";
-import { SettingContext } from "store/settings";
-import { G } from "react-native-svg";
-import { moderateScale } from "utils/responsive";
-import { isOtherOption } from "utils/options";
+import React, { useRef } from "react";
+import { moderateScale } from "utils/responsive.utils";
+import { isOtherOption } from "utils/options.utils";
+import { useSelector } from "react-redux";
+import { getColorTheme, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;
@@ -19,7 +19,7 @@ interface PropsInterface {
 	optionSublabel?: string;
 }
 
-export default function RadioOption({
+const RadioOption = ({
 	label,
 	value,
 	image,
@@ -30,9 +30,9 @@ export default function RadioOption({
 	defaultOtherInputValue,
 	optionLabel,
 	optionSublabel,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { device, colorTheme } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const colorTheme = useSelector(getColorTheme);
+	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 
@@ -53,7 +53,7 @@ export default function RadioOption({
 				></View>
 				<View style={styles.labelContainer}>
 					{/* Icon */}
-					{image !== undefined && image !== undefined && typeof image === "function" && (
+					{image !== undefined && image !== null && typeof image === "function" && (
 						<View
 							style={{
 								...styles.svgImage,
@@ -70,7 +70,7 @@ export default function RadioOption({
 							{image()}
 						</View>
 					)}
-					{image !== undefined && image !== undefined && typeof image === "number" && (
+					{image !== undefined && image !== null && typeof image === "number" && (
 						<Image
 							source={image}
 							style={{
@@ -169,7 +169,10 @@ export default function RadioOption({
 			)}
 		</View>
 	);
-}
+};
+
+export default RadioOption;
+
 const styles = StyleSheet.create({
 	container: {
 		alignItems: "center",

@@ -9,12 +9,12 @@ interface Props {
 	customStyle?: any;
 }
 
-function ButtonContainerWidth({
+const ButtonContainerWidth = ({
 	children,
 	onPress,
 	textStyle,
 	customStyle,
-}: Props): React.ReactElement {
+}: Props): React.ReactElement => {
 	return (
 		<View>
 			<Pressable
@@ -25,7 +25,7 @@ function ButtonContainerWidth({
 			</Pressable>
 		</View>
 	);
-}
+};
 
 const style = StyleSheet.create({
 	container: {

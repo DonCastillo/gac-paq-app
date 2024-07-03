@@ -1,2 +1,4 @@
 node_modules
 *.config.js
+components/svgs/kid/doodles
+components/svgs/kid

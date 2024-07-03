@@ -1,60 +1,29 @@
-import React, { useContext, useEffect } from "react";
-import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
-import Main from "components/Main";
-import CenterMain from "components/orientation/CenterMain";
-import Heading from "components/Heading";
-import Paragraph from "components/Paragraph";
-import ProgressBar from "components/ProgressBar";
+import React, { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Logo } from "components/svgs/kid";
-import BGLinearGradient from "components/BGLinearGradient";
+import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
+import { useSelector } from "react-redux";
+import { getCurrentPageNumber } from "store/settings/settingsSlice";
 
-export default function GenericSplash(): JSX.Element {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
-	const { color100 } = colorTheme;
+const GenericSplash = (): React.ReactElement => {
+	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const navigation = useNavigation();
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
-			clearInterval(timeout);
-			navigation.navigate("RegularPageScreen");
+			navigation.navigate("RegularPageScreen" as never);
 		}, 3000);
-	});
+
+		return () => {
+			clearTimeout(timeout);
+		};
+	}, [navigation, currentPageNumber]);
 
 	return (
-		<View style={[styles.container, { backgroundColor: color100 }]}>
-			<BGLinearGradient />
-			<Main>
-				<CenterMain>
-					<View style={styles.imageContainer}>
-						<Logo />
-					</View>
-					<Heading customStyle={{}}>gacpaq</Heading>
-					<Paragraph
-						customStyle={{
-							color: "#fff",
-							fontSize: 20,
-							lineHeight: 23.6,
-							maxWidth: 340,
-						}}
-					>
-						The global adolescent and children activity questionnaire
-					</Paragraph>
-					<ProgressBar />
-				</CenterMain>
-			</Main>
-		</View>
+		<LoadingScreenAdult
+			displayTitle={true}
+			key={currentPageNumber}
+		/>
 	);
-}
+};
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-	imageContainer: {},
-});
+export default GenericSplash;

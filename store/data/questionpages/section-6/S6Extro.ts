@@ -1,33 +1,28 @@
-import ScreenType from "constants/screen_type";
-import type ExtroPayloadInterface from "interface/directus/extro-payload";
-import Images from "styles/images";
+import Screen from "constants/screen.enum";
+import type { ExtroPayloadInterface } from "interface/payload.type";
 
 const S6Extro: ExtroPayloadInterface = {
 	ident: "play_extro",
 	name: "Section 6 Extro",
-	type: ScreenType.ExtroQuestion,
-	translations: [
-		{
-			id: 1,
-			extro_section_id: 1,
+	type: Screen.ExtroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "Section Complete!",
 			subheading: "Only one more to go!",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				adult: {
-					phone: Images.adults.extro.section_6.phone,
-					tablet: Images.adults.extro.section_6.tablet,
-				},
-				teen: {
-					phone: Images.adults.extro.section_6.phone,
-					tablet: Images.adults.extro.section_6.tablet,
-				},
-			},
 		},
-	],
+		"zh-CN": {
+			heading: "部分完成!",
+			subheading: "只剩下一个!",
+		},
+		"es-MX": {
+			heading: "¡Sección Completa!",
+			subheading: "¡Solo falta una!",
+		},
+		"fr-CA": {
+			heading: "Section terminée!",
+			subheading: "Il ne reste qu'une seule section!",
+		},
+	},
 };
 
 export default S6Extro;

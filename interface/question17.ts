@@ -1,10 +1,12 @@
 interface ModeActivityInterface {
 	kid: {
+		none: string;
 		school: string;
 		work: string;
 		both: string;
 	};
 	adult: {
+		none: string;
 		school: string;
 		work: string;
 		both: string;
@@ -14,16 +16,13 @@ interface ModeActivityInterface {
 interface ModeActivityTransportationInterface {
 	kid: {
 		wheel: {
+			none: string;
 			school: string;
 			work: string;
 			both: string;
 		};
 		walk: {
-			school: string;
-			work: string;
-			both: string;
-		};
-		both: {
+			none: string;
 			school: string;
 			work: string;
 			both: string;
@@ -31,16 +30,13 @@ interface ModeActivityTransportationInterface {
 	};
 	adult: {
 		wheel: {
+			none: string;
 			school: string;
 			work: string;
 			both: string;
 		};
 		walk: {
-			school: string;
-			work: string;
-			both: string;
-		};
-		both: {
+			none: string;
 			school: string;
 			work: string;
 			both: string;

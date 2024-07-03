@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
 import Main from "components/Main";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
@@ -8,18 +7,18 @@ import ProgressBar from "components/ProgressBar";
 import { useNavigation } from "@react-navigation/native";
 import BottomMain from "components/orientation/BottomMain";
 import BGLinearGradient from "components/BGLinearGradient";
+import { useSelector } from "react-redux";
+import { getColorTheme } from "store/settings/settingsSlice";
 
-export default function SplashAdult(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
+const SplashAdult = (): React.ReactElement => {
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
-
 	const navigation = useNavigation();
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
 			clearInterval(timeout);
-			navigation.navigate(`RegularPageScreen`);
+			navigation.navigate("RegularPageScreen" as never);
 		}, 3000);
 	});
 
@@ -53,7 +52,9 @@ export default function SplashAdult(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default SplashAdult;
 
 const styles = StyleSheet.create({
 	container: {

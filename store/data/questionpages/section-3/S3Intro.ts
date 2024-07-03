@@ -1,37 +1,28 @@
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
-import Images from "styles/images";
+import Screen from "constants/screen.enum";
+import type { SectionPayloadInterface } from "interface/payload.type";
 
 const S3Intro: SectionPayloadInterface = {
 	ident: "work_intro",
 	heading: "Work",
-	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	type: Screen.IntroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "Work",
 			subheading: "Section 3",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_3.phone,
-					tablet: Images.kids.intro.section_3.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_3.phone,
-					tablet: Images.adults.intro.section_3.tablet,
-				},
-			},
 		},
-	],
+		"zh-CN": {
+			heading: "工作",
+			subheading: "第3部分",
+		},
+		"es-MX": {
+			heading: "Trabajo",
+			subheading: "Sección 3",
+		},
+		"fr-CA": {
+			heading: "Emploi",
+			subheading: "Section 3",
+		},
+	},
 };
 
 export default S3Intro;

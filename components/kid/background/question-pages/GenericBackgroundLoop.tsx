@@ -7,7 +7,7 @@ interface PropsInterface {
 	fillColor: string;
 }
 
-function GenericBackgroundLoop({ fillColor }: PropsInterface): React.ReactElement {
+const GenericBackgroundLoop = ({ fillColor }: PropsInterface): React.ReactElement => {
 	return (
 		<AbsoluteFullScreenContainer>
 			<LoopPink
@@ -16,7 +16,7 @@ function GenericBackgroundLoop({ fillColor }: PropsInterface): React.ReactElemen
 			/>
 		</AbsoluteFullScreenContainer>
 	);
-}
+};
 
 export default memo(GenericBackgroundLoop);
 

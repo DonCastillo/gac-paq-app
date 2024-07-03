@@ -5,7 +5,7 @@ interface Props {
 	source: any;
 	opacity?: number;
 }
-export default function ImageBackdrop({ source, opacity }: Props): React.ReactElement {
+const ImageBackdrop = ({ source, opacity }: Props): React.ReactElement => {
 	return (
 		<ImageBackground
 			source={source}
@@ -13,7 +13,9 @@ export default function ImageBackdrop({ source, opacity }: Props): React.ReactEl
 			style={[styles.bgImage, { opacity: opacity ?? 1 }]}
 		></ImageBackground>
 	);
-}
+};
+
+export default ImageBackdrop;
 
 const styles = StyleSheet.create({
 	bgImage: {

@@ -1,37 +1,28 @@
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
-import Images from "styles/images";
+import Screen from "constants/screen.enum";
+import type { SectionPayloadInterface } from "interface/payload.type";
 
 const S4Intro: SectionPayloadInterface = {
 	ident: "transportation_intro",
 	heading: "Transportation",
-	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	type: Screen.IntroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "Transportation",
 			subheading: "Section 4",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_4.phone,
-					tablet: Images.kids.intro.section_4.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_4.phone,
-					tablet: Images.adults.intro.section_4.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_4.phone,
-					tablet: Images.adults.intro.section_4.tablet,
-				},
-			},
 		},
-	],
+		"zh-CN": {
+			heading: "交通",
+			subheading: "第4部分",
+		},
+		"es-MX": {
+			heading: "Transporte",
+			subheading: "Sección 4",
+		},
+		"fr-CA": {
+			heading: "Transport",
+			subheading: "Section 4",
+		},
+	},
 };
 
 export default S4Intro;

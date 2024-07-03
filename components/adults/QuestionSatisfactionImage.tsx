@@ -1,23 +1,27 @@
 import { View, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
-import React, { useContext, useState, useEffect } from "react";
-import { SettingContext } from "store/settings";
-import { horizontalScale, verticalScale } from "utils/responsive";
-import { getOptionImage } from "utils/background";
+import React, { useState, useEffect } from "react";
+import { horizontalScale, verticalScale } from "utils/responsive.utils";
+import { getOptionImage } from "utils/background.utils";
+import { useSelector } from "react-redux";
+
+import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import type { ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
-	options: any[];
+	options: ChoiceImage[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionSatisfactionImage({
+const QuestionSatisfactionImage = ({
 	options,
 	onChange,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device, mode } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const numColumn = device.isTablet ? 5 : 3;
@@ -28,7 +32,7 @@ export default function QuestionSatisfactionImage({
 		}
 	}, [currentPage, selectedValue]);
 
-	function selectHandler(value: string | null): void {
+	const selectHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
 			setSelected(value);
 			onChange(value);
@@ -36,9 +40,9 @@ export default function QuestionSatisfactionImage({
 			setSelected(null);
 			onChange(null);
 		}
-	}
+	};
 
-	function renderImage(image: string | Svg): React.ReactElement {
+	const renderImage = (image: string | Svg): React.ReactElement => {
 		if (typeof image === "number") {
 			// Other formats
 			let ImageComponent = <></>;
@@ -70,11 +74,11 @@ export default function QuestionSatisfactionImage({
 				/>
 			);
 		}
-	}
+	};
 
-	function blockRenderOption({ item }): React.ReactElement {
-		const { images, value } = item.image_choices_id;
-		const imageByMode = getOptionImage(images, mode);
+	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
+		const { image_ident, value } = item;
+		const imageByMode = getOptionImage(image_ident);
 
 		return (
 			<Pressable
@@ -101,7 +105,7 @@ export default function QuestionSatisfactionImage({
 				</View>
 			</Pressable>
 		);
-	}
+	};
 
 	return (
 		<SafeAreaView
@@ -114,7 +118,7 @@ export default function QuestionSatisfactionImage({
 						alignItems: "center",
 					}}
 					data={[...options]}
-					renderItem={blockRenderOption}
+					renderItem={({ item }) => blockRenderOption(item)}
 					numColumns={numColumn}
 					key={numColumn}
 					bounces={false}
@@ -122,7 +126,9 @@ export default function QuestionSatisfactionImage({
 			</View>
 		</SafeAreaView>
 	);
-}
+};
+
+export default QuestionSatisfactionImage;
 
 const styles = StyleSheet.create({
 	blockOptionContainer: {

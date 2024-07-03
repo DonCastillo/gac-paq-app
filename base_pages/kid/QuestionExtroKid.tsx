@@ -1,45 +1,51 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
-import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Images from "styles/images/index";
 import Navigation from "components/Navigation";
-import { submitResponse } from "utils/api";
-import { ResponseContext } from "store/responses";
 import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
 import BackgroundYellowStroke from "components/kid/background/question-pages/BackgroundYellowStroke";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive";
+import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
-import { sanitizeResponse } from "utils/response";
+import { sanitizeResponse } from "utils/response.utils";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	getSectionTotalPages,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { proceedPage } from "utils/navigation.utils";
+import { resetResponses } from "store/responses/responsesSlice";
+import { translatePage } from "utils/translate.utils";
+import type { ExtroInterface } from "interface/payload.type";
+import { submitResponse } from "utils/api.utils";
 
-export default function QuestionExtroKid(): React.ReactElement {
-	console.log("question extro kid ...");
-	const settingCtx = useContext(SettingContext);
-	const responseCtx = useContext(ResponseContext);
+const QuestionExtroKid = (): React.ReactElement => {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
+	const sectionTotalPages = useSelector(getSectionTotalPages);
+
+	// state
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
-	const {
-		language,
-		currentPage,
-		currentPageNumber,
-		directusAccessToken,
-		directusBaseEndpoint,
-		colorTheme,
-		device,
-		sectionTotalPages,
-	} = settingCtx.settingState;
-	const { color100, color200 } = colorTheme;
+
+	// translations
 	const isFinal = currentPage.page.isFinal;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
 	const ImageComponent = Images.kids.graphics.extro_question_page;
 	const navigation = useNavigation();
 
@@ -50,7 +56,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 				<BackAndSubmitNav
 					key={"prev" + currentPageNumber}
 					colorTheme="#FFCB66"
-					onPrev={() => settingCtx.prevPage()}
+					onPrev={() => dispatch(prevPage())}
 					onNext={async () => await submitResponseHandler()}
 				/>,
 			);
@@ -60,8 +66,8 @@ export default function QuestionExtroKid(): React.ReactElement {
 					<BackAndNextNav
 						key={"both" + currentPageNumber}
 						colorTheme="#FFCB66"
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.proceedPage()}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => proceedPage()}
 					/>,
 				);
 			} else {
@@ -69,40 +75,26 @@ export default function QuestionExtroKid(): React.ReactElement {
 					<BackAndNextNav
 						key={"next" + currentPageNumber}
 						colorTheme="#FFCB66"
-						onNext={() => settingCtx.proceedPage()}
+						onNext={() => proceedPage()}
 					/>,
 				);
 			}
 		}
 	}, [currentPageNumber]);
 
-	async function submitResponseHandler(): Promise<void> {
+	const submitResponseHandler = async (): Promise<void> => {
 		try {
 			setLoading(true);
-
-			// throw new Error("testing error page");
-
-			const sanitizedResponses = sanitizeResponse(
-				responseCtx.responses,
-				settingCtx.settingState.mode,
-			);
-			// await submitResponse(
-			// 	sanitizedResponses,
-			// 	`${directusBaseEndpoint}/items/response`,
-			// 	directusAccessToken,
-			// );
-			responseCtx.resetResponses();
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			navigation.navigate("SuccessScreen");
+			const sanitizedResponses = sanitizeResponse();
+			await submitResponse(sanitizedResponses);
+			dispatch(resetResponses());
+			navigation.navigate("SuccessScreen" as never);
 		} catch (error) {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
-			console.log("redirect to the error page");
-			console.log("error: ", error);
-			navigation.navigate("ErrorScreen");
+			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}
-	}
+	};
 
 	if (!loading) {
 		return (
@@ -112,7 +104,9 @@ export default function QuestionExtroKid(): React.ReactElement {
 					<ProgressBar
 						currentSectionPage={currentPage.sectionPageNumber}
 						sectionPageTotal={
-							currentPage.sectionNumber !== null && sectionTotalPages[currentPage.sectionNumber]
+							currentPage.sectionNumber !== null
+								? sectionTotalPages[currentPage.sectionNumber]
+								: null
 						}
 						filledColor={"#FFCB66"}
 						unfilledColor={"#FFCB66" + "4D"}
@@ -128,7 +122,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 								lineHeight: device.isTablet ? 55 : 45,
 							}}
 						>
-							{translatedPage?.heading}
+							{translatedPage.heading}
 						</Heading>
 						<Paragraph
 							customStyle={{
@@ -138,7 +132,7 @@ export default function QuestionExtroKid(): React.ReactElement {
 								lineHeight: device.isTablet ? 35 : 27,
 							}}
 						>
-							{translatedPage?.subheading}
+							{translatedPage.subheading}
 						</Paragraph>
 						<View style={styles.imageContainer}>
 							<ImageComponent
@@ -156,7 +150,9 @@ export default function QuestionExtroKid(): React.ReactElement {
 	} else {
 		return <LoadingScreenKid />;
 	}
-}
+};
+
+export default QuestionExtroKid;
 
 const styles = StyleSheet.create({
 	container: {

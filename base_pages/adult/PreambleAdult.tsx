@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
-import { SettingContext } from "store/settings";
-import { translate, translateText } from "utils/page";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -12,26 +10,48 @@ import QuestionContainer from "components/adults/QuestionContainer";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
-import { getImageBackground } from "utils/background";
+import { getImageBackground } from "utils/background.utils";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import { moderateScale } from "utils/responsive";
+import { moderateScale } from "utils/responsive.utils";
 import ScrollContainer from "components/ScrollContainer";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	getMode,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { translatePage, translateText } from "utils/translate.utils";
+import type { PreambleInterface } from "interface/payload.type";
+import { proceedPage } from "utils/navigation.utils";
 
-export default function PreambleAdult(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { mode, language, currentPage, currentPageNumber, device, colorTheme } =
-		settingCtx.settingState;
+const PreambleAdult = (): React.ReactElement => {
+	const dispatch = useDispatch();
+	const mode = useSelector(getMode);
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
 	const { color200 } = colorTheme;
-	const { isKeyboardOpen } = device;
-	const translatedPage: any = translate(currentPage.page.translations, language);
-	const description = translateText(mode, translatedPage?.description);
+
+	// translations
+	const translatedPage = translatePage(
+		currentPage.page.translations,
+		language,
+	) as PreambleInterface;
+
+	const description = translateText(translatedPage.description, mode);
 
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
 			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+				source={getImageBackground()}
 				key={currentPageNumber}
 			/>
 			<Main>
@@ -44,7 +64,7 @@ export default function PreambleAdult(): React.ReactElement {
 								customStyle={{ marginBottom: 10 }}
 								textStyle={{ color: "#fff" }}
 							>
-								{translatedPage?.heading}
+								{translatedPage.heading}
 							</QuestionTitle>
 							<QuestionLabel
 								textStyle={[
@@ -71,14 +91,16 @@ export default function PreambleAdult(): React.ReactElement {
 				<Navigation>
 					<BackAndNextNav
 						key={"WithValue"}
-						onPrev={() => settingCtx.prevPage()}
-						onNext={() => settingCtx.nextPage()}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => proceedPage()}
 					/>
 				</Navigation>
 			</Main>
 		</View>
 	);
-}
+};
+
+export default PreambleAdult;
 
 const styles = StyleSheet.create({
 	container: {

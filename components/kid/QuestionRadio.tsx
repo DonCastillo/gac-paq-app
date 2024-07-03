@@ -1,29 +1,31 @@
 import { View, StyleSheet, FlatList, SafeAreaView } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
-import { SettingContext } from "store/settings";
 import {
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
-	type OptionInterface,
-} from "utils/options";
-import { horizontalScale } from "utils/responsive";
+} from "utils/options.utils";
+import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
+import { useSelector } from "react-redux";
+import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
-	options: OptionInterface[];
+	options: ChoiceIcon[] | Choice[];
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-export default function QuestionRadio({
+const QuestionRadio = ({
 	options,
 	onChange,
 	selectedValue,
-}: PropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme, currentPage, device } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const currentPage = useSelector(getCurrentPage);
+	const device = useSelector(getDevice);
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -47,7 +49,7 @@ export default function QuestionRadio({
 		}
 	}, [selected]);
 
-	function selectHandler(value: string | null): void {
+	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
 
 		if (isOtherOption(value)) {
@@ -89,7 +91,7 @@ export default function QuestionRadio({
 				onChange(value);
 			}
 		}
-	}
+	};
 
 	const enableColumnWrap = device.isTablet && device.orientation === "landscape";
 	const numColumn = enableColumnWrap ? 2 : 1;
@@ -109,7 +111,7 @@ export default function QuestionRadio({
 					renderItem={({ item }) => {
 						return (
 							<Option
-								text={item.text}
+								text={item.label}
 								value={item.value}
 								selected={
 									selected !== null &&
@@ -129,7 +131,9 @@ export default function QuestionRadio({
 			</View>
 		</SafeAreaView>
 	);
-}
+};
+
+export default QuestionRadio;
 
 const styles = StyleSheet.create({
 	container: {

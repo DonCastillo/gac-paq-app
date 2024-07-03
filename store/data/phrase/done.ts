@@ -1,33 +1,24 @@
-import type PhraseInterface from "interface/phrase";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const DonePhrase: PhraseInterface[] = [
-	{
-		id: 1,
-		done_phrase_id: 1,
+const DonePhrase: LangPhraseInterface = {
+	"en-CA": {
 		label: "Done",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		done_phrase_id: 1,
+	"th-TH": {
+		label: "เสร็จสิ้น",
+	},
+	"zh-CN": {
+		label: "完成",
+	},
+	"es-MX": {
 		label: "Hecho",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		done_phrase_id: 1,
+	"es-ES": {
+		label: "Hecho",
+	},
+	"fr-CA": {
 		label: "Terminé",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+};
 
 export default DonePhrase;

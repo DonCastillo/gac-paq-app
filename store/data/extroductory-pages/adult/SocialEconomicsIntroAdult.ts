@@ -1,38 +1,28 @@
-import ScreenType from "constants/screen_type";
-import type SectionPayloadInterface from "interface/directus/section-payload";
-import Images from "styles/images";
+import Screen from "constants/screen.enum";
+import type { SectionPayloadInterface } from "interface/payload.type";
 
 const SocialEconomicsIntroAdult: SectionPayloadInterface = {
 	ident: "about_your_family",
 	heading: "About You",
-
-	type: ScreenType.IntroQuestion,
-	translations: [
-		{
-			id: 4,
-			question_section_id: 3,
+	type: Screen.IntroQuestion,
+	translations: {
+		"en-CA": {
 			heading: "About Your Family",
 			subheading: "Section 8",
-			languages_id: {
-				name: "English - Canada",
-				lang_code: "en-CA",
-			},
-			images: {
-				kid: {
-					phone: Images.kids.intro.section_7.phone,
-					tablet: Images.kids.intro.section_7.tablet,
-				},
-				adult: {
-					phone: Images.adults.intro.section_7.phone,
-					tablet: Images.adults.intro.section_7.tablet,
-				},
-				teen: {
-					phone: Images.adults.intro.section_7.phone,
-					tablet: Images.adults.intro.section_7.tablet,
-				},
-			},
 		},
-	],
+		"zh-CN": {
+			heading: "关于您的家庭",
+			subheading: "第8部分",
+		},
+		"es-MX": {
+			heading: "Acerca de tu familia",
+			subheading: "Sección 8",
+		},
+		"fr-CA": {
+			heading: "À propos de votre famille",
+			subheading: "Section 8",
+		},
+	},
 };
 
 export default SocialEconomicsIntroAdult;

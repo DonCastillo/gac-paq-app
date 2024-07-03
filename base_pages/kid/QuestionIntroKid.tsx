@@ -1,23 +1,40 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
-import { SettingContext } from "store/settings";
-import { translate } from "utils/page";
+import React, { useEffect, useState } from "react";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import Main from "components/Main";
 import BottomMain from "components/orientation/BottomMain";
 import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
-import { getImageBackground } from "utils/background";
-import { moderateScale } from "utils/responsive";
+import { getImageBackground } from "utils/background.utils";
+import { moderateScale } from "utils/responsive.utils";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getCurrentPageNumber,
+	getDevice,
+	getLanguage,
+	prevPage,
+} from "store/settings/settingsSlice";
+import { proceedPage } from "utils/navigation.utils";
+import { translatePage } from "utils/translate.utils";
+import type { SectionInterface } from "interface/payload.type";
 
-export default function QuestionIntroKid(): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { mode, language, currentPage, currentPageNumber, colorTheme, device } =
-		settingCtx.settingState;
+const QuestionIntroKid = (): React.ReactElement => {
+	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const colorTheme = useSelector(getColorTheme);
+	const currentPage = useSelector(getCurrentPage);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
-	const translatedPage: any = translate(currentPage.page.translations, language);
+
+	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+
+	// translations
+	const translatedPage = translatePage(currentPage.page.translations, language) as SectionInterface;
 
 	// set button component dynamically
 	useEffect(() => {
@@ -26,8 +43,8 @@ export default function QuestionIntroKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"both" + currentPageNumber}
 					colorTheme="#fff"
-					onPrev={() => settingCtx.prevPage()}
-					onNext={() => settingCtx.proceedPage()}
+					onPrev={() => dispatch(prevPage())}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		} else {
@@ -35,7 +52,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 				<BackAndNextNav
 					key={"next" + currentPageNumber}
 					colorTheme="#fff"
-					onNext={() => settingCtx.proceedPage()}
+					onNext={() => proceedPage()}
 				/>,
 			);
 		}
@@ -44,7 +61,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 	return (
 		<View style={styles.container}>
 			<ImageBackdrop
-				source={getImageBackground(translatedPage?.images, mode, device.isTablet)}
+				source={getImageBackground()}
 				key={currentPageNumber}
 			/>
 			<View
@@ -58,7 +75,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 				]}
 			>
 				<ScrollView>
-					<Text style={styles.headingSubText}>{translatedPage?.subheading}</Text>
+					<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
 					<Text
 						style={{
 							...styles.headingText,
@@ -72,7 +89,7 @@ export default function QuestionIntroKid(): React.ReactElement {
 							),
 						}}
 					>
-						{translatedPage?.heading}
+						{translatedPage.heading}
 					</Text>
 				</ScrollView>
 			</View>
@@ -82,7 +99,9 @@ export default function QuestionIntroKid(): React.ReactElement {
 			</Main>
 		</View>
 	);
-}
+};
+
+export default QuestionIntroKid;
 
 const styles = StyleSheet.create({
 	container: {

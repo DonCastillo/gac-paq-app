@@ -1,33 +1,24 @@
-import type ButtonInterface from "interface/button";
+import type { LangButtonInterface } from "interface/button";
 
-const NextButton: ButtonInterface[] = [
-	{
-		id: 1,
-		next_button_id: 1,
+const NextButton: LangButtonInterface = {
+	"en-CA": {
 		label: "Next",
-		languages_id: {
-			name: "English - Canada",
-			lang_code: "en-CA",
-		},
 	},
-	{
-		id: 2,
-		next_button_id: 1,
+	"th-TH": {
+		label: "ถัดไป",
+	},
+	"zh-CN": {
+		label: "下一个",
+	},
+	"es-ES": {
 		label: "Siguiente",
-		languages_id: {
-			name: "Spanish - Spain",
-			lang_code: "es-ES",
-		},
 	},
-	{
-		id: 3,
-		next_button_id: 1,
+	"fr-CA": {
 		label: "Suivant",
-		languages_id: {
-			name: "French - Canada",
-			lang_code: "fr-CA",
-		},
 	},
-];
+	"es-MX": {
+		label: "Siguiente",
+	},
+};
 
 export default NextButton;

@@ -1,29 +1,29 @@
-import React, { useContext } from "react";
-import { SettingContext } from "store/settings";
-import { TextInput, View, StyleSheet, ScrollView } from "react-native";
+import React from "react";
+import { TextInput, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
+import { useSelector } from "react-redux";
+import { getColorTheme } from "store/settings/settingsSlice";
 
-interface QuestionInputPropsInterface {
+interface PropsInterface {
 	onChange: (value: string) => void;
 	selectedValue: string | null;
 	placeholder: string | null;
 }
 
-export default function QuestionInput({
+const QuestionInput = ({
 	onChange,
 	selectedValue,
 	placeholder,
-}: QuestionInputPropsInterface): React.ReactElement {
-	const settingCtx = useContext(SettingContext);
-	const { colorTheme } = settingCtx.settingState;
+}: PropsInterface): React.ReactElement => {
+	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 
-	function changeHandler(value: string): void {
+	const changeHandler = (value: string): void => {
 		onChange(value);
-	}
+	};
 
 	return (
-		<View>
+		<View style={{ maxWidth: "100%" }}>
 			<TextInput
 				style={[styles.container, { borderColor: color100 }]}
 				autoCapitalize="none"
@@ -34,7 +34,9 @@ export default function QuestionInput({
 			/>
 		</View>
 	);
-}
+};
+
+export default QuestionInput;
 
 const styles = StyleSheet.create({
 	container: {
