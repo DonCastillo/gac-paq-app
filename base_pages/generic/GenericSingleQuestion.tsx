@@ -5,7 +5,6 @@ import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import Question from "constants/question.enum";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import QuestionRadio from "components/adults/QuestionRadio";

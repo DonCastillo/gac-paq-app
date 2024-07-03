@@ -82,17 +82,14 @@ const settingsSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
-			console.log("getNarrationPayload.fulfilled");
 			state.isLoading = false;
 			state.narrations = action.payload;
 		});
 		builder.addCase(getNarrationPayload.pending, (state) => {
-			console.log("getNarrationPayload.pending");
 			state.isLoading = true;
 			state.narrations = {};
 		});
 		builder.addCase(getNarrationPayload.rejected, (state) => {
-			console.log("getNarrationPayload.rejected");
 			state.isLoading = false;
 			state.narrations = {};
 		});

@@ -4,6 +4,7 @@ enum PhraseLabel {
 	DontKnow = "Don't know",
 	Introduction = "Introduction",
 	TryAgain = "Try Again",
+	Feedback = "Feedback",
 }
 
 export default PhraseLabel;
