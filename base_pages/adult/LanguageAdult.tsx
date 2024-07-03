@@ -19,6 +19,7 @@ import {
 	getIsLoading,
 	getLanguage,
 	getMode,
+	getPhrases,
 	nextPage,
 	setLanguage,
 	setSectionTitles,
@@ -41,6 +42,7 @@ const LanguageAdult = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const isLoading = useSelector(getIsLoading);
+	const phrases = useSelector(getPhrases);
 
 	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -61,25 +63,33 @@ const LanguageAdult = (): React.ReactElement => {
 	useEffect(() => {
 		loadButtons();
 		loadPhrases();
-
-		// translate the section headings
-		const translatedSectionTitles = translateSectionHeading(language);
-		console.log("translatedSectionTitles: ", translatedSectionTitles);
-		// will make "Introduction" and "Feedback" translated in the future
-		dispatch(setSectionTitles(["Introduction", ...translatedSectionTitles, "Feedback"]));
+		translateSections();
 		// set narration payload
 		dispatch(getNarrationPayload({ mode, language }));
 	}, [language]);
+
+	// set phrases
+	useEffect(() => {
+		translateSections();
+	}, [phrases]);
 
 	// set selected value
 	useEffect(() => {
 		setSelectedValue(language);
 	}, [currentPageNumber]);
 
-	// set language default
+	// set language defaulta
 	useEffect(() => {
 		addResponse(language);
 	}, []);
+
+	// translate section headings
+	const translateSections = (): void => {
+		const translatedSectionTitles = translateSectionHeading(language);
+		dispatch(
+			setSectionTitles([phrases?.introduction, ...translatedSectionTitles, phrases?.feedback]),
+		);
+	};
 
 	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {

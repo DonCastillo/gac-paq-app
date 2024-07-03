@@ -119,7 +119,7 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionSatisfactionImage,
-			heading: "Feedback",
+			heading: "Commentaires",
 			label: "Quel penses-tu de l'application?",
 			kid_label: "Quel penses-tu de l'application?",
 			adult_label: "Que pensez-vous de l'application?",

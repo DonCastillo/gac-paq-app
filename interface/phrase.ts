@@ -10,4 +10,5 @@ export interface PhrasePayloadInterface {
 	dontKnow: string;
 	introduction: string;
 	tryAgain: string;
+	feedback: string;
 }

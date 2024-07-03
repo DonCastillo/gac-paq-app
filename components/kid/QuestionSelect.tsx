@@ -1,6 +1,7 @@
 import React from "react";
 import DropDownSelector from "components/DropDownPicker";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
+import { View } from "react-native";
 
 interface PropsInterface {
 	options: Choice[] | ChoiceIcon[];
@@ -18,13 +19,15 @@ const QuestionSelect = ({
 	setDropdownOpen,
 }: PropsInterface): React.ReactElement => {
 	return (
-		<DropDownSelector
-			options={options}
-			selectedValue={selectedValue}
-			onSelect={onChange}
-			dropdownOpen={dropdownOpen}
-			setDropdownOpen={setDropdownOpen}
-		/>
+		<View style={{ maxWidth: "100%" }}>
+			<DropDownSelector
+				options={options}
+				selectedValue={selectedValue}
+				onSelect={onChange}
+				dropdownOpen={dropdownOpen}
+				setDropdownOpen={setDropdownOpen}
+			/>
+		</View>
 	);
 };
 

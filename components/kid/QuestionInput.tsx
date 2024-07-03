@@ -23,7 +23,7 @@ const QuestionInput = ({
 	};
 
 	return (
-		<View>
+		<View style={{ maxWidth: "100%" }}>
 			<TextInput
 				style={[styles.container, { borderColor: color100 }]}
 				autoCapitalize="none"

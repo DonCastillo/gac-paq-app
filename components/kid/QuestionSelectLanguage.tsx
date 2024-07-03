@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 import { getLanguageOption } from "store/questions/questionsSlice";
 import type { ChoiceIcon, LanguageInterface } from "interface/payload.type";
+import { View } from "react-native";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -25,14 +26,16 @@ const QuestionSelectLanguage = ({
 	const itemsRaw: ChoiceIcon[] = optionLanguage(options);
 
 	return (
-		<DropDownSelector
-			options={[...itemsRaw]}
-			selectedValue={selectedValue}
-			onSelect={onChange}
-			dropdownOpen={dropdownOpen}
-			setDropdownOpen={setDropdownOpen}
-			dropdownMinHeight={verticalScale(300, device.screenHeight)}
-		/>
+		<View style={{ maxWidth: "100%" }}>
+			<DropDownSelector
+				options={[...itemsRaw]}
+				selectedValue={selectedValue}
+				onSelect={onChange}
+				dropdownOpen={dropdownOpen}
+				setDropdownOpen={setDropdownOpen}
+				dropdownMinHeight={verticalScale(300, device.screenHeight)}
+			/>
+		</View>
 	);
 };
 
