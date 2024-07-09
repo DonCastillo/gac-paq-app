@@ -9,7 +9,9 @@ import {
 	isOtherWithSpecifiedValue,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getCurrentPage } from "store/settings/settingsSlice";
+import { getCurrentPage, getMode } from "store/settings/settingsSlice";
+import { getOptionSubLabel } from "utils/background.utils";
+import Mode from "constants/mode.enum";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -23,6 +25,7 @@ const QuestionRadio = ({
 	selectedValue,
 }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
+	let mode = useSelector(getMode);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -89,6 +92,11 @@ const QuestionRadio = ({
 		}
 	};
 
+	// if on Mode page, set mode to Kid to enable getOptionSublabel
+	if (currentPage.page.ident === "mode") {
+		mode = Mode.Kid;
+	}
+
 	return (
 		<FlatList
 			removeClippedSubviews={false}
@@ -104,6 +112,8 @@ const QuestionRadio = ({
 			renderItem={({ item }) => (
 				<RadioOption
 					{...item}
+					label={item.label}
+					value={item.value}
 					selected={
 						selected !== null &&
 						(selected === item.value || (isOtherOption(item.value) && isOtherOption(selected)))
@@ -112,6 +122,7 @@ const QuestionRadio = ({
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={getUserSpecifiedOther(item.value, selected)}
+					optionSublabel={getOptionSubLabel(item.sublabel, mode) ?? undefined}
 				/>
 			)}
 			persistentScrollbar={true}

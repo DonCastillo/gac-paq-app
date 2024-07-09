@@ -52,6 +52,11 @@ const DropDownSelector = ({
 				open={dropdownOpen}
 				value={value}
 				items={items}
+				schema={{
+					label: "label",
+					value: "value",
+					icon: "icon",
+				}}
 				setOpen={setDropdownOpen}
 				setValue={setValue}
 				setItems={setItems}

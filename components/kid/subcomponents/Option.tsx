@@ -17,6 +17,7 @@ interface PropsInterface {
 	isOtherSelected?: boolean;
 	autofocusOtherField?: boolean;
 	defaultOtherInputValue?: string;
+	optionSublabel?: string;
 }
 
 const Option = ({
@@ -29,6 +30,7 @@ const Option = ({
 	isOtherSelected = false,
 	autofocusOtherField = false,
 	defaultOtherInputValue,
+	optionSublabel,
 }: PropsInterface): React.ReactElement => {
 	const otherInputRef = useRef<TextInput>(null);
 	const device = useSelector(getDevice);
@@ -61,6 +63,7 @@ const Option = ({
 					]}
 					onPress={() => selectHandler(value)}
 				>
+					{/* Main Label */}
 					<Text
 						style={{
 							...GeneralStyle.kid.optionText,
@@ -77,6 +80,24 @@ const Option = ({
 					>
 						{text}
 					</Text>
+
+					{/* Sublabel */}
+					{optionSublabel !== "" && optionSublabel !== undefined && optionSublabel !== null && (
+						<Text
+							style={{
+								fontSize: moderateScale(
+									device.isTablet ? 12 : 12,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 16 : 16,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
+						>
+							{optionSublabel}
+						</Text>
+					)}
 				</Pressable>
 
 				{/* Other Field */}
