@@ -4,7 +4,12 @@ import DropDownPicker from "react-native-dropdown-picker";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPageNumber, getDevice, getPhrases } from "store/settings/settingsSlice";
+import {
+	getColorTheme,
+	getCurrentPageNumber,
+	getDevice,
+	getPhrases,
+} from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
