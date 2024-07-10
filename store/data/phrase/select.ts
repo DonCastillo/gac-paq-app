@@ -1,6 +1,6 @@
 import type { LangPhraseInterface } from "interface/phrase";
 
-const AgreementPhrase: LangPhraseInterface = {
+const SelectPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Select",
 	},
@@ -21,4 +21,4 @@ const AgreementPhrase: LangPhraseInterface = {
 	},
 };
 
-export default AgreementPhrase;
+export default SelectPhrase;

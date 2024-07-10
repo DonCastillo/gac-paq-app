@@ -48,6 +48,7 @@ import type {
 	QuestionPagesType,
 } from "interface/union.type";
 import FeedbackPhrase from "store/data/phrase/feedback";
+import SelectPhrase from "store/data/phrase/select";
 
 export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
@@ -71,6 +72,7 @@ export interface QuestionSliceInterface {
 	introductionPhrase: LangPhraseInterface;
 	tryAgainPhrase: LangPhraseInterface;
 	feedbackPhrase: LangPhraseInterface;
+	selectPhrase: LangPhraseInterface;
 	successPage: PagePayloadInterface;
 	errorPage: PagePayloadInterface;
 	Transportation7: Transportation7Interface;
@@ -103,6 +105,7 @@ const questionsSlice = createSlice({
 		introductionPhrase: IntroductionPhrase,
 		tryAgainPhrase: TryAgainPhrase,
 		feedbackPhrase: FeedbackPhrase,
+		selectPhrase: SelectPhrase,
 		successPage: SuccessPage,
 		errorPage: ErrorPage,
 		Transportation7: Transportation7 satisfies Transportation7Interface,
@@ -138,6 +141,7 @@ const questionsSlice = createSlice({
 		getIntroductionPhrase: (state: QuestionSliceInterface) => state.introductionPhrase,
 		getTryAgainPhrase: (state: QuestionSliceInterface) => state.tryAgainPhrase,
 		getFeedbackPhrase: (state: QuestionSliceInterface) => state.feedbackPhrase,
+		getSelectPhrase: (state: QuestionSliceInterface) => state.selectPhrase,
 		getSuccessPage: (state: QuestionSliceInterface) => state.successPage,
 		getErrorPage: (state: QuestionSliceInterface) => state.errorPage,
 		getTransportation7: (state: QuestionSliceInterface) => state.Transportation7,
@@ -176,6 +180,7 @@ export const {
 	getIntroductionPhrase,
 	getTryAgainPhrase,
 	getFeedbackPhrase,
+	getSelectPhrase,
 	getSuccessPage,
 	getErrorPage,
 	getTransportation7,

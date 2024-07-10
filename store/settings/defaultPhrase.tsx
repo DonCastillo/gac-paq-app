@@ -8,6 +8,7 @@ const defaultPhrase: PhrasePayloadInterface = {
 	introduction: PhraseLabel.Introduction,
 	tryAgain: PhraseLabel.TryAgain,
 	feedback: PhraseLabel.Feedback,
+	select: PhraseLabel.Select,
 };
 
 export default defaultPhrase;

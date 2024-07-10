@@ -4,7 +4,7 @@ import DropDownPicker from "react-native-dropdown-picker";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
+import { getColorTheme, getCurrentPageNumber, getDevice, getPhrases } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
 
 interface PropsInterface {
@@ -30,6 +30,7 @@ const DropDownSelector = ({
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<ChoiceIcon[] | Choice[]>(options);
+	const phrases = useSelector(getPhrases);
 
 	useEffect(() => {
 		if (items !== options) {
@@ -48,7 +49,7 @@ const DropDownSelector = ({
 			<DropDownPicker
 				style={[styles.container, { borderColor: color100 }]}
 				showTickIcon={true}
-				placeholder="Select"
+				placeholder={phrases?.select}
 				open={dropdownOpen}
 				value={value}
 				items={items}

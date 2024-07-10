@@ -11,4 +11,5 @@ export interface PhrasePayloadInterface {
 	introduction: string;
 	tryAgain: string;
 	feedback: string;
+	select: string;
 }
