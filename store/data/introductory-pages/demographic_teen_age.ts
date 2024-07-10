@@ -149,27 +149,27 @@ const DemographicTeenPage: QuestionDropdownPayloadInterface = {
 			adult_label: "Quel âge avez-vous?",
 			choices: [
 				{
-					label: "12 ans",
+					label: "Douze ans",
 					value: "12",
 				},
 				{
-					label: "13 ans",
+					label: "Treize ans",
 					value: "13",
 				},
 				{
-					label: "14 ans",
+					label: "Quatorze ans",
 					value: "14",
 				},
 				{
-					label: "15 ans",
+					label: "Quinze ans",
 					value: "15",
 				},
 				{
-					label: "16 ans",
+					label: "Seize ans",
 					value: "16",
 				},
 				{
-					label: "17 ans",
+					label: "Dix-sept ans",
 					value: "17",
 				},
 			],

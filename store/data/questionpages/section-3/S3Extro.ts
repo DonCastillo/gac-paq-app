@@ -19,8 +19,8 @@ const S3Extro: ExtroPayloadInterface = {
 			subheading: "¡Solo faltan cuatro!",
 		},
 		"fr-CA": {
-			heading: "Section Complétée!",
-			subheading: "Il ne reste que quatre questions!",
+			heading: "Section complétée!",
+			subheading: "Plus que quatre sections à faire!",
 		},
 	},
 };

@@ -29,7 +29,7 @@ const ErrorPage: PagePayloadInterface = {
 		},
 		"fr-CA": {
 			heading: "Erreur",
-			description: "Oh non, vos réponses n'ont pas été envoyées.\n\nVeuillez réessayer.",
+			description: "Ah non, tes réponses n'ont pas été envoyées.\n\nSVP essais une autre fois.",
 		},
 	},
 };

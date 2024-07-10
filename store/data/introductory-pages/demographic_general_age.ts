@@ -213,43 +213,43 @@ const DemographicPage: QuestionDropdownPayloadInterface = {
 			adult_label: "Quel âge as-tu?",
 			choices: [
 				{
-					label: "8 ans",
+					label: "Huit ans",
 					value: "8",
 				},
 				{
-					label: "9 ans",
+					label: "Neuf ans",
 					value: "9",
 				},
 				{
-					label: "10 ans",
+					label: "Dix ans",
 					value: "10",
 				},
 				{
-					label: "11 ans",
+					label: "Onze ans",
 					value: "11",
 				},
 				{
-					label: "12 ans",
+					label: "Douze ans",
 					value: "12",
 				},
 				{
-					label: "13 ans",
+					label: "Treize ans",
 					value: "13",
 				},
 				{
-					label: "14 ans",
+					label: "Quatorze ans",
 					value: "14",
 				},
 				{
-					label: "15 ans",
+					label: "Quinze ans",
 					value: "15",
 				},
 				{
-					label: "16 ans",
+					label: "Seize ans",
 					value: "16",
 				},
 				{
-					label: "17 ans",
+					label: "Dix-sept ans",
 					value: "17",
 				},
 			],

@@ -17,7 +17,7 @@ const TryAgainPhrase: LangPhraseInterface = {
 		label: "Inténtalo de nuevo",
 	},
 	"fr-CA": {
-		label: "Essaye encore",
+		label: "Essais une autre fois",
 	},
 };
 

@@ -127,24 +127,24 @@ const AgePage: QuestionDropdownPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionDropdown,
 			heading: "Bienvenue!",
-			label: "Qui remplit ce questionnaire?",
-			kid_label: "Qui remplit ce questionnaire?",
-			adult_label: "Qui remplit ce questionnaire?",
+			label: "Qui répond à ce questionnaire?",
+			kid_label: "Qui répond à ce questionnaire?",
+			adult_label: "Qui répond à ce questionnaire?",
 			choices: [
 				{
 					label: "Enfant",
 					value: "child",
 					sublabel: {
-						kid: "8 à 11 ans",
-						adult: "8 à 11 ans",
+						kid: "Huit à onze ans",
+						adult: "Huit à onze ans",
 					},
 				},
 				{
 					label: "Adolescent",
 					value: "teen",
 					sublabel: {
-						kid: "12 à 17 ans",
-						adult: "12 à 17 ans",
+						kid: "Douze à dix-sept ans",
+						adult: "Douze à dix-sept ans",
 					},
 				},
 				{
