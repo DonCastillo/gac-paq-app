@@ -47,6 +47,7 @@ const GenericSingleQuestion = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
 	const { isKeyboardOpen } = device;
+	const backgroundImage = getImageBackground();
 
 	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -140,10 +141,12 @@ const GenericSingleQuestion = (): React.ReactElement => {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />
-				<ImageBackdrop
-					source={getImageBackground()}
-					key={currentPageNumber}
-				/>
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						key={currentPageNumber}
+					/>
+				)}
 				<Main>
 					{!isKeyboardOpen && <ProgressBarAdult />}
 					<CenterMain>

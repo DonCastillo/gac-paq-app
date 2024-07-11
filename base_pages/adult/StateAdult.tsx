@@ -100,15 +100,18 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 		}
 	};
 
+	const backgroundImage = getImageBackgroundStatus(state);
 	if (!loading) {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />
-				<ImageBackdrop
-					source={getImageBackgroundStatus(state)}
-					opacity={0.7}
-					key={state.toString()}
-				/>
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						opacity={0.7}
+						key={state.toString()}
+					/>
+				)}
 				<Main>
 					<CenterMain>
 						<View style={styles.stateIconContainer}>

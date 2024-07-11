@@ -37,6 +37,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const navigation = useNavigation();
+	const backgroundImage = getImageBackground();
 
 	// state
 	const [loading, setLoading] = useState<boolean>(false);
@@ -97,11 +98,13 @@ const QuestionExtroAdult = (): React.ReactElement => {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />
-				<ImageBackdrop
-					source={getImageBackground()}
-					key={currentPageNumber}
-					opacity={0.2}
-				/>
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						key={currentPageNumber}
+						opacity={0.2}
+					/>
+				)}
 				<Main>
 					<ProgressBarAdult />
 					<Toolbar />

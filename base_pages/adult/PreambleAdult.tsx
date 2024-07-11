@@ -38,6 +38,7 @@ const PreambleAdult = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
 	const { color200 } = colorTheme;
+	const backgroundImage = getImageBackground();
 
 	// translations
 	const translatedPage = translatePage(
@@ -50,10 +51,12 @@ const PreambleAdult = (): React.ReactElement => {
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
-			<ImageBackdrop
-				source={getImageBackground()}
-				key={currentPageNumber}
-			/>
+			{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+				<ImageBackdrop
+					source={backgroundImage}
+					key={currentPageNumber}
+				/>
+			)}
 			<Main>
 				<ProgressBarAdult />
 				<Toolbar />

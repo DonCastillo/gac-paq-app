@@ -30,6 +30,7 @@ const QuestionIntroAdult = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
+	const backgroundImage = getImageBackground();
 
 	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -62,10 +63,12 @@ const QuestionIntroAdult = (): React.ReactElement => {
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
-			<ImageBackdrop
-				source={getImageBackground()}
-				key={currentPageNumber}
-			/>
+			{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+				<ImageBackdrop
+					source={backgroundImage}
+					key={currentPageNumber}
+				/>
+			)}
 			<View
 				style={[
 					styles.headingPanel,
