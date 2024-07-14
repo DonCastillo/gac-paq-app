@@ -35,6 +35,7 @@ import {
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
 import LoadingScreenKid from "./LoadingScreenKid";
+import AnimatedView from "components/AnimatedView";
 
 const LanguageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -119,34 +120,36 @@ const LanguageKid = (): React.ReactElement => {
 						<ProgressBarKid />
 						<Toolbar />
 						<TopMain>
-							<View
-								style={[
-									GeneralStyle.kid.introQuestionContainer,
-									{
-										marginVertical: verticalScale(40, device.screenHeight),
-										...styles.mainContainer,
-									},
-								]}
-							>
-								<View style={{ marginBottom: 9 }}>
-									<QuestionLabel
-										textStyle={GeneralStyle.kid.introQuestionLabel}
-										customStyle={{ marginBottom: 7 }}
-									>
-										{questionLabel}
-									</QuestionLabel>
-								</View>
+							<AnimatedView>
+								<View
+									style={[
+										GeneralStyle.kid.introQuestionContainer,
+										{
+											marginVertical: verticalScale(40, device.screenHeight),
+											...styles.mainContainer,
+										},
+									]}
+								>
+									<View style={{ marginBottom: 9 }}>
+										<QuestionLabel
+											textStyle={GeneralStyle.kid.introQuestionLabel}
+											customStyle={{ marginBottom: 7 }}
+										>
+											{questionLabel}
+										</QuestionLabel>
+									</View>
 
-								<View style={styles.questionComponentContainer}>
-									<QuestionSelectLanguage
-										key={currentPageNumber}
-										onChange={changeHandler}
-										selectedValue={language}
-										dropdownOpen={dropdownOpen}
-										setDropdownOpen={setDropdownOpen}
-									/>
+									<View style={styles.questionComponentContainer}>
+										<QuestionSelectLanguage
+											key={currentPageNumber}
+											onChange={changeHandler}
+											selectedValue={language}
+											dropdownOpen={dropdownOpen}
+											setDropdownOpen={setDropdownOpen}
+										/>
+									</View>
 								</View>
-							</View>
+							</AnimatedView>
 						</TopMain>
 						<Navigation>
 							{selectedValue !== null && (

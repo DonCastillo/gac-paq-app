@@ -21,6 +21,7 @@ import {
 } from "store/settings/settingsSlice";
 import { translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
+import AnimatedView from "components/AnimatedView";
 
 const GenericPage = (): React.ReactElement => {
 	const dispatch = useDispatch();

@@ -30,6 +30,7 @@ import { resetResponses } from "store/responses/responsesSlice";
 import { translatePage } from "utils/translate.utils";
 import type { ExtroInterface } from "interface/payload.type";
 import { submitResponse } from "utils/api.utils";
+import AnimatedView from "components/AnimatedView";
 
 const QuestionExtroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -96,6 +97,8 @@ const QuestionExtroKid = (): React.ReactElement => {
 		}
 	};
 
+	console.log("xxx: ", currentPage.screen);
+	// if (currentPage.screen !== "question_extro") return <></>
 	if (!loading) {
 		return (
 			<View style={styles.container}>
@@ -114,34 +117,36 @@ const QuestionExtroKid = (): React.ReactElement => {
 					<Toolbar />
 
 					<CenterMain>
-						<Heading
-							customStyle={{
-								...GeneralStyle.kid.extroPageHeading,
-								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: device.isTablet ? 50 : 40,
-								lineHeight: device.isTablet ? 55 : 45,
-							}}
-						>
-							{translatedPage.heading}
-						</Heading>
-						<Paragraph
-							customStyle={{
-								...GeneralStyle.kid.extroPageParagraph,
-								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: device.isTablet ? 25 : 20,
-								lineHeight: device.isTablet ? 35 : 27,
-							}}
-						>
-							{translatedPage.subheading}
-						</Paragraph>
-						<View style={styles.imageContainer}>
-							<ImageComponent
-								backgroundColor={"red"}
-								height={verticalScale(320, device.screenHeight)}
-								padding={0}
-								margin={0}
-							/>
-						</View>
+						<AnimatedView style={{ flex: 0 }}>
+							<Heading
+								customStyle={{
+									...GeneralStyle.kid.extroPageHeading,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: device.isTablet ? 50 : 40,
+									lineHeight: device.isTablet ? 55 : 45,
+								}}
+							>
+								{translatedPage.heading}
+							</Heading>
+							<Paragraph
+								customStyle={{
+									...GeneralStyle.kid.extroPageParagraph,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: device.isTablet ? 25 : 20,
+									lineHeight: device.isTablet ? 35 : 27,
+								}}
+							>
+								{translatedPage.subheading}
+							</Paragraph>
+							<View style={styles.imageContainer}>
+								<ImageComponent
+									backgroundColor={"red"}
+									height={verticalScale(320, device.screenHeight)}
+									padding={0}
+									margin={0}
+								/>
+							</View>
+						</AnimatedView>
 					</CenterMain>
 					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 				</Main>

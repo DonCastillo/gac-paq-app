@@ -37,6 +37,7 @@ import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
 import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
+import AnimatedView from "components/AnimatedView";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();

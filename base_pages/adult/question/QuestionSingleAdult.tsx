@@ -51,6 +51,7 @@ import type {
 	QuestionSliderInterface,
 	QuestionTextareaInterface,
 } from "interface/payload.type";
+import AnimatedView from "components/AnimatedView";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -254,33 +255,42 @@ const QuestionSingleAdult = (): React.ReactElement => {
 				{!isKeyboardOpen && <ProgressBarAdult />}
 				{!isKeyboardOpen && <Toolbar />}
 				<CenterMain>
-					<QuestionContainer>
-						{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
-						{!isKeyboardOpen && (
-							<View style={{ marginBottom: 13 }}>
-								<QuestionLabel
-									textStyle={{
-										...GeneralStyle.adult.questionLabel,
-										fontSize: moderateScale(
-											device.isTablet ? 15 : 15,
-											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-										),
-										lineHeight: moderateScale(
-											device.isTablet ? 20 : 20,
-											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-										),
-									}}
-									customStyle={{ marginBottom: 7 }}
-								>
-									{questionLabel}
-								</QuestionLabel>
-								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
-									{questionSubLabel}
-								</QuestionSubLabel>
-							</View>
-						)}
-						{questionComponent}
-					</QuestionContainer>
+					<AnimatedView
+						key={currentPageNumber}
+						style={{ flex: 0 }}
+					>
+						<QuestionContainer>
+							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
+							{!isKeyboardOpen && (
+								<View style={{ marginBottom: 13 }}>
+									<QuestionLabel
+										textStyle={{
+											...GeneralStyle.adult.questionLabel,
+											fontSize: moderateScale(
+												device.isTablet ? 15 : 15,
+												device.orientation === "portrait"
+													? device.screenWidth
+													: device.screenHeight,
+											),
+											lineHeight: moderateScale(
+												device.isTablet ? 20 : 20,
+												device.orientation === "portrait"
+													? device.screenWidth
+													: device.screenHeight,
+											),
+										}}
+										customStyle={{ marginBottom: 7 }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+									<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+										{questionSubLabel}
+									</QuestionSubLabel>
+								</View>
+							)}
+							{questionComponent}
+						</QuestionContainer>
+					</AnimatedView>
 				</CenterMain>
 				{!isKeyboardOpen && <Navigation>{buttonComponent !== null && buttonComponent}</Navigation>}
 			</Main>

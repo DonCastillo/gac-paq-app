@@ -37,6 +37,7 @@ import type { QuestionDropdownInterface, QuestionInputInterface } from "interfac
 import { getModeType, getQuestionType } from "utils/type.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
+import AnimatedView from "components/AnimatedView";
 
 const GenericSingleQuestion = (): React.ReactElement => {
 	const dispatch = useDispatch();

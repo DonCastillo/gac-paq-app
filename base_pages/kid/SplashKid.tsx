@@ -9,6 +9,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Logo } from "components/svgs/kid";
 import { useSelector } from "react-redux";
 import { getColorTheme } from "store/settings/settingsSlice";
+import AnimatedView from "components/AnimatedView";
 
 const SplashKid = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
@@ -26,20 +27,22 @@ const SplashKid = (): React.ReactElement => {
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<Main>
 				<CenterMain>
-					<View style={styles.imageContainer}>
-						<Logo />
-					</View>
-					<Heading>gacpaq</Heading>
-					<Paragraph
-						customStyle={{
-							color: "#fff",
-							fontSize: 20,
-							lineHeight: 23.6,
-						}}
-					>
-						The global adolescent and children activity questionnaire
-					</Paragraph>
-					<ProgressBar />
+					<AnimatedView style={{ flex: 0 }}>
+						<View style={styles.imageContainer}>
+							<Logo />
+						</View>
+						<Heading>gacpaq</Heading>
+						<Paragraph
+							customStyle={{
+								color: "#fff",
+								fontSize: 20,
+								lineHeight: 23.6,
+							}}
+						>
+							The global adolescent and children activity questionnaire
+						</Paragraph>
+						<ProgressBar />
+					</AnimatedView>
 				</CenterMain>
 			</Main>
 		</View>

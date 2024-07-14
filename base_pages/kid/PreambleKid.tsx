@@ -23,6 +23,7 @@ import {
 import { translatePage, translateText } from "utils/translate.utils";
 import type { PreambleInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
+import AnimatedView from "components/AnimatedView";
 
 const PreambleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -40,6 +41,8 @@ const PreambleKid = (): React.ReactElement => {
 	) as PreambleInterface;
 	const description = translateText(translatedPage.description, mode);
 
+	// if (currentPage.screen !== "preamble") return <></>
+
 	return (
 		<View style={styles.container}>
 			<BackgroundPreamble fillColor={(color100 ?? "#fff") + "B3"} />
@@ -47,28 +50,30 @@ const PreambleKid = (): React.ReactElement => {
 				<ProgressBarKid />
 				<Toolbar />
 				<CenterMain>
-					<ScrollContainer>
-						<Heading
-							customStyle={{
-								...GeneralStyle.kid.extroPageHeading,
-								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: device.isTablet ? 40 : 30,
-								lineHeight: device.isTablet ? 45 : 35,
-							}}
-						>
-							{translatedPage.heading}
-						</Heading>
-						<Paragraph
-							customStyle={{
-								...GeneralStyle.kid.extroPageParagraph,
-								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: device.isTablet ? 23 : 18,
-								lineHeight: device.isTablet ? 33 : 25,
-							}}
-						>
-							{description}
-						</Paragraph>
-					</ScrollContainer>
+					<AnimatedView style={{ flex: 0 }}>
+						<ScrollContainer>
+							<Heading
+								customStyle={{
+									...GeneralStyle.kid.extroPageHeading,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: device.isTablet ? 40 : 30,
+									lineHeight: device.isTablet ? 45 : 35,
+								}}
+							>
+								{translatedPage.heading}
+							</Heading>
+							<Paragraph
+								customStyle={{
+									...GeneralStyle.kid.extroPageParagraph,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: device.isTablet ? 23 : 18,
+									lineHeight: device.isTablet ? 33 : 25,
+								}}
+							>
+								{description}
+							</Paragraph>
+						</ScrollContainer>
+					</AnimatedView>
 				</CenterMain>
 				<Navigation>
 					<BackAndNextNav

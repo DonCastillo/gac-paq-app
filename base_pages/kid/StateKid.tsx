@@ -22,6 +22,7 @@ import { sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
+import AnimatedView from "components/AnimatedView";
 
 interface Props {
 	state: State;
@@ -102,53 +103,55 @@ function StateKid({ state }: Props): React.ReactElement {
 
 	if (!loading) {
 		return (
-			<View style={styles.container}>
-				<BackgroundYellowStroke />
-				<Main>
-					<CenterMain>
-						<Heading
-							customStyle={{
-								color: "#000",
-								...GeneralStyle.kid.pageHeading,
-							}}
-						>
-							{translatedPage?.heading}
-						</Heading>
-						<Paragraph
-							customStyle={{
-								color: "#000",
-								...GeneralStyle.kid.pageParagraph,
-								fontSize: moderateScale(
-									device.isTablet ? 18 : 20,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								lineHeight: moderateScale(
-									device.isTablet ? 23 : 25,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-							}}
-						>
-							{translatedPage?.description}
-						</Paragraph>
-						<View style={styles.imageContainer}>
-							{/* State Image */}
-							<View style={styles.stateImageContainer}>
-								{state === State.Success ? (
-									<SuccessImage width={300} />
-								) : (
-									<ErrorImage width={300} />
-								)}
-							</View>
+			<AnimatedView>
+				<View style={styles.container}>
+					<BackgroundYellowStroke />
+					<Main>
+						<CenterMain>
+							<Heading
+								customStyle={{
+									color: "#000",
+									...GeneralStyle.kid.pageHeading,
+								}}
+							>
+								{translatedPage?.heading}
+							</Heading>
+							<Paragraph
+								customStyle={{
+									color: "#000",
+									...GeneralStyle.kid.pageParagraph,
+									fontSize: moderateScale(
+										device.isTablet ? 18 : 20,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+									lineHeight: moderateScale(
+										device.isTablet ? 23 : 25,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+								}}
+							>
+								{translatedPage?.description}
+							</Paragraph>
+							<View style={styles.imageContainer}>
+								{/* State Image */}
+								<View style={styles.stateImageContainer}>
+									{state === State.Success ? (
+										<SuccessImage width={300} />
+									) : (
+										<ErrorImage width={300} />
+									)}
+								</View>
 
-							{/* State Icon */}
-							<View style={styles.stateIconContainer}>
-								{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
+								{/* State Icon */}
+								<View style={styles.stateIconContainer}>
+									{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
+								</View>
 							</View>
-						</View>
-					</CenterMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
+						</CenterMain>
+						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+					</Main>
+				</View>
+			</AnimatedView>
 		);
 	} else {
 		return <LoadingScreenKid />;

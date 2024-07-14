@@ -21,6 +21,7 @@ import {
 import { proceedPage } from "utils/navigation.utils";
 import { translatePage } from "utils/translate.utils";
 import type { SectionInterface } from "interface/payload.type";
+import AnimatedView from "components/AnimatedView";
 
 const QuestionIntroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -61,48 +62,52 @@ const QuestionIntroAdult = (): React.ReactElement => {
 	}, [currentPageNumber]);
 
 	return (
-		<View style={styles.container}>
-			<BGLinearGradient />
-			{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
-				<ImageBackdrop
-					source={backgroundImage}
-					key={currentPageNumber}
-				/>
-			)}
-			<View
-				style={[
-					styles.headingPanel,
-					{
-						backgroundColor: color200,
-						maxWidth: device.isTablet ? 400 : "100%",
-						minHeight: device.isTablet ? "100%" : 220,
-					},
-				]}
-			>
-				<ScrollView>
-					<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
-					<Text
-						style={{
-							...styles.headingText,
-							fontSize: moderateScale(
-								device.isTablet ? 20 : 27,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? 25 : 32,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-						}}
-					>
-						{translatedPage.heading}
-					</Text>
-				</ScrollView>
+		<AnimatedView>
+			<View style={styles.container}>
+				<BGLinearGradient />
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						key={currentPageNumber}
+					/>
+				)}
+				<View
+					style={[
+						styles.headingPanel,
+						{
+							backgroundColor: color200,
+							maxWidth: device.isTablet ? 400 : "100%",
+							minHeight: device.isTablet ? "100%" : 220,
+						},
+					]}
+				>
+					<ScrollView>
+						<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
+						<Text
+							style={{
+								...styles.headingText,
+								fontSize: moderateScale(
+									device.isTablet ? 20 : 27,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 25 : 32,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
+						>
+							{translatedPage.heading}
+						</Text>
+					</ScrollView>
+				</View>
+				<Main>
+					<BottomMain>
+						<></>
+					</BottomMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
 			</View>
-			<Main>
-				<BottomMain></BottomMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-			</Main>
-		</View>
+		</AnimatedView>
 	);
 };
 

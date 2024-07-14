@@ -24,6 +24,7 @@ import type { LangPageInterface, PageInterface } from "interface/payload.type";
 import { sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { moderateScale } from "utils/responsive.utils";
+import AnimatedView from "components/AnimatedView";
 
 interface Props {
 	state: State;
@@ -103,46 +104,48 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const backgroundImage = getImageBackgroundStatus(state);
 	if (!loading) {
 		return (
-			<View style={styles.container}>
-				<BGLinearGradient />
-				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
-					<ImageBackdrop
-						source={backgroundImage}
-						opacity={0.7}
-						key={state.toString()}
-					/>
-				)}
-				<Main>
-					<CenterMain>
-						<View style={styles.stateIconContainer}>
-							{state === State.Success ? <CheckMark /> : <ErrorMark />}
-						</View>
-						<Heading
-							customStyle={{
-								...GeneralStyle.adult.pageHeading,
-							}}
-						>
-							{translatedPage?.heading}
-						</Heading>
-						<Paragraph
-							customStyle={{
-								...GeneralStyle.adult.pageParagraph,
-								fontSize: moderateScale(
-									device.isTablet ? 18 : 20,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								lineHeight: moderateScale(
-									device.isTablet ? 23 : 25,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-							}}
-						>
-							{translatedPage?.description}
-						</Paragraph>
-					</CenterMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
+			<AnimatedView>
+				<View style={styles.container}>
+					<BGLinearGradient />
+					{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+						<ImageBackdrop
+							source={backgroundImage}
+							opacity={0.7}
+							key={state.toString()}
+						/>
+					)}
+					<Main>
+						<CenterMain>
+							<View style={styles.stateIconContainer}>
+								{state === State.Success ? <CheckMark /> : <ErrorMark />}
+							</View>
+							<Heading
+								customStyle={{
+									...GeneralStyle.adult.pageHeading,
+								}}
+							>
+								{translatedPage?.heading}
+							</Heading>
+							<Paragraph
+								customStyle={{
+									...GeneralStyle.adult.pageParagraph,
+									fontSize: moderateScale(
+										device.isTablet ? 18 : 20,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+									lineHeight: moderateScale(
+										device.isTablet ? 23 : 25,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+								}}
+							>
+								{translatedPage?.description}
+							</Paragraph>
+						</CenterMain>
+						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+					</Main>
+				</View>
+			</AnimatedView>
 		);
 	} else {
 		return <LoadingScreenAdult />;

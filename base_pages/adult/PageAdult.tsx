@@ -23,6 +23,7 @@ import {
 import { translateDescription, translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
+import AnimatedView from "components/AnimatedView";
 
 const PageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -73,22 +74,24 @@ const PageAdult = (): React.ReactElement => {
 				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
-					<ScrollContainer>
-						<Heading
-							customStyle={{
-								...GeneralStyle.adult.pageHeading,
-							}}
-						>
-							{translatedPage.heading}
-						</Heading>
-						<Paragraph
-							customStyle={{
-								...GeneralStyle.adult.pageParagraph,
-							}}
-						>
-							{translatedDescription}
-						</Paragraph>
-					</ScrollContainer>
+					<AnimatedView style={{ flex: 0 }}>
+						<ScrollContainer>
+							<Heading
+								customStyle={{
+									...GeneralStyle.adult.pageHeading,
+								}}
+							>
+								{translatedPage.heading}
+							</Heading>
+							<Paragraph
+								customStyle={{
+									...GeneralStyle.adult.pageParagraph,
+								}}
+							>
+								{translatedDescription}
+							</Paragraph>
+						</ScrollContainer>
+					</AnimatedView>
 				</CenterMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>
