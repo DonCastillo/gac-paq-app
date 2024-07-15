@@ -23,3 +23,7 @@ web-build/
 android/
 
 ios/
+
+finalresponses.json
+
+store/responses.json
