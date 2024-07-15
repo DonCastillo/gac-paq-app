@@ -35,6 +35,17 @@
 				{
 					"initialOrientation": "PORTRAIT_UP"
 				}
+			],
+			[
+				"expo-build-properties",
+				{
+					"android": {
+						"compileSdkVersion": 34,
+						"targetSdkVersion": 34,
+						"buildToolsVersion": "33.0.0",
+						"minSdkVersion": 21
+					}
+				}
 			]
 		]
 	}

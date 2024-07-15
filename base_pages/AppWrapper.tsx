@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFonts } from "expo-font";
 import RegularPageScreen from "screens/RegularPageScreen";
 import * as ScreenOrientation from "expo-screen-orientation";
@@ -12,11 +12,13 @@ import { setDevice } from "store/settings/settingsSlice";
 import { ErrorScreen, SplashScreen, SuccessScreen } from "utils/state_screen.utils";
 import { loadApp } from "utils/load_pages.utils";
 import LoadingScreenAdult from "./adult/LoadingScreenAdult";
+import NetInfo from "@react-native-community/netinfo";
 
 const Stack = createNativeStackNavigator();
 
 const AppWrapper = (): React.ReactElement => {
 	const [fontsLoaded, fontError] = useFonts(fonts);
+	const [isConnected, setIsConnected] = useState<boolean>(false);
 	const settings = useSelector((state: any) => state.settings);
 	const responses = useSelector((state: any) => state.responses);
 	const questions = useSelector((state: any) => state.questions);
@@ -46,6 +48,22 @@ const AppWrapper = (): React.ReactElement => {
 			ScreenOrientation.removeOrientationChangeListener(orientationListener);
 		};
 	}, []);
+
+	// check if there is an internet connection
+	useEffect(() => {
+		const unsubscribe = NetInfo.addEventListener((state) => {
+			console.log("connection state: ", state);
+			console.log("is connected: ", state.isConnected);
+		});
+
+		return () => {
+			unsubscribe();
+		};
+	}, []);
+	// await NetInfo.fetch().then(state => {
+	// 	console.log('Connection type', state.type);
+	// 	console.log('Is connected?', state.isConnected);
+	//   });
 
 	// load app
 	useEffect(() => {

@@ -19,3 +19,7 @@ web-build/
 # environment variables
 .env
 .env.production
+
+android/
+
+ios/
