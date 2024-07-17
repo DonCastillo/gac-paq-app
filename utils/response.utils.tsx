@@ -12,6 +12,8 @@ import { clearUnansweredResponses, newResponse } from "store/responses/responses
 import { store } from "store/store";
 import { falsyValue } from "./utils.utils";
 import { setEndDateTime } from "store/settings/settingsSlice";
+import LocalStorageKey from "constants/localstorage.enum";
+import { readData, storeData } from "./localstorage.utils";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -158,4 +160,41 @@ const addResponse = (value: string | null): void => {
 		}),
 	);
 };
-export { getResponse, sanitizeResponse, getResponseByIdent, addResponse };
+
+const retrieveResponseFromStorage = async (): Promise<FinalResponseType[] | null> => {
+	const existingResponses: FinalResponseType[] | null = await readData(LocalStorageKey.responses)
+		.then((responses) => {
+			if (responses !== null && responses !== undefined && responses !== "") {
+				return responses as FinalResponseType[];
+			}
+			return null;
+		})
+		.catch(() => {
+			return [];
+		});
+
+	return existingResponses;
+};
+
+const saveResponseToStorage = async (response: FinalResponseType): Promise<void> => {
+	let mergedResponses: FinalResponseType[] = [];
+
+	const existingResponses = await retrieveResponseFromStorage();
+
+	if (existingResponses !== null) {
+		mergedResponses = [...existingResponses, response];
+	} else {
+		mergedResponses = [response];
+	}
+
+	await storeData(LocalStorageKey.responses, mergedResponses);
+};
+
+export {
+	getResponse,
+	sanitizeResponse,
+	getResponseByIdent,
+	addResponse,
+	saveResponseToStorage,
+	retrieveResponseFromStorage,
+};
