@@ -13,7 +13,8 @@ import { store } from "store/store";
 import { falsyValue } from "./utils.utils";
 import { setEndDateTime } from "store/settings/settingsSlice";
 import LocalStorageKey from "constants/localstorage.enum";
-import { readData, storeData } from "./localstorage.utils";
+import { readData, removeData, storeData } from "./localstorage.utils";
+import { submitResponse } from "./api.utils";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -176,13 +177,13 @@ const retrieveResponseFromStorage = async (): Promise<FinalResponseType[] | null
 	return existingResponses;
 };
 
-const saveResponseToStorage = async (response: FinalResponseType): Promise<void> => {
+const queueResponseToStorage = async (response: FinalResponseType): Promise<void> => {
 	let mergedResponses: FinalResponseType[] = [];
 
 	const existingResponses = await retrieveResponseFromStorage();
 
 	if (existingResponses !== null) {
-		mergedResponses = [...existingResponses, response];
+		mergedResponses = [response, ...existingResponses];
 	} else {
 		mergedResponses = [response];
 	}
@@ -190,11 +191,33 @@ const saveResponseToStorage = async (response: FinalResponseType): Promise<void>
 	await storeData(LocalStorageKey.responses, mergedResponses);
 };
 
+const sendResponseQueue = async (): Promise<void> => {
+	while (true) {
+		const existingResponses = await retrieveResponseFromStorage();
+		if (
+			existingResponses !== null &&
+			existingResponses !== undefined &&
+			existingResponses.length > 0
+		) {
+			const responseToSend = existingResponses.pop();
+
+			if (responseToSend !== null && responseToSend !== undefined) {
+				await submitResponse(responseToSend);
+				await removeData(LocalStorageKey.responses);
+				await storeData(LocalStorageKey.responses, existingResponses);
+			}
+		} else {
+			break;
+		}
+	}
+};
+
 export {
 	getResponse,
 	sanitizeResponse,
 	getResponseByIdent,
 	addResponse,
-	saveResponseToStorage,
+	queueResponseToStorage,
 	retrieveResponseFromStorage,
+	sendResponseQueue,
 };

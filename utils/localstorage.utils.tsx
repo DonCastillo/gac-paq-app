@@ -27,4 +27,16 @@ const readData = async (storageKey: string): Promise<any> => {
 	});
 };
 
-export { storeData, readData };
+const removeData = async (storageKey: string): Promise<boolean> => {
+	return new Promise((resolve, reject) => {
+		AsyncStorage.removeItem(storageKey)
+			.then(() => {
+				resolve(true);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+	});
+};
+
+export { storeData, readData, removeData };
