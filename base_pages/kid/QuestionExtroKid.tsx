@@ -15,12 +15,13 @@ import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
-import { sanitizeResponse } from "utils/response.utils";
+import { sanitizeResponse, queueResponseToStorage } from "utils/response.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsConnected,
 	getLanguage,
 	getSectionTotalPages,
 	prevPage,
@@ -39,6 +40,8 @@ const QuestionExtroKid = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
+	const isConnected = useSelector(getIsConnected);
+	// const isConnected = false;
 
 	// state
 	const [loading, setLoading] = useState<boolean>(false);
@@ -87,18 +90,23 @@ const QuestionExtroKid = (): React.ReactElement => {
 		try {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
-			await submitResponse(sanitizedResponses);
-			dispatch(resetResponses());
-			navigation.navigate("SuccessScreen" as never);
+			if (isConnected) {
+				await submitResponse(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "online" });
+			} else {
+				await queueResponseToStorage(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "offline" });
+			}
 		} catch (error) {
+			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
 		}
 	};
 
-	console.log("xxx: ", currentPage.screen);
-	// if (currentPage.screen !== "question_extro") return <></>
 	if (!loading) {
 		return (
 			<View style={styles.container}>

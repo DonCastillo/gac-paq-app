@@ -6,22 +6,32 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import State from "constants/state.enum";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import Images from "styles/images";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import BGLinearGradient from "components/BGLinearGradient";
 import LoadingScreenAdult from "./LoadingScreenAdult";
 import { useDispatch, useSelector } from "react-redux";
-import { getDevice, getLanguage, getPhrases, reset } from "store/settings/settingsSlice";
-import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
+import {
+	getDevice,
+	getIsConnected,
+	getLanguage,
+	getPhrases,
+	reset,
+} from "store/settings/settingsSlice";
+import {
+	getErrorPage,
+	getOfflineSuccessPage,
+	getSuccessPage,
+} from "store/questions/questionsSlice";
 import { resetResponses } from "store/responses/responsesSlice";
 import { translatePage as translatePageUtil } from "utils/translate.utils";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackgroundStatus } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
 import type { LangPageInterface, PageInterface } from "interface/payload.type";
-import { sanitizeResponse } from "utils/response.utils";
+import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { moderateScale } from "utils/responsive.utils";
 import AnimatedView from "components/AnimatedView";
@@ -35,13 +45,17 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
 	const successPage = useSelector(getSuccessPage);
+	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
 	const errorPage = useSelector(getErrorPage);
 	const device = useSelector(getDevice);
+	const isConnected = useSelector(getIsConnected);
 
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
+	const route = useRoute();
+	const { success_type } = route.params as { success_type: string };
 
 	const ErrorMark = Images.general.error;
 	const CheckMark = Images.general.check;
@@ -54,8 +68,13 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 
 	const statePageChange = (): void => {
 		if (state === State.Success) {
-			const pageTranslations: LangPageInterface = successPage.translations;
-			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			if (success_type === "online") {
+				const pageTranslations: LangPageInterface = successPage.translations;
+				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			} else {
+				const pageTranslations: LangPageInterface = offlineSuccessPage.translations;
+				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			}
 		} else {
 			const pageTranslations: LangPageInterface = errorPage.translations;
 			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
@@ -71,10 +90,17 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 		try {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
-			await submitResponse(sanitizedResponses);
-			dispatch(resetResponses());
-			navigation.navigate("SuccessScreen" as never);
+			if (isConnected) {
+				await submitResponse(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "online" });
+			} else {
+				await queueResponseToStorage(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "offline" });
+			}
 		} catch (error) {
+			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);

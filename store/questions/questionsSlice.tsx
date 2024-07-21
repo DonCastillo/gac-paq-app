@@ -49,6 +49,7 @@ import type {
 } from "interface/union.type";
 import FeedbackPhrase from "store/data/phrase/feedback";
 import SelectPhrase from "store/data/phrase/select";
+import OfflineSuccessPage from "store/data/state-pages/offline-success";
 
 export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
@@ -74,6 +75,7 @@ export interface QuestionSliceInterface {
 	feedbackPhrase: LangPhraseInterface;
 	selectPhrase: LangPhraseInterface;
 	successPage: PagePayloadInterface;
+	offlineSuccessPage: PagePayloadInterface;
 	errorPage: PagePayloadInterface;
 	Transportation7: Transportation7Interface;
 	Transportation8_10: Transportation8_10Interface;
@@ -107,6 +109,7 @@ const questionsSlice = createSlice({
 		feedbackPhrase: FeedbackPhrase,
 		selectPhrase: SelectPhrase,
 		successPage: SuccessPage,
+		offlineSuccessPage: OfflineSuccessPage,
 		errorPage: ErrorPage,
 		Transportation7: Transportation7 satisfies Transportation7Interface,
 		Transportation8_10: Transportation8_10 satisfies Transportation8_10Interface,
@@ -143,6 +146,7 @@ const questionsSlice = createSlice({
 		getFeedbackPhrase: (state: QuestionSliceInterface) => state.feedbackPhrase,
 		getSelectPhrase: (state: QuestionSliceInterface) => state.selectPhrase,
 		getSuccessPage: (state: QuestionSliceInterface) => state.successPage,
+		getOfflineSuccessPage: (state: QuestionSliceInterface) => state.offlineSuccessPage,
 		getErrorPage: (state: QuestionSliceInterface) => state.errorPage,
 		getTransportation7: (state: QuestionSliceInterface) => state.Transportation7,
 		getTransportation8_10: (state: QuestionSliceInterface) => state.Transportation8_10,
@@ -182,6 +186,7 @@ export const {
 	getFeedbackPhrase,
 	getSelectPhrase,
 	getSuccessPage,
+	getOfflineSuccessPage,
 	getErrorPage,
 	getTransportation7,
 	getTransportation8_10,

@@ -15,12 +15,13 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import { sanitizeResponse } from "utils/response.utils";
+import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsConnected,
 	getLanguage,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -39,6 +40,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const navigation = useNavigation();
 	const backgroundImage = getImageBackground();
+	const isConnected = useSelector(getIsConnected);
 
 	// state
 	const [loading, setLoading] = useState<boolean>(false);
@@ -85,10 +87,17 @@ const QuestionExtroAdult = (): React.ReactElement => {
 		try {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
-			await submitResponse(sanitizedResponses);
-			dispatch(resetResponses());
-			navigation.navigate("SuccessScreen" as never);
+			if (isConnected) {
+				await submitResponse(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "online" });
+			} else {
+				await queueResponseToStorage(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "offline" });
+			}
 		} catch (error) {
+			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);

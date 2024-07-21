@@ -84,7 +84,7 @@ const AppWrapper = (): React.ReactElement => {
 			<Stack.Navigator
 				screenOptions={{
 					headerShown: false,
-					animation: "none"
+					animation: "none",
 				}}
 			>
 				<Stack.Screen
@@ -98,6 +98,7 @@ const AppWrapper = (): React.ReactElement => {
 				<Stack.Screen
 					name="SuccessScreen"
 					component={SuccessScreen as React.FunctionComponent}
+					initialParams={{ success_type: "offline" }}
 				/>
 				<Stack.Screen
 					name="ErrorScreen"

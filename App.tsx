@@ -13,17 +13,18 @@ if (__DEV__) {
 	Reactotron.log("Hello, Reactotron!"); // log a message!
 }
 
-
 defineSubmitStoredResponses();
 
 const App = (): React.ReactElement => {
-	useEffect(() => { 
-		registerSubmitStoredResponses().then(() => {
-			console.log("Background task registered");
-		}).catch((error) => {
-			console.log("Background task registration failed: ", error);
-		})
-	}, [])
+	useEffect(() => {
+		registerSubmitStoredResponses()
+			.then(() => {
+				console.log("Background task registered");
+			})
+			.catch((error) => {
+				console.log("Background task registration failed: ", error);
+			});
+	}, []);
 	return (
 		<>
 			<StatusBar hidden={true} />
