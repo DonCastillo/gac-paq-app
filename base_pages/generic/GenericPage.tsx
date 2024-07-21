@@ -6,7 +6,6 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ScrollContainer from "components/ScrollContainer";
 import { GeneralStyle } from "styles/general";
@@ -21,7 +20,6 @@ import {
 } from "store/settings/settingsSlice";
 import { translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
-import AnimatedView from "components/AnimatedView";
 
 const GenericPage = (): React.ReactElement => {
 	const dispatch = useDispatch();

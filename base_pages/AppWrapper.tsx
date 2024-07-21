@@ -8,17 +8,18 @@ import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive.utils";
 import type DeviceInterface from "interface/dimensions";
 import fonts from "styles/fonts";
 import { useDispatch, useSelector } from "react-redux";
-import { setDevice } from "store/settings/settingsSlice";
+import { setDevice, setIsConnected } from "store/settings/settingsSlice";
 import { ErrorScreen, SplashScreen, SuccessScreen } from "utils/state_screen.utils";
 import { loadApp } from "utils/load_pages.utils";
 import LoadingScreenAdult from "./adult/LoadingScreenAdult";
 import NetInfo from "@react-native-community/netinfo";
+import { sendResponseQueue } from "utils/response.utils";
 
 const Stack = createNativeStackNavigator();
 
 const AppWrapper = (): React.ReactElement => {
 	const [fontsLoaded, fontError] = useFonts(fonts);
-	const [isConnected, setIsConnected] = useState<boolean>(false);
+	const [hasNetwork, setHasNetwork] = useState<boolean>(false);
 	const settings = useSelector((state: any) => state.settings);
 	const responses = useSelector((state: any) => state.responses);
 	const questions = useSelector((state: any) => state.questions);
@@ -52,18 +53,22 @@ const AppWrapper = (): React.ReactElement => {
 	// check if there is an internet connection
 	useEffect(() => {
 		const unsubscribe = NetInfo.addEventListener((state) => {
-			console.log("connection state: ", state);
-			console.log("is connected: ", state.isConnected);
+			setHasNetwork(state.isConnected ?? false);
 		});
 
 		return () => {
 			unsubscribe();
 		};
 	}, []);
-	// await NetInfo.fetch().then(state => {
-	// 	console.log('Connection type', state.type);
-	// 	console.log('Is connected?', state.isConnected);
-	//   });
+
+	useEffect(() => {
+		dispatch(setIsConnected(hasNetwork));
+		if (hasNetwork) {
+			sendResponseQueue()
+				.then((res) => res)
+				.catch((err) => err);
+		}
+	}, [hasNetwork]);
 
 	// load app
 	useEffect(() => {
@@ -79,7 +84,7 @@ const AppWrapper = (): React.ReactElement => {
 			<Stack.Navigator
 				screenOptions={{
 					headerShown: false,
-					animation: "none",
+					animation: "none"
 				}}
 			>
 				<Stack.Screen

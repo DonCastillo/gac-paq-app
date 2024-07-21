@@ -15,7 +15,10 @@
 		"ios": {
 			"supportsTablet": true,
 			"requireFullScreen": true,
-			"bundleIdentifier": "com.uleth.gacpaq"
+			"bundleIdentifier": "com.uleth.gacpaq",
+			"infoPlist": {
+				"UIBackgroundModes": ["fetch"]
+			}
 		},
 		"android": {
 			"adaptiveIcon": {

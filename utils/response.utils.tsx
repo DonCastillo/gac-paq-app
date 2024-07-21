@@ -11,10 +11,9 @@ import type { FinalResponseType } from "interface/union.type";
 import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
 import { store } from "store/store";
 import { falsyValue } from "./utils.utils";
-import { setEndDateTime } from "store/settings/settingsSlice";
 import LocalStorageKey from "constants/localstorage.enum";
-import { readData, removeData, storeData } from "./localstorage.utils";
-import { submitResponse } from "./api.utils";
+import { readData, removeData, storeData } from "utils/localstorage.utils";
+import { submitResponse } from "utils/api.utils";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -193,21 +192,25 @@ const queueResponseToStorage = async (response: FinalResponseType): Promise<void
 
 const sendResponseQueue = async (): Promise<void> => {
 	while (true) {
-		const existingResponses = await retrieveResponseFromStorage();
-		if (
-			existingResponses !== null &&
-			existingResponses !== undefined &&
-			existingResponses.length > 0
-		) {
-			const responseToSend = existingResponses.pop();
+		try {
+			const existingResponses = await retrieveResponseFromStorage();
+			if (
+				existingResponses !== null &&
+				existingResponses !== undefined &&
+				existingResponses.length > 0
+			) {
+				const responseToSend = existingResponses.pop();
 
-			if (responseToSend !== null && responseToSend !== undefined) {
-				await submitResponse(responseToSend);
-				await removeData(LocalStorageKey.responses);
-				await storeData(LocalStorageKey.responses, existingResponses);
+				if (responseToSend !== null && responseToSend !== undefined) {
+					await submitResponse(responseToSend);
+					await removeData(LocalStorageKey.responses);
+					await storeData(LocalStorageKey.responses, existingResponses);
+				}
+			} else {
+				break;
 			}
-		} else {
-			break;
+		} catch (error) {
+			throw new Error(error);
 		}
 	}
 };

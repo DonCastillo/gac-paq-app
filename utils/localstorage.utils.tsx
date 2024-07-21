@@ -12,7 +12,7 @@ const storeData = async (storageKey: string, data: any): Promise<boolean> => {
 	});
 };
 
-const readData = async (storageKey: string): Promise<any> => {
+const readData = async (storageKey: string): Promise<any | null> => {
 	return new Promise((resolve, reject) => {
 		AsyncStorage.getItem(storageKey)
 			.then((data) => {
