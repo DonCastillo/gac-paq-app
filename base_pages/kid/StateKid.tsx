@@ -10,18 +10,28 @@ import BackgroundYellowStroke from "components/kid/background/question-pages/Bac
 import Images from "styles/images/index";
 import BackAndTryAgainNav from "components/generic/navigation/BackAndTryAgainNav";
 import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { useDispatch, useSelector } from "react-redux";
-import { getDevice, getLanguage, getPhrases, reset } from "store/settings/settingsSlice";
+import {
+	getDevice,
+	getIsConnected,
+	getLanguage,
+	getPhrases,
+	reset,
+} from "store/settings/settingsSlice";
 import { resetResponses } from "store/responses/responsesSlice";
-import { getErrorPage, getSuccessPage } from "store/questions/questionsSlice";
+import {
+	getErrorPage,
+	getOfflineSuccessPage,
+	getSuccessPage,
+} from "store/questions/questionsSlice";
 import { translatePage as translatePageUtil } from "utils/translate.utils";
 import type { PageInterface, LangPageInterface } from "interface/payload.type";
-import { sanitizeResponse } from "utils/response.utils";
+import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive.utils";
+import { moderateScale, verticalScale } from "utils/responsive.utils";
 import AnimatedView from "components/AnimatedView";
 
 interface Props {
@@ -33,13 +43,17 @@ function StateKid({ state }: Props): React.ReactElement {
 	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
 	const successPage = useSelector(getSuccessPage);
+	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
 	const errorPage = useSelector(getErrorPage);
 	const device = useSelector(getDevice);
+	const isConnected = useSelector(getIsConnected);
 
 	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
+	const route = useRoute();
+	const { success_type } = (route.params as { success_type: string }) ?? "";
 
 	const SuccessImage = Images.kids.graphics.success_image;
 	const ErrorImage = Images.kids.graphics.error_image;
@@ -54,8 +68,13 @@ function StateKid({ state }: Props): React.ReactElement {
 
 	const statePageChange = (): void => {
 		if (state === State.Success) {
-			const pageTranslations: LangPageInterface = successPage.translations;
-			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			if (success_type === "online") {
+				const pageTranslations: LangPageInterface = successPage.translations;
+				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			} else {
+				const pageTranslations: LangPageInterface = offlineSuccessPage.translations;
+				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			}
 		} else {
 			const pageTranslations: LangPageInterface = errorPage.translations;
 			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
@@ -71,9 +90,15 @@ function StateKid({ state }: Props): React.ReactElement {
 		try {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
-			await submitResponse(sanitizedResponses);
-			dispatch(resetResponses());
-			navigation.navigate("SuccessScreen" as never);
+			if (isConnected) {
+				await submitResponse(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "online" });
+			} else {
+				await queueResponseToStorage(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "offline" });
+			}
 		} catch (error) {
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
@@ -112,6 +137,8 @@ function StateKid({ state }: Props): React.ReactElement {
 								customStyle={{
 									color: "#000",
 									...GeneralStyle.kid.pageHeading,
+									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 40 : 37, device.screenWidth),
 								}}
 							>
 								{translatedPage?.heading}
@@ -120,25 +147,25 @@ function StateKid({ state }: Props): React.ReactElement {
 								customStyle={{
 									color: "#000",
 									...GeneralStyle.kid.pageParagraph,
-									fontSize: moderateScale(
-										device.isTablet ? 18 : 20,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-									lineHeight: moderateScale(
-										device.isTablet ? 23 : 25,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
+									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
 								}}
 							>
 								{translatedPage?.description}
 							</Paragraph>
 							<View style={styles.imageContainer}>
 								{/* State Image */}
-								<View style={styles.stateImageContainer}>
+								<View style={[styles.stateImageContainer, {}]}>
 									{state === State.Success ? (
-										<SuccessImage width={300} />
+										<SuccessImage
+											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+										/>
 									) : (
-										<ErrorImage width={300} />
+										<ErrorImage
+											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+										/>
 									)}
 								</View>
 
@@ -168,7 +195,7 @@ const styles = StyleSheet.create({
 	imageContainer: {
 		justifyContent: "space-between",
 		alignItems: "center",
-		marginTop: 5,
+		marginTop: 15,
 		flexDirection: "row",
 		position: "relative",
 	},

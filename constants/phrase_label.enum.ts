@@ -6,6 +6,7 @@ enum PhraseLabel {
 	TryAgain = "Try Again",
 	Feedback = "Feedback",
 	Select = "Select",
+	PleaseSpecify = "Please specify",
 }
 
 export default PhraseLabel;

@@ -33,6 +33,7 @@ export interface SettingsSliceInterface {
 	history: number[];
 	isLoading: boolean;
 	startDateTime: Date | null;
+	isConnected: boolean;
 }
 
 const settingsSlice = createSlice({
@@ -57,6 +58,7 @@ const settingsSlice = createSlice({
 		history: [] as number[],
 		isLoading: false as boolean,
 		startDateTime: null as Date | null,
+		isConnected: false,
 	} satisfies SettingsSliceInterface,
 	reducers: {
 		setMode: reducersActions.setMode,
@@ -79,6 +81,7 @@ const settingsSlice = createSlice({
 		removeFeedbackPages: reducersActions.removeFeedbackPages,
 		reset: reducersActions.reset,
 		setStartDateTime: reducersActions.setStartDateTime,
+		setIsConnected: reducersActions.setIsConnected,
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
@@ -114,6 +117,7 @@ const settingsSlice = createSlice({
 		getDirectusBaseEndpoint: (state: SettingsSliceInterface) => state.directusBaseEndpoint,
 		getIsLoading: (state: SettingsSliceInterface) => state.isLoading,
 		getStartDateTime: (state: SettingsSliceInterface) => state.startDateTime,
+		getIsConnected: (state: SettingsSliceInterface) => state.isConnected,
 	},
 });
 
@@ -137,6 +141,7 @@ export const {
 	removeFeedbackPages,
 	reset,
 	setStartDateTime,
+	setIsConnected,
 } = settingsSlice.actions;
 
 export const {
@@ -159,6 +164,7 @@ export const {
 	getDirectusBaseEndpoint,
 	getIsLoading,
 	getStartDateTime,
+	getIsConnected,
 } = settingsSlice.selectors;
 
 export default settingsSlice.reducer;

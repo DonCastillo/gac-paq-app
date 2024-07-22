@@ -16,6 +16,7 @@ import {
 	getColorTheme,
 	getCurrentPage,
 	getCurrentPageNumber,
+	getDevice,
 	getLanguage,
 	getMode,
 	prevPage,
@@ -24,6 +25,7 @@ import { translateDescription, translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
+import { moderateScale } from "utils/responsive.utils";
 
 const PageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -31,6 +33,7 @@ const PageAdult = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
 	const mode = useSelector(getMode);
 	const { color100 } = colorTheme;
 
@@ -79,6 +82,8 @@ const PageAdult = (): React.ReactElement => {
 							<Heading
 								customStyle={{
 									...GeneralStyle.adult.pageHeading,
+									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
 								}}
 							>
 								{translatedPage.heading}
@@ -86,6 +91,8 @@ const PageAdult = (): React.ReactElement => {
 							<Paragraph
 								customStyle={{
 									...GeneralStyle.adult.pageParagraph,
+									fontSize: moderateScale(device.isTablet ? 14 : 16, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 16 : 22, device.screenWidth),
 								}}
 							>
 								{translatedDescription}

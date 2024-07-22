@@ -15,12 +15,13 @@ import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackground } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
-import { sanitizeResponse } from "utils/response.utils";
+import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsConnected,
 	getLanguage,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -30,6 +31,7 @@ import type { ExtroInterface } from "interface/payload.type";
 import { translatePage } from "utils/translate.utils";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
+import { moderateScale } from "utils/responsive.utils";
 
 const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -39,6 +41,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const navigation = useNavigation();
 	const backgroundImage = getImageBackground();
+	const isConnected = useSelector(getIsConnected);
 
 	// state
 	const [loading, setLoading] = useState<boolean>(false);
@@ -85,10 +88,17 @@ const QuestionExtroAdult = (): React.ReactElement => {
 		try {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
-			await submitResponse(sanitizedResponses);
-			dispatch(resetResponses());
-			navigation.navigate("SuccessScreen" as never);
+			if (isConnected) {
+				await submitResponse(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "online" });
+			} else {
+				await queueResponseToStorage(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "offline" });
+			}
 		} catch (error) {
+			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
@@ -114,8 +124,8 @@ const QuestionExtroAdult = (): React.ReactElement => {
 							<Heading
 								customStyle={{
 									...GeneralStyle.adult.pageHeading,
-									fontSize: device.isTablet ? 65 : 50,
-									lineHeight: device.isTablet ? 75 : 60,
+									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
 								}}
 							>
 								{translatedPage.heading}
@@ -123,8 +133,8 @@ const QuestionExtroAdult = (): React.ReactElement => {
 							<Paragraph
 								customStyle={{
 									...GeneralStyle.adult.pageParagraph,
-									fontSize: device.isTablet ? 25 : 23,
-									lineHeight: device.isTablet ? 30 : 25,
+									fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
 								}}
 							>
 								{translatedPage.subheading}

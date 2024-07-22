@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { moderateScale } from "utils/responsive.utils";
 import { isOtherOption } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getDevice } from "store/settings/settingsSlice";
+import { getColorTheme, getDevice, getPhrases } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;
@@ -33,6 +33,7 @@ const RadioOption = ({
 }: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
+	const phrases = useSelector(getPhrases);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 
@@ -163,7 +164,8 @@ const RadioOption = ({
 							onPress(`other (${value})`);
 						}}
 						defaultValue={defaultOtherInputValue}
-						placeholder={"Please Specify"}
+						placeholder={phrases?.specify}
+						keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 					/>
 				</View>
 			)}

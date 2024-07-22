@@ -15,7 +15,10 @@
 		"ios": {
 			"supportsTablet": true,
 			"requireFullScreen": true,
-			"bundleIdentifier": "com.uleth.gacpaq"
+			"bundleIdentifier": "com.uleth.gacpaq",
+			"infoPlist": {
+				"UIBackgroundModes": ["fetch"]
+			}
 		},
 		"android": {
 			"adaptiveIcon": {
@@ -34,6 +37,17 @@
 				"expo-screen-orientation",
 				{
 					"initialOrientation": "PORTRAIT_UP"
+				}
+			],
+			[
+				"expo-build-properties",
+				{
+					"android": {
+						"compileSdkVersion": 34,
+						"targetSdkVersion": 34,
+						"buildToolsVersion": "33.0.0",
+						"minSdkVersion": 21
+					}
 				}
 			]
 		]

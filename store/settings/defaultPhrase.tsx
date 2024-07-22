@@ -9,6 +9,7 @@ const defaultPhrase: PhrasePayloadInterface = {
 	tryAgain: PhraseLabel.TryAgain,
 	feedback: PhraseLabel.Feedback,
 	select: PhraseLabel.Select,
+	specify: PhraseLabel.PleaseSpecify,
 };
 
 export default defaultPhrase;
