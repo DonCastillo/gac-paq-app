@@ -33,7 +33,7 @@ const AboutPage: PagePayloadInterface = {
 				"我们的目标是解决关于活动水平的信息不足，尤其是在幼儿中间，以及目前忽略某些类型的体育活动的问卷的局限性。 通过收集有关积极游戏的数据，我们可以比较国家内和国家之间的活动水平，以确定促进体育活动的有效策略。 我们的研究涉及专家和公众评论，翻译，试点研究以及在各种城市和农村地区的大规模数据收集。 通过将我们的问卷数据与运动传感器进行比较，我们的目标是创建更准确的全球体育活动测量，从而促进全球更健康的生活方式。",
 		},
 		"fr-CA": {
-			heading: "Bienvenue à \nGAC-PAQ",
+			heading: "Bienvenue au questionnaire\nGAC-PAQ",
 			description: "",
 			description_mode: {
 				kid: "Dans ce sondage, nous souhaitons évaluer ton degré d'activité physique au cours de la dernière semaine (incluant les jours de semaine et la dernière fin de semaine).\n\nOn peut pratiquer des activités physiques dans de nombreuses situations, comme pendant nos temps libres, en faisant du sport, en jouant, en nous déplaçant (par exemple, pour aller à l'école, au parc, aux magasins, chez des amis ou des parents), à l'école, en faisant des tâches ménagères ou en travaillant. L'application te guidera parmi ces contextes, un à la fois.\n\nNous te poserons des questions sur les efforts fournis dans le cadre d'une activité physique. Le terme 'effort moyen ou intense' désigne les activités qui font battre ton cœur plus vite et qui t'essoufflent un peu. [Les exemples présentés dans l'application sont notamment le soccer/football, la natation, la course à pied, le saut à la corde, le patinage, le ski de fond, la musculation ou le cyclisme.]\n\nLe terme 'peu d'effort' désigne les activités qui ne t'essoufflent pas. Dans ce cas, les exemples présentés dans l'application sont notamment la marche lente, prendre soin d'animaux domestiques ou à la ferme, jouer dans le carré de sable, et plusieurs tâches ménagères.\n\nIl n'y a pas de bonnes ou de mauvaises réponses. Réponds simplement aux questions du mieux que tu le peux.",

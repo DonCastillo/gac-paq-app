@@ -18,10 +18,18 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				{
 					label: "Child",
 					value: "child",
+					sublabel: {
+						kid: "8 to 11 years old",
+						adult: "8 to 11 years old",
+					},
 				},
 				{
 					label: "Adolescent",
 					value: "teen",
+					sublabel: {
+						kid: "12 to 17 years old",
+						adult: "12 to 17 years old",
+					},
 				},
 				{
 					label: "Parent",
@@ -39,10 +47,18 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				{
 					label: "เด็ก",
 					value: "child",
+					sublabel: {
+						kid: "8 ถึง 11 ปี",
+						adult: "8 ถึง 11 ปี",
+					},
 				},
 				{
 					label: "วัยรุ่น",
 					value: "teen",
+					sublabel: {
+						kid: "12 ถึง 17 ปี",
+						adult: "12 ถึง 17 ปี",
+					},
 				},
 				{
 					label: "ผู้ปกครอง",
@@ -60,10 +76,18 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				{
 					label: "儿童",
 					value: "child",
+					sublabel: {
+						kid: "8到11岁",
+						adult: "8到11岁",
+					},
 				},
 				{
 					label: "青少年",
 					value: "teen",
+					sublabel: {
+						kid: "12到17岁",
+						adult: "12到17岁",
+					},
 				},
 				{
 					label: "家长",
@@ -81,10 +105,18 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				{
 					label: "Niño",
 					value: "child",
+					sublabel: {
+						kid: "8 a 11 años",
+						adult: "8 a 11 años",
+					},
 				},
 				{
 					label: "Adolescente",
 					value: "teen",
+					sublabel: {
+						kid: "12 a 17 años",
+						adult: "12 a 17 años",
+					},
 				},
 				{
 					label: "Padre",
@@ -95,17 +127,25 @@ const AgePage: QuestionDropdownPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionDropdown,
 			heading: "Bienvenue!",
-			label: "Qui remplit ce questionnaire?",
-			kid_label: "Qui remplit ce questionnaire?",
-			adult_label: "Qui remplit ce questionnaire?",
+			label: "Qui répond à ce questionnaire?",
+			kid_label: "Qui répond à ce questionnaire?",
+			adult_label: "Qui répond à ce questionnaire?",
 			choices: [
 				{
 					label: "Enfant",
 					value: "child",
+					sublabel: {
+						kid: "Huit à onze ans",
+						adult: "Huit à onze ans",
+					},
 				},
 				{
 					label: "Adolescent",
 					value: "teen",
+					sublabel: {
+						kid: "Douze à dix-sept ans",
+						adult: "Douze à dix-sept ans",
+					},
 				},
 				{
 					label: "Parent",

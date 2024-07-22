@@ -36,6 +36,7 @@ import type { QuestionDropdownInterface, QuestionInputInterface } from "interfac
 import Mode from "constants/mode.enum";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
 import LoadingScreenKid from "../LoadingScreenKid";
+import AnimatedView from "components/AnimatedView";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -198,29 +199,31 @@ const QuestionSingleKid = (): React.ReactElement => {
 						<ProgressBarKid />
 						<Toolbar />
 						<TopMain>
-							<View
-								style={[
-									GeneralStyle.kid.introQuestionContainer,
-									{
-										marginVertical: verticalScale(40, device.screenHeight),
-										...styles.mainContainer,
-									},
-								]}
-							>
-								<View style={{ marginBottom: 9 }}>
-									<QuestionLabel
-										textStyle={GeneralStyle.kid.introQuestionLabel}
-										customStyle={{ marginBottom: 7 }}
-									>
-										{questionLabel}
-									</QuestionLabel>
-									<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-										{questionSubLabel}
-									</QuestionSubLabel>
-								</View>
+							<AnimatedView key={currentPageNumber}>
+								<View
+									style={[
+										GeneralStyle.kid.introQuestionContainer,
+										{
+											marginVertical: verticalScale(40, device.screenHeight),
+											...styles.mainContainer,
+										},
+									]}
+								>
+									<View style={{ marginBottom: 9 }}>
+										<QuestionLabel
+											textStyle={GeneralStyle.kid.introQuestionLabel}
+											customStyle={{ marginBottom: 7, backgroundColor: "white" }}
+										>
+											{questionLabel}
+										</QuestionLabel>
+										<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+											{questionSubLabel}
+										</QuestionSubLabel>
+									</View>
 
-								<View style={styles.questionComponentContainer}>{questionComponent}</View>
-							</View>
+									<View style={styles.questionComponentContainer}>{questionComponent}</View>
+								</View>
+							</AnimatedView>
 						</TopMain>
 						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 					</Main>

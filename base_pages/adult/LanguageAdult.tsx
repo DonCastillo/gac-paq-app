@@ -34,6 +34,7 @@ import {
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
 import LoadingScreenAdult from "./LoadingScreenAdult";
+import AnimatedView from "components/AnimatedView";
 
 const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -109,21 +110,23 @@ const LanguageAdult = (): React.ReactElement => {
 					<ProgressBarAdult />
 					<Toolbar />
 					<CenterMain>
-						<QuestionContainer>
-							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
-							<View style={{ marginBottom: 13 }}>
-								<QuestionLabel
-									textStyle={GeneralStyle.adult.questionLabel}
-									customStyle={{ marginBottom: 7 }}
-								>
-									{questionLabel}
-								</QuestionLabel>
-							</View>
-							<QuestionSelectLanguageAdult
-								onChange={changeHandler}
-								selectedValue={selectedValue}
-							/>
-						</QuestionContainer>
+						<AnimatedView style={{ flex: 0 }}>
+							<QuestionContainer>
+								<QuestionTitle>{translatedPage.heading}</QuestionTitle>
+								<View style={{ marginBottom: 13 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.adult.questionLabel}
+										customStyle={{ marginBottom: 7 }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+								</View>
+								<QuestionSelectLanguageAdult
+									onChange={changeHandler}
+									selectedValue={selectedValue}
+								/>
+							</QuestionContainer>
+						</AnimatedView>
 					</CenterMain>
 					<Navigation>
 						{selectedValue !== null && (

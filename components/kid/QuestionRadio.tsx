@@ -9,8 +9,10 @@ import {
 import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
+import Mode from "constants/mode.enum";
+import { getOptionSubLabel } from "utils/background.utils";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -26,6 +28,7 @@ const QuestionRadio = ({
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
+	let mode = useSelector(getMode);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -97,6 +100,11 @@ const QuestionRadio = ({
 	const numColumn = enableColumnWrap ? 2 : 1;
 	const adjustWidth = enableColumnWrap ? horizontalScale(150, device.screenWidth) : "100%";
 
+	// if on Mode page, set mode to Kid to enable getOptionSublabel
+	if (currentPage.page.ident === "mode") {
+		mode = Mode.Kid;
+	}
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
@@ -124,6 +132,7 @@ const QuestionRadio = ({
 								isOtherSelected={isOtherSelected}
 								autofocusOtherField={autofocusOtherField}
 								defaultOtherInputValue={getUserSpecifiedOther(item.value, selected)}
+								optionSublabel={getOptionSubLabel(item.sublabel, mode) ?? undefined}
 							/>
 						);
 					}}

@@ -16,6 +16,7 @@ import {
 	getColorTheme,
 	getCurrentPage,
 	getCurrentPageNumber,
+	getDevice,
 	getLanguage,
 	getMode,
 	prevPage,
@@ -23,6 +24,8 @@ import {
 import { translateDescription, translatePage } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
+import AnimatedView from "components/AnimatedView";
+import { moderateScale } from "utils/responsive.utils";
 
 const PageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -30,6 +33,7 @@ const PageKid = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const device = useSelector(getDevice);
 	const mode = useSelector(getMode);
 	const { color100 } = colorTheme;
 
@@ -79,26 +83,32 @@ const PageKid = (): React.ReactElement => {
 				<ProgressBarKid />
 				<Toolbar />
 				<CenterMain>
-					<ScrollContainer>
-						<Heading
-							customStyle={{
-								color: color100,
-								...GeneralStyle.kid.pageHeading,
-							}}
-						>
-							{translatedPage.heading}
-						</Heading>
+					<AnimatedView style={{ flex: 0 }}>
+						<ScrollContainer>
+							<Heading
+								customStyle={{
+									color: color100,
+									...GeneralStyle.kid.pageHeading,
+									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
+								}}
+							>
+								{translatedPage.heading}
+							</Heading>
 
-						<Paragraph
-							customStyle={{
-								color: color100,
-								...GeneralStyle.kid.pageParagraph,
-								backgroundColor: "white",
-							}}
-						>
-							{translatedDescription}
-						</Paragraph>
-					</ScrollContainer>
+							<Paragraph
+								customStyle={{
+									color: color100,
+									...GeneralStyle.kid.pageParagraph,
+									backgroundColor: "white",
+									fontSize: moderateScale(device.isTablet ? 14 : 16, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 16 : 22, device.screenWidth),
+								}}
+							>
+								{translatedDescription}
+							</Paragraph>
+						</ScrollContainer>
+					</AnimatedView>
 				</CenterMain>
 				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 			</Main>

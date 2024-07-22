@@ -1,5 +1,7 @@
 import React from "react";
 import { TextInput, View, StyleSheet } from "react-native";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
 import { GeneralStyle } from "styles/general";
 
 interface PropsInterface {
@@ -13,6 +15,8 @@ const QuestionInput = ({
 	selectedValue,
 	placeholder,
 }: PropsInterface): React.ReactElement => {
+	const device = useSelector(getDevice);
+
 	const changeHandler = (value: string): void => {
 		onChange(value);
 	};
@@ -26,6 +30,7 @@ const QuestionInput = ({
 				onChangeText={changeHandler}
 				placeholder={placeholder ?? ""}
 				defaultValue={selectedValue ?? ""}
+				keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 			/>
 		</View>
 	);

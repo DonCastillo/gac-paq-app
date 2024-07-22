@@ -48,6 +48,9 @@ import type {
 	QuestionPagesType,
 } from "interface/union.type";
 import FeedbackPhrase from "store/data/phrase/feedback";
+import SelectPhrase from "store/data/phrase/select";
+import OfflineSuccessPage from "store/data/state-pages/offline-success";
+import PleaseSpecifyPhrase from "store/data/phrase/please-specify";
 
 export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
@@ -71,7 +74,10 @@ export interface QuestionSliceInterface {
 	introductionPhrase: LangPhraseInterface;
 	tryAgainPhrase: LangPhraseInterface;
 	feedbackPhrase: LangPhraseInterface;
+	selectPhrase: LangPhraseInterface;
+	pleaseSpecifyPhrase: LangPhraseInterface;
 	successPage: PagePayloadInterface;
+	offlineSuccessPage: PagePayloadInterface;
 	errorPage: PagePayloadInterface;
 	Transportation7: Transportation7Interface;
 	Transportation8_10: Transportation8_10Interface;
@@ -103,7 +109,10 @@ const questionsSlice = createSlice({
 		introductionPhrase: IntroductionPhrase,
 		tryAgainPhrase: TryAgainPhrase,
 		feedbackPhrase: FeedbackPhrase,
+		selectPhrase: SelectPhrase,
+		pleaseSpecifyPhrase: PleaseSpecifyPhrase,
 		successPage: SuccessPage,
+		offlineSuccessPage: OfflineSuccessPage,
 		errorPage: ErrorPage,
 		Transportation7: Transportation7 satisfies Transportation7Interface,
 		Transportation8_10: Transportation8_10 satisfies Transportation8_10Interface,
@@ -138,7 +147,10 @@ const questionsSlice = createSlice({
 		getIntroductionPhrase: (state: QuestionSliceInterface) => state.introductionPhrase,
 		getTryAgainPhrase: (state: QuestionSliceInterface) => state.tryAgainPhrase,
 		getFeedbackPhrase: (state: QuestionSliceInterface) => state.feedbackPhrase,
+		getSelectPhrase: (state: QuestionSliceInterface) => state.selectPhrase,
+		getPleaseSpecifyPhrase: (state: QuestionSliceInterface) => state.pleaseSpecifyPhrase,
 		getSuccessPage: (state: QuestionSliceInterface) => state.successPage,
+		getOfflineSuccessPage: (state: QuestionSliceInterface) => state.offlineSuccessPage,
 		getErrorPage: (state: QuestionSliceInterface) => state.errorPage,
 		getTransportation7: (state: QuestionSliceInterface) => state.Transportation7,
 		getTransportation8_10: (state: QuestionSliceInterface) => state.Transportation8_10,
@@ -176,7 +188,10 @@ export const {
 	getIntroductionPhrase,
 	getTryAgainPhrase,
 	getFeedbackPhrase,
+	getSelectPhrase,
+	getPleaseSpecifyPhrase,
 	getSuccessPage,
+	getOfflineSuccessPage,
 	getErrorPage,
 	getTransportation7,
 	getTransportation8_10,

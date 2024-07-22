@@ -39,9 +39,9 @@ const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 		"fr-CA": {
 			type: Question.QuestionLanguage,
 			heading: "Bienvenue!",
-			label: "Quelle langue parlez-vous et où êtes-vous?",
-			kid_label: "Quelle langue parlez-vous et où êtes-vous?",
-			adult_label: "Quelle langue parlez-vous et où êtes-vous?",
+			label: "Quelle langue préfères-tu?",
+			kid_label: "Quelle langue préfères-tu?",
+			adult_label: "Quelle langue préfères-tu?",
 		},
 	},
 };

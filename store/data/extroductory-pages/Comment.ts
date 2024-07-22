@@ -48,7 +48,7 @@ const Comment: QuestionTextareaPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionTextarea,
 			heading: "Commentaires",
-			placeholder: "Entrez votre commentaire ici",
+			placeholder: "Écris ton commentaire ici",
 			label:
 				"As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
 			kid_label:

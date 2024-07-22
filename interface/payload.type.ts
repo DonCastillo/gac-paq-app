@@ -13,14 +13,14 @@ export interface Choice {
 		kid: string;
 		adult: string;
 	};
-}
-
-export interface ChoiceImage extends Choice {
-	image_ident: string;
 	sublabel?: {
 		kid: string;
 		adult: string;
 	};
+}
+
+export interface ChoiceImage extends Choice {
+	image_ident: string;
 }
 
 export interface ChoiceIcon extends Choice {

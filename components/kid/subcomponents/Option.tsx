@@ -5,7 +5,7 @@ import { isOtherOption } from "utils/options.utils";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 
-import { getDevice } from "store/settings/settingsSlice";
+import { getDevice, getPhrases } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	text: string;
@@ -17,6 +17,7 @@ interface PropsInterface {
 	isOtherSelected?: boolean;
 	autofocusOtherField?: boolean;
 	defaultOtherInputValue?: string;
+	optionSublabel?: string;
 }
 
 const Option = ({
@@ -29,9 +30,11 @@ const Option = ({
 	isOtherSelected = false,
 	autofocusOtherField = false,
 	defaultOtherInputValue,
+	optionSublabel,
 }: PropsInterface): React.ReactElement => {
 	const otherInputRef = useRef<TextInput>(null);
 	const device = useSelector(getDevice);
+	const phrases = useSelector(getPhrases);
 
 	return (
 		<View>
@@ -61,6 +64,7 @@ const Option = ({
 					]}
 					onPress={() => selectHandler(value)}
 				>
+					{/* Main Label */}
 					<Text
 						style={{
 							...GeneralStyle.kid.optionText,
@@ -77,6 +81,24 @@ const Option = ({
 					>
 						{text}
 					</Text>
+
+					{/* Sublabel */}
+					{optionSublabel !== "" && optionSublabel !== undefined && optionSublabel !== null && (
+						<Text
+							style={{
+								fontSize: moderateScale(
+									device.isTablet ? 12 : 12,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 16 : 16,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
+						>
+							{optionSublabel}
+						</Text>
+					)}
 				</Pressable>
 
 				{/* Other Field */}
@@ -108,7 +130,8 @@ const Option = ({
 								selectHandler(`other (${value})`);
 							}}
 							defaultValue={defaultOtherInputValue}
-							placeholder="Please Specify"
+							placeholder={phrases?.specify}
+							keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 						/>
 					</View>
 				)}

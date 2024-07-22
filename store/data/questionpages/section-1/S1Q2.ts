@@ -17,31 +17,31 @@ const S1Q2: QuestionRadioPayloadInterface = {
 			adult_label: "How many days did your child attend school in the past week?",
 			choices: [
 				{
-					label: "1 Day",
+					label: "1 day",
 					value: "1",
 				},
 				{
-					label: "2 Days",
+					label: "2 days",
 					value: "2",
 				},
 				{
-					label: "3 Days",
+					label: "3 days",
 					value: "3",
 				},
 				{
-					label: "4 Days",
+					label: "4 days",
 					value: "4",
 				},
 				{
-					label: "5 Days",
+					label: "5 days",
 					value: "5",
 				},
 				{
-					label: "6 Days",
+					label: "6 days",
 					value: "6",
 				},
 				{
-					label: "7 Days",
+					label: "7 days",
 					value: "7",
 				},
 			],

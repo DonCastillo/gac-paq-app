@@ -34,6 +34,7 @@ import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
 import LoadingScreenAdult from "../LoadingScreenAdult";
+import AnimatedView from "components/AnimatedView";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -174,21 +175,26 @@ const QuestionSingleAdult = (): React.ReactElement => {
 					<ProgressBarAdult />
 					<Toolbar />
 					<CenterMain>
-						<QuestionContainer>
-							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
-							<View style={{ marginBottom: 13 }}>
-								<QuestionLabel
-									textStyle={GeneralStyle.adult.questionLabel}
-									customStyle={{ marginBottom: 7 }}
-								>
-									{questionLabel}
-								</QuestionLabel>
-								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
-									{questionSubLabel}
-								</QuestionSubLabel>
-							</View>
-							{questionComponent}
-						</QuestionContainer>
+						<AnimatedView
+							key={currentPageNumber}
+							style={{ flex: 0 }}
+						>
+							<QuestionContainer>
+								<QuestionTitle>{translatedPage.heading}</QuestionTitle>
+								<View style={{ marginBottom: 13 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.adult.questionLabel}
+										customStyle={{ marginBottom: 7 }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+									<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+										{questionSubLabel}
+									</QuestionSubLabel>
+								</View>
+								{questionComponent}
+							</QuestionContainer>
+						</AnimatedView>
 					</CenterMain>
 					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 				</Main>

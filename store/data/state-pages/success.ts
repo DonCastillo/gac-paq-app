@@ -19,7 +19,7 @@ const SuccessPage: PagePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "成功!",
-			description: "干得好！您已完成问卷调查。您的答案已成功发送。\n\n感谢您的帮助！",
+			description: "干得好！您已完成问卷调查。您的答案已成功发送。\n\n感谢您的帮助!",
 		},
 		"es-MX": {
 			heading: "Éxito!",
@@ -34,7 +34,7 @@ const SuccessPage: PagePayloadInterface = {
 		"fr-CA": {
 			heading: "Succès!",
 			description:
-				"Bon travail. Vous avez terminé le questionnaire. Vos réponses ont été envoyées avec succès.\n\nMerci pour votre aide.",
+				"Bon travail, tu as complété le questionnaire. Tes réponses ont bien été envoyées.\n\nMerci pour ton aide!",
 		},
 	},
 };
