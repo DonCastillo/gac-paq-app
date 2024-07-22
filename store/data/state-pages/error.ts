@@ -9,27 +9,27 @@ const ErrorPage: PagePayloadInterface = {
 	translations: {
 		"en-CA": {
 			heading: "Error",
-			description: "Oh no, Your answers were not sent.\n\nPlease try again. ",
+			description: "There is a problem submitting your response.\n\nPlease try again. ",
 		},
 		"th-TH": {
 			heading: "ข้อผิดพลาด",
-			description: "อ๊ะ คำตอบของคุณไม่ถูกส่ง\n\nกรุณาลองอีกครั้ง",
+			description: "มีปัญหาในการส่งคำตอบของคุณ\n\nกรุณาลองอีกครั้ง",
 		},
 		"zh-CN": {
 			heading: "错误",
-			description: "哦，您的答案未发送。\n\n请重试。",
+			description: "提交您的回复时出现问题。\n\n请重试。",
 		},
 		"es-MX": {
 			heading: "Error",
-			description: "Oh no, tus respuestas no fueron enviadas.\n\nPor favor, inténtalo de nuevo.",
+			description: "Hay un problema al enviar tu respuesta.\n\nPor favor, inténtalo de nuevo.",
 		},
 		"es-ES": {
 			heading: "Error",
-			description: "Oh no, tus respuestas no fueron enviadas.\n\nPor favor, inténtalo de nuevo.",
+			description: "Hay un problema al enviar tu respuesta.\n\nPor favor, inténtalo de nuevo.",
 		},
 		"fr-CA": {
 			heading: "Erreur",
-			description: "Ah non, tes réponses n'ont pas été envoyées.\n\nSVP essais une autre fois.",
+			description: "Il y a un problème pour soumettre votre réponse.\n\nSVP essais une autre fois.",
 		},
 	},
 };

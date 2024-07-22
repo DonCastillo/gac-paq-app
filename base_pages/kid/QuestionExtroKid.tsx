@@ -12,7 +12,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive.utils";
+import { moderateScale, verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
 import { sanitizeResponse, queueResponseToStorage } from "utils/response.utils";
@@ -125,13 +125,13 @@ const QuestionExtroKid = (): React.ReactElement => {
 					<Toolbar />
 
 					<CenterMain>
-						<AnimatedView style={{ flex: 0 }}>
+						<AnimatedView style={{ flex: 0, alignItems: "center", justifyContent: "center" }}>
 							<Heading
 								customStyle={{
 									...GeneralStyle.kid.extroPageHeading,
 									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: device.isTablet ? 50 : 40,
-									lineHeight: device.isTablet ? 55 : 45,
+									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 35 : 30, device.screenWidth),
 								}}
 							>
 								{translatedPage.heading}
@@ -140,16 +140,16 @@ const QuestionExtroKid = (): React.ReactElement => {
 								customStyle={{
 									...GeneralStyle.kid.extroPageParagraph,
 									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: device.isTablet ? 25 : 20,
-									lineHeight: device.isTablet ? 35 : 27,
+									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 27 : 27, device.screenWidth),
 								}}
 							>
 								{translatedPage.subheading}
 							</Paragraph>
 							<View style={styles.imageContainer}>
 								<ImageComponent
-									backgroundColor={"red"}
-									height={verticalScale(320, device.screenHeight)}
+									backgroundColor={"white"}
+									height={verticalScale(device.isTablet ? 320 : 290, device.screenHeight)}
 									padding={0}
 									margin={0}
 								/>

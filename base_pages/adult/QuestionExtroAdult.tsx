@@ -31,6 +31,7 @@ import type { ExtroInterface } from "interface/payload.type";
 import { translatePage } from "utils/translate.utils";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
+import { moderateScale } from "utils/responsive.utils";
 
 const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -123,8 +124,8 @@ const QuestionExtroAdult = (): React.ReactElement => {
 							<Heading
 								customStyle={{
 									...GeneralStyle.adult.pageHeading,
-									fontSize: device.isTablet ? 65 : 50,
-									lineHeight: device.isTablet ? 75 : 60,
+									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
 								}}
 							>
 								{translatedPage.heading}
@@ -132,8 +133,8 @@ const QuestionExtroAdult = (): React.ReactElement => {
 							<Paragraph
 								customStyle={{
 									...GeneralStyle.adult.pageParagraph,
-									fontSize: device.isTablet ? 25 : 23,
-									lineHeight: device.isTablet ? 30 : 25,
+									fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
 								}}
 							>
 								{translatedPage.subheading}

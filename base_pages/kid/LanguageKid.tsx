@@ -133,7 +133,7 @@ const LanguageKid = (): React.ReactElement => {
 									<View style={{ marginBottom: 9 }}>
 										<QuestionLabel
 											textStyle={GeneralStyle.kid.introQuestionLabel}
-											customStyle={{ marginBottom: 7 }}
+											customStyle={{ marginBottom: 7, backgroundColor: "white" }}
 										>
 											{questionLabel}
 										</QuestionLabel>

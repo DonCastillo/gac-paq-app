@@ -55,7 +55,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
 	const route = useRoute();
-	const { success_type } = route.params as { success_type: string };
+	const { success_type } = (route.params as { success_type: string }) ?? "";
 
 	const ErrorMark = Images.general.error;
 	const CheckMark = Images.general.check;
@@ -148,6 +148,8 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 							<Heading
 								customStyle={{
 									...GeneralStyle.adult.pageHeading,
+									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
 								}}
 							>
 								{translatedPage?.heading}
@@ -155,14 +157,8 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 							<Paragraph
 								customStyle={{
 									...GeneralStyle.adult.pageParagraph,
-									fontSize: moderateScale(
-										device.isTablet ? 18 : 20,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-									lineHeight: moderateScale(
-										device.isTablet ? 23 : 25,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
+									fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
 								}}
 							>
 								{translatedPage?.description}

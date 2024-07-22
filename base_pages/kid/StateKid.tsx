@@ -31,7 +31,7 @@ import type { PageInterface, LangPageInterface } from "interface/payload.type";
 import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive.utils";
+import { moderateScale, verticalScale } from "utils/responsive.utils";
 import AnimatedView from "components/AnimatedView";
 
 interface Props {
@@ -53,7 +53,7 @@ function StateKid({ state }: Props): React.ReactElement {
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
 	const route = useRoute();
-	const { success_type } = route.params as { success_type: string };
+	const { success_type } = (route.params as { success_type: string }) ?? "";
 
 	const SuccessImage = Images.kids.graphics.success_image;
 	const ErrorImage = Images.kids.graphics.error_image;
@@ -137,8 +137,8 @@ function StateKid({ state }: Props): React.ReactElement {
 								customStyle={{
 									color: "#000",
 									...GeneralStyle.kid.pageHeading,
-									fontSize: device.isTablet ? 40 : 30,
-									lineHeight: device.isTablet ? 45 : 35,
+									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 40 : 37, device.screenWidth),
 								}}
 							>
 								{translatedPage?.heading}
@@ -147,14 +147,8 @@ function StateKid({ state }: Props): React.ReactElement {
 								customStyle={{
 									color: "#000",
 									...GeneralStyle.kid.pageParagraph,
-									fontSize: moderateScale(
-										device.isTablet ? 18 : 18,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-									lineHeight: moderateScale(
-										device.isTablet ? 23 : 23,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
+									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
 								}}
 							>
 								{translatedPage?.description}
@@ -164,13 +158,13 @@ function StateKid({ state }: Props): React.ReactElement {
 								<View style={[styles.stateImageContainer, {}]}>
 									{state === State.Success ? (
 										<SuccessImage
-											width={250}
-											height={280}
+											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
 										/>
 									) : (
 										<ErrorImage
-											width={250}
-											height={280}
+											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
 										/>
 									)}
 								</View>
@@ -201,7 +195,7 @@ const styles = StyleSheet.create({
 	imageContainer: {
 		justifyContent: "space-between",
 		alignItems: "center",
-		marginTop: 5,
+		marginTop: 15,
 		flexDirection: "row",
 		position: "relative",
 	},

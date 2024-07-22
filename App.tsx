@@ -4,7 +4,10 @@ import { StatusBar } from "react-native";
 import { Provider } from "react-redux";
 import { store } from "store/store";
 import Reactotron from "reactotron-react-native";
-import { defineSubmitStoredResponses, registerSubmitStoredResponses } from "utils/process.utils";
+import {
+	defineSubmitStoredResponsesBackground,
+	registerSubmitStoredResponsesBackground,
+} from "utils/process.utils";
 
 if (__DEV__) {
 	// reference to ReactotronConfig
@@ -13,11 +16,11 @@ if (__DEV__) {
 	Reactotron.log("Hello, Reactotron!"); // log a message!
 }
 
-defineSubmitStoredResponses();
+defineSubmitStoredResponsesBackground();
 
 const App = (): React.ReactElement => {
 	useEffect(() => {
-		registerSubmitStoredResponses()
+		registerSubmitStoredResponsesBackground()
 			.then(() => {
 				console.log("Background task registered");
 			})
