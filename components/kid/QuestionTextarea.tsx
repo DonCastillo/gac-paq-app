@@ -39,6 +39,7 @@ const QuestionTextarea = ({
 				multiline={true}
 				numberOfLines={15}
 				maxLength={500}
+				keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 			/>
 		</View>
 	);

@@ -165,6 +165,7 @@ const RadioOption = ({
 						}}
 						defaultValue={defaultOtherInputValue}
 						placeholder={phrases?.specify}
+						keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 					/>
 				</View>
 			)}

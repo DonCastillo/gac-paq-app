@@ -338,6 +338,7 @@ const QuestionRadioImage = ({
 							}}
 							defaultValue={getUserSpecifiedOther(value, selected)}
 							placeholder={phrase?.specify}
+							keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 						/>
 					</View>
 				)}
