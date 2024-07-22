@@ -5,7 +5,7 @@ import { isOtherOption } from "utils/options.utils";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 
-import { getDevice } from "store/settings/settingsSlice";
+import { getDevice, getPhrases } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	text: string;
@@ -34,6 +34,7 @@ const Option = ({
 }: PropsInterface): React.ReactElement => {
 	const otherInputRef = useRef<TextInput>(null);
 	const device = useSelector(getDevice);
+	const phrases = useSelector(getPhrases);
 
 	return (
 		<View>
@@ -129,7 +130,7 @@ const Option = ({
 								selectHandler(`other (${value})`);
 							}}
 							defaultValue={defaultOtherInputValue}
-							placeholder="Please Specify"
+							placeholder={phrases?.specify}
 						/>
 					</View>
 				)}

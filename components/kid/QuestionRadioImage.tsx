@@ -22,7 +22,13 @@ import {
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
 
-import { getMode, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import {
+	getMode,
+	getColorTheme,
+	getCurrentPage,
+	getDevice,
+	getPhrases,
+} from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
@@ -40,6 +46,7 @@ const QuestionRadioImage = ({
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
+	const phrase = useSelector(getPhrases);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -330,7 +337,7 @@ const QuestionRadioImage = ({
 								selectHandler(`other (${value})`);
 							}}
 							defaultValue={getUserSpecifiedOther(value, selected)}
-							placeholder="Please Specify"
+							placeholder={phrase?.specify}
 						/>
 					</View>
 				)}

@@ -12,4 +12,5 @@ export interface PhrasePayloadInterface {
 	tryAgain: string;
 	feedback: string;
 	select: string;
+	specify: string;
 }
