@@ -20,6 +20,8 @@ import {
 import { proceedPage } from "utils/navigation.utils";
 import { translatePage } from "utils/translate.utils";
 import type { SectionInterface } from "interface/payload.type";
+import AnimatedView from "components/AnimatedView";
+import FadeUpView from "components/animation/FadeUpView";
 
 const QuestionIntroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -29,6 +31,7 @@ const QuestionIntroKid = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
+	const backgroundImage = getImageBackground();
 
 	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -58,46 +61,54 @@ const QuestionIntroKid = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
+	// if (currentPage.screen !== "question_intro") return <></>
 	return (
-		<View style={styles.container}>
-			<ImageBackdrop
-				source={getImageBackground()}
-				key={currentPageNumber}
-			/>
-			<View
-				style={[
-					styles.headingPanel,
-					{
-						backgroundColor: color200,
-						maxWidth: device.isTablet ? 400 : "100%",
-						minHeight: device.isTablet ? "100%" : 220,
-					},
-				]}
-			>
-				<ScrollView>
-					<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
-					<Text
-						style={{
-							...styles.headingText,
-							fontSize: moderateScale(
-								device.isTablet ? 20 : 27,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? 25 : 32,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-						}}
-					>
-						{translatedPage.heading}
-					</Text>
-				</ScrollView>
+		<AnimatedView>
+			<View style={styles.container}>
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						key={currentPageNumber}
+					/>
+				)}
+
+				<View
+					style={[
+						styles.headingPanel,
+						{
+							backgroundColor: color200,
+							maxWidth: device.isTablet ? 400 : "100%",
+							minHeight: device.isTablet ? "100%" : 220,
+						},
+					]}
+				>
+					<ScrollView>
+						<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
+						<Text
+							style={{
+								...styles.headingText,
+								fontSize: moderateScale(
+									device.isTablet ? 20 : 27,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet ? 25 : 32,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+							}}
+						>
+							{translatedPage.heading}
+						</Text>
+					</ScrollView>
+				</View>
+				<Main>
+					<BottomMain>
+						<></>
+					</BottomMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
 			</View>
-			<Main>
-				<BottomMain></BottomMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-			</Main>
-		</View>
+		</AnimatedView>
 	);
 };
 

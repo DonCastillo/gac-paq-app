@@ -19,3 +19,11 @@ web-build/
 # environment variables
 .env
 .env.production
+
+android/
+
+ios/
+
+finalresponses.json
+
+store/responses.json

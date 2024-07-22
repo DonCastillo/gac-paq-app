@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { getScreen } from "utils/screen.utils";
 import KeyboardSafeview from "components/KeyboardSafeview";
 import { View } from "react-native";
@@ -39,9 +39,13 @@ const RegularPageScreen = (): React.ReactElement => {
 		dispatch(setColorTheme(currentPage.sectionNumber ?? 0));
 	};
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		changeComponent();
 		changeColor();
+
+		return () => {
+			setComponent(<></>);
+		};
 	}, [currentPageNumber, currentPage, mode]);
 
 	return (

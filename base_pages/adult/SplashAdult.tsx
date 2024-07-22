@@ -9,6 +9,7 @@ import BottomMain from "components/orientation/BottomMain";
 import BGLinearGradient from "components/BGLinearGradient";
 import { useSelector } from "react-redux";
 import { getColorTheme } from "store/settings/settingsSlice";
+import AnimatedView from "components/AnimatedView";
 
 const SplashAdult = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
@@ -27,27 +28,29 @@ const SplashAdult = (): React.ReactElement => {
 			<BGLinearGradient />
 			<Main>
 				<BottomMain>
-					<Heading
-						customStyle={{
-							textAlign: "center",
-							fontSize: 90,
-						}}
-					>
-						gacpaq
-					</Heading>
-					<Paragraph
-						customStyle={{
-							color: "#fff",
-							fontSize: 20,
-							lineHeight: 23.6,
-							textAlign: "center",
-						}}
-					>
-						The global adolescent and children activity questionnaire
-					</Paragraph>
-					<View style={styles.progressContainer}>
-						<ProgressBar />
-					</View>
+					<AnimatedView style={{ flex: 0 }}>
+						<Heading
+							customStyle={{
+								textAlign: "center",
+								fontSize: 90,
+							}}
+						>
+							gacpaq
+						</Heading>
+						<Paragraph
+							customStyle={{
+								color: "#fff",
+								fontSize: 20,
+								lineHeight: 23.6,
+								textAlign: "center",
+							}}
+						>
+							The global adolescent and children activity questionnaire
+						</Paragraph>
+						<View style={styles.progressContainer}>
+							<ProgressBar />
+						</View>
+					</AnimatedView>
 				</BottomMain>
 			</Main>
 		</View>

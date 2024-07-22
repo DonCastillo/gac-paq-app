@@ -17,31 +17,31 @@ const S4Q2: QuestionRadioPayloadInterface = {
 			adult_label: "How many days did your child use this mode in the past week?",
 			choices: [
 				{
-					label: "1 Day",
+					label: "1 day",
 					value: "1",
 				},
 				{
-					label: "2 Days",
+					label: "2 days",
 					value: "2",
 				},
 				{
-					label: "3 Days",
+					label: "3 days",
 					value: "3",
 				},
 				{
-					label: "4 Days",
+					label: "4 days",
 					value: "4",
 				},
 				{
-					label: "5 Days",
+					label: "5 days",
 					value: "5",
 				},
 				{
-					label: "6 Days",
+					label: "6 days",
 					value: "6",
 				},
 				{
-					label: "7 Days",
+					label: "7 days",
 					value: "7",
 				},
 			],
@@ -131,31 +131,31 @@ const S4Q2: QuestionRadioPayloadInterface = {
 				"Combien de jours ton enfant a-t-il (elle) utilisé ce moyen de transport au cours de la dernière semaine?",
 			choices: [
 				{
-					label: "1 Jour",
+					label: "1 jour",
 					value: "1",
 				},
 				{
-					label: "2 Jours",
+					label: "2 jours",
 					value: "2",
 				},
 				{
-					label: "3 Jours",
+					label: "3 jours",
 					value: "3",
 				},
 				{
-					label: "4 Jours",
+					label: "4 jours",
 					value: "4",
 				},
 				{
-					label: "5 Jours",
+					label: "5 jours",
 					value: "5",
 				},
 				{
-					label: "6 Jours",
+					label: "6 jours",
 					value: "6",
 				},
 				{
-					label: "7 Jours",
+					label: "7 jours",
 					value: "7",
 				},
 			],

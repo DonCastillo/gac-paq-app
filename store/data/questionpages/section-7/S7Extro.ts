@@ -19,7 +19,7 @@ const S7Extro: ExtroPayloadInterface = {
 			subheading: "",
 		},
 		"fr-CA": {
-			heading: "Section 7 Complète!",
+			heading: "Section complétée!",
 			subheading: "",
 		},
 	},

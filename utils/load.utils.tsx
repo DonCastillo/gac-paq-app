@@ -48,6 +48,8 @@ const loadPhrases = (): void => {
 	const introductionPhrase = store.getState().questions.introductionPhrase;
 	const tryAgainPhrase = store.getState().questions.tryAgainPhrase;
 	const feedbackPhrase = store.getState().questions.feedbackPhrase;
+	const selectPhrase = store.getState().questions.selectPhrase;
+	const pleaseSpecifyPhrase = store.getState().questions.pleaseSpecifyPhrase;
 
 	store.dispatch(
 		setPhrases({
@@ -57,6 +59,8 @@ const loadPhrases = (): void => {
 			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
 			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
 			feedback: translatePhrase(feedbackPhrase, language) ?? PhraseLabel.Feedback,
+			select: translatePhrase(selectPhrase, language) ?? PhraseLabel.Select,
+			specify: translatePhrase(pleaseSpecifyPhrase, language) ?? PhraseLabel.PleaseSpecify,
 		}),
 	);
 };

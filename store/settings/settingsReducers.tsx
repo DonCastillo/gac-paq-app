@@ -19,6 +19,7 @@ import type {
 	SettingsFuncType,
 	SetNarrationsFuncType,
 	AddNarrationsFuncType,
+	SetIsConnectedFuncType,
 } from "interface/function.type";
 import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
@@ -70,6 +71,10 @@ const addNarration: AddNarrationsFuncType = (state, action) => {
 
 const setSectionTitles: SetSectionTitlesFuncType = (state, action) => {
 	state.sectionTitles = action.payload;
+};
+
+const setIsConnected: SetIsConnectedFuncType = (state, action) => {
+	state.isConnected = action.payload;
 };
 
 const skipPage: SkipPageFuncType = (state, action) => {
@@ -188,4 +193,5 @@ export default {
 	removeFeedbackPages,
 	reset,
 	setStartDateTime,
+	setIsConnected,
 };

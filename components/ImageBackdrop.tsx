@@ -6,13 +6,16 @@ interface Props {
 	opacity?: number;
 }
 const ImageBackdrop = ({ source, opacity }: Props): React.ReactElement => {
-	return (
-		<ImageBackground
-			source={source}
-			resizeMode="cover"
-			style={[styles.bgImage, { opacity: opacity ?? 1 }]}
-		></ImageBackground>
-	);
+	if (source !== null && source !== undefined && source !== "") {
+		return (
+			<ImageBackground
+				source={source}
+				resizeMode="cover"
+				style={[styles.bgImage, { opacity: opacity ?? 1 }]}
+			></ImageBackground>
+		);
+	}
+	return <></>;
 };
 
 export default ImageBackdrop;

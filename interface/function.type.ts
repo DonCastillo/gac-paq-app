@@ -25,6 +25,7 @@ export type AddNarrationsFuncType = (state: SettingsSliceInterface, action: Payl
 export type SkipPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;
 export type AddPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ key: number; page: PageIndexInterface }>) => void;
 export type SetPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<number, PageIndexInterface>>) => void;
+export type SetIsConnectedFuncType = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type AddSectionTotalPagesFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ sectionNumber: number; totalPages: number }>) => void;
 export type SetKeyboardState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SettingsFuncType = (state: SettingsSliceInterface) => void;

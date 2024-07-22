@@ -11,7 +11,9 @@ import type { FinalResponseType } from "interface/union.type";
 import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
 import { store } from "store/store";
 import { falsyValue } from "./utils.utils";
-import { setEndDateTime } from "store/settings/settingsSlice";
+import LocalStorageKey from "constants/localstorage.enum";
+import { readData, removeData, storeData } from "utils/localstorage.utils";
+import { submitResponse } from "utils/api.utils";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -158,4 +160,67 @@ const addResponse = (value: string | null): void => {
 		}),
 	);
 };
-export { getResponse, sanitizeResponse, getResponseByIdent, addResponse };
+
+const retrieveResponseFromStorage = async (): Promise<FinalResponseType[] | null> => {
+	const existingResponses: FinalResponseType[] | null = await readData(LocalStorageKey.responses)
+		.then((responses) => {
+			if (responses !== null && responses !== undefined && responses !== "") {
+				return responses as FinalResponseType[];
+			}
+			return null;
+		})
+		.catch(() => {
+			return [];
+		});
+
+	return existingResponses;
+};
+
+const queueResponseToStorage = async (response: FinalResponseType): Promise<void> => {
+	let mergedResponses: FinalResponseType[] = [];
+
+	const existingResponses = await retrieveResponseFromStorage();
+
+	if (existingResponses !== null) {
+		mergedResponses = [response, ...existingResponses];
+	} else {
+		mergedResponses = [response];
+	}
+
+	await storeData(LocalStorageKey.responses, mergedResponses);
+};
+
+const sendResponseQueue = async (): Promise<void> => {
+	while (true) {
+		try {
+			const existingResponses = await retrieveResponseFromStorage();
+			if (
+				existingResponses !== null &&
+				existingResponses !== undefined &&
+				existingResponses.length > 0
+			) {
+				const responseToSend = existingResponses.pop();
+
+				if (responseToSend !== null && responseToSend !== undefined) {
+					await submitResponse(responseToSend);
+					await removeData(LocalStorageKey.responses);
+					await storeData(LocalStorageKey.responses, existingResponses);
+				}
+			} else {
+				break;
+			}
+		} catch (error) {
+			throw new Error(error);
+		}
+	}
+};
+
+export {
+	getResponse,
+	sanitizeResponse,
+	getResponseByIdent,
+	addResponse,
+	queueResponseToStorage,
+	retrieveResponseFromStorage,
+	sendResponseQueue,
+};

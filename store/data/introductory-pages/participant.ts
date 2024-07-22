@@ -43,10 +43,10 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionInput,
 			heading: "Bienvenue!",
-			label: "Veuillez entrer votre identifiant de participant",
-			kid_label: "Veuillez entrer votre identifiant de participant",
-			adult_label: "Veuillez entrer votre identifiant de participant",
-			placeholder: "Numéro de série de l'identifiant du participant",
+			label: "Veuillez entrer votre numéro de participant",
+			kid_label: "Veuillez entrer votre numéro de participant",
+			adult_label: "Veuillez entrer votre numéro de participant",
+			placeholder: "Numéro d'identification du participant",
 		},
 	},
 };

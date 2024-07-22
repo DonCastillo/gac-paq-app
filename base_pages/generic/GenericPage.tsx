@@ -6,7 +6,6 @@ import Heading from "components/Heading";
 import Paragraph from "components/Paragraph";
 import Navigation from "components/Navigation";
 import BGLinearGradient from "components/BGLinearGradient";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ScrollContainer from "components/ScrollContainer";
 import { GeneralStyle } from "styles/general";

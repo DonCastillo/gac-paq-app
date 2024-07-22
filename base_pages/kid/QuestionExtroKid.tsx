@@ -12,15 +12,16 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive.utils";
+import { moderateScale, verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
-import { sanitizeResponse } from "utils/response.utils";
+import { sanitizeResponse, queueResponseToStorage } from "utils/response.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsConnected,
 	getLanguage,
 	getSectionTotalPages,
 	prevPage,
@@ -30,6 +31,7 @@ import { resetResponses } from "store/responses/responsesSlice";
 import { translatePage } from "utils/translate.utils";
 import type { ExtroInterface } from "interface/payload.type";
 import { submitResponse } from "utils/api.utils";
+import AnimatedView from "components/AnimatedView";
 
 const QuestionExtroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -38,6 +40,8 @@ const QuestionExtroKid = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
+	const isConnected = useSelector(getIsConnected);
+	// const isConnected = false;
 
 	// state
 	const [loading, setLoading] = useState<boolean>(false);
@@ -86,10 +90,17 @@ const QuestionExtroKid = (): React.ReactElement => {
 		try {
 			setLoading(true);
 			const sanitizedResponses = sanitizeResponse();
-			await submitResponse(sanitizedResponses);
-			dispatch(resetResponses());
-			navigation.navigate("SuccessScreen" as never);
+			if (isConnected) {
+				await submitResponse(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "online" });
+			} else {
+				await queueResponseToStorage(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "offline" });
+			}
 		} catch (error) {
+			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
 			setLoading(false);
@@ -114,34 +125,36 @@ const QuestionExtroKid = (): React.ReactElement => {
 					<Toolbar />
 
 					<CenterMain>
-						<Heading
-							customStyle={{
-								...GeneralStyle.kid.extroPageHeading,
-								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: device.isTablet ? 50 : 40,
-								lineHeight: device.isTablet ? 55 : 45,
-							}}
-						>
-							{translatedPage.heading}
-						</Heading>
-						<Paragraph
-							customStyle={{
-								...GeneralStyle.kid.extroPageParagraph,
-								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: device.isTablet ? 25 : 20,
-								lineHeight: device.isTablet ? 35 : 27,
-							}}
-						>
-							{translatedPage.subheading}
-						</Paragraph>
-						<View style={styles.imageContainer}>
-							<ImageComponent
-								backgroundColor={"red"}
-								height={verticalScale(320, device.screenHeight)}
-								padding={0}
-								margin={0}
-							/>
-						</View>
+						<AnimatedView style={{ flex: 0, alignItems: "center", justifyContent: "center" }}>
+							<Heading
+								customStyle={{
+									...GeneralStyle.kid.extroPageHeading,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 35 : 30, device.screenWidth),
+								}}
+							>
+								{translatedPage.heading}
+							</Heading>
+							<Paragraph
+								customStyle={{
+									...GeneralStyle.kid.extroPageParagraph,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 27 : 27, device.screenWidth),
+								}}
+							>
+								{translatedPage.subheading}
+							</Paragraph>
+							<View style={styles.imageContainer}>
+								<ImageComponent
+									backgroundColor={"white"}
+									height={verticalScale(device.isTablet ? 320 : 290, device.screenHeight)}
+									padding={0}
+									margin={0}
+								/>
+							</View>
+						</AnimatedView>
 					</CenterMain>
 					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
 				</Main>

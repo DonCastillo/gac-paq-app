@@ -37,6 +37,7 @@ import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk.";
 import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
+import AnimatedView from "components/AnimatedView";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -46,6 +47,7 @@ const GenericLanguage = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const isLoading = useSelector(getIsLoading);
 	const phrases = useSelector(getPhrases);
+	const backgroundImage = getImageBackground();
 
 	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -108,10 +110,12 @@ const GenericLanguage = (): React.ReactElement => {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />
-				<ImageBackdrop
-					source={getImageBackground()}
-					key={currentPageNumber}
-				/>
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						key={currentPageNumber}
+					/>
+				)}
 				<Main>
 					<ProgressBarAdult />
 					<CenterMain>

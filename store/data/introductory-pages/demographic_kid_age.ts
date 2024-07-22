@@ -117,19 +117,19 @@ const DemographicKidPage: QuestionDropdownPayloadInterface = {
 			adult_label: "Quel âge avez-vous?",
 			choices: [
 				{
-					label: "8 ans",
+					label: "Huit ans",
 					value: "8",
 				},
 				{
-					label: "9 ans",
+					label: "Neuf ans",
 					value: "9",
 				},
 				{
-					label: "10 ans",
+					label: "Dix ans",
 					value: "10",
 				},
 				{
-					label: "11 ans",
+					label: "Onze ans",
 					value: "11",
 				},
 			],

@@ -52,6 +52,7 @@ import type {
 	QuestionSliderInterface,
 	QuestionTextareaInterface,
 } from "interface/payload.type";
+import AnimatedView from "components/AnimatedView";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -257,6 +258,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
+	// if (currentPage.screen !== "question_single") return <></>
 	return (
 		<View style={styles.container}>
 			{background !== null && background}
@@ -265,33 +267,35 @@ const QuestionSingleKid = (): React.ReactElement => {
 				{!isKeyboardOpen && <Toolbar />}
 
 				<TopMain>
-					<View
-						style={[
-							{
-								marginVertical: verticalScale(5, device.screenHeight),
-								paddingHorizontal: device.isTablet ? 20 : 0,
-								...styles.mainContainer,
-							},
-						]}
-					>
-						{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
-						{!isKeyboardOpen && (
-							<View style={{ marginBottom: 9 }}>
-								<QuestionLabel
-									textStyle={GeneralStyle.kid.questionQuestionLabel}
-									customStyle={{
-										marginBottom: 7,
-									}}
-								>
-									{questionLabel}
-								</QuestionLabel>
-								<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-									{questionSubLabel}
-								</QuestionSubLabel>
-							</View>
-						)}
-						<View style={styles.questionComponentContainer}>{questionComponent}</View>
-					</View>
+					<AnimatedView key={currentPageNumber}>
+						<View
+							style={[
+								{
+									marginVertical: verticalScale(5, device.screenHeight),
+									paddingHorizontal: device.isTablet ? 20 : 0,
+									...styles.mainContainer,
+								},
+							]}
+						>
+							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
+							{!isKeyboardOpen && (
+								<View style={{ marginBottom: 9 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.kid.questionQuestionLabel}
+										customStyle={{
+											marginBottom: 7,
+										}}
+									>
+										{questionLabel}
+									</QuestionLabel>
+									<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+										{questionSubLabel}
+									</QuestionSubLabel>
+								</View>
+							)}
+							<View style={styles.questionComponentContainer}>{questionComponent}</View>
+						</View>
+					</AnimatedView>
 				</TopMain>
 				{!isKeyboardOpen && <Navigation>{buttonComponent !== null && buttonComponent}</Navigation>}
 			</Main>

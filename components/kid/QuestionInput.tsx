@@ -2,7 +2,7 @@ import React from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
 import { useSelector } from "react-redux";
-import { getColorTheme } from "store/settings/settingsSlice";
+import { getColorTheme, getDevice } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -16,6 +16,8 @@ const QuestionInput = ({
 	placeholder,
 }: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
+	const device = useSelector(getDevice);
+
 	const { color100 } = colorTheme;
 
 	const changeHandler = (value: string): void => {
@@ -31,6 +33,7 @@ const QuestionInput = ({
 				onChangeText={changeHandler}
 				placeholder={placeholder ?? ""}
 				defaultValue={selectedValue ?? ""}
+				keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 			/>
 		</View>
 	);

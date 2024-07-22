@@ -1,4 +1,6 @@
-const Transportation9_11 = {
+import type { Transportation9_11Interface } from "interface/question17";
+
+const Transportation9_11: Transportation9_11Interface = {
 	"en-CA": {
 		kid: {
 			wheel: {
@@ -92,38 +94,38 @@ const Transportation9_11 = {
 				both: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran la escuela o el trabajo?",
 			},
 		},
-		"fr-CA": {
-			kid: {
-				wheel: {
-					none: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits?",
-					school:
-						"En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que l'école?",
-					work: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que le travail?",
-					both: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que l'école ou le travail?",
-				},
-				walk: {
-					none: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits?",
-					school:
-						"En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que l'école?",
-					work: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que le travail?",
-					both: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que l'école ou le travail?",
-				},
+	},
+	"fr-CA": {
+		kid: {
+			wheel: {
+				none: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits?",
+				school:
+					"En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que l'école?",
+				work: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que le travail?",
+				both: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que l'école ou le travail?",
 			},
-			adult: {
-				wheel: {
-					none: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits?",
-					school:
-						"En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école?",
-					work: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que le travail?",
-					both: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école ou le travail?",
-				},
-				walk: {
-					none: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits?",
-					school:
-						"En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que l'école?",
-					work: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que le travail?",
-					both: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que l'école ou le travail?",
-				},
+			walk: {
+				none: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits?",
+				school:
+					"En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que l'école?",
+				work: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que le travail?",
+				both: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que l'école ou le travail?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits?",
+				school:
+					"En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école?",
+				work: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que le travail?",
+				both: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école ou le travail?",
+			},
+			walk: {
+				none: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits?",
+				school:
+					"En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que l'école?",
+				work: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que le travail?",
+				both: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que l'école ou le travail?",
 			},
 		},
 	},

@@ -19,8 +19,8 @@ const S6Extro: ExtroPayloadInterface = {
 			subheading: "¡Solo falta una!",
 		},
 		"fr-CA": {
-			heading: "Section terminée!",
-			subheading: "Il ne reste qu'une seule section!",
+			heading: "Section complétée!",
+			subheading: "Plus qu'une section à faire!",
 		},
 	},
 };

@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { moderateScale } from "utils/responsive.utils";
 import { isOtherOption } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getDevice } from "store/settings/settingsSlice";
+import { getColorTheme, getDevice, getPhrases } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;
@@ -29,6 +29,7 @@ const CheckboxOption = ({
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
+	const phrases = useSelector(getPhrases);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 
@@ -137,7 +138,8 @@ const CheckboxOption = ({
 							onPress(`other (${value})`);
 						}}
 						defaultValue={defaultOtherInputValue}
-						placeholder={"Please Specify"}
+						placeholder={phrases?.specify}
+						keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
 					/>
 				</View>
 			)}
