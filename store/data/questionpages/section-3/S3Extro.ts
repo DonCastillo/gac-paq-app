@@ -10,6 +10,10 @@ const S3Extro: ExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only four more to go!",
 		},
+		"sv-SE": {
+			heading: "Du är klar med denna sektion!",
+			subheading: "Bara fyra kvar",
+		},
 		"zh-CN": {
 			heading: "部分完成!",
 			subheading: "只剩下四个!",
