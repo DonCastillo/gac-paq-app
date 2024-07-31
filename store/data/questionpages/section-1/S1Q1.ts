@@ -26,6 +26,23 @@ const S1Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 1",
+			label: "Har du varit i skolan den senaste veckan?",
+			kid_label: "Har du varit i skolan den senaste veckan?",
+			adult_label: "Har ditt barn varit i skolan den senaste veckan?",
+			choices: [
+				{
+					label: "Ja",
+					value: "yes",
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 1",

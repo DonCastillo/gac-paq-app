@@ -46,6 +46,43 @@ const S1Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 6",
+			label: "Hur mycket rast har du under en vanlig skoldag?",
+			kid_label: "Hur mycket rast har du under en vanlig skoldag?",
+			adult_label: "Hur mycket rast har ditt barn under en vanlig skoldag?",
+			kid_sublabel:
+				"både rast och lunchrast.  Plussa ihop tiden - till exempel två 15-minuters raster och 30 minuter lunchrast blir 60 minuter",
+			adult_sublabel:
+				"både rast och lunchrast.  Plussa ihop tiden - till exempel två 15-minuters raster och 30 minuter lunchrast blir 60 minuter",
+			choices: [
+				{
+					label: "0 minuter",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 minuter",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 minuter ",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minuter",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Mer än 60 minuter",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Vet ej",
+					value: "Don't know",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 6",

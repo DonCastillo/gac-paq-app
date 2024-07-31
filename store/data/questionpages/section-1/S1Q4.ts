@@ -38,6 +38,35 @@ const S1Q4: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 4",
+			label: "Hur långa är dina idrottslektioner?",
+			kid_label: "Hur långa är dina idrottslektioner?",
+			adult_label: "Hur långa är ditt barns idrottslektioner?",
+			choices: [
+				{
+					label: "Mindre än 30 minuter per lektion",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30-45 minuter per lektion",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46-60 minuter per lektion",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Över 60 minuter per lektion",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Vet ej",
+					value: "Don't know",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 4",

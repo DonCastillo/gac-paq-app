@@ -41,6 +41,35 @@ const S1Q5: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadioImage,
+			heading: "Fråga 5",
+			label: "Vilken av bilderna visar vad du gör mest av på idrottslektionen?",
+			kid_label: "Vilken av bilderna visar vad du gör mest av på idrottslektionen?",
+			adult_label: "Vilken av bilderna visar vad ditt barn gör mest av på idrottslektionen?",
+			choices: [
+				{
+					label: "Stillasittande",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Lätt ansträngning",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medel eller hög ansträngning",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Vet ej",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 5",

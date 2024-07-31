@@ -17,6 +17,14 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			adult_label: "How many physical education classes did your child have in the past week?",
 			max_value: 7,
 		},
+		"sv-SE": {
+			type: Question.QuestionSlider,
+			heading: "Fråga 3",
+			label: "Hur många idrottslektioner har du haft den senaste veckan?",
+			kid_label: "Hur många idrottslektioner har du haft den senaste veckan?",
+			adult_label: "Hur många idrottslektioner har ditt barn haft den senaste veckan?",
+			max_value: 7,
+		},
 		"zh-CN": {
 			type: Question.QuestionSlider,
 			heading: "问题 3",

@@ -87,9 +87,17 @@ const getImageBackground = (): any | null => {
 
 const getImageBackgroundStatus = (state: State): any | null => {
 	const settings = store.getState().settings;
-	const language = settings.language ?? "en-CA";
-	const region = language.split("-")[1].toUpperCase();
+	let language = settings.language ?? "en-CA";
+	let region = language.split("-")[1].toUpperCase();
 	const platform = settings.device.isTablet ? "tablet" : "phone";
+
+	// some languages don't have images yet
+	const blackListLanguages = ["sv-SE"];
+	if (blackListLanguages.includes(language)) {
+		language = "en-CA";
+		region = "CA";
+	}
+	
 
 	return StatusBackground[region][state][platform];
 };
@@ -97,9 +105,16 @@ const getImageBackgroundStatus = (state: State): any | null => {
 const getOptionImage = (image_ident: string): any | null => {
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
-	const language = settings.language ?? "en-CA";
-	const region = language.split("-")[1].toUpperCase();
+	let language = settings.language ?? "en-CA";
+	let region = language.split("-")[1].toUpperCase();
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
+
+	// some languages don't have images yet
+	const blackListLanguages = ["sv-SE"];
+	if (blackListLanguages.includes(language)) {
+		language = "en-CA";
+		region = "CA";
+	}
 
 	const doNotKnowImage = Images.generic.doNotKnow;
 	const kidWalkingImage = Images.kids.options.transportation.walking;
