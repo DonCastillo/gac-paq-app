@@ -48,6 +48,46 @@ const S4Q10: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 17d",
+			label:
+				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till andra platser än skolan eller arbetet under den senaste veckan?",
+			kid_label:
+				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till andra platser än skolan eller arbetet under den senaste veckan?",
+			adult_label:
+				"Hur många dagar cyklade ditt barn (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) till andra platser än skolan eller arbetet under den senaste veckan?",
+			choices: [
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar",
+					value: "5",
+				},
+				{
+					label: "6 dagar",
+					value: "6",
+				},
+				{
+					label: "7 dagar",
+					value: "7",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17d",

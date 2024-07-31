@@ -36,6 +36,34 @@ const S4Q11: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 17e",
+			label:
+				"Hur mycket tid spenderade du på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			kid_label:
+				"Hur mycket tid spenderade du på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			adult_label:
+				"Hur mycket tid spenderade ditt barn på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			choices: [
+				{
+					label: "10 minuter eller mindre",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minuter",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minuter",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Mer än 30 minuter",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17e",

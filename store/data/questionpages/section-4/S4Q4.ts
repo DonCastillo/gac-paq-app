@@ -54,6 +54,50 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadioImage,
+			heading: "Fråga 16",
+			label: "Hur tog du dig till arbetet (eller ditt ideella arbete) den senaste veckan?",
+			kid_label: "Hur tog du dig till arbetet (eller ditt ideella arbete) den senaste veckan?",
+			adult_label: "How did your child go to work in the past week?",
+			kid_sublabel: "Välj det du oftast gjorde.",
+			adult_sublabel: "Välj det han/hon oftast gjorde.",
+			choices: [
+				{
+					label: "Gång",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Cykel",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+						adult: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+					},
+				},
+				{
+					label: "Kollektivtrafik",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+						adult: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+					},
+				},
+				{
+					label: "Bil, taxi eller moped",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Annat, vilket?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 16",

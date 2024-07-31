@@ -34,6 +34,31 @@ const S4Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 15c",
+			label: "Hur lång tid tar det vanligtvis för dig att ta dig till skolan?",
+			kid_label: "Hur lång tid tar det vanligtvis för dig att ta dig till skolan?",
+			adult_label: "Hur lång tid tar det vanligtvis för ditt barn att ta sig till skolan?",
+			choices: [
+				{
+					label: "10 minuter eller mindre",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minuter",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minuter",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Mer än 30 minuter",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 15c",

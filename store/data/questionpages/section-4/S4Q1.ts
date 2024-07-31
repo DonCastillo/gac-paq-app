@@ -68,6 +68,64 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadioImage,
+			heading: "Fråga 15",
+			label: "Hur tog du dig till skolan den senaste veckan?",
+			kid_label: "Hur tog du dig till skolan den senaste veckan?",
+			adult_label: "Hur tog sig ditt barn till skolan den senaste veckan?",
+			kid_sublabel: "Välj det du oftast gjorde.",
+			adult_sublabel: "Välj det han/hon oftast gjorde.",
+			choices: [
+				{
+					label: "Gång",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Cykel",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+						adult: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+					},
+				},
+				{
+					label: "Skolbuss",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Kollektivtrafik",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+						adult: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+					},
+				},
+				{
+					label: "Bil, taxi eller moped",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Annat, vilket?",
+					value: "Other",
+					image_ident: "other",
+				},
+				{
+					label: "Jag går i skolan hemma ",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Jag går i skolan hemma",
+						adult: "Mitt barn går i skolan hemma",
+					},
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 15",

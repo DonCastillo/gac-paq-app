@@ -43,6 +43,41 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionCheckbox,
+			heading: "Fråga 17",
+			label:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			kid_label:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			adult_label:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			kid_sublabel: "Välj alla alternativ du gjort.",
+			adult_sublabel: "Välj alla alternativ ditt barn har gjort.",
+			choices: [
+				{
+					label: "Ja, jag har gått",
+					value: "Walked",
+					label_mode: {
+						kid: "Ja, jag har gått",
+						adult: "Ja, mitt barn har gått",
+					},
+				},
+				{
+					label: "Ja jag har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Ja jag har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
+						adult:
+							"Ja mitt barn har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
+					},
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
 			heading: "问题 17",

@@ -38,6 +38,37 @@ const S4Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 16c",
+			label: "Hur lång tid tar det vanligtvis dig att ta dig till arbetet (eller ideella arbete)?",
+			kid_label:
+				"Hur lång tid tar det vanligtvis dig att ta dig till arbetet (eller ideella arbete)?",
+			adult_label:
+				"Hur lång tid tar det vanligtvis ditt barn att ta sig till arbetet (eller ideella arbete)?",
+			choices: [
+				{
+					label: "10 minuter eller mindre",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minuter",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minuter",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minuter",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Mer än 60 minuter",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 16c",

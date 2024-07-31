@@ -47,6 +47,46 @@ const S4Q8: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 17b",
+			label:
+				"Hur många dagar gick du till andra platser än skolan eller arbetet under sen senaste veckan?",
+			kid_label:
+				"Hur många dagar gick du till andra platser än skolan eller arbetet under sen senaste veckan?",
+			adult_label:
+				"Hur många dagar gick ditt barn till andra platser än skolan eller arbetet under sen senaste veckan?",
+			choices: [
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar",
+					value: "5",
+				},
+				{
+					label: "6 dagar",
+					value: "6",
+				},
+				{
+					label: "7 dagar",
+					value: "7",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17b",
