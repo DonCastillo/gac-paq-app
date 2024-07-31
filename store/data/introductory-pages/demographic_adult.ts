@@ -58,6 +58,55 @@ const DemographicAdultPage: QuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "Hur gammalt är ditt barn?",
+			kid_label: "Hur gammalt är ditt barn?",
+			adult_label: "Hur gammalt är ditt barn?",
+			choices: [
+				{
+					label: "8 år",
+					value: "8",
+				},
+				{
+					label: "9 år",
+					value: "9",
+				},
+				{
+					label: "10 år",
+					value: "10",
+				},
+				{
+					label: "11 år",
+					value: "11",
+				},
+				{
+					label: "12 år",
+					value: "12",
+				},
+				{
+					label: "13 år",
+					value: "13",
+				},
+				{
+					label: "14 år",
+					value: "14",
+				},
+				{
+					label: "15 år",
+					value: "15",
+				},
+				{
+					label: "16 år",
+					value: "16",
+				},
+				{
+					label: "17 år",
+					value: "17",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionDropdown,
 			heading: "ยินดีต้อนรับ!",

@@ -9,12 +9,21 @@ const AboutPage: PagePayloadInterface = {
 	type: Screen.Page,
 	translations: {
 		"en-CA": {
-			heading: "Welcome To \nGAC-PAQ",
+			heading: "Welcome to \nGAC-PAQ",
 			description: "",
 			description_mode: {
 				kid: "For this survey, we want to measure how active you were in the past week (including weekdays and the past weekend).\n\nPhysical activity can take place in many ways including in your free time, doing sports, playing, when going places (like school, parks, shops, and friends' or relatives' houses), at school, during household chores and work. The app will guide you through each way one by one.\n\nWe will ask you about different efforts of physical activity. When we say “medium or hard effort” we mean activities that make your heart beat faster and get you out of breath some of the time. [Examples shown in the app may include soccer/football, swimming, running, skipping, skating, cross-country skiing, weight training, or cycling].\n\nWhen we say 'easy effort', we mean activities that do not make you out of breath. Examples shown in the app may include slow walking, caring for pets or farm animals, playing in a sandbox, and many household chores.\n\nThere are no right and wrong answers. Please answer all the questions the best you can.",
 				adult:
 					"For this survey, we want to measure how active your child was in the past week (including weekdays and weekend days).\n\nPhysical activity can take place in many ways including in your free time, doing sports, playing, when going places (like school, parks, shops, and friends' or relatives' houses), at school, during household chores and work. The app will guide you through each way one by one.\n\nWe will ask you about different efforts of physical activity. When we say 'medium or hard effort' we mean activities that make your heart beat faster and get you out of breath some of the time. [Examples shown in the app may include soccer/football, swimming, running, skipping, skating, cross-country skiing, weight training, or cycling].\n\nWhen we say 'easy effort', we mean activities that do not make you out of breath. Examples shown in the app may include slow walking, caring for pets or farm animals, playing in a sandbox, and many household chores.\n\nThere are no right and wrong answers. Please answer all the questions the best you can.",
+			},
+		},
+		"sv-SE": {
+			heading: "Välkommen till \nGAC-PAQ",
+			description: "",
+			description_mode: {
+				kid: "Vi vill undersöka hur aktiv du har varit under den senaste veckan (både veckodagar och helgen).\n\nFysisk aktivitet kan ske på många olika sätt. Till exempel på sin fritid så kan man gå på en sport, leka, ta sig till ställen (till exempel till skolan, en park, en butik eller vänners/släktingars hem). Man kan också vara aktiv på skolan, när man gör hushållssysslor eller när man arbetar. Appen kommer att guida dig genom varje typ av aktivitet, en i taget.\n\nVi kommer att fråga dig om olika ansträngningar av fysisk aktivitet. När vi säger 'medel eller hög ansträngning' så menar vi aktiviteter som får ditt hjärta att slå snabbare och får dig att bli andfådd.\n\nNär vi säger 'lätt ansträngning' menar vi aktiviteter som inte gör dig andfådd.\n\nDet finns inga svar som är rätt eller fel. Svara på alla frågor så gott du kan.",
+				adult:
+					"Vi undersöka hur aktiv ditt barn har varit under den senaste veckan (både veckodagar och helgen).\n\nFysisk aktivitet kan ske på många olika sätt. Till exempel på sin fritid så kan man gå på en sport, leka, ta sig till ställen (tex. till skolan, en park, en butik eller vänners/släktingars hem). Man kan också vara aktiv på skolan, när man gör hushållssysslor eller när man arbetar. Appen kommer att guida dig genom varje typ aktivitet, en i taget. \n\nVi kommer att fråga dig om olika ansträngningar av fysisk aktivitet. När vi säger 'medel eller hög ansträngning' så menar vi aktiviteter som får ditt hjärta att slå snabbare och får dig att bli andfådd. [Exempel som visas i appen kan vara fotboll, simning, löpning, hoppa hopprep, skridskoåkning, längdskidåkning, styrketräning eller cykling].\n\nNär vi säger 'lätt ansträngning' menar vi aktiviteter som inte gör dig andfådd. Exempel som visas i appen kan vara; långsam gång, ta hand om husdjur, lek i sandlåda eller hushållssysslor.\n\nDet finns inga svar som är rätt eller fel. Svara på alla frågor så gott du kan.",
 			},
 		},
 		"th-TH": {

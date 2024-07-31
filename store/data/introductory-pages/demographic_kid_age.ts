@@ -34,6 +34,31 @@ const DemographicKidPage: QuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionDropdown,
+			heading: "Välkommen!",
+			label: "Hur gammal är du?",
+			kid_label: "Hur gammal är du?",
+			adult_label: "Hur gammal är du?",
+			choices: [
+				{
+					label: "8 år",
+					value: "8",
+				},
+				{
+					label: "9 år",
+					value: "9",
+				},
+				{
+					label: "10 år",
+					value: "10",
+				},
+				{
+					label: "11 år",
+					value: "11",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionDropdown,
 			heading: "ยินดีต้อนรับ!",

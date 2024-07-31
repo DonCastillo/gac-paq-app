@@ -16,6 +16,14 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"sv-SE": {
+			type: Question.QuestionInput,
+			heading: "Välkommen!",
+			label: "Var god skriv in ditt studie ID",
+			kid_label: "Var god skriv in ditt studie ID",
+			adult_label: "Var god skriv in ditt studie ID",
+			placeholder: "Deltagarens studie ID",
+		},
 		"th-TH": {
 			type: Question.QuestionInput,
 			heading: "ยินดีต้อนรับ!",

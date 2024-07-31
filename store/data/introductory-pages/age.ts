@@ -37,6 +37,35 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionDropdown,
+			heading: "Välkommen!",
+			label: "Vem svarar på frågeformuläret?",
+			kid_label: "Vem svarar på frågeformuläret?",
+			adult_label: "Vem svarar på frågeformuläret?",
+			choices: [
+				{
+					label: "Barn",
+					value: "child",
+					sublabel: {
+						kid: "8-11 år",
+						adult: "8-11 år",
+					},
+				},
+				{
+					label: "Ungdom",
+					value: "teen",
+					sublabel: {
+						kid: "12-17 år",
+						adult: "12-17 år",
+					},
+				},
+				{
+					label: "Vårdnadshavare",
+					value: "adult",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionDropdown,
 			heading: "ยินดีต้อนรับ!",

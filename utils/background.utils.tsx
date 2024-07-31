@@ -33,12 +33,19 @@ import StatusBackground from "styles/images/background/status";
 const getImageBackground = (): any | null => {
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
-	const language = settings.language ?? "en-CA";
-	const region = language.split("-")[1].toUpperCase();
+	let language = settings.language ?? "en-CA";
+	let region = language.split("-")[1].toUpperCase();
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
 	const platform = settings.device.isTablet ? "tablet" : "phone";
 	const section = getSectionType(settings.currentPage.section ?? "question");
 	const screen = getScreenType(settings.currentPage.screen ?? "page");
+
+	// some languages don't have images yet
+	const blackListLanguages = ["sv-SE"];
+	if (blackListLanguages.includes(language)) {
+		language = "en-CA";
+		region = "CA";
+	}
 
 	if (section === Section.Intro) {
 		return GenericBackground[region][platform][ident];

@@ -15,6 +15,13 @@ const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
 		},
+		"sv-SE": {
+			type: Question.QuestionLanguage,
+			heading: "Välkommen!",
+			label: "Vilket språk talar du & Var är du?",
+			kid_label: "Vilket språk talar du & Var är du?",
+			adult_label: "Vilket språk talar du & Var är du?",
+		},
 		"th-TH": {
 			type: Question.QuestionLanguage,
 			heading: "ยินดีต้อนรับ!",
