@@ -37,6 +37,34 @@ const S2Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 10",
+			label:
+				"Under de dagar då du gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
+			kid_label:
+				"Under de dagar då du gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
+			adult_label:
+				"Under de dagar då ditt barn gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
+			choices: [
+				{
+					label: "15 minuter eller mindre per dag",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minuter per dag",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minuter per dag",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Över 60 minuter per dag",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 10",

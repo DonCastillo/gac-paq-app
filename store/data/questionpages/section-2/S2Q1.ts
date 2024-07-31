@@ -26,6 +26,26 @@ const S2Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 8",
+			label:
+				"Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			kid_label:
+				"Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			adult_label:
+				"Har ditt barn gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			choices: [
+				{
+					label: "Ja",
+					value: "yes",
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 8",

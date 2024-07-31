@@ -97,7 +97,6 @@ const getImageBackgroundStatus = (state: State): any | null => {
 		language = "en-CA";
 		region = "CA";
 	}
-	
 
 	return StatusBackground[region][state][platform];
 };
