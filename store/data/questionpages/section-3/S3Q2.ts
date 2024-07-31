@@ -39,6 +39,36 @@ const S3Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 13",
+			label: "Hur många timmar arbetade du (eller arbetade ideellt) under den senaste veckan?",
+			kid_label: "Hur många timmar arbetade du (eller arbetade ideellt) under den senaste veckan?",
+			adult_label:
+				"Hur många timmar arbetade ditt barn (eller arbetade ideellt) under den senaste veckan?",
+			choices: [
+				{
+					label: "Mindre än 1 timme per dag",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 till mindre än 2 timmar per dag",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 till mindre än 3 timmar per dag",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 till mindre än 4 timmar per dag",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 timmar eller mer per dag",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 13",

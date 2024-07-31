@@ -41,6 +41,36 @@ const S3Q3: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadioImage,
+			heading: "Fråga 14",
+			label: "Vilken av bilderna visar vad du gör mest när du arbetar eller arbetar ideellt?",
+			kid_label: "Vilken av bilderna visar vad du gör mest när du arbetar eller arbetar ideellt?",
+			adult_label:
+				"Vilken av bilderna visar vad ditt barn gör mest när han/hon arbetar eller arbetar ideellt?",
+			choices: [
+				{
+					label: "Stillasittande",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Lätt ansträngning",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medel eller hög ansträngning",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Vet ej",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 14",

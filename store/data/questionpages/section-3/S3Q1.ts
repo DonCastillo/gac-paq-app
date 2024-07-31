@@ -26,6 +26,23 @@ const S3Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 12",
+			label: "Har du arbetat eller arbetat ideellt under den senaste veckan?",
+			kid_label: "Har du arbetat eller arbetat ideellt under den senaste veckan?",
+			adult_label: "Har ditt barn arbetat eller arbetat ideellt under den senaste veckan?",
+			choices: [
+				{
+					label: "Ja",
+					value: "yes",
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 12",
