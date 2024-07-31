@@ -16,6 +16,15 @@ const S3Preamble: PreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"sv-SE": {
+			heading: "Arbete",
+			subheading: "Sektion 3",
+			description: {
+				kid: "Den här delen handlar om arbete eller ideellt arbete och är inte samma som hushållssysslor. Arbete betyder att man får pengar när man jobbar. Ideellt arbete betyder att man hjälper en organisation utan att få betalt, till exempel att sälja bingolotter åt sitt fotbollslag. Här kommer du få svara på frågor om både arbete och ideellt arbete ihop.",
+				adult:
+					"Den här delen handlar om arbete eller ideellt arbete och är inte samma som hushållssysslor. Arbete skulle vara om ditt barn eller ni som familj får pengar när barnet arbetar. Ideellt arbete betyder att man hjälper en organisation utan att få betalt, till exempel att sälja bingolotter åt sitt fotbollslag. Här kommer du få svara på frågor om både jobb och ideellt arbete ihop.",
+			},
+		},
 		"zh-CN": {
 			heading: "工作",
 			subheading: "第3部分",

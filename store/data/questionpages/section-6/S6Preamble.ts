@@ -16,6 +16,15 @@ const S6Preamble: PreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"sv-SE": {
+			heading: "Lek Och Fritid",
+			subheading: "Sektion 6",
+			description: {
+				kid: "Denna delen handlar om fysisk aktivitet (hur mycket du rör på dig) på fritiden t.ex om man leker eller spelar fotboll med kompisar efter skolan för att det är roligt (ej i lag). Organiserad idrott eller vad man gör på sina raster i skolan räknas inte in i den här delen. För nästa frågor, räkna inte med de aktiviteter som du nyss berättat för oss om.",
+				adult:
+					"Denna del handlar om fysisk aktivitet på ditt barns fritid tex vid lek eller spontanidrott. Detta är den tid som barnet själv bestämmer vad han/hon gör. För nästa frågor, räkna inte med de aktiviteter som du nyss berättat för oss om.",
+			},
+		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
 			subheading: "第6部分",

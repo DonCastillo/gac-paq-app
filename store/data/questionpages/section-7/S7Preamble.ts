@@ -16,6 +16,15 @@ const S7Preamble: PreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"sv-SE": {
+			heading: "Utomhus",
+			subheading: "Sektion 7",
+			description: {
+				kid: "Den här delen handlar om hur mycket tid du har varit utomhus. Det kan vara både när man är i skolan, gör sysslor, arbetar, tar sig till ställen och på fritiden. Här räknas både om man rör på sig eller är stillasittande (tillexempel om man har picknik, läser, eller grillar korv).",
+				adult:
+					"Den här delen handlar om hur mycket tid ditt barn har spenderat utomhus. Det kan vara både när barnet är i skolan, gör sysslor, arbetar, tar sig till ställen och på fritiden. Här räknas både om barnet rör på sig eller är stillasittande (tillexempel om man har picknik, läser, eller grillar korv).",
+			},
+		},
 		"zh-CN": {
 			heading: "室外",
 			subheading: "第7部分",

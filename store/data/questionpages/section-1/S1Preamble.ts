@@ -16,6 +16,15 @@ const S1Preamble: PreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"sv-SE": {
+			heading: "Skola",
+			subheading: "Sektion 1",
+			description: {
+				kid: "Den här delen handlar om vad du gör i skolan. Till exempel under idrottslektionen, dina raster och lunchen.",
+				adult:
+					"Den här delen handlar om vad ditt barn gör i skolan. Till exempel under idrottslektionen, raster och lunchen.",
+			},
+		},
 		"zh-CN": {
 			heading: "学校",
 			subheading: "第1部分",

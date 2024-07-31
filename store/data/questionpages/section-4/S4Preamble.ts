@@ -15,6 +15,14 @@ const S4Preamble: PreamblePayloadInterface = {
 				adult: "This section is about how your child goes to different places.",
 			},
 		},
+		"sv-SE": {
+			heading: "Transport",
+			subheading: "Sektion 4",
+			description: {
+				kid: "Den här delen handlar om hur du tar dig till platser.",
+				adult: "Den här delen handlar om hur ditt barn tar sig till platser.",
+			},
+		},
 		"zh-CN": {
 			heading: "交通",
 			subheading: "第4部分",

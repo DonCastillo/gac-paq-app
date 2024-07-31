@@ -16,6 +16,15 @@ const S5Preamble: PreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"sv-SE": {
+			heading: "Organiserade Aktiviteter",
+			subheading: "Sektion 5",
+			description: {
+				kid: "Den här delen handlar om organiserade aktiviteter och sporter. Det är saker som du kan göra efter skolan som tillexempel gå på simning, gymnastik, dans och karate.",
+				adult:
+					"Den här delen handlar om organiserade aktiviteter och sporter. Det är saker som ditt barn kan göra efter skolan som tillexempel gå på simning, gymnastik, dans och karate.",
+			},
+		},
 		"zh-CN": {
 			heading: "有组织的活动",
 			subheading: "第5部分",

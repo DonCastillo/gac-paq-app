@@ -16,6 +16,15 @@ const S2Preamble: PreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"sv-SE": {
+			heading: "Hushållssysslor",
+			subheading: "Sektion 2",
+			description: {
+				kid: "Den här delen handlar om hushållssysslor där du måste vara aktiv (röra på dig). Det kan till exempel vara hushållssysslor både inne och ute, trädgårdsarbete eller andra likande saker.",
+				adult:
+					"Den här delen handlar om hushållssysslor där ditt barn måste vara aktiv. Det kan till exempel vara hushållssysslor både inne och ute, trädgårdsarbete eller andra likande saker.",
+			},
+		},
 		"zh-CN": {
 			heading: "家务",
 			subheading: "第2部分",
