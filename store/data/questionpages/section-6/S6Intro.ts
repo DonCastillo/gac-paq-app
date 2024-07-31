@@ -10,6 +10,10 @@ const S6Intro: SectionPayloadInterface = {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
 		},
+		"sv-SE": {
+			heading: "Lek Och Fritid",
+			subheading: "Sektion 6",
+		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
 			subheading: "第6部分",

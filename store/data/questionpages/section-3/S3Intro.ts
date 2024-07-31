@@ -10,6 +10,10 @@ const S3Intro: SectionPayloadInterface = {
 			heading: "Work",
 			subheading: "Section 3",
 		},
+		"sv-SE": {
+			heading: "Arbete",
+			subheading: "Sektion 3",
+		},
 		"zh-CN": {
 			heading: "工作",
 			subheading: "第3部分",

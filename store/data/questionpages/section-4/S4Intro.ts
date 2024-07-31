@@ -10,6 +10,10 @@ const S4Intro: SectionPayloadInterface = {
 			heading: "Transportation",
 			subheading: "Section 4",
 		},
+		"sv-SE": {
+			heading: "Transport",
+			subheading: "Sektion 4",
+		},
 		"zh-CN": {
 			heading: "交通",
 			subheading: "第4部分",

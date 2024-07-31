@@ -10,6 +10,10 @@ const S2Intro: SectionPayloadInterface = {
 			heading: "Household Chores",
 			subheading: "Section 2",
 		},
+		"sv-SE": {
+			heading: "Hushållssysslor",
+			subheading: "Sektion 2",
+		},
 		"zh-CN": {
 			heading: "家务",
 			subheading: "第2部分",

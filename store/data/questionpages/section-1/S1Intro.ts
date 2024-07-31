@@ -10,6 +10,10 @@ const S1Intro: SectionPayloadInterface = {
 			heading: "School",
 			subheading: "Section 1",
 		},
+		"sv-SE": {
+			heading: "Skola",
+			subheading: "Sektion 1",
+		},
 		"zh-CN": {
 			heading: "学校",
 			subheading: "第1部分",

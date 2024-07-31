@@ -10,6 +10,10 @@ const S5Intro: SectionPayloadInterface = {
 			heading: "Organized Activities",
 			subheading: "Section 5",
 		},
+		"sv-SE": {
+			heading: "Organiserade Aktiviteter",
+			subheading: "Sektion 5",
+		},
 		"zh-CN": {
 			heading: "有组织的活动",
 			subheading: "第5部分",

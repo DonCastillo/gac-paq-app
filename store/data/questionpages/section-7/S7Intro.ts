@@ -10,6 +10,10 @@ const S7Intro: SectionPayloadInterface = {
 			heading: "Outdoors",
 			subheading: "Section 7",
 		},
+		"sv-SE": {
+			heading: "Utomhus",
+			subheading: "Sektion 7",
+		},
 		"zh-CN": {
 			heading: "室外",
 			subheading: "第7部分",
