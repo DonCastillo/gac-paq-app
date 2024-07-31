@@ -4,6 +4,12 @@ const ContinueButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Continue",
 	},
+	"fr-CA": {
+		label: "Continuer",
+	},
+	"sv-SE": {
+		label: "Fortsätt",
+	},
 	"th-TH": {
 		label: "ดำเนินการต่อ",
 	},
@@ -12,9 +18,6 @@ const ContinueButton: LangButtonInterface = {
 	},
 	"es-ES": {
 		label: "Continuar",
-	},
-	"fr-CA": {
-		label: "Continuer",
 	},
 	"es-MX": {
 		label: "Continuar",

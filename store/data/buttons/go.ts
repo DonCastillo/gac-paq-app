@@ -4,6 +4,12 @@ const GoButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Go",
 	},
+	"fr-CA": {
+		label: "Aller",
+	},
+	"sv-SE": {
+		label: "Gå",
+	},
 	"th-TH": {
 		label: "ไป",
 	},
@@ -12,9 +18,6 @@ const GoButton: LangButtonInterface = {
 	},
 	"es-ES": {
 		label: "Ir",
-	},
-	"fr-CA": {
-		label: "Aller",
 	},
 	"es-MX": {
 		label: "Ir",

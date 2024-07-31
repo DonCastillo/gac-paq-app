@@ -4,6 +4,9 @@ const AgreementPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Yes, I Understand & Agree.",
 	},
+	"sv-SE": {
+		label: "Ja, jag förstår och håller med.",
+	},
 	"th-TH": {
 		label: "ใช่ ฉันเข้าใจและยอมรับ",
 	},

@@ -4,6 +4,12 @@ const NextButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Next",
 	},
+	"sv-SE": {
+		label: "Nästa",
+	},
+	"fr-CA": {
+		label: "Suivant",
+	},
 	"th-TH": {
 		label: "ถัดไป",
 	},
@@ -12,9 +18,6 @@ const NextButton: LangButtonInterface = {
 	},
 	"es-ES": {
 		label: "Siguiente",
-	},
-	"fr-CA": {
-		label: "Suivant",
 	},
 	"es-MX": {
 		label: "Siguiente",

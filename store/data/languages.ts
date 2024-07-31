@@ -86,11 +86,11 @@ const Languages: LanguageInterface[] = [
 	// 	flag_code: "ES",
 	// 	lang_code: "es-ES",
 	// },
-	// {
-	// 	name: "Swedish - Sweden",
-	// 	flag_code: "SE",
-	// 	lang_code: "sv-SE",
-	// },
+	{
+		name: "Swedish - Sweden",
+		flag_code: "SE",
+		lang_code: "sv-SE",
+	},
 	// {
 	// 	name: "Thai - Thailand",
 	// 	flag_code: "TH",

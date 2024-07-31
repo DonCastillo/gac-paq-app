@@ -4,6 +4,12 @@ const BackButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Back",
 	},
+	"fr-CA": {
+		label: "Retour",
+	},
+	"sv-SE": {
+		label: "Tillbaka",
+	},
 	"th-TH": {
 		label: "ย้อนกลับ",
 	},
@@ -13,9 +19,7 @@ const BackButton: LangButtonInterface = {
 	"es-ES": {
 		label: "Volver",
 	},
-	"fr-CA": {
-		label: "Retour",
-	},
+
 	"es-MX": {
 		label: "Volver",
 	},

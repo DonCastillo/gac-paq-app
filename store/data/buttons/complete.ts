@@ -4,6 +4,12 @@ const CompleteButton: LangButtonInterface = {
 	"en-CA": {
 		label: "Complete",
 	},
+	"fr-CA": {
+		label: "Complet",
+	},
+	"sv-SE": {
+		label: "Slutför",
+	},
 	"th-TH": {
 		label: "เสร็จสิ้น",
 	},
@@ -12,9 +18,6 @@ const CompleteButton: LangButtonInterface = {
 	},
 	"es-ES": {
 		label: "Completar",
-	},
-	"fr-CA": {
-		label: "Complet",
 	},
 	"es-MX": {
 		label: "Completar",
