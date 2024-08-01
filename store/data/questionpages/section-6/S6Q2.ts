@@ -53,6 +53,50 @@ const S6Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 22",
+			label:
+				"Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
+			kid_label:
+				"Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
+			adult_label:
+				"Hur många dagar gjorde ditt barn någon aktivitet som gör musklerna starkare under den senaste veckan?",
+			choices: [
+				{
+					label: "0 dagar",
+					value: "0",
+				},
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar",
+					value: "5",
+				},
+				{
+					label: "6 dagar",
+					value: "6",
+				},
+				{
+					label: "7 dagar",
+					value: "7",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十二题",
