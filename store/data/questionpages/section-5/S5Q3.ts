@@ -37,6 +37,34 @@ const S5Q3: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 20",
+			label:
+				"Under de dagar du ägnade dig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
+			kid_label:
+				"Under de dagar du ägnade dig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
+			adult_label:
+				"Under de dagar ditt barn ägnade sig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
+			choices: [
+				{
+					label: "30 minuter eller mindre per dag",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 till 60 minuter per dag",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 till 1 och en halv timme per dag",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Mer än 1 och en halv timme per dag",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 20",

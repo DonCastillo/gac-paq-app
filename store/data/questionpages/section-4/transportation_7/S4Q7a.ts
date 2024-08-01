@@ -27,7 +27,8 @@ const Transportation7: Transportation7Interface = {
 		},
 		adult: {
 			none: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon plats under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
-			school: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skolan under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			school:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skolan under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
 			work: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än arbetet under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
 			both: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
 		},

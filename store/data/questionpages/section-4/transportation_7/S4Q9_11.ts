@@ -35,13 +35,15 @@ const Transportation9_11: Transportation9_11Interface = {
 		kid: {
 			wheel: {
 				none: "Hur mycket tid spenderade du på att cykla till platser under en vanlig dag?",
-				school: "Hur mycket tid spenderade du på att cykla till platser utanför skolan under en vanlig dag?",
+				school:
+					"Hur mycket tid spenderade du på att cykla till platser utanför skolan under en vanlig dag?",
 				work: "Hur mycket tid spenderade du på att cykla till platser utanför arbetet under en vanlig dag?",
 				both: "Hur mycket tid spenderade du på att cykla till andra platser än skolan eller arbetet under en vanlig dag?",
 			},
 			walk: {
 				none: "Hur mycket tid spenderade du på att gå till olika platser under en vanlig dag?",
-				school: "Hur mycket tid spenderade du på att gå till platser utanför skolan under en vanlig dag?",
+				school:
+					"Hur mycket tid spenderade du på att gå till platser utanför skolan under en vanlig dag?",
 				work: "Hur mycket tid spenderade du på att gå till platser utanför arbetet under en vanlig dag?",
 				both: "Hur mycket tid spenderade du på att gå till andra platser än skolan eller arbetet under en vanlig dag?",
 			},

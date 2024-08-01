@@ -26,6 +26,26 @@ const S5Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 18",
+			label:
+				"Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			kid_label:
+				"Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			adult_label:
+				"Har ditt barn gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			choices: [
+				{
+					label: "Ja",
+					value: "yes",
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 18",
