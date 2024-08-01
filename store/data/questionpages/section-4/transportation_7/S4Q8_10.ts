@@ -31,6 +31,36 @@ const Transportation8_10: Transportation8_10Interface = {
 			},
 		},
 	},
+	"sv-SE": {
+		kid: {
+			wheel: {
+				none: "Hur många dagar cyklade du till platser under den senaste veckan?",
+				school: "Hur många dagar cyklade du till platser utanför skolan under den senaste veckan?",
+				work: "Hur många dagar cyklade du till platser utanför arbetet under den senaste veckan?",
+				both: "Hur många dagar cyklade du till andra platser än skolan eller arbetet under den senaste veckan?"
+			},
+			walk: {
+				none: "Hur många dagar gick du till olika platser under den senaste veckan?",
+				school: "Hur många dagar gick du till platser utanför skolan under den senaste veckan?",
+				work: "Hur många dagar gick du till platser utanför arbetet under den senaste veckan?",
+				both: "Hur många dagar gick du till andra platser än skolan eller arbetet under sen senaste veckan?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "Hur många dagar cyklade ditt barn till olika platser under den senaste veckan?",
+				school: "Hur många dagar cyklade ditt barn till platser utanför skolan under den senaste veckan?",
+				work: "Hur många dagar cyklade ditt barn till platser utanför arbetet under den senaste veckan?",
+				both: "Hur många dagar cyklade ditt barn till platser utanför skolan eller arbetet under den senaste veckan?"
+			},
+			walk: {
+				none: "Hur många dagar gick ditt barn till olika platser under den senaste veckan?",
+				school: "Hur många dagar gick ditt barn till platser utanför skolan under den senaste veckan?",
+				work: "Hur många dagar gick ditt barn till platser utanför arbetet under den senaste veckan?",
+				both: "Hur många dagar gick ditt barn till platser utanför skolan eller arbetet under den senaste veckan?",
+			},
+		},
+	},
 	"zh-CN": {
 		kid: {
 			wheel: {

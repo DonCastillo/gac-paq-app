@@ -17,6 +17,21 @@ const Transportation7: Transportation7Interface = {
 			both: "In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 		},
 	},
+	"sv-SE": {
+		kid: {
+			none: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon plats under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			school:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola (till exempel till en kompis, till parken eller en butik)?",
+			work: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än arbetet under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			both: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+		},
+		adult: {
+			none: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon plats under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			school: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skolan under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			work: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än arbetet under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			both: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+		},
+	},
 	"zh-CN": {
 		kid: {
 			none: "在过去一周里，你有走路或骑车去过地方（例如，朋友家，公园，商店）吗？",
