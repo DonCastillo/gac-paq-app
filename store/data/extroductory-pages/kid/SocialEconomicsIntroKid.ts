@@ -10,6 +10,10 @@ const SocialEconomicsIntroKid: SectionPayloadInterface = {
 			heading: "About You",
 			subheading: "Section 8",
 		},
+		"sv-SE": {
+			heading: "Om dig",
+			subheading: "Sektion 8",
+		},
 		"zh-CN": {
 			heading: "关于你",
 			subheading: "第8部分",

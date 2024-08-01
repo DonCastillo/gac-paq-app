@@ -30,6 +30,27 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 24",
+			label: "Vad har ditt barn för kön?",
+			kid_label: "Vad har ditt barn för kön?",
+			adult_label: "Vad har ditt barn för kön?",
+			choices: [
+				{
+					label: "Flicka",
+					value: "Female",
+				},
+				{
+					label: "Pojke",
+					value: "Male",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十四题",
