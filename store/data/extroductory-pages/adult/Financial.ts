@@ -43,6 +43,41 @@ const Financial: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 30",
+			label: "Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
+			kid_label:
+				"Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
+			adult_label:
+				"Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
+			choices: [
+				{
+					label: "Mycket svårt",
+					value: "Very difficult",
+				},
+				{
+					label: "Svårt",
+					value: "Difficult",
+				},
+				{
+					label: "Varken svårt eller enkelt",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Enkelt",
+					value: "Easy",
+				},
+				{
+					label: "Mycket enkelt",
+					value: "Very easy",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第三十题",

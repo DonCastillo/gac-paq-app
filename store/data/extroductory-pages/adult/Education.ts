@@ -43,6 +43,39 @@ const Education: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 29",
+			label: "Vilken är den högsta utbildningsnivå någon i ert hushåll har genomfört?",
+			kid_label: "Vilken är den högsta utbildningsnivå någon i ert hushåll har genomfört?",
+			adult_label: "Vilken är den högsta utbildningsnivå någon i ert hushåll har genomfört?",
+			choices: [
+				{
+					label: "Ingen",
+					value: "No formal schooling",
+				},
+				{
+					label: "Grundskola",
+					value: "Primary school",
+				},
+				{
+					label: "Gymnasium",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Yrkes-/högskoleutbildning",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Universitetsutbildning",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十九题",

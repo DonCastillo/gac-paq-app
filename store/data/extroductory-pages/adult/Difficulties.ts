@@ -63,6 +63,58 @@ const Difficulties: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionCheckbox,
+			heading: "Fråga 25",
+			label: "Ange om ditt barn har problem med något av följande i sina dagliga aktiviteter.",
+			kid_label: "Ange om ditt barn har problem med något av följande i sina dagliga aktiviteter.",
+			adult_label:
+				"Ange om ditt barn har problem med något av följande i sina dagliga aktiviteter.",
+			kid_sublabel: "välj alla som stämmer",
+			adult_sublabel: "välj alla som stämmer",
+			choices: [
+				{
+					label: "Hörsel",
+					value: "Hearing",
+				},
+				{
+					label: "Syn",
+					value: "Seeing",
+				},
+				{
+					label: "Tal",
+					value: "Speech",
+				},
+				{
+					label: "Rörlighet",
+					value: "Mobility",
+				},
+				{
+					label: "Röra sig kvickt och smidigt",
+					value: "Agility",
+				},
+				{
+					label: "Smärta",
+					value: "Pain",
+				},
+				{
+					label: "Minne",
+					value: "Memory",
+				},
+				{
+					label: "Annan",
+					value: "Other",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Inget av ovanstående, barnet har inga svårigheter",
+					value: "None of the above",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
 			heading: "第二十五题",

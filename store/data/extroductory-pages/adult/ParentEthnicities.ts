@@ -46,6 +46,43 @@ const ParentEthnicities: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionCheckbox,
+			heading: "Fråga 27",
+			label: "Vilken är din etnicitet?",
+			kid_label: "Vilken är din etnicitet?",
+			adult_label: "Vilken är din etnicitet?",
+			choices: [
+				{
+					label: "Asiatisk",
+					value: "Asian",
+				},
+				{
+					label: "Svart eller afroamerikansk",
+					value: "Black or African American",
+				},
+				{
+					label: "Ursprungsbefolkning",
+					value: "Indigenous",
+				},
+				{
+					label: "Latinamerikansk",
+					value: "Latin American",
+				},
+				{
+					label: "Vit eller kaukasisk",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Annat",
+					value: "Other",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
 			heading: "第二十七题",

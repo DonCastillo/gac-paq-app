@@ -46,6 +46,43 @@ const Relationship: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 28",
+			label: "Vilken är din relation till barnet?",
+			kid_label: "Vilken är din relation till barnet?",
+			adult_label: "Vilken är din relation till barnet?",
+			choices: [
+				{
+					label: "Pappa",
+					value: "Father",
+				},
+				{
+					label: "Mamma",
+					value: "Mother",
+				},
+				{
+					label: "Farfar/Morfar",
+					value: "Grandfather",
+				},
+				{
+					label: "Farmor/Mormor",
+					value: "Grandmother",
+				},
+				{
+					label: "Vårdnadshavare",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Annat",
+					value: "Other",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十八题",
