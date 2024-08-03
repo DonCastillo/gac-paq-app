@@ -12,6 +12,11 @@ const OfflineSuccessPage: PagePayloadInterface = {
 			description:
 				"Your responses will be saved and automatically resubmitted when the connection is restored.\n\nThank you for your help!",
 		},
+		"sv-SE": {
+			heading: "Du är inte ansluten till internet",
+			description:
+				"Dina svar kommer att sparas och automatiskt skickas igen när anslutningen återställs.\n\nTack för din hjälp!",
+		},
 		"th-TH": {
 			heading: "คุณไม่ได้เชื่อมต่อกับอินเทอร์เน็ต",
 			description:

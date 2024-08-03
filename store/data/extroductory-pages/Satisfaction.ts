@@ -45,6 +45,42 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Feedback",
+			label: "Hur nöjd är du med appen?",
+			kid_label: "Hur nöjd är du med appen?",
+			adult_label: "Hur nöjd är du med appen?",
+			adult_sublabel: "Klicka på bilden (emoji) som visar bäst hur nöjd du är med appen.",
+			kid_sublabel: "Klicka på bilden (emoji) som visar bäst hur nöjd du är med appen.",
+			choices: [
+				{
+					label: "Mycket missnöjd",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Missnöjd",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutral",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Nöjd",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Mycket nöjd",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "反馈",

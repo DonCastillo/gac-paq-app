@@ -9,7 +9,11 @@ const ErrorPage: PagePayloadInterface = {
 	translations: {
 		"en-CA": {
 			heading: "Error",
-			description: "There is a problem submitting your response.\n\nPlease try again. ",
+			description: "There is a problem submitting your response.\n\nPlease try again.",
+		},
+		"sv-SE": {
+			heading: "Ett fel har uppstått",
+			description: "Det uppstod ett problem när du skickade ditt svar.\n\nFörsök igen.",
 		},
 		"th-TH": {
 			heading: "ข้อผิดพลาด",

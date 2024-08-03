@@ -10,6 +10,10 @@ const AppExtro: ExtroPayloadInterface = {
 			heading: "Thank you for completing the survey!",
 			subheading: "",
 		},
+		"sv-SE": {
+			heading: "Tack för att du har fyllt i enkäten!",
+			subheading: "",
+		},
 		"zh-CN": {
 			heading: "感谢您完成调查！",
 			subheading: "",
