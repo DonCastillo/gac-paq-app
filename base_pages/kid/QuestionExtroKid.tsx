@@ -22,20 +22,17 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
-	getLanguage,
 	getSectionTotalPages,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
-import { translatePage } from "utils/translate.utils";
 import type { ExtroInterface } from "interface/payload.type";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
 
 const QuestionExtroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
@@ -49,7 +46,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 
 	// translations
 	const isFinal = currentPage.page.isFinal;
-	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
+	const translatedPage = currentPage.page.translations as ExtroInterface;
 	const ImageComponent = Images.kids.graphics.extro_question_page;
 	const navigation = useNavigation();
 

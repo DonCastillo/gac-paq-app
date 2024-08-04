@@ -27,13 +27,9 @@ import {
 } from "store/settings/settingsSlice";
 import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
-import {
-	translatePage,
-	translateQuestionLabel,
-	translateSectionHeading,
-} from "utils/translate.utils";
+import { translateQuestionLabel, translateSectionHeading } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
-import { getNarrationPayload } from "store/settings/settingsThunk.";
+import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenKid from "./LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
 
@@ -53,10 +49,7 @@ const LanguageKid = (): React.ReactElement => {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 
 	const { color100 } = colorTheme;
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as QuestionDropdownLanguageInterface;
+	const translatedPage = currentPage.page.translations as QuestionDropdownLanguageInterface;
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
 		translatedPage.adult_label,

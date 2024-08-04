@@ -29,10 +29,10 @@ import {
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
 import { getModeType, getQuestionType } from "utils/type.utils";
-import { translatePage, translateQuestionLabel } from "utils/translate.utils";
+import { translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
-import { getNarrationPayload } from "store/settings/settingsThunk.";
+import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "../LoadingScreenAdult";
 import AnimatedView from "components/AnimatedView";
 
@@ -49,10 +49,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as TranslatedIntroQuestionType;
+	const translatedPage = currentPage.page.translations as TranslatedIntroQuestionType;
 
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,

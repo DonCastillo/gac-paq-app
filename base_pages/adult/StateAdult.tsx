@@ -13,24 +13,17 @@ import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import BGLinearGradient from "components/BGLinearGradient";
 import LoadingScreenAdult from "./LoadingScreenAdult";
 import { useDispatch, useSelector } from "react-redux";
-import {
-	getDevice,
-	getIsConnected,
-	getLanguage,
-	getPhrases,
-	reset,
-} from "store/settings/settingsSlice";
+import { getDevice, getIsConnected, getPhrases, reset } from "store/settings/settingsSlice";
 import {
 	getErrorPage,
 	getOfflineSuccessPage,
 	getSuccessPage,
 } from "store/questions/questionsSlice";
 import { resetResponses } from "store/responses/responsesSlice";
-import { translatePage as translatePageUtil } from "utils/translate.utils";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackgroundStatus } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
-import type { LangPageInterface, PageInterface } from "interface/payload.type";
+import type { PageInterface } from "interface/payload.type";
 import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { moderateScale } from "utils/responsive.utils";
@@ -42,7 +35,6 @@ interface Props {
 
 const StateAdult = ({ state }: Props): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
 	const successPage = useSelector(getSuccessPage);
 	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
@@ -69,15 +61,15 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const statePageChange = (): void => {
 		if (state === State.Success) {
 			if (success_type === "online") {
-				const pageTranslations: LangPageInterface = successPage.translations;
-				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+				const pageTranslations: PageInterface = successPage.translations;
+				setTranslatedPage(pageTranslations);
 			} else {
-				const pageTranslations: LangPageInterface = offlineSuccessPage.translations;
-				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+				const pageTranslations: PageInterface = offlineSuccessPage.translations;
+				setTranslatedPage(pageTranslations);
 			}
 		} else {
-			const pageTranslations: LangPageInterface = errorPage.translations;
-			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			const pageTranslations: PageInterface = errorPage.translations;
+			setTranslatedPage(pageTranslations);
 		}
 	};
 

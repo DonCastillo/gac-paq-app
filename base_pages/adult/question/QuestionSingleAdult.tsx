@@ -13,12 +13,7 @@ import { choiceMode } from "utils/options.utils";
 import QuestionRadio from "components/adults/QuestionRadio";
 import QuestionRadioImage from "components/adults/QuestionRadioImage";
 import { addResponse, getResponse } from "utils/response.utils";
-import {
-	intToString,
-	stringToInt,
-	translatePage,
-	translateQuestionLabel,
-} from "utils/translate.utils";
+import { intToString, stringToInt, translateQuestionLabel } from "utils/translate.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label.enum";
 import QuestionInput from "components/adults/QuestionInput";
@@ -35,7 +30,6 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -55,7 +49,6 @@ import AnimatedView from "components/AnimatedView";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
@@ -67,10 +60,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as TranslatedQuestionQuestionType;
+	const translatedPage = currentPage.page.translations as TranslatedQuestionQuestionType;
 
 	let questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,

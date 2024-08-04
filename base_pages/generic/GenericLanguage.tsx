@@ -4,11 +4,7 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
-import {
-	translatePage,
-	translateQuestionLabel,
-	translateSectionHeading,
-} from "utils/translate.utils";
+import { translateQuestionLabel, translateSectionHeading } from "utils/translate.utils";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
@@ -16,7 +12,6 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background.utils";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import { useDispatch, useSelector } from "react-redux";
@@ -34,10 +29,8 @@ import {
 import { loadButtons, loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
-import { getNarrationPayload } from "store/settings/settingsThunk.";
-import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
+import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
-import AnimatedView from "components/AnimatedView";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -53,10 +46,7 @@ const GenericLanguage = (): React.ReactElement => {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as QuestionDropdownLanguageInterface;
+	const translatedPage = currentPage.page.translations as QuestionDropdownLanguageInterface;
 
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,

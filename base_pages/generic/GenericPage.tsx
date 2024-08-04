@@ -11,25 +11,17 @@ import ScrollContainer from "components/ScrollContainer";
 import { GeneralStyle } from "styles/general";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import { useDispatch, useSelector } from "react-redux";
-import {
-	getColorTheme,
-	getCurrentPage,
-	getLanguage,
-	nextPage,
-	prevPage,
-} from "store/settings/settingsSlice";
-import { translatePage } from "utils/translate.utils";
+import { getColorTheme, getCurrentPage, nextPage, prevPage } from "store/settings/settingsSlice";
 import type { PageInterface } from "interface/payload.type";
 
 const GenericPage = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const { color100 } = colorTheme;
 
 	// translations
-	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
+	const translatedPage = currentPage.page.translations as PageInterface;
 
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
