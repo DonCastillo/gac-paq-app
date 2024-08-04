@@ -8,7 +8,6 @@ import type {
 	SetLanguageFuncType,
 	SetDirectusFuncType,
 	SetColorThemeFuncType,
-	SetButtonsFuncType,
 	SetPhrasesFuncType,
 	SetSectionTitlesFuncType,
 	SkipPageFuncType,
@@ -50,10 +49,6 @@ const setColorTheme: SetColorThemeFuncType = (state, action) => {
 	} else {
 		state.colorTheme = Colors[state.mode ?? 0][action.payload % TOTAL_COLORS];
 	}
-};
-
-const setButtons: SetButtonsFuncType = (state, action) => {
-	state.buttons = action.payload;
 };
 
 const setPhrases: SetPhrasesFuncType = (state, action) => {
@@ -182,7 +177,6 @@ export default {
 	prevPage,
 	addPage,
 	setPage,
-	setButtons,
 	setPhrases,
 	setNarrations,
 	addNarration,

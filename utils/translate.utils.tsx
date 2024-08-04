@@ -1,17 +1,7 @@
-import type { LangButtonInterface } from "interface/button";
-import type { LangPhraseInterface } from "interface/phrase";
-import type { ModeType, TranslatedPageType, TranslationType } from "interface/union.type";
+import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 import { store } from "store/store";
 import type { SectionPayloadInterface } from "interface/payload.type";
-
-const translatePage = (translations: TranslationType, langCode: string): TranslatedPageType => {
-	const translatedPage = translations[langCode];
-	if (translatedPage === undefined || translatedPage === null) {
-		return translations["en-CA"];
-	}
-	return translatedPage;
-};
 
 const translateQuestionLabel = (kidLabel: string, adultLabel: string, mode: ModeType): string => {
 	if (mode === Mode.Adult) {
@@ -37,30 +27,14 @@ const translateDescription = (
 	}
 };
 
-const translateButton = (langButtons: LangButtonInterface, langCode: string): string => {
-	const translatedButton = langButtons[langCode];
-	if (translatedButton === undefined || translatedButton === null) {
-		return langButtons["en-CA"].label;
-	}
-	return translatedButton.label;
-};
-
-const translatePhrase = (langPhrases: LangPhraseInterface, langCode: string): string => {
-	const translatedPhrase = langPhrases[langCode];
-	if (translatedPhrase === undefined || translatedPhrase === null) {
-		return langPhrases["en-CA"].label;
-	}
-	return translatedPhrase.label;
-};
-
 const translateSectionHeading = (langCode: string): string[] => {
 	const sectionPages: SectionPayloadInterface[] = store.getState().questions.sectionPages;
 	if (sectionPages.length === 0) return [];
 
 	const translatedSectionTitles = sectionPages.map((sectionPage: SectionPayloadInterface) => {
-		const translatedPage = sectionPage.translations[langCode];
+		const translatedPage = sectionPage.translations;
 		if (translatedPage === undefined || translatedPage === null) {
-			return sectionPage.translations["en-CA"].heading;
+			return sectionPage.translations.heading;
 		}
 		return translatedPage.heading;
 	});
@@ -95,11 +69,8 @@ const intToString = (value: number | null): string => {
 };
 
 export {
-	translatePage,
 	translateQuestionLabel,
 	translateDescription,
-	translateButton,
-	translatePhrase,
 	translateSectionHeading,
 	translateText,
 	stringToInt,

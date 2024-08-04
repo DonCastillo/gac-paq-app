@@ -12,13 +12,15 @@ import AppExtro from "./extroductory-pages/AppExtro";
 import SocialEconomicsIntroKid from "./extroductory-pages/kid/SocialEconomicsIntroKid";
 import SocialEconomicsIntroAdult from "./extroductory-pages/adult/SocialEconomicsIntroAdult";
 import type {
-	AdultExtroductoryPagesType,
-	FeedbackExtroductoryPagesType,
-	KidExtroductoryPagesType,
+	LangAdultExtroductoryPagesType,
+	LangFeedbackExtroductoryPagesType,
+	LangKidExtroductoryPagesType,
 } from "interface/union.type";
+import ChildEthnicitiesSE from "./extroductory-pages/adult/child-ethnicities/sv-SE";
 
-const KidExtroductoryPages: KidExtroductoryPagesType = [SocialEconomicsIntroKid, GenderKid];
-const AdultExtroductoryPages: AdultExtroductoryPagesType = [
+const ChildEthnicitiesPages = [ChildEthnicitiesSE];
+const KidExtroductoryPages: LangKidExtroductoryPagesType = [SocialEconomicsIntroKid, GenderKid];
+const AdultExtroductoryPages: LangAdultExtroductoryPagesType = [
 	SocialEconomicsIntroAdult,
 	GenderAdult,
 	Difficulties,
@@ -28,6 +30,15 @@ const AdultExtroductoryPages: AdultExtroductoryPagesType = [
 	Education,
 	Financial,
 ];
-const FeedbackExtroductoryPages: FeedbackExtroductoryPagesType = [Satisfaction, Comment, AppExtro];
+const FeedbackExtroductoryPages: LangFeedbackExtroductoryPagesType = [
+	Satisfaction,
+	Comment,
+	AppExtro,
+];
 
-export { KidExtroductoryPages, AdultExtroductoryPages, FeedbackExtroductoryPages };
+export {
+	KidExtroductoryPages,
+	AdultExtroductoryPages,
+	FeedbackExtroductoryPages,
+	ChildEthnicitiesPages,
+};

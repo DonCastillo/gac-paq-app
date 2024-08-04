@@ -2,7 +2,6 @@ import { FlagIcons } from "styles/flags";
 import Languages from "store/data/languages";
 import { store } from "store/store";
 import { setButtons, setPhrases } from "store/settings/settingsSlice";
-import { translateButton, translatePhrase } from "./translate.utils";
 import ButtonLabel from "constants/button_label.enum";
 import PhraseLabel from "constants/phrase_label.enum";
 import type { LanguageInterface } from "interface/payload.type";
@@ -20,7 +19,6 @@ const loadLanguagesOffline = (): LanguageInterface[] => {
 };
 
 const loadButtons = (): void => {
-	const language = store.getState().settings.language ?? "en-CA";
 	const backButton = store.getState().questions.backButton;
 	const completeButton = store.getState().questions.completeButton;
 	const continueButton = store.getState().questions.continueButton;
@@ -30,18 +28,17 @@ const loadButtons = (): void => {
 
 	store.dispatch(
 		setButtons({
-			back: translateButton(backButton, language) ?? ButtonLabel.Back,
-			complete: translateButton(completeButton, language) ?? ButtonLabel.Complete,
-			continue: translateButton(continueButton, language) ?? ButtonLabel.Continue,
-			go: translateButton(goButton, language) ?? ButtonLabel.Go,
-			next: translateButton(nextButton, language) ?? ButtonLabel.Next,
-			started: translateButton(startedButton, language) ?? ButtonLabel.Started,
+			back: backButton.label ?? ButtonLabel.Back,
+			complete: completeButton.label ?? ButtonLabel.Complete,
+			continue: continueButton.label ?? ButtonLabel.Continue,
+			go: goButton.label ?? ButtonLabel.Go,
+			next: nextButton.label ?? ButtonLabel.Next,
+			started: startedButton.label ?? ButtonLabel.Started,
 		}),
 	);
 };
 
 const loadPhrases = (): void => {
-	const language = store.getState().settings.language ?? "en-CA";
 	const agreementPhrase = store.getState().questions.agreementPhrase;
 	const donePhrase = store.getState().questions.donePhrase;
 	const dontKnowPhrase = store.getState().questions.dontKnowPhrase;
@@ -53,14 +50,14 @@ const loadPhrases = (): void => {
 
 	store.dispatch(
 		setPhrases({
-			agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
-			done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
-			dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
-			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
-			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
-			feedback: translatePhrase(feedbackPhrase, language) ?? PhraseLabel.Feedback,
-			select: translatePhrase(selectPhrase, language) ?? PhraseLabel.Select,
-			specify: translatePhrase(pleaseSpecifyPhrase, language) ?? PhraseLabel.PleaseSpecify,
+			agreement: agreementPhrase.label ?? PhraseLabel.Agreement,
+			done: donePhrase.label ?? PhraseLabel.Done,
+			dontKnow: dontKnowPhrase.label ?? PhraseLabel.DontKnow,
+			introduction: introductionPhrase.label ?? PhraseLabel.Introduction,
+			tryAgain: tryAgainPhrase.label ?? PhraseLabel.TryAgain,
+			feedback: feedbackPhrase.label ?? PhraseLabel.Feedback,
+			select: selectPhrase.label ?? PhraseLabel.Select,
+			specify: pleaseSpecifyPhrase.label ?? PhraseLabel.PleaseSpecify,
 		}),
 	);
 };

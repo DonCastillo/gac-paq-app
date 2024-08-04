@@ -50,7 +50,7 @@ import S4Preamble from "./questionpages/section-4/S4Preamble";
 import S5Preamble from "./questionpages/section-5/S5Preamble";
 import S6Preamble from "./questionpages/section-6/S6Preamble";
 import S7Preamble from "./questionpages/section-7/S7Preamble";
-import { type QuestionPagesType } from "interface/union.type";
+import type { LangQuestionPagesType } from "interface/union.type";
 
 const Section1 = [S1Intro, S1Preamble, S1Q1, S1Q2, S1Q3, S1Q4, S1Q5, S1Q6, S1Q7, S1Extro];
 const Section2 = [S2Intro, S2Preamble, S2Q1, S2Q2, S2Q3, S2Q4, S2Extro];
@@ -75,7 +75,7 @@ const Section5 = [S5Intro, S5Preamble, S5Q1, S5Q2, S5Q3, S5Extro];
 const Section6 = [S6Intro, S6Preamble, S6Q1, S6Q2, S6Extro];
 const Section7 = [S7Intro, S7Preamble, S7Q1, S7Extro];
 
-const QuestionPages: QuestionPagesType = [
+const QuestionPages: LangQuestionPagesType = [
 	...Section1,
 	...Section2,
 	...Section3,

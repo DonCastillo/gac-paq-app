@@ -1,6 +1,6 @@
-import type { LangButtonInterface } from "interface/button";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const NextButton: LangButtonInterface = {
+const NextPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Next",
 	},
@@ -24,4 +24,4 @@ const NextButton: LangButtonInterface = {
 	},
 };
 
-export default NextButton;
+export default NextPhrase;

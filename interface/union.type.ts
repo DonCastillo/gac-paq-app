@@ -4,7 +4,6 @@ import type Screen from "constants/screen.enum";
 import type {
 	ExtroPayloadInterface,
 	QuestionDropdownLanguageInterface,
-	LangQuestionDropdownLanguageInterface,
 	PagePayloadInterface,
 	PreamblePayloadInterface,
 	QuestionCheckboxPayloadInterface,
@@ -16,28 +15,25 @@ import type {
 	QuestionSliderPayloadInterface,
 	QuestionTextareaPayloadInterface,
 	SectionPayloadInterface,
-	LangPageInterface,
 	QuestionDropdownInterface,
-	LangQuestionDropdownInterface,
-	LangQuestionInputInterface,
-	LangQuestionCheckboxInterface,
-	LangQuestionRadioInterface,
-	LangQuestionTextareaInterface,
-	LangQuestionRadioImageInterface,
-	LangQuestionSliderInterface,
-	LangSectionInterface,
-	LangPreambleInterface,
-	LangExtroInterface,
 	QuestionInputInterface,
 	QuestionCheckboxInterface,
 	QuestionRadioInterface,
 	QuestionTextareaInterface,
 	QuestionRadioImageInterface,
 	QuestionSliderInterface,
-	SectionInterface,
-	PreambleInterface,
-	ExtroInterface,
-	PageInterface,
+	LangPagePayloadInterface,
+	LangQuestionDropdownPayloadInterface,
+	LangQuestionDropdownPayloadLanguageInterface,
+	LangQuestionInputPayloadInterface,
+	LangSectionPayloadInterface,
+	LangQuestionRadioPayloadInterface,
+	LangQuestionCheckboxPayloadInterface,
+	LangQuestionRadioImagePayloadInterface,
+	LangQuestionTextareaPayloadInterface,
+	LangExtroPayloadInterface,
+	LangPreamblePayloadInterface,
+	LangQuestionSliderPayloadInterface,
 } from "interface/payload.type";
 import type Question from "constants/question.enum";
 import type Device from "constants/device.enum";
@@ -55,6 +51,13 @@ export type IntroductoryPageType =
 	| QuestionInputPayloadInterface;
 export type IntroductoryPagesType = IntroductoryPageType[];
 
+export type LangIntroductoryPageType =
+	| LangPagePayloadInterface
+	| LangQuestionDropdownPayloadInterface
+	| LangQuestionDropdownPayloadLanguageInterface
+	| LangQuestionInputPayloadInterface;
+export type LangIntroductoryPagesType = LangIntroductoryPageType[];
+
 // question pages
 export type QuestionPageType =
 	| SectionPayloadInterface
@@ -66,9 +69,24 @@ export type QuestionPageType =
 	| ExtroPayloadInterface;
 export type QuestionPagesType = QuestionPageType[];
 
+export type LangQuestionPageType =
+	| LangSectionPayloadInterface
+	| LangPreamblePayloadInterface
+	| LangQuestionRadioPayloadInterface
+	| LangQuestionSliderPayloadInterface
+	| LangQuestionRadioImagePayloadInterface
+	| LangQuestionCheckboxPayloadInterface
+	| LangExtroPayloadInterface;
+export type LangQuestionPagesType = LangQuestionPageType[];
+
 // kid extroductory page
 export type KidExtroductoryPageType = SectionPayloadInterface | QuestionRadioPayloadInterface;
 export type KidExtroductoryPagesType = KidExtroductoryPageType[];
+
+export type LangKidExtroductoryPageType =
+	| LangSectionPayloadInterface
+	| LangQuestionRadioPayloadInterface;
+export type LangKidExtroductoryPagesType = LangKidExtroductoryPageType[];
 
 // adult extroductory page
 export type AdultExtroductoryPageType =
@@ -76,6 +94,12 @@ export type AdultExtroductoryPageType =
 	| QuestionRadioPayloadInterface
 	| QuestionCheckboxPayloadInterface;
 export type AdultExtroductoryPagesType = AdultExtroductoryPageType[];
+
+export type LangAdultExtroductoryPageType =
+	| LangSectionPayloadInterface
+	| LangQuestionRadioPayloadInterface
+	| LangQuestionCheckboxPayloadInterface;
+export type LangAdultExtroductoryPagesType = LangAdultExtroductoryPageType[];
 
 // extroductory page
 export type ExtroductoryPageType = KidExtroductoryPageType | AdultExtroductoryPageType;
@@ -87,6 +111,12 @@ export type FeedbackExtroductoryPageType =
 	| ExtroPayloadInterface;
 export type FeedbackExtroductoryPagesType = FeedbackExtroductoryPageType[];
 
+export type LangFeedbackExtroductoryPageType =
+	| LangQuestionRadioImagePayloadInterface
+	| LangQuestionTextareaPayloadInterface
+	| LangExtroPayloadInterface;
+export type LangFeedbackExtroductoryPagesType = LangFeedbackExtroductoryPageType[];
+
 // all pages
 export type AllPageType =
 	| IntroductoryPageType
@@ -94,22 +124,6 @@ export type AllPageType =
 	| ExtroductoryPageType
 	| FeedbackExtroductoryPageType;
 export type AllPagesType = AllPageType[];
-
-// translations
-export type TranslationType =
-	| LangPageInterface
-	| LangQuestionDropdownInterface
-	| LangQuestionDropdownLanguageInterface
-	| LangQuestionInputInterface
-	| LangQuestionCheckboxInterface
-	| LangQuestionRadioInterface
-	| LangQuestionTextareaInterface
-	| LangQuestionRadioImageInterface
-	| LangQuestionSliderInterface
-	| LangSectionInterface
-	| LangPreambleInterface
-	| LangExtroInterface
-	| PagePayloadInterface;
 
 export type TranslatedIntroQuestionType =
 	| QuestionDropdownInterface
@@ -124,20 +138,6 @@ export type TranslatedQuestionQuestionType =
 	| QuestionSliderInterface
 	| QuestionInputInterface
 	| QuestionTextareaInterface;
-
-export type TranslatedPageType =
-	| PageInterface
-	| QuestionDropdownInterface
-	| QuestionDropdownLanguageInterface
-	| QuestionInputInterface
-	| QuestionCheckboxInterface
-	| QuestionRadioInterface
-	| QuestionTextareaInterface
-	| QuestionRadioImageInterface
-	| QuestionSliderInterface
-	| SectionInterface
-	| PreambleInterface
-	| ExtroInterface;
 
 export type FinalResponseType =
 	| Record<string, string | string[]>

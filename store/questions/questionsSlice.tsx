@@ -10,13 +10,6 @@ import {
 import DemographicKidPage from "store/data/introductory-pages/demographic_kid_age";
 import DemographicTeenPage from "store/data/introductory-pages/demographic_teen_age";
 import DemographicAdultPage from "store/data/introductory-pages/demographic_adult";
-import BackButton from "store/data/buttons/back";
-import CompleteButton from "store/data/buttons/complete";
-import ContinueButton from "store/data/buttons/continue";
-import GoButton from "store/data/buttons/go";
-import NextButton from "store/data/buttons/next";
-import StartedButton from "store/data/buttons/started";
-import AgreementPhrase from "store/data/phrase/agreement";
 import DonePhrase from "store/data/phrase/done";
 import DontKnowPhrase from "store/data/phrase/dont-know";
 import IntroductionPhrase from "store/data/phrase/introduction";
@@ -27,13 +20,11 @@ import Transportation7 from "store/data/questionpages/section-4/transportation_7
 import Transportation8_10 from "store/data/questionpages/section-4/transportation_7/S4Q8_10";
 import Transportation9_11 from "store/data/questionpages/section-4/transportation_7/S4Q9_11";
 import type {
-	Transportation7Interface,
-	Transportation8_10Interface,
-	Transportation9_11Interface,
+	ModeActivityInterface,
+	ModeActivityTransportationInterface,
 } from "interface/question17";
 import reducersActions from "./questionsReducers";
-import type { LangButtonInterface } from "interface/button";
-import type { LangPhraseInterface } from "interface/phrase";
+import type { PhraseInterface } from "interface/phrase";
 import type {
 	LanguageInterface,
 	PagePayloadInterface,
@@ -51,6 +42,15 @@ import FeedbackPhrase from "store/data/phrase/feedback";
 import SelectPhrase from "store/data/phrase/select";
 import OfflineSuccessPage from "store/data/state-pages/offline-success";
 import PleaseSpecifyPhrase from "store/data/phrase/please-specify";
+import { loadQuestionData, removeQuestionData, storeQuestionData } from "./questionsThunk";
+import {
+	translatePage,
+	translateArrayOfPages,
+	translatePhrase,
+} from "utils/translate_questions.utils";
+import BackPhrase from "store/data/phrase/back";
+import CompletePhrase from "store/data/phrase/complete";
+import NextPhrase from "store/data/phrase/next";
 
 export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
@@ -62,61 +62,68 @@ export interface QuestionSliceInterface {
 	teenAgePage: QuestionDropdownPayloadInterface;
 	adultAgePage: QuestionDropdownPayloadInterface;
 	feedbackExtroPages: FeedbackExtroductoryPagesType;
-	backButton: LangButtonInterface;
-	completeButton: LangButtonInterface;
-	continueButton: LangButtonInterface;
-	goButton: LangButtonInterface;
-	nextButton: LangButtonInterface;
-	startedButton: LangButtonInterface;
-	agreementPhrase: LangPhraseInterface;
-	donePhrase: LangPhraseInterface;
-	dontKnowPhrase: LangPhraseInterface;
-	introductionPhrase: LangPhraseInterface;
-	tryAgainPhrase: LangPhraseInterface;
-	feedbackPhrase: LangPhraseInterface;
-	selectPhrase: LangPhraseInterface;
-	pleaseSpecifyPhrase: LangPhraseInterface;
+	backPhrase: PhraseInterface;
+	completePhrase: PhraseInterface;
+	donePhrase: PhraseInterface;
+	dontKnowPhrase: PhraseInterface;
+	feedbackPhrase: PhraseInterface;
+	introductionPhrase: PhraseInterface;
+	nextPhrase: PhraseInterface;
+	pleaseSpecifyPhrase: PhraseInterface;
+	selectPhrase: PhraseInterface;
+	tryAgainPhrase: PhraseInterface;
 	successPage: PagePayloadInterface;
 	offlineSuccessPage: PagePayloadInterface;
 	errorPage: PagePayloadInterface;
-	Transportation7: Transportation7Interface;
-	Transportation8_10: Transportation8_10Interface;
-	Transportation9_11: Transportation9_11Interface;
+	Transportation7: ModeActivityInterface;
+	Transportation8_10: ModeActivityTransportationInterface;
+	Transportation9_11: ModeActivityTransportationInterface;
 	sectionPages: SectionPayloadInterface[];
 }
 
 const questionsSlice = createSlice({
 	name: "questions",
 	initialState: {
-		languageOption: Languages,
-		introductoryPages: IntroductoryPages,
-		questionPages: QuestionPages,
-		kidExtroPages: KidExtroductoryPages,
-		adultExtroPages: AdultExtroductoryPages,
-		kidAgePage: DemographicKidPage,
-		teenAgePage: DemographicTeenPage,
-		adultAgePage: DemographicAdultPage,
-		feedbackExtroPages: FeedbackExtroductoryPages,
-		backButton: BackButton,
-		completeButton: CompleteButton,
-		continueButton: ContinueButton,
-		goButton: GoButton,
-		nextButton: NextButton,
-		startedButton: StartedButton,
-		agreementPhrase: AgreementPhrase,
-		donePhrase: DonePhrase,
-		dontKnowPhrase: DontKnowPhrase,
-		introductionPhrase: IntroductionPhrase,
-		tryAgainPhrase: TryAgainPhrase,
-		feedbackPhrase: FeedbackPhrase,
-		selectPhrase: SelectPhrase,
-		pleaseSpecifyPhrase: PleaseSpecifyPhrase,
-		successPage: SuccessPage,
-		offlineSuccessPage: OfflineSuccessPage,
-		errorPage: ErrorPage,
-		Transportation7: Transportation7 satisfies Transportation7Interface,
-		Transportation8_10: Transportation8_10 satisfies Transportation8_10Interface,
-		Transportation9_11: Transportation9_11 satisfies Transportation9_11Interface,
+		languageOption: Languages satisfies LanguageInterface[],
+		introductoryPages: translateArrayOfPages(IntroductoryPages, "en-CA") as IntroductoryPagesType,
+		questionPages: translateArrayOfPages(QuestionPages, "en-CA") as QuestionPagesType,
+		kidExtroPages: translateArrayOfPages(KidExtroductoryPages, "en-CA") as KidExtroductoryPagesType,
+		adultExtroPages: translateArrayOfPages(
+			AdultExtroductoryPages,
+			"en-CA",
+		) as AdultExtroductoryPagesType,
+		kidAgePage: translatePage(
+			DemographicKidPage,
+			"en-CA",
+		) satisfies QuestionDropdownPayloadInterface,
+		teenAgePage: translatePage(
+			DemographicTeenPage,
+			"en-CA",
+		) satisfies QuestionDropdownPayloadInterface,
+		adultAgePage: translatePage(
+			DemographicAdultPage,
+			"en-CA",
+		) satisfies QuestionDropdownPayloadInterface,
+		feedbackExtroPages: translateArrayOfPages(
+			FeedbackExtroductoryPages,
+			"en-CA",
+		) as FeedbackExtroductoryPagesType,
+		backPhrase: translatePhrase(BackPhrase, "en-CA") satisfies PhraseInterface,
+		completePhrase: translatePhrase(CompletePhrase, "en-CA") satisfies PhraseInterface,
+		donePhrase: translatePhrase(DonePhrase, "en-CA") satisfies PhraseInterface,
+		dontKnowPhrase: translatePhrase(DontKnowPhrase, "en-CA") satisfies PhraseInterface,
+		feedbackPhrase: translatePhrase(FeedbackPhrase, "en-CA") satisfies PhraseInterface,
+		introductionPhrase: translatePhrase(IntroductionPhrase, "en-CA") satisfies PhraseInterface,
+		nextPhrase: translatePhrase(NextPhrase, "en-CA") satisfies PhraseInterface,
+		pleaseSpecifyPhrase: translatePhrase(PleaseSpecifyPhrase, "en-CA") satisfies PhraseInterface,
+		selectPhrase: translatePhrase(SelectPhrase, "en-CA") satisfies PhraseInterface,
+		tryAgainPhrase: translatePhrase(TryAgainPhrase, "en-CA") satisfies PhraseInterface,
+		successPage: translatePage(SuccessPage, "en-CA") satisfies PagePayloadInterface,
+		offlineSuccessPage: translatePage(OfflineSuccessPage, "en-CA") satisfies PagePayloadInterface,
+		errorPage: translatePage(ErrorPage, "en-CA") satisfies PagePayloadInterface,
+		Transportation7: Transportation7["en-CA"] satisfies ModeActivityInterface,
+		Transportation8_10: Transportation8_10["en-CA"] satisfies ModeActivityTransportationInterface,
+		Transportation9_11: Transportation9_11["en-CA"] satisfies ModeActivityTransportationInterface,
 		sectionPages: [],
 	} satisfies QuestionSliceInterface,
 	reducers: {
@@ -135,20 +142,16 @@ const questionsSlice = createSlice({
 		getTeenAgePage: (state: QuestionSliceInterface) => state.teenAgePage,
 		getAdultAgePage: (state: QuestionSliceInterface) => state.adultAgePage,
 		getFeedbackExtroPages: (state: QuestionSliceInterface) => state.feedbackExtroPages,
-		getBackButton: (state: QuestionSliceInterface) => state.backButton,
-		getCompleteButton: (state: QuestionSliceInterface) => state.completeButton,
-		getContinueButton: (state: QuestionSliceInterface) => state.continueButton,
-		getGoButton: (state: QuestionSliceInterface) => state.goButton,
-		getNextButton: (state: QuestionSliceInterface) => state.nextButton,
-		getStartedButton: (state: QuestionSliceInterface) => state.startedButton,
-		getAgreementPhrase: (state: QuestionSliceInterface) => state.agreementPhrase,
+		getBackPhrase: (state: QuestionSliceInterface) => state.backPhrase,
+		getCompletePhrase: (state: QuestionSliceInterface) => state.completePhrase,
 		getDonePhrase: (state: QuestionSliceInterface) => state.donePhrase,
 		getDontKnowPhrase: (state: QuestionSliceInterface) => state.dontKnowPhrase,
-		getIntroductionPhrase: (state: QuestionSliceInterface) => state.introductionPhrase,
-		getTryAgainPhrase: (state: QuestionSliceInterface) => state.tryAgainPhrase,
 		getFeedbackPhrase: (state: QuestionSliceInterface) => state.feedbackPhrase,
-		getSelectPhrase: (state: QuestionSliceInterface) => state.selectPhrase,
+		getIntroductionPhrase: (state: QuestionSliceInterface) => state.introductionPhrase,
+		getNextPhrase: (state: QuestionSliceInterface) => state.nextPhrase,
 		getPleaseSpecifyPhrase: (state: QuestionSliceInterface) => state.pleaseSpecifyPhrase,
+		getSelectPhrase: (state: QuestionSliceInterface) => state.selectPhrase,
+		getTryAgainPhrase: (state: QuestionSliceInterface) => state.tryAgainPhrase,
 		getSuccessPage: (state: QuestionSliceInterface) => state.successPage,
 		getOfflineSuccessPage: (state: QuestionSliceInterface) => state.offlineSuccessPage,
 		getErrorPage: (state: QuestionSliceInterface) => state.errorPage,
@@ -156,6 +159,18 @@ const questionsSlice = createSlice({
 		getTransportation8_10: (state: QuestionSliceInterface) => state.Transportation8_10,
 		getTransportation9_11: (state: QuestionSliceInterface) => state.Transportation9_11,
 		getSectionPages: (state: QuestionSliceInterface) => state.sectionPages,
+	},
+	extraReducers: (builder) => {
+		builder.addCase(storeQuestionData.fulfilled, (state, action) => {
+			console.log("question state saved...");
+		});
+		builder.addCase(removeQuestionData.fulfilled, (state, action) => {
+			console.log("question state removed...");
+		});
+		builder.addCase(loadQuestionData.fulfilled, (state, action) => {
+			console.log("question state loaded...");
+			state = action.payload;
+		});
 	},
 });
 export const {
@@ -176,20 +191,16 @@ export const {
 	getTeenAgePage,
 	getAdultAgePage,
 	getFeedbackExtroPages,
-	getBackButton,
-	getCompleteButton,
-	getContinueButton,
-	getGoButton,
-	getNextButton,
-	getStartedButton,
-	getAgreementPhrase,
+	getBackPhrase,
+	getCompletePhrase,
 	getDonePhrase,
 	getDontKnowPhrase,
-	getIntroductionPhrase,
-	getTryAgainPhrase,
 	getFeedbackPhrase,
-	getSelectPhrase,
+	getIntroductionPhrase,
+	getNextPhrase,
 	getPleaseSpecifyPhrase,
+	getSelectPhrase,
+	getTryAgainPhrase,
 	getSuccessPage,
 	getOfflineSuccessPage,
 	getErrorPage,

@@ -141,8 +141,6 @@ export interface ExtroInterface {
 }
 
 
-
-
 /** Payload */
 export interface BasePagePayloadInterface {
 	ident: string;
@@ -151,15 +149,6 @@ export interface BasePagePayloadInterface {
 	audio_ident?: string;
 	type: Screen.Page;
 }
-
-export interface PagePayloadInterface extends BasePagePayloadInterface {
-	translations: PageInterface;
-}
-
-export interface LangPagePayloadInterface extends BasePagePayloadInterface {
-	translations: Record<string, PageInterface>;
-}
-
 
 // question dropdown payload
 export interface BaseQuestionDropdownPayloadInterface {
@@ -170,14 +159,6 @@ export interface BaseQuestionDropdownPayloadInterface {
 	type: Screen.SingleQuestion;
 }
 
-export interface QuestionDropdownPayloadInterface extends BaseQuestionDropdownPayloadInterface {
-	translations: QuestionDropdownInterface;
-}
-
-export interface LangQuestionDropdownPayloadInterface extends BaseQuestionDropdownPayloadInterface {
-	translations: Record<string, QuestionDropdownInterface>;
-}
-
 // question dropdown language payload
 export interface BaseQuestionDropdownPayloadLanguageInterface {
 	ident: string;
@@ -185,15 +166,6 @@ export interface BaseQuestionDropdownPayloadLanguageInterface {
 	column_name: string;
 	type: Screen.Language;
 }
-
-export interface QuestionDropdownPayloadLanguageInterface extends BaseQuestionDropdownPayloadLanguageInterface {
-	translations: QuestionDropdownLanguageInterface;
-}
-
-export interface LangQuestionDropdownPayloadLanguageInterface extends BaseQuestionDropdownPayloadLanguageInterface {
-	translations: Record<string, QuestionDropdownLanguageInterface>;
-}
-
 
 // question input payload
 export interface BaseQuestionInputPayloadInterface {
@@ -204,15 +176,6 @@ export interface BaseQuestionInputPayloadInterface {
 	type: Screen.SingleQuestion;
 }
 
-export interface QuestionInputPayloadInterface extends BaseQuestionInputPayloadInterface {
-	translations: QuestionInputInterface;
-}
-
-export interface LangQuestionInputPayloadInterface extends BaseQuestionInputPayloadInterface {
-	translations: Record<string, QuestionInputInterface>;
-}
-
-
 // question checkbox payload
 export interface BaseQuestionCheckboxPayloadInterface {
 	ident: string;
@@ -222,15 +185,6 @@ export interface BaseQuestionCheckboxPayloadInterface {
 	type: Screen.SingleQuestion;
 }
 
-export interface QuestionCheckboxPayloadInterface extends BaseQuestionCheckboxPayloadInterface {
-	translations: QuestionCheckboxInterface;
-}
-
-export interface LangQuestionCheckboxPayloadInterface extends BaseQuestionCheckboxPayloadInterface {
-	translations: Record<string, QuestionCheckboxInterface>;
-}
-
-
 // question radio payload
 export interface BaseQuestionRadioPayloadInterface {
 	ident: string;
@@ -238,14 +192,6 @@ export interface BaseQuestionRadioPayloadInterface {
 	audio_ident?: string;
 	column_name: string;
 	type: Screen.SingleQuestion;
-}
-
-export interface QuestionRadioPayloadInterface extends BaseQuestionRadioPayloadInterface {
-	translations: QuestionRadioInterface;
-}
-
-export interface LangQuestionRadioPayloadInterface extends BaseQuestionRadioPayloadInterface {
-	translations: Record<string, QuestionRadioInterface>;
 }
 
 // question slider payload
@@ -257,15 +203,6 @@ export interface BaseQuestionSliderPayloadInterface {
 	type: Screen.SingleQuestion;
 }
 
-export interface QuestionSliderPayloadInterface extends BaseQuestionSliderPayloadInterface {
-	translations: QuestionSliderInterface;
-}
-
-export interface LangQuestionSliderPayloadInterface extends BaseQuestionSliderPayloadInterface {
-	translations: Record<string, QuestionSliderInterface>;
-}
-
-
 // question textarea payload
 export interface BaseQuestionTextareaPayloadInterface {
 	ident: string;
@@ -275,15 +212,6 @@ export interface BaseQuestionTextareaPayloadInterface {
 	isFinal?: boolean;
 	type: Screen.SingleQuestion;
 }
-
-export interface QuestionTextareaPayloadInterface extends BaseQuestionTextareaPayloadInterface {
-	translations: QuestionTextareaInterface;
-}
-
-export interface LangQuestionTextareaPayloadInterface extends BaseQuestionTextareaPayloadInterface {
-	translations: Record<string, QuestionTextareaInterface>;
-}
-
 
 // question radio image payload
 export interface BaseQuestionRadioImagePayloadInterface {
@@ -295,19 +223,99 @@ export interface BaseQuestionRadioImagePayloadInterface {
 	type: Screen.SingleQuestion;
 }
 
+// section payload
+export interface BaseSectionPayloadInterface {
+	ident: string;
+	heading: string;
+	type: Screen.IntroQuestion;
+}
+
+// preamble payload
+export interface BasePreamblePayloadInterface {
+	ident: string;
+	heading: string;
+	audio_ident?: string;
+	type: Screen.Preamble;
+}
+
+// extro payload
+interface BaseExtroPayloadInterface {
+	ident: string;
+	name: string;
+	isFinal?: boolean;
+	type: Screen.ExtroQuestion;
+}
+
+export interface PagePayloadInterface extends BasePagePayloadInterface {
+	translations: PageInterface;
+}
+
+export interface LangPagePayloadInterface extends BasePagePayloadInterface {
+	translations: Record<string, PageInterface>;
+}
+
+export interface QuestionDropdownPayloadInterface extends BaseQuestionDropdownPayloadInterface {
+	translations: QuestionDropdownInterface;
+}
+
+export interface LangQuestionDropdownPayloadInterface extends BaseQuestionDropdownPayloadInterface {
+	translations: Record<string, QuestionDropdownInterface>;
+}
+
+export interface QuestionDropdownPayloadLanguageInterface extends BaseQuestionDropdownPayloadLanguageInterface {
+	translations: QuestionDropdownLanguageInterface;
+}
+
+export interface LangQuestionDropdownPayloadLanguageInterface extends BaseQuestionDropdownPayloadLanguageInterface {
+	translations: Record<string, QuestionDropdownLanguageInterface>;
+}
+
+export interface QuestionInputPayloadInterface extends BaseQuestionInputPayloadInterface {
+	translations: QuestionInputInterface;
+}
+
+export interface LangQuestionInputPayloadInterface extends BaseQuestionInputPayloadInterface {
+	translations: Record<string, QuestionInputInterface>;
+}
+
+export interface QuestionCheckboxPayloadInterface extends BaseQuestionCheckboxPayloadInterface {
+	translations: QuestionCheckboxInterface;
+}
+
+export interface LangQuestionCheckboxPayloadInterface extends BaseQuestionCheckboxPayloadInterface {
+	translations: Record<string, QuestionCheckboxInterface>;
+}
+
+export interface QuestionRadioPayloadInterface extends BaseQuestionRadioPayloadInterface {
+	translations: QuestionRadioInterface;
+}
+
+export interface LangQuestionRadioPayloadInterface extends BaseQuestionRadioPayloadInterface {
+	translations: Record<string, QuestionRadioInterface>;
+}
+
+export interface QuestionSliderPayloadInterface extends BaseQuestionSliderPayloadInterface {
+	translations: QuestionSliderInterface;
+}
+
+export interface LangQuestionSliderPayloadInterface extends BaseQuestionSliderPayloadInterface {
+	translations: Record<string, QuestionSliderInterface>;
+}
+
+export interface QuestionTextareaPayloadInterface extends BaseQuestionTextareaPayloadInterface {
+	translations: QuestionTextareaInterface;
+}
+
+export interface LangQuestionTextareaPayloadInterface extends BaseQuestionTextareaPayloadInterface {
+	translations: Record<string, QuestionTextareaInterface>;
+}
+
 export interface QuestionRadioImagePayloadInterface extends BaseQuestionRadioImagePayloadInterface {
 	translations: QuestionRadioImageInterface;
 }
 
 export interface LangQuestionRadioImagePayloadInterface extends BaseQuestionRadioImagePayloadInterface {
 	translations: Record<string, QuestionRadioImageInterface>;
-}
-
-// section payload
-export interface BaseSectionPayloadInterface {
-	ident: string;
-	heading: string;
-	type: Screen.IntroQuestion;
 }
 
 export interface SectionPayloadInterface extends BaseSectionPayloadInterface {
@@ -318,16 +326,6 @@ export interface LangSectionPayloadInterface extends BaseSectionPayloadInterface
 	translations: Record<string, SectionInterface>;
 }
 
-
-
-// preamble payload
-export interface BasePreamblePayloadInterface {
-	ident: string;
-	heading: string;
-	audio_ident?: string;
-	type: Screen.Preamble;
-}
-
 export interface PreamblePayloadInterface extends BasePreamblePayloadInterface {
 	translations: PreambleInterface;
 }
@@ -336,14 +334,6 @@ export interface LangPreamblePayloadInterface extends BasePreamblePayloadInterfa
 	translations: Record<string, PreambleInterface>;
 }
 
-
-// extro payload
-interface BaseExtroPayloadInterface {
-	ident: string;
-	name: string;
-	isFinal?: boolean;
-	type: Screen.ExtroQuestion;
-}
 export interface ExtroPayloadInterface extends BaseExtroPayloadInterface {
 	translations: ExtroInterface;
 }
@@ -351,20 +341,3 @@ export interface ExtroPayloadInterface extends BaseExtroPayloadInterface {
 export interface LangExtroPayloadInterface extends BaseExtroPayloadInterface {
 	translations: Record<string, ExtroInterface>;
 }
-
-
-
-
-/** Translations */
-// export type LangPageInterface = Record<string, PageInterface>;
-// export type LangQuestionDropdownInterface = Record<string, QuestionDropdownInterface>;
-// export type LangQuestionDropdownLanguageInterface = Record<string, QuestionDropdownLanguageInterface>;
-// export type LangQuestionInputInterface = Record<string, QuestionInputInterface>;
-// export type LangQuestionCheckboxInterface = Record<string, QuestionCheckboxInterface>;
-// export type LangQuestionRadioInterface = Record<string, QuestionRadioInterface>;
-// export type LangQuestionTextareaInterface = Record<string, QuestionTextareaInterface>;
-// export type LangQuestionRadioImageInterface = Record<string, QuestionRadioImageInterface>;
-// export type LangQuestionSliderInterface = Record<string, QuestionSliderInterface>;
-// export type LangSectionInterface = Record<string, SectionInterface>;
-// export type LangPreambleInterface = Record<string, PreambleInterface>;
-// export type LangExtroInterface = Record<string, ExtroInterface>;
