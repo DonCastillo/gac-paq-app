@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PagePayloadInterface } from "interface/payload.type";
+import type { LangPagePayloadInterface } from "interface/payload.type";
 
-const OfflineSuccessPage: PagePayloadInterface = {
+const OfflineSuccessPage: LangPagePayloadInterface = {
 	ident: "offline_success_page",
 	title: "Offline Success Page",
 	name: "Offline Success Page",

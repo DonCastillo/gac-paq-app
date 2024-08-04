@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const Relationship: QuestionRadioPayloadInterface = {
+const Relationship: LangQuestionRadioPayloadInterface = {
 	ident: "relationship_to_the_child",
 	name: "relationship_to_the_child",
 	type: Screen.SingleQuestion,

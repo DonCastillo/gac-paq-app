@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
 
-const Satisfaction: QuestionRadioImagePayloadInterface = {
+const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 	ident: "app_use_satisfaction",
 	name: "app_use_satisfaction",
 	type: Screen.SingleQuestion,

@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PagePayloadInterface } from "interface/payload.type";
+import type { LangPagePayloadInterface } from "interface/payload.type";
 
-const AboutPage: PagePayloadInterface = {
+const AboutPage: LangPagePayloadInterface = {
 	ident: "welcome",
 	title: "Welcome To GAC-PAQ",
 	name: "Welcome To GAC-PAQ",

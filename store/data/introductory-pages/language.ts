@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionDropdownPayloadLanguageInterface } from "interface/payload.type";
+import type { LangQuestionDropdownPayloadLanguageInterface } from "interface/payload.type";
 
-const LanguagePage: QuestionDropdownPayloadLanguageInterface = {
+const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 	ident: "language_location",
 	name: "language_location",
 	type: Screen.Language,

@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
+import type { LangQuestionCheckboxPayloadInterface } from "interface/payload.type";
 
-const ChildEthnicities: QuestionCheckboxPayloadInterface = {
+const ChildEthnicities: LangQuestionCheckboxPayloadInterface = {
 	ident: "child_ethnicity",
 	name: "child_ethnicity",
 	type: Screen.SingleQuestion,
@@ -42,43 +42,6 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "Prefer not to say",
-					value: "Prefer not to say",
-				},
-			],
-		},
-		"sv-SE": {
-			type: Question.QuestionCheckbox,
-			heading: "Fråga 26",
-			label: "Vilken etnicitet har ditt barn?",
-			kid_label: "Vilken etnicitet har ditt barn?",
-			adult_label: "Vilken etnicitet har ditt barn?",
-			choices: [
-				{
-					label: "Asiatisk",
-					value: "Asian",
-				},
-				{
-					label: "Svart eller afroamerikansk",
-					value: "Black or African American",
-				},
-				{
-					label: "Ursprungsbefolkning",
-					value: "Indigenous",
-				},
-				{
-					label: "Latinamerikansk",
-					value: "Latin American",
-				},
-				{
-					label: "Vit eller kaukasisk",
-					value: "White or Caucasian",
-				},
-				{
-					label: "Annat",
-					value: "Other",
-				},
-				{
-					label: "Föredrar att inte svara",
 					value: "Prefer not to say",
 				},
 			],

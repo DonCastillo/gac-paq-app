@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const Financial: QuestionRadioPayloadInterface = {
+const Financial: LangQuestionRadioPayloadInterface = {
 	ident: "difficulty_to_meet_financial_needs",
 	name: "difficulty_to_meet_financial_needs",
 	type: Screen.SingleQuestion,
