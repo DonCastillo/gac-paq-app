@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
+import type { LangQuestionCheckboxPayloadInterface } from "interface/payload.type";
 
-const S4Q7: QuestionCheckboxPayloadInterface = {
+const S4Q7: LangQuestionCheckboxPayloadInterface = {
 	ident: "transportation_7",
 	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 	column_name: "17.0 Tran",

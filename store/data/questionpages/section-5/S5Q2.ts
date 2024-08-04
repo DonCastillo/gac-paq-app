@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S5Q2: QuestionRadioPayloadInterface = {
+const S5Q2: LangQuestionRadioPayloadInterface = {
 	ident: "organized_2",
 	name: "Question 19: How many days did you do these activities during the past week?",
 	column_name: "19.0 Orga",
