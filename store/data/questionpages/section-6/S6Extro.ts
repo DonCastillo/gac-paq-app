@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { ExtroPayloadInterface } from "interface/payload.type";
+import type { LangExtroPayloadInterface } from "interface/payload.type";
 
-const S6Extro: ExtroPayloadInterface = {
+const S6Extro: LangExtroPayloadInterface = {
 	ident: "play_extro",
 	name: "Section 6 Extro",
 	type: Screen.ExtroQuestion,

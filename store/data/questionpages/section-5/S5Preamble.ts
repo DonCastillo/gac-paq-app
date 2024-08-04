@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PreamblePayloadInterface } from "interface/payload.type";
+import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
-const S5Preamble: PreamblePayloadInterface = {
+const S5Preamble: LangPreamblePayloadInterface = {
 	ident: "organized_preamble",
 	heading: "Organized Activities",
 	type: Screen.Preamble,

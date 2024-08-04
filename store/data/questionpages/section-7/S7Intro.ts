@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { SectionPayloadInterface } from "interface/payload.type";
+import type { LangSectionPayloadInterface } from "interface/payload.type";
 
-const S7Intro: SectionPayloadInterface = {
+const S7Intro: LangSectionPayloadInterface = {
 	ident: "outdoors_intro",
 	heading: "Outdoors",
 	type: Screen.IntroQuestion,
