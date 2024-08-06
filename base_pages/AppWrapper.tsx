@@ -8,12 +8,18 @@ import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive.utils";
 import type DeviceInterface from "interface/dimensions";
 import fonts from "styles/fonts";
 import { useDispatch, useSelector } from "react-redux";
-import { setDevice, setIsConnected } from "store/settings/settingsSlice";
+import { setDevice, setIsConnected, setIsLoading } from "store/settings/settingsSlice";
 import { ErrorScreen, SplashScreen, SuccessScreen } from "utils/state_screen.utils";
-import { loadApp } from "utils/load_pages.utils";
+import { loadPages } from "utils/load_pages.utils";
 import LoadingScreenAdult from "./adult/LoadingScreenAdult";
 import NetInfo from "@react-native-community/netinfo";
 import { sendResponseQueue } from "utils/response.utils";
+import {
+	loadQuestionData,
+	removeQuestionData,
+	storeQuestionData,
+} from "store/questions/questionsThunk";
+import { resetResponses } from "store/responses/responsesSlice";
 
 const Stack = createNativeStackNavigator();
 
@@ -72,7 +78,22 @@ const AppWrapper = (): React.ReactElement => {
 
 	// load app
 	useEffect(() => {
-		loadApp();
+		const loadApp = async (): Promise<void> => {
+			dispatch(setIsLoading(true));
+			await dispatch(removeQuestionData());
+			await dispatch(storeQuestionData());
+			await dispatch(loadQuestionData("en-CA"));
+			dispatch(resetResponses());
+			loadPages();
+			dispatch(setIsLoading(false));
+		};
+		loadApp()
+			.then(() => {
+				console.log("app initially loaded ...");
+			})
+			.catch((err) => {
+				console.log("error loading app", err);
+			});
 	}, []);
 
 	if (!fontsLoaded) {

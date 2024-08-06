@@ -28,7 +28,6 @@ import BackPhrase from "store/data/phrase/back";
 import CompletePhrase from "store/data/phrase/complete";
 import NextPhrase from "store/data/phrase/next";
 
-
 // save all the raw pages and their different translations to local storage
 const saveAppData = async (): Promise<void> => {
 	const appData = {

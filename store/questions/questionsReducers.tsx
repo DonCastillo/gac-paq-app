@@ -29,9 +29,14 @@ const addSectionPage: AddSectionPageFuncType = (state, action) => {
 	state.sectionPages.push(action.payload);
 };
 
+const resetSectionPages: QuestionsFuncType = (state) => {
+	state.sectionPages = [];
+};
+
 export default {
 	setLanguageOption,
 	setIntroductoryPages,
 	identifyLastSectionExtroPage,
 	addSectionPage,
+	resetSectionPages,
 };

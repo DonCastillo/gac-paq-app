@@ -75,20 +75,18 @@ const settingsSlice = createSlice({
 		removeExtroPages: reducersActions.removeExtroPages,
 		removeFeedbackPages: reducersActions.removeFeedbackPages,
 		reset: reducersActions.reset,
+		setIsLoading: reducersActions.setIsLoading,
 		setStartDateTime: reducersActions.setStartDateTime,
 		setIsConnected: reducersActions.setIsConnected,
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
-			state.isLoading = false;
 			state.narrations = action.payload;
 		});
 		builder.addCase(getNarrationPayload.pending, (state) => {
-			state.isLoading = true;
 			state.narrations = {};
 		});
 		builder.addCase(getNarrationPayload.rejected, (state) => {
-			state.isLoading = false;
 			state.narrations = {};
 		});
 	},
@@ -133,6 +131,7 @@ export const {
 	removeExtroPages,
 	removeFeedbackPages,
 	reset,
+	setIsLoading,
 	setStartDateTime,
 	setIsConnected,
 } = settingsSlice.actions;

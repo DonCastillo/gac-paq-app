@@ -8,24 +8,29 @@ import {
 	translatePhrase,
 } from "utils/translate_questions.utils";
 
-export const storeQuestionData = createAsyncThunk("questions/storeQuestionData", async () => {
-	await saveAppData();
-});
+export const storeQuestionData = createAsyncThunk(
+	"questions/storeQuestionData",
+	async (_, { getState, dispatch }) => {
+		await saveAppData();
+	},
+);
 
-export const removeQuestionData = createAsyncThunk("questions/removeQuestionData", async () => {
-	await removeAppData();
-});
+export const removeQuestionData = createAsyncThunk(
+	"questions/removeQuestionData",
+	async (_, { getState, dispatch }) => {
+		await removeAppData();
+	},
+);
 
 export const loadQuestionData = createAsyncThunk(
 	"questions/loadQuestionData",
-	async (language: string | null) => {
+	async (language: string | null, { getState, dispatch }) => {
 		const finalLanguage = language ?? "en-CA";
 		// const finalLanguage = language ?? "fr-CA";
 
 		const data = await readAppData();
 
 		if (data === null && data === undefined) return {};
-
 		const introductoryPages = translateArrayOfPages(data.introductoryPages, finalLanguage);
 		const questionPages = translateArrayOfPages(data.questionPages, finalLanguage);
 		const kidExtroPages = translateArrayOfPages(data.kidExtroPages, finalLanguage);

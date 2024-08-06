@@ -24,6 +24,7 @@ export type SkipPageFuncType = (state: SettingsSliceInterface, action: PayloadAc
 export type AddPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ key: number; page: PageIndexInterface }>) => void;
 export type SetPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<number, PageIndexInterface>>) => void;
 export type SetIsConnectedFuncType = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
+export type SetIsLoadingFuncType = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type AddSectionTotalPagesFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ sectionNumber: number; totalPages: number }>) => void;
 export type SetKeyboardState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SettingsFuncType = (state: SettingsSliceInterface) => void;

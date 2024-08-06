@@ -52,6 +52,7 @@ import BackPhrase from "store/data/phrase/back";
 import CompletePhrase from "store/data/phrase/complete";
 import NextPhrase from "store/data/phrase/next";
 
+const defaultLanguage = "en-CA";
 export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
 	introductoryPages: IntroductoryPagesType;
@@ -85,45 +86,64 @@ const questionsSlice = createSlice({
 	name: "questions",
 	initialState: {
 		languageOption: Languages satisfies LanguageInterface[],
-		introductoryPages: translateArrayOfPages(IntroductoryPages, "en-CA") as IntroductoryPagesType,
-		questionPages: translateArrayOfPages(QuestionPages, "en-CA") as QuestionPagesType,
-		kidExtroPages: translateArrayOfPages(KidExtroductoryPages, "en-CA") as KidExtroductoryPagesType,
+		introductoryPages: translateArrayOfPages(
+			IntroductoryPages,
+			defaultLanguage,
+		) as IntroductoryPagesType,
+		questionPages: translateArrayOfPages(QuestionPages, defaultLanguage) as QuestionPagesType,
+		kidExtroPages: translateArrayOfPages(
+			KidExtroductoryPages,
+			defaultLanguage,
+		) as KidExtroductoryPagesType,
 		adultExtroPages: translateArrayOfPages(
 			AdultExtroductoryPages,
-			"en-CA",
+			defaultLanguage,
 		) as AdultExtroductoryPagesType,
 		kidAgePage: translatePage(
 			DemographicKidPage,
-			"en-CA",
+			defaultLanguage,
 		) satisfies QuestionDropdownPayloadInterface,
 		teenAgePage: translatePage(
 			DemographicTeenPage,
-			"en-CA",
+			defaultLanguage,
 		) satisfies QuestionDropdownPayloadInterface,
 		adultAgePage: translatePage(
 			DemographicAdultPage,
-			"en-CA",
+			defaultLanguage,
 		) satisfies QuestionDropdownPayloadInterface,
 		feedbackExtroPages: translateArrayOfPages(
 			FeedbackExtroductoryPages,
-			"en-CA",
+			defaultLanguage,
 		) as FeedbackExtroductoryPagesType,
-		backPhrase: translatePhrase(BackPhrase, "en-CA") satisfies PhraseInterface,
-		completePhrase: translatePhrase(CompletePhrase, "en-CA") satisfies PhraseInterface,
-		donePhrase: translatePhrase(DonePhrase, "en-CA") satisfies PhraseInterface,
-		dontKnowPhrase: translatePhrase(DontKnowPhrase, "en-CA") satisfies PhraseInterface,
-		feedbackPhrase: translatePhrase(FeedbackPhrase, "en-CA") satisfies PhraseInterface,
-		introductionPhrase: translatePhrase(IntroductionPhrase, "en-CA") satisfies PhraseInterface,
-		nextPhrase: translatePhrase(NextPhrase, "en-CA") satisfies PhraseInterface,
-		pleaseSpecifyPhrase: translatePhrase(PleaseSpecifyPhrase, "en-CA") satisfies PhraseInterface,
-		selectPhrase: translatePhrase(SelectPhrase, "en-CA") satisfies PhraseInterface,
-		tryAgainPhrase: translatePhrase(TryAgainPhrase, "en-CA") satisfies PhraseInterface,
-		successPage: translatePage(SuccessPage, "en-CA") satisfies PagePayloadInterface,
-		offlineSuccessPage: translatePage(OfflineSuccessPage, "en-CA") satisfies PagePayloadInterface,
-		errorPage: translatePage(ErrorPage, "en-CA") satisfies PagePayloadInterface,
-		Transportation7: Transportation7["en-CA"] satisfies ModeActivityInterface,
-		Transportation8_10: Transportation8_10["en-CA"] satisfies ModeActivityTransportationInterface,
-		Transportation9_11: Transportation9_11["en-CA"] satisfies ModeActivityTransportationInterface,
+		backPhrase: translatePhrase(BackPhrase, defaultLanguage) satisfies PhraseInterface,
+		completePhrase: translatePhrase(CompletePhrase, defaultLanguage) satisfies PhraseInterface,
+		donePhrase: translatePhrase(DonePhrase, defaultLanguage) satisfies PhraseInterface,
+		dontKnowPhrase: translatePhrase(DontKnowPhrase, defaultLanguage) satisfies PhraseInterface,
+		feedbackPhrase: translatePhrase(FeedbackPhrase, defaultLanguage) satisfies PhraseInterface,
+		introductionPhrase: translatePhrase(
+			IntroductionPhrase,
+			defaultLanguage,
+		) satisfies PhraseInterface,
+		nextPhrase: translatePhrase(NextPhrase, defaultLanguage) satisfies PhraseInterface,
+		pleaseSpecifyPhrase: translatePhrase(
+			PleaseSpecifyPhrase,
+			defaultLanguage,
+		) satisfies PhraseInterface,
+		selectPhrase: translatePhrase(SelectPhrase, defaultLanguage) satisfies PhraseInterface,
+		tryAgainPhrase: translatePhrase(TryAgainPhrase, defaultLanguage) satisfies PhraseInterface,
+		successPage: translatePage(SuccessPage, defaultLanguage) satisfies PagePayloadInterface,
+		offlineSuccessPage: translatePage(
+			OfflineSuccessPage,
+			defaultLanguage,
+		) satisfies PagePayloadInterface,
+		errorPage: translatePage(ErrorPage, defaultLanguage) satisfies PagePayloadInterface,
+		Transportation7: Transportation7[defaultLanguage] satisfies ModeActivityInterface,
+		Transportation8_10: Transportation8_10[
+			defaultLanguage
+		] satisfies ModeActivityTransportationInterface,
+		Transportation9_11: Transportation9_11[
+			defaultLanguage
+		] satisfies ModeActivityTransportationInterface,
 		sectionPages: [],
 	} satisfies QuestionSliceInterface,
 	reducers: {
@@ -131,6 +151,7 @@ const questionsSlice = createSlice({
 		setIntroductoryPages: reducersActions.setIntroductoryPages,
 		identifyLastSectionExtroPage: reducersActions.identifyLastSectionExtroPage,
 		addSectionPage: reducersActions.addSectionPage,
+		resetSectionPages: reducersActions.resetSectionPages,
 	},
 	selectors: {
 		getLanguageOption: (state: QuestionSliceInterface) => state.languageOption,
@@ -162,14 +183,34 @@ const questionsSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(storeQuestionData.fulfilled, (state, action) => {
-			console.log("question state saved...");
+			console.log("question saving fulfilled...");
+		});
+		builder.addCase(storeQuestionData.pending, (state, action) => {
+			console.log("question saving pending...");
+		});
+		builder.addCase(storeQuestionData.rejected, (state, action) => {
+			console.log("question saving rejected...");
 		});
 		builder.addCase(removeQuestionData.fulfilled, (state, action) => {
-			console.log("question state removed...");
+			console.log("question removing fulfilled...");
+		});
+		builder.addCase(removeQuestionData.pending, (state, action) => {
+			console.log("question removing pending...");
+		});
+		builder.addCase(removeQuestionData.rejected, (state, action) => {
+			console.log("question removing rejected...");
 		});
 		builder.addCase(loadQuestionData.fulfilled, (state, action) => {
-			console.log("question state loaded...");
-			state = action.payload;
+			console.log("question loaded fulfilled...");
+			return { ...state, ...action.payload };
+		});
+		builder.addCase(loadQuestionData.pending, (state, action) => {
+			console.log("question loaded pending...");
+			state = {};
+		});
+		builder.addCase(loadQuestionData.rejected, (state, action) => {
+			console.log("question loaded rejected...");
+			state = {};
 		});
 	},
 });
@@ -178,6 +219,7 @@ export const {
 	setIntroductoryPages,
 	identifyLastSectionExtroPage,
 	addSectionPage,
+	resetSectionPages,
 } = questionsSlice.actions;
 
 export const {
