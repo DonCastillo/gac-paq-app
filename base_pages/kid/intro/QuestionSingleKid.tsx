@@ -26,6 +26,7 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
+	setIsLoading,
 	setMode,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
@@ -127,6 +128,13 @@ const QuestionSingleKid = (): React.ReactElement => {
 		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
+	// load translations
+	const loadNarrations = async (mode: Mode): Promise<void> => {
+		dispatch(setIsLoading(true));
+		await dispatch(getNarrationPayload({ mode, language }));
+		dispatch(setIsLoading(false));
+	};
+
 	useEffect(() => {
 		// trigger a mode change if the mode changes from a values that is not a kid
 		if (mode !== Mode.Kid) {
@@ -152,7 +160,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 			value !== undefined &&
 			value !== null
 		) {
-			dispatch(getNarrationPayload({ mode: getModeType(value), language }));
+			loadNarrations(getModeType(value));
 		}
 	};
 

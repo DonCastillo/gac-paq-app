@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { useNavigation } from "@react-navigation/native";
+import React, { useCallback } from "react";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
-import { useDispatch } from "react-redux";
-import { setIsLoading } from "store/settings/settingsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { getCurrentPageNumber, getLanguage, getMode, skipPage } from "store/settings/settingsSlice";
 import AnimatedView from "components/AnimatedView";
 import {
 	loadQuestionData,
@@ -10,38 +10,46 @@ import {
 	storeQuestionData,
 } from "store/questions/questionsThunk";
 import { loadPages } from "utils/load_pages.utils";
+import { changeMode } from "utils/mode.utils";
 import { resetResponses } from "store/responses/responsesSlice";
 
 const GenericSplash = (): React.ReactElement => {
 	const navigation = useNavigation();
 	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
+	const mode = useSelector(getMode);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
 
-	useEffect(() => {
-		const loadApp = async (): Promise<void> => {
-			dispatch(setIsLoading(true));
-			await dispatch(removeQuestionData());
-			await dispatch(storeQuestionData());
-			await dispatch(loadQuestionData("en-CA"));
-			dispatch(resetResponses());
-			loadPages();
-			dispatch(setIsLoading(false));
-		};
+	const loadApp = async (): Promise<void> => {
+		await dispatch(removeQuestionData());
+		await dispatch(storeQuestionData());
+		await dispatch(loadQuestionData(language));
+		dispatch(resetResponses());
+		loadPages();
+		dispatch(skipPage(1));
+		changeMode(mode);
+	};
 
-		const timeout = setTimeout(() => {
-			loadApp()
-				.then(() => {
-					console.log("app reloaded ...");
-					navigation.navigate("RegularPageScreen" as never);
-				})
-				.catch((err) => {
-					console.log("error loading app", err);
-				});
-		}, 3000);
+	useFocusEffect(
+		useCallback(() => {
+			const timer = setTimeout(() => {
+				console.log("useFocusEffect on GenericSplash");
+				loadApp()
+					.then(() => {
+						console.log("finished reloading app");
+						navigation.navigate("RegularPageScreen" as never);
+					})
+					.catch((error) => {
+						console.log(error);
+					});
+			}, 3000);
 
-		return () => {
-			clearTimeout(timeout);
-		};
-	}, []);
+			return () => {
+				console.log("exiting GenericSplash");
+				clearTimeout(timer);
+			};
+		}, [navigation, currentPageNumber]),
+	);
 
 	return (
 		<AnimatedView>

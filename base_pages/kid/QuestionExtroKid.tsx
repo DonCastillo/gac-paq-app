@@ -22,8 +22,10 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
+	getIsLoading,
 	getSectionTotalPages,
 	prevPage,
+	setIsLoading,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
@@ -38,10 +40,10 @@ const QuestionExtroKid = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
 	const isConnected = useSelector(getIsConnected);
+	const isLoading = useSelector(getIsLoading);
 	// const isConnected = false;
 
 	// state
-	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// translations
@@ -85,7 +87,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 
 	const submitResponseHandler = async (): Promise<void> => {
 		try {
-			setLoading(true);
+			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
 			if (isConnected) {
 				await submitResponse(sanitizedResponses);
@@ -100,11 +102,11 @@ const QuestionExtroKid = (): React.ReactElement => {
 			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
-			setLoading(false);
+			dispatch(setIsLoading(false));
 		}
 	};
 
-	if (!loading) {
+	if (!isLoading) {
 		return (
 			<View style={styles.container}>
 				<BackgroundYellowStroke />

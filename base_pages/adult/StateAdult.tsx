@@ -13,7 +13,14 @@ import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
 import BGLinearGradient from "components/BGLinearGradient";
 import LoadingScreenAdult from "./LoadingScreenAdult";
 import { useDispatch, useSelector } from "react-redux";
-import { getDevice, getIsConnected, getPhrases, reset } from "store/settings/settingsSlice";
+import {
+	getDevice,
+	getIsConnected,
+	getIsLoading,
+	getPhrases,
+	reset,
+	setIsLoading,
+} from "store/settings/settingsSlice";
 import {
 	getErrorPage,
 	getOfflineSuccessPage,
@@ -41,8 +48,8 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const errorPage = useSelector(getErrorPage);
 	const device = useSelector(getDevice);
 	const isConnected = useSelector(getIsConnected);
+	const isLoading = useSelector(getIsLoading);
 
-	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
@@ -80,7 +87,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 
 	const resubmitResponse = async (): Promise<void> => {
 		try {
-			setLoading(true);
+			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
 			if (isConnected) {
 				await submitResponse(sanitizedResponses);
@@ -95,7 +102,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
-			setLoading(false);
+			dispatch(setIsLoading(false));
 		}
 	};
 
@@ -120,7 +127,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	};
 
 	const backgroundImage = getImageBackgroundStatus(state);
-	if (!loading) {
+	if (!isLoading) {
 		return (
 			<AnimatedView>
 				<View style={styles.container}>

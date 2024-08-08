@@ -8,7 +8,13 @@ import { getDeviceInfo, getInitialDeviceInfo } from "utils/responsive.utils";
 import type DeviceInterface from "interface/dimensions";
 import fonts from "styles/fonts";
 import { useDispatch, useSelector } from "react-redux";
-import { setDevice, setIsConnected, setIsLoading } from "store/settings/settingsSlice";
+import {
+	getLanguage,
+	getMode,
+	setDevice,
+	setIsConnected,
+	setIsLoading,
+} from "store/settings/settingsSlice";
 import { ErrorScreen, SplashScreen, SuccessScreen } from "utils/state_screen.utils";
 import { loadPages } from "utils/load_pages.utils";
 import LoadingScreenAdult from "./adult/LoadingScreenAdult";
@@ -20,12 +26,16 @@ import {
 	storeQuestionData,
 } from "store/questions/questionsThunk";
 import { resetResponses } from "store/responses/responsesSlice";
+import { changeMode } from "utils/mode.utils";
+import GenericSplash from "./generic/GenericSplash";
 
 const Stack = createNativeStackNavigator();
 
 const AppWrapper = (): React.ReactElement => {
 	const [fontsLoaded, fontError] = useFonts(fonts);
 	const [hasNetwork, setHasNetwork] = useState<boolean>(false);
+	const mode = useSelector(getMode);
+	const language = useSelector(getLanguage);
 	const settings = useSelector((state: any) => state.settings);
 	const responses = useSelector((state: any) => state.responses);
 	const questions = useSelector((state: any) => state.questions);
@@ -82,9 +92,10 @@ const AppWrapper = (): React.ReactElement => {
 			dispatch(setIsLoading(true));
 			await dispatch(removeQuestionData());
 			await dispatch(storeQuestionData());
-			await dispatch(loadQuestionData("en-CA"));
+			await dispatch(loadQuestionData(language));
 			dispatch(resetResponses());
 			loadPages();
+			changeMode(mode);
 			dispatch(setIsLoading(false));
 		};
 		loadApp()

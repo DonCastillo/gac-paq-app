@@ -25,6 +25,7 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
+	setIsLoading,
 	setMode,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
@@ -35,6 +36,7 @@ import type { QuestionDropdownInterface, QuestionInputInterface } from "interfac
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "../LoadingScreenAdult";
 import AnimatedView from "components/AnimatedView";
+import type Mode from "constants/mode.enum";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -114,6 +116,13 @@ const QuestionSingleAdult = (): React.ReactElement => {
 		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
+	// load translations
+	const loadNarrations = async (mode: Mode): Promise<void> => {
+		dispatch(setIsLoading(true));
+		await dispatch(getNarrationPayload({ mode, language }));
+		dispatch(setIsLoading(false));
+	};
+
 	/**
 	 * temporarily store the initial selection
 	 */
@@ -134,7 +143,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 			value !== undefined &&
 			value !== null
 		) {
-			dispatch(getNarrationPayload({ mode: getModeType(value), language }));
+			loadNarrations(getModeType(value));
 		}
 	};
 
