@@ -34,6 +34,8 @@ import type {
 	LangExtroPayloadInterface,
 	LangPreamblePayloadInterface,
 	LangQuestionSliderPayloadInterface,
+	LangQuestionOptionPayloadInterface,
+	QuestionCheckboxInputInterface,
 } from "interface/payload.type";
 import type Question from "constants/question.enum";
 import type Device from "constants/device.enum";
@@ -98,7 +100,8 @@ export type AdultExtroductoryPagesType = AdultExtroductoryPageType[];
 export type LangAdultExtroductoryPageType =
 	| LangSectionPayloadInterface
 	| LangQuestionRadioPayloadInterface
-	| LangQuestionCheckboxPayloadInterface;
+	| LangQuestionCheckboxPayloadInterface
+	| LangQuestionOptionPayloadInterface;
 export type LangAdultExtroductoryPagesType = LangAdultExtroductoryPageType[];
 
 // extroductory page
@@ -137,7 +140,8 @@ export type TranslatedQuestionQuestionType =
 	| QuestionRadioImageInterface
 	| QuestionSliderInterface
 	| QuestionInputInterface
-	| QuestionTextareaInterface;
+	| QuestionTextareaInterface
+	| QuestionCheckboxInputInterface;
 
 export type FinalResponseType =
 	| Record<string, string | string[]>

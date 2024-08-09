@@ -16,9 +16,7 @@ import type {
 	LangFeedbackExtroductoryPagesType,
 	LangKidExtroductoryPagesType,
 } from "interface/union.type";
-import ChildEthnicitiesSE from "./extroductory-pages/adult/child-ethnicities/sv-SE";
 
-const ChildEthnicitiesPages = [ChildEthnicitiesSE];
 const KidExtroductoryPages: LangKidExtroductoryPagesType = [SocialEconomicsIntroKid, GenderKid];
 const AdultExtroductoryPages: LangAdultExtroductoryPagesType = [
 	SocialEconomicsIntroAdult,
@@ -36,9 +34,4 @@ const FeedbackExtroductoryPages: LangFeedbackExtroductoryPagesType = [
 	AppExtro,
 ];
 
-export {
-	KidExtroductoryPages,
-	AdultExtroductoryPages,
-	FeedbackExtroductoryPages,
-	ChildEthnicitiesPages,
-};
+export { KidExtroductoryPages, AdultExtroductoryPages, FeedbackExtroductoryPages };

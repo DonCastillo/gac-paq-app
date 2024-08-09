@@ -96,6 +96,15 @@ export interface QuestionCheckboxInterface extends BasePayloadInterface{
 	choices: Choice[];
 }
 
+export interface QuestionCheckboxInputInterface extends BasePayloadInterface{
+	type: Question.QuestionCheckboxInput;
+	heading: string;
+	input_label: string;
+	input_placeholder: string;
+	input_label_en?: string;
+	choices: Choice[];
+}
+
 export interface QuestionRadioInterface extends BasePayloadInterface{
 	type: Question.QuestionRadio;
 	heading: string;
@@ -187,6 +196,15 @@ export interface BaseQuestionCheckboxPayloadInterface {
 
 // question radio payload
 export interface BaseQuestionRadioPayloadInterface {
+	ident: string;
+	name: string;
+	audio_ident?: string;
+	column_name: string;
+	type: Screen.SingleQuestion;
+}
+
+// question option payload
+export interface BaseQuestionOptionPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
@@ -293,6 +311,11 @@ export interface QuestionRadioPayloadInterface extends BaseQuestionRadioPayloadI
 export interface LangQuestionRadioPayloadInterface extends BaseQuestionRadioPayloadInterface {
 	translations: Record<string, QuestionRadioInterface>;
 }
+
+export interface LangQuestionOptionPayloadInterface extends BaseQuestionOptionPayloadInterface {
+	translations: Record<string, QuestionRadioInterface | QuestionCheckboxInterface | QuestionCheckboxInputInterface>;
+}
+
 
 export interface QuestionSliderPayloadInterface extends BaseQuestionSliderPayloadInterface {
 	translations: QuestionSliderInterface;

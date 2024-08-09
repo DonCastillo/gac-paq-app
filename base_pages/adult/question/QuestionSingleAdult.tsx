@@ -38,6 +38,7 @@ import { getQuestion17Label } from "utils/label.utils";
 import { getQuestionType } from "utils/type.utils";
 import type { TranslatedQuestionQuestionType } from "interface/union.type";
 import type {
+	QuestionCheckboxInputInterface,
 	QuestionCheckboxInterface,
 	QuestionInputInterface,
 	QuestionRadioImageInterface,
@@ -46,6 +47,7 @@ import type {
 	QuestionTextareaInterface,
 } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
+import QuestionCheckboxInput from "components/adults/QuestionCheckboxInput";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -222,6 +224,21 @@ const QuestionSingleAdult = (): React.ReactElement => {
 				selectedValue={selectedValue}
 				placeholder={questionCasted.placeholder}
 				onChange={changeHandler}
+			/>
+		);
+	} else if (questionType === Question.QuestionCheckboxInput) {
+		const questionCasted = translatedPage as QuestionCheckboxInputInterface;
+		questionComponent = (
+			<QuestionCheckboxInput
+				key={currentPageNumber}
+				selectedValue={selectedValue}
+				inputPlaceholder={questionCasted.input_placeholder}
+				inputLabel={questionCasted.input_label}
+				inputLabelEn={questionCasted.input_label_en}
+				options={choiceMode(questionCasted.choices, mode)}
+				onSelect={(value: string) => {
+					changeHandler(value);
+				}}
 			/>
 		);
 	} else if (questionType === Question.QuestionTextarea) {

@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { LangQuestionCheckboxPayloadInterface } from "interface/payload.type";
+import type { LangQuestionOptionPayloadInterface } from "interface/payload.type";
 
-const ChildEthnicities: LangQuestionCheckboxPayloadInterface = {
+const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 	ident: "child_ethnicity",
 	name: "child_ethnicity",
 	type: Screen.SingleQuestion,
@@ -42,6 +42,27 @@ const ChildEthnicities: LangQuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "Prefer not to say",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 26",
+			label: "Vilket land är du född i?",
+			kid_label: "Vilket land är du född i?",
+			adult_label: "Vilket land är du född i?",
+			choices: [
+				{
+					label: "Sverige",
+					value: "Sweden",
+				},
+				{
+					label: "Annat",
+					value: "Other",
+				},
+				{
+					label: "Föredrar att inte svara",
 					value: "Prefer not to say",
 				},
 			],

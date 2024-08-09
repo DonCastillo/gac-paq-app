@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { LangQuestionCheckboxPayloadInterface } from "interface/payload.type";
+import type { LangQuestionOptionPayloadInterface } from "interface/payload.type";
 
-const ParentEthnicities: LangQuestionCheckboxPayloadInterface = {
+const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 	ident: "parent_ethnicity",
 	name: "parent_ethnicity",
 	type: Screen.SingleQuestion,
@@ -47,36 +47,18 @@ const ParentEthnicities: LangQuestionCheckboxPayloadInterface = {
 			],
 		},
 		"sv-SE": {
-			type: Question.QuestionCheckbox,
+			type: Question.QuestionCheckboxInput,
 			heading: "Fråga 27",
-			label: "Vilken är din etnicitet?",
-			kid_label: "Vilken är din etnicitet?",
-			adult_label: "Vilken är din etnicitet?",
+			label:
+				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			kid_label:
+				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			adult_label:
+				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			input_label: "år",
+			input_placeholder: "år",
+			input_label_en: "years",
 			choices: [
-				{
-					label: "Asiatisk",
-					value: "Asian",
-				},
-				{
-					label: "Svart eller afroamerikansk",
-					value: "Black or African American",
-				},
-				{
-					label: "Ursprungsbefolkning",
-					value: "Indigenous",
-				},
-				{
-					label: "Latinamerikansk",
-					value: "Latin American",
-				},
-				{
-					label: "Vit eller kaukasisk",
-					value: "White or Caucasian",
-				},
-				{
-					label: "Annat",
-					value: "Other",
-				},
 				{
 					label: "Föredrar att inte svara",
 					value: "Prefer not to say",
