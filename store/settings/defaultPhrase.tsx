@@ -2,14 +2,16 @@ import PhraseLabel from "constants/phrase_label.enum";
 import type { PhrasePayloadInterface } from "interface/phrase";
 
 const defaultPhrase: PhrasePayloadInterface = {
-	agreement: PhraseLabel.Agreement,
+	back: PhraseLabel.Back,
+	complete: PhraseLabel.Complete,
 	done: PhraseLabel.Done,
 	dontKnow: PhraseLabel.DontKnow,
-	introduction: PhraseLabel.Introduction,
-	tryAgain: PhraseLabel.TryAgain,
 	feedback: PhraseLabel.Feedback,
-	select: PhraseLabel.Select,
+	introduction: PhraseLabel.Introduction,
+	next: PhraseLabel.Next,
 	specify: PhraseLabel.PleaseSpecify,
+	select: PhraseLabel.Select,
+	tryAgain: PhraseLabel.TryAgain,
 };
 
 export default defaultPhrase;

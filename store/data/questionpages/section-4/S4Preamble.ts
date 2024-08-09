@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PreamblePayloadInterface } from "interface/payload.type";
+import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
-const S4Preamble: PreamblePayloadInterface = {
+const S4Preamble: LangPreamblePayloadInterface = {
 	ident: "transportation_preamble",
 	heading: "Transportation",
 	type: Screen.Preamble,

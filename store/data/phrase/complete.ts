@@ -1,6 +1,6 @@
-import type { LangButtonInterface } from "interface/button";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const CompleteButton: LangButtonInterface = {
+const CompletePhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Complete",
 	},
@@ -24,4 +24,4 @@ const CompleteButton: LangButtonInterface = {
 	},
 };
 
-export default CompleteButton;
+export default CompletePhrase;

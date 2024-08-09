@@ -1,6 +1,6 @@
-import type { LangButtonInterface } from "interface/button";
+import type { LangPhraseInterface } from "interface/phrase";
 
-const BackButton: LangButtonInterface = {
+const BackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Back",
 	},
@@ -25,4 +25,4 @@ const BackButton: LangButtonInterface = {
 	},
 };
 
-export default BackButton;
+export default BackPhrase;

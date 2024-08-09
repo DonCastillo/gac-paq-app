@@ -17,11 +17,10 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { translateDescription, translatePage } from "utils/translate.utils";
+import { translateDescription } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
@@ -29,7 +28,6 @@ import { moderateScale } from "utils/responsive.utils";
 
 const PageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
@@ -41,7 +39,7 @@ const PageAdult = (): React.ReactElement => {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// translations
-	const translatedPage = translatePage(currentPage.page.translations, language) as PageInterface;
+	const translatedPage = currentPage.page.translations as PageInterface;
 	const translatedDescription = translateDescription(
 		translatedPage.description ?? "",
 		translatedPage.description_mode,

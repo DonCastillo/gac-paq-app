@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionInputPayloadInterface } from "interface/payload.type";
+import type { LangQuestionInputPayloadInterface } from "interface/payload.type";
 
-const ParticipantIDPage: QuestionInputPayloadInterface = {
+const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 	ident: "participant_id",
 	name: "participant_id",
 	type: Screen.SingleQuestion,

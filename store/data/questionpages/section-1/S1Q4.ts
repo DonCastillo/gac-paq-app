@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S1Q4: QuestionRadioPayloadInterface = {
+const S1Q4: LangQuestionRadioPayloadInterface = {
 	ident: "school_4",
 	name: "Question 4: How long are your physical education classes?",
 	column_name: "04.0 Scho",

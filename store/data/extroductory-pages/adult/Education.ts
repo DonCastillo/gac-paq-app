@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const Education: QuestionRadioPayloadInterface = {
+const Education: LangQuestionRadioPayloadInterface = {
 	ident: "highest_level_of_education",
 	name: "highest_level_of_education",
 	type: Screen.SingleQuestion,

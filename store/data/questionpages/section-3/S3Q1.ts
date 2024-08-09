@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S3Q1: QuestionRadioPayloadInterface = {
+const S3Q1: LangQuestionRadioPayloadInterface = {
 	ident: "work_1",
 	name: "Question 12: In the past week, did you volunteer or work?",
 	type: Screen.SingleQuestion,

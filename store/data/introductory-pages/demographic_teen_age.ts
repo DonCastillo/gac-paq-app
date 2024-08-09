@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
+import type { LangQuestionDropdownPayloadInterface } from "interface/payload.type";
 
-const DemographicTeenPage: QuestionDropdownPayloadInterface = {
+const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	audio_ident: "child_age",

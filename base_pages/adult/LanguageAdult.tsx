@@ -21,20 +21,20 @@ import {
 	getMode,
 	getPhrases,
 	nextPage,
+	setIsLoading,
 	setLanguage,
 	setSectionTitles,
+	skipPage,
 } from "store/settings/settingsSlice";
-import { loadButtons, loadPhrases } from "utils/load.utils";
+import { loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
-import {
-	translatePage,
-	translateQuestionLabel,
-	translateSectionHeading,
-} from "utils/translate.utils";
+import { translateQuestionLabel, translateSectionHeading } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
-import { getNarrationPayload } from "store/settings/settingsThunk.";
+import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "./LoadingScreenAdult";
 import AnimatedView from "components/AnimatedView";
+import { loadQuestionData } from "store/questions/questionsThunk";
+import { loadPages } from "utils/load_pages.utils";
 
 const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -49,54 +49,49 @@ const LanguageAdult = (): React.ReactElement => {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as QuestionDropdownLanguageInterface;
-
+	const translatedPage = currentPage.page.translations as QuestionDropdownLanguageInterface;
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
 		translatedPage.adult_label,
 		mode,
 	);
 
-	// translate phrases and buttons
-	useEffect(() => {
-		loadButtons();
+	// translate and load all the pages
+	const loadAppBasedOnLanguage = async (language: string): Promise<void> => {
+		dispatch(setIsLoading(true));
+		await dispatch(loadQuestionData(language));
 		loadPhrases();
-		translateSections();
-		// set narration payload
-		dispatch(getNarrationPayload({ mode, language }));
-	}, [language]);
-
-	// set phrases
-	useEffect(() => {
-		translateSections();
-	}, [phrases]);
-
-	// set selected value
-	useEffect(() => {
-		setSelectedValue(language);
-	}, [currentPageNumber]);
-
-	// set language defaulta
-	useEffect(() => {
-		addResponse(language);
-	}, []);
+		translateSections(language);
+		await dispatch(getNarrationPayload({ mode, language }));
+		loadPages();
+		dispatch(skipPage(1));
+		dispatch(setIsLoading(false));
+	};
 
 	// translate section headings
-	const translateSections = (): void => {
+	const translateSections = (language: string): void => {
 		const translatedSectionTitles = translateSectionHeading(language);
 		dispatch(
 			setSectionTitles([phrases?.introduction, ...translatedSectionTitles, phrases?.feedback]),
 		);
 	};
 
+	// set selected value
+	useEffect(() => {
+		setSelectedValue(language);
+	}, [currentPageNumber]);
+
+	// set language default
+	useEffect(() => {
+		addResponse(language);
+	}, []);
+
 	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
-			dispatch(setLanguage(value));
 			addResponse(value);
 			setSelectedValue(value);
+			dispatch(setLanguage(value));
+			loadAppBasedOnLanguage(value);
 		} else {
 			setSelectedValue(null);
 		}
@@ -140,7 +135,7 @@ const LanguageAdult = (): React.ReactElement => {
 			</View>
 		);
 	} else {
-		return <LoadingScreenAdult />;
+		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
 };
 

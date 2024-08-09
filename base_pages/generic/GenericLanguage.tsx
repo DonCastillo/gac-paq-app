@@ -4,11 +4,7 @@ import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
 import QuestionSelectLanguageAdult from "components/adults/QuestionSelectLanguageAdult";
-import {
-	translatePage,
-	translateQuestionLabel,
-	translateSectionHeading,
-} from "utils/translate.utils";
+import { translateQuestionLabel, translateSectionHeading } from "utils/translate.utils";
 import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
@@ -16,7 +12,6 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background.utils";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import { useDispatch, useSelector } from "react-redux";
@@ -28,16 +23,18 @@ import {
 	getMode,
 	getPhrases,
 	nextPage,
+	setIsLoading,
 	setLanguage,
 	setSectionTitles,
+	skipPage,
 } from "store/settings/settingsSlice";
-import { loadButtons, loadPhrases } from "utils/load.utils";
+import { loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
-import { getNarrationPayload } from "store/settings/settingsThunk.";
-import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
+import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
-import AnimatedView from "components/AnimatedView";
+import { loadQuestionData } from "store/questions/questionsThunk";
+import { loadPages } from "utils/load_pages.utils";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -53,30 +50,32 @@ const GenericLanguage = (): React.ReactElement => {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as QuestionDropdownLanguageInterface;
-
+	const translatedPage = currentPage.page.translations as QuestionDropdownLanguageInterface;
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
 		translatedPage.adult_label,
 		mode,
 	);
 
-	// translate phrases and buttons
-	useEffect(() => {
-		loadButtons();
+	// translate and load all the pages
+	const loadAppBasedOnLanguage = async (language: string): Promise<void> => {
+		dispatch(setIsLoading(true));
+		await dispatch(loadQuestionData(language));
 		loadPhrases();
-		translateSections();
-		// set narration payload
-		dispatch(getNarrationPayload({ mode, language }));
-	}, [language]);
+		translateSections(language);
+		await dispatch(getNarrationPayload({ mode, language }));
+		loadPages();
+		dispatch(skipPage(1));
+		dispatch(setIsLoading(false));
+	};
 
-	// set phrases
-	useEffect(() => {
-		translateSections();
-	}, [phrases]);
+	// translate section headings
+	const translateSections = (language: string): void => {
+		const translatedSectionTitles = translateSectionHeading(language);
+		dispatch(
+			setSectionTitles([phrases?.introduction, ...translatedSectionTitles, phrases?.feedback]),
+		);
+	};
 
 	// set selected value
 	useEffect(() => {
@@ -88,19 +87,12 @@ const GenericLanguage = (): React.ReactElement => {
 		addResponse(language);
 	}, []);
 
-	// translate section headings
-	const translateSections = (): void => {
-		const translatedSectionTitles = translateSectionHeading(language);
-		dispatch(
-			setSectionTitles([phrases?.introduction, ...translatedSectionTitles, phrases?.feedback]),
-		);
-	};
-
 	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
-			dispatch(setLanguage(value));
 			addResponse(value);
 			setSelectedValue(value);
+			dispatch(setLanguage(value));
+			loadAppBasedOnLanguage(value);
 		} else {
 			setSelectedValue(null);
 		}
@@ -108,7 +100,10 @@ const GenericLanguage = (): React.ReactElement => {
 
 	if (!isLoading) {
 		return (
-			<View style={styles.container}>
+			<View
+				style={styles.container}
+				key={currentPageNumber}
+			>
 				<BGLinearGradient />
 				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
 					<ImageBackdrop
@@ -142,7 +137,7 @@ const GenericLanguage = (): React.ReactElement => {
 			</View>
 		);
 	} else {
-		return <LoadingScreenAdult />;
+		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
 };
 

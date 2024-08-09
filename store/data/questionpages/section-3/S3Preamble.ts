@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PreamblePayloadInterface } from "interface/payload.type";
+import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
-const S3Preamble: PreamblePayloadInterface = {
+const S3Preamble: LangPreamblePayloadInterface = {
 	ident: "work_preamble",
 	heading: "Work",
 	audio_ident: "work_preamble",

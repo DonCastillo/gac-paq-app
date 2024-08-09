@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S6Q1: QuestionRadioPayloadInterface = {
+const S6Q1: LangQuestionRadioPayloadInterface = {
 	ident: "play_1",
 	name: "Question 21:	In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
 	type: Screen.SingleQuestion,

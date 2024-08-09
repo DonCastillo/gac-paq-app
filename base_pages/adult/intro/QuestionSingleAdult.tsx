@@ -25,16 +25,18 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
+	setIsLoading,
 	setMode,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
 import { getModeType, getQuestionType } from "utils/type.utils";
-import { translatePage, translateQuestionLabel } from "utils/translate.utils";
+import { translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
-import { getNarrationPayload } from "store/settings/settingsThunk.";
+import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "../LoadingScreenAdult";
 import AnimatedView from "components/AnimatedView";
+import type Mode from "constants/mode.enum";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -49,10 +51,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as TranslatedIntroQuestionType;
+	const translatedPage = currentPage.page.translations as TranslatedIntroQuestionType;
 
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
@@ -117,6 +116,13 @@ const QuestionSingleAdult = (): React.ReactElement => {
 		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
+	// load translations
+	const loadNarrations = async (mode: Mode): Promise<void> => {
+		dispatch(setIsLoading(true));
+		await dispatch(getNarrationPayload({ mode, language }));
+		dispatch(setIsLoading(false));
+	};
+
 	/**
 	 * temporarily store the initial selection
 	 */
@@ -137,7 +143,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 			value !== undefined &&
 			value !== null
 		) {
-			dispatch(getNarrationPayload({ mode: getModeType(value), language }));
+			loadNarrations(getModeType(value));
 		}
 	};
 

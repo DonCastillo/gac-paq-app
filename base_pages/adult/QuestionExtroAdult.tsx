@@ -22,34 +22,33 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
-	getLanguage,
+	getIsLoading,
 	prevPage,
+	setIsLoading,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
 import type { ExtroInterface } from "interface/payload.type";
-import { translatePage } from "utils/translate.utils";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
 import { moderateScale } from "utils/responsive.utils";
 
 const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const navigation = useNavigation();
 	const backgroundImage = getImageBackground();
 	const isConnected = useSelector(getIsConnected);
+	const isLoading = useSelector(getIsLoading);
 
 	// state
-	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// translations
 	const isFinal = currentPage.page?.isFinal;
-	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
+	const translatedPage = currentPage.page.translations as ExtroInterface;
 
 	// set button component dynamically
 	useEffect(() => {
@@ -86,7 +85,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 
 	const submitResponseHandler = async (): Promise<void> => {
 		try {
-			setLoading(true);
+			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
 			if (isConnected) {
 				await submitResponse(sanitizedResponses);
@@ -101,11 +100,11 @@ const QuestionExtroAdult = (): React.ReactElement => {
 			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
-			setLoading(false);
+			dispatch(setIsLoading(false));
 		}
 	};
 
-	if (!loading) {
+	if (!isLoading) {
 		return (
 			<View style={styles.container}>
 				<BGLinearGradient />

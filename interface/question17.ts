@@ -1,4 +1,4 @@
-interface ModeActivityInterface {
+export interface ModeActivityInterface {
 	kid: {
 		none: string;
 		school: string;
@@ -13,7 +13,7 @@ interface ModeActivityInterface {
 	};
 }
 
-interface ModeActivityTransportationInterface {
+export interface ModeActivityTransportationInterface {
 	kid: {
 		wheel: {
 			none: string;

@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
 
-const S1Q5: QuestionRadioImagePayloadInterface = {
+const S1Q5: LangQuestionRadioImagePayloadInterface = {
 	ident: "school_5",
 	name: "Question 5: Which of the following images shows what you do most of the time in physical education class?",
 	column_name: "05.0 Scho",

@@ -13,12 +13,7 @@ import { choiceMode } from "utils/options.utils";
 import QuestionRadio from "components/adults/QuestionRadio";
 import QuestionRadioImage from "components/adults/QuestionRadioImage";
 import { addResponse, getResponse } from "utils/response.utils";
-import {
-	intToString,
-	stringToInt,
-	translatePage,
-	translateQuestionLabel,
-} from "utils/translate.utils";
+import { intToString, stringToInt, translateQuestionLabel } from "utils/translate.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import PhraseLabel from "constants/phrase_label.enum";
 import QuestionInput from "components/adults/QuestionInput";
@@ -35,7 +30,6 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -44,6 +38,7 @@ import { getQuestion17Label } from "utils/label.utils";
 import { getQuestionType } from "utils/type.utils";
 import type { TranslatedQuestionQuestionType } from "interface/union.type";
 import type {
+	QuestionCheckboxInputInterface,
 	QuestionCheckboxInterface,
 	QuestionInputInterface,
 	QuestionRadioImageInterface,
@@ -52,10 +47,10 @@ import type {
 	QuestionTextareaInterface,
 } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
+import QuestionCheckboxInput from "components/adults/QuestionCheckboxInput";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
@@ -67,10 +62,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as TranslatedQuestionQuestionType;
+	const translatedPage = currentPage.page.translations as TranslatedQuestionQuestionType;
 
 	let questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
@@ -232,6 +224,21 @@ const QuestionSingleAdult = (): React.ReactElement => {
 				selectedValue={selectedValue}
 				placeholder={questionCasted.placeholder}
 				onChange={changeHandler}
+			/>
+		);
+	} else if (questionType === Question.QuestionCheckboxInput) {
+		const questionCasted = translatedPage as QuestionCheckboxInputInterface;
+		questionComponent = (
+			<QuestionCheckboxInput
+				key={currentPageNumber}
+				selectedValue={selectedValue}
+				inputPlaceholder={questionCasted.input_placeholder}
+				inputLabel={questionCasted.input_label}
+				inputLabelEn={questionCasted.input_label_en}
+				options={choiceMode(questionCasted.choices, mode)}
+				onSelect={(value: string) => {
+					changeHandler(value);
+				}}
 			/>
 		);
 	} else if (questionType === Question.QuestionTextarea) {

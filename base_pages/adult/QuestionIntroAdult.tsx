@@ -15,17 +15,14 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
-import { translatePage } from "utils/translate.utils";
 import type { SectionInterface } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
 
 const QuestionIntroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
@@ -37,7 +34,7 @@ const QuestionIntroAdult = (): React.ReactElement => {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// translations
-	const translatedPage = translatePage(currentPage.page.translations, language) as SectionInterface;
+	const translatedPage = currentPage.page.translations as SectionInterface;
 
 	// set button component dynamically
 	useEffect(() => {

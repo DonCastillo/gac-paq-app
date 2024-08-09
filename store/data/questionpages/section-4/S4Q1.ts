@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
 
-const S4Q1: QuestionRadioImagePayloadInterface = {
+const S4Q1: LangQuestionRadioImagePayloadInterface = {
 	ident: "transportation_1",
 	name: "Question 15:	How did you go to school in the past week?",
 	type: Screen.SingleQuestion,

@@ -21,11 +21,10 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { translatePage, translateText } from "utils/translate.utils";
+import { translateText } from "utils/translate.utils";
 import type { PreambleInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
@@ -33,7 +32,6 @@ import AnimatedView from "components/AnimatedView";
 const PreambleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const mode = useSelector(getMode);
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
@@ -42,10 +40,7 @@ const PreambleAdult = (): React.ReactElement => {
 	const backgroundImage = getImageBackground();
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as PreambleInterface;
+	const translatedPage = currentPage.page.translations as PreambleInterface;
 
 	const description = translateText(translatedPage.description, mode);
 

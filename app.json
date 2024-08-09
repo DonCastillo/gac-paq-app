@@ -18,6 +18,9 @@
 			"bundleIdentifier": "com.uleth.gacpaq",
 			"infoPlist": {
 				"UIBackgroundModes": ["fetch"]
+			},
+			"config": {
+				"usesNonExemptEncryption": false
 			}
 		},
 		"android": {

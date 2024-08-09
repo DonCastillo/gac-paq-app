@@ -9,6 +9,7 @@ enum Question {
 	QuestionRadioImage = "question_radio_image",
 	QuestionLanguage = "question_language",
 	QuestionSatisfactionImage = "question_satisfaction_image",
+	QuestionCheckboxInput = "question_checkbox_input",
 }
 
 export default Question;

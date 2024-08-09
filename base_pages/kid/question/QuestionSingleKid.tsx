@@ -11,12 +11,7 @@ import QuestionSlider from "components/kid/QuestionSlider";
 import QuestionRadioImage from "components/kid/QuestionRadioImage";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { addResponse, getResponse } from "utils/response.utils";
-import {
-	intToString,
-	stringToInt,
-	translatePage,
-	translateQuestionLabel,
-} from "utils/translate.utils";
+import { intToString, stringToInt, translateQuestionLabel } from "utils/translate.utils";
 import { getQuestionBackground } from "utils/background.utils";
 import Device from "constants/device.enum";
 import PhraseLabel from "constants/phrase_label.enum";
@@ -36,7 +31,6 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -56,7 +50,6 @@ import AnimatedView from "components/AnimatedView";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const colorTheme = useSelector(getColorTheme);
@@ -69,10 +62,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as TranslatedQuestionQuestionType;
+	const translatedPage = currentPage.page.translations as TranslatedQuestionQuestionType;
 
 	let questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,

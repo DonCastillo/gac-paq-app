@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
+import type { LangQuestionDropdownPayloadInterface } from "interface/payload.type";
 
-const AgePage: QuestionDropdownPayloadInterface = {
+const AgePage: LangQuestionDropdownPayloadInterface = {
 	ident: "mode",
 	name: "mode",
 	type: Screen.SingleQuestion,
