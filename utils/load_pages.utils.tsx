@@ -17,7 +17,6 @@ import {
 	clearFeedbackResponses,
 	clearQuestionResponses,
 	clearResponseByIdent,
-	resetResponses,
 } from "store/responses/responsesSlice";
 import {
 	addSectionPage,

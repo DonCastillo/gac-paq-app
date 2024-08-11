@@ -25,7 +25,7 @@ const LoadingScreenAdult = ({ displayTitle }: PropsInterface): React.ReactElemen
 					/>
 					{displayTitle === true && (
 						<Paragraph customStyle={{ color: "#37383c", fontSize: 20, lineHeight: 30 }}>
-							The Global Adolescent and Children Activity Questionnaire
+							The Global Adolescent and Child Activity Questionnaire
 						</Paragraph>
 					)}
 					<View
