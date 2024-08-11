@@ -6,6 +6,7 @@ import {
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
+	optionLetter,
 } from "utils/options.utils";
 import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
@@ -153,10 +154,10 @@ const QuestionCheckbox = ({
 					key={enableColumnWrap.toString()}
 					data={[...options]}
 					contentContainerStyle={{ paddingBottom: 20 }}
-					renderItem={({ item }) => {
+					renderItem={({ item, index }) => {
 						return (
 							<Option
-								text={item.label}
+								text={`${optionLetter(index)}.  ${item.label}`}
 								value={item.value}
 								selected={
 									selected !== null &&

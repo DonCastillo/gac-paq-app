@@ -55,12 +55,6 @@ const optionLanguage = (options: LanguageInterface[]): ChoiceIcon[] => {
 						padding={0}
 						margin={0}
 					/>
-					// <FlagComponent
-					// 	height={50}
-					// 	width={50}
-					// 	padding={0}
-					// 	margin={0}
-					// />
 				),
 			};
 		}
@@ -123,6 +117,12 @@ const getUserSpecifiedOther = (value: string | null, selected: string | null): s
 	return match[1];
 };
 
+const optionLetter = (index: number): string => {
+	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	const lettersArr = letters.split("");
+	return lettersArr[index % letters.length];
+};
+
 export {
 	optionLanguage,
 	hasOtherOption,
@@ -131,4 +131,5 @@ export {
 	isOtherWithSpecifiedValue,
 	extractUserSpecifiedOtherFromArray,
 	choiceMode,
+	optionLetter,
 };
