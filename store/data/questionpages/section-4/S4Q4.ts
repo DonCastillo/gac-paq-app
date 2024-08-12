@@ -98,6 +98,50 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadioImage,
+			heading: "คำถามที่ 16",
+			label: "สัปดาห์ที่แล้ว น้องเดินทางไปทำงานอย่างไร?",
+			kid_label: "สัปดาห์ที่แล้ว น้องเดินทางไปทำงานอย่างไร?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณเดินทางไปทำงานอย่างไร?",
+			kid_sublabel: "เลือกวิธีการเดินทางที่น้องใช้เป็นหลัก",
+			adult_sublabel: "เลือกวิธีการเดินทางที่บุตรหลานของคุณใช้เป็นหลัก",
+			choices: [
+				{
+					label: "เดิน ",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+						adult: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+					},
+				},
+				{
+					label: "การขนส่งสาธารณะ",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+						adult: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+					},
+				},
+				{
+					label: "รถยนต์ รถแท็กซี่ รถบรรทุก หรือรถจักรยานยนต์/มอเตอร์ไซค์",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "อื่น ๆ วิธีใด?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 16",

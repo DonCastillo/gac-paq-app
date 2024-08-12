@@ -84,6 +84,43 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 15b",
+			label: "สัปดาห์ที่แล้ว น้องใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
+			kid_label: "สัปดาห์ที่แล้ว น้องใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
+			choices: [
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 15b",

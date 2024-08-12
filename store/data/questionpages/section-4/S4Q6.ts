@@ -69,6 +69,35 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 16c",
+			label: "ปกติน้องใช้เวลาเดินทางไปทำงานนานเท่าไหร่?",
+			kid_label: "ปกติน้องใช้เวลาเดินทางไปทำงานนานเท่าไหร่?",
+			adult_label: "ปกติบุตรหลานของคุณใช้เวลาเดินทางไปทำงานนานเท่าไหร่?",
+			choices: [
+				{
+					label: "10 นาทีหรือน้อยกว่า",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 นาที",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 นาที",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 นาที",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "มากกว่า 60 นาที",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 16c",

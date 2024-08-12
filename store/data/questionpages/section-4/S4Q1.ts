@@ -134,6 +134,68 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadioImage,
+			heading: "คำถามที่ 15",
+			label: "สัปดาห์ที่แล้ว น้องเดินทางไปโรงเรียนด้วยวิธีการใด?",
+			kid_label: "สัปดาห์ที่แล้ว น้องเดินทางไปโรงเรียนด้วยวิธีการใด?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณเดินทางไปโรงเรียนด้วยวิธีการใด?",
+			kid_sublabel: "เลือกวิธีการเดินทางที่น้องใช้เป็นหลัก",
+			adult_sublabel: "เลือกวิธีการเดินทางที่บุตรหลานของคุณใช้เป็นหลัก",
+			choices: [
+				{
+					label: "เดิน",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+						adult: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+					},
+				},
+				{
+					label: "รถโรงเรียน",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "การขนส่งสาธารณะ",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+						adult: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+					},
+				},
+				{
+					label: "รถยนต์ รถแท็กซี่ รถบรรทุก หรือรถจักรยานยนต์/มอเตอร์ไซค์",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "อื่น ๆ รวมถึงกรณีที่ใช้มากกว่า 1 วิธี",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "เช่น เดินและขึ้นรถประจำทาง/รถเมล์",
+						adult: "เช่น เดินและขึ้นรถประจำทาง/รถเมล์",
+					},
+				},
+				{
+					label: "เรียนที่บ้านไม่ได้เดินทางไปโรงเรียน",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "เรียนที่บ้านไม่ได้เดินทางไปโรงเรียน",
+						adult: "บุตรหลานของฉันเรียนที่บ้านไม่ได้เดินทางไปโรงเรียน",
+					},
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 15",

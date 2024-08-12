@@ -63,6 +63,34 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 17c",
+			label:
+				"โดยปกติ น้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+			kid_label:
+				"โดยปกติ น้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+			adult_label:
+				"โดยปกติ บุตรหลานของคุณใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+			choices: [
+				{
+					label: "10 นาทีหรือน้อยกว่า",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 นาที",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 นาที",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "มากกว่า 30 นาที",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17c",
