@@ -48,7 +48,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถามที่ 8",
+			heading: "คำถาม 8",
 			label:
 				"สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
 			kid_label:

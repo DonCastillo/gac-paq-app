@@ -88,7 +88,7 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถามที่ 16b",
+			heading: "คำถาม 16b",
 			label: "สัปดาห์ที่แล้ว น้องใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
 			kid_label: "สัปดาห์ที่แล้ว น้องใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",

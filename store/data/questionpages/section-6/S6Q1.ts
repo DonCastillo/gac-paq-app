@@ -87,7 +87,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถามที่ 21",
+			heading: "คำถาม 21",
 			label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
 			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
 			adult_label:

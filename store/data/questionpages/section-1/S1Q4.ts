@@ -69,7 +69,7 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถามที่ 4",
+			heading: "คำถาม 4",
 			label: "วิชาพลศึกษาของน้องใช้เวลาเรียนนานเท่าไหร่?",
 			kid_label: "วิชาพลศึกษาของน้องใช้เวลาเรียนนานเท่าไหร่?",
 			adult_label: "วิชาพลศึกษาของบุตรหลานของคุณใช้เวลาเรียนนานเท่าไหร่?",

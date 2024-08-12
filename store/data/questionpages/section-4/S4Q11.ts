@@ -66,7 +66,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถามที่ 17e",
+			heading: "คำถาม 17e",
 			label:
 				"ในวันปกติ คุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			kid_label:

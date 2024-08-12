@@ -73,7 +73,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadioImage,
-			heading: "คำถามที่ 14",
+			heading: "คำถาม 14",
 			label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
 			kid_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
 			adult_label:

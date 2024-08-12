@@ -71,7 +71,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถามที่ 13",
+			heading: "คำถาม 13",
 			label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
 			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
 			adult_label:

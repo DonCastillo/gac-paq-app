@@ -27,7 +27,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionSlider,
-			heading: "คำถามที่ 3",
+			heading: "คำถาม 3",
 			label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
 			kid_label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
