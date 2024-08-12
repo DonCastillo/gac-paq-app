@@ -25,6 +25,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"Den här delen handlar om hushållssysslor där ditt barn måste vara aktiv. Det kan till exempel vara hushållssysslor både inne och ute, trädgårdsarbete eller andra likande saker.",
 			},
 		},
+		"th-TH": {
+			heading: "งานบ้าน",
+			subheading: "ส่วนที่ 2",
+			description: {
+				kid: "ส่วนนี้เป็นคำถามเกี่ยวกับงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัว ที่น้องต้องออกแรง ตัวอย่างของงานบ้านหรืองานที่ได้รับมอบหมายในบ้าน เช่น งานทำความสะอาดบ้านต่าง ๆ  งานดูแลสนามบริเวณบ้าน งานทำสวน และงานอื่น ๆ ที่เกี่ยวข้อง",
+				adult:
+					"ส่วนนี้เป็นคำถามเกี่ยวกับงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัว ที่บุตรหลานของคุณต้องออกแรง ตัวอย่างของงานบ้านหรืองานที่ได้รับมอบหมายในบ้าน เช่น งานทำความสะอาดบ้านต่าง ๆ  งานดูแลสนามบริเวณบ้าน งานทำสวน และงานอื่น ๆ ที่เกี่ยวข้อง",
+			},
+		},
 		"zh-CN": {
 			heading: "家务",
 			subheading: "第2部分",

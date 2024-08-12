@@ -25,6 +25,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"Den här delen handlar om vad ditt barn gör i skolan. Till exempel under idrottslektionen, raster och lunchen.",
 			},
 		},
+		"th-TH": {
+			heading: "โรงเรียน",
+			subheading: "ส่วนที่ 1",
+			description: {
+				kid: "ส่วนนี้เป็นคำถามเกี่ยวกับสิ่งที่น้องทำในวันปกติที่ไปโรงเรียน เช่น ในวิชาพลศึกษา ช่วงเวลาพัก และช่วงพักกลางวัน",
+				adult:
+					"วนนี้เป็นคำถามเกี่ยวกับสิ่งที่บุตรหลานของคุณทำในวันปกติที่ไปโรงเรียน เช่น ในวิชาพลศึกษา ช่วงเวลาพัก และช่วงพักกลางวัน ",
+			},
+		},
 		"zh-CN": {
 			heading: "学校",
 			subheading: "第1部分",

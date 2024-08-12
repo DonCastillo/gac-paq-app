@@ -23,6 +23,14 @@ const S4Preamble: LangPreamblePayloadInterface = {
 				adult: "Den här delen handlar om hur ditt barn tar sig till platser.",
 			},
 		},
+		"th-TH": {
+			heading: "การเดินทาง",
+			subheading: "ส่วนที่ 4",
+			description: {
+				kid: "ส่วนนี้เป็นคำถามเกี่ยวกับวิธีที่น้องใช้เดินทางไปสถานที่ต่าง ๆ",
+				adult: "ส่วนนี้เป็นคำถามเกี่ยวกับวิธีที่บุตรหลานของคุณใช้เดินทางไปสถานที่ต่าง ๆ",
+			},
+		},
 		"zh-CN": {
 			heading: "交通",
 			subheading: "第4部分",

@@ -25,6 +25,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"Denna del handlar om fysisk aktivitet på ditt barns fritid tex vid lek eller spontanidrott. Detta är den tid som barnet själv bestämmer vad han/hon gör. För nästa frågor, räkna inte med de aktiviteter som du nyss berättat för oss om.",
 			},
 		},
+		"th-TH": {
+			heading: "การเล่นหรือช่วงเวลาว่าง",
+			subheading: "ส่วนที่ 6",
+			description: {
+				kid: "ส่วนนี้เป็นคำถามที่รวมกิจกรรมทางกายทั้งหมดที่น้องทำระหว่างการเล่นหรือช่วงที่มีเวลาว่าง แต่ไม่รวมถึงกิจกรรมที่ถูกจัดขึ้นหรือช่วงพักที่โรงเรียน สำหรับคำถามต่อไปนี้จะไม่รวมกิจกรรมที่น้องตอบไปแล้วในส่วนที่ผ่านมา ",
+				adult:
+					"ส่วนนี้เป็นคำถามที่รวมกิจกรรมทางกายทั้งหมดที่บุตรหลานของคุณทำระหว่างการเล่นหรือช่วงที่มีเวลาว่าง แต่ไม่รวมถึงกิจกรรมที่ถูกจัดขึ้นหรือช่วงพักที่โรงเรียน สำหรับคำถามต่อไปนี้จะไม่รวมกิจกรรมที่คุณตอบไปแล้วในส่วนที่ผ่านมา",
+			},
+		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
 			subheading: "第6部分",
