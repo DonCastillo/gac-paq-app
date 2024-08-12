@@ -59,6 +59,31 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 24",
+			label: "น้องเป็น...",
+			kid_label: "น้องเป็น...",
+			adult_label: "น้องเป็น...",
+			choices: [
+				{
+					label: "เด็กผู้ชาย",
+					value: "Boy",
+				},
+				{
+					label: "เด็กผู้หญิง",
+					value: "Girl",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十四题",
