@@ -65,6 +65,43 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionCheckbox,
+			heading: "คำถาม 27",
+			label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			kid_label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			adult_label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			choices: [
+				{
+					label: "เอเชีย",
+					value: "Asian",
+				},
+				{
+					label: "คนผิวดำหรือเชื้อสายแอฟริกันอเมริกัน",
+					value: "Black or African American",
+				},
+				{
+					label: "ชนพื้นเมือง",
+					value: "Indigenous",
+				},
+				{
+					label: "ละตินอเมริกา",
+					value: "Latin American",
+				},
+				{
+					label: "คนผิวขาวหรือคอเคเซียน",
+					value: "White or Caucasian",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
 			heading: "第二十七题",

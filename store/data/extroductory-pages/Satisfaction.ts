@@ -81,6 +81,42 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "ข้อเสนอแนะ",
+			label: "น้องรู้สึกพอใจกับการใช้แอปนี้มากน้อยเพียงใด?",
+			kid_label: "น้องรู้สึกพอใจกับการใช้แอปนี้มากน้อยเพียงใด?",
+			adult_label: "น้องรู้สึกพอใจกับการใช้แอปนี้มากน้อยเพียงใด?",
+			adult_sublabel: "คลิกที่ภาพ (อิโมจิ) ที่ตรงกับระดับความพึงพอใจของน้องมากที่สุด",
+			kid_sublabel: "คลิกที่ภาพ (อิโมจิ) ที่ตรงกับระดับความพึงพอใจของน้องมากที่สุด",
+			choices: [
+				{
+					label: "ไม่พอใจมาก",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "ไม่พอใจ",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "เฉยๆ",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "พอใจ",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "พอใจมาก",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "反馈",

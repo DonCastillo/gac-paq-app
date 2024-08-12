@@ -35,6 +35,18 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "Om ja, skriv dem nedan",
 			adult_sublabel: "Om ja, skriv dem nedan",
 		},
+		"th-TH": {
+			type: Question.QuestionTextarea,
+			heading: "ข้อเสนอแนะ",
+			placeholder: "ใส่ความคิดเห็นของคุณได้ที่นี่",
+			label: "องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			kid_label:
+				"องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			adult_label:
+				"องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			kid_sublabel: "ถ้ามี ขอให้พิมพ์ลงในช่องด้านล่าง",
+			adult_sublabel: "ถ้ามี ขอให้พิมพ์ลงในช่องด้านล่าง",
+		},
 		"zh-CN": {
 			type: Question.QuestionTextarea,
 			heading: "反馈",

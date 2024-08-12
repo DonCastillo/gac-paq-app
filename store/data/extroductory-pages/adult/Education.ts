@@ -76,6 +76,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 29",
+			label: "การศึกษาสูงสุดของสมาชิกในครอบครัวของคุณอยู่ในระดับใด?",
+			kid_label: "การศึกษาสูงสุดของสมาชิกในครอบครัวของคุณอยู่ในระดับใด?",
+			adult_label: "การศึกษาสูงสุดของสมาชิกในครอบครัวของคุณอยู่ในระดับใด?",
+			choices: [
+				{
+					label: "ไม่ได้เรียนหนังสือ",
+					value: "No formal schooling",
+				},
+				{
+					label: "ระดับประถมศึกษา",
+					value: "Primary school",
+				},
+				{
+					label: "ระดับมัธยมศึกษาตอนต้นหรือตอนปลาย",
+					value: "Secondary or high school",
+				},
+				{
+					label: "ศึกษาสายอาชีพ/ระดับวิทยาลัย",
+					value: "Vocational/college education",
+				},
+				{
+					label: "ระดับอุดมศึกษา/มหาวิทยาลัย",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十九题",

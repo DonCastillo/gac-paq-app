@@ -115,6 +115,57 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionCheckbox,
+			heading: "คำถาม 25",
+			label: "บุตรหลานของคุณมีอุปสรรคใดต่อการใช้ชีวิตประจำวันตามรายการต่อไปนี้บ้างหรือไม่?",
+			kid_label: "บุตรหลานของคุณมีอุปสรรคใดต่อการใช้ชีวิตประจำวันตามรายการต่อไปนี้บ้างหรือไม่?",
+			adult_label: "บุตรหลานของคุณมีอุปสรรคใดต่อการใช้ชีวิตประจำวันตามรายการต่อไปนี้บ้างหรือไม่?",
+			kid_sublabel: "เลือกทั้งหมดที่ตรงกับบุตรหลานของคุณ",
+			adult_sublabel: "เลือกทั้งหมดที่ตรงกับบุตรหลานของคุณ",
+			choices: [
+				{
+					label: "การฟัง",
+					value: "Hearing",
+				},
+				{
+					label: "การมองเห็น",
+					value: "Seeing",
+				},
+				{
+					label: "การพูด ",
+					value: "Speech",
+				},
+				{
+					label: "การเคลื่อนไหว",
+					value: "Mobility",
+				},
+				{
+					label: "ความคล่องตัว",
+					value: "Agility",
+				},
+				{
+					label: "อาการเจ็บปวด",
+					value: "Pain",
+				},
+				{
+					label: "ความทรงจำ",
+					value: "Memory",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to say",
+				},
+				{
+					label: "ไม่ตรงกับข้อใดเลย พวกเขาไม่มีอุปสรรคใด ๆ ตามที่กล่าวมาข้างต้น",
+					value: "None of the above",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
 			heading: "第二十五题",
@@ -187,7 +238,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 					value: "Seeing",
 				},
 				{
-					label: "Hablar ",
+					label: "Hablar",
 					value: "Speech",
 				},
 				{

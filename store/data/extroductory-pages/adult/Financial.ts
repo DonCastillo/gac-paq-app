@@ -78,6 +78,41 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 30",
+			label: "คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
+			kid_label:
+				"คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
+			adult_label:
+				"คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
+			choices: [
+				{
+					label: "ยากมาก",
+					value: "Very difficult",
+				},
+				{
+					label: "ยาก",
+					value: "Difficult",
+				},
+				{
+					label: "ไม่ง่ายและไม่ยาก",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "ง่าย",
+					value: "Easy",
+				},
+				{
+					label: "ง่ายมาก",
+					value: "Very easy",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第三十题",
@@ -90,7 +125,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 					value: "Very difficult",
 				},
 				{
-					label: "困难 ",
+					label: "困难",
 					value: "Difficult",
 				},
 				{

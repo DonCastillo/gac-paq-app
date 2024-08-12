@@ -83,6 +83,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 28",
+			label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
+			kid_label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
+			adult_label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
+			choices: [
+				{
+					label: "เป็นพ่อ",
+					value: "Father",
+				},
+				{
+					label: "เป็นแม่",
+					value: "Mother",
+				},
+				{
+					label: "เป็นปู่/ตา",
+					value: "Grandfather",
+				},
+				{
+					label: "เป็นย่า/ยาย",
+					value: "Grandmother",
+				},
+				{
+					label: "เป็นครูสอนพิเศษหรือผู้ดูแล",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十八题",
@@ -107,7 +144,7 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 					value: "Grandmother",
 				},
 				{
-					label: "导师或监护人 ",
+					label: "导师或监护人",
 					value: "Tutor or guardian",
 				},
 				{
