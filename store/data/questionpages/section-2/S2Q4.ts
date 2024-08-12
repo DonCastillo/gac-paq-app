@@ -70,6 +70,38 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadioImage,
+			heading: "คำถามที่ 11",
+			label:
+				"ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
+			kid_label:
+				"ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
+			adult_label:
+				"ภาพใดต่อไปนี้ แสดงสิ่งที่บุตรหลานของคุณทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
+			choices: [
+				{
+					label: "ไม่ได้เคลื่อนไหว",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "เคลื่อนไหวโดยใช้แรงเพียงเล็กน้อย",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "เคลื่อนไหวโดยใช้แรงในระดับปานกลางถึงมาก",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "ไม่ทราบ",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 11",
