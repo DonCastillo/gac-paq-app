@@ -7,9 +7,11 @@ import {
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
+	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getCurrentPage } from "store/settings/settingsSlice";
+import Section from "constants/section.enum";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -146,9 +148,14 @@ const QuestionCheckbox = ({
 				flexDirection: "column",
 				paddingBottom: 20,
 			}}
-			renderItem={({ item }) => (
+			renderItem={({ item, index }) => (
 				<CheckboxOption
 					{...item}
+					label={
+						currentPage.section === Section.Question
+							? `${optionLetter(index)}.  ${item.label}`
+							: item.label
+					}
 					selected={
 						selected !== null &&
 						(selected?.includes(item.value) ||
