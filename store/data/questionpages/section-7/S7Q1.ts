@@ -77,6 +77,39 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 23",
+			label: "สัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			choices: [
+				{
+					label: "ไม่มีเลย",
+					value: "None",
+				},
+				{
+					label: "น้อยกว่า 1 ชั่วโมง (ต่อวัน)",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 ชั่วโมงแต่ไม่ถึง 2 ชั่วโมง (ต่อวัน)",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 ชั่วโมงแต่ไม่ถึง 3 ชั่วโมง (ต่อวัน)",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 ชั่วโมงแต่ไม่ถึง 4 ชั่วโมง (ต่อวัน)",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 ชั่วโมงขึ้นไป (ต่อวัน)",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "第二十三题",
