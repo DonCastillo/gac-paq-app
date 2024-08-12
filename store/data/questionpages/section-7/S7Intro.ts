@@ -14,6 +14,10 @@ const S7Intro: LangSectionPayloadInterface = {
 			heading: "Utomhus",
 			subheading: "Sektion 7",
 		},
+		"th-TH": {
+			heading: "กิจกรรมกลางแจ้ง/กิจกรรมในที่โล่ง",
+			subheading: "ส่วนที่ 7",
+		},
 		"zh-CN": {
 			heading: "室外",
 			subheading: "第7部分",

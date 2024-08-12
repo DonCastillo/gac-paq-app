@@ -30,6 +30,8 @@ import VolunteeringOptions from "styles/images/options/volunteering";
 import type State from "constants/state.enum";
 import StatusBackground from "styles/images/background/status";
 
+const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "es-MX", "fr-CA"];
+
 const getImageBackground = (): any | null => {
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
@@ -41,7 +43,7 @@ const getImageBackground = (): any | null => {
 	const screen = getScreenType(settings.currentPage.screen ?? "page");
 
 	// some languages don't have images yet
-	const blackListLanguages = ["sv-SE"];
+
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
 		region = "CA";
@@ -92,7 +94,6 @@ const getImageBackgroundStatus = (state: State): any | null => {
 	const platform = settings.device.isTablet ? "tablet" : "phone";
 
 	// some languages don't have images yet
-	const blackListLanguages = ["sv-SE"];
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
 		region = "CA";
@@ -109,7 +110,6 @@ const getOptionImage = (image_ident: string): any | null => {
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
 
 	// some languages don't have images yet
-	const blackListLanguages = ["sv-SE"];
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
 		region = "CA";

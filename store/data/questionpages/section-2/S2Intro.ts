@@ -14,6 +14,10 @@ const S2Intro: LangSectionPayloadInterface = {
 			heading: "Hushållssysslor",
 			subheading: "Sektion 2",
 		},
+		"th-TH": {
+			heading: "งานบ้าน",
+			subheading: "ส่วนที่ 2",
+		},
 		"zh-CN": {
 			heading: "家务",
 			subheading: "第2部分",

@@ -14,6 +14,10 @@ const S6Intro: LangSectionPayloadInterface = {
 			heading: "Lek Och Fritid",
 			subheading: "Sektion 6",
 		},
+		"th-TH": {
+			heading: "การเล่นหรือช่วงเวลาว่าง",
+			subheading: "ส่วนที่ 6",
+		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
 			subheading: "第6部分",

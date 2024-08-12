@@ -14,6 +14,10 @@ const S1Intro: LangSectionPayloadInterface = {
 			heading: "Skola",
 			subheading: "Sektion 1",
 		},
+		"th-TH": {
+			heading: "โรงเรียน",
+			subheading: "ส่วนที่ 1",
+		},
 		"zh-CN": {
 			heading: "学校",
 			subheading: "第1部分",
