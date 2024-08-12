@@ -83,6 +83,43 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 2",
+			label: "สัปดาห์ที่แล้วน้องไปโรงเรียนกี่วัน?",
+			kid_label: "สัปดาห์ที่แล้วน้องไปโรงเรียนกี่วัน?",
+			adult_label: "สัปดาห์ที่แล้วบุตรหลานของคุณไปโรงเรียนกี่วัน?",
+			choices: [
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 2",

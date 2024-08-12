@@ -67,6 +67,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 4",
+			label: "วิชาพลศึกษาของน้องใช้เวลาเรียนนานเท่าไหร่?",
+			kid_label: "วิชาพลศึกษาของน้องใช้เวลาเรียนนานเท่าไหร่?",
+			adult_label: "วิชาพลศึกษาของบุตรหลานของคุณใช้เวลาเรียนนานเท่าไหร่?",
+			choices: [
+				{
+					label: "น้อยกว่า 30 นาทีต่อคาบ",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 นาทีต่อคาบ",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 นาทีต่อคาบ",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "มากกว่า 60 นาทีต่อคาบ",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "ไม่ทราบ",
+					value: "Don't know",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 4",

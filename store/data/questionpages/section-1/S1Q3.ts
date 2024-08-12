@@ -25,6 +25,14 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			adult_label: "Hur många idrottslektioner har ditt barn haft den senaste veckan?",
 			max_value: 7,
 		},
+		"th-TH": {
+			type: Question.QuestionSlider,
+			heading: "คำถามที่ 3",
+			label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
+			kid_label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
+			max_value: 7,
+		},
 		"zh-CN": {
 			type: Question.QuestionSlider,
 			heading: "问题 3",
