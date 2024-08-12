@@ -69,24 +69,24 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionDropdown,
 			heading: "ยินดีต้อนรับ!",
-			label: "ใครกำลังทำแบบสอบถามนี้?",
-			kid_label: "ใครกำลังทำแบบสอบถามนี้?",
-			adult_label: "ใครกำลังทำแบบสอบถามนี้?",
+			label: "ผู้ตอบแบบสอบถามอยู่ตอนนี้คือ...?",
+			kid_label: "ผู้ตอบแบบสอบถามอยู่ตอนนี้คือ...?",
+			adult_label: "ผู้ตอบแบบสอบถามอยู่ตอนนี้คือ...?",
 			choices: [
 				{
 					label: "เด็ก",
 					value: "child",
 					sublabel: {
-						kid: "8 ถึง 11 ปี",
-						adult: "8 ถึง 11 ปี",
+						kid: "อายุ  8-11 ปี",
+						adult: "อายุ  8-11 ปี",
 					},
 				},
 				{
 					label: "วัยรุ่น",
 					value: "teen",
 					sublabel: {
-						kid: "12 ถึง 17 ปี",
-						adult: "12 ถึง 17 ปี",
+						kid: "อายุ 12-17 ปี",
+						adult: "อายุ 12-17 ปี",
 					},
 				},
 				{

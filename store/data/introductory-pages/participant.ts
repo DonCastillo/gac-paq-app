@@ -27,10 +27,10 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionInput,
 			heading: "ยินดีต้อนรับ!",
-			label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
-			kid_label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
-			adult_label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
-			placeholder: "หมายเลขซีเรียล ID ผู้เข้าร่วม",
+			label: "โปรดใส่เลขรหัสผู้เข้าร่วมการตอบแบบสอบถามของคุณ",
+			kid_label: "โปรดใส่เลขรหัสผู้เข้าร่วมการตอบแบบสอบถามของคุณ",
+			adult_label: "โปรดใส่เลขรหัสผู้เข้าร่วมการตอบแบบสอบถามของคุณ",
+			placeholder: "หมายเลขซีเรียลของผู้เข้าร่วมการตอบแบบสอบถาม",
 		},
 		"zh-CN": {
 			type: Question.QuestionInput,

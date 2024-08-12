@@ -14,6 +14,10 @@ const S6Extro: LangExtroPayloadInterface = {
 			heading: "Du är klar med denna sektion!",
 			subheading: "Bara en kvar",
 		},
+		"th-TH": {
+			heading: "ส่วนนี้เสร็จเรียบร้อย!",
+			subheading: "เหลืออีกแค่ 1!",
+		},
 		"zh-CN": {
 			heading: "部分完成!",
 			subheading: "只剩下一个!",
