@@ -16,8 +16,8 @@ const ErrorPage: LangPagePayloadInterface = {
 			description: "Det uppstod ett problem när du skickade ditt svar.\n\nFörsök igen.",
 		},
 		"th-TH": {
-			heading: "ข้อผิดพลาด",
-			description: "มีปัญหาในการส่งคำตอบของคุณ\n\nกรุณาลองอีกครั้ง",
+			heading: "เกิดข้อผิดพลาด",
+			description: "มีปัญหาในการส่งคำตอบของคุณ\n\nโปรดลองอีกครั้ง",
 		},
 		"zh-CN": {
 			heading: "错误",

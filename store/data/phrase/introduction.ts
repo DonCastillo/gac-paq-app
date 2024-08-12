@@ -8,7 +8,7 @@ const IntroductionPhrase: LangPhraseInterface = {
 		label: "Introduktion",
 	},
 	"th-TH": {
-		label: "บทนำ",
+		label: "ส่วนเริ่มต้น",
 	},
 	"zh-CN": {
 		label: "介绍",

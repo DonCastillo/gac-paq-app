@@ -8,7 +8,7 @@ const DonePhrase: LangPhraseInterface = {
 		label: "Klar",
 	},
 	"th-TH": {
-		label: "เสร็จสิ้น",
+		label: "เสร็จเรียบร้อย",
 	},
 	"zh-CN": {
 		label: "完成",

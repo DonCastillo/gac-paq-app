@@ -8,7 +8,7 @@ const DontKnowPhrase: LangPhraseInterface = {
 		label: "Vet ej",
 	},
 	"th-TH": {
-		label: "ไม่รู้",
+		label: "ไม่ทราบ",
 	},
 	"zh-CN": {
 		label: "不知道",
