@@ -18,6 +18,10 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
 			adult_label:
 				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			kid_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
+			adult_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
 			choices: [
 				{
 					label: "None",

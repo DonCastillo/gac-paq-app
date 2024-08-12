@@ -177,9 +177,9 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionDropdown,
 			heading: "Bienvenue!",
-			label: "Quel âge avez-vous?",
-			kid_label: "Quel âge avez-vous?",
-			adult_label: "Quel âge avez-vous?",
+			label: "Quel âge as-tu?",
+			kid_label: "Quel âge as-tu?",
+			adult_label: "Quel âge as-tu?",
 			choices: [
 				{
 					label: "Douze ans",

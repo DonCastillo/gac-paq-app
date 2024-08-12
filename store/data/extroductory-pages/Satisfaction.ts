@@ -156,8 +156,8 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Commentaires",
-			label: "Quel penses-tu de l'application?",
-			kid_label: "Quel penses-tu de l'application?",
+			label: "Que penses-tu de l'application?",
+			kid_label: "Que penses-tu de l'application?",
 			adult_label: "Que pensez-vous de l'application?",
 			adult_sublabel: "Cliquez sur l'image (émoji) qui représente le mieux votre satisfaction.",
 			kid_sublabel: "Clique sur l'image (émoji) qui représente le mieux ta satisfaction.",
