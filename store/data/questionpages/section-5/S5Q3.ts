@@ -65,6 +65,31 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 20",
+			label: "สัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมดังกล่าวนานเท่าไหร่?",
+			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมดังกล่าวนานเท่าไหร่?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาทำกิจกรรมดังกล่าวนานเท่าไหร่?",
+			choices: [
+				{
+					label: "30 นาทีต่อวันหรือน้อยกว่า",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 - 60 นาทีต่อวัน",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 - 1 ชั่วโมงครึ่งต่อวัน",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "มากกว่า 1 ชั่วโมงครึ่งต่อวัน",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 20",
