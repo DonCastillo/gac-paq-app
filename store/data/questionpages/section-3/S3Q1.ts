@@ -43,6 +43,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 12",
+			label: "สัปดาห์ที่แล้ว น้องได้ทำงานหรือเป็นอาสาสมัครหรือไม่?",
+			kid_label: "สัปดาห์ที่แล้ว น้องได้ทำงานหรือเป็นอาสาสมัครหรือไม่?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณได้ทำงานหรือเป็นอาสาสมัครหรือไม่?",
+			choices: [
+				{
+					label: "ใช่ ได้ทำ",
+					value: "yes",
+				},
+				{
+					label: "ไม่ ไม่ได้ทำ",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 12",

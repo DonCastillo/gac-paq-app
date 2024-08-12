@@ -69,6 +69,36 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถามที่ 13",
+			label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
+			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
+			adult_label:
+				"สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
+			choices: [
+				{
+					label: "น้อยกว่า 1 ชั่วโมง (ต่อวัน)",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 ชั่วโมงแต่ไม่ถึง 2 ชั่วโมง (ต่อวัน)",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 ชั่วโมงแต่ไม่ถึง 3 ชั่วโมง (ต่อวัน)",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 ชั่วโมงแต่ไม่ถึง 4 ชั่วโมง (ต่อวัน)",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 ชั่วโมงขึ้นไป (ต่อวัน)",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 13",
