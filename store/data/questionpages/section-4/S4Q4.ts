@@ -136,7 +136,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "其他的",
+					label: "其他，哪种？",
 					value: "Other",
 					image_ident: "other",
 				},
@@ -180,7 +180,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Otro",
+					label: "Otro, ¿cuál?",
 					value: "Other",
 					image_ident: "other",
 				},

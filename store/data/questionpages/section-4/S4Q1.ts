@@ -53,9 +53,13 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Other, which one?",
+					label: "Other, including combinations",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "for example walk and bus",
+						adult: "for example walk and bus",
+					},
 				},
 				{
 					label: "Stay home for school",
@@ -111,9 +115,13 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Annat, vilket?",
+					label: "Annan eller en kombination",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "tillexempel gå och åka buss",
+						adult: "tillexempel gå och åka buss",
+					},
 				},
 				{
 					label: "Jag går i skolan hemma ",
@@ -172,9 +180,13 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "其他",
+					label: "其他，包括组合式交通",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "如步行并坐公交",
+						adult: "如步行并坐公交",
+					},
 				},
 				{
 					label: "居家上学",
@@ -233,9 +245,13 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Otro",
+					label: "Otro, incluyendo combinaciones ¿cuál?",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "por ejemplo, caminando y autobús",
+						adult: "por ejemplo, caminando y autobús",
+					},
 				},
 				{
 					label: "Recibo educación en casa o asisto a un internado ",
@@ -295,15 +311,18 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Autre",
+					label: "Autre, incluant les combinaisons",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "par exemple, marche et autobus",
+						adult: "par exemple, marche et autobus",
+					},
 				},
 				{
 					label: "Je reste à la maison pour l'école",
 					value: "Stay home for school",
 					image_ident: "staying_home",
-
 					label_mode: {
 						kid: "Je reste à la maison pour l'école",
 						adult: "Mon enfant fait l'école à la maison",
