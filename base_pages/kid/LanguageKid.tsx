@@ -36,6 +36,7 @@ import LoadingScreenKid from "./LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
 import { loadQuestionData } from "store/questions/questionsThunk";
 import { loadPages } from "utils/load_pages.utils";
+import { clearExtroResponses, clearFeedbackResponses, clearQuestionResponses } from "store/responses/responsesSlice";
 
 const LanguageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -69,6 +70,9 @@ const LanguageKid = (): React.ReactElement => {
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
 		dispatch(skipPage(1));
+		dispatch(clearQuestionResponses());
+		dispatch(clearExtroResponses());
+		dispatch(clearFeedbackResponses());
 		dispatch(setIsLoading(false));
 	};
 
