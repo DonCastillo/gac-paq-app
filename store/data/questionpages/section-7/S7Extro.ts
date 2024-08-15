@@ -19,7 +19,7 @@ const S7Extro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"zh-CN": {
-			heading: "部分完成!",
+			heading: "此部分完成",
 			subheading: "",
 		},
 		"es-MX": {

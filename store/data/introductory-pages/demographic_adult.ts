@@ -159,9 +159,9 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionDropdown,
 			heading: "欢迎!",
-			label: "你的孩子多大了?",
-			kid_label: "你的孩子多大了?",
-			adult_label: "你的孩子多大了?",
+			label: "您的孩子几岁？",
+			kid_label: "您的孩子几岁？",
+			adult_label: "您的孩子几岁？",
 			choices: [
 				{
 					label: "8岁",
