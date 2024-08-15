@@ -35,7 +35,11 @@ import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import { loadQuestionData } from "store/questions/questionsThunk";
 import { loadPages } from "utils/load_pages.utils";
-import { clearExtroResponses, clearFeedbackResponses, clearQuestionResponses } from "store/responses/responsesSlice";
+import {
+	clearExtroResponses,
+	clearFeedbackResponses,
+	clearQuestionResponses,
+} from "store/responses/responsesSlice";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();

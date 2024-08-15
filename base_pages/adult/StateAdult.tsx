@@ -82,7 +82,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 
 	const resetApp = (): void => {
 		dispatch(reset());
-		navigation.navigate("SplashScreen" as never);
+		navigation.reset({ index: 0, routes: [{ name: "SplashScreen" as never }] });
 	};
 
 	const resubmitResponse = async (): Promise<void> => {

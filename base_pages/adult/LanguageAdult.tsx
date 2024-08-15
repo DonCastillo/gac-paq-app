@@ -35,7 +35,11 @@ import LoadingScreenAdult from "./LoadingScreenAdult";
 import AnimatedView from "components/AnimatedView";
 import { loadQuestionData } from "store/questions/questionsThunk";
 import { loadPages } from "utils/load_pages.utils";
-import { clearExtroResponses, clearFeedbackResponses, clearQuestionResponses } from "store/responses/responsesSlice";
+import {
+	clearExtroResponses,
+	clearFeedbackResponses,
+	clearQuestionResponses,
+} from "store/responses/responsesSlice";
 
 const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
