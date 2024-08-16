@@ -11,7 +11,7 @@ const FeedbackPhrase: LangPhraseInterface = {
 		label: "ความคิดเห็น",
 	},
 	"zh-CN": {
-		label: "评论",
+		label: "反馈",
 	},
 	"es-MX": {
 		label: "Comentarios",

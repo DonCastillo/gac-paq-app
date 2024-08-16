@@ -214,7 +214,6 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					label: "骑车",
 					value: "Wheeling",
 					image_ident: "wheeling",
-
 					sublabel: {
 						kid: "如轮椅、自行车、滑板、推式踏板车、轮滑",
 						adult: "如轮椅、自行车、滑板、推式踏板车、轮滑",
@@ -238,7 +237,6 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				{
 					label: "私家车、出租车、卡车或摩托车",
 					value: "Car, taxi, truck, or motorcycle",
-
 					image_ident: "car",
 				},
 				{
@@ -254,7 +252,6 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					label: "居家上学",
 					value: "Stay home for school",
 					image_ident: "staying_home",
-
 					label_mode: {
 						kid: "居家上学",
 						adult: "我的孩子居家上学",
