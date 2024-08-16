@@ -105,9 +105,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 11",
-			label: "以下哪一项显示了你在做家务时的大部分时间在做的事情？",
-			kid_label: "以下哪一项显示了你在做家务时的大部分时间在做的事情？",
-			adult_label: "以下哪一项显示了您的孩子在做家务活时的大部分时间在做的事情？",
+			label: "以下哪一项符合你在做家务活时的大部分时间在做的事情？",
+			kid_label: "以下哪一项符合你在做家务活时的大部分时间在做的事情？",
+			adult_label: "以下哪一项符合您的孩子在做家务活时的大部分时间在做的事情？",
 			choices: [
 				{
 					label: "不动",
