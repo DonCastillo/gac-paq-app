@@ -19,7 +19,7 @@ const AppExtro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"zh-CN": {
-			heading: "感谢您完成调查！",
+			heading: "感谢您完成调查",
 			subheading: "",
 		},
 		"es-MX": {

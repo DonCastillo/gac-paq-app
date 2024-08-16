@@ -35,8 +35,8 @@ const S4Preamble: LangPreamblePayloadInterface = {
 			heading: "交通",
 			subheading: "第4部分",
 			description: {
-				kid: "本部分是关于一些你如何去不同的地方的问题。",
-				adult: "本部分是关于一些您的孩子如何去不同的地方的问题。",
+				kid: "本部分是关于你去不同地方的交通方式的一些问题。",
+				adult: "本部分是关于您的孩子去不同地方的交通方式的一些问题。",
 			},
 		},
 		"es-MX": {

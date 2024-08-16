@@ -50,7 +50,7 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionTextarea,
 			heading: "反馈",
-			placeholder: "在此处输入您的评论",
+			placeholder: "请在此输入您的意见",
 			label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
 			kid_label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
 			adult_label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
