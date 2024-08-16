@@ -99,29 +99,49 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 4",
-			label: "你的体育课一节有多长时间？",
-			kid_label: "你的体育课一节有多长时间？",
-			adult_label: "您的孩子的体育课一节有多长时间？",
+			label: "你上的体育课一节有多长时间？",
+			kid_label: "你上的体育课一节有多长时间？",
+			adult_label: "您孩子上的体育课一节有多长时间？",
 			choices: [
 				{
 					label: "每节课少于30分钟",
 					value: "Less than 30 minutes per class",
+					label_mode: {
+						kid: "每节课少于30分钟",
+						adult: "每节课少于30分钟 (不含30分钟)",
+					},
 				},
 				{
 					label: "每节课30-45分钟",
 					value: "30 - 45 minutes per class",
+					label_mode: {
+						kid: "每节课30-45分钟",
+						adult: "每节课30-45分钟 (不含45分钟)",
+					},
 				},
 				{
 					label: "每节课46-60分钟",
 					value: "46 - 60 minutes per class",
+					label_mode: {
+						kid: "每节课46-60分钟",
+						adult: "每节课46-60分钟 (不含60分钟)",
+					},
 				},
 				{
 					label: "每节课60分钟以上",
 					value: "Over 60 minutes per class",
+					label_mode: {
+						kid: "每节课60分钟以上",
+						adult: "每节课60分钟及以上",
+					},
 				},
 				{
 					label: "不知道",
 					value: "Don't know",
+					label_mode: {
+						kid: "不知道",
+						adult: "不知道",
+					},
 				},
 			],
 		},

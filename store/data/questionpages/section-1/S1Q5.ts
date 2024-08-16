@@ -102,9 +102,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 5",
-			label: "以下哪张图片显示了你在体育课上大部分时间的情况？",
-			kid_label: "以下哪张图片显示了你在体育课上大部分时间的情况？",
-			adult_label: "以下哪张图片显示了您的孩子在体育课上大部分时间的情况？",
+			label: "以下哪张图片符合你在体育课上大部分时间的情况？",
+			kid_label: "以下哪张图片符合你在体育课上大部分时间的情况？",
+			adult_label: "以下哪张图片符合您孩子在体育课上大部分时间的情况？",
 			choices: [
 				{
 					label: "不动",

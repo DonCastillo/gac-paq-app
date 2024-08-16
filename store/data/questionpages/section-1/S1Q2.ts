@@ -123,8 +123,8 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 2",
-			label: "在过去一周里，你有几天上学？",
-			kid_label: "在过去一周里，你有几天上学？",
+			label: "在过去一周里，你上了几天学？",
+			kid_label: "在过去一周里，你上了几天学？",
 			adult_label: "在过去一周里，您的孩子有几天上学？",
 			choices: [
 				{
