@@ -104,9 +104,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 14",
-			label: "以下哪一项显示了你在做志愿服务和/或工作时大部分时间在做的事情？",
-			kid_label: "以下哪一项显示了你在做志愿服务和/或工作时大部分时间在做的事情？",
-			adult_label: "以下哪一项显示了您的孩子在做志愿服务和/或工作时大部分时间在做的事情？",
+			label: "以下哪一项符合你大部分做志愿服务和/或工作时大部分时间在做的事情？",
+			kid_label: "以下哪一项符合你大部分做志愿服务和/或工作时大部分时间在做的事情？",
+			adult_label: "以下哪一项符合您的孩子在做志愿服务和/或工作时大部分时间在做的事情？",
 			choices: [
 				{
 					label: "不动",

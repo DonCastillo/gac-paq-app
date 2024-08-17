@@ -63,8 +63,8 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 12",
-			label: "在过去一周里，你是否有参加志愿服务或工作？",
-			kid_label: "在过去一周里，你是否有参加志愿服务或工作？",
+			label: "在过去一周里，你是否参加过志愿服务或工作？",
+			kid_label: "在过去一周里，你是否参加过志愿服务或工作？",
 			adult_label: "在过去一周里，您的孩子是否有参加志愿服务或工作？",
 			choices: [
 				{
