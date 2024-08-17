@@ -93,9 +93,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 20",
-			label: "在过去一周里，你在做上述这些活动时，通常每天持续多长时间？",
-			kid_label: "在过去一周里，你在做上述这些活动时，通常每天持续多长时间？",
-			adult_label: "在过去一周里，您的孩子在做上述这些活动时，通常每天持续多长时间？",
+			label: "在过去一周里，你通常每天花多长时间做上述这些活动？",
+			kid_label: "在过去一周里，你通常每天花多长时间做上述这些活动？",
+			adult_label: "在过去一周里，您的孩子做上述这些活动通常每天花多长时间？",
 			choices: [
 				{
 					label: "每天少于或等于30分钟",
