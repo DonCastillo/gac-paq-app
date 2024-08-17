@@ -148,8 +148,8 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			label: "在过去一周里，你是如何去工作地点的？",
 			kid_label: "在过去一周里，你是如何去工作地点的？",
 			adult_label: "在过去一周里，您的孩子是如何去工作地点的？",
-			kid_sublabel: "选择你使用的主要交通方式。",
-			adult_sublabel: "选择您的孩子使用的主要交通方式。",
+			kid_sublabel: "选择你使用的主要交通方式",
+			adult_sublabel: "选择您的孩子使用的主要交通方式",
 			choices: [
 				{
 					label: "步行",
@@ -180,7 +180,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "其他，哪个？",
+					label: "其他，哪种?",
 					value: "Other",
 					image_ident: "other",
 				},

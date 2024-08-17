@@ -130,9 +130,9 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17b",
-			label: "在过去一周里，除了上学或工作，你有多少天步行去别的地方？",
-			kid_label: "在过去一周里，除了上学或工作，你有多少天步行去别的地方？",
-			adult_label: "在过去一周，除了上学或工作，您的孩子有多少天步行去其他地方？",
+			label: "在过去一周里，除了上学或工作，你有多少天步行或骑自行车去别的地方？",
+			kid_label: "在过去一周里，除了上学或工作，你有多少天步行或骑自行车去别的地方？",
+			adult_label: "在过去一周里，除了上学或工作以外，您的孩子有多少天步行或骑自行车去别的地方? ",
 			choices: [
 				{
 					label: "1 天",

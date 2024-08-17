@@ -94,9 +94,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17c",
-			label: "在平常的日子里，除了上学或上班，你步行去其他地方花费多少时间？",
-			kid_label: "在平常的日子里，除了上学或上班，你步行去其他地方花费多少时间？",
-			adult_label: "在正常的一天里，您的孩子走路去除了学校或工作地点的其他地方需要多长时间？",
+			label: "平日里，除了上学或工作，你步行或骑自行车去其他地方要花多长时间? ",
+			kid_label: "平日里，除了上学或工作，你步行或骑自行车去其他地方要花多长时间? ",
+			adult_label: "平日里，除了上学或工作，您的孩子步行或骑自行车去其他地方要花多长时间?",
 			choices: [
 				{
 					label: "少于或等于10分钟 ",

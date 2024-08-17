@@ -199,11 +199,11 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 15",
-			label: "在过去一周里，你是怎样去学校的?",
-			kid_label: "在过去一周里，你是怎样去学校的?",
-			adult_label: "在过去一周里，您的孩子是怎样去学校的?",
-			kid_sublabel: "选择你最常用的方式.",
-			adult_sublabel: "选择您的孩子最常用的方式.",
+			label: "在过去一周里，你是如何去学校的？",
+			kid_label: "在过去一周里，你是如何去学校的？",
+			adult_label: "在过去一周里，您的孩子是如何去学校的？",
+			kid_sublabel: "选择你的主要交通方式",
+			adult_sublabel: "选择您的孩子使用的主要交通方式",
 			choices: [
 				{
 					label: "步行",
@@ -220,7 +220,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "校车 ",
+					label: "校车",
 					value: "School bus",
 					image_ident: "school_bus",
 				},
@@ -228,7 +228,6 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					label: "公共交通",
 					value: "Public transit",
 					image_ident: "public_transit",
-
 					sublabel: {
 						kid: "如公交车、火车、有轨电车、地铁、轮渡",
 						adult: "如公交车、火车、有轨电车、地铁、轮渡",

@@ -101,9 +101,9 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 16c",
-			label: "通常情况下，你采用该交通方式到工作地点需要多长时间？",
-			kid_label: "通常情况下，你采用该交通方式到工作地点需要多长时间？",
-			adult_label: "通常情况下，您的孩子采用上述方式到工作地点需要多长时间？",
+			label: "通常情况下，你采用上述方式去工作需要多长时间？",
+			kid_label: "通常情况下，你采用上述方式去工作需要多长时间？",
+			adult_label: "通常情况下，您的孩子采用上述方式去工作需要多长时间？",
 			choices: [
 				{
 					label: "少于或等于10分钟",

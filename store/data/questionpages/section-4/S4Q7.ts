@@ -134,11 +134,11 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "是的，我骑自行车去 ",
+					label: "是的，我骑自行车去",
 					value: "Wheeled",
 					label_mode: {
-						kid: "是的，我骑自行车去 ",
-						adult: "是的，他/她骑自行车去 ",
+						kid: "是的，我骑自行车去",
+						adult: "是的，他/她骑自行车去",
 					},
 				},
 				{
