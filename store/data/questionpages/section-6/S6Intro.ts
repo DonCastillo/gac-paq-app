@@ -10,6 +10,10 @@ const S6Intro: LangSectionPayloadInterface = {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
 		},
+		"pt-BR": {
+			heading: "Brincadeiras Ou Tempo Livre",
+			subheading: "Seção 6",
+		},
 		"sv-SE": {
 			heading: "Lek Och Fritid",
 			subheading: "Sektion 6",
