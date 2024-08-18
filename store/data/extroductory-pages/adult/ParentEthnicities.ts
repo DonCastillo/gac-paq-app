@@ -104,38 +104,18 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
-			heading: "第二十七题",
-			label: "您的种族是？",
-			kid_label: "您的种族是？",
-			adult_label: "您的种族是？",
+			heading: "问题 27",
+			label: "您的民族是?",
+			kid_label: "您的民族是?",
+			adult_label: "您的民族是?",
 			choices: [
 				{
-					label: "亚洲",
-					value: "Asian",
-				},
-				{
-					label: "黑人或美籍非裔",
-					value: "Black or African American",
-				},
-				{
-					label: "本土的",
-					value: "Indigenous",
-				},
-				{
-					label: "拉丁美洲",
-					value: "Latin American",
-				},
-				{
-					label: "白种人",
-					value: "White or Caucasian",
+					label: "汉族",
+					value: "Han",
 				},
 				{
 					label: "其他",
 					value: "Other",
-				},
-				{
-					label: "不想说",
-					value: "Prefer not to say",
 				},
 			],
 		},

@@ -146,41 +146,41 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十二题",
+			heading: "问题 22",
 			label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
 			kid_label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
-			adult_label: "在过去一周里，您的孩子有几天是做一些能让他们变得更强壮的活动？",
+			adult_label: "在过去一周里，您的孩子有几天或做一些能让他们变得更强壮的活动？",
 			choices: [
 				{
-					label: "0天",
+					label: "0 天",
 					value: "0",
 				},
 				{
-					label: "1天",
+					label: "1 天",
 					value: "1",
 				},
 				{
-					label: "2天",
+					label: "2 天",
 					value: "2",
 				},
 				{
-					label: "3天",
+					label: "3 天",
 					value: "3",
 				},
 				{
-					label: "4天",
+					label: "4 天",
 					value: "4",
 				},
 				{
-					label: "5天",
+					label: "5 天",
 					value: "5",
 				},
 				{
-					label: "6天",
+					label: "6 天",
 					value: "6",
 				},
 				{
-					label: "7天",
+					label: "7 天",
 					value: "7",
 				},
 			],

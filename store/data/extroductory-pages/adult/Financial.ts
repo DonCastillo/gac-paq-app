@@ -115,10 +115,10 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第三十题",
-			label: "满足家庭的经济需求对您来说难易程度如何？",
-			kid_label: "满足家庭的经济需求对您来说难易程度如何？",
-			adult_label: "满足家庭的经济需求对您来说难易程度如何？",
+			heading: "问题 30",
+			label: "对您来说满足家庭的经济需求难易程度如何？",
+			kid_label: "对您来说满足家庭的经济需求难易程度如何？",
+			adult_label: "对您来说满足家庭的经济需求难易程度如何？",
 			choices: [
 				{
 					label: "非常困难",
@@ -129,7 +129,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 					value: "Difficult",
 				},
 				{
-					label: "既不容易也不困难",
+					label: "一般",
 					value: "Neither easy nor difficult",
 				},
 				{

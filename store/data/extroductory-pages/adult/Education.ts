@@ -111,10 +111,10 @@ const Education: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十九题",
-			label: "您的家庭成员完成的最高教育水平是？",
-			kid_label: "您的家庭成员完成的最高教育水平是？",
-			adult_label: "您的家庭成员完成的最高教育水平是？",
+			heading: "问题 29",
+			label: "您的家庭成员完成的最高教育水平是?",
+			kid_label: "您的家庭成员完成的最高教育水平是?",
+			adult_label: "您的家庭成员完成的最高教育水平是?",
 			choices: [
 				{
 					label: "没有受过正规教育",
@@ -125,11 +125,11 @@ const Education: LangQuestionRadioPayloadInterface = {
 					value: "Primary school",
 				},
 				{
-					label: "初中或高中",
+					label: "中学",
 					value: "Secondary or high school",
 				},
 				{
-					label: "职业或学院教育",
+					label: "高职高专",
 					value: "Vocational/college education",
 				},
 				{

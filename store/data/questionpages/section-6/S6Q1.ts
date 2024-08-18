@@ -125,13 +125,13 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十一题",
+			heading: "问题 21",
 			label: "在过去一周里，你每天仅仅是为了玩耍而进行的活动平均有多长时间？",
 			kid_label: "在过去一周里，你每天仅仅是为了玩耍而进行的活动平均有多长时间？",
-			adult_label: "在过去的一周里，你的孩子在一个正常的日子里，玩得开心的时间有多少？",
+			adult_label: "在过去一周里，您的孩子每天仅仅是为了玩耍而进行的活动平均有多长时间？",
 			choices: [
 				{
-					label: "没有",
+					label: "无",
 					value: "None",
 				},
 				{
@@ -139,11 +139,11 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 					value: "Less than 1 hour per day",
 				},
 				{
-					label: "每天1-2 小时",
+					label: "每天1-2小时",
 					value: "1 to less than 2 hours per day",
 				},
 				{
-					label: "每天2-3 小时 ",
+					label: "每天2-3小时",
 					value: "2 to less than 3 hours per day",
 				},
 				{
@@ -151,7 +151,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 					value: "3 to less than 4 hours per day",
 				},
 				{
-					label: "每天4 小时及以上",
+					label: "每天4小时及以上",
 					value: "4 hours or more per day",
 				},
 			],

@@ -122,10 +122,10 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十八题",
-			label: "你和您孩子的关系是？",
-			kid_label: "你和您孩子的关系是？",
-			adult_label: "你和您孩子的关系是？",
+			heading: "问题 28",
+			label: "您是孩子的?",
+			kid_label: "您是孩子的?",
+			adult_label: "您是孩子的?",
 			choices: [
 				{
 					label: "父亲",
@@ -136,11 +136,11 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 					value: "Mother",
 				},
 				{
-					label: "祖父",
+					label: "爷爷或外公",
 					value: "Grandfather",
 				},
 				{
-					label: "祖母",
+					label: "奶奶或外婆",
 					value: "Grandmother",
 				},
 				{

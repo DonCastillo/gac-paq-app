@@ -168,31 +168,31 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
-			heading: "第二十五题",
-			label: "请指出您的孩子在日常活动中是否有以下任何困难。",
-			kid_label: "请指出您的孩子在日常活动中是否有以下任何困难。",
-			adult_label: "请指出您的孩子在日常活动中是否有以下任何困难。",
+			heading: "问题 25",
+			label: "请指出您的孩子在日常活动中是否有以下任何困难",
+			kid_label: "请指出您的孩子在日常活动中是否有以下任何困难",
+			adult_label: "请指出您的孩子在日常活动中是否有以下任何困难",
 			kid_sublabel: "选择所有符合的",
 			adult_sublabel: "选择所有符合的",
 			choices: [
 				{
-					label: "听觉",
+					label: "听力",
 					value: "Hearing",
 				},
 				{
-					label: "视觉",
+					label: "视力",
 					value: "Seeing",
 				},
 				{
-					label: "口语",
+					label: "说话能力",
 					value: "Speech",
 				},
 				{
-					label: "运动",
+					label: "移动能力",
 					value: "Mobility",
 				},
 				{
-					label: "敏捷",
+					label: "灵活性",
 					value: "Agility",
 				},
 				{
@@ -200,7 +200,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 					value: "Pain",
 				},
 				{
-					label: "记忆",
+					label: "记忆力",
 					value: "Memory",
 				},
 				{
@@ -208,7 +208,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 					value: "Other",
 				},
 				{
-					label: "不想说",
+					label: "不想回答",
 					value: "Prefer not to say",
 				},
 				{

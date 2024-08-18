@@ -11,7 +11,7 @@ const PleaseSpecifyPhrase: LangPhraseInterface = {
 		label: "โปรดระบุ",
 	},
 	"zh-CN": {
-		label: "请具体说明",
+		label: "请说明",
 	},
 	"es-MX": {
 		label: "Por favor especifica",

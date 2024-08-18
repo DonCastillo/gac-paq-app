@@ -86,10 +86,10 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十四题",
-			label: "你的性别...",
-			kid_label: "你的性别...",
-			adult_label: "你的性别...",
+			heading: "问题 24",
+			label: "你的性别",
+			kid_label: "你的性别",
+			adult_label: "你的性别",
 			choices: [
 				{
 					label: "男",
