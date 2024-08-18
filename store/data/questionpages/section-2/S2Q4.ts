@@ -133,7 +133,7 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 11",
+			heading: "Pregunta 11",
 			label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
 			kid_label:
@@ -147,7 +147,7 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "not_moving",
 				},
 				{
-					label: "Esfuerzo fácil ",
+					label: "Esfuerzo fácil",
 					value: "0.3",
 					image_ident: "easy_effort",
 				},

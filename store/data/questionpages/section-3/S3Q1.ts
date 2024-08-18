@@ -79,7 +79,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 12",
+			heading: "Pregunta 12",
 			label: "En la última semana, ¿fuiste voluntario o trabajaste?",
 			kid_label: "En la última semana, ¿fuiste voluntario o trabajaste?",
 			adult_label: "En la última semana, ¿fue su hija o hijo voluntario o trabajó?",

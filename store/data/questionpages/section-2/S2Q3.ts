@@ -120,7 +120,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 10",
+			heading: "Pregunta 10",
 			label:
 				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			kid_label:

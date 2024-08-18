@@ -132,7 +132,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 14",
+			heading: "Pregunta 14",
 			label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			kid_label:

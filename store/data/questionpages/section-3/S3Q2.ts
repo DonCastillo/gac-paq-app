@@ -130,7 +130,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 13",
+			heading: "Pregunta 13",
 			label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			adult_label:
