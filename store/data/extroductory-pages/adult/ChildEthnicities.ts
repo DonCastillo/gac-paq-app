@@ -122,39 +122,19 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 			],
 		},
 		"es-MX": {
-			type: Question.QuestionCheckbox,
-			heading: "Question 26",
-			label: "¿Cuál es la etnia de tu hijo o hija?",
-			kid_label: "¿Cuál es la etnia de tu hijo o hija?",
-			adult_label: "¿Cuál es la etnia de tu hijo o hija?",
+			type: Question.QuestionRadio,
+			heading: "Pregunta 26",
+			label: "¿Habla algún dialecto o lengua indígena?",
+			kid_label: "¿Habla algún dialecto o lengua indígena?",
+			adult_label: "¿Habla algún dialecto o lengua indígena?",
 			choices: [
 				{
-					label: "Asiático",
-					value: "Asian",
+					label: "Sí",
+					value: "yes",
 				},
 				{
-					label: "Negro o afroamericano",
-					value: "Black or African American",
-				},
-				{
-					label: "Indígena",
-					value: "Indigenous",
-				},
-				{
-					label: "Latinoamericano",
-					value: "Latin American",
-				},
-				{
-					label: "Blanco o caucásico",
-					value: "White or Caucasian",
-				},
-				{
-					label: "Otro",
-					value: "Other",
-				},
-				{
-					label: "Prefiero no decirlo",
-					value: "Prefer not to say",
+					label: "No",
+					value: "no",
 				},
 			],
 		},

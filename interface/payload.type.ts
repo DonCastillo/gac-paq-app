@@ -313,7 +313,7 @@ export interface LangQuestionRadioPayloadInterface extends BaseQuestionRadioPayl
 }
 
 export interface LangQuestionOptionPayloadInterface extends BaseQuestionOptionPayloadInterface {
-	translations: Record<string, QuestionRadioInterface | QuestionCheckboxInterface | QuestionCheckboxInputInterface>;
+	translations: Record<string, QuestionRadioInterface | QuestionCheckboxInterface | QuestionCheckboxInputInterface | QuestionInputInterface>;
 }
 
 

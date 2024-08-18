@@ -62,13 +62,13 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			heading: "Comentarios",
 			placeholder: "Escribe tus comentarios aquí",
 			label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
 			kid_label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
 			adult_label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
-			kid_sublabel: "Si es así escríbelas en el siguiente cuadro por favor.",
-			adult_sublabel: "Si es así escríbelas en el siguiente cuadro por favor.",
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
+			kid_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
+			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 		},
 		"fr-CA": {
 			type: Question.QuestionTextarea,

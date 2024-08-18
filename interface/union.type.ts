@@ -101,7 +101,8 @@ export type LangAdultExtroductoryPageType =
 	| LangSectionPayloadInterface
 	| LangQuestionRadioPayloadInterface
 	| LangQuestionCheckboxPayloadInterface
-	| LangQuestionOptionPayloadInterface;
+	| LangQuestionOptionPayloadInterface
+	| LangQuestionInputPayloadInterface;
 export type LangAdultExtroductoryPagesType = LangAdultExtroductoryPageType[];
 
 // extroductory page
