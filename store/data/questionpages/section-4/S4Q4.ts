@@ -188,12 +188,12 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 16",
-			label: "¿Cómo fuiste a trabajar en la última semana?",
-			kid_label: "¿Cómo fuiste a trabajar en la última semana?",
+			heading: "Pregunta 16",
+			label: "¿Cómo fuiste al trabajo la semana pasada?",
+			kid_label: "¿Cómo fuiste al trabajo la semana pasada?",
 			adult_label: "¿Cómo fue su hija o hijo al trabajo la semana pasada?",
 			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
-			adult_sublabel: "Selecciona el modo de transporte que más utilizó.",
+			adult_sublabel: "Selecciona el modo de transporte que más utilizó",
 			choices: [
 				{
 					label: "Caminando",

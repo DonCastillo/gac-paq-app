@@ -196,35 +196,35 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
 			choices: [
 				{
-					label: "0 Días",
+					label: "0 días",
 					value: "0",
 				},
 				{
-					label: "1 Día",
+					label: "1 día",
 					value: "1",
 				},
 				{
-					label: "2 Días",
+					label: "2 días",
 					value: "2",
 				},
 				{
-					label: "3 Días",
+					label: "3 días",
 					value: "3",
 				},
 				{
-					label: "4 Días",
+					label: "4 días",
 					value: "4",
 				},
 				{
-					label: "5 Días",
+					label: "5 días",
 					value: "5",
 				},
 				{
-					label: "6 Días",
+					label: "6 días",
 					value: "6",
 				},
 				{
-					label: "7 Días",
+					label: "7 días",
 					value: "7",
 				},
 			],

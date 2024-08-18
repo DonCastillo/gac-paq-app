@@ -94,9 +94,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17c",
-			label: "平日里，除了上学或工作，你步行或骑自行车去其他地方要花多长时间? ",
-			kid_label: "平日里，除了上学或工作，你步行或骑自行车去其他地方要花多长时间? ",
-			adult_label: "平日里，除了上学或工作，您的孩子步行或骑自行车去其他地方要花多长时间?",
+			label: "在一个正常的日子里，您步行到学校或工作以外的地方通常需要多长时间？",
+			kid_label: "在一个正常的日子里，您步行到学校或工作以外的地方通常需要多长时间？",
+			adult_label: "在一个正常的日子里，您的孩子步行到学校或工作以外的其他地方通常需要多长时间？",
 			choices: [
 				{
 					label: "少于或等于10分钟 ",
@@ -124,7 +124,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo, la escuela o el colegio?",
 			adult_label:
-				"En un día normal ¿Cuánto tiempo caminó para llegar a lugares distintos al trabajo, escuela o colegio?",
+				"En un día normal, ¿cuánto tiempo caminó tu hijo o hija para llegar a lugares distintos al trabajo, escuela o colegio?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -152,7 +152,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				" Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
 			adult_label:
-				"Lors d'une journée normale, combien de temps ton enfant a-t-il (elle) marché [roulé] pour aller à des endroits autres que l'école ou le travail?",
+				"Lors d'une journée normale, combien de temps ton enfant a-t-il (elle) marché pour aller à des endroits autres que l'école ou le travail?",
 			choices: [
 				{
 					label: "10 minutes ou moins",

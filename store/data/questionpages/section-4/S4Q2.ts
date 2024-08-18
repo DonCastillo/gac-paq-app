@@ -160,37 +160,37 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 15b",
+			heading: "Pregunta 15b",
 			label: "¿Cuántos días usaste este modo de transporte en la última semana?",
 			kid_label: "¿Cuántos días usaste este modo de transporte en la última semana?",
 			adult_label: "¿Cuántos días usó su hija o hijo este modo de transporte en la última semana?",
 			choices: [
 				{
-					label: "1 Día",
+					label: "1 día",
 					value: "1",
 				},
 				{
-					label: "2 Días",
+					label: "2 días",
 					value: "2",
 				},
 				{
-					label: "3 Días",
+					label: "3 días",
 					value: "3",
 				},
 				{
-					label: "4 Días",
+					label: "4 días",
 					value: "4",
 				},
 				{
-					label: "5 Días",
+					label: "5 días",
 					value: "5",
 				},
 				{
-					label: "6 Días",
+					label: "6 días",
 					value: "6",
 				},
 				{
-					label: "7 Días",
+					label: "7 días",
 					value: "7",
 				},
 			],

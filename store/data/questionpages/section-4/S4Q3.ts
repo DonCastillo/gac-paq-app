@@ -111,7 +111,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 15c",
+			heading: "Pregunta 15c",
 			label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
 			adult_label:

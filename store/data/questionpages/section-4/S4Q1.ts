@@ -260,12 +260,12 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 15",
+			heading: "Pregunta 15",
 			label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
 			kid_label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
 			adult_label: "¿Cómo fue su hija o hijo a la escuela o colegio la última semana?",
-			kid_sublabel: "Selecciona el modo de transporte que más utilizaste.",
-			adult_sublabel: "Seleccione el modo de transporte que más utilizó.",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
+			adult_sublabel: "Seleccione el modo de transporte que más utilizó",
 			choices: [
 				{
 					label: "Caminando",
@@ -312,12 +312,12 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "Recibo educación en casa o asisto a un internado ",
+					label: "Recibo educación en casa o asisto a un internado",
 					value: "Stay home for school",
 					image_ident: "staying_home",
 
 					label_mode: {
-						kid: "Recibo educación en casa o asisto a un internado ",
+						kid: "Recibo educación en casa o asisto a un internado",
 						adult: "Mi hija o hijo recibe educación en casa o asiste a un internado",
 					},
 				},

@@ -129,7 +129,7 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 16c",
+			heading: "Pregunta 16c",
 			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
 			adult_label: "¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo?",
