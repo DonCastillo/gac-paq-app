@@ -10,6 +10,10 @@ const S5Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only two more to go!",
 		},
+		"pt-BR": {
+			heading: "Seção Completa!",
+			subheading: "Faltam apenas dois!",
+		},
 		"sv-SE": {
 			heading: "Du är klar med denna sektion!",
 			subheading: "Bara två kvar",
