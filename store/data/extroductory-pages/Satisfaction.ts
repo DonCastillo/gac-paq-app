@@ -120,11 +120,11 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "反馈",
-			label: "你对这款应用满意程度如何?",
-			kid_label: "你对这款应用满意程度如何?",
-			adult_label: "你对这款应用满意程度如何?",
-			adult_sublabel: "点击最能代表你满意度的图片(表情符号)。",
-			kid_sublabel: "点击最能代表你满意度的图片(表情符号)。",
+			label: "对本应用的满意程度如何?",
+			kid_label: "对本应用的满意程度如何?",
+			adult_label: "对本应用的满意程度如何?",
+			adult_sublabel: "请选择最能代表您的满意度的图片（表情）。",
+			kid_sublabel: "请选择最能代表您的满意度的图片（表情）。",
 			choices: [
 				{
 					label: "非常不满意",
