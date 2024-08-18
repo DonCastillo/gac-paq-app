@@ -4,6 +4,9 @@ const DonePhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Done",
 	},
+	"pt-BR": {
+		label: "Concluído",
+	},
 	"sv-SE": {
 		label: "Klar",
 	},
