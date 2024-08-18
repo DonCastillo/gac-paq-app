@@ -41,6 +41,38 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadioImage,
+			heading: "Pergunta 5",
+			label:
+				"Qual das opções de imagem a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
+			kid_label:
+				"Qual das opções de imagem a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
+			adult_label:
+				"Qual das opções de imagem a seguir corresponde ao que o(a) seu(sua) filho(a) faz na maior parte do tempo nas aulas de Educação Física?",
+			choices: [
+				{
+					label: "Faço principalmente atividades sem esforço",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Faço principalmente atividades com esforço leve",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Faço principalmente atividades com esforço médio ou intenso",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Não sei",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadioImage,
 			heading: "คำถาม 5",

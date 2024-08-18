@@ -46,6 +46,44 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 6",
+			label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
+			kid_label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
+			adult_label:
+				"Em um dia normal na escola, quanto tempo de intervalo ou recreio o(a) seu(sua) filho(a) tem?",
+			kid_sublabel:
+				"Isso significa recreios ou intervalos na escola. Por favor, contabilize todo o tempo junto - por exemplo, se você tem dois intervalos ou recreios de 15 minutos por dia e mais 30 minutos para o almoço por dia, o seu tempo total seria de 60 minutos",
+			adult_sublabel:
+				"Isso significa recreios ou intervalos na escola. Por favor, contabilize todo o tempo junto - por exemplo, se o(a) seu(sua) filho(a) tem dois intervalos ou recreios de 15 minutos por dia e mais 30 minutos para o almoço por dia, o tempo total seria de 60 minutos",
+			choices: [
+				{
+					label: "0 minutos",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 minutos",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 minutos",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutos",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Mais de 60 minutos",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Não sei",
+					value: "Don't know",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "คำถาม 6",

@@ -26,6 +26,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 1",
+			label: "Na última semana, você foi à escola?",
+			kid_label: "Na última semana, você foi à escola?",
+			adult_label: "Na última semana, o(a) seu(sua) filho(a) foi à escola?",
+			choices: [
+				{
+					label: "Sim",
+					value: "yes",
+				},
+				{
+					label: "Não",
+					value: "no",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 1",

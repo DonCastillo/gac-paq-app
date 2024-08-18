@@ -38,6 +38,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 4",
+			label: "Quanto tempo duram as suas aulas de Educação Física?",
+			kid_label: "Quanto tempo duram as suas aulas de Educação Física?",
+			adult_label: "Quanto tempo duram as aulas de Educação Física do(a) seu(sua) filho(a)?",
+			choices: [
+				{
+					label: "Menos de 30 minutos por aula",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 minutos por aula",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 minutos por aula",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Mais de 60 minutos por aula",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Não sei",
+					value: "Don't know",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 4",
