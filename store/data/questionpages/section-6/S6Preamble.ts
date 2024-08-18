@@ -16,6 +16,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"pt-BR": {
+			heading: "Brincadeiras Ou Tempo Livre",
+			subheading: "Seção 6",
+			description: {
+				kid: "Isso inclui todas as atividades físicas que você pratica durante o seu tempo de lazer ou durante as suas brincadeiras. Isso não inclui atividades organizadas, esportes, recreios ou intervalos na escola.",
+				adult:
+					"Isso inclui todas as atividades físicas que o(a) seu(sua) filho(a) pratica durante o tempo de lazer ou durante as brincadeiras. Isso não inclui atividades organizadas, esportes, recreios ou intervalos na escola.",
+			},
+		},
 		"sv-SE": {
 			heading: "Lek Och Fritid",
 			subheading: "Sektion 6",

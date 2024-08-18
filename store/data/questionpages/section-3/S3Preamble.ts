@@ -16,6 +16,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"pt-BR": {
+			heading: "Trabalho",
+			subheading: "Seção 3",
+			description: {
+				kid: "Esta seção trata de trabalho voluntário ou trabalho remunerado fora de sua casa - diferente das atividades e tarefas domésticas. Trabalho remunerado seria quando você ganha dinheiro para você ou para sua família. Trabalho voluntário seria como ajudar outras pessoas ou uma organização gratuitamente (sem receber dinheiro por isso). Trabalho remunerado ou trabalho voluntário podem ocorrer em locais como lojas, igrejas, fazendas, restaurantes, etc. Por favor, para responder as próximas questões considere trabalho remunerado e trabalho voluntário.",
+				adult:
+					"Esta seção trata de trabalho voluntário ou trabalho remunerado fora de sua casa - diferente das atividades e tarefas domésticas. Trabalho remunerado seria quando o(a) seu(sua) filho(a) ganha dinheiro para ele(a) ou para a própria família. Trabalho voluntário seria como ajudar outras pessoas ou uma organização gratuitamente (sem receber dinheiro por isso). Trabalho remunerado ou trabalho voluntário podem ocorrer em locais como lojas, igrejas, fazendas, restaurantes, etc. Por favor, para responder as próximas questões considere trabalho remunerado e trabalho voluntário.",
+			},
+		},
 		"sv-SE": {
 			heading: "Arbete",
 			subheading: "Sektion 3",

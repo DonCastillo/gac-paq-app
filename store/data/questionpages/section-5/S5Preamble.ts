@@ -16,6 +16,15 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"pt-BR": {
+			heading: "Atividades Organizadas e Esportes",
+			subheading: "Seção 5",
+			description: {
+				kid: "Esta seção trata de atividades físicas organizadas e esportes. Elas incluem atividades que você pratica fora do horário escolar (por exemplo, algumas escolas têm escolinhas de treinamento, ligas esportivas ou atividades extracurriculares). Estas atividades também incluem aulas de natação, ginástica, dança, karatê, e judô fora da escola.",
+				adult:
+					"Esta seção trata de atividades físicas organizadas e esportes. Elas incluem atividades que o(a) seu(sua) filho(a) pratica fora do horário escolar (por exemplo, algumas escolas têm escolinhas de treinamento, ligas esportivas ou atividades extracurriculares). Estas atividades também incluem aulas de natação, ginástica, dança, karatê, e judô fora da escola.",
+			},
+		},
 		"sv-SE": {
 			heading: "Organiserade Aktiviteter",
 			subheading: "Sektion 5",

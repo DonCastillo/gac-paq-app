@@ -16,6 +16,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"pt-BR": {
+			heading: "Atividades Ao Ar Livre",
+			subheading: "Seção 7",
+			description: {
+				kid: "Esta seção trata do tempo que você passa ao ar livre. Isso pode ser na escola, durante afazeres e tarefas em casa ao ar livre, trabalho remunerado ou trabalho voluntário ao ar livre, transporte de um lugar a outro ao ar livre, e durante o seu tempo livre. Isso também inclui o tempo em que você está ao ar livre, mas não está se movendo (por exemplo, piqueniques, leitura, conversando com amigos e sentado perto de uma fogueira). ",
+				adult:
+					"Esta seção trata do tempo que o(a) seu(sua) filho(a) passa ao ar livre. Isso pode ser na escola, durante afazeres e tarefas em casa ao ar livre, trabalho remunerado ou trabalho voluntário ao ar livre, transporte de um lugar a outro ao ar livre, e durante o seu tempo livre. Isso também inclui o tempo em que o(a) seu(sua) filho(a) está ao ar livre, mas não está se movendo (por exemplo, piqueniques, leitura, conversando com amigos e sentado perto de uma fogueira).",
+			},
+		},
 		"sv-SE": {
 			heading: "Utomhus",
 			subheading: "Sektion 7",

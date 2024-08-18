@@ -16,6 +16,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"pt-BR": {
+			heading: "Atividades Ou Tarefas Domésticas",
+			subheading: "Seção 2",
+			description: {
+				kid: "Esta seção trata de tarefas ou afazeres em casa que exigem que você esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, e outras tarefas relacionadas.",
+				adult:
+					"Esta seção trata de tarefas ou afazeres em casa que exigem que o(a) seu(sua) filho(a) esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, e outras tarefas relacionadas.",
+			},
+		},
 		"sv-SE": {
 			heading: "Hushållssysslor",
 			subheading: "Sektion 2",

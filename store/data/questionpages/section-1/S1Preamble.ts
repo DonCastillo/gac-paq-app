@@ -16,6 +16,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"pt-BR": {
+			heading: "Escola",
+			subheading: "Seção 1",
+			description: {
+				kid: "Esta seção é sobre o que você faz durante o horário escolar normal, por exemplo, durante as aulas de educação física, o recreio ou intervalo, e o horário do almoço.",
+				adult:
+					"Esta seção é sobre o que o(a) seu(sua) filho(a) faz durante o horário escolar normal, por exemplo, durante as aulas de educação física, o recreio ou intervalo, e o horário do almoço.",
+			},
+		},
 		"sv-SE": {
 			heading: "Skola",
 			subheading: "Sektion 1",
