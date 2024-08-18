@@ -30,7 +30,7 @@ import VolunteeringOptions from "styles/images/options/volunteering";
 import type State from "constants/state.enum";
 import StatusBackground from "styles/images/background/status";
 
-const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "es-MX", "fr-CA"];
+const blackListLanguages = ["pt-BR", "sv-SE", "th-TH", "zh-CN", "es-MX", "fr-CA"];
 
 const getImageBackground = (): any | null => {
 	const settings = store.getState().settings;

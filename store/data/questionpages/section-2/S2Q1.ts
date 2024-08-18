@@ -26,6 +26,24 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 8",
+			label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
+			kid_label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
+			adult_label:
+				"Na última semana, o(a) seu(sua) filho(a) realizou ativamente atividades ou tarefas domésticas?",
+			choices: [
+				{
+					label: "Sim",
+					value: "yes",
+				},
+				{
+					label: "Não",
+					value: "no",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 8",

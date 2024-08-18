@@ -37,6 +37,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 10",
+			label:
+				"Na última semana, nos dias em que você fez atividades ou tarefas domésticas quanto tempo você gastou fazendo essas atividades ou tarefas domésticas ao longo do dia?",
+			kid_label:
+				"Na última semana, nos dias em que você fez atividades ou tarefas domésticas quanto tempo você gastou fazendo essas atividades ou tarefas domésticas ao longo do dia?",
+			adult_label:
+				"Na última semana, nos dias em que o(a) seu(sua) filho(a) fez atividades ou tarefas domésticas quanto tempo ele(a) gastou fazendo essas atividades ou tarefas domésticas ao longo do dia?",
+			choices: [
+				{
+					label: "15 minutos ou menos por dia",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minutos por dia",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minutos por dia",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Mais de 60 minutos por dia",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 10",
