@@ -26,6 +26,24 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 12",
+			label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
+			kid_label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
+			adult_label:
+				"Na última semana, o(a) seu(sua) filho(a) fez algum trabalho voluntário ou trabalho remunerado?",
+			choices: [
+				{
+					label: "Sim",
+					value: "yes",
+				},
+				{
+					label: "Não",
+					value: "no",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 12",
