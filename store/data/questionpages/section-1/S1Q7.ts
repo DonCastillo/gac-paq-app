@@ -130,7 +130,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 7",
+			heading: "Pregunta 7",
 			label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
 			kid_label:

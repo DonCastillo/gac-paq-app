@@ -43,7 +43,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionSlider,
-			heading: "Question 3",
+			heading: "Pregunta 3",
 			label: "¿Cuántas clases de educación física tuviste en la semana pasada?",
 			kid_label: "¿Cuántas clases de educación física tuviste en la semana pasada?",
 			adult_label: "¿Cuántas clases de educación física tuvo su hija o hijo la semana pasada?",
