@@ -15,6 +15,13 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
 		},
+		"pt-BR": {
+			type: Question.QuestionLanguage,
+			heading: "Bem-vindo(a)!",
+			label: "Que língua você fala e onde você está?",
+			kid_label: "Que língua você fala e onde você está?",
+			adult_label: "Que língua você fala e onde você está?",
+		},
 		"sv-SE": {
 			type: Question.QuestionLanguage,
 			heading: "Välkommen!",
@@ -32,9 +39,9 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 		"zh-CN": {
 			type: Question.QuestionLanguage,
 			heading: "欢迎!",
-			label: "您讲哪种语言？",
-			kid_label: "您讲哪种语言？",
-			adult_label: "您讲哪种语言？",
+			label: "您讲哪种语言？您在哪里?",
+			kid_label: "您讲哪种语言？您在哪里?",
+			adult_label: "您讲哪种语言？您在哪里?",
 		},
 		"es-MX": {
 			type: Question.QuestionLanguage,
@@ -46,9 +53,9 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 		"fr-CA": {
 			type: Question.QuestionLanguage,
 			heading: "Bienvenue!",
-			label: "Quelle langue préfères-tu?",
-			kid_label: "Quelle langue préfères-tu?",
-			adult_label: "Quelle langue préfères-tu?",
+			label: "Quelle langue préfères-tu et où es-tu ?",
+			kid_label: "Quelle langue préfères-tu et où es-tu ?",
+			adult_label: "Quelle langue préfères-tu et où es-tu ?",
 		},
 	},
 };

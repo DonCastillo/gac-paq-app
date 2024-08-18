@@ -58,6 +58,55 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionDropdown,
+			heading: "Bem-vindo(a)!",
+			label: "Quantos anos tem seu filho?",
+			kid_label: "Quantos anos tem seu filho?",
+			adult_label: "Quantos anos tem seu filho?",
+			choices: [
+				{
+					label: "8 anos",
+					value: "8",
+				},
+				{
+					label: "9 anos",
+					value: "9",
+				},
+				{
+					label: "10 anos",
+					value: "10",
+				},
+				{
+					label: "11 anos",
+					value: "11",
+				},
+				{
+					label: "12 anos",
+					value: "12",
+				},
+				{
+					label: "13 anos",
+					value: "13",
+				},
+				{
+					label: "14 anos",
+					value: "14",
+				},
+				{
+					label: "15 anos",
+					value: "15",
+				},
+				{
+					label: "16 anos",
+					value: "16",
+				},
+				{
+					label: "17 anos",
+					value: "17",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

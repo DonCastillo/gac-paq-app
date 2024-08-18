@@ -34,6 +34,31 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionDropdown,
+			heading: "Bem-vindo(a)!",
+			label: "Quantos anos você tem?",
+			kid_label: "Quantos anos você tem?",
+			adult_label: "Quantos anos você tem?",
+			choices: [
+				{
+					label: "8 anos",
+					value: "8",
+				},
+				{
+					label: "9 anos",
+					value: "9",
+				},
+				{
+					label: "10 anos",
+					value: "10",
+				},
+				{
+					label: "11 anos",
+					value: "11",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionDropdown,
 			heading: "Välkommen!",

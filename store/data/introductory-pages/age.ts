@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionDropdown,
+			heading: "Bem-vindo(a)!",
+			label: "Quem está respondendo a este questionário?",
+			kid_label: "Quem está respondendo a este questionário?",
+			adult_label: "Quem está respondendo a este questionário?",
+			choices: [
+				{
+					label: "Criança",
+					value: "child",
+					sublabel: {
+						kid: "8 a 11 anos",
+						adult: "8 a 11 anos",
+					},
+				},
+				{
+					label: "Adolescente",
+					value: "teen",
+					sublabel: {
+						kid: "12 a 17 anos",
+						adult: "12 a 17 anos",
+					},
+				},
+				{
+					label: "Pai/Mãe (ou Responsável)",
+					value: "adult",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionDropdown,
 			heading: "Välkommen!",
