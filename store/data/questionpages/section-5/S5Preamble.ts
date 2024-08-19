@@ -52,6 +52,15 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"本部分是关于课外有组织的身体活动和体育运动的一些问题，包括您的孩子课外参加的有组织的活动（如学校的运动队或体育社团、以及课外活动），还包括任何校外的体育俱乐部、培训班课程的活动，如羽毛球、游泳、舞蹈和跆拳道等。",
 			},
 		},
+		"es-ES": {
+			heading: "Actividades Organizadas",
+			subheading: "Sección 5",
+			description: {
+				kid: "Esta sección trata sobre las actividades organizadas físicamente activas y los deportes. Incluyen las actividades que realizas fuera de la escuela o colegio (por ejemplo, algunas escuelas o colegios tienen ligas deportivas o actividades extraescolares). También se incluyen las ligas deportivas y las clases de actividades como natación, gimnasia, danza y kárate fuera de la escuela o colegio.",
+				adult:
+					"Esta sección trata sobre las actividades organizadas físicamente activas y los deportes. Incluyen las actividades que realiza su hija o hijo fuera de la escuela o colegio (por ejemplo, algunas escuelas o colegios tienen ligas deportivas o actividades extraescolares). También se incluye las ligas deportivas y las clases de actividades como natación, gimnasia, danza y kárate fuera de la escuela o colegio.",
+			},
+		},
 		"es-MX": {
 			heading: "Actividades Organizadas",
 			subheading: "Sección 5",

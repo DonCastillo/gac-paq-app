@@ -52,6 +52,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"本部分是关于您的孩子在家之外所做的工作（非家务）或志愿服务的一些问题。工作是指为自己或家人赚钱的活动，志愿服务是指无偿帮助他人或组织(没有收入)的活动。请将工作和志愿服务的情况合并起来回答。",
 			},
 		},
+		"es-ES": {
+			heading: "Trabajo",
+			subheading: "Sección 3",
+			description: {
+				kid: "Esta sección se trata del trabajo o el voluntariado fuera de casa, no incluye las tareas del hogar o quehaceres. Trabajar es ganar dinero para ti o para tu familia. El voluntariado es ayudar a otras personas o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden llevarse a cabo en lugares como una tienda, una granja, un restaurante, etc. Por favor, responde sobre estas dos actividades (trabajo y voluntariado) a la vez.",
+				adult:
+					"Esta sección se trata del trabajo o el voluntariado que hace su hijo o hija fuera de casa, no incluye las tareas del hogar o quehaceres. Trabajar es cuando su hija o hijo gana dinero para sí mismo o para su familia. El voluntariado es ayudar a otras personas o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden llevarse a cabo en lugares como una tienda, una granja, un restaurante, etc. Por favor, responda a estas dos actividades (trabajo y voluntariado) a la vez.",
+			},
+		},
 		"es-MX": {
 			heading: "Trabajo",
 			subheading: "Sección 3",

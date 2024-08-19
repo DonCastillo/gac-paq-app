@@ -52,6 +52,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"本部分是关于您的孩子做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
 			},
 		},
+		"es-ES": {
+			heading: "Tareas Del Hogar O Quehaceres",
+			subheading: "Sección 2",
+			description: {
+				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el patio de casa, la jardinería y otras tareas relacionadas.",
+				adult:
+					"Esta sección trata de las tareas o quehaceres del hogar que requieren que su hija o hijo sea activo físicamente. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el patio de casa, la jardinería y otras tareas relacionadas.",
+			},
+		},
 		"es-MX": {
 			heading: "Tareas Del Hogar O Quehaceres",
 			subheading: "Sección 2",

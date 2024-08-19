@@ -52,6 +52,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"本部分是关于您孩子的室外活动的一些问题，包括学校、家务、工作和志愿服务，交通，以及他们空闲时间的活动，也包括您的孩子在室外坐着不动的活动（如，野餐，阅读，以及坐着烤火）。",
 			},
 		},
+		"es-ES": {
+			heading: "Al Aire Libre",
+			subheading: "Sección 7",
+			description: {
+				kid: "Esta sección trata sobre la cantidad de tiempo que pasas al aire libre. Puede ser en la escuela o colegio, durante las tareas del hogar o quehaceres, el trabajo y el voluntariado, el transporte, así como en tu tiempo libre. También incluye el tiempo que pasas al aire libre, pero sin moverte (por ejemplo, de picnic, leyendo, sentado junto a una fogata).",
+				adult:
+					"Esta sección trata sobre la cantidad de tiempo que pasa al aire libre su hija o hijo. Puede ser en la escuela o colegio, durante las tareas del hogar o quehaceres, el trabajo y el voluntariado, y el transporte, así como en su tiempo libre. También incluye el tiempo que pasa al aire libre, pero sin moverse (por ejemplo, de picnic, leyendo, sentado junto a una fogata).",
+			},
+		},
 		"es-MX": {
 			heading: "Al Aire Libre",
 			subheading: "Sección 7",

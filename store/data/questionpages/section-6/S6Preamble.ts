@@ -52,6 +52,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"本部分是关于您的孩子校外玩耍或空闲时间进行的所有身体活动的一些问题。这部分时间由您的孩子自由支配。[应用中会展示不同国家的示例] \n\n对于接下来的问题, 不要包括E部分的活动。 ",
 			},
 		},
+		"es-ES": {
+			heading: "Juego O Tiempo Libre",
+			subheading: "Sección 6",
+			description: {
+				kid: "Esto incluye toda la actividad física que realizas durante tu tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio.",
+				adult:
+					"Este apartado incluye toda la actividad física que realiza su hija o hijo durante su tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio.",
+			},
+		},
 		"es-MX": {
 			heading: "Juego O Tiempo Libre",
 			subheading: "Sección 6",

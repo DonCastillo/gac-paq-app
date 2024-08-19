@@ -51,6 +51,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 				adult: "本部分是关于您的孩子在上学期间身体活动的一些问题，如在上体育课、课间休息和午餐时。",
 			},
 		},
+		"es-ES": {
+			heading: "Escuela O Colegio",
+			subheading: "Sección 1",
+			description: {
+				kid: "Esta sección es acerca de lo que haces normalmente durante tu tiempo en la escuela o colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora de comer.",
+				adult:
+					"Esta sección es acerca de lo que su hija o hijo hace normalmente durante su tiempo en la escuela o el colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora de comer.",
+			},
+		},
 		"es-MX": {
 			heading: "Escuela O Colegio",
 			subheading: "Sección 1",
