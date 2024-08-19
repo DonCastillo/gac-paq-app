@@ -17,6 +17,22 @@ const Transportation7: Transportation7Interface = {
 			both: "In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 		},
 	},
+	"pt-BR": {
+		kid: {
+			none: "Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares (por exemplo, casa de um amigo, um parque, uma loja)?",
+			school:
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a outros lugares além da escola (por exemplo, a casa de um amigo, um parque, uma loja)?",
+			work: "Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares além do trabalho (por exemplo, a casa de um amigo, um parque, uma loja)?",
+			both: " Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+		},
+		adult: {
+			none: "Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares (por exemplo, casa de um amigo, um parque, uma loja)?",
+			school:
+				"Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares além da escola (por exemplo, casa de um amigo, um parque, uma loja)?",
+			work: "Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares além da escola ou do trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			both: "Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+		},
+	},
 	"sv-SE": {
 		kid: {
 			none: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon plats under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",

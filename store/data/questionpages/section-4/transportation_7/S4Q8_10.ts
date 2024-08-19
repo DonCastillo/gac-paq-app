@@ -31,6 +31,39 @@ const Transportation8_10: Transportation8_10Interface = {
 			},
 		},
 	},
+	"pt-BR": {
+		kid: {
+			wheel: {
+				none: "Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares?",
+				school:
+					"Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola?",
+				work: "Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além do trabalho?",
+				both: "Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+			},
+			walk: {
+				none: "Na última semana, quantos dias você caminhou para ir a lugares?",
+				school: "Na última semana, quantos dias você caminhou para lugares além da escola?",
+				work: "Na última semana, quantos dias você caminhou para lugares além do trabalho?",
+				both: "Na última semana, quantos dias você caminhou para outros lugares além da escola ou trabalho?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "Na última semana, quantos dias o(a) seu(sua) filho(a) usou uma bicicleta ou outro meio de transporte ativo para ir a lugares?",
+				school:
+					"Na última semana, quantos dias o(a) seu(sua) filho(a) usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola?",
+				work: "Na última semana, quantos dias o(a) seu(sua) filho(a) usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além do trabalho?",
+				both: "Na última semana, quantos dias o(a) seu(sua) filho(a) usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+			},
+			walk: {
+				none: "Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para ir a lugares?",
+				school:
+					"Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para lugares além da escola?",
+				work: "Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para lugares além do trabalho?",
+				both: "Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para outros lugares além da escola ou trabalho?",
+			},
+		},
+	},
 	"sv-SE": {
 		kid: {
 			wheel: {

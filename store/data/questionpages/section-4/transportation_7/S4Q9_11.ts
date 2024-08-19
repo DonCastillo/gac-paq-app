@@ -31,6 +31,40 @@ const Transportation9_11: Transportation9_11Interface = {
 			},
 		},
 	},
+	"pt-BR": {
+		kid: {
+			wheel: {
+				none: "Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a lugares?",
+				school:
+					"Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a lugares além da escola?",
+				work: "Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a lugares além do trabalho?",
+				both: "Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+			},
+			walk: {
+				none: "Em um dia normal, quanto tempo você gasta caminhando para ir a lugares?",
+				school:
+					"Em um dia normal, quanto tempo você gasta caminhando para ir a lugares além da escola?",
+				work: "Em um dia normal, quanto tempo você gasta caminhando para ir a lugares além do trabalho?",
+				both: "Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a lugares?",
+				school:
+					"Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a lugares além da escola?",
+				work: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a lugares além do trabalho?",
+				both: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+			},
+			walk: {
+				none: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta caminhando para ir a lugares?",
+				school:
+					"Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta caminhando para ir a lugares além da escola?",
+				work: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta caminhando para ir a lugares além do trabalho?",
+				both: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) leva caminhando para ir a outros lugares além da escola ou trabalho?",
+			},
+		},
+	},
 	"sv-SE": {
 		kid: {
 			wheel: {
