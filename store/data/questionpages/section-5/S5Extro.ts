@@ -26,6 +26,10 @@ const S5Extro: LangExtroPayloadInterface = {
 			heading: "此部分完成",
 			subheading: "还有2项未完成",
 		},
+		"es-ES": {
+			heading: "Sección Completa",
+			subheading: "Sólo faltan dos",
+		},
 		"es-MX": {
 			heading: "¡Sección Completa!",
 			subheading: "¡Solo faltan dos!",

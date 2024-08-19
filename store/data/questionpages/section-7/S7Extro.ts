@@ -26,6 +26,10 @@ const S7Extro: LangExtroPayloadInterface = {
 			heading: "此部分完成",
 			subheading: "",
 		},
+		"es-ES": {
+			heading: "Sección Completa",
+			subheading: "",
+		},
 		"es-MX": {
 			heading: "¡Sección Completa!",
 			subheading: "",

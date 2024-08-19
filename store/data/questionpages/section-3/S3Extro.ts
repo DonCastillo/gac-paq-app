@@ -26,6 +26,10 @@ const S3Extro: LangExtroPayloadInterface = {
 			heading: "此部分完成",
 			subheading: "还有4项未完成",
 		},
+		"es-ES": {
+			heading: "Sección Completa",
+			subheading: "Sólo faltan cuatro",
+		},
 		"es-MX": {
 			heading: "¡Sección Completa!",
 			subheading: "¡Solo faltan cuatro!",
