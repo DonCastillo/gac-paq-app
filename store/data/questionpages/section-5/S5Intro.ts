@@ -26,6 +26,10 @@ const S5Intro: LangSectionPayloadInterface = {
 			heading: "有组织的活动",
 			subheading: "第5部分",
 		},
+		"es-ES": {
+			heading: "Actividades Organizadas",
+			subheading: "Sección 5",
+		},
 		"es-MX": {
 			heading: "Actividades Organizadas",
 			subheading: "Sección 5",
