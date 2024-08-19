@@ -43,6 +43,42 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 23",
+			label:
+				"Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
+			kid_label:
+				"Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
+			adult_label:
+				"Na última semana, em um dia normal, quanto tempo o(a) seu(sua) filho(a) realizou atividades ao ar livre?",
+			choices: [
+				{
+					label: "Nenhum",
+					value: "None",
+				},
+				{
+					label: "Menos que 1 hora por dia",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "De 1 hora até menos que 2 horas por dia",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "De 2 horas até menos que 3 horas por dia",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "De 3 horas até menos que 4 horas por dia",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 horas ou mais por dia",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 23",
