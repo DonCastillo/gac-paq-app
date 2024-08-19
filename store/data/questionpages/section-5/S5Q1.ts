@@ -101,6 +101,23 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 18",
+			label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
+			kid_label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
+			adult_label: "¿Su hija o hijo realizó alguna actividad organizada durante la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 18",
