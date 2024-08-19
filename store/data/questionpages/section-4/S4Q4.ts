@@ -230,6 +230,50 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadioImage,
+			heading: "Pregunta 16",
+			label: "¿Cómo fuiste al trabajo o voluntariado la semana pasada?",
+			kid_label: "¿Cómo fuiste al trabajo o voluntariado la semana pasada?",
+			adult_label: "¿Cómo fue su hija o hijo al trabajo o voluntariado la semana pasada?",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
+			adult_sublabel: "Selecciona el modo de transporte que más utilizó",
+			choices: [
+				{
+					label: "Caminando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Sobre ruedas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+					},
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+					},
+				},
+				{
+					label: "Automóvil, taxi, camioneta o motocicleta",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Otro, ¿cuál?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 16",

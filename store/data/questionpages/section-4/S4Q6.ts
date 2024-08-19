@@ -157,6 +157,36 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 16c",
+			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
+			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
+			adult_label:
+				"¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo o voluntariado?",
+			choices: [
+				{
+					label: "10 minutos o menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutos",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Más de 60 minutos",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 16c",

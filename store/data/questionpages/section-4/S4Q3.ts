@@ -134,6 +134,32 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 15c",
+			label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
+			kid_label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
+			adult_label:
+				"¿Normalmente cuánto tiempo necesita su hija o hijo para ir a la escuela o colegio?",
+			choices: [
+				{
+					label: "10 minutos o menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Más de 30 minutos",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 15c",

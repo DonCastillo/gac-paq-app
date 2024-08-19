@@ -144,6 +144,34 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 17c",
+			label:
+				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			kid_label:
+				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			adult_label:
+				"En un día normal, ¿cuánto tiempo caminó tu hijo o hija para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio?",
+			choices: [
+				{
+					label: "10 minutos o menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Más de 30 minutos",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c",
