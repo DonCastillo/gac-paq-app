@@ -48,6 +48,14 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			adult_label: "请输入填写者ID",
 			placeholder: "填写者ID序列",
 		},
+		"es-ES": {
+			type: Question.QuestionInput,
+			heading: "¡Bienvenido!",
+			label: "Escribe tu numero de participante",
+			kid_label: "Escribe tu numero de participante",
+			adult_label: "Escribe tu numero de participante",
+			placeholder: "Número de participante",
+		},
 		"es-MX": {
 			type: Question.QuestionInput,
 			heading: "¡Bienvenido!",
