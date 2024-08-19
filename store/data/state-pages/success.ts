@@ -39,7 +39,7 @@ const SuccessPage: LangPagePayloadInterface = {
 		"es-ES": {
 			heading: "Éxito!",
 			description:
-				"Buen trabajo. Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
+				"Bien hecho. Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
 		},
 		"fr-CA": {
 			heading: "Succès!",

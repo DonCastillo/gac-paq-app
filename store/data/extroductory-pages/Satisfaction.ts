@@ -189,6 +189,42 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Comentarios",
+			label: "¿Cómo de satisfecho se siente con la aplicación?",
+			kid_label: "¿Cómo de satisfecho se siente con la aplicación?",
+			adult_label: "¿Cómo de satisfecho se siente con la aplicación?",
+			adult_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
+			kid_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
+			choices: [
+				{
+					label: "Muy insatisfecho",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Insatisfecho",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutral",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Satisfecho",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Muy satisfecho",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Comentarios",

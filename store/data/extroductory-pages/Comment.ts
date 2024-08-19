@@ -70,6 +70,19 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "如有，请写在下面方框里",
 			adult_sublabel: "如有，请写在下面方框里",
 		},
+		"es-ES": {
+			type: Question.QuestionTextarea,
+			heading: "Comentarios",
+			placeholder: "Escribe aquí tu comentario",
+			label:
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			kid_label:
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			adult_label:
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			kid_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
+			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
+		},
 		"es-MX": {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",

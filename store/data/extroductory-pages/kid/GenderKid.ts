@@ -134,6 +134,31 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 24",
+			label: "Tú eres…",
+			kid_label: "Tú eres…",
+			adult_label: "Tú eres…",
+			choices: [
+				{
+					label: "Hombre",
+					value: "Boy",
+				},
+				{
+					label: "Mujer",
+					value: "Girl",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no responder",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 24",
