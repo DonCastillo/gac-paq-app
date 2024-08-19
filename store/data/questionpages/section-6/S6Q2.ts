@@ -57,6 +57,50 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 22",
+			label:
+				"Na última semana, quantos dias por semana você fez atividades que deixaram seus músculos mais fortes?",
+			kid_label:
+				"Na última semana, quantos dias por semana você fez atividades que deixaram seus músculos mais fortes?",
+			adult_label:
+				"Na última semana, quantos dias por semana o(a) seu(sua) filho(a) fez atividades que deixaram os músculos dele(a) mais fortes?",
+			choices: [
+				{
+					label: "0 dias",
+					value: "0",
+				},
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 22",
