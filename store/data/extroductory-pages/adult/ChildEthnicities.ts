@@ -46,6 +46,43 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionCheckbox,
+			heading: "Pergunta 26",
+			label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
+			kid_label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
+			adult_label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
+			choices: [
+				{
+					label: "Branca",
+					value: "White",
+				},
+				{
+					label: "Preta",
+					value: "Black",
+				},
+				{
+					label: "Amarela",
+					value: "Yellow",
+				},
+				{
+					label: "Parda",
+					value: "Brown",
+				},
+				{
+					label: "Indígena",
+					value: "Indigenous",
+				},
+				{
+					label: "Outro",
+					value: "Other",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 26",

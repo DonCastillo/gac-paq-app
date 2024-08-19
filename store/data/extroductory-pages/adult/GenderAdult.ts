@@ -30,6 +30,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 24",
+			label: "Qual é o sexo do(a) seu(sua) filho(a)?",
+			kid_label: "Qual é o sexo do(a) seu(sua) filho(a)?",
+			adult_label: "Qual é o sexo do(a) seu(sua) filho(a)?",
+			choices: [
+				{
+					label: "Feminino",
+					value: "Female",
+				},
+				{
+					label: "Masculino",
+					value: "Male",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 24",

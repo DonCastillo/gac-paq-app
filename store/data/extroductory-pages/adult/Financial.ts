@@ -43,6 +43,41 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 30",
+			label: "Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
+			kid_label:
+				"Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
+			adult_label:
+				"Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
+			choices: [
+				{
+					label: "Muito difícil",
+					value: "Very difficult",
+				},
+				{
+					label: "Difícil",
+					value: "Difficult",
+				},
+				{
+					label: "Nem fácil nem difícil",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Fácil",
+					value: "Easy",
+				},
+				{
+					label: "Muito fácil",
+					value: "Very easy",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 30",

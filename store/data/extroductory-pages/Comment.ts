@@ -22,6 +22,19 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"pt-BR": {
+			type: Question.QuestionTextarea,
+			heading: "Comentários",
+			placeholder: "Digite seu comentário aqui",
+			label:
+				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			kid_label:
+				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			adult_label:
+				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			kid_sublabel: "Se sim, por favor escreva-os na caixa abaixo",
+			adult_sublabel: "Se sim, por favor escreva-os na caixa abaixo",
+		},
 		"sv-SE": {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",

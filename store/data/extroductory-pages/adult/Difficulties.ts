@@ -63,6 +63,60 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionCheckbox,
+			heading: "Pergunta 25",
+			label:
+				"Por favor, indique se o(a) seu(sua) filho(a) tem dificuldades com alguma das seguintes situações nas atividades diárias.",
+			kid_label:
+				"Por favor, indique se o(a) seu(sua) filho(a) tem dificuldades com alguma das seguintes situações nas atividades diárias.",
+			adult_label:
+				"Por favor, indique se o(a) seu(sua) filho(a) tem dificuldades com alguma das seguintes situações nas atividades diárias.",
+			kid_sublabel: "Selecione todas as que se aplicam",
+			adult_sublabel: "Selecione todas as que se aplicam",
+			choices: [
+				{
+					label: "Audição",
+					value: "Hearing",
+				},
+				{
+					label: "Visão",
+					value: "Seeing",
+				},
+				{
+					label: "Fala",
+					value: "Speech",
+				},
+				{
+					label: "Mobilidade",
+					value: "Mobility",
+				},
+				{
+					label: "Agilidade",
+					value: "Agility",
+				},
+				{
+					label: "Dor",
+					value: "Pain",
+				},
+				{
+					label: "Memória",
+					value: "Memory",
+				},
+				{
+					label: "Outro",
+					value: "Other",
+				},
+				{
+					label: "Prefiro não dizer",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Nenhuma das opções anteriores, ele(a) não têm dificuldades",
+					value: "None of the above",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionCheckbox,
 			heading: "Fråga 25",

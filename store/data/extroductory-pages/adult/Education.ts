@@ -43,6 +43,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 29",
+			label: "Qual é o maior grau de educação completado por um membro de sua casa?",
+			kid_label: "Qual é o maior grau de educação completado por um membro de sua casa?",
+			adult_label: "Qual é o maior grau de educação completado por um membro de sua casa?",
+			choices: [
+				{
+					label: "Sem educação formal",
+					value: "No formal schooling",
+				},
+				{
+					label: "Ensino fundamental",
+					value: "Primary school",
+				},
+				{
+					label: "Ensino médio",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Educação profissional",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Ensino superior/universitário",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 29",
