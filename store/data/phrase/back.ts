@@ -22,7 +22,6 @@ const BackPhrase: LangPhraseInterface = {
 	"es-ES": {
 		label: "Volver",
 	},
-
 	"es-MX": {
 		label: "Volver",
 	},

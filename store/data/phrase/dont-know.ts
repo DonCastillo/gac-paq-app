@@ -20,7 +20,7 @@ const DontKnowPhrase: LangPhraseInterface = {
 		label: "No sé",
 	},
 	"es-ES": {
-		label: "No sé",
+		label: "No lo sé",
 	},
 	"fr-CA": {
 		label: "Je ne sais pas",

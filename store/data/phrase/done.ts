@@ -20,7 +20,7 @@ const DonePhrase: LangPhraseInterface = {
 		label: "Hecho",
 	},
 	"es-ES": {
-		label: "Hecho",
+		label: "Listo",
 	},
 	"fr-CA": {
 		label: "Terminé",

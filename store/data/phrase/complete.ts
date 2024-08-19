@@ -20,7 +20,7 @@ const CompletePhrase: LangPhraseInterface = {
 		label: "完成",
 	},
 	"es-ES": {
-		label: "Completar",
+		label: "Completado",
 	},
 	"es-MX": {
 		label: "Completar",
