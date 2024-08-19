@@ -160,6 +160,36 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 13",
+			label: "¿Cuántas horas has pasado como voluntario y/o trabajando la semana pasada?",
+			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando la semana pasada?",
+			adult_label:
+				"¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando durante la semana pasada?",
+			choices: [
+				{
+					label: "Menos de 1 hora al día",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "De 1 a menos de 2 horas al día",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "De 2 a menos de 3 horas al día",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "De 3 a menos de 4 horas al día",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 horas o más al día",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 13",
