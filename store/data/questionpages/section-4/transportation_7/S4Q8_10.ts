@@ -157,6 +157,40 @@ const Transportation8_10: Transportation8_10Interface = {
 			},
 		},
 	},
+	"es-ES": {
+		kid: {
+			wheel: {
+				none: "¿Cuántos días usaste ruedas para ir a lugares durante la semana pasada?",
+				school:
+					"¿Cuántos días usaste ruedas para ir a lugares distintos a la escuela o colegio durante la semana pasada?",
+				work: "¿Cuántos días usaste ruedas para ir a lugares distintos al trabajo o voluntariado durante la semana pasada?",
+				both: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+			},
+			walk: {
+				none: "¿Cuántos días caminaste para ir a lugares durante la semana pasada?",
+				school:
+					"¿Cuántos días caminaste para ir a lugares distintos a la escuela o al colegio durante la semana pasada?",
+				work: "¿Cuántos días caminaste para ir a lugares distintos al trabajo o voluntariado durante la semana pasada?",
+				both: "¿Cuántos días caminaste para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares la semana pasada?",
+				school:
+					"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos a la escuela o colegio la semana pasada?",
+				work: "¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado la semana pasada?",
+				both: "¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio la semana pasada?",
+			},
+			walk: {
+				none: "¿Cuántos días su hija o hijo caminó para ir a lugares la semana pasada?",
+				school:
+					"¿Cuántos días su hija o hijo caminó para ir a lugares distintos a la escuela o colegio la semana pasada?",
+				work: "¿Cuántos días su hija o hijo caminó para ir a lugares distintos al trabajo o voluntariado la semana pasada?",
+				both: "¿Cuántos días su hija o hijo caminó para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio la semana pasada?",
+			},
+		},
+	},
 	"es-MX": {
 		kid: {
 			wheel: {

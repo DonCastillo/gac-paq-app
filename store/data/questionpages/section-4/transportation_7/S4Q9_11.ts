@@ -159,6 +159,40 @@ const Transportation9_11: Transportation9_11Interface = {
 			},
 		},
 	},
+	"es-ES": {
+		kid: {
+			wheel: {
+				none: "En un día normal, ¿cuánto tiempo pasaste usando ruedas para ir a lugares?",
+				school:
+					"En un día normal, ¿cuánto tiempo pasaste usando ruedas para ir a lugares distintos a la escuela o colegio?",
+				work: "En un día normal, ¿cuánto tiempo pasaste usando ruedas para ir a lugares distintos al trabajo o voluntariado?",
+				both: "En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			},
+			walk: {
+				none: "En un día normal, ¿cuánto tiempo pasaste caminando para ir a lugares?",
+				school:
+					"En un día normal, ¿cuánto tiempo pasaste caminando para ir a lugares distintos a la escuela o colegio?",
+				work: "En un día normal, ¿cuánto tiempo pasaste caminando para ir a lugares distintos al trabajo o voluntariado?",
+				both: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			},
+		},
+		adult: {
+			wheel: {
+				none: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija usando ruedas para ir a lugares?",
+				school:
+					"En un día normal, ¿cuánto tiempo pasó tu hijo o hija usando ruedas para ir a lugares distintos a la escuela o colegio?",
+				work: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija usando ruedas para ir a lugares distintos al trabajo o voluntariado?",
+				both: "En un día normal, ¿cuánto tiempo su hijo o hija se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio?",
+			},
+			walk: {
+				none: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija caminando para ir a lugares?",
+				school:
+					"En un día normal, ¿cuánto tiempo pasó tu hijo o hija caminando para ir a lugares distintos a la escuela o colegio?",
+				work: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija caminando para ir a lugares distintos al trabajo o voluntariado?",
+				both: "En un día normal, ¿cuánto tiempo caminó tu hijo o hija para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio?",
+			},
+		},
+	},
 	"es-MX": {
 		kid: {
 			wheel: {

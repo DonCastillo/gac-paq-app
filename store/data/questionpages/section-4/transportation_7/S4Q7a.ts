@@ -81,6 +81,22 @@ const Transportation7: Transportation7Interface = {
 			both: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
 		},
 	},
+	"es-ES": {
+		kid: {
+			none: "Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) para ir a lugares?",
+			school:
+				"Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos a la escuela o colegio (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			work: "Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos al trabajo o voluntariado (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			both: "Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines) a lugares distintos al trabajo o voluntariado, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+		},
+		adult: {
+			none: "Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) para ir a lugares (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			school:
+				"Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos a la escuela o colegio (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			work: "Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos al trabajo o voluntariado (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			both: "Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines) a lugares distintos al trabajo o voluntariado, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+		},
+	},
 	"es-MX": {
 		kid: {
 			none: "En la última semana, ¿caminaste o rodaste para ir a lugares (por ejemplo, la casa de un amigo, un parque, una tienda)?",
