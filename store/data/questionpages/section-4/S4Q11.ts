@@ -36,6 +36,34 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 17e",
+			label:
+				"Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+			kid_label:
+				"Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+			adult_label:
+				"Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+			choices: [
+				{
+					label: "10 minutos ou menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Mais de 30 minutos",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 17e",

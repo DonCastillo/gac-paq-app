@@ -38,6 +38,36 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 16c",
+			label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
+			kid_label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
+			adult_label:
+				"Quanto tempo, normalmente, o(a) seu(sua) filho(a) leva para ir para o trabalho?",
+			choices: [
+				{
+					label: "10 minutos ou menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutos",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Mais que 60 minutos",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 16c",

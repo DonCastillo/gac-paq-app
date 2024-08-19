@@ -72,6 +72,68 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadioImage,
+			heading: "Pergunta 15",
+			label: "Na última semana, como você foi para a escola?",
+			kid_label: "Na última semana, como você foi para a escola?",
+			adult_label: "Na última semana, como o(a) seu(sua) filho(a) foi para a escola?",
+			kid_sublabel: "Selecione o meio de transporte principal que você usou",
+			adult_sublabel: "Selecione o meio de transporte principal que o(a) seu(sua) filho(a) usou",
+			choices: [
+				{
+					label: "Caminhando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Sobre rodas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "por exemplo, cadeira de rodas, bicicleta, skate, patinete, patins",
+						adult: "por exemplo, cadeira de rodas, bicicleta, skate, patinete, patins",
+					},
+				},
+				{
+					label: "Ônibus escolar",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "por exemplo, ônibus, trem, bonde, metrô, barco, balsa",
+						adult: "por exemplo, ônibus, trem, bonde, metrô, barco, balsa",
+					},
+				},
+				{
+					label: "Carro, taxi, caminhão ou moto",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Outro, incluindo combinações",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "por exemplo, caminhando e ônibus",
+						adult: "por exemplo, caminhando e ônibus",
+					},
+				},
+				{
+					label: "Eu estudo em casa",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Eu estudo em casa",
+						adult: "Meu(minha) filho(a) estuda de casa",
+					},
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadioImage,
 			heading: "Fråga 15",

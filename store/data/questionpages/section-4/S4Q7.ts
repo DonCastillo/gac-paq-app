@@ -43,6 +43,40 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionCheckbox,
+			heading: "Pergunta 17",
+			label:
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			kid_label:
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			adult_label:
+				"Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			kid_sublabel: "Selecione todas as respostas que se aplicam a você.",
+			adult_sublabel: "Selecione todas as respostas que se aplicam ao(a) seu(sua) filho(a).",
+			choices: [
+				{
+					label: "Sim, eu fui caminhando",
+					value: "Walked",
+					label_mode: {
+						kid: "Sim, eu fui caminhando",
+						adult: "Sim, ele(a) foi caminhando",
+					},
+				},
+				{
+					label: "Sim, eu fui de bicicleta ou outro meio de transporte ativo",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Sim, eu fui de bicicleta ou outro meio de transporte ativo",
+						adult: "Sim, ele(a) foi de bicicleta ou outro meio de transporte ativo",
+					},
+				},
+				{
+					label: "Não",
+					value: "no",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionCheckbox,
 			heading: "Fråga 17",

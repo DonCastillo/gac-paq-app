@@ -46,6 +46,45 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Question 15b",
+			label: "Na última semana, quantos dias você usou este meio de transporte para ir à escola?",
+			kid_label:
+				"Na última semana, quantos dias você usou este meio de transporte para ir à escola?",
+			adult_label:
+				"Na última semana, quantos dias o(a) seu(sua) filho(a) usou este meio de transporte para ir à escola?",
+			choices: [
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 15b",
