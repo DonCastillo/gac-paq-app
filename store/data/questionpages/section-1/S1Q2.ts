@@ -194,6 +194,43 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 2",
+			label: "¿Cuántos días fuiste a la escuela o colegio la semana pasada?",
+			kid_label: "¿Cuántos días fuiste a la escuela o colegio la semana pasada?",
+			adult_label: "¿Cuántos días fue su hija o hijo a la escuela o colegio la semana pasada?",
+			choices: [
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 2",
