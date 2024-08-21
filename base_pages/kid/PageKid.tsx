@@ -17,6 +17,7 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -25,6 +26,7 @@ import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
 import { moderateScale } from "utils/responsive.utils";
+import LoadingScreenKid from "./LoadingScreenKid";
 
 const PageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -33,6 +35,7 @@ const PageKid = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const mode = useSelector(getMode);
+	const isLoading = useSelector(getIsLoading);
 	const { color100 } = colorTheme;
 
 	// state
@@ -74,44 +77,48 @@ const PageKid = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
-	return (
-		<View style={styles.container}>
-			{background !== null && background}
-			<Main>
-				<ProgressBarKid />
-				<Toolbar />
-				<CenterMain>
-					<AnimatedView style={{ flex: 0 }}>
-						<ScrollContainer>
-							<Heading
-								customStyle={{
-									color: color100,
-									...GeneralStyle.kid.pageHeading,
-									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
-								}}
-							>
-								{translatedPage.heading}
-							</Heading>
+	if (!isLoading) {
+		return (
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					<ProgressBarKid />
+					<Toolbar />
+					<CenterMain>
+						<AnimatedView style={{ flex: 0 }}>
+							<ScrollContainer>
+								<Heading
+									customStyle={{
+										color: color100,
+										...GeneralStyle.kid.pageHeading,
+										fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+										lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
+									}}
+								>
+									{translatedPage.heading}
+								</Heading>
 
-							<Paragraph
-								customStyle={{
-									color: color100,
-									...GeneralStyle.kid.pageParagraph,
-									backgroundColor: "white",
-									fontSize: moderateScale(device.isTablet ? 14 : 16, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 16 : 22, device.screenWidth),
-								}}
-							>
-								{translatedDescription}
-							</Paragraph>
-						</ScrollContainer>
-					</AnimatedView>
-				</CenterMain>
-				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-			</Main>
-		</View>
-	);
+								<Paragraph
+									customStyle={{
+										color: color100,
+										...GeneralStyle.kid.pageParagraph,
+										backgroundColor: "white",
+										fontSize: moderateScale(device.isTablet ? 14 : 16, device.screenWidth),
+										lineHeight: moderateScale(device.isTablet ? 16 : 22, device.screenWidth),
+									}}
+								>
+									{translatedDescription}
+								</Paragraph>
+							</ScrollContainer>
+						</AnimatedView>
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenKid key={currentPageNumber}/>;
+	}
 };
 
 export default PageKid;

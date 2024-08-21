@@ -45,7 +45,7 @@ const AboutPage: LangPagePayloadInterface = {
 			},
 		},
 		"es-ES": {
-			heading: "Te damos la bienvenida al cuestionario\n\nGAC-PAQ",
+			heading: "Te damos la bienvenida al cuestionario GAC-PAQ",
 			description: "",
 			description_mode: {
 				kid: "Para esta encuesta, queremos medir lo activo o activa que estuviste durante la semana pasada (es decir, última semana de Lunes a Domingo).\n\nLa actividad física puede ocurrir de muchas maneras, incluso en tu tiempo libre, haciendo deporte, jugando, cuando te desplazas a lugares (como el colegio, parques, tiendas y casas de amigos o familiares), en la escuela o el colegio, durante las tareas domésticas y el trabajo. La aplicación te guiará a través de cada opción, una por una.\n\nTe preguntaremos sobre diferentes intensidades de esfuerzo en tu actividad física. Cuando decimos “esfuerzo medio o intenso” nos referimos a actividades que hacen que tu corazón lata más rápido y te dejen sin aliento algunas veces. [Los ejemplos que se muestran en la aplicación pueden incluir fútbol, natación, carreras, saltos, patinaje, esquí de fondo, entrenamiento con pesas o ciclismo].\n\nCuando decimos “esfuerzo fácil”, nos referimos a actividades que no te dejen sin aliento. [Los ejemplos que se muestran en la aplicación pueden incluir caminar lento, cuidar mascotas o animales de granja, jugar en una caja de arena y muchas tareas domésticas].\n\nNo hay respuestas correctas o incorrectas. Por favor contesta todas las preguntas lo mejor que puedas.",

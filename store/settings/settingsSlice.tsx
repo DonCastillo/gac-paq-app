@@ -31,6 +31,7 @@ export interface SettingsSliceInterface {
 	isLoading: boolean;
 	startDateTime: Date | null;
 	isConnected: boolean;
+	enableNarration: boolean;
 }
 
 const settingsSlice = createSlice({
@@ -55,6 +56,7 @@ const settingsSlice = createSlice({
 		isLoading: false as boolean,
 		startDateTime: null as Date | null,
 		isConnected: false,
+		enableNarration: true,
 	} satisfies SettingsSliceInterface,
 	reducers: {
 		setMode: reducersActions.setMode,
@@ -78,6 +80,7 @@ const settingsSlice = createSlice({
 		setIsLoading: reducersActions.setIsLoading,
 		setStartDateTime: reducersActions.setStartDateTime,
 		setIsConnected: reducersActions.setIsConnected,
+		setEnableNarration: reducersActions.setEnableNarration,
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
@@ -110,6 +113,7 @@ const settingsSlice = createSlice({
 		getIsLoading: (state: SettingsSliceInterface) => state.isLoading,
 		getStartDateTime: (state: SettingsSliceInterface) => state.startDateTime,
 		getIsConnected: (state: SettingsSliceInterface) => state.isConnected,
+		getEnableNarration: (state: SettingsSliceInterface) => state.enableNarration,
 	},
 });
 
@@ -134,6 +138,7 @@ export const {
 	setIsLoading,
 	setStartDateTime,
 	setIsConnected,
+	setEnableNarration,
 } = settingsSlice.actions;
 
 export const {
@@ -156,6 +161,7 @@ export const {
 	getIsLoading,
 	getStartDateTime,
 	getIsConnected,
+	getEnableNarration,
 } = settingsSlice.selectors;
 
 export default settingsSlice.reducer;

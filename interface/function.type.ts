@@ -27,6 +27,7 @@ export type SetIsConnectedFuncType = (state: SettingsSliceInterface, action: Pay
 export type SetIsLoadingFuncType = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type AddSectionTotalPagesFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ sectionNumber: number; totalPages: number }>) => void;
 export type SetKeyboardState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
+export type SetEnableNarrationState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SettingsFuncType = (state: SettingsSliceInterface) => void;
 
 /** Responses Slice Function Signature */

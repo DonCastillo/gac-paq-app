@@ -20,6 +20,7 @@ import type {
 	AddNarrationsFuncType,
 	SetIsConnectedFuncType,
 	SetIsLoadingFuncType,
+	SetEnableNarrationState,
 } from "interface/function.type";
 import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
@@ -163,11 +164,16 @@ const removeFeedbackPages: SettingsFuncType = (state) => {
 	state.pages = pagesWithoutFeedback;
 };
 
+const setEnableNarration: SetEnableNarrationState = (state, action) => {
+	state.enableNarration = action.payload;
+};
+
 const reset: SettingsFuncType = (state) => {
 	setMode(state, { type: "", payload: undefined });
 	skipPage(state, { type: "", payload: 1 });
 	setColorTheme(state, { type: "", payload: 0 });
 	setLanguage(state, { type: "", payload: "en-CA" });
+	setEnableNarration(state, { type: "", payload: true });
 	setStartDateTime(state);
 };
 
@@ -194,4 +200,5 @@ export default {
 	setIsLoading,
 	setStartDateTime,
 	setIsConnected,
+	setEnableNarration,
 };

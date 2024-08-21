@@ -14,6 +14,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { useDispatch, useSelector } from "react-redux";
 import {
+	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
 	getIsLoading,
@@ -47,6 +48,8 @@ function StateKid({ state }: Props): React.ReactElement {
 	const device = useSelector(getDevice);
 	const isConnected = useSelector(getIsConnected);
 	const isLoading = useSelector(getIsLoading);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
+
 
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
@@ -180,7 +183,7 @@ function StateKid({ state }: Props): React.ReactElement {
 			</AnimatedView>
 		);
 	} else {
-		return <LoadingScreenKid />;
+		return <LoadingScreenKid key={currentPageNumber} />;
 	}
 }
 

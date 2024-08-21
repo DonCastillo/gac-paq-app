@@ -14,17 +14,20 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import type { SectionInterface } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
+import LoadingScreenKid from "./LoadingScreenKid";
 
 const QuestionIntroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const isLoading = useSelector(getIsLoading);
 	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
 	const backgroundImage = getImageBackground();
@@ -57,54 +60,59 @@ const QuestionIntroKid = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
-	return (
-		<AnimatedView>
-			<View style={styles.container}>
-				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
-					<ImageBackdrop
-						source={backgroundImage}
-						key={currentPageNumber}
-					/>
-				)}
-
-				<View
-					style={[
-						styles.headingPanel,
-						{
-							backgroundColor: color200,
-							maxWidth: device.isTablet ? 400 : "100%",
-							minHeight: device.isTablet ? "100%" : 220,
-						},
-					]}
-				>
-					<ScrollView>
-						<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
-						<Text
-							style={{
-								...styles.headingText,
-								fontSize: moderateScale(
-									device.isTablet ? 20 : 27,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								lineHeight: moderateScale(
-									device.isTablet ? 25 : 32,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-							}}
-						>
-							{translatedPage.heading}
-						</Text>
-					</ScrollView>
+	if(!isLoading) {
+		return (
+			<AnimatedView>
+				<View style={styles.container}>
+					{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+						<ImageBackdrop
+							source={backgroundImage}
+							key={currentPageNumber}
+						/>
+					)}
+	
+					<View
+						style={[
+							styles.headingPanel,
+							{
+								backgroundColor: color200,
+								maxWidth: device.isTablet ? 400 : "100%",
+								minHeight: device.isTablet ? "100%" : 220,
+							},
+						]}
+					>
+						<ScrollView>
+							<Text style={styles.headingSubText}>{translatedPage.subheading}</Text>
+							<Text
+								style={{
+									...styles.headingText,
+									fontSize: moderateScale(
+										device.isTablet ? 20 : 27,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+									lineHeight: moderateScale(
+										device.isTablet ? 25 : 32,
+										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+									),
+								}}
+							>
+								{translatedPage.heading}
+							</Text>
+						</ScrollView>
+					</View>
+					<Main>
+						<BottomMain>
+							<></>
+						</BottomMain>
+						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+					</Main>
 				</View>
-				<Main>
-					<BottomMain>
-						<></>
-					</BottomMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
-		</AnimatedView>
-	);
+			</AnimatedView>
+		);
+	} else {
+		<LoadingScreenKid key={currentPageNumber} />;
+	}
+	
 };
 
 export default QuestionIntroKid;

@@ -236,7 +236,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 			</TouchableWithoutFeedback>
 		);
 	} else {
-		return <LoadingScreenKid />;
+		return <LoadingScreenKid key={currentPageNumber}/>;
 	}
 };
 

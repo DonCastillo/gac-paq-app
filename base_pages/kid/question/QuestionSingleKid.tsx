@@ -31,6 +31,7 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -47,6 +48,7 @@ import type {
 	QuestionTextareaInterface,
 } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
+import LoadingScreenKid from "../LoadingScreenKid";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -57,6 +59,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const { isKeyboardOpen } = device;
 	const { color200 } = colorTheme;
+	const isLoading = useSelector(getIsLoading);
 
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
@@ -248,49 +251,54 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
-	// if (currentPage.screen !== "question_single") return <></>
-	return (
-		<View style={styles.container}>
-			{background !== null && background}
-			<Main>
-				{!isKeyboardOpen && <ProgressBarKid />}
-				{!isKeyboardOpen && <Toolbar />}
+	if (!isLoading) {
+		return (
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					{!isKeyboardOpen && <ProgressBarKid />}
+					{!isKeyboardOpen && <Toolbar />}
 
-				<TopMain>
-					<AnimatedView key={currentPageNumber}>
-						<View
-							style={[
-								{
-									marginVertical: verticalScale(5, device.screenHeight),
-									paddingHorizontal: device.isTablet ? 20 : 0,
-									...styles.mainContainer,
-								},
-							]}
-						>
-							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
-							{!isKeyboardOpen && (
-								<View style={{ marginBottom: 9 }}>
-									<QuestionLabel
-										textStyle={GeneralStyle.kid.questionQuestionLabel}
-										customStyle={{
-											marginBottom: 7,
-										}}
-									>
-										{questionLabel}
-									</QuestionLabel>
-									<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-										{questionSubLabel}
-									</QuestionSubLabel>
-								</View>
-							)}
-							<View style={styles.questionComponentContainer}>{questionComponent}</View>
-						</View>
-					</AnimatedView>
-				</TopMain>
-				{!isKeyboardOpen && <Navigation>{buttonComponent !== null && buttonComponent}</Navigation>}
-			</Main>
-		</View>
-	);
+					<TopMain>
+						<AnimatedView key={currentPageNumber}>
+							<View
+								style={[
+									{
+										marginVertical: verticalScale(5, device.screenHeight),
+										paddingHorizontal: device.isTablet ? 20 : 0,
+										...styles.mainContainer,
+									},
+								]}
+							>
+								{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
+								{!isKeyboardOpen && (
+									<View style={{ marginBottom: 9 }}>
+										<QuestionLabel
+											textStyle={GeneralStyle.kid.questionQuestionLabel}
+											customStyle={{
+												marginBottom: 7,
+											}}
+										>
+											{questionLabel}
+										</QuestionLabel>
+										<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+											{questionSubLabel}
+										</QuestionSubLabel>
+									</View>
+								)}
+								<View style={styles.questionComponentContainer}>{questionComponent}</View>
+							</View>
+						</AnimatedView>
+					</TopMain>
+					{!isKeyboardOpen && (
+						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+					)}
+				</Main>
+			</View>
+		);
+	} else {
+		return <LoadingScreenKid key={currentPageNumber}/>;
+	}
 };
 
 export default QuestionSingleKid;

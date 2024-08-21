@@ -160,7 +160,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 			</View>
 		);
 	} else {
-		return <LoadingScreenKid />;
+		return <LoadingScreenKid key={currentPageNumber}/>;
 	}
 };
 
