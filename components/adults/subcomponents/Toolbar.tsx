@@ -198,7 +198,6 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			</Text>
 			{!isLoading ? NarrationButtonComponent : <ActivityIndicator size="small" />}
 		</View>
-		// <></>
 	);
 };
 

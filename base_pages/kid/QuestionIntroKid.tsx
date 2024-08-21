@@ -57,7 +57,6 @@ const QuestionIntroKid = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
-	// if (currentPage.screen !== "question_intro") return <></>
 	return (
 		<AnimatedView>
 			<View style={styles.container}>
