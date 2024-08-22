@@ -81,7 +81,7 @@ const AppWrapper = (): React.ReactElement => {
 	useEffect(() => {
 		dispatch(setIsConnected(hasNetwork));
 		if (hasNetwork) {
-			dispatch(getNarrationPayload({ mode, language }))
+			dispatch(getNarrationPayload({ mode, language }));
 			sendResponseQueue()
 				.then((res) => res)
 				.catch((err) => err);

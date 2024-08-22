@@ -50,7 +50,6 @@ function StateKid({ state }: Props): React.ReactElement {
 	const isLoading = useSelector(getIsLoading);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 
-
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
@@ -128,63 +127,62 @@ function StateKid({ state }: Props): React.ReactElement {
 		}
 	}
 
-	if (!isLoading) {
-		return (
-			<AnimatedView>
-				<View style={styles.container}>
-					<BackgroundYellowStroke />
-					<Main>
-						<CenterMain>
-							<Heading
-								customStyle={{
-									color: "#000",
-									...GeneralStyle.kid.pageHeading,
-									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 40 : 37, device.screenWidth),
-								}}
-							>
-								{translatedPage?.heading}
-							</Heading>
-							<Paragraph
-								customStyle={{
-									color: "#000",
-									...GeneralStyle.kid.pageParagraph,
-									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
-								}}
-							>
-								{translatedPage?.description}
-							</Paragraph>
-							<View style={styles.imageContainer}>
-								{/* State Image */}
-								<View style={[styles.stateImageContainer, {}]}>
-									{state === State.Success ? (
-										<SuccessImage
-											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-										/>
-									) : (
-										<ErrorImage
-											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-										/>
-									)}
-								</View>
-
-								{/* State Icon */}
-								<View style={styles.stateIconContainer}>
-									{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
-								</View>
-							</View>
-						</CenterMain>
-						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-					</Main>
-				</View>
-			</AnimatedView>
-		);
-	} else {
+	if (isLoading) {
 		return <LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<AnimatedView>
+			<View style={styles.container}>
+				<BackgroundYellowStroke />
+				<Main>
+					<CenterMain>
+						<Heading
+							customStyle={{
+								color: "#000",
+								...GeneralStyle.kid.pageHeading,
+								fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 40 : 37, device.screenWidth),
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								color: "#000",
+								...GeneralStyle.kid.pageParagraph,
+								fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+						<View style={styles.imageContainer}>
+							{/* State Image */}
+							<View style={[styles.stateImageContainer, {}]}>
+								{state === State.Success ? (
+									<SuccessImage
+										height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+										width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+									/>
+								) : (
+									<ErrorImage
+										height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+										width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+									/>
+								)}
+							</View>
+
+							{/* State Icon */}
+							<View style={styles.stateIconContainer}>
+								{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
+							</View>
+						</View>
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		</AnimatedView>
+	);
 }
 
 const styles = StyleSheet.create({

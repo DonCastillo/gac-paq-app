@@ -77,48 +77,47 @@ const PageKid = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
-	if (!isLoading) {
-		return (
-			<View style={styles.container}>
-				{background !== null && background}
-				<Main>
-					<ProgressBarKid />
-					<Toolbar />
-					<CenterMain>
-						<AnimatedView style={{ flex: 0 }}>
-							<ScrollContainer>
-								<Heading
-									customStyle={{
-										color: color100,
-										...GeneralStyle.kid.pageHeading,
-										fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
-										lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
-									}}
-								>
-									{translatedPage.heading}
-								</Heading>
-
-								<Paragraph
-									customStyle={{
-										color: color100,
-										...GeneralStyle.kid.pageParagraph,
-										backgroundColor: "white",
-										fontSize: moderateScale(device.isTablet ? 14 : 16, device.screenWidth),
-										lineHeight: moderateScale(device.isTablet ? 16 : 22, device.screenWidth),
-									}}
-								>
-									{translatedDescription}
-								</Paragraph>
-							</ScrollContainer>
-						</AnimatedView>
-					</CenterMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
-		);
-	} else {
-		return <LoadingScreenKid key={currentPageNumber}/>;
+	if (isLoading) {
+		<LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			{background !== null && background}
+			<Main>
+				<ProgressBarKid />
+				<Toolbar />
+				<CenterMain>
+					<AnimatedView style={{ flex: 0 }}>
+						<ScrollContainer>
+							<Heading
+								customStyle={{
+									color: color100,
+									...GeneralStyle.kid.pageHeading,
+									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
+								}}
+							>
+								{translatedPage.heading}
+							</Heading>
+
+							<Paragraph
+								customStyle={{
+									color: color100,
+									...GeneralStyle.kid.pageParagraph,
+									backgroundColor: "white",
+									fontSize: moderateScale(device.isTablet ? 14 : 16, device.screenWidth),
+									lineHeight: moderateScale(device.isTablet ? 16 : 22, device.screenWidth),
+								}}
+							>
+								{translatedDescription}
+							</Paragraph>
+						</ScrollContainer>
+					</AnimatedView>
+				</CenterMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
+		</View>
+	);
 };
 
 export default PageKid;

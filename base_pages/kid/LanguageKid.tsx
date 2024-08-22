@@ -115,61 +115,60 @@ const LanguageKid = (): React.ReactElement => {
 		}
 	};
 
-	if (!isLoading) {
-		return (
-			<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
-				<View style={styles.container}>
-					{background !== null && background}
-					<Main>
-						<ProgressBarKid />
-						<Toolbar />
-						<TopMain>
-							<AnimatedView>
-								<View
-									style={[
-										GeneralStyle.kid.introQuestionContainer,
-										{
-											marginVertical: verticalScale(40, device.screenHeight),
-											...styles.mainContainer,
-										},
-									]}
-								>
-									<View style={{ marginBottom: 9 }}>
-										<QuestionLabel
-											textStyle={GeneralStyle.kid.introQuestionLabel}
-											customStyle={{ marginBottom: 7, backgroundColor: "white" }}
-										>
-											{questionLabel}
-										</QuestionLabel>
-									</View>
-
-									<View style={styles.questionComponentContainer}>
-										<QuestionSelectLanguage
-											key={currentPageNumber}
-											onChange={changeHandler}
-											selectedValue={language}
-											dropdownOpen={dropdownOpen}
-											setDropdownOpen={setDropdownOpen}
-										/>
-									</View>
-								</View>
-							</AnimatedView>
-						</TopMain>
-						<Navigation>
-							{selectedValue !== null && (
-								<BackAndNextNav
-									colorTheme={color100}
-									onNext={() => dispatch(nextPage())}
-								/>
-							)}
-						</Navigation>
-					</Main>
-				</View>
-			</TouchableWithoutFeedback>
-		);
-	} else {
-		return <LoadingScreenKid key={currentPageNumber} />;
+	if (isLoading) {
+		<LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					<ProgressBarKid />
+					<Toolbar />
+					<TopMain>
+						<AnimatedView>
+							<View
+								style={[
+									GeneralStyle.kid.introQuestionContainer,
+									{
+										marginVertical: verticalScale(40, device.screenHeight),
+										...styles.mainContainer,
+									},
+								]}
+							>
+								<View style={{ marginBottom: 9 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.kid.introQuestionLabel}
+										customStyle={{ marginBottom: 7, backgroundColor: "white" }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+								</View>
+
+								<View style={styles.questionComponentContainer}>
+									<QuestionSelectLanguage
+										key={currentPageNumber}
+										onChange={changeHandler}
+										selectedValue={language}
+										dropdownOpen={dropdownOpen}
+										setDropdownOpen={setDropdownOpen}
+									/>
+								</View>
+							</View>
+						</AnimatedView>
+					</TopMain>
+					<Navigation>
+						{selectedValue !== null && (
+							<BackAndNextNav
+								colorTheme={color100}
+								onNext={() => dispatch(nextPage())}
+							/>
+						)}
+					</Navigation>
+				</Main>
+			</View>
+		</TouchableWithoutFeedback>
+	);
 };
 
 export default LanguageKid;

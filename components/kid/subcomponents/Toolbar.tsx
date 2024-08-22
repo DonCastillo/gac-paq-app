@@ -107,12 +107,12 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			});
 		}
 		updateStatus();
+
 		// autoplay sounds only works if the following conditions are met:
 		// 1. if narration is enabled
 		// 2. if there is audio available
-
 		if (hasAudio && enableNarration) {
-			playSound()
+			playSound();
 		}
 		dispatch(setIsLoading(false));
 	}, [sound]);

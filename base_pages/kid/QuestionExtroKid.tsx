@@ -106,62 +106,59 @@ const QuestionExtroKid = (): React.ReactElement => {
 		}
 	};
 
-	if (!isLoading) {
-		return (
-			<View style={styles.container}>
-				<BackgroundYellowStroke />
-				<Main>
-					<ProgressBar
-						currentSectionPage={currentPage.sectionPageNumber}
-						sectionPageTotal={
-							currentPage.sectionNumber !== null
-								? sectionTotalPages[currentPage.sectionNumber]
-								: null
-						}
-						filledColor={"#FFCB66"}
-						unfilledColor={"#FFCB66" + "4D"}
-					/>
-					<Toolbar />
-
-					<CenterMain>
-						<AnimatedView style={{ flex: 0, alignItems: "center", justifyContent: "center" }}>
-							<Heading
-								customStyle={{
-									...GeneralStyle.kid.extroPageHeading,
-									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 35 : 30, device.screenWidth),
-								}}
-							>
-								{translatedPage.heading}
-							</Heading>
-							<Paragraph
-								customStyle={{
-									...GeneralStyle.kid.extroPageParagraph,
-									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 27 : 27, device.screenWidth),
-								}}
-							>
-								{translatedPage.subheading}
-							</Paragraph>
-							<View style={styles.imageContainer}>
-								<ImageComponent
-									backgroundColor={"white"}
-									height={verticalScale(device.isTablet ? 320 : 290, device.screenHeight)}
-									padding={0}
-									margin={0}
-								/>
-							</View>
-						</AnimatedView>
-					</CenterMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
-		);
-	} else {
-		return <LoadingScreenKid key={currentPageNumber}/>;
+	if (isLoading) {
+		return <LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			<BackgroundYellowStroke />
+			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null ? sectionTotalPages[currentPage.sectionNumber] : null
+					}
+					filledColor={"#FFCB66"}
+					unfilledColor={"#FFCB66" + "4D"}
+				/>
+				<Toolbar />
+
+				<CenterMain>
+					<AnimatedView style={{ flex: 0, alignItems: "center", justifyContent: "center" }}>
+						<Heading
+							customStyle={{
+								...GeneralStyle.kid.extroPageHeading,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 35 : 30, device.screenWidth),
+							}}
+						>
+							{translatedPage.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								...GeneralStyle.kid.extroPageParagraph,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 27 : 27, device.screenWidth),
+							}}
+						>
+							{translatedPage.subheading}
+						</Paragraph>
+						<View style={styles.imageContainer}>
+							<ImageComponent
+								backgroundColor={"white"}
+								height={verticalScale(device.isTablet ? 320 : 290, device.screenHeight)}
+								padding={0}
+								margin={0}
+							/>
+						</View>
+					</AnimatedView>
+				</CenterMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
+		</View>
+	);
 };
 
 export default QuestionExtroKid;

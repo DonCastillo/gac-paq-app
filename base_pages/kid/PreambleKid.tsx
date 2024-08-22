@@ -41,53 +41,52 @@ const PreambleKid = (): React.ReactElement => {
 	const translatedPage = currentPage.page.translations as PreambleInterface;
 	const description = translateText(translatedPage.description, mode);
 
-	if (!isLoading) {
-		return (
-			<View style={styles.container}>
-				<BackgroundPreamble fillColor={(color100 ?? "#fff") + "B3"} />
-				<Main>
-					<ProgressBarKid />
-					<Toolbar />
-					<CenterMain>
-						<AnimatedView style={{ flex: 0 }}>
-							<ScrollContainer>
-								<Heading
-									customStyle={{
-										...GeneralStyle.kid.extroPageHeading,
-										maxWidth: device.isTablet ? 600 : "100%",
-										fontSize: device.isTablet ? 40 : 30,
-										lineHeight: device.isTablet ? 45 : 35,
-									}}
-								>
-									{translatedPage.heading}
-								</Heading>
-								<Paragraph
-									customStyle={{
-										...GeneralStyle.kid.extroPageParagraph,
-										maxWidth: device.isTablet ? 600 : "100%",
-										fontSize: device.isTablet ? 23 : 18,
-										lineHeight: device.isTablet ? 33 : 25,
-									}}
-								>
-									{description}
-								</Paragraph>
-							</ScrollContainer>
-						</AnimatedView>
-					</CenterMain>
-					<Navigation>
-						<BackAndNextNav
-							key={"WithValue"}
-							colorTheme={color200}
-							onPrev={() => dispatch(prevPage())}
-							onNext={() => proceedPage()}
-						/>
-					</Navigation>
-				</Main>
-			</View>
-		);
-	} else {
+	if (isLoading) {
 		return <LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			<BackgroundPreamble fillColor={(color100 ?? "#fff") + "B3"} />
+			<Main>
+				<ProgressBarKid />
+				<Toolbar />
+				<CenterMain>
+					<AnimatedView style={{ flex: 0 }}>
+						<ScrollContainer>
+							<Heading
+								customStyle={{
+									...GeneralStyle.kid.extroPageHeading,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: device.isTablet ? 40 : 30,
+									lineHeight: device.isTablet ? 45 : 35,
+								}}
+							>
+								{translatedPage.heading}
+							</Heading>
+							<Paragraph
+								customStyle={{
+									...GeneralStyle.kid.extroPageParagraph,
+									maxWidth: device.isTablet ? 600 : "100%",
+									fontSize: device.isTablet ? 23 : 18,
+									lineHeight: device.isTablet ? 33 : 25,
+								}}
+							>
+								{description}
+							</Paragraph>
+						</ScrollContainer>
+					</AnimatedView>
+				</CenterMain>
+				<Navigation>
+					<BackAndNextNav
+						key={"WithValue"}
+						colorTheme={color200}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => proceedPage()}
+					/>
+				</Navigation>
+			</Main>
+		</View>
+	);
 };
 
 export default PreambleKid;

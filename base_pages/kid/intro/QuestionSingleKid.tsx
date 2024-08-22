@@ -190,54 +190,53 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
-	if (!isLoading) {
-		return (
-			<TouchableWithoutFeedback
-				onPress={() => {
-					setDropdownOpen(false);
-					Keyboard.dismiss();
-				}}
-			>
-				<View style={styles.container}>
-					{background !== null && background}
-					<Main>
-						<ProgressBarKid />
-						<Toolbar />
-						<TopMain>
-							<AnimatedView key={currentPageNumber}>
-								<View
-									style={[
-										GeneralStyle.kid.introQuestionContainer,
-										{
-											marginVertical: verticalScale(40, device.screenHeight),
-											...styles.mainContainer,
-										},
-									]}
-								>
-									<View style={{ marginBottom: 9 }}>
-										<QuestionLabel
-											textStyle={GeneralStyle.kid.introQuestionLabel}
-											customStyle={{ marginBottom: 7, backgroundColor: "white" }}
-										>
-											{questionLabel}
-										</QuestionLabel>
-										<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-											{questionSubLabel}
-										</QuestionSubLabel>
-									</View>
-
-									<View style={styles.questionComponentContainer}>{questionComponent}</View>
-								</View>
-							</AnimatedView>
-						</TopMain>
-						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-					</Main>
-				</View>
-			</TouchableWithoutFeedback>
-		);
-	} else {
-		return <LoadingScreenKid key={currentPageNumber}/>;
+	if (isLoading) {
+		return <LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<TouchableWithoutFeedback
+			onPress={() => {
+				setDropdownOpen(false);
+				Keyboard.dismiss();
+			}}
+		>
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					<ProgressBarKid />
+					<Toolbar />
+					<TopMain>
+						<AnimatedView key={currentPageNumber}>
+							<View
+								style={[
+									GeneralStyle.kid.introQuestionContainer,
+									{
+										marginVertical: verticalScale(40, device.screenHeight),
+										...styles.mainContainer,
+									},
+								]}
+							>
+								<View style={{ marginBottom: 9 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.kid.introQuestionLabel}
+										customStyle={{ marginBottom: 7, backgroundColor: "white" }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+									<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+										{questionSubLabel}
+									</QuestionSubLabel>
+								</View>
+
+								<View style={styles.questionComponentContainer}>{questionComponent}</View>
+							</View>
+						</AnimatedView>
+					</TopMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		</TouchableWithoutFeedback>
+	);
 };
 
 export default QuestionSingleKid;

@@ -251,54 +251,51 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
-	if (!isLoading) {
-		return (
-			<View style={styles.container}>
-				{background !== null && background}
-				<Main>
-					{!isKeyboardOpen && <ProgressBarKid />}
-					{!isKeyboardOpen && <Toolbar />}
-
-					<TopMain>
-						<AnimatedView key={currentPageNumber}>
-							<View
-								style={[
-									{
-										marginVertical: verticalScale(5, device.screenHeight),
-										paddingHorizontal: device.isTablet ? 20 : 0,
-										...styles.mainContainer,
-									},
-								]}
-							>
-								{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
-								{!isKeyboardOpen && (
-									<View style={{ marginBottom: 9 }}>
-										<QuestionLabel
-											textStyle={GeneralStyle.kid.questionQuestionLabel}
-											customStyle={{
-												marginBottom: 7,
-											}}
-										>
-											{questionLabel}
-										</QuestionLabel>
-										<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-											{questionSubLabel}
-										</QuestionSubLabel>
-									</View>
-								)}
-								<View style={styles.questionComponentContainer}>{questionComponent}</View>
-							</View>
-						</AnimatedView>
-					</TopMain>
-					{!isKeyboardOpen && (
-						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-					)}
-				</Main>
-			</View>
-		);
-	} else {
-		return <LoadingScreenKid key={currentPageNumber}/>;
+	if (isLoading) {
+		<LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			{background !== null && background}
+			<Main>
+				{!isKeyboardOpen && <ProgressBarKid />}
+				{!isKeyboardOpen && <Toolbar />}
+
+				<TopMain>
+					<AnimatedView key={currentPageNumber}>
+						<View
+							style={[
+								{
+									marginVertical: verticalScale(5, device.screenHeight),
+									paddingHorizontal: device.isTablet ? 20 : 0,
+									...styles.mainContainer,
+								},
+							]}
+						>
+							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
+							{!isKeyboardOpen && (
+								<View style={{ marginBottom: 9 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.kid.questionQuestionLabel}
+										customStyle={{
+											marginBottom: 7,
+										}}
+									>
+										{questionLabel}
+									</QuestionLabel>
+									<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+										{questionSubLabel}
+									</QuestionSubLabel>
+								</View>
+							)}
+							<View style={styles.questionComponentContainer}>{questionComponent}</View>
+						</View>
+					</AnimatedView>
+				</TopMain>
+				{!isKeyboardOpen && <Navigation>{buttonComponent !== null && buttonComponent}</Navigation>}
+			</Main>
+		</View>
+	);
 };
 
 export default QuestionSingleKid;
