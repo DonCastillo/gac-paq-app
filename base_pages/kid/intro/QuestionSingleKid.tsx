@@ -26,15 +26,16 @@ import {
 	getMode,
 	nextPage,
 	prevPage,
+	setIsLoading,
 	setMode,
 } from "store/settings/settingsSlice";
 import { changeMode } from "utils/mode.utils";
 import { getModeType, getQuestionType } from "utils/type.utils";
-import { translatePage, translateQuestionLabel } from "utils/translate.utils";
+import { translateQuestionLabel } from "utils/translate.utils";
 import type { TranslatedIntroQuestionType } from "interface/union.type";
 import type { QuestionDropdownInterface, QuestionInputInterface } from "interface/payload.type";
 import Mode from "constants/mode.enum";
-import { getNarrationPayload } from "store/settings/settingsThunk.";
+import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenKid from "../LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
 
@@ -56,10 +57,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as TranslatedIntroQuestionType;
+	const translatedPage = currentPage.page.translations as TranslatedIntroQuestionType;
 
 	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
@@ -130,6 +128,13 @@ const QuestionSingleKid = (): React.ReactElement => {
 		setSelectedValue(getResponse());
 	}, [currentPageNumber]);
 
+	// load translations
+	const loadNarrations = async (mode: Mode): Promise<void> => {
+		dispatch(setIsLoading(true));
+		await dispatch(getNarrationPayload({ mode, language }));
+		dispatch(setIsLoading(false));
+	};
+
 	useEffect(() => {
 		// trigger a mode change if the mode changes from a values that is not a kid
 		if (mode !== Mode.Kid) {
@@ -155,7 +160,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 			value !== undefined &&
 			value !== null
 		) {
-			dispatch(getNarrationPayload({ mode: getModeType(value), language }));
+			loadNarrations(getModeType(value));
 		}
 	};
 
@@ -185,54 +190,53 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
-	if (!isLoading) {
-		return (
-			<TouchableWithoutFeedback
-				onPress={() => {
-					setDropdownOpen(false);
-					Keyboard.dismiss();
-				}}
-			>
-				<View style={styles.container}>
-					{background !== null && background}
-					<Main>
-						<ProgressBarKid />
-						<Toolbar />
-						<TopMain>
-							<AnimatedView key={currentPageNumber}>
-								<View
-									style={[
-										GeneralStyle.kid.introQuestionContainer,
-										{
-											marginVertical: verticalScale(40, device.screenHeight),
-											...styles.mainContainer,
-										},
-									]}
-								>
-									<View style={{ marginBottom: 9 }}>
-										<QuestionLabel
-											textStyle={GeneralStyle.kid.introQuestionLabel}
-											customStyle={{ marginBottom: 7, backgroundColor: "white" }}
-										>
-											{questionLabel}
-										</QuestionLabel>
-										<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
-											{questionSubLabel}
-										</QuestionSubLabel>
-									</View>
-
-									<View style={styles.questionComponentContainer}>{questionComponent}</View>
-								</View>
-							</AnimatedView>
-						</TopMain>
-						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-					</Main>
-				</View>
-			</TouchableWithoutFeedback>
-		);
-	} else {
-		return <LoadingScreenKid />;
+	if (isLoading) {
+		return <LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<TouchableWithoutFeedback
+			onPress={() => {
+				setDropdownOpen(false);
+				Keyboard.dismiss();
+			}}
+		>
+			<View style={styles.container}>
+				{background !== null && background}
+				<Main>
+					<ProgressBarKid />
+					<Toolbar />
+					<TopMain>
+						<AnimatedView key={currentPageNumber}>
+							<View
+								style={[
+									GeneralStyle.kid.introQuestionContainer,
+									{
+										marginVertical: verticalScale(40, device.screenHeight),
+										...styles.mainContainer,
+									},
+								]}
+							>
+								<View style={{ marginBottom: 9 }}>
+									<QuestionLabel
+										textStyle={GeneralStyle.kid.introQuestionLabel}
+										customStyle={{ marginBottom: 7, backgroundColor: "white" }}
+									>
+										{questionLabel}
+									</QuestionLabel>
+									<QuestionSubLabel customStyle={{ marginBottom: 4 }}>
+										{questionSubLabel}
+									</QuestionSubLabel>
+								</View>
+
+								<View style={styles.questionComponentContainer}>{questionComponent}</View>
+							</View>
+						</AnimatedView>
+					</TopMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		</TouchableWithoutFeedback>
+	);
 };
 
 export default QuestionSingleKid;

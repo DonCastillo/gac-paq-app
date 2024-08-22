@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { ExtroPayloadInterface } from "interface/payload.type";
+import type { LangExtroPayloadInterface } from "interface/payload.type";
 
-const S7Extro: ExtroPayloadInterface = {
+const S7Extro: LangExtroPayloadInterface = {
 	ident: "outdoors_extro",
 	name: "Section 7 Extro",
 	type: Screen.ExtroQuestion,
@@ -10,8 +10,24 @@ const S7Extro: ExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"pt-BR": {
+			heading: "Seção Completa!",
+			subheading: "",
+		},
+		"sv-SE": {
+			heading: "Du är klar med denna sektion!",
+			subheading: "",
+		},
+		"th-TH": {
+			heading: "ส่วนนี้เสร็จเรียบร้อย!",
+			subheading: "",
+		},
 		"zh-CN": {
-			heading: "部分完成!",
+			heading: "此部分完成",
+			subheading: "",
+		},
+		"es-ES": {
+			heading: "Sección Completa",
 			subheading: "",
 		},
 		"es-MX": {

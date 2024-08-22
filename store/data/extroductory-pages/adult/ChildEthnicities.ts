@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
+import type { LangQuestionOptionPayloadInterface } from "interface/payload.type";
 
-const ChildEthnicities: QuestionCheckboxPayloadInterface = {
+const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 	ident: "child_ethnicity",
 	name: "child_ethnicity",
 	type: Screen.SingleQuestion,
@@ -46,49 +46,124 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
-		"zh-CN": {
+		"pt-BR": {
 			type: Question.QuestionCheckbox,
-			heading: "第二十六题",
-			label: "您孩子的种族是？",
-			kid_label: "您孩子的种族是？",
-			adult_label: "您孩子的种族是？",
+			heading: "Pergunta 26",
+			label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
+			kid_label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
+			adult_label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
 			choices: [
 				{
-					label: "亚洲",
-					value: "Asian",
+					label: "Branca",
+					value: "White",
 				},
 				{
-					label: "黑人或美籍非裔",
-					value: "Black or African American",
+					label: "Preta",
+					value: "Black",
 				},
 				{
-					label: "本土的",
+					label: "Amarela",
+					value: "Yellow",
+				},
+				{
+					label: "Parda",
+					value: "Brown",
+				},
+				{
+					label: "Indígena",
 					value: "Indigenous",
 				},
 				{
-					label: "拉丁美洲",
+					label: "Outro",
+					value: "Other",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 26",
+			label: "Vilket land är du född i?",
+			kid_label: "Vilket land är du född i?",
+			adult_label: "Vilket land är du född i?",
+			choices: [
+				{
+					label: "Sverige",
+					value: "Sweden",
+				},
+				{
+					label: "Annat",
+					value: "Other",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionCheckbox,
+			heading: "คำถาม 26",
+			label: "บุตรหลานของคุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			kid_label: "บุตรหลานของคุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			adult_label: "บุตรหลานของคุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			choices: [
+				{
+					label: "เอเชีย",
+					value: "Asian",
+				},
+				{
+					label: "คนผิวดำหรือเชื้อสายแอฟริกันอเมริกัน",
+					value: "Black or African American",
+				},
+				{
+					label: "ชนพื้นเมือง",
+					value: "Indigenous",
+				},
+				{
+					label: "ละตินอเมริกา",
 					value: "Latin American",
 				},
 				{
-					label: "白种人",
+					label: "คนผิวขาวหรือคอเคเซียน",
 					value: "White or Caucasian",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"zh-CN": {
+			type: Question.QuestionCheckbox,
+			heading: "问题 26",
+			label: "您孩子的民族是?",
+			kid_label: "您孩子的民族是?",
+			adult_label: "您孩子的民族是?",
+			choices: [
+				{
+					label: "汉族",
+					value: "Han",
 				},
 				{
 					label: "其他",
 					value: "Other",
 				},
-				{
-					label: "不想说",
-					value: "Prefer not to say",
-				},
 			],
 		},
-		"es-MX": {
+		"es-ES": {
 			type: Question.QuestionCheckbox,
-			heading: "Question 26",
-			label: "¿Cuál es la etnia de tu hijo o hija?",
-			kid_label: "¿Cuál es la etnia de tu hijo o hija?",
-			adult_label: "¿Cuál es la etnia de tu hijo o hija?",
+			heading: "Pregunta 26",
+			label: "¿Cuál es la etnia de su hija o hijo?",
+			kid_label: "¿Cuál es la etnia de su hija o hijo?",
+			adult_label: "¿Cuál es la etnia de su hija o hijo?",
 			choices: [
 				{
 					label: "Asiático",
@@ -117,6 +192,23 @@ const ChildEthnicities: QuestionCheckboxPayloadInterface = {
 				{
 					label: "Prefiero no decirlo",
 					value: "Prefer not to say",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 26",
+			label: "¿Habla algún dialecto o lengua indígena?",
+			kid_label: "¿Habla algún dialecto o lengua indígena?",
+			adult_label: "¿Habla algún dialecto o lengua indígena?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
 				},
 			],
 		},

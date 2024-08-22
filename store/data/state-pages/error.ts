@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PagePayloadInterface } from "interface/payload.type";
+import type { LangPagePayloadInterface } from "interface/payload.type";
 
-const ErrorPage: PagePayloadInterface = {
+const ErrorPage: LangPagePayloadInterface = {
 	ident: "error_page",
 	title: "Error Page",
 	name: "Error Page",
@@ -9,11 +9,19 @@ const ErrorPage: PagePayloadInterface = {
 	translations: {
 		"en-CA": {
 			heading: "Error",
-			description: "There is a problem submitting your response.\n\nPlease try again. ",
+			description: "There is a problem submitting your response.\n\nPlease try again.",
+		},
+		"pt-BR": {
+			heading: "Erro",
+			description: "Há um problema ao enviar suas respostas.\n\nPor favor, tente novamente.",
+		},
+		"sv-SE": {
+			heading: "Ett fel har uppstått",
+			description: "Det uppstod ett problem när du skickade ditt svar.\n\nFörsök igen.",
 		},
 		"th-TH": {
-			heading: "ข้อผิดพลาด",
-			description: "มีปัญหาในการส่งคำตอบของคุณ\n\nกรุณาลองอีกครั้ง",
+			heading: "เกิดข้อผิดพลาด",
+			description: "มีปัญหาในการส่งคำตอบของคุณ\n\nโปรดลองอีกครั้ง",
 		},
 		"zh-CN": {
 			heading: "错误",

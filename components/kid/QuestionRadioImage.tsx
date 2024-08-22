@@ -19,6 +19,7 @@ import {
 	hasOtherOption,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
+	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
 
@@ -179,7 +180,7 @@ const QuestionRadioImage = ({
 		}
 	};
 
-	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
+	const blockRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
 		const { image_ident, label, value } = item;
 		const imageWidth = horizontalScale(280, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(image_ident);
@@ -214,7 +215,7 @@ const QuestionRadioImage = ({
 							),
 						}}
 					>
-						{label}
+						{`${optionLetter(index)}.  ${label}`}
 					</Text>
 				</View>
 			</Pressable>
@@ -222,7 +223,7 @@ const QuestionRadioImage = ({
 	};
 
 	/** if the option contains value called "other", it will be displayed as a list */
-	const listRenderOption = (item: ChoiceImage): React.ReactElement => {
+	const listRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
 		const { image_ident, label, value, sublabel, label_mode } = item;
 		const imageByMode = getOptionImage(image_ident);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
@@ -284,7 +285,7 @@ const QuestionRadioImage = ({
 									isSelected ? { color: "#fff" } : { color: "#000" },
 								]}
 							>
-								{optionText}
+								{`${optionLetter(index)}.  ${optionText}`}
 							</Text>
 						)}
 						{optionSublabel !== null && (
@@ -353,7 +354,7 @@ const QuestionRadioImage = ({
 					<FlatList
 						initialNumToRender={4}
 						data={[...options]}
-						renderItem={({ item }) => blockRenderOption(item)}
+						renderItem={({ item, index }) => blockRenderOption(item, index)}
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
@@ -363,7 +364,7 @@ const QuestionRadioImage = ({
 						horizontal={false}
 						removeClippedSubviews={false}
 						data={[...options]}
-						renderItem={({ item }) => listRenderOption(item)}
+						renderItem={({ item, index }) => listRenderOption(item, index)}
 						bounces={false}
 					/>
 				)}

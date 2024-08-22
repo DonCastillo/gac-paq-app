@@ -4,8 +4,14 @@ const DontKnowPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Don't know",
 	},
+	"pt-BR": {
+		label: "Eu não sei",
+	},
+	"sv-SE": {
+		label: "Vet ej",
+	},
 	"th-TH": {
-		label: "ไม่รู้",
+		label: "ไม่ทราบ",
 	},
 	"zh-CN": {
 		label: "不知道",
@@ -14,7 +20,7 @@ const DontKnowPhrase: LangPhraseInterface = {
 		label: "No sé",
 	},
 	"es-ES": {
-		label: "No sé",
+		label: "No lo sé",
 	},
 	"fr-CA": {
 		label: "Je ne sais pas",

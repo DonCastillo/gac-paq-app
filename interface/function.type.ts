@@ -4,7 +4,6 @@ import { type SettingsSliceInterface } from "store/settings/settingsSlice";
 import { type PayloadAction } from "@reduxjs/toolkit";
 import type DeviceInterface from "./dimensions";
 import type { ResponseInterface, LanguageInterface, PageIndexInterface, SectionPayloadInterface } from "interface/payload.type";
-import type { ButtonPayloadInterface } from "./button";
 import type { PhrasePayloadInterface } from "./phrase";
 
 
@@ -17,7 +16,6 @@ export type SetDeviceFuncType = (state: SettingsSliceInterface, action: PayloadA
 export type SetLanguageFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
 export type SetDirectusFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
 export type SetColorThemeFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;
-export type SetButtonsFuncType = (state: SettingsSliceInterface, action: PayloadAction<ButtonPayloadInterface>) => void;
 export type SetPhrasesFuncType = (state: SettingsSliceInterface, action: PayloadAction<PhrasePayloadInterface>) => void;
 export type SetSectionTitlesFuncType = (state: SettingsSliceInterface, action: PayloadAction<string[]>) => void;
 export type SetNarrationsFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<string, string | null>>) => void;
@@ -26,8 +24,10 @@ export type SkipPageFuncType = (state: SettingsSliceInterface, action: PayloadAc
 export type AddPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ key: number; page: PageIndexInterface }>) => void;
 export type SetPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<number, PageIndexInterface>>) => void;
 export type SetIsConnectedFuncType = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
+export type SetIsLoadingFuncType = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type AddSectionTotalPagesFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ sectionNumber: number; totalPages: number }>) => void;
 export type SetKeyboardState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
+export type SetEnableNarrationState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SettingsFuncType = (state: SettingsSliceInterface) => void;
 
 /** Responses Slice Function Signature */

@@ -5,7 +5,7 @@ import AboutPage from "store/data/introductory-pages/about";
 import LanguagePage from "store/data/introductory-pages/language";
 
 export const currentDefaultPage: PageIndexInterface = {
-	page: LanguagePage,
+	page: { ...LanguagePage, translations: LanguagePage.translations["en-CA"] },
 	pageNumber: 1,
 	screen: Screen.Language,
 	section: Section.Intro,
@@ -14,7 +14,7 @@ export const currentDefaultPage: PageIndexInterface = {
 };
 
 export const nextDefaultPage: PageIndexInterface = {
-	page: AboutPage,
+	page: { ...AboutPage, translations: AboutPage.translations["en-CA"] },
 	pageNumber: 2,
 	screen: Screen.Page,
 	section: Section.Intro,

@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S4Q8: QuestionRadioPayloadInterface = {
+const S4Q8: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_8",
 	name: "Question 17b: How many days did you walk to places other than school or work in the past week?",
 	type: Screen.SingleQuestion,
@@ -47,12 +47,132 @@ const S4Q8: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 17b",
+			label:
+				"Na última semana, quantos dias você caminhou para outros lugares além da escola ou trabalho?",
+			kid_label:
+				"Na última semana, quantos dias você caminhou para outros lugares além da escola ou trabalho?",
+			adult_label:
+				"Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para outros lugares além da escola ou trabalho?",
+			choices: [
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 17b",
+			label:
+				"Hur många dagar gick du till andra platser än skolan eller arbetet under sen senaste veckan?",
+			kid_label:
+				"Hur många dagar gick du till andra platser än skolan eller arbetet under sen senaste veckan?",
+			adult_label:
+				"Hur många dagar gick ditt barn till andra platser än skolan eller arbetet under sen senaste veckan?",
+			choices: [
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar",
+					value: "5",
+				},
+				{
+					label: "6 dagar",
+					value: "6",
+				},
+				{
+					label: "7 dagar",
+					value: "7",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 17b",
+			label:
+				"สัปดาห์ที่แล้ว น้องเดิน เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานทั้งหมดกี่วัน?",
+			kid_label:
+				"สัปดาห์ที่แล้ว น้องเดิน เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานทั้งหมดกี่วัน?",
+			adult_label:
+				"สัปดาห์ที่แล้ว บุตรหลานของคุณเดิน เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานทั้งหมดกี่วัน?",
+			choices: [
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17b",
 			label: "在过去一周里，除了上学或工作，你有多少天步行去别的地方？",
 			kid_label: "在过去一周里，除了上学或工作，你有多少天步行去别的地方？",
-			adult_label: "在过去一周，除了上学或工作，您的孩子有多少天步行去其他地方？",
+			adult_label: "在过去一周里，您的孩子有多少天步行去除了学校或工作以外的地方？",
 			choices: [
 				{
 					label: "1 天",
@@ -84,6 +204,46 @@ const S4Q8: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 17b",
+			label:
+				"¿Cuántos días caminaste para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+			kid_label:
+				"¿Cuántos días caminaste para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+			adult_label:
+				"¿Cuántos días su hija o hijo caminó para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio la semana pasada?",
+			choices: [
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b",
@@ -95,31 +255,31 @@ const S4Q8: QuestionRadioPayloadInterface = {
 				"¿Cuántos días su hija o hijo caminó para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			choices: [
 				{
-					label: "1 Día",
+					label: "1 día",
 					value: "1",
 				},
 				{
-					label: "2 Días",
+					label: "2 días",
 					value: "2",
 				},
 				{
-					label: "3 Días",
+					label: "3 días",
 					value: "3",
 				},
 				{
-					label: "4 Días",
+					label: "4 días",
 					value: "4",
 				},
 				{
-					label: "5 Días",
+					label: "5 días",
 					value: "5",
 				},
 				{
-					label: "6 Días",
+					label: "6 días",
 					value: "6",
 				},
 				{
-					label: "7 Días",
+					label: "7 días",
 					value: "7",
 				},
 			],

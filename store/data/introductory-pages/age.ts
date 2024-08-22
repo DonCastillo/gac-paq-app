@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
+import type { LangQuestionDropdownPayloadInterface } from "interface/payload.type";
 
-const AgePage: QuestionDropdownPayloadInterface = {
+const AgePage: LangQuestionDropdownPayloadInterface = {
 	ident: "mode",
 	name: "mode",
 	type: Screen.SingleQuestion,
@@ -37,27 +37,85 @@ const AgePage: QuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionDropdown,
+			heading: "Bem-vindo(a)!",
+			label: "Quem está respondendo a este questionário?",
+			kid_label: "Quem está respondendo a este questionário?",
+			adult_label: "Quem está respondendo a este questionário?",
+			choices: [
+				{
+					label: "Criança",
+					value: "child",
+					sublabel: {
+						kid: "8 a 11 anos",
+						adult: "8 a 11 anos",
+					},
+				},
+				{
+					label: "Adolescente",
+					value: "teen",
+					sublabel: {
+						kid: "12 a 17 anos",
+						adult: "12 a 17 anos",
+					},
+				},
+				{
+					label: "Pai/Mãe (ou Responsável)",
+					value: "adult",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionDropdown,
+			heading: "Välkommen!",
+			label: "Vem svarar på frågeformuläret?",
+			kid_label: "Vem svarar på frågeformuläret?",
+			adult_label: "Vem svarar på frågeformuläret?",
+			choices: [
+				{
+					label: "Barn",
+					value: "child",
+					sublabel: {
+						kid: "8-11 år",
+						adult: "8-11 år",
+					},
+				},
+				{
+					label: "Ungdom",
+					value: "teen",
+					sublabel: {
+						kid: "12-17 år",
+						adult: "12-17 år",
+					},
+				},
+				{
+					label: "Vårdnadshavare",
+					value: "adult",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionDropdown,
 			heading: "ยินดีต้อนรับ!",
-			label: "ใครกำลังทำแบบสอบถามนี้?",
-			kid_label: "ใครกำลังทำแบบสอบถามนี้?",
-			adult_label: "ใครกำลังทำแบบสอบถามนี้?",
+			label: "ผู้ตอบแบบสอบถามอยู่ตอนนี้คือ...?",
+			kid_label: "ผู้ตอบแบบสอบถามอยู่ตอนนี้คือ...?",
+			adult_label: "ผู้ตอบแบบสอบถามอยู่ตอนนี้คือ...?",
 			choices: [
 				{
 					label: "เด็ก",
 					value: "child",
 					sublabel: {
-						kid: "8 ถึง 11 ปี",
-						adult: "8 ถึง 11 ปี",
+						kid: "อายุ  8-11 ปี",
+						adult: "อายุ  8-11 ปี",
 					},
 				},
 				{
 					label: "วัยรุ่น",
 					value: "teen",
 					sublabel: {
-						kid: "12 ถึง 17 ปี",
-						adult: "12 ถึง 17 ปี",
+						kid: "อายุ 12-17 ปี",
+						adult: "อายุ 12-17 ปี",
 					},
 				},
 				{
@@ -69,9 +127,9 @@ const AgePage: QuestionDropdownPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionDropdown,
 			heading: "欢迎!",
-			label: "谁在填写这份问卷?",
-			kid_label: "谁在填写这份问卷?",
-			adult_label: "谁在填写这份问卷?",
+			label: "谁在填写本问卷？",
+			kid_label: "谁在填写本问卷？",
+			adult_label: "谁在填写本问卷？",
 			choices: [
 				{
 					label: "儿童",
@@ -90,7 +148,36 @@ const AgePage: QuestionDropdownPayloadInterface = {
 					},
 				},
 				{
-					label: "家长",
+					label: "父母",
+					value: "adult",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionDropdown,
+			heading: "¡Bienvenido!",
+			label: "¿Quén esta respondiendo el cuestionario?",
+			kid_label: "¿Quén esta respondiendo el cuestionario?",
+			adult_label: "¿Quén esta respondiendo el cuestionario?",
+			choices: [
+				{
+					label: "Niña o niño",
+					value: "child",
+					sublabel: {
+						kid: "8 a 11 años",
+						adult: "8 a 11 años",
+					},
+				},
+				{
+					label: "Adolescente",
+					value: "teen",
+					sublabel: {
+						kid: "12 a 17 años",
+						adult: "12 a 17 años",
+					},
+				},
+				{
+					label: "Padre/madre/cuidador(a)",
 					value: "adult",
 				},
 			],

@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
+import type { LangQuestionOptionPayloadInterface } from "interface/payload.type";
 
-const ParentEthnicities: QuestionCheckboxPayloadInterface = {
+const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 	ident: "parent_ethnicity",
 	name: "parent_ethnicity",
 	type: Screen.SingleQuestion,
@@ -46,49 +46,122 @@ const ParentEthnicities: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
-		"zh-CN": {
+		"pt-BR": {
 			type: Question.QuestionCheckbox,
-			heading: "第二十七题",
-			label: "您的种族是？",
-			kid_label: "您的种族是？",
-			adult_label: "您的种族是？",
+			heading: "Pergunta 27",
+			label: "Qual é a sua cor ou raça?",
+			kid_label: "Qual é a sua cor ou raça?",
+			adult_label: "Qual é a sua cor ou raça?",
 			choices: [
 				{
-					label: "亚洲",
-					value: "Asian",
+					label: "Branca",
+					value: "White",
 				},
 				{
-					label: "黑人或美籍非裔",
-					value: "Black or African American",
+					label: "Preta",
+					value: "Black",
 				},
 				{
-					label: "本土的",
+					label: "Amarela",
+					value: "Yellow",
+				},
+				{
+					label: "Parda",
+					value: "Brown",
+				},
+				{
+					label: "Indígena",
 					value: "Indigenous",
 				},
 				{
-					label: "拉丁美洲",
+					label: "Outro",
+					value: "Other",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionCheckboxInput,
+			heading: "Fråga 27",
+			label:
+				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			kid_label:
+				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			adult_label:
+				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			input_label: "år",
+			input_placeholder: "år",
+			input_label_en: "years",
+			choices: [
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionCheckbox,
+			heading: "คำถาม 27",
+			label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			kid_label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			adult_label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
+			choices: [
+				{
+					label: "เอเชีย",
+					value: "Asian",
+				},
+				{
+					label: "คนผิวดำหรือเชื้อสายแอฟริกันอเมริกัน",
+					value: "Black or African American",
+				},
+				{
+					label: "ชนพื้นเมือง",
+					value: "Indigenous",
+				},
+				{
+					label: "ละตินอเมริกา",
 					value: "Latin American",
 				},
 				{
-					label: "白种人",
+					label: "คนผิวขาวหรือคอเคเซียน",
 					value: "White or Caucasian",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"zh-CN": {
+			type: Question.QuestionCheckbox,
+			heading: "问题 27",
+			label: "您的民族是?",
+			kid_label: "您的民族是?",
+			adult_label: "您的民族是?",
+			choices: [
+				{
+					label: "汉族",
+					value: "Han",
 				},
 				{
 					label: "其他",
 					value: "Other",
 				},
-				{
-					label: "不想说",
-					value: "Prefer not to say",
-				},
 			],
 		},
-		"es-MX": {
+		"es-ES": {
 			type: Question.QuestionCheckbox,
-			heading: "Question 26",
-			label: "¿Cuál es tu etnicidad?",
-			kid_label: "¿Cuál es tu etnicidad?",
-			adult_label: "¿Cuál es tu etnicidad?",
+			heading: "Pregunta 27",
+			label: "¿Cuál es su etnia?",
+			kid_label: "¿Cuál es su etnia?",
+			adult_label: "¿Cuál es su etnia?",
 			choices: [
 				{
 					label: "Asiático",
@@ -119,6 +192,14 @@ const ParentEthnicities: QuestionCheckboxPayloadInterface = {
 					value: "Prefer not to say",
 				},
 			],
+		},
+		"es-MX": {
+			type: Question.QuestionInput,
+			heading: "Pregunta 27",
+			label: "¿Qué dialecto o lengua indígena habla?",
+			kid_label: "¿Qué dialecto o lengua indígena habla?",
+			adult_label: "¿Qué dialecto o lengua indígena habla?",
+			placeholder: "",
 		},
 		"fr-CA": {
 			type: Question.QuestionCheckbox,

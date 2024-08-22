@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
+import type { LangQuestionDropdownPayloadInterface } from "interface/payload.type";
 
-const DemographicAdultPage: QuestionDropdownPayloadInterface = {
+const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	audio_ident: "child_age",
@@ -58,12 +58,110 @@ const DemographicAdultPage: QuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionDropdown,
+			heading: "Bem-vindo(a)!",
+			label: "Quantos anos tem seu filho?",
+			kid_label: "Quantos anos tem seu filho?",
+			adult_label: "Quantos anos tem seu filho?",
+			choices: [
+				{
+					label: "8 anos",
+					value: "8",
+				},
+				{
+					label: "9 anos",
+					value: "9",
+				},
+				{
+					label: "10 anos",
+					value: "10",
+				},
+				{
+					label: "11 anos",
+					value: "11",
+				},
+				{
+					label: "12 anos",
+					value: "12",
+				},
+				{
+					label: "13 anos",
+					value: "13",
+				},
+				{
+					label: "14 anos",
+					value: "14",
+				},
+				{
+					label: "15 anos",
+					value: "15",
+				},
+				{
+					label: "16 anos",
+					value: "16",
+				},
+				{
+					label: "17 anos",
+					value: "17",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "Hur gammalt är ditt barn?",
+			kid_label: "Hur gammalt är ditt barn?",
+			adult_label: "Hur gammalt är ditt barn?",
+			choices: [
+				{
+					label: "8 år",
+					value: "8",
+				},
+				{
+					label: "9 år",
+					value: "9",
+				},
+				{
+					label: "10 år",
+					value: "10",
+				},
+				{
+					label: "11 år",
+					value: "11",
+				},
+				{
+					label: "12 år",
+					value: "12",
+				},
+				{
+					label: "13 år",
+					value: "13",
+				},
+				{
+					label: "14 år",
+					value: "14",
+				},
+				{
+					label: "15 år",
+					value: "15",
+				},
+				{
+					label: "16 år",
+					value: "16",
+				},
+				{
+					label: "17 år",
+					value: "17",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionDropdown,
 			heading: "ยินดีต้อนรับ!",
-			label: "คุณมีลูกอายุเท่าไร?",
-			kid_label: "คุณมีลูกอายุเท่าไร?",
-			adult_label: "คุณมีลูกอายุเท่าไร?",
+			label: "ลูกของคุณอายุเท่าไร?",
+			kid_label: "ลูกของคุณอายุเท่าไร?",
+			adult_label: "ลูกของคุณอายุเท่าไร?",
 			choices: [
 				{
 					label: "8 ปี",
@@ -110,9 +208,9 @@ const DemographicAdultPage: QuestionDropdownPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionDropdown,
 			heading: "欢迎!",
-			label: "你的孩子多大了?",
-			kid_label: "你的孩子多大了?",
-			adult_label: "你的孩子多大了?",
+			label: "您的孩子几岁？",
+			kid_label: "您的孩子几岁？",
+			adult_label: "您的孩子几岁？",
 			choices: [
 				{
 					label: "8岁",
@@ -152,6 +250,55 @@ const DemographicAdultPage: QuestionDropdownPayloadInterface = {
 				},
 				{
 					label: "17岁",
+					value: "17",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionDropdown,
+			heading: "¡Bienvenido!",
+			label: "¿Cuántos años tiene su hija o hijo?",
+			kid_label: "¿Cuántos años tiene su hija o hijo?",
+			adult_label: "¿Cuántos años tiene su hija o hijo?",
+			choices: [
+				{
+					label: "8 años",
+					value: "8",
+				},
+				{
+					label: "9 años",
+					value: "9",
+				},
+				{
+					label: "10 años",
+					value: "10",
+				},
+				{
+					label: "11 años",
+					value: "11",
+				},
+				{
+					label: "12 años",
+					value: "12",
+				},
+				{
+					label: "13 años",
+					value: "13",
+				},
+				{
+					label: "14 años",
+					value: "14",
+				},
+				{
+					label: "15 años",
+					value: "15",
+				},
+				{
+					label: "16 años",
+					value: "16",
+				},
+				{
+					label: "17 años",
 					value: "17",
 				},
 			],

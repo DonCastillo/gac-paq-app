@@ -22,34 +22,33 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
-	getLanguage,
+	getIsLoading,
 	prevPage,
+	setIsLoading,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
 import type { ExtroInterface } from "interface/payload.type";
-import { translatePage } from "utils/translate.utils";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
 import { moderateScale } from "utils/responsive.utils";
 
 const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const navigation = useNavigation();
 	const backgroundImage = getImageBackground();
 	const isConnected = useSelector(getIsConnected);
+	const isLoading = useSelector(getIsLoading);
 
 	// state
-	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// translations
 	const isFinal = currentPage.page?.isFinal;
-	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
+	const translatedPage = currentPage.page.translations as ExtroInterface;
 
 	// set button component dynamically
 	useEffect(() => {
@@ -86,7 +85,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 
 	const submitResponseHandler = async (): Promise<void> => {
 		try {
-			setLoading(true);
+			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
 			if (isConnected) {
 				await submitResponse(sanitizedResponses);
@@ -101,53 +100,52 @@ const QuestionExtroAdult = (): React.ReactElement => {
 			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
-			setLoading(false);
+			dispatch(setIsLoading(false));
 		}
 	};
 
-	if (!loading) {
-		return (
-			<View style={styles.container}>
-				<BGLinearGradient />
-				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
-					<ImageBackdrop
-						source={backgroundImage}
-						key={currentPageNumber}
-						opacity={0.2}
-					/>
-				)}
-				<Main>
-					<ProgressBarAdult />
-					<Toolbar />
-					<CenterMain>
-						<AnimatedView style={{ flex: 0 }}>
-							<Heading
-								customStyle={{
-									...GeneralStyle.adult.pageHeading,
-									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
-								}}
-							>
-								{translatedPage.heading}
-							</Heading>
-							<Paragraph
-								customStyle={{
-									...GeneralStyle.adult.pageParagraph,
-									fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
-								}}
-							>
-								{translatedPage.subheading}
-							</Paragraph>
-						</AnimatedView>
-					</CenterMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
-		);
-	} else {
-		return <LoadingScreenAdult />;
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			<BGLinearGradient />
+			{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+				<ImageBackdrop
+					source={backgroundImage}
+					key={currentPageNumber}
+					opacity={0.2}
+				/>
+			)}
+			<Main>
+				<ProgressBarAdult />
+				<Toolbar />
+				<CenterMain>
+					<AnimatedView style={{ flex: 0 }}>
+						<Heading
+							customStyle={{
+								...GeneralStyle.adult.pageHeading,
+								fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
+							}}
+						>
+							{translatedPage.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								...GeneralStyle.adult.pageParagraph,
+								fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
+							}}
+						>
+							{translatedPage.subheading}
+						</Paragraph>
+					</AnimatedView>
+				</CenterMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
+		</View>
+	);
 };
 
 export default QuestionExtroAdult;

@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
 
-const S1Q7: QuestionRadioImagePayloadInterface = {
+const S1Q7: LangQuestionRadioImagePayloadInterface = {
 	ident: "school_7",
 	name: "Question 7: Which of the following images shows what you do most of the time during your breaks?",
 	column_name: "07.0 Scho",
@@ -41,12 +41,102 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadioImage,
+			heading: "Pergunta 7",
+			label:
+				"Qual das opções a seguir corresponde ao que você faz na maior parte das vezes durante os intervalos ou recreios?",
+			kid_label:
+				"Qual das opções a seguir corresponde ao que você faz na maior parte das vezes durante os intervalos ou recreios?",
+			adult_label:
+				"Qual das opções a seguir corresponde ao que o(a) seu(sua) filho(a) faz na maior parte das vezes durante os intervalos ou recreios?",
+			choices: [
+				{
+					label: "Faço principalmente atividades sem esforço",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Faço principalmente atividades com esforço leve",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Faço principalmente atividades com esforço médio ou intenso",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Não sei",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadioImage,
+			heading: "คำถาม 7",
+			label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ในช่วงเวลาพัก?",
+			kid_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ในช่วงเวลาพัก?",
+			adult_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่บุตรหลานของคุณทำเป็นส่วนใหญ่ในช่วงเวลาพัก?",
+			choices: [
+				{
+					label: "ไม่ได้เคลื่อนไหว",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "เคลื่อนไหวโดยใช้แรงเพียงเล็กน้อย",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "เคลื่อนไหวโดยใช้แรงในระดับปานกลางถึงมาก",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "ไม่ทราบ",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadioImage,
+			heading: "Fråga 7",
+			label: "Vilken av bilderna visar vad du gör mest av under dina raster?",
+			kid_label: "Vilken av bilderna visar vad du gör mest av under dina raster?",
+			adult_label: "Vilken av bilderna visar vad ditt barn gör mest av tiden under sina raster?",
+			choices: [
+				{
+					label: "Stillasittande",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Lätt ansträngning",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medel eller hög ansträngning",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Vet ej",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 7",
-			label: "以下哪张图片是你大部分在学校休息时间里做的？",
-			kid_label: "以下哪张图片是你大部分在学校休息时间里做的？",
-			adult_label: "以下哪张图片是您的孩子大部分在学校休息时间里做的事情？",
+			label: "以下哪张图片符合你大部分在校休息时间里进行的活动？",
+			kid_label: "以下哪张图片符合你大部分在校休息时间里进行的活动？",
+			adult_label: "以下哪张图片符合您的孩子在学校大部分休息时间里进行的活动？",
 			choices: [
 				{
 					label: "不动",
@@ -70,9 +160,41 @@ const S1Q7: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadioImage,
+			heading: "Pregunta 7",
+			label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
+			kid_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
+			adult_label:
+				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo durante sus recreos o descansos?",
+			choices: [
+				{
+					label: "Sin moverte",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Esfuerzo fácil",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Esfuerzo medio o fuerte",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "No sé",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 7",
+			heading: "Pregunta 7",
 			label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
 			kid_label:

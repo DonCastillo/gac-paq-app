@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S2Q1: QuestionRadioPayloadInterface = {
+const S2Q1: LangQuestionRadioPayloadInterface = {
 	ident: "household_1",
 	name: "Question 8: In the past week, did you do active chores or tasks?",
 	column_name: "08.0 Hous",
@@ -26,6 +26,64 @@ const S2Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 8",
+			label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
+			kid_label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
+			adult_label:
+				"Na última semana, o(a) seu(sua) filho(a) realizou ativamente atividades ou tarefas domésticas?",
+			choices: [
+				{
+					label: "Sim",
+					value: "yes",
+				},
+				{
+					label: "Não",
+					value: "no",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 8",
+			label:
+				"Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			kid_label:
+				"Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			adult_label:
+				"Har ditt barn gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			choices: [
+				{
+					label: "Ja",
+					value: "yes",
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 8",
+			label:
+				"สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
+			kid_label:
+				"สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
+			adult_label:
+				"สัปดาห์ที่แล้ว บุตรหลานของคุณได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
+			choices: [
+				{
+					label: "ใช่ ได้ทำ",
+					value: "yes",
+				},
+				{
+					label: "ไม่ ไม่ได้ทำ",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 8",
@@ -43,9 +101,27 @@ const S2Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 8",
+			label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
+			kid_label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
+			adult_label:
+				"¿Realizó su hija o hijo tareas del hogar o quehaceres activos la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 8",
+			heading: "Pregunta 8",
 			label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
 			kid_label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
 			adult_label:

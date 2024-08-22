@@ -11,6 +11,7 @@ import {
 	hasOtherOption,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
+	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
@@ -137,7 +138,7 @@ const QuestionRadioImage = ({
 		}
 	};
 
-	const blockRenderOption = (item: ChoiceImage): React.ReactElement => {
+	const blockRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
 		const { image_ident, label, value } = item;
 		const baseWidth = device.orientation === "landscape" || !device.isTablet ? 250 : 270;
 		const imageWidth = horizontalScale(baseWidth, device.screenWidth) / numColumn;
@@ -173,7 +174,7 @@ const QuestionRadioImage = ({
 							),
 						}}
 					>
-						{label}
+						{`${optionLetter(index)}.  ${label}`}
 					</Text>
 				</View>
 			</Pressable>
@@ -181,7 +182,7 @@ const QuestionRadioImage = ({
 	};
 
 	/** if the option contains value called "other", it will be displayed as a list */
-	const listRenderOption = (item: ChoiceImage): React.ReactElement => {
+	const listRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
 		const { image_ident, label, value, sublabel, label_mode } = item;
 		const imageByMode = getOptionImage(image_ident);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
@@ -191,7 +192,7 @@ const QuestionRadioImage = ({
 		return (
 			<View style={{ paddingVertical: 2, marginBottom: 2 }}>
 				<RadioOption
-					label={label}
+					label={`${optionLetter(index)}.  ${label}`}
 					value={value}
 					image={imageByMode}
 					selected={isSelected}
@@ -199,7 +200,7 @@ const QuestionRadioImage = ({
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={getUserSpecifiedOther(value, selected)}
-					optionLabel={optionText ?? undefined}
+					optionLabel={`${optionLetter(index)}.  ${optionText}` ?? undefined}
 					optionSublabel={optionSublabel ?? undefined}
 				/>
 			</View>
@@ -215,7 +216,7 @@ const QuestionRadioImage = ({
 					<FlatList
 						initialNumToRender={4}
 						data={[...options]}
-						renderItem={({ item }) => blockRenderOption(item)}
+						renderItem={({ item, index }) => blockRenderOption(item, index)}
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
@@ -225,7 +226,7 @@ const QuestionRadioImage = ({
 						removeClippedSubviews={false}
 						horizontal={false}
 						data={[...options]}
-						renderItem={({ item }) => listRenderOption(item)}
+						renderItem={({ item, index }) => listRenderOption(item, index)}
 						bounces={false}
 						persistentScrollbar={true}
 						showsVerticalScrollIndicator={true}

@@ -14,11 +14,13 @@ import BGLinearGradient from "components/BGLinearGradient";
 import LoadingScreenAdult from "./LoadingScreenAdult";
 import { useDispatch, useSelector } from "react-redux";
 import {
+	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
-	getLanguage,
+	getIsLoading,
 	getPhrases,
 	reset,
+	setIsLoading,
 } from "store/settings/settingsSlice";
 import {
 	getErrorPage,
@@ -26,11 +28,10 @@ import {
 	getSuccessPage,
 } from "store/questions/questionsSlice";
 import { resetResponses } from "store/responses/responsesSlice";
-import { translatePage as translatePageUtil } from "utils/translate.utils";
 import ImageBackdrop from "components/ImageBackdrop";
 import { getImageBackgroundStatus } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
-import type { LangPageInterface, PageInterface } from "interface/payload.type";
+import type { PageInterface } from "interface/payload.type";
 import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { moderateScale } from "utils/responsive.utils";
@@ -42,15 +43,15 @@ interface Props {
 
 const StateAdult = ({ state }: Props): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
 	const successPage = useSelector(getSuccessPage);
 	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
 	const errorPage = useSelector(getErrorPage);
 	const device = useSelector(getDevice);
 	const isConnected = useSelector(getIsConnected);
+	const isLoading = useSelector(getIsLoading);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
 
-	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
@@ -69,26 +70,26 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const statePageChange = (): void => {
 		if (state === State.Success) {
 			if (success_type === "online") {
-				const pageTranslations: LangPageInterface = successPage.translations;
-				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+				const pageTranslations: PageInterface = successPage.translations;
+				setTranslatedPage(pageTranslations);
 			} else {
-				const pageTranslations: LangPageInterface = offlineSuccessPage.translations;
-				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+				const pageTranslations: PageInterface = offlineSuccessPage.translations;
+				setTranslatedPage(pageTranslations);
 			}
 		} else {
-			const pageTranslations: LangPageInterface = errorPage.translations;
-			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			const pageTranslations: PageInterface = errorPage.translations;
+			setTranslatedPage(pageTranslations);
 		}
 	};
 
 	const resetApp = (): void => {
 		dispatch(reset());
-		navigation.navigate("SplashScreen" as never);
+		navigation.reset({ index: 0, routes: [{ name: "SplashScreen" as never }] });
 	};
 
 	const resubmitResponse = async (): Promise<void> => {
 		try {
-			setLoading(true);
+			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
 			if (isConnected) {
 				await submitResponse(sanitizedResponses);
@@ -103,7 +104,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
-			setLoading(false);
+			dispatch(setIsLoading(false));
 		}
 	};
 
@@ -128,50 +129,49 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	};
 
 	const backgroundImage = getImageBackgroundStatus(state);
-	if (!loading) {
-		return (
-			<AnimatedView>
-				<View style={styles.container}>
-					<BGLinearGradient />
-					{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
-						<ImageBackdrop
-							source={backgroundImage}
-							opacity={0.7}
-							key={state.toString()}
-						/>
-					)}
-					<Main>
-						<CenterMain>
-							<View style={styles.stateIconContainer}>
-								{state === State.Success ? <CheckMark /> : <ErrorMark />}
-							</View>
-							<Heading
-								customStyle={{
-									...GeneralStyle.adult.pageHeading,
-									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
-								}}
-							>
-								{translatedPage?.heading}
-							</Heading>
-							<Paragraph
-								customStyle={{
-									...GeneralStyle.adult.pageParagraph,
-									fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
-								}}
-							>
-								{translatedPage?.description}
-							</Paragraph>
-						</CenterMain>
-						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-					</Main>
-				</View>
-			</AnimatedView>
-		);
-	} else {
-		return <LoadingScreenAdult />;
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
+	return (
+		<AnimatedView>
+			<View style={styles.container}>
+				<BGLinearGradient />
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						opacity={0.7}
+						key={state.toString()}
+					/>
+				)}
+				<Main>
+					<CenterMain>
+						<View style={styles.stateIconContainer}>
+							{state === State.Success ? <CheckMark /> : <ErrorMark />}
+						</View>
+						<Heading
+							customStyle={{
+								...GeneralStyle.adult.pageHeading,
+								fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								...GeneralStyle.adult.pageParagraph,
+								fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		</AnimatedView>
+	);
 };
 
 const styles = StyleSheet.create({

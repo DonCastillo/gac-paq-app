@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionSliderPayloadInterface } from "interface/payload.type";
+import type { LangQuestionSliderPayloadInterface } from "interface/payload.type";
 
-const S1Q3: QuestionSliderPayloadInterface = {
+const S1Q3: LangQuestionSliderPayloadInterface = {
 	ident: "school_3",
 	name: "Question 3: How many physical education classes did you have in the past week?",
 	column_name: "03.0 Scho",
@@ -17,6 +17,31 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			adult_label: "How many physical education classes did your child have in the past week?",
 			max_value: 7,
 		},
+		"pt-BR": {
+			type: Question.QuestionSlider,
+			heading: "Pergunta 3",
+			label: "Na última semana, quantas aulas de Educação Física você teve?",
+			kid_label: "Na última semana, quantas aulas de Educação Física você teve?",
+			adult_label:
+				"Na última semana, quantas aulas de Educação Física o(a) seu(sua) filho(a) teve?",
+			max_value: 7,
+		},
+		"sv-SE": {
+			type: Question.QuestionSlider,
+			heading: "Fråga 3",
+			label: "Hur många idrottslektioner har du haft den senaste veckan?",
+			kid_label: "Hur många idrottslektioner har du haft den senaste veckan?",
+			adult_label: "Hur många idrottslektioner har ditt barn haft den senaste veckan?",
+			max_value: 7,
+		},
+		"th-TH": {
+			type: Question.QuestionSlider,
+			heading: "คำถาม 3",
+			label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
+			kid_label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
+			max_value: 7,
+		},
 		"zh-CN": {
 			type: Question.QuestionSlider,
 			heading: "问题 3",
@@ -25,9 +50,17 @@ const S1Q3: QuestionSliderPayloadInterface = {
 			adult_label: "在过去一周里，您的孩子上了几节体育课？",
 			max_value: 7,
 		},
+		"es-ES": {
+			type: Question.QuestionSlider,
+			heading: "Pregunta 3",
+			label: "¿Cuántas clases de educación física tuviste durante la semana pasada?",
+			kid_label: "¿Cuántas clases de educación física tuviste durante la semana pasada?",
+			adult_label: "¿Cuántas clases de educación física tuvo su hija o hijo la semana pasada?",
+			max_value: 7,
+		},
 		"es-MX": {
 			type: Question.QuestionSlider,
-			heading: "Question 3",
+			heading: "Pregunta 3",
 			label: "¿Cuántas clases de educación física tuviste en la semana pasada?",
 			kid_label: "¿Cuántas clases de educación física tuviste en la semana pasada?",
 			adult_label: "¿Cuántas clases de educación física tuvo su hija o hijo la semana pasada?",

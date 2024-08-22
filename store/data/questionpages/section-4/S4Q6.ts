@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S4Q6: QuestionRadioPayloadInterface = {
+const S4Q6: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_6",
 	name: "Question 16c: How long does it normally take you to go to work?",
 	column_name: "16.C Tran",
@@ -38,12 +38,102 @@ const S4Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 16c",
+			label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
+			kid_label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
+			adult_label:
+				"Quanto tempo, normalmente, o(a) seu(sua) filho(a) leva para ir para o trabalho?",
+			choices: [
+				{
+					label: "10 minutos ou menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutos",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Mais que 60 minutos",
+					value: "More than 60 minutes",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 16c",
+			label: "Hur lång tid tar det vanligtvis dig att ta dig till arbetet (eller ideella arbete)?",
+			kid_label:
+				"Hur lång tid tar det vanligtvis dig att ta dig till arbetet (eller ideella arbete)?",
+			adult_label:
+				"Hur lång tid tar det vanligtvis ditt barn att ta sig till arbetet (eller ideella arbete)?",
+			choices: [
+				{
+					label: "10 minuter eller mindre",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minuter",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minuter",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minuter",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Mer än 60 minuter",
+					value: "More than 60 minutes",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 16c",
+			label: "ปกติน้องใช้เวลาเดินทางไปทำงานนานเท่าไหร่?",
+			kid_label: "ปกติน้องใช้เวลาเดินทางไปทำงานนานเท่าไหร่?",
+			adult_label: "ปกติบุตรหลานของคุณใช้เวลาเดินทางไปทำงานนานเท่าไหร่?",
+			choices: [
+				{
+					label: "10 นาทีหรือน้อยกว่า",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 นาที",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 นาที",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 นาที",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "มากกว่า 60 นาที",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 16c",
-			label: "通常情况下，你采用该交通方式到工作地点需要多长时间？",
-			kid_label: "通常情况下，你采用该交通方式到工作地点需要多长时间？",
-			adult_label: "通常情况下，您的孩子采用上述方式到工作地点需要多长时间？",
+			label: "通常情况下，你采用上述方式去工作需要多长时间？",
+			kid_label: "通常情况下，你采用上述方式去工作需要多长时间？",
+			adult_label: "通常情况下，您的孩子采用上述方式去工作需要多长时间？",
 			choices: [
 				{
 					label: "少于或等于10分钟",
@@ -67,9 +157,39 @@ const S4Q6: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 16c",
+			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
+			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
+			adult_label:
+				"¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo o voluntariado?",
+			choices: [
+				{
+					label: "10 minutos o menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutos",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Más de 60 minutos",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Question 16c",
+			heading: "Pregunta 16c",
 			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo?",
 			adult_label: "¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo?",

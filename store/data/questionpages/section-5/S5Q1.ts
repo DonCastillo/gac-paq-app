@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S5Q1: QuestionRadioPayloadInterface = {
+const S5Q1: LangQuestionRadioPayloadInterface = {
 	ident: "organized_1",
 	name: "Question 18:	Did you do any organized activities during the past week?",
 	column_name: "18.0 Orga",
@@ -26,12 +26,70 @@ const S5Q1: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 18",
+			label: "Na última semana, você praticou alguma atividade organizada ou esporte?",
+			kid_label: "Na última semana, você praticou alguma atividade organizada ou esporte?",
+			adult_label:
+				"Na última semana, o(a) seu(sua) filho(a) praticou alguma atividade organizada ou esporte?",
+			choices: [
+				{
+					label: "Sim",
+					value: "yes",
+				},
+				{
+					label: "Não",
+					value: "no",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 18",
+			label:
+				"Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			kid_label:
+				"Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			adult_label:
+				"Har ditt barn gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			choices: [
+				{
+					label: "Ja",
+					value: "yes",
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 18",
+			label:
+				"สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมหรือเล่นกีฬาที่ทางโรงเรียนจัดขึ้น การเรียนพิเศษทางด้านกีฬา รวมถึงกิจกรรมที่ทางชุมชนจัดขึ้นบ้างหรือไม่?",
+			kid_label:
+				"สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมหรือเล่นกีฬาที่ทางโรงเรียนจัดขึ้น การเรียนพิเศษทางด้านกีฬา รวมถึงกิจกรรมที่ทางชุมชนจัดขึ้นบ้างหรือไม่?",
+			adult_label:
+				"สัปดาห์ที่แล้ว บุตรหลานของคุณได้ทำกิจกรรมหรือเล่นกีฬาที่ทางโรงเรียนจัดขึ้น การเรียนพิเศษทางด้านกีฬา รวมถึงกิจกรรมที่ทางชุมชนจัดขึ้นบ้างหรือไม่?",
+			choices: [
+				{
+					label: "ใช่ ได้ทำ/เข้าร่วม",
+					value: "yes",
+				},
+				{
+					label: "ไม่ ไม่ได้ทำ/เข้าร่วม",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 18",
-			label: "在过去一周里，你有参加有组织的活动吗?",
-			kid_label: "在过去一周里，你有参加有组织的活动吗?",
-			adult_label: "在过去一周里，您的孩子有参加有组织的活动吗?",
+			label: "在过去一周里，你参加过有组织的活动吗?",
+			kid_label: "在过去一周里，你参加过有组织的活动吗?",
+			adult_label: "在过去一周里，您的孩子是否参加过有组织的活动？",
 			choices: [
 				{
 					label: "是",
@@ -39,6 +97,23 @@ const S5Q1: QuestionRadioPayloadInterface = {
 				},
 				{
 					label: "否",
+					value: "no",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 18",
+			label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
+			kid_label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
+			adult_label: "¿Su hija o hijo realizó alguna actividad organizada durante la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
 					value: "no",
 				},
 			],

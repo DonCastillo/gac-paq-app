@@ -39,7 +39,7 @@ const SplashKid = (): React.ReactElement => {
 								lineHeight: 23.6,
 							}}
 						>
-							The global adolescent and children activity questionnaire
+							The global adolescent and child activity questionnaire
 						</Paragraph>
 						<ProgressBar />
 					</AnimatedView>

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ButtonIcon from "components/buttons/ButtonIcon";
 import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed";
 import { useSelector } from "react-redux";
-import { getButtons } from "store/settings/settingsSlice";
+import { getPhrases } from "store/settings/settingsSlice";
 
 interface Props {
 	onPrev?: () => void;
@@ -16,7 +16,7 @@ const BackAndSubmitNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactEle
 	const [hasPrev, setHasPrev] = useState<boolean>(false);
 	const [hasNext, setHasNext] = useState<boolean>(false);
 	const [justification, setJustification] = useState<FlexStyle["justifyContent"]>("space-between");
-	const buttons = useSelector(getButtons);
+	const phrases = useSelector(getPhrases);
 
 	// determine whether to show prev, next, or both buttons
 	useEffect(() => {
@@ -54,7 +54,7 @@ const BackAndSubmitNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactEle
 
 			{hasNext && (
 				<BtnCntrWdthShadowed
-					label={buttons?.complete}
+					label={phrases?.complete}
 					onPress={async () => onNext !== undefined && onNext()}
 					colorTheme={"#FFCB66"}
 				/>

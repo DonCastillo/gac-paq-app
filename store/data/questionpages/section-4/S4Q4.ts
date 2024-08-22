@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
 
-const S4Q4: QuestionRadioImagePayloadInterface = {
+const S4Q4: LangQuestionRadioImagePayloadInterface = {
 	ident: "transportation_4",
 	name: "Question 16:	How did you go to work in the past week?",
 	column_name: "16.0 Tran",
@@ -54,14 +54,146 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadioImage,
+			heading: "Pergunta 16",
+			label: "Na última semana, como você foi para o trabalho?",
+			kid_label: "Na última semana, como você foi para o trabalho?",
+			adult_label: "Na última semana, como o(a) seu(sua) filho(a) foi para o trabalho?",
+			kid_sublabel: "Selecione o meio de transporte principal que você usou.",
+			adult_sublabel: "Selecione o meio de transporte principal que o(a) seu(sua) filho(a) usou.",
+			choices: [
+				{
+					label: "Caminhando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Sobre rodas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "por exemplo, cadeira de rodas, bicicleta, skate, patinete, patins",
+						adult: "por exemplo, cadeira de rodas, bicicleta, skate, patinete, patins",
+					},
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "por exemplo, ônibus, trem, bonde, metrô, barco, balsa",
+						adult: "por exemplo, ônibus, trem, bonde, metrô, barco, balsa",
+					},
+				},
+				{
+					label: "Carro, taxi, caminhão ou moto",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Outro",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadioImage,
+			heading: "Fråga 16",
+			label: "Hur tog du dig till arbetet (eller ditt ideella arbete) den senaste veckan?",
+			kid_label: "Hur tog du dig till arbetet (eller ditt ideella arbete) den senaste veckan?",
+			adult_label: "How did your child go to work in the past week?",
+			kid_sublabel: "Välj det du oftast gjorde.",
+			adult_sublabel: "Välj det han/hon oftast gjorde.",
+			choices: [
+				{
+					label: "Gång",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Cykel",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+						adult: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+					},
+				},
+				{
+					label: "Kollektivtrafik",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+						adult: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+					},
+				},
+				{
+					label: "Bil, taxi eller moped",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Annat, vilket?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadioImage,
+			heading: "คำถาม 16",
+			label: "สัปดาห์ที่แล้ว น้องเดินทางไปทำงานอย่างไร?",
+			kid_label: "สัปดาห์ที่แล้ว น้องเดินทางไปทำงานอย่างไร?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณเดินทางไปทำงานอย่างไร?",
+			kid_sublabel: "เลือกวิธีการเดินทางที่น้องใช้เป็นหลัก",
+			adult_sublabel: "เลือกวิธีการเดินทางที่บุตรหลานของคุณใช้เป็นหลัก",
+			choices: [
+				{
+					label: "เดิน ",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+						adult: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+					},
+				},
+				{
+					label: "การขนส่งสาธารณะ",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+						adult: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+					},
+				},
+				{
+					label: "รถยนต์ รถแท็กซี่ รถบรรทุก หรือรถจักรยานยนต์/มอเตอร์ไซค์",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "อื่น ๆ วิธีใด?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 16",
 			label: "在过去一周里，你是如何去工作地点的？",
 			kid_label: "在过去一周里，你是如何去工作地点的？",
 			adult_label: "在过去一周里，您的孩子是如何去工作地点的？",
-			kid_sublabel: "选择你使用的主要交通方式。",
-			adult_sublabel: "选择您的孩子使用的主要交通方式。",
+			kid_sublabel: "选择你使用的主要交通方式",
+			adult_sublabel: "选择您的孩子使用的主要交通方式",
 			choices: [
 				{
 					label: "步行",
@@ -92,20 +224,20 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "其他的",
+					label: "其他，哪种?",
 					value: "Other",
 					image_ident: "other",
 				},
 			],
 		},
-		"es-MX": {
+		"es-ES": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 16",
-			label: "¿Cómo fuiste a trabajar en la última semana?",
-			kid_label: "¿Cómo fuiste a trabajar en la última semana?",
-			adult_label: "¿Cómo fue su hija o hijo al trabajo la semana pasada?",
+			heading: "Pregunta 16",
+			label: "¿Cómo fuiste al trabajo o voluntariado la semana pasada?",
+			kid_label: "¿Cómo fuiste al trabajo o voluntariado la semana pasada?",
+			adult_label: "¿Cómo fue su hija o hijo al trabajo o voluntariado la semana pasada?",
 			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
-			adult_sublabel: "Selecciona el modo de transporte que más utilizó.",
+			adult_sublabel: "Selecciona el modo de transporte que más utilizó",
 			choices: [
 				{
 					label: "Caminando",
@@ -136,7 +268,51 @@ const S4Q4: QuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Otro",
+					label: "Otro, ¿cuál?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadioImage,
+			heading: "Pregunta 16",
+			label: "¿Cómo fuiste al trabajo la semana pasada?",
+			kid_label: "¿Cómo fuiste al trabajo la semana pasada?",
+			adult_label: "¿Cómo fue su hija o hijo al trabajo la semana pasada?",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
+			adult_sublabel: "Selecciona el modo de transporte que más utilizó",
+			choices: [
+				{
+					label: "Caminando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Sobre ruedas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+					},
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+					},
+				},
+				{
+					label: "Automóvil, taxi, camioneta o motocicleta",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Otro, ¿cuál?",
 					value: "Other",
 					image_ident: "other",
 				},

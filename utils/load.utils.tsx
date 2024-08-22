@@ -1,9 +1,7 @@
 import { FlagIcons } from "styles/flags";
 import Languages from "store/data/languages";
 import { store } from "store/store";
-import { setButtons, setPhrases } from "store/settings/settingsSlice";
-import { translateButton, translatePhrase } from "./translate.utils";
-import ButtonLabel from "constants/button_label.enum";
+import { setPhrases } from "store/settings/settingsSlice";
 import PhraseLabel from "constants/phrase_label.enum";
 import type { LanguageInterface } from "interface/payload.type";
 
@@ -19,50 +17,32 @@ const loadLanguagesOffline = (): LanguageInterface[] => {
 	});
 };
 
-const loadButtons = (): void => {
-	const language = store.getState().settings.language ?? "en-CA";
-	const backButton = store.getState().questions.backButton;
-	const completeButton = store.getState().questions.completeButton;
-	const continueButton = store.getState().questions.continueButton;
-	const goButton = store.getState().questions.goButton;
-	const nextButton = store.getState().questions.nextButton;
-	const startedButton = store.getState().questions.startedButton;
-
-	store.dispatch(
-		setButtons({
-			back: translateButton(backButton, language) ?? ButtonLabel.Back,
-			complete: translateButton(completeButton, language) ?? ButtonLabel.Complete,
-			continue: translateButton(continueButton, language) ?? ButtonLabel.Continue,
-			go: translateButton(goButton, language) ?? ButtonLabel.Go,
-			next: translateButton(nextButton, language) ?? ButtonLabel.Next,
-			started: translateButton(startedButton, language) ?? ButtonLabel.Started,
-		}),
-	);
-};
-
 const loadPhrases = (): void => {
-	const language = store.getState().settings.language ?? "en-CA";
-	const agreementPhrase = store.getState().questions.agreementPhrase;
+	const backPhrase = store.getState().questions.backPhrase;
+	const completePhrase = store.getState().questions.completePhrase;
 	const donePhrase = store.getState().questions.donePhrase;
 	const dontKnowPhrase = store.getState().questions.dontKnowPhrase;
-	const introductionPhrase = store.getState().questions.introductionPhrase;
-	const tryAgainPhrase = store.getState().questions.tryAgainPhrase;
 	const feedbackPhrase = store.getState().questions.feedbackPhrase;
-	const selectPhrase = store.getState().questions.selectPhrase;
+	const introductionPhrase = store.getState().questions.introductionPhrase;
+	const nextPhrase = store.getState().questions.nextPhrase;
 	const pleaseSpecifyPhrase = store.getState().questions.pleaseSpecifyPhrase;
+	const selectPhrase = store.getState().questions.selectPhrase;
+	const tryAgainPhrase = store.getState().questions.tryAgainPhrase;
 
 	store.dispatch(
 		setPhrases({
-			agreement: translatePhrase(agreementPhrase, language) ?? PhraseLabel.Agreement,
-			done: translatePhrase(donePhrase, language) ?? PhraseLabel.Done,
-			dontKnow: translatePhrase(dontKnowPhrase, language) ?? PhraseLabel.DontKnow,
-			introduction: translatePhrase(introductionPhrase, language) ?? PhraseLabel.Introduction,
-			tryAgain: translatePhrase(tryAgainPhrase, language) ?? PhraseLabel.TryAgain,
-			feedback: translatePhrase(feedbackPhrase, language) ?? PhraseLabel.Feedback,
-			select: translatePhrase(selectPhrase, language) ?? PhraseLabel.Select,
-			specify: translatePhrase(pleaseSpecifyPhrase, language) ?? PhraseLabel.PleaseSpecify,
+			back: backPhrase.label ?? PhraseLabel.Back,
+			complete: completePhrase.label ?? PhraseLabel.Complete,
+			done: donePhrase.label ?? PhraseLabel.Done,
+			dontKnow: dontKnowPhrase.label ?? PhraseLabel.DontKnow,
+			feedback: feedbackPhrase.label ?? PhraseLabel.Feedback,
+			introduction: introductionPhrase.label ?? PhraseLabel.Introduction,
+			next: nextPhrase.label ?? PhraseLabel.Next,
+			specify: pleaseSpecifyPhrase.label ?? PhraseLabel.PleaseSpecify,
+			select: selectPhrase.label ?? PhraseLabel.Select,
+			tryAgain: tryAgainPhrase.label ?? PhraseLabel.TryAgain,
 		}),
 	);
 };
 
-export { loadLanguagesOffline, loadButtons, loadPhrases };
+export { loadLanguagesOffline, loadPhrases };

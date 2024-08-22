@@ -4,14 +4,12 @@ import { currentDefaultPage, nextDefaultPage } from "./defaultPage";
 import defaultColor from "./defaultColor";
 import type DeviceInterface from "interface/dimensions";
 import type ColorInterface from "interface/color";
-import defaultButton from "./defaultButton";
 import defaultPhrase from "./defaultPhrase";
 import type { ModeType } from "interface/union.type";
 import reducersActions from "./settingsReducers";
-import type { ButtonPayloadInterface } from "interface/button";
 import type { PhrasePayloadInterface } from "interface/phrase";
 import type { PageIndexInterface } from "interface/payload.type";
-import { getNarrationPayload } from "./settingsThunk.";
+import { getNarrationPayload } from "./settingsThunk";
 
 export interface SettingsSliceInterface {
 	mode: ModeType;
@@ -22,7 +20,6 @@ export interface SettingsSliceInterface {
 	currentPageNumber: number;
 	currentPage: PageIndexInterface;
 	nextPage: PageIndexInterface;
-	buttons: ButtonPayloadInterface;
 	phrases: PhrasePayloadInterface;
 	sectionTitles: string[];
 	sectionTotalPages: Record<number, number>;
@@ -34,6 +31,7 @@ export interface SettingsSliceInterface {
 	isLoading: boolean;
 	startDateTime: Date | null;
 	isConnected: boolean;
+	enableNarration: boolean;
 }
 
 const settingsSlice = createSlice({
@@ -47,7 +45,6 @@ const settingsSlice = createSlice({
 		currentPageNumber: 1,
 		currentPage: currentDefaultPage,
 		nextPage: nextDefaultPage,
-		buttons: defaultButton,
 		phrases: defaultPhrase,
 		sectionTitles: [] as string[],
 		sectionTotalPages: {},
@@ -59,6 +56,7 @@ const settingsSlice = createSlice({
 		isLoading: false as boolean,
 		startDateTime: null as Date | null,
 		isConnected: false,
+		enableNarration: true,
 	} satisfies SettingsSliceInterface,
 	reducers: {
 		setMode: reducersActions.setMode,
@@ -71,7 +69,6 @@ const settingsSlice = createSlice({
 		prevPage: reducersActions.prevPage,
 		addPage: reducersActions.addPage,
 		setPage: reducersActions.setPage,
-		setButtons: reducersActions.setButtons,
 		setPhrases: reducersActions.setPhrases,
 		setNarrations: reducersActions.setNarrations,
 		setSectionTitles: reducersActions.setSectionTitles,
@@ -80,20 +77,19 @@ const settingsSlice = createSlice({
 		removeExtroPages: reducersActions.removeExtroPages,
 		removeFeedbackPages: reducersActions.removeFeedbackPages,
 		reset: reducersActions.reset,
+		setIsLoading: reducersActions.setIsLoading,
 		setStartDateTime: reducersActions.setStartDateTime,
 		setIsConnected: reducersActions.setIsConnected,
+		setEnableNarration: reducersActions.setEnableNarration,
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
-			state.isLoading = false;
 			state.narrations = action.payload;
 		});
 		builder.addCase(getNarrationPayload.pending, (state) => {
-			state.isLoading = true;
 			state.narrations = {};
 		});
 		builder.addCase(getNarrationPayload.rejected, (state) => {
-			state.isLoading = false;
 			state.narrations = {};
 		});
 	},
@@ -107,7 +103,6 @@ const settingsSlice = createSlice({
 		getCurrentPageNumber: (state: SettingsSliceInterface) => state.currentPageNumber,
 		getCurrentPage: (state: SettingsSliceInterface) => state.currentPage,
 		getNextPage: (state: SettingsSliceInterface) => state.nextPage,
-		getButtons: (state: SettingsSliceInterface) => state.buttons,
 		getPhrases: (state: SettingsSliceInterface) => state.phrases,
 		getNarrations: (state: SettingsSliceInterface) => state.narrations,
 		getSectionTitles: (state: SettingsSliceInterface) => state.sectionTitles,
@@ -118,6 +113,7 @@ const settingsSlice = createSlice({
 		getIsLoading: (state: SettingsSliceInterface) => state.isLoading,
 		getStartDateTime: (state: SettingsSliceInterface) => state.startDateTime,
 		getIsConnected: (state: SettingsSliceInterface) => state.isConnected,
+		getEnableNarration: (state: SettingsSliceInterface) => state.enableNarration,
 	},
 });
 
@@ -132,7 +128,6 @@ export const {
 	prevPage,
 	addPage,
 	setPage,
-	setButtons,
 	setPhrases,
 	setSectionTitles,
 	addSectionTotalPages,
@@ -140,8 +135,10 @@ export const {
 	removeExtroPages,
 	removeFeedbackPages,
 	reset,
+	setIsLoading,
 	setStartDateTime,
 	setIsConnected,
+	setEnableNarration,
 } = settingsSlice.actions;
 
 export const {
@@ -154,7 +151,6 @@ export const {
 	getCurrentPageNumber,
 	getCurrentPage,
 	getNextPage,
-	getButtons,
 	getPhrases,
 	getNarrations,
 	getSectionTitles,
@@ -165,6 +161,7 @@ export const {
 	getIsLoading,
 	getStartDateTime,
 	getIsConnected,
+	getEnableNarration,
 } = settingsSlice.selectors;
 
 export default settingsSlice.reducer;

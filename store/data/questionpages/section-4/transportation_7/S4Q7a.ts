@@ -17,19 +17,84 @@ const Transportation7: Transportation7Interface = {
 			both: "In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 		},
 	},
-	"zh-CN": {
+	"pt-BR": {
 		kid: {
-			none: "在过去一周里，你有走路或骑车去过地方（例如，朋友家，公园，商店）吗？",
-			school: "在过去一周里，你有走路或骑车去过除学校以外的地方（例如，朋友家，公园，商店）吗？",
-			work: "在过去一周里，你有走路或骑车去过除工作以外的地方（例如，朋友家，公园，商店）吗？",
-			both: "在过去一周里，你有走路或骑车去过除学校或工作以外的地方（例如，朋友家，公园，商店）吗？",
+			none: "Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares (por exemplo, casa de um amigo, um parque, uma loja)?",
+			school:
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a outros lugares além da escola (por exemplo, a casa de um amigo, um parque, uma loja)?",
+			work: "Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares além do trabalho (por exemplo, a casa de um amigo, um parque, uma loja)?",
+			both: " Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
 		},
 		adult: {
-			none: "在过去一周里，你的孩子有走路或骑车去过地方（例如，朋友家，公园，商店）吗？",
+			none: "Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares (por exemplo, casa de um amigo, um parque, uma loja)?",
 			school:
-				"在过去一周里，你的孩子有走路或骑车去过除学校以外的地方（例如，朋友家，公园，商店）吗？",
-			work: "在过去一周里，你的孩子有走路或骑车去过除工作以外的地方（例如，朋友家，公园，商店）吗？",
-			both: "在过去一周里，你的孩子有走路或骑车去过除学校或工作以外的地方（例如，朋友家，公园，商店）吗？",
+				"Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares além da escola (por exemplo, casa de um amigo, um parque, uma loja)?",
+			work: "Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares além da escola ou do trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			both: "Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+		},
+	},
+	"sv-SE": {
+		kid: {
+			none: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon plats under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			school:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola (till exempel till en kompis, till parken eller en butik)?",
+			work: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än arbetet under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			both: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+		},
+		adult: {
+			none: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon plats under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			school:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skolan under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			work: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än arbetet under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			both: "Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+		},
+	},
+	"th-TH": {
+		kid: {
+			none: "ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่ต่าง ๆ (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			school:
+				"ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			work: "ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่ที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			both: "ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+		},
+		adult: {
+			none: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่ต่าง ๆ (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			school:
+				"ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			work: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่ที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			both: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+		},
+	},
+	"zh-CN": {
+		kid: {
+			none: "在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去其他地方（例如，朋友家、公园或商店）？",
+			school:
+				"在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去过除了学校以外的地方（例如，朋友家、公园或商店）？",
+			work: "在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去过除了工作以外的地方（例如，朋友家、公园或商店）？",
+			both: "在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去过除了学校或工作以外的地方（例如，朋友家、公园或商店）？",
+		},
+		adult: {
+			none: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去过其他地方（例如，朋友家、公园或商店）？",
+			school:
+				"在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去过除了学校以外的地方（例如，朋友家、公园或商店）？",
+			work: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去过除了工作以外的地方（例如，朋友家、公园或商店）？",
+			both: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
+		},
+	},
+	"es-ES": {
+		kid: {
+			none: "Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) para ir a lugares?",
+			school:
+				"Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos a la escuela o colegio (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			work: "Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos al trabajo o voluntariado (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			both: "Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines) a lugares distintos al trabajo o voluntariado, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+		},
+		adult: {
+			none: "Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) para ir a lugares (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			school:
+				"Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos a la escuela o colegio (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			work: "Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete o patines) a lugares distintos al trabajo o voluntariado (por ejemplo, a casa de un amigo, a un parque o a una tienda)?",
+			both: "Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines) a lugares distintos al trabajo o voluntariado, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
 		},
 	},
 	"es-MX": {

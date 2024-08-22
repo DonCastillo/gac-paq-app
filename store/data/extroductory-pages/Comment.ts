@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionTextareaPayloadInterface } from "interface/payload.type";
+import type { LangQuestionTextareaPayloadInterface } from "interface/payload.type";
 
-const Comment: QuestionTextareaPayloadInterface = {
+const Comment: LangQuestionTextareaPayloadInterface = {
 	ident: "app_use_comment",
 	name: "app_use_comment",
 	type: Screen.SingleQuestion,
@@ -22,28 +22,79 @@ const Comment: QuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"pt-BR": {
+			type: Question.QuestionTextarea,
+			heading: "Comentários",
+			placeholder: "Digite seu comentário aqui",
+			label:
+				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			kid_label:
+				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			adult_label:
+				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			kid_sublabel: "Se sim, por favor escreva-os na caixa abaixo",
+			adult_sublabel: "Se sim, por favor escreva-os na caixa abaixo",
+		},
+		"sv-SE": {
+			type: Question.QuestionTextarea,
+			heading: "Feedback",
+			placeholder: "Skriv din kommentar här",
+			label:
+				"Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
+			kid_label:
+				"Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
+			adult_label:
+				"Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
+			kid_sublabel: "Om ja, skriv dem nedan",
+			adult_sublabel: "Om ja, skriv dem nedan",
+		},
+		"th-TH": {
+			type: Question.QuestionTextarea,
+			heading: "ข้อเสนอแนะ",
+			placeholder: "ใส่ความคิดเห็นของคุณได้ที่นี่",
+			label: "องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			kid_label:
+				"องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			adult_label:
+				"องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			kid_sublabel: "ถ้ามี ขอให้พิมพ์ลงในช่องด้านล่าง",
+			adult_sublabel: "ถ้ามี ขอให้พิมพ์ลงในช่องด้านล่าง",
+		},
 		"zh-CN": {
 			type: Question.QuestionTextarea,
 			heading: "反馈",
-			placeholder: "在此处输入您的评论",
-			label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
-			kid_label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
-			adult_label: "你对这个应用或者我们问的问题有什么评论或建议吗?",
-			kid_sublabel: "如有，请在下面的方框中填写",
-			adult_sublabel: "如有，请在下面的方框中填写",
+			placeholder: "请在此输入您的意见",
+			label: "您对本应用或我们的问题有评论或建议吗?",
+			kid_label: "您对本应用或我们的问题有评论或建议吗?",
+			adult_label: "您对本应用或我们的问题有评论或建议吗?",
+			kid_sublabel: "如有，请写在下面方框里",
+			adult_sublabel: "如有，请写在下面方框里",
+		},
+		"es-ES": {
+			type: Question.QuestionTextarea,
+			heading: "Comentarios",
+			placeholder: "Escribe aquí tu comentario",
+			label:
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			kid_label:
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			adult_label:
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			kid_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
+			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 		},
 		"es-MX": {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",
 			placeholder: "Escribe tus comentarios aquí",
 			label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
 			kid_label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
 			adult_label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
-			kid_sublabel: "Si es así escríbelas en el siguiente cuadro por favor.",
-			adult_sublabel: "Si es así escríbelas en el siguiente cuadro por favor.",
+				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
+			kid_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
+			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 		},
 		"fr-CA": {
 			type: Question.QuestionTextarea,

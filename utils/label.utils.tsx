@@ -2,13 +2,11 @@ import Mode from "constants/mode.enum";
 import { store } from "store/store";
 import { getResponseByIdent } from "./response.utils";
 import type {
-	Transportation7Interface,
-	Transportation8_10Interface,
-	Transportation9_11Interface,
+	ModeActivityInterface,
+	ModeActivityTransportationInterface,
 } from "interface/question17";
 
 const getQuestion17Label = (): string => {
-	const language = store.getState().settings.language ?? "en-CA";
 	const mode = store.getState().settings.mode === Mode.Adult ? Mode.Adult : Mode.Kid;
 	const currentIdent = store.getState().settings.currentPage.page.ident;
 
@@ -30,32 +28,32 @@ const getQuestion17Label = (): string => {
 	}
 
 	if (currentIdent === "transportation_7") {
-		const questionLabels: Transportation7Interface = store.getState().questions.Transportation7;
-		return questionLabels[language][mode][attendance] ?? "";
+		const questionLabels: ModeActivityInterface = store.getState().questions.Transportation7;
+		return questionLabels[mode][attendance] ?? "";
 	}
 
 	if (currentIdent === "transportation_8") {
-		const questionLabels: Transportation8_10Interface =
+		const questionLabels: ModeActivityTransportationInterface =
 			store.getState().questions.Transportation8_10;
-		return questionLabels[language][mode].walk[attendance] ?? "";
+		return questionLabels[mode].walk[attendance] ?? "";
 	}
 
 	if (currentIdent === "transportation_9") {
-		const questionLabels: Transportation9_11Interface =
+		const questionLabels: ModeActivityTransportationInterface =
 			store.getState().questions.Transportation9_11;
-		return questionLabels[language][mode].walk[attendance] ?? "";
+		return questionLabels[mode].walk[attendance] ?? "";
 	}
 
 	if (currentIdent === "transportation_10") {
-		const questionLabels: Transportation8_10Interface =
+		const questionLabels: ModeActivityTransportationInterface =
 			store.getState().questions.Transportation8_10;
-		return questionLabels[language][mode].wheel[attendance] ?? "";
+		return questionLabels[mode].wheel[attendance] ?? "";
 	}
 
 	if (currentIdent === "transportation_11") {
-		const questionLabels: Transportation9_11Interface =
+		const questionLabels: ModeActivityTransportationInterface =
 			store.getState().questions.Transportation9_11;
-		return questionLabels[language][mode].wheel[attendance] ?? "";
+		return questionLabels[mode].wheel[attendance] ?? "";
 	}
 
 	return "";

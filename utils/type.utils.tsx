@@ -54,6 +54,8 @@ const getQuestionType = (questionType: string): Question => {
 		return Question.QuestionLanguage;
 	} else if (questionType === "question_satisfaction_image") {
 		return Question.QuestionSatisfactionImage;
+	} else if (questionType === "question_checkbox_input") {
+		return Question.QuestionCheckboxInput;
 	} else {
 		return Question.QuestionInput;
 	}

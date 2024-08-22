@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { SectionPayloadInterface } from "interface/payload.type";
+import type { LangSectionPayloadInterface } from "interface/payload.type";
 
-const S4Intro: SectionPayloadInterface = {
+const S4Intro: LangSectionPayloadInterface = {
 	ident: "transportation_intro",
 	heading: "Transportation",
 	type: Screen.IntroQuestion,
@@ -10,9 +10,25 @@ const S4Intro: SectionPayloadInterface = {
 			heading: "Transportation",
 			subheading: "Section 4",
 		},
+		"pt-BR": {
+			heading: "Transporte",
+			subheading: "Seção 4",
+		},
+		"sv-SE": {
+			heading: "Transport",
+			subheading: "Sektion 4",
+		},
+		"th-TH": {
+			heading: "การเดินทาง",
+			subheading: "ส่วนที่ 4",
+		},
 		"zh-CN": {
 			heading: "交通",
 			subheading: "第4部分",
+		},
+		"es-ES": {
+			heading: "Transporte",
+			subheading: "Sección 4",
 		},
 		"es-MX": {
 			heading: "Transporte",

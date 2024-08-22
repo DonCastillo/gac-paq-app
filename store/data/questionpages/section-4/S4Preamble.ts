@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PreamblePayloadInterface } from "interface/payload.type";
+import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
-const S4Preamble: PreamblePayloadInterface = {
+const S4Preamble: LangPreamblePayloadInterface = {
 	ident: "transportation_preamble",
 	heading: "Transportation",
 	type: Screen.Preamble,
@@ -15,12 +15,44 @@ const S4Preamble: PreamblePayloadInterface = {
 				adult: "This section is about how your child goes to different places.",
 			},
 		},
+		"pt-BR": {
+			heading: "Transporte",
+			subheading: "Seção 4",
+			description: {
+				kid: "Esta seção é sobre como você vai a diferentes lugares.",
+				adult: "Esta seção é sobre como o(a) seu(sua) filho(a) vai a diferentes lugares.",
+			},
+		},
+		"sv-SE": {
+			heading: "Transport",
+			subheading: "Sektion 4",
+			description: {
+				kid: "Den här delen handlar om hur du tar dig till platser.",
+				adult: "Den här delen handlar om hur ditt barn tar sig till platser.",
+			},
+		},
+		"th-TH": {
+			heading: "การเดินทาง",
+			subheading: "ส่วนที่ 4",
+			description: {
+				kid: "ส่วนนี้เป็นคำถามเกี่ยวกับวิธีที่น้องใช้เดินทางไปสถานที่ต่าง ๆ",
+				adult: "ส่วนนี้เป็นคำถามเกี่ยวกับวิธีที่บุตรหลานของคุณใช้เดินทางไปสถานที่ต่าง ๆ",
+			},
+		},
 		"zh-CN": {
 			heading: "交通",
 			subheading: "第4部分",
 			description: {
-				kid: "本部分是关于一些你如何去不同的地方的问题。",
-				adult: "本部分是关于一些您的孩子如何去不同的地方的问题。",
+				kid: "本部分是关于你去不同地方的交通方式的一些问题。",
+				adult: "本部分是关于您的孩子去不同地方的交通方式的一些问题。",
+			},
+		},
+		"es-ES": {
+			heading: "Transporte",
+			subheading: "Sección 4",
+			description: {
+				kid: "Esta sección trata de cómo te desplazas a diferentes lugares.",
+				adult: "Esta sección trata de cómo su hija o hijo se desplaza a diferentes lugares.",
 			},
 		},
 		"es-MX": {

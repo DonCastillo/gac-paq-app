@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { ExtroPayloadInterface } from "interface/payload.type";
+import type { LangExtroPayloadInterface } from "interface/payload.type";
 
-const AppExtro: ExtroPayloadInterface = {
+const AppExtro: LangExtroPayloadInterface = {
 	ident: "survey_app_extro",
 	name: "Survey AppExtro",
 	type: Screen.ExtroQuestion,
@@ -10,8 +10,24 @@ const AppExtro: ExtroPayloadInterface = {
 			heading: "Thank you for completing the survey!",
 			subheading: "",
 		},
+		"th-TH": {
+			heading: "ขอบคุณที่ทำแบบสำรวจ!",
+			subheading: "",
+		},
+		"sv-SE": {
+			heading: "Tack för att du har fyllt i enkäten!",
+			subheading: "",
+		},
 		"zh-CN": {
-			heading: "感谢您完成调查！",
+			heading: "感谢您完成调查",
+			subheading: "",
+		},
+		"pt-BR": {
+			heading: "Obrigado por completar a pesquisa!",
+			subheading: "",
+		},
+		"es-ES": {
+			heading: "Gracias por completar la encuesta",
 			subheading: "",
 		},
 		"es-MX": {

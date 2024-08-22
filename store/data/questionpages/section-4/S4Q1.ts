@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
 
-const S4Q1: QuestionRadioImagePayloadInterface = {
+const S4Q1: LangQuestionRadioImagePayloadInterface = {
 	ident: "transportation_1",
 	name: "Question 15:	How did you go to school in the past week?",
 	type: Screen.SingleQuestion,
@@ -53,9 +53,13 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Other, which one?",
+					label: "Other, including combinations",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "for example walk and bus",
+						adult: "for example walk and bus",
+					},
 				},
 				{
 					label: "Stay home for school",
@@ -68,14 +72,200 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadioImage,
+			heading: "Pergunta 15",
+			label: "Na última semana, como você foi para a escola?",
+			kid_label: "Na última semana, como você foi para a escola?",
+			adult_label: "Na última semana, como o(a) seu(sua) filho(a) foi para a escola?",
+			kid_sublabel: "Selecione o meio de transporte principal que você usou",
+			adult_sublabel: "Selecione o meio de transporte principal que o(a) seu(sua) filho(a) usou",
+			choices: [
+				{
+					label: "Caminhando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Sobre rodas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "por exemplo, cadeira de rodas, bicicleta, skate, patinete, patins",
+						adult: "por exemplo, cadeira de rodas, bicicleta, skate, patinete, patins",
+					},
+				},
+				{
+					label: "Ônibus escolar",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "por exemplo, ônibus, trem, bonde, metrô, barco, balsa",
+						adult: "por exemplo, ônibus, trem, bonde, metrô, barco, balsa",
+					},
+				},
+				{
+					label: "Carro, taxi, caminhão ou moto",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Outro, incluindo combinações",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "por exemplo, caminhando e ônibus",
+						adult: "por exemplo, caminhando e ônibus",
+					},
+				},
+				{
+					label: "Eu estudo em casa",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Eu estudo em casa",
+						adult: "Meu(minha) filho(a) estuda de casa",
+					},
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadioImage,
+			heading: "Fråga 15",
+			label: "Hur tog du dig till skolan den senaste veckan?",
+			kid_label: "Hur tog du dig till skolan den senaste veckan?",
+			adult_label: "Hur tog sig ditt barn till skolan den senaste veckan?",
+			kid_sublabel: "Välj det du oftast gjorde.",
+			adult_sublabel: "Välj det han/hon oftast gjorde.",
+			choices: [
+				{
+					label: "Gång",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Cykel",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+						adult: "eller åkt rullstol, e-cykel, sparkcykel eller rollerblades",
+					},
+				},
+				{
+					label: "Skolbuss",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Kollektivtrafik",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+						adult: "t.ex. buss, tåg, spårväg, tunnelbana, båt",
+					},
+				},
+				{
+					label: "Bil, taxi eller moped",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Annan eller en kombination",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "tillexempel gå och åka buss",
+						adult: "tillexempel gå och åka buss",
+					},
+				},
+				{
+					label: "Jag går i skolan hemma ",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Jag går i skolan hemma",
+						adult: "Mitt barn går i skolan hemma",
+					},
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadioImage,
+			heading: "คำถาม 15",
+			label: "สัปดาห์ที่แล้ว น้องเดินทางไปโรงเรียนด้วยวิธีการใด?",
+			kid_label: "สัปดาห์ที่แล้ว น้องเดินทางไปโรงเรียนด้วยวิธีการใด?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณเดินทางไปโรงเรียนด้วยวิธีการใด?",
+			kid_sublabel: "เลือกวิธีการเดินทางที่น้องใช้เป็นหลัก",
+			adult_sublabel: "เลือกวิธีการเดินทางที่บุตรหลานของคุณใช้เป็นหลัก",
+			choices: [
+				{
+					label: "เดิน",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+						adult: "เช่น จักรยาน จักรยานไฟฟ้า สเก็ตบอร์ด สกู๊ตเตอร์ โรลเลอร์เบลด วีลแชร์",
+					},
+				},
+				{
+					label: "รถโรงเรียน",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "การขนส่งสาธารณะ",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+						adult: "เช่น รถประจำทาง/รถเมล์ รถไฟ รถราง รถไฟใต้ดิน เรือ",
+					},
+				},
+				{
+					label: "รถยนต์ รถแท็กซี่ รถบรรทุก หรือรถจักรยานยนต์/มอเตอร์ไซค์",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "อื่น ๆ รวมถึงกรณีที่ใช้มากกว่า 1 วิธี",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "เช่น เดินและขึ้นรถประจำทาง/รถเมล์",
+						adult: "เช่น เดินและขึ้นรถประจำทาง/รถเมล์",
+					},
+				},
+				{
+					label: "เรียนที่บ้านไม่ได้เดินทางไปโรงเรียน",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "เรียนที่บ้านไม่ได้เดินทางไปโรงเรียน",
+						adult: "บุตรหลานของฉันเรียนที่บ้านไม่ได้เดินทางไปโรงเรียน",
+					},
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadioImage,
 			heading: "问题 15",
-			label: "在过去一周里，你是怎样去学校的?",
-			kid_label: "在过去一周里，你是怎样去学校的?",
-			adult_label: "在过去一周里，您的孩子是怎样去学校的?",
-			kid_sublabel: "选择你最常用的方式.",
-			adult_sublabel: "选择您的孩子最常用的方式.",
+			label: "在过去一周里，你是如何去学校的？",
+			kid_label: "在过去一周里，你是如何去学校的？",
+			adult_label: "在过去一周里，您的孩子是如何去学校的？",
+			kid_sublabel: "选择你的主要交通方式",
+			adult_sublabel: "选择您的孩子使用的主要交通方式",
 			choices: [
 				{
 					label: "步行",
@@ -86,14 +276,13 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					label: "骑车",
 					value: "Wheeling",
 					image_ident: "wheeling",
-
 					sublabel: {
 						kid: "如轮椅、自行车、滑板、推式踏板车、轮滑",
 						adult: "如轮椅、自行车、滑板、推式踏板车、轮滑",
 					},
 				},
 				{
-					label: "校车 ",
+					label: "校车",
 					value: "School bus",
 					image_ident: "school_bus",
 				},
@@ -101,7 +290,6 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					label: "公共交通",
 					value: "Public transit",
 					image_ident: "public_transit",
-
 					sublabel: {
 						kid: "如公交车、火车、有轨电车、地铁、轮渡",
 						adult: "如公交车、火车、有轨电车、地铁、轮渡",
@@ -110,19 +298,21 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 				{
 					label: "私家车、出租车、卡车或摩托车",
 					value: "Car, taxi, truck, or motorcycle",
-
 					image_ident: "car",
 				},
 				{
-					label: "其他",
+					label: "其他，包括组合式交通",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "如步行并坐公交",
+						adult: "如步行并坐公交",
+					},
 				},
 				{
 					label: "居家上学",
 					value: "Stay home for school",
 					image_ident: "staying_home",
-
 					label_mode: {
 						kid: "居家上学",
 						adult: "我的孩子居家上学",
@@ -130,14 +320,78 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadioImage,
+			heading: "Pregunta 15",
+			label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
+			kid_label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
+			adult_label: "¿Cómo fue su hija o hijo a la escuela o colegio la semana pasada?",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
+			adult_sublabel: "Seleccione el modo de transporte que más utilizó",
+			choices: [
+				{
+					label: "Caminando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Sobre ruedas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+
+					sublabel: {
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+					},
+				},
+				{
+					label: "Autobús escolar",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+
+					sublabel: {
+						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+					},
+				},
+				{
+					label: "Automóvil, taxi, camioneta o motocicleta",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Otro, incluyendo combinaciones ¿cuál?",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "por ejemplo, caminando y autobús",
+						adult: "por ejemplo, caminando y autobús",
+					},
+				},
+				{
+					label: "Recibo educación en casa o asisto a un internado",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Recibo educación en casa o asisto a un internado",
+						adult: "Mi hija o hijo recibe educación en casa o asiste a un internado",
+					},
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 15",
+			heading: "Pregunta 15",
 			label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
 			kid_label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
 			adult_label: "¿Cómo fue su hija o hijo a la escuela o colegio la última semana?",
-			kid_sublabel: "Selecciona el modo de transporte que más utilizaste.",
-			adult_sublabel: "Seleccione el modo de transporte que más utilizó.",
+			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
+			adult_sublabel: "Seleccione el modo de transporte que más utilizó",
 			choices: [
 				{
 					label: "Caminando",
@@ -175,17 +429,21 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Otro",
+					label: "Otro, incluyendo combinaciones ¿cuál?",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "por ejemplo, caminando y autobús",
+						adult: "por ejemplo, caminando y autobús",
+					},
 				},
 				{
-					label: "Recibo educación en casa o asisto a un internado ",
+					label: "Recibo educación en casa o asisto a un internado",
 					value: "Stay home for school",
 					image_ident: "staying_home",
 
 					label_mode: {
-						kid: "Recibo educación en casa o asisto a un internado ",
+						kid: "Recibo educación en casa o asisto a un internado",
 						adult: "Mi hija o hijo recibe educación en casa o asiste a un internado",
 					},
 				},
@@ -237,15 +495,18 @@ const S4Q1: QuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Autre",
+					label: "Autre, incluant les combinaisons",
 					value: "Other",
 					image_ident: "other",
+					sublabel: {
+						kid: "par exemple, marche et autobus",
+						adult: "par exemple, marche et autobus",
+					},
 				},
 				{
 					label: "Je reste à la maison pour l'école",
 					value: "Stay home for school",
 					image_ident: "staying_home",
-
 					label_mode: {
 						kid: "Je reste à la maison pour l'école",
 						adult: "Mon enfant fait l'école à la maison",

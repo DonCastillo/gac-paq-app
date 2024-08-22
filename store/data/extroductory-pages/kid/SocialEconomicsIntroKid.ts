@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { SectionPayloadInterface } from "interface/payload.type";
+import type { LangSectionPayloadInterface } from "interface/payload.type";
 
-const SocialEconomicsIntroKid: SectionPayloadInterface = {
+const SocialEconomicsIntroKid: LangSectionPayloadInterface = {
 	ident: "about_you",
 	heading: "About You",
 	type: Screen.IntroQuestion,
@@ -10,9 +10,25 @@ const SocialEconomicsIntroKid: SectionPayloadInterface = {
 			heading: "About You",
 			subheading: "Section 8",
 		},
+		"pt-BR": {
+			heading: "Sobre Você",
+			subheading: "Seção 8",
+		},
+		"sv-SE": {
+			heading: "Om dig",
+			subheading: "Sektion 8",
+		},
+		"th-TH": {
+			heading: "เกี่ยวกับคุณ",
+			subheading: "ส่วนที่ 8",
+		},
 		"zh-CN": {
 			heading: "关于你",
 			subheading: "第8部分",
+		},
+		"es-ES": {
+			heading: "Acerca de ti",
+			subheading: "Sección 8",
 		},
 		"es-MX": {
 			heading: "Acerca de ti",

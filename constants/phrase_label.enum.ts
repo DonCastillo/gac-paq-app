@@ -1,12 +1,14 @@
 enum PhraseLabel {
-	Agreement = "Yes, I Understand & Agree.",
+	Back = "Back",
+	Complete = "Complete",
 	Done = "Done",
 	DontKnow = "Don't know",
-	Introduction = "Introduction",
-	TryAgain = "Try Again",
 	Feedback = "Feedback",
-	Select = "Select",
+	Introduction = "Introduction",
+	Next = "Next",
 	PleaseSpecify = "Please specify",
+	Select = "Select",
+	TryAgain = "Try Again",
 }
 
 export default PhraseLabel;

@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PagePayloadInterface } from "interface/payload.type";
+import type { LangPagePayloadInterface } from "interface/payload.type";
 
-const SuccessPage: PagePayloadInterface = {
+const SuccessPage: LangPagePayloadInterface = {
 	ident: "success_page",
 	title: "Success Page",
 	name: "Success Page",
@@ -12,14 +12,24 @@ const SuccessPage: PagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"pt-BR": {
+			heading: "Sucesso!",
+			description:
+				"Bom trabalho, você concluiu o questionário. Suas respostas foram enviadas com sucesso.\n\nObrigado(a) pela sua ajuda!",
+		},
+		"sv-SE": {
+			heading: "Det lyckades!",
+			description:
+				"Bra jobbat, du är klar med alla frågor och de har skickats iväg!\n\nTack för din hjälp!",
+		},
 		"th-TH": {
 			heading: "สำเร็จ!",
 			description:
-				"งานดี! คุณได้ทำแบบสอบถามเสร็จสิ้นแล้ว คำตอบของคุณถูกส่งเรียบร้อยแล้ว\n\nขอบคุณสำหรับความช่วยเหลือของคุณ!",
+				"เก่งมาก! คุณตอบแบบสอบถามเสร็จแล้ว คำตอบของคุณถูกส่งไปเป็นที่เรียบร้อย\n\nขอขอบคุณที่เข้าร่วมการตอบแบบสอบถามครั้งนี้",
 		},
 		"zh-CN": {
 			heading: "成功!",
-			description: "干得好！您已完成问卷调查。您的答案已成功发送。\n\n感谢您的帮助!",
+			description: "做得很好。您已经完成问卷。您的回答已成功提交。\n\n感谢您的帮助!",
 		},
 		"es-MX": {
 			heading: "Éxito!",
@@ -29,7 +39,7 @@ const SuccessPage: PagePayloadInterface = {
 		"es-ES": {
 			heading: "Éxito!",
 			description:
-				"Buen trabajo. Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
+				"Bien hecho. Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
 		},
 		"fr-CA": {
 			heading: "Succès!",
