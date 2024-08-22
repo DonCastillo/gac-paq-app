@@ -204,7 +204,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
-		"es-SE": {
+		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17d",
 			label:

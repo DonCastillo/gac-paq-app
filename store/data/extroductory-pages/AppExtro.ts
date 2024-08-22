@@ -22,6 +22,14 @@ const AppExtro: LangExtroPayloadInterface = {
 			heading: "感谢您完成调查",
 			subheading: "",
 		},
+		"pt-BR": {
+			heading: "Obrigado por completar a pesquisa!",
+			subheading: "",
+		},
+		"es-ES": {
+			heading: "Gracias por completar la encuesta",
+			subheading: "",
+		},
 		"es-MX": {
 			heading: "¡Gracias por completar la encuesta!",
 			subheading: "",
