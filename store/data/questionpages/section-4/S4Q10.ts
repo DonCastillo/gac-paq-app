@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S4Q10: QuestionRadioPayloadInterface = {
+const S4Q10: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_10",
 	name: "Question 17d: How many days did you wheel to places other than school or work in the past week?",
 	column_name: "17.D Tran",
@@ -48,6 +48,125 @@ const S4Q10: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 17d",
+			label:
+				"Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+			kid_label:
+				"Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+			adult_label:
+				"Na última semana, quantos dias o(a) seu(sua) filho(a) usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+			choices: [
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 17d",
+			label:
+				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till andra platser än skolan eller arbetet under den senaste veckan?",
+			kid_label:
+				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till andra platser än skolan eller arbetet under den senaste veckan?",
+			adult_label:
+				"Hur många dagar cyklade ditt barn (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) till andra platser än skolan eller arbetet under den senaste veckan?",
+			choices: [
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar",
+					value: "5",
+				},
+				{
+					label: "6 dagar",
+					value: "6",
+				},
+				{
+					label: "7 dagar",
+					value: "7",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 17d",
+			label: "สัปดาห์ที่แล้ว คุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
+			kid_label:
+				"สัปดาห์ที่แล้ว คุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
+			adult_label:
+				"สัปดาห์ที่แล้ว บุตรหลานของคุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
+			choices: [
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 17d",
@@ -85,6 +204,46 @@ const S4Q10: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 17d",
+			label:
+				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+			kid_label:
+				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+			adult_label:
+				"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio la semana pasada?",
+			choices: [
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17d",
@@ -96,31 +255,31 @@ const S4Q10: QuestionRadioPayloadInterface = {
 				"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			choices: [
 				{
-					label: "1 Día",
+					label: "1 día",
 					value: "1",
 				},
 				{
-					label: "2 Días",
+					label: "2 días",
 					value: "2",
 				},
 				{
-					label: "3 Días",
+					label: "3 días",
 					value: "3",
 				},
 				{
-					label: "4 Días",
+					label: "4 días",
 					value: "4",
 				},
 				{
-					label: "5 Días",
+					label: "5 días",
 					value: "5",
 				},
 				{
-					label: "6 Días",
+					label: "6 días",
 					value: "6",
 				},
 				{
-					label: "7 Días",
+					label: "7 días",
 					value: "7",
 				},
 			],

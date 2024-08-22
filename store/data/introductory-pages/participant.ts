@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionInputPayloadInterface } from "interface/payload.type";
+import type { LangQuestionInputPayloadInterface } from "interface/payload.type";
 
-const ParticipantIDPage: QuestionInputPayloadInterface = {
+const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 	ident: "participant_id",
 	name: "participant_id",
 	type: Screen.SingleQuestion,
@@ -16,21 +16,45 @@ const ParticipantIDPage: QuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"pt-BR": {
+			type: Question.QuestionInput,
+			heading: "Bem-vindo(a)!",
+			label: "Por favor, insira o seu ID de participante",
+			kid_label: "Por favor, insira o seu ID de participante",
+			adult_label: "Por favor, insira o seu ID de participante",
+			placeholder: "Número de Série do ID do Participante",
+		},
+		"sv-SE": {
+			type: Question.QuestionInput,
+			heading: "Välkommen!",
+			label: "Var god skriv in ditt studie ID",
+			kid_label: "Var god skriv in ditt studie ID",
+			adult_label: "Var god skriv in ditt studie ID",
+			placeholder: "Deltagarens studie ID",
+		},
 		"th-TH": {
 			type: Question.QuestionInput,
 			heading: "ยินดีต้อนรับ!",
-			label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
-			kid_label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
-			adult_label: "กรุณากรอก ID ผู้เข้าร่วมของคุณ",
-			placeholder: "หมายเลขซีเรียล ID ผู้เข้าร่วม",
+			label: "โปรดใส่เลขรหัสผู้เข้าร่วมการตอบแบบสอบถามของคุณ",
+			kid_label: "โปรดใส่เลขรหัสผู้เข้าร่วมการตอบแบบสอบถามของคุณ",
+			adult_label: "โปรดใส่เลขรหัสผู้เข้าร่วมการตอบแบบสอบถามของคุณ",
+			placeholder: "หมายเลขซีเรียลของผู้เข้าร่วมการตอบแบบสอบถาม",
 		},
 		"zh-CN": {
 			type: Question.QuestionInput,
 			heading: "欢迎!",
-			label: "请输入您的参与者ID",
-			kid_label: "请输入您的参与者ID",
-			adult_label: "请输入您的参与者ID",
-			placeholder: "参与者ID序列号",
+			label: "请输入填写者ID",
+			kid_label: "请输入填写者ID",
+			adult_label: "请输入填写者ID",
+			placeholder: "填写者ID序列",
+		},
+		"es-ES": {
+			type: Question.QuestionInput,
+			heading: "¡Bienvenido!",
+			label: "Escribe tu numero de participante",
+			kid_label: "Escribe tu numero de participante",
+			adult_label: "Escribe tu numero de participante",
+			placeholder: "Número de participante",
 		},
 		"es-MX": {
 			type: Question.QuestionInput,

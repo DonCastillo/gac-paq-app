@@ -21,34 +21,35 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
+	getIsLoading,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
-import { translatePage, translateText } from "utils/translate.utils";
+import { translateText } from "utils/translate.utils";
 import type { PreambleInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
+import LoadingScreenAdult from "./LoadingScreenAdult";
 
 const PreambleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const mode = useSelector(getMode);
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
+	const isLoading = useSelector(getIsLoading);
 	const { color200 } = colorTheme;
 	const backgroundImage = getImageBackground();
 
 	// translations
-	const translatedPage = translatePage(
-		currentPage.page.translations,
-		language,
-	) as PreambleInterface;
+	const translatedPage = currentPage.page.translations as PreambleInterface;
 
 	const description = translateText(translatedPage.description, mode);
 
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
+	}
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />

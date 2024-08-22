@@ -16,6 +16,7 @@ const ProgressBar = ({ color }: PropsInterface): React.ReactElement => {
 				color={color ?? "white"}
 				borderWidth={2}
 				borderRadius={6}
+				useNativeDriver={true}
 			/>
 		</View>
 	);

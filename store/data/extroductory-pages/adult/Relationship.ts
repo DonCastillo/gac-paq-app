@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const Relationship: QuestionRadioPayloadInterface = {
+const Relationship: LangQuestionRadioPayloadInterface = {
 	ident: "relationship_to_the_child",
 	name: "relationship_to_the_child",
 	type: Screen.SingleQuestion,
@@ -46,12 +46,123 @@ const Relationship: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 28",
+			label: "Qual é a sua relação com a criança/jovem?",
+			kid_label: "Qual é a sua relação com a criança/jovem?",
+			adult_label: "Qual é a sua relação com a criança/jovem?",
+			choices: [
+				{
+					label: "Pai",
+					value: "Father",
+				},
+				{
+					label: "Mãe",
+					value: "Mother",
+				},
+				{
+					label: "Avô",
+					value: "Grandfather",
+				},
+				{
+					label: "Avó",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Outro",
+					value: "Other",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 28",
+			label: "Vilken är din relation till barnet?",
+			kid_label: "Vilken är din relation till barnet?",
+			adult_label: "Vilken är din relation till barnet?",
+			choices: [
+				{
+					label: "Pappa",
+					value: "Father",
+				},
+				{
+					label: "Mamma",
+					value: "Mother",
+				},
+				{
+					label: "Farfar/Morfar",
+					value: "Grandfather",
+				},
+				{
+					label: "Farmor/Mormor",
+					value: "Grandmother",
+				},
+				{
+					label: "Vårdnadshavare",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Annat",
+					value: "Other",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 28",
+			label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
+			kid_label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
+			adult_label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
+			choices: [
+				{
+					label: "เป็นพ่อ",
+					value: "Father",
+				},
+				{
+					label: "เป็นแม่",
+					value: "Mother",
+				},
+				{
+					label: "เป็นปู่/ตา",
+					value: "Grandfather",
+				},
+				{
+					label: "เป็นย่า/ยาย",
+					value: "Grandmother",
+				},
+				{
+					label: "เป็นครูสอนพิเศษหรือผู้ดูแล",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十八题",
-			label: "你和您孩子的关系是？",
-			kid_label: "你和您孩子的关系是？",
-			adult_label: "你和您孩子的关系是？",
+			heading: "问题 28",
+			label: "您是孩子的?",
+			kid_label: "您是孩子的?",
+			adult_label: "您是孩子的?",
 			choices: [
 				{
 					label: "父亲",
@@ -62,15 +173,15 @@ const Relationship: QuestionRadioPayloadInterface = {
 					value: "Mother",
 				},
 				{
-					label: "祖父",
+					label: "爷爷或外公",
 					value: "Grandfather",
 				},
 				{
-					label: "祖母",
+					label: "奶奶或外婆",
 					value: "Grandmother",
 				},
 				{
-					label: "导师或监护人 ",
+					label: "导师或监护人",
 					value: "Tutor or guardian",
 				},
 				{
@@ -79,6 +190,46 @@ const Relationship: QuestionRadioPayloadInterface = {
 				},
 				{
 					label: "不想回答",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 28",
+			label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			choices: [
+				{
+					label: "Papá",
+					value: "Father",
+				},
+				{
+					label: "Mamá",
+					value: "Mother",
+				},
+				{
+					label: "Abuelo",
+					value: "Grandfather",
+				},
+				{
+					label: "Abuela",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
 					value: "Prefer not to answer",
 				},
 			],

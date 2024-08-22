@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PreamblePayloadInterface } from "interface/payload.type";
+import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
-const S2Preamble: PreamblePayloadInterface = {
+const S2Preamble: LangPreamblePayloadInterface = {
 	ident: "household_preamble",
 	heading: "Household Chores",
 	audio_ident: "household_preamble",
@@ -16,13 +16,49 @@ const S2Preamble: PreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"pt-BR": {
+			heading: "Atividades Ou Tarefas Domésticas",
+			subheading: "Seção 2",
+			description: {
+				kid: "Esta seção trata de tarefas ou afazeres em casa que exigem que você esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, e outras tarefas relacionadas.",
+				adult:
+					"Esta seção trata de tarefas ou afazeres em casa que exigem que o(a) seu(sua) filho(a) esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, e outras tarefas relacionadas.",
+			},
+		},
+		"sv-SE": {
+			heading: "Hushållssysslor",
+			subheading: "Sektion 2",
+			description: {
+				kid: "Den här delen handlar om hushållssysslor där du måste vara aktiv (röra på dig). Det kan till exempel vara hushållssysslor både inne och ute, trädgårdsarbete eller andra likande saker.",
+				adult:
+					"Den här delen handlar om hushållssysslor där ditt barn måste vara aktiv. Det kan till exempel vara hushållssysslor både inne och ute, trädgårdsarbete eller andra likande saker.",
+			},
+		},
+		"th-TH": {
+			heading: "งานบ้าน",
+			subheading: "ส่วนที่ 2",
+			description: {
+				kid: "ส่วนนี้เป็นคำถามเกี่ยวกับงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัว ที่น้องต้องออกแรง ตัวอย่างของงานบ้านหรืองานที่ได้รับมอบหมายในบ้าน เช่น งานทำความสะอาดบ้านต่าง ๆ  งานดูแลสนามบริเวณบ้าน งานทำสวน และงานอื่น ๆ ที่เกี่ยวข้อง",
+				adult:
+					"ส่วนนี้เป็นคำถามเกี่ยวกับงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัว ที่บุตรหลานของคุณต้องออกแรง ตัวอย่างของงานบ้านหรืองานที่ได้รับมอบหมายในบ้าน เช่น งานทำความสะอาดบ้านต่าง ๆ  งานดูแลสนามบริเวณบ้าน งานทำสวน และงานอื่น ๆ ที่เกี่ยวข้อง",
+			},
+		},
 		"zh-CN": {
 			heading: "家务",
 			subheading: "第2部分",
 			description: {
-				kid: "本部分是关于一些需要你做的家务或在家干的活的问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
+				kid: "本部分是关于你做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
 				adult:
-					"本部分是关于一些需要您的孩子做家务或在家干的活的问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
+					"本部分是关于您的孩子做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
+			},
+		},
+		"es-ES": {
+			heading: "Tareas Del Hogar O Quehaceres",
+			subheading: "Sección 2",
+			description: {
+				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el patio de casa, la jardinería y otras tareas relacionadas.",
+				adult:
+					"Esta sección trata de las tareas o quehaceres del hogar que requieren que su hija o hijo sea activo físicamente. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el patio de casa, la jardinería y otras tareas relacionadas.",
 			},
 		},
 		"es-MX": {

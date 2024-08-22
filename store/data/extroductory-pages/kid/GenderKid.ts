@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const GenderKid: QuestionRadioPayloadInterface = {
+const GenderKid: LangQuestionRadioPayloadInterface = {
 	ident: "child_sex_entered_by_child",
 	name: "child_sex",
 	type: Screen.SingleQuestion,
@@ -34,12 +34,87 @@ const GenderKid: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 24",
+			label: "Você é ...",
+			kid_label: "Você é ...",
+			adult_label: "Você é ...",
+			choices: [
+				{
+					label: "Menino",
+					value: "Boy",
+				},
+				{
+					label: "Menina",
+					value: "Girl",
+				},
+				{
+					label: "Outro",
+					value: "Other",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 24",
+			label: "Jag är en…",
+			kid_label: "Jag är en…",
+			adult_label: "Jag är en…",
+			choices: [
+				{
+					label: "Pojke",
+					value: "Boy",
+				},
+				{
+					label: "Flicka",
+					value: "Girl",
+				},
+				{
+					label: "Annat",
+					value: "Other",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 24",
+			label: "น้องเป็น...",
+			kid_label: "น้องเป็น...",
+			adult_label: "น้องเป็น...",
+			choices: [
+				{
+					label: "เด็กผู้ชาย",
+					value: "Boy",
+				},
+				{
+					label: "เด็กผู้หญิง",
+					value: "Girl",
+				},
+				{
+					label: "อื่น ๆ",
+					value: "Other",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十四题",
-			label: "你的性别...",
-			kid_label: "你的性别...",
-			adult_label: "你的性别...",
+			heading: "问题 24",
+			label: "你的性别",
+			kid_label: "你的性别",
+			adult_label: "你的性别",
 			choices: [
 				{
 					label: "男",
@@ -55,6 +130,31 @@ const GenderKid: QuestionRadioPayloadInterface = {
 				},
 				{
 					label: "不愿透露",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 24",
+			label: "Tú eres…",
+			kid_label: "Tú eres…",
+			adult_label: "Tú eres…",
+			choices: [
+				{
+					label: "Hombre",
+					value: "Boy",
+				},
+				{
+					label: "Mujer",
+					value: "Girl",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no responder",
 					value: "Prefer not to answer",
 				},
 			],

@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const GenderAdult: QuestionRadioPayloadInterface = {
+const GenderAdult: LangQuestionRadioPayloadInterface = {
 	ident: "child_sex_entered_by_parent",
 	name: "child_sex",
 	type: Screen.SingleQuestion,
@@ -30,12 +30,75 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Pergunta 24",
+			label: "Qual é o sexo do(a) seu(sua) filho(a)?",
+			kid_label: "Qual é o sexo do(a) seu(sua) filho(a)?",
+			adult_label: "Qual é o sexo do(a) seu(sua) filho(a)?",
+			choices: [
+				{
+					label: "Feminino",
+					value: "Female",
+				},
+				{
+					label: "Masculino",
+					value: "Male",
+				},
+				{
+					label: "Prefiro não responder",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 24",
+			label: "Vad har ditt barn för kön?",
+			kid_label: "Vad har ditt barn för kön?",
+			adult_label: "Vad har ditt barn för kön?",
+			choices: [
+				{
+					label: "Flicka",
+					value: "Female",
+				},
+				{
+					label: "Pojke",
+					value: "Male",
+				},
+				{
+					label: "Föredrar att inte svara",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 24",
+			label: "บุตรหลานของคุณเป็นเพศใด?",
+			kid_label: "บุตรหลานของคุณเป็นเพศใด?",
+			adult_label: "บุตรหลานของคุณเป็นเพศใด?",
+			choices: [
+				{
+					label: "หญิง",
+					value: "Female",
+				},
+				{
+					label: "ชาย",
+					value: "Male",
+				},
+				{
+					label: "ไม่ต้องการตอบ",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "第二十四题",
-			label: "你的孩子是...",
-			kid_label: "你的孩子是...",
-			adult_label: "你的孩子是...",
+			heading: "问题 24",
+			label: "您孩子的性别？",
+			kid_label: "您孩子的性别？",
+			adult_label: "您孩子的性别？",
 			choices: [
 				{
 					label: "女",
@@ -47,6 +110,27 @@ const GenderAdult: QuestionRadioPayloadInterface = {
 				},
 				{
 					label: "不愿透露",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 24",
+			label: "¿Cuál es el sexo de su hija o hijo?",
+			kid_label: "¿Cuál es el sexo de su hija o hijo?",
+			adult_label: "¿Cuál es el sexo de su hija o hijo?",
+			choices: [
+				{
+					label: "Mujer",
+					value: "Female",
+				},
+				{
+					label: "Hombre",
+					value: "Male",
+				},
+				{
+					label: "Prefiere no contestar",
 					value: "Prefer not to answer",
 				},
 			],

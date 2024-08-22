@@ -22,34 +22,33 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
-	getLanguage,
+	getIsLoading,
 	getSectionTotalPages,
 	prevPage,
+	setIsLoading,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import { resetResponses } from "store/responses/responsesSlice";
-import { translatePage } from "utils/translate.utils";
 import type { ExtroInterface } from "interface/payload.type";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
 
 const QuestionExtroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
 	const isConnected = useSelector(getIsConnected);
+	const isLoading = useSelector(getIsLoading);
 	// const isConnected = false;
 
 	// state
-	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 
 	// translations
 	const isFinal = currentPage.page.isFinal;
-	const translatedPage = translatePage(currentPage.page.translations, language) as ExtroInterface;
+	const translatedPage = currentPage.page.translations as ExtroInterface;
 	const ImageComponent = Images.kids.graphics.extro_question_page;
 	const navigation = useNavigation();
 
@@ -88,7 +87,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 
 	const submitResponseHandler = async (): Promise<void> => {
 		try {
-			setLoading(true);
+			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
 			if (isConnected) {
 				await submitResponse(sanitizedResponses);
@@ -103,66 +102,63 @@ const QuestionExtroKid = (): React.ReactElement => {
 			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
-			setLoading(false);
+			dispatch(setIsLoading(false));
 		}
 	};
 
-	if (!loading) {
-		return (
-			<View style={styles.container}>
-				<BackgroundYellowStroke />
-				<Main>
-					<ProgressBar
-						currentSectionPage={currentPage.sectionPageNumber}
-						sectionPageTotal={
-							currentPage.sectionNumber !== null
-								? sectionTotalPages[currentPage.sectionNumber]
-								: null
-						}
-						filledColor={"#FFCB66"}
-						unfilledColor={"#FFCB66" + "4D"}
-					/>
-					<Toolbar />
-
-					<CenterMain>
-						<AnimatedView style={{ flex: 0, alignItems: "center", justifyContent: "center" }}>
-							<Heading
-								customStyle={{
-									...GeneralStyle.kid.extroPageHeading,
-									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 35 : 30, device.screenWidth),
-								}}
-							>
-								{translatedPage.heading}
-							</Heading>
-							<Paragraph
-								customStyle={{
-									...GeneralStyle.kid.extroPageParagraph,
-									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 27 : 27, device.screenWidth),
-								}}
-							>
-								{translatedPage.subheading}
-							</Paragraph>
-							<View style={styles.imageContainer}>
-								<ImageComponent
-									backgroundColor={"white"}
-									height={verticalScale(device.isTablet ? 320 : 290, device.screenHeight)}
-									padding={0}
-									margin={0}
-								/>
-							</View>
-						</AnimatedView>
-					</CenterMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
-		);
-	} else {
-		return <LoadingScreenKid />;
+	if (isLoading) {
+		return <LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			<BackgroundYellowStroke />
+			<Main>
+				<ProgressBar
+					currentSectionPage={currentPage.sectionPageNumber}
+					sectionPageTotal={
+						currentPage.sectionNumber !== null ? sectionTotalPages[currentPage.sectionNumber] : null
+					}
+					filledColor={"#FFCB66"}
+					unfilledColor={"#FFCB66" + "4D"}
+				/>
+				<Toolbar />
+
+				<CenterMain>
+					<AnimatedView style={{ flex: 0, alignItems: "center", justifyContent: "center" }}>
+						<Heading
+							customStyle={{
+								...GeneralStyle.kid.extroPageHeading,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 35 : 30, device.screenWidth),
+							}}
+						>
+							{translatedPage.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								...GeneralStyle.kid.extroPageParagraph,
+								maxWidth: device.isTablet ? 600 : "100%",
+								fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 27 : 27, device.screenWidth),
+							}}
+						>
+							{translatedPage.subheading}
+						</Paragraph>
+						<View style={styles.imageContainer}>
+							<ImageComponent
+								backgroundColor={"white"}
+								height={verticalScale(device.isTablet ? 320 : 290, device.screenHeight)}
+								padding={0}
+								margin={0}
+							/>
+						</View>
+					</AnimatedView>
+				</CenterMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
+		</View>
+	);
 };
 
 export default QuestionExtroKid;

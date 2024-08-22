@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionDropdownPayloadInterface } from "interface/payload.type";
+import type { LangQuestionDropdownPayloadInterface } from "interface/payload.type";
 
-const DemographicTeenPage: QuestionDropdownPayloadInterface = {
+const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	audio_ident: "child_age",
@@ -38,6 +38,72 @@ const DemographicTeenPage: QuestionDropdownPayloadInterface = {
 				},
 				{
 					label: "17 years old",
+					value: "17",
+				},
+			],
+		},
+		"pt-BR": {
+			type: Question.QuestionDropdown,
+			heading: "Bem-vindo(a)!",
+			label: "Quantos anos você tem?",
+			kid_label: "Quantos anos você tem?",
+			adult_label: "Quantos anos você tem?",
+			choices: [
+				{
+					label: "12 anos",
+					value: "12",
+				},
+				{
+					label: "13 anos",
+					value: "13",
+				},
+				{
+					label: "14 anos",
+					value: "14",
+				},
+				{
+					label: "15 anos",
+					value: "15",
+				},
+				{
+					label: "16 anos",
+					value: "16",
+				},
+				{
+					label: "17 anos",
+					value: "17",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionDropdown,
+			heading: "Välkommen!",
+			label: "Hur gammal är du?",
+			kid_label: "Hur gammal är du?",
+			adult_label: "Hur gammal är du?",
+			choices: [
+				{
+					label: "12 år",
+					value: "12",
+				},
+				{
+					label: "13 år",
+					value: "13",
+				},
+				{
+					label: "14 år",
+					value: "14",
+				},
+				{
+					label: "15 år",
+					value: "15",
+				},
+				{
+					label: "16 år",
+					value: "16",
+				},
+				{
+					label: "17 år",
 					value: "17",
 				},
 			],
@@ -108,6 +174,39 @@ const DemographicTeenPage: QuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionDropdown,
+			heading: "¡Bienvenido!",
+			label: "¿Cuántos años tienes?",
+			kid_label: "¿Cuántos años tienes?",
+			adult_label: "¿Cuántos años tienes?",
+			choices: [
+				{
+					label: "12 años",
+					value: "12",
+				},
+				{
+					label: "13 años",
+					value: "13",
+				},
+				{
+					label: "14 años",
+					value: "14",
+				},
+				{
+					label: "15 años",
+					value: "15",
+				},
+				{
+					label: "16 años",
+					value: "16",
+				},
+				{
+					label: "17 años",
+					value: "17",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
 			heading: "¡Bienvenido!",
@@ -144,9 +243,9 @@ const DemographicTeenPage: QuestionDropdownPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionDropdown,
 			heading: "Bienvenue!",
-			label: "Quel âge avez-vous?",
-			kid_label: "Quel âge avez-vous?",
-			adult_label: "Quel âge avez-vous?",
+			label: "Quel âge as-tu?",
+			kid_label: "Quel âge as-tu?",
+			adult_label: "Quel âge as-tu?",
 			choices: [
 				{
 					label: "Douze ans",

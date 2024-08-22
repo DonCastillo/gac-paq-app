@@ -2,12 +2,12 @@ import { View, StyleSheet } from "react-native";
 import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getButtons, getColorTheme, nextPage, prevPage } from "store/settings/settingsSlice";
+import { getPhrases, getColorTheme, nextPage, prevPage } from "store/settings/settingsSlice";
 
 const BackAndGoNav = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const colorTheme = useSelector(getColorTheme);
-	const buttons = useSelector(getButtons);
+	const phrases = useSelector(getPhrases);
 	const { color100 } = colorTheme;
 
 	return (
@@ -22,7 +22,7 @@ const BackAndGoNav = (): React.ReactElement => {
 					color: color100,
 				}}
 			>
-				{buttons?.back}
+				{phrases?.back}
 			</ButtonContainerWidth>
 
 			<ButtonContainerWidth
@@ -35,7 +35,7 @@ const BackAndGoNav = (): React.ReactElement => {
 					color: "#fff",
 				}}
 			>
-				{buttons?.next}
+				{phrases?.next}
 			</ButtonContainerWidth>
 		</View>
 	);

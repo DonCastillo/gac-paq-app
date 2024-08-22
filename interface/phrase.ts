@@ -5,12 +5,14 @@ export interface PhraseInterface {
 export type LangPhraseInterface = Record<string, PhraseInterface>;
 
 export interface PhrasePayloadInterface {
-	agreement: string;
+	back: string;
+	complete: string;
 	done: string;
 	dontKnow: string;
-	introduction: string;
-	tryAgain: string;
 	feedback: string;
-	select: string;
+	introduction: string;
+	next: string;
 	specify: string;
+	select: string;
+	tryAgain: string;
 }

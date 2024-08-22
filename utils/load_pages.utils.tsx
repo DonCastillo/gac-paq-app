@@ -17,11 +17,11 @@ import {
 	clearFeedbackResponses,
 	clearQuestionResponses,
 	clearResponseByIdent,
-	resetResponses,
 } from "store/responses/responsesSlice";
 import {
 	addSectionPage,
 	identifyLastSectionExtroPage,
+	resetSectionPages,
 	setLanguageOption,
 } from "store/questions/questionsSlice";
 import { addPage, setPage, addSectionTotalPages } from "store/settings/settingsSlice";
@@ -36,7 +36,7 @@ import type {
 	SectionPayloadInterface,
 } from "interface/payload.type";
 
-const loadApp = (): void => {
+const loadPages = (): void => {
 	const questions = store.getState().questions;
 	const introductoryPages: IntroductoryPagesType = questions.introductoryPages;
 	const questionPages: QuestionPagesType = questions.questionPages;
@@ -47,13 +47,16 @@ const loadApp = (): void => {
 	// DO NOT RESET APP CONFIGURATIONS HERE
 
 	// clear all responses
-	store.dispatch(resetResponses());
+	// store.dispatch(resetResponses());
 
 	// load offline languages
 	store.dispatch(setLanguageOption(languages));
 
 	// determine the last section extro page
 	store.dispatch(identifyLastSectionExtroPage());
+
+	// clear section pages
+	store.dispatch(resetSectionPages());
 
 	let pageNumber = 1;
 	let sectionNumber = 0;
@@ -298,4 +301,4 @@ const reloadExtroFeedbackPages = (): void => {
 	}
 };
 
-export { loadApp, loadAgePage, reloadExtroFeedbackPages };
+export { loadPages, loadAgePage, reloadExtroFeedbackPages };

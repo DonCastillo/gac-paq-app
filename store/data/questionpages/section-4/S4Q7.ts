@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionCheckboxPayloadInterface } from "interface/payload.type";
+import type { LangQuestionCheckboxPayloadInterface } from "interface/payload.type";
 
-const S4Q7: QuestionCheckboxPayloadInterface = {
+const S4Q7: LangQuestionCheckboxPayloadInterface = {
 	ident: "transportation_7",
 	name: "Question 17:	In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 	column_name: "17.0 Tran",
@@ -43,6 +43,110 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionCheckbox,
+			heading: "Pergunta 17",
+			label:
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			kid_label:
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			adult_label:
+				"Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			kid_sublabel: "Selecione todas as respostas que se aplicam a você.",
+			adult_sublabel: "Selecione todas as respostas que se aplicam ao(a) seu(sua) filho(a).",
+			choices: [
+				{
+					label: "Sim, eu fui caminhando",
+					value: "Walked",
+					label_mode: {
+						kid: "Sim, eu fui caminhando",
+						adult: "Sim, ele(a) foi caminhando",
+					},
+				},
+				{
+					label: "Sim, eu fui de bicicleta ou outro meio de transporte ativo",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Sim, eu fui de bicicleta ou outro meio de transporte ativo",
+						adult: "Sim, ele(a) foi de bicicleta ou outro meio de transporte ativo",
+					},
+				},
+				{
+					label: "Não",
+					value: "no",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionCheckbox,
+			heading: "Fråga 17",
+			label:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			kid_label:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			adult_label:
+				"Gick eller cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till någon annan plats än skola eller arbete under den senaste veckan (till exempel till en kompis, till parken eller en butik)?",
+			kid_sublabel: "Välj alla alternativ du gjort.",
+			adult_sublabel: "Välj alla alternativ ditt barn har gjort.",
+			choices: [
+				{
+					label: "Ja, jag har gått",
+					value: "Walked",
+					label_mode: {
+						kid: "Ja, jag har gått",
+						adult: "Ja, mitt barn har gått",
+					},
+				},
+				{
+					label: "Ja jag har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Ja jag har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
+						adult:
+							"Ja mitt barn har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
+					},
+				},
+				{
+					label: "Nej",
+					value: "no",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionCheckbox,
+			heading: "คำถาม 17",
+			label:
+				"สัปดาห์ที่แล้ว น้องได้เดินหรือใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานหรือไม่?  (เช่น บ้านเพื่อน สวนสาธารณะ ร้านขายของ)",
+			kid_label:
+				"สัปดาห์ที่แล้ว น้องได้เดินหรือใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานหรือไม่?  (เช่น บ้านเพื่อน สวนสาธารณะ ร้านขายของ)",
+			adult_label:
+				"สัปดาห์ที่แล้ว บุตรหลานของคุณได้เดินหรือใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานหรือไม่?  (เช่น บ้านเพื่อน สวนสาธารณะ ร้านขายของ)",
+			kid_sublabel: "ขอให้เลือกคำตอบทั้งหมดที่ตรงกับน้อง",
+			adult_sublabel: "ขอให้เลือกคำตอบทั้งหมดที่ตรงกับบุตรหลานของคุณ",
+			choices: [
+				{
+					label: "ใช่ ฉันเดิน",
+					value: "Walked",
+					label_mode: {
+						kid: "ใช่ ฉันเดิน",
+						adult: "ใช่ บุตรหลานของฉันเดิน",
+					},
+				},
+				{
+					label: "ใช่ ฉันใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+					value: "Wheeled",
+					label_mode: {
+						kid: "ใช่ ฉันใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+						adult:
+							"ใช่ บุตรหลานของฉันใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+					},
+				},
+				{
+					label: "ไม่",
+					value: "no",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
 			heading: "问题 17",
@@ -64,15 +168,49 @@ const S4Q7: QuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "是的，我骑自行车去 ",
+					label: "是的，我骑自行车去",
 					value: "Wheeled",
 					label_mode: {
-						kid: "是的，我骑自行车去 ",
-						adult: "是的，他/她骑自行车去 ",
+						kid: "是的，我骑自行车去",
+						adult: "是的，他/她骑自行车去",
 					},
 				},
 				{
 					label: "否",
+					value: "no",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 17",
+			label:
+				"Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines) a lugares distintos al trabajo o voluntariado, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			kid_label:
+				"Durante la semana pasada, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines) a lugares distintos al trabajo o voluntariado, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			adult_label:
+				"Durante la semana pasada, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines) a lugares distintos al trabajo o voluntariado, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			kid_sublabel: "Por favor, selecciona todas las respuestas que correspondan",
+			adult_sublabel: "Por favor, seleccione todas las respuestas que le correspondan",
+			choices: [
+				{
+					label: "Sí, caminé",
+					value: "Walked",
+					label_mode: {
+						kid: "Sí, caminé",
+						adult: "Sí, caminó",
+					},
+				},
+				{
+					label: "Sí, me desplacé sobre ruedas ",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Sí, me desplacé sobre ruedas ",
+						adult: "Sí, se desplazó sobre ruedas",
+					},
+				},
+				{
+					label: "No",
 					value: "no",
 				},
 			],

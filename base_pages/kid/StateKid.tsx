@@ -14,11 +14,13 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { useDispatch, useSelector } from "react-redux";
 import {
+	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
-	getLanguage,
+	getIsLoading,
 	getPhrases,
 	reset,
+	setIsLoading,
 } from "store/settings/settingsSlice";
 import { resetResponses } from "store/responses/responsesSlice";
 import {
@@ -26,8 +28,7 @@ import {
 	getOfflineSuccessPage,
 	getSuccessPage,
 } from "store/questions/questionsSlice";
-import { translatePage as translatePageUtil } from "utils/translate.utils";
-import type { PageInterface, LangPageInterface } from "interface/payload.type";
+import type { PageInterface } from "interface/payload.type";
 import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { GeneralStyle } from "styles/general";
@@ -40,15 +41,15 @@ interface Props {
 
 function StateKid({ state }: Props): React.ReactElement {
 	const dispatch = useDispatch();
-	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
 	const successPage = useSelector(getSuccessPage);
 	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
 	const errorPage = useSelector(getErrorPage);
 	const device = useSelector(getDevice);
 	const isConnected = useSelector(getIsConnected);
+	const isLoading = useSelector(getIsLoading);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
 
-	const [loading, setLoading] = useState<boolean>(false);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
 	const navigation = useNavigation();
@@ -69,26 +70,26 @@ function StateKid({ state }: Props): React.ReactElement {
 	const statePageChange = (): void => {
 		if (state === State.Success) {
 			if (success_type === "online") {
-				const pageTranslations: LangPageInterface = successPage.translations;
-				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+				const pageTranslations: PageInterface = successPage.translations;
+				setTranslatedPage(pageTranslations);
 			} else {
-				const pageTranslations: LangPageInterface = offlineSuccessPage.translations;
-				setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+				const pageTranslations: PageInterface = offlineSuccessPage.translations;
+				setTranslatedPage(pageTranslations);
 			}
 		} else {
-			const pageTranslations: LangPageInterface = errorPage.translations;
-			setTranslatedPage(translatePageUtil(pageTranslations, language) as PageInterface);
+			const pageTranslations: PageInterface = errorPage.translations;
+			setTranslatedPage(pageTranslations);
 		}
 	};
 
 	function resetApp(): void {
 		dispatch(reset());
-		navigation.navigate("SplashScreen" as never);
+		navigation.reset({ index: 0, routes: [{ name: "SplashScreen" as never }] });
 	}
 
 	const resubmitResponse = async (): Promise<void> => {
 		try {
-			setLoading(true);
+			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
 			if (isConnected) {
 				await submitResponse(sanitizedResponses);
@@ -102,7 +103,7 @@ function StateKid({ state }: Props): React.ReactElement {
 		} catch (error) {
 			navigation.navigate("ErrorScreen" as never);
 		} finally {
-			setLoading(false);
+			dispatch(setIsLoading(false));
 		}
 	};
 
@@ -126,63 +127,62 @@ function StateKid({ state }: Props): React.ReactElement {
 		}
 	}
 
-	if (!loading) {
-		return (
-			<AnimatedView>
-				<View style={styles.container}>
-					<BackgroundYellowStroke />
-					<Main>
-						<CenterMain>
-							<Heading
-								customStyle={{
-									color: "#000",
-									...GeneralStyle.kid.pageHeading,
-									fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 40 : 37, device.screenWidth),
-								}}
-							>
-								{translatedPage?.heading}
-							</Heading>
-							<Paragraph
-								customStyle={{
-									color: "#000",
-									...GeneralStyle.kid.pageParagraph,
-									fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
-								}}
-							>
-								{translatedPage?.description}
-							</Paragraph>
-							<View style={styles.imageContainer}>
-								{/* State Image */}
-								<View style={[styles.stateImageContainer, {}]}>
-									{state === State.Success ? (
-										<SuccessImage
-											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-										/>
-									) : (
-										<ErrorImage
-											height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-											width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
-										/>
-									)}
-								</View>
-
-								{/* State Icon */}
-								<View style={styles.stateIconContainer}>
-									{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
-								</View>
-							</View>
-						</CenterMain>
-						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-					</Main>
-				</View>
-			</AnimatedView>
-		);
-	} else {
-		return <LoadingScreenKid />;
+	if (isLoading) {
+		return <LoadingScreenKid key={currentPageNumber} />;
 	}
+	return (
+		<AnimatedView>
+			<View style={styles.container}>
+				<BackgroundYellowStroke />
+				<Main>
+					<CenterMain>
+						<Heading
+							customStyle={{
+								color: "#000",
+								...GeneralStyle.kid.pageHeading,
+								fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 40 : 37, device.screenWidth),
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								color: "#000",
+								...GeneralStyle.kid.pageParagraph,
+								fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+						<View style={styles.imageContainer}>
+							{/* State Image */}
+							<View style={[styles.stateImageContainer, {}]}>
+								{state === State.Success ? (
+									<SuccessImage
+										height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+										width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+									/>
+								) : (
+									<ErrorImage
+										height={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+										width={verticalScale(device.isTablet ? 220 : 200, device.screenHeight)}
+									/>
+								)}
+							</View>
+
+							{/* State Icon */}
+							<View style={styles.stateIconContainer}>
+								{state === State.Success ? <CheckMark /> : <ErrorMark style={styles.errorMark} />}
+							</View>
+						</View>
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		</AnimatedView>
+	);
 }
 
 const styles = StyleSheet.create({

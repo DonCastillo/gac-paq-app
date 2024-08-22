@@ -1,8 +1,8 @@
 import Question from "constants/question.enum";
 import Screen from "constants/screen.enum";
-import type { QuestionRadioImagePayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
 
-const Satisfaction: QuestionRadioImagePayloadInterface = {
+const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 	ident: "app_use_satisfaction",
 	name: "app_use_satisfaction",
 	type: Screen.SingleQuestion,
@@ -45,14 +45,122 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Feedback",
+			label: "O quanto satisfeito(a) você está com o aplicativo?",
+			kid_label: "O quanto satisfeito(a) você está com o aplicativo?",
+			adult_label: "O quanto satisfeito(a) você está com o aplicativo?",
+			adult_sublabel: "Clica na imagem (emoji) que melhor representa a sua satisfação.",
+			kid_sublabel: "Clica na imagem (emoji) que melhor representa a sua satisfação.",
+			choices: [
+				{
+					label: "Muito insatisfeito(a)",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Insatisfeito(a)",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutro(a)",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Satisfeito(a)",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Muito satisfeito(a)",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Feedback",
+			label: "Hur nöjd är du med appen?",
+			kid_label: "Hur nöjd är du med appen?",
+			adult_label: "Hur nöjd är du med appen?",
+			adult_sublabel: "Klicka på bilden (emoji) som visar bäst hur nöjd du är med appen.",
+			kid_sublabel: "Klicka på bilden (emoji) som visar bäst hur nöjd du är med appen.",
+			choices: [
+				{
+					label: "Mycket missnöjd",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Missnöjd",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutral",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Nöjd",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Mycket nöjd",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "ข้อเสนอแนะ",
+			label: "น้องรู้สึกพอใจกับการใช้แอปนี้มากน้อยเพียงใด?",
+			kid_label: "น้องรู้สึกพอใจกับการใช้แอปนี้มากน้อยเพียงใด?",
+			adult_label: "น้องรู้สึกพอใจกับการใช้แอปนี้มากน้อยเพียงใด?",
+			adult_sublabel: "คลิกที่ภาพ (อิโมจิ) ที่ตรงกับระดับความพึงพอใจของน้องมากที่สุด",
+			kid_sublabel: "คลิกที่ภาพ (อิโมจิ) ที่ตรงกับระดับความพึงพอใจของน้องมากที่สุด",
+			choices: [
+				{
+					label: "ไม่พอใจมาก",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "ไม่พอใจ",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "เฉยๆ",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "พอใจ",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "พอใจมาก",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"zh-CN": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "反馈",
-			label: "你对这款应用满意程度如何?",
-			kid_label: "你对这款应用满意程度如何?",
-			adult_label: "你对这款应用满意程度如何?",
-			adult_sublabel: "点击最能代表你满意度的图片(表情符号)。",
-			kid_sublabel: "点击最能代表你满意度的图片(表情符号)。",
+			label: "对本应用的满意程度如何?",
+			kid_label: "对本应用的满意程度如何?",
+			adult_label: "对本应用的满意程度如何?",
+			adult_sublabel: "请选择最能代表您的满意度的图片（表情）。",
+			kid_sublabel: "请选择最能代表您的满意度的图片（表情）。",
 			choices: [
 				{
 					label: "非常不满意",
@@ -81,14 +189,50 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Comentarios",
+			label: "¿Cómo de satisfecho se siente con la aplicación?",
+			kid_label: "¿Cómo de satisfecho se siente con la aplicación?",
+			adult_label: "¿Cómo de satisfecho se siente con la aplicación?",
+			adult_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
+			kid_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
+			choices: [
+				{
+					label: "Muy insatisfecho",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Insatisfecho",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutral",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Satisfecho",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Muy satisfecho",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionSatisfactionImage,
-			heading: "Retroalimentación",
-			label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
-			kid_label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
-			adult_label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
-			adult_sublabel: "Selecciona la imagen (emoji) que mejor represente tu satisfacción.",
-			kid_sublabel: "Selecciona la imagen (emoji) que mejor represente tu satisfacción.",
+			heading: "Comentarios",
+			label: "¿Qué tan satisfecho se siente con la aplicación?",
+			kid_label: "¿Qué tan satisfecho se siente con la aplicación?",
+			adult_label: "¿Qué tan satisfecho se siente con la aplicación?",
+			adult_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
+			kid_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
 			choices: [
 				{
 					label: "Muy insatisfecho",
@@ -120,8 +264,8 @@ const Satisfaction: QuestionRadioImagePayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Commentaires",
-			label: "Quel penses-tu de l'application?",
-			kid_label: "Quel penses-tu de l'application?",
+			label: "Que penses-tu de l'application?",
+			kid_label: "Que penses-tu de l'application?",
 			adult_label: "Que pensez-vous de l'application?",
 			adult_sublabel: "Cliquez sur l'image (émoji) qui représente le mieux votre satisfaction.",
 			kid_sublabel: "Clique sur l'image (émoji) qui représente le mieux ta satisfaction.",

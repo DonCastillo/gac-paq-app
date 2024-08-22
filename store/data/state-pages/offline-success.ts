@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { PagePayloadInterface } from "interface/payload.type";
+import type { LangPagePayloadInterface } from "interface/payload.type";
 
-const OfflineSuccessPage: PagePayloadInterface = {
+const OfflineSuccessPage: LangPagePayloadInterface = {
 	ident: "offline_success_page",
 	title: "Offline Success Page",
 	name: "Offline Success Page",
@@ -12,10 +12,20 @@ const OfflineSuccessPage: PagePayloadInterface = {
 			description:
 				"Your responses will be saved and automatically resubmitted when the connection is restored.\n\nThank you for your help!",
 		},
+		"pt-BR": {
+			heading: "Você não está conectado à Internet",
+			description:
+				"Suas respostas serão salvas e enviadas automaticamente quando a conexão for restabelecida.\n\nObrigado(a) pela sua ajuda!",
+		},
+		"sv-SE": {
+			heading: "Du är inte ansluten till internet",
+			description:
+				"Dina svar kommer att sparas och automatiskt skickas igen när anslutningen återställs.\n\nTack för din hjälp!",
+		},
 		"th-TH": {
 			heading: "คุณไม่ได้เชื่อมต่อกับอินเทอร์เน็ต",
 			description:
-				"การตอบของคุณจะถูกบันทึกและส่งใหม่โดยอัตโนมัติเมื่อการเชื่อมต่อได้รับการคืนค่า\n\nขอบคุณสำหรับความช่วยเหลือของคุณ!",
+				"คำตอบของคุณจะถูกบันทึกและส่งอัตโนมัติเมื่อเชื่อมต่อกับอินเทอร์เน็ตอีกครั้ง\n\nขอบคุณสำหรับความช่วยเหลือของคุณ!",
 		},
 		"zh-CN": {
 			heading: "你没有连接到互联网",

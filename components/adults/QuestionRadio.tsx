@@ -7,11 +7,13 @@ import {
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
+	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
 import { getCurrentPage, getMode } from "store/settings/settingsSlice";
 import { getOptionSubLabel } from "utils/background.utils";
 import Mode from "constants/mode.enum";
+import Section from "constants/section.enum";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -109,10 +111,14 @@ const QuestionRadio = ({
 				flexDirection: "column",
 				paddingBottom: 20,
 			}}
-			renderItem={({ item }) => (
+			renderItem={({ item, index }) => (
 				<RadioOption
 					{...item}
-					label={item.label}
+					label={
+						currentPage.section === Section.Question
+							? `${optionLetter(index)}.  ${item.label}`
+							: item.label
+					}
 					value={item.value}
 					selected={
 						selected !== null &&

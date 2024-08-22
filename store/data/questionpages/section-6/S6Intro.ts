@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { SectionPayloadInterface } from "interface/payload.type";
+import type { LangSectionPayloadInterface } from "interface/payload.type";
 
-const S6Intro: SectionPayloadInterface = {
+const S6Intro: LangSectionPayloadInterface = {
 	ident: "play_intro",
 	heading: "Play or Free Time",
 	type: Screen.IntroQuestion,
@@ -10,9 +10,25 @@ const S6Intro: SectionPayloadInterface = {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
 		},
+		"pt-BR": {
+			heading: "Brincadeiras Ou Tempo Livre",
+			subheading: "Seção 6",
+		},
+		"sv-SE": {
+			heading: "Lek Och Fritid",
+			subheading: "Sektion 6",
+		},
+		"th-TH": {
+			heading: "การเล่นหรือช่วงเวลาว่าง",
+			subheading: "ส่วนที่ 6",
+		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
 			subheading: "第6部分",
+		},
+		"es-ES": {
+			heading: "Juego O Tiempo Libre",
+			subheading: "Sección 6",
 		},
 		"es-MX": {
 			heading: "Juego O Tiempo Libre",

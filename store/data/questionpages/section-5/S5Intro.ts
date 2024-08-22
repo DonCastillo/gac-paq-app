@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { SectionPayloadInterface } from "interface/payload.type";
+import type { LangSectionPayloadInterface } from "interface/payload.type";
 
-const S5Intro: SectionPayloadInterface = {
+const S5Intro: LangSectionPayloadInterface = {
 	ident: "organized_intro",
 	heading: "Organized Activities",
 	type: Screen.IntroQuestion,
@@ -10,9 +10,25 @@ const S5Intro: SectionPayloadInterface = {
 			heading: "Organized Activities",
 			subheading: "Section 5",
 		},
+		"pt-BR": {
+			heading: "Atividades Organizadas e Esportes",
+			subheading: "Seção 5",
+		},
+		"sv-SE": {
+			heading: "Organiserade Aktiviteter",
+			subheading: "Sektion 5",
+		},
+		"th-TH": {
+			heading: "กิจกรรมที่จัดขึ้น",
+			subheading: "ส่วนที่ 5",
+		},
 		"zh-CN": {
 			heading: "有组织的活动",
 			subheading: "第5部分",
+		},
+		"es-ES": {
+			heading: "Actividades Organizadas",
+			subheading: "Sección 5",
 		},
 		"es-MX": {
 			heading: "Actividades Organizadas",

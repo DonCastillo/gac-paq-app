@@ -1,7 +1,7 @@
 import Screen from "constants/screen.enum";
-import type { SectionPayloadInterface } from "interface/payload.type";
+import type { LangSectionPayloadInterface } from "interface/payload.type";
 
-const S3Intro: SectionPayloadInterface = {
+const S3Intro: LangSectionPayloadInterface = {
 	ident: "work_intro",
 	heading: "Work",
 	type: Screen.IntroQuestion,
@@ -10,9 +10,25 @@ const S3Intro: SectionPayloadInterface = {
 			heading: "Work",
 			subheading: "Section 3",
 		},
+		"pt-BR": {
+			heading: "Trabalho",
+			subheading: "Seção 3",
+		},
+		"sv-SE": {
+			heading: "Arbete",
+			subheading: "Sektion 3",
+		},
+		"th-TH": {
+			heading: "การทำงาน",
+			subheading: "ส่วนที่ 3",
+		},
 		"zh-CN": {
 			heading: "工作",
 			subheading: "第3部分",
+		},
+		"es-ES": {
+			heading: "Trabajo",
+			subheading: "Sección 3",
 		},
 		"es-MX": {
 			heading: "Trabajo",

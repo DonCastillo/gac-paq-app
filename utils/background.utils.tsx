@@ -30,15 +30,24 @@ import VolunteeringOptions from "styles/images/options/volunteering";
 import type State from "constants/state.enum";
 import StatusBackground from "styles/images/background/status";
 
+const blackListLanguages = ["pt-BR", "sv-SE", "th-TH", "zh-CN", "es-ES", "es-MX", "fr-CA"];
+
 const getImageBackground = (): any | null => {
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
-	const language = settings.language ?? "en-CA";
-	const region = language.split("-")[1].toUpperCase();
+	let language = settings.language ?? "en-CA";
+	let region = language.split("-")[1].toUpperCase();
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
 	const platform = settings.device.isTablet ? "tablet" : "phone";
 	const section = getSectionType(settings.currentPage.section ?? "question");
 	const screen = getScreenType(settings.currentPage.screen ?? "page");
+
+	// some languages don't have images yet
+
+	if (blackListLanguages.includes(language)) {
+		language = "en-CA";
+		region = "CA";
+	}
 
 	if (section === Section.Intro) {
 		return GenericBackground[region][platform][ident];
@@ -80,9 +89,15 @@ const getImageBackground = (): any | null => {
 
 const getImageBackgroundStatus = (state: State): any | null => {
 	const settings = store.getState().settings;
-	const language = settings.language ?? "en-CA";
-	const region = language.split("-")[1].toUpperCase();
+	let language = settings.language ?? "en-CA";
+	let region = language.split("-")[1].toUpperCase();
 	const platform = settings.device.isTablet ? "tablet" : "phone";
+
+	// some languages don't have images yet
+	if (blackListLanguages.includes(language)) {
+		language = "en-CA";
+		region = "CA";
+	}
 
 	return StatusBackground[region][state][platform];
 };
@@ -90,9 +105,15 @@ const getImageBackgroundStatus = (state: State): any | null => {
 const getOptionImage = (image_ident: string): any | null => {
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
-	const language = settings.language ?? "en-CA";
-	const region = language.split("-")[1].toUpperCase();
+	let language = settings.language ?? "en-CA";
+	let region = language.split("-")[1].toUpperCase();
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
+
+	// some languages don't have images yet
+	if (blackListLanguages.includes(language)) {
+		language = "en-CA";
+		region = "CA";
+	}
 
 	const doNotKnowImage = Images.generic.doNotKnow;
 	const kidWalkingImage = Images.kids.options.transportation.walking;

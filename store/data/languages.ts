@@ -1,11 +1,11 @@
 import type { LanguageInterface } from "interface/payload.type";
 
 const Languages: LanguageInterface[] = [
-	// {
-	// 	name: "Portugese - Brazil",
-	// 	flag_code: "BR",
-	// 	lang_code: "pt-BR",
-	// },
+	{
+		name: "Portugese - Brazil",
+		flag_code: "BR",
+		lang_code: "pt-BR",
+	},
 	{
 		name: "English - Canada",
 		flag_code: "CA",
@@ -16,11 +16,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "CA",
 		lang_code: "fr-CA",
 	},
-	// {
-	// 	name: "Chinese - China",
-	// 	flag_code: "CN",
-	// 	lang_code: "zh-CN",
-	// },
+	{
+		name: "Chinese - China",
+		flag_code: "CN",
+		lang_code: "zh-CN",
+	},
 	// {
 	// 	name: "Spanish - Colombia",
 	// 	flag_code: "CO",
@@ -41,11 +41,11 @@ const Languages: LanguageInterface[] = [
 	// 	flag_code: "MX",
 	// 	lang_code: "en-MX",
 	// },
-	// {
-	// 	name: "Spanish - Mexico",
-	// 	flag_code: "MX",
-	// 	lang_code: "es-MX",
-	// },
+	{
+		name: "Spanish - Mexico",
+		flag_code: "MX",
+		lang_code: "es-MX",
+	},
 	// {
 	// 	name: "Nepali - Nepal",
 	// 	flag_code: "NP",
@@ -81,21 +81,21 @@ const Languages: LanguageInterface[] = [
 	// 	flag_code: "PG",
 	// 	lang_code: "en-PG",
 	// },
-	// {
-	// 	name: "Spanish - Spain",
-	// 	flag_code: "ES",
-	// 	lang_code: "es-ES",
-	// },
-	// {
-	// 	name: "Swedish - Sweden",
-	// 	flag_code: "SE",
-	// 	lang_code: "sv-SE",
-	// },
-	// {
-	// 	name: "Thai - Thailand",
-	// 	flag_code: "TH",
-	// 	lang_code: "th-TH",
-	// },
+	{
+		name: "Spanish - Spain",
+		flag_code: "ES",
+		lang_code: "es-ES",
+	},
+	{
+		name: "Swedish - Sweden",
+		flag_code: "SE",
+		lang_code: "sv-SE",
+	},
+	{
+		name: "Thai - Thailand",
+		flag_code: "TH",
+		lang_code: "th-TH",
+	},
 	// {
 	// 	name: "English - United Arab Emirates",
 	// 	flag_code: "AE",

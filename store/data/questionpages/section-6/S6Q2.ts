@@ -1,8 +1,8 @@
 import Screen from "constants/screen.enum";
 import Question from "constants/question.enum";
-import type { QuestionRadioPayloadInterface } from "interface/payload.type";
+import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
-const S6Q2: QuestionRadioPayloadInterface = {
+const S6Q2: LangQuestionRadioPayloadInterface = {
 	ident: "play_2",
 	name: "Question 22: In the past week, how many days per week did you do activities that make your muscles stronger?",
 	type: Screen.SingleQuestion,
@@ -18,6 +18,10 @@ const S6Q2: QuestionRadioPayloadInterface = {
 				"In the past week, how many days per week did you do activities that make your muscles stronger?",
 			adult_label:
 				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
 					label: "0 days",
@@ -53,43 +57,218 @@ const S6Q2: QuestionRadioPayloadInterface = {
 				},
 			],
 		},
-		"zh-CN": {
+		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "第二十二题",
-			label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
-			kid_label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
-			adult_label: "在过去一周里，您的孩子有几天是做一些能让他们变得更强壮的活动？",
+			heading: "Pergunta 22",
+			label:
+				"Na última semana, quantos dias por semana você fez atividades que deixaram seus músculos mais fortes?",
+			kid_label:
+				"Na última semana, quantos dias por semana você fez atividades que deixaram seus músculos mais fortes?",
+			adult_label:
+				"Na última semana, quantos dias por semana o(a) seu(sua) filho(a) fez atividades que deixaram os músculos dele(a) mais fortes?",
 			choices: [
 				{
-					label: "0天",
+					label: "0 dias",
 					value: "0",
 				},
 				{
-					label: "1天",
+					label: "1 dia",
 					value: "1",
 				},
 				{
-					label: "2天",
+					label: "2 dias",
 					value: "2",
 				},
 				{
-					label: "3天",
+					label: "3 dias",
 					value: "3",
 				},
 				{
-					label: "4天",
+					label: "4 dias",
 					value: "4",
 				},
 				{
-					label: "5天",
+					label: "5 dias",
 					value: "5",
 				},
 				{
-					label: "6天",
+					label: "6 dias",
 					value: "6",
 				},
 				{
-					label: "7天",
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 22",
+			label:
+				"Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
+			kid_label:
+				"Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
+			adult_label:
+				"Hur många dagar gjorde ditt barn någon aktivitet som gör musklerna starkare under den senaste veckan?",
+			choices: [
+				{
+					label: "0 dagar",
+					value: "0",
+				},
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar",
+					value: "5",
+				},
+				{
+					label: "6 dagar",
+					value: "6",
+				},
+				{
+					label: "7 dagar",
+					value: "7",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "คำถาม 22",
+			label: "สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมที่ทำให้กล้ามเนื้อแข็งแรงขึ้น กี่วัน?",
+			kid_label: "สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมที่ทำให้กล้ามเนื้อแข็งแรงขึ้น กี่วัน?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณได้ทำกิจกรรมที่ทำให้กล้ามเนื้อแข็งแรงขึ้น กี่วัน?",
+			kid_sublabel: "ตัวอย่างเช่น ยิมนาสติก ปีนเขา วิดพื้น ยกเวท หรือโหนบาร์ เป็นต้น",
+			adult_sublabel: "ตัวอย่างเช่น ยิมนาสติก ปีนเขา วิดพื้น ยกเวท หรือโหนบาร์ เป็นต้น",
+			choices: [
+				{
+					label: "0 วัน",
+					value: "0",
+				},
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 22",
+			label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
+			kid_label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
+			adult_label: "在过去一周里，您的孩子有几天或做一些能让他们变得更强壮的活动？",
+			choices: [
+				{
+					label: "0 天",
+					value: "0",
+				},
+				{
+					label: "1 天",
+					value: "1",
+				},
+				{
+					label: "2 天",
+					value: "2",
+				},
+				{
+					label: "3 天",
+					value: "3",
+				},
+				{
+					label: "4 天",
+					value: "4",
+				},
+				{
+					label: "5 天",
+					value: "5",
+				},
+				{
+					label: "6 天",
+					value: "6",
+				},
+				{
+					label: "7 天",
+					value: "7",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 22",
+			label:
+				"Durante la semana pasada, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			kid_label:
+				"Durante la semana pasada, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			adult_label:
+				"Durante la semana pasada, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
 					value: "7",
 				},
 			],
@@ -105,35 +284,35 @@ const S6Q2: QuestionRadioPayloadInterface = {
 				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
 			choices: [
 				{
-					label: "0 Días",
+					label: "0 días",
 					value: "0",
 				},
 				{
-					label: "1 Día",
+					label: "1 día",
 					value: "1",
 				},
 				{
-					label: "2 Días",
+					label: "2 días",
 					value: "2",
 				},
 				{
-					label: "3 Días",
+					label: "3 días",
 					value: "3",
 				},
 				{
-					label: "4 Días",
+					label: "4 días",
 					value: "4",
 				},
 				{
-					label: "5 Días",
+					label: "5 días",
 					value: "5",
 				},
 				{
-					label: "6 Días",
+					label: "6 días",
 					value: "6",
 				},
 				{
-					label: "7 Días",
+					label: "7 días",
 					value: "7",
 				},
 			],
