@@ -156,7 +156,7 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
-		"en-ES": {
+		"es-ES": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 27",
 			label: "¿Cuál es su etnia?",

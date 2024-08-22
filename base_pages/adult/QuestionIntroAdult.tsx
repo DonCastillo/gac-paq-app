@@ -15,17 +15,20 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import type { SectionInterface } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
+import LoadingScreenAdult from "./LoadingScreenAdult";
 
 const QuestionIntroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const isLoading = useSelector(getIsLoading);
 	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
 	const backgroundImage = getImageBackground();
@@ -58,6 +61,9 @@ const QuestionIntroAdult = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
+	}
 	return (
 		<AnimatedView>
 			<View style={styles.container}>

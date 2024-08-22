@@ -30,6 +30,7 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -48,6 +49,7 @@ import type {
 } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
 import QuestionCheckboxInput from "components/adults/QuestionCheckboxInput";
+import LoadingScreenAdult from "../LoadingScreenAdult";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -55,6 +57,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
+	const isLoading = useSelector(getIsLoading);
 	const { isKeyboardOpen } = device;
 
 	// state
@@ -255,6 +258,9 @@ const QuestionSingleAdult = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
+	}
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />

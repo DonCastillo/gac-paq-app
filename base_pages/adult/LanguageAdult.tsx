@@ -105,46 +105,45 @@ const LanguageAdult = (): React.ReactElement => {
 		}
 	};
 
-	if (!isLoading) {
-		return (
-			<View style={styles.container}>
-				<BGLinearGradient />
-				<Main>
-					<ProgressBarAdult />
-					<Toolbar />
-					<CenterMain>
-						<AnimatedView style={{ flex: 0 }}>
-							<QuestionContainer>
-								<QuestionTitle>{translatedPage.heading}</QuestionTitle>
-								<View style={{ marginBottom: 13 }}>
-									<QuestionLabel
-										textStyle={GeneralStyle.adult.questionLabel}
-										customStyle={{ marginBottom: 7 }}
-									>
-										{questionLabel}
-									</QuestionLabel>
-								</View>
-								<QuestionSelectLanguageAdult
-									onChange={changeHandler}
-									selectedValue={selectedValue}
-								/>
-							</QuestionContainer>
-						</AnimatedView>
-					</CenterMain>
-					<Navigation>
-						{selectedValue !== null && (
-							<BackAndNextNav
-								colorTheme={"#FFF"}
-								onNext={() => dispatch(nextPage())}
-							/>
-						)}
-					</Navigation>
-				</Main>
-			</View>
-		);
-	} else {
+	if (isLoading) {
 		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			<BGLinearGradient />
+			<Main>
+				<ProgressBarAdult />
+				<Toolbar />
+				<CenterMain>
+					<AnimatedView style={{ flex: 0 }}>
+						<QuestionContainer>
+							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.adult.questionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+							</View>
+							<QuestionSelectLanguageAdult
+								onChange={changeHandler}
+								selectedValue={selectedValue}
+							/>
+						</QuestionContainer>
+					</AnimatedView>
+				</CenterMain>
+				<Navigation>
+					{selectedValue !== null && (
+						<BackAndNextNav
+							colorTheme={"#FFF"}
+							onNext={() => dispatch(nextPage())}
+						/>
+					)}
+				</Navigation>
+			</Main>
+		</View>
+	);
 };
 
 export default LanguageAdult;

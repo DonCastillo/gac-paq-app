@@ -17,6 +17,7 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getIsLoading,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -25,6 +26,7 @@ import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
 import { moderateScale } from "utils/responsive.utils";
+import LoadingScreenAdult from "./LoadingScreenAdult";
 
 const PageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -33,6 +35,8 @@ const PageAdult = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const mode = useSelector(getMode);
+	const isLoading = useSelector(getIsLoading);
+
 	const { color100 } = colorTheme;
 
 	// state
@@ -68,6 +72,9 @@ const PageAdult = (): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
+	}
 	return (
 		<View style={[styles.container, { backgroundColor: color100 }]}>
 			<BGLinearGradient />

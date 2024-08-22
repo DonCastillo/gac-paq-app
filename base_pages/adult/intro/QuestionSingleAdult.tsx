@@ -173,42 +173,41 @@ const QuestionSingleAdult = (): React.ReactElement => {
 		questionComponent = <></>;
 	}
 
-	if (!isLoading) {
-		return (
-			<View style={styles.container}>
-				<BGLinearGradient />
-				<Main>
-					<ProgressBarAdult />
-					<Toolbar />
-					<CenterMain>
-						<AnimatedView
-							key={currentPageNumber}
-							style={{ flex: 0 }}
-						>
-							<QuestionContainer>
-								<QuestionTitle>{translatedPage.heading}</QuestionTitle>
-								<View style={{ marginBottom: 13 }}>
-									<QuestionLabel
-										textStyle={GeneralStyle.adult.questionLabel}
-										customStyle={{ marginBottom: 7 }}
-									>
-										{questionLabel}
-									</QuestionLabel>
-									<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
-										{questionSubLabel}
-									</QuestionSubLabel>
-								</View>
-								{questionComponent}
-							</QuestionContainer>
-						</AnimatedView>
-					</CenterMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
-		);
-	} else {
-		return <LoadingScreenAdult />;
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
+	return (
+		<View style={styles.container}>
+			<BGLinearGradient />
+			<Main>
+				<ProgressBarAdult />
+				<Toolbar />
+				<CenterMain>
+					<AnimatedView
+						key={currentPageNumber}
+						style={{ flex: 0 }}
+					>
+						<QuestionContainer>
+							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
+							<View style={{ marginBottom: 13 }}>
+								<QuestionLabel
+									textStyle={GeneralStyle.adult.questionLabel}
+									customStyle={{ marginBottom: 7 }}
+								>
+									{questionLabel}
+								</QuestionLabel>
+								<QuestionSubLabel customStyle={{ marginBottom: 7 }}>
+									{questionSubLabel}
+								</QuestionSubLabel>
+							</View>
+							{questionComponent}
+						</QuestionContainer>
+					</AnimatedView>
+				</CenterMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
+		</View>
+	);
 };
 
 export default QuestionSingleAdult;

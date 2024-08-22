@@ -14,6 +14,7 @@ import BGLinearGradient from "components/BGLinearGradient";
 import LoadingScreenAdult from "./LoadingScreenAdult";
 import { useDispatch, useSelector } from "react-redux";
 import {
+	getCurrentPageNumber,
 	getDevice,
 	getIsConnected,
 	getIsLoading,
@@ -49,6 +50,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const isConnected = useSelector(getIsConnected);
 	const isLoading = useSelector(getIsLoading);
+	const currentPageNumber = useSelector(getCurrentPageNumber);
 
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
@@ -127,50 +129,49 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	};
 
 	const backgroundImage = getImageBackgroundStatus(state);
-	if (!isLoading) {
-		return (
-			<AnimatedView>
-				<View style={styles.container}>
-					<BGLinearGradient />
-					{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
-						<ImageBackdrop
-							source={backgroundImage}
-							opacity={0.7}
-							key={state.toString()}
-						/>
-					)}
-					<Main>
-						<CenterMain>
-							<View style={styles.stateIconContainer}>
-								{state === State.Success ? <CheckMark /> : <ErrorMark />}
-							</View>
-							<Heading
-								customStyle={{
-									...GeneralStyle.adult.pageHeading,
-									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
-								}}
-							>
-								{translatedPage?.heading}
-							</Heading>
-							<Paragraph
-								customStyle={{
-									...GeneralStyle.adult.pageParagraph,
-									fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
-								}}
-							>
-								{translatedPage?.description}
-							</Paragraph>
-						</CenterMain>
-						<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-					</Main>
-				</View>
-			</AnimatedView>
-		);
-	} else {
-		return <LoadingScreenAdult />;
+	if (isLoading) {
+		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
+	return (
+		<AnimatedView>
+			<View style={styles.container}>
+				<BGLinearGradient />
+				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+					<ImageBackdrop
+						source={backgroundImage}
+						opacity={0.7}
+						key={state.toString()}
+					/>
+				)}
+				<Main>
+					<CenterMain>
+						<View style={styles.stateIconContainer}>
+							{state === State.Success ? <CheckMark /> : <ErrorMark />}
+						</View>
+						<Heading
+							customStyle={{
+								...GeneralStyle.adult.pageHeading,
+								fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
+							}}
+						>
+							{translatedPage?.heading}
+						</Heading>
+						<Paragraph
+							customStyle={{
+								...GeneralStyle.adult.pageParagraph,
+								fontSize: moderateScale(device.isTablet ? 18 : 20, device.screenWidth),
+								lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
+							}}
+						>
+							{translatedPage?.description}
+						</Paragraph>
+					</CenterMain>
+					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+				</Main>
+			</View>
+		</AnimatedView>
+	);
 };
 
 const styles = StyleSheet.create({
