@@ -1,58 +1,63 @@
 {
-	"expo": {
-		"name": "GAC-PAQ",
-		"slug": "gacpaq-app",
-		"version": "3.0.0",
-		"orientation": "portrait",
-		"icon": "./assets/icon.png",
-		"userInterfaceStyle": "light",
-		"splash": {
-			"image": "./assets/splash-icon.png",
-			"resizeMode": "contain",
-			"backgroundColor": "#ffffff"
-		},
-		"assetBundlePatterns": ["**/*"],
-		"ios": {
-			"supportsTablet": true,
-			"requireFullScreen": true,
-			"bundleIdentifier": "com.uleth.gacpaq",
-			"infoPlist": {
-				"UIBackgroundModes": ["fetch"]
-			},
-			"config": {
-				"usesNonExemptEncryption": false
-			}
-		},
-		"android": {
-			"adaptiveIcon": {
-				"foregroundImage": "./assets/adaptive-icon.png",
-				"backgroundColor": "#ffffff"
-			},
-			"package": "com.uleth.gacpaq"
-		},
-		"extra": {
-			"eas": {
-				"projectId": "11d18dae-7a98-46a2-a619-8efdc31cc2a5"
-			}
-		},
-		"plugins": [
-			[
-				"expo-screen-orientation",
-				{
-					"initialOrientation": "PORTRAIT_UP"
-				}
-			],
-			[
-				"expo-build-properties",
-				{
-					"android": {
-						"compileSdkVersion": 34,
-						"targetSdkVersion": 34,
-						"buildToolsVersion": "33.0.0",
-						"minSdkVersion": 21
-					}
-				}
-			]
-		]
-	}
+  "expo": {
+    "name": "GAC-PAQ",
+    "slug": "gacpaq-app",
+    "version": "3.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "bundleIdentifier": "com.uleth.gacpaq",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "fetch"
+        ]
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.uleth.gacpaq",
+      "versionCode": 2
+    },
+    "extra": {
+      "eas": {
+        "projectId": "11d18dae-7a98-46a2-a619-8efdc31cc2a5"
+      }
+    },
+    "plugins": [
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT_UP"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "33.0.0",
+            "minSdkVersion": 21
+          }
+        }
+      ]
+    ]
+  }
 }
