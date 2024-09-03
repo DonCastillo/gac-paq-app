@@ -19,16 +19,14 @@ import {
 	getIsLoading,
 	getLanguage,
 	getMode,
-	getPhrases,
 	nextPage,
 	setIsLoading,
 	setLanguage,
-	setSectionTitles,
 	skipPage,
 } from "store/settings/settingsSlice";
-import { loadPhrases } from "utils/load.utils";
+import { loadPhrases, loadSectionTitles } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
-import { translateQuestionLabel, translateSectionHeading } from "utils/translate.utils";
+import { translateQuestionLabel } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "./LoadingScreenAdult";
@@ -40,6 +38,7 @@ import {
 	clearFeedbackResponses,
 	clearQuestionResponses,
 } from "store/responses/responsesSlice";
+import { getSectionPages } from "store/questions/questionsSlice";
 
 const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -48,7 +47,7 @@ const LanguageAdult = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const isLoading = useSelector(getIsLoading);
-	const phrases = useSelector(getPhrases);
+	const sectionPages = useSelector(getSectionPages);
 
 	// state
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
@@ -66,7 +65,6 @@ const LanguageAdult = (): React.ReactElement => {
 		dispatch(setIsLoading(true));
 		await dispatch(loadQuestionData(language));
 		loadPhrases();
-		translateSections(language);
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
 		dispatch(skipPage(1));
@@ -76,30 +74,35 @@ const LanguageAdult = (): React.ReactElement => {
 		dispatch(setIsLoading(false));
 	};
 
-	// translate section headings
-	const translateSections = (language: string): void => {
-		const translatedSectionTitles = translateSectionHeading(language);
-		dispatch(
-			setSectionTitles([phrases?.introduction, ...translatedSectionTitles, phrases?.feedback]),
-		);
-	};
+	// set translated section titles
+	useEffect(() => {
+		loadSectionTitles();
+	}, [sectionPages]);
 
 	// set selected value
 	useEffect(() => {
 		setSelectedValue(language);
 	}, [currentPageNumber]);
 
-	// set language default
+	// set language default and add to response
 	useEffect(() => {
 		addResponse(language);
 	}, []);
 
 	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
-			addResponse(value);
-			setSelectedValue(value);
-			dispatch(setLanguage(value));
-			loadAppBasedOnLanguage(value);
+			loadAppBasedOnLanguage(value)
+				.then(() => {
+					addResponse(value);
+					setSelectedValue(value);
+					dispatch(setLanguage(value));
+				})
+				.catch((error) => {
+					addResponse("en-CA");
+					setSelectedValue("en-CA");
+					dispatch(setLanguage("en-CA"));
+					console.error(error);
+				});
 		} else {
 			setSelectedValue(null);
 		}

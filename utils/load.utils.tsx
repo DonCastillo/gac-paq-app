@@ -1,9 +1,10 @@
 import { FlagIcons } from "styles/flags";
 import Languages from "store/data/languages";
 import { store } from "store/store";
-import { setPhrases } from "store/settings/settingsSlice";
+import { setPhrases, setSectionTitles } from "store/settings/settingsSlice";
 import PhraseLabel from "constants/phrase_label.enum";
 import type { LanguageInterface } from "interface/payload.type";
+import { translateSectionHeading } from "./translate.utils";
 
 const loadLanguagesOffline = (): LanguageInterface[] => {
 	return Languages.map((language: LanguageInterface) => {
@@ -45,4 +46,12 @@ const loadPhrases = (): void => {
 	);
 };
 
-export { loadLanguagesOffline, loadPhrases };
+const loadSectionTitles = (): void => {
+	const language = store.getState().settings.language;
+	const phrases = store.getState().settings.phrases;
+	const translatedSectionTitles = translateSectionHeading(language);
+	const sectionTitles = [phrases?.introduction, ...translatedSectionTitles, phrases?.feedback];
+	store.dispatch(setSectionTitles(sectionTitles));
+};
+
+export { loadLanguagesOffline, loadPhrases, loadSectionTitles };

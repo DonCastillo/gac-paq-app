@@ -27,7 +27,7 @@ import {
 	setSectionTitles,
 	skipPage,
 } from "store/settings/settingsSlice";
-import { loadPhrases } from "utils/load.utils";
+import { loadPhrases, loadSectionTitles } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { translateQuestionLabel, translateSectionHeading } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
@@ -41,6 +41,7 @@ import {
 	clearFeedbackResponses,
 	clearQuestionResponses,
 } from "store/responses/responsesSlice";
+import { getSectionPages } from "store/questions/questionsSlice";
 
 const LanguageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -51,7 +52,7 @@ const LanguageKid = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
-	const phrases = useSelector(getPhrases);
+	const sectionPages = useSelector(getSectionPages);
 
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
@@ -70,7 +71,6 @@ const LanguageKid = (): React.ReactElement => {
 		dispatch(setIsLoading(true));
 		await dispatch(loadQuestionData(language));
 		loadPhrases();
-		translateSections(language);
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
 		dispatch(skipPage(1));
@@ -80,13 +80,10 @@ const LanguageKid = (): React.ReactElement => {
 		dispatch(setIsLoading(false));
 	};
 
-	// translate section headings
-	const translateSections = (language: string): void => {
-		const translatedSectionTitles = translateSectionHeading(language);
-		dispatch(
-			setSectionTitles([phrases?.introduction, ...translatedSectionTitles, phrases?.feedback]),
-		);
-	};
+	// set translated section titles
+	useEffect(() => {
+		loadSectionTitles();
+	}, [sectionPages]);
 
 	// set background screen dynamically
 	useEffect(() => {
@@ -99,24 +96,32 @@ const LanguageKid = (): React.ReactElement => {
 		setSelectedValue(language);
 	}, [currentPageNumber]);
 
-	// set language default
+	// set language default and add to response
 	useEffect(() => {
 		addResponse(language);
 	}, []);
 
 	const changeHandler = (value: string | null): void => {
 		if (value !== "" && value !== null && value !== undefined) {
-			addResponse(value);
-			setSelectedValue(value);
-			dispatch(setLanguage(value));
-			loadAppBasedOnLanguage(value);
+			loadAppBasedOnLanguage(value)
+				.then(() => {
+					addResponse(value);
+					setSelectedValue(value);
+					dispatch(setLanguage(value));
+				})
+				.catch((error) => {
+					addResponse("en-CA");
+					setSelectedValue("en-CA");
+					dispatch(setLanguage("en-CA"));
+					console.error(error);
+				});
 		} else {
 			setSelectedValue(null);
 		}
 	};
 
 	if (isLoading) {
-		<LoadingScreenKid key={currentPageNumber} />;
+		return <LoadingScreenKid key={currentPageNumber} />;
 	}
 	return (
 		<TouchableWithoutFeedback onPress={() => setDropdownOpen(false)}>
