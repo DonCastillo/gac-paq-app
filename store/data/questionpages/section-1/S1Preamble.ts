@@ -5,6 +5,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 	ident: "school_preamble",
 	heading: "School",
 	audio_ident: "school_preamble",
+	audio_autoplay: true,
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

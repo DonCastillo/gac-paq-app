@@ -8,6 +8,7 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "app_satisfaction",
 	audio_ident: "rating",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionSatisfactionImage,

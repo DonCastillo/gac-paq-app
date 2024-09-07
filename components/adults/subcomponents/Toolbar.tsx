@@ -33,6 +33,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const isLoading = useSelector(getIsLoading);
 	const dispatch = useDispatch();
 	const enableNarration = useSelector(getEnableNarration);
+	const isAudioAutoplaying = currentPage?.page?.audio_autoplay ?? false;
 
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
 	const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -111,7 +112,8 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		// autoplay sounds only works if the following conditions are met:
 		// 1. if narration is enabled
 		// 2. if there is audio available
-		if (hasAudio && enableNarration) {
+		// 3. if the page's audio_autoplay is set to TRUE
+		if (hasAudio && enableNarration && isAudioAutoplaying) {
 			playSound();
 		}
 		dispatch(setIsLoading(false));
@@ -163,8 +165,13 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 					color={"#fff"}
 					containerStyle={styles.icon}
 					onPress={() => {
-						stopSound();
-						dispatch(setEnableNarration(false));
+						stopSound()
+							.then(() => {
+								dispatch(setEnableNarration(false));
+							})
+							.catch((error) => {
+								console.error(error);
+							});
 					}}
 				/>
 			);
@@ -176,8 +183,13 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 					color={"#fff"}
 					containerStyle={styles.icon}
 					onPress={() => {
-						playSound();
-						dispatch(setEnableNarration(true));
+						playSound()
+							.then(() => {
+								dispatch(setEnableNarration(true));
+							})
+							.catch((error) => {
+								console.error(error);
+							});
 					}}
 				/>
 			);

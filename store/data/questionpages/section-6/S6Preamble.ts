@@ -5,6 +5,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 	ident: "play_preamble",
 	heading: "Play or Free Time",
 	audio_ident: "play_preamble",
+	audio_autoplay: true,
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

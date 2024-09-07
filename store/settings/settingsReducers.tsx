@@ -79,35 +79,50 @@ const setIsLoading: SetIsLoadingFuncType = (state, action) => {
 };
 
 const skipPage: SkipPageFuncType = (state, action) => {
-	let currentPageNumber = action.payload;
+	console.log("skipping page...")
+
+	const allPages = state.pages;
+	const currentPageNumber = state.currentPageNumber;
+	const currentPage = getPage(currentPageNumber, allPages);
+	const updatedPages = {...allPages, [currentPageNumber]: { ...currentPage, page: { ...currentPage.page, audio_autoplay: false } } };
+
+	let nextPageNumber = action.payload;
 	let newHistory: number[] = [...state.history];
 
-	if (currentPageNumber <= 0) {
-		currentPageNumber = 1;
+	if (nextPageNumber <= 0) {
+		nextPageNumber = 1;
 	}
 
 	// update history
-	newHistory = [...new Set([...newHistory, currentPageNumber].sort((a, b) => a - b))];
-	newHistory = newHistory.filter((pageNum) => pageNum <= currentPageNumber);
+	newHistory = [...new Set([...newHistory, nextPageNumber].sort((a, b) => a - b))];
+	newHistory = newHistory.filter((pageNum) => pageNum <= nextPageNumber);
 
 	// update current page
-	const currentPage = getPage(currentPageNumber, state.pages);
-	const nextPage = getPage(currentPageNumber + 1, state.pages);
-	state.currentPageNumber = currentPageNumber;
-	state.currentPage = currentPage;
-	state.nextPage = nextPage;
+	const nextPage = getPage(nextPageNumber, allPages);
+	const nextNextPage = getPage(nextPageNumber + 1, allPages);
+	state.currentPageNumber = nextPageNumber;
+	state.currentPage = nextPage;
+	state.nextPage = nextNextPage;
 	state.history = [...newHistory];
+	state.pages = updatedPages;
 };
 
 const nextPage: SettingsFuncType = (state) => {
-	const currentPageNumber = state.currentPageNumber + 1;
-	const newHistory = new Set([...state.history, currentPageNumber].sort((a, b) => a - b));
-	const currentPage = getPage(currentPageNumber, state.pages);
-	const nextPage = getPage(currentPageNumber + 1, state.pages);
-	state.currentPageNumber = currentPageNumber;
-	state.currentPage = currentPage;
-	state.nextPage = nextPage;
+	const allPages = state.pages;
+	const currentPageNumber = state.currentPageNumber;
+	console.log("Current Page Number", currentPageNumber);
+	const currentPage = getPage(currentPageNumber, allPages);
+	const updatedPages = {...allPages, [currentPageNumber]: { ...currentPage, page: { ...currentPage.page, audio_autoplay: false } } };
+
+	const nextPageNumber = currentPageNumber + 1;
+	const newHistory = new Set([...state.history, nextPageNumber].sort((a, b) => a - b));
+	const nextPage = getPage(nextPageNumber, allPages);
+	const nextNextPage = getPage(nextPageNumber + 1, allPages);
+	state.currentPageNumber = nextPageNumber;
+	state.currentPage = nextPage;
+	state.nextPage = nextNextPage;
 	state.history = [...newHistory];
+	state.pages = updatedPages;
 };
 
 const prevPage: SettingsFuncType = (state) => {

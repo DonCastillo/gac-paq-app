@@ -8,6 +8,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "child_ethnicities",
 	audio_ident: "child_ethnicities",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionCheckbox,

@@ -6,6 +6,7 @@ const AboutPage: LangPagePayloadInterface = {
 	title: "Welcome To GAC-PAQ",
 	name: "Welcome To GAC-PAQ",
 	audio_ident: "about",
+	audio_autoplay: true,
 	type: Screen.Page,
 	translations: {
 		"en-CA": {

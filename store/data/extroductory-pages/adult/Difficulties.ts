@@ -8,6 +8,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "difficulties",
 	audio_ident: "child_difficulties",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionCheckbox,

@@ -7,6 +7,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 	name: "Question 17d: How many days did you wheel to places other than school or work in the past week?",
 	column_name: "17.D Tran",
 	audio_ident: "transportation_10",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

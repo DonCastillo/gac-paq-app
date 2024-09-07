@@ -5,6 +5,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 	ident: "household_preamble",
 	heading: "Household Chores",
 	audio_ident: "household_preamble",
+	audio_autoplay: true,
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

@@ -156,6 +156,7 @@ export interface BasePagePayloadInterface {
 	title: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	type: Screen.Page;
 }
 
@@ -164,6 +165,7 @@ export interface BaseQuestionDropdownPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	type: Screen.SingleQuestion;
 }
@@ -172,6 +174,8 @@ export interface BaseQuestionDropdownPayloadInterface {
 export interface BaseQuestionDropdownPayloadLanguageInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	type: Screen.Language;
 }
@@ -181,6 +185,7 @@ export interface BaseQuestionInputPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	type: Screen.SingleQuestion;
 }
@@ -190,6 +195,7 @@ export interface BaseQuestionCheckboxPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	type: Screen.SingleQuestion;
 }
@@ -199,6 +205,7 @@ export interface BaseQuestionRadioPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	type: Screen.SingleQuestion;
 }
@@ -208,6 +215,7 @@ export interface BaseQuestionOptionPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	type: Screen.SingleQuestion;
 }
@@ -217,6 +225,7 @@ export interface BaseQuestionSliderPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	type: Screen.SingleQuestion;
 }
@@ -226,6 +235,7 @@ export interface BaseQuestionTextareaPayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	isFinal?: boolean;
 	type: Screen.SingleQuestion;
@@ -236,6 +246,7 @@ export interface BaseQuestionRadioImagePayloadInterface {
 	ident: string;
 	name: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	column_name: string;
 	isFinal?: boolean;
 	type: Screen.SingleQuestion;
@@ -245,6 +256,8 @@ export interface BaseQuestionRadioImagePayloadInterface {
 export interface BaseSectionPayloadInterface {
 	ident: string;
 	heading: string;
+	audio_ident?: string;
+	audio_autoplay?: boolean;
 	type: Screen.IntroQuestion;
 }
 
@@ -253,6 +266,7 @@ export interface BasePreamblePayloadInterface {
 	ident: string;
 	heading: string;
 	audio_ident?: string;
+	audio_autoplay?: boolean;
 	type: Screen.Preamble;
 }
 
@@ -260,6 +274,8 @@ export interface BasePreamblePayloadInterface {
 interface BaseExtroPayloadInterface {
 	ident: string;
 	name: string;
+	audio_ident?: string;
+	audio_autoplay?: boolean;
 	isFinal?: boolean;
 	type: Screen.ExtroQuestion;
 }

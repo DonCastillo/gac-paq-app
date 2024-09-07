@@ -7,6 +7,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 	name: "Question 16:	How did you go to work in the past week?",
 	column_name: "16.0 Tran",
 	audio_ident: "transportation_4",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

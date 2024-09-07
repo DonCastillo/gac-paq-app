@@ -6,6 +6,7 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	audio_ident: "child_age",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	column_name: "age",
 	translations: {

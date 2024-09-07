@@ -8,6 +8,7 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "sex",
 	audio_ident: "child_sex",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

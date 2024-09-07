@@ -7,6 +7,7 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 	name: "Question 4: How long are your physical education classes?",
 	column_name: "04.0 Scho",
 	audio_ident: "school_4",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

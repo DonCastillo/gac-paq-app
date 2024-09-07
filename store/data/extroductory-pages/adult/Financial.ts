@@ -8,6 +8,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "financial_needs",
 	audio_ident: "financial",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

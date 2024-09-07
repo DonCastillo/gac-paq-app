@@ -6,6 +6,7 @@ const S7Preamble: LangPreamblePayloadInterface = {
 	heading: "Outdoors",
 	audio_ident: "outdoors_preamble",
 	type: Screen.Preamble,
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			heading: "Outdoors",

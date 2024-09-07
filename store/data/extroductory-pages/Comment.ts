@@ -8,6 +8,7 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "comment",
 	audio_ident: "comment",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionTextarea,

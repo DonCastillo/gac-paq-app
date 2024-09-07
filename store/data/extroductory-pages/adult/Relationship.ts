@@ -8,6 +8,7 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "relationship",
 	audio_ident: "relationship",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

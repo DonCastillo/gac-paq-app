@@ -7,6 +7,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 	name: "Question 7: Which of the following images shows what you do most of the time during your breaks?",
 	column_name: "07.0 Scho",
 	audio_ident: "school_7",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

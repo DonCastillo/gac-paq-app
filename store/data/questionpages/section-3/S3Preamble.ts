@@ -5,6 +5,7 @@ const S3Preamble: LangPreamblePayloadInterface = {
 	ident: "work_preamble",
 	heading: "Work",
 	audio_ident: "work_preamble",
+	audio_autoplay: true,
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

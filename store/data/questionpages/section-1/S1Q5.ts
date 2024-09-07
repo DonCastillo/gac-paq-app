@@ -7,6 +7,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 	name: "Question 5: Which of the following images shows what you do most of the time in physical education class?",
 	column_name: "05.0 Scho",
 	audio_ident: "school_5",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

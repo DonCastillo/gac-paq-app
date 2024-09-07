@@ -8,6 +8,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "21.0 Play",
 	audio_ident: "play_1",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
