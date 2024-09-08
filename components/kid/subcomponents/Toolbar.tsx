@@ -44,7 +44,6 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const [sourceType, setSourceType] = useState<"online" | "offline">("online");
 	let NarrationButtonComponent = <></>;
 
-
 	useEffect(() => {
 		// set title
 		if (title === sectionTitle) return;
