@@ -1,4 +1,16 @@
 const PhysicalEducationOptions = {
+	AE: {
+		kid: {
+			not_moving: require("assets/images/kid/AE/options/physical_education/not_moving.webp"),
+			easy_effort: require("assets/images/kid/AE/options/physical_education/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/kid/AE/options/physical_education/medium_or_hard_effort.webp"),
+		},
+		teen: {
+			not_moving: require("assets/images/teen/AE/options/physical_education/not_moving.webp"),
+			easy_effort: require("assets/images/teen/AE/options/physical_education/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/AE/options/physical_education/medium_or_hard_effort.webp"),
+		},
+	},
 	BR: {
 		kid: {
 			not_moving: require("assets/images/kid/BR/options/physical_education/not_moving.webp"),

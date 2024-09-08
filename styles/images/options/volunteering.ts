@@ -1,4 +1,11 @@
 const VolunteeringOptions = {
+	AE: {
+		teen: {
+			not_moving: require("assets/images/teen/AE/options/volunteering/not_moving.webp"),
+			easy_effort: require("assets/images/teen/AE/options/volunteering/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/AE/options/volunteering/medium_or_hard_effort.webp"),
+		},
+	},
 	BR: {
 		teen: {
 			not_moving: require("assets/images/teen/BR/options/volunteering/not_moving.webp"),

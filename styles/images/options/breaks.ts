@@ -1,4 +1,16 @@
 const BreaksOptions = {
+	AE: {
+		kid: {
+			not_moving: require("assets/images/kid/AE/options/breaks/not_moving.webp"),
+			easy_effort: require("assets/images/kid/AE/options/breaks/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/kid/AE/options/breaks/medium_or_hard_effort.webp"),
+		},
+		teen: {
+			not_moving: require("assets/images/teen/AE/options/breaks/not_moving.webp"),
+			easy_effort: require("assets/images/teen/AE/options/breaks/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/AE/options/breaks/medium_or_hard_effort.webp"),
+		},
+	},
 	BR: {
 		kid: {
 			not_moving: require("assets/images/kid/BR/options/breaks/not_moving.webp"),
