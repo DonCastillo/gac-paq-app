@@ -71,6 +71,18 @@ const BreaksOptions = {
 			medium_or_hard_effort: require("assets/images/teen/MX/options/breaks/medium_or_hard_effort.webp"),
 		},
 	},
+	NP: {
+		kid: {
+			not_moving: require("assets/images/kid/NP/options/breaks/not_moving.webp"),
+			easy_effort: require("assets/images/kid/NP/options/breaks/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/kid/NP/options/breaks/medium_or_hard_effort.webp"),
+		},
+		teen: {
+			not_moving: require("assets/images/teen/NP/options/breaks/not_moving.webp"),
+			easy_effort: require("assets/images/teen/NP/options/breaks/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/NP/options/breaks/medium_or_hard_effort.webp"),
+		},
+	},
 };
 
 export default BreaksOptions;
