@@ -71,6 +71,18 @@ const ChoresOptions = {
 			medium_or_hard_effort: require("assets/images/teen/MX/options/chores/medium_or_hard_effort.webp"),
 		},
 	},
+	NG: {
+		kid: {
+			not_moving: require("assets/images/kid/NG/options/chores/not_moving.webp"),
+			easy_effort: require("assets/images/kid/NG/options/chores/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/kid/NG/options/chores/medium_or_hard_effort.webp"),
+		},
+		teen: {
+			not_moving: require("assets/images/teen/NG/options/chores/not_moving.webp"),
+			easy_effort: require("assets/images/teen/NG/options/chores/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/NG/options/chores/medium_or_hard_effort.webp"),
+		},
+	},
 	NP: {
 		kid: {
 			not_moving: require("assets/images/kid/NP/options/chores/not_moving.webp"),

@@ -41,6 +41,13 @@ const VolunteeringOptions = {
 			medium_or_hard_effort: require("assets/images/teen/MX/options/volunteering/medium_or_hard_effort.webp"),
 		},
 	},
+	NG: {
+		teen: {
+			not_moving: require("assets/images/teen/NG/options/volunteering/not_moving.webp"),
+			easy_effort: require("assets/images/teen/NG/options/volunteering/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/NG/options/volunteering/medium_or_hard_effort.webp"),
+		},
+	},
 	NP: {
 		teen: {
 			not_moving: require("assets/images/teen/NP/options/volunteering/not_moving.webp"),
