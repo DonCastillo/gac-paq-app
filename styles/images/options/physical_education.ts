@@ -35,6 +35,18 @@ const PhysicalEducationOptions = {
 			medium_or_hard_effort: require("assets/images/teen/CO/options/physical_education/medium_or_hard_effort.webp"),
 		},
 	},
+	IN: {
+		kid: {
+			not_moving: require("assets/images/kid/IN/options/physical_education/not_moving.webp"),
+			easy_effort: require("assets/images/kid/IN/options/physical_education/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/kid/IN/options/physical_education/medium_or_hard_effort.webp"),
+		},
+		teen: {
+			not_moving: require("assets/images/teen/IN/options/physical_education/not_moving.webp"),
+			easy_effort: require("assets/images/teen/IN/options/physical_education/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/IN/options/physical_education/medium_or_hard_effort.webp"),
+		},
+	},
 };
 
 export default PhysicalEducationOptions;
