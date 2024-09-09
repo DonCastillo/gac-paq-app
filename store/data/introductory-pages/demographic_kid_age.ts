@@ -35,6 +35,31 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "तपाईंको उमेर कति हो?",
+			kid_label: "तपाईंको उमेर कति हो?",
+			adult_label: "तपाईंको उमेर कति हो?",
+			choices: [
+				{
+					label: "८ वर्षको",
+					value: "8",
+				},
+				{
+					label: "९ वर्षको",
+					value: "9",
+				},
+				{
+					label: "१० वर्षको",
+					value: "10",
+				},
+				{
+					label: "११ वर्षको",
+					value: "11",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionDropdown,
 			heading: "Bem-vindo(a)!",

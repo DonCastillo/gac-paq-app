@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionDropdown,
+			heading: "तपाईं लाई स्वागत् छ",
+			label: "यो प्रश्नावली कसले भर्दै छ?",
+			kid_label: "यो प्रश्नावली कसले भर्दै छ?",
+			adult_label: "यो प्रश्नावली कसले भर्दै छ?",
+			choices: [
+				{
+					label: "वालवालिका",
+					value: "child",
+					sublabel: {
+						kid: "८ देखी ११ वर्षको",
+						adult: "८ देखी ११ वर्षको",
+					},
+				},
+				{
+					label: "किशोर किशोरी",
+					value: "teen",
+					sublabel: {
+						kid: "१२ देखी १७ वर्षको",
+						adult: "१२ देखी १७ वर्षको",
+					},
+				},
+				{
+					label: "अभिभावक",
+					value: "adult",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionDropdown,
 			heading: "Bem-vindo(a)!",
