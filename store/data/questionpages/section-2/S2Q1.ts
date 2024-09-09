@@ -27,6 +27,24 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ८",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंको छोरा वा छोरीले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
+			choices: [
+				{
+					label: "गरे",
+					value: "yes",
+				},
+				{
+					label: "गरिनँ",
+					value: "no",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 8",

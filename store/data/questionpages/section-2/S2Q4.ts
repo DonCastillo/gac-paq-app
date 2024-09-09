@@ -42,6 +42,36 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ११",
+			label: "तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने घरायसी कामकाजलाई देखाउँछ?",
+			kid_label: "तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने घरायसी कामकाजलाई देखाउँछ?",
+			adult_label:
+				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने घरायसी कामकाजलाई देखाउँछ?",
+			choices: [
+				{
+					label: "हलचल नगरेको",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "सजिलो प्रयासको शारीरिक गतिविधि गरेको",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम/गाह्रो प्रयासको शारीरिक गतिविधि गरेको",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "थाहा छैन",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Pergunta 11",
