@@ -4,6 +4,9 @@ const NextPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Next",
 	},
+	"ne-NP": {
+		label: "अर्को",
+	},
 	"pt-BR": {
 		label: "Próximo",
 	},
