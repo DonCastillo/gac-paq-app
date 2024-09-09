@@ -58,6 +58,54 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "Question 22",
+			label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label:
+				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 22",
