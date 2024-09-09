@@ -27,6 +27,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १",
+			label: "के तपाईं पछिल्लो (गएको/ बितेको) हप्तामा विध्यालय जानुभयो?",
+			kid_label: "के तपाईं पछिल्लो (गएको/ बितेको) हप्तामा विध्यालय जानुभयो?",
+			adult_label: "के तपाईंको छोरा वा छोरी पछिल्लो (गएको/ बितेको) हप्तामा विद्यालय जानुभयो?",
+			choices: [
+				{
+					label: "गएँ",
+					value: "yes",
+				},
+				{
+					label: "गइनं",
+					value: "no",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 1",

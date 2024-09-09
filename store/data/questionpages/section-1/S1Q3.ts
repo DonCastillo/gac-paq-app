@@ -18,6 +18,16 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			adult_label: "How many physical education classes did your child have in the past week?",
 			max_value: 7,
 		},
+		"ne-NP": {
+			type: Question.QuestionSlider,
+			heading: "प्रश्न ३",
+			label: "पछिल्लो (गएको/बितेको) हप्तामा तपाईंले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/बितेको) हप्तामा तपाईंले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/बितेको) हप्तामा तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
+			max_value: 7,
+		},
 		"pt-BR": {
 			type: Question.QuestionSlider,
 			heading: "Pergunta 3",
