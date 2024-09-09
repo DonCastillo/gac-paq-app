@@ -10,6 +10,10 @@ const S4Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only three more to go!",
 		},
+		"ne-NP": {
+			heading: "यो खण्ड सकियो!",
+			subheading: "केवल तीन वटा मात्रै बाकी छ !",
+		},
 		"pt-BR": {
 			heading: "Seção Completa!",
 			subheading: "Faltam apenas três!",
