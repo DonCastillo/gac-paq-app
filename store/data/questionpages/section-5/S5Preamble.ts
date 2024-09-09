@@ -17,6 +17,15 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"ne-NP": {
+			heading: "सन्गठित क्रियाकलाप",
+			subheading: "खण्ड ५",
+			description: {
+				kid: "यो खन्ड शारिरिक रुपमा सक्रिय हुने सन्गठित क्रियाकलाप र खेलकुद सँग सम्बन्धि छ l यसमा विध्यालय बिदा भए पछि गरिने क्रियाकलाप (उदाहरणका लागि केहि स्कुलमा खेलकुदको लिग वा अतिरिक्त क्रियाकलाप हुने गर्छन) l यसमा विध्यालय समय पछि हुने खेलकुदको लिग वा पौडि, जिम्नास्टिक, नाच र कराते सम्बन्धि कक्षाहरु पनि समाबेस हुन्छन् ।",
+				adult:
+					"यो खन्ड शारिरिक रुपमा सक्रिय हुने सन्गठित क्रियाकलाप र खेलकुद सँग सम्बन्धि छ l यसमा विध्यालय बिदा भए पछि गरिने क्रियाकलाप (उदाहरणका लागि केहि स्कुलमा खेलकुदको लिग वा अतिरिक्त क्रियाकलाप हुने गर्छन) l यसमा विध्यालय समय पछि हुने खेलकुदको लिग वा पौडि, जिम्नास्टिक, नाच र कराते सम्बन्धि कक्षाहरु पनि समाबेस हुन्छन् ।",
+			},
+		},
 		"pt-BR": {
 			heading: "Atividades Organizadas e Esportes",
 			subheading: "Seção 5",
