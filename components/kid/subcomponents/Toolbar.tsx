@@ -1,11 +1,12 @@
 import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
 import { useDispatch, useSelector } from "react-redux";
 import { type AVPlaybackStatus, Audio } from "expo-av";
 import {
+	disableNarrationAutoplay,
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
@@ -34,14 +35,13 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const dispatch = useDispatch();
 	const enableNarration = useSelector(getEnableNarration);
 	const isAudioAutoplaying = currentPage?.page?.audio_autoplay ?? false;
+	const narrationIdent = currentPage?.page?.audio_ident ?? null;
 
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
-	const [isPlaying, setIsPlaying] = useState<boolean>(false);
 	const [hasAudio, setHasAudio] = useState<boolean>(false);
 	const [sound, setSound] = useState<Audio.Sound | null>(null);
 	const [sourceSrc, setSourceSrc] = useState<string | null>(null);
-	const [status, setStatus] = useState<AVPlaybackStatus | null>(null);
-	const [sourceType, setSourceType] = useState<"online" | "offline">("online");
+	const [sourceType] = useState<"online" | "offline">("online");
 	let NarrationButtonComponent = <></>;
 
 	useEffect(() => {
@@ -56,7 +56,13 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 
 	useEffect(() => {
 		dispatch(setIsLoading(true));
-		stopSound();
+		stopSound()
+			.then((result) => {
+				console.log("Sound Stopped: ", result);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
 
 		// determine if audio exists, fetch appropriate audio file /  endpoint
 		// const { sound } = await Audio.Sound.createAsync(require("./../../../assets/audio/P1.wav"), { shouldPlay: true });
@@ -68,7 +74,23 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			}
 		}
 		dispatch(setIsLoading(false));
-	}, [currentPageNumber, mode]);
+
+		if (sound !== null && sound !== undefined) {
+			return () => {
+				console.log("Unloading Sound");
+				sound
+					.unloadAsync()
+					.then(() => {
+						console.log("Sound unloaded");
+					})
+					.catch((error) => {
+						console.log("Error unloading sound", error);
+					});
+			};
+		} else {
+			return undefined;
+		}
+	}, [narrationIdent, currentPageNumber, mode]);
 
 	// load sound
 	useEffect(() => {
@@ -102,39 +124,50 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
 				if (status.isLoaded) {
 					if (status.didJustFinish) {
-						stopSound();
+						stopSound()
+							.then((result) => {
+								console.log("Sound Stopped: ", result);
+							})
+							.catch((error) => {
+								console.log(error);
+							});
+						dispatch(disableNarrationAutoplay(currentPageNumber));
 					}
 				}
 			});
 		}
-		updateStatus();
+		// updateStatus();
 
 		// autoplay sounds only works if the following conditions are met:
 		// 1. if narration is enabled
 		// 2. if there is audio available
 		// 3. if the page's audio_autoplay is set to TRUE
 		if (hasAudio && enableNarration && isAudioAutoplaying) {
-			playSound();
+			playSound()
+				.then(() => {
+					console.log("Sound Playing");
+				})
+				.catch((error) => {
+					console.log(error);
+				});
 		}
 		dispatch(setIsLoading(false));
 	}, [sound]);
 
-	// sound status
-	const updateStatus = async (): Promise<void> => {
-		if (sound !== null && sound !== undefined) {
-			const status = await sound.getStatusAsync();
-			setStatus(status);
-		}
-	};
-
 	// load sound
 	const loadSound = async (): Promise<void> => {
-		await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+		await Audio.setIsEnabledAsync(true);
+		await Audio.setAudioModeAsync({
+			playsInSilentModeIOS: true,
+			allowsRecordingIOS: false,
+			interruptionModeIOS: 1,
+			shouldDuckAndroid: false,
+			interruptionModeAndroid: 1,
+		});
 		if (sourceSrc === "" || sourceSrc === null || sourceSrc === undefined) return;
 		if (sourceType === "online") {
 			const { sound } = await Audio.Sound.createAsync({ uri: sourceSrc });
 			setSound(sound);
-			await updateStatus();
 		}
 	};
 
@@ -142,8 +175,6 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const playSound = async (): Promise<void> => {
 		if (sound !== null && sound !== undefined) {
 			await sound.playAsync();
-			setIsPlaying(true);
-			await updateStatus();
 		}
 	};
 
@@ -151,8 +182,6 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const stopSound = async (): Promise<void> => {
 		if (sound !== null && sound !== undefined) {
 			await sound.stopAsync();
-			setIsPlaying(false);
-			await updateStatus();
 		}
 	};
 
@@ -171,7 +200,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 								dispatch(setEnableNarration(false));
 							})
 							.catch((error) => {
-								console.error(error);
+								console.log(error);
 							});
 					}}
 				/>
@@ -190,7 +219,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 								dispatch(setEnableNarration(true));
 							})
 							.catch((error) => {
-								console.error(error);
+								console.log(error);
 							});
 					}}
 				/>
@@ -222,7 +251,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	);
 };
 
-export default Toolbar;
+export default memo(Toolbar);
 
 const styles = StyleSheet.create({
 	container: {

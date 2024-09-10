@@ -82,6 +82,7 @@ const settingsSlice = createSlice({
 		setIsConnected: reducersActions.setIsConnected,
 		setEnableNarration: reducersActions.setEnableNarration,
 		resetAllNarrations: reducersActions.resetAllNarrationAutoplay,
+		disableNarrationAutoplay: reducersActions.disableNarrationAutoplay,
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
@@ -141,6 +142,7 @@ export const {
 	setIsConnected,
 	setEnableNarration,
 	resetAllNarrations,
+	disableNarrationAutoplay,
 } = settingsSlice.actions;
 
 export const {

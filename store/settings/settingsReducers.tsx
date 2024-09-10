@@ -181,11 +181,17 @@ const disableNarrationAutoplay: DisableNarrationAutoplayFuncType = (state, actio
 	const allPages = state.pages;
 	const currentPageNumber = state.currentPageNumber;
 	const currentPage = getPage(currentPageNumber, allPages);
+	const audioIdent = currentPage.page.audio_ident;
 	const updatedPages = {
 		...allPages,
 		[currentPageNumber]: { ...currentPage, page: { ...currentPage.page, audio_autoplay: false } },
 	};
 	state.pages = updatedPages;
+	if (audioIdent !== undefined && audioIdent !== null) {
+		// state.narrations[audioIdent] = { ...state.narrations[audioIdent], audio_autoplay: false };
+		console.log("Narration Autoplay Disabled: ", state.narrations[audioIdent]);
+		// state.narrations[audioIdent] = null;
+	}
 };
 
 const resetAllNarrationAutoplay: ResetAllNarrationAutoplayFuncType = (state) => {
