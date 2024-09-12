@@ -1,20 +1,19 @@
 import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
 import { useDispatch, useSelector } from "react-redux";
-import { type AVPlaybackStatus, Audio } from "expo-av";
+import { Audio } from "expo-av";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
 	getEnableNarration,
 	getIsLoading,
-	getMode,
 	getSectionTitles,
+	getSoundType,
 	setEnableNarration,
-	setIsLoading,
 } from "store/settings/settingsSlice";
 import { getAudioURI } from "utils/narration";
 
@@ -29,23 +28,20 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const sectionTitles = useSelector(getSectionTitles);
 	const device = useSelector(getDevice);
-	const mode = useSelector(getMode);
 	const isLoading = useSelector(getIsLoading);
 	const dispatch = useDispatch();
 	const enableNarration = useSelector(getEnableNarration);
 	const isAudioAutoplaying = currentPage?.page?.audio_autoplay ?? false;
+	const soundType = useSelector(getSoundType);
 
+	const soundSrc = useRef<null | string>(null);
+	const sound = useRef(new Audio.Sound());
+
+	const [loaded, setLoaded] = useState<boolean>(false);
 	const [title, setTitle] = useState<string>(sectionTitle ?? "");
-	const [isPlaying, setIsPlaying] = useState<boolean>(false);
-	const [hasAudio, setHasAudio] = useState<boolean>(false);
-	const [sound, setSound] = useState<Audio.Sound | null>(null);
-	const [sourceSrc, setSourceSrc] = useState<string | null>(null);
-	const [status, setStatus] = useState<AVPlaybackStatus | null>(null);
-	const [sourceType, setSourceType] = useState<"online" | "offline">("online");
 	let NarrationButtonComponent = <></>;
 
 	useEffect(() => {
-		// set title
 		if (title === sectionTitle) return;
 		if (currentPage.sectionNumber !== null) {
 			setTitle(sectionTitles[currentPage.sectionNumber] ?? "");
@@ -54,109 +50,101 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		}
 	}, [currentPageNumber]);
 
+	// load source file
 	useEffect(() => {
-		dispatch(setIsLoading(true));
 		stopSound();
-
-		// determine if audio exists, fetch appropriate audio file /  endpoint
-		// const { sound } = await Audio.Sound.createAsync(require("./../../../assets/audio/P1.wav"), { shouldPlay: true });
-		if (sourceType === "online") {
+		unloadSound();
+		if (soundType === "online") {
 			const audioURI = getAudioURI();
-			if (audioURI !== null && sourceSrc !== audioURI) {
-				setHasAudio(true);
-				setSourceSrc(audioURI);
+			if (audioURI !== null && soundSrc.current !== audioURI) {
+				console.log("Audio URI: ", audioURI);
+				soundSrc.current = audioURI;
 			}
 		}
-		dispatch(setIsLoading(false));
-	}, [currentPageNumber, mode]);
+		return () => {
+			soundSrc.current = null;
+		};
+	}, []);
 
 	// load sound
 	useEffect(() => {
-		dispatch(setIsLoading(true));
-		loadSound().catch((error) => {
-			console.log("Error loading sound", error);
-			setHasAudio(false);
+		loadSound(soundSrc.current);
+		return () => {
+			stopSound();
+			unloadSound();
+			soundSrc.current = null;
+		};
+	}, [soundSrc]);
+
+	const loadSound = async (soundSrc: string): Promise<void> => {
+		setLoaded(false);
+		await Audio.setIsEnabledAsync(true);
+		await Audio.setAudioModeAsync({
+			playsInSilentModeIOS: true,
+			allowsRecordingIOS: false,
+			interruptionModeIOS: 1,
+			shouldDuckAndroid: false,
+			interruptionModeAndroid: 1,
 		});
-		dispatch(setIsLoading(false));
+		const soundStatus = await sound.current.getStatusAsync();
 
-		if (sound !== null && sound !== undefined) {
-			return () => {
-				console.log("Unloading Sound");
-				sound
-					.unloadAsync()
-					.then(() => {
-						console.log("Sound unloaded");
-					})
-					.catch((error) => {
-						console.log("Error unloading sound", error);
-					});
-			};
-		} else {
-			return undefined;
-		}
-	}, [sourceSrc, sourceType]);
+		// if sound is not loaded, load it
+		if (!soundStatus.isLoaded) {
+			try {
+				// loading sound
+				const result = await sound.current.loadAsync({ uri: soundSrc });
 
-	useEffect(() => {
-		dispatch(setIsLoading(true));
-		if (sound !== null && sound !== undefined) {
-			sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
-				if (status.isLoaded) {
-					if (status.didJustFinish) {
-						stopSound();
+				// if sound is not loaded
+				if (!result.isLoaded) {
+					setLoaded(false);
+					throw new Error("Sound not loaded");
+				} else {
+					setLoaded(true);
+					if (enableNarration && isAudioAutoplaying) {
+						await playSound();
 					}
 				}
-			});
-		}
-		updateStatus();
-
-		// autoplay sounds only works if the following conditions are met:
-		// 1. if narration is enabled
-		// 2. if there is audio available
-		// 3. if the page's audio_autoplay is set to TRUE
-		if (hasAudio && enableNarration && isAudioAutoplaying) {
-			playSound();
-		}
-		dispatch(setIsLoading(false));
-	}, [sound]);
-
-	// sound status
-	const updateStatus = async (): Promise<void> => {
-		if (sound !== null && sound !== undefined) {
-			const status = await sound.getStatusAsync();
-			setStatus(status);
+			} catch (error) {
+				setLoaded(false);
+				console.log("Sound not loaded", error);
+			}
+		} else {
+			setLoaded(true);
 		}
 	};
 
-	// load sound
-	const loadSound = async (): Promise<void> => {
-		await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
-		if (sourceSrc === "" || sourceSrc === null || sourceSrc === undefined) return;
-		if (sourceType === "online") {
-			const { sound } = await Audio.Sound.createAsync({ uri: sourceSrc });
-			setSound(sound);
-			await updateStatus();
-		}
+	const unloadSound = async (): Promise<void> => {
+		await sound.current.unloadAsync();
+		setLoaded(false);
 	};
 
-	// play sound
 	const playSound = async (): Promise<void> => {
-		if (sound !== null && sound !== undefined) {
-			await sound.playAsync();
-			setIsPlaying(true);
-			await updateStatus();
+		try {
+			const soundStatus = await sound.current.getStatusAsync();
+			if (soundStatus.isLoaded) {
+				if (!soundStatus.isPlaying) {
+					await sound.current.playAsync();
+				}
+			}
+		} catch (error) {
+			console.log("Error playing sound", error);
 		}
 	};
 
-	// stop sound
 	const stopSound = async (): Promise<void> => {
-		if (sound !== null && sound !== undefined) {
-			await sound.stopAsync();
-			setIsPlaying(false);
-			await updateStatus();
+		try {
+			const soundStatus = await sound.current.getStatusAsync();
+			if (soundStatus.isLoaded) {
+				if (soundStatus.isPlaying) {
+					await sound.current.stopAsync();
+				}
+			}
+		} catch (error) {
+			console.log("Error playing sound", error);
 		}
 	};
 
-	if (hasAudio) {
+	if (loaded) {
 		if (enableNarration) {
 			NarrationButtonComponent = (
 				<Icon
@@ -171,7 +159,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 								dispatch(setEnableNarration(false));
 							})
 							.catch((error) => {
-								console.error(error);
+								console.log("Error stopping sound", error);
 							});
 					}}
 				/>
@@ -190,7 +178,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 								dispatch(setEnableNarration(true));
 							})
 							.catch((error) => {
-								console.error(error);
+								console.log("Error playing sound", error);
 							});
 					}}
 				/>

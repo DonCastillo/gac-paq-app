@@ -259,7 +259,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 			{background !== null && background}
 			<Main>
 				{!isKeyboardOpen && <ProgressBarKid />}
-				{!isKeyboardOpen && <Toolbar />}
+				{!isKeyboardOpen && <Toolbar key={currentPageNumber} />}
 
 				<TopMain>
 					<AnimatedView key={currentPageNumber}>
