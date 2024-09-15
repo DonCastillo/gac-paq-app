@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
 import { Icon } from "@rneui/themed";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { GeneralStyle } from "styles/general";
 import { moderateScale } from "utils/responsive.utils";
 import { useDispatch, useSelector } from "react-redux";
@@ -51,23 +51,24 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	}, [currentPageNumber]);
 
 	// load source file
-	useEffect(() => {
+	useLayoutEffect(() => {
 		stopSound();
 		unloadSound();
 		if (soundType === "online") {
 			const audioURI = getAudioURI();
 			if (audioURI !== null && soundSrc.current !== audioURI) {
-				console.log("Audio URI: ", audioURI);
 				soundSrc.current = audioURI;
 			}
 		}
 		return () => {
+			stopSound();
+			unloadSound();
 			soundSrc.current = null;
 		};
 	}, []);
 
 	// load sound
-	useEffect(() => {
+	useLayoutEffect(() => {
 		loadSound(soundSrc.current);
 		return () => {
 			stopSound();

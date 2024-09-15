@@ -266,7 +266,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 			<BGLinearGradient />
 			<Main>
 				{!isKeyboardOpen && <ProgressBarAdult />}
-				{!isKeyboardOpen && <Toolbar />}
+				{!isKeyboardOpen && <Toolbar key={currentPageNumber} />}
 				<CenterMain>
 					<AnimatedView
 						key={currentPageNumber}
