@@ -62,7 +62,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-ES": {
-			heading: "Escuela O Colegio",
+			heading: "Escuela o colegio",
 			subheading: "Sección 1",
 			description: {
 				kid: "Esta sección es acerca de lo que haces normalmente durante tu tiempo en la escuela o colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora de comer.",
@@ -71,7 +71,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Escuela O Colegio",
+			heading: "Escuela o colegio",
 			subheading: "Sección 1",
 			description: {
 				kid: "Esta sección es acerca de lo que haces normalmente durante tu tiempo en la escuela o colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora del refrigerio.",
