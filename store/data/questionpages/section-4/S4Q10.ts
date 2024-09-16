@@ -97,7 +97,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till andra platser än skolan eller arbetet under den senaste veckan?",
 			adult_label:
-				"Hur många dagar cyklade ditt barn (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) till andra platser än skolan eller arbetet under den senaste veckan?",
+				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till andra platser än skolan eller arbetet under sen senaste veckan?",
 			choices: [
 				{
 					label: "En dag",
