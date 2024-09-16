@@ -238,6 +238,10 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				"En la última semana, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
 			adult_label:
 				"En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+			kid_sublabel:
+				"Estas actividades no se realizan para competir o entrenar. Algunos ejemplos incluyen juegos de pelota por diversión, jugar en una piscina, saltar en camas elásticas o brincolines, jugar escondidas, jugar en el arenero, construir casas en los árboles, etc.",
+			adult_sublabel:
+				"Estas actividades no se realizan para competir o entrenar. Algunos ejemplos incluyen juegos de pelota por diversión, jugar en una piscina, saltar en camas elásticas o brincolines, jugar escondidas, jugar en el arenero, construir casas en los árboles, etc.",
 			choices: [
 				{
 					label: "Nada",
