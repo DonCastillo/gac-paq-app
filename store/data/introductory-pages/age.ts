@@ -213,7 +213,7 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
-			heading: "¡Bienvenido!",
+			heading: "¡Te damos la bienvenida!",
 			label: "¿Quién está tomando este cuestionario?",
 			kid_label: "¿Quién está tomando este cuestionario?",
 			adult_label: "¿Quién está tomando este cuestionario?",

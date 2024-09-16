@@ -243,7 +243,7 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
-			heading: "¡Bienvenido!",
+			heading: "¡Te damos la bienvenida!",
 			label: "¿Cuántos años tienes?",
 			kid_label: "¿Cuántos años tienes?",
 			adult_label: "¿Cuántos años tienes?",

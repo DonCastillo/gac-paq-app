@@ -66,7 +66,7 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionInput,
-			heading: "¡Bienvenido!",
+			heading: "¡Te damos la bienvenida!",
 			label: "Por favor ingresa tu ID de participante",
 			kid_label: "Por favor ingresa tu ID de participante",
 			adult_label: "Por favor ingresa tu ID de participante",
