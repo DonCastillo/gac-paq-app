@@ -25,10 +25,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
-					label: "0 days",
-					value: "0",
-				},
-				{
 					label: "1 day",
 					value: "1",
 				},
@@ -68,10 +64,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_label:
 				"Na última semana, quantos dias por semana o(a) seu(sua) filho(a) fez atividades que deixaram os músculos dele(a) mais fortes?",
 			choices: [
-				{
-					label: "0 dias",
-					value: "0",
-				},
 				{
 					label: "1 dia",
 					value: "1",
@@ -113,10 +105,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Hur många dagar gjorde ditt barn någon aktivitet som gör musklerna starkare under den senaste veckan?",
 			choices: [
 				{
-					label: "0 dagar",
-					value: "0",
-				},
-				{
 					label: "En dag",
 					value: "1",
 				},
@@ -156,10 +144,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_sublabel: "ตัวอย่างเช่น ยิมนาสติก ปีนเขา วิดพื้น ยกเวท หรือโหนบาร์ เป็นต้น",
 			choices: [
 				{
-					label: "0 วัน",
-					value: "0",
-				},
-				{
 					label: "1 วัน",
 					value: "1",
 				},
@@ -196,10 +180,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			kid_label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
 			adult_label: "在过去一周里，您的孩子有几天或做一些能让他们变得更强壮的活动？",
 			choices: [
-				{
-					label: "0 天",
-					value: "0",
-				},
 				{
 					label: "1 天",
 					value: "1",
@@ -241,10 +221,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Durante la semana pasada, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
 			choices: [
 				{
-					label: "0 días",
-					value: "0",
-				},
-				{
 					label: "1 día",
 					value: "1",
 				},
@@ -284,10 +260,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_label:
 				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
 			choices: [
-				{
-					label: "0 días",
-					value: "0",
-				},
 				{
 					label: "1 día",
 					value: "1",
@@ -332,10 +304,6 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_sublabel:
 				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
 			choices: [
-				{
-					label: "0 jour",
-					value: "0",
-				},
 				{
 					label: "1 jour",
 					value: "1",
