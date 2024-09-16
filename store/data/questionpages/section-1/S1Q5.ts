@@ -14,9 +14,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
 			label:
-				"Which of the following images looks like what you do most of the time in physical education class?",
+				"Which of the following images shows what you do most of the time in physical education class?",
 			kid_label:
-				"Which of the following images looks like what you do most of the time in physical education class?",
+				"Which of the following images shows what you do most of the time in physical education class?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [

@@ -13,10 +13,9 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 7",
-			label:
-				"Which of the following images looks like what you do most of the time during your breaks?",
+			label: "Which of the following images shows what you do most of the time during your breaks?",
 			kid_label:
-				"Which of the following images looks like what you do most of the time during your breaks?",
+				"Which of the following images shows what you do most of the time during your breaks?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time during their breaks?",
 			choices: [
@@ -45,10 +44,9 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ७",
-			label:
-				"Which of the following images looks like what you do most of the time during your breaks?",
+			label: "Which of the following images shows what you do most of the time during your breaks?",
 			kid_label:
-				"Which of the following images looks like what you do most of the time during your breaks?",
+				"Which of the following images shows what you do most of the time during your breaks?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time during their breaks?",
 			choices: [
