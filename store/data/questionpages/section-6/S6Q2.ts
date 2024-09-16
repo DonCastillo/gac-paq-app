@@ -327,6 +327,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
 			adult_label:
 				"Au cours de la dernière semaine, combien de jours ton enfant a-t-il (elle) pratiqué des activités qui rendent ses muscles plus forts?",
+			kid_sublabel:
+				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
+			adult_sublabel:
+				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
 			choices: [
 				{
 					label: "0 jour",

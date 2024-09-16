@@ -152,7 +152,7 @@ const QuestionCheckbox = ({
 				<CheckboxOption
 					{...item}
 					label={
-						(currentPage.section === Section.Question || currentPage.section === Section.Extro)
+						currentPage.section === Section.Question || currentPage.section === Section.Extro
 							? `${optionLetter(index)}.  ${item.label}`
 							: item.label
 					}
