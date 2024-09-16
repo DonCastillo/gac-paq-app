@@ -214,28 +214,28 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionDropdown,
 			heading: "¡Te damos la bienvenida!",
-			label: "¿Quién está tomando este cuestionario?",
-			kid_label: "¿Quién está tomando este cuestionario?",
-			adult_label: "¿Quién está tomando este cuestionario?",
+			label: "¿Quién está respondiendo el cuestionario?",
+			kid_label: "¿Quién está respondiendo el cuestionario?",
+			adult_label: "¿Quién está respondiendo el cuestionario?",
 			choices: [
 				{
-					label: "Niño",
+					label: "Niño o niña",
 					value: "child",
 					sublabel: {
-						kid: "8 a 11 años",
-						adult: "8 a 11 años",
+						kid: "de 8 a 11 años de edad",
+						adult: "de 8 a 11 años de edad",
 					},
 				},
 				{
 					label: "Adolescente",
 					value: "teen",
 					sublabel: {
-						kid: "12 a 17 años",
-						adult: "12 a 17 años",
+						kid: "de 12 a 17 años de edad",
+						adult: "de 12 a 17 años de edad",
 					},
 				},
 				{
-					label: "Padre",
+					label: "Padre/madre o cuidador",
 					value: "adult",
 				},
 			],
