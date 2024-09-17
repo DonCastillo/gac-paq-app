@@ -16,6 +16,14 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"ne-NP": {
+			type: Question.QuestionInput,
+			heading: "तपाईं लाई स्वागत् छ",
+			label: "कृपया तपाइको सहभागि आइडी नम्बर भर्नुहोस्",
+			kid_label: "कृपया तपाइको सहभागि आइडी नम्बर भर्नुहोस्",
+			adult_label: "कृपया तपाइको सहभागि आइडी नम्बर भर्नुहोस्",
+			placeholder: "सहभागि आइडी सिरियल नम्बर",
+		},
 		"pt-BR": {
 			type: Question.QuestionInput,
 			heading: "Bem-vindo(a)!",
@@ -58,11 +66,11 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionInput,
-			heading: "¡Bienvenido!",
-			label: "Por favor ingresa tu ID de participante",
-			kid_label: "Por favor ingresa tu ID de participante",
-			adult_label: "Por favor ingresa tu ID de participante",
-			placeholder: "Número de serie de ID de participante",
+			heading: "¡Te damos la bienvenida!",
+			label: "Por favor, ingresa tu ID de participante",
+			kid_label: "Por favor, ingresa tu ID de participante",
+			adult_label: "Por favor, ingresa tu ID de participante",
+			placeholder: "Número de serie de la identificación de participante",
 		},
 		"fr-CA": {
 			type: Question.QuestionInput,

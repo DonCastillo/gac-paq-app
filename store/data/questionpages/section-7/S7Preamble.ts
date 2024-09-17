@@ -6,10 +6,20 @@ const S7Preamble: LangPreamblePayloadInterface = {
 	heading: "Outdoors",
 	audio_ident: "outdoors_preamble",
 	type: Screen.Preamble,
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			heading: "Outdoors",
 			subheading: "Section 7",
+			description: {
+				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+				adult:
+					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+			},
+		},
+		"ne-NP": {
+			heading: "बाहिरी गतिविधि",
+			subheading: "खण्ड ७",
 			description: {
 				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 				adult:
@@ -53,7 +63,7 @@ const S7Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-ES": {
-			heading: "Al Aire Libre",
+			heading: "Al aire libre",
 			subheading: "Sección 7",
 			description: {
 				kid: "Esta sección trata sobre la cantidad de tiempo que pasas al aire libre. Puede ser en la escuela o colegio, durante las tareas del hogar o quehaceres, el trabajo y el voluntariado, el transporte, así como en tu tiempo libre. También incluye el tiempo que pasas al aire libre, pero sin moverte (por ejemplo, de picnic, leyendo, sentado junto a una fogata).",
@@ -62,7 +72,7 @@ const S7Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Al Aire Libre",
+			heading: "Al aire libre",
 			subheading: "Sección 7",
 			description: {
 				kid: "Esta sección trata sobre la cantidad de tiempo que pasas al aire libre. Puede ser en la escuela o colegio, durante las tareas del hogar o quehaceres, el trabajo y el voluntariado, el transporte, así como en tu tiempo libre. También incluye el tiempo que pasas al aire libre, pero sin moverte (por ejemplo, de picnic, leyendo, sentado junto a una fogata).",

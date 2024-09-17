@@ -10,6 +10,10 @@ const S2Intro: LangSectionPayloadInterface = {
 			heading: "Household Chores",
 			subheading: "Section 2",
 		},
+		"ne-NP": {
+			heading: "घरायसी काम",
+			subheading: "खण्ड २",
+		},
 		"pt-BR": {
 			heading: "Atividades Ou Tarefas Domésticas",
 			subheading: "Seção 2",
@@ -27,11 +31,11 @@ const S2Intro: LangSectionPayloadInterface = {
 			subheading: "第2部分",
 		},
 		"es-ES": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 		},
 		"es-MX": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 		},
 		"fr-CA": {

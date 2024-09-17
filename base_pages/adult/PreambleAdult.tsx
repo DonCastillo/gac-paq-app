@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, View } from "react-native";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
@@ -44,8 +44,19 @@ const PreambleAdult = (): React.ReactElement => {
 
 	// translations
 	const translatedPage = currentPage.page.translations as PreambleInterface;
-
 	const description = translateText(translatedPage.description, mode);
+	const [proceed, setProceed] = useState<boolean>(false);
+
+	// display buttons
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setProceed(true);
+			clearTimeout(timer);
+		}, 3000);
+		return () => {
+			setProceed(false);
+		};
+	}, [currentPageNumber]);
 
 	if (isLoading) {
 		return <LoadingScreenAdult key={currentPageNumber} />;
@@ -100,11 +111,18 @@ const PreambleAdult = (): React.ReactElement => {
 					</AnimatedView>
 				</CenterMain>
 				<Navigation>
-					<BackAndNextNav
-						key={"WithValue"}
-						onPrev={() => dispatch(prevPage())}
-						onNext={() => proceedPage()}
-					/>
+					{proceed || currentPage.page.audio_autoplay === false ? (
+						<BackAndNextNav
+							key={"Proceed"}
+							onPrev={() => dispatch(prevPage())}
+							onNext={() => proceedPage()}
+						/>
+					) : (
+						<BackAndNextNav
+							key={"DontProceed"}
+							onPrev={() => dispatch(prevPage())}
+						/>
+					)}
 				</Navigation>
 			</Main>
 		</View>

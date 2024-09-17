@@ -29,6 +29,9 @@ export type AddSectionTotalPagesFuncType = (state: SettingsSliceInterface, actio
 export type SetKeyboardState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SetEnableNarrationState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SettingsFuncType = (state: SettingsSliceInterface) => void;
+export type DisableNarrationAutoplayFuncType = (state: SettingsSliceInterface) => void;
+export type ResetAllNarrationAutoplayFuncType = (state: SettingsSliceInterface) => void;
+
 
 /** Responses Slice Function Signature */
 export type NewResponseFuncType = (state: Record<string, ResponseInterface>, action: PayloadAction<ResponseInterface>) => void;

@@ -7,15 +7,15 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 	name: "Question 7: Which of the following images shows what you do most of the time during your breaks?",
 	column_name: "07.0 Scho",
 	audio_ident: "school_7",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 7",
-			label:
-				"Which of the following pictures looks like what you do most of the time during your breaks?",
+			label: "Which of the following images shows what you do most of the time during your breaks?",
 			kid_label:
-				"Which of the following pictures looks like what you do most of the time during your breaks?",
+				"Which of the following images shows what you do most of the time during your breaks?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time during their breaks?",
 			choices: [
@@ -38,6 +38,37 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 					label: "Don't know",
 					value: "0",
 					image_ident: "dont_know",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ७",
+			label: "Which of the following images shows what you do most of the time during your breaks?",
+			kid_label:
+				"Which of the following images shows what you do most of the time during your breaks?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time during their breaks?",
+			choices: [
+				{
+					label: "हलचल नगरेको",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "सजिलो प्रयासको शारीरिक गतिविधि गरेको",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम/गाह्रो प्रयासको शारीरिक गतिविधि गरेको",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "थाहा छैन",
+					image_ident: "dont_know",
+					value: "0",
 				},
 			],
 		},

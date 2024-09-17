@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionDropdown,
+			heading: "तपाईं लाई स्वागत् छ",
+			label: "यो प्रश्नावली कसले भर्दै छ?",
+			kid_label: "यो प्रश्नावली कसले भर्दै छ?",
+			adult_label: "यो प्रश्नावली कसले भर्दै छ?",
+			choices: [
+				{
+					label: "वालवालिका",
+					value: "child",
+					sublabel: {
+						kid: "८ देखी ११ वर्षको",
+						adult: "८ देखी ११ वर्षको",
+					},
+				},
+				{
+					label: "किशोर किशोरी",
+					value: "teen",
+					sublabel: {
+						kid: "१२ देखी १७ वर्षको",
+						adult: "१२ देखी १७ वर्षको",
+					},
+				},
+				{
+					label: "अभिभावक",
+					value: "adult",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionDropdown,
 			heading: "Bem-vindo(a)!",
@@ -184,29 +213,29 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
-			heading: "¡Bienvenido!",
-			label: "¿Quién está tomando este cuestionario?",
-			kid_label: "¿Quién está tomando este cuestionario?",
-			adult_label: "¿Quién está tomando este cuestionario?",
+			heading: "¡Te damos la bienvenida!",
+			label: "¿Quién está respondiendo el cuestionario?",
+			kid_label: "¿Quién está respondiendo el cuestionario?",
+			adult_label: "¿Quién está respondiendo el cuestionario?",
 			choices: [
 				{
-					label: "Niño",
+					label: "Niño o niña",
 					value: "child",
 					sublabel: {
-						kid: "8 a 11 años",
-						adult: "8 a 11 años",
+						kid: "de 8 a 11 años de edad",
+						adult: "de 8 a 11 años de edad",
 					},
 				},
 				{
 					label: "Adolescente",
 					value: "teen",
 					sublabel: {
-						kid: "12 a 17 años",
-						adult: "12 a 17 años",
+						kid: "de 12 a 17 años de edad",
+						adult: "de 12 a 17 años de edad",
 					},
 				},
 				{
-					label: "Padre",
+					label: "Padre/madre o cuidador",
 					value: "adult",
 				},
 			],

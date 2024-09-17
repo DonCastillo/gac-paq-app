@@ -4,6 +4,9 @@ const BackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Back",
 	},
+	"ne-NP": {
+		label: "पछाडि",
+	},
 	"pt-BR": {
 		label: "Voltar",
 	},

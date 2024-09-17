@@ -8,14 +8,15 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "14.0 Work",
 	audio_ident: "work_3",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
 			label:
-				"Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
+				"Which of the following images shows what you do most of the time while volunteering and/or working?",
 			kid_label:
-				"Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
+				"Which of the following images shows what you do most of the time while volunteering and/or working?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
 			choices: [

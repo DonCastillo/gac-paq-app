@@ -7,6 +7,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 	name: "Question 9: How many days did you do chores during the past week?",
 	column_name: "09.0 Hous",
 	audio_ident: "household_2",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
@@ -42,6 +43,44 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ९",
+			label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति दिन घरायसी कामकाज गर्नुभयो?",
+			kid_label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति दिन घरायसी कामकाज गर्नुभयो?",
+			adult_label:
+				"तपाईंको छोरा वा छोरीले पछिल्लो (गएको/ बितेको) हप्तामा कति दिन घरायसी कामकाज गर्नुभयो?",
+			choices: [
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
 					value: "7",
 				},
 			],

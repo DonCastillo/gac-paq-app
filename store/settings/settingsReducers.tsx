@@ -21,6 +21,8 @@ import type {
 	SetIsConnectedFuncType,
 	SetIsLoadingFuncType,
 	SetEnableNarrationState,
+	DisableNarrationAutoplayFuncType,
+	ResetAllNarrationAutoplayFuncType,
 } from "interface/function.type";
 import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
@@ -79,34 +81,50 @@ const setIsLoading: SetIsLoadingFuncType = (state, action) => {
 };
 
 const skipPage: SkipPageFuncType = (state, action) => {
-	let currentPageNumber = action.payload;
+	const allPages = state.pages;
+
+	let nextPageNumber = action.payload;
 	let newHistory: number[] = [...state.history];
 
-	if (currentPageNumber <= 0) {
-		currentPageNumber = 1;
+	if (nextPageNumber <= 0) {
+		nextPageNumber = 1;
 	}
 
 	// update history
-	newHistory = [...new Set([...newHistory, currentPageNumber].sort((a, b) => a - b))];
-	newHistory = newHistory.filter((pageNum) => pageNum <= currentPageNumber);
+	newHistory = [...new Set([...newHistory, nextPageNumber].sort((a, b) => a - b))];
+	newHistory = newHistory.filter((pageNum) => pageNum <= nextPageNumber);
 
 	// update current page
-	const currentPage = getPage(currentPageNumber, state.pages);
-	const nextPage = getPage(currentPageNumber + 1, state.pages);
-	state.currentPageNumber = currentPageNumber;
-	state.currentPage = currentPage;
-	state.nextPage = nextPage;
+	const nextPage = getPage(nextPageNumber, allPages);
+	const nextNextPage = getPage(nextPageNumber + 1, allPages);
+
+	// disable current page narration autoplay
+	disableNarrationAutoplay(state);
+
+	state.currentPageNumber = nextPageNumber;
+	state.currentPage = nextPage;
+	state.nextPage = nextNextPage;
 	state.history = [...newHistory];
 };
 
 const nextPage: SettingsFuncType = (state) => {
-	const currentPageNumber = state.currentPageNumber + 1;
-	const newHistory = new Set([...state.history, currentPageNumber].sort((a, b) => a - b));
-	const currentPage = getPage(currentPageNumber, state.pages);
-	const nextPage = getPage(currentPageNumber + 1, state.pages);
-	state.currentPageNumber = currentPageNumber;
-	state.currentPage = currentPage;
-	state.nextPage = nextPage;
+	const allPages = state.pages;
+	const currentPageNumber = state.currentPageNumber;
+	const nextPageNumber = currentPageNumber + 1;
+
+	// update history
+	const newHistory = new Set([...state.history, nextPageNumber].sort((a, b) => a - b));
+
+	// update current page
+	const nextPage = getPage(nextPageNumber, allPages);
+	const nextNextPage = getPage(nextPageNumber + 1, allPages);
+
+	// disable current page narration autoplay
+	disableNarrationAutoplay(state);
+
+	state.currentPageNumber = nextPageNumber;
+	state.currentPage = nextPage;
+	state.nextPage = nextNextPage;
 	state.history = [...newHistory];
 };
 
@@ -123,6 +141,8 @@ const prevPage: SettingsFuncType = (state) => {
 		newHistory !== undefined && newHistory !== null && newHistory.length > 0
 			? newHistory.at(-1)
 			: 1; // remove previous page
+
+	// update current page
 	const currentPage = getPage(currentPageNumber ?? 1, state.pages);
 	const nextPage = getPage((currentPageNumber ?? 1) + 1, state.pages);
 
@@ -168,6 +188,35 @@ const setEnableNarration: SetEnableNarrationState = (state, action) => {
 	state.enableNarration = action.payload;
 };
 
+const disableNarrationAutoplay: DisableNarrationAutoplayFuncType = (state) => {
+	const allPages = state.pages;
+	const currentPageNumber = state.currentPageNumber;
+	const currentPage = getPage(currentPageNumber, allPages);
+
+	// update pages with the current page's audio_autoplay set to false
+	const updatedPages = {
+		...allPages,
+		[currentPageNumber]: { ...currentPage, page: { ...currentPage.page, audio_autoplay: false } },
+	};
+	state.pages = updatedPages;
+
+	// update current page's audio_autoplay to false
+	if (state.currentPage.pageNumber === currentPageNumber) {
+		state.currentPage = {
+			...state.currentPage,
+			page: { ...state.currentPage.page, audio_autoplay: false },
+		};
+	}
+};
+
+const resetAllNarrationAutoplay: ResetAllNarrationAutoplayFuncType = (state) => {
+	const allPages = state.pages;
+	const updatedPages = Object.entries(allPages).map(([key, page]) => {
+		return { ...page, page: { ...page.page, audio_autoplay: true } };
+	});
+	state.pages = updatedPages;
+};
+
 const reset: SettingsFuncType = (state) => {
 	setMode(state, { type: "", payload: undefined });
 	skipPage(state, { type: "", payload: 1 });
@@ -201,4 +250,6 @@ export default {
 	setStartDateTime,
 	setIsConnected,
 	setEnableNarration,
+	disableNarrationAutoplay,
+	resetAllNarrationAutoplay,
 };

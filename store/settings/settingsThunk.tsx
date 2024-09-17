@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import Mode from "constants/mode.enum";
 import type { ModeType } from "interface/union.type";
+import type { SettingsSliceInterface } from "./settingsSlice";
 
 export const getNarrationPayload = createAsyncThunk(
 	"settings/fetchNarrations",
@@ -10,8 +11,8 @@ export const getNarrationPayload = createAsyncThunk(
 			return null;
 		}
 		const finalMode = mode === Mode.Adult ? "adult" : "kid";
-		const { settings } = getState();
-		const { directusAccessToken, directusBaseEndpoint } = settings;
+		const { settings } = getState() as any;
+		const { directusAccessToken, directusBaseEndpoint } = settings as SettingsSliceInterface;
 
 		const fields = "*,language.lang_code,mode.value";
 		const limit = "-1";

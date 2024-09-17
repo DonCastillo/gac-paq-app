@@ -7,6 +7,7 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 	name: "Question 1: Did you attend school in the past week?",
 	column_name: "01.0 Scho",
 	audio_ident: "school_1",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
@@ -22,6 +23,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १",
+			label: "के तपाईं पछिल्लो (गएको/ बितेको) हप्तामा विध्यालय जानुभयो?",
+			kid_label: "के तपाईं पछिल्लो (गएको/ बितेको) हप्तामा विध्यालय जानुभयो?",
+			adult_label: "के तपाईंको छोरा वा छोरी पछिल्लो (गएको/ बितेको) हप्तामा विद्यालय जानुभयो?",
+			choices: [
+				{
+					label: "गएँ",
+					value: "yes",
+				},
+				{
+					label: "गइनं",
 					value: "no",
 				},
 			],

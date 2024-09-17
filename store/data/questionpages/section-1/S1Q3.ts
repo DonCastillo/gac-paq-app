@@ -7,6 +7,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 	name: "Question 3: How many physical education classes did you have in the past week?",
 	column_name: "03.0 Scho",
 	audio_ident: "school_3",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
@@ -15,6 +16,16 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			label: "How many physical education classes did you have in the past week?",
 			kid_label: "How many physical education classes did you have in the past week?",
 			adult_label: "How many physical education classes did your child have in the past week?",
+			max_value: 7,
+		},
+		"ne-NP": {
+			type: Question.QuestionSlider,
+			heading: "प्रश्न ३",
+			label: "पछिल्लो (गएको/बितेको) हप्तामा तपाईंले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/बितेको) हप्तामा तपाईंले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/बितेको) हप्तामा तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
 			max_value: 7,
 		},
 		"pt-BR": {

@@ -10,6 +10,10 @@ const S5Intro: LangSectionPayloadInterface = {
 			heading: "Organized Activities",
 			subheading: "Section 5",
 		},
+		"ne-NP": {
+			heading: "सन्गठित क्रियाकलाप",
+			subheading: "खण्ड ५",
+		},
 		"pt-BR": {
 			heading: "Atividades Organizadas e Esportes",
 			subheading: "Seção 5",
@@ -27,11 +31,11 @@ const S5Intro: LangSectionPayloadInterface = {
 			subheading: "第5部分",
 		},
 		"es-ES": {
-			heading: "Actividades Organizadas",
+			heading: "Actividades organizadas",
 			subheading: "Sección 5",
 		},
 		"es-MX": {
-			heading: "Actividades Organizadas",
+			heading: "Actividades organizadas",
 			subheading: "Sección 5",
 		},
 		"fr-CA": {

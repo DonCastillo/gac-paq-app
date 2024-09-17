@@ -8,6 +8,7 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 	column_name: "16.C Tran",
 	type: Screen.SingleQuestion,
 	audio_ident: "transportation_6",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

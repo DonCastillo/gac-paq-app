@@ -7,6 +7,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 	name: "Question 2: How many days did you attend school in the past week?",
 	column_name: "02.0 Scho",
 	audio_ident: "school_2",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
@@ -42,6 +43,43 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २",
+			label: "पछिल्लो (गएको/बितेको) हप्तामा तपाईं कति दिन विध्यालय जानुभयो?",
+			kid_label: "पछिल्लो (गएको/बितेको) हप्तामा तपाईं कति दिन विध्यालय जानुभयो?",
+			adult_label: "तपाईंको छोरा वा छोरी पछिल्लो (गएको/बितेको) हप्तामा कति दिन विध्यालय जानुभयो?",
+			choices: [
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
 					value: "7",
 				},
 			],

@@ -5,11 +5,21 @@ const S6Preamble: LangPreamblePayloadInterface = {
 	ident: "play_preamble",
 	heading: "Play or Free Time",
 	audio_ident: "play_preamble",
+	audio_autoplay: true,
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
+			description: {
+				kid: "This includes all the physical activity that you do during your play or free time. This does not include organized activities or break times in school. For the next questions, do not include the activities that you just told us about.",
+				adult:
+					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
+			},
+		},
+		"ne-NP": {
+			heading: "खाली समय वा खेल्ने समय",
+			subheading: "खण्ड ६",
 			description: {
 				kid: "This includes all the physical activity that you do during your play or free time. This does not include organized activities or break times in school. For the next questions, do not include the activities that you just told us about.",
 				adult:
@@ -53,7 +63,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-ES": {
-			heading: "Juego O Tiempo Libre",
+			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 			description: {
 				kid: "Esto incluye toda la actividad física que realizas durante tu tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio.",
@@ -62,7 +72,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Juego O Tiempo Libre",
+			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 			description: {
 				kid: "Esto incluye toda la actividad física que realizas durante tu tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio. Para las siguientes preguntas, no incluyas las actividades que acabas de informar.",

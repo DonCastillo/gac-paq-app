@@ -11,6 +11,10 @@ const ErrorPage: LangPagePayloadInterface = {
 			heading: "Error",
 			description: "There is a problem submitting your response.\n\nPlease try again.",
 		},
+		"ne-NP": {
+			heading: "मिलेन",
+			description: "तपाईंको उत्तर पठाउनमा समस्या छ।\n\nकृपया पुन: प्रयास गर्नुहोस्।",
+		},
 		"pt-BR": {
 			heading: "Erro",
 			description: "Há um problema ao enviar suas respostas.\n\nPor favor, tente novamente.",
