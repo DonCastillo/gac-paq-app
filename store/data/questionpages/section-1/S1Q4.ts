@@ -7,6 +7,7 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 	name: "Question 4: How long are your physical education classes?",
 	column_name: "04.0 Scho",
 	audio_ident: "school_4",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
@@ -34,6 +35,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "Don't know",
+					value: "Don't know",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ४",
+			label: "शारीरिक शिक्षासम्बन्धी कक्षाहरु कति समयको (लामो) हुने गर्दछन्?",
+			kid_label: "शारीरिक शिक्षासम्बन्धी कक्षाहरु कति समयको (लामो) हुने गर्दछन्?",
+			adult_label: "शारीरिक शिक्षासम्बन्धी कक्षाहरु कति समय को (लामो) हुने गर्दछन्?",
+			choices: [
+				{
+					label: "प्रति कक्षा ३० मिनेटभन्दा कम",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "प्रति कक्षा ३०-४५ मिनेट",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "प्रति कक्षा ४६-६० मिनेट",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "प्रति कक्षा ६० मिनेटभन्दा बढी",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "थाहा छैन",
 					value: "Don't know",
 				},
 			],

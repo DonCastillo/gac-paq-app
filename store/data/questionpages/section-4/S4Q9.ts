@@ -6,12 +6,13 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_9",
 	name: "Question 17c: On a normal day, how much time did you walk to places other than school or work?",
 	column_name: "17.C Tran",
-	audio_ident: "transportation_9",
+	audio_ident: "transportation_10",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17c",
+			heading: "Question 17c - Walking",
 			label: "On a normal day, how much time did you walk to places other than school or work?",
 			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
 			adult_label:
@@ -37,7 +38,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 17c",
+			heading: "Pergunta 17c - Andando",
 			label:
 				"Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			kid_label:
@@ -65,7 +66,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 17c",
+			heading: "Fråga 17c - Gående",
 			label:
 				"Hur mycket tid spenderade du på att gå till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
 			kid_label:
@@ -93,7 +94,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 17c",
+			heading: "คำถาม 17c - เดิน",
 			label:
 				"โดยปกติ น้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			kid_label:
@@ -121,7 +122,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 17c",
+			heading: "问题 17c - 步行",
 			label: "在一个正常的日子里，您步行到学校或工作以外的地方通常需要多长时间？",
 			kid_label: "在一个正常的日子里，您步行到学校或工作以外的地方通常需要多长时间？",
 			adult_label: "在一个正常的日子里，您的孩子步行到学校或工作以外的其他地方通常需要多长时间？",
@@ -146,7 +147,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17c",
+			heading: "Pregunta 17c - Caminando",
 			label:
 				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
 			kid_label:
@@ -174,7 +175,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17c",
+			heading: "Pregunta 17c - Caminando",
 			label:
 				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo, la escuela o el colegio?",
 			kid_label:
@@ -202,7 +203,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17c",
+			heading: "Question 17c - Marche",
 			label:
 				" Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
 			kid_label:

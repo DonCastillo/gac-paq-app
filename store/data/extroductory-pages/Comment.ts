@@ -8,6 +8,7 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "comment",
 	audio_ident: "comment",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionTextarea,
@@ -88,13 +89,13 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			heading: "Comentarios",
 			placeholder: "Escribe tus comentarios aquí",
 			label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
+				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
 			kid_label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
+				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
 			adult_label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar? ",
-			kid_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
-			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
+				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+			kid_sublabel: "Si es así escríbelas en el siguiente cuadro por favor",
+			adult_sublabel: "Si es así escríbelas en el siguiente cuadro por favor",
 		},
 		"fr-CA": {
 			type: Question.QuestionTextarea,

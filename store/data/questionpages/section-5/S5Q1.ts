@@ -7,6 +7,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 	name: "Question 18:	Did you do any organized activities during the past week?",
 	column_name: "18.0 Orga",
 	audio_ident: "organized_1",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
@@ -124,6 +125,8 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
 			kid_label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
 			adult_label: "¿Su hija o hijo realizó alguna actividad organizada durante la semana pasada?",
+			kid_sublabel: "Por ejemplo ir a una academia de fútbol, natación, danza, taekwondo u otro.",
+			adult_sublabel: "Por ejemplo ir a una academia de fútbol, natación, danza, taekwondo u otro.",
 			choices: [
 				{
 					label: "Sí",

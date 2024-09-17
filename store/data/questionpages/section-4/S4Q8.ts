@@ -8,10 +8,11 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "17.B Tran",
 	audio_ident: "transportation_8",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17b",
+			heading: "Question 17b - Walking",
 			label: "How many days did you walk to places other than school or work in the past week?",
 			kid_label: "How many days did you walk to places other than school or work in the past week?",
 			adult_label:
@@ -49,7 +50,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 17b",
+			heading: "Pergunta 17b - Andando",
 			label:
 				"Na última semana, quantos dias você caminhou para outros lugares além da escola ou trabalho?",
 			kid_label:
@@ -89,7 +90,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 17b",
+			heading: "Fråga 17b - Gående",
 			label:
 				"Hur många dagar gick du till andra platser än skolan eller arbetet under sen senaste veckan?",
 			kid_label:
@@ -129,7 +130,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 17b",
+			heading: "คำถาม 17b - เดิน",
 			label:
 				"สัปดาห์ที่แล้ว น้องเดิน เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานทั้งหมดกี่วัน?",
 			kid_label:
@@ -169,7 +170,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 17b",
+			heading: "问题 17b - 步行",
 			label: "在过去一周里，除了上学或工作，你有多少天步行去别的地方？",
 			kid_label: "在过去一周里，除了上学或工作，你有多少天步行去别的地方？",
 			adult_label: "在过去一周里，您的孩子有多少天步行去除了学校或工作以外的地方？",
@@ -206,7 +207,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17b",
+			heading: "Pregunta 17b - Caminando",
 			label:
 				"¿Cuántos días caminaste para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
 			kid_label:
@@ -246,7 +247,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17b",
+			heading: "Pregunta 17b - Caminando",
 			label:
 				"¿Cuántos días caminaste para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			kid_label:
@@ -286,7 +287,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17b",
+			heading: "Question 17b - Marche",
 			label:
 				"Combien de jours as-tu marché pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
 			kid_label:

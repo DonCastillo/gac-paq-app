@@ -8,6 +8,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "13.0 Work",
 	audio_ident: "work_2",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

@@ -4,16 +4,17 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S2Q1: LangQuestionRadioPayloadInterface = {
 	ident: "household_1",
-	name: "Question 8: In the past week, did you do active chores or tasks?",
+	name: "Question 8: In the past week, did you do any active chores or tasks?",
 	column_name: "08.0 Hous",
 	audio_ident: "household_1",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 8",
-			label: "In the past week, did you do active chores or tasks?",
-			kid_label: "In the past week, did you do active chores or tasks?",
+			label: "In the past week, did you do any active chores or tasks?",
+			kid_label: "In the past week, did you do any active chores or tasks?",
 			adult_label: "In the past week, did your child do active chores or tasks?",
 			choices: [
 				{
@@ -22,6 +23,24 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ८",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंको छोरा वा छोरीले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
+			choices: [
+				{
+					label: "गरे",
+					value: "yes",
+				},
+				{
+					label: "गरिनँ",
 					value: "no",
 				},
 			],

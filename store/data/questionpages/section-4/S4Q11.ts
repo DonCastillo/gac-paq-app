@@ -4,14 +4,15 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q11: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_11",
-	name: "Question 17e: On a normal day, how much time did you wheel to places other than school or work?",
+	name: "Question 17c: On a normal day, how much time did you wheel to places other than school or work?",
 	column_name: "17.E Tran",
 	audio_ident: "transportation_11",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17e",
+			heading: "Question 17c - Wheeling",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
 			kid_label:
 				"On a normal day, how much time did you wheel to places other than school or work?",
@@ -38,7 +39,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 17e",
+			heading: "Pergunta 17c - Bicicleta",
 			label:
 				"Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
 			kid_label:
@@ -66,7 +67,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 17e",
+			heading: "Fråga 17c - Cyklade",
 			label:
 				"Hur mycket tid spenderade du på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
 			kid_label:
@@ -94,7 +95,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 17e",
+			heading: "คำถาม 17c - ล้อ",
 			label:
 				"ในวันปกติ คุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			kid_label:
@@ -122,7 +123,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 17e",
+			heading: "问题 17c - 骑车",
 			label: "在平常的日子里，除了上学或工作，您骑自行车去其他地方要花多少时间？",
 			kid_label: "在平常的日子里，除了上学或工作，您骑自行车去其他地方要花多少时间？",
 			adult_label: "在平常的日子里，除了上学或工作，您的孩子骑自行车去其他地方要花多少时间？",
@@ -147,7 +148,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17e",
+			heading: "Pregunta 17c - En ruedas",
 			label:
 				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
 			kid_label:
@@ -175,7 +176,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17e",
+			heading: "Pregunta 17c - En ruedas",
 			label:
 				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo, la escuela o el colegio?",
 			kid_label:
@@ -203,7 +204,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17e",
+			heading: "Question 17c - Rouler",
 			label:
 				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail? ",
 			kid_label:

@@ -10,6 +10,10 @@ const S6Intro: LangSectionPayloadInterface = {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
 		},
+		"ne-NP": {
+			heading: "खाली समय वा खेल्ने समय",
+			subheading: "खण्ड ६",
+		},
 		"pt-BR": {
 			heading: "Brincadeiras Ou Tempo Livre",
 			subheading: "Seção 6",
@@ -27,11 +31,11 @@ const S6Intro: LangSectionPayloadInterface = {
 			subheading: "第6部分",
 		},
 		"es-ES": {
-			heading: "Juego O Tiempo Libre",
+			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 		},
 		"es-MX": {
-			heading: "Juego O Tiempo Libre",
+			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 		},
 		"fr-CA": {

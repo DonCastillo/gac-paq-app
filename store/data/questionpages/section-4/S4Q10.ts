@@ -4,14 +4,15 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const S4Q10: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_10",
-	name: "Question 17d: How many days did you wheel to places other than school or work in the past week?",
+	name: "Question 17b: How many days did you wheel to places other than school or work in the past week?",
 	column_name: "17.D Tran",
-	audio_ident: "transportation_10",
+	audio_ident: "transportation_9",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17d",
+			heading: "Question 17b - Wheeling",
 			label: "How many days did you wheel to places other than school or work in the past week?",
 			kid_label:
 				"How many days did you wheel to places other than school or work in the past week?",
@@ -50,7 +51,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 17d",
+			heading: "Pergunta 17b - Bicicleta",
 			label:
 				"Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
 			kid_label:
@@ -90,13 +91,13 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 17d",
+			heading: "Fråga 17b - Cyklade",
 			label:
 				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till andra platser än skolan eller arbetet under den senaste veckan?",
 			kid_label:
 				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) du till andra platser än skolan eller arbetet under den senaste veckan?",
 			adult_label:
-				"Hur många dagar cyklade ditt barn (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) till andra platser än skolan eller arbetet under den senaste veckan?",
+				"Hur många dagar cyklade (eller åkte rullstol, e-cykel, sparkcykel eller rollerblades) ditt barn till andra platser än skolan eller arbetet under sen senaste veckan?",
 			choices: [
 				{
 					label: "En dag",
@@ -130,7 +131,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 17d",
+			heading: "คำถาม 17b - ล้อ",
 			label: "สัปดาห์ที่แล้ว คุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
 			kid_label:
 				"สัปดาห์ที่แล้ว คุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
@@ -169,7 +170,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 17d",
+			heading: "问题 17b - 骑车",
 			label: "在过去一周里，除了上学或工作，您有多少天骑自行车去其他地方？",
 			kid_label: "在过去一周里，除了上学或工作，您有多少天骑自行车去其他地方？",
 			adult_label: "在过去一周里，除了上学或工作，您的孩子有多少天骑自行车去其他地方？",
@@ -206,7 +207,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17d",
+			heading: "Pregunta 17b - En ruedas",
 			label:
 				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
 			kid_label:
@@ -246,7 +247,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17d",
+			heading: "Pregunta 17b - En ruedas",
 			label:
 				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
 			kid_label:
@@ -286,7 +287,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 17d",
+			heading: "Question 17b - Rouler",
 			label:
 				"Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
 			kid_label:

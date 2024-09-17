@@ -7,15 +7,16 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 	name: "Question 5: Which of the following images shows what you do most of the time in physical education class?",
 	column_name: "05.0 Scho",
 	audio_ident: "school_5",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
 			label:
-				"Which of the following pictures looks like what you do most of the time in physical education class?",
+				"Which of the following images shows what you do most of the time in physical education class?",
 			kid_label:
-				"Which of the following pictures looks like what you do most of the time in physical education class?",
+				"Which of the following images shows what you do most of the time in physical education class?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [
@@ -36,6 +37,38 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				},
 				{
 					label: "Don't know",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ५",
+			label:
+				"तल दिएको कुन तस्विरले तपाईंले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ होला?",
+			kid_label:
+				"तल दिएको कुन तस्विरले तपाईंले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ होला?",
+			adult_label:
+				"    तल दिएको कुन तस्बिरले तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने काम देखाउँछ होला?",
+			choices: [
+				{
+					label: "हलचल नगरेको",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "सजिलो प्रयासको शारीरिक गतिविधि गरेको",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम/गाह्रो प्रयासको शारीरिक गतिविधि गरेको",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "थाहा छैन",
 					image_ident: "dont_know",
 					value: "0",
 				},

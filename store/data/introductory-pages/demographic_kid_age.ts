@@ -6,6 +6,7 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	audio_ident: "child_age",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	column_name: "age",
 	translations: {
@@ -30,6 +31,31 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 				{
 					label: "11 years old",
+					value: "11",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "तपाईंको उमेर कति हो?",
+			kid_label: "तपाईंको उमेर कति हो?",
+			adult_label: "तपाईंको उमेर कति हो?",
+			choices: [
+				{
+					label: "८ वर्षको",
+					value: "8",
+				},
+				{
+					label: "९ वर्षको",
+					value: "9",
+				},
+				{
+					label: "१० वर्षको",
+					value: "10",
+				},
+				{
+					label: "११ वर्षको",
 					value: "11",
 				},
 			],
@@ -161,7 +187,7 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
-			heading: "¡Bienvenido!",
+			heading: "¡Te damos la bienvenida!",
 			label: "¿Cuántos años tienes?",
 			kid_label: "¿Cuántos años tienes?",
 			adult_label: "¿Cuántos años tienes?",

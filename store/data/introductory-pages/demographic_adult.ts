@@ -6,6 +6,7 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 	ident: "age",
 	name: "age",
 	audio_ident: "child_age",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	column_name: "age",
 	translations: {
@@ -54,6 +55,55 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 				},
 				{
 					label: "17 years old",
+					value: "17",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionDropdown,
+			heading: "तपाईं लाई स्वागत् छ",
+			label: "तपाईंको बच्चा कति वर्षको भयो?",
+			kid_label: "तपाईंको बच्चा कति वर्षको भयो?",
+			adult_label: "तपाईंको बच्चा कति वर्षको भयो?",
+			choices: [
+				{
+					label: "८ वर्षको",
+					value: "8",
+				},
+				{
+					label: "९ वर्षको",
+					value: "9",
+				},
+				{
+					label: "१० वर्षको",
+					value: "10",
+				},
+				{
+					label: "११ वर्षको",
+					value: "11",
+				},
+				{
+					label: "१२ वर्षको",
+					value: "12",
+				},
+				{
+					label: "१३ वर्षको",
+					value: "13",
+				},
+				{
+					label: "१४ वर्षको",
+					value: "14",
+				},
+				{
+					label: "१५ वर्षको",
+					value: "15",
+				},
+				{
+					label: "१६ वर्षको",
+					value: "16",
+				},
+				{
+					label: "१७ वर्षको",
 					value: "17",
 				},
 			],
@@ -305,10 +355,10 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
-			heading: "¡Bienvenido!",
-			label: "¿Cuántos años tiene tu hijo?",
-			kid_label: "¿Cuántos años tiene tu hijo?",
-			adult_label: "¿Cuántos años tiene tu hijo?",
+			heading: "¡Te damos la bienvenida!",
+			label: "¿Cuántos años tiene su hija o hijo?",
+			kid_label: "¿Cuántos años tiene su hija o hijo?",
+			adult_label: "¿Cuántos años tiene su hija o hijo?",
 			choices: [
 				{
 					label: "8 años",

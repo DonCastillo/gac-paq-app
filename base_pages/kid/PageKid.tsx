@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import { StyleSheet, View } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
@@ -41,6 +41,7 @@ const PageKid = (): React.ReactElement => {
 	// state
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+	const [proceed, setProceed] = useState<boolean>(false);
 
 	// translations
 	const translatedPage = currentPage.page.translations as PageInterface;
@@ -53,19 +54,36 @@ const PageKid = (): React.ReactElement => {
 	// set background screen dynamically
 	useEffect(() => {
 		setBackground(getIntroductoryBackground(currentPageNumber));
+		const timer = setTimeout(() => {
+			setProceed(true);
+			clearTimeout(timer);
+		}, 3000);
+		return () => {
+			setProceed(false);
+		};
 	}, [currentPageNumber]);
 
 	// set button component dynamically
 	useEffect(() => {
 		if (currentPageNumber > 0) {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"both"}
-					colorTheme={color100}
-					onPrev={() => dispatch(prevPage())}
-					onNext={() => proceedPage()}
-				/>,
-			);
+			if (proceed || currentPage.page.audio_autoplay === false) {
+				setButtonComponent(
+					<BackAndNextNav
+						key={"both"}
+						colorTheme={color100}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => proceedPage()}
+					/>,
+				);
+			} else {
+				setButtonComponent(
+					<BackAndNextNav
+						key={"next"}
+						colorTheme={color100}
+						onPrev={() => dispatch(prevPage())}
+					/>,
+				);
+			}
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
@@ -75,7 +93,7 @@ const PageKid = (): React.ReactElement => {
 				/>,
 			);
 		}
-	}, [currentPageNumber]);
+	}, [currentPageNumber, proceed]);
 
 	if (isLoading) {
 		<LoadingScreenKid key={currentPageNumber} />;

@@ -7,6 +7,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 	name: "Question 10: On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
 	column_name: "10.0 Hous",
 	audio_ident: "household_3",
+	audio_autoplay: true,
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
@@ -33,6 +34,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "Over 60 minutes per day",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १०",
+			label:
+				"तपाईंले पछिल्लो (गएको/ बितेको) हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन घरायसी कामकाजमा कति समय व्यतित् गर्नुभयो?",
+			kid_label:
+				"तपाईंले पछिल्लो (गएको/ बितेको) हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन घरायसी कामकाजमा कति समय व्यतित् गर्नुभयो?",
+			adult_label:
+				"तपाईंको छोरा वा छोरीले पछिल्लो हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन सो घरायसी काममा कति समय व्यतित गर्नुभयो?",
+			choices: [
+				{
+					label: "प्रत्येक दिन १५ मिनेट वा सो भन्दा कम",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "प्रत्येक दिन १६-३० मिनेट",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "प्रत्येक दिन ३१-६० मिनेट",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "प्रत्येक दिन ६० मिनेटभन्दा बढी",
 					value: "Over 60 minutes per day",
 				},
 			],

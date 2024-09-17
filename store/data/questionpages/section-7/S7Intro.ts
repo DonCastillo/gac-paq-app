@@ -10,6 +10,10 @@ const S7Intro: LangSectionPayloadInterface = {
 			heading: "Outdoors",
 			subheading: "Section 7",
 		},
+		"ne-NP": {
+			heading: "बाहिरी गतिविधि",
+			subheading: "खण्ड ७",
+		},
 		"pt-BR": {
 			heading: "Atividades Ao Ar Livre",
 			subheading: "Seção 7",
@@ -27,11 +31,11 @@ const S7Intro: LangSectionPayloadInterface = {
 			subheading: "第7部分",
 		},
 		"es-ES": {
-			heading: "Al Aire Libre",
+			heading: "Al aire libre",
 			subheading: "Sección 7",
 		},
 		"es-MX": {
-			heading: "Al Aire Libre",
+			heading: "Al aire libre",
 			subheading: "Sección 7",
 		},
 		"fr-CA": {

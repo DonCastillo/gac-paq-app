@@ -8,6 +8,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "23.0 Outd",
 	audio_ident: "outdoors_1",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

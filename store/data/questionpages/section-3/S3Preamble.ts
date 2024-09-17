@@ -5,6 +5,7 @@ const S3Preamble: LangPreamblePayloadInterface = {
 	ident: "work_preamble",
 	heading: "Work",
 	audio_ident: "work_preamble",
+	audio_autoplay: true,
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {
@@ -14,6 +15,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 				kid: "This section is about work or volunteering away from your home - different from chores. Working would be when you make money for you or your family. Volunteering would be helping others or an organization for free (no money). Work and volunteering can take place at location such as a store, farm, restaurant, etc. Please answer both together.",
 				adult:
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
+			},
+		},
+		"ne-NP": {
+			heading: "काम",
+			subheading: "खण्ड ३",
+			description: {
+				kid: "यो खन्ड, तपाइले घरबाहिर (घरायसी काम वाहेक) का काम वा स्वयंमसेवकिय कार्यहरु सगं सम्बन्धित छ। गर्ने कामहरु, आफ्नो वा परिवारका लागि पैसा कमाउने हुन सक्छन् वा कुनै सन्स्थामा निसुल्क काम गर्ने पनि हुन सक्छन् । काम वा स्वयंमसेवकिय कार्य एकै ठाउमा जस्तै पसल, खेत, रेस्टुरा आदि हुन सक्छन् । कृपया दुबैको सँगै उत्तर दिनुहोस्।",
+				adult:
+					"यो खन्ड, घरबाहिर (घरायसी काम वाहेक) का काम वा स्वयंमसेवकिय कार्यहरु सगं सम्बन्धित छ। गर्ने कामहरुमा, तपाइको छोरा वा छोरीले आफ्नो वा परिवारका लागि पैसा कमाउने हुन सक्छन् वा कुनै सन्स्थामा निसुल्क काम गर्ने पनि हुन सक्छन्। कृपया दुबैको सँगै उत्तर दिनुहोस्।",
 			},
 		},
 		"pt-BR": {

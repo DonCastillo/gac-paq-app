@@ -8,6 +8,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "20.0 Orga",
 	audio_ident: "organized_3",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

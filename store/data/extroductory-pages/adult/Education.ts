@@ -8,6 +8,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 	type: Screen.SingleQuestion,
 	column_name: "education",
 	audio_ident: "education",
+	audio_autoplay: true,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,

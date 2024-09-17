@@ -5,6 +5,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 	ident: "household_preamble",
 	heading: "Household Chores",
 	audio_ident: "household_preamble",
+	audio_autoplay: true,
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {
@@ -14,6 +15,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 				kid: "This section is about chores or tasks that require you to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 				adult:
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
+			},
+		},
+		"ne-NP": {
+			heading: "घरायसी काम",
+			subheading: "खण्ड २",
+			description: {
+				kid: "यो खन्डले, तपाइले सक्रिय हुनको लागि घरमा गर्ने घरायसी कामलाई जनाउछ । उदाहरणको लागि घरको काम, करेसाबारीको काम, बगैंचामा गोडमेल गर्ने र अन्य कामहरु पर्छन् ।",
+				adult:
+					"यो खन्डले, तपाईंको छोरा वा छोरीले सक्रिय हुनको लागि घरमा गर्ने घरायसी कामलाई जनाउछ । उदाहरणको लागि घरको काम, करेसाबारीको काम, बगैंचामा गोडमेल गर्ने र अन्य कामहरु पर्छन् ।",
 			},
 		},
 		"pt-BR": {
@@ -53,7 +63,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-ES": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 			description: {
 				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el patio de casa, la jardinería y otras tareas relacionadas.",
@@ -62,7 +72,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 			description: {
 				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las tareas del hogar, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
