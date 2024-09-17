@@ -63,7 +63,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-ES": {
-			heading: "Juego O Tiempo Libre",
+			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 			description: {
 				kid: "Esto incluye toda la actividad física que realizas durante tu tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio.",
@@ -72,7 +72,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Juego O Tiempo Libre",
+			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 			description: {
 				kid: "Esto incluye toda la actividad física que realizas durante tu tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio. Para las siguientes preguntas, no incluyas las actividades que acabas de informar.",

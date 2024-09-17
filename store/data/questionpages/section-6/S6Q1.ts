@@ -238,6 +238,10 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				"En la última semana, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
 			adult_label:
 				"En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+			kid_sublabel:
+				"Estas actividades no se realizan para competir o entrenar. Algunos ejemplos incluyen juegos de pelota por diversión, jugar en una piscina, saltar en camas elásticas o brincolines, jugar escondidas, jugar en el arenero, construir casas en los árboles, etc.",
+			adult_sublabel:
+				"Estas actividades no se realizan para competir o entrenar. Algunos ejemplos incluyen juegos de pelota por diversión, jugar en una piscina, saltar en camas elásticas o brincolines, jugar escondidas, jugar en el arenero, construir casas en los árboles, etc.",
 			choices: [
 				{
 					label: "Nada",
@@ -274,6 +278,10 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				"Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé à jouer activement, juste pour le plaisir?",
 			adult_label:
 				"Durant la dernière semaine, lors d'une journée normale, combien de temps ton enfant a-t-il (elle) passé à jouer activement, juste pour le plaisir?",
+			kid_sublabel:
+				"Ces activités ne sont pas pratiquées pour la compétition ou l'entraînement. Les exemples incluent jouer au ballon, jouer dans une piscine, sauter sur un trampoline, jouer à la tague, à cache-cache ou dans un carré de sable, construire des forts ou des cabanes dans les arbres, etc.",
+			adult_sublabel:
+				"Ces activités ne sont pas pratiquées pour la compétition ou l'entraînement. Les exemples incluent jouer au ballon, jouer dans une piscine, sauter sur un trampoline, jouer à la tague, à cache-cache ou dans un carré de sable, construire des forts ou des cabanes dans les arbres, etc.",
 			choices: [
 				{
 					label: "Pas du tout",

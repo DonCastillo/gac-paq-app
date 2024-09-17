@@ -355,10 +355,10 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionDropdown,
-			heading: "¡Bienvenido!",
-			label: "¿Cuántos años tiene tu hijo?",
-			kid_label: "¿Cuántos años tiene tu hijo?",
-			adult_label: "¿Cuántos años tiene tu hijo?",
+			heading: "¡Te damos la bienvenida!",
+			label: "¿Cuántos años tiene su hija o hijo?",
+			kid_label: "¿Cuántos años tiene su hija o hijo?",
+			adult_label: "¿Cuántos años tiene su hija o hijo?",
 			choices: [
 				{
 					label: "8 años",

@@ -63,7 +63,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-ES": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 			description: {
 				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el patio de casa, la jardinería y otras tareas relacionadas.",
@@ -72,7 +72,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 			description: {
 				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las tareas del hogar, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
