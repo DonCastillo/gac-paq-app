@@ -70,7 +70,7 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			label: "Por favor, ingresa tu ID de participante",
 			kid_label: "Por favor, ingresa tu ID de participante",
 			adult_label: "Por favor, ingresa tu ID de participante",
-			placeholder: "Número de serie de ID de participante",
+			placeholder: "Número de serie de la identificación de participante",
 		},
 		"fr-CA": {
 			type: Question.QuestionInput,
