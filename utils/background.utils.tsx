@@ -33,7 +33,7 @@ import StatusBackground from "styles/images/background/status";
 const blackListLanguages = ["pt-BR", "sv-SE", "th-TH", "zh-CN", "es-ES", "es-MX", "fr-CA"];
 
 const getImageBackground = (): any | null => {
-	const blackListLanguages = ["pt-BR", "sv-SE", "th-TH", "zh-CN", "es-MX", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "es-MX", "fr-CA"];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
