@@ -67,7 +67,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	// translations
 	const translatedPage = currentPage.page.translations as TranslatedQuestionQuestionType;
 
-	let questionLabel = translateQuestionLabel(
+	const questionLabel = translateQuestionLabel(
 		translatedPage.kid_label,
 		translatedPage.adult_label,
 		mode,
@@ -84,17 +84,17 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	let questionComponent = <></>;
 
 	// change labels if in question 17
-	if (
-		[
-			"transportation_7",
-			"transportation_8",
-			"transportation_9",
-			"transportation_10",
-			"transportation_11",
-		].includes(currentPage.page.ident)
-	) {
-		questionLabel = getQuestion17Label();
-	}
+	// if (
+	// 	[
+	// 		"transportation_7",
+	// 		"transportation_8",
+	// 		"transportation_9",
+	// 		"transportation_10",
+	// 		"transportation_11",
+	// 	].includes(currentPage.page.ident)
+	// ) {
+	// 	questionLabel = getQuestion17Label();
+	// }
 
 	// fetch response for this question
 	useEffect(() => {
@@ -266,7 +266,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 			<BGLinearGradient />
 			<Main>
 				{!isKeyboardOpen && <ProgressBarAdult />}
-				{!isKeyboardOpen && <Toolbar />}
+				{!isKeyboardOpen && <Toolbar key={currentPageNumber} />}
 				<CenterMain>
 					<AnimatedView
 						key={currentPageNumber}

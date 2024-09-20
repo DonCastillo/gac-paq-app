@@ -229,11 +229,11 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Comentarios",
-			label: "¿Qué tan satisfecho se siente con la aplicación?",
-			kid_label: "¿Qué tan satisfecho se siente con la aplicación?",
-			adult_label: "¿Qué tan satisfecho se siente con la aplicación?",
-			adult_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
-			kid_sublabel: "Seleccione la imagen (carita) que mejor represente su satisfacción.",
+			label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
+			kid_label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
+			adult_label: "¿Cuál es tu nivel de satisfacción con la aplicación?",
+			adult_sublabel: "Selecciona la imagen (emoji) que mejor represente tu satisfacción.",
+			kid_sublabel: "Selecciona la imagen (emoji) que mejor represente tu satisfacción.",
 			choices: [
 				{
 					label: "Muy insatisfecho",

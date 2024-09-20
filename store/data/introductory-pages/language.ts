@@ -59,7 +59,7 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionLanguage,
-			heading: "¡Bienvenido!",
+			heading: "¡Te damos la bienvenida!",
 			label: "¿Qué idioma hablas y dónde estás?",
 			kid_label: "¿Qué idioma hablas y dónde estás?",
 			adult_label: "¿Qué idioma hablas y dónde estás?",

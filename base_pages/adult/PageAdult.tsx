@@ -36,11 +36,11 @@ const PageAdult = (): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const mode = useSelector(getMode);
 	const isLoading = useSelector(getIsLoading);
-
 	const { color100 } = colorTheme;
 
 	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
+	const [proceed, setProceed] = useState<boolean>(false);
 
 	// translations
 	const translatedPage = currentPage.page.translations as PageInterface;
@@ -50,17 +50,37 @@ const PageAdult = (): React.ReactElement => {
 		mode,
 	) as string;
 
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setProceed(true);
+			clearTimeout(timer);
+		}, 3000);
+		return () => {
+			setProceed(false);
+		};
+	}, [currentPageNumber]);
+
 	// set button component dynamically
 	useEffect(() => {
 		if (currentPageNumber > 0) {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"both"}
-					colorTheme={"#FFF"}
-					onPrev={() => dispatch(prevPage())}
-					onNext={() => proceedPage()}
-				/>,
-			);
+			if (proceed || currentPage.page.audio_autoplay === false) {
+				setButtonComponent(
+					<BackAndNextNav
+						key={"both"}
+						colorTheme={"#FFF"}
+						onPrev={() => dispatch(prevPage())}
+						onNext={() => proceedPage()}
+					/>,
+				);
+			} else {
+				setButtonComponent(
+					<BackAndNextNav
+						key={"next"}
+						colorTheme={"#FFF"}
+						onPrev={() => dispatch(prevPage())}
+					/>,
+				);
+			}
 		} else {
 			setButtonComponent(
 				<BackAndNextNav
@@ -70,7 +90,7 @@ const PageAdult = (): React.ReactElement => {
 				/>,
 			);
 		}
-	}, [currentPageNumber]);
+	}, [currentPageNumber, proceed]);
 
 	if (isLoading) {
 		return <LoadingScreenAdult key={currentPageNumber} />;

@@ -31,11 +31,11 @@ const S7Intro: LangSectionPayloadInterface = {
 			subheading: "第7部分",
 		},
 		"es-ES": {
-			heading: "Al Aire Libre",
+			heading: "Al aire libre",
 			subheading: "Sección 7",
 		},
 		"es-MX": {
-			heading: "Al Aire Libre",
+			heading: "Al aire libre",
 			subheading: "Sección 7",
 		},
 		"fr-CA": {

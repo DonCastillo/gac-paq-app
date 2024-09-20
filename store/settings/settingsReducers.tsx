@@ -82,7 +82,6 @@ const setIsLoading: SetIsLoadingFuncType = (state, action) => {
 
 const skipPage: SkipPageFuncType = (state, action) => {
 	const allPages = state.pages;
-	const currentPageNumber = state.currentPageNumber;
 
 	let nextPageNumber = action.payload;
 	let newHistory: number[] = [...state.history];
@@ -98,7 +97,10 @@ const skipPage: SkipPageFuncType = (state, action) => {
 	// update current page
 	const nextPage = getPage(nextPageNumber, allPages);
 	const nextNextPage = getPage(nextPageNumber + 1, allPages);
-	disableNarrationAutoplay(state, { type: "", payload: currentPageNumber });
+
+	// disable current page narration autoplay
+	disableNarrationAutoplay(state);
+
 	state.currentPageNumber = nextPageNumber;
 	state.currentPage = nextPage;
 	state.nextPage = nextNextPage;
@@ -109,10 +111,17 @@ const nextPage: SettingsFuncType = (state) => {
 	const allPages = state.pages;
 	const currentPageNumber = state.currentPageNumber;
 	const nextPageNumber = currentPageNumber + 1;
+
+	// update history
 	const newHistory = new Set([...state.history, nextPageNumber].sort((a, b) => a - b));
+
+	// update current page
 	const nextPage = getPage(nextPageNumber, allPages);
 	const nextNextPage = getPage(nextPageNumber + 1, allPages);
-	disableNarrationAutoplay(state, { type: "", payload: currentPageNumber });
+
+	// disable current page narration autoplay
+	disableNarrationAutoplay(state);
+
 	state.currentPageNumber = nextPageNumber;
 	state.currentPage = nextPage;
 	state.nextPage = nextNextPage;
@@ -132,6 +141,8 @@ const prevPage: SettingsFuncType = (state) => {
 		newHistory !== undefined && newHistory !== null && newHistory.length > 0
 			? newHistory.at(-1)
 			: 1; // remove previous page
+
+	// update current page
 	const currentPage = getPage(currentPageNumber ?? 1, state.pages);
 	const nextPage = getPage((currentPageNumber ?? 1) + 1, state.pages);
 
@@ -177,15 +188,25 @@ const setEnableNarration: SetEnableNarrationState = (state, action) => {
 	state.enableNarration = action.payload;
 };
 
-const disableNarrationAutoplay: DisableNarrationAutoplayFuncType = (state, action) => {
+const disableNarrationAutoplay: DisableNarrationAutoplayFuncType = (state) => {
 	const allPages = state.pages;
 	const currentPageNumber = state.currentPageNumber;
 	const currentPage = getPage(currentPageNumber, allPages);
+
+	// update pages with the current page's audio_autoplay set to false
 	const updatedPages = {
 		...allPages,
 		[currentPageNumber]: { ...currentPage, page: { ...currentPage.page, audio_autoplay: false } },
 	};
 	state.pages = updatedPages;
+
+	// update current page's audio_autoplay to false
+	if (state.currentPage.pageNumber === currentPageNumber) {
+		state.currentPage = {
+			...state.currentPage,
+			page: { ...state.currentPage.page, audio_autoplay: false },
+		};
+	}
 };
 
 const resetAllNarrationAutoplay: ResetAllNarrationAutoplayFuncType = (state) => {

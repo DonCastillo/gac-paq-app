@@ -31,11 +31,11 @@ const S2Intro: LangSectionPayloadInterface = {
 			subheading: "第2部分",
 		},
 		"es-ES": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 		},
 		"es-MX": {
-			heading: "Tareas Del Hogar O Quehaceres",
+			heading: "Tareas del hogar o quehaceres",
 			subheading: "Sección 2",
 		},
 		"fr-CA": {

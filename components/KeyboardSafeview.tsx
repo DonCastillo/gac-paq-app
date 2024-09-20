@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import { getDevice, setKeyboardState } from "store/settings/settingsSlice";
+import {
+	disableNarrationAutoplay,
+	getDevice,
+	setKeyboardState,
+} from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -41,7 +45,12 @@ const KeyboardSafeview = ({ children }: PropsInterface): React.ReactElement => {
 			style={{ flex: 1 }}
 			behavior={device.platform === "ios" ? "padding" : "height"}
 		>
-			<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+			<TouchableWithoutFeedback
+				onPress={() => {
+					Keyboard.dismiss();
+					dispatch(disableNarrationAutoplay());
+				}}
+			>
 				<View style={{ flex: 1 }}>{children}</View>
 			</TouchableWithoutFeedback>
 		</KeyboardAvoidingView>

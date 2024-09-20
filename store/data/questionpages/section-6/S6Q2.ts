@@ -331,6 +331,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
 			adult_label:
 				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
+			kid_sublabel:
+				"Algunos ejemplos incluyen niños, niñas o jóvenes haciendo gimnasia, escalando, haciendo lagartijas, levantando pesas o usando el pasamanos.",
+			adult_sublabel:
+				"Algunos ejemplos incluyen niños, niñas o jóvenes haciendo gimnasia, escalando, haciendo lagartijas, levantando pesas o usando el pasamanos.",
 			choices: [
 				{
 					label: "0 días",
@@ -375,6 +379,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
 			adult_label:
 				"Au cours de la dernière semaine, combien de jours ton enfant a-t-il (elle) pratiqué des activités qui rendent ses muscles plus forts?",
+			kid_sublabel:
+				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
+			adult_sublabel:
+				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
 			choices: [
 				{
 					label: "0 jour",
