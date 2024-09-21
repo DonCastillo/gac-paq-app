@@ -60,17 +60,13 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "Question 22",
+			heading: "प्रश्न २२",
 			label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
 			kid_label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
 			adult_label:
-				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
-			kid_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
-			adult_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईंको छोरा वा छोरीले कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
 			choices: [
 				{
 					label: "० दिन",
