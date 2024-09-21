@@ -50,11 +50,12 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "Question 17b",
-			label: "How many days did you walk to places other than school or work in the past week?",
-			kid_label: "How many days did you walk to places other than school or work in the past week?",
+			heading: "प्रश्न १७b - हिँड्नु",
+			label: "पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन हिंड्नुभयो?",
+			kid_label:
+				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन हिंड्नुभयो?",
 			adult_label:
-				"How many days did your child walk to places other than school or work in the past week?",
+				"पछिल्लो हप्तामा, तपाईंको छोरा वा छोरीले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन हिंड्नुभयो?",
 			choices: [
 				{
 					label: "१ दिन",

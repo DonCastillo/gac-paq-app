@@ -36,6 +36,34 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७c - हिँड्नु",
+			label:
+				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			kid_label:
+				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			adult_label:
+				"सामान्य दिनमा, तपाईंको छोरा वा छोरीले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			choices: [
+				{
+					label: "१० मिनेट वा सोभन्दा कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनेट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनेट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनेटभन्दा बढी",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 17c - Andando",

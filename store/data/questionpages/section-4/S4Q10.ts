@@ -51,12 +51,13 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "Question 17d",
-			label: "How many days did you wheel to places other than school or work in the past week?",
+			heading: "प्रश्न १७b - गाडी",
+			label:
+				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
 			kid_label:
-				"How many days did you wheel to places other than school or work in the past week?",
+				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
 			adult_label:
-				"How many days did your child wheel to places other than school or work in the past week?",
+				"पछिल्लो हप्तामा, तपाईंको छोरा वा छोरीले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
 			choices: [
 				{
 					label: "१ दिन",

@@ -73,6 +73,68 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १५",
+			label: "पछिल्लो (गएको/ बितेको) हप्ता, तपाईं विध्यालय कसरी जानुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्ता, तपाईं विध्यालय कसरी जानुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्ता, तपाईंको छोरा वा छोरी विध्यालय कसरी जानुभयो?",
+			kid_sublabel: "तपाईंले प्रयोग गर्ने मुख्य माध्यम छान्नुहोस्",
+			adult_sublabel: "तपाईंको बच्चा/छोरा वा छोरी ले प्रयोग गर्ने मुख्य माध्यम छान्नुहोस्",
+			choices: [
+				{
+					label: "हिंड्दै",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "व्हिलिंग (पांग्राको प्रयोग गर्दै)",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "व्हिलचेयर, स्केटबोर्ड, धकेल्ने स्कुटर, रोलरब्लेड",
+						adult: "व्हिलचेयर, स्केटबोर्ड, धकेल्ने स्कुटर, रोलरब्लेड",
+					},
+				},
+				{
+					label: "विध्यालयको बसमा",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "सार्वजनिक माध्यम",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "जस्तै: बस, ट्रेन, सबवे, डुंगा",
+						adult: "जस्तै: बस, ट्रेन, सबवे, डुंगा",
+					},
+				},
+				{
+					label: "कार, ट्याक्सी, ट्रक, मोटरसाइकल",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "दुइ वा दुइ भन्दा बढी माध्यम समेत, जस्तै: हिंड्दै र बसमा",
+						adult: "दुइ वा दुइ भन्दा बढी माध्यम समेत, जस्तै: हिंड्दै र बसमा",
+					},
+				},
+				{
+					label: "म घरमै बसे वा बोर्डिंग स्कुलको होस्टलमा बसे",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "म घरमै बसे वा बोर्डिंग स्कुलको होस्टलमा बसे",
+						adult: "घरमै पढ्ने वा बोर्डिंग स्कुलको होस्टलमा बस्ने",
+					},
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Pergunta 15",

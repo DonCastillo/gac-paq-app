@@ -49,10 +49,11 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "Question 15b",
-			label: "How many days did you use this mode in the past week?",
-			kid_label: "How many days did you use this mode in the past week?",
-			adult_label: "How many days did your child use this mode in the past week?",
+			heading: "प्रश्न १५b",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंको छोरा वा छोरीले यो माध्यम कति पटक प्रयोग गर्नुभयो?",
 			choices: [
 				{
 					label: "१ दिन",

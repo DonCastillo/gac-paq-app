@@ -35,6 +35,31 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १५c",
+			label: "सामान्यतया तपाईंलाई विध्यालय पुग्न कति समय लाग्छ?",
+			kid_label: "सामान्यतया तपाईंलाई विध्यालय पुग्न कति समय लाग्छ?",
+			adult_label: "सामान्यतया, तपाईंको छोरा वा छोरीलाई विध्यालय पुग्न कति समय लाग्छ?",
+			choices: [
+				{
+					label: "१० मिनेट वा सोभन्दा कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनेट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनेट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनेटभन्दा बढी",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 15c",
