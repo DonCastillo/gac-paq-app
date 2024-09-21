@@ -44,6 +44,39 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "तपाइलाई तपाइको पारिवारिक आवसेकता पुरा गर्न कती सजिलो वा गाह्रो छ?",
+			kid_label: "तपाइलाई तपाइको पारिवारिक आवसेकता पुरा गर्न कती सजिलो वा गाह्रो छ?",
+			adult_label: "तपाइलाई तपाइको पारिवारिक आवसेकता पुरा गर्न कती सजिलो वा गाह्रो छ?",
+			choices: [
+				{
+					label: "धेरै गाह्रो छ",
+					value: "Very difficult",
+				},
+				{
+					label: "गाह्रो छ",
+					value: "Difficult",
+				},
+				{
+					label: "न त गाह्रो छ न त सजिलो छ",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "सजिलो छ",
+					value: "Easy",
+				},
+				{
+					label: "धेरै सजिलो छ",
+					value: "Very easy",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 30",

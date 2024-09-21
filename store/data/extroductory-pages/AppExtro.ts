@@ -10,6 +10,10 @@ const AppExtro: LangExtroPayloadInterface = {
 			heading: "Thank you for completing the survey!",
 			subheading: "",
 		},
+		"ne-NP": {
+			heading: "सर्वेको पूरा गर्नु भएकोमा धन्यवाद!",
+			subheading: "",
+		},
 		"th-TH": {
 			heading: "ขอบคุณที่ทำแบบสำรวจ!",
 			subheading: "",
