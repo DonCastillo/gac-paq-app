@@ -4,6 +4,9 @@ const CompletePhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Complete",
 	},
+	"ar-AE": {
+		label: "اكتمل",
+	},
 	"ne-NP": {
 		label: "पूरा",
 	},
