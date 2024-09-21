@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "बच्चा सँग तपाइको सम्बन्ध के हो?",
+			kid_label: "बच्चा सँग तपाइको सम्बन्ध के हो?",
+			adult_label: "बच्चा सँग तपाइको सम्बन्ध के हो?",
+			choices: [
+				{
+					label: "बुवा",
+					value: "Father",
+				},
+				{
+					label: "आमा",
+					value: "Mother",
+				},
+				{
+					label: "हजुरबा",
+					value: "Grandfather",
+				},
+				{
+					label: "हजुरआमा",
+					value: "Grandmother",
+				},
+				{
+					label: "अन्य अभिभावक",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 28",

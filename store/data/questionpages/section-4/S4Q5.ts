@@ -47,6 +47,44 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १६b",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंको छोरा वा छोरीले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
+			choices: [
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 16b",

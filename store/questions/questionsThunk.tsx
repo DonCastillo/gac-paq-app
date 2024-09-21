@@ -26,7 +26,6 @@ export const loadQuestionData = createAsyncThunk(
 	"questions/loadQuestionData",
 	async (language: string | null, { getState, dispatch }) => {
 		const finalLanguage = language ?? "en-CA";
-		// const finalLanguage = language ?? "fr-CA";
 
 		const data = await readAppData();
 

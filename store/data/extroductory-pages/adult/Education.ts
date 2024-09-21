@@ -44,6 +44,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २९",
+			label: "तपाइ को परिवारमा सबै भन्दा धेरै पढेको सदस्यको शैक्षिक योग्यता कती हो?",
+			kid_label: "तपाइ को परिवारमा सबै भन्दा धेरै पढेको सदस्यको शैक्षिक योग्यता कती हो?",
+			adult_label: "तपाइ को परिवारमा सबै भन्दा धेरै पढेको सदस्यको शैक्षिक योग्यता कती हो?",
+			choices: [
+				{
+					label: "औपचारिक शिक्षा छैन",
+					value: "No formal schooling",
+				},
+				{
+					label: "राथमिक तह",
+					value: "Primary school",
+				},
+				{
+					label: "निम्न माध्यमिक वा हाइस्कुल",
+					value: "Secondary or high school",
+				},
+				{
+					label: "प्राबिधिक शिक्षा",
+					value: "Vocational/college education",
+				},
+				{
+					label: "विस्वविद्यालय शिक्षा",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 29",

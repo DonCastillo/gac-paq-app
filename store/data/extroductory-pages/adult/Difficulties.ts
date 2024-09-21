@@ -64,6 +64,60 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २५",
+			label:
+				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			kid_label:
+				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			adult_label:
+				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			kid_sublabel: "उपयुक्त मा चिन्ह लगाउनुहोस् ।",
+			adult_sublabel: "उपयुक्त मा चिन्ह लगाउनुहोस् ।",
+			choices: [
+				{
+					label: "सुन्नमा",
+					value: "Hearing",
+				},
+				{
+					label: "हेर्नमा",
+					value: "Seeing",
+				},
+				{
+					label: "बोल्नमा",
+					value: "Speech",
+				},
+				{
+					label: "हिड्डुल गर्नमा",
+					value: "Mobility",
+				},
+				{
+					label: "जागरुक रहन मा",
+					value: "Agility",
+				},
+				{
+					label: "दुखाइमा",
+					value: "Pain",
+				},
+				{
+					label: "सम्झनमा",
+					value: "Memory",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to say",
+				},
+				{
+					label: "कुनै पनि छैन, उ सँग कुनै समस्या छैन",
+					value: "None of the above",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
 			heading: "Pergunta 25",

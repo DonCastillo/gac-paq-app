@@ -27,6 +27,24 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १२",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा, के तपाईंले कुनै काम वा स्वयंसेवा गर्नुभयो ? ",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, के तपाईंले कुनै काम वा स्वयंसेवा गर्नुभयो ? ",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको)  हप्तामा, के तपाईंको छोरा वा छोरीले कुनै काम वा स्वयंसेवा गर्नुभयो?",
+			choices: [
+				{
+					label: "गरे",
+					value: "yes",
+				},
+				{
+					label: "गरिनँ",
+					value: "no",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 12",

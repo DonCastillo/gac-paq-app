@@ -47,6 +47,43 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २६",
+			label: "तपाइको छोरा वा छोरीको जातियता के हो?",
+			kid_label: "तपाइको छोरा वा छोरीको जातियता के हो?",
+			adult_label: "तपाइको छोरा वा छोरीको जातियता के हो?",
+			choices: [
+				{
+					label: "एसियन्",
+					value: "Asian",
+				},
+				{
+					label: "कालो बर्ण वा अफ्रीकन्",
+					value: "Black or African American",
+				},
+				{
+					label: "आदिवासि",
+					value: "Indigenous",
+				},
+				{
+					label: "यटिन अमेरिकन्",
+					value: "Latin American",
+				},
+				{
+					label: "सेतो बर्ण वा ककेसियन्",
+					value: "White or Caucasian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
 			heading: "Pergunta 26",

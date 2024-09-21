@@ -44,6 +44,41 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २३",
+			label: "पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंले कति समय घर बाहिर बिताउनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंले कति समय घर बाहिर बिताउनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंको छोरा वा छोरीले कति समय घर बाहिर बिताउनुभयो?",
+			choices: [
+				{
+					label: "कुनै पनि गरिन",
+					value: "None",
+				},
+				{
+					label: "प्रत्येक दिन एक घण्टा भन्दा कम भन्दा कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "प्रत्येक दिन एक घण्टा देखि दुई घण्टा भन्दा कम",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "प्रत्येक दिन दुई घण्टा देखि तीन घण्टा भन्दा कम",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "प्रत्येक दिन तीन घण्टा देखि चार घण्टा भन्दा कम",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "प्रत्येक दिन चार घण्टा वा बढी",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 23",

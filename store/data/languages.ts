@@ -46,11 +46,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "MX",
 		lang_code: "es-MX",
 	},
-	// {
-	// 	name: "Nepali - Nepal",
-	// 	flag_code: "NP",
-	// 	lang_code: "ne-NP",
-	// },
+	{
+		name: "Nepali - Nepal",
+		flag_code: "NP",
+		lang_code: "ne-NP",
+	},
 	// {
 	// 	name: "Fulah - Nigeria",
 	// 	flag_code: "NG",

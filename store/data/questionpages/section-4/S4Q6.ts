@@ -39,6 +39,35 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १६c",
+			label: "सामान्यतया, तपाईंलाई काममा पुग्न कति समय लाग्छ?",
+			kid_label: "सामान्यतया, तपाईंलाई काममा पुग्न कति समय लाग्छ?",
+			adult_label: "सामान्यतया, तपाईंको छोरा वा छोरीलाई काममा पुग्न कति समय लाग्छ?",
+			choices: [
+				{
+					label: "१० मिनेट वा सोभन्दा कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनेट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनेट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३१-६० मिनेट",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "६० मिनेट भन्दा बढी",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 16c",

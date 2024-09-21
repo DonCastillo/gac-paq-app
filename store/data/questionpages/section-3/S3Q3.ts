@@ -42,6 +42,38 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १४",
+			label:
+				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			kid_label:
+				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			adult_label:
+				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			choices: [
+				{
+					label: "हलचल नगरेको ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "सजिलो प्रयासको काम गरेको",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम/गाह्रो प्रयासको काम गरेको",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "थाहा छैन",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Pergunta 14",

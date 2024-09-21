@@ -35,6 +35,31 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २४",
+			label: "के  तपाईं ... हो?",
+			kid_label: "के  तपाईं ... हो?",
+			adult_label: "के  तपाईं ... हो?",
+			choices: [
+				{
+					label: "केटा",
+					value: "Boy",
+				},
+				{
+					label: "केटी",
+					value: "Girl",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहान्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 24",

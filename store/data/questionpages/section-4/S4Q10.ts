@@ -49,6 +49,46 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७b - गाडी",
+			label:
+				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
+			kid_label:
+				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
+			adult_label:
+				"पछिल्लो हप्तामा, तपाईंको छोरा वा छोरीले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
+			choices: [
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 17b - Bicicleta",

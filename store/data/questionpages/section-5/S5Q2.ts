@@ -47,6 +47,45 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १९",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, कति दिन तपाईंको छोरा वा छोरीले सन्गठित क्रियाकलापमा लाग्नुभयो?",
+			choices: [
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 19",
