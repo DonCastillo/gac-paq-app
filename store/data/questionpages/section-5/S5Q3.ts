@@ -38,6 +38,32 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २०",
+			label: "ति दिनमा, सन्गठित क्रियाकलापमा तपाईंले कति समय व्यतित गर्नुभयो?",
+			kid_label: "ति दिनमा, सन्गठित क्रियाकलापमा तपाईंले कति समय व्यतित गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता ति दिनमा, तपाईंको छोरा वा छोरीले सन्गठित क्रियाकलापमा लाग्दा सामान्यतया प्रत्येक दिन कति अवधिसम्मको हुन्थ्यो?",
+			choices: [
+				{
+					label: "प्रति दिन ३० मिनेट वा सोभन्दा कम",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "प्रति दिन ३१-६०मिनेट",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "प्रति दिन १-१.५ घन्टा",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "प्रति दिन १.५ घन्टा भन्दा बढी",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 20",

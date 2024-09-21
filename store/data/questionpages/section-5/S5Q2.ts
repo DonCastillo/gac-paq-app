@@ -49,10 +49,12 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "Question 19",
-			label: "How many days did you do these activities during the past week?",
-			kid_label: "How many days did you do these activities during the past week?",
-			adult_label: "How many days did your child do these activities during the past week?",
+			heading: "प्रश्न १९",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, कति दिन तपाईंको छोरा वा छोरीले सन्गठित क्रियाकलापमा लाग्नुभयो?",
 			choices: [
 				{
 					label: "१ दिन",

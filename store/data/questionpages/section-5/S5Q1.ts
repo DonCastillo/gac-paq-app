@@ -27,6 +27,25 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label: "पछिल्लो (गएको/ बितेको)  हप्ता, के तपाईं कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको)  हप्ता, के तपाईं कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, के तपाईंको छोरा वा छोरीले कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			choices: [
+				{
+					label: "गएँ",
+					value: "yes",
+				},
+				{
+					label: "गइनं",
+					value: "no",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 18",
