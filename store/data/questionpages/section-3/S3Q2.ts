@@ -40,6 +40,38 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १३",
+			label:
+				"तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
+			kid_label:
+				"तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको)  हप्तामा, तपाईंको छोरा वा छोरीले कति घण्टा काम वा स्वयंसेवामा व्यतित गर्नुभयो?",
+			choices: [
+				{
+					label: "दिनको १ घन्टा भन्दा कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "दिनको १ देखि २ घण्टा भन्दा कम",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "दिनको २ देखि ३ घण्टा भन्दा कम",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "दिनको ३ देखि ४ घण्टा भन्दा कम",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "दिनको ४ घण्टा वा बढी",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 13",

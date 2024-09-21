@@ -44,26 +44,26 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
-			heading: "Question 14",
+			heading: "प्रश्न १४",
 			label:
-				"Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
+				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
 			kid_label:
-				"Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
+				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
 			adult_label:
-				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
+				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
 			choices: [
 				{
-					label: "हलचल नगरेको",
+					label: "हलचल नगरेको ",
 					value: "0.1",
 					image_ident: "not_moving",
 				},
 				{
-					label: "सजिलो प्रयासको शारीरिक गतिविधि गरेको",
+					label: "सजिलो प्रयासको काम गरेको",
 					value: "0.3",
 					image_ident: "easy_effort",
 				},
 				{
-					label: "मध्यम/गाह्रो प्रयासको शारीरिक गतिविधि गरेको",
+					label: "मध्यम/गाह्रो प्रयासको काम गरेको",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},
