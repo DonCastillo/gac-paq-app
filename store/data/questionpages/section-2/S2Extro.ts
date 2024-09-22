@@ -11,8 +11,8 @@ const S2Extro: LangExtroPayloadInterface = {
 			subheading: "Only five more to go!",
 		},
 		"ar-AE": {
-			heading: "تم اكمال القسم!",
-			subheading: "لم يتبق سوى خمسة أسئلة فقط!",
+			heading: "!تم اكمال القسم",
+			subheading: "!لم يتبق سوى خمسة أسئلة فقط",
 		},
 		"ne-NP": {
 			heading: "यो खण्ड सकियो!",

@@ -11,8 +11,8 @@ const S3Extro: LangExtroPayloadInterface = {
 			subheading: "Only four more to go!",
 		},
 		"ar-AE": {
-			heading: "تم اكمال القسم!",
-			subheading: "لم يتبق سوى أربعة أسئلة فقط!",
+			heading: "!تم اكمال القسم",
+			subheading: "!لم يتبق سوى أربعة أسئلة فقط",
 		},
 		"ne-NP": {
 			heading: "यो खण्ड सकियो!",
