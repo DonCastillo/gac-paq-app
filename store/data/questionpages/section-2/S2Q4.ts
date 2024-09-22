@@ -41,6 +41,35 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "السؤال ١١",
+			label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء قيامك بالأعمال المنزلية؟",
+			kid_label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء قيامك بالأعمال المنزلية؟",
+			adult_label: "أي من الصور التالية تبيّن ما يفعله طفلك غالباً أثناء قيامه بالأعمال المنزلية؟",
+			choices: [
+				{
+					label: "لا حركة",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "جهد سهل",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "جهد متوسط أو صعب",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "لا أعرف",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ११",

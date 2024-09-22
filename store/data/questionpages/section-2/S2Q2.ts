@@ -47,6 +47,43 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال ٩",
+			label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بالأعمال المنزلية؟",
+			kid_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بالأعمال المنزلية؟",
+			adult_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قام فيها طفلك بالأعمال المنزلية؟",
+			choices: [
+				{
+					label: "يوم واحد (١)",
+					value: "1",
+				},
+				{
+					label: "يومين (٢)",
+					value: "2",
+				},
+				{
+					label: "ثلاثة أيام (٣)",
+					value: "3",
+				},
+				{
+					label: "أربعة أيام (٤)",
+					value: "4",
+				},
+				{
+					label: "خمسة أيام (٥)",
+					value: "5",
+				},
+				{
+					label: "ستة أيام  (٦)",
+					value: "6",
+				},
+				{
+					label: "سبعة أيام (٧)",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ९",
