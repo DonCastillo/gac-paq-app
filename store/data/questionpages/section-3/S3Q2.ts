@@ -40,6 +40,36 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال ١٣",
+			label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
+			kid_label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
+			adult_label:
+				"خلال الأسبوع الماضي، كم عدد الساعات التي قضاها طفلك في العمل التطوعي أو الوظيفة؟",
+			choices: [
+				{
+					label: "أقل من ساعة في اليوم",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "ما بين ساعة وأقل من ساعتين في اليوم",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "ما بين ساعتين وأقل من 3 ساعات في اليوم",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "ما بين 3 ساعات وأقل من 4 ساعات في اليوم",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 ساعات أو أكثر في اليوم",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १३",
