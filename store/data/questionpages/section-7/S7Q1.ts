@@ -44,6 +44,39 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 23",
+			label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في الهواء الطلق؟",
+			kid_label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في الهواء الطلق؟",
+			adult_label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضى طفلك في الهواء الطلق؟",
+			choices: [
+				{
+					label: "لا شيء",
+					value: "None",
+				},
+				{
+					label: "أقل من ساعة في اليوم",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "ما بين ساعة وأقل من ساعتين في اليوم",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "ما بين ساعتين وأقل من 3 ساعات في اليوم",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "ما بين 3 ساعات وأقل من 4 ساعات في اليوم",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "ساعات أو أكثر في اليوم" + "4",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २३",
