@@ -44,6 +44,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 29",
+			label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
+			kid_label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
+			adult_label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
+			choices: [
+				{
+					label: "غير متعلم",
+					value: "No formal schooling",
+				},
+				{
+					label: "ابتدائي",
+					value: "Primary school",
+				},
+				{
+					label: "ثانوي",
+					value: "Secondary or high school",
+				},
+				{
+					label: "مهني (دبلوم)",
+					value: "Vocational/college education",
+				},
+				{
+					label: "جامعي (بكالوريوس/ ماجستير/ دكتوراه)",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २९",

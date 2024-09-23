@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 28",
+			label: "ما هي علاقتك بالطفل؟",
+			kid_label: "ما هي علاقتك بالطفل؟",
+			adult_label: "ما هي علاقتك بالطفل؟",
+			choices: [
+				{
+					label: "الأب",
+					value: "Father",
+				},
+				{
+					label: "الأم",
+					value: "Mother",
+				},
+				{
+					label: "الجد",
+					value: "Grandfather",
+				},
+				{
+					label: "الجدة",
+					value: "Grandmother",
+				},
+				{
+					label: "المعلم أو الوصي",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "علاقة أخرى – يرجى التحديد:",
+					value: "Other",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २८",

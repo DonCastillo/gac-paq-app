@@ -31,6 +31,23 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 24",
+			label: "ما هو جنس طفلك؟",
+			kid_label: "ما هو جنس طفلك؟",
+			adult_label: "ما هو جنس طفلك؟",
+			choices: [
+				{
+					label: "ذكر",
+					value: "Female",
+				},
+				{
+					label: "أنثى",
+					value: "Male",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २४",
