@@ -55,6 +55,51 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "السؤال 16",
+			label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
+			kid_label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
+			adult_label: "كيف ذهب طفلك إلى العمل خلال الأسبوع الماضي؟ ",
+			kid_sublabel: "حدد الوسيلة الأكثر استخداماً",
+			adult_sublabel: "حدد الوسيلة الاكثر استخداماً",
+			choices: [
+				{
+					label: "المشي",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "العجلات",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+						adult:
+							"مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+					},
+				},
+				{
+					label: "النقل العام",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "مثل الحافلة، القطار، الترام، المترو، أو القارب",
+						adult: "مثل الحافلة، القطار، الترام، المترو، أو القارب",
+					},
+				},
+				{
+					label: "السيارة، التاكسي، أو الدراجة النارية",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "وسيلة أخرى – ما هي؟",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १६",
