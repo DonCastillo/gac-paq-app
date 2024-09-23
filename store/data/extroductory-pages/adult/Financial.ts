@@ -44,6 +44,39 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 30",
+			label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
+			kid_label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
+			adult_label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
+			choices: [
+				{
+					label: "صعب جداً",
+					value: "Very difficult",
+				},
+				{
+					label: "صعب",
+					value: "Difficult",
+				},
+				{
+					label: "ليس سهلاً ولا صعباً",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "سهل",
+					value: "Easy",
+				},
+				{
+					label: "سهل جداً",
+					value: "Very easy",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",

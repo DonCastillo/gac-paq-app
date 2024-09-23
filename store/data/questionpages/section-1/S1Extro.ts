@@ -10,6 +10,10 @@ const S1Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only six more to go!",
 		},
+		"ar-AE": {
+			heading: "!تم اكمال القسم",
+			subheading: "!لم يتبق سوى ستة أسئلة فقط",
+		},
 		"ne-NP": {
 			heading: "यो खण्ड सकियो !",
 			subheading: "केवल छ वटा मात्रै बाकी छ !",

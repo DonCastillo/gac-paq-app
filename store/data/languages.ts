@@ -96,6 +96,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "TH",
 		lang_code: "th-TH",
 	},
+	{
+		name: "Arabic - United Arab Emirates",
+		flag_code: "AE",
+		lang_code: "ar-AE",
+	},
 	// {
 	// 	name: "English - United Arab Emirates",
 	// 	flag_code: "AE",

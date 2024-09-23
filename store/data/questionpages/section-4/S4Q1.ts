@@ -73,6 +73,69 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "السؤال ١٥",
+			label: "كيف ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
+			kid_label: "كيف ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
+			adult_label: "كيف ذهب طفلك إلى المدرسة خلال الأسبوع الماضي؟",
+			kid_sublabel: "حدد الوسيلة الأكثر استخداماً",
+			adult_sublabel: "حدد الوسيلة الاكثر استخداماً",
+			choices: [
+				{
+					label: "المشي",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "العجلات",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+						adult:
+							"مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+					},
+				},
+				{
+					label: "الحافلة المدرسية",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "النقل العام",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "مثل الحافلة، القطار، الترام، المترو، أو القارب",
+						adult: "مثل الحافلة، القطار، الترام، المترو، أو القارب",
+					},
+				},
+				{
+					label: "السيارة، التاكسي، أو الدراجة النارية",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "وسيلة أخرى، أو عدّة وسائل",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "مثل المشي والحافلة",
+						adult: "مثل المشي والحافلة",
+					},
+				},
+				{
+					label: "أنا أدرس من المنزل",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "أنا أدرس من المنزل",
+						adult: "طفلي يدرس من المنزل",
+					},
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १५",

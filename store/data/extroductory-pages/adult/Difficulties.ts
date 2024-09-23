@@ -64,6 +64,57 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionCheckbox,
+			heading: "السؤال 25",
+			label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
+			kid_label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
+			adult_label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
+			kid_sublabel: "يرجى تحديد جميع الخيارات التي تنطبق عليه",
+			adult_sublabel: "يرجى تحديد جميع الخيارات التي تنطبق عليه",
+			choices: [
+				{
+					label: "السمع",
+					value: "Hearing",
+				},
+				{
+					label: "البصر",
+					value: "Seeing",
+				},
+				{
+					label: "الكلام",
+					value: "Speech",
+				},
+				{
+					label: "الحركة",
+					value: "Mobility",
+				},
+				{
+					label: "الرشاقة",
+					value: "Agility",
+				},
+				{
+					label: "الذاكرة",
+					value: "Pain",
+				},
+				{
+					label: "ألم",
+					value: "Memory",
+				},
+				{
+					label: "صعوبات أخرى",
+					value: "Other",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to say",
+				},
+				{
+					label: "لا شيء مما سبق، ليس لديهم أي صعوبات",
+					value: "None of the above",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २५",

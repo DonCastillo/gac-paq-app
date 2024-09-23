@@ -27,6 +27,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال ١٢",
+			label: "خلال الأسبوع الماضي، هل قمت بعملٍ تطوعي أو وظيفة؟",
+			kid_label: "خلال الأسبوع الماضي، هل قمت بعملٍ تطوعي أو وظيفة؟",
+			adult_label: "خلال الأسبوع الماضي، هل قام طفلك بعملٍ تطوعي أو وظيفة؟",
+			choices: [
+				{
+					label: "نعم",
+					value: "yes",
+				},
+				{
+					label: "لا",
+					value: "no",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १२",

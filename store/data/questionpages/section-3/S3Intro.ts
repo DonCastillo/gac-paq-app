@@ -10,6 +10,10 @@ const S3Intro: LangSectionPayloadInterface = {
 			heading: "Work",
 			subheading: "Section 3",
 		},
+		"ar-AE": {
+			heading: "العمل",
+			subheading: "القسم الثالث (٣)",
+		},
 		"ne-NP": {
 			heading: "काम",
 			subheading: "खण्ड ३",

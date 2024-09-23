@@ -10,6 +10,10 @@ const SocialEconomicsIntroAdult: LangSectionPayloadInterface = {
 			heading: "About Your Family",
 			subheading: "Section 8",
 		},
+		"ar-AE": {
+			heading: "عن عائلتك",
+			subheading: "القسم 8",
+		},
 		"ne-NP": {
 			heading: "तपाईंको परिवारको बारेमा",
 			subheading: "खण्ड ८",

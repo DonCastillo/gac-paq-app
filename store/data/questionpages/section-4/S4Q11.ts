@@ -37,6 +37,34 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 17c - العجلات",
+			label:
+				"في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			kid_label:
+				"في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			adult_label:
+				"في الأيام العادية، كم من الوقت يقضي طفلك في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			choices: [
+				{
+					label: "دقائق أو أقل " + "10",
+					value: "10 minutes or less",
+				},
+				{
+					label: "ما بين 11 و20 دقيقة",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "ما بين 21 و30 دقيقة",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "أكثر من 30 دقيقة",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७c - गाडी",

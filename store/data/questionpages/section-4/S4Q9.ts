@@ -36,6 +36,34 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 17c - المشي",
+			label:
+				"كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			kid_label:
+				"كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			adult_label:
+				"كم عدد الأيام التي قام فيها طفلك باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			choices: [
+				{
+					label: "دقائق أو أقل " + "10",
+					value: "10 minutes or less",
+				},
+				{
+					label: "ما بين 11 و20 دقيقة",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "ما بين 21 و30 دقيقة",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "أكثر من 30 دقيقة",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७c - हिँड्नु",

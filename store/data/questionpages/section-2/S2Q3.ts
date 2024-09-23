@@ -38,6 +38,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال ١٠",
+			label:
+				"في الأيام التي قمت فيها بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت تطلّب منك القيام بتلك الأعمال طوال اليوم؟",
+			kid_label:
+				"في الأيام التي قمت فيها بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت تطلّب منك القيام بتلك الأعمال طوال اليوم؟",
+			adult_label:
+				"في الأيام التي قام فيها طفلك بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت تطلّب منه القيام بتلك الأعمال طوال اليوم؟",
+			choices: [
+				{
+					label: "15 دقيقة أو أقل في اليوم",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "ما بين 16 و30 دقيقة في اليوم",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "ما بين 31 و60 دقيقة في اليوم",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "أكثر من 60 دقيقة في اليوم",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १०",

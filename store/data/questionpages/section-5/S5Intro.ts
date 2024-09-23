@@ -10,6 +10,10 @@ const S5Intro: LangSectionPayloadInterface = {
 			heading: "Organized Activities",
 			subheading: "Section 5",
 		},
+		"ar-AE": {
+			heading: "الأنشطة المنظّمة أو الخارجية",
+			subheading: "القسم الخامس (٥)",
+		},
 		"ne-NP": {
 			heading: "सन्गठित क्रियाकलाप",
 			subheading: "खण्ड ५",

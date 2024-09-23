@@ -46,6 +46,42 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "التغذية الراجعة",
+			label: "ما مدى رضاك عن التطبيق؟",
+			kid_label: "ما مدى رضاك عن التطبيق؟",
+			adult_label: "ما مدى رضاك عن التطبيق؟",
+			adult_sublabel: ".حدد الصورة (الرمز التعبيري) التي تمثل مدى رضاك بأفضل وجه",
+			kid_sublabel: ".حدد الصورة (الرمز التعبيري) التي تمثل مدى رضاك بأفضل وجه",
+			choices: [
+				{
+					label: "غير راضٍ على الإطلاق",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "غير راضٍ",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "محايد",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "راضٍ",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "راضٍ جدًا",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "प्रतिक्रिया",
