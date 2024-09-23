@@ -38,6 +38,33 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 20",
+			label: "في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
+			kid_label:
+				"في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
+			adult_label:
+				"في الأيام التي قام فيها طفلك بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرق عادةً؟",
+			choices: [
+				{
+					label: "دقيقة أو أقل في اليوم" + "30",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "ما بين 31 و60 دقيقة في اليوم",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "ما بين 1 و1.5 ساعة في اليوم",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "أكثر من 1.5 ساعة في اليوم",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २०",

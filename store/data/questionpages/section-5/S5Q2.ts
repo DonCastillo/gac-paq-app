@@ -47,6 +47,43 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 19",
+			label: "كم عدد الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي؟",
+			kid_label: "كم عدد الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي؟",
+			adult_label: "كم عدد الأيام التي قام فيها طفلك بهذه الأنشطة خلال الأسبوع الماضي؟",
+			choices: [
+				{
+					label: "يوم واحد (١)",
+					value: "1",
+				},
+				{
+					label: "يومين (٢)",
+					value: "2",
+				},
+				{
+					label: "ثلاثة أيام (٣)",
+					value: "3",
+				},
+				{
+					label: "أربعة أيام (٤)",
+					value: "4",
+				},
+				{
+					label: "خمسة أيام (٥)",
+					value: "5",
+				},
+				{
+					label: "ستة أيام  (٦)",
+					value: "6",
+				},
+				{
+					label: "سبعة أيام (٧)",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १९",
