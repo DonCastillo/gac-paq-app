@@ -40,6 +40,35 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 13",
+			label: "In the past week, how many hours did you spend volunteering or working?",
+			kid_label: "In the past week, how many hours did you spend volunteering or working?",
+			adult_label: "In the past week, how many hours did your child spend volunteering or working?",
+			choices: [
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hours or more per day",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "السؤال ١٣",
