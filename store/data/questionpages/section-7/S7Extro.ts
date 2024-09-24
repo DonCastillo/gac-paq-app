@@ -10,6 +10,10 @@ const S7Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"en-AE": {
+			heading: "Section Complete!",
+			subheading: "",
+		},
 		"ar-AE": {
 			heading: "!تم اكمال القسم",
 			subheading: "",

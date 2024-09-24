@@ -10,6 +10,10 @@ const S1Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only six more to go!",
 		},
+		"en-AE": {
+			heading: "Section Complete!",
+			subheading: "Only six more to go!",
+		},
 		"ar-AE": {
 			heading: "!تم اكمال القسم",
 			subheading: "!لم يتبق سوى ستة أسئلة فقط",
