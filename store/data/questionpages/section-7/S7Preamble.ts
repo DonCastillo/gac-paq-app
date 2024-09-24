@@ -17,6 +17,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"en-AE": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+			description: {
+				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, camping in the desert, etc.)",
+				adult:
+					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, or camping in the desert, etc.)",
+			},
+		},
 		"ar-AE": {
 			heading: "قضاء الوقت في الهواء الطلق",
 			subheading: "القسم السابع (٧)",
