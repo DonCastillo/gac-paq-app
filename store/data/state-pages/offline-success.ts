@@ -15,7 +15,7 @@ const OfflineSuccessPage: LangPagePayloadInterface = {
 		"ar-AE": {
 			heading: "لم تتصل بالإنترنت",
 			description:
-				"!سيتم حفظ إجاباتك وإعادة إرسالها تلقائيًا عند استعادة الاتصال.\n\nشكرًا لمساعدتك",
+				".سيتم حفظ إجاباتك وإعادة إرسالها تلقائيًا عند استعادة الاتصال\n\n!شكرًا لمساعدتك",
 		},
 		"ne-NP": {
 			heading: "You are not connected to the Internet",
