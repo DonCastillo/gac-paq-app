@@ -10,6 +10,10 @@ const S7Intro: LangSectionPayloadInterface = {
 			heading: "Outdoors",
 			subheading: "Section 7",
 		},
+		"en-AE": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+		},
 		"ar-AE": {
 			heading: "قضاء الوقت في الهواء الطلق",
 			subheading: "القسم السابع (٧)",
