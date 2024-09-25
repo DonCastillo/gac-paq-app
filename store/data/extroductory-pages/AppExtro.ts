@@ -10,6 +10,10 @@ const AppExtro: LangExtroPayloadInterface = {
 			heading: "Thank you for completing the survey!",
 			subheading: "",
 		},
+		"en-AE": {
+			heading: "Thank you for completing the survey!",
+			subheading: "",
+		},
 		"ar-AE": {
 			heading: "!شكرًا لإكمالك الاستطلاع",
 			subheading: "",

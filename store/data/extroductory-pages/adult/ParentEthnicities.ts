@@ -47,6 +47,17 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionCheckboxInput,
+			heading: "Question 27",
+			label: "What is your nationality?",
+			kid_label: "What is your nationality?",
+			adult_label: "What is your nationality?",
+			input_label: "",
+			input_placeholder: "",
+			input_label_en: "",
+			choices: [],
+		},
 		"ar-AE": {
 			type: Question.QuestionCheckboxInput,
 			heading: "السؤال 27",

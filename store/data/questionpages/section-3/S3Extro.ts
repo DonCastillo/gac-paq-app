@@ -10,6 +10,10 @@ const S3Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only four more to go!",
 		},
+		"en-AE": {
+			heading: "Section Complete!",
+			subheading: "Only four more to go!",
+		},
 		"ar-AE": {
 			heading: "!تم اكمال القسم",
 			subheading: "!لم يتبق سوى أربعة أسئلة فقط",

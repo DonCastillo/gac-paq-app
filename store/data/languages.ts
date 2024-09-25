@@ -101,11 +101,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "AE",
 		lang_code: "ar-AE",
 	},
-	// {
-	// 	name: "English - United Arab Emirates",
-	// 	flag_code: "AE",
-	// 	lang_code: "en-AE",
-	// },
+	{
+		name: "English - United Arab Emirates",
+		flag_code: "AE",
+		lang_code: "en-AE",
+	},
 ];
 
 export default Languages;

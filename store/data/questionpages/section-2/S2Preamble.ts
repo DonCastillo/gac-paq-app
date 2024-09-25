@@ -17,6 +17,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"en-AE": {
+			heading: "Household Chores",
+			subheading: "Section 2",
+			description: {
+				kid: "This section is about chores or tasks that require you to be active. Examples of chores or tasks include housework such as washing dishes, preparing meals, gardening tasks, and more.",
+				adult:
+					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework such as washing dishes, preparing meals, gardening tasks, and more.",
+			},
+		},
 		"ar-AE": {
 			heading: "الواجبات المنزلية",
 			subheading: "القسم الثاني (٢)",
