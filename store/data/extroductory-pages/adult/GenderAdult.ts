@@ -31,6 +31,23 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "What is your child's gender?",
+			kid_label: "What is your child's gender?",
+			adult_label: "What is your child's gender?",
+			choices: [
+				{
+					label: "Male",
+					value: "Male",
+				},
+				{
+					label: "Female",
+					value: "Female",
+				},
+			],
+		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "السؤال 24",
