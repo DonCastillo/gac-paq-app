@@ -44,7 +44,7 @@ const blackListLanguages = [
 ];
 
 const getImageBackground = (): any | null => {
-	const blackListLanguages = ["ne-NP", "sv-SE", "th-TH", "zh-CN", "fr-CA", "ar-AE", "en-AE"];
+	const blackListLanguages = ["ne-NP", "sv-SE", "th-TH", "zh-CN", "fr-CA"];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
