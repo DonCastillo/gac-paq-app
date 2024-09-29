@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { moderateScale } from "utils/responsive.utils";
 import { isOtherOption } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getDevice, getPhrases } from "store/settings/settingsSlice";
+import { getColorTheme, getDevice, getLanguage, getPhrases } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;
@@ -29,6 +29,7 @@ const CheckboxOption = ({
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
+	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
@@ -49,7 +50,7 @@ const CheckboxOption = ({
 						},
 					]}
 				></View>
-				<View style={styles.labelContainer}>
+				<View style={[styles.labelContainer]}>
 					{/* Icon */}
 					{image !== undefined && image !== null && typeof image === "function" && (
 						<View
@@ -91,13 +92,14 @@ const CheckboxOption = ({
 						style={{
 							...styles.labelText,
 							fontSize: moderateScale(
-								device.isTablet ? 14 : 16,
+								device.isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							lineHeight: moderateScale(
-								device.isTablet ? 18 : 20,
+								device.isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
+							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 						}}
 					>
 						{label}
@@ -140,6 +142,7 @@ const CheckboxOption = ({
 						defaultValue={defaultOtherInputValue}
 						placeholder={phrases?.specify}
 						keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
+						textAlign={language === "ar-AE" ? "right" : "left"}
 					/>
 				</View>
 			)}

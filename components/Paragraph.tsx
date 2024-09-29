@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/settings/settingsSlice";
+import { getDevice, getLanguage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -11,6 +11,7 @@ interface PropsInterface {
 
 const Paragraph = ({ children, customStyle = {} }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
+	const language = useSelector(getLanguage);
 	return (
 		<View>
 			<Text
@@ -27,6 +28,9 @@ const Paragraph = ({ children, customStyle = {} }: PropsInterface): React.ReactE
 						),
 					},
 					customStyle,
+					{
+						writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+					},
 				]}
 			>
 				{children}

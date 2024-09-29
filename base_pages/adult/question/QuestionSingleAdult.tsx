@@ -31,6 +31,7 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
+	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -55,6 +56,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
@@ -280,13 +282,25 @@ const QuestionSingleAdult = (): React.ReactElement => {
 										textStyle={{
 											...GeneralStyle.adult.questionLabel,
 											fontSize: moderateScale(
-												device.isTablet ? 15 : 15,
+												device.isTablet
+													? language === "ar-AE"
+														? 18
+														: 15
+													: language === "ar-AE"
+														? 18
+														: 15,
 												device.orientation === "portrait"
 													? device.screenWidth
 													: device.screenHeight,
 											),
 											lineHeight: moderateScale(
-												device.isTablet ? 20 : 20,
+												device.isTablet
+													? language === "ar-AE"
+														? 23
+														: 20
+													: language === "ar-AE"
+														? 23
+														: 20,
 												device.orientation === "portrait"
 													? device.screenWidth
 													: device.screenHeight,
