@@ -23,6 +23,7 @@ import {
 	getDevice,
 	getIsConnected,
 	getIsLoading,
+	getLanguage,
 	getSectionTotalPages,
 	prevPage,
 	setIsLoading,
@@ -37,6 +38,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const language = useSelector(getLanguage);
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
 	const isConnected = useSelector(getIsConnected);
@@ -129,8 +131,26 @@ const QuestionExtroKid = (): React.ReactElement => {
 							customStyle={{
 								...GeneralStyle.kid.extroPageHeading,
 								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
-								lineHeight: moderateScale(device.isTablet ? 35 : 30, device.screenWidth),
+								fontSize: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 34
+											: 30
+										: language === "ar-AE"
+											? 30
+											: 27,
+									device.screenWidth,
+								),
+								lineHeight: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 38
+											: 35
+										: language === "ar-AE"
+											? 34
+											: 30,
+									device.screenWidth,
+								),
 							}}
 						>
 							{translatedPage.heading}
@@ -139,8 +159,26 @@ const QuestionExtroKid = (): React.ReactElement => {
 							customStyle={{
 								...GeneralStyle.kid.extroPageParagraph,
 								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
-								lineHeight: moderateScale(device.isTablet ? 27 : 27, device.screenWidth),
+								fontSize: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 21
+											: 18
+										: language === "ar-AE"
+											? 21
+											: 18,
+									device.screenWidth,
+								),
+								lineHeight: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 30
+											: 27
+										: language === "ar-AE"
+											? 30
+											: 27,
+									device.screenWidth,
+								),
 							}}
 						>
 							{translatedPage.subheading}

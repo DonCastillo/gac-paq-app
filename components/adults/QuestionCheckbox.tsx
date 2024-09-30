@@ -10,7 +10,7 @@ import {
 	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getCurrentPage } from "store/settings/settingsSlice";
+import { getCurrentPage, getLanguage } from "store/settings/settingsSlice";
 import Section from "constants/section.enum";
 
 interface PropsInterface {
@@ -26,6 +26,7 @@ const QuestionCheckbox = ({
 }: PropsInterface): React.ReactElement => {
 	const SEPARATOR = " | ";
 	const currentPage = useSelector(getCurrentPage);
+	const language = useSelector(getLanguage);
 
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -147,6 +148,7 @@ const QuestionCheckbox = ({
 				justifyContent: "flex-start",
 				flexDirection: "column",
 				paddingBottom: 20,
+				direction: language === "ar-AE" ? "rtl" : "ltr",
 			}}
 			renderItem={({ item, index }) => (
 				<CheckboxOption

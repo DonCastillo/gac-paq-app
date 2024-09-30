@@ -3,7 +3,7 @@ import { TextInput, View, StyleSheet } from "react-native";
 import { Font, GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/settings/settingsSlice";
+import { getDevice, getLanguage } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -17,6 +17,7 @@ const QuestionTextarea = ({
 	placeholder,
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
+	const language = useSelector(getLanguage);
 
 	const changeHandler = (value: string): void => {
 		onChange(value);
@@ -35,6 +36,7 @@ const QuestionTextarea = ({
 				numberOfLines={15}
 				maxLength={500}
 				keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
+				textAlign={language === "ar-AE" ? "right" : "left"}
 			/>
 		</View>
 	);

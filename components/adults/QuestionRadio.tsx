@@ -10,7 +10,7 @@ import {
 	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getCurrentPage, getMode } from "store/settings/settingsSlice";
+import { getCurrentPage, getLanguage, getMode } from "store/settings/settingsSlice";
 import { getOptionSubLabel } from "utils/background.utils";
 import Mode from "constants/mode.enum";
 import Section from "constants/section.enum";
@@ -28,6 +28,7 @@ const QuestionRadio = ({
 }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	let mode = useSelector(getMode);
+	const language = useSelector(getLanguage);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -49,6 +50,12 @@ const QuestionRadio = ({
 			setIsOtherSelected(false);
 		}
 	}, [selected]);
+
+	const getLabel = (index: number, label: string): string => {
+		return currentPage.section === Section.Question || currentPage.section === Section.Extro
+			? `${optionLetter(index)}.  ${label}`
+			: label;
+	};
 
 	const pressHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
@@ -110,15 +117,12 @@ const QuestionRadio = ({
 				justifyContent: "flex-start",
 				flexDirection: "column",
 				paddingBottom: 20,
+				direction: language === "ar-AE" ? "rtl" : "ltr",
 			}}
 			renderItem={({ item, index }) => (
 				<RadioOption
 					{...item}
-					label={
-						currentPage.section === Section.Question || currentPage.section === Section.Extro
-							? `${optionLetter(index)}.  ${item.label}`
-							: item.label
-					}
+					label={getLabel(index, item.label)}
 					value={item.value}
 					selected={
 						selected !== null &&

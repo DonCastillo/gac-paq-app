@@ -29,6 +29,7 @@ import {
 	getCurrentPage,
 	getDevice,
 	getPhrases,
+	getLanguage,
 } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
 
@@ -48,6 +49,7 @@ const QuestionRadioImage = ({
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
 	const phrase = useSelector(getPhrases);
+	const language = useSelector(getLanguage);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -206,13 +208,14 @@ const QuestionRadioImage = ({
 						style={{
 							...styles.blockOptionLabelText,
 							fontSize: moderateScale(
-								device.isTablet ? 12 : 14,
+								device.isTablet ? (language === "ar-AE" ? 13 : 12) : language === "ar-AE" ? 14 : 14,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							lineHeight: moderateScale(
-								device.isTablet ? 17 : 19,
+								device.isTablet ? (language === "ar-AE" ? 18 : 17) : language === "ar-AE" ? 20 : 19,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
+							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 						}}
 					>
 						{`${optionLetter(index)}.  ${label}`}
@@ -274,15 +277,30 @@ const QuestionRadioImage = ({
 									styles.listOptionLabelText,
 									{
 										fontSize: moderateScale(
-											device.isTablet ? 14 : 14,
+											device.isTablet
+												? language === "ar-AE"
+													? 17
+													: 14
+												: language === "ar-AE"
+													? 17
+													: 14,
 											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 										),
 										lineHeight: moderateScale(
-											device.isTablet ? 18 : 18,
+											device.isTablet
+												? language === "ar-AE"
+													? 21
+													: 18
+												: language === "ar-AE"
+													? 21
+													: 18,
 											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 										),
 									},
 									isSelected ? { color: "#fff" } : { color: "#000" },
+									{
+										writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+									},
 								]}
 							>
 								{`${optionLetter(index)}.  ${optionText}`}
@@ -294,15 +312,30 @@ const QuestionRadioImage = ({
 									styles.listOptionSubLabelText,
 									{
 										fontSize: moderateScale(
-											device.isTablet ? 12 : 12,
+											device.isTablet
+												? language === "ar-AE"
+													? 15
+													: 12
+												: language === "ar-AE"
+													? 15
+													: 12,
 											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 										),
 										lineHeight: moderateScale(
-											device.isTablet ? 16 : 16,
+											device.isTablet
+												? language === "ar-AE"
+													? 19
+													: 16
+												: language === "ar-AE"
+													? 19
+													: 16,
 											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 										),
 									},
 									isSelected ? { color: "#fff" } : { color: "#000" },
+									{
+										writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+									},
 								]}
 							>
 								{optionSublabel}
@@ -340,6 +373,7 @@ const QuestionRadioImage = ({
 							defaultValue={getUserSpecifiedOther(value, selected)}
 							placeholder={phrase?.specify}
 							keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
+							textAlign={language === "ar-AE" ? "right" : "left"}
 						/>
 					</View>
 				)}
@@ -358,6 +392,7 @@ const QuestionRadioImage = ({
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
+						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
 					/>
 				) : (
 					<FlatList
@@ -366,6 +401,7 @@ const QuestionRadioImage = ({
 						data={[...options]}
 						renderItem={({ item, index }) => listRenderOption(item, index)}
 						bounces={false}
+						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
 					/>
 				)}
 			</View>

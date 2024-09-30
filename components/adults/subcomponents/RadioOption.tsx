@@ -4,7 +4,13 @@ import React, { useRef } from "react";
 import { moderateScale } from "utils/responsive.utils";
 import { isOtherOption } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getDevice, getPhrases } from "store/settings/settingsSlice";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getDevice,
+	getLanguage,
+	getPhrases,
+} from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;
@@ -34,6 +40,8 @@ const RadioOption = ({
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
 	const phrases = useSelector(getPhrases);
+	const language = useSelector(getLanguage);
+	const currentPage = useSelector(getCurrentPage);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 
@@ -41,7 +49,7 @@ const RadioOption = ({
 		<View style={{ marginBottom: 0 }}>
 			{/* Option Container */}
 			<Pressable
-				style={styles.container}
+				style={{ ...styles.container }}
 				onPress={() => onPress(value)}
 			>
 				<View
@@ -52,7 +60,7 @@ const RadioOption = ({
 						},
 					]}
 				></View>
-				<View style={styles.labelContainer}>
+				<View style={[styles.labelContainer]}>
 					{/* Icon */}
 					{image !== undefined && image !== null && typeof image === "function" && (
 						<View
@@ -95,13 +103,26 @@ const RadioOption = ({
 							style={{
 								...styles.labelText,
 								fontSize: moderateScale(
-									device.isTablet ? 14 : 16,
+									device.isTablet
+										? language === "ar-AE" && currentPage.page.ident !== "language_location"
+											? 17
+											: 14
+										: language === "ar-AE" && currentPage.page.ident !== "language_location"
+											? 19
+											: 16,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
 								lineHeight: moderateScale(
-									device.isTablet ? 18 : 20,
+									device.isTablet
+										? language === "ar-AE" && currentPage.page.ident !== "language_location"
+											? 21
+											: 18
+										: language === "ar-AE" && currentPage.page.ident !== "language_location"
+											? 23
+											: 20,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
+								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 							}}
 						>
 							{optionLabel !== "" && optionLabel !== undefined && optionLabel !== null
@@ -115,13 +136,26 @@ const RadioOption = ({
 								style={{
 									...styles.labelText,
 									fontSize: moderateScale(
-										device.isTablet ? 12 : 12,
+										device.isTablet
+											? language === "ar-AE"
+												? 15
+												: 12
+											: language === "ar-AE"
+												? 15
+												: 12,
 										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 									),
 									lineHeight: moderateScale(
-										device.isTablet ? 16 : 16,
+										device.isTablet
+											? language === "ar-AE"
+												? 19
+												: 16
+											: language === "ar-AE"
+												? 19
+												: 16,
 										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 									),
+									writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 								}}
 							>
 								{optionSublabel}
@@ -166,6 +200,7 @@ const RadioOption = ({
 						defaultValue={defaultOtherInputValue}
 						placeholder={phrases?.specify}
 						keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
+						textAlign={language === "ar-AE" ? "right" : "left"}
 					/>
 				</View>
 			)}

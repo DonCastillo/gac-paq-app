@@ -17,7 +17,7 @@ const ErrorPage: LangPagePayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "خطأ",
-			description: ".هناك مشكلة في إرسال إجابتك.\n\nيرجى المحاولة مرة أخرى",
+			description: "هناك مشكلة في إرسال إجابتك.\n\nيرجى المحاولة مرة أخرى.",
 		},
 		"ne-NP": {
 			heading: "मिलेन",

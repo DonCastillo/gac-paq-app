@@ -22,6 +22,7 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
+	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -36,6 +37,7 @@ const PreambleAdult = (): React.ReactElement => {
 	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const language = useSelector(getLanguage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
 	const isLoading = useSelector(getIsLoading);
@@ -89,13 +91,25 @@ const PreambleAdult = (): React.ReactElement => {
 										{
 											color: "#fff",
 											fontSize: moderateScale(
-												device.isTablet ? 15 : 17,
+												device.isTablet
+													? language === "ar-AE"
+														? 18
+														: 15
+													: language === "ar-AE"
+														? 20
+														: 17,
 												device.orientation === "portrait"
 													? device.screenWidth
 													: device.screenHeight,
 											),
 											lineHeight: moderateScale(
-												device.isTablet ? 20 : 22,
+												device.isTablet
+													? language === "ar-AE"
+														? 23
+														: 20
+													: language === "ar-AE"
+														? 25
+														: 22,
 												device.orientation === "portrait"
 													? device.screenWidth
 													: device.screenHeight,

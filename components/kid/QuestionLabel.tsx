@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/settings/settingsSlice";
+import { getDevice, getLanguage } from "store/settings/settingsSlice";
 import { moderateScale } from "utils/responsive.utils";
 
 interface PropsInterface {
@@ -16,6 +16,8 @@ const QuestionLabel = ({
 	textStyle = {},
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
+	const language = useSelector(getLanguage);
+
 	return (
 		<View style={[styles.container, customStyle]}>
 			<Text
@@ -23,14 +25,15 @@ const QuestionLabel = ({
 					styles.text,
 					{
 						fontSize: moderateScale(
-							device.isTablet ? 15 : 19,
+							device.isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 22 : 19,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 						),
 						lineHeight: moderateScale(
-							device.isTablet ? 20 : 24,
+							device.isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 27 : 24,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 						),
 					},
+					{ direction: language === "ar-AE" ? "rtl" : "ltr" },
 					textStyle,
 				]}
 			>

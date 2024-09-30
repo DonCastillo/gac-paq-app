@@ -18,6 +18,7 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
+	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -34,6 +35,7 @@ const PageKid = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
+	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
 	const isLoading = useSelector(getIsLoading);
 	const { color100 } = colorTheme;
@@ -111,8 +113,26 @@ const PageKid = (): React.ReactElement => {
 								customStyle={{
 									color: color100,
 									...GeneralStyle.kid.pageHeading,
-									fontSize: moderateScale(device.isTablet ? 40 : 30, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 50 : 40, device.screenWidth),
+									fontSize: moderateScale(
+										device.isTablet
+											? language === "ar-AE"
+												? 43
+												: 40
+											: language === "ar-AE"
+												? 33
+												: 30,
+										device.screenWidth,
+									),
+									lineHeight: moderateScale(
+										device.isTablet
+											? language === "ar-AE"
+												? 53
+												: 50
+											: language === "ar-AE"
+												? 43
+												: 40,
+										device.screenWidth,
+									),
 								}}
 							>
 								{translatedPage.heading}
@@ -123,8 +143,26 @@ const PageKid = (): React.ReactElement => {
 									color: color100,
 									...GeneralStyle.kid.pageParagraph,
 									backgroundColor: "white",
-									fontSize: moderateScale(device.isTablet ? 14 : 16, device.screenWidth),
-									lineHeight: moderateScale(device.isTablet ? 16 : 22, device.screenWidth),
+									fontSize: moderateScale(
+										device.isTablet
+											? language === "ar-AE"
+												? 17
+												: 14
+											: language === "ar-AE"
+												? 19
+												: 16,
+										device.screenWidth,
+									),
+									lineHeight: moderateScale(
+										device.isTablet
+											? language === "ar-AE"
+												? 19
+												: 16
+											: language === "ar-AE"
+												? 25
+												: 22,
+										device.screenWidth,
+									),
 								}}
 							>
 								{translatedDescription}

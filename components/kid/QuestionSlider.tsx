@@ -3,9 +3,15 @@ import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import { Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label.enum";
-import { horizontalScale } from "utils/responsive.utils";
+import { horizontalScale, moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
-import { getPhrases, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
+import {
+	getPhrases,
+	getColorTheme,
+	getCurrentPage,
+	getDevice,
+	getLanguage,
+} from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -22,6 +28,7 @@ const QuestionSlider = ({
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
 	const phrases = useSelector(getPhrases);
+	const language = useSelector(getLanguage);
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState<number | PhraseLabel.DontKnow>(selectedValue ?? 0);
 	const [maxVal, setMaxVal] = useState<number>(maxValue ?? 10);
@@ -118,6 +125,29 @@ const QuestionSlider = ({
 						style={[
 							styles.optionText,
 							value === PhraseLabel.DontKnow ? styles.textPressed : GeneralStyle.kid.inactiveText,
+							{
+								fontSize: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 17
+											: 14
+										: language === "ar-AE"
+											? 19
+											: 16,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								lineHeight: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 21
+											: 18
+										: language === "ar-AE"
+											? 23
+											: 20,
+									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+								),
+								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+							},
 						]}
 					>
 						{phrases?.dontKnow}

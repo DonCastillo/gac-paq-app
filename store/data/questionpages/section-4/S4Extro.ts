@@ -15,8 +15,8 @@ const S4Extro: LangExtroPayloadInterface = {
 			subheading: "Only three more to go!",
 		},
 		"ar-AE": {
-			heading: "!تم اكمال القسم",
-			subheading: "!لم يتبق سوى ثلاثة أسئلة فقط",
+			heading: "تم اكمال القسم" + "!",
+			subheading: "لم يتبق سوى ثلاثة أسئلة فقط" + "!",
 		},
 		"ne-NP": {
 			heading: "यो खण्ड सकियो!",
