@@ -85,7 +85,6 @@ const PreambleKid = (): React.ReactElement => {
 										: language === "ar-AE"
 											? 38
 											: 35,
-									backgroundColor: "pink",
 								}}
 							>
 								{translatedPage.heading}
