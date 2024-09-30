@@ -219,7 +219,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 								<View style={{ marginBottom: 9 }}>
 									<QuestionLabel
 										textStyle={GeneralStyle.kid.introQuestionLabel}
-										customStyle={{ marginBottom: 7, backgroundColor: "white" }}
+										customStyle={{ marginBottom: 7 }}
 									>
 										{questionLabel}
 									</QuestionLabel>

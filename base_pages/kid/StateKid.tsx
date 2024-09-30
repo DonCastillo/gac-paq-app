@@ -18,6 +18,7 @@ import {
 	getDevice,
 	getIsConnected,
 	getIsLoading,
+	getLanguage,
 	getPhrases,
 	reset,
 	setIsLoading,
@@ -42,6 +43,7 @@ interface Props {
 function StateKid({ state }: Props): React.ReactElement {
 	const dispatch = useDispatch();
 	const phrases = useSelector(getPhrases);
+	const language = useSelector(getLanguage);
 	const successPage = useSelector(getSuccessPage);
 	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
 	const errorPage = useSelector(getErrorPage);
@@ -140,8 +142,26 @@ function StateKid({ state }: Props): React.ReactElement {
 							customStyle={{
 								color: "#000",
 								...GeneralStyle.kid.pageHeading,
-								fontSize: moderateScale(device.isTablet ? 30 : 27, device.screenWidth),
-								lineHeight: moderateScale(device.isTablet ? 40 : 37, device.screenWidth),
+								fontSize: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 33
+											: 30
+										: language === "ar-AE"
+											? 30
+											: 27,
+									device.screenWidth,
+								),
+								lineHeight: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 43
+											: 40
+										: language === "ar-AE"
+											? 40
+											: 37,
+									device.screenWidth,
+								),
 							}}
 						>
 							{translatedPage?.heading}
@@ -150,8 +170,26 @@ function StateKid({ state }: Props): React.ReactElement {
 							customStyle={{
 								color: "#000",
 								...GeneralStyle.kid.pageParagraph,
-								fontSize: moderateScale(device.isTablet ? 18 : 18, device.screenWidth),
-								lineHeight: moderateScale(device.isTablet ? 23 : 25, device.screenWidth),
+								fontSize: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 21
+											: 18
+										: language === "ar-AE"
+											? 21
+											: 18,
+									device.screenWidth,
+								),
+								lineHeight: moderateScale(
+									device.isTablet
+										? language === "ar-AE"
+											? 26
+											: 23
+										: language === "ar-AE"
+											? 28
+											: 25,
+									device.screenWidth,
+								),
 							}}
 						>
 							{translatedPage?.description}
