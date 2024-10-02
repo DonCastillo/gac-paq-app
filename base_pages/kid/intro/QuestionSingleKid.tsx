@@ -55,6 +55,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
 	const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+	const [proceed, setProceed] = useState<boolean>(false);
 
 	// translations
 	const translatedPage = currentPage.page.translations as TranslatedIntroQuestionType;
@@ -104,7 +105,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		if (selectedValue !== null) {
+		if (selectedValue !== null && proceed) {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"bothSelectedValue"}
@@ -122,7 +123,23 @@ const QuestionSingleKid = (): React.ReactElement => {
 				/>,
 			);
 		}
-	}, [selectedValue]);
+	}, [selectedValue, proceed]);
+
+	// display buttons
+	useEffect(() => {
+		if (currentPage.page.audio_autoplay === true) {
+			const timer = setTimeout(() => {
+				setProceed(true);
+				clearTimeout(timer);
+			}, 3000);
+		} else {
+			setProceed(true);
+		}
+
+		return () => {
+			setProceed(false);
+		};
+	}, [currentPageNumber]);
 
 	useEffect(() => {
 		setSelectedValue(getResponse());

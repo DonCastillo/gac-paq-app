@@ -150,6 +150,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		}
 	};
 
+	NarrationButtonComponent = <></>;
 	if (loaded) {
 		if (enableNarration) {
 			NarrationButtonComponent = (
@@ -188,6 +189,10 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 				/>
 			);
 		}
+	} else {
+		if (soundSrc.current !== null) {
+			NarrationButtonComponent = <ActivityIndicator size="small" />;
+		}
 	}
 
 	return (
@@ -210,7 +215,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			>
 				{title}
 			</Text>
-			{!isLoading ? NarrationButtonComponent : <ActivityIndicator size="small" />}
+			{NarrationButtonComponent}
 		</View>
 	);
 };
