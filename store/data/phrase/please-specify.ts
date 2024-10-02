@@ -4,8 +4,14 @@ const PleaseSpecifyPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Please specify",
 	},
+	"en-AE": {
+		label: "Please specify",
+	},
+	"ar-AE": {
+		label: "يرجى تحديد",
+	},
 	"ne-NP": {
-		label: "कृपया निर्दिष्ट गर्नुहोस्",
+		label: "उल्लेख गर्नुहोस्",
 	},
 	"pt-BR": {
 		label: "Por favor, especifique",

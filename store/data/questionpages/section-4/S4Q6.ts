@@ -39,6 +39,93 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 16c",
+			label: "How long does it normally take you to go to work?",
+			kid_label: "How long does it normally take you to go to work?",
+			adult_label: "How long does it normally take your child to go to work?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutes",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "More than 60 minutes",
+					value: "More than 60 minutes",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 16c",
+			label: "كم من الوقت تستغرق عادةّ للذهاب إلى العمل؟",
+			kid_label: "كم من الوقت تستغرق عادةّ للذهاب إلى العمل؟",
+			adult_label: "كم من الوقت يستغرق طفلك عادةّ للذهاب إلى العمل؟",
+			choices: [
+				{
+					label: "دقائق أو أقل " + "10",
+					value: "10 minutes or less",
+				},
+				{
+					label: "ما بين 11 و20 دقيقة",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "ما بين 21 و30 دقيقة",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "ما بين 31 و60 دقيقة",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "أكثر من 60 دقيقة",
+					value: "More than 60 minutes",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १६c",
+			label: "सामान्यतया, तपाईंलाई काममा पुग्न कति समय लाग्छ?",
+			kid_label: "सामान्यतया, तपाईंलाई काममा पुग्न कति समय लाग्छ?",
+			adult_label: "सामान्यतया, तपाईंको छोरा वा छोरीलाई काममा पुग्न कति समय लाग्छ?",
+			choices: [
+				{
+					label: "१० मिनेट वा सोभन्दा कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनेट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनेट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३१-६० मिनेट",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "६० मिनेट भन्दा बढी",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 16c",

@@ -17,6 +17,24 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"en-AE": {
+			heading: "Work",
+			subheading: "Section 3",
+			description: {
+				kid: "This section is about work or volunteering away from your home – different from chores. Working would be when you make money for you or your family. Volunteering would be helping others or an organization for free (no money). Work and volunteering can take place at location such as a store, farm, restaurant, etc. Please answer both together.",
+				adult:
+					"This section is about work or volunteering away from your home – different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Work and volunteering can take place at location such as a store, farm, restaurant, etc. Please answer both together.",
+			},
+		},
+		"ar-AE": {
+			heading: "العمل",
+			subheading: "القسم الثالث (٣)",
+			description: {
+				kid: "يحتوي هذا القسم على أسئلة حول أعمال تطوعية أو وظائف خارج المنزل – هذا يختلف عن الأعمال المنزلية. الوظيفة قد تكون أي عمل تكتسب مقابله دفعة مالية (راتب). أما العمل التطوعي فهو عبارة عن مساعدة الآخرين أو منظمةٍ ما مجاناً (من دون مقابل مالي). يمكن أن يكون العمل التطوعي أو الوظيفة في أماكن مثل المتاجر أو المطاعم أو المزارع وغيرها. يرجى الإجابة عن كلا النوعين من العمل معاً في الأسئلة التالية.",
+				adult:
+					"يحتوي هذا القسم على أسئلة حول أعمال تطوعية أو وظائف خارج المنزل – هذا يختلف عن الأعمال المنزلية. الوظيفة قد تكون أي عمل تكتسب مقابله دفعة مالية (راتب). أما العمل التطوعي فهو عبارة عن مساعدة الآخرين أو منظمةٍ ما مجاناً (من دون مقابل مالي). يرجى الإجابة عن كلا النوعين من العمل معاً في الأسئلة التالية.",
+			},
+		},
 		"ne-NP": {
 			heading: "काम",
 			subheading: "खण्ड ३",

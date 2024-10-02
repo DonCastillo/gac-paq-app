@@ -46,11 +46,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "MX",
 		lang_code: "es-MX",
 	},
-	// {
-	// 	name: "Nepali - Nepal",
-	// 	flag_code: "NP",
-	// 	lang_code: "ne-NP",
-	// },
+	{
+		name: "Nepali - Nepal",
+		flag_code: "NP",
+		lang_code: "ne-NP",
+	},
 	// {
 	// 	name: "Fulah - Nigeria",
 	// 	flag_code: "NG",
@@ -96,11 +96,16 @@ const Languages: LanguageInterface[] = [
 		flag_code: "TH",
 		lang_code: "th-TH",
 	},
-	// {
-	// 	name: "English - United Arab Emirates",
-	// 	flag_code: "AE",
-	// 	lang_code: "en-AE",
-	// },
+	{
+		name: "Arabic - United Arab Emirates",
+		flag_code: "AE",
+		lang_code: "ar-AE",
+	},
+	{
+		name: "English - United Arab Emirates",
+		flag_code: "AE",
+		lang_code: "en-AE",
+	},
 ];
 
 export default Languages;

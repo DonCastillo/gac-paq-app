@@ -11,9 +11,11 @@ import {
 	getDevice,
 	getEnableNarration,
 	getIsLoading,
+	getLanguage,
 	getSectionTitles,
 	getSoundType,
 	setEnableNarration,
+	setIsLoading,
 } from "store/settings/settingsSlice";
 import { getAudioURI } from "utils/narration";
 
@@ -30,6 +32,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
 	const dispatch = useDispatch();
+	const language = useSelector(getLanguage);
 	const enableNarration = useSelector(getEnableNarration);
 	const isAudioAutoplaying = currentPage?.page?.audio_autoplay ?? false;
 	const soundType = useSelector(getSoundType);
@@ -145,6 +148,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		}
 	};
 
+	NarrationButtonComponent = <></>;
 	if (loaded) {
 		if (enableNarration) {
 			NarrationButtonComponent = (
@@ -185,6 +189,10 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 				/>
 			);
 		}
+	} else {
+		if (soundSrc.current !== null) {
+			NarrationButtonComponent = <ActivityIndicator size="small" />;
+		}
 	}
 
 	return (
@@ -194,19 +202,20 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 					GeneralStyle.kid.topHeaderSectionTitle,
 					{
 						fontSize: moderateScale(
-							device.isTablet ? 13 : 13,
+							device.isTablet ? (language === "ar-AE" ? 16 : 13) : language === "ar-AE" ? 16 : 13,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 						),
 						lineHeight: moderateScale(
-							device.isTablet ? 16 : 16,
+							device.isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16,
 							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 						),
+						direction: language === "ar-AE" ? "rtl" : "ltr",
 					},
 				]}
 			>
 				{title}
 			</Text>
-			{!isLoading ? NarrationButtonComponent : <ActivityIndicator size="small" />}
+			{NarrationButtonComponent}
 		</View>
 	);
 };

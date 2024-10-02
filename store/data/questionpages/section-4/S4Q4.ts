@@ -55,6 +55,140 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 16",
+			label: "How did you go to work in the past week?",
+			kid_label: "How did you go to work in the past week?",
+			adult_label: "How did your child go to work in the past week?",
+			kid_sublabel: "Select the mode that you used the most",
+			adult_sublabel: "Select the mode that your child used the most",
+			choices: [
+				{
+					label: "Walking",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Wheeling",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "for example, bicycle, e-bicycle, skateboard, push scooter, rollerblades, wheelchair use",
+						adult:
+							"for example, bicycle, e-bicycle, skateboard, push scooter, rollerblades, wheelchair use",
+					},
+				},
+				{
+					label: "Public transit",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "example: bus, train, tramway, subway, boat",
+						adult: "example: bus, train, tramway, subway, boat",
+					},
+				},
+				{
+					label: "Car, taxi, or motorcycle",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Other, which one?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "السؤال 16",
+			label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
+			kid_label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
+			adult_label: "كيف ذهب طفلك إلى العمل خلال الأسبوع الماضي؟ ",
+			kid_sublabel: "حدد الوسيلة الأكثر استخداماً",
+			adult_sublabel: "حدد الوسيلة الاكثر استخداماً",
+			choices: [
+				{
+					label: "المشي",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "العجلات",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+						adult:
+							"مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+					},
+				},
+				{
+					label: "النقل العام",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "مثل الحافلة، القطار، الترام، المترو، أو القارب",
+						adult: "مثل الحافلة، القطار، الترام، المترو، أو القارب",
+					},
+				},
+				{
+					label: "السيارة، التاكسي، أو الدراجة النارية",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "وسيلة أخرى – ما هي؟",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १६",
+			label: "पछिल्लो (गएको/ बितेको) हप्ता तपाईं काममा कसरी जानुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्ता तपाईं काममा कसरी जानुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्ता तपाईंको छोरा वा छोरी काममा कसरी जानुभयो?",
+			kid_sublabel: "तपाईंले प्रयोग गर्ने मुख्य माध्यम छान्नुहोस्",
+			adult_sublabel: "तपाईंको छोरा वा छोरीले प्रयोग गर्ने मुख्य माध्यम छान्नुहोस्",
+			choices: [
+				{
+					label: "हिंड्दै",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "व्हिलिंग (पांग्राको प्रयोग गर्दै)",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "व्हिलचेयर, स्केटबोर्ड, धकेल्ने स्कुटर, रोलरब्लेड",
+						adult: "व्हिलचेयर, स्केटबोर्ड, धकेल्ने स्कुटर, रोलरब्लेड",
+					},
+				},
+				{
+					label: "सार्वजनिक माध्यम",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "जस्तै: बस, ट्रेन, सबवे, डुंगा",
+						adult: "जस्तै: बस, ट्रेन, सबवे, डुंगा",
+					},
+				},
+				{
+					label: "कार, ट्याक्सी, ट्रक, मोटरसाइकल",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Pergunta 16",

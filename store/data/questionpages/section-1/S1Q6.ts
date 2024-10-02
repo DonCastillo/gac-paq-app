@@ -47,6 +47,80 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 6",
+			label: "On a normal school day, how much break time do you have?",
+			kid_label: "On a normal school day, how much break time do you have?",
+			adult_label: "On a normal school day, how much break time does your child have?",
+			kid_sublabel:
+				"This means recess and lunch breaks. Please add the time together - for example two 15-minute recess/break periods per day and 30 minutes for lunch would be 60 minutes",
+			adult_sublabel:
+				"This means recess and lunch breaks. Please add the time together - for example two 15-minute recess/break periods per day and 30 minutes for lunch would be 60 minutes",
+			choices: [
+				{
+					label: "0 minutes",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 minutes",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 minutes",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutes",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "More than 60 minutes",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Don't know",
+					value: "Don't know",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 6",
+			label: "في أيام الدراسة العادية، ما هي مدّة الاستراحة لديك؟",
+			kid_label: "في أيام الدراسة العادية، ما هي مدّة الاستراحة لديك؟",
+			adult_label: "في أيام الدراسة العادية، ما هي مدّة الاستراحة لدى طفلك؟",
+			kid_sublabel:
+				"هذا يشمل فترة الاستراحة ووقت الغداء. يرجى إضافة الوقت معاً – مثلاً، فترتا استراحة لمدّة 15 دقيقة في اليوم وفترة واحدة لمدة 30 دقيقة لتناول الطعام ستكون 60 دقيقة إجمالاً",
+			adult_sublabel:
+				"هذا يشمل فترة الاستراحة ووقت الغداء. يرجى إضافة الوقت معاً – مثلاً، فترتا استراحة لمدّة 15 دقيقة في اليوم وفترة واحدة لمدة 30 دقيقة لتناول الطعام ستكون 60 دقيقة إجمالاً",
+			choices: [
+				{
+					label: "لا شيء",
+					value: "0 minutes",
+				},
+				{
+					label: "ما بين 1 و15 دقيقة",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "ما بين 16 و30 دقيقة",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "ما بين 31 و60 دقيقة",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "أكثر من 60 دقيقة",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "لا أعرف",
+					value: "Don't know",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ६",

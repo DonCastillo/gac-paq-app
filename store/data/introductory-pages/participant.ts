@@ -16,6 +16,22 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"en-AE": {
+			type: Question.QuestionInput,
+			heading: "Welcome!",
+			label: "Please enter your Participant ID",
+			kid_label: "Please enter your Participant ID",
+			adult_label: "Please enter your Participant ID",
+			placeholder: "Participant ID Serial Number",
+		},
+		"ar-AE": {
+			type: Question.QuestionInput,
+			heading: "مرحباً بك",
+			label: "يرجى إدخال رقم هوية المشارك الخاص بك",
+			kid_label: "يرجى إدخال رقم هوية المشارك الخاص بك",
+			adult_label: "يرجى إدخال رقم هوية المشارك الخاص بك",
+			placeholder: "الرقم التسلسلي لهوية المشارك",
+		},
 		"ne-NP": {
 			type: Question.QuestionInput,
 			heading: "तपाईं लाई स्वागत् छ",

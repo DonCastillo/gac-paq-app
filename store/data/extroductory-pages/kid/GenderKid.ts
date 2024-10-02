@@ -35,6 +35,65 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "Are you…",
+			kid_label: "Are you…",
+			adult_label: "Are you…",
+			choices: [
+				{
+					label: "Male",
+					value: "Male",
+				},
+				{
+					label: "Female",
+					value: "Female",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 24",
+			label: "هل أنت...",
+			kid_label: "هل أنت...",
+			adult_label: "هل أنت...",
+			choices: [
+				{
+					label: "ذكر",
+					value: "Boy",
+				},
+				{
+					label: "أنثى",
+					value: "Girl",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २४",
+			label: "के  तपाईं ... हो?",
+			kid_label: "के  तपाईं ... हो?",
+			adult_label: "के  तपाईं ... हो?",
+			choices: [
+				{
+					label: "केटा",
+					value: "Boy",
+				},
+				{
+					label: "केटी",
+					value: "Girl",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहान्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 24",

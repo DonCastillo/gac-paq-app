@@ -15,6 +15,7 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
+	getLanguage,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
@@ -27,6 +28,7 @@ const QuestionIntroKid = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const language = useSelector(getLanguage);
 	const isLoading = useSelector(getIsLoading);
 	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
@@ -89,13 +91,26 @@ const QuestionIntroKid = (): React.ReactElement => {
 							style={{
 								...styles.headingText,
 								fontSize: moderateScale(
-									device.isTablet ? 20 : 27,
+									device.isTablet
+										? language === "ar-AE"
+											? 23
+											: 20
+										: language === "ar-AE"
+											? 30
+											: 27,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
 								lineHeight: moderateScale(
-									device.isTablet ? 25 : 32,
+									device.isTablet
+										? language === "ar-AE"
+											? 28
+											: 25
+										: language === "ar-AE"
+											? 35
+											: 32,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
+								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 							}}
 						>
 							{translatedPage.heading}

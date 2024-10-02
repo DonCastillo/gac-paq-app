@@ -27,6 +27,40 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 1",
+			label: "Did you attend school in the past week?",
+			kid_label: "Did you attend school in the past week?",
+			adult_label: "Did your child attend school in the past week?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 1",
+			label: "هل ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
+			kid_label: "هل ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
+			adult_label: "هل ذهب طفلك للمدرسة خلال الأسبوع الماضي؟",
+			choices: [
+				{
+					label: "نعم",
+					value: "yes",
+				},
+				{
+					label: "لا",
+					value: "no",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १",

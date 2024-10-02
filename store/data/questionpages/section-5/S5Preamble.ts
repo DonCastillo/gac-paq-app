@@ -17,6 +17,24 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"en-AE": {
+			heading: "Organized Activities",
+			subheading: "Section 5",
+			description: {
+				kid: "This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sports leagues and lessons for activities like swimming, gymnastics, karate, and horse riding outside of school.",
+				adult:
+					"This section is about physically active organized activities and sports. They include activities that your child does outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sports leagues and lessons for activities like swimming, gymnastics, karate, and horse riding outside of school.",
+			},
+		},
+		"ar-AE": {
+			heading: "الأنشطة المنظّمة أو الخارجية",
+			subheading: "القسم الخامس (٥)",
+			description: {
+				kid: "يحتوي هذا القسم على أسئلة حول الأنشطة المنظّمة أو الخارجية والرياضة، وهي تشمل الأنشطة التي تقوم بها خارج المدرسة (مثل البطولات الرياضية أو الأنشطة التي تقدمها بعض المدارس). وتشمل أيضاً أي دوريات رياضية أو دروس السباحة والجمباز والكاراتيه وركوب الخيل وغيرها.",
+				adult:
+					"يحتوي هذا القسم على أسئلة حول الأنشطة المنظمّة أو الخارجية والرياضة، وهي تشمل الأنشطة التي يقوم بها طفلك خارج المدرسة (مثل البطولات الرياضية أو الأنشطة التي تقدمها بعض المدارس). وتشمل أيضاً أي دوريات رياضية أو دروس السباحة والجمباز والكاراتيه وركوب الخيل وغيرها.",
+			},
+		},
 		"ne-NP": {
 			heading: "सन्गठित क्रियाकलाप",
 			subheading: "खण्ड ५",

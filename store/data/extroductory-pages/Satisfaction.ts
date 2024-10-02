@@ -46,6 +46,114 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Feedback",
+			label: "How satisfied are you with the app? ",
+			kid_label: "How satisfied are you with the app? ",
+			adult_label: "How satisfied are you with the app? ",
+			adult_sublabel: "Click on the image (emoji) that best represents your satisfaction.",
+			kid_sublabel: "Click on the image (emoji) that best represents your satisfaction.",
+			choices: [
+				{
+					label: "Strongly dissatisfied",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Dissatisfied",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutral",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Satisfied",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Strongly satisfied",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "التغذية الراجعة",
+			label: "ما مدى رضاك عن التطبيق؟",
+			kid_label: "ما مدى رضاك عن التطبيق؟",
+			adult_label: "ما مدى رضاك عن التطبيق؟",
+			adult_sublabel: ".حدد الصورة (الرمز التعبيري) التي تمثل مدى رضاك بأفضل وجه",
+			kid_sublabel: ".حدد الصورة (الرمز التعبيري) التي تمثل مدى رضاك بأفضل وجه",
+			choices: [
+				{
+					label: "غير راضٍ على الإطلاق",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "غير راضٍ",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "محايد",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "راضٍ",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "راضٍ جدًا",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "प्रतिक्रिया",
+			label: "तपाईं यो app बाट कत्तिको सन्तुस्ट हुनुहुन्छ वा सोधिएका प्रश्नहरु कस्तो लाग्यो?",
+			kid_label: "तपाईं यो app बाट कत्तिको सन्तुस्ट हुनुहुन्छ वा सोधिएका प्रश्नहरु कस्तो लाग्यो?",
+			adult_label: "तपाईं यो app बाट कत्तिको सन्तुस्ट हुनुहुन्छ वा सोधिएका प्रश्नहरु कस्तो लाग्यो?",
+			adult_sublabel: "तपाइको सन्तुस्टिलाइ कुन इमोजिले प्रतिनिधित्व गर्छ, चिन्न लगाउनुहोस् ।",
+			kid_sublabel: "तपाइको सन्तुस्टिलाइ कुन इमोजिले प्रतिनिधित्व गर्छ, चिन्न लगाउनुहोस् ।",
+			choices: [
+				{
+					label: "धेरै असन्तुष्ट",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "असन्तुष्ट",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "तटस्थ",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "सन्तुष्ट",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "धेरै सन्तुष्ट",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Feedback",

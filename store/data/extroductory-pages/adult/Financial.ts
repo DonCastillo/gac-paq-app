@@ -44,6 +44,106 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 30",
+			label: "How difficult or easy is it for you to meet the financial needs of your family?",
+			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label:
+				"How difficult or easy is it for you to meet the financial needs of your family?",
+			choices: [
+				{
+					label: "Very difficult",
+					value: "Very difficult",
+				},
+				{
+					label: "Difficult",
+					value: "Difficult",
+				},
+				{
+					label: "Neither easy nor difficult",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Easy",
+					value: "Easy",
+				},
+				{
+					label: "Very easy",
+					value: "Very easy",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 30",
+			label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
+			kid_label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
+			adult_label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
+			choices: [
+				{
+					label: "صعب جداً",
+					value: "Very difficult",
+				},
+				{
+					label: "صعب",
+					value: "Difficult",
+				},
+				{
+					label: "ليس سهلاً ولا صعباً",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "سهل",
+					value: "Easy",
+				},
+				{
+					label: "سهل جداً",
+					value: "Very easy",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "तपाइलाई तपाइको पारिवारिक आवसेकता पुरा गर्न कती सजिलो वा गाह्रो छ?",
+			kid_label: "तपाइलाई तपाइको पारिवारिक आवसेकता पुरा गर्न कती सजिलो वा गाह्रो छ?",
+			adult_label: "तपाइलाई तपाइको पारिवारिक आवसेकता पुरा गर्न कती सजिलो वा गाह्रो छ?",
+			choices: [
+				{
+					label: "धेरै गाह्रो छ",
+					value: "Very difficult",
+				},
+				{
+					label: "गाह्रो छ",
+					value: "Difficult",
+				},
+				{
+					label: "न त गाह्रो छ न त सजिलो छ",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "सजिलो छ",
+					value: "Easy",
+				},
+				{
+					label: "धेरै सजिलो छ",
+					value: "Very easy",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 30",

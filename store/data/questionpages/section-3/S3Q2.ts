@@ -40,6 +40,97 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 13",
+			label: "In the past week, how many hours did you spend volunteering or working?",
+			kid_label: "In the past week, how many hours did you spend volunteering or working?",
+			adult_label: "In the past week, how many hours did your child spend volunteering or working?",
+			choices: [
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hours or more per day",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال ١٣",
+			label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
+			kid_label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
+			adult_label:
+				"خلال الأسبوع الماضي، كم عدد الساعات التي قضاها طفلك في العمل التطوعي أو الوظيفة؟",
+			choices: [
+				{
+					label: "أقل من ساعة في اليوم",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "ما بين ساعة وأقل من ساعتين في اليوم",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "ما بين ساعتين وأقل من 3 ساعات في اليوم",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "ما بين 3 ساعات وأقل من 4 ساعات في اليوم",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 ساعات أو أكثر في اليوم",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १३",
+			label:
+				"तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
+			kid_label:
+				"तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको)  हप्तामा, तपाईंको छोरा वा छोरीले कति घण्टा काम वा स्वयंसेवामा व्यतित गर्नुभयो?",
+			choices: [
+				{
+					label: "दिनको १ घन्टा भन्दा कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "दिनको १ देखि २ घण्टा भन्दा कम",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "दिनको २ देखि ३ घण्टा भन्दा कम",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "दिनको ३ देखि ४ घण्टा भन्दा कम",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "दिनको ४ घण्टा वा बढी",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 13",

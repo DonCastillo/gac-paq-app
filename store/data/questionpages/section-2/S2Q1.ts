@@ -27,6 +27,41 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 8",
+			label: "In the past week, did you do active chores or tasks?",
+			kid_label: "In the past week, did you do active chores or tasks?",
+			adult_label: "In the past week, did your child do active chores or tasks?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 8",
+			label: "خلال الأسبوع الماضي، هل قمت بأعمال منزلية أو مهام تتطلّب منك النشاط البدني؟",
+			kid_label: "خلال الأسبوع الماضي، هل قمت بأعمال منزلية أو مهام تتطلّب منك النشاط البدني؟",
+			adult_label:
+				"خلال الأسبوع الماضي، هل قام طفلك بأعمال منزلية أو مهام تتطلّب منه النشاط البدني؟",
+			choices: [
+				{
+					label: "نعم",
+					value: "yes",
+				},
+				{
+					label: "لا",
+					value: "no",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ८",

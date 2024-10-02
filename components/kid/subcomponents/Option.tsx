@@ -5,7 +5,7 @@ import { isOtherOption } from "utils/options.utils";
 import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 
-import { getDevice, getPhrases } from "store/settings/settingsSlice";
+import { getDevice, getLanguage, getPhrases } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	text: string;
@@ -35,6 +35,7 @@ const Option = ({
 	const otherInputRef = useRef<TextInput>(null);
 	const device = useSelector(getDevice);
 	const phrases = useSelector(getPhrases);
+	const language = useSelector(getLanguage);
 
 	return (
 		<View>
@@ -69,14 +70,15 @@ const Option = ({
 						style={{
 							...GeneralStyle.kid.optionText,
 							fontSize: moderateScale(
-								device.isTablet ? 14 : 16,
+								device.isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							lineHeight: moderateScale(
-								device.isTablet ? 18 : 20,
+								device.isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							color: selected ? "#fff" : "#000",
+							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 						}}
 					>
 						{text}
@@ -87,13 +89,26 @@ const Option = ({
 						<Text
 							style={{
 								fontSize: moderateScale(
-									device.isTablet ? 12 : 12,
+									device.isTablet
+										? language === "ar-AE"
+											? 15
+											: 12
+										: language === "ar-AE"
+											? 15
+											: 12,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
 								lineHeight: moderateScale(
-									device.isTablet ? 16 : 16,
+									device.isTablet
+										? language === "ar-AE"
+											? 19
+											: 16
+										: language === "ar-AE"
+											? 19
+											: 16,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
+								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 							}}
 						>
 							{optionSublabel}
@@ -132,6 +147,7 @@ const Option = ({
 							defaultValue={defaultOtherInputValue}
 							placeholder={phrases?.specify}
 							keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
+							textAlign={language === "ar-AE" ? "right" : "left"}
 						/>
 					</View>
 				)}

@@ -25,6 +25,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
+					label: "0 days",
+					value: "0",
+				},
+				{
 					label: "1 day",
 					value: "1",
 				},
@@ -54,6 +58,139 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 22",
+			label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label:
+				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel: "Examples include gymnastics, climbing, weightlifting, etc.",
+			adult_sublabel: "Examples include gymnastics, climbing, weightlifting, etc.",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 22",
+			label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بأنشطة تقوّي العضلات؟",
+			kid_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بأنشطة تقوّي العضلات؟",
+			adult_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قام فيها طفلك بأنشطة تقوّي العضلات؟",
+			kid_sublabel: ".من الأمثلة على ذلك الجمباز والتسلق وتمارين الأثقال وغيرها",
+			adult_sublabel: ".من الأمثلة على ذلك الجمباز والتسلق وتمارين الأثقال وغيرها",
+			choices: [
+				{
+					label: "٠ يوم",
+					value: "0",
+				},
+				{
+					label: "يوم واحد (١)",
+					value: "1",
+				},
+				{
+					label: "يومين (٢)",
+					value: "2",
+				},
+				{
+					label: "ثلاثة أيام (٣)",
+					value: "3",
+				},
+				{
+					label: "أربعة أيام (٤)",
+					value: "4",
+				},
+				{
+					label: "خمسة أيام (٥)",
+					value: "5",
+				},
+				{
+					label: "ستة أيام  (٦)",
+					value: "6",
+				},
+				{
+					label: "سبعة أيام (٧)",
+					value: "7",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २२",
+			label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईंको छोरा वा छोरीले कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 22",
@@ -64,6 +201,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_label:
 				"Na última semana, quantos dias por semana o(a) seu(sua) filho(a) fez atividades que deixaram os músculos dele(a) mais fortes?",
 			choices: [
+				{
+					label: "0 dias",
+					value: "0",
+				},
 				{
 					label: "1 dia",
 					value: "1",
@@ -105,6 +246,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Hur många dagar gjorde ditt barn någon aktivitet som gör musklerna starkare under den senaste veckan?",
 			choices: [
 				{
+					label: "0 dagar",
+					value: "0",
+				},
+				{
 					label: "En dag",
 					value: "1",
 				},
@@ -144,6 +289,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_sublabel: "ตัวอย่างเช่น ยิมนาสติก ปีนเขา วิดพื้น ยกเวท หรือโหนบาร์ เป็นต้น",
 			choices: [
 				{
+					label: "0 วัน",
+					value: "0",
+				},
+				{
 					label: "1 วัน",
 					value: "1",
 				},
@@ -180,6 +329,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			kid_label: "在过去一周里，你有几天会做一些能让你变得更强壮的活动？",
 			adult_label: "在过去一周里，您的孩子有几天或做一些能让他们变得更强壮的活动？",
 			choices: [
+				{
+					label: "0 天",
+					value: "0",
+				},
 				{
 					label: "1 天",
 					value: "1",
@@ -220,6 +373,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_label:
 				"Durante la semana pasada, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
 			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
 				{
 					label: "1 día",
 					value: "1",
@@ -265,6 +422,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				"Algunos ejemplos incluyen niños, niñas o jóvenes haciendo gimnasia, escalando, haciendo lagartijas, levantando pesas o usando el pasamanos.",
 			choices: [
 				{
+					label: "0 días",
+					value: "0",
+				},
+				{
 					label: "1 día",
 					value: "1",
 				},
@@ -308,6 +469,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_sublabel:
 				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
 			choices: [
+				{
+					label: "0 jour",
+					value: "0",
+				},
 				{
 					label: "1 jour",
 					value: "1",

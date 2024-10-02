@@ -245,6 +245,170 @@ const IntroBackground = {
 			},
 		},
 	},
+	MX: {
+		school: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/school/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/school/tablet/intro.webp"),
+			},
+		},
+		household: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/household/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/household/tablet/intro.webp"),
+			},
+		},
+		work: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/work/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/work/tablet/intro.webp"),
+			},
+		},
+		transportation: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/transportation/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/transportation/tablet/intro.webp"),
+			},
+		},
+		organized: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/organized/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/organized/tablet/intro.webp"),
+			},
+		},
+		play: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/play/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/play/tablet/intro.webp"),
+			},
+		},
+		outdoors: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/outdoors/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/outdoors/tablet/intro.webp"),
+			},
+		},
+		extro: {
+			kid: {
+				phone: require("assets/images/kid/MX/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/kid/MX/sections/extro/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MX/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/teen/MX/sections/extro/tablet/intro.webp"),
+			},
+		},
+	},
+	AE: {
+		school: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/school/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/school/tablet/intro.webp"),
+			},
+		},
+		household: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/household/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/household/tablet/intro.webp"),
+			},
+		},
+		work: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/work/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/work/tablet/intro.webp"),
+			},
+		},
+		transportation: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/transportation/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/transportation/tablet/intro.webp"),
+			},
+		},
+		organized: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/organized/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/organized/tablet/intro.webp"),
+			},
+		},
+		play: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/play/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/play/tablet/intro.webp"),
+			},
+		},
+		outdoors: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/outdoors/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/outdoors/tablet/intro.webp"),
+			},
+		},
+		extro: {
+			kid: {
+				phone: require("assets/images/kid/AE/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/kid/AE/sections/extro/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/AE/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/teen/AE/sections/extro/tablet/intro.webp"),
+			},
+		},
+	},
 };
 
 export default IntroBackground;

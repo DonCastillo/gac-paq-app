@@ -6,8 +6,10 @@ import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import {
 	getColorTheme,
+	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getLanguage,
 	getPhrases,
 } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
@@ -32,6 +34,8 @@ const DropDownSelector = ({
 	const colorTheme = useSelector(getColorTheme);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
+	const currentPage = useSelector(getCurrentPage);
+	const language = useSelector(getLanguage);
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<ChoiceIcon[] | Choice[]>(options);
@@ -52,7 +56,14 @@ const DropDownSelector = ({
 	return (
 		<>
 			<DropDownPicker
-				style={[styles.container, { borderColor: color100 }]}
+				style={[
+					styles.container,
+					{
+						borderColor: color100,
+						width: "100%",
+						direction: language === "ar-AE" ? "rtl" : "ltr",
+					},
+				]}
 				showTickIcon={true}
 				placeholder={phrases?.select}
 				open={dropdownOpen}
@@ -93,18 +104,32 @@ const DropDownSelector = ({
 						device.isTablet ? 35 : 45,
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
+					direction: language === "ar-AE" ? "rtl" : "ltr",
 				}}
 				onChangeValue={(value: string) => onSelect(value)}
 				textStyle={{
 					...GeneralStyle.kid.dropdownPickerText,
 					fontSize: moderateScale(
-						device.isTablet ? 12 : 16,
+						device.isTablet
+							? value === "ar-AE" && currentPage.page.ident !== "language_location"
+								? 15
+								: 12
+							: value === "ar-AE" && currentPage.page.ident !== "language_location"
+								? 19
+								: 16,
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
 					lineHeight: moderateScale(
-						device.isTablet ? 16 : 20,
+						device.isTablet
+							? value === "ar-AE" && currentPage.page.ident !== "language_location"
+								? 19
+								: 16
+							: value === "ar-AE" && currentPage.page.ident !== "language_location"
+								? 23
+								: 20,
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
+					writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 				}}
 			/>
 		</>

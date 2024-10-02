@@ -27,6 +27,58 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 12",
+			label: "In the past week, did you volunteer or work?",
+			kid_label: "In the past week, did you volunteer or work?",
+			adult_label: "In the past week, did your child volunteer or work?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال ١٢",
+			label: "خلال الأسبوع الماضي، هل قمت بعملٍ تطوعي أو وظيفة؟",
+			kid_label: "خلال الأسبوع الماضي، هل قمت بعملٍ تطوعي أو وظيفة؟",
+			adult_label: "خلال الأسبوع الماضي، هل قام طفلك بعملٍ تطوعي أو وظيفة؟",
+			choices: [
+				{
+					label: "نعم",
+					value: "yes",
+				},
+				{
+					label: "لا",
+					value: "no",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १२",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा, के तपाईंले कुनै काम वा स्वयंसेवा गर्नुभयो ? ",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, के तपाईंले कुनै काम वा स्वयंसेवा गर्नुभयो ? ",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको)  हप्तामा, के तपाईंको छोरा वा छोरीले कुनै काम वा स्वयंसेवा गर्नुभयो?",
+			choices: [
+				{
+					label: "गरे",
+					value: "yes",
+				},
+				{
+					label: "गरिनँ",
+					value: "no",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 12",

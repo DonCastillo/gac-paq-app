@@ -31,6 +31,61 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "What is your child's gender?",
+			kid_label: "What is your child's gender?",
+			adult_label: "What is your child's gender?",
+			choices: [
+				{
+					label: "Male",
+					value: "Male",
+				},
+				{
+					label: "Female",
+					value: "Female",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 24",
+			label: "ما هو جنس طفلك؟",
+			kid_label: "ما هو جنس طفلك؟",
+			adult_label: "ما هو جنس طفلك؟",
+			choices: [
+				{
+					label: "ذكر",
+					value: "Female",
+				},
+				{
+					label: "أنثى",
+					value: "Male",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २४",
+			label: "तपाइको बच्चाको लिङ के हो?",
+			kid_label: "तपाइको बच्चाको लिङ के हो?",
+			adult_label: "तपाइको बच्चाको लिङ के हो?",
+			choices: [
+				{
+					label: "महिला",
+					value: "Female",
+				},
+				{
+					label: "पुरुष",
+					value: "Male",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 24",

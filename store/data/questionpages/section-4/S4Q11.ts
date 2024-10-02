@@ -37,6 +37,89 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 17c - Wheeling",
+			label: "On a normal day, how much time did you wheel to places other than school or work?",
+			kid_label:
+				"On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label:
+				"On a normal day, how much time did your child wheel to places other than school or work?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 17c - العجلات",
+			label:
+				"في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			kid_label:
+				"في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			adult_label:
+				"في الأيام العادية، كم من الوقت يقضي طفلك في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			choices: [
+				{
+					label: "دقائق أو أقل " + "10",
+					value: "10 minutes or less",
+				},
+				{
+					label: "ما بين 11 و20 دقيقة",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "ما بين 21 و30 دقيقة",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "أكثر من 30 دقيقة",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७c - गाडी",
+			label:
+				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
+			kid_label:
+				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
+			adult_label:
+				"सामान्य दिनमा, तपाईंको छोरा वा छोरीले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
+			choices: [
+				{
+					label: "१० मिनेट वा सोभन्दा कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनेट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनेट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनेटभन्दा बढी",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 17c - Bicicleta",

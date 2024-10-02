@@ -59,6 +59,104 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old is your child?",
+			kid_label: "How old is your child?",
+			adult_label: "How old is your child?",
+			choices: [
+				{
+					label: "8 years old",
+					value: "8",
+				},
+				{
+					label: "9 years old",
+					value: "9",
+				},
+				{
+					label: "10 years old",
+					value: "10",
+				},
+				{
+					label: "11 years old",
+					value: "11",
+				},
+				{
+					label: "12 years old",
+					value: "12",
+				},
+				{
+					label: "13 years old",
+					value: "13",
+				},
+				{
+					label: "14 years old",
+					value: "14",
+				},
+				{
+					label: "15 years old",
+					value: "15",
+				},
+				{
+					label: "16 years old",
+					value: "16",
+				},
+				{
+					label: "17 years old",
+					value: "17",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionDropdown,
+			heading: "مرحباً بك",
+			label: "كم عمر طفلك؟",
+			kid_label: "كم عمر طفلك؟",
+			adult_label: "كم عمر طفلك؟",
+			choices: [
+				{
+					label: "٨ سنوات",
+					value: "8",
+				},
+				{
+					label: "٩ سنوات",
+					value: "9",
+				},
+				{
+					label: "١٠ سنوات",
+					value: "10",
+				},
+				{
+					label: "١١ سنة ",
+					value: "11",
+				},
+				{
+					label: "١٢ سنة",
+					value: "12",
+				},
+				{
+					label: "١٣ سنة",
+					value: "13",
+				},
+				{
+					label: "١٤ سنة",
+					value: "14",
+				},
+				{
+					label: "١٥ سنة",
+					value: "15",
+				},
+				{
+					label: "١٦ سنة",
+					value: "16",
+				},
+				{
+					label: "١٧ سنة",
+					value: "17",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionDropdown,
 			heading: "तपाईं लाई स्वागत् छ",

@@ -47,6 +47,117 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 28",
+			label: "What is your relationship to the child?",
+			kid_label: "What is your relationship to the child?",
+			adult_label: "What is your relationship to the child?",
+			choices: [
+				{
+					label: "Father",
+					value: "Father",
+				},
+				{
+					label: "Mother",
+					value: "Mother",
+				},
+				{
+					label: "Grandfather",
+					value: "Grandfather",
+				},
+				{
+					label: "Grandmother",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor or guardian",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Other",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 28",
+			label: "ما هي علاقتك بالطفل؟",
+			kid_label: "ما هي علاقتك بالطفل؟",
+			adult_label: "ما هي علاقتك بالطفل؟",
+			choices: [
+				{
+					label: "الأب",
+					value: "Father",
+				},
+				{
+					label: "الأم",
+					value: "Mother",
+				},
+				{
+					label: "الجد",
+					value: "Grandfather",
+				},
+				{
+					label: "الجدة",
+					value: "Grandmother",
+				},
+				{
+					label: "المعلم أو الوصي",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "علاقة أخرى – يرجى التحديد:",
+					value: "Other",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "बच्चा सँग तपाइको सम्बन्ध के हो?",
+			kid_label: "बच्चा सँग तपाइको सम्बन्ध के हो?",
+			adult_label: "बच्चा सँग तपाइको सम्बन्ध के हो?",
+			choices: [
+				{
+					label: "बुवा",
+					value: "Father",
+				},
+				{
+					label: "आमा",
+					value: "Mother",
+				},
+				{
+					label: "हजुरबा",
+					value: "Grandfather",
+				},
+				{
+					label: "हजुरआमा",
+					value: "Grandmother",
+				},
+				{
+					label: "अन्य अभिभावक",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 28",

@@ -44,6 +44,106 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 29",
+			label: "What is the highest level of education completed by a member of your household?",
+			kid_label: "What is the highest level of education completed by a member of your household?",
+			adult_label:
+				"What is the highest level of education completed by a member of your household?",
+			choices: [
+				{
+					label: "No formal schooling",
+					value: "No formal schooling",
+				},
+				{
+					label: "Primary school",
+					value: "Primary school",
+				},
+				{
+					label: "Secondary or high school",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Vocational/college education",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Tertiary/university education",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 29",
+			label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
+			kid_label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
+			adult_label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
+			choices: [
+				{
+					label: "غير متعلم",
+					value: "No formal schooling",
+				},
+				{
+					label: "ابتدائي",
+					value: "Primary school",
+				},
+				{
+					label: "ثانوي",
+					value: "Secondary or high school",
+				},
+				{
+					label: "مهني (دبلوم)",
+					value: "Vocational/college education",
+				},
+				{
+					label: "جامعي (بكالوريوس/ ماجستير/ دكتوراه)",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २९",
+			label: "तपाइ को परिवारमा सबै भन्दा धेरै पढेको सदस्यको शैक्षिक योग्यता कती हो?",
+			kid_label: "तपाइ को परिवारमा सबै भन्दा धेरै पढेको सदस्यको शैक्षिक योग्यता कती हो?",
+			adult_label: "तपाइ को परिवारमा सबै भन्दा धेरै पढेको सदस्यको शैक्षिक योग्यता कती हो?",
+			choices: [
+				{
+					label: "औपचारिक शिक्षा छैन",
+					value: "No formal schooling",
+				},
+				{
+					label: "राथमिक तह",
+					value: "Primary school",
+				},
+				{
+					label: "निम्न माध्यमिक वा हाइस्कुल",
+					value: "Secondary or high school",
+				},
+				{
+					label: "प्राबिधिक शिक्षा",
+					value: "Vocational/college education",
+				},
+				{
+					label: "विस्वविद्यालय शिक्षा",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 29",
