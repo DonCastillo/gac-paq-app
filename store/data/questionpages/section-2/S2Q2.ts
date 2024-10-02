@@ -47,6 +47,80 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 9",
+			label: "How many days did you do chores during the past week?",
+			kid_label: "How many days did you do chores during the past week?",
+			adult_label: "How many days did your child do chores during the past week?",
+			choices: [
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال ٩",
+			label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بالأعمال المنزلية؟",
+			kid_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بالأعمال المنزلية؟",
+			adult_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قام فيها طفلك بالأعمال المنزلية؟",
+			choices: [
+				{
+					label: "يوم واحد (١)",
+					value: "1",
+				},
+				{
+					label: "يومين (٢)",
+					value: "2",
+				},
+				{
+					label: "ثلاثة أيام (٣)",
+					value: "3",
+				},
+				{
+					label: "أربعة أيام (٤)",
+					value: "4",
+				},
+				{
+					label: "خمسة أيام (٥)",
+					value: "5",
+				},
+				{
+					label: "ستة أيام  (٦)",
+					value: "6",
+				},
+				{
+					label: "سبعة أيام (٧)",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ९",

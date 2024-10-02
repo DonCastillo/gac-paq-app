@@ -49,6 +49,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const [proceed, setProceed] = useState<boolean>(false);
 
 	// translations
 	const translatedPage = currentPage.page.translations as TranslatedIntroQuestionType;
@@ -92,7 +93,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	}, [currentPageNumber]);
 
 	useEffect(() => {
-		if (selectedValue !== null) {
+		if (selectedValue !== null && proceed) {
 			setButtonComponent(
 				<BackAndNextNav
 					key={"both"}
@@ -110,7 +111,23 @@ const QuestionSingleAdult = (): React.ReactElement => {
 				/>,
 			);
 		}
-	}, [selectedValue]);
+	}, [selectedValue, proceed]);
+
+	// display buttons
+	useEffect(() => {
+		if (currentPage.page.audio_autoplay === true) {
+			const timer = setTimeout(() => {
+				setProceed(true);
+				clearTimeout(timer);
+			}, 3000);
+		} else {
+			setProceed(true);
+		}
+
+		return () => {
+			setProceed(false);
+		};
+	}, [currentPageNumber]);
 
 	useEffect(() => {
 		setSelectedValue(getResponse());

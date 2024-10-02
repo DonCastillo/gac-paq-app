@@ -30,10 +30,21 @@ import VolunteeringOptions from "styles/images/options/volunteering";
 import type State from "constants/state.enum";
 import StatusBackground from "styles/images/background/status";
 
-const blackListLanguages = ["pt-BR", "sv-SE", "th-TH", "zh-CN", "es-ES", "es-MX", "fr-CA"];
+const blackListLanguages = [
+	"ne-NP",
+	"pt-BR",
+	"sv-SE",
+	"th-TH",
+	"zh-CN",
+	"es-ES",
+	"es-MX",
+	"fr-CA",
+	"ar-AE",
+	"en-AE",
+];
 
 const getImageBackground = (): any | null => {
-	const blackListLanguages = ["pt-BR", "sv-SE", "th-TH", "zh-CN", "es-MX", "fr-CA"];
+	const blackListLanguages = ["ne-NP", "sv-SE", "th-TH", "zh-CN", "fr-CA"];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
@@ -104,7 +115,7 @@ const getImageBackgroundStatus = (state: State): any | null => {
 };
 
 const getOptionImage = (image_ident: string): any | null => {
-	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "fr-CA", "ne-NP"];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";

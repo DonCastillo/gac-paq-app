@@ -17,6 +17,24 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"en-AE": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+			description: {
+				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, camping in the desert, etc.)",
+				adult:
+					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, or camping in the desert, etc.)",
+			},
+		},
+		"ar-AE": {
+			heading: "قضاء الوقت في الهواء الطلق",
+			subheading: "القسم السابع (٧)",
+			description: {
+				kid: "يحتوي هذا القسم على أسئلة حول الوقت الذي تقضيه في الهواء الطلق. يمكن أن يكون ذلك خلال وقتك في المدرسة، أثناء الأعمال المنزلية، فترة العمل التطوعي أو الوظيفة، أثناء النقل والمواصلات، وكذلك في الوقت الفراغ. وهذا أيضاً يشمل الوقت الذي تقضيه في الهواء الطلق من دون حركة أو فعالية (مثل القراءة، أو أثناء النزهة، أو التخييم في الصحراء، وغيرها).",
+				adult:
+					"يحتوي هذا القسم على أسئلة حول الوقت الذي يقضيه طفلك في الهواء الطلق. يمكن أن يكون ذلك خلال وقته في المدرسة، أثناء الأعمال المنزلية، العمل التطوعي أو الوظيفة، أثناء النقل والمواصلات، وكذلك في الوقت الفراغ. وهذا أيضاً يشمل الوقت الذي يقضيه في الهواء الطلق من دون حركة أو فعالية (مثل القراءة، أو أثناء النزهة، أو التخييم في الصحراء، وغيرها).",
+			},
+		},
 		"ne-NP": {
 			heading: "बाहिरी गतिविधि",
 			subheading: "खण्ड ७",

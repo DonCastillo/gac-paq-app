@@ -42,6 +42,100 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 14",
+			label:
+				"Which of the following images shows what you do most of the time while volunteering or working?",
+			kid_label:
+				"Which of the following images shows what you do most of the time while volunteering or working?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time while volunteering or working?",
+			choices: [
+				{
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Don't know",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "السؤال ١٤",
+			label: "أي من الصور التالية تبيّن ما تفعله معظم الوقت أثناء العمل التطوعي أو الوظيفة؟",
+			kid_label: "أي من الصور التالية تبيّن ما تفعله معظم الوقت أثناء العمل التطوعي أو الوظيفة؟",
+			adult_label:
+				"أي من الصور التالية تبيّن ما يفعله طفلك معظم الوقت أثناء العمل التطوعي أو الوظيفة؟",
+			choices: [
+				{
+					label: "لا حركة",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "جهد سهل",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "جهد متوسط أو صعب",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "لا أعرف",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १४",
+			label:
+				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			kid_label:
+				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			adult_label:
+				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			choices: [
+				{
+					label: "हलचल नगरेको ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "सजिलो प्रयासको काम गरेको",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम/गाह्रो प्रयासको काम गरेको",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "थाहा छैन",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Pergunta 14",

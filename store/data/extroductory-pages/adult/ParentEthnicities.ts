@@ -47,6 +47,65 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionCheckboxInput,
+			heading: "Question 27",
+			label: "What is your nationality?",
+			kid_label: "What is your nationality?",
+			adult_label: "What is your nationality?",
+			input_label: "",
+			input_placeholder: "",
+			input_label_en: "",
+			choices: [],
+		},
+		"ar-AE": {
+			type: Question.QuestionCheckboxInput,
+			heading: "السؤال 27",
+			label: "ما هي جنسيتك؟",
+			kid_label: "ما هي جنسيتك؟",
+			adult_label: "ما هي جنسيتك؟",
+			input_label: "",
+			input_placeholder: "",
+			input_label_en: "",
+			choices: [],
+		},
+		"ne-NP": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २७",
+			label: "तपाइको जातियता के हो?",
+			kid_label: "तपाइको जातियता के हो?",
+			adult_label: "तपाइको जातियता के हो?",
+			choices: [
+				{
+					label: "एसियन्",
+					value: "Asian",
+				},
+				{
+					label: "कालो बर्ण वा अफ्रीकन्",
+					value: "Black or African American",
+				},
+				{
+					label: "आदिवासि",
+					value: "Indigenous",
+				},
+				{
+					label: "यटिन अमेरिकन्",
+					value: "Latin American",
+				},
+				{
+					label: "सेतो बर्ण वा ककेसियन्",
+					value: "White or Caucasian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
 			heading: "Pergunta 27",

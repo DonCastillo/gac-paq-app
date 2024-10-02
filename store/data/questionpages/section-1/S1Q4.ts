@@ -39,6 +39,64 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 4",
+			label: "How long are your physical education classes?",
+			kid_label: "How long are your physical education classes?",
+			adult_label: "How long are your child's physical education classes?",
+			choices: [
+				{
+					label: "Less than 30 minutes per class",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 minutes per class",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 minutes per class",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Over 60 minutes per class",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Don't know",
+					value: "Don't know",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 4",
+			label: "ما هي المدّة الزمنية لحصص التربية البدنية؟",
+			kid_label: "ما هي المدّة الزمنية لحصص التربية البدنية؟",
+			adult_label: "ما هي المدّة الزمنية لحصص التربية البدنية لدى طفلك؟",
+			choices: [
+				{
+					label: "أقل من 30 دقيقة",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "ما بين 30 و45 دقيقة",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "ما بين 46 و60 دقيقة",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "أكثر من 60 دقيقة",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "لا أعرف",
+					value: "Don't know",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ४",

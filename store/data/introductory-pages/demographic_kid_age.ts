@@ -35,6 +35,56 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old are you?",
+			kid_label: "How old are you?",
+			adult_label: "How old are you?",
+			choices: [
+				{
+					label: "8 years old",
+					value: "8",
+				},
+				{
+					label: "9 years old",
+					value: "9",
+				},
+				{
+					label: "10 years old",
+					value: "10",
+				},
+				{
+					label: "11 years old",
+					value: "11",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionDropdown,
+			heading: "مرحباً بك",
+			label: "كم عمرك؟",
+			kid_label: "كم عمرك؟",
+			adult_label: "كم عمرك؟",
+			choices: [
+				{
+					label: "٨ سنوات",
+					value: "8",
+				},
+				{
+					label: "٩ سنوات",
+					value: "9",
+				},
+				{
+					label: "١٠ سنوات",
+					value: "10",
+				},
+				{
+					label: "١١ سنة ",
+					value: "11",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

@@ -44,6 +44,112 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 17",
+			label:
+				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_label:
+				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			adult_label:
+				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_sublabel: "Please select all responses that apply to you.",
+			adult_sublabel: "Please select all responses that apply to your child.",
+			choices: [
+				{
+					label: "Yes, I walked",
+					value: "Walked",
+					label_mode: {
+						kid: "Yes, I walked",
+						adult: "Yes, they walked",
+					},
+				},
+				{
+					label: "Yes, I wheeled",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Yes, I wheeled",
+						adult: "Yes, they wheeled",
+					},
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionCheckbox,
+			heading: "السؤال 17",
+			label:
+				"خلال الأسبوع الماضي، هل قمت بالمشي أو استخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل (مثل منازل الأصدقاء أو الأقارب، الحديقة، والمتجر، وغيرها)؟",
+			kid_label:
+				"خلال الأسبوع الماضي، هل قمت بالمشي أو استخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل (مثل منازل الأصدقاء أو الأقارب، الحديقة، والمتجر، وغيرها)؟",
+			adult_label:
+				"خلال الأسبوع الماضي، هل قام طفلك بالمشي أو استخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل (مثل منازل الأصدقاء أو الأقارب، الحديقة، المتجر، وغيرها)؟",
+			kid_sublabel: ".يرجى تحديد جميع الخيارات التي تنطبق عليك",
+			adult_sublabel: ".يرجى تحديد جميع الخيارات التي تنطبق عليه",
+			choices: [
+				{
+					label: "نعم، قمت بالمشي",
+					value: "Walked",
+					label_mode: {
+						kid: "نعم، قمت بالمشي",
+						adult: "نعم، قام بالمشي",
+					},
+				},
+				{
+					label: "نعم، قمت باستخدام العجلات",
+					value: "Wheeled",
+					label_mode: {
+						kid: "نعم، قمت باستخدام العجلات",
+						adult: "نعم، قام باستخدام العجلات",
+					},
+				},
+				{
+					label: "لا",
+					value: "no",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न १७",
+			label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले यात्रा गर्ने प्रमुख माध्यम मार्फत (जस्तै: हिंड्ने, साइकल चलाउने, व्हिलिंग गर्ने) विध्यालय वा कामबाहेक अन्य ठाउँहरु जानुभयो? (जस्तै: साथीको घर, पार्क, पसल)?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले यात्रा गर्ने प्रमुख माध्यम मार्फत (जस्तै: हिंड्ने, साइकल चलाउने, व्हिलिंग गर्ने) विध्यालय वा कामबाहेक अन्य ठाउँहरु जानुभयो? (जस्तै: साथीको घर, पार्क, पसल)?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंको छोरा वा छोरी, विध्यालय वा कामबाहेक अन्य ठाउँहरुमा हिडेर वा साइकल चलाएर जानुभयो (जस्तै: साथीको घर, पार्क, पसल)?",
+			kid_sublabel: "कृपया लागु हुने सबै विकल्पहरु छान्नुहोला l",
+			adult_sublabel: "कृपया लागु हुने सबै विकल्पहरु छान्नुहोला l",
+			choices: [
+				{
+					label: "हो, म हिंडे",
+					value: "Walked",
+					label_mode: {
+						kid: "हो, म हिंडे",
+						adult: "हो, ऊ हिड्यो/ उनि हिडिन्",
+					},
+				},
+				{
+					label: "हो, मैले बाइक चलाए",
+					value: "Wheeled",
+					label_mode: {
+						kid: "हो, मैले बाइक चलाए",
+						adult: "हो, उसले साइकल चलायो/ उनले साइकल चलाइन्",
+					},
+				},
+				{
+					label: "कतै पनि गईन",
+					value: "no",
+					label_mode: {
+						kid: "कतै पनि गईन",
+						adult: "कतै पनि गएन/गइनन्",
+					},
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
 			heading: "Pergunta 17",

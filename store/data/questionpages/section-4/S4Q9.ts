@@ -36,6 +36,88 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 17c - Walking",
+			label: "On a normal day, how much time did you walk to places other than school or work?",
+			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
+			adult_label:
+				"On a normal day, how much time did your child walk to places other than school or work?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 17c - المشي",
+			label:
+				"كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			kid_label:
+				"كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			adult_label:
+				"كم عدد الأيام التي قام فيها طفلك باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			choices: [
+				{
+					label: "دقائق أو أقل " + "10",
+					value: "10 minutes or less",
+				},
+				{
+					label: "ما بين 11 و20 دقيقة",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "ما بين 21 و30 دقيقة",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "أكثر من 30 دقيقة",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७c - हिँड्नु",
+			label:
+				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			kid_label:
+				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			adult_label:
+				"सामान्य दिनमा, तपाईंको छोरा वा छोरीले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			choices: [
+				{
+					label: "१० मिनेट वा सोभन्दा कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनेट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनेट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनेटभन्दा बढी",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 17c - Andando",

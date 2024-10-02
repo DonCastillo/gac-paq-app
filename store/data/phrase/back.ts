@@ -4,6 +4,12 @@ const BackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Back",
 	},
+	"en-AE": {
+		label: "Back",
+	},
+	"ar-AE": {
+		label: "العودة",
+	},
 	"ne-NP": {
 		label: "पछाडि",
 	},

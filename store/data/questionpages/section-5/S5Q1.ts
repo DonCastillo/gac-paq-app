@@ -27,6 +27,59 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 18",
+			label: "Did you do any organized activities during the past week?",
+			kid_label: "Did you do any organized activities during the past week?",
+			adult_label: "Did your child do any organized activities during the past week?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 18",
+			label: "هل شاركت في أي أنشطة منظّمة أو خارجية خلال الأسبوع الماضي؟",
+			kid_label: "هل شاركت في أي أنشطة منظّمة أو خارجية خلال الأسبوع الماضي؟",
+			adult_label: "هل شارك طفلك في أي أنشطة منظّمة أو خارجية خلال الأسبوع الماضي؟",
+			choices: [
+				{
+					label: "نعم",
+					value: "yes",
+				},
+				{
+					label: "لا",
+					value: "no",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label: "पछिल्लो (गएको/ बितेको)  हप्ता, के तपाईं कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको)  हप्ता, के तपाईं कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, के तपाईंको छोरा वा छोरीले कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			choices: [
+				{
+					label: "गएँ",
+					value: "yes",
+				},
+				{
+					label: "गइनं",
+					value: "no",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 18",

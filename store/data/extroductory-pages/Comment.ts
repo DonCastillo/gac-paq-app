@@ -23,6 +23,39 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"en-AE": {
+			type: Question.QuestionTextarea,
+			heading: "Feedback",
+			placeholder: "Enter your comment here",
+			label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_sublabel: "If yes, please write them in the box below",
+			adult_sublabel: "If yes, please write them in the box below",
+		},
+		"ar-AE": {
+			type: Question.QuestionTextarea,
+			heading: "تعليق",
+			placeholder: "أدخل تعليقك هنا",
+			label: "هل لديك أي تعليقات أو اقتراحات حول التطبيق أو الأسئلة التي طرحناها؟",
+			kid_label: "هل لديك أي تعليقات أو اقتراحات حول التطبيق أو الأسئلة التي طرحناها؟",
+			adult_label: "هل لديك أي تعليقات أو اقتراحات حول التطبيق أو الأسئلة التي طرحناها؟",
+			kid_sublabel: "إذا كانت الإجابة نعم، يرجى كتابتها في المربع أدناه",
+			adult_sublabel: "إذا كانت الإجابة نعم، يرجى كتابتها في المربع أدناه",
+		},
+		"ne-NP": {
+			type: Question.QuestionTextarea,
+			heading: "प्रतिक्रिया",
+			placeholder: "तपाइको प्रतिकृया यहाँ लेख्नुहोस्",
+			label: "app वा हामिले सोधेका प्रश्नहरु सम्बन्धि तपाईंको केहि शुझाव वा प्रश्न छ?",
+			kid_label: "app वा हामिले सोधेका प्रश्नहरु सम्बन्धि तपाईंको केहि शुझाव वा प्रश्न छ?",
+			adult_label: "app वा हामिले सोधेका प्रश्नहरु सम्बन्धि तपाईंको केहि शुझाव वा प्रश्न छ?",
+			kid_sublabel: "छ भने, तलको बाकसमा लेख्नुहोस् ।",
+			adult_sublabel: "छ भने, तलको बाकसमा लेख्नुहोस् ।",
+		},
 		"pt-BR": {
 			type: Question.QuestionTextarea,
 			heading: "Comentários",

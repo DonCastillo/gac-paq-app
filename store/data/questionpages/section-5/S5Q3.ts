@@ -38,6 +38,87 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 20",
+			label:
+				"On the days that you did these activities during the past week, how long did it usually last?",
+			kid_label:
+				"On the days that you did these activities during the past week, how long did it usually last?",
+			adult_label:
+				"On the days that your child did these activities during the past week, how long did it usually last?",
+			choices: [
+				{
+					label: "30 minutes or less per day",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 to 60 minutes per day",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 to 1 and a half hours per day",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "More than 1 and a half hours per day",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 20",
+			label: "في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
+			kid_label:
+				"في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
+			adult_label:
+				"في الأيام التي قام فيها طفلك بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرق عادةً؟",
+			choices: [
+				{
+					label: "دقيقة أو أقل في اليوم" + "30",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "ما بين 31 و60 دقيقة في اليوم",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "ما بين 1 و1.5 ساعة في اليوم",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "أكثر من 1.5 ساعة في اليوم",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २०",
+			label: "ति दिनमा, सन्गठित क्रियाकलापमा तपाईंले कति समय व्यतित गर्नुभयो?",
+			kid_label: "ति दिनमा, सन्गठित क्रियाकलापमा तपाईंले कति समय व्यतित गर्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता ति दिनमा, तपाईंको छोरा वा छोरीले सन्गठित क्रियाकलापमा लाग्दा सामान्यतया प्रत्येक दिन कति अवधिसम्मको हुन्थ्यो?",
+			choices: [
+				{
+					label: "प्रति दिन ३० मिनेट वा सोभन्दा कम",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "प्रति दिन ३१-६०मिनेट",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "प्रति दिन १-१.५ घन्टा",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "प्रति दिन १.५ घन्टा भन्दा बढी",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 20",

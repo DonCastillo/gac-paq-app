@@ -47,6 +47,119 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 19",
+			label: "How many days did you do these activities during the past week?",
+			kid_label: "How many days did you do these activities during the past week?",
+			adult_label: "How many days did your child do these activities during the past week?",
+			choices: [
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 19",
+			label: "كم عدد الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي؟",
+			kid_label: "كم عدد الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي؟",
+			adult_label: "كم عدد الأيام التي قام فيها طفلك بهذه الأنشطة خلال الأسبوع الماضي؟",
+			choices: [
+				{
+					label: "يوم واحد (١)",
+					value: "1",
+				},
+				{
+					label: "يومين (٢)",
+					value: "2",
+				},
+				{
+					label: "ثلاثة أيام (٣)",
+					value: "3",
+				},
+				{
+					label: "أربعة أيام (٤)",
+					value: "4",
+				},
+				{
+					label: "خمسة أيام (٥)",
+					value: "5",
+				},
+				{
+					label: "ستة أيام  (٦)",
+					value: "6",
+				},
+				{
+					label: "سبعة أيام (٧)",
+					value: "7",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १९",
+			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्तामा, कति दिन तपाईंको छोरा वा छोरीले सन्गठित क्रियाकलापमा लाग्नुभयो?",
+			choices: [
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 19",

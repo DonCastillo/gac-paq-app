@@ -41,6 +41,66 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 11",
+			label: "Which of the following images shows what you do most of the time during your chores?",
+			kid_label:
+				"Which of the following images shows what you do most of the time during your chores?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time during their chores?",
+			choices: [
+				{
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Don't know",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadioImage,
+			heading: "السؤال ١١",
+			label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء قيامك بالأعمال المنزلية؟",
+			kid_label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء قيامك بالأعمال المنزلية؟",
+			adult_label: "أي من الصور التالية تبيّن ما يفعله طفلك غالباً أثناء قيامه بالأعمال المنزلية؟",
+			choices: [
+				{
+					label: "لا حركة",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "جهد سهل",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "جهد متوسط أو صعب",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "لا أعرف",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ११",

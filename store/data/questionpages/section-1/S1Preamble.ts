@@ -17,6 +17,24 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"en-AE": {
+			heading: "School",
+			subheading: "Section 1",
+			description: {
+				kid: "This section is about what you do during normal school hours, for example during physical education classes, recess, and lunch time.",
+				adult:
+					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
+			},
+		},
+		"ar-AE": {
+			heading: "المدرسة",
+			subheading: "القسم الأول (١)",
+			description: {
+				kid: "يحتوي هذا القسم على أسئلة حول الأنشطة التي تقوم بها أثناء وجودك في المدرسة، مثلاً خلال حصص التربية البدنية، فترة الاستراحة، ووقت الغداء.",
+				adult:
+					"يحتوي هذا القسم على أسئلة حول الأنشطة التي يقوم بها طفلك أثناء وجوده في المدرسة، مثلاً خلال حصص التربية البدنية، فترة الاستراحة، ووقت الغداء.",
+			},
+		},
 		"ne-NP": {
 			heading: "विध्यालय",
 			subheading: "खण्ड १",

@@ -31,6 +31,7 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
+	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -55,6 +56,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
@@ -63,6 +65,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	// state
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const [proceed, setProceed] = useState<boolean>(false);
 
 	// translations
 	const translatedPage = currentPage.page.translations as TranslatedQuestionQuestionType;
@@ -125,8 +128,9 @@ const QuestionSingleAdult = (): React.ReactElement => {
 
 	useEffect(() => {
 		if (
-			(selectedValue !== null && selectedValue !== "") ||
-			currentPage.page.ident === "app_use_comment"
+			((selectedValue !== null && selectedValue !== "") ||
+				currentPage.page.ident === "app_use_comment") &&
+			proceed
 		) {
 			setButtonComponent(
 				<BackAndNextNav
@@ -145,7 +149,23 @@ const QuestionSingleAdult = (): React.ReactElement => {
 				/>,
 			);
 		}
-	}, [selectedValue]);
+	}, [selectedValue, proceed]);
+
+	// display buttons
+	useEffect(() => {
+		if (currentPage.page.audio_autoplay === true) {
+			const timer = setTimeout(() => {
+				setProceed(true);
+				clearTimeout(timer);
+			}, 3000);
+		} else {
+			setProceed(true);
+		}
+
+		return () => {
+			setProceed(false);
+		};
+	}, [currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection
@@ -280,13 +300,25 @@ const QuestionSingleAdult = (): React.ReactElement => {
 										textStyle={{
 											...GeneralStyle.adult.questionLabel,
 											fontSize: moderateScale(
-												device.isTablet ? 15 : 15,
+												device.isTablet
+													? language === "ar-AE"
+														? 18
+														: 15
+													: language === "ar-AE"
+														? 18
+														: 15,
 												device.orientation === "portrait"
 													? device.screenWidth
 													: device.screenHeight,
 											),
 											lineHeight: moderateScale(
-												device.isTablet ? 20 : 20,
+												device.isTablet
+													? language === "ar-AE"
+														? 23
+														: 20
+													: language === "ar-AE"
+														? 23
+														: 20,
 												device.orientation === "portrait"
 													? device.screenWidth
 													: device.screenHeight,

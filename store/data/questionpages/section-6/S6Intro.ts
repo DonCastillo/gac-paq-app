@@ -10,6 +10,14 @@ const S6Intro: LangSectionPayloadInterface = {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
 		},
+		"en-AE": {
+			heading: "Play or Free Time",
+			subheading: "Section 6",
+		},
+		"ar-AE": {
+			heading: "اللعب أو وقت الفراغ",
+			subheading: "القسم السادس  (٦)",
+		},
 		"ne-NP": {
 			heading: "खाली समय वा खेल्ने समय",
 			subheading: "खण्ड ६",

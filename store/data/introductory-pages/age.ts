@@ -37,6 +37,64 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "Who's taking this questionnaire?",
+			kid_label: "Who's taking this questionnaire?",
+			adult_label: "Who's taking this questionnaire?",
+			choices: [
+				{
+					label: "Child",
+					value: "child",
+					sublabel: {
+						kid: "8 to 11 years old",
+						adult: "8 to 11 years old",
+					},
+				},
+				{
+					label: "Adolescent",
+					value: "teen",
+					sublabel: {
+						kid: "12 to 17 years old",
+						adult: "12 to 17 years old",
+					},
+				},
+				{
+					label: "Parent",
+					value: "adult",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionDropdown,
+			heading: "مرحباً بك",
+			label: "من الذي يقوم بإجراء هذه الاستبانة؟",
+			kid_label: "من الذي يقوم بإجراء هذه الاستبانة؟",
+			adult_label: "من الذي يقوم بإجراء هذه الاستبانة؟",
+			choices: [
+				{
+					label: "طفل",
+					value: "child",
+					sublabel: {
+						kid: "من 8 إلى 11 سنة",
+						adult: "من 8 إلى 11 سنة",
+					},
+				},
+				{
+					label: "مراهق",
+					value: "teen",
+					sublabel: {
+						kid: "من 12 إلى 17 سنة",
+						adult: "من 12 إلى 17 سنة",
+					},
+				},
+				{
+					label: "والد\\ة",
+					value: "adult",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionDropdown,
 			heading: "तपाईं लाई स्वागत् छ",

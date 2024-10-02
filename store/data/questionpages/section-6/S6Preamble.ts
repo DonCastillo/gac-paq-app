@@ -17,6 +17,24 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"en-AE": {
+			heading: "Play or Free Time",
+			subheading: "Section 6",
+			description: {
+				kid: "This includes all the physical activity that you do during your play or free time. This does not include organized activities or break times in school. For the next questions, do not include the activities that you just told us about.",
+				adult:
+					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
+			},
+		},
+		"ar-AE": {
+			heading: "اللعب أو وقت الفراغ",
+			subheading: "القسم السادس  (٦)",
+			description: {
+				kid: "يشمل ذلك كل أنواع النشاط البدني التي تقوم بها أثناء اللعب أو وقت الفراغ، ولا يشمل الأنشطة المنظّمة أو أوقات الاستراحة في المدرسة.",
+				adult:
+					"يشمل ذلك كل أنواع النشاط البدني التي يقوم بها طفلك أثناء اللعب أو وقت الفراغ، ولا يشمل الأنشطة المنظمة أو أوقات الاستراحة في المدرسة.",
+			},
+		},
 		"ne-NP": {
 			heading: "खाली समय वा खेल्ने समय",
 			subheading: "खण्ड ६",

@@ -50,6 +50,125 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionRadio,
+			heading: "Question 21",
+			label:
+				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label:
+				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label:
+				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			kid_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, hide and seek, etc.",
+			adult_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, hide and seek, etc.",
+			choices: [
+				{
+					label: "None",
+					value: "None",
+				},
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hours or more per day",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "السؤال 21",
+			label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في اللعب بنشاط، للمتعة فقط؟",
+			kid_label:
+				"خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في اللعب بنشاط، للمتعة فقط؟",
+			adult_label:
+				"خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضى طفلك باللعب بنشاط، للمتعة فقط؟",
+			kid_sublabel:
+				".هذه الأنشطة ليست للتنافس أو التدريب. ومن الأمثلة على ذلك اللعب بالكرة للمرح واللعب في المسبح والقفز على الترامبولين ولعبة الغميضة وغيرها",
+			adult_sublabel:
+				".هذه الأنشطة ليست للتنافس أو التدريب. ومن الأمثلة على ذلك اللعب بالكرة للمرح واللعب في المسبح والقفز على الترامبولين ولعبة الغميضة وغيرها",
+			choices: [
+				{
+					label: "لا شيء",
+					value: "None",
+				},
+				{
+					label: "أقل من ساعة في اليوم",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "ما بين ساعة وأقل من ساعتين في اليوم",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "ما بين ساعتين وأقل من 3 ساعات في اليوم",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "ما بين 3 ساعات وأقل من 4 ساعات في اليوم",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "ساعات أو أكثر في اليوم" + "4",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २१",
+			label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईं रमाइलोको लागि सक्रिय रुपमा कति समय खेल्नुभयो?",
+			kid_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईं रमाइलोको लागि सक्रिय रुपमा कति समय खेल्नुभयो?",
+			adult_label:
+				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, रमाइलोको लागि तपाईंको छोरा वा छोरीले सक्रिय रुपमा कति समय खेल्नुभयो?",
+			kid_sublabel:
+				"हामीले यसमा कुनै प्रतिस्पर्धा वा तालिमका गतिविधिबारे उल्लेख नगरेको कुरा app ले प्रस्ट पार्नेछ l बालबालिकाहरुलाई त्यस काममा लाग्ने उपयुक्त समय बताउन लगाईनेछ l उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
+			adult_sublabel:
+				"हामीले यसमा कुनै प्रतिस्पर्धा वा तालिमका गतिविधिबारे उल्लेख नगरेको कुरा app ले प्रस्ट पार्नेछ l अभिभावकहरुलाई त्यस काममा लाग्ने अनुकुल समय बताउन लगाईनेछ l उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
+			choices: [
+				{
+					label: "कुनै पनि नगरेको",
+					value: "None",
+				},
+				{
+					label: "प्रत्येक दिन एक घण्टा भन्दा कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "प्रत्येक दिन एक घण्टा देखि दुई घण्टा भन्दा कम",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "प्रत्येक दिन दुई घण्टा देखि तीन घण्टा भन्दा कम",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "प्रत्येक दिन तीन घण्टा देखि चार घण्टा भन्दा कम",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "प्रत्येक दिन चार घण्टा वा बढी",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Pergunta 21",

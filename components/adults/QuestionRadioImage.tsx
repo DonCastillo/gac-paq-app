@@ -14,7 +14,13 @@ import {
 	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
+import {
+	getColorTheme,
+	getCurrentPage,
+	getDevice,
+	getLanguage,
+	getMode,
+} from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
@@ -32,6 +38,7 @@ const QuestionRadioImage = ({
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
+	const language = useSelector(getLanguage);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -165,13 +172,14 @@ const QuestionRadioImage = ({
 						style={{
 							...styles.blockOptionLabelText,
 							fontSize: moderateScale(
-								device.isTablet ? 10 : 12,
+								device.isTablet ? (language === "ar-AE" ? 11 : 10) : language === "ar-AE" ? 13 : 12,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
 							lineHeight: moderateScale(
-								device.isTablet ? 13 : 15,
+								device.isTablet ? (language === "ar-AE" ? 14 : 13) : language === "ar-AE" ? 16 : 15,
 								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 							),
+							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 						}}
 					>
 						{`${optionLetter(index)}.  ${label}`}
@@ -220,6 +228,7 @@ const QuestionRadioImage = ({
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
+						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
 					/>
 				) : (
 					<FlatList
@@ -230,6 +239,7 @@ const QuestionRadioImage = ({
 						bounces={false}
 						persistentScrollbar={true}
 						showsVerticalScrollIndicator={true}
+						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
 					/>
 				)}
 			</View>

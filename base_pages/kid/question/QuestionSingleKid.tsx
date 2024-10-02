@@ -64,6 +64,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+	const [proceed, setProceed] = useState<boolean>(false);
 
 	const translatedPage = currentPage.page.translations as TranslatedQuestionQuestionType;
 
@@ -137,8 +138,9 @@ const QuestionSingleKid = (): React.ReactElement => {
 
 	useEffect(() => {
 		if (
-			(selectedValue !== null && selectedValue !== "") ||
-			currentPage.page.ident === "app_use_comment"
+			((selectedValue !== null && selectedValue !== "") ||
+				currentPage.page.ident === "app_use_comment") &&
+			proceed
 		) {
 			setButtonComponent(
 				<BackAndNextNav
@@ -157,7 +159,23 @@ const QuestionSingleKid = (): React.ReactElement => {
 				/>,
 			);
 		}
-	}, [selectedValue]);
+	}, [selectedValue, proceed]);
+
+	// display buttons
+	useEffect(() => {
+		if (currentPage.page.audio_autoplay === true) {
+			const timer = setTimeout(() => {
+				setProceed(true);
+				clearTimeout(timer);
+			}, 3000);
+		} else {
+			setProceed(true);
+		}
+
+		return () => {
+			setProceed(false);
+		};
+	}, [currentPageNumber]);
 
 	/**
 	 * temporarily store the initial selection

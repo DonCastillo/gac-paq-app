@@ -64,6 +64,165 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 25",
+			label:
+				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_label:
+				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			adult_label:
+				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_sublabel: "Select all that apply",
+			adult_sublabel: "Select all that apply",
+			choices: [
+				{
+					label: "Hearing",
+					value: "Hearing",
+				},
+				{
+					label: "Seeing",
+					value: "Seeing",
+				},
+				{
+					label: "Speech",
+					value: "Speech",
+				},
+				{
+					label: "Mobility",
+					value: "Mobility",
+				},
+				{
+					label: "Agility",
+					value: "Agility",
+				},
+				{
+					label: "Pain",
+					value: "Pain",
+				},
+				{
+					label: "Memory",
+					value: "Memory",
+				},
+				{
+					label: "Other",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to say",
+					value: "Prefer not to say",
+				},
+				{
+					label: "None of the above, they don't have difficulties",
+					value: "None of the above",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionCheckbox,
+			heading: "السؤال 25",
+			label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
+			kid_label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
+			adult_label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
+			kid_sublabel: "يرجى تحديد جميع الخيارات التي تنطبق عليه",
+			adult_sublabel: "يرجى تحديد جميع الخيارات التي تنطبق عليه",
+			choices: [
+				{
+					label: "السمع",
+					value: "Hearing",
+				},
+				{
+					label: "البصر",
+					value: "Seeing",
+				},
+				{
+					label: "الكلام",
+					value: "Speech",
+				},
+				{
+					label: "الحركة",
+					value: "Mobility",
+				},
+				{
+					label: "الرشاقة",
+					value: "Agility",
+				},
+				{
+					label: "الذاكرة",
+					value: "Pain",
+				},
+				{
+					label: "ألم",
+					value: "Memory",
+				},
+				{
+					label: "صعوبات أخرى",
+					value: "Other",
+				},
+				{
+					label: "أفضّل عدم الإجابة",
+					value: "Prefer not to say",
+				},
+				{
+					label: "لا شيء مما سبق، ليس لديهم أي صعوبات",
+					value: "None of the above",
+				},
+			],
+		},
+		"ne-NP": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २५",
+			label:
+				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			kid_label:
+				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			adult_label:
+				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			kid_sublabel: "उपयुक्त मा चिन्ह लगाउनुहोस् ।",
+			adult_sublabel: "उपयुक्त मा चिन्ह लगाउनुहोस् ।",
+			choices: [
+				{
+					label: "सुन्नमा",
+					value: "Hearing",
+				},
+				{
+					label: "हेर्नमा",
+					value: "Seeing",
+				},
+				{
+					label: "बोल्नमा",
+					value: "Speech",
+				},
+				{
+					label: "हिड्डुल गर्नमा",
+					value: "Mobility",
+				},
+				{
+					label: "जागरुक रहन मा",
+					value: "Agility",
+				},
+				{
+					label: "दुखाइमा",
+					value: "Pain",
+				},
+				{
+					label: "सम्झनमा",
+					value: "Memory",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "भन्न चाहन्न",
+					value: "Prefer not to say",
+				},
+				{
+					label: "कुनै पनि छैन, उ सँग कुनै समस्या छैन",
+					value: "None of the above",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
 			heading: "Pergunta 25",

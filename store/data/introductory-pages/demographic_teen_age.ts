@@ -43,6 +43,72 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-AE": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old are you?",
+			kid_label: "How old are you?",
+			adult_label: "How old are you?",
+			choices: [
+				{
+					label: "12 years old",
+					value: "12",
+				},
+				{
+					label: "13 years old",
+					value: "13",
+				},
+				{
+					label: "14 years old",
+					value: "14",
+				},
+				{
+					label: "15 years old",
+					value: "15",
+				},
+				{
+					label: "16 years old",
+					value: "16",
+				},
+				{
+					label: "17 years old",
+					value: "17",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionDropdown,
+			heading: "مرحباً بك",
+			label: "كم عمرك؟",
+			kid_label: "كم عمرك؟",
+			adult_label: "كم عمرك؟",
+			choices: [
+				{
+					label: "١٢ سنة",
+					value: "12",
+				},
+				{
+					label: "١٣ سنة",
+					value: "13",
+				},
+				{
+					label: "١٤ سنة",
+					value: "14",
+				},
+				{
+					label: "١٥ سنة",
+					value: "15",
+				},
+				{
+					label: "١٦ سنة",
+					value: "16",
+				},
+				{
+					label: "١٧ سنة",
+					value: "17",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionDropdown,
 			heading: "तपाईं लाई स्वागत् छ",
