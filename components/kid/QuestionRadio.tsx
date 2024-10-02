@@ -126,6 +126,7 @@ const QuestionRadio = ({
 					contentContainerStyle={{
 						paddingBottom: 20,
 						direction: language === "ar-AE" ? "rtl" : "ltr",
+						backgroundColor: "pink"
 					}}
 					renderItem={({ item, index }) => {
 						return (

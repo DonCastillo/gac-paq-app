@@ -238,7 +238,7 @@ const GeneralStyle = {
 		radioButton: {
 			height: 25,
 			width: 25,
-			marginRight: 15,
+			// marginRight: 15,
 			borderRadius: 25 / 2,
 			borderColor: INACTIVE_COLOR,
 			borderWidth: 2,

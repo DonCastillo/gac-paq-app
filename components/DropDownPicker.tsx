@@ -62,6 +62,10 @@ const DropDownSelector = ({
 						borderColor: color100,
 						width: "100%",
 						direction: language === "ar-AE" ? "rtl" : "ltr",
+						// writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+						flexDirection: (language === "ar-AE" && device.platform === "android" ? "row-reverse" : "row"),
+						backgroundColor: "pink",
+
 					},
 				]}
 				showTickIcon={true}
@@ -105,6 +109,8 @@ const DropDownSelector = ({
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
 					direction: language === "ar-AE" ? "rtl" : "ltr",
+					flexDirection: (language === "ar-AE" && device.platform === "android" ? "row-reverse" : "row"),
+
 				}}
 				onChangeValue={(value: string) => onSelect(value)}
 				textStyle={{

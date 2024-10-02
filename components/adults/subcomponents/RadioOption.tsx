@@ -49,7 +49,7 @@ const RadioOption = ({
 		<View style={{ marginBottom: 0 }}>
 			{/* Option Container */}
 			<Pressable
-				style={{ ...styles.container }}
+				style={{ ...styles.container, backgroundColor: "green", paddingHorizontal: 5, flexDirection: (language === "ar-AE" && device.platform === "android" ? "row-reverse" : "row") }}
 				onPress={() => onPress(value)}
 			>
 				<View
@@ -60,7 +60,7 @@ const RadioOption = ({
 						},
 					]}
 				></View>
-				<View style={[styles.labelContainer]}>
+				<View style={[styles.labelContainer, {backgroundColor: "brown", paddingVertical: 0, paddingHorizontal: 10 }]}>
 					{/* Icon */}
 					{image !== undefined && image !== null && typeof image === "function" && (
 						<View
@@ -123,6 +123,8 @@ const RadioOption = ({
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
 								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+								direction: language === "ar-AE" ? "rtl" : "ltr",
+								backgroundColor: "blue"
 							}}
 						>
 							{optionLabel !== "" && optionLabel !== undefined && optionLabel !== null
@@ -156,6 +158,8 @@ const RadioOption = ({
 										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 									),
 									writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+								backgroundColor: "lightblue"
+
 								}}
 							>
 								{optionSublabel}

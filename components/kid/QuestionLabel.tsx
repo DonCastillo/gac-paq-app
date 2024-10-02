@@ -23,18 +23,18 @@ const QuestionLabel = ({
 			<Text
 				style={[
 					styles.text,
-					{
-						fontSize: moderateScale(
-							device.isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 22 : 19,
-							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-						),
-						lineHeight: moderateScale(
-							device.isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 27 : 24,
-							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-						),
-					},
-					{ direction: language === "ar-AE" ? "rtl" : "ltr" },
-					textStyle,
+					// {
+					// 	fontSize: moderateScale(
+					// 		device.isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 22 : 19,
+					// 		device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					// 	),
+					// 	lineHeight: moderateScale(
+					// 		device.isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 27 : 24,
+					// 		device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+					// 	),
+					// },
+					// { writingDirection: language === "ar-AE" ? "rtl" : "ltr", backgroundColor: "red" },
+					// textStyle,
 				]}
 			>
 				{children}
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 	},
 	text: {
-		textAlign: "left",
 		width: "100%",
 		flex: 1,
 		flexWrap: "wrap",

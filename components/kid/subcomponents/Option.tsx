@@ -41,48 +41,64 @@ const Option = ({
 		<View>
 			<View
 				style={{
-					width,
-					borderWidth: GeneralStyle.kid.optionContainer.borderWidth,
-					borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
-					marginRight: GeneralStyle.kid.optionContainer.marginRight,
-					marginBottom: GeneralStyle.kid.optionContainer.marginBottom,
-					borderColor: color,
-					overflow: "hidden",
+					// width,
+					// borderWidth: GeneralStyle.kid.optionContainer.borderWidth,
+					// borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
+					// marginRight: GeneralStyle.kid.optionContainer.marginRight,
+					// marginBottom: GeneralStyle.kid.optionContainer.marginBottom,
+					// borderColor: color,
+					// overflow: "hidden",
 				}}
 			>
 				{/* Option Container */}
-				<Pressable
+				{/* <Pressable
 					style={[
 						{
 							paddingVertical: moderateScale(8, device.screenHeight),
 							paddingHorizontal: moderateScale(20, device.screenWidth),
 							backgroundColor: selected ? color : "#fff",
+							backgroundColor: "yellow",
+							flexDirection: "row",
+							width: "100%",
 						},
 						isOtherSelected && {
 							borderBottomLeftRadius: 0,
 							borderBottomRightRadius: 0,
-						},
+						},			
+					{ direction: language === "ar-AE" ? "rtl" : "ltr", backgroundColor: "red" },
+
 					]}
 					onPress={() => selectHandler(value)}
-				>
+				> */}
 					{/* Main Label */}
 					<Text
 						style={{
-							...GeneralStyle.kid.optionText,
-							fontSize: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							color: selected ? "#fff" : "#000",
+							// ...GeneralStyle.kid.optionText,
+							// width: "100%",
+							// flex: 1,
+							// flexWrap: "wrap",
+							// flexDirection: "row",
+							// fontSize: moderateScale(
+							// 	device.isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
+							// 	device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							// ),
+							// lineHeight: moderateScale(
+							// 	device.isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
+							// 	device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
+							// ),
+							// // color: selected ? "#fff" : "#000",
 							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+							// direction: language === "ar-AE" ? "rtl" : "ltr",
+							// alignSelf: "flex-start",
+							// // width: "100%",
+							// backgroundColor: "lightblue",
+							// // flexDirection: "row-reverse"
+							// textAlign: "right"
 						}}
 					>
 						{text}
 					</Text>
+					
 
 					{/* Sublabel */}
 					{optionSublabel !== "" && optionSublabel !== undefined && optionSublabel !== null && (
@@ -114,7 +130,7 @@ const Option = ({
 							{optionSublabel}
 						</Text>
 					)}
-				</Pressable>
+				{/* </Pressable> */}
 
 				{/* Other Field */}
 				{isOtherOption(value) && isOtherSelected && (
