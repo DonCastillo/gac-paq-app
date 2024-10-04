@@ -48,7 +48,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			heading: "Atividades Ou Tarefas Domésticas",
 			subheading: "Seção 2",
 			description: {
-				kid: "Esta seção trata de tarefas ou afazeres em casa que exigem que você esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, e outras tarefas relacionadas.",
+				kid: "Esta seção trata de tarefas ou afazeres em casa que exigem que você esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, entre outras tarefas relacionadas.",
 				adult:
 					"Esta seção trata de tarefas ou afazeres em casa que exigem que o(a) seu(sua) filho(a) esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, e outras tarefas relacionadas.",
 			},

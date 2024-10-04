@@ -48,7 +48,7 @@ const S5Preamble: LangPreamblePayloadInterface = {
 			heading: "Atividades Organizadas e Esportes",
 			subheading: "Seção 5",
 			description: {
-				kid: "Esta seção trata de atividades físicas organizadas e esportes. Elas incluem atividades que você pratica fora do horário escolar (por exemplo, algumas escolas têm escolinhas de treinamento, ligas esportivas ou atividades extracurriculares). Estas atividades também incluem aulas de natação, ginástica, dança, karatê, e judô fora da escola.",
+				kid: "Esta seção trata de atividades físicas organizadas e esportes. Elas incluem atividades que você pratica fora do horário escolar. Por exemplo, algumas escolas têm escolinhas de treinamento, ligas esportivas ou atividades extracurriculares. Essas atividades também incluem aulas de natação, ginástica, dança, karatê, judô e outras artes marciais fora da escola.",
 				adult:
 					"Esta seção trata de atividades físicas organizadas e esportes. Elas incluem atividades que o(a) seu(sua) filho(a) pratica fora do horário escolar (por exemplo, algumas escolas têm escolinhas de treinamento, ligas esportivas ou atividades extracurriculares). Estas atividades também incluem aulas de natação, ginástica, dança, karatê, e judô fora da escola.",
 			},

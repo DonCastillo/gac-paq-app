@@ -154,9 +154,9 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			type: Question.QuestionCheckbox,
 			heading: "Questão 17",
 			label:
-				"Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo, por exemplo, bicicleta, cadeira de rodas, skate, patinete, patins, para ir a outros lugares além da escola ou trabalho, como por exemplo, casa de um amigo, um parque, uma loja?",
 			kid_label:
-				"Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+				"Na última semana, você caminhou ou usou outro meio de transporte ativo, por exemplo, bicicleta, cadeira de rodas, skate, patinete, patins, para ir a outros lugares além da escola ou trabalho, como por exemplo, casa de um amigo, um parque, uma loja?",
 			adult_label:
 				"Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
 			kid_sublabel: "Selecione todas as respostas que se aplicam a você.",
