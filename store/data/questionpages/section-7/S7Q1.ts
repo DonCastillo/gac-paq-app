@@ -148,7 +148,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 23",
+			heading: "Questão 23",
 			label:
 				"Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
 			kid_label:

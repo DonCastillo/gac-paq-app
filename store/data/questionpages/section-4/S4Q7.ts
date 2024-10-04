@@ -152,7 +152,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
-			heading: "Pergunta 17",
+			heading: "Questão 17",
 			label:
 				"Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
 			kid_label:

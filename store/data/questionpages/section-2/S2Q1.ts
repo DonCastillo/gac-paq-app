@@ -82,7 +82,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 8",
+			heading: "Questão 8",
 			label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
 			kid_label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
 			adult_label:

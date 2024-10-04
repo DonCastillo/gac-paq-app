@@ -120,7 +120,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 17c - Andando",
+			heading: "Questão 17c - Andando",
 			label:
 				"Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			kid_label:

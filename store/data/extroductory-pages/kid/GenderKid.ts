@@ -96,7 +96,7 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 24",
+			heading: "Questão 24",
 			label: "Você é ...",
 			kid_label: "Você é ...",
 			adult_label: "Você é ...",

@@ -171,7 +171,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 21",
+			heading: "Questão 21",
 			label:
 				"Na última semana, em um dia normal, quanto tempo você passou jogando ou brincando ativamente, apenas por diversão?",
 			kid_label:

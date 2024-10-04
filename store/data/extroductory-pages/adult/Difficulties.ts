@@ -225,7 +225,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
-			heading: "Pergunta 25",
+			heading: "Questão 25",
 			label:
 				"Por favor, indique se o(a) seu(sua) filho(a) tem dificuldades com alguma das seguintes situações nas atividades diárias.",
 			kid_label:

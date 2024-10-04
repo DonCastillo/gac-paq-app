@@ -81,7 +81,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 12",
+			heading: "Questão 12",
 			label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
 			kid_label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
 			adult_label:

@@ -124,7 +124,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 10",
+			heading: "Questão 10",
 			label:
 				"Na última semana, nos dias em que você fez atividades ou tarefas domésticas quanto tempo você gastou fazendo essas atividades ou tarefas domésticas ao longo do dia?",
 			kid_label:

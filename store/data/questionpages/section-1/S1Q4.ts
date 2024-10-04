@@ -128,7 +128,7 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 4",
+			heading: "Questão 4",
 			label: "Quanto tempo duram as suas aulas de Educação Física?",
 			kid_label: "Quanto tempo duram as suas aulas de Educação Física?",
 			adult_label: "Quanto tempo duram as aulas de Educação Física do(a) seu(sua) filho(a)?",

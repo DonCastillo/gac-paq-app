@@ -108,7 +108,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
-			heading: "Pergunta 26",
+			heading: "Questão 26",
 			label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
 			kid_label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",
 			adult_label: "Qual é a cor ou raça do(a) seu(sua) filho(a)?",

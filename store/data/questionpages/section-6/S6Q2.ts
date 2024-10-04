@@ -193,7 +193,7 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 22",
+			heading: "Questão 22",
 			label:
 				"Na última semana, quantos dias por semana você fez atividades que deixaram seus músculos mais fortes?",
 			kid_label:

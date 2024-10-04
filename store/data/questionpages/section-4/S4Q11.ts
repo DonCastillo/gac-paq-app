@@ -122,7 +122,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 17c - Bicicleta",
+			heading: "Questão 17c - Bicicleta",
 			label:
 				"Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
 			kid_label:

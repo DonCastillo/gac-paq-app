@@ -82,7 +82,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 18",
+			heading: "Questão 18",
 			label: "Na última semana, você praticou alguma atividade organizada ou esporte?",
 			kid_label: "Na última semana, você praticou alguma atividade organizada ou esporte?",
 			adult_label:

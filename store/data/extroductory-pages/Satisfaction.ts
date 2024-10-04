@@ -156,7 +156,7 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionSatisfactionImage,
-			heading: "Feedback",
+			heading: "Comentários",
 			label: "O quanto satisfeito(a) você está com o aplicativo?",
 			kid_label: "O quanto satisfeito(a) você está com o aplicativo?",
 			adult_label: "O quanto satisfeito(a) você está com o aplicativo?",

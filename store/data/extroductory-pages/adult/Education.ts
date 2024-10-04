@@ -146,7 +146,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 29",
+			heading: "Questão 29",
 			label: "Qual é o maior grau de educação completado por um membro de sua casa?",
 			kid_label: "Qual é o maior grau de educação completado por um membro de sua casa?",
 			adult_label: "Qual é o maior grau de educação completado por um membro de sua casa?",

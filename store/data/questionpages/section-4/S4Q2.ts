@@ -161,7 +161,7 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Question 15b",
+			heading: "Questão 15b",
 			label: "Na última semana, quantos dias você usou este meio de transporte para ir à escola?",
 			kid_label:
 				"Na última semana, quantos dias você usou este meio de transporte para ir à escola?",
