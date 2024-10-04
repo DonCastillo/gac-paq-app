@@ -134,10 +134,6 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 					value: "Indigenous",
 				},
 				{
-					label: "Outro",
-					value: "Other",
-				},
-				{
 					label: "Prefiro não responder",
 					value: "Prefer not to say",
 				},

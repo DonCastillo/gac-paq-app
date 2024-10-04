@@ -50,7 +50,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			description: {
 				kid: "Esta seção inclui todas as atividades físicas que você pratica durante o seu tempo de lazer ou durante as suas brincadeiras. Isso não inclui atividades organizadas, esportes, recreios ou intervalos na escola.",
 				adult:
-					"Isso inclui todas as atividades físicas que o(a) seu(sua) filho(a) pratica durante o tempo de lazer ou durante as brincadeiras. Isso não inclui atividades organizadas, esportes, recreios ou intervalos na escola.",
+					"Esta seção inclui todas as atividades físicas que o seu filho ou filha pratica durante o tempo de lazer ou durante as brincadeiras. Isso não inclui atividades organizadas, esportes, recreios ou intervalos na escola.",
 			},
 		},
 		"sv-SE": {
