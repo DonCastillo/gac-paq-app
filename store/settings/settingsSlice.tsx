@@ -17,6 +17,7 @@ export interface SettingsSliceInterface {
 	language: string;
 	directusAccessToken: string;
 	directusBaseEndpoint: string;
+	responseTable: string;
 	currentPageNumber: number;
 	currentPage: PageIndexInterface;
 	nextPage: PageIndexInterface;
@@ -43,6 +44,7 @@ const settingsSlice = createSlice({
 		language: "en-CA",
 		directusAccessToken: process.env.EXPO_PUBLIC_ADMIN_TOKEN as string,
 		directusBaseEndpoint: process.env.EXPO_PUBLIC_ADMIN_API_URL as string,
+		responseTable: process.env.EXPO_PUBLIC_RESPONSE_TABLE as string,
 		currentPageNumber: 1,
 		currentPage: currentDefaultPage,
 		nextPage: nextDefaultPage,
@@ -103,6 +105,7 @@ const settingsSlice = createSlice({
 		getDevice: (state: SettingsSliceInterface) => state.device,
 		getLanguage: (state: SettingsSliceInterface) => state.language,
 		getDirectusAccessToken: (state: SettingsSliceInterface) => state.directusAccessToken,
+		getResponseTable: (state: SettingsSliceInterface) => state.responseTable,
 		getColorTheme: (state: SettingsSliceInterface) => state.colorTheme,
 		getCurrentPageNumber: (state: SettingsSliceInterface) => state.currentPageNumber,
 		getCurrentPage: (state: SettingsSliceInterface) => state.currentPage,
@@ -154,6 +157,7 @@ export const {
 	getDevice,
 	getLanguage,
 	getDirectusAccessToken,
+	getResponseTable,
 	getColorTheme,
 	getCurrentPageNumber,
 	getCurrentPage,
