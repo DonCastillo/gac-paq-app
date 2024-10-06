@@ -27,3 +27,7 @@ ios/
 finalresponses.json
 
 store/responses.json
+
+eas.json
+
+eas copy.json
