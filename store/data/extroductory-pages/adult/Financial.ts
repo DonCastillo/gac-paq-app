@@ -146,7 +146,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 30",
+			heading: "Questão 30",
 			label: "Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
 			kid_label:
 				"Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",

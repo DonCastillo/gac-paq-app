@@ -161,7 +161,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 6",
+			heading: "Questão 6",
 			label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
 			kid_label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
 			adult_label:

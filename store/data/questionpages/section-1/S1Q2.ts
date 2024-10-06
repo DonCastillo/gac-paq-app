@@ -160,7 +160,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 2",
+			heading: "Questão 2",
 			label: "Na última semana, quantos dias você foi à escola?",
 			kid_label: "Na última semana, quantos dias você foi à escola?",
 			adult_label: "Na última semana, quantos dias o(a) seu(sua) filho(a) foi à escola?",

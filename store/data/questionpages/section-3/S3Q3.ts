@@ -138,7 +138,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
-			heading: "Pergunta 14",
+			heading: "Questão 14",
 			label:
 				"Qual das opções de imagem a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário e/ou trabalho remunerado?",
 			kid_label:

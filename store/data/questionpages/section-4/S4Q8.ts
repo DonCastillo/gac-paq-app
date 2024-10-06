@@ -167,7 +167,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 17b - Andando",
+			heading: "Questão 17b - Andando",
 			label:
 				"Na última semana, quantos dias você caminhou para outros lugares além da escola ou trabalho?",
 			kid_label:

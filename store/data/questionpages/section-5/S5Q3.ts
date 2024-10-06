@@ -121,7 +121,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 20",
+			heading: "Questão 20",
 			label:
 				"Na última semana, nos dias em que você fez essas atividades quanto tempo geralmente durou?",
 			kid_label:

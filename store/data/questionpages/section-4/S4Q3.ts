@@ -112,7 +112,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 15c",
+			heading: "Questão 15c",
 			label: "Quanto tempo, normalmente, você leva para ir para a escola?",
 			kid_label: "Quanto tempo, normalmente, você leva para ir para a escola?",
 			adult_label: "Quanto tempo, normalmente, o(a) seu(sua) filho(a) leva para ir para a escola?",

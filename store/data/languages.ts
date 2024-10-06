@@ -2,7 +2,7 @@ import type { LanguageInterface } from "interface/payload.type";
 
 const Languages: LanguageInterface[] = [
 	{
-		name: "Portugese - Brazil",
+		name: "Portuguese - Brazil",
 		flag_code: "BR",
 		lang_code: "pt-BR",
 	},

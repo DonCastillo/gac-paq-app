@@ -171,13 +171,13 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 21",
+			heading: "Questão 21",
 			label:
-				"Na última semana, em um dia normal, quanto tempo você passou jogando ou brincando ativamente, apenas por diversão?",
+				"Na última semana, em um dia normal, quanto tempo você passou jogando ou brincando ativamente, apenas por diversão? Essas atividades não são realizadas para competição ou treinamento. Exemplos incluem jogar bola por diversão, brincar de pula-pula, brincar na piscina, brincar de pega-pega, esconde-esconde, brincar correndo na rua ou no parque por diversão.",
 			kid_label:
-				"Na última semana, em um dia normal, quanto tempo você passou jogando ou brincando ativamente, apenas por diversão?",
+				"Na última semana, em um dia normal, quanto tempo você passou jogando ou brincando ativamente, apenas por diversão? Essas atividades não são realizadas para competição ou treinamento. Exemplos incluem jogar bola por diversão, brincar de pula-pula, brincar na piscina, brincar de pega-pega, esconde-esconde, brincar correndo na rua ou no parque por diversão.",
 			adult_label:
-				"Na última semana, em um dia normal, quanto tempo o(a) seu(sua) filho(a) passou jogando ou brincando ativamente, apenas por diversão?",
+				"Na última semana, em um dia normal, quanto tempo seu filho ou filha passou jogando ou brincando ativamente, apenas por diversão? Essas atividades não são realizadas para competição ou treinamento. Exemplos incluem jogar bola por diversão, brincar de pula-pula, brincar na piscina, brincar de pega-pega, esconde-esconde, brincar correndo na rua ou no parque por diversão.",
 			choices: [
 				{
 					label: "Nenhum",
