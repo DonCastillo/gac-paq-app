@@ -108,7 +108,7 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionCheckbox,
-			heading: "Pergunta 27",
+			heading: "Questão 27",
 			label: "Qual é a sua cor ou raça?",
 			kid_label: "Qual é a sua cor ou raça?",
 			adult_label: "Qual é a sua cor ou raça?",
@@ -132,10 +132,6 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				{
 					label: "Indígena",
 					value: "Indigenous",
-				},
-				{
-					label: "Outro",
-					value: "Other",
 				},
 				{
 					label: "Prefiro não responder",

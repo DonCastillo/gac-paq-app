@@ -51,10 +51,14 @@ const PreambleAdult = (): React.ReactElement => {
 
 	// display buttons
 	useEffect(() => {
-		const timer = setTimeout(() => {
+		if (currentPage.page.audio_autoplay === true) {
+			const timer = setTimeout(() => {
+				setProceed(true);
+				clearTimeout(timer);
+			}, 3000);
+		} else {
 			setProceed(true);
-			clearTimeout(timer);
-		}, 3000);
+		}
 		return () => {
 			setProceed(false);
 		};
@@ -125,7 +129,7 @@ const PreambleAdult = (): React.ReactElement => {
 					</AnimatedView>
 				</CenterMain>
 				<Navigation>
-					{proceed || currentPage.page.audio_autoplay === false ? (
+					{proceed ? (
 						<BackAndNextNav
 							key={"Proceed"}
 							onPrev={() => dispatch(prevPage())}

@@ -137,7 +137,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
-			heading: "Pergunta 5",
+			heading: "Questão 5",
 			label:
 				"Qual das opções de imagem a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
 			kid_label:

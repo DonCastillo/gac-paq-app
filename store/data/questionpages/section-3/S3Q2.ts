@@ -133,7 +133,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 13",
+			heading: "Questão 13",
 			label:
 				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado? ",
 			kid_label:

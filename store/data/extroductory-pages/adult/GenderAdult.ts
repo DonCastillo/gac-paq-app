@@ -88,7 +88,7 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 24",
+			heading: "Questão 24",
 			label: "Qual é o sexo do(a) seu(sua) filho(a)?",
 			kid_label: "Qual é o sexo do(a) seu(sua) filho(a)?",
 			adult_label: "Qual é o sexo do(a) seu(sua) filho(a)?",

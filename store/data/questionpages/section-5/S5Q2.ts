@@ -162,7 +162,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 19",
+			heading: "Questão 19",
 			label: "Na última semana, quantos dias você fez essas atividades?",
 			kid_label: "Na última semana, quantos dias você fez essas atividades?",
 			adult_label: "Na última semana, quantos dias o(a) seu(sua) filho(a) fez essas atividades?",

@@ -263,7 +263,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
-			heading: "Pergunta 15",
+			heading: "Questão 15",
 			label: "Na última semana, como você foi para a escola?",
 			kid_label: "Na última semana, como você foi para a escola?",
 			adult_label: "Na última semana, como o(a) seu(sua) filho(a) foi para a escola?",

@@ -80,7 +80,7 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Pergunta 1",
+			heading: "Questão 1",
 			label: "Na última semana, você foi à escola?",
 			kid_label: "Na última semana, você foi à escola?",
 			adult_label: "Na última semana, o(a) seu(sua) filho(a) foi à escola?",
