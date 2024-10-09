@@ -20,6 +20,7 @@ const skipTo = (answer: string | string[] | null): number => {
 	const currentIdent = store.getState().settings.currentPage.page.ident;
 	const pages = store.getState().settings.pages;
 	const mode = store.getState().settings.mode;
+	const language = store.getState().settings.language;
 
 	let finalAnswer: string | string[] | null = null;
 	if (Array.isArray(answer)) {
@@ -28,6 +29,13 @@ const skipTo = (answer: string | string[] | null): number => {
 		finalAnswer = answer !== "" ? answer.toString().toLowerCase() : null;
 	} else {
 		finalAnswer = null;
+	}
+
+	if (language === "sv-SE") {
+		if (currentIdent === "child_ethnicity" && finalAnswer === "sweden") {
+			store.dispatch(clearResponseByIdent("parent_ethnicity"));
+			return getPageNumberBasedOnIdent("relationship_to_the_child", pages);
+		}
 	}
 
 	// if responder indicates they did not attend school, skip entire SCHOOL section
