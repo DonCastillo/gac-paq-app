@@ -15,6 +15,14 @@ const S4Preamble: LangPreamblePayloadInterface = {
 				adult: "This section is about how your child goes to different places.",
 			},
 		},
+		"ma-IN": {
+			heading: "वाहतूक",
+			subheading: "विभाग ४",
+			description: {
+				kid: "तुम्ही वेगवेगळ्या ठिकाणी जाताना कसा प्रवास करता याविषयी हा विभाग आहे.",
+				adult: "तुमचे मूल वेगवेगळ्या ठिकाणी जाताना कसा प्रवास करते याविषयी हा विभाग आहे.",
+			},
+		},
 		"hi-IN": {
 			heading: "परिवहन",
 			subheading: "भाग 4",

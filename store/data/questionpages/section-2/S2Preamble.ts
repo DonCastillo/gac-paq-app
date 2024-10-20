@@ -17,6 +17,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"ma-IN": {
+			heading: "घरातील नेहमीची कामे",
+			subheading: "विभाग २",
+			description: {
+				kid: "हा विभाग त्या कामांबद्दल आहे जी करताना तुम्हाला सक्रिय असणे आवश्यक आहे. यांमध्ये घरकाम, अंगणातील काम, बागकाम आणि इतर संबंधित कामे यांचा समावेश होतो.",
+				adult:
+					"हा विभाग त्या कामांबद्दल आहे जी करताना तुमचे मूल सक्रिय असणे आवश्यक आहे. यांमध्ये घरकाम, अंगणातील काम, बागकाम आणि इतर संबंधित कामे यांचा समावेश होतो.",
+			},
+		},
 		"hi-IN": {
 			heading: "घरेलू काम",
 			subheading: "भाग 2",

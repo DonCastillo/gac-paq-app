@@ -10,6 +10,10 @@ const S1Intro: LangSectionPayloadInterface = {
 			heading: "School",
 			subheading: "Section 1",
 		},
+		"ma-IN": {
+			heading: "शाळा",
+			subheading: "विभाग १",
+		},
 		"hi-IN": {
 			heading: "स्कूल",
 			subheading: "भाग 1",
