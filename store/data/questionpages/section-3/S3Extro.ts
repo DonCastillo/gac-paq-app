@@ -10,6 +10,10 @@ const S3Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only four more to go!",
 		},
+		"ma-IN": {
+			heading: "विभाग पूर्ण!",
+			subheading: "अजून फक्त चार बाकी आहेत!",
+		},
 		"hi-IN": {
 			heading: "भाग पूर्ण",
 			subheading: "सिर्फ चार और बाकी है",
