@@ -12,6 +12,11 @@ const SuccessPage: LangPagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"hi-IN": {
+			heading: "सफलता!",
+			description:
+				"बहुत अच्छा! आपने प्रश्नावली पूरी कर ली है। आपके जवाब भेज दिए गए हैं। आपकी मदद के लिए धन्यवाद!",
+		},
 		"en-AE": {
 			heading: "Success!",
 			description:
