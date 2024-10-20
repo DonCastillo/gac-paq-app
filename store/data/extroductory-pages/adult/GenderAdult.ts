@@ -31,6 +31,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न 24",
+			label: "आपके बच्चे का लिंग क्या है?",
+			kid_label: "आपके बच्चे का लिंग क्या है?",
+			adult_label: "आपके बच्चे का लिंग क्या है?",
+			choices: [
+				{
+					label: "महिला",
+					value: "Female",
+				},
+				{
+					label: "पुरुष",
+					value: "Male",
+				},
+				{
+					label: "जवाब नहीं देना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 24",

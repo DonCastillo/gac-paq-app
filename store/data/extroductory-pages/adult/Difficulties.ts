@@ -64,6 +64,60 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २५",
+			label:
+				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			kid_label:
+				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			adult_label:
+				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			kid_sublabel: "हर वो जो लागू हो उन्हें चुनें",
+			adult_sublabel: "हर वो जो लागू हो उन्हें चुनें",
+			choices: [
+				{
+					label: "सुनना",
+					value: "Hearing",
+				},
+				{
+					label: "देखना",
+					value: "Seeing",
+				},
+				{
+					label: "बोलना",
+					value: "Speech",
+				},
+				{
+					label: "गतिशीलता",
+					value: "Mobility",
+				},
+				{
+					label: "फुर्ती",
+					value: "Agility",
+				},
+				{
+					label: "दर्द",
+					value: "Pain",
+				},
+				{
+					label: "स्मृति",
+					value: "Memory",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "नहीं कहना पसंद करेंगे",
+					value: "Prefer not to say",
+				},
+				{
+					label: "उपरोक्त में से कोई नहीं, उन्हें कोई कठिनाई नहीं है",
+					value: "None of the above",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",

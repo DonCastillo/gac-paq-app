@@ -23,6 +23,19 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"hi-IN": {
+			type: Question.QuestionTextarea,
+			heading: "प्रतिक्रिया",
+			placeholder: "अपनी टिप्पणी यहां दर्ज करें",
+			label:
+				"क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
+			kid_label:
+				"क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
+			adult_label:
+				"क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
+			kid_sublabel: "यदि हां, तो कृपया उन्हें नीचे दिए गए बॉक्स में लिखें",
+			adult_sublabel: "यदि हां, तो कृपया उन्हें नीचे दिए गए बॉक्स में लिखें",
+		},
 		"en-AE": {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",

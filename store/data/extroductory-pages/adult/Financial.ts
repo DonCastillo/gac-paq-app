@@ -44,6 +44,39 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "आपके लिए अपने परिवार की वित्तीय जरूरतों को पूरा करना कितना मुश्किल या आसान है?",
+			kid_label: "आपके लिए अपने परिवार की वित्तीय जरूरतों को पूरा करना कितना मुश्किल या आसान है?",
+			adult_label: "आपके लिए अपने परिवार की वित्तीय जरूरतों को पूरा करना कितना मुश्किल या आसान है?",
+			choices: [
+				{
+					label: "बहुत मुश्किल",
+					value: "Very difficult",
+				},
+				{
+					label: "मुश्किल",
+					value: "Difficult",
+				},
+				{
+					label: "न आसान न मुश्किल",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "आसान ",
+					value: "Easy",
+				},
+				{
+					label: "बहुत आसान",
+					value: "Very easy",
+				},
+				{
+					label: "जवाब नहीं देना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",

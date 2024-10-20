@@ -47,6 +47,43 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न 26",
+			label: "आपके बच्चे की जातीयता क्या है?",
+			kid_label: "आपके बच्चे की जातीयता क्या है?",
+			adult_label: "आपके बच्चे की जातीयता क्या है?",
+			choices: [
+				{
+					label: "एशियाई",
+					value: "Asian",
+				},
+				{
+					label: "ब्लैक या अफ़्रीकी अमेरिकी",
+					value: "Black or African American",
+				},
+				{
+					label: "स्वदेशी",
+					value: "Indigenous",
+				},
+				{
+					label: "लैटिन अमेरिकी",
+					value: "Latin American",
+				},
+				{
+					label: "व्हाइट या कोकेशियान",
+					value: "White or Caucasian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "नहीं कहना पसंद करेंगे",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionCheckboxInput,
 			heading: "Question 26",

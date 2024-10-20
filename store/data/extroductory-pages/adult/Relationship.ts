@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "बच्चे के साथ आपका क्या रिश्ता है?",
+			kid_label: "बच्चे के साथ आपका क्या रिश्ता है?",
+			adult_label: "बच्चे के साथ आपका क्या रिश्ता है?",
+			choices: [
+				{
+					label: "पिता",
+					value: "Father",
+				},
+				{
+					label: "माता",
+					value: "Mother",
+				},
+				{
+					label: "दादा",
+					value: "Grandfather",
+				},
+				{
+					label: "दादी",
+					value: "Grandmother",
+				},
+				{
+					label: "शिक्षक या संरक्षक",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "नहीं कहना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 28",
