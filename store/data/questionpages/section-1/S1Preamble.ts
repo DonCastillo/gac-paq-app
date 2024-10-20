@@ -17,6 +17,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"hi-IN": {
+			heading: "स्कूल",
+			subheading: "भाग 1",
+			description: {
+				kid: "यह अनुभाग इस बारे में है कि आप सामान्य स्कूल घंटों के दौरान क्या करते हैं, उदाहरण के लिए पीटी की क्लास, अवकाश और दोपहर के भोजन के समय के दौरान।",
+				adult:
+					"यह अनुभाग इस बारे में है कि आपका बच्चा सामान्य स्कूल समय के दौरान क्या करता है, उदाहरण के लिए पीटी की क्लास, अवकाश और दोपहर के भोजन के समय के दौरान।",
+			},
+		},
 		"en-AE": {
 			heading: "School",
 			subheading: "Section 1",

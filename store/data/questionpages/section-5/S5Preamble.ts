@@ -17,6 +17,15 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"hi-IN": {
+			heading: "संगठित गतिविधियाँ",
+			subheading: "भाग 5",
+			description: {
+				kid: "यह अनुभाग शारीरिक रूप से सक्रिय संगठित गतिविधियों और खेलों के बारे में है। इनमें वे गतिविधियाँ शामिल हैं जो आप स्कूल के दिन के बाहर करते हैं (उदाहरण के लिए, कुछ स्कूलों में खेल लीग या पाठ्येतर गतिविधियाँ होती हैं)। इनमें स्कूल के बाहर तैराकी, जिमनास्टिक, नृत्य और कराटे जैसी गतिविधियों के लिए कोई भी खेल लीग और पाठ भी शामिल हैं।",
+				adult:
+					"यह अनुभाग शारीरिक रूप से सक्रिय संगठित गतिविधियों और खेलों के बारे में है। इनमें वे गतिविधियाँ शामिल हैं जो आप स्कूल के दिन के बाहर करते हैं (उदाहरण के लिए, कुछ स्कूलों में खेल लीग या पाठ्येतर गतिविधियाँ होती हैं)। इनमें स्कूल के बाहर तैराकी, जिमनास्टिक, नृत्य और कराटे जैसी गतिविधियों के लिए कोई भी खेल लीग और पाठ भी शामिल हैं।",
+			},
+		},
 		"en-AE": {
 			heading: "Organized Activities",
 			subheading: "Section 5",

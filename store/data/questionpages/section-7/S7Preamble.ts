@@ -17,6 +17,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"hi-IN": {
+			heading: "बाहरी गतिविधियाँ",
+			subheading: "भाग 7",
+			description: {
+				kid: "यह अनुभाग उस समय के बारे में है जो आप बाहर बिताते हैं। यह स्कूल में, कामकाज के दौरान, काम और स्वयंसेवा, और परिवहन के साथ-साथ आपके खाली समय में भी हो सकता है। इसमें वह समय भी शामिल है जब आप बाहर हैं, लेकिन घूम नहीं रहे हैं (उदाहरण के लिए, पिकनिक, पढ़ना, आग के पास बैठना)।",
+				adult:
+					"यह अनुभाग उस समय के बारे में है जो आपका बच्चा बाहर बिताता है। यह स्कूल में, कामकाज के दौरान, नौकरी और स्वयंसेवा, और परिवहन के साथ-साथ उनके खाली समय में भी हो सकता है। इसमें वह समय भी शामिल है जब आपका बच्चा बाहर है, लेकिन घूम नहीं रहा है (उदाहरण के लिए, पिकनिक, पढ़ना, आग के पास बैठना)।",
+			},
+		},
 		"en-AE": {
 			heading: "Outdoors",
 			subheading: "Section 7",

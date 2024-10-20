@@ -17,6 +17,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"hi-IN": {
+			heading: "काम",
+			subheading: "भाग 3",
+			description: {
+				kid: "यह अनुभाग आपके घर से दूर नौकरी या स्वयंसेवा के बारे में है - कामकाज से अलग। नौकरी करना तब होगा जब आप अपने या अपने परिवार के लिए पैसे कमाएंगे। स्वयंसेवा का मतलब दूसरों या किसी संगठन को मुफ्त में मदद करना होगा (पैसा नहीं दिया जाएगा)। नौकरी और स्वयंसेवा किसी स्टोर, फार्म, होटल आदि स्थानों पर हो सकती है। कृपया दोनों का उत्तर एक साथ दें।",
+				adult:
+					"यह अनुभाग आपके घर से दूर नौकरी या स्वयंसेवा के बारे में है - कामकाज से अलग। काम करना तब होगा जब आपका बच्चा अपने लिए या अपने परिवार के लिए पैसा कमा रहा हो। स्वयंसेवा का मतलब दूसरों या किसी संगठन को मुफ्त में मदद करना होगा (पैसा नहीं दिया जाएगा)। कृपया दोनों का उत्तर एक साथ दें।",
+			},
+		},
 		"en-AE": {
 			heading: "Work",
 			subheading: "Section 3",
