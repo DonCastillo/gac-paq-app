@@ -27,6 +27,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १२",
+			label: "पिछले सप्ताह में, क्या आपने स्वयंसेवा की या नौकरी की?",
+			kid_label: "पिछले सप्ताह में, क्या आपने स्वयंसेवा की या नौकरी की?",
+			adult_label: "पिछले सप्ताह में, क्या आपके बच्चे ने स्वेच्छा से काम किया या नौकरी की?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 12",
