@@ -27,6 +27,23 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ८",
+			label: "पिछले सप्ताह में, क्या आपने सक्रिय घरेलू कामकाज या कार्य किए?",
+			kid_label: "पिछले सप्ताह में, क्या आपने सक्रिय घरेलू कामकाज या कार्य किए?",
+			adult_label: "पिछले सप्ताह में, क्या आपके बच्चे ने सक्रिय घरेलू कामकाज या कार्य किए?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 8",

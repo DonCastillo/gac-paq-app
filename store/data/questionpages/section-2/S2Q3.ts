@@ -38,6 +38,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १०",
+			label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में काम करने में कितना समय बिताया?",
+			kid_label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में काम करने में कितना समय बिताया?",
+			adult_label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपके बच्चे ने घरेलू कामकाज किए, उन्होंने पूरे दिन में घरेलू काम करने में कितना समय बिताया?",
+			choices: [
+				{
+					label: "रति दिन 15 मिनट या उससे कम",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "प्रतिदिन 16 - 30 मिनट",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "प्रतिदिन 31 - 60 मिनट",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "प्रति दिन 60 मिनट से अधिक",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",

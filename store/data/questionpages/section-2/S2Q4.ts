@@ -41,6 +41,38 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ११",
+			label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने कामकाज के दौरान ज्यादातर समय करते हैं?",
+			kid_label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने कामकाज के दौरान ज्यादातर समय करते हैं?",
+			adult_label:
+				"निम्नलिखित में से कौन सी तस्वीर आपके बच्चे द्वारा अपने घरेलू कामकाज के दौरान अधिकांश समय किए जाने वाले कार्यों से मिलती जुलती है?",
+			choices: [
+				{
+					label: "कम हलचल वाली गतिविधियाँ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "आसान प्रयास",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम या कठिन प्रयास",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "पता नहीं",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
