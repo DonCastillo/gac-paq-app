@@ -10,6 +10,10 @@ const S7Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"hi-IN": {
+			heading: "भाग पूर्ण",
+			subheading: "",
+		},
 		"en-AE": {
 			heading: "Section Complete!",
 			subheading: "",
