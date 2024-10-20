@@ -38,6 +38,34 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २०",
+			label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			kid_label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			adult_label:
+				"पिछले सप्ताह के दौरान आपके बच्चे ने जिन दिनों ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			choices: [
+				{
+					label: "प्रति दिन 30 मिनट या उससे कम",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "प्रतिदिन 31 - 60 मिनट",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "प्रतिदिन 1 से 1.5 घंटे",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "प्रति दिन 1.5 घंटे से अधिक",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",

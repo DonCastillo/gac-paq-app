@@ -27,6 +27,23 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label: "क्या आपने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			kid_label: "क्या आपने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			adult_label: "क्या आपके बच्चे ने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 18",

@@ -47,6 +47,43 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १९",
+			label: "पिछले सप्ताह के दौरान आपने कितने दिन ये गतिविधियाँ कीं?",
+			kid_label: "पिछले सप्ताह के दौरान आपने कितने दिन ये गतिविधियाँ कीं?",
+			adult_label: "आपके बच्चे ने पिछले सप्ताह के दौरान कितने दिन ये गतिविधियाँ कीं?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 19",
