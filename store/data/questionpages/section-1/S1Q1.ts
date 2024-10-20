@@ -27,6 +27,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १",
+			label: "क्या आप पिछले सप्ताह स्कूल गए थे?",
+			kid_label: "क्या आप पिछले सप्ताह स्कूल गए थे?",
+			adult_label: "क्या आपका बच्चा पिछले सप्ताह स्कूल गया था?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 1",
