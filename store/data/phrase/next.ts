@@ -4,6 +4,9 @@ const NextPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Next",
 	},
+	"hi-IN": {
+		label: "अगला",
+	},
 	"en-AE": {
 		label: "Next",
 	},

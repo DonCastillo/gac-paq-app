@@ -4,6 +4,9 @@ const TryAgainPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Try Again",
 	},
+	"hi-IN": {
+		label: "फिर से कोशिश करें",
+	},
 	"en-AE": {
 		label: "Try Again",
 	},
