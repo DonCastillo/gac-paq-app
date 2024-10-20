@@ -55,6 +55,51 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १६",
+			label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
+			kid_label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
+			adult_label: "आपका बच्चा पिछले सप्ताह काम पर कैसे गया?",
+			kid_sublabel: "परिवहन का वह साधन चुनें जिसका आपने सबसे अधिक उपयोग किया है",
+			adult_sublabel: "परिवहन का वह साधन चुनें जिसे आपके बच्चे ने सबसे अधिक उपयोग किया है",
+			choices: [
+				{
+					label: "चल के जाना",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "व्हीलिंग",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+						adult:
+							"उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+					},
+				},
+				{
+					label: "सार्वजनिक परिवहन",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+						adult: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+					},
+				},
+				{
+					label: "कार, टैक्सी, ट्रक, या मोटरसाइकिल",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "अन्य, कौन सा?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 16",

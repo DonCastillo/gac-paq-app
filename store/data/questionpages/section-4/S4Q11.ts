@@ -37,6 +37,34 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७c - व्हीलिंग",
+			label:
+				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गए?",
+			kid_label:
+				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गए?",
+			adult_label:
+				"एक सामान्य दिन में, आपके बच्चे ने स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके बिताया?",
+			choices: [
+				{
+					label: "10 मिनट या उससे कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 मिनट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 मिनट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "30 मिनट से अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",

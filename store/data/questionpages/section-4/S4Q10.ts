@@ -49,6 +49,46 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७b - गाड़ी",
+			label:
+				"पिछले सप्ताह में आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन व्हीलिंग करके गए?",
+			kid_label:
+				"पिछले सप्ताह में आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन व्हीलिंग करके गए?",
+			adult_label:
+				"पिछले सप्ताह में आपका बच्चा स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन व्हीलिंग करके गया?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",

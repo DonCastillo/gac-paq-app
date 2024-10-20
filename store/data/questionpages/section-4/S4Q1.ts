@@ -73,6 +73,69 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १५",
+			label: "आप पिछले सप्ताह स्कूल कैसे गए?",
+			kid_label: "आप पिछले सप्ताह स्कूल कैसे गए?",
+			adult_label: "आपका बच्चा पिछले सप्ताह स्कूल कैसे गया?",
+			kid_sublabel: "वह साधन चुनें जिसका आपने सबसे अधिक उपयोग किया है",
+			adult_sublabel: "परिवहन का वह साधन चुनें जिसका आपके बच्चे ने सबसे अधिक उपयोग किया हो",
+			choices: [
+				{
+					label: "चल के जाना",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "व्हीलिंग",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+						adult:
+							"उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+					},
+				},
+				{
+					label: "स्कूल बस",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "सार्वजनिक परिवहन",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+						adult: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+					},
+				},
+				{
+					label: "कार, टैक्सी, ट्रक, या मोटरसाइकिल",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "अन्य, संयोजन सहित",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "उदाहरण के लिए पैदल और बस",
+						adult: "उदाहरण के लिए पैदल और बस",
+					},
+				},
+				{
+					label: "स्कूल के लिए मैं घर पर ही रहता/रहती हूँ",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "स्कूल के लिए मैं घर पर ही रहता/रहती हूँ",
+						adult: "मेरा बच्चा घर से ही स्कूल करता है",
+					},
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 15",
