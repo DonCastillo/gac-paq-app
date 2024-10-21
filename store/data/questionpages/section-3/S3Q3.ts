@@ -42,6 +42,38 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १४",
+			label:
+				"स्वयंसेवा आणि/किंवा नोकरी करताना तुम्ही बहुतेक वेळा काय करता हे खालीलपैकी कोणते चित्र दाखवते?",
+			kid_label:
+				"स्वयंसेवा आणि/किंवा नोकरी करताना तुम्ही बहुतेक वेळा काय करता हे खालीलपैकी कोणते चित्र दाखवते?",
+			adult_label:
+				"स्वयंसेवा आणि/किंवा नोकरी करताना तुमचे मूल बहुतेक वेळा काय करते हे खालीलपैकी कोणते चित्र दाखवते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १४",

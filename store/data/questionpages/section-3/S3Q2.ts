@@ -40,6 +40,36 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १३",
+			label: "गेल्या आठवड्यात, तुम्ही किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
+			kid_label: "गेल्या आठवड्यात, तुम्ही किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
+			adult_label:
+				"गेल्या आठवड्यात, तुमच्या मुलाने किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
+			choices: [
+				{
+					label: "दररोज एका तासापेक्षा कमी वेळ",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "दररोज १ ते २ तास",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "दररोज २ ते ३ तास",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "दररोज ३ ते ४ तास",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "दररोज ४ पेक्षा जास्त तास",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १३",
