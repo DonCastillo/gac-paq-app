@@ -42,6 +42,38 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ५",
+			label:
+				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			kid_label:
+				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			adult_label:
+				"तुमचे मूल शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करते हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न 5",

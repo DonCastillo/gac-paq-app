@@ -39,6 +39,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ४",
+			label: "तुमचा शारीरिक शिक्षणाचा एक वर्ग किती वेळ चालतो?",
+			kid_label: "तुमचा शारीरिक शिक्षणाचा एक वर्ग किती वेळ चालतो?",
+			adult_label: "तुमच्या मुलाच्या शारीरिक शिक्षणाचा एक वर्ग किती वेळ असतो?",
+			choices: [
+				{
+					label: "३० मिनिटांपेक्षा कमी वेळ",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "३० - ४५ मिनिटे",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "४६ - ६० मिनिटे",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "६० मिनिटांपेक्षा अधिक",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "माहित नाही",
+					value: "Don't know",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ४",

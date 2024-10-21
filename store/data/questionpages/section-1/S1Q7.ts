@@ -41,6 +41,38 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ७",
+			label:
+				"पुढीलपैकी कोणते चित्र तुम्ही तुमच्या मधल्या सुट्टीमध्ये बहुतेक वेळ काय करता हे दाखवते?",
+			kid_label:
+				"पुढीलपैकी कोणते चित्र तुम्ही तुमच्या मधल्या सुट्टीमध्ये बहुतेक वेळ काय करता हे दाखवते?",
+			adult_label:
+				"पुढीलपैकी कोणते चित्र तुमचे मूल मधल्या सुट्टीमध्ये बहुतेक वेळ काय करते हे दर्शवते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न 7",
