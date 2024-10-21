@@ -27,6 +27,23 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ८",
+			label: "गेल्या आठवड्यात तुम्ही घरातील नेहमीची कामे केलीत का?",
+			kid_label: "गेल्या आठवड्यात तुम्ही घरातील नेहमीची कामे केलीत का?",
+			adult_label: "गेल्या आठवड्यात तुमच्या मुलाने घरातील नेहमीची कामे केली का?",
+			choices: [
+				{
+					label: "होय",
+					value: "yes",
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ८",

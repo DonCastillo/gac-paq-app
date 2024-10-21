@@ -47,6 +47,43 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ९",
+			label: "तुम्ही गेल्या आठवड्यादरम्यान किती दिवस घरातील नेहमीची कामे केली?",
+			kid_label: "तुम्ही गेल्या आठवड्यादरम्यान किती दिवस घरातील नेहमीची कामे केली?",
+			adult_label: "तुमच्या मुलाने गेल्या आठवड्यातील किती दिवस घरातील नेहमीची कामे केली?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ९",
