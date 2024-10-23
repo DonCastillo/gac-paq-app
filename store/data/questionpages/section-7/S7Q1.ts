@@ -44,6 +44,37 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २३",
+			label: "मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
+			kid_label:
+				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
+			adult_label:
+				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुमच्या मुलाने सरासरी किती वेळ घराबाहेर घालवला?",
+			choices: [
+				{
+					label: "अजिबात नाही",
+					value: "None",
+				},
+				{
+					label: "दररोज एक तास किंवा त्यापेक्षा कमी",
+					value: "An hour or less per day",
+				},
+				{
+					label: "दररोज साधारण २ तास",
+					value: "Approximately 2 hours per day",
+				},
+				{
+					label: "दररोज  साधारण ३ तास",
+					value: "Approximately 3 hours per day",
+				},
+				{
+					label: "दररोज ४ किंवा अधिक तास",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २३",
