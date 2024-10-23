@@ -73,6 +73,68 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १५",
+			label: "तुम्ही गेल्या आठवड्यात घरून शाळेला कसे गेलात?",
+			kid_label: "तुम्ही गेल्या आठवड्यात घरून शाळेला कसे गेलात?",
+			adult_label: "तुमचे मूल गेल्या आठवड्यात घरून शाळेला कसे गेले?",
+			kid_sublabel: "तुम्ही वापरलेली प्रमुख पद्धत निवडा",
+			adult_sublabel: "त्याने/ तिने वापरलेली प्रमुख पद्धत निवडा",
+			choices: [
+				{
+					label: "चालत",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "चाकांच्या साधनांचा वापर करून",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदा. सायकल, चाकांची खुर्ची, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+						adult: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+					},
+				},
+				{
+					label: "शाळेची बस",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "सार्वजनिक वाहतूक",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव",
+						adult: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव इ.",
+					},
+				},
+				{
+					label: "कार किंवा ट्रक किंवा मोटरसायकल",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "इतर, एकाहून अधिक साधनांचा वापर करून",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "उदा. चालत व बसने",
+						adult: "उदा. चालत व बसने",
+					},
+				},
+				{
+					label: "लागू नाही (मी घरीच किंवा निवासी शाळेत शिकत आहे)",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "लागू नाही (मी घरीच किंवा निवासी शाळेत शिकत आहे)",
+						adult: "लागू नाही (तुमचे मूल घरीच किंवा निवासी शाळेत शिकत आहे)",
+					},
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १५",

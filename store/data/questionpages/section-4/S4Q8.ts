@@ -48,6 +48,43 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७b - चालणे",
+			label: "तुम्ही गेल्या आठवड्यात किती वेळा चालत गेलात?",
+			kid_label: "तुम्ही गेल्या आठवड्यात किती वेळा चालत गेलात?",
+			adult_label: "तुमचे मूल गेल्या आठवड्यात किती वेळा चालत गेले?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७b - हिँड्नु",

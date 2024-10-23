@@ -37,6 +37,31 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७c - चाक फिरवणे",
+			label: "तुम्हाला एकदा चाकांची साधने वापरून जाण्यासाठी सामान्यपणे किती वेळ लागला?",
+			kid_label: "तुम्हाला एकदा चाकांची साधने वापरून जाण्यासाठी सामान्यपणे किती वेळ लागला?",
+			adult_label: "तुमच्या मुलाला एकदा चाकांची साधने वापरून जाण्यासाठी सामान्यपणे किती वेळ लागला?",
+			choices: [
+				{
+					label: "१० मिनिटे किंवा त्यापेक्षा कमी",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनिटे",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनिटे",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनिटांपेक्षा अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७c - व्हीलिंग",

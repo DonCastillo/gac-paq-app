@@ -55,6 +55,59 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १६",
+			label: "तुम्ही गेल्या आठवड्यात घरून कामावर कसे गेलात?",
+			kid_label: "तुम्ही गेल्या आठवड्यात घरून कामावर कसे गेलात?",
+			adult_label: "तुमचे मूल गेल्या आठवड्यात घरून कामावर कसे गेले?",
+			kid_sublabel: "तुम्ही वापरलेली प्रमुख पद्धत निवडा",
+			adult_sublabel: "त्याने/ तिने वापरलेली प्रमुख पद्धत निवडा",
+			choices: [
+				{
+					label: "चालत",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "चाकांच्या साधनांचा वापर करून",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+						adult: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+					},
+				},
+				{
+					label: "सार्वजनिक वाहतूक",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव इ.",
+						adult: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव, इ.",
+					},
+				},
+				{
+					label: "कार, टॅक्सी, ट्रक, मोटरसायकल इ.",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "इतर, एकाहून अधिक साधनांचा वापर करून (उदा. चालत व बसने)",
+					value: "Other",
+					image_ident: "other",
+				},
+				{
+					label: "लागू नाही (मी घरून काम करतो / करते)",
+					value: "Work from home",
+					image_ident: "other",
+					label_mode: {
+						kid: "लागू नाही (मी घरून काम करतो / करते)",
+						adult: "लागू नाही (तुमचे मूल घरून काम करते)",
+					},
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १६",

@@ -39,6 +39,31 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १६c",
+			label: "तुम्हाला घरून कामावर जाण्यासाठी सामान्यपणे किती वेळ लागतो?",
+			kid_label: "तुम्हाला घरून कामावर जाण्यासाठी सामान्यपणे किती वेळ लागतो?",
+			adult_label: "तुमच्या मुलाला घरून कामावर जाण्यासाठी सामान्यपणे किती वेळ लागतो?",
+			choices: [
+				{
+					label: "१० मिनिटे किंवा त्यापेक्षा कमी",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनिटे",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनिटे",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनिटांपेक्षा अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १६c",
