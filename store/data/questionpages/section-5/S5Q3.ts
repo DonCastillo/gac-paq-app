@@ -38,6 +38,33 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २०",
+			label: "मागील आठवड्यात तुम्ही ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			kid_label:
+				"मागील आठवड्यात तुम्ही ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			adult_label:
+				"मागील आठवड्यात तुमच्या मुलाने ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			choices: [
+				{
+					label: "दररोज ३० मिनिटे किंवा त्यापेक्षा कमी वेळ",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "दररोज ३१-६० मिनिटे",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "दररोज ६१-९० मिनिटे",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "दररोज ९० मिनिटांपेक्षा अधिक वेळ",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २०",

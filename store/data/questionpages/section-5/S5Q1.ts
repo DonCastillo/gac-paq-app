@@ -27,6 +27,26 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label:
+				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			kid_label:
+				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			adult_label:
+				"मागील आठवड्यात तुमच्या मुलाने शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			choices: [
+				{
+					label: "होय",
+					value: "yes",
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १८",
