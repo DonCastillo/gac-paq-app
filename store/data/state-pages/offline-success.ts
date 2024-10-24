@@ -12,6 +12,11 @@ const OfflineSuccessPage: LangPagePayloadInterface = {
 			description:
 				"Your responses will be saved and automatically resubmitted when the connection is restored.\n\nThank you for your help!",
 		},
+		"ma-IN": {
+			heading: "तुम्ही इंटरनेटशी कनेक्ट केलेले नाही.",
+			description:
+				"तुमचे प्रतिसाद जतन केले जातील आणि कनेक्शन पुनर्स्थापित झाल्यावर स्वयंचलितपणे पुन्हा पाठवले जातील.\n\nतुमच्या मदतीबद्दल धन्यवाद!",
+		},
 		"hi-IN": {
 			heading: "आप इंटरनेट से कनेक्ट नहीं हैं",
 			description:
