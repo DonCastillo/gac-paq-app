@@ -64,6 +64,60 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २५",
+			label:
+				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			kid_label:
+				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			adult_label:
+				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			kid_sublabel: "लागू होणारे सर्व पर्याय निवडा",
+			adult_sublabel: "लागू होणारे सर्व पर्याय निवडा",
+			choices: [
+				{
+					label: "ऐकणे",
+					value: "Hearing",
+				},
+				{
+					label: "बघणे",
+					value: "Seeing",
+				},
+				{
+					label: "बोलणे",
+					value: "Speech",
+				},
+				{
+					label: "शारीरिक हालचाल करणे",
+					value: "Mobility",
+				},
+				{
+					label: "चपळाईने हालचाल करणे",
+					value: "Agility",
+				},
+				{
+					label: "वेदना जाणवणे",
+					value: "Pain",
+				},
+				{
+					label: "स्मरणशक्ती / गोष्टी लक्षात राहणे",
+					value: "Memory",
+				},
+				{
+					label: "इतर",
+					value: "Other",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to say",
+				},
+				{
+					label: "यांपैकी काहीही नाही, त्याला / तिला कोणत्याही अडचणी नाहीत",
+					value: "None of the above",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २५",

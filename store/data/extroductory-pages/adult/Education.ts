@@ -44,6 +44,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २९",
+			label: "तुमच्या घरातील सदस्याने पूर्ण केलेला सर्वोच्च शैक्षणिक स्तर कोणता?",
+			kid_label: "तुमच्या घरातील सदस्याने पूर्ण केलेला सर्वोच्च शैक्षणिक स्तर कोणता?",
+			adult_label: "तुमच्या घरातील सदस्याने पूर्ण केलेला सर्वोच्च शैक्षणिक स्तर कोणता?",
+			choices: [
+				{
+					label: "औपचारिक शालेय शिक्षण झालेले नाही",
+					value: "No formal schooling",
+				},
+				{
+					label: "प्राथमिक शालेय शिक्षण",
+					value: "Primary school",
+				},
+				{
+					label: "माध्यमिक किंवा उच्च माध्यमिक शालेय शिक्षण",
+					value: "Secondary or high school",
+				},
+				{
+					label: "व्यावसायिक/ महाविद्यालयीन शिक्षण",
+					value: "Vocational/college education",
+				},
+				{
+					label: "तृतीय स्तर / विद्यापीठ शिक्षण",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २९",

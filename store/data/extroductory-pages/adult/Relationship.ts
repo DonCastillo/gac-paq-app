@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "तुमचे मुलाशी / मुलीशी कोणते नाते आहे?",
+			kid_label: "तुमचे मुलाशी / मुलीशी कोणते नाते आहे?",
+			adult_label: "तुमचे मुलाशी / मुलीशी कोणते नाते आहे?",
+			choices: [
+				{
+					label: "वडील",
+					value: "Father",
+				},
+				{
+					label: "आई",
+					value: "Mother",
+				},
+				{
+					label: "आजोबा",
+					value: "Grandfather",
+				},
+				{
+					label: "आज्जी",
+					value: "Grandmother",
+				},
+				{
+					label: "शिक्षक किंवा पालक",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "इतर नाते",
+					value: "Other",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २८",

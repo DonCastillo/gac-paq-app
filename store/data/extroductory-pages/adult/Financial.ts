@@ -44,6 +44,41 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			kid_label:
+				"तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			adult_label:
+				"तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			choices: [
+				{
+					label: "खूप अवघड",
+					value: "Very difficult",
+				},
+				{
+					label: "अवघड",
+					value: "Difficult",
+				},
+				{
+					label: "सोपेही नाही किंवा अवघडही नाही",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "सोपे",
+					value: "Easy",
+				},
+				{
+					label: "खूप सोपे",
+					value: "Very easy",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",

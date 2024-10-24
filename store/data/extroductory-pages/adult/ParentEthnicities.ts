@@ -47,6 +47,43 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २७",
+			label: "तुमचा वांशिक गट कोणता?",
+			kid_label: "तुमचा वांशिक गट कोणता?",
+			adult_label: "तुमचा वांशिक गट कोणता?",
+			choices: [
+				{
+					label: "आशियाई",
+					value: "Asian",
+				},
+				{
+					label: "कृष्णवर्णीय किंवा अमेरिकन कृष्णवर्णीय",
+					value: "Black or African American",
+				},
+				{
+					label: "स्थानिक / मूलनिवासी / आदिवासी",
+					value: "Indigenous",
+				},
+				{
+					label: "लॅटिन अमेरिकन",
+					value: "Latin American",
+				},
+				{
+					label: "श्वेतवर्णीय किंवा कॉकेशियन",
+					value: "White or Caucasian",
+				},
+				{
+					label: "इतर",
+					value: "Other",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न 27",
