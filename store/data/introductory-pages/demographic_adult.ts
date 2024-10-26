@@ -59,6 +59,55 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपले स्वागत आहे!",
+			label: "तुमच्या मुलाचे वय काय आहे?",
+			kid_label: "तुमच्या मुलाचे वय काय आहे?",
+			adult_label: "तुमच्या मुलाचे वय काय आहे?",
+			choices: [
+				{
+					label: "८ वर्षे",
+					value: "8",
+				},
+				{
+					label: "९ वर्षे",
+					value: "9",
+				},
+				{
+					label: "१० वर्षे",
+					value: "10",
+				},
+				{
+					label: "११ वर्षे",
+					value: "11",
+				},
+				{
+					label: "१२ वर्षे",
+					value: "12",
+				},
+				{
+					label: "१३ वर्षे",
+					value: "13",
+				},
+				{
+					label: "१४ वर्षे",
+					value: "14",
+				},
+				{
+					label: "१५ वर्षे",
+					value: "15",
+				},
+				{
+					label: "१६ वर्षे",
+					value: "16",
+				},
+				{
+					label: "१७ वर्षे",
+					value: "17",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionDropdown,
 			heading: "आपका स्वागत है",
