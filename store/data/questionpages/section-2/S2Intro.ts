@@ -10,6 +10,14 @@ const S2Intro: LangSectionPayloadInterface = {
 			heading: "Household Chores",
 			subheading: "Section 2",
 		},
+		"ma-IN": {
+			heading: "घरातील नेहमीची कामे",
+			subheading: "विभाग २",
+		},
+		"hi-IN": {
+			heading: "घरेलू काम",
+			subheading: "भाग 2",
+		},
 		"en-AE": {
 			heading: "Household Chores",
 			subheading: "Section 2",

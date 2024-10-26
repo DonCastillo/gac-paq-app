@@ -42,6 +42,70 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ५",
+			label:
+				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			kid_label:
+				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			adult_label:
+				"तुमचे मूल शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करते हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न 5",
+			label:
+				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
+			kid_label:
+				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
+			adult_label:
+				"निम्नलिखित में से कौन सा चित्र आपके बच्चे द्वारा पीटी क्लास में अधिकांश समय किए जाने वाले कार्यों में से मिलता जुलता है?",
+			choices: [
+				{
+					label: "कम हलचल वाली गतिविधियाँ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "आसान प्रयास",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम या कठिन प्रयास",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "पता नहीं",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",

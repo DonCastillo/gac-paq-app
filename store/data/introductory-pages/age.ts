@@ -37,6 +37,64 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपले स्वागत आहे!",
+			label: "ही प्रश्नावली कोण घेत आहे?",
+			kid_label: "ही प्रश्नावली कोण घेत आहे?",
+			adult_label: "ही प्रश्नावली कोण घेत आहे?",
+			choices: [
+				{
+					label: "मूल",
+					value: "child",
+					sublabel: {
+						kid: "८ ते ११ वर्षे",
+						adult: "८ ते ११ वर्षे",
+					},
+				},
+				{
+					label: "किशोर",
+					value: "teen",
+					sublabel: {
+						kid: "१२ ते १७ वर्षे",
+						adult: "१२ ते १७ वर्षे",
+					},
+				},
+				{
+					label: "पालक",
+					value: "adult",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपका स्वागत है",
+			label: "यह प्रश्नावली कौन ले रहा है",
+			kid_label: "यह प्रश्नावली कौन ले रहा है",
+			adult_label: "यह प्रश्नावली कौन ले रहा है",
+			choices: [
+				{
+					label: "बच्चा",
+					value: "child",
+					sublabel: {
+						kid: "8 से 11 वर्ष",
+						adult: "8 से 11 वर्ष",
+					},
+				},
+				{
+					label: "किशोर",
+					value: "teen",
+					sublabel: {
+						kid: "12 से 17 वर्ष",
+						adult: "12 से 17 वर्ष",
+					},
+				},
+				{
+					label: "माता-पिता",
+					value: "adult",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

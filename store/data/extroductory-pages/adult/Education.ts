@@ -44,6 +44,72 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २९",
+			label: "तुमच्या घरातील सदस्याने पूर्ण केलेला सर्वोच्च शैक्षणिक स्तर कोणता?",
+			kid_label: "तुमच्या घरातील सदस्याने पूर्ण केलेला सर्वोच्च शैक्षणिक स्तर कोणता?",
+			adult_label: "तुमच्या घरातील सदस्याने पूर्ण केलेला सर्वोच्च शैक्षणिक स्तर कोणता?",
+			choices: [
+				{
+					label: "औपचारिक शालेय शिक्षण झालेले नाही",
+					value: "No formal schooling",
+				},
+				{
+					label: "प्राथमिक शालेय शिक्षण",
+					value: "Primary school",
+				},
+				{
+					label: "माध्यमिक किंवा उच्च माध्यमिक शालेय शिक्षण",
+					value: "Secondary or high school",
+				},
+				{
+					label: "व्यावसायिक/ महाविद्यालयीन शिक्षण",
+					value: "Vocational/college education",
+				},
+				{
+					label: "तृतीय स्तर / विद्यापीठ शिक्षण",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २९",
+			label: "आपके घर के किसी सदस्य द्वारा पूरी की गई शिक्षा का उच्चतम स्तर क्या है?",
+			kid_label: "आपके घर के किसी सदस्य द्वारा पूरी की गई शिक्षा का उच्चतम स्तर क्या है?",
+			adult_label: "आपके घर के किसी सदस्य द्वारा पूरी की गई शिक्षा का उच्चतम स्तर क्या है?",
+			choices: [
+				{
+					label: "कोई औपचारिक स्कूली शिक्षा नहीं",
+					value: "No formal schooling",
+				},
+				{
+					label: "प्राथमिक स्कूल",
+					value: "Primary school",
+				},
+				{
+					label: "माध्यमिक या उच्च विद्यालय",
+					value: "Secondary or high school",
+				},
+				{
+					label: "व्यावसायिक/कॉलेज शिक्षा",
+					value: "Vocational/college education",
+				},
+				{
+					label: "तृतीयक/विश्वविद्यालयी शिक्षा",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "जवाब नहीं देना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 29",

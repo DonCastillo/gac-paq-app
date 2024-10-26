@@ -59,6 +59,104 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपले स्वागत आहे!",
+			label: "तुमच्या मुलाचे वय काय आहे?",
+			kid_label: "तुमच्या मुलाचे वय काय आहे?",
+			adult_label: "तुमच्या मुलाचे वय काय आहे?",
+			choices: [
+				{
+					label: "८ वर्षे",
+					value: "8",
+				},
+				{
+					label: "९ वर्षे",
+					value: "9",
+				},
+				{
+					label: "१० वर्षे",
+					value: "10",
+				},
+				{
+					label: "११ वर्षे",
+					value: "11",
+				},
+				{
+					label: "१२ वर्षे",
+					value: "12",
+				},
+				{
+					label: "१३ वर्षे",
+					value: "13",
+				},
+				{
+					label: "१४ वर्षे",
+					value: "14",
+				},
+				{
+					label: "१५ वर्षे",
+					value: "15",
+				},
+				{
+					label: "१६ वर्षे",
+					value: "16",
+				},
+				{
+					label: "१७ वर्षे",
+					value: "17",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपका स्वागत है",
+			label: "आपके बच्चे की उम्र क्या है?",
+			kid_label: "आपके बच्चे की उम्र क्या है?",
+			adult_label: "आपके बच्चे की उम्र क्या है?",
+			choices: [
+				{
+					label: "8 साल",
+					value: "8",
+				},
+				{
+					label: "9 साल",
+					value: "9",
+				},
+				{
+					label: "10 साल",
+					value: "10",
+				},
+				{
+					label: "11 साल",
+					value: "11",
+				},
+				{
+					label: "12 साल",
+					value: "12",
+				},
+				{
+					label: "13 साल",
+					value: "13",
+				},
+				{
+					label: "14 साल",
+					value: "14",
+				},
+				{
+					label: "15 साल",
+					value: "15",
+				},
+				{
+					label: "16 साल",
+					value: "16",
+				},
+				{
+					label: "17 साल",
+					value: "17",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

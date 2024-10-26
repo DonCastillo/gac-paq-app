@@ -47,6 +47,80 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २७",
+			label: "तुमचा वांशिक गट कोणता?",
+			kid_label: "तुमचा वांशिक गट कोणता?",
+			adult_label: "तुमचा वांशिक गट कोणता?",
+			choices: [
+				{
+					label: "आशियाई",
+					value: "Asian",
+				},
+				{
+					label: "कृष्णवर्णीय किंवा अमेरिकन कृष्णवर्णीय",
+					value: "Black or African American",
+				},
+				{
+					label: "स्थानिक / मूलनिवासी / आदिवासी",
+					value: "Indigenous",
+				},
+				{
+					label: "लॅटिन अमेरिकन",
+					value: "Latin American",
+				},
+				{
+					label: "श्वेतवर्णीय किंवा कॉकेशियन",
+					value: "White or Caucasian",
+				},
+				{
+					label: "इतर",
+					value: "Other",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न 27",
+			label: "आपकी जातीयता क्या है?",
+			kid_label: "आपकी जातीयता क्या है?",
+			adult_label: "आपकी जातीयता क्या है?",
+			choices: [
+				{
+					label: "एशियाई",
+					value: "Asian",
+				},
+				{
+					label: "ब्लैक या अफ़्रीकी अमेरिकी",
+					value: "Black or African American",
+				},
+				{
+					label: "स्वदेशी",
+					value: "Indigenous",
+				},
+				{
+					label: "लैटिन अमेरिकी",
+					value: "Latin American",
+				},
+				{
+					label: "व्हाइट या कोकेशियान",
+					value: "White or Caucasian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "नहीं कहना पसंद करेंगे",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionCheckboxInput,
 			heading: "Question 27",

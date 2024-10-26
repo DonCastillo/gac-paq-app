@@ -27,6 +27,43 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label:
+				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			kid_label:
+				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			adult_label:
+				"मागील आठवड्यात तुमच्या मुलाने शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			choices: [
+				{
+					label: "होय",
+					value: "yes",
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label: "क्या आपने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			kid_label: "क्या आपने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			adult_label: "क्या आपके बच्चे ने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 18",

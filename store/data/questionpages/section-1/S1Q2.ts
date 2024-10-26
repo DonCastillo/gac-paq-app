@@ -47,6 +47,80 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २",
+			label: "तुम्ही गेल्या आठवड्यात किती दिवस शाळेत गेला होता?",
+			kid_label: "तुम्ही गेल्या आठवड्यात किती दिवस शाळेत गेला होता?",
+			adult_label: "गेल्या आठवड्यात तुमचे मूल किती दिवस शाळेत गेले होते?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २",
+			label: "पिछले सप्ताह आप कितने दिन स्कूल गए?",
+			kid_label: "पिछले सप्ताह आप कितने दिन स्कूल गए?",
+			adult_label: "आपका बच्चा पिछले सप्ताह कितने दिन स्कूल गया?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 2",

@@ -48,6 +48,83 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७b - चालणे",
+			label: "तुम्ही गेल्या आठवड्यात किती वेळा चालत गेलात?",
+			kid_label: "तुम्ही गेल्या आठवड्यात किती वेळा चालत गेलात?",
+			adult_label: "तुमचे मूल गेल्या आठवड्यात किती वेळा चालत गेले?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७b - हिँड्नु",
+			label:
+				"पिछले सप्ताह में आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन पैदल गए?",
+			kid_label:
+				"पिछले सप्ताह में आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन पैदल गए?",
+			adult_label:
+				"पिछले सप्ताह में आपका बच्चा स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन पैदल गया?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Walking",

@@ -15,6 +15,20 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
 		},
+		"ma-IN": {
+			type: Question.QuestionLanguage,
+			heading: "आपले स्वागत आहे!",
+			label: "तुम्ही कोणती भाषा बोलता आणि तुम्ही कुठे आहात?",
+			kid_label: "तुम्ही कोणती भाषा बोलता आणि तुम्ही कुठे आहात?",
+			adult_label: "तुम्ही कोणती भाषा बोलता आणि तुम्ही कुठे आहात?",
+		},
+		"hi-IN": {
+			type: Question.QuestionLanguage,
+			heading: "आपका स्वागत है",
+			label: "आप कौनसी भाषा बोलते हैं और आप कहाँ हैं?",
+			kid_label: "आप कौनसी भाषा बोलते हैं और आप कहाँ हैं?",
+			adult_label: "आप कौनसी भाषा बोलते हैं और आप कहाँ हैं?",
+		},
 		"en-AE": {
 			type: Question.QuestionLanguage,
 			heading: "Welcome!",

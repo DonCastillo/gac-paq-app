@@ -46,6 +46,80 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "प्रतिसाद",
+			label: "तुम्ही या ॲपबाबत कितपत समाधानी आहात?",
+			kid_label: "तुम्ही या ॲपबाबत कितपत समाधानी आहात?",
+			adult_label: "तुम्ही या ॲपबाबत कितपत समाधानी आहात?",
+			adult_sublabel: "तुमचे समाधान योग्यरित्या व्यक्त करणाऱ्या चित्रावर (इमोजीवर) क्लिक करा.",
+			kid_sublabel: "तुमचे समाधान योग्यरित्या व्यक्त करणाऱ्या चित्रावर (इमोजीवर) क्लिक करा.",
+			choices: [
+				{
+					label: "खूप असंतुष्ट",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "असंतुष्ट",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "तटस्थ",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "संतुष्ट",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "खूप संतुष्ट",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "प्रतिक्रिया",
+			label: "आप ऐप से कितने संतुष्ट हैं?",
+			kid_label: "आप ऐप से कितने संतुष्ट हैं?",
+			adult_label: "आप ऐप से कितने संतुष्ट हैं?",
+			adult_sublabel:
+				"उस चित्र (इमोजी) पर क्लिक करें जो आपकी संतुष्टि का सबसे अच्छा प्रतिनिधित्व करता है।",
+			kid_sublabel:
+				"उस चित्र (इमोजी) पर क्लिक करें जो आपकी संतुष्टि का सबसे अच्छा प्रतिनिधित्व करता है।",
+			choices: [
+				{
+					label: "पूरी तरह से असंतुष्ट",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "असंतुष्ट",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "तटस्थ",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "संतुष्ट",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "पूरी तरह से संतुष्ट",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Feedback",

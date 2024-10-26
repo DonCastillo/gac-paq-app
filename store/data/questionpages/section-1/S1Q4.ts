@@ -39,6 +39,64 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ४",
+			label: "तुमचा शारीरिक शिक्षणाचा एक वर्ग किती वेळ चालतो?",
+			kid_label: "तुमचा शारीरिक शिक्षणाचा एक वर्ग किती वेळ चालतो?",
+			adult_label: "तुमच्या मुलाच्या शारीरिक शिक्षणाचा एक वर्ग किती वेळ असतो?",
+			choices: [
+				{
+					label: "३० मिनिटांपेक्षा कमी वेळ",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "३० - ४५ मिनिटे",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "४६ - ६० मिनिटे",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "६० मिनिटांपेक्षा अधिक",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "माहित नाही",
+					value: "Don't know",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ४",
+			label: "आपकी पीटी क्लास कितने समय की होती है?",
+			kid_label: "आपकी पीटी क्लास कितने समय की होती है?",
+			adult_label: "आपके बच्चे की पीटी क्लास कितने समय की होती है?",
+			choices: [
+				{
+					label: "प्रति क्लास 30 मिनट से कम",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "प्रति क्लास 30 - 45 मिनट",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "प्रति क्लास 46 - 60 मिनट",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "प्रति क्लास 60 मिनट से अधिक",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "पता नहीं",
+					value: "Don't know",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 4",

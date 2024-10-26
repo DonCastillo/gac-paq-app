@@ -55,6 +55,104 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १६",
+			label: "तुम्ही गेल्या आठवड्यात घरून कामावर कसे गेलात?",
+			kid_label: "तुम्ही गेल्या आठवड्यात घरून कामावर कसे गेलात?",
+			adult_label: "तुमचे मूल गेल्या आठवड्यात घरून कामावर कसे गेले?",
+			kid_sublabel: "तुम्ही वापरलेली प्रमुख पद्धत निवडा",
+			adult_sublabel: "त्याने/ तिने वापरलेली प्रमुख पद्धत निवडा",
+			choices: [
+				{
+					label: "चालत",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "चाकांच्या साधनांचा वापर करून",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+						adult: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+					},
+				},
+				{
+					label: "सार्वजनिक वाहतूक",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव इ.",
+						adult: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव, इ.",
+					},
+				},
+				{
+					label: "कार, टॅक्सी, ट्रक, मोटरसायकल इ.",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "इतर, एकाहून अधिक साधनांचा वापर करून (उदा. चालत व बसने)",
+					value: "Other",
+					image_ident: "other",
+				},
+				{
+					label: "लागू नाही (मी घरून काम करतो / करते)",
+					value: "Work from home",
+					image_ident: "other",
+					label_mode: {
+						kid: "लागू नाही (मी घरून काम करतो / करते)",
+						adult: "लागू नाही (तुमचे मूल घरून काम करते)",
+					},
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १६",
+			label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
+			kid_label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
+			adult_label: "आपका बच्चा पिछले सप्ताह काम पर कैसे गया?",
+			kid_sublabel: "परिवहन का वह साधन चुनें जिसका आपने सबसे अधिक उपयोग किया है",
+			adult_sublabel: "परिवहन का वह साधन चुनें जिसे आपके बच्चे ने सबसे अधिक उपयोग किया है",
+			choices: [
+				{
+					label: "चल के जाना",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "व्हीलिंग",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+						adult:
+							"उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+					},
+				},
+				{
+					label: "सार्वजनिक परिवहन",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+						adult: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+					},
+				},
+				{
+					label: "कार, टैक्सी, ट्रक, या मोटरसाइकिल",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "अन्य, कौन सा?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 16",

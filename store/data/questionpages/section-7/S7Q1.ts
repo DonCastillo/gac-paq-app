@@ -44,6 +44,70 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २३",
+			label: "मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
+			kid_label:
+				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
+			adult_label:
+				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुमच्या मुलाने सरासरी किती वेळ घराबाहेर घालवला?",
+			choices: [
+				{
+					label: "अजिबात नाही",
+					value: "None",
+				},
+				{
+					label: "दररोज एक तास किंवा त्यापेक्षा कमी",
+					value: "An hour or less per day",
+				},
+				{
+					label: "दररोज साधारण २ तास",
+					value: "Approximately 2 hours per day",
+				},
+				{
+					label: "दररोज  साधारण ३ तास",
+					value: "Approximately 3 hours per day",
+				},
+				{
+					label: "दररोज ४ किंवा अधिक तास",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २३",
+			label: "पिछले सप्ताह में, सामान्य दिन में, आपने कितना समय बाहर बिताया है?",
+			kid_label: "पिछले सप्ताह में, सामान्य दिन में, आपने कितना समय बाहर बिताया है?",
+			adult_label: "पिछले सप्ताह में, सामान्य दिन में, आपके बच्चे ने बाहर कितना समय बिताया?",
+			choices: [
+				{
+					label: "कुछ भी नहीं",
+					value: "None",
+				},
+				{
+					label: "रति दिन 1 घंटे से कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "रति दिन 1 से 2 घंटे",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "प्रति दिन 2 से 3 घंटे",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "प्रति दिन 3 से 4 घंटे",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "प्रति दिन 4 घंटे या अधिक",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 23",

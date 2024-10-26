@@ -35,6 +35,56 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १५c",
+			label: "तुम्हाला घरून शाळेत जायला सामान्यपणे किती वेळ लागतो?",
+			kid_label: "तुम्हाला घरून शाळेत जायला सामान्यपणे किती वेळ लागतो?",
+			adult_label: "तुमच्या मुलाला घरून शाळेत जायला सामान्यपणे किती वेळ लागतो?",
+			choices: [
+				{
+					label: "१० मिनिटे किंवा त्यापेक्षा कमी",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनिटे",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनिटे",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनिटांपेक्षा अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १५c",
+			label: "आपको स्कूल जाने में सामान्यतः कितना समय लगता है?",
+			kid_label: "आपको स्कूल जाने में सामान्यतः कितना समय लगता है?",
+			adult_label: "आपके बच्चे को स्कूल जाने में सामान्यतः कितना समय लगता है?",
+			choices: [
+				{
+					label: "10 मिनट या उससे कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 मिनट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 मिनट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "30 मिनट से अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 15c",

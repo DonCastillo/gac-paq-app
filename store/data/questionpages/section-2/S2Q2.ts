@@ -47,6 +47,80 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ९",
+			label: "तुम्ही गेल्या आठवड्यादरम्यान किती दिवस घरातील नेहमीची कामे केली?",
+			kid_label: "तुम्ही गेल्या आठवड्यादरम्यान किती दिवस घरातील नेहमीची कामे केली?",
+			adult_label: "तुमच्या मुलाने गेल्या आठवड्यातील किती दिवस घरातील नेहमीची कामे केली?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ९",
+			label: "पिछले सप्ताह आपने कितने दिन घरेलू कामकाज किए?",
+			kid_label: "पिछले सप्ताह आपने कितने दिन घरेलू कामकाज किए?",
+			adult_label: "पिछले सप्ताह आपके बच्चे ने कितने दिन घरेलू कामकाज किए?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 9",

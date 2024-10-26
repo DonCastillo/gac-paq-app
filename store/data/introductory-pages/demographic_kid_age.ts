@@ -35,6 +35,56 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपले स्वागत आहे!",
+			label: "तुमचे वय काय आहे?",
+			kid_label: "तुमचे वय काय आहे?",
+			adult_label: "तुमचे वय काय आहे?",
+			choices: [
+				{
+					label: "८ वर्षे",
+					value: "8",
+				},
+				{
+					label: "९ वर्षे",
+					value: "9",
+				},
+				{
+					label: "१० वर्षे",
+					value: "10",
+				},
+				{
+					label: "११ वर्षे",
+					value: "11",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपका स्वागत है",
+			label: "आपकी उम्र क्या है?",
+			kid_label: "आपकी उम्र क्या है?",
+			adult_label: "आपकी उम्र क्या है?",
+			choices: [
+				{
+					label: "8 साल",
+					value: "8",
+				},
+				{
+					label: "9 साल",
+					value: "9",
+				},
+				{
+					label: "10 साल",
+					value: "10",
+				},
+				{
+					label: "11 साल",
+					value: "11",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

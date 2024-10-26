@@ -47,6 +47,80 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १५b",
+			label: "तुम्ही गेल्या आठवड्यात या पद्धतीचा वापर किती वेळा केला?",
+			kid_label: "तुम्ही गेल्या आठवड्यात या पद्धतीचा वापर किती वेळा केला?",
+			adult_label: "तुमच्या मुलाने गेल्या आठवड्यात या पद्धतीचा वापर किती वेळा केला?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १५b",
+			label: "पिछले सप्ताह आपने कितने दिन परिवहन के इस साधन का उपयोग किया?",
+			kid_label: "पिछले सप्ताह आपने कितने दिन परिवहन के इस साधन का उपयोग किया?",
+			adult_label: "आपके बच्चे ने पिछले सप्ताह में कितने दिन परिवहन के इस साधन का उपयोग किया?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 15b",

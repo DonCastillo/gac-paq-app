@@ -10,6 +10,14 @@ const S7Intro: LangSectionPayloadInterface = {
 			heading: "Outdoors",
 			subheading: "Section 7",
 		},
+		"ma-IN": {
+			heading: "बाहरी गतिविधियाँ",
+			subheading: "विभाग ७",
+		},
+		"hi-IN": {
+			heading: "बाहरी गतिविधियाँ",
+			subheading: "भाग 7",
+		},
 		"en-AE": {
 			heading: "Outdoors",
 			subheading: "Section 7",

@@ -41,6 +41,70 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ११",
+			label:
+				"तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
+			kid_label:
+				"तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
+			adult_label:
+				"तुमचे मूल घरातील नेहमीची कामे करताना बहुतेक वेळ काय करते हे पुढीलपैकी कशातून दिसून येते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ११",
+			label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने कामकाज के दौरान ज्यादातर समय करते हैं?",
+			kid_label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने कामकाज के दौरान ज्यादातर समय करते हैं?",
+			adult_label:
+				"निम्नलिखित में से कौन सी तस्वीर आपके बच्चे द्वारा अपने घरेलू कामकाज के दौरान अधिकांश समय किए जाने वाले कार्यों से मिलती जुलती है?",
+			choices: [
+				{
+					label: "कम हलचल वाली गतिविधियाँ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "आसान प्रयास",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम या कठिन प्रयास",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "पता नहीं",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",

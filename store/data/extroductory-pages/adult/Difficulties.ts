@@ -64,6 +64,114 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २५",
+			label:
+				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			kid_label:
+				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			adult_label:
+				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			kid_sublabel: "लागू होणारे सर्व पर्याय निवडा",
+			adult_sublabel: "लागू होणारे सर्व पर्याय निवडा",
+			choices: [
+				{
+					label: "ऐकणे",
+					value: "Hearing",
+				},
+				{
+					label: "बघणे",
+					value: "Seeing",
+				},
+				{
+					label: "बोलणे",
+					value: "Speech",
+				},
+				{
+					label: "शारीरिक हालचाल करणे",
+					value: "Mobility",
+				},
+				{
+					label: "चपळाईने हालचाल करणे",
+					value: "Agility",
+				},
+				{
+					label: "वेदना जाणवणे",
+					value: "Pain",
+				},
+				{
+					label: "स्मरणशक्ती / गोष्टी लक्षात राहणे",
+					value: "Memory",
+				},
+				{
+					label: "इतर",
+					value: "Other",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to say",
+				},
+				{
+					label: "यांपैकी काहीही नाही, त्याला / तिला कोणत्याही अडचणी नाहीत",
+					value: "None of the above",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न २५",
+			label:
+				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			kid_label:
+				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			adult_label:
+				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			kid_sublabel: "हर वो जो लागू हो उन्हें चुनें",
+			adult_sublabel: "हर वो जो लागू हो उन्हें चुनें",
+			choices: [
+				{
+					label: "सुनना",
+					value: "Hearing",
+				},
+				{
+					label: "देखना",
+					value: "Seeing",
+				},
+				{
+					label: "बोलना",
+					value: "Speech",
+				},
+				{
+					label: "गतिशीलता",
+					value: "Mobility",
+				},
+				{
+					label: "फुर्ती",
+					value: "Agility",
+				},
+				{
+					label: "दर्द",
+					value: "Pain",
+				},
+				{
+					label: "स्मृति",
+					value: "Memory",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "नहीं कहना पसंद करेंगे",
+					value: "Prefer not to say",
+				},
+				{
+					label: "उपरोक्त में से कोई नहीं, उन्हें कोई कठिनाई नहीं है",
+					value: "None of the above",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",

@@ -37,6 +37,59 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७c - चाक फिरवणे",
+			label: "तुम्हाला एकदा चाकांची साधने वापरून जाण्यासाठी सामान्यपणे किती वेळ लागला?",
+			kid_label: "तुम्हाला एकदा चाकांची साधने वापरून जाण्यासाठी सामान्यपणे किती वेळ लागला?",
+			adult_label: "तुमच्या मुलाला एकदा चाकांची साधने वापरून जाण्यासाठी सामान्यपणे किती वेळ लागला?",
+			choices: [
+				{
+					label: "१० मिनिटे किंवा त्यापेक्षा कमी",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनिटे",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनिटे",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनिटांपेक्षा अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १७c - व्हीलिंग",
+			label:
+				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गए?",
+			kid_label:
+				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गए?",
+			adult_label:
+				"एक सामान्य दिन में, आपके बच्चे ने स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके बिताया?",
+			choices: [
+				{
+					label: "10 मिनट या उससे कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 मिनट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 मिनट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "30 मिनट से अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",

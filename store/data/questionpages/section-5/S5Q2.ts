@@ -47,6 +47,80 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १९",
+			label: "मागील आठवड्यात अशा प्रकारचे उपक्रम तुम्ही किती दिवस केले?",
+			kid_label: "मागील आठवड्यात अशा प्रकारचे उपक्रम तुम्ही किती दिवस केले?",
+			adult_label: "मागील आठवड्यात अशा प्रकारचे उपक्रम तुमच्या मुलाने किती दिवस केले?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १९",
+			label: "पिछले सप्ताह के दौरान आपने कितने दिन ये गतिविधियाँ कीं?",
+			kid_label: "पिछले सप्ताह के दौरान आपने कितने दिन ये गतिविधियाँ कीं?",
+			adult_label: "आपके बच्चे ने पिछले सप्ताह के दौरान कितने दिन ये गतिविधियाँ कीं?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 19",

@@ -16,6 +16,22 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"ma-IN": {
+			type: Question.QuestionInput,
+			heading: "आपले स्वागत आहे!",
+			label: "कृपया तुमचा सहभागी आयडी नोंदवा",
+			kid_label: "कृपया तुमचा सहभागी आयडी नोंदवा",
+			adult_label: "कृपया तुमचा सहभागी आयडी नोंदवा",
+			placeholder: "सहभागी आयडी अनुक्रमांक",
+		},
+		"hi-IN": {
+			type: Question.QuestionInput,
+			heading: "आपका स्वागत है",
+			label: "कृपया अपनी प्रतिभागी आईडी दर्ज करें",
+			kid_label: "कृपया अपनी प्रतिभागी आईडी दर्ज करें",
+			adult_label: "कृपया अपनी प्रतिभागी आईडी दर्ज करें",
+			placeholder: "प्रतिभागी आईडी क्रमांक",
+		},
 		"en-AE": {
 			type: Question.QuestionInput,
 			heading: "Welcome!",

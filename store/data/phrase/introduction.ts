@@ -4,6 +4,12 @@ const IntroductionPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Introduction",
 	},
+	"ma-IN": {
+		label: "प्रस्तावना",
+	},
+	"hi-IN": {
+		label: "प्रस्तावना",
+	},
 	"en-AE": {
 		label: "Introduction",
 	},
