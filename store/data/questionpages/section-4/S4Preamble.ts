@@ -15,6 +15,14 @@ const S4Preamble: LangPreamblePayloadInterface = {
 				adult: "This section is about how your child goes to different places.",
 			},
 		},
+		"ch-MW": {
+			heading: "Mayendedwe",
+			subheading: "Gawo 4",
+			description: {
+				kid: "Gawoli likunena za momwe umayendera popita Kumalo osiyanasiyana.",
+				adult: "Gawoli likunena za momwe mwana wanu amayendera popita Kumalo osiyanasiyana.",
+			},
+		},
 		"ma-IN": {
 			heading: "वाहतूक",
 			subheading: "विभाग ४",

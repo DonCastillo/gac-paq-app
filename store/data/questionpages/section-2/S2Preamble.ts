@@ -17,6 +17,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"ch-MW": {
+			heading: "Ntchito zapakhomo",
+			subheading: "Gawo lachiwiri",
+			description: {
+				kid: "Gawoli likunena za ntchito zapakhomo kapena ntchito zomwe zimafuna kuti ukhale otanganidwa. Zitsanzo za ntchito zapakhomo ndi ntchito yokonza nyumba, panja panyumba, kulima dimba, ndi zina.",
+				adult:
+					"Gawoli likunena za ntchito zapakhomo kapena ntchito zomwe zimafuna kuti mwana wanu akhale otanganidwa. Zitsanzo za ntchito zapakhomo ndi ntchito yokonza nyumba, panja panyumba, kulima pa munda wapakhomo, ndi zina.",
+			},
+		},
 		"ma-IN": {
 			heading: "घरातील नेहमीची कामे",
 			subheading: "विभाग २",

@@ -17,6 +17,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"ch-MW": {
+			heading: "Sukulu",
+			subheading: "Gawo loyamba",
+			description: {
+				kid: "Gawoli likunena za zinthu zomwe umachita panthawi yomwe uli ku sukulu monga nthawi ya maphunziro olimbikitsa thupi, nthawi yopuma kapena buleki.",
+				adult:
+					"Gawoli likunena za zinthu zomwe mwana wanu amachita panthawi yomwe ali ku sukulu monga nthawi ya maphunziro olimbikitsa thupi, nthawi yopuma kapena buleki.",
+			},
+		},
 		"ma-IN": {
 			heading: "शाळा",
 			subheading: "विभाग १",
