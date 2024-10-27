@@ -47,6 +47,43 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 2",
+			label: "Kodi unapita kusukulu masiku angati m’sabata yapitayi?",
+			kid_label: "Kodi unapita kusukulu masiku angati m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu anapita kusukulu masiku angati m’sabata yapitayi?",
+			choices: [
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २",
