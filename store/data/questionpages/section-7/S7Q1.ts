@@ -44,6 +44,42 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 23",
+			label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
+			kid_label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
+			adult_label:
+				"M’sabata yapitayi, pa tsiku labwinobwno ndi nthawi yaitali bwanji yomwe mwana wanu amakhala panja?",
+			choices: [
+				{
+					label: "Sunakhaleko panja",
+					value: "None",
+				},
+				{
+					label: "Osafika ola limodzi pa tsiku",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "Ola limodzi koma osafika 2 hours patsiku",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "Maola awiri koma osafika 3 hours patsiku",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "Kupitilira maola 4 patsiku",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २३",
