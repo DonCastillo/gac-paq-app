@@ -38,6 +38,33 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 20",
+			label: "Pamasiku omwe umachita zochitika zimenezi, kodi zimatenga nthawi yayitali bwanji?",
+			kid_label:
+				"Pamasiku omwe umachita zochitika zimenezi, kodi zimatenga nthawi yayitali bwanji?",
+			adult_label:
+				"Pamasiku omwe mwana wanu anachita masewerowo, kodi zimatenga nthawi yayitali bwanji?",
+			choices: [
+				{
+					label: "30 minitsi kapena osafika pa tsiku",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "Pakati pa 31 mpaka 60 minitsi pa tsiku",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "Pakati pa 1 hour ndi 1 hour 30 minitsi pa tsiku",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Kuposera 1 hour 30 minitsi pa tsiku",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २०",

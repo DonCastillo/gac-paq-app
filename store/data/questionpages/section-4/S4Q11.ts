@@ -39,7 +39,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 17c - Kukwera njinga",
+			heading: "Funso 17c - Kukwera njinga",
 			label:
 				"Pa tsiku, Zinakutengera nthawi yaitali bwanji kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
 			kid_label:

@@ -27,6 +27,26 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 18",
+			label:
+				"Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
+			kid_label:
+				"Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
+			adult_label:
+				"Kodi m’sabata yathayi mwana wanu anasewerako pa zochitika zinazake zokonzedwa ndi sukulu kapena kalabu?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १८",
