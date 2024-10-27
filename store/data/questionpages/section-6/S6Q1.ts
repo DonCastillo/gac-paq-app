@@ -50,6 +50,70 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 21",
+			label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
+			kid_label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
+			adult_label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe mwana wanu anasewera masewero othamangathamanga pongosangalala chabe?",
+			kid_sublabel:
+				"Awa simasewero omwe amachitika popanga mpikisano kapena training. Zitsanzo zili ngati kusewera ndi mpira, chipako, chibisalilano, Fulaye, kupanga zawana ndi zina.",
+			adult_sublabel:
+				"Awa simasewero omwe amachitika popanga mpikisano kapena training. Zitsanzo zili ngati kusewera ndi mpira, chipako, chibisalilano, Fulaye, kupanga zawana ndi zina.",
+			choices: [
+				{
+					label: "Sunasewereko",
+					value: "None",
+					label_mode: {
+						kid: "Sunasewereko",
+						adult: "Sanasewere",
+					},
+				},
+				{
+					label: "Osafika ola limodzi pa tsiku",
+					value: "Less than 1 hour per day",
+					label_mode: {
+						kid: "Osafika ola limodzi pa tsiku",
+						adult: "Osafika 1 hour pa tsiku",
+					},
+				},
+				{
+					label: "Ola limodzi koma osafika 2 hours patsiku",
+					value: "1 to less than 2 hours per day",
+					label_mode: {
+						kid: "Ola limodzi koma osafika 2 hours patsiku",
+						adult: "1 hour koma osafika 2 hours patsiku",
+					},
+				},
+				{
+					label: "Maola awiri koma osafika 3 hours patsiku",
+					value: "2 to less than 3 hours per day",
+					label_mode: {
+						kid: "Maola awiri koma osafika 3 hours patsiku",
+						adult: "2 hours koma osafika 3 hours patsiku",
+					},
+				},
+				{
+					label: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+					value: "3 to less than 4 hours per day",
+					label_mode: {
+						kid: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+						adult: "3 hours koma osafika 4 hours patsiku",
+					},
+				},
+				{
+					label: "Kupitilira maola 4 patsiku",
+					value: "4 hours or more per day",
+					label_mode: {
+						kid: "Kupitilira maola 4 patsiku",
+						adult: "Kupitilira maola 4 kapena 4 hours patsiku",
+					},
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २१",

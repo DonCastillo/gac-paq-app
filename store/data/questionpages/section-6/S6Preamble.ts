@@ -21,9 +21,9 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			heading: "Nthawi yosewera kapena yopuma",
 			subheading: "Gawo 6",
 			description: {
-				kid: "Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mumachita mukakhala ndi mpata kapena mukamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu.",
+				kid: "Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mumachita mukakhala ndi mpata kapena mukamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu. Pa mafunso otsatirawa, musaphatikizepo zochitika zomwe wanena kale.",
 				adult:
-					"Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mwana wanu amachita akakhala ndi mpata kapena akamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu.",
+					"Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mwana wanu amachita akakhala ndi mpata kapena akamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu. Pa mafunso otsatirawa, musaphatikizepo zochitika zomwe mwanena kale.",
 			},
 		},
 		"ma-IN": {
