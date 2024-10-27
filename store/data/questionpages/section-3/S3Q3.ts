@@ -42,6 +42,50 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Funso 14",
+			label:
+				"Pa zithunzi zotsatirazi ndi chithunzi chiti chomwe chikufanana ndi zomwe umachita nthawi zambiri ukamagwira ntchito yolipidwa kapena yongodzipereka?",
+			kid_label:
+				"Pa zithunzi zotsatirazi ndi chithunzi chiti chomwe chikufanana ndi zomwe umachita nthawi zambiri ukamagwira ntchito yolipidwa kapena yongodzipereka?",
+			adult_label:
+				"Pa zithunzi zotsatirazi ndi chithunzi chiti chomwe chikufanana ndi zomwe mwana wanu amachita nthawi zambiri akamagwira ntchito yongodzipereka kapena yolipidwa?",
+			choices: [
+				{
+					label: "Mumangokhala malo amodzi",
+					value: "0.1",
+					image_ident: "not_moving",
+					label_mode: {
+						kid: "Mumangokhala malo amodzi",
+						adult: "Amangokhala malo amodzi",
+					},
+				},
+				{
+					label: "Mumalimbikira pang’ono",
+					value: "0.3",
+					image_ident: "easy_effort",
+					label_mode: {
+						kid: "Mumalimbikira pang’ono",
+						adult: "Amalimbikira pang’ono",
+					},
+				},
+				{
+					label: "Mumalimbikira mwapakakatikati",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+					label_mode: {
+						kid: "Mumalimbikira mwapakakatikati",
+						adult: "Amalimbikira mwapakakatikati kapena kwambiri",
+					},
+				},
+				{
+					label: "Sindikudziwa",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १४",
