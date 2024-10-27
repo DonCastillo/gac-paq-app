@@ -36,6 +36,34 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 17c - Kuyenda",
+			label:
+				"Pa tsiku, Zinakutengera nthawi yaitali bwanji kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
+			kid_label:
+				"Pa tsiku, Zinakutengera nthawi yaitali bwanji kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
+			adult_label:
+				"Pa tsiku, Zimamutengera nthawi yaitali bwanji mwana wanu kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
+			choices: [
+				{
+					label: "Ma minutes 10 kapena osakwana",
+					value: "10 minutes or less",
+				},
+				{
+					label: "Pakati pa 10 mpaka 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "Pakati pa 21 mpaka 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Minutes kuposera 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७c - चालणे",

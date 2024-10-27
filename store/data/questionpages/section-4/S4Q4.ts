@@ -55,6 +55,50 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Funso 16",
+			label: "Kodi umayenda bwanji popita kuntchito m’sabata yapitayi?",
+			kid_label: "Kodi umayenda bwanji popita kuntchito m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu anayenda bwanji popita kuntchito msabata yapitayi?",
+			kid_sublabel: "Usankhe mayendedwe omwe unawagwirisa ntchito kwambiri.",
+			adult_sublabel: "Musankhe mayendedwe omwe anawagwirisa ntchito kwambiri.",
+			choices: [
+				{
+					label: "Kuyenda wa pansi",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Kugwirisa ntchito njinga yopalasa kapena wheelchair",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "",
+						adult: "",
+					},
+				},
+				{
+					label: "Mayendedwe apagulu ngati kukwera minibus, sitima kapena boti",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "",
+						adult: "",
+					},
+				},
+				{
+					label: "Galimoto, taxi kapena njinga ya moto",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Mayendedwe ena, fotokozani",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १६",
