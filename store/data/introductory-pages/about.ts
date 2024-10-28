@@ -19,7 +19,7 @@ const AboutPage: LangPagePayloadInterface = {
 			},
 		},
 		"ch-MW": {
-			heading: "Mwalandilidwa mu kafukufuku\n\nwa GAC-PAC",
+			heading: "Mwalandilidwa mu kafukufuku\nwa GAC-PAQ",
 			description: "",
 			description_mode: {
 				kid: "Mukafukufukuyu, tikufuna kudziwa momwe umachitira zinthu musabata yapitayi (kuphatikizapo masiku ankati mwa sabata ndi a kumapeto kwa sabata yapitayi).\n\nZochita zolimbitsa thupi zimatha kuchitika m'njira zambiri kuphatikizapo nthawi yomwe uli ndi mpata, pochita masewero olimbitsa thupi, posewera, popita kumalo kwina kwake (monga kusukulu, kupaki, mashopu, ndi ku nyumba Kwa anzako kapena achibale), pa sukulu, pogwira ntchito zapakhomo ndi ntchito zina. Pulogalamuyi ifunsa njira iliyonse payokha payokha.\n\nNdikufunsa za kulimbikra komwe umasonyeza pochita zinthu zolimbitsa thupi. Ndikamanena kuti 'kulimbikra kwapakatikati, kapena Kulimbikira kwambiri' ndikutanthauza zinthu zomwe zimachititsa mtima wako kugunda mwachangu ndikukuchititsa nthawi zina kukhala ndi phuma. [Zitsanzo zomwe zili mu pulogalamuyi zingaphatikizepo mpira wa miyendo, kusambira, kuthamanga, kudumpha, kukwera skateboard, kutsetsereka pa mtsetse, kunyamula zinthu zolemera, kapena kupalasa njinga].\n\nNdikanena kuti kulimbikira pang’ono ndikutanthauza zinthu zomwe sizikuchititsa phuma. Zitsanzo zosonyezedwa mu pulogilamuyi zingaphatikizepo kuyenda pang'onopang'ono, kusamalira ziweto, kusewera ndi mchenga ndi ntchito zambiri zapakhomo.\n\nPalibe mayankho olondola ndi olakwika. Chonde uyankhe mafunso onse momwe ungathere.",
