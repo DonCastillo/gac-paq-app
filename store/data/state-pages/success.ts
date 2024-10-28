@@ -15,7 +15,7 @@ const SuccessPage: LangPagePayloadInterface = {
 		"ch-MW": {
 			heading: "Zatheka!",
 			description:
-				"Mwachita bwino, mwamaliza kuyankha mafunso onse. Mayankho anu atumizidwa bwinobwino.\n\nTikuthokoza chithandizo chomwe mwatipasa.",
+				"Mwachita bwino, mafunso athera pamenepa. Mayankho anu atumizidwa.\n\nTikuthokoza chithandizo chomwe mwatipasa.",
 		},
 		"ma-IN": {
 			heading: "यश!",
