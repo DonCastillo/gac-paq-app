@@ -44,6 +44,40 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionCheckbox,
+			heading: "Funso 17",
+			label:
+				"M’sabata yapitayi, kodi unayenda wapansi, kapena kupalasa njinga kupita kumalo ena osati ku sukulu kapena kuntchito (Monga kwa anzanu, ku paki/ malo osewererako, ku shopu)?",
+			kid_label:
+				"M’sabata yapitayi, kodi unayenda wapansi, kapena kupalasa njinga kupita kumalo ena osati ku sukulu kapena kuntchito (Monga kwa anzanu, ku paki/ malo osewererako, ku shopu)?",
+			adult_label:
+				"M’sabata yapitayi, kodi mwana wanu anayenda wapansi, kapena kupalasa njinga kupita kumalo ena osati ku sukulu kapena kuntchito (Monga kwa anzake, ku paki/ malo osewererako, ku shopu)?",
+			kid_sublabel: "Ukhoza kusankha mayankho onse omwe akukukhuza.",
+			adult_sublabel: "Mukhoza kusankha mayankho onse omwe akukukhudza mwana wanu.",
+			choices: [
+				{
+					label: "Inde ndinaenda",
+					value: "Walked",
+					label_mode: {
+						kid: "Inde ndinaenda",
+						adult: "Inde anaenda",
+					},
+				},
+				{
+					label: "Inde ndinapalasa njinga",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Inde ndinapalasa njinga",
+						adult: "Inde anapalasa njinga",
+					},
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न १७",

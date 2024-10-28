@@ -40,6 +40,38 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 13",
+			label:
+				"M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
+			kid_label:
+				"M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
+			adult_label:
+				"M'sabata yapitayi, ndi maola angati omwe mwana wanu anagwira ntchito yolipidwa kapena yongodzipereka?",
+			choices: [
+				{
+					label: "Osafika ola limodzi pa tsiku",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "Ola limodzi koma osafika 2 hours patsiku",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "Maola awiri koma osafika 3 hours patsiku",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "Kupitilira maola 4 patsiku",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १३",

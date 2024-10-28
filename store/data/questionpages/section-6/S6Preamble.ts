@@ -17,6 +17,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"ch-MW": {
+			heading: "Nthawi yosewera kapena yopuma",
+			subheading: "Gawo 6",
+			description: {
+				kid: "Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mumachita mukakhala ndi mpata kapena mukamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu. Pa mafunso otsatirawa, musaphatikizepo zochitika zomwe wanena kale.",
+				adult:
+					"Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mwana wanu amachita akakhala ndi mpata kapena akamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu. Pa mafunso otsatirawa, musaphatikizepo zochitika zomwe mwanena kale.",
+			},
+		},
 		"ma-IN": {
 			heading: "खेळायचा किंवा मोकळा वेळ",
 			subheading: "विभाग ६",

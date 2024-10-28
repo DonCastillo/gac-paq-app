@@ -17,6 +17,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"ch-MW": {
+			heading: "Ntchito",
+			subheading: "Gawo lachitatu",
+			description: {
+				kid: "Gawoli likunena za ntchito yolipidwa kapena yongodzipereka yomwe ungagwire Kumalo omwe sikwanu - izi ndi zosiyana ndi ntchito zapakhomo. Kugwira ntchito kungakhale pamene mukugwira ntchito kuti mupeze ndalama zothandizira inu kapena banja lanu. Ntchito yongodzipereka ingakhale yothandiza ena kapena bungwe kwaulere (popanda kulandira ndalama). Ntchito yolipidwa ndi yongodzipereka itha kuchitika pamalo monga kusitolo, kumunda, malo odyera, ndi ena ambiri. Chonde yankhirani zonse pamodzi.",
+				adult:
+					"Gawoli likunena za ntchito yolipidwa kapena yongodzipereka yomwe mwana wanu angagwire Kumalo omwe sikunyumba kwanu - izi ndi zosiyana ndi ntchito zapakhomo. Kugwira ntchito kungakhale pamene mwanayo akugwira ntchito kuti mupeze ndalama zothandizira iyeyo kapena banja lanu. Ntchito yongodzipereka ingakhale yongothandiza ena kapena bungwe kwaulere (popanda kulandira ndalama). Ntchito yolipidwa ndi yongodzipereka atha kugwirira pamalo monga kusitolo, kumunda, malo odyera, ndi ena ambiri. Chonde yankhirani zonse pamodzi.",
+			},
+		},
 		"ma-IN": {
 			heading: "नोकरीतील कामे",
 			subheading: "विभाग ३",

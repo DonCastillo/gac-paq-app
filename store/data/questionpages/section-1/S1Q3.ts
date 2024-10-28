@@ -18,6 +18,16 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			adult_label: "How many physical education classes did your child have in the past week?",
 			max_value: 7,
 		},
+		"ch-MW": {
+			type: Question.QuestionSlider,
+			heading: "Funso 3",
+			label:
+				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
+			kid_label:
+				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu anapita kusukulu masiku angati m’sabata yapitayi?",
+			max_value: 7,
+		},
 		"ma-IN": {
 			type: Question.QuestionSlider,
 			heading: "प्रश्न ३",

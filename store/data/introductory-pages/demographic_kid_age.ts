@@ -35,6 +35,31 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Mwalandilidwa!",
+			label: "Uli ndi dzaka zingati?",
+			kid_label: "Uli ndi dzaka zingati?",
+			adult_label: "Uli ndi dzaka zingati?",
+			choices: [
+				{
+					label: "Zaka 8",
+					value: "8",
+				},
+				{
+					label: "Zaka 9",
+					value: "9",
+				},
+				{
+					label: "Zaka 10",
+					value: "10",
+				},
+				{
+					label: "Zaka 11",
+					value: "11",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionDropdown,
 			heading: "आपले स्वागत आहे!",

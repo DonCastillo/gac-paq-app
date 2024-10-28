@@ -10,6 +10,10 @@ const S3Intro: LangSectionPayloadInterface = {
 			heading: "Work",
 			subheading: "Section 3",
 		},
+		"ch-MW": {
+			heading: "Ntchito",
+			subheading: "Gawo lachitatu",
+		},
 		"ma-IN": {
 			heading: "नोकरीतील कामे",
 			subheading: "विभाग ३",

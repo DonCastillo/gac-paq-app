@@ -73,6 +73,68 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Funso 15",
+			label: "Kodi umayenda bwanji popita kusukulu m’sabata yapitayi?",
+			kid_label: "Kodi umayenda bwanji popita kusukulu m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu amaenda bwanji popita kusukulu sabata yapitayi?",
+			kid_sublabel: "Usankhe mayendedwe omwe unawagwirisa ntchito kwambiri.",
+			adult_sublabel: "Musankhe mayendedwe omwe mwana wanu anawagwirisa ntchito kwambiri.",
+			choices: [
+				{
+					label: "Kuyenda wa pansi",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Kugwirisa ntchito njinga yopalasa kapena wheelchair",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "",
+						adult: "",
+					},
+				},
+				{
+					label: "Bus ya kusukulu",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Mayendedwe apagulu ngati kukwera minibus sitima kapena boti",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "",
+						adult: "",
+					},
+				},
+				{
+					label: "Galimoto, taxi kapena njinga ya moto",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Mayendedwe ena",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "",
+						adult: "",
+					},
+				},
+				{
+					label: "Ndimaphunzira sukulu pakhomo",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Ndimaphunzira sukulu pakhomo",
+						adult: "Mwana wanga amaphunzira sukulu pakhomo",
+					},
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १५",

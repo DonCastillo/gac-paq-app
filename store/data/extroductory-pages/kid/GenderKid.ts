@@ -35,6 +35,31 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 24",
+			label: "Kodi ndiwe...",
+			kid_label: "Kodi ndiwe...",
+			adult_label: "Kodi ndiwe...",
+			choices: [
+				{
+					label: "Mwamuna",
+					value: "Boy",
+				},
+				{
+					label: "Wamkazi",
+					value: "Girl",
+				},
+				{
+					label: "Zina",
+					value: "Other",
+				},
+				{
+					label: "Sindikufuna kuyankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २४",

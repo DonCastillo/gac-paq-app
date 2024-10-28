@@ -47,6 +47,44 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 6",
+			label: "Kodi patsiku lasukulu, mumakhala ndi nthawi ya buleki yaitali bwanji?",
+			kid_label: "Kodi patsiku lasukulu, mumakhala ndi nthawi ya buleki yaitali bwanji?",
+			adult_label:
+				"Patsiku lasukulu labwinobwino kodi mwana wanu amakhala ndi nthawi ya buleki yochuluka bwanji?",
+			kid_sublabel:
+				"Apa ndikufuna uphatikize nthawi yonse ya buleki kuphatikizapo yachokudya chamasana, mwachitsanzo ngati umakhala ndi ma buleki awiri a 15 minutes komanso buleki ya chokudya chamasana ya 30 minutes, nthawi yonse pamozi ikhala 60 minutes.",
+			adult_sublabel:
+				"Apa ndikufuna muphatikize nthawi yonse ya buleki, mwachitsanzo ngati mwana wanu amakhala ndi ma buleki awiri a 15 minutes komanso buleki ya chokudya chamasana ya 30 minutes, nthawi yonse pamozi ikhala 60 minutes.",
+			choices: [
+				{
+					label: "Simupita buleki",
+					value: "0 minutes",
+				},
+				{
+					label: "1 mpaka 15 minutes",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 mpaka 30 minutes",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 mpaka 60 minutes",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Imapitilira 60 minutes",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Sindikudziwa",
+					value: "Don't know",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ६",

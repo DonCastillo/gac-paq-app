@@ -27,6 +27,23 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 8",
+			label: "M’sabata yapitayi, kodi unagwirapo ntchito zapakhomo?",
+			kid_label: "M’sabata yapitayi, kodi unagwirapo ntchito zapakhomo?",
+			adult_label: "M’sabata yapitayi, kodi mwana wanu anagwirapo ntchito zapakhomo?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ८",

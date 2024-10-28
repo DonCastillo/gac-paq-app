@@ -46,6 +46,42 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Ndemanga",
+			label: "Mwakhutitsidwa bwanji ndi pulogalamuyi?",
+			kid_label: "Mwakhutitsidwa bwanji ndi pulogalamuyi?",
+			adult_label: "Mwakhutitsidwa bwanji ndi pulogalamuyi?",
+			adult_sublabel: "Dinani pa chithunzi kapena emoji yomwe ikuyimira bwino kukhutira kwanu.",
+			kid_sublabel: "Dinani pa chithunzi kapena emoji yomwe ikuyimira bwino kukhutira kwanu.",
+			choices: [
+				{
+					label: "Khalidwe kotsutsana kwambiri",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Khalidwe kotsutsana",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Chotsutsa",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Khalidwe kothokozetsa",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Khalidwe kothokozetsa kwambiri",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "प्रतिसाद",

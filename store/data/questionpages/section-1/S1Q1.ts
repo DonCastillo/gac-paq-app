@@ -27,6 +27,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 1",
+			label: "Kodi unapita kusukulu m’sabata yapitayi?",
+			kid_label: "Kodi unapita kusukulu m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu anapita kusukulu m’sabata yapitayi?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १",

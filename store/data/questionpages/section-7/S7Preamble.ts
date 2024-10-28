@@ -17,6 +17,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"ch-MW": {
+			heading: "Kukhala panja",
+			subheading: "Gawo 7",
+			description: {
+				kid: "Gawoli likunena za nthawi yomwe mumakhala muli panja. Mukhoza kukhala muli kusukulu, mukugwira ntchito zapakhomo, ntchito yolipidwa ndi yongodzipereka, mukuenda kupita kwinakwake, komanso nthawi yomwe muli ndi mpata. Izi zimaphatikizaponso nthawi yomwe muli panja, koma simukuyendayenda (mwachitsanzo, pa picnic, kowerenga, ndi kuotha moto).",
+				adult:
+					"Gawoli likunena za nthawi yomwe mwana wanu amakhala ali panja. Akhoza kukhala ali kusukulu, akugwira ntchito zapakhomo, ntchito yolipidwa kapena yongodzipereka, akuenda kupita kwinakwake, komanso nthawi yomwe ali ndi mpata. Izi zimaphatikizaponso nthawi yomwe mwana wanu ali panja, koma sakuyendayenda (mwachitsanzo, pa picnic, kowerenga, ndi kuotha moto).",
+			},
+		},
 		"ma-IN": {
 			heading: "बाहरी गतिविधियाँ",
 			subheading: "विभाग ७",

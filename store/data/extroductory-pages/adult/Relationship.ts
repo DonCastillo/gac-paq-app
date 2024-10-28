@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 28",
+			label: "Pali Ubale wanji ndi mwanayu?",
+			kid_label: "Pali Ubale wanji ndi mwanayu?",
+			adult_label: "Pali Ubale wanji ndi mwanayu?",
+			choices: [
+				{
+					label: "Bambo",
+					value: "Father",
+				},
+				{
+					label: "Amayi ",
+					value: "Mother",
+				},
+				{
+					label: "Agogo aamuna",
+					value: "Grandfather",
+				},
+				{
+					label: "Agogo aakazi",
+					value: "Grandmother",
+				},
+				{
+					label: "Mphunzitsi wake kapena omuyang’anira",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Ubale wina",
+					value: "Other",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २८",

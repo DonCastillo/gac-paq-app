@@ -38,6 +38,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 10",
+			label:
+				"Pa masiku amene unagwira ntchito zapakhomo sabata yapitayi, kodi zinakutengera nthawi yaitali bwanji kugwira ntchitozi pa tsiku lonse?",
+			kid_label:
+				"Pa masiku amene unagwira ntchito zapakhomo sabata yapitayi, kodi zinakutengera nthawi yaitali bwanji kugwira ntchitozi pa tsiku lonse?",
+			adult_label:
+				"Kodi pa masiku amene mwana wanu anagwira ntchito zapakhomo m’sabata yapitayi, kodi zinamutengera nthawi yaitali bwanji kugwira ntchitozo pa tsiku lonse?",
+			choices: [
+				{
+					label: "15 minitsi kapena osakwana patsiku",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "Pakati pa 16 ndi 30 minitsi pa tsiku",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "Pakati pa 31 ndi 60 minitsi pa tsiku",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Kupitilira 60 minutes pa tsiku",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १०",

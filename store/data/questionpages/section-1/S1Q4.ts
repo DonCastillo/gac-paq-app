@@ -39,6 +39,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 4",
+			label: "Kodi maphunziro olimbitsa thupi amatenga nthawi yaitali bwanji mukuphunzira?",
+			kid_label: "Kodi maphunziro olimbitsa thupi amatenga nthawi yaitali bwanji mukuphunzira?",
+			adult_label: "Kodi maphunziro olimbitsa thupi a mwana wanu amatenga nthawi yaitali bwanji?",
+			choices: [
+				{
+					label: "Simafika 30 minutess pa class iliyonse",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "Pakati pa 30 minutes mpaka 45 minutes pa class iliyonse",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "Pakati pa 46 minutes mpaka 60 minutes pa class iliyonse",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Imapitilira 60 minutes pa class iliyonse",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Sindikudziwa",
+					value: "Don't know",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ४",

@@ -48,6 +48,46 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 17b - Kuyenda",
+			label:
+				"Kodi unayenda wapansi masiku angati kupita malo ena kupatula ku sukukulu kapena kuntchito sabata yapitayi?",
+			kid_label:
+				"Kodi unayenda wapansi masiku angati kupita malo ena kupatula ku sukukulu kapena kuntchito sabata yapitayi?",
+			adult_label:
+				"Kodi ndi masiku angati omwe mwana wanu anayenda wapansi kupita ku malo ena kupatula ku sukukulu kapena kuntchito nsabata yapitayi?",
+			choices: [
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७b - चालणे",

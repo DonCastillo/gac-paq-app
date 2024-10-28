@@ -23,6 +23,19 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"ch-MW": {
+			type: Question.QuestionTextarea,
+			heading: "Ndemanga",
+			placeholder: "Lembani ndemanga yanu apa",
+			label:
+				"Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
+			kid_label:
+				"Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
+			adult_label:
+				"Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
+			kid_sublabel: "Ngati inde, chonde zilembeni m'bokosi lomwe lili pansipa",
+			adult_sublabel: "Ngati inde, chonde zilembeni m'bokosi lomwe lili pansipa",
+		},
 		"ma-IN": {
 			type: Question.QuestionTextarea,
 			heading: "प्रतिसाद",

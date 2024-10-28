@@ -39,6 +39,35 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 16c",
+			label: "Nthawi zambiri zimakutengera nthawi yayitali bwanji kuti ukafike ku ntchito?",
+			kid_label: "Nthawi zambiri zimakutengera nthawi yayitali bwanji kuti ukafike ku ntchito?",
+			adult_label: "Zimatenga nthawi yayitali bwanji kuti mwana wanu akafike ku ntchito?",
+			choices: [
+				{
+					label: "Ma minitsi 10 kapena osakwana",
+					value: "10 minutes or less",
+				},
+				{
+					label: "Pakati pa 10 mpaka 20 minitsi",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "Pakati pa 21 mpaka 30 minitsi",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Pakati pa 31 mpaka 60 minitsi",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Kuposera 60 minitsi",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १६c",

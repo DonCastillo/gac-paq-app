@@ -17,6 +17,15 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"ch-MW": {
+			heading: "Zochita zokonzedwa",
+			subheading: "Gawo 5",
+			description: {
+				kid: "Gawoli likukhudzana ndi zochitika zolimbitsa thupi komanso masewera. Izi zimaphatikizapo zochitika zomwe mumachita pa nthawi kapena masiku omwe si a sukulu (mwachitsanzo, masukulu ena amakonza masewera olimbitsa thupi kapena zochitika zina). Zimaphatikizanso magulu amasewera ampikisano ndi maphunziro azinthu monga kusambira, masewera olimbitsa thupi, kuvina, ndi karate zomwe zimachitika pa nthawi yomwe si ya sukulu.",
+				adult:
+					"Gawoli likukhudzana ndi zochitika zolimbitsa thupi komanso masewera. Izi zimaphatikizapo zochitika zomwe mwana wanu amachita pa nthawi kapena masiku omwe si a sukulu (mwachitsanzo, masukulu ena amakonza masewera olimbitsa thupi kapena zochitika zina). Zimaphatikizanso magulu amasewera ampikisano ndi maphunziro azinthu monga kusambira, masewera olimbitsa thupi, kuvina, ndi karate zomwe zimachitika pa nthawi yomwe si ya sukulu.",
+			},
+		},
 		"ma-IN": {
 			heading: "संघटित उपक्रम",
 			subheading: "विभाग ५",

@@ -27,6 +27,25 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 12",
+			label: "M’sabata yapitayi, kodi unagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			kid_label:
+				"M’sabata yapitayi, kodi unagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			adult_label:
+				"M’sabata yapitayi, kodi mwana wanu anagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १२",
