@@ -64,6 +64,60 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionCheckbox,
+			heading: "Funso 25",
+			label:
+				"Chonde onetsani ngati mwana wanu ali ndi zovuta ndi zotsatirazi pazochitika zake za tsiku ndi tsiku.",
+			kid_label:
+				"Chonde onetsani ngati mwana wanu ali ndi zovuta ndi zotsatirazi pazochitika zake za tsiku ndi tsiku.",
+			adult_label:
+				"Chonde onetsani ngati mwana wanu ali ndi zovuta ndi zotsatirazi pazochitika zake za tsiku ndi tsiku.",
+			kid_sublabel: "Sankhani zonse zomwe zikugwira ntchito.",
+			adult_sublabel: "Sankhani zonse zomwe zikugwira ntchito.",
+			choices: [
+				{
+					label: "Kumva",
+					value: "Hearing",
+				},
+				{
+					label: "Kuona",
+					value: "Seeing",
+				},
+				{
+					label: "Kuyankhula",
+					value: "Speech",
+				},
+				{
+					label: "Kuyenda",
+					value: "Mobility",
+				},
+				{
+					label: "Kuthamanga",
+					value: "Agility",
+				},
+				{
+					label: "Kumva kupweteka mthupi",
+					value: "Pain",
+				},
+				{
+					label: "Kukumbukira zinthu",
+					value: "Memory",
+				},
+				{
+					label: "Zina",
+					value: "Other",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Alibe vuto lililonse",
+					value: "None of the above",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २५",

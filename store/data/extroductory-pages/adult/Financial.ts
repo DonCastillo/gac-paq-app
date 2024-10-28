@@ -44,6 +44,39 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 30",
+			label: "Zimakhala zovuta kapena zosavuta bwanji kuti mupeze zosowa za banja lanu?",
+			kid_label: "Zimakhala zovuta kapena zosavuta bwanji kuti mupeze zosowa za banja lanu?",
+			adult_label: "Zimakhala zovuta kapena zosavuta bwanji kuti mupeze zosowa za banja lanu?",
+			choices: [
+				{
+					label: "Zovuta kwambiri",
+					value: "Very difficult",
+				},
+				{
+					label: "Zovuta",
+					value: "Difficult",
+				},
+				{
+					label: "Pakatikati",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Zophweka",
+					value: "Easy",
+				},
+				{
+					label: "Zophweka kwambiri",
+					value: "Very easy",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",

@@ -44,6 +44,41 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 29",
+			label: "Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
+			kid_label:
+				"Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
+			adult_label:
+				"Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
+			choices: [
+				{
+					label: "Palibe anapita ku sukulu",
+					value: "No formal schooling",
+				},
+				{
+					label: "Anamaliza primary",
+					value: "Primary school",
+				},
+				{
+					label: "Anamaliza secondary",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Anamaliza ku technical college",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Anamaliza ku university",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २९",

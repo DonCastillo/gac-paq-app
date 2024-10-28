@@ -93,7 +93,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "car",
 				},
 				{
-					label: "Mayendedwe ena, fotokozani",
+					label: "Mayendedwe ena",
 					value: "Other",
 					image_ident: "other",
 				},

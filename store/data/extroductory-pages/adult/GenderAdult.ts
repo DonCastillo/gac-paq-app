@@ -31,6 +31,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 24",
+			label: "Kodi mwana wanu ndiwammuna kapena wamkazi?",
+			kid_label: "Kodi mwana wanu ndiwammuna kapena wamkazi?",
+			adult_label: "Kodi mwana wanu ndiwammuna kapena wamkazi?",
+			choices: [
+				{
+					label: "Wamkazi",
+					value: "Female",
+				},
+				{
+					label: "Wammuna",
+					value: "Male",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २४",

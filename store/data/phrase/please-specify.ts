@@ -5,7 +5,7 @@ const PleaseSpecifyPhrase: LangPhraseInterface = {
 		label: "Please specify",
 	},
 	"ch-MW": {
-		label: "Chonde fotokozani",
+		label: "Fotokozani",
 	},
 	"ma-IN": {
 		label: "कृपया निर्दिष्ट करा",

@@ -47,6 +47,43 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionCheckbox,
+			heading: "Funso 26",
+			label: "Kodi mwana wanu ndi wa mtundu wanji wa anthu?",
+			kid_label: "Kodi mwana wanu ndi wa mtundu wanji wa anthu?",
+			adult_label: "Kodi mwana wanu ndi wa mtundu wanji wa anthu?",
+			choices: [
+				{
+					label: "Amwenye",
+					value: "Asian",
+				},
+				{
+					label: "Achikuda",
+					value: "Black or African American",
+				},
+				{
+					label: "Achikaladi",
+					value: "Indigenous",
+				},
+				{
+					label: "Latin America",
+					value: "Latin American",
+				},
+				{
+					label: "Achizungu",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Mtundu wina",
+					value: "Other",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २६",
