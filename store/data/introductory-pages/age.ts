@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Mwalandilidwa!",
+			label: "Kodi akuyankha mafunsowa ndani?",
+			kid_label: "Kodi akuyankha mafunsowa ndani?",
+			adult_label: "Kodi akuyankha mafunsowa ndani?",
+			choices: [
+				{
+					label: "Mwana",
+					value: "child",
+					sublabel: {
+						kid: "wa zaka za pakati pa 8 ndi 11",
+						adult: "wa zaka za pakati pa 8 ndi 11",
+					},
+				},
+				{
+					label: "Wachinyamata",
+					value: "teen",
+					sublabel: {
+						kid: "wa zaka za pakati pa 12 ndi 17",
+						adult: "wa zaka za pakati pa 12 ndi 17",
+					},
+				},
+				{
+					label: "Kholo",
+					value: "adult",
+				},
+			],
+		},
 		"ma-IN": {
 			type: Question.QuestionDropdown,
 			heading: "आपले स्वागत आहे!",

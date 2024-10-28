@@ -15,6 +15,13 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
 		},
+		"ch-MW": {
+			type: Question.QuestionLanguage,
+			heading: "Mwalandilidwa!",
+			label: "Kodi mumalankhula chilankhulo chanji? Muli kuti?",
+			kid_label: "Kodi mumalankhula chilankhulo chanji? Muli kuti?",
+			adult_label: "Kodi mumalankhula chilankhulo chanji? Muli kuti?",
+		},
 		"ma-IN": {
 			type: Question.QuestionLanguage,
 			heading: "आपले स्वागत आहे!",
