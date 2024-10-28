@@ -14,7 +14,8 @@ const OfflineSuccessPage: LangPagePayloadInterface = {
 		},
 		"ch-MW": {
 			heading: "Simunalumikizane ndi intaneti",
-			description: "Mayankho anu asungidwa ndikukutumizidwanso zokha pamene kulumikizana kwabweranso.\n\nZikomo chifukwa cha chithandizo chanu!",
+			description:
+				"Mayankho anu asungidwa ndikukutumizidwanso zokha pamene kulumikizana kwabweranso.\n\nZikomo chifukwa cha chithandizo chanu!",
 		},
 		"ma-IN": {
 			heading: "तुम्ही इंटरनेटशी कनेक्ट केलेले नाही.",

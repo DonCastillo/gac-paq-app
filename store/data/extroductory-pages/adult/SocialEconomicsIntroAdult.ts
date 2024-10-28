@@ -11,7 +11,7 @@ const SocialEconomicsIntroAdult: LangSectionPayloadInterface = {
 			subheading: "Section 8",
 		},
 		"ch-MW": {
-			heading: "Za Banja Lanu",
+			heading: "Zokhuza Banja Lanu",
 			subheading: "Gawo 8",
 		},
 		"ma-IN": {
