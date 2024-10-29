@@ -50,6 +50,46 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 21",
+			label:
+				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label:
+				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label:
+				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			kid_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
+			adult_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
+			choices: [
+				{
+					label: "None",
+					value: "None",
+				},
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hours or more per day",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 21",

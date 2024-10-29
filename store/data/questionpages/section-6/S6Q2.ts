@@ -58,6 +58,54 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 22",
+			label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label:
+				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 22",
