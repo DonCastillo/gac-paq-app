@@ -27,6 +27,79 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 12",
+			label: "In the past week, did you volunteer or work?",
+			kid_label: "In the past week, did you volunteer or work?",
+			adult_label: "In the past week, did your child volunteer or work?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 12",
+			label: "M’sabata yapitayi, kodi unagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			kid_label:
+				"M’sabata yapitayi, kodi unagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			adult_label:
+				"M’sabata yapitayi, kodi mwana wanu anagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १२",
+			label:
+				"गेल्या आठवड्यात, तुम्ही स्वयंसेवक म्हणून काही काम केले का किंवा एखादे काम असे केले का ज्यामुळे तुम्हाला किंवा तुमच्या कुटुंबाला थोडेफार उत्पन्न मिळाले?",
+			kid_label:
+				"गेल्या आठवड्यात, तुम्ही स्वयंसेवक म्हणून काही काम केले का किंवा एखादे काम असे केले का ज्यामुळे तुम्हाला किंवा तुमच्या कुटुंबाला थोडेफार उत्पन्न मिळाले?",
+			adult_label:
+				"गेल्या आठवड्यात, तुमच्या मुलाने स्वयंसेवक म्हणून काही काम केले का किंवा एखादी नोकरी केली का?",
+			choices: [
+				{
+					label: "होय",
+					value: "yes",
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १२",
+			label: "पिछले सप्ताह में, क्या आपने स्वयंसेवा की या नौकरी की?",
+			kid_label: "पिछले सप्ताह में, क्या आपने स्वयंसेवा की या नौकरी की?",
+			adult_label: "पिछले सप्ताह में, क्या आपके बच्चे ने स्वेच्छा से काम किया या नौकरी की?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 12",

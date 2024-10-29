@@ -39,6 +39,122 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 4",
+			label: "How long are your physical education classes?",
+			kid_label: "How long are your physical education classes?",
+			adult_label: "How long are your child's physical education classes?",
+			choices: [
+				{
+					label: "Less than 30 minutes per class",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 minutes per class",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 minutes per class",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Over 60 minutes per class",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Don't know",
+					value: "Don't know",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 4",
+			label: "Kodi maphunziro olimbitsa thupi amatenga nthawi yaitali bwanji mukuphunzira?",
+			kid_label: "Kodi maphunziro olimbitsa thupi amatenga nthawi yaitali bwanji mukuphunzira?",
+			adult_label: "Kodi maphunziro olimbitsa thupi a mwana wanu amatenga nthawi yaitali bwanji?",
+			choices: [
+				{
+					label: "Simafika 30 minutess pa class iliyonse",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "Pakati pa 30 minutes mpaka 45 minutes pa class iliyonse",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "Pakati pa 46 minutes mpaka 60 minutes pa class iliyonse",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Imapitilira 60 minutes pa class iliyonse",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Sindikudziwa",
+					value: "Don't know",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ४",
+			label: "तुमचा शारीरिक शिक्षणाचा एक वर्ग किती वेळ चालतो?",
+			kid_label: "तुमचा शारीरिक शिक्षणाचा एक वर्ग किती वेळ चालतो?",
+			adult_label: "तुमच्या मुलाच्या शारीरिक शिक्षणाचा एक वर्ग किती वेळ असतो?",
+			choices: [
+				{
+					label: "३० मिनिटांपेक्षा कमी वेळ",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "३० - ४५ मिनिटे",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "४६ - ६० मिनिटे",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "६० मिनिटांपेक्षा अधिक",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "माहित नाही",
+					value: "Don't know",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ४",
+			label: "आपकी पीटी क्लास कितने समय की होती है?",
+			kid_label: "आपकी पीटी क्लास कितने समय की होती है?",
+			adult_label: "आपके बच्चे की पीटी क्लास कितने समय की होती है?",
+			choices: [
+				{
+					label: "प्रति क्लास 30 मिनट से कम",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "प्रति क्लास 30 - 45 मिनट",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "प्रति क्लास 46 - 60 मिनट",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "प्रति क्लास 60 मिनट से अधिक",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "पता नहीं",
+					value: "Don't know",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 4",

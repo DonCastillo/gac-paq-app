@@ -47,6 +47,154 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 28",
+			label: "What is your relationship to the child?",
+			kid_label: "What is your relationship to the child?",
+			adult_label: "What is your relationship to the child?",
+			choices: [
+				{
+					label: "Father",
+					value: "Father",
+				},
+				{
+					label: "Mother",
+					value: "Mother",
+				},
+				{
+					label: "Grandfather",
+					value: "Grandfather",
+				},
+				{
+					label: "Grandmother",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor or guardian",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Other",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 28",
+			label: "Pali Ubale wanji ndi mwanayu?",
+			kid_label: "Pali Ubale wanji ndi mwanayu?",
+			adult_label: "Pali Ubale wanji ndi mwanayu?",
+			choices: [
+				{
+					label: "Bambo",
+					value: "Father",
+				},
+				{
+					label: "Amayi ",
+					value: "Mother",
+				},
+				{
+					label: "Agogo aamuna",
+					value: "Grandfather",
+				},
+				{
+					label: "Agogo aakazi",
+					value: "Grandmother",
+				},
+				{
+					label: "Mphunzitsi wake kapena omuyang’anira",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Ubale wina",
+					value: "Other",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "तुमचे मुलाशी / मुलीशी कोणते नाते आहे?",
+			kid_label: "तुमचे मुलाशी / मुलीशी कोणते नाते आहे?",
+			adult_label: "तुमचे मुलाशी / मुलीशी कोणते नाते आहे?",
+			choices: [
+				{
+					label: "वडील",
+					value: "Father",
+				},
+				{
+					label: "आई",
+					value: "Mother",
+				},
+				{
+					label: "आजोबा",
+					value: "Grandfather",
+				},
+				{
+					label: "आज्जी",
+					value: "Grandmother",
+				},
+				{
+					label: "शिक्षक किंवा पालक",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "इतर नाते",
+					value: "Other",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "बच्चे के साथ आपका क्या रिश्ता है?",
+			kid_label: "बच्चे के साथ आपका क्या रिश्ता है?",
+			adult_label: "बच्चे के साथ आपका क्या रिश्ता है?",
+			choices: [
+				{
+					label: "पिता",
+					value: "Father",
+				},
+				{
+					label: "माता",
+					value: "Mother",
+				},
+				{
+					label: "दादा",
+					value: "Grandfather",
+				},
+				{
+					label: "दादी",
+					value: "Grandmother",
+				},
+				{
+					label: "शिक्षक या संरक्षक",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "नहीं कहना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 28",

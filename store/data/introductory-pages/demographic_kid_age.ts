@@ -35,6 +35,106 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old are you?",
+			kid_label: "How old are you?",
+			adult_label: "How old are you?",
+			choices: [
+				{
+					label: "8 years old",
+					value: "8",
+				},
+				{
+					label: "9 years old",
+					value: "9",
+				},
+				{
+					label: "10 years old",
+					value: "10",
+				},
+				{
+					label: "11 years old",
+					value: "11",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Mwalandilidwa!",
+			label: "Uli ndi dzaka zingati?",
+			kid_label: "Uli ndi dzaka zingati?",
+			adult_label: "Uli ndi dzaka zingati?",
+			choices: [
+				{
+					label: "Zaka 8",
+					value: "8",
+				},
+				{
+					label: "Zaka 9",
+					value: "9",
+				},
+				{
+					label: "Zaka 10",
+					value: "10",
+				},
+				{
+					label: "Zaka 11",
+					value: "11",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपले स्वागत आहे!",
+			label: "तुमचे वय काय आहे?",
+			kid_label: "तुमचे वय काय आहे?",
+			adult_label: "तुमचे वय काय आहे?",
+			choices: [
+				{
+					label: "८ वर्षे",
+					value: "8",
+				},
+				{
+					label: "९ वर्षे",
+					value: "9",
+				},
+				{
+					label: "१० वर्षे",
+					value: "10",
+				},
+				{
+					label: "११ वर्षे",
+					value: "11",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपका स्वागत है",
+			label: "आपकी उम्र क्या है?",
+			kid_label: "आपकी उम्र क्या है?",
+			adult_label: "आपकी उम्र क्या है?",
+			choices: [
+				{
+					label: "8 साल",
+					value: "8",
+				},
+				{
+					label: "9 साल",
+					value: "9",
+				},
+				{
+					label: "10 साल",
+					value: "10",
+				},
+				{
+					label: "11 साल",
+					value: "11",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

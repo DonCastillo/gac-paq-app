@@ -37,6 +37,122 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "Who's taking this questionnaire?",
+			kid_label: "Who's taking this questionnaire?",
+			adult_label: "Who's taking this questionnaire?",
+			choices: [
+				{
+					label: "Child",
+					value: "child",
+					sublabel: {
+						kid: "8 to 11 years old",
+						adult: "8 to 11 years old",
+					},
+				},
+				{
+					label: "Adolescent",
+					value: "teen",
+					sublabel: {
+						kid: "12 to 17 years old",
+						adult: "12 to 17 years old",
+					},
+				},
+				{
+					label: "Parent",
+					value: "adult",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Mwalandilidwa!",
+			label: "Kodi akuyankha mafunsowa ndani?",
+			kid_label: "Kodi akuyankha mafunsowa ndani?",
+			adult_label: "Kodi akuyankha mafunsowa ndani?",
+			choices: [
+				{
+					label: "Mwana",
+					value: "child",
+					sublabel: {
+						kid: "wa zaka za pakati pa 8 ndi 11",
+						adult: "wa zaka za pakati pa 8 ndi 11",
+					},
+				},
+				{
+					label: "Wachinyamata",
+					value: "teen",
+					sublabel: {
+						kid: "wa zaka za pakati pa 12 ndi 17",
+						adult: "wa zaka za pakati pa 12 ndi 17",
+					},
+				},
+				{
+					label: "Kholo",
+					value: "adult",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपले स्वागत आहे!",
+			label: "ही प्रश्नावली कोण घेत आहे?",
+			kid_label: "ही प्रश्नावली कोण घेत आहे?",
+			adult_label: "ही प्रश्नावली कोण घेत आहे?",
+			choices: [
+				{
+					label: "मूल",
+					value: "child",
+					sublabel: {
+						kid: "८ ते ११ वर्षे",
+						adult: "८ ते ११ वर्षे",
+					},
+				},
+				{
+					label: "किशोर",
+					value: "teen",
+					sublabel: {
+						kid: "१२ ते १७ वर्षे",
+						adult: "१२ ते १७ वर्षे",
+					},
+				},
+				{
+					label: "पालक",
+					value: "adult",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपका स्वागत है",
+			label: "यह प्रश्नावली कौन ले रहा है",
+			kid_label: "यह प्रश्नावली कौन ले रहा है",
+			adult_label: "यह प्रश्नावली कौन ले रहा है",
+			choices: [
+				{
+					label: "बच्चा",
+					value: "child",
+					sublabel: {
+						kid: "8 से 11 वर्ष",
+						adult: "8 से 11 वर्ष",
+					},
+				},
+				{
+					label: "किशोर",
+					value: "teen",
+					sublabel: {
+						kid: "12 से 17 वर्ष",
+						adult: "12 से 17 वर्ष",
+					},
+				},
+				{
+					label: "माता-पिता",
+					value: "adult",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

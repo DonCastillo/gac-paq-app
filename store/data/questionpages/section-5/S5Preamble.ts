@@ -17,6 +17,42 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"en-MW": {
+			heading: "Organized Activities",
+			subheading: "Section 5",
+			description: {
+				kid: "This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
+				adult:
+					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
+			},
+		},
+		"ch-MW": {
+			heading: "Zochita zokonzedwa",
+			subheading: "Gawo 5",
+			description: {
+				kid: "Gawoli likukhudzana ndi zochitika zolimbitsa thupi komanso masewera. Izi zimaphatikizapo zochitika zomwe mumachita pa nthawi kapena masiku omwe si a sukulu (mwachitsanzo, masukulu ena amakonza masewera olimbitsa thupi kapena zochitika zina). Zimaphatikizanso magulu amasewera ampikisano ndi maphunziro azinthu monga kusambira, masewera olimbitsa thupi, kuvina, ndi karate zomwe zimachitika pa nthawi yomwe si ya sukulu.",
+				adult:
+					"Gawoli likukhudzana ndi zochitika zolimbitsa thupi komanso masewera. Izi zimaphatikizapo zochitika zomwe mwana wanu amachita pa nthawi kapena masiku omwe si a sukulu (mwachitsanzo, masukulu ena amakonza masewera olimbitsa thupi kapena zochitika zina). Zimaphatikizanso magulu amasewera ampikisano ndi maphunziro azinthu monga kusambira, masewera olimbitsa thupi, kuvina, ndi karate zomwe zimachitika pa nthawi yomwe si ya sukulu.",
+			},
+		},
+		"ma-IN": {
+			heading: "संघटित उपक्रम",
+			subheading: "विभाग ५",
+			description: {
+				kid: "हा विभाग शारीरिकदृष्ट्या सक्रिय संघटनांची आवश्यकता असलेल्या खेळ आणि उपक्रमांविषयी आहे. यात तुम्ही शालेय शिक्षणाव्यतिरिक्त करत असलेल्या उपक्रमांचा समावेश होतो (उदाहरणार्थ, काही शाळांमध्ये क्रीडा स्पर्धा किंवा अभ्यासेतर उपक्रम आहेत). त्यामध्ये कोणत्याही क्रीडा स्पर्धा आणि शाळेच्या बाहेर करायचे उपक्रम जसे की, पोहणे, जिम्नॅस्टिक्स, नृत्य आणि कराटे यांचादेखील समावेश होतो.",
+				adult:
+					"हा विभाग शारीरिकदृष्ट्या सक्रिय संघटनांची आवश्यकता असलेल्या खेळ आणि उपक्रमांविषयी आहे. यात तुमचे मूल शालेय शिक्षणाव्यतिरिक्त करत असलेल्या उपक्रमांचा समावेश होतो (उदाहरणार्थ, काही शाळांमध्ये क्रीडा स्पर्धा किंवा अभ्यासेतर उपक्रम आहेत). त्यामध्ये कोणत्याही क्रीडा स्पर्धा आणि शाळेच्या बाहेर करायचे उपक्रम जसे की, पोहणे, जिम्नॅस्टिक्स, नृत्य आणि कराटे यांचादेखील समावेश होतो.",
+			},
+		},
+		"hi-IN": {
+			heading: "संगठित गतिविधियाँ",
+			subheading: "भाग 5",
+			description: {
+				kid: "यह अनुभाग शारीरिक रूप से सक्रिय संगठित गतिविधियों और खेलों के बारे में है। इनमें वे गतिविधियाँ शामिल हैं जो आप स्कूल के दिन के बाहर करते हैं (उदाहरण के लिए, कुछ स्कूलों में खेल लीग या पाठ्येतर गतिविधियाँ होती हैं)। इनमें स्कूल के बाहर तैराकी, जिमनास्टिक, नृत्य और कराटे जैसी गतिविधियों के लिए कोई भी खेल लीग और पाठ भी शामिल हैं।",
+				adult:
+					"यह अनुभाग शारीरिक रूप से सक्रिय संगठित गतिविधियों और खेलों के बारे में है। इनमें वे गतिविधियाँ शामिल हैं जो आप स्कूल के दिन के बाहर करते हैं (उदाहरण के लिए, कुछ स्कूलों में खेल लीग या पाठ्येतर गतिविधियाँ होती हैं)। इनमें स्कूल के बाहर तैराकी, जिमनास्टिक, नृत्य और कराटे जैसी गतिविधियों के लिए कोई भी खेल लीग और पाठ भी शामिल हैं।",
+			},
+		},
 		"en-AE": {
 			heading: "Organized Activities",
 			subheading: "Section 5",

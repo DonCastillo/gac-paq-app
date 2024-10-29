@@ -55,6 +55,193 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 16",
+			label: "How did you go to work in the past week?",
+			kid_label: "How did you go to work in the past week?",
+			adult_label: "How did your child go to work in the past week?",
+			kid_sublabel: "Select the mode that you used the most.",
+			adult_sublabel: "Select the mode that your child used the most.",
+			choices: [
+				{
+					label: "Walking",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Wheeling",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult:
+							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+					},
+				},
+				{
+					label: "Public transit",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "example: bus, train, tramway, subway, boat",
+						adult: "example: bus, train, tramway, subway, boat",
+					},
+				},
+				{
+					label: "Car, taxi, truck, or motorcycle",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Other, which one?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Funso 16",
+			label: "Kodi umayenda bwanji popita kuntchito m’sabata yapitayi?",
+			kid_label: "Kodi umayenda bwanji popita kuntchito m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu anayenda bwanji popita kuntchito msabata yapitayi?",
+			kid_sublabel: "Usankhe mayendedwe omwe unawagwirisa ntchito kwambiri.",
+			adult_sublabel: "Musankhe mayendedwe omwe anawagwirisa ntchito kwambiri.",
+			choices: [
+				{
+					label: "Kuyenda wa pansi",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Kugwirisa ntchito njinga yopalasa kapena wheelchair",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "",
+						adult: "",
+					},
+				},
+				{
+					label: "Mayendedwe apagulu ngati kukwera minibus, sitima kapena boti",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "",
+						adult: "",
+					},
+				},
+				{
+					label: "Galimoto, taxi kapena njinga ya moto",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "China, ndi chiti?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १६",
+			label: "तुम्ही गेल्या आठवड्यात घरून कामावर कसे गेलात?",
+			kid_label: "तुम्ही गेल्या आठवड्यात घरून कामावर कसे गेलात?",
+			adult_label: "तुमचे मूल गेल्या आठवड्यात घरून कामावर कसे गेले?",
+			kid_sublabel: "तुम्ही वापरलेली प्रमुख पद्धत निवडा",
+			adult_sublabel: "त्याने/ तिने वापरलेली प्रमुख पद्धत निवडा",
+			choices: [
+				{
+					label: "चालत",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "चाकांच्या साधनांचा वापर करून",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+						adult: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
+					},
+				},
+				{
+					label: "सार्वजनिक वाहतूक",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव इ.",
+						adult: "उदा. बस, आगगाडी, ट्रामवे, सबवे, नाव, इ.",
+					},
+				},
+				{
+					label: "कार, टॅक्सी, ट्रक, मोटरसायकल इ.",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "इतर, एकाहून अधिक साधनांचा वापर करून (उदा. चालत व बसने)",
+					value: "Other",
+					image_ident: "other",
+				},
+				{
+					label: "लागू नाही (मी घरून काम करतो / करते)",
+					value: "Work from home",
+					image_ident: "other",
+					label_mode: {
+						kid: "लागू नाही (मी घरून काम करतो / करते)",
+						adult: "लागू नाही (तुमचे मूल घरून काम करते)",
+					},
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न १६",
+			label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
+			kid_label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
+			adult_label: "आपका बच्चा पिछले सप्ताह काम पर कैसे गया?",
+			kid_sublabel: "परिवहन का वह साधन चुनें जिसका आपने सबसे अधिक उपयोग किया है",
+			adult_sublabel: "परिवहन का वह साधन चुनें जिसे आपके बच्चे ने सबसे अधिक उपयोग किया है",
+			choices: [
+				{
+					label: "चल के जाना",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "व्हीलिंग",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+						adult:
+							"उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+					},
+				},
+				{
+					label: "सार्वजनिक परिवहन",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+						adult: "उदाहरण के लिए, बस, ट्रेन, ट्रामवे, सबवे, नाव",
+					},
+				},
+				{
+					label: "कार, टैक्सी, ट्रक, या मोटरसाइकिल",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "अन्य, कौन सा?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 16",

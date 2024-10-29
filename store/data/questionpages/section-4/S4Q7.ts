@@ -44,6 +44,150 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 17",
+			label:
+				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_label:
+				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			adult_label:
+				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_sublabel: "Please select all responses that apply to you.",
+			adult_sublabel: "Please select all responses that apply to your child.",
+			choices: [
+				{
+					label: "Yes, I walked",
+					value: "Walked",
+					label_mode: {
+						kid: "Yes, I walked",
+						adult: "Yes, they walked",
+					},
+				},
+				{
+					label: "Yes, I wheeled",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Yes, I wheeled",
+						adult: "Yes, they wheeled",
+					},
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionCheckbox,
+			heading: "Funso 17",
+			label:
+				"M’sabata yapitayi, kodi unayenda wapansi, kapena kupalasa njinga kupita kumalo ena osati ku sukulu kapena kuntchito (Monga kwa anzanu, ku paki/ malo osewererako, ku shopu)?",
+			kid_label:
+				"M’sabata yapitayi, kodi unayenda wapansi, kapena kupalasa njinga kupita kumalo ena osati ku sukulu kapena kuntchito (Monga kwa anzanu, ku paki/ malo osewererako, ku shopu)?",
+			adult_label:
+				"M’sabata yapitayi, kodi mwana wanu anayenda wapansi, kapena kupalasa njinga kupita kumalo ena osati ku sukulu kapena kuntchito (Monga kwa anzake, ku paki/ malo osewererako, ku shopu)?",
+			kid_sublabel: "Ukhoza kusankha mayankho onse omwe akukukhuza.",
+			adult_sublabel: "Mukhoza kusankha mayankho onse omwe akukukhudza mwana wanu.",
+			choices: [
+				{
+					label: "Inde ndinaenda",
+					value: "Walked",
+					label_mode: {
+						kid: "Inde ndinaenda",
+						adult: "Inde anaenda",
+					},
+				},
+				{
+					label: "Inde ndinapalasa njinga",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Inde ndinapalasa njinga",
+						adult: "Inde anapalasa njinga",
+					},
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न १७",
+			label:
+				"गेल्या आठवड्यात, तुम्ही शाळा किंवा कामाशिवाय इतर ठिकाणी (उदा. मित्राच्या घरी, बागेत, दुकानात) जाण्यासाठी सक्रिय पद्धतींचा वापर केला का? (उदा. चालणे, सायकल चालवणे, चाकांच्या साधनांचा वापर करणे इ.)",
+			kid_label:
+				"गेल्या आठवड्यात, तुम्ही शाळा किंवा कामाशिवाय इतर ठिकाणी (उदा. मित्राच्या घरी, बागेत, दुकानात) जाण्यासाठी सक्रिय पद्धतींचा वापर केला का? (उदा. चालणे, सायकल चालवणे, चाकांच्या साधनांचा वापर करणे इ.)",
+			adult_label:
+				"गेल्या आठवड्यात, तुमच्या मुलाने शाळा किंवा कामाशिवाय इतर ठिकाणी (उदा. मित्राच्या घरी, बागेत, दुकानात) जाण्यासाठी सक्रिय पद्धतींचा वापर केला का (उदा. चालणे, सायकल चालवणे, चाकांच्या साधनांचा वापर करणे इ.)",
+			kid_sublabel: "कृपया तुम्हाला लागू होणारे सर्व प्रतिसाद निवडा",
+			adult_sublabel: "कृपया त्याला/ तिला लागू होणारे सर्व प्रतिसाद निवडा",
+			choices: [
+				{
+					label: "होय, मी चालत जातो/जाते",
+					value: "Walked",
+					label_mode: {
+						kid: "होय, मी चालत जातो/जाते",
+						adult: "होय, माझे मूल चालत गेले",
+					},
+				},
+				{
+					label: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
+					value: "Wheeled",
+					label_mode: {
+						kid: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
+						adult: "माझ्या मुलाने वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
+					},
+				},
+				{
+					label: "होय, मी बाईकने जातो/जाते",
+					value: "Other",
+					label_mode: {
+						kid: "होय, मी बाईकने जातो/जाते",
+						adult: "होय, माझे मूल बाईकने गेले",
+					},
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionCheckbox,
+			heading: "प्रश्न १७",
+			label:
+				"पिछले सप्ताह में, क्या आप स्कूल या नौकरी के अलावा अन्य स्थानों (उदाहरण के लिए, किसी मित्र का घर, कोई पार्क, कोई दुकान) पर जाने के लिए पैदल या व्हीलिंग करके गए थे?",
+			kid_label:
+				"पिछले सप्ताह में, क्या आप स्कूल या नौकरी के अलावा अन्य स्थानों (उदाहरण के लिए, किसी मित्र का घर, कोई पार्क, कोई दुकान) पर जाने के लिए पैदल या व्हीलिंग करके गए थे?",
+			adult_label:
+				"पिछले सप्ताह में, क्या आपका बच्चा स्कूल या काम के अलावा अन्य स्थान जाने के लिए पैदल या व्हीलिंग करके गया था (उदाहरण के लिए, किसी दोस्त का घर, कोई पार्क, कोई दुकान)?",
+			kid_sublabel: "कृपया उन सभी प्रतिक्रियाओं का चयन करें जो आप पर लागू होती हैं।",
+			adult_sublabel: "कृपया उन सभी प्रतिक्रियाओं का चयन करें जो आपके बच्चे पर लागू होती हैं।",
+			choices: [
+				{
+					label: "हां, मैं पैदल चलकर गया था",
+					value: "Walked",
+					label_mode: {
+						kid: "हां, मैं पैदल चलकर गया था",
+						adult: "हाँ, वह  पैदल चलकर गया था",
+					},
+				},
+				{
+					label: "हाँ, मैं व्हीलिंग करके गया था",
+					value: "Wheeled",
+					label_mode: {
+						kid: "हाँ, मैं व्हीलिंग करके गया था",
+						adult: "हाँ, वह व्हीलिंग करके गया था",
+					},
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",

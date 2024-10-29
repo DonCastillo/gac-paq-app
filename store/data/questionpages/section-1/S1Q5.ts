@@ -42,6 +42,146 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 5",
+			label:
+				"Which of the following images shows what you do most of the time in physical education class?",
+			kid_label:
+				"Which of the following images shows what you do most of the time in physical education class?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time in physical education class?",
+			choices: [
+				{
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Don't know",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Funso 5",
+			label:
+				"Pazithunzi zotsatirazi, ndi chithunzi chiti chomwe chikufanana ndi zomwe mumachita nthawi zambiri akamakuphunzitsani mmaphunziro olimbitsa thupi?",
+			kid_label:
+				"Pazithunzi zotsatirazi, ndi chithunzi chiti chomwe chikufanana ndi zomwe mumachita nthawi zambiri akamakuphunzitsani mmaphunziro olimbitsa thupi?",
+			adult_label:
+				"Pazithunzi zotsatirazi, ndi chithunzi chiti chomwe chikufanana ndi zomwe mwana wanu amachita nthawi zambiri akamaphunzira maphunziro olimbitsa thupi kusukulu?",
+			choices: [
+				{
+					label: "Mumangokhala malo amodzi",
+					value: "0.1",
+					image_ident: "not_moving",
+					label_mode: {
+						kid: "Mumangokhala malo amodzi",
+						adult: "Amangokhala malo amodzi",
+					},
+				},
+				{
+					label: "Mumalimbikira pang’ono",
+					value: "0.3",
+					image_ident: "easy_effort",
+					label_mode: {
+						kid: "Mumalimbikira pang’ono",
+						adult: "Amalimbikira pang’ono",
+					},
+				},
+				{
+					label: "Mumalimbikira mwapakakatikati",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+					label_mode: {
+						kid: "Mumalimbikira mwapakakatikati",
+						adult: "Amalimbikira mwapakakatikati kapena kwambiri",
+					},
+				},
+				{
+					label: "Sindikudziwa",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ५",
+			label:
+				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			kid_label:
+				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			adult_label:
+				"तुमचे मूल शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करते हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न 5",
+			label:
+				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
+			kid_label:
+				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
+			adult_label:
+				"निम्नलिखित में से कौन सा चित्र आपके बच्चे द्वारा पीटी क्लास में अधिकांश समय किए जाने वाले कार्यों में से मिलता जुलता है?",
+			choices: [
+				{
+					label: "कम हलचल वाली गतिविधियाँ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "आसान प्रयास",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम या कठिन प्रयास",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "पता नहीं",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",

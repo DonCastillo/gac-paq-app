@@ -17,6 +17,42 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"en-MW": {
+			heading: "Play or Free Time",
+			subheading: "Section 6",
+			description: {
+				kid: "This includes all the physical activity that you do during your play or free time. This does not include organized activities or break times in school. For the next questions, do not include the activities that you just told us about.",
+				adult:
+					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
+			},
+		},
+		"ch-MW": {
+			heading: "Nthawi yosewera kapena yopuma",
+			subheading: "Gawo 6",
+			description: {
+				kid: "Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mumachita mukakhala ndi mpata kapena mukamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu. Pa mafunso otsatirawa, musaphatikizepo zochitika zomwe wanena kale.",
+				adult:
+					"Izi zikuphatikiza zochitika zonse zolimbitsa thupi zomwe mwana wanu amachita akakhala ndi mpata kapena akamasewera. Koma sizikuphatikizapo zochitika zokonzedwa ndi sukulu, kalabu kapena nthawi ya buleki ku sukulu. Pa mafunso otsatirawa, musaphatikizepo zochitika zomwe mwanena kale.",
+			},
+		},
+		"ma-IN": {
+			heading: "खेळायचा किंवा मोकळा वेळ",
+			subheading: "विभाग ६",
+			description: {
+				kid: "या विभागात तुम्ही तुमच्या खेळादरम्यान किंवा मोकळ्या वेळेत करत असलेल्या सर्व शारीरिक हालचालींचा समावेश होतो. मात्र, यात तुम्ही शाळेत केलेल्या शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेल्या उपक्रमांचा किंवा शाळेतील मधल्या सुट्ट्यांचा समावेश होत नाही. मोकळ्या वेळेतील शारीरिक हालचालींमध्ये मैदानी खेळ, नाच, कसरत व सक्रियपणे खेळण्याचा समावेश होतो. तुम्ही आत्ताच सांगितलेल्या उपक्रमांचा व हालचालींचा समावेश पुढील प्रश्नांच्या उत्तरांसाठी करू नका.",
+				adult:
+					"या विभागात तुमचे मूल त्याच्या खेळादरम्यान किंवा मोकळ्या वेळेत करत असलेल्या सर्व शारीरिक हालचालींचा समावेश होतो. यात त्याने शाळेत केलेल्या शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेल्या उपक्रमांचा किंवा शाळेतील मधल्या सुट्ट्यांचा समावेश होत नाही. मोकळ्या वेळेतील शारीरिक हालचालींमध्ये मैदानी खेळ, नाच, कसरत व सक्रियपणे खेळण्याचा समावेश होतो. तुम्ही आत्ताच सांगितलेल्या उपक्रमांचा व हालचालींचा समावेश पुढील प्रश्नांच्या उत्तरांसाठी करू नका.",
+			},
+		},
+		"hi-IN": {
+			heading: "खेल या खाली समय",
+			subheading: "भाग 6",
+			description: {
+				kid: "इसमें वे सभी शारीरिक गतिविधियाँ शामिल हैं जो आप अपने खेल या खाली समय के दौरान करते हैं। इसमें स्कूल में संगठित गतिविधियाँ या ब्रेक का समय शामिल नहीं है। अगले प्रश्नों के लिए, उन गतिविधियों को शामिल न करें जिनके बारे में आपने अभी हमें बताया है।",
+				adult:
+					"इसमें वे सभी शारीरिक गतिविधियाँ शामिल हैं जो आपका बच्चा अपने खेल या खाली समय के दौरान करता है। यही वह समय है जब आपका बच्चा निर्णय लेता है कि इसका उपयोग कैसे करना है। अगले प्रश्नों के लिए, उन गतिविधियों को शामिल न करें जिनके बारे में आपने अभी हमें बताया है।",
+			},
+		},
 		"en-AE": {
 			heading: "Play or Free Time",
 			subheading: "Section 6",

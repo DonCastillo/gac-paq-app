@@ -4,6 +4,18 @@ const CompletePhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Complete",
 	},
+	"en-MW": {
+		label: "Complete",
+	},
+	"ch-MW": {
+		label: "Tamaliza",
+	},
+	"ma-IN": {
+		label: "पूर्ण",
+	},
+	"hi-IN": {
+		label: "पूरा",
+	},
 	"en-AE": {
 		label: "Complete",
 	},

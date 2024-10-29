@@ -17,6 +17,42 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"en-MW": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+			description: {
+				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+				adult:
+					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+			},
+		},
+		"ch-MW": {
+			heading: "Kukhala panja",
+			subheading: "Gawo 7",
+			description: {
+				kid: "Gawoli likunena za nthawi yomwe mumakhala muli panja. Mukhoza kukhala muli kusukulu, mukugwira ntchito zapakhomo, ntchito yolipidwa ndi yongodzipereka, mukuenda kupita kwinakwake, komanso nthawi yomwe muli ndi mpata. Izi zimaphatikizaponso nthawi yomwe muli panja, koma simukuyendayenda (mwachitsanzo, pa picnic, kowerenga, ndi kuotha moto).",
+				adult:
+					"Gawoli likunena za nthawi yomwe mwana wanu amakhala ali panja. Akhoza kukhala ali kusukulu, akugwira ntchito zapakhomo, ntchito yolipidwa kapena yongodzipereka, akuenda kupita kwinakwake, komanso nthawi yomwe ali ndi mpata. Izi zimaphatikizaponso nthawi yomwe mwana wanu ali panja, koma sakuyendayenda (mwachitsanzo, pa picnic, kowerenga, ndi kuotha moto).",
+			},
+		},
+		"ma-IN": {
+			heading: "बाहरी गतिविधियाँ",
+			subheading: "विभाग ७",
+			description: {
+				kid: "हा विभाग तुम्ही घराबाहेर घालवलेल्या वेळेबद्दल आहे. या वेळेत तुम्ही शाळेत, घरी, कामाच्या ठिकाणी, स्वयंसेवा करताना आणि वाहतुकीदरम्यान तसेच तुमच्या मोकळ्या वेळेत केलेल्या हालचालींचा समावेश होतो. त्याचबरोबर तुम्ही घराबाहेर असताना, पण हालचाली करीत नसलेल्या वेळेचाही समावेश होतो (उदाहरणार्थ, पिकनिक, वाचन, शेकोटीभोवती बसणे) इ.",
+				adult:
+					"हा विभाग तुमच्या मुलाने घराबाहेर घालवलेल्या वेळेबद्दल आहे. या वेळेत त्याने/ तिने शाळेत, घरी, कामाच्या ठिकाणी, स्वयंसेवा करताना आणि वाहतुकीदरम्यान तसेच त्याच्या/ तिच्या मोकळ्या वेळेत केलेल्या हालचालींचा समावेश होतो. त्याचबरोबर तो/ ती घराबाहेर असताना, पण हालचाली करीत नसलेल्या वेळेचाही समावेश होतो (उदाहरणार्थ, पिकनिक, वाचन, शेकोटीभोवती बसणे इ.)",
+			},
+		},
+		"hi-IN": {
+			heading: "बाहरी गतिविधियाँ",
+			subheading: "भाग 7",
+			description: {
+				kid: "यह अनुभाग उस समय के बारे में है जो आप बाहर बिताते हैं। यह स्कूल में, कामकाज के दौरान, काम और स्वयंसेवा, और परिवहन के साथ-साथ आपके खाली समय में भी हो सकता है। इसमें वह समय भी शामिल है जब आप बाहर हैं, लेकिन घूम नहीं रहे हैं (उदाहरण के लिए, पिकनिक, पढ़ना, आग के पास बैठना)।",
+				adult:
+					"यह अनुभाग उस समय के बारे में है जो आपका बच्चा बाहर बिताता है। यह स्कूल में, कामकाज के दौरान, नौकरी और स्वयंसेवा, और परिवहन के साथ-साथ उनके खाली समय में भी हो सकता है। इसमें वह समय भी शामिल है जब आपका बच्चा बाहर है, लेकिन घूम नहीं रहा है (उदाहरण के लिए, पिकनिक, पढ़ना, आग के पास बैठना)।",
+			},
+		},
 		"en-AE": {
 			heading: "Outdoors",
 			subheading: "Section 7",

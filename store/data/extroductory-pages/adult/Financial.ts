@@ -44,6 +44,141 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 30",
+			label: "How difficult or easy is it for you to meet the financial needs of your family?",
+			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label:
+				"How difficult or easy is it for you to meet the financial needs of your family?",
+			choices: [
+				{
+					label: "Very difficult",
+					value: "Very difficult",
+				},
+				{
+					label: "Difficult",
+					value: "Difficult",
+				},
+				{
+					label: "Neither easy nor difficult",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Easy",
+					value: "Easy",
+				},
+				{
+					label: "Very easy",
+					value: "Very easy",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 30",
+			label: "Zimakhala zovuta kapena zosavuta bwanji kuti mupeze zosowa za banja lanu?",
+			kid_label: "Zimakhala zovuta kapena zosavuta bwanji kuti mupeze zosowa za banja lanu?",
+			adult_label: "Zimakhala zovuta kapena zosavuta bwanji kuti mupeze zosowa za banja lanu?",
+			choices: [
+				{
+					label: "Zovuta kwambiri",
+					value: "Very difficult",
+				},
+				{
+					label: "Zovuta",
+					value: "Difficult",
+				},
+				{
+					label: "Pakatikati",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Zophweka",
+					value: "Easy",
+				},
+				{
+					label: "Zophweka kwambiri",
+					value: "Very easy",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			kid_label:
+				"तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			adult_label:
+				"तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			choices: [
+				{
+					label: "खूप अवघड",
+					value: "Very difficult",
+				},
+				{
+					label: "अवघड",
+					value: "Difficult",
+				},
+				{
+					label: "सोपेही नाही किंवा अवघडही नाही",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "सोपे",
+					value: "Easy",
+				},
+				{
+					label: "खूप सोपे",
+					value: "Very easy",
+				},
+				{
+					label: "मला नाही सांगायचे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "आपके लिए अपने परिवार की वित्तीय जरूरतों को पूरा करना कितना मुश्किल या आसान है?",
+			kid_label: "आपके लिए अपने परिवार की वित्तीय जरूरतों को पूरा करना कितना मुश्किल या आसान है?",
+			adult_label: "आपके लिए अपने परिवार की वित्तीय जरूरतों को पूरा करना कितना मुश्किल या आसान है?",
+			choices: [
+				{
+					label: "बहुत मुश्किल",
+					value: "Very difficult",
+				},
+				{
+					label: "मुश्किल",
+					value: "Difficult",
+				},
+				{
+					label: "न आसान न मुश्किल",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "आसान ",
+					value: "Easy",
+				},
+				{
+					label: "बहुत आसान",
+					value: "Very easy",
+				},
+				{
+					label: "जवाब नहीं देना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",

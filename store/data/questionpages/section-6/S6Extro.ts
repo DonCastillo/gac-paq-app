@@ -10,6 +10,22 @@ const S6Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only one more to go!",
 		},
+		"en-MW": {
+			heading: "Section Complete!",
+			subheading: "Only one more to go!",
+		},
+		"ch-MW": {
+			heading: "Gawo latha",
+			subheading: "Tasala ndi gawo limozi lokha kuti timalize",
+		},
+		"ma-IN": {
+			heading: "विभाग पूर्ण!",
+			subheading: "अजून फक्त एक बाकी आहे!",
+		},
+		"hi-IN": {
+			heading: "भाग पूर्ण",
+			subheading: "सिर्फ एक और बाकी है",
+		},
 		"en-AE": {
 			heading: "Section Complete!",
 			subheading: "Only one more to go!",
@@ -40,7 +56,7 @@ const S6Extro: LangExtroPayloadInterface = {
 		},
 		"es-ES": {
 			heading: "Sección Completa",
-			subheading: "Sólo falta uno",
+			subheading: "Sólo falta una",
 		},
 		"es-MX": {
 			heading: "¡Sección Completa!",

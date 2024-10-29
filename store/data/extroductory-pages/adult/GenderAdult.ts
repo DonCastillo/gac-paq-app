@@ -31,6 +31,90 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "What is your child's sex?",
+			kid_label: "What is your child's sex?",
+			adult_label: "What is your child's sex?",
+			choices: [
+				{
+					label: "Female",
+					value: "Female",
+				},
+				{
+					label: "Male",
+					value: "Male",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 24",
+			label: "Kodi mwana wanu ndiwammuna kapena wamkazi?",
+			kid_label: "Kodi mwana wanu ndiwammuna kapena wamkazi?",
+			adult_label: "Kodi mwana wanu ndiwammuna kapena wamkazi?",
+			choices: [
+				{
+					label: "Wamkazi",
+					value: "Female",
+				},
+				{
+					label: "Wammuna",
+					value: "Male",
+				},
+				{
+					label: "Ndasankha kusayankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २४",
+			label: "तुमच्या मुलाचे लिंग काय आहे?",
+			kid_label: "तुमच्या मुलाचे लिंग काय आहे?",
+			adult_label: "तुमच्या मुलाचे लिंग काय आहे?",
+			choices: [
+				{
+					label: "स्त्री",
+					value: "Female",
+				},
+				{
+					label: "पुरुष",
+					value: "Male",
+				},
+				{
+					label: "मला सांगायचे नाही",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न 24",
+			label: "आपके बच्चे का लिंग क्या है?",
+			kid_label: "आपके बच्चे का लिंग क्या है?",
+			adult_label: "आपके बच्चे का लिंग क्या है?",
+			choices: [
+				{
+					label: "महिला",
+					value: "Female",
+				},
+				{
+					label: "पुरुष",
+					value: "Male",
+				},
+				{
+					label: "जवाब नहीं देना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 24",

@@ -47,6 +47,155 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 16b",
+			label: "How many days did you use this mode in the past week?",
+			kid_label: "How many days did you use this mode in the past week?",
+			adult_label: "How many days did your child use this mode in the past week?",
+			choices: [
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 16b",
+			label: "Ndi masiku angati omwe unagwiritsa ntchito mayendedwe oterewa m’sabata yapitayi?",
+			kid_label: "Ndi masiku angati omwe unagwiritsa ntchito mayendedwe oterewa m’sabata yapitayi?",
+			adult_label:
+				"Ndi masiku angati omwe mwana wanu anagwiritsa ntchito mayendedwe oterewa m’sabata yapitayi?",
+			choices: [
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १६b",
+			label: "तुम्ही गेल्या आठवड्यात या पद्धतीचा वापर किती वेळा केला?",
+			kid_label: "तुम्ही गेल्या आठवड्यात या पद्धतीचा वापर किती वेळा केला?",
+			adult_label: "तुमच्या मुलाने गेल्या आठवड्यात किती वेळा या पद्धतीचा वापर केला?",
+			choices: [
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १६b",
+			label: "पिछले सप्ताह आपने कितने दिन परिवहन के इस साधन का उपयोग किया?",
+			kid_label: "पिछले सप्ताह आपने कितने दिन परिवहन के इस साधन का उपयोग किया?",
+			adult_label: "आपके बच्चे ने पिछले सप्ताह में कितने दिन परिवहन के इस साधन का उपयोग किया?",
+			choices: [
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 16b",

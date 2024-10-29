@@ -4,6 +4,18 @@ const DontKnowPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Don't know",
 	},
+	"en-MW": {
+		label: "Don't know",
+	},
+	"ch-MW": {
+		label: "Sindikudziwa",
+	},
+	"ma-IN": {
+		label: "माहीत नाही",
+	},
+	"hi-IN": {
+		label: "पता नहीं",
+	},
 	"en-AE": {
 		label: "Don't know",
 	},

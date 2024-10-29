@@ -35,6 +35,106 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "Are you a…",
+			kid_label: "Are you a…",
+			adult_label: "Are you a…",
+			choices: [
+				{
+					label: "Boy",
+					value: "Boy",
+				},
+				{
+					label: "Girl",
+					value: "Girl",
+				},
+				{
+					label: "Other",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 24",
+			label: "Kodi ndiwe...",
+			kid_label: "Kodi ndiwe...",
+			adult_label: "Kodi ndiwe...",
+			choices: [
+				{
+					label: "Mwamuna",
+					value: "Boy",
+				},
+				{
+					label: "Wamkazi",
+					value: "Girl",
+				},
+				{
+					label: "Zina",
+					value: "Other",
+				},
+				{
+					label: "Sindikufuna kuyankha",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २४",
+			label: "तुमचे लिंग निवडा",
+			kid_label: "तुमचे लिंग निवडा",
+			adult_label: "तुमचे लिंग निवडा",
+			choices: [
+				{
+					label: "मुलगा",
+					value: "Boy",
+				},
+				{
+					label: "मुलगी",
+					value: "Girl",
+				},
+				{
+					label: "इतर",
+					value: "Other",
+				},
+				{
+					label: "मला उत्तर द्यायचे नाही",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न 24",
+			label: "क्या आप एक ...",
+			kid_label: "क्या आप एक ...",
+			adult_label: "क्या आप एक ...",
+			choices: [
+				{
+					label: "लड़के हो",
+					value: "Boy",
+				},
+				{
+					label: "लड़की हो",
+					value: "Girl",
+				},
+				{
+					label: "अन्य",
+					value: "Other",
+				},
+				{
+					label: "जवाब नहीं देना पसंद करेंगे",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 24",

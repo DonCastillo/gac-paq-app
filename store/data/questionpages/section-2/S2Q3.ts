@@ -38,6 +38,118 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 10",
+			label:
+				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label:
+				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label:
+				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			choices: [
+				{
+					label: "15 minutes or less per day",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minutes per day",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minutes per day",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Over 60 minutes per day",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 10",
+			label:
+				"Pa masiku amene unagwira ntchito zapakhomo sabata yapitayi, kodi zinakutengera nthawi yaitali bwanji kugwira ntchitozi pa tsiku lonse?",
+			kid_label:
+				"Pa masiku amene unagwira ntchito zapakhomo sabata yapitayi, kodi zinakutengera nthawi yaitali bwanji kugwira ntchitozi pa tsiku lonse?",
+			adult_label:
+				"Kodi pa masiku amene mwana wanu anagwira ntchito zapakhomo m’sabata yapitayi, kodi zinamutengera nthawi yaitali bwanji kugwira ntchitozo pa tsiku lonse?",
+			choices: [
+				{
+					label: "15 minitsi kapena osakwana patsiku",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "Pakati pa 16 ndi 30 minitsi pa tsiku",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "Pakati pa 31 ndi 60 minitsi pa tsiku",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Kupitilira 60 minutes pa tsiku",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १०",
+			label:
+				"गेल्या आठवड्यादरम्यान तुम्ही ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी तुम्ही दिवसभरात ही कामे करण्यात किती वेळ घालवलात?",
+			kid_label:
+				"गेल्या आठवड्यादरम्यान तुम्ही ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी तुम्ही दिवसभरात ही कामे करण्यात किती वेळ घालवलात?",
+			adult_label:
+				"गेल्या आठवड्यात तुमच्या मुलाने ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी त्याने/ तिने दिवसभरात ही कामे करण्यात किती वेळ घालवला?",
+			choices: [
+				{
+					label: "दररोज १५ मिनिटे किंवा त्यापेक्षा कमी",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "दररोज १६ - ३० मिनिटे",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "दररोज ३१ - ६० मिनिटे",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "दररोज ६० मिनिटांहून अधिक",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १०",
+			label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में काम करने में कितना समय बिताया?",
+			kid_label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में काम करने में कितना समय बिताया?",
+			adult_label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपके बच्चे ने घरेलू कामकाज किए, उन्होंने पूरे दिन में घरेलू काम करने में कितना समय बिताया?",
+			choices: [
+				{
+					label: "रति दिन 15 मिनट या उससे कम",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "प्रतिदिन 16 - 30 मिनट",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "प्रतिदिन 31 - 60 मिनट",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "प्रति दिन 60 मिनट से अधिक",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
