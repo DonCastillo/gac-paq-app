@@ -17,6 +17,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"en-MW": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+			description: {
+				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+				adult:
+					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+			},
+		},
 		"ch-MW": {
 			heading: "Kukhala panja",
 			subheading: "Gawo 7",
