@@ -41,6 +41,145 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 7",
+			label: "Which of the following images shows what you do most of the time during your breaks?",
+			kid_label:
+				"Which of the following images shows what you do most of the time during your breaks?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time during their breaks?",
+			choices: [
+				{
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Don't know",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Funso 7",
+			label:
+				"Kodi chithunzi chanji mwa izi chikuyimira zomwe mumachita kwambiri pa nthawi ya buleki?",
+			kid_label:
+				"Kodi chithunzi chanji mwa izi chikuyimira zomwe mumachita kwambiri pa nthawi ya buleki?",
+			adult_label:
+				"Ndi chithunzi chiti pa zithunzi zotsatirazi chomwe chikufanana ndi zomwe mwana wanu amachita nthawi zambiri panthawi yabuleki?",
+			choices: [
+				{
+					label: "Mumangokhala malo amodzi",
+					value: "0.1",
+					image_ident: "not_moving",
+					label_mode: {
+						kid: "Mumangokhala malo amodzi",
+						adult: "Amangokhala malo amodzi",
+					},
+				},
+				{
+					label: "Mumalimbikira pang’ono",
+					value: "0.3",
+					image_ident: "easy_effort",
+					label_mode: {
+						kid: "Mumalimbikira pang’ono",
+						adult: "Amalimbikira pang’ono",
+					},
+				},
+				{
+					label: "Mumalimbikira mwapakakatikati",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+					label_mode: {
+						kid: "Mumalimbikira mwapakakatikati",
+						adult: "Amalimbikira mwapakakatikati kapena kwambiri",
+					},
+				},
+				{
+					label: "Sindikudziwa",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ७",
+			label:
+				"पुढीलपैकी कोणते चित्र तुम्ही तुमच्या मधल्या सुट्टीमध्ये बहुतेक वेळ काय करता हे दाखवते?",
+			kid_label:
+				"पुढीलपैकी कोणते चित्र तुम्ही तुमच्या मधल्या सुट्टीमध्ये बहुतेक वेळ काय करता हे दाखवते?",
+			adult_label:
+				"पुढीलपैकी कोणते चित्र तुमचे मूल मधल्या सुट्टीमध्ये बहुतेक वेळ काय करते हे दर्शवते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न 7",
+			label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने अवकाश के दौरान अधिकांश समय करते हैं?",
+			kid_label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने अवकाश के दौरान अधिकांश समय करते हैं?",
+			adult_label:
+				"निम्नलिखित में से कौन सा चित्र आपके बच्चे द्वारा अपने अवकाश के दौरान अधिकांश समय किए जाने वाले कार्यों से मिलता जुलता है?",
+			choices: [
+				{
+					label: "कम हलचल वाली गतिविधियाँ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "आसान प्रयास",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम या कठिन प्रयास",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "पता नहीं",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 7",

@@ -4,6 +4,18 @@ const FeedbackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Feedback",
 	},
+	"en-MW": {
+		label: "Feedback",
+	},
+	"ch-MW": {
+		label: "Ndemanga",
+	},
+	"ma-IN": {
+		label: "अभिप्राय",
+	},
+	"hi-IN": {
+		label: "प्रतिक्रिया",
+	},
 	"en-AE": {
 		label: "Feedback",
 	},

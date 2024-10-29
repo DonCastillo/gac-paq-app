@@ -35,6 +35,106 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 15c",
+			label: "How long does it normally take you to go to school?",
+			kid_label: "How long does it normally take you to go to school?",
+			adult_label: "How long does it normally take your child to go to school?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 15c",
+			label: "Nthawi zambiri zimakutengera nthawi yayitali bwanji kuti ukafike kusukulu?",
+			kid_label: "Nthawi zambiri zimakutengera nthawi yayitali bwanji kuti ukafike kusukulu?",
+			adult_label: "Zimatenga nthawi yayitali bwanji kuti mwana wanu akafike kusukulu?",
+			choices: [
+				{
+					label: "Ma minitsi 10 kapena osakwana",
+					value: "10 minutes or less",
+				},
+				{
+					label: "Pakati pa 10 mpaka 20 minitsi",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "Pakati pa 21 mpaka 30 minitsi",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Kuposera 30 minitsi",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १५c",
+			label: "तुम्हाला घरून शाळेत जायला सामान्यपणे किती वेळ लागतो?",
+			kid_label: "तुम्हाला घरून शाळेत जायला सामान्यपणे किती वेळ लागतो?",
+			adult_label: "तुमच्या मुलाला घरून शाळेत जायला सामान्यपणे किती वेळ लागतो?",
+			choices: [
+				{
+					label: "१० मिनिटे किंवा त्यापेक्षा कमी",
+					value: "10 minutes or less",
+				},
+				{
+					label: "११-२० मिनिटे",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "२१-३० मिनिटे",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "३० मिनिटांपेक्षा अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १५c",
+			label: "आपको स्कूल जाने में सामान्यतः कितना समय लगता है?",
+			kid_label: "आपको स्कूल जाने में सामान्यतः कितना समय लगता है?",
+			adult_label: "आपके बच्चे को स्कूल जाने में सामान्यतः कितना समय लगता है?",
+			choices: [
+				{
+					label: "10 मिनट या उससे कम",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 मिनट",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 मिनट",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "30 मिनट से अधिक",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 15c",

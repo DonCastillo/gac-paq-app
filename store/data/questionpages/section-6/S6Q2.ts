@@ -58,6 +58,196 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 22",
+			label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label:
+				"In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label:
+				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel:
+				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 22",
+			label:
+				"M’sabata yapitayi ndi masiku angati omwe unachita zinthu zomwe zingakuthandize Kukhala ndi thupi lamphamvu?",
+			kid_label:
+				"M’sabata yapitayi ndi masiku angati omwe unachita zinthu zomwe zingakuthandize Kukhala ndi thupi lamphamvu?",
+			adult_label:
+				"M’sabata yapitayi ndi masiku angati omwe mwana wanu anachita zinthu zomwe zingamuthandize kukhala wamphamvu?",
+			kid_sublabel:
+				"Zitsanzo ndi masewero olimbitsa thupi, ma push up, kapena kunyamula ma weti ndi zina.",
+			adult_sublabel:
+				"Zitsanzo ndi masewero olimbitsa thupi, ma push up, kapena kunyamula ma weti ndi zina.",
+			choices: [
+				{
+					label: "Masiku 0",
+					value: "0",
+				},
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २२",
+			label: "मागील आठवड्यात, तुम्ही किती दिवस अशा हालचाली केल्या ज्यांनी तुम्हाला मजबूत बनवले?",
+			kid_label:
+				"मागील आठवड्यात, तुम्ही किती दिवस अशा हालचाली केल्या ज्यांनी तुम्हाला मजबूत बनवले?",
+			adult_label:
+				"मागील आठवड्यात, तुमच्या मुलाने किती दिवस अशा हालचाली केल्या ज्यांनी त्याला/ तिला मजबूत बनवले?",
+			kid_sublabel: "जिम्नॅस्टिकस, टेकडी चढणे, जोर-बैठक मारणे, वेटलिफ्टिंग, मंकी बार्सवर खेळणे इ.",
+			adult_sublabel:
+				"उदा. जिम्नॅस्टिक्स, टेकडी चढणे, जोर बैठका मारणे, वेटलिफ्टिंग, मंकी बार्सवर खेळणे इ.",
+			choices: [
+				{
+					label: "० दिवस",
+					value: "0",
+				},
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २२",
+			label:
+				"पिछले सप्ताह में, आपने  कितने दिन ऐसी गतिविधियाँ कीं जो आपकी मांसपेशियों को मजबूत बनाती हैं?",
+			kid_label:
+				"पिछले सप्ताह में, आपने  कितने दिन ऐसी गतिविधियाँ कीं जो आपकी मांसपेशियों को मजबूत बनाती हैं?",
+			adult_label:
+				"पिछले सप्ताह में, आपके बच्चे ने कितने दिन ऐसी गतिविधियाँ कीं जो उसकी मांसपेशियों को मजबूत बनाती हैं?",
+			kid_sublabel:
+				"उदाहरणों में जिमनास्टिक्स, चढ़ाई, पुश-अप्स, भारोत्तोलन या मंकी बार्स का उपयोग शामिल हैं।",
+			adult_sublabel:
+				"उदाहरणों में जिमनास्टिक्स, चढ़ाई, पुश-अप्स, भारोत्तोलन या मंकी बार्स का उपयोग शामिल हैं।",
+			choices: [
+				{
+					label: "0 दिन",
+					value: "0",
+				},
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",

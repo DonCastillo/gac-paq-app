@@ -27,6 +27,80 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 18",
+			label: "Did you do any organized activities during the past week?",
+			kid_label: "Did you do any organized activities during the past week?",
+			adult_label: "Did your child do any organized activities during the past week?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 18",
+			label:
+				"Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
+			kid_label:
+				"Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
+			adult_label:
+				"Kodi m’sabata yathayi mwana wanu anasewerako pa zochitika zinazake zokonzedwa ndi sukulu kapena kalabu?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label:
+				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			kid_label:
+				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			adult_label:
+				"मागील आठवड्यात तुमच्या मुलाने शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			choices: [
+				{
+					label: "होय",
+					value: "yes",
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १८",
+			label: "क्या आपने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			kid_label: "क्या आपने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			adult_label: "क्या आपके बच्चे ने पिछले सप्ताह के दौरान कोई संगठित गतिविधियाँ कीं?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 18",

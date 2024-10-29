@@ -27,6 +27,74 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 8",
+			label: "In the past week, did you do any active chores or tasks?",
+			kid_label: "In the past week, did you do any active chores or tasks?",
+			adult_label: "In the past week, did your child do active chores or tasks?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 8",
+			label: "M’sabata yapitayi, kodi unagwirapo ntchito zapakhomo?",
+			kid_label: "M’sabata yapitayi, kodi unagwirapo ntchito zapakhomo?",
+			adult_label: "M’sabata yapitayi, kodi mwana wanu anagwirapo ntchito zapakhomo?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ८",
+			label: "गेल्या आठवड्यात तुम्ही घरातील नेहमीची कामे केलीत का?",
+			kid_label: "गेल्या आठवड्यात तुम्ही घरातील नेहमीची कामे केलीत का?",
+			adult_label: "गेल्या आठवड्यात तुमच्या मुलाने घरातील नेहमीची कामे केली का?",
+			choices: [
+				{
+					label: "होय",
+					value: "yes",
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ८",
+			label: "पिछले सप्ताह में, क्या आपने सक्रिय घरेलू कामकाज या कार्य किए?",
+			kid_label: "पिछले सप्ताह में, क्या आपने सक्रिय घरेलू कामकाज या कार्य किए?",
+			adult_label: "पिछले सप्ताह में, क्या आपके बच्चे ने सक्रिय घरेलू कामकाज या कार्य किए?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 8",

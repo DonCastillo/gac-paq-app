@@ -41,6 +41,145 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 11",
+			label: "Which of the following images shows what you do most of the time during your chores?",
+			kid_label:
+				"Which of the following images shows what you do most of the time during your chores?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time during their chores?",
+			choices: [
+				{
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Don't know",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadioImage,
+			heading: "Funso 11",
+			label:
+				"Ndi chithunzi chiti mwa zotsatirazi chomwe chikufana ndi zomwe umachita nthawi zambiri ukamagwira ntchito zapakhomo?",
+			kid_label:
+				"Ndi chithunzi chiti mwa zotsatirazi chomwe chikufana ndi zomwe umachita nthawi zambiri ukamagwira ntchito zapakhomo?",
+			adult_label:
+				"Ndi chithunzi chiti mwa zithunzi zotsatirazi chomwe chikufana ndi zomwe mwana wanu amachita nthawi zambiri akamagwira ntchito zapakhomo?",
+			choices: [
+				{
+					label: "Mumangokhala malo amodzi",
+					value: "0.1",
+					image_ident: "not_moving",
+					label_mode: {
+						kid: "Mumangokhala malo amodzi",
+						adult: "Amangokhala malo amodzi",
+					},
+				},
+				{
+					label: "Mumalimbikira pang’ono",
+					value: "0.3",
+					image_ident: "easy_effort",
+					label_mode: {
+						kid: "Mumalimbikira pang’ono",
+						adult: "Amalimbikira pang’ono",
+					},
+				},
+				{
+					label: "Mumalimbikira mwapakakatikati",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+					label_mode: {
+						kid: "Mumalimbikira mwapakakatikati",
+						adult: "Amalimbikira mwapakakatikati kapena kwambiri",
+					},
+				},
+				{
+					label: "Sindikudziwa",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ११",
+			label:
+				"तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
+			kid_label:
+				"तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
+			adult_label:
+				"तुमचे मूल घरातील नेहमीची कामे करताना बहुतेक वेळ काय करते हे पुढीलपैकी कशातून दिसून येते?",
+			choices: [
+				{
+					label: "बहुतेक वेळा बैठ्या हालचाली",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "बहुतेक वेळा कमी श्रमाच्या हालचाली",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "बहुतेक वेळा मध्यम किंवा कठीण श्रमाच्या हालचाली",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "माहित नाही",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "प्रश्न ११",
+			label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने कामकाज के दौरान ज्यादातर समय करते हैं?",
+			kid_label:
+				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने कामकाज के दौरान ज्यादातर समय करते हैं?",
+			adult_label:
+				"निम्नलिखित में से कौन सी तस्वीर आपके बच्चे द्वारा अपने घरेलू कामकाज के दौरान अधिकांश समय किए जाने वाले कार्यों से मिलती जुलती है?",
+			choices: [
+				{
+					label: "कम हलचल वाली गतिविधियाँ",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "आसान प्रयास",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "मध्यम या कठिन प्रयास",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "पता नहीं",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",

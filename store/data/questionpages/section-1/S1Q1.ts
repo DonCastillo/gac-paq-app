@@ -27,6 +27,74 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 1",
+			label: "Did you attend school in the past week?",
+			kid_label: "Did you attend school in the past week?",
+			adult_label: "Did your child attend school in the past week?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 1",
+			label: "Kodi unapita kusukulu m’sabata yapitayi?",
+			kid_label: "Kodi unapita kusukulu m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu anapita kusukulu m’sabata yapitayi?",
+			choices: [
+				{
+					label: "Eya",
+					value: "yes",
+				},
+				{
+					label: "Ayi",
+					value: "no",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १",
+			label: "तुम्ही गेल्या आठवड्यात शाळेत गेला होता का?",
+			kid_label: "तुम्ही गेल्या आठवड्यात शाळेत गेला होता का?",
+			adult_label: "तुमचे मूल गेल्या आठवड्यात शाळेत गेले होते का?",
+			choices: [
+				{
+					label: "होय",
+					value: "yes",
+				},
+				{
+					label: "नाही",
+					value: "no",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १",
+			label: "क्या आप पिछले सप्ताह स्कूल गए थे?",
+			kid_label: "क्या आप पिछले सप्ताह स्कूल गए थे?",
+			adult_label: "क्या आपका बच्चा पिछले सप्ताह स्कूल गया था?",
+			choices: [
+				{
+					label: "हाँ",
+					value: "yes",
+				},
+				{
+					label: "नहीं",
+					value: "no",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 1",

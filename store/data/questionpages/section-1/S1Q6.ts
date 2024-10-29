@@ -47,6 +47,155 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 6",
+			label: "On a normal school day, how much break time do you have?",
+			kid_label: "On a normal school day, how much break time do you have?",
+			adult_label: "On a normal school day, how much break time does your child have?",
+			kid_sublabel:
+				"This means recess and lunch breaks. Please add the time together - for example two 15-minute recess/break periods per day and 30 minutes for lunch would be 60 minutes",
+			adult_sublabel:
+				"This means recess and lunch breaks. Please add the time together - for example two 15-minute recess/break periods per day and 30 minutes for lunch would be 60 minutes",
+			choices: [
+				{
+					label: "0 minutes",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 minutes",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 minutes",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutes",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "More than 60 minutes",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Don't know",
+					value: "Don't know",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 6",
+			label: "Kodi patsiku lasukulu, mumakhala ndi nthawi ya buleki yaitali bwanji?",
+			kid_label: "Kodi patsiku lasukulu, mumakhala ndi nthawi ya buleki yaitali bwanji?",
+			adult_label:
+				"Patsiku lasukulu labwinobwino kodi mwana wanu amakhala ndi nthawi ya buleki yochuluka bwanji?",
+			kid_sublabel:
+				"Apa ndikufuna uphatikize nthawi yonse ya buleki kuphatikizapo yachokudya chamasana, mwachitsanzo ngati umakhala ndi ma buleki awiri a 15 minutes komanso buleki ya chokudya chamasana ya 30 minutes, nthawi yonse pamozi ikhala 60 minutes.",
+			adult_sublabel:
+				"Apa ndikufuna muphatikize nthawi yonse ya buleki, mwachitsanzo ngati mwana wanu amakhala ndi ma buleki awiri a 15 minutes komanso buleki ya chokudya chamasana ya 30 minutes, nthawi yonse pamozi ikhala 60 minutes.",
+			choices: [
+				{
+					label: "Simupita buleki",
+					value: "0 minutes",
+				},
+				{
+					label: "1 mpaka 15 minutes",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 mpaka 30 minutes",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 mpaka 60 minutes",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Imapitilira 60 minutes",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Sindikudziwa",
+					value: "Don't know",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ६",
+			label: "शाळेच्या सर्वसामान्य दिवशी, तुमची मधली सुट्टी किती वेळ असते?",
+			kid_label: "शाळेच्या सर्वसामान्य दिवशी, तुमची मधली सुट्टी किती वेळ असते?",
+			adult_label: "शाळेच्या नेहमीच्या दिवशी, तुमच्या मुलाची मधली सुट्टी किती वेळ असते?",
+			kid_sublabel:
+				"छोटी सुट्टी आणि जेवणाची सुट्टी मिळून). कृपया सगळा वेळ एकत्र मोजा – उदाहरणार्थ १५ मिनिटांच्या दोन लहान सुट्ट्या व ३० मिनिटे जेवणाची सुट्टी असे मिळून ६० मिनिटे होतील",
+			adult_sublabel:
+				"छोटी सुट्टी आणि जेवणाची सुट्टी मिळून). कृपया सगळा वेळ एकत्र मोजा – उदाहरणार्थ १५ मिनिटांच्या दोन लहान सुट्ट्या व ३० मिनिटे जेवणाची सुट्टी असे मिळून ६० मिनिटे होतील",
+			choices: [
+				{
+					label: "0 मिनिटे",
+					value: "0 minutes",
+				},
+				{
+					label: "१ - १५ मिनिटे",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "१६ - ३० मिनिटे",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "३१ - ६० मिनिटे",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "६० मिनिटांपेक्षा अधिक काळ",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "माहित नाही",
+					value: "Don't know",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ६",
+			label: "एक सामान्य स्कूल के दिन, आपके पास कितना अवकाश समय होता है?",
+			kid_label: "एक सामान्य स्कूल के दिन, आपके पास कितना अवकाश समय होता है?",
+			adult_label: "सामान्य स्कूल दिवस पर, आपके बच्चे के पास कितना अवकाश समय होता है?",
+			kid_sublabel:
+				"इसका मतलब है अवकाश और दोपहर के भोजन का अवकाश)। कृपया समय को एक साथ जोड़ें - उदाहरण के लिए प्रतिदिन 15 मिनट की दो अवकाश/अवकाश अवधि और दोपहर के भोजन के लिए 30 मिनट की अवधि 60 मिनट होगी",
+			adult_sublabel:
+				"इसका मतलब है अवकाश और दोपहर के भोजन का अवकाश)। कृपया समय को एक साथ जोड़ें - उदाहरण के लिए प्रतिदिन 15 मिनट की दो अवकाश/अवकाश अवधि और दोपहर के भोजन के लिए 30 मिनट की अवधि 60 मिनट होगी",
+			choices: [
+				{
+					label: "0 मिनट",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 मिनट",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 मिनट",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 मिनट",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "60 मिनट से अधिक",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "पता नहीं",
+					value: "Don't know",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 6",

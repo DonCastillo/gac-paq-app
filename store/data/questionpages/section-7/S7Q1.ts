@@ -44,6 +44,140 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 23",
+			label: "In the past week, on a normal day, how much time do you spend outdoors?",
+			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
+			adult_label:
+				"In the past week, on a normal day, how much time did your child spend outdoors?",
+			choices: [
+				{
+					label: "None",
+					value: "None",
+				},
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hours or more per day",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 23",
+			label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
+			kid_label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
+			adult_label:
+				"M’sabata yapitayi, pa tsiku labwinobwno ndi nthawi yaitali bwanji yomwe mwana wanu amakhala panja?",
+			choices: [
+				{
+					label: "Sunakhaleko panja",
+					value: "None",
+				},
+				{
+					label: "Osafika ola limodzi pa tsiku",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "Ola limodzi koma osafika 2 hours patsiku",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "Maola awiri koma osafika 3 hours patsiku",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "Kupitilira maola 4 patsiku",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २३",
+			label: "मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
+			kid_label:
+				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
+			adult_label:
+				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुमच्या मुलाने सरासरी किती वेळ घराबाहेर घालवला?",
+			choices: [
+				{
+					label: "अजिबात नाही",
+					value: "None",
+				},
+				{
+					label: "दररोज एक तास किंवा त्यापेक्षा कमी",
+					value: "An hour or less per day",
+				},
+				{
+					label: "दररोज साधारण २ तास",
+					value: "Approximately 2 hours per day",
+				},
+				{
+					label: "दररोज  साधारण ३ तास",
+					value: "Approximately 3 hours per day",
+				},
+				{
+					label: "दररोज ४ किंवा अधिक तास",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २३",
+			label: "पिछले सप्ताह में, सामान्य दिन में, आपने कितना समय बाहर बिताया है?",
+			kid_label: "पिछले सप्ताह में, सामान्य दिन में, आपने कितना समय बाहर बिताया है?",
+			adult_label: "पिछले सप्ताह में, सामान्य दिन में, आपके बच्चे ने बाहर कितना समय बिताया?",
+			choices: [
+				{
+					label: "कुछ भी नहीं",
+					value: "None",
+				},
+				{
+					label: "रति दिन 1 घंटे से कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "रति दिन 1 से 2 घंटे",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "प्रति दिन 2 से 3 घंटे",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "प्रति दिन 3 से 4 घंटे",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "प्रति दिन 4 घंटे या अधिक",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 23",

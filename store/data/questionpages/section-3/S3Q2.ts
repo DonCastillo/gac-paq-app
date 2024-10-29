@@ -40,6 +40,127 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 13",
+			label: "In the past week, how many hours have you spent volunteering and/or working?",
+			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
+			adult_label:
+				"In the past week, how many hours did your child spend volunteering and/or working?",
+			choices: [
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hours or more per day",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 13",
+			label:
+				"M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
+			kid_label:
+				"M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
+			adult_label:
+				"M'sabata yapitayi, ndi maola angati omwe mwana wanu anagwira ntchito yolipidwa kapena yongodzipereka?",
+			choices: [
+				{
+					label: "Osafika ola limodzi pa tsiku",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "Ola limodzi koma osafika 2 hours patsiku",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "Maola awiri koma osafika 3 hours patsiku",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "Kupitilira maola 4 patsiku",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १३",
+			label: "गेल्या आठवड्यात, तुम्ही किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
+			kid_label: "गेल्या आठवड्यात, तुम्ही किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
+			adult_label:
+				"गेल्या आठवड्यात, तुमच्या मुलाने किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
+			choices: [
+				{
+					label: "दररोज एका तासापेक्षा कमी वेळ",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "दररोज १ ते २ तास",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "दररोज २ ते ३ तास",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "दररोज ३ ते ४ तास",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "दररोज ४ पेक्षा जास्त तास",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न १३",
+			label: "पिछले सप्ताह में, आपने स्वयंसेवा और/या नौकरी में कितने घंटे बिताए हैं?",
+			kid_label: "पिछले सप्ताह में, आपने स्वयंसेवा और/या नौकरी में कितने घंटे बिताए हैं?",
+			adult_label: "पिछले सप्ताह में, आपके बच्चे ने स्वयंसेवा और/या नौकरी में कितने घंटे बिताए?",
+			choices: [
+				{
+					label: "प्रति दिन 1 घंटे से कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "रति दिन 1 से 2 घंटे",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "प्रति दिन 2 से 3 घंटे",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "प्रति दिन 3 से 4 घंटे",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "प्रति दिन 4 घंटे या अधिक",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 13",

@@ -38,6 +38,116 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 20",
+			label:
+				"On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label:
+				"On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label:
+				"On the days that your child did these activities during the past week, how long did it usually last?",
+			choices: [
+				{
+					label: "30 minutes or less per day",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 to 60 minutes per day",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 to 1 and a half hours per day",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "More than 1 and a half hours per day",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 20",
+			label: "Pamasiku omwe umachita zochitika zimenezi, kodi zimatenga nthawi yayitali bwanji?",
+			kid_label:
+				"Pamasiku omwe umachita zochitika zimenezi, kodi zimatenga nthawi yayitali bwanji?",
+			adult_label:
+				"Pamasiku omwe mwana wanu anachita masewerowo, kodi zimatenga nthawi yayitali bwanji?",
+			choices: [
+				{
+					label: "30 minitsi kapena osafika pa tsiku",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "Pakati pa 31 mpaka 60 minitsi pa tsiku",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "Pakati pa 1 hour ndi 1 hour 30 minitsi pa tsiku",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Kuposera 1 hour 30 minitsi pa tsiku",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २०",
+			label: "मागील आठवड्यात तुम्ही ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			kid_label:
+				"मागील आठवड्यात तुम्ही ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			adult_label:
+				"मागील आठवड्यात तुमच्या मुलाने ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			choices: [
+				{
+					label: "दररोज ३० मिनिटे किंवा त्यापेक्षा कमी वेळ",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "दररोज ३१-६० मिनिटे",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "दररोज ६१-९० मिनिटे",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "दररोज ९० मिनिटांपेक्षा अधिक वेळ",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २०",
+			label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			kid_label:
+				"पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			adult_label:
+				"पिछले सप्ताह के दौरान आपके बच्चे ने जिन दिनों ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			choices: [
+				{
+					label: "प्रति दिन 30 मिनट या उससे कम",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "प्रतिदिन 31 - 60 मिनट",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "प्रतिदिन 1 से 1.5 घंटे",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "प्रति दिन 1.5 घंटे से अधिक",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",

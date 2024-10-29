@@ -50,6 +50,186 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 21",
+			label:
+				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label:
+				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label:
+				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			kid_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
+			adult_sublabel:
+				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
+			choices: [
+				{
+					label: "None",
+					value: "None",
+				},
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to less than 2 hours per day",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 to less than 3 hours per day",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 to less than 4 hours per day",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hours or more per day",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 21",
+			label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
+			kid_label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
+			adult_label:
+				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe mwana wanu anasewera masewero othamangathamanga pongosangalala chabe?",
+			kid_sublabel:
+				"Awa simasewero omwe amachitika popanga mpikisano kapena training. Zitsanzo zili ngati kusewera ndi mpira, chipako, chibisalilano, Fulaye, kupanga zawana ndi zina.",
+			adult_sublabel:
+				"Awa simasewero omwe amachitika popanga mpikisano kapena training. Zitsanzo zili ngati kusewera ndi mpira, chipako, chibisalilano, Fulaye, kupanga zawana ndi zina.",
+			choices: [
+				{
+					label: "Sunasewereko",
+					value: "None",
+					label_mode: {
+						kid: "Sunasewereko",
+						adult: "Sanasewere",
+					},
+				},
+				{
+					label: "Osafika ola limodzi pa tsiku",
+					value: "Less than 1 hour per day",
+					label_mode: {
+						kid: "Osafika ola limodzi pa tsiku",
+						adult: "Osafika 1 hour pa tsiku",
+					},
+				},
+				{
+					label: "Ola limodzi koma osafika 2 hours patsiku",
+					value: "1 to less than 2 hours per day",
+					label_mode: {
+						kid: "Ola limodzi koma osafika 2 hours patsiku",
+						adult: "1 hour koma osafika 2 hours patsiku",
+					},
+				},
+				{
+					label: "Maola awiri koma osafika 3 hours patsiku",
+					value: "2 to less than 3 hours per day",
+					label_mode: {
+						kid: "Maola awiri koma osafika 3 hours patsiku",
+						adult: "2 hours koma osafika 3 hours patsiku",
+					},
+				},
+				{
+					label: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+					value: "3 to less than 4 hours per day",
+					label_mode: {
+						kid: "Kupitilira maola atatu koma osafika 4 hours patsiku",
+						adult: "3 hours koma osafika 4 hours patsiku",
+					},
+				},
+				{
+					label: "Kupitilira maola 4 patsiku",
+					value: "4 hours or more per day",
+					label_mode: {
+						kid: "Kupitilira maola 4 patsiku",
+						adult: "Kupitilira maola 4 kapena 4 hours patsiku",
+					},
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २१",
+			label:
+				"गेल्या आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुम्ही किती वेळ केवळ मजेसाठी सक्रियपणे खेळलात?",
+			kid_label:
+				"गेल्या आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुम्ही किती वेळ केवळ मजेसाठी सक्रियपणे खेळलात?",
+			adult_label:
+				"मागील आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुमचे मूल किती वेळ केवळ मजेसाठी सक्रियपणे खेळले?",
+			kid_sublabel:
+				"या हालचाली स्पर्धेसाठी अथवा प्रशिक्षणासाठी केल्या जात नाहीत. उदा. बॉल गेम्स खेळणे, स्विमिंग पूलमध्ये खेळणे, ट्रॅम्पोलिनवर उड्या मारणे, लपाछपी, वाळूत खेळणे, किल्ले अथवा ट्री हाऊस बनवणे इ.",
+			adult_sublabel:
+				"या हालचाली स्पर्धेसाठी अथवा प्रशिक्षणासाठी केल्या जात नाहीत. उदा. बॉल गेम्स खेळणे, स्विमिंग पूलमध्ये खेळणे, ट्रॅम्पोलिनवर उड्या  मारणे, लपाछपी, वाळूत खेळणे, किल्ले अथवा ट्री हाऊस बनवणे इ.",
+			choices: [
+				{
+					label: "अजिबात नाही",
+					value: "None",
+				},
+				{
+					label: "दररोज एक तास किंवा त्यापेक्षा कमी",
+					value: "An hour or less per day",
+				},
+				{
+					label: "दररोज साधारण २ तास",
+					value: "Approximately 2 hours per day",
+				},
+				{
+					label: "दररोज  साधारण ३ तास",
+					value: "Approximately 3 hours per day",
+				},
+				{
+					label: "दररोज ४ किंवा अधिक तास",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २१",
+			label:
+				"पिछले सप्ताह में, एक सामान्य दिन में, आपने केवल मनोरंजन के लिए, सक्रिय रूप से खेलने में कितना समय बिताया?",
+			kid_label:
+				"पिछले सप्ताह में, एक सामान्य दिन में, आपने केवल मनोरंजन के लिए, सक्रिय रूप से खेलने में कितना समय बिताया?",
+			adult_label:
+				"पिछले सप्ताह में, एक सामान्य दिन में, आपके बच्चे ने केवल मनोरंजन के लिए, सक्रिय रूप से खेलने में कितना समय बिताया?",
+			kid_sublabel:
+				"ये वे गतिविधियाँ हैं जो प्रतिस्पर्धा या प्रशिक्षण के लिए नहीं की गईं। उदाहरणों में मनोरंजन के लिए बॉल गेम्स खेलना, स्विमिंग पूल में खेलना, ट्रैम्पोलिन पर कूदना, पकड़म-पकड़ाई खेलना, लुका-छिपी खेलना, सैंडबॉक्स में खेलना, किले या ट्री हाउस बनाना आदि शामिल हैं।",
+			adult_sublabel:
+				"ये वे गतिविधियाँ हैं जो प्रतिस्पर्धा या प्रशिक्षण के लिए नहीं की गईं। उदाहरणों में मनोरंजन के लिए बॉल गेम्स खेलना, स्विमिंग पूल में खेलना, ट्रैम्पोलिन पर कूदना, पकड़म-पकड़ाई खेलना, लुका-छिपी खेलना, सैंडबॉक्स में खेलना, किले या ट्री हाउस बनाना आदि शामिल हैं।",
+			choices: [
+				{
+					label: "कुछ भी नहीं",
+					value: "None",
+				},
+				{
+					label: "प्रति दिन 1 घंटे से कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "प्रति दिन 1 से 2 घंटे",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "प्रति दिन 2 से 3 घंटे ",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "प्रति दिन 3 से 4 घंटे",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "प्रति दिन 4 घंटे या अधिक",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",

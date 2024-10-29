@@ -10,6 +10,22 @@ const S5Intro: LangSectionPayloadInterface = {
 			heading: "Organized Activities",
 			subheading: "Section 5",
 		},
+		"en-MW": {
+			heading: "Organized Activities",
+			subheading: "Section 5",
+		},
+		"ch-MW": {
+			heading: "Zochita zokonzedwa",
+			subheading: "Gawo 5",
+		},
+		"ma-IN": {
+			heading: "संघटित उपक्रम",
+			subheading: "विभाग ५",
+		},
+		"hi-IN": {
+			heading: "संगठित गतिविधियाँ",
+			subheading: "भाग 5",
+		},
 		"en-AE": {
 			heading: "Organized Activities",
 			subheading: "Section 5",

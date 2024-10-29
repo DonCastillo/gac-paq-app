@@ -12,6 +12,26 @@ const SuccessPage: LangPagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"en-MW": {
+			heading: "Success!",
+			description:
+				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
+		},
+		"ch-MW": {
+			heading: "Zatheka!",
+			description:
+				"Mwachita bwino, mafunso athera pamenepa. Mayankho anu atumizidwa.\n\nTikuthokoza chithandizo chomwe mwatipasa.",
+		},
+		"ma-IN": {
+			heading: "यश!",
+			description:
+				"खूप छान, तुम्ही प्रश्नावली पूर्ण केली. तुमची उत्तरे यशस्वीरित्या पाठवली गेली आहेत. तुमच्या मदतीबद्दल धन्यवाद!",
+		},
+		"hi-IN": {
+			heading: "सफलता!",
+			description:
+				"बहुत अच्छा! आपने प्रश्नावली पूरी कर ली है। आपके जवाब भेज दिए गए हैं। आपकी मदद के लिए धन्यवाद!",
+		},
 		"en-AE": {
 			heading: "Success!",
 			description:

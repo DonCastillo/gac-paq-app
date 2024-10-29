@@ -15,6 +15,38 @@ const S4Preamble: LangPreamblePayloadInterface = {
 				adult: "This section is about how your child goes to different places.",
 			},
 		},
+		"en-MW": {
+			heading: "Transportation",
+			subheading: "Section 4",
+			description: {
+				kid: "This section is about how you go to different places.",
+				adult: "This section is about how your child goes to different places.",
+			},
+		},
+		"ch-MW": {
+			heading: "Mayendedwe",
+			subheading: "Gawo 4",
+			description: {
+				kid: "Gawoli likunena za momwe umayendera popita Kumalo osiyanasiyana.",
+				adult: "Gawoli likunena za momwe mwana wanu amayendera popita Kumalo osiyanasiyana.",
+			},
+		},
+		"ma-IN": {
+			heading: "वाहतूक",
+			subheading: "विभाग ४",
+			description: {
+				kid: "तुम्ही वेगवेगळ्या ठिकाणी जाताना कसा प्रवास करता याविषयी हा विभाग आहे.",
+				adult: "तुमचे मूल वेगवेगळ्या ठिकाणी जाताना कसा प्रवास करते याविषयी हा विभाग आहे.",
+			},
+		},
+		"hi-IN": {
+			heading: "परिवहन",
+			subheading: "भाग 4",
+			description: {
+				kid: "यह अनुभाग इस बारे में है कि आप विभिन्न स्थानों पर कैसे जाते हैं।",
+				adult: "यह अनुभाग इस बारे में है कि आपका बच्चा विभिन्न स्थानों पर कैसे जाता है।",
+			},
+		},
 		"en-AE": {
 			heading: "Transportation",
 			subheading: "Section 4",

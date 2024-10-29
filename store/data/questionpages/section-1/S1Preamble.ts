@@ -17,6 +17,42 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"en-MW": {
+			heading: "School",
+			subheading: "Section 1",
+			description: {
+				kid: "This section is about what you do during normal school hours, for example during physical education classes, recess, and lunch time.",
+				adult:
+					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
+			},
+		},
+		"ch-MW": {
+			heading: "Sukulu",
+			subheading: "Gawo loyamba",
+			description: {
+				kid: "Gawoli likunena za zinthu zomwe umachita panthawi yomwe uli ku sukulu monga nthawi ya maphunziro olimbikitsa thupi, nthawi yopuma kapena buleki.",
+				adult:
+					"Gawoli likunena za zinthu zomwe mwana wanu amachita panthawi yomwe ali ku sukulu monga nthawi ya maphunziro olimbikitsa thupi, nthawi yopuma kapena buleki.",
+			},
+		},
+		"ma-IN": {
+			heading: "शाळा",
+			subheading: "विभाग १",
+			description: {
+				kid: "हा विभाग, रोजच्या शालेय वेळेत, उदाहरणार्थ शारीरिक शिक्षणाच्या वर्गात, मधल्या सुट्टीत आणि दुपारच्या जेवणाच्या सुट्टीत, तुम्ही काय करता याविषयी आहे.",
+				adult:
+					"हा विभाग, तुमचे मूल रोज शाळेच्या वेळेत, उदाहरणार्थ शारीरिक शिक्षण वर्गात, मधल्या सुट्टीत आणि दुपारच्या जेवणाच्या सुट्टीत काय करते याबद्दल आहे.",
+			},
+		},
+		"hi-IN": {
+			heading: "स्कूल",
+			subheading: "भाग 1",
+			description: {
+				kid: "यह अनुभाग इस बारे में है कि आप सामान्य स्कूल घंटों के दौरान क्या करते हैं, उदाहरण के लिए पीटी की क्लास, अवकाश और दोपहर के भोजन के समय के दौरान।",
+				adult:
+					"यह अनुभाग इस बारे में है कि आपका बच्चा सामान्य स्कूल समय के दौरान क्या करता है, उदाहरण के लिए पीटी की क्लास, अवकाश और दोपहर के भोजन के समय के दौरान।",
+			},
+		},
 		"en-AE": {
 			heading: "School",
 			subheading: "Section 1",

@@ -10,6 +10,22 @@ const SocialEconomicsIntroKid: LangSectionPayloadInterface = {
 			heading: "About You",
 			subheading: "Section 8",
 		},
+		"en-MW": {
+			heading: "About You",
+			subheading: "Section 8",
+		},
+		"ch-MW": {
+			heading: "Za inu",
+			subheading: "Gawo 8",
+		},
+		"ma-IN": {
+			heading: "तुमच्याबद्दल",
+			subheading: "विभाग ८",
+		},
+		"hi-IN": {
+			heading: "आपके बारे में",
+			subheading: "भाग 8",
+		},
 		"en-AE": {
 			heading: "About You",
 			subheading: "Section 8",

@@ -4,6 +4,18 @@ const BackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Back",
 	},
+	"en-MW": {
+		label: "Back",
+	},
+	"ch-MW": {
+		label: "Bwererani",
+	},
+	"ma-IN": {
+		label: "पाठी",
+	},
+	"hi-IN": {
+		label: "वापस",
+	},
 	"en-AE": {
 		label: "Back",
 	},

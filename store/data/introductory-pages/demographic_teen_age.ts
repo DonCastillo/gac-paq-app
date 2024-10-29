@@ -43,6 +43,138 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old are you?",
+			kid_label: "How old are you?",
+			adult_label: "How old are you?",
+			choices: [
+				{
+					label: "12 years old",
+					value: "12",
+				},
+				{
+					label: "13 years old",
+					value: "13",
+				},
+				{
+					label: "14 years old",
+					value: "14",
+				},
+				{
+					label: "15 years old",
+					value: "15",
+				},
+				{
+					label: "16 years old",
+					value: "16",
+				},
+				{
+					label: "17 years old",
+					value: "17",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Mwalandilidwa!",
+			label: "Uli ndi dzaka zingati?",
+			kid_label: "Uli ndi dzaka zingati?",
+			adult_label: "Uli ndi dzaka zingati?",
+			choices: [
+				{
+					label: "Zaka 12",
+					value: "12",
+				},
+				{
+					label: "Zaka 13",
+					value: "13",
+				},
+				{
+					label: "Zaka 14",
+					value: "14",
+				},
+				{
+					label: "Zaka 15",
+					value: "15",
+				},
+				{
+					label: "Zaka 16",
+					value: "16",
+				},
+				{
+					label: "Zaka 17",
+					value: "17",
+				},
+			],
+		},
+		"ma-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपले स्वागत आहे!",
+			label: "तुमचे वय काय आहे?",
+			kid_label: "तुमचे वय काय आहे?",
+			adult_label: "तुमचे वय काय आहे?",
+			choices: [
+				{
+					label: "१२ वर्षे",
+					value: "12",
+				},
+				{
+					label: "१३ वर्षे",
+					value: "13",
+				},
+				{
+					label: "१४ वर्षे",
+					value: "14",
+				},
+				{
+					label: "१५ वर्षे",
+					value: "15",
+				},
+				{
+					label: "१६ वर्षे",
+					value: "16",
+				},
+				{
+					label: "१७ वर्षे",
+					value: "17",
+				},
+			],
+		},
+		"hi-IN": {
+			type: Question.QuestionDropdown,
+			heading: "आपका स्वागत है",
+			label: "आपकी उम्र क्या है?",
+			kid_label: "आपकी उम्र क्या है?",
+			adult_label: "आपकी उम्र क्या है?",
+			choices: [
+				{
+					label: "12 साल",
+					value: "12",
+				},
+				{
+					label: "13 साल",
+					value: "13",
+				},
+				{
+					label: "14 साल",
+					value: "14",
+				},
+				{
+					label: "15 साल",
+					value: "15",
+				},
+				{
+					label: "16 साल",
+					value: "16",
+				},
+				{
+					label: "17 साल",
+					value: "17",
+				},
+			],
+		},
 		"en-AE": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",
