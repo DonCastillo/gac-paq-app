@@ -35,6 +35,31 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old are you?",
+			kid_label: "How old are you?",
+			adult_label: "How old are you?",
+			choices: [
+				{
+					label: "8 years old",
+					value: "8",
+				},
+				{
+					label: "9 years old",
+					value: "9",
+				},
+				{
+					label: "10 years old",
+					value: "10",
+				},
+				{
+					label: "11 years old",
+					value: "11",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionDropdown,
 			heading: "Mwalandilidwa!",
