@@ -37,6 +37,33 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 17c - Wheeling",
+			label: "On a normal day, how much time did you wheel to places other than school or work?",
+			kid_label:
+				"On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label:
+				"On a normal day, how much time did your child wheel to places other than school or work?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 17c - Kukwera njinga",

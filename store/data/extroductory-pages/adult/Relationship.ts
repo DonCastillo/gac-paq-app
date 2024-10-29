@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-MW": {
+			type: Question.QuestionRadio,
+			heading: "Question 28",
+			label: "What is your relationship to the child?",
+			kid_label: "What is your relationship to the child?",
+			adult_label: "What is your relationship to the child?",
+			choices: [
+				{
+					label: "Father",
+					value: "Father",
+				},
+				{
+					label: "Mother",
+					value: "Mother",
+				},
+				{
+					label: "Grandfather",
+					value: "Grandfather",
+				},
+				{
+					label: "Grandmother",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor or guardian",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Other",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 28",

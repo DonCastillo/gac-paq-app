@@ -44,10 +44,21 @@ const blackListLanguages = [
 	"hi-IN",
 	"ma-IN",
 	"ch-MW",
+	"en-MW",
 ];
 
 const getImageBackground = (): any | null => {
-	const blackListLanguages = ["ne-NP", "sv-SE", "th-TH", "zh-CN", "fr-CA", "hi-IN", "ma-IN", "ch-MW"];
+	const blackListLanguages = [
+		"ne-NP",
+		"sv-SE",
+		"th-TH",
+		"zh-CN",
+		"fr-CA",
+		"hi-IN",
+		"ma-IN",
+		"ch-MW",
+		"en-MW",
+	];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
@@ -118,7 +129,17 @@ const getImageBackgroundStatus = (state: State): any | null => {
 };
 
 const getOptionImage = (image_ident: string): any | null => {
-	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "fr-CA", "ne-NP", "hi-IN", "ma-IN", "ch-MW"];
+	const blackListLanguages = [
+		"sv-SE",
+		"th-TH",
+		"zh-CN",
+		"fr-CA",
+		"ne-NP",
+		"hi-IN",
+		"ma-IN",
+		"ch-MW",
+		"en-MW",
+	];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";

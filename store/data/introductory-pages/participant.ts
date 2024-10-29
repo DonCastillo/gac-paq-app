@@ -16,6 +16,14 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"en-MW": {
+			type: Question.QuestionInput,
+			heading: "Welcome!",
+			label: "Please enter your Participant ID",
+			kid_label: "Please enter your Participant ID",
+			adult_label: "Please enter your Participant ID",
+			placeholder: "Participant ID Serial Number",
+		},
 		"ch-MW": {
 			type: Question.QuestionInput,
 			heading: "Mwalandilidwa!",
