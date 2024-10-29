@@ -26,11 +26,26 @@ const Languages: LanguageInterface[] = [
 	// 	flag_code: "CO",
 	// 	lang_code: "es-CO",
 	// },
-	// {
-	// 	name: "Hindi - India",
-	// 	flag_code: "IN",
-	// 	lang_code: "hi-IN",
-	// },
+	{
+		name: "Hindi - India",
+		flag_code: "IN",
+		lang_code: "hi-IN",
+	},
+	{
+		name: "Marathi - India",
+		flag_code: "IN",
+		lang_code: "ma-IN",
+	},
+	{
+		name: "English - Malawi",
+		flag_code: "MW",
+		lang_code: "en-MW",
+	},
+	{
+		name: "Chichewa - Malawi",
+		flag_code: "MW",
+		lang_code: "ch-MW",
+	},
 	// {
 	// 	name: "English - Malawi",
 	// 	flag_code: "MW",
