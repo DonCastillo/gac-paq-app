@@ -45,11 +45,11 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 7",
 			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo durante tus descansos?",
 			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus recreos o descansos?",
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo durante tus descansos?",
 			adult_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo durante sus recreos o descansos?",
+				"¿Cuál de las siguientes imágenes muestra lo que hace la mayor parte del tiempo su hija o hijo durante sus descansos?",
 			choices: [
 				{
 					label: "Sin moverte",
@@ -62,7 +62,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "easy_effort",
 				},
 				{
-					label: "Esfuerzo medio o fuerte",
+					label: "Esfuerzo medio o intenso",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},

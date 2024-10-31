@@ -46,11 +46,11 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 5",
 			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
 			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
 			adult_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo en la clase de educación física?",
+				"¿Cuál de las siguientes imágenes muestra lo que hace su hija o hijo la mayor parte del tiempo en la clase de educación física?",
 			choices: [
 				{
 					label: "Sin moverte",
@@ -63,7 +63,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "easy_effort",
 				},
 				{
-					label: "Esfuerzo medio o fuerte",
+					label: "Esfuerzo medio o intenso",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},

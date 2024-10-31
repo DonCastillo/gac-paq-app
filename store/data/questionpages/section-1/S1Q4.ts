@@ -42,9 +42,9 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 4",
-			label: "¿Cuánto tiempo duran tus clases de educación física?",
-			kid_label: "¿Cuánto tiempo duran tus clases de educación física?",
-			adult_label: "¿Cuánto tiempo duran las clases de educación física de su hija o hijo?",
+			label: "¿Cuánto duran tus clases de educación física?",
+			kid_label: "¿Cuánto duran tus clases de educación física?",
+			adult_label: "¿Cuánto duran sus clases de educación física?",
 			choices: [
 				{
 					label: "Menos de 30 minutos por clase",

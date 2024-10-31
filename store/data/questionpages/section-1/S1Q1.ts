@@ -30,9 +30,9 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 1",
-			label: "¿Fuiste a la escuela o colegio la semana pasada?",
-			kid_label: "¿Fuiste a la escuela o colegio la semana pasada?",
-			adult_label: "¿Fue su hija o hijo a la escuela o colegio la semana pasada?",
+			label: "¿Asististe a la escuela la semana pasada?",
+			kid_label: "¿Asististe a la escuela la semana pasada?",
+			adult_label: "¿Asistió su hija o hijo a la escuela la semana pasada?",
 			choices: [
 				{
 					label: "Sí",
