@@ -5,7 +5,7 @@ const TryAgainPhrase: LangPhraseInterface = {
 		label: "Try Again",
 	},
 	"es-CO": {
-		label: "Intentar de nuevo",
+		label: "Inténtalo de nuevo",
 	},
 	"en-MW": {
 		label: "Try Again",
