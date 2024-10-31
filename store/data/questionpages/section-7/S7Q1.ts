@@ -44,6 +44,41 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 23",
+			label: "Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
+			kid_label:
+				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
+			adult_label:
+				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasó su hija o hijo al aire libre?",
+			choices: [
+				{
+					label: "Nada",
+					value: "None",
+				},
+				{
+					label: "Menos de 1 hora al día",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 a menos de 2 horas al día",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 a menos de 3 horas al día",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 a menos de 4 horas al día",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 horas o más al día",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 23",
