@@ -4,6 +4,9 @@ const CompletePhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Complete",
 	},
+	"es-CO": {
+		label: "Completar",
+	},
 	"en-MW": {
 		label: "Complete",
 	},
