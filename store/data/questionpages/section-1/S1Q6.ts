@@ -47,6 +47,44 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 6",
+			label: "En un día escolar normal ¿Cuánto tiempo de recreo o descanso tienes?",
+			kid_label: "En un día escolar normal ¿Cuánto tiempo de recreo o descanso tienes?",
+			adult_label:
+				"En un día escolar normal ¿Cuánto tiempo de recreo o descanso tiene su hija o hijo?",
+			kid_sublabel:
+				"Esto significa el recreo o descanso y la hora de comer. Por favor, suma los tiempos; por ejemplo, dos recreos o descansos de 15 minutos por día y 30 minutos para comer sumarían 60 minutos",
+			adult_sublabel:
+				"Esto significa el recreo o descanso y la hora de comer. Por favor, sume los tiempos; por ejemplo, dos recreos o descansos de 15 minutos por día y 30 minutos para comer sumarían 60 minutos",
+			choices: [
+				{
+					label: "0 minutos",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 minutos",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 minutos",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minutos",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Más de 60 minutos",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "No sé",
+					value: "Don't know",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 6",
