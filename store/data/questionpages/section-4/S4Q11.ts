@@ -37,6 +37,34 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 17c - En ruedas",
+			label:
+				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			kid_label:
+				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			adult_label:
+				"En un día normal, ¿cuánto tiempo su hijo o hija se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio?",
+			choices: [
+				{
+					label: "10 minutos o menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Más de 30 minutos",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
