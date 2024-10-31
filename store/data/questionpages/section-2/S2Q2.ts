@@ -47,6 +47,44 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 9",
+			label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
+			kid_label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
+			adult_label:
+				"¿Cuántos días de la semana pasada realizó su hija o hijo tareas del hogar o quehaceres?",
+			choices: [
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 9",
