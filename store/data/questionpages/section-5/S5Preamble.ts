@@ -21,9 +21,9 @@ const S5Preamble: LangPreamblePayloadInterface = {
 			heading: "Actividades organizadas",
 			subheading: "Sección 5",
 			description: {
-				kid: "Esta sección trata sobre las actividades organizadas físicamente activas y los deportes. Incluyen las actividades que realizas fuera de la escuela o colegio (por ejemplo, algunas escuelas o colegios tienen ligas deportivas o actividades extraescolares). También se incluyen las ligas deportivas y las clases de actividades como natación, gimnasia, danza y kárate fuera de la escuela o colegio.",
+				kid: "Esta sección trata de las actividades organizadas físicamente activas y los deportes. Incluyen las actividades que realizas después del colegio (por ejemplo, algunos colegios tienen ligas deportivas o actividades 2 extraescolares). También se incluyen las ligas deportivas y las clases de actividades como natación, gimnasia, danza y kárate fuera del colegio. ",
 				adult:
-					"Esta sección trata sobre las actividades organizadas físicamente activas y los deportes. Incluyen las actividades que realiza su hija o hijo fuera de la escuela o colegio (por ejemplo, algunas escuelas o colegios tienen ligas deportivas o actividades extraescolares). También se incluye las ligas deportivas y las clases de actividades como natación, gimnasia, danza y kárate fuera de la escuela o colegio.",
+					"Esta sección trata de las actividades organizadas físicamente activas y los deportes. Incluyen las actividades que realiza después del colegio (por ejemplo, algunos colegios tienen ligas deportivas o actividades 2 extraescolares). También se incluyen las ligas deportivas y las clases de actividades como natación, gimnasia, danza y kárate fuera del colegio.",
 			},
 		},
 		"en-MW": {
