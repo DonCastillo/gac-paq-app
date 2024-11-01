@@ -46,11 +46,11 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 14",
 			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			adult_label:
-				"¿Cuál de las siguientes opciones se parece más a lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
+				"¿Cuál de las siguientes opciones muestra lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
 			choices: [
 				{
 					label: "Sin moverte",
@@ -63,7 +63,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "easy_effort",
 				},
 				{
-					label: "Esfuerzo medio o fuerte",
+					label: "Esfuerzo medio o intenso",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},
