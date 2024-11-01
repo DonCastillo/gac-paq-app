@@ -45,11 +45,11 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 11",
 			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
+				"¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
 			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
+				"¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
 			adult_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas del hogar o quehaceres?",
+				"¿Cuál de las siguientes afirmaciones describe lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas domésticas?",
 			choices: [
 				{
 					label: "Sin moverte",
@@ -62,7 +62,7 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "easy_effort",
 				},
 				{
-					label: "Esfuerzo medio o fuerte",
+					label: "Esfuerzo medio o intenso",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},

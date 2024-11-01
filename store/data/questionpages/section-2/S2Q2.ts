@@ -50,10 +50,9 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 9",
-			label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
-			kid_label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
-			adult_label:
-				"¿Cuántos días de la semana pasada realizó su hija o hijo tareas del hogar o quehaceres?",
+			label: "¿Cuántos días de la semana pasada realizaste tareas domésticas?",
+			kid_label: "¿Cuántos días de la semana pasada realizaste tareas domésticas?",
+			adult_label: "¿Cuántos días de la semana pasada realizó su hija o hijo tareas domésticas?",
 			choices: [
 				{
 					label: "1 día",

@@ -42,27 +42,31 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 10",
 			label:
-				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			kid_label:
-				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			adult_label:
-				"En los días que su hija o hijo realizó tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasó haciéndolas a lo largo del día?",
+				"En los días que su hija o hijo hizo tareas domésticas durante la semana pasada, ¿cuánto tiempo pasó haciéndolas a lo largo del día?",
 			choices: [
 				{
-					label: "15 minutos o menos al día",
+					label: "15 minutos o menos por día",
 					value: "15 minutes or less per day",
 				},
 				{
-					label: "16 - 30 minutos al día",
+					label: "16 - 30 minutos por día",
 					value: "16 - 30 minutes per day",
 				},
 				{
-					label: "31 - 60 minutos al día",
+					label: "31 - 60 minutos por día",
 					value: "31 - 60 minutes per day",
 				},
 				{
-					label: "Más de 60 minutos al día",
-					value: "Over 60 minutes per day",
+					label: "61 - 90 minutos por día",
+					value: "61 - 90 minutes per day",
+				},
+				{
+					label: "91 minutos o más por día",
+					value: "91 minutes or more per day",
 				},
 			],
 		},
