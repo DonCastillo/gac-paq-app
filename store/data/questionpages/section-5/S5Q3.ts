@@ -49,15 +49,15 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				"En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
 			choices: [
 				{
-					label: "30 minutos o menos al día",
+					label: "30 minutos o menos por día",
 					value: "30 minutes or less per day",
 				},
 				{
-					label: "31 - 60 minutos al día",
+					label: "31 - 60 minutos por día",
 					value: "31 to 60 minutes per day",
 				},
 				{
-					label: "1 a 1:30 horas al día",
+					label: "1 a 1:30 horas por día Inciso",
 					value: "1 to 1 and a half hours per day",
 				},
 				{
