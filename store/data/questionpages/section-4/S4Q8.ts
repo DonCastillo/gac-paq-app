@@ -52,11 +52,11 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b - Caminando",
 			label:
-				"¿Cuántos días caminaste para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+				"¿Cuántos días caminaste para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
 			kid_label:
-				"¿Cuántos días caminaste para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
+				"¿Cuántos días caminaste para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
 			adult_label:
-				"¿Cuántos días su hija o hijo caminó para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio la semana pasada?",
+				"¿Cuántos días caminó su hija o hijo para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
 			choices: [
 				{
 					label: "1 día",

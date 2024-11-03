@@ -76,11 +76,11 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 15",
-			label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
-			kid_label: "¿Cómo fuiste a la escuela o colegio la semana pasada?",
+			label: "¿Cómo fuiste a la escuela la semana pasada?",
+			kid_label: "¿Cómo fuiste a la escuela la semana pasada?",
 			adult_label: "¿Cómo fue su hija o hijo a la escuela o colegio la semana pasada?",
-			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
-			adult_sublabel: "Seleccione el modo de transporte que más utilizó",
+			kid_sublabel: "Selecciona el modo que más utilizaste",
+			adult_sublabel: "Seleccione el modo que más utilizó",
 			choices: [
 				{
 					label: "Caminando",
@@ -88,12 +88,11 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "walking",
 				},
 				{
-					label: "Sobre ruedas",
+					label: "Desplazarse sobre ruedas",
 					value: "Wheeling",
 					image_ident: "wheeling",
-
 					sublabel: {
-						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines",
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
 						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
 					},
 				},
@@ -106,14 +105,13 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					label: "Transporte público",
 					value: "Public transit",
 					image_ident: "public_transit",
-
 					sublabel: {
 						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
 						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
 					},
 				},
 				{
-					label: "Automóvil, taxi, camioneta o motocicleta",
+					label: "Carro, taxi, camión o motocicleta",
 					value: "Car, taxi, truck, or motorcycle",
 					image_ident: "car",
 				},
@@ -122,8 +120,8 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					value: "Other",
 					image_ident: "other",
 					sublabel: {
-						kid: "por ejemplo, caminando y autobús",
-						adult: "por ejemplo, caminando y autobús",
+						kid: "por ejemplo, caminando y bus",
+						adult: "por ejemplo, caminando y bus",
 					},
 				},
 				{
@@ -132,7 +130,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "staying_home",
 					label_mode: {
 						kid: "Recibo educación en casa o asisto a un internado",
-						adult: "Mi hija o hijo recibe educación en casa o asiste a un internado",
+						adult: "Recibo educación en casa o asisto a un internado",
 					},
 				},
 			],

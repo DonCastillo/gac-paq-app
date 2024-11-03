@@ -42,10 +42,9 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 16c",
-			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
-			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
-			adult_label:
-				"¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo o voluntariado?",
+			label: "¿Cuánto tiempo necesitas normalmente para ir a la escuela?",
+			kid_label: "¿Cuánto tiempo necesitas normalmente para ir a la escuela?",
+			adult_label: "¿Cuánto tiempo necesitó su hija o hijo normalmente para ir a la escuela?",
 			choices: [
 				{
 					label: "10 minutos o menos",

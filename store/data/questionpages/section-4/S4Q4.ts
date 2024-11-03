@@ -58,11 +58,11 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 16",
-			label: "¿Cómo fuiste al trabajo o voluntariado la semana pasada?",
-			kid_label: "¿Cómo fuiste al trabajo o voluntariado la semana pasada?",
-			adult_label: "¿Cómo fue su hija o hijo al trabajo o voluntariado la semana pasada?",
-			kid_sublabel: "Selecciona el modo de transporte que más utilizaste",
-			adult_sublabel: "Selecciona el modo de transporte que más utilizó",
+			label: "¿Cómo fuiste al trabajo la semana pasada?",
+			kid_label: "¿Cómo fuiste al trabajo la semana pasada?",
+			adult_label: "¿Cómo fue su hija o hijo al trabajo la semana pasada?",
+			kid_sublabel: "Seleccione el modo que más utilizaste",
+			adult_sublabel: "Seleccione el modo que más utilizó",
 			choices: [
 				{
 					label: "Caminando",
@@ -70,12 +70,12 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "walking",
 				},
 				{
-					label: "Sobre ruedas",
+					label: "Desplazarse sobre ruedas",
 					value: "Wheeling",
 					image_ident: "wheeling",
 					sublabel: {
-						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
-						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patines",
 					},
 				},
 				{
@@ -88,7 +88,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "Automóvil, taxi, camioneta o motocicleta",
+					label: "Carro, taxi, camión o motocicleta",
 					value: "Car, taxi, truck, or motorcycle",
 					image_ident: "car",
 				},
