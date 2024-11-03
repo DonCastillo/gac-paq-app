@@ -54,34 +54,34 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",
 			label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
 			kid_label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
 			adult_label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+				"En la última semana, en un día promedio, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
 			choices: [
 				{
 					label: "Nada",
 					value: "None",
 				},
 				{
-					label: "Menos de 1 hora al día",
+					label: "Menos de 1 hora por día",
 					value: "Less than 1 hour per day",
 				},
 				{
-					label: "De 1 a menos de 2 horas al día",
+					label: "De 1 a menos de 2 horas por día",
 					value: "1 to less than 2 hours per day",
 				},
 				{
-					label: "De 2 a menos de 3 horas al día",
+					label: "De 2 a menos de 3 horas por día",
 					value: "2 to less than 3 hours per day",
 				},
 				{
-					label: "De 3 a menos de 4 horas al día",
+					label: "De 3 a menos de 4 horas por día",
 					value: "3 to less than 4 hours per day",
 				},
 				{
-					label: "4 horas o más al día",
+					label: "4 horas o más por día",
 					value: "4 hours or more per day",
 				},
 			],
