@@ -10,6 +10,10 @@ const S4Intro: LangSectionPayloadInterface = {
 			heading: "Transportation",
 			subheading: "Section 4",
 		},
+		"es-CO": {
+			heading: "Transporte",
+			subheading: "Sección 4",
+		},
 		"en-MW": {
 			heading: "Transportation",
 			subheading: "Section 4",

@@ -21,11 +21,11 @@ const Languages: LanguageInterface[] = [
 		flag_code: "CN",
 		lang_code: "zh-CN",
 	},
-	// {
-	// 	name: "Spanish - Colombia",
-	// 	flag_code: "CO",
-	// 	lang_code: "es-CO",
-	// },
+	{
+		name: "Spanish - Colombia",
+		flag_code: "CO",
+		lang_code: "es-CO",
+	},
 	{
 		name: "Hindi - India",
 		flag_code: "IN",
@@ -46,16 +46,6 @@ const Languages: LanguageInterface[] = [
 		flag_code: "MW",
 		lang_code: "ch-MW",
 	},
-	// {
-	// 	name: "English - Malawi",
-	// 	flag_code: "MW",
-	// 	lang_code: "en-MW",
-	// },
-	// {
-	// 	name: "English - Mexico",
-	// 	flag_code: "MX",
-	// 	lang_code: "en-MX",
-	// },
 	{
 		name: "Spanish - Mexico",
 		flag_code: "MX",
@@ -66,36 +56,6 @@ const Languages: LanguageInterface[] = [
 		flag_code: "NP",
 		lang_code: "ne-NP",
 	},
-	// {
-	// 	name: "Fulah - Nigeria",
-	// 	flag_code: "NG",
-	// 	lang_code: "ff-NG",
-	// },
-	// {
-	// 	name: "Hausa - Nigeria",
-	// 	flag_code: "NG",
-	// 	lang_code: "ha-NG",
-	// },
-	// {
-	// 	name: "Igbo - Nigeria",
-	// 	flag_code: "NG",
-	// 	lang_code: "ig-NG",
-	// },
-	// {
-	// 	name: "Kanuri - Nigeria",
-	// 	flag_code: "NG",
-	// 	lang_code: "kr-NG",
-	// },
-	// {
-	// 	name: "Yoruba - Nigeria",
-	// 	flag_code: "NG",
-	// 	lang_code: "yo-NG",
-	// },
-	// {
-	// 	name: "English - Papua New Guinea",
-	// 	flag_code: "PG",
-	// 	lang_code: "en-PG",
-	// },
 	{
 		name: "Spanish - Spain",
 		flag_code: "ES",

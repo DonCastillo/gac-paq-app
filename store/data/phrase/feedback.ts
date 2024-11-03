@@ -4,6 +4,9 @@ const FeedbackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Feedback",
 	},
+	"es-CO": {
+		label: "Comentarios",
+	},
 	"en-MW": {
 		label: "Feedback",
 	},
