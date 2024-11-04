@@ -45,6 +45,7 @@ const blackListLanguages = [
 	"ma-IN",
 	"ch-MW",
 	"en-MW",
+	"es-CO",
 ];
 
 const getImageBackground = (): any | null => {
@@ -58,6 +59,7 @@ const getImageBackground = (): any | null => {
 		"ma-IN",
 		"ch-MW",
 		"en-MW",
+		"es-CO",
 	];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
@@ -134,11 +136,6 @@ const getOptionImage = (image_ident: string): any | null => {
 		"th-TH",
 		"zh-CN",
 		"fr-CA",
-		"ne-NP",
-		"hi-IN",
-		"ma-IN",
-		"ch-MW",
-		"en-MW",
 	];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;

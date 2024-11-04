@@ -31,6 +31,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 24",
+			label: "¿Cuál es el sexo de su hija o hijo?",
+			kid_label: "¿Cuál es el sexo de su hija o hijo?",
+			adult_label: "¿Cuál es el sexo de su hija o hijo?",
+			choices: [
+				{
+					label: "Mujer",
+					value: "Female",
+				},
+				{
+					label: "Hombre",
+					value: "Male",
+				},
+				{
+					label: "Prefiere no contestar",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 24",
