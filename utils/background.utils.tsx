@@ -136,7 +136,6 @@ const getOptionImage = (image_ident: string): any | null => {
 		"th-TH",
 		"zh-CN",
 		"fr-CA",
-		"ne-NP",
 	];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
