@@ -4,6 +4,9 @@ const PleaseSpecifyPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Please specify",
 	},
+	"es-CO": {
+		label: "Por favor especifica",
+	},
 	"en-MW": {
 		label: "Please specify",
 	},
