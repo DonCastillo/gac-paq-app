@@ -137,8 +137,6 @@ const getOptionImage = (image_ident: string): any | null => {
 		"zh-CN",
 		"fr-CA",
 		"ne-NP",
-		"hi-IN",
-		"ma-IN",
 		"ch-MW",
 		"en-MW",
 	];
