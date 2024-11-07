@@ -60,7 +60,6 @@ const getImageBackground = (): any | null => {
 		"ma-IN",
 		"ch-MW",
 		"en-MW",
-		"es-CO",
 		"en-NG",
 	];
 	const settings = store.getState().settings;
