@@ -46,6 +46,7 @@ const blackListLanguages = [
 	"ch-MW",
 	"en-MW",
 	"es-CO",
+	"en-NG",
 ];
 
 const getImageBackground = (): any | null => {
@@ -60,6 +61,7 @@ const getImageBackground = (): any | null => {
 		"ch-MW",
 		"en-MW",
 		"es-CO",
+		"en-NG",
 	];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
@@ -70,8 +72,13 @@ const getImageBackground = (): any | null => {
 	const section = getSectionType(settings.currentPage.section ?? "question");
 	const screen = getScreenType(settings.currentPage.screen ?? "page");
 
-	// some languages don't have images yet
+	// modify conditional statement here if 2 or more languages have the same background images
+	if (language === "en-NG") {
+		language = "en-MW";
+		region = "MW";
+	}
 
+	// some languages don't have images yet
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
 		region = "CA";
@@ -131,17 +138,18 @@ const getImageBackgroundStatus = (state: State): any | null => {
 };
 
 const getOptionImage = (image_ident: string): any | null => {
-	const blackListLanguages = [
-		"sv-SE",
-		"th-TH",
-		"zh-CN",
-		"fr-CA",
-	];
+	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "fr-CA"];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
 	let region = language.split("-")[1].toUpperCase();
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
+
+	// modify conditional statement here if 2 or more languages have the same images
+	if (language === "en-NG") {
+		language = "en-MW";
+		region = "MW";
+	}
 
 	// some languages don't have images yet
 	if (blackListLanguages.includes(language)) {
