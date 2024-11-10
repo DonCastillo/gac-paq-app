@@ -51,7 +51,6 @@ const blackListLanguages = [
 
 const getImageBackground = (): any | null => {
 	const blackListLanguages = [
-		"ne-NP",
 		"sv-SE",
 		"th-TH",
 		"zh-CN",
