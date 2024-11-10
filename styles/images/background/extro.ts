@@ -299,6 +299,56 @@ const ExtroBackground = {
 			},
 		},
 	},
+	IN: {
+		school: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/school/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/school/tablet/extro.webp"),
+			},
+		},
+		household: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/household/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/household/tablet/extro.webp"),
+			},
+		},
+		work: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/work/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/work/tablet/extro.webp"),
+			},
+		},
+		transportation: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/transportation/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/transportation/tablet/extro.webp"),
+			},
+		},
+		organized: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/organized/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/organized/tablet/extro.webp"),
+			},
+		},
+		play: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/play/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/play/tablet/extro.webp"),
+			},
+		},
+		outdoors: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/outdoors/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/outdoors/tablet/extro.webp"),
+			},
+		},
+		extro: {
+			teen: {
+				phone: require("assets/images/teen/IN/sections/extro/phone/extro.webp"),
+				tablet: require("assets/images/teen/IN/sections/extro/tablet/extro.webp"),
+			},
+		},
+	},
 };
 
 export default ExtroBackground;

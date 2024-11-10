@@ -56,8 +56,6 @@ const getImageBackground = (): any | null => {
 		"th-TH",
 		"zh-CN",
 		"fr-CA",
-		"hi-IN",
-		"ma-IN",
 		"ch-MW",
 		"en-MW",
 		"en-NG",
