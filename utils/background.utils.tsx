@@ -92,7 +92,7 @@ const getImageBackground = (): any | null => {
 		}
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
-				return ExtroBackground[region][ident.split("_extro")[0]][mode][platform];
+				return IntroBackground[region][ident.split("_extro")[0]][mode][platform];
 			}
 		}
 	}
