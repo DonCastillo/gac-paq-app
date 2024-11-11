@@ -55,9 +55,6 @@ const getImageBackground = (): any | null => {
 		"th-TH",
 		"zh-CN",
 		"fr-CA",
-		"ch-MW",
-		"en-MW",
-		"en-NG",
 	];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
