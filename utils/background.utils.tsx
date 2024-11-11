@@ -22,7 +22,6 @@ import Section from "constants/section.enum";
 import GenericBackground from "styles/images/background/generic";
 import Screen from "constants/screen.enum";
 import IntroBackground from "styles/images/background/intro";
-import ExtroBackground from "styles/images/background/extro";
 import PhysicalEducationOptions from "styles/images/options/physical_education";
 import BreaksOptions from "styles/images/options/breaks";
 import ChoresOptions from "styles/images/options/chores";
