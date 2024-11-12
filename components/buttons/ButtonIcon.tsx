@@ -7,9 +7,10 @@ interface Props {
 	name: string;
 	size?: number;
 	onPress: () => void;
+	accessibilityLabel?: string;
 }
 
-const ButtonIcon = ({ type, color, name, size, onPress }: Props): React.ReactElement => {
+const ButtonIcon = ({ type, color, name, size, onPress, accessibilityLabel }: Props): React.ReactElement => {
 	return (
 		<Icon
 			type={type ?? "ionicons"}
@@ -17,6 +18,7 @@ const ButtonIcon = ({ type, color, name, size, onPress }: Props): React.ReactEle
 			size={size ?? 50}
 			color={color}
 			onPress={onPress}
+			accessibilityLabel={accessibilityLabel}
 		/>
 	);
 };
