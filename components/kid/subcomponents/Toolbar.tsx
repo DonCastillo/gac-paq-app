@@ -153,6 +153,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		if (enableNarration) {
 			NarrationButtonComponent = (
 				<Icon
+					accessibilityLabel="Stop narration"
 					name="volume-2"
 					size={ICON_SIZE}
 					type={"simple-line-icon"}
@@ -172,6 +173,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		} else {
 			NarrationButtonComponent = (
 				<Icon
+					accessibilityLabel="Play narration"
 					name="volume-off"
 					size={ICON_SIZE}
 					type={"simple-line-icon"}
