@@ -19,7 +19,7 @@ import {
 import { Audio } from "expo-av";
 import { getAudioURI } from "utils/narration";
 
-const ICON_SIZE = 30;
+const ICON_SIZE = 35;
 
 interface PropsInterface {
 	sectionTitle?: string;

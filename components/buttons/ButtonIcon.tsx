@@ -15,7 +15,7 @@ const ButtonIcon = ({ type, color, name, size, onPress, accessibilityLabel }: Pr
 		<Icon
 			type={type ?? "ionicons"}
 			name={name}
-			size={size ?? 50}
+			size={size ?? 60}
 			color={color}
 			onPress={onPress}
 			accessibilityLabel={accessibilityLabel}

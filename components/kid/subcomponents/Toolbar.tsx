@@ -19,7 +19,7 @@ import {
 } from "store/settings/settingsSlice";
 import { getAudioURI } from "utils/narration";
 
-const ICON_SIZE = 30;
+const ICON_SIZE = 35;
 
 interface PropsInterface {
 	sectionTitle?: string;
