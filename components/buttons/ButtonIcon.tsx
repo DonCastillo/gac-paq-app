@@ -10,7 +10,14 @@ interface Props {
 	accessibilityLabel?: string;
 }
 
-const ButtonIcon = ({ type, color, name, size, onPress, accessibilityLabel }: Props): React.ReactElement => {
+const ButtonIcon = ({
+	type,
+	color,
+	name,
+	size,
+	onPress,
+	accessibilityLabel,
+}: Props): React.ReactElement => {
 	return (
 		<Icon
 			type={type ?? "ionicons"}
