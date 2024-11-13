@@ -10,6 +10,12 @@ export const getNarrationPayload = createAsyncThunk(
 		if (mode === undefined || mode === null) {
 			return null;
 		}
+
+		// modify conditional statement here if 2 or more languages are the same translations
+		if (language === "en-NG") {
+			language = "en-MW";
+		}
+
 		const finalMode = mode === Mode.Adult ? "adult" : "kid";
 		const { settings } = getState() as any;
 		const { directusAccessToken, directusBaseEndpoint } = settings as SettingsSliceInterface;

@@ -57,6 +57,11 @@ const Languages: LanguageInterface[] = [
 		lang_code: "ne-NP",
 	},
 	{
+		name: "English - Nigeria",
+		flag_code: "NG",
+		lang_code: "en-NG",
+	},
+	{
 		name: "Spanish - Spain",
 		flag_code: "ES",
 		lang_code: "es-ES",

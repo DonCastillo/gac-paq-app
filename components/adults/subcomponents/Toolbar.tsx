@@ -19,7 +19,7 @@ import {
 import { Audio } from "expo-av";
 import { getAudioURI } from "utils/narration";
 
-const ICON_SIZE = 30;
+const ICON_SIZE = 35;
 
 interface PropsInterface {
 	sectionTitle?: string;
@@ -155,6 +155,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		if (enableNarration) {
 			NarrationButtonComponent = (
 				<Icon
+					accessibilityLabel="Stop narration"
 					name="volume-up"
 					size={ICON_SIZE}
 					color={"#fff"}
@@ -173,6 +174,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		} else {
 			NarrationButtonComponent = (
 				<Icon
+					accessibilityLabel="Play narration"
 					name="volume-off"
 					size={ICON_SIZE}
 					color={"#fff"}
