@@ -49,6 +49,7 @@ const BackAndSubmitNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactEle
 					type="font-awesome"
 					color={colorTheme ?? "#fff"}
 					onPress={() => onPrev !== undefined && onPrev()}
+					accessibilityLabel="Go to the previous page"
 				/>
 			)}
 

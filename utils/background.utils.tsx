@@ -22,7 +22,6 @@ import Section from "constants/section.enum";
 import GenericBackground from "styles/images/background/generic";
 import Screen from "constants/screen.enum";
 import IntroBackground from "styles/images/background/intro";
-import ExtroBackground from "styles/images/background/extro";
 import PhysicalEducationOptions from "styles/images/options/physical_education";
 import BreaksOptions from "styles/images/options/breaks";
 import ChoresOptions from "styles/images/options/chores";
@@ -30,37 +29,8 @@ import VolunteeringOptions from "styles/images/options/volunteering";
 import type State from "constants/state.enum";
 import StatusBackground from "styles/images/background/status";
 
-const blackListLanguages = [
-	"ne-NP",
-	"pt-BR",
-	"sv-SE",
-	"th-TH",
-	"zh-CN",
-	"es-ES",
-	"es-MX",
-	"fr-CA",
-	"ar-AE",
-	"en-AE",
-	"hi-IN",
-	"ma-IN",
-	"ch-MW",
-	"en-MW",
-	"es-CO",
-];
-
 const getImageBackground = (): any | null => {
-	const blackListLanguages = [
-		"ne-NP",
-		"sv-SE",
-		"th-TH",
-		"zh-CN",
-		"fr-CA",
-		"hi-IN",
-		"ma-IN",
-		"ch-MW",
-		"en-MW",
-		"es-CO",
-	];
+	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "fr-CA"];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
@@ -70,8 +40,13 @@ const getImageBackground = (): any | null => {
 	const section = getSectionType(settings.currentPage.section ?? "question");
 	const screen = getScreenType(settings.currentPage.screen ?? "page");
 
-	// some languages don't have images yet
+	// modify conditional statement here if 2 or more languages have the same background images
+	if (language === "en-NG") {
+		language = "en-MW";
+		region = "MW";
+	}
 
+	// some languages don't have images yet
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
 		region = "CA";
@@ -92,7 +67,7 @@ const getImageBackground = (): any | null => {
 		}
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
-				return ExtroBackground[region][ident.split("_extro")[0]][mode][platform];
+				return IntroBackground[region][ident.split("_extro")[0]][mode][platform];
 			}
 		}
 	}
@@ -116,6 +91,7 @@ const getImageBackground = (): any | null => {
 };
 
 const getImageBackgroundStatus = (state: State): any | null => {
+	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "fr-CA"];
 	const settings = store.getState().settings;
 	let language = settings.language ?? "en-CA";
 	let region = language.split("-")[1].toUpperCase();
@@ -131,17 +107,18 @@ const getImageBackgroundStatus = (state: State): any | null => {
 };
 
 const getOptionImage = (image_ident: string): any | null => {
-	const blackListLanguages = [
-		"sv-SE",
-		"th-TH",
-		"zh-CN",
-		"fr-CA",
-	];
+	const blackListLanguages = ["sv-SE", "th-TH", "zh-CN", "fr-CA"];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
 	let region = language.split("-")[1].toUpperCase();
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
+
+	// modify conditional statement here if 2 or more languages have the same images
+	if (language === "en-NG") {
+		language = "en-MW";
+		region = "MW";
+	}
 
 	// some languages don't have images yet
 	if (blackListLanguages.includes(language)) {

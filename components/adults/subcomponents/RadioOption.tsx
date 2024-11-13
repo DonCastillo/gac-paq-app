@@ -109,7 +109,7 @@ const RadioOption = ({
 											: 14
 										: language === "ar-AE" && currentPage.page.ident !== "language_location"
 											? 19
-											: 16,
+											: 18,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
 								lineHeight: moderateScale(
@@ -119,7 +119,7 @@ const RadioOption = ({
 											: 18
 										: language === "ar-AE" && currentPage.page.ident !== "language_location"
 											? 23
-											: 20,
+											: 22,
 									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 								),
 								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
@@ -138,21 +138,21 @@ const RadioOption = ({
 									fontSize: moderateScale(
 										device.isTablet
 											? language === "ar-AE"
-												? 15
-												: 12
+												? 17
+												: 16
 											: language === "ar-AE"
-												? 15
-												: 12,
+												? 17
+												: 16,
 										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 									),
 									lineHeight: moderateScale(
 										device.isTablet
 											? language === "ar-AE"
-												? 19
-												: 16
+												? 21
+												: 20
 											: language === "ar-AE"
-												? 19
-												: 16,
+												? 21
+												: 20,
 										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 									),
 									writingDirection: language === "ar-AE" ? "rtl" : "ltr",

@@ -163,6 +163,88 @@ const IntroBackground = {
 			},
 		},
 	},
+	CO: {
+		school: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/school/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/school/tablet/intro.webp"),
+			},
+		},
+		household: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/household/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/household/tablet/intro.webp"),
+			},
+		},
+		work: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/work/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/work/tablet/intro.webp"),
+			},
+		},
+		transportation: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/transportation/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/transportation/tablet/intro.webp"),
+			},
+		},
+		organized: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/organized/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/organized/tablet/intro.webp"),
+			},
+		},
+		play: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/play/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/play/tablet/intro.webp"),
+			},
+		},
+		outdoors: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/outdoors/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/outdoors/tablet/intro.webp"),
+			},
+		},
+		extro: {
+			kid: {
+				phone: require("assets/images/kid/CO/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/kid/CO/sections/extro/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/CO/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/teen/CO/sections/extro/tablet/intro.webp"),
+			},
+		},
+	},
 	BR: {
 		school: {
 			kid: {
@@ -406,6 +488,252 @@ const IntroBackground = {
 			teen: {
 				phone: require("assets/images/teen/AE/sections/extro/phone/intro.webp"),
 				tablet: require("assets/images/teen/AE/sections/extro/tablet/intro.webp"),
+			},
+		},
+	},
+	IN: {
+		school: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/school/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/school/tablet/intro.webp"),
+			},
+		},
+		household: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/household/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/household/tablet/intro.webp"),
+			},
+		},
+		work: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/work/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/work/tablet/intro.webp"),
+			},
+		},
+		transportation: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/transportation/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/transportation/tablet/intro.webp"),
+			},
+		},
+		organized: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/organized/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/organized/tablet/intro.webp"),
+			},
+		},
+		play: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/play/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/play/tablet/intro.webp"),
+			},
+		},
+		outdoors: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/outdoors/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/outdoors/tablet/intro.webp"),
+			},
+		},
+		extro: {
+			kid: {
+				phone: require("assets/images/kid/IN/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/kid/IN/sections/extro/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/IN/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/teen/IN/sections/extro/tablet/intro.webp"),
+			},
+		},
+	},
+	NP: {
+		school: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/school/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/school/tablet/intro.webp"),
+			},
+		},
+		household: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/household/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/household/tablet/intro.webp"),
+			},
+		},
+		work: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/work/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/work/tablet/intro.webp"),
+			},
+		},
+		transportation: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/transportation/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/transportation/tablet/intro.webp"),
+			},
+		},
+		organized: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/organized/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/organized/tablet/intro.webp"),
+			},
+		},
+		play: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/play/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/play/tablet/intro.webp"),
+			},
+		},
+		outdoors: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/outdoors/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/outdoors/tablet/intro.webp"),
+			},
+		},
+		extro: {
+			kid: {
+				phone: require("assets/images/kid/NP/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/kid/NP/sections/extro/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/NP/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/teen/NP/sections/extro/tablet/intro.webp"),
+			},
+		},
+	},
+	MW: {
+		school: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/school/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/school/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/school/tablet/intro.webp"),
+			},
+		},
+		household: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/household/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/household/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/household/tablet/intro.webp"),
+			},
+		},
+		work: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/work/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/work/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/work/tablet/intro.webp"),
+			},
+		},
+		transportation: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/transportation/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/transportation/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/transportation/tablet/intro.webp"),
+			},
+		},
+		organized: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/organized/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/organized/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/organized/tablet/intro.webp"),
+			},
+		},
+		play: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/play/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/play/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/play/tablet/intro.webp"),
+			},
+		},
+		outdoors: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/outdoors/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/outdoors/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/outdoors/tablet/intro.webp"),
+			},
+		},
+		extro: {
+			kid: {
+				phone: require("assets/images/kid/MW/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/kid/MW/sections/extro/tablet/intro.webp"),
+			},
+			teen: {
+				phone: require("assets/images/teen/MW/sections/extro/phone/intro.webp"),
+				tablet: require("assets/images/teen/MW/sections/extro/tablet/intro.webp"),
 			},
 		},
 	},

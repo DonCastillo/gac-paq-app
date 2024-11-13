@@ -17,6 +17,7 @@ const ProgressBar = ({ color }: PropsInterface): React.ReactElement => {
 				borderWidth={2}
 				borderRadius={6}
 				useNativeDriver={true}
+				accessibilityLabel="Loading the app"
 			/>
 		</View>
 	);

@@ -45,6 +45,7 @@ const BackAndNextNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactEleme
 					type="font-awesome"
 					color={colorTheme ?? "#fff"}
 					onPress={() => onPrev !== undefined && onPrev()}
+					accessibilityLabel="Go to the previous page"
 				/>
 			)}
 
@@ -54,6 +55,7 @@ const BackAndNextNav = ({ onPrev, onNext, colorTheme }: Props): React.ReactEleme
 					type="font-awesome"
 					color={colorTheme ?? "#fff"}
 					onPress={() => onNext !== undefined && onNext()}
+					accessibilityLabel="Go to the next page"
 				/>
 			)}
 		</View>
