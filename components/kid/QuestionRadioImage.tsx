@@ -184,8 +184,9 @@ const QuestionRadioImage = ({
 
 	const blockRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
 		const { image_ident, label, value } = item;
-		const imageWidth = horizontalScale(280, device.screenWidth) / numColumn;
+		const imageWidth = horizontalScale(290, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(image_ident);
+		const denominator = device.isTablet ? 1.05 : 1.3;
 
 		return (
 			<Pressable
@@ -193,17 +194,23 @@ const QuestionRadioImage = ({
 					styles.blockOptionContainer,
 					{
 						maxWidth: imageWidth,
-						aspectRatio: 1 / 1,
+						aspectRatio: 1 / denominator,
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => selectHandler(value)}
 			>
-				<View style={styles.blockOptionImageContainer}>
+				<View
+					style={{
+						...styles.blockOptionImageContainer,
+						flex: 2.3,
+						position: "relative",
+					}}
+				>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(imageByMode)}
 				</View>
-				<View style={styles.blockOptionLabelContainer}>
+				<View style={{ ...styles.blockOptionLabelContainer, flex: 1}}>
 					<Text
 						style={{
 							...styles.blockOptionLabelText,
@@ -218,7 +225,7 @@ const QuestionRadioImage = ({
 							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
 						}}
 					>
-						{`${optionLetter(index)}.  ${label}`}
+						{`${optionLetter(index)}.  ${label}`} Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					</Text>
 				</View>
 			</Pressable>
@@ -428,18 +435,21 @@ const styles = StyleSheet.create({
 		...GeneralStyle.general.imageFilter,
 	},
 	blockOptionImageContainer: {
-		justifyContent: "center",
-		alignItems: "center",
-		position: "relative",
-		flex: 1,
+		// justifyContent: "center",
+		// alignItems: "center",
+		// position: "relative",
+		// flex: 1,
+		// backgroundColor: "orange",
+		// width: 100,
+		// height: "50%",
 		...GeneralStyle.kid.blockOptionImageContainer,
 	},
 
 	optionImage: {
 		...GeneralStyle.kid.optionImage,
-		position: "absolute",
-		top: 0,
-		left: 0,
+		position: "relative",
+		// top: 0,
+		// left: 0,
 		height: "100%",
 		width: "100%",
 	},
