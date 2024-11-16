@@ -7,6 +7,7 @@ import {
 	SafeAreaView,
 	Image,
 	TextInput,
+	ScrollView,
 } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
@@ -32,6 +33,11 @@ import {
 	getLanguage,
 } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
+import {
+	adjustRadioImageAspectRatio,
+	adjustRadioImageBlockText,
+	adjustWritingDirection,
+} from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -186,7 +192,6 @@ const QuestionRadioImage = ({
 		const { image_ident, label, value } = item;
 		const imageWidth = horizontalScale(290, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(image_ident);
-		const denominator = device.isTablet ? 1.05 : 1.3;
 
 		return (
 			<Pressable
@@ -194,7 +199,7 @@ const QuestionRadioImage = ({
 					styles.blockOptionContainer,
 					{
 						maxWidth: imageWidth,
-						aspectRatio: 1 / denominator,
+						aspectRatio: adjustRadioImageAspectRatio(),
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
@@ -203,29 +208,22 @@ const QuestionRadioImage = ({
 				<View
 					style={{
 						...styles.blockOptionImageContainer,
-						flex: 2.3,
+						flex: 1,
 						position: "relative",
 					}}
 				>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(imageByMode)}
 				</View>
-				<View style={{ ...styles.blockOptionLabelContainer, flex: 1}}>
+				<View style={{ ...styles.blockOptionLabelContainer }}>
 					<Text
 						style={{
 							...styles.blockOptionLabelText,
-							fontSize: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 13 : 12) : language === "ar-AE" ? 14 : 14,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 18 : 17) : language === "ar-AE" ? 20 : 19,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+							...adjustRadioImageBlockText(),
+							writingDirection: adjustWritingDirection(),
 						}}
 					>
-						{`${optionLetter(index)}.  ${label}`} Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						{`${optionLetter(index)}.  ${label}`}
 					</Text>
 				</View>
 			</Pressable>
