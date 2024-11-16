@@ -7,7 +7,6 @@ import {
 	SafeAreaView,
 	Image,
 	TextInput,
-	ScrollView,
 } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
@@ -397,7 +396,7 @@ const QuestionRadioImage = ({
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
-						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
+						contentContainerStyle={{ direction: adjustWritingDirection() }}
 					/>
 				) : (
 					<FlatList
@@ -406,7 +405,7 @@ const QuestionRadioImage = ({
 						data={[...options]}
 						renderItem={({ item, index }) => listRenderOption(item, index)}
 						bounces={false}
-						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
+						contentContainerStyle={{ direction: adjustWritingDirection() }}
 					/>
 				)}
 			</View>
@@ -433,13 +432,6 @@ const styles = StyleSheet.create({
 		...GeneralStyle.general.imageFilter,
 	},
 	blockOptionImageContainer: {
-		// justifyContent: "center",
-		// alignItems: "center",
-		// position: "relative",
-		// flex: 1,
-		// backgroundColor: "orange",
-		// width: 100,
-		// height: "50%",
 		...GeneralStyle.kid.blockOptionImageContainer,
 	},
 

@@ -13,6 +13,8 @@ const adjustRadioImageAspectRatio = (): number => {
 		if (language === "pt-BR") {
 			denominator = isTablet ? 1.05 : 1.6;
 		}
+	} else {
+		denominator = isTablet ? 1.15 : 1.5;
 	}
 	return 1 / denominator;
 };
@@ -25,15 +27,16 @@ const adjustRadioImageBlockText = (): { fontSize: number; lineHeight: number } =
 	const screenWidth = store.getState().settings.device.screenWidth;
 	const screenHeight = store.getState().settings.device.screenHeight;
 
-	let textStyle = {
-		fontSize: 14,
-		lineHeight: 19,
-	};
+	let tabletFontSize = 10;
+	let phoneFontSize = 12;
+	let tabletLineHeight = 13;
+	let phoneLineHeight = 15;
+
 	if (mode === Mode.Kid) {
-		let tabletFontSize = 12;
-		let phoneFontSize = 14;
-		let tabletLineHeight = 17;
-		let phoneLineHeight = 19;
+		tabletFontSize = 12;
+		phoneFontSize = 14;
+		tabletLineHeight = 17;
+		phoneLineHeight = 19;
 
 		if (language === "ar-AE") {
 			tabletFontSize = 13;
@@ -48,18 +51,37 @@ const adjustRadioImageBlockText = (): { fontSize: number; lineHeight: number } =
 			phoneFontSize = 13;
 			phoneLineHeight = 15;
 		}
+	} else {
+		tabletFontSize = 10;
+		phoneFontSize = 12;
+		tabletLineHeight = 13;
+		phoneLineHeight = 15;
 
-		textStyle = {
-			fontSize: moderateScale(
-				isTablet ? tabletFontSize : phoneFontSize,
-				orientation === "portrait" ? screenWidth : screenHeight,
-			),
-			lineHeight: moderateScale(
-				isTablet ? tabletLineHeight : phoneLineHeight,
-				orientation === "portrait" ? screenWidth : screenHeight,
-			),
-		};
+		if (language === "ar-AE") {
+			tabletFontSize = 11;
+			phoneFontSize = 13;
+			tabletLineHeight = 14;
+			phoneLineHeight = 16;
+		}
+
+		if (language === "pt-BR") {
+			tabletFontSize = 11;
+			tabletLineHeight = 14;
+			phoneFontSize = 13;
+			phoneLineHeight = 15;
+		}
 	}
+
+	const textStyle = {
+		fontSize: moderateScale(
+			isTablet ? tabletFontSize : phoneFontSize,
+			orientation === "portrait" ? screenWidth : screenHeight,
+		),
+		lineHeight: moderateScale(
+			isTablet ? tabletLineHeight : phoneLineHeight,
+			orientation === "portrait" ? screenWidth : screenHeight,
+		),
+	};
 
 	return textStyle;
 };
