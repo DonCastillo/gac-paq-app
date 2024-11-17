@@ -177,7 +177,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			label: "Na última semana, você praticou alguma atividade física organizada ou esporte?",
 			kid_label: "Na última semana, você praticou alguma atividade física organizada ou esporte?",
 			adult_label:
-				"Na última semana, seu filho ou filha praticou alguma atividade física organizada ou esporte?",
+				"Na última semana, a criança ou adolescente que você é responsável praticou alguma atividade física organizada ou esporte?",
 			choices: [
 				{
 					label: "Sim",
