@@ -175,7 +175,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 			label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
 			kid_label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
 			adult_label:
-				"Na última semana, o(a) seu(sua) filho(a) fez algum trabalho voluntário ou trabalho remunerado?",
+				"Na última semana, a criança ou adolescente que você é responsável fez algum trabalho voluntário ou trabalho remunerado?",
 			choices: [
 				{
 					label: "Sim",
