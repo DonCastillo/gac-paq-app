@@ -433,7 +433,7 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Na última semana, quantos dias você fez atividades que deixaram seus músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
 			adult_label:
-				"Na última semana, quantos dias por semana seu filho ou filha fez atividades que deixaram os músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
+				"Na última semana, quantos dias a criança ou adolescente que você é responsável fez atividades que deixaram os músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
 			choices: [
 				{
 					label: "0 dias",
