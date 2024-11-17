@@ -351,11 +351,11 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
 			kid_label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
 			adult_label:
-				"Em um dia normal na escola, quanto tempo de intervalo ou recreio o(a) seu(sua) filho(a) tem?",
+				"Em um dia normal na escola, quanto tempo de intervalo ou recreio a criança ou adolescente que você é responsável tem?",
 			kid_sublabel:
 				"Isso significa recreios ou intervalos na escola. Por favor, contabilize todo o tempo junto - por exemplo, se você tem dois intervalos ou recreios de 15 minutos por dia e mais 30 minutos para o almoço por dia, o seu tempo total seria de 60 minutos",
 			adult_sublabel:
-				"Isso significa recreios ou intervalos na escola. Por favor, contabilize todo o tempo junto - por exemplo, se o(a) seu(sua) filho(a) tem dois intervalos ou recreios de 15 minutos por dia e mais 30 minutos para o almoço por dia, o tempo total seria de 60 minutos",
+				"Isso significa recreios ou intervalos na escola. Por favor, contabilize todo o tempo junto, por exemplo, se a criança ou adolescente que você é responsável tem dois intervalos ou recreios de 15 minutos por dia e mais 30 minutos para o almoço por dia, o tempo total seria de 60 minutos de intervalo ou recreio.",
 			choices: [
 				{
 					label: "0 minutos",
