@@ -95,7 +95,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 			description: {
 				kid: "Esta seção é sobre o que você faz durante o horário escolar normal, por exemplo, durante as aulas de educação física, o recreio ou intervalo, e o horário do almoço.",
 				adult:
-					"Esta seção é sobre o que o(a) seu(sua) filho(a) faz durante o horário escolar normal, por exemplo, durante as aulas de educação física, o recreio ou intervalo, e o horário do almoço.",
+					"Esta seção é sobre o que a criança ou adolescente que você é responsável faz durante o horário escolar normal, por exemplo, durante as aulas de educação física, o recreio ou intervalo, e o horário do almoço.",
 			},
 		},
 		"sv-SE": {

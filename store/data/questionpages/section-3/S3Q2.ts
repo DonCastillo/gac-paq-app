@@ -290,7 +290,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado? ",
 			adult_label:
-				"Na última semana, quantas horas por dia o(a) seu(sua) filho(a) passou fazendo trabalho voluntário e/ou trabalho remunerado?",
+				"Na última semana, quantas horas por dia a criança ou adolescente que você é responsável passou fazendo trabalho voluntário ou trabalho remunerado?",
 			choices: [
 				{
 					label: "Menos que 1 hora por dia",

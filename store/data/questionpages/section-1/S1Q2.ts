@@ -348,7 +348,8 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 2",
 			label: "Na última semana, quantos dias você foi à escola?",
 			kid_label: "Na última semana, quantos dias você foi à escola?",
-			adult_label: "Na última semana, quantos dias o(a) seu(sua) filho(a) foi à escola?",
+			adult_label:
+				"Na última semana, quantos dias a criança ou adolescente que você é responsável foi à escola?",
 			choices: [
 				{
 					label: "1 dia",

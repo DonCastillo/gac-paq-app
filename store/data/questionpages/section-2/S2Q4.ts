@@ -306,11 +306,11 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Questão 11",
 			label:
-				"Qual das opções de imagem a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
+				"Qual das opções a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
 			kid_label:
-				"Qual das opções de imagem a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
+				"Qual das opções a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
 			adult_label:
-				"Qual das opções de imagem a seguir mostra o que o(a) seu(sua) filho(a) faz na maior parte do tempo durante as atividades ou tarefas domésticas?",
+				"Qual das opções a seguir mostra o que a criança ou adolescente que você é responsável faz na maior parte do tempo durante as atividades ou tarefas domésticas?",
 			choices: [
 				{
 					label: "Faço principalmente atividades sem esforço",

@@ -260,11 +260,11 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Questão 17c - Bicicleta",
 			label:
-				"Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+				"Em um dia normal, quanto tempo você leva de bicicleta ou outro meio de transporte ativo de rodas para ir a outros lugares além da escola ou trabalho?",
 			kid_label:
-				"Em um dia normal, quanto tempo você gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+				"Em um dia normal, quanto tempo você leva de bicicleta ou outro meio de transporte ativo de rodas para ir a outros lugares além da escola ou trabalho?",
 			adult_label:
-				"Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta andando de bicicleta ou usando outro meio de transporte ativo para ir a outros lugares além da escola ou trabalho?",
+				"Em um dia normal, quanto tempo a criança ou adolescente que você é responsável leva de bicicleta ou outro meio de transporte ativo de rodas para ir a outros lugares além da escola ou trabalho?",
 			choices: [
 				{
 					label: "10 minutos ou menos",

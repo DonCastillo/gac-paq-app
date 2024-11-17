@@ -10,10 +10,11 @@ import {
 	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getCurrentPage, getLanguage, getMode } from "store/settings/settingsSlice";
+import { getCurrentPage, getMode } from "store/settings/settingsSlice";
 import { getOptionSubLabel } from "utils/background.utils";
 import Mode from "constants/mode.enum";
 import Section from "constants/section.enum";
+import { adjustWritingDirection } from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -28,7 +29,6 @@ const QuestionRadio = ({
 }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	let mode = useSelector(getMode);
-	const language = useSelector(getLanguage);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -117,7 +117,7 @@ const QuestionRadio = ({
 				justifyContent: "flex-start",
 				flexDirection: "column",
 				paddingBottom: 20,
-				direction: language === "ar-AE" ? "rtl" : "ltr",
+				direction: adjustWritingDirection(),
 			}}
 			renderItem={({ item, index }) => (
 				<RadioOption

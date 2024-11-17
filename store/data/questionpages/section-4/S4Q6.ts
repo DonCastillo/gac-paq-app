@@ -273,7 +273,7 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 			label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
 			kid_label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
 			adult_label:
-				"Quanto tempo, normalmente, o(a) seu(sua) filho(a) leva para ir para o trabalho?",
+				"Quanto tempo, normalmente, a criança ou adolescente que você é responsável leva para ir para o trabalho?",
 			choices: [
 				{
 					label: "10 minutos ou menos",

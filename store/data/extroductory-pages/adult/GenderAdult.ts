@@ -194,9 +194,9 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 24",
-			label: "Qual é o sexo do(a) seu(sua) filho(a)?",
-			kid_label: "Qual é o sexo do(a) seu(sua) filho(a)?",
-			adult_label: "Qual é o sexo do(a) seu(sua) filho(a)?",
+			label: "Qual é o sexo da criança ou adolescente que você é responsável?",
+			kid_label: "Qual é o sexo da criança ou adolescente que você é responsável?",
+			adult_label: "Qual é o sexo da criança ou adolescente que você é responsável?",
 			choices: [
 				{
 					label: "Feminino",

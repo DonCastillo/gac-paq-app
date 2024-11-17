@@ -312,11 +312,11 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Questão 14",
 			label:
-				"Qual das opções de imagem a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário e/ou trabalho remunerado?",
+				"Qual das opções a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
 			kid_label:
-				"Qual das opções de imagem a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário e/ou trabalho remunerado?",
+				"Qual das opções a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
 			adult_label:
-				"Qual das opções de imagem a seguir mostra o que o(a) seu(sua) filho(a) faz na maior parte do tempo enquanto faz trabalho voluntário e/ou trabalho remunerado? ",
+				"Qual das opções a seguir mostra o que a criança ou adolescente que você é responsável faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
 			choices: [
 				{
 					label: "Faço principalmente atividades sem esforço",

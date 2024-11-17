@@ -368,7 +368,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Na última semana, quantos dias você caminhou para outros lugares além da escola ou trabalho?",
 			adult_label:
-				"Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para outros lugares além da escola ou trabalho?",
+				"Na última semana, quantos dias a criança ou adolescente que você é responsável caminhou para outros lugares além da escola ou trabalho?",
 			choices: [
 				{
 					label: "1 dia",

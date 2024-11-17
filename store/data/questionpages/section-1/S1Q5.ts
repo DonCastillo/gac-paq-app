@@ -311,11 +311,11 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Questão 5",
 			label:
-				"Qual das opções de imagem a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
+				"Qual das opções a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
 			kid_label:
-				"Qual das opções de imagem a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
+				"Qual das opções a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
 			adult_label:
-				"Qual das opções de imagem a seguir corresponde ao que o(a) seu(sua) filho(a) faz na maior parte do tempo nas aulas de Educação Física?",
+				"Qual das opções a seguir corresponde ao que a criança ou adolescente que você é responsável faz na maior parte do tempo nas aulas de Educação Física?",
 			choices: [
 				{
 					label: "Faço principalmente atividades sem esforço",

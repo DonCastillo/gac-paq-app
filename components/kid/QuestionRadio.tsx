@@ -10,16 +10,11 @@ import {
 import { horizontalScale } from "utils/responsive.utils";
 import Option from "./subcomponents/Option";
 import { useSelector } from "react-redux";
-import {
-	getColorTheme,
-	getCurrentPage,
-	getDevice,
-	getLanguage,
-	getMode,
-} from "store/settings/settingsSlice";
+import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
 import Mode from "constants/mode.enum";
 import { getOptionSubLabel } from "utils/background.utils";
+import { adjustWritingDirection } from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -35,7 +30,6 @@ const QuestionRadio = ({
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-	const language = useSelector(getLanguage);
 	let mode = useSelector(getMode);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
@@ -125,7 +119,7 @@ const QuestionRadio = ({
 					data={[...options]}
 					contentContainerStyle={{
 						paddingBottom: 20,
-						direction: language === "ar-AE" ? "rtl" : "ltr",
+						direction: adjustWritingDirection(),
 					}}
 					renderItem={({ item, index }) => {
 						return (

@@ -368,11 +368,11 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Questão 17b - Bicicleta",
 			label:
-				"Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+				"Na última semana, quantos dias você foi de bicicleta ou outro meio de transporte ativo de rodas para outros lugares além da escola ou trabalho?",
 			kid_label:
-				"Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+				"Na última semana, quantos dias você foi de bicicleta ou outro meio de transporte ativo de rodas para outros lugares além da escola ou trabalho?",
 			adult_label:
-				"Na última semana, quantos dias o(a) seu(sua) filho(a) usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
+				"Na última semana, quantos dias a criança ou adolescente que você é responsável foi de bicicleta ou outro meio de transporte ativo de rodas para outros lugares além da escola ou trabalho?",
 			choices: [
 				{
 					label: "1 dia",

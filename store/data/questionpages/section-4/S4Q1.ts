@@ -578,9 +578,10 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 			heading: "Questão 15",
 			label: "Na última semana, como você foi para a escola?",
 			kid_label: "Na última semana, como você foi para a escola?",
-			adult_label: "Na última semana, como o(a) seu(sua) filho(a) foi para a escola?",
-			kid_sublabel: "Selecione o meio de transporte principal que você usou",
-			adult_sublabel: "Selecione o meio de transporte principal que o(a) seu(sua) filho(a) usou",
+			adult_label:
+				"Na última semana, como a criança ou adolescente que você é responsável foi para a escola?",
+			kid_sublabel: "Selecione o meio de transporte principal que você usou.",
+			adult_sublabel: "Selecione o meio de transporte principal que ele ou ela usou.",
 			choices: [
 				{
 					label: "Caminhando",

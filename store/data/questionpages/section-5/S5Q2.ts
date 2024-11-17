@@ -351,7 +351,8 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 19",
 			label: "Na última semana, quantos dias você fez essas atividades?",
 			kid_label: "Na última semana, quantos dias você fez essas atividades?",
-			adult_label: "Na última semana, quantos dias o(a) seu(sua) filho(a) fez essas atividades?",
+			adult_label:
+				"Na última semana, quantos dias a criança ou adolescente que você é responsável fez essas atividades?",
 			choices: [
 				{
 					label: "1 dia",

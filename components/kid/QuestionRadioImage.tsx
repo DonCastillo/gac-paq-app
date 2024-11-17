@@ -32,6 +32,16 @@ import {
 	getLanguage,
 } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
+import {
+	adjustOptionListImageSizeNonSVGKid,
+	adjustOptionListImageSizeSVGKid,
+	adjustQuestionRadioImageListOptionLabelKid,
+	adjustQuestionRadioImageListOptionSubLabelKid,
+	adjustRadioImageAspectRatio,
+	adjustRadioImageBlockText,
+	adjustTextAlignmentDirection,
+	adjustWritingDirection,
+} from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -141,14 +151,7 @@ const QuestionRadioImage = ({
 					<Image
 						style={{
 							...GeneralStyle.general.inlineOptionImage,
-							maxWidth: moderateScale(
-								device.isTablet ? 30 : 30,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							minHeight: moderateScale(
-								device.isTablet ? 30 : 30,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
+							...adjustOptionListImageSizeNonSVGKid(),
 						}}
 						source={image}
 						resizeMode="cover"
@@ -167,14 +170,7 @@ const QuestionRadioImage = ({
 					<ImageComponent
 						style={{
 							...GeneralStyle.general.inlineOptionImage,
-							maxWidth: moderateScale(
-								device.isTablet ? 50 : 50,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							minHeight: moderateScale(
-								device.isTablet ? 50 : 50,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
+							...adjustOptionListImageSizeSVGKid(),
 						}}
 					/>
 				);
@@ -184,7 +180,7 @@ const QuestionRadioImage = ({
 
 	const blockRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
 		const { image_ident, label, value } = item;
-		const imageWidth = horizontalScale(280, device.screenWidth) / numColumn;
+		const imageWidth = horizontalScale(290, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(image_ident);
 
 		return (
@@ -193,29 +189,28 @@ const QuestionRadioImage = ({
 					styles.blockOptionContainer,
 					{
 						maxWidth: imageWidth,
-						aspectRatio: 1 / 1,
+						aspectRatio: adjustRadioImageAspectRatio(),
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => selectHandler(value)}
 			>
-				<View style={styles.blockOptionImageContainer}>
+				<View
+					style={{
+						...styles.blockOptionImageContainer,
+						flex: 1,
+						position: "relative",
+					}}
+				>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(imageByMode)}
 				</View>
-				<View style={styles.blockOptionLabelContainer}>
+				<View style={{ ...styles.blockOptionLabelContainer }}>
 					<Text
 						style={{
 							...styles.blockOptionLabelText,
-							fontSize: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 13 : 12) : language === "ar-AE" ? 14 : 14,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 18 : 17) : language === "ar-AE" ? 20 : 19,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+							...adjustRadioImageBlockText(),
+							writingDirection: adjustWritingDirection(),
 						}}
 					>
 						{`${optionLetter(index)}.  ${label}`}
@@ -276,30 +271,11 @@ const QuestionRadioImage = ({
 								style={[
 									styles.listOptionLabelText,
 									{
-										fontSize: moderateScale(
-											device.isTablet
-												? language === "ar-AE"
-													? 17
-													: 14
-												: language === "ar-AE"
-													? 17
-													: 14,
-											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-										),
-										lineHeight: moderateScale(
-											device.isTablet
-												? language === "ar-AE"
-													? 21
-													: 18
-												: language === "ar-AE"
-													? 21
-													: 18,
-											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-										),
+										...adjustQuestionRadioImageListOptionLabelKid(),
 									},
 									isSelected ? { color: "#fff" } : { color: "#000" },
 									{
-										writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+										writingDirection: adjustWritingDirection(),
 									},
 								]}
 							>
@@ -311,30 +287,11 @@ const QuestionRadioImage = ({
 								style={[
 									styles.listOptionSubLabelText,
 									{
-										fontSize: moderateScale(
-											device.isTablet
-												? language === "ar-AE"
-													? 15
-													: 12
-												: language === "ar-AE"
-													? 15
-													: 12,
-											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-										),
-										lineHeight: moderateScale(
-											device.isTablet
-												? language === "ar-AE"
-													? 19
-													: 16
-												: language === "ar-AE"
-													? 19
-													: 16,
-											device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-										),
+										...adjustQuestionRadioImageListOptionSubLabelKid(),
 									},
 									isSelected ? { color: "#fff" } : { color: "#000" },
 									{
-										writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+										writingDirection: adjustWritingDirection(),
 									},
 								]}
 							>
@@ -373,7 +330,7 @@ const QuestionRadioImage = ({
 							defaultValue={getUserSpecifiedOther(value, selected)}
 							placeholder={phrase?.specify}
 							keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
-							textAlign={language === "ar-AE" ? "right" : "left"}
+							textAlign={adjustTextAlignmentDirection()}
 						/>
 					</View>
 				)}
@@ -392,7 +349,7 @@ const QuestionRadioImage = ({
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
-						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
+						contentContainerStyle={{ direction: adjustWritingDirection() }}
 					/>
 				) : (
 					<FlatList
@@ -401,7 +358,7 @@ const QuestionRadioImage = ({
 						data={[...options]}
 						renderItem={({ item, index }) => listRenderOption(item, index)}
 						bounces={false}
-						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
+						contentContainerStyle={{ direction: adjustWritingDirection() }}
 					/>
 				)}
 			</View>
@@ -428,18 +385,14 @@ const styles = StyleSheet.create({
 		...GeneralStyle.general.imageFilter,
 	},
 	blockOptionImageContainer: {
-		justifyContent: "center",
-		alignItems: "center",
-		position: "relative",
-		flex: 1,
 		...GeneralStyle.kid.blockOptionImageContainer,
 	},
 
 	optionImage: {
 		...GeneralStyle.kid.optionImage,
-		position: "absolute",
-		top: 0,
-		left: 0,
+		position: "relative",
+		// top: 0,
+		// left: 0,
 		height: "100%",
 		width: "100%",
 	},

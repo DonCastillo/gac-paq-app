@@ -311,7 +311,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 			kid_label:
 				"Qual das opções a seguir corresponde ao que você faz na maior parte das vezes durante os intervalos ou recreios?",
 			adult_label:
-				"Qual das opções a seguir corresponde ao que o(a) seu(sua) filho(a) faz na maior parte das vezes durante os intervalos ou recreios?",
+				"Qual das opções a seguir corresponde ao que a criança ou adolescente que você é responsável faz na maior parte das vezes durante os intervalos ou recreios?",
 			choices: [
 				{
 					label: "Faço principalmente atividades sem esforço",

@@ -15,10 +15,8 @@ import LoadingScreenAdult from "./LoadingScreenAdult";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPageNumber,
-	getDevice,
 	getIsConnected,
 	getIsLoading,
-	getLanguage,
 	getPhrases,
 	reset,
 	setIsLoading,
@@ -35,8 +33,8 @@ import { GeneralStyle } from "styles/general";
 import type { PageInterface } from "interface/payload.type";
 import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
-import { moderateScale } from "utils/responsive.utils";
 import AnimatedView from "components/AnimatedView";
+import { adjustPageHeadingText, adjustStateDescriptionText } from "utils/style";
 
 interface Props {
 	state: State;
@@ -48,11 +46,9 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 	const successPage = useSelector(getSuccessPage);
 	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
 	const errorPage = useSelector(getErrorPage);
-	const device = useSelector(getDevice);
 	const isConnected = useSelector(getIsConnected);
 	const isLoading = useSelector(getIsLoading);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const language = useSelector(getLanguage);
 
 	const [buttonComponent, setButtonComponent] = useState<React.ReactElement | null>(null);
 	const [translatedPage, setTranslatedPage] = useState<PageInterface | null>(null);
@@ -153,26 +149,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 						<Heading
 							customStyle={{
 								...GeneralStyle.adult.pageHeading,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 43
-											: 40
-										: language === "ar-AE"
-											? 33
-											: 30,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 53
-											: 50
-										: language === "ar-AE"
-											? 43
-											: 40,
-									device.screenWidth,
-								),
+								...adjustPageHeadingText(),
 							}}
 						>
 							{translatedPage?.heading}
@@ -180,26 +157,7 @@ const StateAdult = ({ state }: Props): React.ReactElement => {
 						<Paragraph
 							customStyle={{
 								...GeneralStyle.adult.pageParagraph,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 21
-											: 18
-										: language === "ar-AE"
-											? 23
-											: 20,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 26
-											: 23
-										: language === "ar-AE"
-											? 28
-											: 25,
-									device.screenWidth,
-								),
+								...adjustStateDescriptionText(),
 							}}
 						>
 							{translatedPage?.description}
