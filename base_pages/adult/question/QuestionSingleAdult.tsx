@@ -24,14 +24,12 @@ import QuestionTextarea from "components/adults/QuestionTextarea";
 import QuestionCheckbox from "components/adults/QuestionCheckbox";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
-import { moderateScale } from "utils/responsive.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -51,12 +49,12 @@ import type {
 import AnimatedView from "components/AnimatedView";
 import QuestionCheckboxInput from "components/adults/QuestionCheckboxInput";
 import LoadingScreenAdult from "../LoadingScreenAdult";
+import { adjustQuestionSingleQuestionLabel } from "utils/style";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
@@ -299,30 +297,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 									<QuestionLabel
 										textStyle={{
 											...GeneralStyle.adult.questionLabel,
-											fontSize: moderateScale(
-												device.isTablet
-													? language === "ar-AE"
-														? 18
-														: 15
-													: language === "ar-AE"
-														? 18
-														: 15,
-												device.orientation === "portrait"
-													? device.screenWidth
-													: device.screenHeight,
-											),
-											lineHeight: moderateScale(
-												device.isTablet
-													? language === "ar-AE"
-														? 23
-														: 20
-													: language === "ar-AE"
-														? 23
-														: 20,
-												device.orientation === "portrait"
-													? device.screenWidth
-													: device.screenHeight,
-											),
+											...adjustQuestionSingleQuestionLabel(),
 										}}
 										customStyle={{ marginBottom: 7 }}
 									>
