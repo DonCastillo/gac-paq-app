@@ -274,7 +274,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Na última semana, nos dias em que você fez atividades ou tarefas domésticas quanto tempo você gastou fazendo essas atividades ou tarefas domésticas ao longo do dia?",
 			adult_label:
-				"Na última semana, nos dias em que o(a) seu(sua) filho(a) fez atividades ou tarefas domésticas quanto tempo ele(a) gastou fazendo essas atividades ou tarefas domésticas ao longo do dia?",
+				"Na última semana, nos dias em que a criança ou adolescente que você é responsável fez atividades ou tarefas domésticas quanto tempo ele ou ela gastou fazendo essas atividades ou tarefas domésticas ao longo do dia?",
 			choices: [
 				{
 					label: "15 minutos ou menos por dia",
