@@ -5,11 +5,7 @@ import { horizontalScale, verticalScale } from "utils/responsive.utils";
 import { getOptionImage } from "utils/background.utils";
 import { useSelector } from "react-redux";
 
-import {
-	getColorTheme,
-	getCurrentPage,
-	getDevice,
-} from "store/settings/settingsSlice";
+import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
 
 interface PropsInterface {
