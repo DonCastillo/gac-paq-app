@@ -425,9 +425,10 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			heading: "Questão 16",
 			label: "Na última semana, como você foi para o trabalho?",
 			kid_label: "Na última semana, como você foi para o trabalho?",
-			adult_label: "Na última semana, como o(a) seu(sua) filho(a) foi para o trabalho?",
+			adult_label:
+				"Na última semana, como a criança ou adolescente que você é responsável foi para o trabalho?",
 			kid_sublabel: "Selecione o meio de transporte principal que você usou.",
-			adult_sublabel: "Selecione o meio de transporte principal que o(a) seu(sua) filho(a) usou.",
+			adult_sublabel: "Selecione o meio de transporte principal que ele ou ela usou.",
 			choices: [
 				{
 					label: "Caminhando",

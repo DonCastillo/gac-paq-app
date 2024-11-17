@@ -336,9 +336,9 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			kid_label:
 				"Na última semana, você caminhou ou usou outro meio de transporte ativo, por exemplo, bicicleta, cadeira de rodas, skate, patinete, patins, para ir a outros lugares além da escola ou trabalho, como por exemplo, casa de um amigo, um parque, uma loja?",
 			adult_label:
-				"Na última semana, seu filho ou filha caminhou ou usou outro meio de transporte ativo, por exemplo, bicicleta, cadeira de rodas, skate, patinete, patins, para ir a outros lugares além da escola ou trabalho, como por exemplo, casa de um amigo, um parque, uma loja?",
+				"Na última semana, a criança ou adolescente que você é responsável caminhou ou usou outro meio de transporte ativo, por exemplo, bicicleta, cadeira de rodas, skate, patinete, patins, para ir a outros lugares além da escola ou trabalho, como por exemplo, casa de um amigo, um parque, uma loja?",
 			kid_sublabel: "Selecione todas as respostas que se aplicam a você.",
-			adult_sublabel: "Selecione todas as respostas que se aplicam a seu filho ou filha.",
+			adult_sublabel: "Selecione todas as respostas que se aplicam a ele ou ela.",
 			choices: [
 				{
 					label: "Sim, eu fui caminhando",

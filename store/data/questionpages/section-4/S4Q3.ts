@@ -240,7 +240,8 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 15c",
 			label: "Quanto tempo, normalmente, você leva para ir para a escola?",
 			kid_label: "Quanto tempo, normalmente, você leva para ir para a escola?",
-			adult_label: "Quanto tempo, normalmente, o(a) seu(sua) filho(a) leva para ir para a escola?",
+			adult_label:
+				"Quanto tempo, normalmente, a criança ou adolescente que você é responsável leva para ir para a escola?",
 			choices: [
 				{
 					label: "10 minutos ou menos",

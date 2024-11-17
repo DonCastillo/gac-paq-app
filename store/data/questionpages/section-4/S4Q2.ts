@@ -352,7 +352,7 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Na última semana, quantos dias você usou este meio de transporte para ir à escola?",
 			adult_label:
-				"Na última semana, quantos dias o(a) seu(sua) filho(a) usou este meio de transporte para ir à escola?",
+				"Na última semana, quantos dias a criança ou adolescente que você é responsável usou este meio de transporte para ir à escola?",
 			choices: [
 				{
 					label: "1 dia",
