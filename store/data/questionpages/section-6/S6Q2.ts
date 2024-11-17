@@ -429,9 +429,9 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Questão 22",
 			label:
-				"Na última semana, quantos dias por semana você fez atividades que deixaram seus músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
+				"Na última semana, quantos dias você fez atividades que deixaram seus músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
 			kid_label:
-				"Na última semana, quantos dias por semana você fez atividades que deixaram seus músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
+				"Na última semana, quantos dias você fez atividades que deixaram seus músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
 			adult_label:
 				"Na última semana, quantos dias por semana seu filho ou filha fez atividades que deixaram os músculos mais fortes? Exemplos incluem ginástica, escalada, flexões, levantamento de peso, pendurar-se em barras.",
 			choices: [
