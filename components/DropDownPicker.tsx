@@ -9,10 +9,10 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
-	getLanguage,
 	getPhrases,
 } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
+import { adjustDropdownIconSize, adjustWritingDirection } from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -35,7 +35,6 @@ const DropDownSelector = ({
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
 	const currentPage = useSelector(getCurrentPage);
-	const language = useSelector(getLanguage);
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<ChoiceIcon[] | Choice[]>(options);
@@ -61,7 +60,7 @@ const DropDownSelector = ({
 					{
 						borderColor: color100,
 						width: "100%",
-						direction: language === "ar-AE" ? "rtl" : "ltr",
+						direction: adjustWritingDirection(),
 					},
 				]}
 				showTickIcon={true}
@@ -81,14 +80,7 @@ const DropDownSelector = ({
 				labelStyle={styles.labelStyle}
 				iconContainerStyle={{
 					...styles.iconContainer,
-					height: moderateScale(
-						device.isTablet ? 25 : 30,
-						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-					),
-					width: moderateScale(
-						device.isTablet ? 25 : 30,
-						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-					),
+					...adjustDropdownIconSize(),
 				}}
 				dropDownContainerStyle={[
 					styles.dropdownContainer,
@@ -104,7 +96,7 @@ const DropDownSelector = ({
 						device.isTablet ? 35 : 45,
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
-					direction: language === "ar-AE" ? "rtl" : "ltr",
+					direction: adjustWritingDirection(),
 				}}
 				onChangeValue={(value: string) => onSelect(value)}
 				textStyle={{
@@ -129,7 +121,7 @@ const DropDownSelector = ({
 								: 20,
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
-					writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+					writingDirection: adjustWritingDirection(),
 				}}
 			/>
 		</>

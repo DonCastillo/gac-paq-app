@@ -27,7 +27,6 @@ import {
 } from "store/questions/questionsThunk";
 import { resetResponses } from "store/responses/responsesSlice";
 import { changeMode } from "utils/mode.utils";
-import GenericSplash from "./generic/GenericSplash";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 
 const Stack = createNativeStackNavigator();

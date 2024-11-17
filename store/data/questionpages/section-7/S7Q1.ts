@@ -322,7 +322,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
 			adult_label:
-				"Na última semana, em um dia normal, quanto tempo o(a) seu(sua) filho(a) realizou atividades ao ar livre?",
+				"Na última semana, em um dia normal, quanto tempo a criança ou adolescente que você é responsável realizou atividades ao ar livre?",
 			choices: [
 				{
 					label: "Nenhum",

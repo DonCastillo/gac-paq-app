@@ -84,7 +84,8 @@ const S4Preamble: LangPreamblePayloadInterface = {
 			subheading: "Seção 4",
 			description: {
 				kid: "Esta seção é sobre como você vai a diferentes lugares.",
-				adult: "Esta seção é sobre como o(a) seu(sua) filho(a) vai a diferentes lugares.",
+				adult:
+					"Esta seção é sobre como a criança ou adolescente que você é responsável vai a diferentes lugares.",
 			},
 		},
 		"sv-SE": {

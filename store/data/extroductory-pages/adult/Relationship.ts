@@ -349,9 +349,9 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 28",
-			label: "Qual é a sua relação com a criança/jovem?",
-			kid_label: "Qual é a sua relação com a criança/jovem?",
-			adult_label: "Qual é a sua relação com a criança/jovem?",
+			label: "Qual é a sua relação com a criança ou adolescente que você é responsável?",
+			kid_label: "Qual é a sua relação com a criança ou adolescente que você é responsável?",
+			adult_label: "Qual é a sua relação com a criança ou adolescente que você é responsável?",
 			choices: [
 				{
 					label: "Pai",

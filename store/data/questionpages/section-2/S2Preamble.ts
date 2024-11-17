@@ -95,7 +95,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			description: {
 				kid: "Esta seção trata de tarefas ou afazeres em casa que exigem que você esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, entre outras tarefas relacionadas.",
 				adult:
-					"Esta seção trata de tarefas ou afazeres em casa que exigem que o seu filho ou filha esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, entre outras tarefas relacionadas.",
+					"Esta seção trata de tarefas ou afazeres em casa que exigem que a criança ou adolescente que você é responsável esteja ativo fisicamente. Exemplos de tarefas ou afazeres em casa incluem limpeza de casa, limpeza no jardim, jardinagem, limpeza ou trabalho no quintal, limpeza ou trabalho na varanda, entre outras tarefas relacionadas.",
 			},
 		},
 		"sv-SE": {

@@ -265,7 +265,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Na última semana, nos dias em que você fez essas atividades quanto tempo geralmente durou?",
 			adult_label:
-				"Na última semana, nos dias em que o(a) seu(sua) filho(a) fez essas atividades quanto tempo geralmente durou?",
+				"Na última semana, nos dias em que a criança ou adolescente que você é responsável fez essas atividades quanto tempo geralmente durou?",
 			choices: [
 				{
 					label: "30 minutos ou menos por dia",

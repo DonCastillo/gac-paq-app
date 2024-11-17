@@ -95,7 +95,7 @@ const S7Preamble: LangPreamblePayloadInterface = {
 			description: {
 				kid: "Esta seção trata do tempo que você passa ao ar livre. Isso pode ser na escola, durante afazeres e tarefas em casa ao ar livre, trabalho remunerado ou trabalho voluntário ao ar livre, transporte de um lugar a outro ao ar livre, e durante o seu tempo livre. Isso também inclui o tempo em que você está ao ar livre, mas não está se movendo, como em piqueniques, leitura, conversando com amigos e momentos sentado em algum local ao ar livre.",
 				adult:
-					"Esta seção trata do tempo que o seu filho ou filha passa ao ar livre. Isso pode ser na escola, durante afazeres e tarefas em casa ao ar livre, trabalho remunerado ou trabalho voluntário ao ar livre, transporte de um lugar a outro ao ar livre, e durante o seu tempo livre. Isso também inclui o tempo em que o seu filho ou filha está ao ar livre, mas não está se movendo, como em piqueniques, leitura, conversando com amigos e momentos sentado em algum local ao ar livre.",
+					"Esta seção trata do tempo que a criança ou adolescente que você é responsável passa ao ar livre. Isso pode ser na escola, durante afazeres e tarefas em casa ao ar livre, trabalho remunerado ou trabalho voluntário ao ar livre, transporte de um lugar a outro ao ar livre, e durante o seu tempo livre. Isso também inclui o tempo em que a criança ou adolescente que você é responsável está ao ar livre, mas não está se movendo, como em piqueniques, leitura, conversando com amigos e momentos sentado em algum local ao ar livre.",
 			},
 		},
 		"sv-SE": {

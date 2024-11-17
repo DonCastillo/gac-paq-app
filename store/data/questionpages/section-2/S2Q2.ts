@@ -351,7 +351,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			label: "Na última semana, quantos dias você fez atividades ou tarefas domésticas?",
 			kid_label: "Na última semana, quantos dias você fez atividades ou tarefas domésticas?",
 			adult_label:
-				"Na última semana, quantos dias o(a) seu(sua) filho(a) fez atividades ou tarefas domésticas?",
+				"Na última semana, quantos dias a criança ou adolescente que você é responsável fez atividades ou tarefas domésticas?",
 			choices: [
 				{
 					label: "1 dia",

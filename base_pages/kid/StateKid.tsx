@@ -18,7 +18,6 @@ import {
 	getDevice,
 	getIsConnected,
 	getIsLoading,
-	getLanguage,
 	getPhrases,
 	reset,
 	setIsLoading,
@@ -33,8 +32,9 @@ import type { PageInterface } from "interface/payload.type";
 import { queueResponseToStorage, sanitizeResponse } from "utils/response.utils";
 import { submitResponse } from "utils/api.utils";
 import { GeneralStyle } from "styles/general";
-import { moderateScale, verticalScale } from "utils/responsive.utils";
 import AnimatedView from "components/AnimatedView";
+import { adjustStateDescriptionText, adjustStateKidPageHeadingText } from "utils/style";
+import { verticalScale } from "utils/responsive.utils";
 
 interface Props {
 	state: State;
@@ -43,7 +43,6 @@ interface Props {
 function StateKid({ state }: Props): React.ReactElement {
 	const dispatch = useDispatch();
 	const phrases = useSelector(getPhrases);
-	const language = useSelector(getLanguage);
 	const successPage = useSelector(getSuccessPage);
 	const offlineSuccessPage = useSelector(getOfflineSuccessPage);
 	const errorPage = useSelector(getErrorPage);
@@ -142,26 +141,7 @@ function StateKid({ state }: Props): React.ReactElement {
 							customStyle={{
 								color: "#000",
 								...GeneralStyle.kid.pageHeading,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 33
-											: 30
-										: language === "ar-AE"
-											? 30
-											: 27,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 43
-											: 40
-										: language === "ar-AE"
-											? 40
-											: 37,
-									device.screenWidth,
-								),
+								...adjustStateKidPageHeadingText(),
 							}}
 						>
 							{translatedPage?.heading}
@@ -170,26 +150,7 @@ function StateKid({ state }: Props): React.ReactElement {
 							customStyle={{
 								color: "#000",
 								...GeneralStyle.kid.pageParagraph,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 21
-											: 18
-										: language === "ar-AE"
-											? 21
-											: 18,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 26
-											: 23
-										: language === "ar-AE"
-											? 28
-											: 25,
-									device.screenWidth,
-								),
+								...adjustStateDescriptionText(),
 							}}
 						>
 							{translatedPage?.description}

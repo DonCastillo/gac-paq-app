@@ -18,7 +18,6 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -27,6 +26,7 @@ import type { PreambleInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
 import LoadingScreenKid from "./LoadingScreenKid";
+import { adjustPreambleDescriptionText, adjustPreambleHeadingText } from "utils/style";
 
 const PreambleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -34,7 +34,6 @@ const PreambleKid = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const device = useSelector(getDevice);
-	const language = useSelector(getLanguage);
 	const colorTheme = useSelector(getColorTheme);
 	const isLoading = useSelector(getIsLoading);
 	const { color100, color200 } = colorTheme;
@@ -75,20 +74,7 @@ const PreambleKid = (): React.ReactElement => {
 								customStyle={{
 									...GeneralStyle.kid.extroPageHeading,
 									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: device.isTablet
-										? language === "ar-AE"
-											? 43
-											: 40
-										: language === "ar-AE"
-											? 33
-											: 30,
-									lineHeight: device.isTablet
-										? language === "ar-AE"
-											? 48
-											: 45
-										: language === "ar-AE"
-											? 38
-											: 35,
+									...adjustPreambleHeadingText(),
 								}}
 							>
 								{translatedPage.heading}
@@ -97,20 +83,7 @@ const PreambleKid = (): React.ReactElement => {
 								customStyle={{
 									...GeneralStyle.kid.extroPageParagraph,
 									maxWidth: device.isTablet ? 600 : "100%",
-									fontSize: device.isTablet
-										? language === "ar-AE"
-											? 26
-											: 23
-										: language === "ar-AE"
-											? 21
-											: 18,
-									lineHeight: device.isTablet
-										? language === "ar-AE"
-											? 36
-											: 33
-										: language === "ar-AE"
-											? 28
-											: 25,
+									...adjustPreambleDescriptionText(),
 								}}
 							>
 								{description}

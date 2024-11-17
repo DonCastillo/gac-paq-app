@@ -12,7 +12,7 @@ import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
-import { moderateScale, verticalScale } from "utils/responsive.utils";
+import { verticalScale } from "utils/responsive.utils";
 import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
 import { sanitizeResponse, queueResponseToStorage } from "utils/response.utils";
@@ -23,7 +23,6 @@ import {
 	getDevice,
 	getIsConnected,
 	getIsLoading,
-	getLanguage,
 	getSectionTotalPages,
 	prevPage,
 	setIsLoading,
@@ -33,12 +32,12 @@ import { resetResponses } from "store/responses/responsesSlice";
 import type { ExtroInterface } from "interface/payload.type";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
+import { adjustExtroDescriptionText, adjustExtroPageHeading } from "utils/style";
 
 const QuestionExtroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const language = useSelector(getLanguage);
 	const device = useSelector(getDevice);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
 	const isConnected = useSelector(getIsConnected);
@@ -131,26 +130,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 							customStyle={{
 								...GeneralStyle.kid.extroPageHeading,
 								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 34
-											: 30
-										: language === "ar-AE"
-											? 30
-											: 27,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 38
-											: 35
-										: language === "ar-AE"
-											? 34
-											: 30,
-									device.screenWidth,
-								),
+								...adjustExtroPageHeading(),
 							}}
 						>
 							{translatedPage.heading}
@@ -159,26 +139,7 @@ const QuestionExtroKid = (): React.ReactElement => {
 							customStyle={{
 								...GeneralStyle.kid.extroPageParagraph,
 								maxWidth: device.isTablet ? 600 : "100%",
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 21
-											: 18
-										: language === "ar-AE"
-											? 21
-											: 18,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 30
-											: 27
-										: language === "ar-AE"
-											? 30
-											: 27,
-									device.screenWidth,
-								),
+								...adjustExtroDescriptionText(),
 							}}
 						>
 							{translatedPage.subheading}

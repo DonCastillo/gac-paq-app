@@ -10,14 +10,13 @@ import {
 	getDevice,
 	getEnableNarration,
 	getIsLoading,
-	getLanguage,
-	getMode,
 	getSectionTitles,
 	getSoundType,
 	setEnableNarration,
 } from "store/settings/settingsSlice";
 import { Audio } from "expo-av";
 import { getAudioURI } from "utils/narration";
+import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
 
 const ICON_SIZE = 35;
 
@@ -31,7 +30,6 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const sectionTitles = useSelector(getSectionTitles);
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
-	const language = useSelector(getLanguage);
 	const dispatch = useDispatch();
 	const enableNarration = useSelector(getEnableNarration);
 	const isAudioAutoplaying = currentPage?.page?.audio_autoplay ?? false;
@@ -203,15 +201,8 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 				style={[
 					GeneralStyle.adult.topHeaderSectionTitle,
 					{
-						fontSize: moderateScale(
-							device.isTablet ? (language === "ar-AE" ? 16 : 13) : language === "ar-AE" ? 16 : 13,
-							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-						),
-						lineHeight: moderateScale(
-							device.isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16,
-							device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-						),
-						direction: language === "ar-AE" ? "rtl" : "ltr",
+						...adjustToolbarHeadingText(),
+						direction: adjustWritingDirection(),
 					},
 				]}
 			>

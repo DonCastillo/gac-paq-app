@@ -497,13 +497,13 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 			type: Question.QuestionCheckbox,
 			heading: "Questão 25",
 			label:
-				"Por favor, indique se o(a) seu(sua) filho(a) tem dificuldades com alguma das seguintes situações nas atividades diárias.",
+				"Por favor, indique se a criança ou adolescente que você é responsável tem dificuldades com alguma das seguintes situações nas atividades diárias.",
 			kid_label:
-				"Por favor, indique se o(a) seu(sua) filho(a) tem dificuldades com alguma das seguintes situações nas atividades diárias.",
+				"Por favor, indique se a criança ou adolescente que você é responsável tem dificuldades com alguma das seguintes situações nas atividades diárias.",
 			adult_label:
-				"Por favor, indique se o(a) seu(sua) filho(a) tem dificuldades com alguma das seguintes situações nas atividades diárias.",
-			kid_sublabel: "Selecione todas as que se aplicam",
-			adult_sublabel: "Selecione todas as que se aplicam",
+				"Por favor, indique se a criança ou adolescente que você é responsável tem dificuldades com alguma das seguintes situações nas atividades diárias.",
+			kid_sublabel: "Selecione todas as que se aplicam.",
+			adult_sublabel: "Selecione todas as opções que se aplicam.",
 			choices: [
 				{
 					label: "Audição",

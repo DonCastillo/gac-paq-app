@@ -222,9 +222,9 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 24",
-			label: "Você é ...",
-			kid_label: "Você é ...",
-			adult_label: "Você é ...",
+			label: "O que você se considera?",
+			kid_label: "O que você se considera?",
+			adult_label: "O que você se considera?",
 			choices: [
 				{
 					label: "Menino",

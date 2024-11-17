@@ -92,7 +92,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			label: "Na última semana, quantas aulas de Educação Física você teve?",
 			kid_label: "Na última semana, quantas aulas de Educação Física você teve?",
 			adult_label:
-				"Na última semana, quantas aulas de Educação Física o(a) seu(sua) filho(a) teve?",
+				"Na última semana, a criança ou adolescente que você é responsável teve quantas aulas de Educação Física?",
 			max_value: 7,
 		},
 		"sv-SE": {

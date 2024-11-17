@@ -172,7 +172,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
 			kid_label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
 			adult_label:
-				"Na última semana, o(a) seu(sua) filho(a) realizou ativamente atividades ou tarefas domésticas?",
+				"Na última semana, a criança ou adolescente que você é responsável realizou ativamente atividades ou tarefas domésticas?",
 			choices: [
 				{
 					label: "Sim",

@@ -276,7 +276,8 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 4",
 			label: "Quanto tempo duram as suas aulas de Educação Física?",
 			kid_label: "Quanto tempo duram as suas aulas de Educação Física?",
-			adult_label: "Quanto tempo duram as aulas de Educação Física do(a) seu(sua) filho(a)?",
+			adult_label:
+				"Quanto tempo duram as aulas de Educação Física da criança ou adolescente que você é responsável?",
 			choices: [
 				{
 					label: "Menos de 30 minutos por aula",

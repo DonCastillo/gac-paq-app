@@ -261,7 +261,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			adult_label:
-				"Em um dia normal, quanto tempo o(a) seu(sua) filho(a) leva caminhando para ir a outros lugares além da escola ou trabalho?",
+				"Em um dia normal, quanto tempo a criança ou adolescente que você é responsável leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			choices: [
 				{
 					label: "10 minutos ou menos",
