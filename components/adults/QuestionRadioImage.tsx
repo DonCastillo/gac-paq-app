@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import type { Svg } from "react-native-svg";
 import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background.utils";
-import { horizontalScale, moderateScale, verticalScale } from "utils/responsive.utils";
+import { horizontalScale, verticalScale } from "utils/responsive.utils";
 import RadioOption from "./subcomponents/RadioOption";
 import {
 	getUserSpecifiedOther,
@@ -14,14 +14,13 @@ import {
 	optionLetter,
 } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import {
-	getColorTheme,
-	getCurrentPage,
-	getDevice,
-	getLanguage,
-	getMode,
-} from "store/settings/settingsSlice";
+import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
+import {
+	adjustRadioImageAspectRatio,
+	adjustRadioImageBlockText,
+	adjustWritingDirection,
+} from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -38,7 +37,6 @@ const QuestionRadioImage = ({
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-	const language = useSelector(getLanguage);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -147,8 +145,6 @@ const QuestionRadioImage = ({
 
 	const blockRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
 		const { image_ident, label, value } = item;
-		const baseWidth = device.orientation === "landscape" || !device.isTablet ? 250 : 270;
-		const imageWidth = horizontalScale(baseWidth, device.screenWidth) / numColumn;
 		const imageByMode = getOptionImage(image_ident);
 
 		return (
@@ -156,30 +152,30 @@ const QuestionRadioImage = ({
 				style={[
 					styles.blockOptionContainer,
 					{
-						width: imageWidth,
-						aspectRatio: 1 / 1,
+						maxWidth: "100%",
+						width: "100%",
+						aspectRatio: adjustRadioImageAspectRatio(),
 					},
 					selected === value && { borderColor: color100, borderWidth: 1 },
 				]}
 				onPress={() => selectHandler(value)}
 			>
-				<View style={styles.blockOptionImageContainer}>
+				<View
+					style={{
+						...styles.blockOptionImageContainer,
+						flex: 1,
+						position: "relative",
+					}}
+				>
 					{selected === value && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
 					{renderImage(imageByMode)}
 				</View>
-				<View style={styles.blockOptionLabelContainer}>
+				<View style={{ ...styles.blockOptionLabelContainer }}>
 					<Text
 						style={{
 							...styles.blockOptionLabelText,
-							fontSize: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 11 : 10) : language === "ar-AE" ? 13 : 12,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 14 : 13) : language === "ar-AE" ? 16 : 15,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+							...adjustRadioImageBlockText(),
+							writingDirection: adjustWritingDirection(),
 						}}
 					>
 						{`${optionLetter(index)}.  ${label}`}
@@ -228,7 +224,9 @@ const QuestionRadioImage = ({
 						numColumns={numColumn}
 						key={numColumn}
 						bounces={false}
-						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
+						contentContainerStyle={{
+							direction: adjustWritingDirection(),
+						}}
 					/>
 				) : (
 					<FlatList
@@ -239,7 +237,7 @@ const QuestionRadioImage = ({
 						bounces={false}
 						persistentScrollbar={true}
 						showsVerticalScrollIndicator={true}
-						contentContainerStyle={{ direction: language === "ar-AE" ? "rtl" : "ltr" }}
+						contentContainerStyle={{ direction: adjustWritingDirection() }}
 					/>
 				)}
 			</View>
@@ -254,10 +252,6 @@ const styles = StyleSheet.create({
 		...GeneralStyle.adult.blockOptionContainer,
 	},
 	blockOptionImageContainer: {
-		justifyContent: "center",
-		alignItems: "center",
-		position: "relative",
-		flex: 1,
 		...GeneralStyle.adult.blockOptionImageContainer,
 	},
 	blockOptionLabelContainer: {
@@ -266,7 +260,9 @@ const styles = StyleSheet.create({
 	blockOptionLabelText: {
 		...GeneralStyle.adult.optionImageLabelText,
 	},
-	container: {},
+	container: {
+		justifyContent: "center",
+	},
 	imageFilter: {
 		...GeneralStyle.general.imageFilter,
 	},

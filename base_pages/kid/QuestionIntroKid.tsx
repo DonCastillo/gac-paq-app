@@ -7,7 +7,6 @@ import Navigation from "components/Navigation";
 import ImageBackdrop from "components/ImageBackdrop";
 import { GeneralStyle } from "styles/general";
 import { getImageBackground } from "utils/background.utils";
-import { moderateScale } from "utils/responsive.utils";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getColorTheme,
@@ -15,20 +14,19 @@ import {
 	getCurrentPageNumber,
 	getDevice,
 	getIsLoading,
-	getLanguage,
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
 import type { SectionInterface } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
 import LoadingScreenKid from "./LoadingScreenKid";
+import { adjustIntroDescriptionText, adjustWritingDirection } from "utils/style";
 
 const QuestionIntroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const language = useSelector(getLanguage);
 	const isLoading = useSelector(getIsLoading);
 	const device = useSelector(getDevice);
 	const { color200 } = colorTheme;
@@ -90,27 +88,8 @@ const QuestionIntroKid = (): React.ReactElement => {
 						<Text
 							style={{
 								...styles.headingText,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 23
-											: 20
-										: language === "ar-AE"
-											? 30
-											: 27,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 28
-											: 25
-										: language === "ar-AE"
-											? 35
-											: 32,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+								...adjustIntroDescriptionText(),
+								writingDirection: adjustWritingDirection(),
 							}}
 						>
 							{translatedPage.heading}

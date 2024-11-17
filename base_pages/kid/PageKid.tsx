@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
@@ -16,9 +16,7 @@ import {
 	getColorTheme,
 	getCurrentPage,
 	getCurrentPageNumber,
-	getDevice,
 	getIsLoading,
-	getLanguage,
 	getMode,
 	prevPage,
 } from "store/settings/settingsSlice";
@@ -26,16 +24,14 @@ import { translateDescription } from "utils/translate.utils";
 import type { PageInterface } from "interface/payload.type";
 import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
-import { moderateScale } from "utils/responsive.utils";
 import LoadingScreenKid from "./LoadingScreenKid";
+import { adjustPageDescriptionText, adjustPageHeadingText } from "utils/style";
 
 const PageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const colorTheme = useSelector(getColorTheme);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const device = useSelector(getDevice);
-	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
 	const isLoading = useSelector(getIsLoading);
 	const { color100 } = colorTheme;
@@ -113,26 +109,7 @@ const PageKid = (): React.ReactElement => {
 								customStyle={{
 									color: color100,
 									...GeneralStyle.kid.pageHeading,
-									fontSize: moderateScale(
-										device.isTablet
-											? language === "ar-AE"
-												? 43
-												: 40
-											: language === "ar-AE"
-												? 33
-												: 30,
-										device.screenWidth,
-									),
-									lineHeight: moderateScale(
-										device.isTablet
-											? language === "ar-AE"
-												? 53
-												: 50
-											: language === "ar-AE"
-												? 43
-												: 40,
-										device.screenWidth,
-									),
+									...adjustPageHeadingText(),
 								}}
 							>
 								{translatedPage.heading}
@@ -143,26 +120,7 @@ const PageKid = (): React.ReactElement => {
 									color: color100,
 									...GeneralStyle.kid.pageParagraph,
 									backgroundColor: "white",
-									fontSize: moderateScale(
-										device.isTablet
-											? language === "ar-AE"
-												? 17
-												: 14
-											: language === "ar-AE"
-												? 19
-												: 16,
-										device.screenWidth,
-									),
-									lineHeight: moderateScale(
-										device.isTablet
-											? language === "ar-AE"
-												? 19
-												: 16
-											: language === "ar-AE"
-												? 25
-												: 22,
-										device.screenWidth,
-									),
+									...adjustPageDescriptionText(),
 								}}
 							>
 								{translatedDescription}

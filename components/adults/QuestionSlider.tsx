@@ -6,12 +6,8 @@ import PhraseLabel from "constants/phrase_label.enum";
 import RadioOption from "components/adults/subcomponents/RadioOption";
 import { useSelector } from "react-redux";
 
-import {
-	getPhrases,
-	getColorTheme,
-	getCurrentPage,
-	getLanguage,
-} from "store/settings/settingsSlice";
+import { getPhrases, getColorTheme, getCurrentPage } from "store/settings/settingsSlice";
+import { adjustWritingDirection } from "utils/style";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -27,7 +23,6 @@ const QuestionSlider = ({
 	const currentPage = useSelector(getCurrentPage);
 	const colorTheme = useSelector(getColorTheme);
 	const phrases = useSelector(getPhrases);
-	const language = useSelector(getLanguage);
 	const { color100, color200 } = colorTheme;
 	const [value, setValue] = useState<number | PhraseLabel.DontKnow>(selectedValue ?? 0);
 	const [maxVal, setMaxVal] = useState<number>(maxValue ?? 10);
@@ -111,7 +106,7 @@ const QuestionSlider = ({
 					scrollEnabled={true}
 					data={[{ label: phrases?.dontKnow, value: PhraseLabel.DontKnow }]}
 					contentContainerStyle={{
-						direction: language === "ar-AE" ? "rtl" : "ltr",
+						direction: adjustWritingDirection(),
 					}}
 					renderItem={({ item }) => (
 						<RadioOption

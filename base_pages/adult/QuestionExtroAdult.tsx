@@ -20,10 +20,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
-	getDevice,
 	getIsConnected,
 	getIsLoading,
-	getLanguage,
 	prevPage,
 	setIsLoading,
 } from "store/settings/settingsSlice";
@@ -32,14 +30,12 @@ import { resetResponses } from "store/responses/responsesSlice";
 import type { ExtroInterface } from "interface/payload.type";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
-import { moderateScale } from "utils/responsive.utils";
+import { adjustExtroDescriptionText, adjustExtroPageHeading } from "utils/style";
 
 const QuestionExtroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const device = useSelector(getDevice);
-	const language = useSelector(getLanguage);
 	const navigation = useNavigation();
 	const backgroundImage = getImageBackground();
 	const isConnected = useSelector(getIsConnected);
@@ -127,26 +123,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 						<Heading
 							customStyle={{
 								...GeneralStyle.adult.pageHeading,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 43
-											: 40
-										: language === "ar-AE"
-											? 33
-											: 30,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 53
-											: 50
-										: language === "ar-AE"
-											? 43
-											: 40,
-									device.screenWidth,
-								),
+								...adjustExtroPageHeading(),
 							}}
 						>
 							{translatedPage.heading}
@@ -154,26 +131,7 @@ const QuestionExtroAdult = (): React.ReactElement => {
 						<Paragraph
 							customStyle={{
 								...GeneralStyle.adult.pageParagraph,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 21
-											: 18
-										: language === "ar-AE"
-											? 23
-											: 20,
-									device.screenWidth,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE"
-											? 26
-											: 23
-										: language === "ar-AE"
-											? 28
-											: 25,
-									device.screenWidth,
-								),
+								...adjustExtroDescriptionText(),
 							}}
 						>
 							{translatedPage.subheading}
