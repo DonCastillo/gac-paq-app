@@ -1,8 +1,9 @@
 import React from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
-import { getDevice, getLanguage } from "store/settings/settingsSlice";
+import { getDevice } from "store/settings/settingsSlice";
 import { GeneralStyle } from "styles/general";
+import { adjustTextAlignmentDirection } from "utils/style";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -16,7 +17,6 @@ const QuestionInput = ({
 	placeholder,
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
-	const language = useSelector(getLanguage);
 
 	const changeHandler = (value: string): void => {
 		onChange(value);
@@ -32,7 +32,7 @@ const QuestionInput = ({
 				placeholder={placeholder ?? ""}
 				defaultValue={selectedValue ?? ""}
 				keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
-				textAlign={language === "ar-AE" ? "right" : "left"}
+				textAlign={adjustTextAlignmentDirection()}
 			/>
 		</View>
 	);

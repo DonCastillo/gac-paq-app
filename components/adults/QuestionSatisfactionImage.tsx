@@ -9,7 +9,6 @@ import {
 	getColorTheme,
 	getCurrentPage,
 	getDevice,
-	getLanguage,
 } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
 
