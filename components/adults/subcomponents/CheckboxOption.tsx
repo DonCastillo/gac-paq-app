@@ -1,10 +1,16 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
 import React, { useRef } from "react";
-import { moderateScale } from "utils/responsive.utils";
 import { isOtherOption } from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getDevice, getLanguage, getPhrases } from "store/settings/settingsSlice";
+import { getColorTheme, getDevice, getPhrases } from "store/settings/settingsSlice";
+import {
+	adjustCheckboxOptionLabel,
+	adjustOptionListImageSizeNonSVGAdult,
+	adjustOptionListImageSizeSVGAdult,
+	adjustTextAlignmentDirection,
+	adjustWritingDirection,
+} from "utils/style";
 
 interface PropsInterface {
 	label: string;
@@ -29,7 +35,6 @@ const CheckboxOption = ({
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-	const language = useSelector(getLanguage);
 	const phrases = useSelector(getPhrases);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
@@ -56,14 +61,7 @@ const CheckboxOption = ({
 						<View
 							style={{
 								...styles.svgImage,
-								maxWidth: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								maxHeight: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
+								...adjustOptionListImageSizeSVGAdult(),
 							}}
 						>
 							{image()}
@@ -74,14 +72,7 @@ const CheckboxOption = ({
 							source={image}
 							style={{
 								...styles.nonSvgImage,
-								maxWidth: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								minHeight: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
+								...adjustOptionListImageSizeNonSVGAdult(),
 							}}
 							resizeMode="contain"
 						/>
@@ -91,15 +82,8 @@ const CheckboxOption = ({
 					<Text
 						style={{
 							...styles.labelText,
-							fontSize: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							lineHeight: moderateScale(
-								device.isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
-								device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-							),
-							writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+							...adjustCheckboxOptionLabel(),
+							writingDirection: adjustWritingDirection(),
 						}}
 					>
 						{label}
@@ -142,7 +126,7 @@ const CheckboxOption = ({
 						defaultValue={defaultOtherInputValue}
 						placeholder={phrases?.specify}
 						keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
-						textAlign={language === "ar-AE" ? "right" : "left"}
+						textAlign={adjustTextAlignmentDirection()}
 					/>
 				</View>
 			)}

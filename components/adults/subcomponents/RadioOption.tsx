@@ -1,16 +1,17 @@
 import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
 import { GeneralStyle } from "styles/general";
 import React, { useRef } from "react";
-import { moderateScale } from "utils/responsive.utils";
 import { isOtherOption } from "utils/options.utils";
 import { useSelector } from "react-redux";
+import { getColorTheme, getDevice, getPhrases } from "store/settings/settingsSlice";
 import {
-	getColorTheme,
-	getCurrentPage,
-	getDevice,
-	getLanguage,
-	getPhrases,
-} from "store/settings/settingsSlice";
+	adjustOptionListImageSizeNonSVGAdult,
+	adjustOptionListImageSizeSVGAdult,
+	adjustRadioOptionLabel,
+	adjustRadioOptionSublabel,
+	adjustTextAlignmentDirection,
+	adjustWritingDirection,
+} from "utils/style";
 
 interface PropsInterface {
 	label: string;
@@ -40,8 +41,6 @@ const RadioOption = ({
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
 	const phrases = useSelector(getPhrases);
-	const language = useSelector(getLanguage);
-	const currentPage = useSelector(getCurrentPage);
 	const { color100 } = colorTheme;
 	const otherInputRef = useRef<TextInput>(null);
 
@@ -66,14 +65,7 @@ const RadioOption = ({
 						<View
 							style={{
 								...styles.svgImage,
-								maxWidth: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								maxHeight: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
+								...adjustOptionListImageSizeSVGAdult(),
 							}}
 						>
 							{image()}
@@ -84,14 +76,7 @@ const RadioOption = ({
 							source={image}
 							style={{
 								...styles.nonSvgImage,
-								maxWidth: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								minHeight: moderateScale(
-									device.isTablet ? 30 : 30,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
+								...adjustOptionListImageSizeNonSVGAdult(),
 							}}
 							resizeMode="contain"
 						/>
@@ -102,27 +87,8 @@ const RadioOption = ({
 						<Text
 							style={{
 								...styles.labelText,
-								fontSize: moderateScale(
-									device.isTablet
-										? language === "ar-AE" && currentPage.page.ident !== "language_location"
-											? 17
-											: 14
-										: language === "ar-AE" && currentPage.page.ident !== "language_location"
-											? 19
-											: 18,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								lineHeight: moderateScale(
-									device.isTablet
-										? language === "ar-AE" && currentPage.page.ident !== "language_location"
-											? 21
-											: 18
-										: language === "ar-AE" && currentPage.page.ident !== "language_location"
-											? 23
-											: 22,
-									device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-								),
-								writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+								...adjustRadioOptionLabel(),
+								writingDirection: adjustWritingDirection(),
 							}}
 						>
 							{optionLabel !== "" && optionLabel !== undefined && optionLabel !== null
@@ -135,27 +101,8 @@ const RadioOption = ({
 							<Text
 								style={{
 									...styles.labelText,
-									fontSize: moderateScale(
-										device.isTablet
-											? language === "ar-AE"
-												? 17
-												: 16
-											: language === "ar-AE"
-												? 17
-												: 16,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-									lineHeight: moderateScale(
-										device.isTablet
-											? language === "ar-AE"
-												? 21
-												: 20
-											: language === "ar-AE"
-												? 21
-												: 20,
-										device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-									),
-									writingDirection: language === "ar-AE" ? "rtl" : "ltr",
+									...adjustRadioOptionSublabel(),
+									writingDirection: adjustWritingDirection(),
 								}}
 							>
 								{optionSublabel}
@@ -200,7 +147,7 @@ const RadioOption = ({
 						defaultValue={defaultOtherInputValue}
 						placeholder={phrases?.specify}
 						keyboardType={device.platform === "ios" ? "ascii-capable" : "visible-password"}
-						textAlign={language === "ar-AE" ? "right" : "left"}
+						textAlign={adjustTextAlignmentDirection()}
 					/>
 				</View>
 			)}
