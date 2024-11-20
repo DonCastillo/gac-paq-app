@@ -10,6 +10,9 @@ const IntroductionPhrase: LangPhraseInterface = {
 	"en-MW": {
 		label: "Introduction",
 	},
+	"en-NG": {
+		label: "Introduction",
+	},
 	"ch-MW": {
 		label: "Mawu oyamba",
 	},

@@ -10,6 +10,9 @@ const PleaseSpecifyPhrase: LangPhraseInterface = {
 	"en-MW": {
 		label: "Please specify",
 	},
+	"en-NG": {
+		label: "Please specify",
+	},
 	"ch-MW": {
 		label: "Fotokozani",
 	},
