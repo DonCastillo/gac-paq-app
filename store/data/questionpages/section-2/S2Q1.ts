@@ -62,6 +62,23 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NG": {
+			type: Question.QuestionRadio,
+			heading: "Question 8",
+			label: "In the past week, did you do any active chores or tasks?",
+			kid_label: "In the past week, did you do any active chores or tasks?",
+			adult_label: "In the past week, did your child do active chores or tasks?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 8",

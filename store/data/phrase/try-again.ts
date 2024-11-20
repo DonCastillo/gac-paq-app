@@ -10,6 +10,9 @@ const TryAgainPhrase: LangPhraseInterface = {
 	"en-MW": {
 		label: "Try Again",
 	},
+	"en-NG": {
+		label: "Try Again",
+	},
 	"ch-MW": {
 		label: "Yeseraninso",
 	},

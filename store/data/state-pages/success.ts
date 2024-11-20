@@ -22,6 +22,11 @@ const SuccessPage: LangPagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"en-NG": {
+			heading: "Success!",
+			description:
+				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
+		},
 		"ch-MW": {
 			heading: "Zatheka!",
 			description:
