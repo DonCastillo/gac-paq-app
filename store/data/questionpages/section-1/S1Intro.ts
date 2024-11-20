@@ -18,6 +18,10 @@ const S1Intro: LangSectionPayloadInterface = {
 			heading: "School",
 			subheading: "Section 1",
 		},
+		"en-NG": {
+			heading: "School",
+			subheading: "Section 1",
+		},
 		"ch-MW": {
 			heading: "Sukulu",
 			subheading: "Gawo loyamba",
