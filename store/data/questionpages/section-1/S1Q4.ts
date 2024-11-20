@@ -97,6 +97,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NG": {
+			type: Question.QuestionRadio,
+			heading: "Question 4",
+			label: "How long are your physical education classes?",
+			kid_label: "How long are your physical education classes?",
+			adult_label: "How long are your child's physical education classes?",
+			choices: [
+				{
+					label: "Less than 30 minutes per class",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 minutes per class",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 minutes per class",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Over 60 minutes per class",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Don't know",
+					value: "Don't know",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 4",
