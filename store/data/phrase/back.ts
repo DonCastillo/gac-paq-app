@@ -10,6 +10,9 @@ const BackPhrase: LangPhraseInterface = {
 	"en-MW": {
 		label: "Back",
 	},
+	"en-NG": {
+		label: "Back",
+	},
 	"ch-MW": {
 		label: "Bwererani",
 	},

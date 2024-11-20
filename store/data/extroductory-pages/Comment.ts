@@ -49,6 +49,19 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"en-NG": {
+			type: Question.QuestionTextarea,
+			heading: "Feedback",
+			placeholder: "Enter your comment here",
+			label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_sublabel: "If yes, please write them in the box below",
+			adult_sublabel: "If yes, please write them in the box below",
+		},
 		"ch-MW": {
 			type: Question.QuestionTextarea,
 			heading: "Ndemanga",

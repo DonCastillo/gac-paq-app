@@ -18,6 +18,10 @@ const S4Intro: LangSectionPayloadInterface = {
 			heading: "Transportation",
 			subheading: "Section 4",
 		},
+		"en-NG": {
+			heading: "Transportation",
+			subheading: "Section 4",
+		},
 		"ch-MW": {
 			heading: "Mayendedwe",
 			subheading: "Gawo 4",

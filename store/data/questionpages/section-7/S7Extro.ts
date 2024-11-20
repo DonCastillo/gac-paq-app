@@ -18,6 +18,10 @@ const S7Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"en-NG": {
+			heading: "Section Complete!",
+			subheading: "",
+		},
 		"ch-MW": {
 			heading: "Gawo latha",
 			subheading: "",

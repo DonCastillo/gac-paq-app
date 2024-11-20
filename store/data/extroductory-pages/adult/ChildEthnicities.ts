@@ -121,6 +121,35 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"en-NG": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 26",
+			label: "What is your child's ethnicity?",
+			kid_label: "What is your child's ethnicity?",
+			adult_label: "What is your child's ethnicity?",
+			choices: [
+				{
+					label: "Yoruba",
+					value: "Yoruba",
+				},
+				{
+					label: "Igbo",
+					value: "Igbo",
+				},
+				{
+					label: "Hausa",
+					value: "Hausa",
+				},
+				{
+					label: "Other",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to say",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionCheckbox,
 			heading: "Funso 26",
