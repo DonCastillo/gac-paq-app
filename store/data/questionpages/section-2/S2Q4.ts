@@ -466,7 +466,7 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				"¿Cuál de las siguientes imágenes se parece más a lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas del hogar o quehaceres?",
 			choices: [
 				{
-					label: "Sin moverte",
+					label: "Sin moverse",
 					value: "0.1",
 					image_ident: "not_moving",
 				},

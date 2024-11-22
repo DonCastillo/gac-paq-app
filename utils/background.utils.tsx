@@ -133,6 +133,7 @@ const getOptionImage = (image_ident: string): any | null => {
 	}
 
 	const doNotKnowImage = Images.generic.doNotKnow;
+	const doNotKnowImageES = Images.generic.doNotKnowES;
 	const kidWalkingImage = Images.kids.options.transportation.walking;
 	const kidWheelingImage = Images.kids.options.transportation.wheeling;
 	const kidSchoolBusImage = Images.kids.options.transportation.school_bus;
@@ -154,7 +155,11 @@ const getOptionImage = (image_ident: string): any | null => {
 	// options for physical education
 	if (page_ident === "school_5") {
 		if (image_ident === "dont_know") {
-			return doNotKnowImage;
+			if (language === "es-ES") {
+				return doNotKnowImageES;
+			} else {
+				return doNotKnowImage;
+			}
 		}
 		return PhysicalEducationOptions[region][mode][image_ident];
 	}
@@ -162,7 +167,11 @@ const getOptionImage = (image_ident: string): any | null => {
 	// options for breaks
 	if (page_ident === "school_7") {
 		if (image_ident === "dont_know") {
-			return doNotKnowImage;
+			if (language === "es-ES") {
+				return doNotKnowImageES;
+			} else {
+				return doNotKnowImage;
+			}
 		}
 		return BreaksOptions[region][mode][image_ident];
 	}
@@ -170,7 +179,11 @@ const getOptionImage = (image_ident: string): any | null => {
 	// options for chores
 	if (page_ident === "household_4") {
 		if (image_ident === "dont_know") {
-			return doNotKnowImage;
+			if (language === "es-ES") {
+				return doNotKnowImageES;
+			} else {
+				return doNotKnowImage;
+			}
 		}
 		return ChoresOptions[region][mode][image_ident];
 	}
@@ -178,7 +191,11 @@ const getOptionImage = (image_ident: string): any | null => {
 	// options for volunteering. only for teens and parent of teens
 	if (page_ident === "work_3") {
 		if (image_ident === "dont_know") {
-			return doNotKnowImage;
+			if (language === "es-ES") {
+				return doNotKnowImageES;
+			} else {
+				return doNotKnowImage;
+			}
 		}
 		return VolunteeringOptions[region].teen[image_ident];
 	}

@@ -469,7 +469,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo en la clase de educación física?",
 			choices: [
 				{
-					label: "Sin moverte",
+					label: "Sin moverse",
 					value: "0.1",
 					image_ident: "not_moving",
 				},
