@@ -906,7 +906,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 
 					sublabel: {
 						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines",
-						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines",
 					},
 				},
 				{

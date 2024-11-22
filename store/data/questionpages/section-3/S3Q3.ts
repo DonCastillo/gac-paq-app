@@ -472,7 +472,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 				"¿Cuál de las siguientes opciones se parece más a lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
 			choices: [
 				{
-					label: "Sin moverte",
+					label: "Sin moverse",
 					value: "0.1",
 					image_ident: "not_moving",
 				},
