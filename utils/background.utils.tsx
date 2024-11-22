@@ -97,6 +97,12 @@ const getImageBackgroundStatus = (state: State): any | null => {
 	let region = language.split("-")[1].toUpperCase();
 	const platform = settings.device.isTablet ? "tablet" : "phone";
 
+	// modify conditional statement here if 2 or more languages have the same background images
+	if (language === "en-NG") {
+		language = "en-MW";
+		region = "MW";
+	}
+
 	// some languages don't have images yet
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
