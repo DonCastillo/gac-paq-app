@@ -13,6 +13,7 @@ const GenericImages = {
 		very_satisfied: VerySatisfiedSVG,
 	},
 	doNotKnow: require("assets/images/general/options/do-not-know.webp"),
+	doNotKnowES: require("assets/images/general/options/do-not-know-es.webp"),
 };
 
 export default GenericImages;

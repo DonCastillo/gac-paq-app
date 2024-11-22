@@ -312,7 +312,7 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 					value: "Male",
 				},
 				{
-					label: "Prefiere no contestar",
+					label: "Prefiero no contestar",
 					value: "Prefer not to answer",
 				},
 			],

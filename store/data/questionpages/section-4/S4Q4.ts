@@ -661,8 +661,8 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					value: "Wheeling",
 					image_ident: "wheeling",
 					sublabel: {
-						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
-						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patinete, patines",
 					},
 				},
 				{

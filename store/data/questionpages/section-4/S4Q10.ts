@@ -561,7 +561,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17b - En ruedas",
+			heading: "Pregunta 17b - Sobre ruedas",
 			label:
 				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
 			kid_label:
