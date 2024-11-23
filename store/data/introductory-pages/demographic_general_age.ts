@@ -404,7 +404,7 @@ const DemographicPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionDropdown,
-			heading: "مرحباً بك",
+			heading: "مرحباً بك!",
 			label: "كم عمرك؟",
 			kid_label: "كم عمرك؟",
 			adult_label: "كم عمرك؟",
@@ -422,7 +422,7 @@ const DemographicPage: LangQuestionDropdownPayloadInterface = {
 					value: "10",
 				},
 				{
-					label: "١١ سنة ",
+					label: "١١ سنة",
 					value: "11",
 				},
 				{

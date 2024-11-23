@@ -74,10 +74,10 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionInput,
-			heading: "مرحباً بك",
-			label: "يرجى إدخال رقم هوية المشارك الخاص بك",
-			kid_label: "يرجى إدخال رقم هوية المشارك الخاص بك",
-			adult_label: "يرجى إدخال رقم هوية المشارك الخاص بك",
+			heading: "مرحباً بك!",
+			label: "يُرجى إدخال رقم هوية المشارك الخاص بك",
+			kid_label: "يُرجى إدخال رقم هوية المشارك الخاص بك",
+			adult_label: "يُرجى إدخال رقم هوية المشارك الخاص بك",
 			placeholder: "الرقم التسلسلي لهوية المشارك",
 		},
 		"ne-NP": {
