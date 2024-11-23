@@ -302,7 +302,7 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionSatisfactionImage,
-			heading: "التغذية الراجعة",
+			heading: "ملاحظات",
 			label: "ما مدى رضاك عن التطبيق؟",
 			kid_label: "ما مدى رضاك عن التطبيق؟",
 			adult_label: "ما مدى رضاك عن التطبيق؟",

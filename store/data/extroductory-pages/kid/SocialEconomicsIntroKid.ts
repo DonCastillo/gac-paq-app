@@ -39,7 +39,7 @@ const SocialEconomicsIntroKid: LangSectionPayloadInterface = {
 			subheading: "Section 8",
 		},
 		"ar-AE": {
-			heading: "عنك",
+			heading: "أخبرنا عن نفسك",
 			subheading: "القسم الثامن [٨]",
 		},
 		"ne-NP": {

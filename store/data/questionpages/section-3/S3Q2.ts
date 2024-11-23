@@ -252,7 +252,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال ١٣",
+			heading: "سؤال [١٣]",
 			label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
 			kid_label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
 			adult_label:

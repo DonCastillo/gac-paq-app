@@ -240,7 +240,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال ١٠",
+			heading: "سؤال [١٠]",
 			label:
 				"في الأيام التي قمت فيها بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت تطلّب منك القيام بتلك الأعمال طوال اليوم؟",
 			kid_label:

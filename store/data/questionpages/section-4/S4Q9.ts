@@ -225,7 +225,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 17c - المشي",
+			heading: "سؤال [١٧ج] - المشي",
 			label:
 				"كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
 			kid_label:

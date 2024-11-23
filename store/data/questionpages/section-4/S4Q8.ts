@@ -321,7 +321,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 17b - المشي",
+			heading: "سؤال [١٧ب] - المشي",
 			label:
 				"كم عدد الأيام التي قمت فيها بالمشي للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
 			kid_label:

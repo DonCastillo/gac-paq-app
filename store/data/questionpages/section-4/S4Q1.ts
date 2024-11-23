@@ -513,7 +513,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadioImage,
-			heading: "السؤال ١٥",
+			heading: "سؤال [١٥]",
 			label: "كيف ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
 			kid_label: "كيف ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
 			adult_label: "كيف ذهب طفلك إلى المدرسة خلال الأسبوع الماضي؟",

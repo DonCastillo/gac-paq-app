@@ -280,7 +280,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadioImage,
-			heading: "السؤال ١٤",
+			heading: "سؤال [١٤]",
 			label: "أي من الصور التالية تبيّن ما تفعله معظم الوقت أثناء العمل التطوعي أو الوظيفة؟",
 			kid_label: "أي من الصور التالية تبيّن ما تفعله معظم الوقت أثناء العمل التطوعي أو الوظيفة؟",
 			adult_label:

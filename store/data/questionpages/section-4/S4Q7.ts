@@ -292,7 +292,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionCheckbox,
-			heading: "السؤال 17",
+			heading: "سؤال [١٧]",
 			label:
 				"خلال الأسبوع الماضي، هل قمت بالمشي أو استخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل (مثل منازل الأصدقاء أو الأقارب، الحديقة، والمتجر، وغيرها)؟",
 			kid_label:

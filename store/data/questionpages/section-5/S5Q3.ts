@@ -234,7 +234,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 20",
+			heading: "سؤال [٢٠]",
 			label: "في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
 			kid_label:
 				"في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",

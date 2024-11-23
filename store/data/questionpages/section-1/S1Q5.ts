@@ -280,7 +280,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadioImage,
-			heading: "السؤال 5",
+			heading: "سؤال [٥]",
 			label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء حصة التربية البدنية؟",
 			kid_label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء حصة التربية البدنية؟",
 			adult_label: "أي من الصور التالية تبيّن ما يفعله طفلك غالباً أثناء حصة التربية البدنية؟",

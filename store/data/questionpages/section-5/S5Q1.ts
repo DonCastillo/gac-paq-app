@@ -154,7 +154,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 18",
+			heading: "سؤال [١٨]",
 			label: "هل شاركت في أي أنشطة منظّمة أو خارجية خلال الأسبوع الماضي؟",
 			kid_label: "هل شاركت في أي أنشطة منظّمة أو خارجية خلال الأسبوع الماضي؟",
 			adult_label: "هل شارك طفلك في أي أنشطة منظّمة أو خارجية خلال الأسبوع الماضي؟",

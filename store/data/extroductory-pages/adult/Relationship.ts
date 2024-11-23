@@ -311,7 +311,7 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 28",
+			heading: "سؤال [٢٨]",
 			label: "ما هي علاقتك بالطفل؟",
 			kid_label: "ما هي علاقتك بالطفل؟",
 			adult_label: "ما هي علاقتك بالطفل؟",

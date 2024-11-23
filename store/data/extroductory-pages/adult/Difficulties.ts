@@ -444,7 +444,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionCheckbox,
-			heading: "السؤال 25",
+			heading: "سؤال [٢٥]",
 			label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
 			kid_label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",
 			adult_label: "هل يواجه طفلك أياً من الصعوبات التالية في أنشطته اليومية؟",

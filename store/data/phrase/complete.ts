@@ -26,7 +26,7 @@ const CompletePhrase: LangPhraseInterface = {
 		label: "Complete",
 	},
 	"ar-AE": {
-		label: "اكتمل",
+		label: "اكتمل الاستبيان",
 	},
 	"ne-NP": {
 		label: "पूरा",

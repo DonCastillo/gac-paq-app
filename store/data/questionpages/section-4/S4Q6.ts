@@ -240,7 +240,7 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 16c",
+			heading: "سؤال [١٦ج]",
 			label: "كم من الوقت تستغرق عادةّ للذهاب إلى العمل؟",
 			kid_label: "كم من الوقت تستغرق عادةّ للذهاب إلى العمل؟",
 			adult_label: "كم من الوقت يستغرق طفلك عادةّ للذهاب إلى العمل؟",

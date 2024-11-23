@@ -348,7 +348,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 21",
+			heading: "سؤال [٢١]",
 			label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في اللعب بنشاط، للمتعة فقط؟",
 			kid_label:
 				"خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في اللعب بنشاط، للمتعة فقط؟",

@@ -229,7 +229,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 17c - العجلات",
+			heading: "سؤال [١٧ج] - العجلات",
 			label:
 				"في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
 			kid_label:

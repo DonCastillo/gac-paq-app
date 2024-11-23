@@ -309,7 +309,7 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 16b",
+			heading: "سؤال [١٦ب]",
 			label: "كم عدد الأيام التي استخدمت فيها هذه الوسيلة خلال الأسبوع الماضي؟",
 			kid_label: "كم عدد الأيام التي استخدمت فيها هذه الوسيلة خلال الأسبوع الماضي؟",
 			adult_label: "كم عدد الأيام التي استخدم فيها طفلك هذه الوسيلة خلال الأسبوع الماضي؟",

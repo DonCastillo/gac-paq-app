@@ -244,7 +244,7 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 4",
+			heading: "سؤال [٤]",
 			label: "ما هي المدّة الزمنية لحصص التربية البدنية؟",
 			kid_label: "ما هي المدّة الزمنية لحصص التربية البدنية؟",
 			adult_label: "ما هي المدّة الزمنية لحصص التربية البدنية لدى طفلك؟",

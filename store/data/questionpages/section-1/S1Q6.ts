@@ -309,7 +309,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 6",
+			heading: "سؤال [٦]",
 			label: "في أيام الدراسة العادية، ما هي مدّة الاستراحة لديك؟",
 			kid_label: "في أيام الدراسة العادية، ما هي مدّة الاستراحة لديك؟",
 			adult_label: "في أيام الدراسة العادية، ما هي مدّة الاستراحة لدى طفلك؟",

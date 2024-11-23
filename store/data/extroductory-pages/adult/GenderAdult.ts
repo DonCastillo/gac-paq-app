@@ -176,7 +176,7 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 24",
+			heading: "سؤال [٢٤]",
 			label: "ما هو جنس طفلك؟",
 			kid_label: "ما هو جنس طفلك؟",
 			adult_label: "ما هو جنس طفلك؟",
