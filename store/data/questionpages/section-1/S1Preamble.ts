@@ -82,7 +82,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "المدرسة",
-			subheading: "القسم الأول (١)",
+			subheading: "القسم الأول [١]",
 			description: {
 				kid: "يحتوي هذا القسم على أسئلة حول الأنشطة التي تقوم بها أثناء وجودك في المدرسة، مثلاً خلال حصص التربية البدنية، فترة الاستراحة، ووقت الغداء.",
 				adult:

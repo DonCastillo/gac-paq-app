@@ -40,7 +40,7 @@ const S2Intro: LangSectionPayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "الواجبات المنزلية",
-			subheading: "القسم الثاني (٢)",
+			subheading: "القسم الثاني [٢]",
 		},
 		"ne-NP": {
 			heading: "घरायसी काम",

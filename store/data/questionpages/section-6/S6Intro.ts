@@ -40,7 +40,7 @@ const S6Intro: LangSectionPayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "اللعب أو وقت الفراغ",
-			subheading: "القسم السادس  (٦)",
+			subheading: "القسم السادس [٦]",
 		},
 		"ne-NP": {
 			heading: "खाली समय वा खेल्ने समय",

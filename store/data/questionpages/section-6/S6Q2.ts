@@ -396,7 +396,7 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			adult_sublabel: ".من الأمثلة على ذلك الجمباز والتسلق وتمارين الأثقال وغيرها",
 			choices: [
 				{
-					label: "٠ يوم",
+					label: "لا شيء (٠)",
 					value: "0",
 				},
 				{
@@ -420,7 +420,7 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 					value: "5",
 				},
 				{
-					label: "ستة أيام  (٦)",
+					label: "ستة أيام (٦)",
 					value: "6",
 				},
 				{

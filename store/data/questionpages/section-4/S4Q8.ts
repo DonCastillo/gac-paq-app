@@ -350,7 +350,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 					value: "5",
 				},
 				{
-					label: "ستة أيام  (٦)",
+					label: "ستة أيام (٦)",
 					value: "6",
 				},
 				{

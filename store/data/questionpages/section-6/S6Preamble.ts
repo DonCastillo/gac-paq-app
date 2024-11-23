@@ -82,7 +82,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "اللعب أو وقت الفراغ",
-			subheading: "القسم السادس  (٦)",
+			subheading: "القسم السادس [٦]",
 			description: {
 				kid: "يشمل ذلك كل أنواع النشاط البدني التي تقوم بها أثناء اللعب أو وقت الفراغ، ولا يشمل الأنشطة المنظّمة أو أوقات الاستراحة في المدرسة.",
 				adult:

@@ -40,7 +40,7 @@ const S1Intro: LangSectionPayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "المدرسة",
-			subheading: "القسم الأول (١)",
+			subheading: "القسم الأول [١]",
 		},
 		"ne-NP": {
 			heading: "विध्यालय",
