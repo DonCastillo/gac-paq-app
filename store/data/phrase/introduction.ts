@@ -26,7 +26,7 @@ const IntroductionPhrase: LangPhraseInterface = {
 		label: "Introduction",
 	},
 	"ar-AE": {
-		label: "مقدمة",
+		label: "المقدمة",
 	},
 	"ne-NP": {
 		label: "परिचय",

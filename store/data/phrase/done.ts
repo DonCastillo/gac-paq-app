@@ -26,7 +26,7 @@ const DonePhrase: LangPhraseInterface = {
 		label: "Done",
 	},
 	"ar-AE": {
-		label: "تم الانتهاء",
+		label: "الانتهاء",
 	},
 	"ne-NP": {
 		label: "सकियो",
