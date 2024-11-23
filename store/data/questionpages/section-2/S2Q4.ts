@@ -287,12 +287,12 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "not_moving",
 				},
 				{
-					label: "جهد سهل",
+					label: "‌جهد سهل",
 					value: "0.3",
 					image_ident: "easy_effort",
 				},
 				{
-					label: "جهد متوسط أو صعب",
+					label: "‌جهد متوسط أو صعب",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},
