@@ -382,7 +382,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
 			kid_label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
 			adult_label: "كيف ذهب طفلك إلى العمل خلال الأسبوع الماضي؟ ",
-			kid_sublabel: "حدد الوسيلة الأكثر استخداماً",
+			kid_sublabel: "حدد الوسيلة الاكثر استخداماً",
 			adult_sublabel: "حدد الوسيلة الاكثر استخداماً",
 			choices: [
 				{

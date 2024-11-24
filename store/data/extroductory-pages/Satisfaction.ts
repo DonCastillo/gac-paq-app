@@ -306,7 +306,7 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 			label: "ما مدى رضاك عن التطبيق؟",
 			kid_label: "ما مدى رضاك عن التطبيق؟",
 			adult_label: "ما مدى رضاك عن التطبيق؟",
-			adult_sublabel: ".حدد الصورة (الرمز التعبيري) التي تمثل مدى رضاك بأفضل وجه",
+			adult_sublabel: "حدد الصورة (الرمز التعبيري) التي تمثل مدى رضاك بأفضل وجه.",
 			kid_sublabel: ".حدد الصورة (الرمز التعبيري) التي تمثل مدى رضاك بأفضل وجه",
 			choices: [
 				{

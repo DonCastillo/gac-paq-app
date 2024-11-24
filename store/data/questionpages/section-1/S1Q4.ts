@@ -250,19 +250,19 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 			adult_label: "ما هي المدّة الزمنية لحصص التربية البدنية لدى طفلك؟",
 			choices: [
 				{
-					label: "أقل من 30 دقيقة",
+					label: "أقل من ٣٠ دقيقة",
 					value: "Less than 30 minutes per class",
 				},
 				{
-					label: "ما بين 30 و45 دقيقة",
+					label: "ما بين ٣٠ و٤٥ دقيقة",
 					value: "30 - 45 minutes per class",
 				},
 				{
-					label: "ما بين 46 و60 دقيقة",
+					label: "ما بين ٤٥ و٦٠ دقيقة",
 					value: "46 - 60 minutes per class",
 				},
 				{
-					label: "أكثر من 60 دقيقة",
+					label: "أكثر من ٦٠ دقيقة",
 					value: "Over 60 minutes per class",
 				},
 				{
