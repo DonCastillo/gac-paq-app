@@ -153,7 +153,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال ١٢",
+			heading: "سؤال [١٢]",
 			label: "خلال الأسبوع الماضي، هل قمت بعملٍ تطوعي أو وظيفة؟",
 			kid_label: "خلال الأسبوع الماضي، هل قمت بعملٍ تطوعي أو وظيفة؟",
 			adult_label: "خلال الأسبوع الماضي، هل قام طفلك بعملٍ تطوعي أو وظيفة؟",

@@ -66,10 +66,10 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionLanguage,
-			heading: "مرحباً بك",
-			label: "ما اللغة التي تتحدثها وأين أنت؟",
-			kid_label: "ما اللغة التي تتحدثها وأين أنت؟",
-			adult_label: "ما اللغة التي تتحدثها وأين أنت؟",
+			heading: "مرحباً بك!",
+			label: "ما هي اللغة التي تتحدّثها وأين أنت؟",
+			kid_label: "ما هي اللغة التي تتحدّثها وأين أنت؟",
+			adult_label: "ما هي اللغة التي تتحدّثها وأين أنت؟",
 		},
 		"ne-NP": {
 			type: Question.QuestionLanguage,

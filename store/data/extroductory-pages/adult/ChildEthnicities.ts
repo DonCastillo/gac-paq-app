@@ -274,7 +274,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionCheckboxInput,
-			heading: "السؤال 26",
+			heading: "سؤال [٢٦]",
 			label: "ما هي جنسية طفلك؟",
 			kid_label: "ما هي جنسية طفلك؟",
 			adult_label: "ما هي جنسية طفلك؟",

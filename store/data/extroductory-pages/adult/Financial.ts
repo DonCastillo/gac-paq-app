@@ -285,7 +285,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 30",
+			heading: "سؤال [٣٠]",
 			label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
 			kid_label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",
 			adult_label: "ما مدى صعوبة تلبية الاحتياجات المالية لعائلتك؟",

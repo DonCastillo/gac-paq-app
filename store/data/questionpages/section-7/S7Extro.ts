@@ -39,7 +39,7 @@ const S7Extro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"ar-AE": {
-			heading: "تم اكمال القسم" + "!",
+			heading: "اكتمل القسم",
 			subheading: "",
 		},
 		"ne-NP": {

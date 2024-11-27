@@ -309,7 +309,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال ٩",
+			heading: "سؤال [٩]",
 			label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بالأعمال المنزلية؟",
 			kid_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قمت فيها بالأعمال المنزلية؟",
 			adult_label: "خلال الأسبوع الماضي، كم عدد الأيام التي قام فيها طفلك بالأعمال المنزلية؟",
@@ -335,7 +335,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 					value: "5",
 				},
 				{
-					label: "ستة أيام  (٦)",
+					label: "ستة أيام (٦)",
 					value: "6",
 				},
 				{

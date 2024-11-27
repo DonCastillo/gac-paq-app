@@ -39,7 +39,7 @@ const AppExtro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"ar-AE": {
-			heading: "شكرًا لإكمالك الاستطلاع" + "!",
+			heading: "شكراً لك على إكمال الاستبيان!",
 			subheading: "",
 		},
 		"ne-NP": {

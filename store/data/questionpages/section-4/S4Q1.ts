@@ -513,11 +513,11 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadioImage,
-			heading: "السؤال ١٥",
+			heading: "سؤال [١٥]",
 			label: "كيف ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
 			kid_label: "كيف ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
 			adult_label: "كيف ذهب طفلك إلى المدرسة خلال الأسبوع الماضي؟",
-			kid_sublabel: "حدد الوسيلة الأكثر استخداماً",
+			kid_sublabel: "حدد الوسيلة الاكثر استخداماً",
 			adult_sublabel: "حدد الوسيلة الاكثر استخداماً",
 			choices: [
 				{
@@ -526,22 +526,22 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "walking",
 				},
 				{
-					label: "العجلات",
+					label: "‌العجلات",
 					value: "Wheeling",
 					image_ident: "wheeling",
 					sublabel: {
-						kid: "مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+						kid: "مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكراسي المتحركة، وغيرها",
 						adult:
 							"مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
 					},
 				},
 				{
-					label: "الحافلة المدرسية",
+					label: "‌الحافلة المدرسية",
 					value: "School bus",
 					image_ident: "school_bus",
 				},
 				{
-					label: "النقل العام",
+					label: "‌النقل العام",
 					value: "Public transit",
 					image_ident: "public_transit",
 					sublabel: {
@@ -550,7 +550,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "السيارة، التاكسي، أو الدراجة النارية",
+					label: "‌السيارة، التاكسي، أو الدراجة النارية",
 					value: "Car, taxi, truck, or motorcycle",
 					image_ident: "car",
 				},
