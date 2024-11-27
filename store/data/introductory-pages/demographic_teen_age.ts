@@ -276,7 +276,7 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionDropdown,
-			heading: "مرحباً بك",
+			heading: "مرحباً بك!",
 			label: "كم عمرك؟",
 			kid_label: "كم عمرك؟",
 			adult_label: "كم عمرك؟",

@@ -26,7 +26,7 @@ const FeedbackPhrase: LangPhraseInterface = {
 		label: "Feedback",
 	},
 	"ar-AE": {
-		label: "ردود الفعل",
+		label: "التعليقات والملاحظات",
 	},
 	"ne-NP": {
 		label: "प्रतिक्रिया",

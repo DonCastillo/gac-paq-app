@@ -73,7 +73,7 @@ const S4Preamble: LangPreamblePayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "المواصلات",
-			subheading: "القسم الرابع (٤)",
+			subheading: "القسم الرابع [٤]",
 			description: {
 				kid: "يحتوي هذا القسم على أسئلة حول التنقل وكيفية الذهاب إلى أماكن مختلفة.",
 				adult: "يحتوي هذا القسم على أسئلة حول التنقل وكيفية الذهاب إلى أماكن مختلفة.",

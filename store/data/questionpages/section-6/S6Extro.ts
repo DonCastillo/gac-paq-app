@@ -39,8 +39,8 @@ const S6Extro: LangExtroPayloadInterface = {
 			subheading: "Only one more to go!",
 		},
 		"ar-AE": {
-			heading: "تم اكمال القسم" + "!",
-			subheading: "لم يتبق سوى سؤال واحد فقط" + "!",
+			heading: "اكتمل القسم",
+			subheading: "لم يتبقَّ سوى سؤال واحد فقط!",
 		},
 		"ne-NP": {
 			heading: "यो खण्ड सकियो!",

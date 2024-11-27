@@ -149,7 +149,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 8",
+			heading: "سؤال [٨]",
 			label: "خلال الأسبوع الماضي، هل قمت بأعمال منزلية أو مهام تتطلّب منك النشاط البدني؟",
 			kid_label: "خلال الأسبوع الماضي، هل قمت بأعمال منزلية أو مهام تتطلّب منك النشاط البدني؟",
 			adult_label:

@@ -242,29 +242,29 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionDropdown,
-			heading: "مرحباً بك",
-			label: "من الذي يقوم بإجراء هذه الاستبانة؟",
-			kid_label: "من الذي يقوم بإجراء هذه الاستبانة؟",
-			adult_label: "من الذي يقوم بإجراء هذه الاستبانة؟",
+			heading: "مرحباً بك!",
+			label: "من الذي يقوم بإجراء هذا الاستبيان؟",
+			kid_label: "من الذي يقوم بإجراء هذا الاستبيان؟",
+			adult_label: "من الذي يقوم بإجراء هذا الاستبيان؟",
 			choices: [
 				{
 					label: "طفل",
 					value: "child",
 					sublabel: {
-						kid: "من 8 إلى 11 سنة",
-						adult: "من 8 إلى 11 سنة",
+						kid: "من ٨ سنوات إلى ١١ سنة",
+						adult: "من ٨ سنوات إلى ١١ سنة",
 					},
 				},
 				{
 					label: "مراهق",
 					value: "teen",
 					sublabel: {
-						kid: "من 12 إلى 17 سنة",
-						adult: "من 12 إلى 17 سنة",
+						kid: "من ١٢ إلى ١٧ سنة",
+						adult: "من ١٢ إلى ١٧ سنة",
 					},
 				},
 				{
-					label: "والد\\ة",
+					label: "والد(ة)",
 					value: "adult",
 				},
 			],

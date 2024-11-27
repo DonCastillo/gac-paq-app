@@ -40,7 +40,7 @@ const S7Intro: LangSectionPayloadInterface = {
 		},
 		"ar-AE": {
 			heading: "قضاء الوقت في الهواء الطلق",
-			subheading: "القسم السابع (٧)",
+			subheading: "القسم السابع [٧]",
 		},
 		"ne-NP": {
 			heading: "बाहिरी गतिविधि",

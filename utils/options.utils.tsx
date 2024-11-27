@@ -2,6 +2,8 @@ import React from "react";
 import type { Choice, ChoiceIcon, ChoiceImage, LanguageInterface } from "interface/payload.type";
 import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
+import { store } from "store/store";
+
 
 const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
 
@@ -118,9 +120,8 @@ const getUserSpecifiedOther = (value: string | null, selected: string | null): s
 };
 
 const optionLetter = (index: number): string => {
-	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	const lettersArr = letters.split("");
-	return lettersArr[index % letters.length];
+	const letters = store.getState().questions.optionLetters;
+	return letters[index % letters.length];
 };
 
 export {

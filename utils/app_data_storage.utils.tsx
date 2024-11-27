@@ -27,6 +27,7 @@ import Transportation9_11 from "store/data/questionpages/section-4/transportatio
 import BackPhrase from "store/data/phrase/back";
 import CompletePhrase from "store/data/phrase/complete";
 import NextPhrase from "store/data/phrase/next";
+import OptionLetters from "store/data/options/letter";
 
 // save all the raw pages and their different translations to local storage
 const saveAppData = async (): Promise<void> => {
@@ -53,6 +54,7 @@ const saveAppData = async (): Promise<void> => {
 		successPage: SuccessPage,
 		offlineSuccessPage: OfflineSuccessPage,
 		errorPage: ErrorPage,
+		optionLetters: OptionLetters, 
 		Transportation7,
 		Transportation8_10,
 		Transportation9_11,

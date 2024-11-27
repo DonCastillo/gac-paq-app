@@ -282,7 +282,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 29",
+			heading: "سؤال [٢٩]",
 			label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
 			kid_label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",
 			adult_label: "ما هو أعلى مستوى تعليمي تم تحصيله من قِبل أحد أفراد أسرتك؟",

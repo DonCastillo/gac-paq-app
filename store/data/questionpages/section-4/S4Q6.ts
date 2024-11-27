@@ -240,29 +240,29 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 16c",
+			heading: "سؤال [١٦ج]",
 			label: "كم من الوقت تستغرق عادةّ للذهاب إلى العمل؟",
 			kid_label: "كم من الوقت تستغرق عادةّ للذهاب إلى العمل؟",
-			adult_label: "كم من الوقت يستغرق طفلك عادةّ للذهاب إلى العمل؟",
+			adult_label: "كم من الوقت يقضي طفلك عادةّ للذهاب إلى العمل؟",
 			choices: [
 				{
-					label: "دقائق أو أقل " + "10",
+					label: "‌١٠ دقائق أو أقل",
 					value: "10 minutes or less",
 				},
 				{
-					label: "ما بين 11 و20 دقيقة",
+					label: "‌ب.	ما بين ١١ و٢٠ دقيقة",
 					value: "11 - 20 minutes",
 				},
 				{
-					label: "ما بين 21 و30 دقيقة",
+					label: "‌ما بين ٢١ و٣٠ دقيقة",
 					value: "21 - 30 minutes",
 				},
 				{
-					label: "ما بين 31 و60 دقيقة",
+					label: "‌ما بين ٣١ و٦٠ دقيقة",
 					value: "31 - 60 minutes",
 				},
 				{
-					label: "أكثر من 60 دقيقة",
+					label: "‌أكثر من ٦٠ دقيقة",
 					value: "More than 60 minutes",
 				},
 			],

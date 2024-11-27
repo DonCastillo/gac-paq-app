@@ -378,11 +378,11 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadioImage,
-			heading: "السؤال 16",
+			heading: "سؤال [١٦]",
 			label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
 			kid_label: "كيف ذهبت إلى العمل خلال الأسبوع الماضي؟",
-			adult_label: "كيف ذهب طفلك إلى العمل خلال الأسبوع الماضي؟ ",
-			kid_sublabel: "حدد الوسيلة الأكثر استخداماً",
+			adult_label: "كيف ذهب طفلك إلى العمل خلال الأسبوع الماضي؟",
+			kid_sublabel: "حدد الوسيلة الاكثر استخداماً",
 			adult_sublabel: "حدد الوسيلة الاكثر استخداماً",
 			choices: [
 				{

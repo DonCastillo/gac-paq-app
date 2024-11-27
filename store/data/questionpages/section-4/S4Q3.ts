@@ -212,25 +212,25 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 15c",
+			heading: "سؤال [١٥ج]",
 			label: "كم من الوقت تقضي عادةّ للذهاب إلى المدرسة؟",
 			kid_label: "كم من الوقت تقضي عادةّ للذهاب إلى المدرسة؟",
 			adult_label: "كم من الوقت يقضي طفلك عادةً للذهاب إلى المدرسة؟",
 			choices: [
 				{
-					label: "دقائق أو أقل " + "10",
+					label: "‌١٠ دقائق أو أقل",
 					value: "10 minutes or less",
 				},
 				{
-					label: "ما بين 11 و20 دقيقة",
+					label: "ما بين ١١ و٢٠ دقيقة",
 					value: "11 - 20 minutes",
 				},
 				{
-					label: "ما بين 21 و30 دقيقة",
+					label: "‌ما بين ٢١ و٣٠ دقيقة",
 					value: "21 - 30 minutes",
 				},
 				{
-					label: "أكثر من 30 دقيقة",
+					label: "‌أكثر من ٣٠ دقيقة",
 					value: "More than 30 minutes",
 				},
 			],

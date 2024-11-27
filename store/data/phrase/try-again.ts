@@ -26,7 +26,7 @@ const TryAgainPhrase: LangPhraseInterface = {
 		label: "Try Again",
 	},
 	"ar-AE": {
-		label: "يرجى المحاولة مرة أخرى",
+		label: "يُرجى المحاولة مرةً أخرى",
 	},
 	"ne-NP": {
 		label: "फेरी कोसिस् गर्नुहोस्",

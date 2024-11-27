@@ -148,13 +148,13 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadio,
-			heading: "السؤال 1",
-			label: "هل ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
-			kid_label: "هل ذهبت إلى المدرسة خلال الأسبوع الماضي؟",
+			heading: "سؤال [١] ",
+			label: "هل ذهبت إلى مدرسة خلال الأسبوع الماضي؟",
+			kid_label: "هل ذهبت إلى مدرسة خلال الأسبوع الماضي؟",
 			adult_label: "هل ذهب طفلك للمدرسة خلال الأسبوع الماضي؟",
 			choices: [
 				{
-					label: "نعم",
+					label: "‌نعم",
 					value: "yes",
 				},
 				{

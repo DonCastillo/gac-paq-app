@@ -78,7 +78,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionSlider,
-			heading: "السؤال 3",
+			heading: "سؤال [٣]",
 			label: "كم عدد حصص التربية البدنية التي حضرتها خلال الأسبوع الماضي؟",
 			kid_label: "كم عدد حصص التربية البدنية التي حضرتها خلال الأسبوع الماضي؟",
 			adult_label: "كم عدد حصص التربية البدنية التي حضرها خلال الأسبوع الماضي؟",

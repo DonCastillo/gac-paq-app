@@ -280,7 +280,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		},
 		"ar-AE": {
 			type: Question.QuestionRadioImage,
-			heading: "السؤال 5",
+			heading: "سؤال [٥]",
 			label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء حصة التربية البدنية؟",
 			kid_label: "أي من الصور التالية تبيّن ما تفعله غالباً أثناء حصة التربية البدنية؟",
 			adult_label: "أي من الصور التالية تبيّن ما يفعله طفلك غالباً أثناء حصة التربية البدنية؟",
@@ -291,12 +291,12 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "not_moving",
 				},
 				{
-					label: "جهد سهل",
+					label: "‌جهد سهل",
 					value: "0.3",
 					image_ident: "easy_effort",
 				},
 				{
-					label: "جهد متوسط أو صعب",
+					label: "‌جهد متوسط أو صعب",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},
