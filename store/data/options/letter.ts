@@ -11,6 +11,18 @@ const OptionLetters: Record<string, string[]>  = {
         "I",
         "J",
     ],
+    "th-TH": [
+        "ก",
+        "ข",
+        "ค",
+        "ง",
+        "จ",
+        "ฉ",
+        "ช",
+        "ซ",
+        "ฌ",
+        "ญ",
+    ],
     "ar-AE": [
         "أ",
         "ب",
