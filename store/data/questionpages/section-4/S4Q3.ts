@@ -313,7 +313,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 15c",
+			heading: "ข้อ 15c",
 			label: "ปกติน้องใช้เวลาเดินทางไปโรงเรียนนานเท่าไหร่?",
 			kid_label: "ปกติน้องใช้เวลาเดินทางไปโรงเรียนนานเท่าไหร่?",
 			adult_label: "ปกติบุตรหลานของคุณใช้เวลาเดินทางไปโรงเรียนนานเท่าไหร่?",

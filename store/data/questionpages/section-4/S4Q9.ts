@@ -337,7 +337,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 17c - เดิน",
+			heading: "ข้อ 17c - เดิน",
 			label:
 				"โดยปกติ น้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			kid_label:

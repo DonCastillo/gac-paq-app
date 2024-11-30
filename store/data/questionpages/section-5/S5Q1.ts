@@ -228,7 +228,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 18",
+			heading: "ข้อ 18",
 			label:
 				"สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมหรือเล่นกีฬาที่ทางโรงเรียนจัดขึ้น การเรียนพิเศษทางด้านกีฬา รวมถึงกิจกรรมที่ทางชุมชนจัดขึ้นบ้างหรือไม่?",
 			kid_label:

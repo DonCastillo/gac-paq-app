@@ -223,7 +223,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 12",
+			heading: "ข้อ 12",
 			label: "สัปดาห์ที่แล้ว น้องได้ทำงานหรือเป็นอาสาสมัครหรือไม่?",
 			kid_label: "สัปดาห์ที่แล้ว น้องได้ทำงานหรือเป็นอาสาสมัครหรือไม่?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณได้ทำงานหรือเป็นอาสาสมัครหรือไม่?",

@@ -763,7 +763,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadioImage,
-			heading: "คำถาม 15",
+			heading: "ข้อ 15",
 			label: "สัปดาห์ที่แล้ว น้องเดินทางไปโรงเรียนด้วยวิธีการใด?",
 			kid_label: "สัปดาห์ที่แล้ว น้องเดินทางไปโรงเรียนด้วยวิธีการใด?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณเดินทางไปโรงเรียนด้วยวิธีการใด?",

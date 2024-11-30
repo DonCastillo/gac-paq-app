@@ -352,7 +352,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 10",
+			heading: "ข้อ 10",
 			label:
 				"สัปดาห์ที่แล้ว น้องใช้เวลาไปกับการทำงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัวมากน้อยเพียงใดในแต่ละวัน?",
 			kid_label:

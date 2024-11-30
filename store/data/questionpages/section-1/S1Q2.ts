@@ -457,7 +457,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 2",
+			heading: "ข้อ 2",
 			label: "สัปดาห์ที่แล้วน้องไปโรงเรียนกี่วัน?",
 			kid_label: "สัปดาห์ที่แล้วน้องไปโรงเรียนกี่วัน?",
 			adult_label: "สัปดาห์ที่แล้วบุตรหลานของคุณไปโรงเรียนกี่วัน?",
