@@ -1,5 +1,5 @@
 import QuestionLabel from "components/kid/QuestionLabel";
-import React, { memo } from "react";
+import React from "react";
 import { GeneralStyle } from "styles/general";
 import { adjustQuestionSublabel } from "utils/style";
 
@@ -34,4 +34,4 @@ const QuestionSubLabel = ({
 	}
 };
 
-export default memo(QuestionSubLabel);
+export default QuestionSubLabel;

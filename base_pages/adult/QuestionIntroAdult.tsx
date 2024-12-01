@@ -21,7 +21,7 @@ import { proceedPage } from "utils/navigation.utils";
 import type { SectionInterface } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
 import LoadingScreenAdult from "./LoadingScreenAdult";
-import { adjustIntroDescriptionText, adjustWritingDirection } from "utils/style";
+import { adjustIntroDescriptionText, adjustIntroHeadingText, adjustWritingDirection } from "utils/style";
 
 const QuestionIntroAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -85,7 +85,7 @@ const QuestionIntroAdult = (): React.ReactElement => {
 					]}
 				>
 					<ScrollView>
-						<Text style={[styles.headingSubText, { writingDirection: adjustWritingDirection() }]}>
+						<Text style={[styles.headingSubText, { writingDirection: adjustWritingDirection(), ...adjustIntroHeadingText() }]}>
 							{translatedPage.subheading}
 						</Text>
 						<Text

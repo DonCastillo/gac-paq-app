@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { adjustQuestionLabelKid, adjustWritingDirection } from "utils/style";
 
@@ -31,9 +31,7 @@ const QuestionLabel = ({
 	);
 };
 
-export default memo(QuestionLabel, (prevProps, nextProps) => {
-	return JSON.stringify(prevProps) === JSON.stringify(nextProps);
-});
+export default QuestionLabel;
 
 const styles = StyleSheet.create({
 	container: {
