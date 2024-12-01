@@ -414,7 +414,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 29",
+			heading: "ข้อ 29",
 			label: "การศึกษาสูงสุดของสมาชิกในครอบครัวของคุณอยู่ในระดับใด?",
 			kid_label: "การศึกษาสูงสุดของสมาชิกในครอบครัวของคุณอยู่ในระดับใด?",
 			adult_label: "การศึกษาสูงสุดของสมาชิกในครอบครัวของคุณอยู่ในระดับใด?",

@@ -376,7 +376,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionCheckbox,
-			heading: "คำถาม 26",
+			heading: "ข้อ 26",
 			label: "บุตรหลานของคุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
 			kid_label: "บุตรหลานของคุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
 			adult_label: "บุตรหลานของคุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
