@@ -54,7 +54,7 @@ const saveAppData = async (): Promise<void> => {
 		successPage: SuccessPage,
 		offlineSuccessPage: OfflineSuccessPage,
 		errorPage: ErrorPage,
-		optionLetters: OptionLetters, 
+		optionLetters: OptionLetters,
 		Transportation7,
 		Transportation8_10,
 		Transportation9_11,

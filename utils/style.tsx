@@ -71,7 +71,7 @@ const adjustRadioImageBlockText = (): any => {
 	}
 
 	const textStyle = {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
 		fontSize: moderateScale(
 			isTablet ? tabletFontSize : phoneFontSize,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -194,7 +194,7 @@ const adjustRadioOptionLabel = (): any => {
 	const { page } = currentPage;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet
 				? language === "ar-AE" && page.ident !== "language_location"
@@ -223,7 +223,7 @@ const adjustRadioOptionSublabel = (): any => {
 	const { isTablet, orientation, screenWidth, screenHeight } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 12) : language === "ar-AE" ? 17 : 14,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -240,7 +240,7 @@ const adjustCheckboxOptionLabel = (): any => {
 	const { isTablet, orientation, screenWidth, screenHeight } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -391,7 +391,7 @@ const adjustIntroHeadingText = (): any => {
 	const { language } = store.getState().settings;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 	};
 };
 
@@ -400,7 +400,7 @@ const adjustIntroDescriptionText = (): any => {
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 30 : 27,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -449,7 +449,7 @@ const adjustParagraph = (): any => {
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? 15 : 15,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -466,7 +466,7 @@ const adjustHeading = (): any => {
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC + 10 : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC + 10 : 0,
 		fontSize: moderateScale(
 			isTablet ? 45 : 30,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -483,7 +483,7 @@ const adjustOptionLabelKid = (): any => {
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -548,7 +548,7 @@ const adjustQuestionTitle = (): any => {
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -563,10 +563,10 @@ const adjustQuestionTitle = (): any => {
 const adjustQuestionLabelKid = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
-	console.log("question label: ", language)
+	console.log("question label: ", language);
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 22 : 19,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -598,7 +598,7 @@ const adjustQuestionRadioImageListOptionLabelKid = (): any => {
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -615,7 +615,7 @@ const adjustQuestionRadioImageListOptionSubLabelKid = (): any => {
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
-		paddingVertical: (NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0),
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 15 : 12) : language === "ar-AE" ? 15 : 12,
 			orientation === "portrait" ? screenWidth : screenHeight,
