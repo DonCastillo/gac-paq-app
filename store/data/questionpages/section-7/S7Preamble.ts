@@ -93,9 +93,9 @@ const S7Preamble: LangPreamblePayloadInterface = {
 			heading: "बाहिरी गतिविधि",
 			subheading: "खण्ड ७",
 			description: {
-				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+				kid: "यस खन्डमा तपाईंले घरबाहिर बिताएको समय पर्दछ । यसमा स्कुल, घरायसी काम, पैसा आउने काम र स्वमसेवा र यातायातका साथै खाली समय पनि पर्छ । यसमा तपाईंले घरबाहिर हलचल नगरिकन बिताएको समय (जस्तै पिक्निक खाने, बसेर पढ्ने, आगो ताप्ने) ।",
 				adult:
-					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+					"यस खन्डमा तपाईंको  छोरा वा छोरीले घरबाहिर बिताएको समय पर्दछ । यसमा स्कुल, घरायसी काम, पैसा आउने काम र स्वमसेवा र यातायातका साथै खालि समय पनि पर्छ । यसमा तपाईंले घरबाहिर हलचल नगरिकन बिताएको समय (जस्तै पिक्निक खाने, बसेर पढ्ने, आगो ताप्ने) ।",
 			},
 		},
 		"pt-BR": {

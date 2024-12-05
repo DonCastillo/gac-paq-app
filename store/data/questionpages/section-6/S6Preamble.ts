@@ -93,9 +93,9 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			heading: "खाली समय वा खेल्ने समय",
 			subheading: "खण्ड ६",
 			description: {
-				kid: "This includes all the physical activity that you do during your play or free time. This does not include organized activities or break times in school. For the next questions, do not include the activities that you just told us about.",
+				kid: "यस खन्डमा तपाईंले खाली समयमा रमाइलोको लागि गर्ने शारीरिक गतिविधिहरु संलग्न छन् l यसमा सन्गठित क्रियाकलाप वा स्कुलको ब्रेक समय पर्दैन l अबका प्रस्नहरुमा अघि भर्खर भनेका क्रियाकलापहरु समावेश नगर्नु होला l",
 				adult:
-					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
+					"यस खन्डमा, तपाईंको छोरा वा छोरीले खाली समयमा रमाइलोको लागि खेल्ने सबै खाले शारीरिक गतिविधिहरु पर्दछन् l यो समय भनेको, तपाइको छोरा वा छोरीले आफुखुशी उपयोग गर्ने समय हो । आगामी प्रश्नमा अगाडी भनिएका गतिविधिहरु समावेश नगर्नुहोला l",
 			},
 		},
 		"pt-BR": {
