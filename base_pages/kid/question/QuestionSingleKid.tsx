@@ -40,6 +40,7 @@ import { proceedPage } from "utils/navigation.utils";
 import { getQuestionType } from "utils/type.utils";
 import type { TranslatedQuestionQuestionType } from "interface/union.type";
 import type {
+	ChoiceImage,
 	QuestionCheckboxInterface,
 	QuestionInputInterface,
 	QuestionRadioImageInterface,
@@ -200,7 +201,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = (
 			<QuestionRadio
 				key={currentPageNumber}
-				options={questionCasted.choices}
+				options={choiceMode(questionCasted.choices, mode)}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 			/>
@@ -210,7 +211,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = (
 			<QuestionRadioImage
 				key={currentPageNumber}
-				options={questionCasted.choices}
+				options={choiceMode(questionCasted.choices, mode) as ChoiceImage[]}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 			/>
