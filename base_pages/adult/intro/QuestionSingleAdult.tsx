@@ -37,6 +37,7 @@ import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "../LoadingScreenAdult";
 import AnimatedView from "components/AnimatedView";
 import type Mode from "constants/mode.enum";
+import { choiceMode } from "utils/options.utils";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -170,7 +171,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 			<QuestionRadio
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				options={questionCasted.choices}
+				options={choiceMode(questionCasted.choices, mode)}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}
