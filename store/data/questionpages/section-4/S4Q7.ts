@@ -479,10 +479,10 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			adult_sublabel: "请选择所有适用于您的孩子的答案。",
 			choices: [
 				{
-					label: "是的，我步行去 ",
+					label: "是的，我步行去",
 					value: "Walked",
 					label_mode: {
-						kid: "是的，我步行去 ",
+						kid: "是的，我步行去",
 						adult: "是的，他/她步行去",
 					},
 				},
@@ -521,10 +521,10 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "Sí, me desplacé sobre ruedas ",
+					label: "Sí, me desplacé sobre ruedas",
 					value: "Wheeled",
 					label_mode: {
-						kid: "Sí, me desplacé sobre ruedas ",
+						kid: "Sí, me desplacé sobre ruedas",
 						adult: "Sí, se desplazó sobre ruedas",
 					},
 				},
@@ -555,10 +555,10 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "Sí, me desplacé sobre ruedas ",
+					label: "Sí, me desplacé sobre ruedas",
 					value: "Wheeled",
 					label_mode: {
-						kid: "Sí, me desplacé sobre ruedas ",
+						kid: "Sí, me desplacé sobre ruedas",
 						adult: "Sí, se desplazó sobre ruedas",
 					},
 				},

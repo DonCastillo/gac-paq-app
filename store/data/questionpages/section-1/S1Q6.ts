@@ -357,7 +357,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				"यसको मतलब रिसेस् र खाजाको समय । कृपया जोडेर समग्र समय निकाल्नुहोला- उदाहरणका लागि एक दिनमा, दुईटा १५ मिनेटको छोटो ब्रेक (रिसेस् टाईम) र ३० मिनेटको खाजा ब्रेकको समय जोड्दा समग्रमा ६० मिनेट हुनेछ l",
 			choices: [
 				{
-					label: "० मिनेट ",
+					label: "० मिनेट",
 					value: "0 minutes",
 				},
 				{
@@ -477,7 +477,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 					value: "1 - 15 minutes",
 				},
 				{
-					label: "16 - 30 minuter ",
+					label: "16 - 30 minuter",
 					value: "16 - 30 minutes",
 				},
 				{

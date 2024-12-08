@@ -293,7 +293,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 					value: "1 to less than 2 hours per day",
 				},
 				{
-					label: "प्रति दिन 2 से 3 घंटे ",
+					label: "प्रति दिन 2 से 3 घंटे",
 					value: "2 to less than 3 hours per day",
 				},
 				{

@@ -319,7 +319,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
 			choices: [
 				{
-					label: "हलचल नगरेको ",
+					label: "हलचल नगरेको",
 					value: "0.1",
 					image_ident: "not_moving",
 				},

@@ -564,7 +564,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			adult_sublabel: "เลือกวิธีการเดินทางที่บุตรหลานของคุณใช้เป็นหลัก",
 			choices: [
 				{
-					label: "เดิน ",
+					label: "เดิน",
 					value: "Walking",
 					image_ident: "walking",
 				},
