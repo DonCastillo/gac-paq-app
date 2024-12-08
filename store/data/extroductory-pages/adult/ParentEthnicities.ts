@@ -303,7 +303,7 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 					value: "Indigenous",
 				},
 				{
-					label: "यटिन अमेरिकन्",
+					label: "ल्यटिन अमेरिकन्",
 					value: "Latin American",
 				},
 				{

@@ -448,9 +448,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Marche",
 			label:
-				" Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
+				"Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
 			kid_label:
-				" Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
+				"Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail? ",
 			adult_label:
 				"Lors d'une journée normale, combien de temps ton enfant a-t-il (elle) marché pour aller à des endroits autres que l'école ou le travail?",
 			choices: [

@@ -172,10 +172,18 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 			choices: [
 				{
 					label: "गएँ",
+					label_mode: {
+						kid: "गएँ",
+						adult: "जानुभयो",
+					},
 					value: "yes",
 				},
 				{
 					label: "गइनं",
+					label_mode: {
+						kid: "गइनं",
+						adult: "जानुभएन",
+					},
 					value: "no",
 				},
 			],

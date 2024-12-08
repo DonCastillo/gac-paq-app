@@ -324,6 +324,10 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			choices: [
 				{
 					label: "कुनै पनि गरिन",
+					label_mode: {
+						kid: "कुनै पनि गरिन",
+						adult: "घर बाहिर गएन वा गइनन्",
+					},
 					value: "None",
 				},
 				{
