@@ -4,7 +4,6 @@ import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 import { store } from "store/store";
 
-
 const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
 
 export interface OptionInterface {

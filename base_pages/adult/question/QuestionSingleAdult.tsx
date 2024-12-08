@@ -38,6 +38,7 @@ import { getQuestion17Label } from "utils/label.utils";
 import { getQuestionType } from "utils/type.utils";
 import type { TranslatedQuestionQuestionType } from "interface/union.type";
 import type {
+	ChoiceImage,
 	QuestionCheckboxInputInterface,
 	QuestionCheckboxInterface,
 	QuestionInputInterface,
@@ -179,7 +180,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 			<QuestionRadio
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				options={questionCasted.choices}
+				options={choiceMode(questionCasted.choices, mode)}
 				onSelect={(value: string) => {
 					changeHandler(value);
 				}}
@@ -203,7 +204,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 			<QuestionRadioImage
 				key={currentPageNumber}
 				selectedValue={selectedValue}
-				options={questionCasted.choices}
+				options={choiceMode(questionCasted.choices, mode) as ChoiceImage[]}
 				onChange={changeHandler}
 			/>
 		);

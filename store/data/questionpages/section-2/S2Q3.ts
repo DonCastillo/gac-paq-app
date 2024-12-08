@@ -386,11 +386,11 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 			adult_label: "在过去一周您的孩子做家务活的日子里，每天做家务活多长时间？",
 			choices: [
 				{
-					label: "每天少于或等于15分钟 ",
+					label: "每天少于或等于15分钟",
 					value: "15 minutes or less per day",
 				},
 				{
-					label: "每天16-30 分钟 ",
+					label: "每天16-30 分钟",
 					value: "16 - 30 minutes per day",
 				},
 				{
@@ -398,7 +398,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 					value: "31 - 60 minutes per day",
 				},
 				{
-					label: "每天 60 分钟以上 ",
+					label: "每天 60 分钟以上",
 					value: "Over 60 minutes per day",
 				},
 			],

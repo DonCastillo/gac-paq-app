@@ -27,7 +27,7 @@ const S7Intro: LangSectionPayloadInterface = {
 			subheading: "Gawo 7",
 		},
 		"ma-IN": {
-			heading: "बाहरी गतिविधियाँ",
+			heading: "घराबाहेर",
 			subheading: "विभाग ७",
 		},
 		"hi-IN": {

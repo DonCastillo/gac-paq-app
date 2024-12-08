@@ -751,7 +751,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "Jag går i skolan hemma ",
+					label: "Jag går i skolan hemma",
 					value: "Stay home for school",
 					image_ident: "staying_home",
 					label_mode: {

@@ -45,7 +45,7 @@ const RadioOption = ({
 	const otherInputRef = useRef<TextInput>(null);
 
 	return (
-		<View style={{ marginBottom: 0 }}>
+		<View style={styles.outerContainer}>
 			{/* Option Container */}
 			<Pressable
 				style={{ ...styles.container }}
@@ -158,6 +158,9 @@ const RadioOption = ({
 export default RadioOption;
 
 const styles = StyleSheet.create({
+	outerContainer: {
+		marginBottom: 0,
+	},
 	container: {
 		alignItems: "center",
 		flexDirection: "row",

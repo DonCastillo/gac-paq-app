@@ -175,10 +175,18 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			choices: [
 				{
 					label: "गरे",
+					label_mode: {
+						kid: "गरे",
+						adult: "गर्नुभयो",
+					},
 					value: "yes",
 				},
 				{
 					label: "गरिनँ",
+					label_mode: {
+						kid: "गरिनँ",
+						adult: "गर्नुभएन",
+					},
 					value: "no",
 				},
 			],

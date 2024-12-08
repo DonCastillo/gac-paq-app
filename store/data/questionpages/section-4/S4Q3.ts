@@ -416,9 +416,9 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 15c",
-			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école? ",
+			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école?",
 			kid_label:
-				"Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école? ",
+				"Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école?",
 			adult_label:
 				"Combien de temps faut-il, en général, à ton enfant pour aller de la maison jusqu'à l'école?",
 			choices: [

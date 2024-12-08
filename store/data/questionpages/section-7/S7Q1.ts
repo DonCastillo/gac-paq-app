@@ -69,7 +69,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 					value: "2 to less than 3 hours per day",
 				},
 				{
-					label: "3 a menos de 4 horas por día ",
+					label: "3 a menos de 4 horas por día",
 					value: "3 to less than 4 hours per day",
 				},
 				{
@@ -324,6 +324,10 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			choices: [
 				{
 					label: "कुनै पनि गरिन",
+					label_mode: {
+						kid: "कुनै पनि गरिन",
+						adult: "घर बाहिर गएन वा गइनन्",
+					},
 					value: "None",
 				},
 				{
@@ -463,7 +467,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 					value: "None",
 				},
 				{
-					label: "每天少于1小时 ",
+					label: "每天少于1小时",
 					value: "Less than 1 hour per day",
 				},
 				{
@@ -479,7 +483,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 					value: "3 to less than 4 hours per day",
 				},
 				{
-					label: "每天4小时及以上 ",
+					label: "每天4小时及以上",
 					value: "4 hours or more per day",
 				},
 			],

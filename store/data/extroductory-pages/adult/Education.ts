@@ -325,7 +325,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 					value: "No formal schooling",
 				},
 				{
-					label: "राथमिक तह",
+					label: "प्राथमिक तह",
 					value: "Primary school",
 				},
 				{

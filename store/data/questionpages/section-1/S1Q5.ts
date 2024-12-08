@@ -315,7 +315,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 			kid_label:
 				"तल दिएको कुन तस्विरले तपाईंले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ होला?",
 			adult_label:
-				"    तल दिएको कुन तस्बिरले तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने काम देखाउँछ होला?",
+				"तल दिएको कुन तस्बिरले तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने काम देखाउँछ होला?",
 			choices: [
 				{
 					label: "हलचल नगरेको",
@@ -496,7 +496,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 			label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
 			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física? ",
+				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
 			adult_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo en la clase de educación física?",
 			choices: [

@@ -2,6 +2,9 @@ import Mode from "constants/mode.enum";
 import { store } from "store/store";
 import { moderateScale } from "./responsive.utils";
 
+const NONALPHANUMERIC = ["th-TH", "hi-IN", "ma-IN", "ne-NP", "ar-AE"];
+const PADDINGNONALPHANUMERIC = 10;
+
 const adjustRadioImageAspectRatio = (): number => {
 	const { language, mode, device } = store.getState().settings;
 	const { isTablet } = device;
@@ -18,7 +21,7 @@ const adjustRadioImageAspectRatio = (): number => {
 	return 1 / denominator;
 };
 
-const adjustRadioImageBlockText = (): { fontSize: number; lineHeight: number } => {
+const adjustRadioImageBlockText = (): any => {
 	const { language, mode, device } = store.getState().settings;
 	const { isTablet, orientation, screenWidth, screenHeight } = device;
 
@@ -68,6 +71,7 @@ const adjustRadioImageBlockText = (): { fontSize: number; lineHeight: number } =
 	}
 
 	const textStyle = {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
 		fontSize: moderateScale(
 			isTablet ? tabletFontSize : phoneFontSize,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -184,12 +188,13 @@ const adjustOptionListImageSizeNonSVGKid = (): { maxWidth: number; minHeight: nu
 	};
 };
 
-const adjustRadioOptionLabel = (): { fontSize: number; lineHeight: number } => {
+const adjustRadioOptionLabel = (): any => {
 	const { language, device, currentPage } = store.getState().settings;
 	const { isTablet, orientation, screenWidth, screenHeight } = device;
 	const { page } = currentPage;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet
 				? language === "ar-AE" && page.ident !== "language_location"
@@ -197,7 +202,7 @@ const adjustRadioOptionLabel = (): { fontSize: number; lineHeight: number } => {
 					: 14
 				: language === "ar-AE" && page.ident !== "language_location"
 					? 19
-					: 18,
+					: 16,
 			orientation === "portrait" ? screenWidth : screenHeight,
 		),
 		lineHeight: moderateScale(
@@ -207,33 +212,35 @@ const adjustRadioOptionLabel = (): { fontSize: number; lineHeight: number } => {
 					: 18
 				: language === "ar-AE" && page.ident !== "language_location"
 					? 23
-					: 22,
+					: 20,
 			orientation === "portrait" ? screenWidth : screenHeight,
 		),
 	};
 };
 
-const adjustRadioOptionSublabel = (): { fontSize: number; lineHeight: number } => {
+const adjustRadioOptionSublabel = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, orientation, screenWidth, screenHeight } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 17 : 16) : language === "ar-AE" ? 17 : 16,
+			isTablet ? (language === "ar-AE" ? 17 : 12) : language === "ar-AE" ? 17 : 14,
 			orientation === "portrait" ? screenWidth : screenHeight,
 		),
 		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 21 : 20) : language === "ar-AE" ? 21 : 20,
+			isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18,
 			orientation === "portrait" ? screenWidth : screenHeight,
 		),
 	};
 };
 
-const adjustCheckboxOptionLabel = (): { fontSize: number; lineHeight: number } => {
+const adjustCheckboxOptionLabel = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, orientation, screenWidth, screenHeight } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -322,7 +329,7 @@ const adjustPageDescriptionText = (): { fontSize: number; lineHeight: number } =
 	};
 };
 
-const adjustExtroPageHeading = (): { fontSize: number; lineHeight: number } => {
+const adjustExtroPageHeading = (): any => {
 	const { language, device, mode } = store.getState().settings;
 	const { isTablet, screenWidth } = device;
 
@@ -380,11 +387,20 @@ const adjustExtroDescriptionText = (): { fontSize: number; lineHeight: number } 
 	}
 };
 
-const adjustIntroDescriptionText = (): { fontSize: number; lineHeight: number } => {
+const adjustIntroHeadingText = (): any => {
+	const { language } = store.getState().settings;
+
+	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
+	};
+};
+
+const adjustIntroDescriptionText = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 30 : 27,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -428,11 +444,12 @@ const adjustQuestionSingleQuestionLabel = (): { fontSize: number; lineHeight: nu
 	};
 };
 
-const adjustParagraph = (): { fontSize: number; lineHeight: number } => {
-	const { device } = store.getState().settings;
+const adjustParagraph = (): any => {
+	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? 15 : 15,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -444,11 +461,12 @@ const adjustParagraph = (): { fontSize: number; lineHeight: number } => {
 	};
 };
 
-const adjustHeading = (): { fontSize: number; lineHeight: number } => {
-	const { device } = store.getState().settings;
+const adjustHeading = (): any => {
+	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC + 10 : 0,
 		fontSize: moderateScale(
 			isTablet ? 45 : 30,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -460,11 +478,12 @@ const adjustHeading = (): { fontSize: number; lineHeight: number } => {
 	};
 };
 
-const adjustOptionLabelKid = (): { fontSize: number; lineHeight: number } => {
+const adjustOptionLabelKid = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -524,11 +543,12 @@ const adjustQuestionSublabel = (): { fontSize: number; lineHeight: number } => {
 	};
 };
 
-const adjustQuestionTitle = (): { fontSize: number; lineHeight: number } => {
+const adjustQuestionTitle = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -540,11 +560,13 @@ const adjustQuestionTitle = (): { fontSize: number; lineHeight: number } => {
 	};
 };
 
-const adjustQuestionLabelKid = (): { fontSize: number; lineHeight: number } => {
+const adjustQuestionLabelKid = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
+	console.log("question label: ", language);
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 22 : 19,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -571,11 +593,12 @@ const adjustDropdownIconSize = (): { width: number; height: number } => {
 	};
 };
 
-const adjustQuestionRadioImageListOptionLabelKid = (): { fontSize: number; lineHeight: number } => {
+const adjustQuestionRadioImageListOptionLabelKid = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -587,14 +610,12 @@ const adjustQuestionRadioImageListOptionLabelKid = (): { fontSize: number; lineH
 	};
 };
 
-const adjustQuestionRadioImageListOptionSubLabelKid = (): {
-	fontSize: number;
-	lineHeight: number;
-} => {
+const adjustQuestionRadioImageListOptionSubLabelKid = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth, screenHeight, orientation } = device;
 
 	return {
+		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
 		fontSize: moderateScale(
 			isTablet ? (language === "ar-AE" ? 15 : 12) : language === "ar-AE" ? 15 : 12,
 			orientation === "portrait" ? screenWidth : screenHeight,
@@ -627,6 +648,7 @@ export {
 	adjustPageDescriptionText,
 	adjustExtroPageHeading,
 	adjustExtroDescriptionText,
+	adjustIntroHeadingText,
 	adjustIntroDescriptionText,
 	adjustToolbarHeadingText,
 	adjustQuestionSingleQuestionLabel,

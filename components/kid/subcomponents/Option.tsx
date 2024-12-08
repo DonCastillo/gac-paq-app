@@ -1,4 +1,4 @@
-import React, { memo, useRef } from "react";
+import React, { useRef } from "react";
 import { Pressable, TextInput, View, Text } from "react-native";
 import { GeneralStyle } from "styles/general";
 import { isOtherOption } from "utils/options.utils";
@@ -135,4 +135,4 @@ const Option = ({
 	);
 };
 
-export default memo(Option);
+export default Option;
