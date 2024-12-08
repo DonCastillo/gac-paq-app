@@ -2,7 +2,7 @@ import Mode from "constants/mode.enum";
 import { store } from "store/store";
 import { moderateScale } from "./responsive.utils";
 
-const NONALPHANUMERIC = ["th-TH", "hi-IN", "ma-IN", "ne-NP", "sv-SE", "ar-AE"];
+const NONALPHANUMERIC = ["th-TH", "hi-IN", "ma-IN", "ne-NP", "ar-AE"];
 const PADDINGNONALPHANUMERIC = 10;
 
 const adjustRadioImageAspectRatio = (): number => {

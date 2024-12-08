@@ -3,8 +3,8 @@ import type { ImageStyle, StyleProp } from "react-native";
 import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import type { Svg } from "react-native-svg";
-import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background.utils";
-import { horizontalScale, verticalScale } from "utils/responsive.utils";
+import { getOptionImage, getOptionSubLabel } from "utils/background.utils";
+import { verticalScale } from "utils/responsive.utils";
 import RadioOption from "./subcomponents/RadioOption";
 import {
 	getUserSpecifiedOther,
