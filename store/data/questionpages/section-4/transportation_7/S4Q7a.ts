@@ -23,7 +23,7 @@ const Transportation7: Transportation7Interface = {
 			school:
 				"Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a outros lugares além da escola (por exemplo, a casa de um amigo, um parque, uma loja)?",
 			work: "Na última semana, você caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares além do trabalho (por exemplo, a casa de um amigo, um parque, uma loja)?",
-			both: " Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
+			both: "Na última semana, você caminhou ou usou outro meio de transporte ativo (por exemplo, bicicleta, skate, patinete, patins) para ir a outros lugares além da escola ou trabalho (por exemplo, casa de um amigo, um parque, uma loja)?",
 		},
 		adult: {
 			none: "Na última semana, o(a) seu(sua) filho(a) caminhou ou usou outro meio de transporte ativo (como bicicleta, skate, patinete ou patins) para ir a lugares (por exemplo, casa de um amigo, um parque, uma loja)?",

@@ -306,11 +306,11 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ७",
-			label: "Which of the following images shows what you do most of the time during your breaks?",
+			label: "तल दिएको कुन तस्बिरले तपाईंले ब्रेक टाइममा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ?",
 			kid_label:
-				"Which of the following images shows what you do most of the time during your breaks?",
+				"तल दिएको कुन तस्बिरले तपाईंले ब्रेक टाइममा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ?",
 			adult_label:
-				"Which of the following images resembles what your child does most of the time during their breaks?",
+				"तल दिएको कुन तस्बिरले तपाईंको छोरा वा छोरीले ब्रेक टाइममा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ?",
 			choices: [
 				{
 					label: "हलचल नगरेको",
@@ -368,7 +368,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadioImage,
-			heading: "คำถาม 7",
+			heading: "ข้อ 7",
 			label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ในช่วงเวลาพัก?",
 			kid_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ในช่วงเวลาพัก?",
 			adult_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่บุตรหลานของคุณทำเป็นส่วนใหญ่ในช่วงเวลาพัก?",

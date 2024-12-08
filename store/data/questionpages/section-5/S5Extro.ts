@@ -56,7 +56,7 @@ const S5Extro: LangExtroPayloadInterface = {
 		},
 		"th-TH": {
 			heading: "ส่วนนี้เสร็จเรียบร้อย!",
-			subheading: "เหลืออีกแค่ 2!",
+			subheading: "เหลืออีกแค่ 2 ส่วน!",
 		},
 		"zh-CN": {
 			heading: "此部分完成",

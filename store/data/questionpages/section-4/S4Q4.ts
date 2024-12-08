@@ -556,7 +556,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadioImage,
-			heading: "คำถาม 16",
+			heading: "ข้อ 16",
 			label: "สัปดาห์ที่แล้ว น้องเดินทางไปทำงานอย่างไร?",
 			kid_label: "สัปดาห์ที่แล้ว น้องเดินทางไปทำงานอย่างไร?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณเดินทางไปทำงานอย่างไร?",
@@ -564,7 +564,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			adult_sublabel: "เลือกวิธีการเดินทางที่บุตรหลานของคุณใช้เป็นหลัก",
 			choices: [
 				{
-					label: "เดิน ",
+					label: "เดิน",
 					value: "Walking",
 					image_ident: "walking",
 				},

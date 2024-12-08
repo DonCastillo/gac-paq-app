@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
 import { adjustQuestionTitle, adjustWritingDirection } from "utils/style";
@@ -30,7 +30,7 @@ const QuestionTitle = ({
 	);
 };
 
-export default memo(QuestionTitle);
+export default QuestionTitle;
 
 const styles = StyleSheet.create({
 	container: {

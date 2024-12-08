@@ -38,15 +38,18 @@ const translatePhrase = (
 	return phrase[finalLanguage];
 };
 
-const translateOptionLetters = (letters: Record<string, string[]>, language: string | undefined): string[] => {
+const translateOptionLetters = (
+	letters: Record<string, string[]>,
+	language: string | undefined,
+): string[] => {
 	const finalLanguage = language ?? "en-CA";
 	let finalLetters = letters["en-CA"];
 
-	if(letters[finalLanguage] !== undefined && letters[finalLanguage] !== null) {
+	if (letters[finalLanguage] !== undefined && letters[finalLanguage] !== null) {
 		finalLetters = letters[finalLanguage];
 	}
 
 	return finalLetters;
-}
+};
 
 export { translateArrayOfPages, translatePage, translatePhrase, translateOptionLetters };

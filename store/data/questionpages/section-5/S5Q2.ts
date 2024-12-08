@@ -461,7 +461,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 19",
+			heading: "ข้อ 19",
 			label: "สัปดาห์ที่แล้ว น้องทำกิจกรรมดังกล่าวทั้งหมดกี่วัน?",
 			kid_label: "สัปดาห์ที่แล้ว น้องทำกิจกรรมดังกล่าวทั้งหมดกี่วัน?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณทำกิจกรรมดังกล่าวทั้งหมดกี่วัน?",

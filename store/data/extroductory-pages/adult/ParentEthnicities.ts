@@ -303,7 +303,7 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 					value: "Indigenous",
 				},
 				{
-					label: "यटिन अमेरिकन्",
+					label: "ल्यटिन अमेरिकन्",
 					value: "Latin American",
 				},
 				{
@@ -374,7 +374,7 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionCheckbox,
-			heading: "คำถาม 27",
+			heading: "ข้อ 27",
 			label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
 			kid_label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",
 			adult_label: "คุณมีเชื้อชาติ/ชาติพันธุ์ใด?",

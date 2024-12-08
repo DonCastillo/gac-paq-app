@@ -175,10 +175,18 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			choices: [
 				{
 					label: "गरे",
+					label_mode: {
+						kid: "गरे",
+						adult: "गर्नुभयो",
+					},
 					value: "yes",
 				},
 				{
 					label: "गरिनँ",
+					label_mode: {
+						kid: "गरिनँ",
+						adult: "गर्नुभएन",
+					},
 					value: "no",
 				},
 			],
@@ -223,7 +231,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 8",
+			heading: "ข้อ 8",
 			label:
 				"สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
 			kid_label:

@@ -201,19 +201,19 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
-					value: "Wheeled",
-					label_mode: {
-						kid: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
-						adult: "माझ्या मुलाने वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
-					},
-				},
-				{
 					label: "होय, मी बाईकने जातो/जाते",
 					value: "Other",
 					label_mode: {
 						kid: "होय, मी बाईकने जातो/जाते",
 						adult: "होय, माझे मूल बाईकने गेले",
+					},
+				},
+				{
+					label: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
+					value: "Wheeled",
+					label_mode: {
+						kid: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
+						adult: "माझ्या मुलाने वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
 					},
 				},
 				{
@@ -433,7 +433,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionCheckbox,
-			heading: "คำถาม 17",
+			heading: "ข้อ 17",
 			label:
 				"สัปดาห์ที่แล้ว น้องได้เดินหรือใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานหรือไม่?  (เช่น บ้านเพื่อน สวนสาธารณะ ร้านขายของ)",
 			kid_label:
@@ -479,10 +479,10 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			adult_sublabel: "请选择所有适用于您的孩子的答案。",
 			choices: [
 				{
-					label: "是的，我步行去 ",
+					label: "是的，我步行去",
 					value: "Walked",
 					label_mode: {
-						kid: "是的，我步行去 ",
+						kid: "是的，我步行去",
 						adult: "是的，他/她步行去",
 					},
 				},
@@ -521,10 +521,10 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "Sí, me desplacé sobre ruedas ",
+					label: "Sí, me desplacé sobre ruedas",
 					value: "Wheeled",
 					label_mode: {
-						kid: "Sí, me desplacé sobre ruedas ",
+						kid: "Sí, me desplacé sobre ruedas",
 						adult: "Sí, se desplazó sobre ruedas",
 					},
 				},
@@ -555,10 +555,10 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "Sí, me desplacé sobre ruedas ",
+					label: "Sí, me desplacé sobre ruedas",
 					value: "Wheeled",
 					label_mode: {
-						kid: "Sí, me desplacé sobre ruedas ",
+						kid: "Sí, me desplacé sobre ruedas",
 						adult: "Sí, se desplazó sobre ruedas",
 					},
 				},

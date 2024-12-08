@@ -296,7 +296,7 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 24",
+			heading: "ข้อ 24",
 			label: "น้องเป็น...",
 			kid_label: "น้องเป็น...",
 			adult_label: "น้องเป็น...",

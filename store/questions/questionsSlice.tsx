@@ -146,7 +146,7 @@ const questionsSlice = createSlice({
 			defaultLanguage
 		] satisfies ModeActivityTransportationInterface,
 		sectionPages: [],
-		optionLetters: []
+		optionLetters: [],
 	} satisfies QuestionSliceInterface,
 	reducers: {
 		setLanguageOption: reducersActions.setLanguageOption,

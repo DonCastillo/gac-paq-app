@@ -459,7 +459,7 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 28",
+			heading: "ข้อ 28",
 			label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
 			kid_label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
 			adult_label: "คุณกับบุตรหลานมีความสัมพันธ์กันอย่างไร?",
