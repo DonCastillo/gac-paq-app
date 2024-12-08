@@ -319,7 +319,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
 			choices: [
 				{
-					label: "हलचल नगरेको ",
+					label: "हलचल नगरेको",
 					value: "0.1",
 					image_ident: "not_moving",
 				},
@@ -404,7 +404,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadioImage,
-			heading: "คำถาม 14",
+			heading: "ข้อ 14",
 			label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
 			kid_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
 			adult_label:

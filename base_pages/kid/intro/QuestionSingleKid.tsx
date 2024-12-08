@@ -38,6 +38,7 @@ import Mode from "constants/mode.enum";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenKid from "../LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
+import { choiceMode } from "utils/options.utils";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -186,7 +187,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 		questionComponent = (
 			<QuestionSelect
 				key={currentPageNumber}
-				options={questionCasted.choices}
+				options={choiceMode(questionCasted.choices, mode)}
 				onChange={changeHandler}
 				selectedValue={selectedValue}
 				dropdownOpen={dropdownOpen}

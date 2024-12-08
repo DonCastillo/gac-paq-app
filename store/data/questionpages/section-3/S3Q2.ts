@@ -316,9 +316,9 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Questão 13",
 			label:
-				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado? ",
+				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado?",
 			kid_label:
-				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado? ",
+				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado?",
 			adult_label:
 				"Na última semana, quantas horas por dia a criança ou adolescente que você é responsável passou fazendo trabalho voluntário ou trabalho remunerado?",
 			choices: [
@@ -376,7 +376,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 13",
+			heading: "ข้อ 13",
 			label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
 			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
 			adult_label:

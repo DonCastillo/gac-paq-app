@@ -601,9 +601,9 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionDropdown,
 			heading: "ยินดีต้อนรับ!",
-			label: "ลูกของคุณอายุเท่าไร?",
-			kid_label: "ลูกของคุณอายุเท่าไร?",
-			adult_label: "ลูกของคุณอายุเท่าไร?",
+			label: "บุตรหลานของคุณอายุเท่าไหร่?",
+			kid_label: "บุตรหลานของคุณอายุเท่าไหร่?",
+			adult_label: "บุตรหลานของคุณอายุเท่าไหร่?",
 			choices: [
 				{
 					label: "8 ปี",

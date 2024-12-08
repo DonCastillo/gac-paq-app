@@ -396,7 +396,7 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadioImage,
-			heading: "คำถาม 11",
+			heading: "ข้อ 11",
 			label:
 				"ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
 			kid_label:

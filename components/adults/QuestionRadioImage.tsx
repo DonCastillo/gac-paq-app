@@ -3,8 +3,8 @@ import type { ImageStyle, StyleProp } from "react-native";
 import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import type { Svg } from "react-native-svg";
-import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background.utils";
-import { horizontalScale, verticalScale } from "utils/responsive.utils";
+import { getOptionImage, getOptionSubLabel } from "utils/background.utils";
+import { verticalScale } from "utils/responsive.utils";
 import RadioOption from "./subcomponents/RadioOption";
 import {
 	getUserSpecifiedOther,
@@ -187,10 +187,9 @@ const QuestionRadioImage = ({
 
 	/** if the option contains value called "other", it will be displayed as a list */
 	const listRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
-		const { image_ident, label, value, sublabel, label_mode } = item;
+		const { image_ident, label, value, sublabel } = item;
 		const imageByMode = getOptionImage(image_ident);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
-		const optionText = getOptionText(label, label_mode, mode);
 		const optionSublabel = getOptionSubLabel(sublabel, mode);
 
 		return (
@@ -204,7 +203,7 @@ const QuestionRadioImage = ({
 					isOtherSelected={isOtherSelected}
 					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={getUserSpecifiedOther(value, selected)}
-					optionLabel={`${optionLetter(index)}.  ${optionText}` ?? undefined}
+					optionLabel={`${optionLetter(index)}.  ${label}`}
 					optionSublabel={optionSublabel ?? undefined}
 				/>
 			</View>

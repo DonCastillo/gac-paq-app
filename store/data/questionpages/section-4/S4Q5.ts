@@ -464,7 +464,7 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 16b",
+			heading: "ข้อ 16b",
 			label: "สัปดาห์ที่แล้ว น้องใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
 			kid_label: "สัปดาห์ที่แล้ว น้องใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้วิธีการเดินทางดังกล่าวนี้กี่วัน?",
@@ -577,7 +577,7 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 16b",
-			label: " ¿Cuántos días usaste este modo de transporte en la última semana?",
+			label: "¿Cuántos días usaste este modo de transporte en la última semana?",
 			kid_label: "¿Cuántos días usaste este modo de transporte en la última semana?",
 			adult_label: "¿Cuántos días usó su hija o hijo este modo de transporte en la última semana?",
 			choices: [

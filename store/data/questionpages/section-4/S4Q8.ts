@@ -480,7 +480,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 17b - เดิน",
+			heading: "ข้อ 17b - เดิน",
 			label:
 				"สัปดาห์ที่แล้ว น้องเดิน เพื่อไปสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานทั้งหมดกี่วัน?",
 			kid_label:

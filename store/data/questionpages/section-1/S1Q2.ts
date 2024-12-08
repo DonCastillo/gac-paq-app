@@ -274,7 +274,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 2",
 			label: "How many days did you attend school in the past week?",
 			kid_label: "How many days did you attend school in the past week?",
-			adult_label: "How many days did your child attend school in the past week? ",
+			adult_label: "How many days did your child attend school in the past week?",
 			choices: [
 				{
 					label: "1 day",
@@ -457,7 +457,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 2",
+			heading: "ข้อ 2",
 			label: "สัปดาห์ที่แล้วน้องไปโรงเรียนกี่วัน?",
 			kid_label: "สัปดาห์ที่แล้วน้องไปโรงเรียนกี่วัน?",
 			adult_label: "สัปดาห์ที่แล้วบุตรหลานของคุณไปโรงเรียนกี่วัน?",

@@ -341,7 +341,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 17c - ล้อ",
+			heading: "ข้อ 17c - ล้อ",
 			label:
 				"ในวันปกติ คุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			kid_label:
@@ -375,7 +375,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			adult_label: "在平常的日子里，除了上学或工作，您的孩子骑自行车去其他地方要花多少时间？",
 			choices: [
 				{
-					label: "少于或等于10分钟 ",
+					label: "少于或等于10分钟",
 					value: "10 minutes or less",
 				},
 				{
@@ -383,7 +383,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 					value: "11 - 20 minutes",
 				},
 				{
-					label: "21-30分钟 ",
+					label: "21-30分钟",
 					value: "21 - 30 minutes",
 				},
 				{
@@ -452,9 +452,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Rouler",
 			label:
-				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail? ",
+				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail?",
 			kid_label:
-				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail? ",
+				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail?",
 			adult_label:
 				"Lors d'une journée normale, combien de temps ton enfant a-t-il (elle) roulé pour aller à des endroits autres que l'école ou le travail?",
 			choices: [

@@ -421,7 +421,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"th-TH": {
 			type: Question.QuestionRadio,
-			heading: "คำถาม 30",
+			heading: "ข้อ 30",
 			label: "คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
 			kid_label:
 				"คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",

@@ -59,7 +59,6 @@ const QuestionRadioImage = ({
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
 	const phrase = useSelector(getPhrases);
-	const language = useSelector(getLanguage);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -222,10 +221,9 @@ const QuestionRadioImage = ({
 
 	/** if the option contains value called "other", it will be displayed as a list */
 	const listRenderOption = (item: ChoiceImage, index: number): React.ReactElement => {
-		const { image_ident, label, value, sublabel, label_mode } = item;
+		const { image_ident, label, value, sublabel } = item;
 		const imageByMode = getOptionImage(image_ident);
 		const isSelected = value === selected || (isOtherOption(value) && isOtherOption(selected));
-		const optionText = getOptionText(label, label_mode, mode);
 		const optionSublabel = getOptionSubLabel(sublabel, mode);
 
 		return (
@@ -266,7 +264,7 @@ const QuestionRadioImage = ({
 							justifyContent: "center",
 						}}
 					>
-						{optionText !== null && (
+						{label !== null && (
 							<Text
 								style={[
 									styles.listOptionLabelText,
@@ -279,7 +277,7 @@ const QuestionRadioImage = ({
 									},
 								]}
 							>
-								{`${optionLetter(index)}.  ${optionText}`}
+								{`${optionLetter(index)}.  ${label}`}
 							</Text>
 						)}
 						{optionSublabel !== null && (
