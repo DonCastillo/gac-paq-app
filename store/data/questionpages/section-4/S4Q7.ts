@@ -303,18 +303,18 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			adult_sublabel: "يرجى تحديد جميع الخيارات التي تنطبق عليه.",
 			choices: [
 				{
-					label: "‌نعم، قام بالمشي",
+					label: "نعم، قمت بالمشي",
 					value: "Walked",
 					label_mode: {
-						kid: "‌نعم، قام بالمشي",
+						kid: "‌نعم، قمت بالمشي",
 						adult: "نعم، قام بالمشي",
 					},
 				},
 				{
-					label: "‌نعم، قام باستخدام العجلات",
+					label: "نعم، قمت باستخدام العجلات",
 					value: "Wheeled",
 					label_mode: {
-						kid: "‌نعم، قام باستخدام العجلات",
+						kid: "‌نعم، قمت باستخدام العجلات",
 						adult: "نعم، قام باستخدام العجلات",
 					},
 				},
