@@ -246,11 +246,11 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 					value: "30 minutes or less per day",
 				},
 				{
-					label: "‌ما بين ٣١ دقيقة وأقل من ساعة في اليوم",
+					label: "ما بين ٣١ دقيقة وساعة في اليوم",
 					value: "31 to 60 minutes per day",
 				},
 				{
-					label: "‌ما بين ساعة وأقل من ساعة ونصف في اليوم",
+					label: "ما بين ساعة وساعة ونصف في اليوم",
 					value: "1 to 1 and a half hours per day",
 				},
 				{
