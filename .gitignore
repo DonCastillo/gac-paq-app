@@ -29,5 +29,6 @@ finalresponses.json
 store/responses.json
 
 eas.json
+svg-non-stop
 
 eas copy.json
