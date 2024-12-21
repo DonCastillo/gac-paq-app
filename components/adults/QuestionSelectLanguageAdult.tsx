@@ -135,7 +135,7 @@ const QuestionSelectLanguageAdult = ({
 						},
 					]}
 				>
-					<View style={{ backgroundColor: "white" }}>
+					<View>
 						<Text
 							style={{
 								...styles.blockOptionLabelText,
@@ -150,7 +150,7 @@ const QuestionSelectLanguageAdult = ({
 						</Text>
 					</View>
 
-					<View style={{ backgroundColor: "white" }}>
+					<View>
 						<Text
 							style={{
 								...styles.blockOptionLabelText,
