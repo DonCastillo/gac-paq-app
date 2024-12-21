@@ -17,12 +17,13 @@ const QuestionContainer = ({ children, customStyle }: PropsInterface): React.Rea
 		device.orientation === "landscape" ? 250 : device.isTablet ? 290 : 340,
 		device.screenWidth,
 	);
+
 	return (
 		<View
 			style={[
 				styles.container,
 				{
-					maxHeight: verticalScale(600, device.screenHeight),
+					// maxHeight: verticalScale(device.isTablet ? 600 : 500, device.screenHeight),
 					width,
 				},
 				customStyle,

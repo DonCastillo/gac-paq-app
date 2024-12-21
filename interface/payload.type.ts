@@ -29,6 +29,7 @@ export interface ChoiceIcon extends Choice {
 
 export interface LanguageInterface {
 	name: string;
+	country_name: string,
 	local_name?: string;
 	flag_code?: string;
 	lang_code: string;

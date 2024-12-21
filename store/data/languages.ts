@@ -144,4 +144,3 @@ const Languages: LanguageInterface[] = [
 ];
 
 export default Languages;
- 
