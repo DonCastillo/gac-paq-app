@@ -23,7 +23,7 @@ const QuestionContainer = ({ children, customStyle }: PropsInterface): React.Rea
 			style={[
 				styles.container,
 				{
-					// maxHeight: verticalScale(device.isTablet ? 600 : 500, device.screenHeight),
+					// maxHeight: verticalScale(device.isTablet ? 600 : 400, device.screenHeight),
 					width,
 				},
 				customStyle,

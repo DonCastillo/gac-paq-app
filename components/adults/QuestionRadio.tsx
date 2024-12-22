@@ -116,7 +116,6 @@ const QuestionRadio = ({
 				flexGrow: 1,
 				justifyContent: "flex-start",
 				flexDirection: "column",
-				paddingBottom: 20,
 				direction: adjustWritingDirection(),
 			}}
 			renderItem={({ item, index }) => (
