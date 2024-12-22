@@ -3,7 +3,8 @@ import { store } from "store/store";
 import { moderateScale } from "./responsive.utils";
 
 const NONALPHANUMERIC = ["th-TH", "hi-IN", "ma-IN", "ne-NP", "ar-AE"];
-const PADDINGNONALPHANUMERIC = 10;
+// const PADDINGNONALPHANUMERIC = 2;
+const PADDINGNONALPHANUMERIC = 5;
 
 const adjustRadioImageAspectRatio = (): number => {
 	const { language, mode, device } = store.getState().settings;

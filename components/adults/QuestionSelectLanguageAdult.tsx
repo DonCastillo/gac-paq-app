@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import type { LanguageInterface } from "interface/payload.type";
 import { useSelector } from "react-redux";
 import { getLanguageOption } from "store/questions/questionsSlice";
@@ -24,6 +24,7 @@ const QuestionSelectLanguageAdult = ({
 	const flatListRef = React.useRef<FlatList>(null);
 
 	const [selected, setSelected] = useState<string | null>(selectedValue);
+	const [optionRowIndex, setOptionRowIndex] = useState<number>(0);
 
 	const options: LanguageInterface[] = useSelector(getLanguageOption);
 	const questionContainerWidth = horizontalScale(
@@ -79,15 +80,19 @@ const QuestionSelectLanguageAdult = ({
 	}, [currentPage, selectedValue]);
 
 	useEffect(() => {
-		const index = options.findIndex((item) => item.lang_code === selectedValue);
-		const rawIndex = Math.floor(index / numColumns);
+		let index = options.findIndex((item) => item.lang_code === selected);
+		index = Math.floor(index / numColumns);
+		setOptionRowIndex(index);
+	}, [selected]);
+
+	useLayoutEffect(() => {
 		flatListRef.current?.scrollToIndex({
-			index: rawIndex >= 0 ? rawIndex : 0,
+			index: optionRowIndex >= 0 ? optionRowIndex : 0,
 			animated: false,
 			viewPosition: 0,
 			viewOffset: 0,
 		});
-	});
+	}, [optionRowIndex]);
 
 	const languageOption = (item: LanguageInterface, index: number): React.ReactElement => {
 		const lastItem = index === options.length - 1;
@@ -183,7 +188,8 @@ const QuestionSelectLanguageAdult = ({
 						key={numColumns}
 						bounces={false}
 						keyExtractor={(item) => item.lang_code}
-						initialScrollIndex={0}
+						refreshing={true}
+						initialScrollIndex={optionRowIndex >= 0 ? optionRowIndex : 0}
 						persistentScrollbar={true}
 						showsVerticalScrollIndicator={true}
 						initialNumToRender={6}

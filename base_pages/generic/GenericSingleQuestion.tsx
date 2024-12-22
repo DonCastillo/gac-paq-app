@@ -39,6 +39,7 @@ import { getModeType, getQuestionType } from "utils/type.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import type Mode from "constants/mode.enum";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const GenericSingleQuestion = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -155,6 +156,7 @@ const GenericSingleQuestion = (): React.ReactElement => {
 				)}
 				<Main>
 					{!isKeyboardOpen && <ProgressBarAdult />}
+					{!isKeyboardOpen && <Toolbar />}
 					<CenterMain>
 						<QuestionContainer>
 							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
