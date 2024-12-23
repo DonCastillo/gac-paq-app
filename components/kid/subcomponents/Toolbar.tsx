@@ -204,7 +204,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			style={{
 				...styles.container,
 				paddingVertical: moderateScale(5, device.screenWidth),
-				backgroundColor: "white"
+				backgroundColor: "white",
 			}}
 		>
 			<View
