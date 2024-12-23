@@ -174,17 +174,17 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंको छोरा वा छोरीले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
 			choices: [
 				{
-					label: "गरे",
+					label: "गरें",
 					label_mode: {
-						kid: "गरे",
+						kid: "गरें",
 						adult: "गर्नुभयो",
 					},
 					value: "yes",
 				},
 				{
-					label: "गरिनँ",
+					label: "गरिनं",
 					label_mode: {
-						kid: "गरिनँ",
+						kid: "गरिनं",
 						adult: "गर्नुभएन",
 					},
 					value: "no",
