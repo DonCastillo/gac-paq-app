@@ -388,11 +388,33 @@ const adjustExtroDescriptionText = (): { fontSize: number; lineHeight: number } 
 	}
 };
 
+const adjustDropdownLabelText = (): any => {
+	const { language } = store.getState().settings;
+	let adjustedFont = {};
+
+	if (NONALPHANUMERIC.includes(language)) {
+		adjustedFont = {
+			fontFamily: "undefined",
+		};
+	}
+
+	return { ...adjustedFont };
+};
+
 const adjustIntroHeadingText = (): any => {
 	const { language } = store.getState().settings;
+	let adjustedFont = {};
+
+	if (NONALPHANUMERIC.includes(language)) {
+		adjustedFont = {
+			fontFamily: "undefined",
+			fontSize: 25,
+		};
+	}
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
+		...adjustedFont,
 	};
 };
 
@@ -632,6 +654,7 @@ export {
 	adjustParagraph,
 	adjustHeading,
 	adjustDropdownIconSize,
+	adjustDropdownLabelText,
 	adjustRadioImageAspectRatio,
 	adjustRadioImageBlockText,
 	adjustWritingDirection,
