@@ -12,7 +12,11 @@ import {
 	getPhrases,
 } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
-import { adjustDropdownIconSize, adjustDropdownLabelText, adjustWritingDirection } from "utils/style";
+import {
+	adjustDropdownIconSize,
+	adjustDropdownLabelText,
+	adjustWritingDirection,
+} from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -122,7 +126,7 @@ const DropDownSelector = ({
 						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
 					),
 					writingDirection: adjustWritingDirection(),
-					...adjustDropdownLabelText()
+					...adjustDropdownLabelText(),
 				}}
 			/>
 		</>
