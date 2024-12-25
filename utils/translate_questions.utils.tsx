@@ -52,4 +52,24 @@ const translateOptionLetters = (
 	return finalLetters;
 };
 
-export { translateArrayOfPages, translatePage, translatePhrase, translateOptionLetters };
+const translateOptionNumbers = (
+	numbers: Record<string, string[]>,
+	language: string | undefined,
+): string[] => {
+	const finalLanguage = language ?? "en-CA";
+	let finalNumbers = numbers["en-CA"];
+
+	if (numbers[finalLanguage] !== undefined && numbers[finalLanguage] !== null) {
+		finalNumbers = numbers[finalLanguage];
+	}
+
+	return finalNumbers;
+};
+
+export {
+	translateArrayOfPages,
+	translatePage,
+	translatePhrase,
+	translateOptionLetters,
+	translateOptionNumbers,
+};
