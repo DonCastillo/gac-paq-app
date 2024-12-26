@@ -257,7 +257,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७c - गाडी",
+			heading: "प्रश्न १७ग - गाडी",
 			label:
 				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
 			kid_label:

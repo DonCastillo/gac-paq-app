@@ -213,7 +213,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
-			heading: "प्रश्न 7",
+			heading: "प्रश्न ७",
 			label:
 				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने अवकाश के दौरान अधिकांश समय करते हैं?",
 			kid_label:

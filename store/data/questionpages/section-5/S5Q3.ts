@@ -242,7 +242,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				"في الأيام التي قام فيها طفلك بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرق عادةً؟",
 			choices: [
 				{
-					label: "‌٣٠ دقيقة أو أقل في اليوم",
+					label: "٣٠ دقيقة أو أقل في اليوم",
 					value: "30 minutes or less per day",
 				},
 				{
@@ -254,7 +254,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 					value: "1 to 1 and a half hours per day",
 				},
 				{
-					label: "‌أكثر من ساعة ونصف في اليوم",
+					label: "أكثر من ساعة ونصف في اليوم",
 					value: "More than 1 and a half hours per day",
 				},
 			],

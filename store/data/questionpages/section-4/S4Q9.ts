@@ -253,7 +253,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७c - हिँड्नु",
+			heading: "प्रश्न १७ग - हिँड्नु",
 			label:
 				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
 			kid_label:

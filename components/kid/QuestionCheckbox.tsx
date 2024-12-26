@@ -153,7 +153,6 @@ const QuestionCheckbox = ({
 					numColumns={numColumn}
 					key={enableColumnWrap.toString()}
 					data={[...options]}
-					contentContainerStyle={{ paddingBottom: 20 }}
 					renderItem={({ item, index }) => {
 						return (
 							<Option

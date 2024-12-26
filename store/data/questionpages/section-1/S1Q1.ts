@@ -179,9 +179,9 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 					value: "yes",
 				},
 				{
-					label: "गइनं",
+					label: "गईन",
 					label_mode: {
-						kid: "गइनं",
+						kid: "गईन",
 						adult: "जानुभएन",
 					},
 					value: "no",

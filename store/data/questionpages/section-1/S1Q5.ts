@@ -216,7 +216,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
-			heading: "प्रश्न 5",
+			heading: "प्रश्न ५",
 			label:
 				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
 			kid_label:

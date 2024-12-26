@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 import { getPhrases, getColorTheme, getCurrentPage } from "store/settings/settingsSlice";
 import { adjustWritingDirection } from "utils/style";
+import { optionNumber } from "utils/options.utils";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -52,6 +53,17 @@ const QuestionSlider = ({
 		return typeof value === "number" && Number.isInteger(value);
 	};
 
+	const displayValue = (value: number | PhraseLabel.DontKnow): string => {
+		let displayNumber = optionNumber(0);
+		if (value === PhraseLabel.DontKnow) {
+			displayNumber = optionNumber(0);
+		} else {
+			displayNumber = optionNumber(value);
+		}
+
+		return displayNumber;
+	};
+
 	const isColor100 = (value: number | PhraseLabel.DontKnow): string => {
 		return isNumber(value) ? color100 : GeneralStyle.adult.inactiveField.borderColor;
 	};
@@ -93,7 +105,7 @@ const QuestionSlider = ({
 								!isNumber(value) && styles.tooltipUnselected,
 							]}
 						>
-							<Text style={[styles.tooltipText]}>{isNumber(value) ? value : 0}</Text>
+							<Text style={[styles.tooltipText]}>{displayValue(isNumber(value) ? value : 0)}</Text>
 						</View>
 					),
 				}}

@@ -7,6 +7,7 @@ import { horizontalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getPhrases, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 import { adjustQuestionSliderTextKid, adjustWritingDirection } from "utils/style";
+import { optionNumber } from "utils/options.utils";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -50,6 +51,17 @@ const QuestionSlider = ({
 	const isNumber = (value: number | PhraseLabel.DontKnow): boolean => {
 		if (value === PhraseLabel.DontKnow) return false;
 		return typeof value === "number" && Number.isInteger(value);
+	};
+
+	const displayValue = (value: number | PhraseLabel.DontKnow): string => {
+		let displayNumber = optionNumber(0);
+		if (value === PhraseLabel.DontKnow) {
+			displayNumber = optionNumber(0);
+		} else {
+			displayNumber = optionNumber(value);
+		}
+
+		return displayNumber;
 	};
 
 	const isColor100 = (value: number | PhraseLabel.DontKnow): string => {
@@ -96,7 +108,7 @@ const QuestionSlider = ({
 							]}
 						>
 							<Text style={[styles.tooltipText, { color: isNumber(value) ? "#fff" : "#fff" }]}>
-								{isNumber(value) ? value : 0}
+								{displayValue(isNumber(value) ? value : 0)}
 							</Text>
 						</View>
 					),

@@ -123,6 +123,11 @@ const optionLetter = (index: number): string => {
 	return letters[index % letters.length];
 };
 
+const optionNumber = (index: number): string => {
+	const numbers = store.getState().questions.optionNumbers;
+	return numbers[index % numbers.length];
+};
+
 export {
 	optionLanguage,
 	hasOtherOption,
@@ -132,4 +137,5 @@ export {
 	extractUserSpecifiedOtherFromArray,
 	choiceMode,
 	optionLetter,
+	optionNumber,
 };
