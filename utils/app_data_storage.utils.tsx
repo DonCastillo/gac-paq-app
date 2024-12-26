@@ -39,6 +39,7 @@ const saveAppData = async (): Promise<void> => {
 		kidExtroPages: KidExtroductoryPages,
 		adultExtroPages: AdultExtroductoryPages,
 		kidAgePage: DemographicKidPage,
+		teenAgePage: DemographicTeenPage,
 		adultAgePage: DemographicAdultPage,
 		feedbackExtroPages: FeedbackExtroductoryPages,
 		backPhrase: BackPhrase,
