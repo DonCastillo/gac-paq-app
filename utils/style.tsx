@@ -3,7 +3,8 @@ import { store } from "store/store";
 import { moderateScale } from "./responsive.utils";
 
 const NONALPHANUMERIC = ["th-TH", "hi-IN", "ma-IN", "ne-NP", "ar-AE"];
-const PADDINGNONALPHANUMERIC = 10;
+// const PADDINGNONALPHANUMERIC = 10;
+const PADDINGNONALPHANUMERIC = 5;
 
 const adjustRadioImageAspectRatio = (): number => {
 	const { language, mode, device } = store.getState().settings;
@@ -387,11 +388,33 @@ const adjustExtroDescriptionText = (): { fontSize: number; lineHeight: number } 
 	}
 };
 
+const adjustDropdownLabelText = (): any => {
+	const { language } = store.getState().settings;
+	let adjustedFont = {};
+
+	if (NONALPHANUMERIC.includes(language)) {
+		adjustedFont = {
+			fontFamily: "undefined",
+		};
+	}
+
+	return { ...adjustedFont };
+};
+
 const adjustIntroHeadingText = (): any => {
 	const { language } = store.getState().settings;
+	let adjustedFont = {};
+
+	if (NONALPHANUMERIC.includes(language)) {
+		adjustedFont = {
+			fontFamily: "undefined",
+			fontSize: 25,
+		};
+	}
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
+		...adjustedFont,
 	};
 };
 
@@ -631,6 +654,7 @@ export {
 	adjustParagraph,
 	adjustHeading,
 	adjustDropdownIconSize,
+	adjustDropdownLabelText,
 	adjustRadioImageAspectRatio,
 	adjustRadioImageBlockText,
 	adjustWritingDirection,

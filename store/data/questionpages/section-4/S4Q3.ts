@@ -237,7 +237,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १५c",
+			heading: "प्रश्न १५ग",
 			label: "सामान्यतया तपाईंलाई विध्यालय पुग्न कति समय लाग्छ?",
 			kid_label: "सामान्यतया तपाईंलाई विध्यालय पुग्न कति समय लाग्छ?",
 			adult_label: "सामान्यतया, तपाईंको छोरा वा छोरीलाई विध्यालय पुग्न कति समय लाग्छ?",

@@ -118,7 +118,6 @@ const QuestionRadio = ({
 					key={enableColumnWrap.toString()}
 					data={[...options]}
 					contentContainerStyle={{
-						paddingBottom: 20,
 						direction: adjustWritingDirection(),
 					}}
 					renderItem={({ item, index }) => {

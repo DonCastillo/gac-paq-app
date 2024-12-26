@@ -11,6 +11,7 @@ import {
 	getDevice,
 	getEnableNarration,
 	getIsLoading,
+	getLanguage,
 	getSectionTitles,
 	getSoundType,
 	setEnableNarration,
@@ -18,6 +19,7 @@ import {
 } from "store/settings/settingsSlice";
 import { getAudioURI } from "utils/narration";
 import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
+import LanguageIndicator from "components/LanguageIndicator";
 
 const ICON_SIZE = 35;
 
@@ -29,6 +31,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const sectionTitles = useSelector(getSectionTitles);
+	const language = useSelector(getLanguage);
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
 	const dispatch = useDispatch();
@@ -197,18 +200,35 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	}
 
 	return (
-		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
-			<Text
-				style={[
-					GeneralStyle.kid.topHeaderSectionTitle,
-					{
-						...adjustToolbarHeadingText(),
-						direction: adjustWritingDirection(),
-					},
-				]}
+		<View
+			style={{
+				...styles.container,
+				paddingVertical: moderateScale(5, device.screenWidth),
+				backgroundColor: "white",
+			}}
+		>
+			<View
+				style={{
+					justifyContent: "flex-start",
+					alignItems: "center",
+					flexDirection: "row",
+				}}
 			>
-				{title}
-			</Text>
+				<View style={{ marginRight: 10 }}>
+					<LanguageIndicator langCode={language} />
+				</View>
+				<Text
+					style={[
+						GeneralStyle.kid.topHeaderSectionTitle,
+						{
+							...adjustToolbarHeadingText(),
+							direction: adjustWritingDirection(),
+						},
+					]}
+				>
+					{title}
+				</Text>
+			</View>
 			{NarrationButtonComponent}
 		</View>
 	);

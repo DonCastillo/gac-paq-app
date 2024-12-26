@@ -39,6 +39,7 @@ import {
 	clearQuestionResponses,
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -124,6 +125,7 @@ const GenericLanguage = (): React.ReactElement => {
 				)}
 				<Main>
 					<ProgressBarAdult />
+					<Toolbar />
 					<CenterMain>
 						<QuestionContainer>
 							<QuestionTitle>{translatedPage.heading}</QuestionTitle>

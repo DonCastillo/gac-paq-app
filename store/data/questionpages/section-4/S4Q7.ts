@@ -306,7 +306,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					label: "نعم، قمت بالمشي",
 					value: "Walked",
 					label_mode: {
-						kid: "‌نعم، قمت بالمشي",
+						kid: "نعم، قمت بالمشي",
 						adult: "نعم، قام بالمشي",
 					},
 				},
@@ -314,7 +314,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					label: "نعم، قمت باستخدام العجلات",
 					value: "Wheeled",
 					label_mode: {
-						kid: "‌نعم، قمت باستخدام العجلات",
+						kid: "نعم، قمت باستخدام العجلات",
 						adult: "نعم، قام باستخدام العجلات",
 					},
 				},

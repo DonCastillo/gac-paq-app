@@ -10,6 +10,7 @@ import {
 	getDevice,
 	getEnableNarration,
 	getIsLoading,
+	getLanguage,
 	getSectionTitles,
 	getSoundType,
 	setEnableNarration,
@@ -17,6 +18,7 @@ import {
 import { Audio } from "expo-av";
 import { getAudioURI } from "utils/narration";
 import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
+import LanguageIndicator from "components/LanguageIndicator";
 
 const ICON_SIZE = 35;
 
@@ -28,6 +30,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const sectionTitles = useSelector(getSectionTitles);
+	const language = useSelector(getLanguage);
 	const device = useSelector(getDevice);
 	const isLoading = useSelector(getIsLoading);
 	const dispatch = useDispatch();
@@ -197,17 +200,22 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 
 	return (
 		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
-			<Text
-				style={[
-					GeneralStyle.adult.topHeaderSectionTitle,
-					{
-						...adjustToolbarHeadingText(),
-						direction: adjustWritingDirection(),
-					},
-				]}
-			>
-				{title}
-			</Text>
+			<View style={{ justifyContent: "flex-start", alignItems: "center", flexDirection: "row" }}>
+				<View style={{ marginRight: 10 }}>
+					<LanguageIndicator langCode={language} />
+				</View>
+				<Text
+					style={[
+						GeneralStyle.adult.topHeaderSectionTitle,
+						{
+							...adjustToolbarHeadingText(),
+							direction: adjustWritingDirection(),
+						},
+					]}
+				>
+					{title}
+				</Text>
+			</View>
 			{NarrationButtonComponent}
 		</View>
 	);
