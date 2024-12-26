@@ -21,7 +21,12 @@ const ProgressBar = ({
 	const device = useSelector(getDevice);
 	if (currentSectionPage !== null && sectionPageTotal !== null) {
 		return (
-			<View style={[styles.container, { paddingHorizontal: 20 }]}>
+			<View
+				style={[
+					styles.container,
+					{ paddingHorizontal: 20, paddingTop: device.platform === "ios" ? 0 : 25 },
+				]}
+			>
 				<Progress.Bar
 					style={{ width: "100%" }}
 					progress={currentSectionPage / sectionPageTotal}
