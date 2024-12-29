@@ -38,6 +38,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 10",
+			label:
+				"Ve dnech, kdy ses v minulém týdnu věnoval(a) domácím povinnostem, kolik času za den jsi těmito povinnostmi strávil(a)?",
+			kid_label:
+				"Ve dnech, kdy ses v minulém týdnu věnoval(a) domácím povinnostem, kolik času za den jsi těmito povinnostmi strávil(a)?",
+			adult_label:
+				"Ve dnech, kdy se vaše dítě v minulém týdnu věnovalo domácím povinnostem, kolik času za den těmito povinnostmi strávilo?",
+			choices: [
+				{
+					label: "Méně než 15 minut za den",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minut za den",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minut za den",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Více než 60 minut za den",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 10",
