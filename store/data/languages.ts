@@ -43,13 +43,13 @@ const Languages: LanguageInterface[] = [
 		flag_code: "CO",
 		lang_code: "es-CO",
 	},
-	// {
-	// 	name: "English",
-	// 	country_name: "Czech Republic",
-	// 	local_name: "English",
-	// 	flag_code: "CZ",
-	// 	lang_code: "en-CZ",
-	// },
+	{
+		name: "Czech",
+		country_name: "Czech Republic",
+		local_name: "Czech",
+		flag_code: "CZ",
+		lang_code: "cz-CR",
+	},
 	{
 		name: "Hindi",
 		country_name: "India",
