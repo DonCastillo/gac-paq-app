@@ -44,6 +44,43 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 29",
+			label: "Jaké je nejvyšší dosažené vzdělání členů ve vaší domácnosti?",
+			kid_label: "Jaké je nejvyšší dosažené vzdělání členů ve vaší domácnosti?",
+			adult_label: "Jaké je nejvyšší dosažené vzdělání členů ve vaší domácnosti?",
+			choices: [
+				{
+					label: "Bez formálního vzdělání",
+					value: "No formal schooling",
+				},
+				{
+					label: "Základní škola",
+					value: "Primary school",
+				},
+				{
+					label: "Střední škola s výučním listem",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Střední škola s maturitou",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Vyšší odborná škola",
+					value: "Higher vocational school",
+				},
+				{
+					label: "Vysoká škola",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Nechci odpovídat",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 29",

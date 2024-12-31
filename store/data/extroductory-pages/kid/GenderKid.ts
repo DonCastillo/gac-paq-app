@@ -35,6 +35,23 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 24",
+			label: "Jsi",
+			kid_label: "Jsi",
+			adult_label: "Jsi",
+			choices: [
+				{
+					label: "Chlapec",
+					value: "Boy",
+				},
+				{
+					label: "Dívka",
+					value: "Girl",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 24",
