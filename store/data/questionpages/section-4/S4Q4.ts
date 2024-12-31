@@ -55,6 +55,51 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadioImage,
+			heading: "Otázka 16",
+			label: "Jakým způsobem ses v minulém týdnu dopravoval(a) do práce?",
+			kid_label: "Jakým způsobem ses v minulém týdnu dopravoval(a) do práce?",
+			adult_label: "Jakým způsobem se vaše dítě v minulém týdnu dopravovalo do práce?",
+			kid_sublabel: "Vyber hlavní způsob dopravy.",
+			adult_sublabel: "Vyberte hlavní způsob dopravy vašeho dítěte.",
+			choices: [
+				{
+					label: "Chůze",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Vlastní pohon na kolečkách",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "například invalidní vozík, JÍZDNÍ KOLO, ELEKTROKOLO, skateboard, koloběžka, kolečkové brusle",
+						adult:
+							"například invalidní vozík, JÍZDNÍ KOLO, ELEKTROKOLO, skateboard, koloběžka, kolečkové brusle",
+					},
+				},
+				{
+					label: "Veřejná doprava",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "například autobus, vlak, tramvaj, metro, loď",
+						adult: "např. autobus, vlak, tramvaj, metro, loď",
+					},
+				},
+				{
+					label: "Auto, taxi, nákladní automobil, motocykl",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Jiný způsob, prosím uveď",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 16",

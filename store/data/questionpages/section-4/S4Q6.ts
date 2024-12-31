@@ -39,6 +39,35 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 16c",
+			label: "Jak dlouho ti obvykle trvá cesta do práce?",
+			kid_label: "Jak dlouho ti obvykle trvá cesta do práce?",
+			adult_label: "Jak dlouho vašemu dítěti obvykle trvá cesta do práce?",
+			choices: [
+				{
+					label: "10 minut a méně",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minut",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minut",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minut",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Více než 60 minut",
+					value: "More than 60 minutes",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 16c",
