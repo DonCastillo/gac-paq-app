@@ -40,6 +40,35 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 13",
+			label: "Kolik hodin jsi v minulém týdnu strávil(a) dobrovolnictvím či brigádou?",
+			kid_label: "Kolik hodin jsi v minulém týdnu strávil(a) dobrovolnictvím či brigádou?",
+			adult_label: "Kolik hodin vaše dítě v minulém týdnu strávilo brigádou či dobrovolnictvím?",
+			choices: [
+				{
+					label: "Méně než 1 hodinu za den",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 - 2 hodiny za den",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 - 3 hodiny za den",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 - 4 hodiny za den",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hodiny a více za den",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 13",

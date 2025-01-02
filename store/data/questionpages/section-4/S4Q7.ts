@@ -44,6 +44,40 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionCheckbox,
+			heading: "Otázka 17",
+			label:
+				"Využil(a) JSI v minulém týdnu CHŮZI NEBO vlastní pohon na kolečkách, aby ses dostal(a) na různá místa kromě školy a práce (např. na návštěvu ke kamarádům, do parku, do obchodu)?",
+			kid_label:
+				"Využil(a) JSI v minulém týdnu CHŮZI NEBO vlastní pohon na kolečkách, aby ses dostal(a) na různá místa kromě školy a práce (např. na návštěvu ke kamarádům, do parku, do obchodu)?",
+			adult_label:
+				"Využilo vaše dítě v minulém týdnu chůzi či vlastní pohon na kolečkách, aby se dostalo na různá místa kromě školy a práce (např. na návštěvu ke kamarádům, do parku, do obchodu)?",
+			kid_sublabel: "Vyber prosím všechny možnosti, které se tě týkají.",
+			adult_sublabel: "Vyberte prosím všechny možnosti, které se vašeho dítěte týkají.",
+			choices: [
+				{
+					label: "Ano, šel(šla) jsem pěšky",
+					value: "Walked",
+					label_mode: {
+						kid: "Ano, šel(šla) jsem pěšky",
+						adult: "Ano, šlo pěšky",
+					},
+				},
+				{
+					label: "Ano, využil(a) jsem vlastní pohon na kolečkách",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Ano, využil(a) jsem vlastní pohon na kolečkách",
+						adult: "Ano, využilo vlastní pohon na kolečkách",
+					},
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 17",

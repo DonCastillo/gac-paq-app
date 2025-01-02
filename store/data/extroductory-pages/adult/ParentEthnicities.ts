@@ -47,6 +47,31 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionCheckbox,
+			heading: "Otázka 27",
+			label: "Jaká je vaše etnická příslušnost?",
+			kid_label: "Jaká je vaše etnická příslušnost?",
+			adult_label: "Jaká je vaše etnická příslušnost?",
+			choices: [
+				{
+					label: "Asijská",
+					value: "Asian",
+				},
+				{
+					label: "Bělošská nebo kavkazská",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Jiná, prosím uveďte",
+					value: "Other",
+				},
+				{
+					label: "Nechci sdělovat",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 27",

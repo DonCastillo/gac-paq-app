@@ -4,6 +4,9 @@ const DontKnowPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Don't know",
 	},
+	"cz-CR": {
+		label: "Nevím",
+	},
 	"es-CO": {
 		label: "No lo sé",
 	},

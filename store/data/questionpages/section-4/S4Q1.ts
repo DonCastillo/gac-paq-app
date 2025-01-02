@@ -73,6 +73,69 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadioImage,
+			heading: "Otázka 15",
+			label: "Jakým způsobem ses v minulém týdnu dopravoval(a) do školy?",
+			kid_label: "Jakým způsobem ses v minulém týdnu dopravoval(a) do školy?",
+			adult_label: "Jakým způsobem se vaše dítě v minulém týdnu dopravovalo do školy?",
+			kid_sublabel: "Vyber HLAVNÍ způsob dopravy.",
+			adult_sublabel: "Vyberte hlavní způsob dopravy vašeho dítěte.",
+			choices: [
+				{
+					label: "Chůze",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Vlastní pohon na kolečkách",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "např. invalidní vozík, jízdní kolo, elektrokolo, skateboard, koloběžka, kolečkové brusle",
+						adult:
+							"například invalidní vozík, jízdní kolo, elektrokolo, skateboard, koloběžka, kolečkové brusle",
+					},
+				},
+				{
+					label: "Školní autobus",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Veřejná doprava",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "např. autobus, vlak, tramvaj, metro, loď",
+						adult: "například autobus, vlak, tramvaj, metro, loď",
+					},
+				},
+				{
+					label: "Auto, taxi, nákladní automobil, motocykl",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Jiný způsob včetně kombinací",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "např. chůze a autobus",
+						adult: "např. chůze a autobus",
+					},
+				},
+				{
+					label: "Mám domácí vzdělávání",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Mám domácí vzdělávání",
+						adult: "Moje dítě má domácí vzdělávání",
+					},
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 15",

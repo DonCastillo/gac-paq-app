@@ -166,7 +166,7 @@ const QuestionSelectLanguageAdult = ({
 								fontStyle: "italic",
 							}}
 						>
-							{!["English", "Chichewa"].includes(item.name ?? "") && `${item.name}`}
+							{!["English", "Chichewa", "Czech"].includes(item.name ?? "") && `${item.name}`}
 						</Text>
 					</View>
 				</View>

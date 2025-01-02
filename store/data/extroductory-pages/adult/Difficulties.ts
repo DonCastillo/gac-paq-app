@@ -64,6 +64,60 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionCheckbox,
+			heading: "Otázka 25",
+			label:
+				"Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
+			kid_label:
+				"Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
+			adult_label:
+				"Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
+			kid_sublabel: "Můžete uvést i více možností",
+			adult_sublabel: "Můžete uvést i více možností",
+			choices: [
+				{
+					label: "Sluch",
+					value: "Hearing",
+				},
+				{
+					label: "Zrak",
+					value: "Seeing",
+				},
+				{
+					label: "Mluvený projev",
+					value: "Speech",
+				},
+				{
+					label: "Pohyblivost",
+					value: "Mobility",
+				},
+				{
+					label: "Obratnost",
+					value: "Agility",
+				},
+				{
+					label: "Bolest",
+					value: "Pain",
+				},
+				{
+					label: "Paměť",
+					value: "Memory",
+				},
+				{
+					label: "Jiná možnost",
+					value: "Other",
+				},
+				{
+					label: "Nechci sdělovat",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Nic z výše uvedeného, mé dítě problémy nemá",
+					value: "None of the above",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 25",

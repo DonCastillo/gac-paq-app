@@ -43,6 +43,39 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionDropdown,
+			heading: "Vítejte",
+			label: "Kolik je ti roků?",
+			kid_label: "Kolik je ti roků?",
+			adult_label: "Kolik je ti roků?",
+			choices: [
+				{
+					label: "12 let",
+					value: "12",
+				},
+				{
+					label: "13 let",
+					value: "13",
+				},
+				{
+					label: "14 let",
+					value: "14",
+				},
+				{
+					label: "15 let",
+					value: "15",
+				},
+				{
+					label: "16 let",
+					value: "16",
+				},
+				{
+					label: "17 let",
+					value: "17",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionDropdown,
 			heading: "¡Bienvenido!",

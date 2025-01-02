@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionDropdown,
+			heading: "Vítejte",
+			label: "Kdo vyplňuje tento dotazník?",
+			kid_label: "Kdo vyplňuje tento dotazník?",
+			adult_label: "Kdo vyplňuje tento dotazník?",
+			choices: [
+				{
+					label: "Dítě",
+					value: "child",
+					sublabel: {
+						kid: "8 - 11 let",
+						adult: "8 - 11 let",
+					},
+				},
+				{
+					label: "Adolescent",
+					value: "teen",
+					sublabel: {
+						kid: "12 - 17 let",
+						adult: "12 - 17 let",
+					},
+				},
+				{
+					label: "Rodič",
+					value: "adult",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionDropdown,
 			heading: "¡Bienvenido!",

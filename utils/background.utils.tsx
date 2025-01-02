@@ -46,6 +46,11 @@ const getImageBackground = (): any | null => {
 		region = "MW";
 	}
 
+	if (language === "cz-CR") {
+		language = "es-ES";
+		region = "ES";
+	}
+
 	// some languages don't have images yet
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
@@ -103,6 +108,11 @@ const getImageBackgroundStatus = (state: State): any | null => {
 		region = "MW";
 	}
 
+	if (language === "cz-CR") {
+		language = "es-ES";
+		region = "ES";
+	}
+
 	// some languages don't have images yet
 	if (blackListLanguages.includes(language)) {
 		language = "en-CA";
@@ -124,6 +134,11 @@ const getOptionImage = (image_ident: string): any | null => {
 	if (language === "en-NG") {
 		language = "en-MW";
 		region = "MW";
+	}
+
+	if (language === "cz-CR") {
+		language = "es-ES";
+		region = "ES";
 	}
 
 	// some languages don't have images yet

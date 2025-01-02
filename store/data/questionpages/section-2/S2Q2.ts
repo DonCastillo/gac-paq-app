@@ -47,6 +47,43 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 9",
+			label: "V kolika dnech ses minulý týden věnoval(a) domácím povinnostem?",
+			kid_label: "V kolika dnech ses minulý týden věnoval(a) domácím povinnostem?",
+			adult_label: "V kolika dnech se vaše dítě minulý týden věnovalo domácím povinnostem?",
+			choices: [
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 dní",
+					value: "5",
+				},
+				{
+					label: "6 dní",
+					value: "6",
+				},
+				{
+					label: "7 dní",
+					value: "7",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 9",

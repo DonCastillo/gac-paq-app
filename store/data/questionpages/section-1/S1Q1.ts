@@ -27,6 +27,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 1",
+			label: "Chodil(a) jsi minulý týden do školy?",
+			kid_label: "Chodil(a) jsi minulý týden do školy?",
+			adult_label: "Chodilo vaše dítě minulý týden do školy?",
+			choices: [
+				{
+					label: "Ano",
+					value: "yes",
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 1",

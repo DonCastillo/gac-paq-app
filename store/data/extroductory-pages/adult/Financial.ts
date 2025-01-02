@@ -44,6 +44,39 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 30",
+			label: "Jak složité je pro vás uspokojit finanční nároky vaší rodiny?",
+			kid_label: "Jak složité je pro vás uspokojit finanční nároky vaší rodiny?",
+			adult_label: "Jak složité je pro vás uspokojit finanční nároky vaší rodiny?",
+			choices: [
+				{
+					label: "Velmi složité",
+					value: "Very difficult",
+				},
+				{
+					label: "Složité",
+					value: "Difficult",
+				},
+				{
+					label: "Ani složité, ani jednoduché",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Jednoduché",
+					value: "Easy",
+				},
+				{
+					label: "Velmi jednoduché",
+					value: "Very easy",
+				},
+				{
+					label: "Nechci odpovídat",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Preunta 30",
