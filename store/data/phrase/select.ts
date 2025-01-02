@@ -4,6 +4,9 @@ const SelectPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Select",
 	},
+	"cz-CR": {
+		label: "Vyberte",
+	},
 	"es-CO": {
 		label: "Seleccionar",
 	},

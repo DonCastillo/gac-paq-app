@@ -17,6 +17,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"cz-CR": {
+			heading: "Práce",
+			subheading: "Sekce 3",
+			description: {
+				kid: "Tato část je o brigádě nebo dobrovolnictví  mimo domov – nejedná se tedy o domácí povinnosti. Brigádou se rozumí vydělávání peněz pro tebe nebo tvou rodinu. Dobrovolnou prací se rozumí bezúplatná pomoc lidem nebo organizacím. K této brigádě nebo dobrovolné práci může docházet např. v obchodě, na farmě, v restauraci apod. prosím odpovězte na obě položky souhrnně.",
+				adult:
+					"Tato část je o brigádě nebo dobrovolnictví mimo domov – nejedná se tedy o domácí povinnosti. Brigádou se rozumí vydělávání peněz vaším dítětem pro něj nebo vaši rodinu. Dobrovolnictvím se rozumí bezúplatná pomoc lidem nebo organizacím. Do odpovědi prosím zahrňte obě položky.",
+			},
+		},
 		"es-CO": {
 			heading: "Trabajo",
 			subheading: "Sección 3",

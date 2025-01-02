@@ -27,6 +27,23 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 8",
+			label: "Věnoval(a) ses v minulém týdnu domácím povinnostem?",
+			kid_label: "Věnoval(a) ses v minulém týdnu domácím povinnostem?",
+			adult_label: "Věnovalo se vaše dítě minulém týdnu domácím povinnostem?",
+			choices: [
+				{
+					label: "Ano",
+					value: "yes",
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 8",

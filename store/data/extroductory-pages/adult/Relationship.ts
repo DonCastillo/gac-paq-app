@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 28",
+			label: "Jaký je váš vztah k dítěti?",
+			kid_label: "Jaký je váš vztah k dítěti?",
+			adult_label: "Jaký je váš vztah k dítěti?",
+			choices: [
+				{
+					label: "Otec",
+					value: "Father",
+				},
+				{
+					label: "Matka",
+					value: "Mother",
+				},
+				{
+					label: "Děda",
+					value: "Grandfather",
+				},
+				{
+					label: "Babička",
+					value: "Grandmother",
+				},
+				{
+					label: "Opatrovník, zákonný zástupce",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Jiný, prosím uveďte",
+					value: "Other",
+				},
+				{
+					label: "Nechci odpovídat",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",

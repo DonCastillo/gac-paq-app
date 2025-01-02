@@ -50,6 +50,44 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 21",
+			label: "Kolik času jsi v průměrný den minulého týdne strávil(a) aktivní hrou pro zábavu?",
+			kid_label: "Kolik času jsi v průměrný den minulého týdne strávil(a) aktivní hrou pro zábavu?",
+			adult_label:
+				"Kolik času v průměrný den minulého týdne strávilo vaše dítě aktivní hrou pro zábavu?",
+			kid_sublabel:
+				"Tyto činnosti nezahrnují soutěže ani trénink. příkladem mohou být míčové hry pro zábavu, aktivity v bazénu, skákání na trampolíně, hra na honěnou či na schovávanou, hra v pískovišti, stavění bunkrů nebo např. domečků na stromech.",
+			adult_sublabel:
+				"Tyto činnosti nezahrnují soutěže ani trénink. příkladem mohou být míčové hry pro zábavu, aktivity v bazénu, skákání na trampolíně, hra na honěnou či na schovávanou, hra v pískovišti, stavění bunkrů nebo např. domečků na stromech.",
+			choices: [
+				{
+					label: "Vůbec žádný čas",
+					value: "None",
+				},
+				{
+					label: "Méně než 1 hodinu za den",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 - 2 hodiny za den",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 - 3 hodiny za den",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 - 4 hodiny za den",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hodiny a více za den",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",

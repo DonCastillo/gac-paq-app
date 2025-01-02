@@ -17,6 +17,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"cz-CR": {
+			heading: "Domácí povinnosti",
+			subheading: "Sekce 2",
+			description: {
+				kid: "Tato část je o domácích povinnostech, u kterých jsi pohybově aktivní. Tyto povinnosti zahrnují domácí práce, práce okolo domu, na zahradě apod.",
+				adult:
+					"Tato část je o domácích povinnostech, u kterých jsou vaše děti pohybově aktivní. Tyto povinnosti zahrnují domácí práce, práce okolo domu, na zahradě apod.",
+			},
+		},
 		"es-CO": {
 			heading: "Tareas domesticas",
 			subheading: "Sección 2",

@@ -38,6 +38,34 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 20",
+			label:
+				"Ve dnech, kdy ses minulý týden těmto aktivitám věnoval(a), jak dlouho to obvykle trvalo?",
+			kid_label:
+				"Ve dnech, kdy ses minulý týden těmto aktivitám věnoval(a), jak dlouho to obvykle trvalo?",
+			adult_label:
+				"Ve dnech, kdy se vaše dítě minulý týden těmto aktivitám věnovalo a jak dlouho to obvykle trvalo?",
+			choices: [
+				{
+					label: "30 minut a méně za den",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 - 60 minut za den",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 - 1,5 hodiny za den",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Více než 1,5 hodiny za den",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 20",

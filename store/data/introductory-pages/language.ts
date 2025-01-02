@@ -15,6 +15,13 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
 		},
+		"cz-CR": {
+			type: Question.QuestionLanguage,
+			heading: "Vítejte",
+			label: "Jakým jazykem mluvíš a kde jsi?",
+			kid_label: "Jakým jazykem mluvíš a kde jsi?",
+			adult_label: "Jakým jazykem mluvíš a kde jsi?",
+		},
 		"es-CO": {
 			type: Question.QuestionLanguage,
 			heading: "¡Bienvenido!",

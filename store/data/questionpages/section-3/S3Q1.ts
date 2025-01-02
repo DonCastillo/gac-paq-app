@@ -27,6 +27,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 12",
+			label: "Věnoval(a) ses v minulém týdnu dobrovolnictví nebo brigádě?",
+			kid_label: "Věnoval(a) ses v minulém týdnu dobrovolnictví nebo brigádě?",
+			adult_label: "Věnovalo se vaše dítě v minulém týdnu brigádě nebo dobrovolnictví?",
+			choices: [
+				{
+					label: "Ano",
+					value: "yes",
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 12",

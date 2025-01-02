@@ -46,6 +46,42 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Zpětná vazba",
+			label: "Jak jsi spokojen(a) s aplikací?",
+			kid_label: "Jak jsi spokojen(a) s aplikací?",
+			adult_label: "Jak jste spokojen(a) s aplikací?",
+			adult_sublabel: "Klikni na obrázek (emotikon), který vystihuje úroveň tvé spokojenosti.",
+			kid_sublabel: "Klikněte na obrázek (emotikon), který vystihuje úroveň vaší spokojenosti.",
+			choices: [
+				{
+					label: "Silně nespokojen(a)",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Nespokojen(a)",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutrální",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Spokojen(a)",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Velmi spokojen(a)",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Comentarios",

@@ -10,6 +10,10 @@ const S2Intro: LangSectionPayloadInterface = {
 			heading: "Household Chores",
 			subheading: "Section 2",
 		},
+		"cz-CR": {
+			heading: "Domácí povinnosti",
+			subheading: "Sekce 2",
+		},
 		"es-CO": {
 			heading: "Tareas domesticas",
 			subheading: "Sección 2",

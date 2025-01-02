@@ -58,6 +58,54 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 22",
+			label:
+				"Kolik dnů v minulém týdnu ses věnoval(a) aktivitám, které měly charakter posilování svalů?",
+			kid_label:
+				"Kolik dnů v minulém týdnu ses věnoval(a) aktivitám, které měly charakter posilování svalů?",
+			adult_label:
+				"Kolik dnů v minulém týdnu se vaše dítě věnovalo aktivitám, které měly charakter posilování svalů?",
+			kid_sublabel:
+				"Příkladem může být gymnastika, šplh, shyby, posilování s činkami, aktivity na prolézačkách.",
+			adult_sublabel:
+				"Příkladem může být gymnastika, šplh, shyby, posilování s činkami, aktivity na prolézačkách.",
+			choices: [
+				{
+					label: "0 den",
+					value: "0",
+				},
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 dní",
+					value: "5",
+				},
+				{
+					label: "6 dní",
+					value: "6",
+				},
+				{
+					label: "7 dní",
+					value: "7",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 22",

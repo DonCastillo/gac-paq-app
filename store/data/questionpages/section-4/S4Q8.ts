@@ -48,6 +48,45 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 17b - Chůze",
+			label: "V kolika dnech jsi minulý týden šel či šla pěšky na různá místa kromě školy a práce?",
+			kid_label:
+				"V kolika dnech jsi minulý týden šel či šla pěšky na různá místa kromě školy a práce?",
+			adult_label:
+				"V kolika dnech šlo vaše dítě minulý týden pěšky na různá místa kromě školy a práce?",
+			choices: [
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 dní",
+					value: "5",
+				},
+				{
+					label: "6 dní",
+					value: "6",
+				},
+				{
+					label: "7 dní",
+					value: "7",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b - Caminando",

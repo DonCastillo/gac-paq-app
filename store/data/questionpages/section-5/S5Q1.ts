@@ -27,6 +27,23 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 18",
+			label: "Zapojil(a) ses během minulého týdne do nějaké organizované aktivity?",
+			kid_label: "Zapojil(a) ses během minulého týdne do nějaké organizované aktivity?",
+			adult_label: "Zapojilo se během minulého týdne vaše dítě do nějaké organizované aktivity?",
+			choices: [
+				{
+					label: "Ano",
+					value: "yes",
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 18",

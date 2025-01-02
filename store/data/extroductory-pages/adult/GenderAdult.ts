@@ -31,6 +31,23 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 24",
+			label: "Jaké je pohlaví vašeho dítěte?",
+			kid_label: "Jaké je pohlaví vašeho dítěte?",
+			adult_label: "Jaké je pohlaví vašeho dítěte?",
+			choices: [
+				{
+					label: "Žena",
+					value: "Female",
+				},
+				{
+					label: "Muž",
+					value: "Male",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 24",

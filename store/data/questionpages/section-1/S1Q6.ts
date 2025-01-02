@@ -47,6 +47,43 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 6",
+			label: "Kolik času během normálního školního dne strávíš přestávkami?",
+			kid_label: "Kolik času během normálního školního dne strávíš přestávkami?",
+			adult_label: "Kolik času během normálního školního dne stráví vaše dítě přestávkami?",
+			kid_sublabel:
+				"Tím se rozumí přestávky včetně obědové pauzy. Prosím sečti dobu všech přestávek – například dvě patnáctiminutové přestávky a jedna třicetiminutová přestávka na oběd dají dohromady 60 minut",
+			adult_sublabel:
+				"Tím se rozumí přestávky včetně obědové pauzy. Prosím sečtěte dobu všech přestávek – například dvě patnáctiminutové přestávky a jedna třicetiminutová přestávka na oběd dají dohromady 60 minut",
+			choices: [
+				{
+					label: "0 minut",
+					value: "0 minutes",
+				},
+				{
+					label: "1 - 15 minut",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 - 30 minut",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 - 60 minut",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Více než 60 minut",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Nevím",
+					value: "Don't know",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 6",
