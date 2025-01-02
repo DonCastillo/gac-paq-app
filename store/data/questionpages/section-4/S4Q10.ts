@@ -286,7 +286,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७b - गाड़ी",
+			heading: "प्रश्न १७b - व्हीलिंग",
 			label:
 				"पिछले सप्ताह में आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन व्हीलिंग करके गए?",
 			kid_label:

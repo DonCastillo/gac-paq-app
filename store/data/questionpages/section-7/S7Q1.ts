@@ -258,11 +258,11 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 					value: "None",
 				},
 				{
-					label: "रति दिन 1 घंटे से कम",
+					label: "प्रति दिन 1 घंटे से कम",
 					value: "Less than 1 hour per day",
 				},
 				{
-					label: "रति दिन 1 से 2 घंटे",
+					label: "प्रति दिन 1 से 2 घंटे",
 					value: "1 to less than 2 hours per day",
 				},
 				{

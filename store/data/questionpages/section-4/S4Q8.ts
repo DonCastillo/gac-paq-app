@@ -282,7 +282,7 @@ const S4Q8: LangQuestionRadioPayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७b - हिँड्नु",
+			heading: "प्रश्न १७b - पैदल चलना",
 			label:
 				"पिछले सप्ताह में आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन पैदल गए?",
 			kid_label:
