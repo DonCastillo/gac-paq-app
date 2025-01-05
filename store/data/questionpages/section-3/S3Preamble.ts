@@ -136,7 +136,7 @@ const S3Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "工作",
-			subheading: "第3部分",
+			subheading: "第三部分",
 			description: {
 				kid: "本部分是关于你在家之外所做的工作（非家务）或志愿服务的一些问题。工作是指为自己或家人赚钱的活动，志愿服务是指无偿帮助他人或组织(没有收入)的活动。工作和志愿服务可以在商店、农场、餐馆等地方进行。请将工作和志愿服务的情况合并起来回答。",
 				adult:

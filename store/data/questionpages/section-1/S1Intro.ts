@@ -64,7 +64,7 @@ const S1Intro: LangSectionPayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "学校",
-			subheading: "第1部分",
+			subheading: "第一部分",
 		},
 		"es-ES": {
 			heading: "Escuela o colegio",

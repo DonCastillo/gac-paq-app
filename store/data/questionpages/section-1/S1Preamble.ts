@@ -136,7 +136,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "学校",
-			subheading: "第1部分",
+			subheading: "第一部分",
 			description: {
 				kid: "本部分是关于你上学期间身体活动的一些问题，如在上体育课、课间休息和午餐时。",
 				adult: "本部分是关于您的孩子在上学期间身体活动的一些问题，如在上体育课、课间休息和午餐时。",
