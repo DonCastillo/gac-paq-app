@@ -4,6 +4,7 @@ const OptionNumbers: Record<string, string[]> = {
 	"ma-IN": ["०", "१", "२", "३", "४", "५", "६", "७"],
 	"hi-IN": ["०", "१", "२", "३", "४", "५", "६", "७"],
 	"ar-AE": ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧"],
+	"zh-CN": ["零", "一", "二", "三", "四", "五", "六", "七"],
 };
 
 export default OptionNumbers;
