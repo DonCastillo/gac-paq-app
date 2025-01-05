@@ -416,7 +416,7 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionDropdown,
-			heading: "欢迎!",
+			heading: "欢迎！",
 			label: "谁在填写本问卷？",
 			kid_label: "谁在填写本问卷？",
 			adult_label: "谁在填写本问卷？",
