@@ -63,7 +63,7 @@ const S2Extro: LangExtroPayloadInterface = {
 			subheading: "เหลืออีกแค่ 5 ส่วน!",
 		},
 		"zh-CN": {
-			heading: "此部分完成",
+			heading: "本部分完成！",
 			subheading: "只剩下五部分了！",
 		},
 		"es-ES": {
