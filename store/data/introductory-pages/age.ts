@@ -425,16 +425,16 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 					label: "儿童",
 					value: "child",
 					sublabel: {
-						kid: "8到11岁",
-						adult: "8到11岁",
+						kid: "8-11岁",
+						adult: "8-11岁",
 					},
 				},
 				{
 					label: "青少年",
 					value: "teen",
 					sublabel: {
-						kid: "12到17岁",
-						adult: "12到17岁",
+						kid: "12-17岁",
+						adult: "12-17岁",
 					},
 				},
 				{
