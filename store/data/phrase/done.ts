@@ -44,7 +44,7 @@ const DonePhrase: LangPhraseInterface = {
 		label: "เสร็จเรียบร้อย",
 	},
 	"zh-CN": {
-		label: "完成",
+		label: "已完成",
 	},
 	"es-MX": {
 		label: "Hecho",
