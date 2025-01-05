@@ -64,7 +64,7 @@ const S6Extro: LangExtroPayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "此部分完成",
-			subheading: "还有1项未完成",
+			subheading: "只剩下一部分了！",
 		},
 		"es-ES": {
 			heading: "Sección Completa",
