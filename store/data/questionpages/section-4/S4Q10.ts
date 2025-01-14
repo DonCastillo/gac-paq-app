@@ -49,6 +49,46 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 17b - Vlastní pohon na kolečkách",
+			label:
+				"V kolika dnech jsi minulý týden použil(a) vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
+			kid_label:
+				"V kolika dnech jsi minulý týden použil(a) vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
+			adult_label:
+				"V kolika dnech použilo vaše dítě minulý týden vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
+			choices: [
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 dní",
+					value: "5",
+				},
+				{
+					label: "6 dní",
+					value: "6",
+				},
+				{
+					label: "7 dní",
+					value: "7",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b - En ruedas",
@@ -365,7 +405,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७b - गाडी",
+			heading: "प्रश्न १७ख - गाडी",
 			label:
 				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
 			kid_label:

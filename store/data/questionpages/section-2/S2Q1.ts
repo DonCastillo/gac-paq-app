@@ -27,6 +27,23 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 8",
+			label: "Věnoval(a) ses v minulém týdnu domácím povinnostem?",
+			kid_label: "Věnoval(a) ses v minulém týdnu domácím povinnostem?",
+			adult_label: "Věnovalo se vaše dítě minulém týdnu domácím povinnostem?",
+			choices: [
+				{
+					label: "Ano",
+					value: "yes",
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 8",
@@ -174,17 +191,17 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंको छोरा वा छोरीले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
 			choices: [
 				{
-					label: "गरे",
+					label: "गरें",
 					label_mode: {
-						kid: "गरे",
+						kid: "गरें",
 						adult: "गर्नुभयो",
 					},
 					value: "yes",
 				},
 				{
-					label: "गरिनँ",
+					label: "गरिनं",
 					label_mode: {
-						kid: "गरिनँ",
+						kid: "गरिनं",
 						adult: "गर्नुभएन",
 					},
 					value: "no",

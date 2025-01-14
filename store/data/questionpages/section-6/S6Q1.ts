@@ -50,6 +50,44 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 21",
+			label: "Kolik času jsi v průměrný den minulého týdne strávil(a) aktivní hrou pro zábavu?",
+			kid_label: "Kolik času jsi v průměrný den minulého týdne strávil(a) aktivní hrou pro zábavu?",
+			adult_label:
+				"Kolik času v průměrný den minulého týdne strávilo vaše dítě aktivní hrou pro zábavu?",
+			kid_sublabel:
+				"Tyto činnosti nezahrnují soutěže ani trénink. příkladem mohou být míčové hry pro zábavu, aktivity v bazénu, skákání na trampolíně, hra na honěnou či na schovávanou, hra v pískovišti, stavění bunkrů nebo např. domečků na stromech.",
+			adult_sublabel:
+				"Tyto činnosti nezahrnují soutěže ani trénink. příkladem mohou být míčové hry pro zábavu, aktivity v bazénu, skákání na trampolíně, hra na honěnou či na schovávanou, hra v pískovišti, stavění bunkrů nebo např. domečků na stromech.",
+			choices: [
+				{
+					label: "Vůbec žádný čas",
+					value: "None",
+				},
+				{
+					label: "Méně než 1 hodinu za den",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 - 2 hodiny za den",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 - 3 hodiny za den",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 - 4 hodiny za den",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hodiny a více za den",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",
@@ -395,7 +433,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			adult_label:
 				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, रमाइलोको लागि तपाईंको छोरा वा छोरीले सक्रिय रुपमा कति समय खेल्नुभयो?",
 			kid_sublabel:
-				"हामीले यसमा कुनै प्रतिस्पर्धा वा तालिमका गतिविधिबारे उल्लेख नगरेको कुरा app ले प्रस्ट पार्नेछ l बालबालिकाहरुलाई त्यस काममा लाग्ने उपयुक्त समय बताउन लगाईनेछ l उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
+				"उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
 			adult_sublabel:
 				"उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
 			choices: [

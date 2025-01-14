@@ -59,6 +59,55 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionDropdown,
+			heading: "Vítejte",
+			label: "Kolik má vaše dítě roků?",
+			kid_label: "Kolik má vaše dítě roků?",
+			adult_label: "Kolik má vaše dítě roků?",
+			choices: [
+				{
+					label: "8 let",
+					value: "8",
+				},
+				{
+					label: "9 let",
+					value: "9",
+				},
+				{
+					label: "10 let",
+					value: "10",
+				},
+				{
+					label: "11 let",
+					value: "11",
+				},
+				{
+					label: "12 let",
+					value: "12",
+				},
+				{
+					label: "13 let",
+					value: "13",
+				},
+				{
+					label: "14 let",
+					value: "14",
+				},
+				{
+					label: "15 let",
+					value: "15",
+				},
+				{
+					label: "16 let",
+					value: "16",
+				},
+				{
+					label: "17 let",
+					value: "17",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionDropdown,
 			heading: "¡Bienvenido!",

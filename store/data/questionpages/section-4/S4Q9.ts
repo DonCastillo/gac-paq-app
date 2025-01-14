@@ -36,6 +36,34 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 17c - Chůze",
+			label:
+				"Kolik času strávíš v průměrný den chůzí, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			kid_label:
+				"Kolik času strávíš v průměrný den chůzí, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			adult_label:
+				"Kolik času stráví vaše dítě v průměrný den chůzí, aby se dopravilo na různá místa kromě školy a práce?",
+			choices: [
+				{
+					label: "10 minut a méně",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minut",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 – 30 minut",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Více než 30 minut",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - Caminando",
@@ -253,7 +281,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७c - हिँड्नु",
+			heading: "प्रश्न १७ग - हिँड्नु",
 			label:
 				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
 			kid_label:

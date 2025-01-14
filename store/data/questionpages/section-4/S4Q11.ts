@@ -37,6 +37,34 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 17c - Vlastní pohon na kolečkách",
+			label:
+				"Kolik času strávíš v průměrný den vlastním pohonem na kolečkách, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			kid_label:
+				"Kolik času strávíš v průměrný den vlastním pohonem na kolečkách, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			adult_label:
+				"Kolik času stráví vaše dítě v průměrný den vlastním pohonem na kolečkách, aby se dopravilo na různá místa kromě školy a práce?",
+			choices: [
+				{
+					label: "10 minut a méně",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minut",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 – 30 minut",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Více než 30 minut",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - En ruedas",
@@ -257,7 +285,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७c - गाडी",
+			heading: "प्रश्न १७ग - गाडी",
 			label:
 				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
 			kid_label:

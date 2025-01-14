@@ -27,6 +27,23 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 18",
+			label: "Zapojil(a) ses během minulého týdne do nějaké organizované aktivity?",
+			kid_label: "Zapojil(a) ses během minulého týdne do nějaké organizované aktivity?",
+			adult_label: "Zapojilo se během minulého týdne vaše dítě do nějaké organizované aktivity?",
+			choices: [
+				{
+					label: "Ano",
+					value: "yes",
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 18",
@@ -179,17 +196,17 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				"पछिल्लो (गएको/ बितेको) हप्ता, के तपाईंको छोरा वा छोरीले कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
 			choices: [
 				{
-					label: "गएँ",
+					label: "भएं",
 					label_mode: {
-						kid: "गएँ",
+						kid: "भएं",
 						adult: "हुनुभयो",
 					},
 					value: "yes",
 				},
 				{
-					label: "गइनं",
+					label: "भईन",
 					label_mode: {
-						kid: "गइनं",
+						kid: "भईन",
 						adult: "हुनुभएन",
 					},
 					value: "no",

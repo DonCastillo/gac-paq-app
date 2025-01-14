@@ -35,6 +35,31 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 15c",
+			label: "Jak dlouho ti obvykle trvá cesta do školy?",
+			kid_label: "Jak dlouho ti obvykle trvá cesta do školy?",
+			adult_label: "Jak dlouho vašemu dítěti obvykle trvá cesta do školy?",
+			choices: [
+				{
+					label: "10 minut a méně",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minut",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minut",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Více než 30 minut",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 15c",
@@ -237,7 +262,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १५c",
+			heading: "प्रश्न १५ग",
 			label: "सामान्यतया तपाईंलाई विध्यालय पुग्न कति समय लाग्छ?",
 			kid_label: "सामान्यतया तपाईंलाई विध्यालय पुग्न कति समय लाग्छ?",
 			adult_label: "सामान्यतया, तपाईंको छोरा वा छोरीलाई विध्यालय पुग्न कति समय लाग्छ?",

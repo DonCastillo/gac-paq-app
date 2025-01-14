@@ -13,6 +13,7 @@ import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
 import { useDispatch, useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, nextPage, prevPage } from "store/settings/settingsSlice";
 import type { PageInterface } from "interface/payload.type";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const GenericPage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const GenericPage = (): React.ReactElement => {
 			<BGLinearGradient />
 			<Main>
 				<ProgressBarAdult />
+				<Toolbar />
 				<CenterMain>
 					<ScrollContainer>
 						<Heading customStyle={GeneralStyle.adult.pageHeading}>{translatedPage.heading}</Heading>

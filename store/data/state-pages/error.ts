@@ -11,6 +11,10 @@ const ErrorPage: LangPagePayloadInterface = {
 			heading: "Error",
 			description: "There is a problem submitting your response.\n\nPlease try again.",
 		},
+		"cz-CR": {
+			heading: "Chyba",
+			description: "Při odesílání vašich odpovědí došlo k problému.\n\nProsím, zkus to znovu.",
+		},
 		"es-CO": {
 			heading: "Error",
 			description: "Hay un problema al enviar tu respuesta.\n\nPor favor, inténtalo de nuevo.",

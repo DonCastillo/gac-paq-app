@@ -16,6 +16,14 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"cz-CR": {
+			type: Question.QuestionInput,
+			heading: "Vítejte",
+			label: "Prosím, vložte svůj účastnický ID kód",
+			kid_label: "Prosím, vložte svůj účastnický ID kód",
+			adult_label: "Prosím, vložte svůj účastnický ID kód",
+			placeholder: "Účastnický ID kód",
+		},
 		"es-CO": {
 			type: Question.QuestionInput,
 			heading: "¡Bienvenido!",

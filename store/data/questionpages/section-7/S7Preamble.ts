@@ -17,6 +17,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"cz-CR": {
+			heading: "Venkovní aktivity",
+			subheading: "Sekce 7",
+			description: {
+				kid: "Tato část je o době strávené venkovními aktivitami, jedná se o školní aktivity, domácí povinnosti, brigádu, dobrovolnickou činnost, dopravu a volný čas. Také se tím rozumí čas strávený venku, kdy se nepohybujete (piknik, četba, sezení u ohně).",
+				adult:
+					"Tato část je o době, kterou vaše dítě stráví venkovními aktivitami. Jedná se o školní aktivity, domácí povinnosti, brigádu, dobrovolnictví, dopravu a volný čas, Také se tím rozumí čas strávený venku kdy se dítě nepohybuje (piknik, četba, sezení u ohně).",
+			},
+		},
 		"es-CO": {
 			heading: "Al aire libre",
 			subheading: "Sección 7",

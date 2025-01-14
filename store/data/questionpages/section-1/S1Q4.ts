@@ -39,6 +39,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 4",
+			label: "Jak dlouho vaše hodiny tělesné výchovy trvají?",
+			kid_label: "Jak dlouho vaše hodiny tělesné výchovy trvají?",
+			adult_label: "Jak dlouho trvají hodiny tělesné výchovy vašeho dítěte?",
+			choices: [
+				{
+					label: "Méně než 30 minut",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 minut",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 minut",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Více než 60 minut",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Nevím",
+					value: "Don't know",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 4",

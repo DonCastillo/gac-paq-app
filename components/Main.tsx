@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		flexDirection: "column",
-		paddingVertical: 20,
+		paddingVertical: 0,
 		paddingHorizontal: 10,
 		minWidth: "100%",
 		height: "100%",

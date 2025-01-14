@@ -23,6 +23,16 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"cz-CR": {
+			type: Question.QuestionTextarea,
+			heading: "Zpětná vazba",
+			placeholder: "Zde zadejte svůj komentář",
+			label: "Máš nějaké poznámky nebo návrhy k aplikaci nebo k položeným otázkám?",
+			kid_label: "Máš nějaké poznámky nebo návrhy k aplikaci nebo k položeným otázkám?",
+			adult_label: "Máte nějaké poznámky nebo návrhy k aplikaci nebo položeným otázkám?",
+			kid_sublabel: "Pokud ano, napiš je do tohoto pole.",
+			adult_sublabel: "Pokud ano, napište je do tohoto pole.",
+		},
 		"es-CO": {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",

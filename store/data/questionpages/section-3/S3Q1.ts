@@ -27,6 +27,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 12",
+			label: "Věnoval(a) ses v minulém týdnu dobrovolnictví nebo brigádě?",
+			kid_label: "Věnoval(a) ses v minulém týdnu dobrovolnictví nebo brigádě?",
+			adult_label: "Věnovalo se vaše dítě v minulém týdnu brigádě nebo dobrovolnictví?",
+			choices: [
+				{
+					label: "Ano",
+					value: "yes",
+				},
+				{
+					label: "Ne",
+					value: "no",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 12",
@@ -177,17 +194,17 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				"पछिल्लो (गएको/ बितेको)  हप्तामा, के तपाईंको छोरा वा छोरीले कुनै काम वा स्वयंसेवा गर्नुभयो?",
 			choices: [
 				{
-					label: "गरे",
+					label: "गरें",
 					label_mode: {
-						kid: "गरे",
+						kid: "गरें",
 						adult: "गर्नुभयो",
 					},
 					value: "yes",
 				},
 				{
-					label: "गरिनँ",
+					label: "गरिनं",
 					label_mode: {
-						kid: "गरिनँ",
+						kid: "गरिनं",
 						adult: "गर्नुभएन",
 					},
 					value: "no",

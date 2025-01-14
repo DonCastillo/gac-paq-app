@@ -41,6 +41,36 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadioImage,
+			heading: "Otázka 7",
+			label: "Který z následujících obrázků vystihuje, co většinou o přestávkách děláš?",
+			kid_label: "Který z následujících obrázků vystihuje, co většinou o přestávkách děláš?",
+			adult_label:
+				"Který z následujících obrázků vystihuje, co většinou vaše dítě o přestávkách dělá?",
+			choices: [
+				{
+					label: "Nepohybuji se",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Věnuji se aktivitám nízké náročnosti",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Věnuji se aktivitám střední nebo vysoké náročnosti",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Nevím",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 7",
@@ -213,7 +243,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
-			heading: "प्रश्न 7",
+			heading: "प्रश्न ७",
 			label:
 				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने अवकाश के दौरान अधिकांश समय करते हैं?",
 			kid_label:

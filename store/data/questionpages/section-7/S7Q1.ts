@@ -44,6 +44,39 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 23",
+			label: "Kolik času jsi v průměrný den minulého týdne strávil(a) venku?",
+			kid_label: "Kolik času jsi v průměrný den minulého týdne strávil(a) venku?",
+			adult_label: "Kolik času v průměrný den minulého týdne strávilo vaše dítě venku?",
+			choices: [
+				{
+					label: "Vůbec žádný čas",
+					value: "None",
+				},
+				{
+					label: "Méně než 1 hodinu za den",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 - 2 hodiny za den",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 - 3 hodiny za den",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 - 4 hodiny za den",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hodiny a více za den ",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 23",
@@ -323,9 +356,9 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंको छोरा वा छोरीले कति समय घर बाहिर बिताउनुभयो?",
 			choices: [
 				{
-					label: "कुनै पनि गरिन",
+					label: "कुनै पनि समय घर बाहिर बिताइन",
 					label_mode: {
-						kid: "कुनै पनि गरिन",
+						kid: "कुनै पनि समय घर बाहिर बिताइन",
 						adult: "घर बाहिर गएन वा गइनन्",
 					},
 					value: "None",

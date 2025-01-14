@@ -81,6 +81,7 @@ export interface QuestionSliceInterface {
 	Transportation9_11: ModeActivityTransportationInterface;
 	sectionPages: SectionPayloadInterface[];
 	optionLetters: string[];
+	optionNumbers: string[];
 }
 
 const questionsSlice = createSlice({
@@ -147,6 +148,7 @@ const questionsSlice = createSlice({
 		] satisfies ModeActivityTransportationInterface,
 		sectionPages: [],
 		optionLetters: [],
+		optionNumbers: [],
 	} satisfies QuestionSliceInterface,
 	reducers: {
 		setLanguageOption: reducersActions.setLanguageOption,
@@ -183,6 +185,7 @@ const questionsSlice = createSlice({
 		getTransportation9_11: (state: QuestionSliceInterface) => state.Transportation9_11,
 		getSectionPages: (state: QuestionSliceInterface) => state.sectionPages,
 		getOptionLetters: (state: QuestionSliceInterface) => state.optionLetters,
+		getOptionNumbers: (state: QuestionSliceInterface) => state.optionNumbers,
 	},
 	extraReducers: (builder) => {
 		builder.addCase(storeQuestionData.fulfilled, (state, action) => {
@@ -228,6 +231,7 @@ export const {
 export const {
 	getSectionPages,
 	getOptionLetters,
+	getOptionNumbers,
 	getLanguageOption,
 	getIntroductoryPages,
 	getQuestionPages,

@@ -7,6 +7,7 @@ import {
 	translateArrayOfPages,
 	translatePhrase,
 	translateOptionLetters,
+	translateOptionNumbers,
 } from "utils/translate_questions.utils";
 
 export const storeQuestionData = createAsyncThunk(
@@ -55,6 +56,7 @@ export const loadQuestionData = createAsyncThunk(
 		const Transportation8_10 = data.Transportation8_10[finalLanguage];
 		const Transportation9_11 = data.Transportation9_11[finalLanguage];
 		const optionLetters = translateOptionLetters(data.optionLetters, finalLanguage);
+		const optionNumbers = translateOptionNumbers(data.optionNumbers, finalLanguage);
 
 		const questionData = {
 			languageOption: data.languageOption as LanguageInterface[],
@@ -84,6 +86,7 @@ export const loadQuestionData = createAsyncThunk(
 			Transportation9_11,
 			sectionPages: [],
 			optionLetters,
+			optionNumbers,
 		} satisfies QuestionSliceInterface;
 
 		return questionData;

@@ -42,6 +42,38 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadioImage,
+			heading: "Otázka 5",
+			label:
+				"Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy děláš?",
+			kid_label:
+				"Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy děláš?",
+			adult_label:
+				"Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy vaše dítě dělá?",
+			choices: [
+				{
+					label: "Nepohybuji se",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Věnuji se aktivitám nízké náročnosti",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Věnuji se aktivitám střední nebo vysoké náročnosti",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Nevím",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 5",
@@ -216,7 +248,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
-			heading: "प्रश्न 5",
+			heading: "प्रश्न ५",
 			label:
 				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
 			kid_label:

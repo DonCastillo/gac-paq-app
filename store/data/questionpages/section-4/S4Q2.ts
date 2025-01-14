@@ -47,6 +47,43 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 15b",
+			label: "V kolika dnech jsi v minulém týdnu tento způsob dopravy využil(a)?",
+			kid_label: "V kolika dnech jsi v minulém týdnu tento způsob dopravy využil(a)?",
+			adult_label: "V kolika dnech vaše dítě v minulém týdnu tento způsob dopravy využilo?",
+			choices: [
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 dní",
+					value: "5",
+				},
+				{
+					label: "6 dní",
+					value: "6",
+				},
+				{
+					label: "7 dní",
+					value: "7",
+				},
+			],
+		},
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 15b",
@@ -346,7 +383,7 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १५b",
+			heading: "प्रश्न १५ख",
 			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
 			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
 			adult_label:
