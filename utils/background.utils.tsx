@@ -30,7 +30,7 @@ import type State from "constants/state.enum";
 import StatusBackground from "styles/images/background/status";
 
 const getImageBackground = (): any | null => {
-	const blackListLanguages = ["sv-SE", "zh-CN", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "fr-CA"];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
@@ -96,7 +96,7 @@ const getImageBackground = (): any | null => {
 };
 
 const getImageBackgroundStatus = (state: State): any | null => {
-	const blackListLanguages = ["sv-SE", "zh-CN", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "fr-CA"];
 	const settings = store.getState().settings;
 	let language = settings.language ?? "en-CA";
 	let region = language.split("-")[1].toUpperCase();
