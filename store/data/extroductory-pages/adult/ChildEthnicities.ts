@@ -437,7 +437,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 			],
 		},
 		"zh-CN": {
-			type: Question.QuestionCheckbox,
+			type: Question.QuestionRadio,
 			heading: "问题 26",
 			label: "您孩子的民族是?",
 			kid_label: "您孩子的民族是?",
