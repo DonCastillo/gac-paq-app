@@ -9,6 +9,16 @@ const StatusBackground = {
 			tablet: require("assets/images/teen/CA/status/tablet/failed.webp"),
 		},
 	},
+	CN: {
+		success: {
+		   phone: require("assets/images/teen/CN/status/phone/success.webp"),
+		   tablet: require("assets/images/teen/CN/status/tablet/success.webp"),
+		},
+		error: {
+		   phone: require("assets/images/teen/CN/status/phone/failed.webp"),
+		   tablet: require("assets/images/teen/CN/status/tablet/failed.webp"),
+		},
+	 },
 	TH: {
 		success: {
 			phone: require("assets/images/teen/TH/status/phone/success.webp"),
