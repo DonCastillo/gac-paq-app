@@ -136,7 +136,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "家务",
-			subheading: "第2部分",
+			subheading: "第二部分",
 			description: {
 				kid: "本部分是关于你做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
 				adult:

@@ -64,7 +64,7 @@ const S7Intro: LangSectionPayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "室外",
-			subheading: "第7部分",
+			subheading: "第七部分",
 		},
 		"es-ES": {
 			heading: "Al aire libre",

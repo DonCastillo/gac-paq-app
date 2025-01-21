@@ -286,7 +286,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७b - गाड़ी",
+			heading: "प्रश्न १७b - व्हीलिंग",
 			label:
 				"पिछले सप्ताह में आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितने दिन व्हीलिंग करके गए?",
 			kid_label:
@@ -570,31 +570,31 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			adult_label: "在过去一周里，除了上学或工作，您的孩子有多少天骑自行车去其他地方？",
 			choices: [
 				{
-					label: "1 天",
+					label: "1天",
 					value: "1",
 				},
 				{
-					label: "2 天",
+					label: "2天",
 					value: "2",
 				},
 				{
-					label: "3 天",
+					label: "3天",
 					value: "3",
 				},
 				{
-					label: "4 天",
+					label: "4天",
 					value: "4",
 				},
 				{
-					label: "5 天",
+					label: "5天",
 					value: "5",
 				},
 				{
-					label: "6 天",
+					label: "6天",
 					value: "6",
 				},
 				{
-					label: "7 天",
+					label: "7天",
 					value: "7",
 				},
 			],

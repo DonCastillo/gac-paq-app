@@ -356,9 +356,9 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionDropdown,
 			heading: "आपका स्वागत है",
-			label: "आपके बच्चे की उम्र क्या है?",
-			kid_label: "आपके बच्चे की उम्र क्या है?",
-			adult_label: "आपके बच्चे की उम्र क्या है?",
+			label: "आपके बच्चे की उम्र कितनी है?",
+			kid_label: "आपके बच्चे की उम्र कितनी है?",
+			adult_label: "आपके बच्चे की उम्र कितनी है?",
 			choices: [
 				{
 					label: "8 साल",

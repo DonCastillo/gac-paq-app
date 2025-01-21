@@ -25,6 +25,13 @@ const QuestionSatisfactionImage = ({
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const numColumn = device.isTablet ? 5 : 3;
+	const dissatisfiedOptions = options.filter(
+		(option) => option.image_ident === "dissatisfied" || option.image_ident === "very_dissatisfied",
+	);
+	const neutralOptions = options.filter((option) => option.image_ident === "neutral");
+	const satisfiedOptions = options.filter(
+		(option) => option.image_ident === "satisfied" || option.image_ident === "very_satisfied",
+	);
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -63,13 +70,9 @@ const QuestionSatisfactionImage = ({
 					style={{
 						width: "100%",
 						height: "100%",
-						maxWidth:
-							horizontalScale(device.orientation === "landscape" ? 190 : 210, device.screenWidth) /
-							numColumn,
-						maxHeight:
-							horizontalScale(device.orientation === "landscape" ? 190 : 210, device.screenWidth) /
-							numColumn,
-						aspectRatio: 1 / 1,
+						maxWidth: horizontalScale(device.isTablet ? 230 : 230, device.screenWidth) / numColumn,
+						maxHeight: horizontalScale(device.isTablet ? 230 : 230, device.screenWidth) / numColumn,
+						aspectRatio: 1,
 					}}
 				/>
 			);
@@ -111,18 +114,58 @@ const QuestionSatisfactionImage = ({
 		<SafeAreaView
 			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
 		>
-			<View style={{}}>
-				<FlatList
-					style={{ width: "100%" }}
-					contentContainerStyle={{
-						alignItems: "center",
-					}}
-					data={[...options]}
-					renderItem={({ item }) => blockRenderOption(item)}
-					numColumns={numColumn}
-					key={numColumn}
-					bounces={false}
-				/>
+			<View style={{ width: "100%" }}>
+				{device.isTablet ? (
+					<View>
+						<FlatList
+							style={{ width: "100%" }}
+							contentContainerStyle={{
+								alignItems: "center",
+							}}
+							data={[...options]}
+							renderItem={({ item }) => blockRenderOption(item)}
+							numColumns={numColumn}
+							key={"single-row" + numColumn}
+							bounces={false}
+						/>
+					</View>
+				) : (
+					<View>
+						<FlatList
+							style={{}}
+							contentContainerStyle={{
+								alignItems: "center",
+							}}
+							data={[...dissatisfiedOptions]}
+							renderItem={({ item }) => blockRenderOption(item)}
+							numColumns={numColumn}
+							key={"dissatisfied" + numColumn}
+							bounces={false}
+						/>
+						<FlatList
+							style={{}}
+							contentContainerStyle={{
+								alignItems: "center",
+							}}
+							data={[...neutralOptions]}
+							renderItem={({ item }) => blockRenderOption(item)}
+							numColumns={numColumn}
+							key={"neutral" + numColumn}
+							bounces={false}
+						/>
+						<FlatList
+							style={{}}
+							contentContainerStyle={{
+								alignItems: "center",
+							}}
+							data={[...satisfiedOptions]}
+							renderItem={({ item }) => blockRenderOption(item)}
+							numColumns={numColumn}
+							key={"satisfied" + numColumn}
+							bounces={false}
+						/>
+					</View>
+				)}
 			</View>
 		</SafeAreaView>
 	);

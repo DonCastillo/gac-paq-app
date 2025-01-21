@@ -108,7 +108,7 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionLanguage,
-			heading: "欢迎!",
+			heading: "欢迎！",
 			label: "您讲哪种语言？您在哪里?",
 			kid_label: "您讲哪种语言？您在哪里?",
 			adult_label: "您讲哪种语言？您在哪里?",

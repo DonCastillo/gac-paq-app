@@ -136,7 +136,7 @@ const S7Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "室外",
-			subheading: "第7部分",
+			subheading: "第七部分",
 			description: {
 				kid: "本部分是关于你的室外活动的一些问题，包括学校、家务、工作和志愿服务、交通、以及空闲时间的活动，也包括在室外坐着不动的活动(如，野餐，阅读，以及坐着烤火)。",
 				adult:

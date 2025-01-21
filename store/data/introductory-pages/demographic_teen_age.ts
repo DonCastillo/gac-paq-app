@@ -244,9 +244,9 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionDropdown,
 			heading: "आपका स्वागत है",
-			label: "आपकी उम्र क्या है?",
-			kid_label: "आपकी उम्र क्या है?",
-			adult_label: "आपकी उम्र क्या है?",
+			label: "आपकी उम्र कितनी है?",
+			kid_label: "आपकी उम्र कितनी है?",
+			adult_label: "आपकी उम्र कितनी है?",
 			choices: [
 				{
 					label: "12 साल",
@@ -474,7 +474,7 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionDropdown,
-			heading: "欢迎!",
+			heading: "欢迎！",
 			label: "你多大了?",
 			kid_label: "你多大了?",
 			adult_label: "你多大了?",
