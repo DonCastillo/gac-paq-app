@@ -123,7 +123,7 @@ const getImageBackgroundStatus = (state: State): any | null => {
 };
 
 const getOptionImage = (image_ident: string): any | null => {
-	const blackListLanguages = ["sv-SE", "zh-CN", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "fr-CA"];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
