@@ -10,6 +10,10 @@ const S7Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"en-NZ": {
+			heading: "Section Complete!",
+			subheading: "",
+		},
 		"cz-CR": {
 			heading: "Sekce dokončena!",
 			subheading: "",
