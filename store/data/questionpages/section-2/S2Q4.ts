@@ -44,9 +44,10 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
-			label: "Which of the following images shows what you do most of the time during your chores?",
+			label:
+				"Which of the following pictures looks like what you do most of the time during your chores?",
 			kid_label:
-				"Which of the following images shows what you do most of the time during your chores?",
+				"Which of the following pictures looks like what you do most of the time during your chores?",
 			adult_label:
 				"Which of the following images resembles what your child does most of the time during their chores?",
 			choices: [
