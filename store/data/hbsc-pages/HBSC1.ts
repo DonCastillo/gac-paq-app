@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const HBSC1: LangQuestionRadioPayloadInterface = {
 	ident: "hbsc_1",
-	name: "Question 30: Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
+	name: "Question 31: Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
 	column_name: "hbsc_1",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 30",
+			heading: "Question 31",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
 			kid_label:
@@ -54,7 +54,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 30",
+			heading: "Question 31",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
 			kid_label:
@@ -98,7 +98,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 30",
+			heading: "Question 31",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
 			kid_label:
@@ -142,7 +142,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 30",
+			heading: "Question 31",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
 			kid_label:
@@ -186,7 +186,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 30",
+			heading: "Question 31",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
 			kid_label:
