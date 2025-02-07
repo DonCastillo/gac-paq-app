@@ -228,6 +228,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 32",
+			label:
+				"Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
+			kid_label:
+				"Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
+			adult_label:
+				"Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
+			choices: [
+				{
+					label: "Varje dag",
+					value: "Every day",
+				},
+				{
+					label: "4 - 6 gånger i veckan",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 gånger i veckan",
+					value: "3 times a week",
+				},
+				{
+					label: "2 gånger i veckan",
+					value: "2 times a week",
+				},
+				{
+					label: "1 gång i veckan",
+					value: "Once a week",
+				},
+				{
+					label: "1 gång i månaden",
+					value: "Once a month",
+				},
+				{
+					label: "Mindre än 1 gång i månaden",
+					value: "Less than once a month",
+				},
+				{
+					label: "Aldrig",
+					value: "Never",
+				},
+			],
+		},
 	},
 };
 
