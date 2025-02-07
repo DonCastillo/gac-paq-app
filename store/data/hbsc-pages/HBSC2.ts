@@ -272,6 +272,47 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 32",
+			label: "学校课堂之外，你经常在空闲时间进行让你出汗或上气不接下气的运动吗？",
+			kid_label: "学校课堂之外，你经常在空闲时间进行让你出汗或上气不接下气的运动吗？",
+			adult_label: "学校课堂之外，你经常在空闲时间进行让你出汗或上气不接下气的运动吗？",
+			choices: [
+				{
+					label: "每天",
+					value: "Every day",
+				},
+				{
+					label: "每周4至6次",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "每周3次",
+					value: "3 times a week",
+				},
+				{
+					label: "每周2次",
+					value: "2 times a week",
+				},
+				{
+					label: "每周1次",
+					value: "Once a week",
+				},
+				{
+					label: "每月1次",
+					value: "Once a month",
+				},
+				{
+					label: "每月不到1次",
+					value: "Less than once a month",
+				},
+				{
+					label: "从不",
+					value: "Never",
+				},
+			],
+		},
 	},
 };
 

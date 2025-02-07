@@ -30,6 +30,10 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			heading: "Hälsobeteende hos skolbarn",
 			subheading: "",
 		},
+		"zh-CN": {
+			heading: "学龄儿童的健康行为",
+			subheading: "",
+		},
 	},
 };
 

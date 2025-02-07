@@ -284,6 +284,49 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 31",
+			label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",
+			kid_label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",
+			adult_label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",
+			kid_sublabel: "请把你每天进行身体活动上的所有时间加起来。",
+			adult_sublabel: "请把你每天进行身体活动上的所有时间加起来。",
+			choices: [
+				{
+					label: "0天",
+					value: "0",
+				},
+				{
+					label: "1天",
+					value: "1",
+				},
+				{
+					label: "2天",
+					value: "2",
+				},
+				{
+					label: "3天",
+					value: "3",
+				},
+				{
+					label: "4天",
+					value: "4",
+				},
+				{
+					label: "5天",
+					value: "5",
+				},
+				{
+					label: "6天",
+					value: "6",
+				},
+				{
+					label: "7天",
+					value: "7",
+				},
+			],
+		},
 	},
 };
 
