@@ -188,6 +188,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 37",
+			label:
+				"Hur mycket tid är du stillasittande på en vanlig dag? Det kan tillexempel vara när du och tittar på tv, spelar dataspel, pratar med vänner, eller gör andra stillasittande aktiviteter så som att titta på en surfplatta eller läsa en bok.",
+			kid_label:
+				"Hur mycket tid är du stillasittande på en vanlig dag? Det kan tillexempel vara när du och tittar på tv, spelar dataspel, pratar med vänner, eller gör andra stillasittande aktiviteter så som att titta på en surfplatta eller läsa en bok.",
+			adult_label:
+				"Hur mycket tid är du stillasittande på en vanlig dag? Det kan tillexempel vara när du och tittar på tv, spelar dataspel, pratar med vänner, eller gör andra stillasittande aktiviteter så som att titta på en surfplatta eller läsa en bok.",
+			choices: [
+				{
+					label: "Mindre än 1 timme per dag",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 till 2 timmar per dag",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3 till 4 timmar per dag",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "5 till 6 timmar per dag",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "7 till 8 timmar per dag",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Mer än 8 timmar per dag",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 	},
 };
 

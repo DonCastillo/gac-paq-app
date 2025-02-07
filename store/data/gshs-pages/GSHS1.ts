@@ -12,11 +12,13 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 33",
 			label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			adult_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+			adult_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
 			choices: [
 				{
 					label: "0 days",
@@ -56,11 +58,13 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 33",
 			label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			adult_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+			adult_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
 			choices: [
 				{
 					label: "0 days",
@@ -100,11 +104,13 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 33",
 			label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			adult_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+			adult_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
 			choices: [
 				{
 					label: "0 days",
@@ -144,11 +150,13 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 33",
 			label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			adult_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+			adult_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
 			choices: [
 				{
 					label: "0 days",
@@ -188,11 +196,13 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 33",
 			label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			adult_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+			adult_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
 			choices: [
 				{
 					label: "0 days",
@@ -224,6 +234,52 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 33",
+			label:
+				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
+			kid_label:
+				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
+			adult_label:
+				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
+			kid_sublabel: "Räkna ihop all tid du varit fysisk aktiv varje dag.",
+			adult_sublabel: "Räkna ihop all tid du varit fysisk aktiv varje dag.",
+			choices: [
+				{
+					label: "0 dagar",
+					value: "0",
+				},
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar",
+					value: "5",
+				},
+				{
+					label: "6 dagar",
+					value: "6",
+				},
+				{
+					label: "7 dagar",
 					value: "7",
 				},
 			],

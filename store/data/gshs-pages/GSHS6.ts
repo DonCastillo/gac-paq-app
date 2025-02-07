@@ -193,6 +193,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 38",
+			label: "Hur många timmars sömn får du under en vanlig vardag?",
+			kid_label: "Hur många timmars sömn får du under en vanlig vardag?",
+			adult_label: "Hur många timmars sömn får du under en vanlig vardag?",
+			choices: [
+				{
+					label: "4 timmar eller mindre",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 timmar",
+					value: "5 hours",
+				},
+				{
+					label: "6 timmar",
+					value: "6 hours",
+				},
+				{
+					label: "7 timmar",
+					value: "7 hours",
+				},
+				{
+					label: "8 timmar",
+					value: "8 hours",
+				},
+				{
+					label: "9 timmar",
+					value: "9 hours",
+				},
+				{
+					label: "10 timmar eller mer",
+					value: "10 or more hours",
+				},
+			],
+		},
 	},
 };
 

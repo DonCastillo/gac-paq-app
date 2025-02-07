@@ -188,6 +188,40 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"sv-SE": {
+			type: Question.QuestionRadio,
+			heading: "Fråga 36",
+			label: "Hur många dagar i veckan har du haft idrottslektion under det senaste skolåret?",
+			kid_label: "Hur många dagar i veckan har du haft idrottslektion under det senaste skolåret?",
+			adult_label:
+				"Hur många dagar i veckan har du haft idrottslektion under det senaste skolåret?",
+			choices: [
+				{
+					label: "0 dagar",
+					value: "0",
+				},
+				{
+					label: "En dag",
+					value: "1",
+				},
+				{
+					label: "2 dagar",
+					value: "2",
+				},
+				{
+					label: "3 dagar",
+					value: "3",
+				},
+				{
+					label: "4 dagar",
+					value: "4",
+				},
+				{
+					label: "5 dagar eller fler",
+					value: ">=5",
+				},
+			],
+		},
 	},
 };
 

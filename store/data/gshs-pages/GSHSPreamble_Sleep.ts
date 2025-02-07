@@ -7,43 +7,51 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {
-			heading: "GSHS - Sleep",
-			subheading: "GSHS",
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about how much sleep you get.",
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
 		"en-NZ": {
-			heading: "GSHS - Sleep",
-			subheading: "GSHS",
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about how much sleep you get.",
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
 		"en-MW": {
-			heading: "GSHS - Sleep",
-			subheading: "GSHS",
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about how much sleep you get.",
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
 		"en-NG": {
-			heading: "GSHS - Sleep",
-			subheading: "GSHS",
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about how much sleep you get.",
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
 		"en-AE": {
-			heading: "GSHS - Sleep",
-			subheading: "GSHS",
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about how much sleep you get.",
 				adult: "The next question asks about how much sleep you get.",
+			},
+		},
+		"sv-SE": {
+			heading: "Sömn",
+			subheading: "Global skolbaserad undersökning om studenthälsa",
+			description: {
+				kid: "Nästa fråga handlar om hur mycket du sover.",
+				adult: "Nästa fråga handlar om hur mycket du sover.",
 			},
 		},
 	},
