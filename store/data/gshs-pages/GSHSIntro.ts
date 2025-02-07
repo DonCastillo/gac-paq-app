@@ -3,7 +3,7 @@ import type { LangSectionPayloadInterface } from "interface/payload.type";
 
 const GSHSIntro: LangSectionPayloadInterface = {
 	ident: "gshs_intro",
-	heading: "",
+	heading: "GSHS",
 	type: Screen.IntroQuestion,
 	translations: {
 		"en-CA": {

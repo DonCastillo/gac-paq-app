@@ -3,7 +3,7 @@ import type { LangExtroPayloadInterface } from "interface/payload.type";
 
 const HBSCExtro: LangExtroPayloadInterface = {
 	ident: "hbsc_extro",
-	name: "",
+	name: "HBSC Extro",
 	type: Screen.ExtroQuestion,
 	translations: {
 		"en-CA": {

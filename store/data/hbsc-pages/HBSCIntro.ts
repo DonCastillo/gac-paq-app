@@ -3,7 +3,7 @@ import type { LangSectionPayloadInterface } from "interface/payload.type";
 
 const HBSCIntro: LangSectionPayloadInterface = {
 	ident: "hbsc_intro",
-	heading: "",
+	heading: "HBSC",
 	type: Screen.IntroQuestion,
 	translations: {
 		"en-CA": {

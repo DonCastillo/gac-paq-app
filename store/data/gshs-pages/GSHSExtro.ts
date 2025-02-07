@@ -3,7 +3,7 @@ import type { LangExtroPayloadInterface } from "interface/payload.type";
 
 const GSHSExtro: LangExtroPayloadInterface = {
 	ident: "gshs_extro",
-	name: "",
+	name: "GSHS Extro",
 	type: Screen.ExtroQuestion,
 	translations: {
 		"en-CA": {

@@ -3,7 +3,7 @@ import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
 const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 	ident: "gshs_preamble_sleep",
-	heading: "",
+	heading: "GSHS - Sleep Preamble",
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

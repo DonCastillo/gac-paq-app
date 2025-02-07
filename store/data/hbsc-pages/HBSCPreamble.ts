@@ -3,7 +3,7 @@ import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
 const HBSCPreamble: LangPreamblePayloadInterface = {
 	ident: "hbsc_preamble",
-	heading: "",
+	heading: "HBSC Preamble",
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {

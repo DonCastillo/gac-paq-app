@@ -3,7 +3,7 @@ import type { LangPreamblePayloadInterface } from "interface/payload.type";
 
 const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 	ident: "gshs_preamble_pa",
-	heading: "",
+	heading: "GSHS - Physical Activity Preamble",
 	type: Screen.Preamble,
 	translations: {
 		"en-CA": {
