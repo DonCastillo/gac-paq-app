@@ -222,6 +222,39 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 36",
+			label: "在本学年里，每周你有几天上体育课？",
+			kid_label: "在本学年里，每周你有几天上体育课？",
+			adult_label: "在本学年里，每周你有几天上体育课？",
+			choices: [
+				{
+					label: "0天",
+					value: "0",
+				},
+				{
+					label: "1天",
+					value: "1",
+				},
+				{
+					label: "2天",
+					value: "2",
+				},
+				{
+					label: "3天",
+					value: "3",
+				},
+				{
+					label: "4天",
+					value: "4",
+				},
+				{
+					label: "5天或以上",
+					value: ">=5",
+				},
+			],
+		},
 	},
 };
 

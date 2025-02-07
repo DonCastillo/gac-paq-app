@@ -224,6 +224,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 37",
+			label:
+				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动，如所在国家的特定例子？",
+			kid_label:
+				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动，如所在国家的特定例子？",
+			adult_label:
+				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动，如所在国家的特定例子？",
+			choices: [
+				{
+					label: "每天少于1小时",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "每天1至2小时",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "每天3至4小时",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "每天5至6小时",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "每天7至8小时",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "每天8小时以上",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 	},
 };
 

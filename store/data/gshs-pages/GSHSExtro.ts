@@ -30,6 +30,10 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			heading: "Du är klar med denna sektion!",
 			subheading: "",
 		},
+		"zh-CN": {
+			heading: "本部分完成！",
+			subheading: "",
+		},
 	},
 };
 

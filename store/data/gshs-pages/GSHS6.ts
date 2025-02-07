@@ -230,6 +230,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 38",
+			label: "通常你在上学日的晚上睡眠时长是多少个小时？",
+			kid_label: "通常你在上学日的晚上睡眠时长是多少个小时？",
+			adult_label: "通常你在上学日的晚上睡眠时长是多少个小时？",
+			choices: [
+				{
+					label: "4小时或更少",
+					value: "4 or less hours",
+				},
+				{
+					label: "5小时",
+					value: "5 hours",
+				},
+				{
+					label: "6小时",
+					value: "6 hours",
+				},
+				{
+					label: "7小时",
+					value: "7 hours",
+				},
+				{
+					label: "8小时",
+					value: "8 hours",
+				},
+				{
+					label: "9小时",
+					value: "9 hours",
+				},
+				{
+					label: "10小时或以上",
+					value: "10 or more hours",
+				},
+			],
+		},
 	},
 };
 

@@ -272,6 +272,48 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"zh-CN": {
+			type: Question.QuestionRadio,
+			heading: "问题 34",
+			label: "在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
+			kid_label: "在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
+			adult_label:
+				"在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
+			choices: [
+				{
+					label: "0天",
+					value: "0",
+				},
+				{
+					label: "1天",
+					value: "1",
+				},
+				{
+					label: "2天",
+					value: "2",
+				},
+				{
+					label: "3天",
+					value: "3",
+				},
+				{
+					label: "4天",
+					value: "4",
+				},
+				{
+					label: "5天",
+					value: "5",
+				},
+				{
+					label: "6天",
+					value: "6",
+				},
+				{
+					label: "7天",
+					value: "7",
+				},
+			],
+		},
 	},
 };
 
