@@ -6,6 +6,8 @@ import QuestionPages from "store/data/question-pages";
 import {
 	AdultExtroductoryPages,
 	FeedbackExtroductoryPages,
+	GSHSPages,
+	HBSCPages,
 	KidExtroductoryPages,
 } from "store/data/extroductory-pages";
 import DemographicKidPage from "store/data/introductory-pages/demographic_kid_age";
@@ -38,6 +40,8 @@ const saveAppData = async (): Promise<void> => {
 		questionPages: QuestionPages,
 		kidExtroPages: KidExtroductoryPages,
 		adultExtroPages: AdultExtroductoryPages,
+		hbscPages: HBSCPages,
+		gshsPages: GSHSPages,
 		kidAgePage: DemographicKidPage,
 		teenAgePage: DemographicTeenPage,
 		adultAgePage: DemographicAdultPage,

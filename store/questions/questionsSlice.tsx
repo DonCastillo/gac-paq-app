@@ -5,6 +5,8 @@ import QuestionPages from "store/data/question-pages";
 import {
 	AdultExtroductoryPages,
 	FeedbackExtroductoryPages,
+	GSHSPages,
+	HBSCPages,
 	KidExtroductoryPages,
 } from "store/data/extroductory-pages";
 import DemographicKidPage from "store/data/introductory-pages/demographic_kid_age";
@@ -57,6 +59,8 @@ export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
 	introductoryPages: IntroductoryPagesType;
 	questionPages: QuestionPagesType;
+	hbscPages: QuestionPagesType;
+	gshsPages: QuestionPagesType;
 	kidExtroPages: KidExtroductoryPagesType;
 	adultExtroPages: AdultExtroductoryPagesType;
 	kidAgePage: QuestionDropdownPayloadInterface;
@@ -93,6 +97,8 @@ const questionsSlice = createSlice({
 			defaultLanguage,
 		) as IntroductoryPagesType,
 		questionPages: translateArrayOfPages(QuestionPages, defaultLanguage) as QuestionPagesType,
+		hbscPages: translateArrayOfPages(HBSCPages, defaultLanguage) as QuestionPagesType,
+		gshsPages: translateArrayOfPages(GSHSPages, defaultLanguage) as QuestionPagesType,
 		kidExtroPages: translateArrayOfPages(
 			KidExtroductoryPages,
 			defaultLanguage,
@@ -161,6 +167,8 @@ const questionsSlice = createSlice({
 		getLanguageOption: (state: QuestionSliceInterface) => state.languageOption,
 		getIntroductoryPages: (state: QuestionSliceInterface) => state.introductoryPages,
 		getQuestionPages: (state: QuestionSliceInterface) => state.questionPages,
+		getHBSCPages: (state: QuestionSliceInterface) => state.hbscPages,
+		getGSHSPages: (state: QuestionSliceInterface) => state.gshsPages,
 		getKidExtroPages: (state: QuestionSliceInterface) => state.kidExtroPages,
 		getAdultExtroPages: (state: QuestionSliceInterface) => state.adultExtroPages,
 		getKidAgePage: (state: QuestionSliceInterface) => state.kidAgePage,
@@ -235,6 +243,8 @@ export const {
 	getLanguageOption,
 	getIntroductoryPages,
 	getQuestionPages,
+	getHBSCPages,
+	getGSHSPages,
 	getKidExtroPages,
 	getAdultExtroPages,
 	getKidAgePage,

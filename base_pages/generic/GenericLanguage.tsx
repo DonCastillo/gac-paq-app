@@ -40,6 +40,7 @@ import {
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
 import Toolbar from "components/adults/subcomponents/Toolbar";
+import { changeMode } from "utils/mode.utils";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -69,6 +70,7 @@ const GenericLanguage = (): React.ReactElement => {
 		loadPhrases();
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
+		changeMode(mode, language);
 		dispatch(skipPage(1));
 		dispatch(clearQuestionResponses());
 		dispatch(clearExtroResponses());

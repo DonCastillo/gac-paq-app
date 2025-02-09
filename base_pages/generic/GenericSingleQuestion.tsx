@@ -95,7 +95,7 @@ const GenericSingleQuestion = (): React.ReactElement => {
 		// only triggers a mode change if the respondent actually selects a mode
 		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
 			dispatch(setMode(getModeType(value)));
-			changeMode(getModeType(value));
+			changeMode(getModeType(value), language);
 		}
 
 		// record start when user is answering questions

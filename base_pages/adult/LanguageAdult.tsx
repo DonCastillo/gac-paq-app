@@ -39,6 +39,7 @@ import {
 	clearQuestionResponses,
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
+import { changeMode } from "utils/mode.utils";
 
 const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -67,6 +68,7 @@ const LanguageAdult = (): React.ReactElement => {
 		loadPhrases();
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
+		changeMode(mode, language);
 		dispatch(skipPage(1));
 		dispatch(clearQuestionResponses());
 		dispatch(clearExtroResponses());

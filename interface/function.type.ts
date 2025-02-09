@@ -43,3 +43,6 @@ export type SetLanguageOptionFuncType = (state: any, action: PayloadAction<Langu
 export type SetIntroductoryPagesFuncType = (state: any, action: PayloadAction<IntroductoryPagesType>) => void;
 export type AddSectionPageFuncType = (state: any, action: PayloadAction<SectionPayloadInterface>) => void;
 export type QuestionsFuncType = (state: any) => void; 
+
+export type loadPagesFuncType = (newPages: Record<number, PageIndexInterface>) => 
+    { pages: Record<number, PageIndexInterface>; sectionTotal: Record<number, number> };
