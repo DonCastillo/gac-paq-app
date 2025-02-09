@@ -110,12 +110,14 @@ export type ExtroductoryPageType = KidExtroductoryPageType | AdultExtroductoryPa
 export type ExtroductoryPagesType = ExtroductoryPageType[];
 
 export type FeedbackExtroductoryPageType =
+	| SectionPayloadInterface
 	| QuestionRadioImagePayloadInterface
 	| QuestionTextareaPayloadInterface
 	| ExtroPayloadInterface;
 export type FeedbackExtroductoryPagesType = FeedbackExtroductoryPageType[];
 
 export type LangFeedbackExtroductoryPageType =
+	| LangSectionPayloadInterface
 	| LangQuestionRadioImagePayloadInterface
 	| LangQuestionTextareaPayloadInterface
 	| LangExtroPayloadInterface;

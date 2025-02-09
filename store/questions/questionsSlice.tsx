@@ -83,7 +83,7 @@ export interface QuestionSliceInterface {
 	Transportation7: ModeActivityInterface;
 	Transportation8_10: ModeActivityTransportationInterface;
 	Transportation9_11: ModeActivityTransportationInterface;
-	sectionPages: SectionPayloadInterface[];
+	sectionPages: Record<number, SectionPayloadInterface>;
 	optionLetters: string[];
 	optionNumbers: string[];
 }
@@ -152,14 +152,13 @@ const questionsSlice = createSlice({
 		Transportation9_11: Transportation9_11[
 			defaultLanguage
 		] satisfies ModeActivityTransportationInterface,
-		sectionPages: [],
+		sectionPages: {},
 		optionLetters: [],
 		optionNumbers: [],
 	} satisfies QuestionSliceInterface,
 	reducers: {
 		setLanguageOption: reducersActions.setLanguageOption,
 		setIntroductoryPages: reducersActions.setIntroductoryPages,
-		identifyLastSectionExtroPage: reducersActions.identifyLastSectionExtroPage,
 		addSectionPage: reducersActions.addSectionPage,
 		resetSectionPages: reducersActions.resetSectionPages,
 	},
@@ -228,13 +227,8 @@ const questionsSlice = createSlice({
 		});
 	},
 });
-export const {
-	setLanguageOption,
-	setIntroductoryPages,
-	identifyLastSectionExtroPage,
-	addSectionPage,
-	resetSectionPages,
-} = questionsSlice.actions;
+export const { setLanguageOption, setIntroductoryPages, addSectionPage, resetSectionPages } =
+	questionsSlice.actions;
 
 export const {
 	getSectionPages,

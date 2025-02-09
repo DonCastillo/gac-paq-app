@@ -9,7 +9,6 @@ import {
 	translateOptionLetters,
 	translateOptionNumbers,
 } from "utils/translate_questions.utils";
-import MAIN_STUDY_LANG from "constants/main_study_lang";
 
 export const storeQuestionData = createAsyncThunk(
 	"questions/storeQuestionData",
@@ -27,11 +26,9 @@ export const removeQuestionData = createAsyncThunk(
 
 export const loadQuestionData = createAsyncThunk(
 	"questions/loadQuestionData",
-	async (language: string | null, { getState, dispatch }) => {
+	async (language: string | undefined, { getState, dispatch }) => {
 		const finalLanguage = language ?? "en-CA";
 
-		// console.log("*********************************************");
-		// console.log("*** finalLanguage", finalLanguage);
 		const data = await readAppData();
 
 		if (data === null && data === undefined) return {};
@@ -65,7 +62,6 @@ export const loadQuestionData = createAsyncThunk(
 		const optionLetters = translateOptionLetters(data.optionLetters, finalLanguage);
 		const optionNumbers = translateOptionNumbers(data.optionNumbers, finalLanguage);
 
-
 		const questionData = {
 			languageOption: data.languageOption as LanguageInterface[],
 			introductoryPages,
@@ -94,7 +90,7 @@ export const loadQuestionData = createAsyncThunk(
 			Transportation7,
 			Transportation8_10,
 			Transportation9_11,
-			sectionPages: [],
+			sectionPages: {},
 			optionLetters,
 			optionNumbers,
 		} satisfies QuestionSliceInterface;
