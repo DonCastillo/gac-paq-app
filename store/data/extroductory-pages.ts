@@ -33,8 +33,16 @@ import GSHS5 from "./gshs-pages/GSHS5";
 import GSHSPreamble_Sleep from "./gshs-pages/GSHSPreamble_Sleep";
 import GSHS6 from "./gshs-pages/GSHS6";
 import GSHSExtro from "./gshs-pages/GSHSExtro";
+import { LangExtroPayloadInterface } from "interface/payload.type";
+import FeedbackExtro from "./extroductory-pages/FeedbackExtro";
+import FeedbackIntro from "./extroductory-pages/FeedbackIntro";
+import DemographicExtro from "./extroductory-pages/DemographicExtro";
 
-const KidExtroductoryPages: LangKidExtroductoryPagesType = [SocialEconomicsIntroKid, GenderKid];
+const KidExtroductoryPages: LangKidExtroductoryPagesType = [
+	SocialEconomicsIntroKid,
+	GenderKid,
+	DemographicExtro,
+];
 const AdultExtroductoryPages: LangAdultExtroductoryPagesType = [
 	SocialEconomicsIntroAdult,
 	GenderAdult,
@@ -44,11 +52,13 @@ const AdultExtroductoryPages: LangAdultExtroductoryPagesType = [
 	Relationship,
 	Education,
 	Financial,
+	DemographicExtro,
 ];
 const FeedbackExtroductoryPages: LangFeedbackExtroductoryPagesType = [
+	FeedbackIntro,
 	Satisfaction,
 	Comment,
-	AppExtro,
+	FeedbackExtro,
 ];
 
 const HBSCPages: LangQuestionPagesType = [HBSCIntro, HBSCPreamble, HBSC1, HBSC2, HBSCExtro];
@@ -67,10 +77,13 @@ const GSHSPages: LangQuestionPagesType = [
 	GSHSExtro,
 ];
 
+const AppExtroPage: LangExtroPayloadInterface = AppExtro;
+
 export {
 	KidExtroductoryPages,
 	AdultExtroductoryPages,
 	FeedbackExtroductoryPages,
 	HBSCPages,
 	GSHSPages,
+	AppExtroPage,
 };
