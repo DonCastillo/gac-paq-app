@@ -5,6 +5,7 @@ enum Section {
 	Hbsc = "hbsc",
 	Gshs = "gshs",
 	Feedback = "feedback",
+	AppExtro = "appExtro",
 }
 
 export default Section;

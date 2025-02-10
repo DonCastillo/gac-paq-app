@@ -40,6 +40,7 @@ export const loadQuestionData = createAsyncThunk(
 		const feedbackExtroPages = translateArrayOfPages(data.feedbackExtroPages, finalLanguage);
 		const hbscPages = translateArrayOfPages(data.hbscPages, finalLanguage);
 		const gshsPages = translateArrayOfPages(data.gshsPages, finalLanguage);
+		const appExtroPages = translateArrayOfPages(data.appExtroPages, finalLanguage);
 		const kidAgePage = translatePage(data.kidAgePage, finalLanguage);
 		const teenAgePage = translatePage(data.teenAgePage, finalLanguage);
 		const adultAgePage = translatePage(data.adultAgePage, finalLanguage);
@@ -68,6 +69,7 @@ export const loadQuestionData = createAsyncThunk(
 			questionPages,
 			hbscPages,
 			gshsPages,
+			appExtroPages,
 			kidExtroPages,
 			adultExtroPages,
 			kidAgePage,

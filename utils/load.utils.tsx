@@ -1,12 +1,7 @@
 import { FlagIcons } from "styles/flags";
 import Languages from "store/data/languages";
 import { store } from "store/store";
-import {
-	addSectionTitle,
-	resetSectionTitles,
-	setPhrases,
-	setSectionTitles,
-} from "store/settings/settingsSlice";
+import { addSectionTitle, resetSectionTitles, setPhrases } from "store/settings/settingsSlice";
 import PhraseLabel from "constants/phrase_label.enum";
 import type { LanguageInterface } from "interface/payload.type";
 import { translateSectionHeading } from "./translate.utils";

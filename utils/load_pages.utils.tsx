@@ -20,7 +20,6 @@ import {
 } from "store/responses/responsesSlice";
 import {
 	addSectionPage,
-	identifyLastSectionExtroPage,
 	resetSectionPages,
 	setLanguageOption,
 } from "store/questions/questionsSlice";
@@ -35,13 +34,13 @@ import type {
 	PageIndexInterface,
 	SectionPayloadInterface,
 } from "interface/payload.type";
+import MAIN_STUDY_LANG from "constants/main_study_lang";
+import { type loadPagesFuncType } from "interface/function.type";
 
 const loadPages = (): void => {
 	const questions = store.getState().questions;
 	const introductoryPages: IntroductoryPagesType = questions.introductoryPages;
 	const questionPages: QuestionPagesType = questions.questionPages;
-	const kidExtroPages: KidExtroductoryPagesType = questions.kidExtroPages;
-	const feedbackExtroPages: FeedbackExtroductoryPagesType = questions.feedbackExtroPages;
 	const languages: LanguageInterface[] = loadLanguagesOffline();
 
 	// DO NOT RESET APP CONFIGURATIONS HERE
@@ -51,9 +50,6 @@ const loadPages = (): void => {
 
 	// load offline languages
 	store.dispatch(setLanguageOption(languages));
-
-	// determine the last section extro page
-	store.dispatch(identifyLastSectionExtroPage());
 
 	// clear section pages
 	store.dispatch(resetSectionPages());
@@ -91,9 +87,12 @@ const loadPages = (): void => {
 	questionPages.forEach((page: QuestionPageType) => {
 		// add page to section
 		if (getScreenType(page.type) === Screen.IntroQuestion) {
-			store.dispatch(addSectionPage(page as SectionPayloadInterface));
 			sectionPageNumber = 1;
 			sectionNumber++;
+			// store.dispatch(addSectionPage(page as SectionPayloadInterface));
+			if (getScreenType(page.type) === Screen.IntroQuestion) {
+				store.dispatch(addSectionPage({ sectionNumber, page: page as SectionPayloadInterface }));
+			}
 		}
 
 		store.dispatch(
@@ -113,59 +112,6 @@ const loadPages = (): void => {
 		// add section total pages
 		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		sectionPageNumber++;
-		pageNumber++;
-	});
-
-	// load default extro pages (kids)
-	sectionNumber++;
-	kidExtroPages.forEach((page: KidExtroductoryPageType, sectionIndex: number) => {
-		const sectionPageNumber = ++sectionIndex;
-
-		// add page to section
-		if (getScreenType(page.type) === Screen.IntroQuestion) {
-			store.dispatch(addSectionPage(page as SectionPayloadInterface));
-		}
-
-		store.dispatch(
-			addPage({
-				key: pageNumber,
-				page: {
-					pageNumber,
-					page,
-					screen: page.type,
-					section: Section.Extro,
-					sectionNumber,
-					sectionPageNumber,
-				},
-			}),
-		);
-
-		// add section total pages
-		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
-		pageNumber++;
-	});
-
-	// load feedback pages
-	sectionNumber++;
-	feedbackExtroPages.forEach((page: FeedbackExtroductoryPageType, sectionIndex: number) => {
-		const sectionPageNumber = ++sectionIndex;
-
-		store.dispatch(
-			addPage({
-				key: pageNumber,
-				page: {
-					pageNumber,
-					page,
-					screen: page.type,
-					section: Section.Feedback,
-					sectionNumber,
-					sectionPageNumber,
-				},
-			}),
-		);
-
-		// add section total pages
-		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		pageNumber++;
 	});
 };
@@ -207,14 +153,231 @@ const loadAgePage = (mode: ModeType): void => {
 	store.dispatch(clearFeedbackResponses());
 };
 
-const reloadExtroFeedbackPages = (): void => {
+const loadKidDemographicPages: loadPagesFuncType = (newPages) => {
 	const questions = store.getState().questions;
-	const settings = store.getState().settings;
-	const adultExtroPages: AdultExtroductoryPagesType = questions.adultExtroPages;
 	const kidExtroPages: KidExtroductoryPagesType = questions.kidExtroPages;
+
+	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
+	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
+
+	let lastPageNumber: number = lastPage.pageNumber ?? 1;
+	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
+	const finalPages: Record<number, PageIndexInterface> = {};
+
+	lastSectionNumber++;
+	kidExtroPages.forEach((page: KidExtroductoryPageType, index: number) => {
+		const pageNumber = ++lastPageNumber;
+
+		// add page to section
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
+			store.dispatch(
+				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
+			);
+		}
+
+		finalPages[pageNumber] = {
+			pageNumber,
+			page,
+			screen: page.type,
+			section: Section.Extro,
+			sectionNumber: lastSectionNumber,
+			sectionPageNumber: ++index,
+		};
+	});
+	return {
+		pages: finalPages,
+		sectionTotal: { [lastSectionNumber]: Object.keys(finalPages).length },
+	};
+};
+
+const loadAdultDemographicPages: loadPagesFuncType = (newPages) => {
+	const questions = store.getState().questions;
+	const adultExtroPages: AdultExtroductoryPagesType = questions.adultExtroPages;
+
+	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
+	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
+
+	let lastPageNumber: number = lastPage.pageNumber ?? 1;
+	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
+	const finalPages: Record<number, PageIndexInterface> = {};
+
+	lastSectionNumber++;
+	adultExtroPages.forEach((page: AdultExtroductoryPageType, index: number) => {
+		const pageNumber = ++lastPageNumber;
+
+		// add page to section
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
+			store.dispatch(
+				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
+			);
+		}
+
+		finalPages[pageNumber] = {
+			pageNumber,
+			page,
+			screen: page.type,
+			section: Section.Extro,
+			sectionNumber: lastSectionNumber,
+			sectionPageNumber: ++index,
+		};
+	});
+
+	return {
+		pages: finalPages,
+		sectionTotal: { [lastSectionNumber]: Object.keys(finalPages).length },
+	};
+};
+
+const loadFeedbackPages: loadPagesFuncType = (newPages) => {
+	const questions = store.getState().questions;
 	const feedbackPages: FeedbackExtroductoryPagesType = questions.feedbackExtroPages;
+
+	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
+	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
+
+	let lastPageNumber: number = lastPage.pageNumber ?? 1;
+	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
+	const finalPages: Record<number, PageIndexInterface> = {};
+
+	lastSectionNumber++;
+	feedbackPages.forEach((page: FeedbackExtroductoryPageType, index: number) => {
+		const pageNumber = ++lastPageNumber;
+
+		// add page to section
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
+			store.dispatch(
+				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
+			);
+		}
+
+		finalPages[pageNumber] = {
+			pageNumber,
+			page,
+			screen: page.type,
+			section: Section.Feedback,
+			sectionNumber: lastSectionNumber,
+			sectionPageNumber: ++index,
+		};
+	});
+	return {
+		pages: finalPages,
+		sectionTotal: { [lastSectionNumber]: Object.keys(finalPages).length },
+	};
+};
+
+const loadHbscPages: loadPagesFuncType = (newPages) => {
+	const questions = store.getState().questions;
+	const HbscPages: QuestionPagesType = questions.hbscPages;
+
+	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
+	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
+
+	let lastPageNumber: number = lastPage.pageNumber ?? 1;
+	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
+	const finalPages: Record<number, PageIndexInterface> = {};
+
+	lastSectionNumber++;
+	HbscPages.forEach((page: QuestionPageType, index: number) => {
+		const pageNumber = ++lastPageNumber;
+
+		// add page to section
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
+			store.dispatch(
+				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
+			);
+		}
+
+		finalPages[pageNumber] = {
+			pageNumber,
+			page,
+			screen: page.type,
+			section: Section.Hbsc,
+			sectionNumber: lastSectionNumber,
+			sectionPageNumber: ++index,
+		};
+	});
+	return {
+		pages: finalPages,
+		sectionTotal: { [lastSectionNumber]: Object.keys(finalPages).length },
+	};
+};
+
+const loadGshsPages: loadPagesFuncType = (newPages) => {
+	const questions = store.getState().questions;
+	const GshsPages: QuestionPagesType = questions.gshsPages;
+
+	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
+	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
+
+	let lastPageNumber: number = lastPage.pageNumber ?? 1;
+	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
+	const finalPages: Record<number, PageIndexInterface> = {};
+
+	lastSectionNumber++;
+	GshsPages.forEach((page: QuestionPageType, index: number) => {
+		const pageNumber = ++lastPageNumber;
+
+		// add page to section
+		if (getScreenType(page.type) === Screen.IntroQuestion) {
+			store.dispatch(
+				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
+			);
+		}
+
+		finalPages[pageNumber] = {
+			pageNumber,
+			page,
+			screen: page.type,
+			section: Section.Gshs,
+			sectionNumber: lastSectionNumber,
+			sectionPageNumber: ++index,
+		};
+	});
+
+	return {
+		pages: finalPages,
+		sectionTotal: { [lastSectionNumber]: Object.keys(finalPages).length },
+	};
+};
+
+const loadAppExtroPages: loadPagesFuncType = (newPages) => {
+	const questions = store.getState().questions;
+	const AppExtroPages: QuestionPagesType = questions.appExtroPages;
+
+	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
+	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
+
+	let lastPageNumber: number = lastPage.pageNumber ?? 1;
+	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
+	const finalPages: Record<number, PageIndexInterface> = {};
+
+	lastSectionNumber++;
+	AppExtroPages.forEach((page: QuestionPageType, index: number) => {
+		const pageNumber = ++lastPageNumber;
+
+		finalPages[pageNumber] = {
+			pageNumber,
+			page,
+			screen: page.type,
+			section: Section.AppExtro,
+			sectionNumber: lastSectionNumber,
+			sectionPageNumber: ++index,
+		};
+	});
+
+	return {
+		pages: finalPages,
+		sectionTotal: { [lastSectionNumber]: Object.keys(finalPages).length },
+	};
+};
+
+const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
+	const settings = store.getState().settings;
 	const allPages: Record<number, PageIndexInterface> = settings.pages;
-	const mode: ModeType = settings.mode;
+	interface AccumulatedPageType {
+		pages: PageIndexInterface[];
+		sectionTotal: Record<number, number>;
+	}
 
 	let newPages: Record<number, PageIndexInterface> = {};
 	let newSectionTotalPages: Record<number, number> = {};
@@ -223,77 +386,64 @@ const reloadExtroFeedbackPages = (): void => {
 		return;
 	}
 
-	// remove all extro and feedback pages
+	// remove all extro, feedback, hbsc, gshs pages
 	for (const [key, page] of Object.entries(allPages)) {
-		if (page.section === Section.Extro || page.section === Section.Feedback) {
+		if (
+			page.section === Section.Extro ||
+			page.section === Section.Feedback ||
+			page.section === Section.Hbsc ||
+			page.section === Section.Gshs ||
+			page.section === Section.AppExtro
+		) {
 			continue;
 		} else {
 			newPages = { ...newPages, [key]: page };
 		}
 	}
 
-	const lastPagesIndex: number = parseInt(Object.keys(newPages).at(-1) ?? "1");
-	const lastPage: PageIndexInterface = newPages[lastPagesIndex];
+	// collect extro pages
+	let pages: Record<number, PageIndexInterface> = {};
+	let sectionTotal: Record<number, number> = {};
 
-	let lastPageNumber: number = lastPage.pageNumber ?? 1;
-	let lastSectionNumber: number = lastPage.sectionNumber ?? 1;
-	let finalExtroPages: PageIndexInterface[] = [];
-	let finalFeedbackPages: PageIndexInterface[] = [];
-
-	// load all extro pages
-	lastSectionNumber++;
 	if (mode === Mode.Kid || mode === Mode.Teen) {
-		finalExtroPages = kidExtroPages.map((page: KidExtroductoryPageType, index: number) => {
-			return {
-				pageNumber: ++lastPageNumber,
-				page,
-				screen: page.type,
-				section: Section.Extro,
-				sectionNumber: lastSectionNumber,
-				sectionPageNumber: ++index,
-			};
-		});
+		// collect kid demographics pages
+		({ pages, sectionTotal } = loadKidDemographicPages(newPages) as AccumulatedPageType);
+		newPages = { ...newPages, ...pages };
+		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
 	} else {
-		finalExtroPages = adultExtroPages.map((page: AdultExtroductoryPageType, index: number) => {
-			return {
-				pageNumber: ++lastPageNumber,
-				page,
-				screen: page.type,
-				section: Section.Extro,
-				sectionNumber: lastSectionNumber,
-				sectionPageNumber: ++index,
-			};
-		});
+		// collect adult demographics pages
+		({ pages, sectionTotal } = loadAdultDemographicPages(newPages) as AccumulatedPageType);
+		newPages = { ...newPages, ...pages };
+		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
 	}
 
-	newSectionTotalPages = {
-		...newSectionTotalPages,
-		[lastSectionNumber]: finalExtroPages.length,
-	};
+	if (MAIN_STUDY_LANG.includes(language)) {
+		// main study extro pages
 
-	// load all feedback pages
-	lastSectionNumber++;
-	finalFeedbackPages = feedbackPages.map((page: FeedbackExtroductoryPageType, index: number) => {
-		return {
-			pageNumber: ++lastPageNumber,
-			page,
-			screen: page.type,
-			section: Section.Feedback,
-			sectionNumber: lastSectionNumber,
-			sectionPageNumber: ++index,
-		};
-	});
-	newSectionTotalPages = {
-		...newSectionTotalPages,
-		[lastSectionNumber]: finalFeedbackPages.length,
-	};
+		// collect hsbc pages
+		({ pages, sectionTotal } = loadHbscPages(newPages) as AccumulatedPageType);
+		newPages = { ...newPages, ...pages };
+		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
 
-	finalExtroPages.forEach((page: PageIndexInterface) => {
-		newPages = { ...newPages, [page.pageNumber ?? 1]: page };
-	});
-	finalFeedbackPages.forEach((page: PageIndexInterface) => {
-		newPages = { ...newPages, [page.pageNumber ?? 1]: page };
-	});
+		// collect gshs pages
+		({ pages, sectionTotal } = loadGshsPages(newPages) as AccumulatedPageType);
+		newPages = { ...newPages, ...pages };
+		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+	} else {
+		// pilot study extro pages
+		// collect feedback pages
+		({ pages, sectionTotal } = loadFeedbackPages(newPages) as AccumulatedPageType);
+		newPages = { ...newPages, ...pages };
+		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+	}
+
+	({ pages, sectionTotal } = loadAppExtroPages(newPages) as AccumulatedPageType);
+	newPages = { ...newPages, ...pages };
+	newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+
+	// console.log("************************************************");
+	// console.log("final pages: ", newPages);
+	// console.log("final sectionTotal: ", newSectionTotalPages);
 
 	store.dispatch(setPage(newPages));
 	for (const [key, value] of Object.entries(newSectionTotalPages)) {

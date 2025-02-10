@@ -87,7 +87,8 @@ export type KidExtroductoryPagesType = KidExtroductoryPageType[];
 
 export type LangKidExtroductoryPageType =
 	| LangSectionPayloadInterface
-	| LangQuestionRadioPayloadInterface;
+	| LangQuestionRadioPayloadInterface
+	| LangExtroPayloadInterface;
 export type LangKidExtroductoryPagesType = LangKidExtroductoryPageType[];
 
 // adult extroductory page
@@ -102,7 +103,8 @@ export type LangAdultExtroductoryPageType =
 	| LangQuestionRadioPayloadInterface
 	| LangQuestionCheckboxPayloadInterface
 	| LangQuestionOptionPayloadInterface
-	| LangQuestionInputPayloadInterface;
+	| LangQuestionInputPayloadInterface
+	| LangExtroPayloadInterface;
 export type LangAdultExtroductoryPagesType = LangAdultExtroductoryPageType[];
 
 // extroductory page

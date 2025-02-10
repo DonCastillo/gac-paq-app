@@ -77,7 +77,7 @@ const GSHSPages: LangQuestionPagesType = [
 	GSHSExtro,
 ];
 
-const AppExtroPage: LangExtroPayloadInterface = AppExtro;
+const AppExtroPage: LangQuestionPagesType = [AppExtro];
 
 export {
 	KidExtroductoryPages,
