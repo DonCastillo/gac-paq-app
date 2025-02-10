@@ -5,7 +5,7 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 const HBSC2: LangQuestionRadioPayloadInterface = {
 	ident: "hbsc_2",
 	name: "Question 32: Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-	column_name: "hbsc_2",
+	column_name: "HBSC 02",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

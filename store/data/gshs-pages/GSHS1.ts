@@ -5,7 +5,7 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 const GSHS1: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_1",
 	name: "Question 33: During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
-	column_name: "gshs_1",
+	column_name: "GSHS 01",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

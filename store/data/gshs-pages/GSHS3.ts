@@ -5,7 +5,7 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 const GSHS3: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_3",
 	name: "Question 35: During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
-	column_name: "gshs_3",
+	column_name: "GSHS 03",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

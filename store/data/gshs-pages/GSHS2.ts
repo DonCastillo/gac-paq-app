@@ -5,7 +5,7 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 const GSHS2: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_2",
 	name: "Question 34: During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
-	column_name: "gshs_2",
+	column_name: "GSHS 02",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

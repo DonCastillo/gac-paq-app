@@ -5,7 +5,7 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 const HBSC1: LangQuestionRadioPayloadInterface = {
 	ident: "hbsc_1",
 	name: "Question 31: Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
-	column_name: "hbsc_1",
+	column_name: "HBSC 01",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

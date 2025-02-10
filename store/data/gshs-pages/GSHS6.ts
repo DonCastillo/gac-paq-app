@@ -5,7 +5,7 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 const GSHS6: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_6",
 	name: "Question 38: On an average school night, how many hours of sleep do you get?",
-	column_name: "gshs_6",
+	column_name: "GSHS 06",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {

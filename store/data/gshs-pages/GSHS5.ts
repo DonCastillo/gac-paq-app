@@ -5,7 +5,7 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 const GSHS5: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_5",
 	name: "Question 37: How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
-	column_name: "gshs_5",
+	column_name: "GSHS 05",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
