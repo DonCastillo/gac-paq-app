@@ -4,6 +4,7 @@ import type { LangExtroPayloadInterface } from "interface/payload.type";
 const AppExtro: LangExtroPayloadInterface = {
 	ident: "survey_app_extro",
 	name: "Survey AppExtro",
+	isFinal: true,
 	type: Screen.ExtroQuestion,
 	translations: {
 		"en-CA": {

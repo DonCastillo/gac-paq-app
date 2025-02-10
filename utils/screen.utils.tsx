@@ -48,15 +48,11 @@ const getScreen = (
 	else if (mode === Mode.Kid && section === Section.Intro && screen === Screen.SingleQuestion)
 		return <IntroQuestionSingleKid />;
 	// preamble
-	else if (mode === undefined && section === Section.Question && screen === Screen.Preamble) {
+	else if (mode === undefined && screen === Screen.Preamble) {
 		return <PreambleAdult />;
-	} else if (mode === Mode.Kid && section === Section.Question && screen === Screen.Preamble) {
+	} else if (mode === Mode.Kid && screen === Screen.Preamble) {
 		return <PreambleKid />;
-	} else if (
-		(mode === Mode.Adult || mode === Mode.Teen) &&
-		section === Section.Question &&
-		screen === Screen.Preamble
-	) {
+	} else if ((mode === Mode.Adult || mode === Mode.Teen) && screen === Screen.Preamble) {
 		return <PreambleAdult />;
 	}
 	// question question
@@ -70,7 +66,29 @@ const getScreen = (
 		return <QuestionQuestionSingleAdult />;
 	else if (mode === Mode.Kid && section === Section.Question && screen === Screen.SingleQuestion)
 		return <QuestionQuestionSingleKid />;
-	// question extro
+	// hbsc pages
+	else if (mode === undefined && section === Section.Hbsc && screen === Screen.SingleQuestion)
+		return <QuestionQuestionSingleAdult />;
+	else if (
+		(mode === Mode.Adult || mode === Mode.Teen) &&
+		section === Section.Hbsc &&
+		screen === Screen.SingleQuestion
+	)
+		return <QuestionQuestionSingleAdult />;
+	else if (mode === Mode.Kid && section === Section.Hbsc && screen === Screen.SingleQuestion)
+		return <QuestionQuestionSingleKid />;
+	// gshs pages
+	else if (mode === undefined && section === Section.Gshs && screen === Screen.SingleQuestion)
+		return <QuestionQuestionSingleAdult />;
+	else if (
+		(mode === Mode.Adult || mode === Mode.Teen) &&
+		section === Section.Gshs &&
+		screen === Screen.SingleQuestion
+	)
+		return <QuestionQuestionSingleAdult />;
+	else if (mode === Mode.Kid && section === Section.Gshs && screen === Screen.SingleQuestion)
+		return <QuestionQuestionSingleKid />;
+	// question extro / demographic questions
 	else if (mode === undefined && section === Section.Extro && screen === Screen.SingleQuestion)
 		return <QuestionQuestionSingleAdult />;
 	else if (

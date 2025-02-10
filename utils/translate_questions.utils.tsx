@@ -1,3 +1,4 @@
+import MAIN_STUDY_LANG from "constants/main_study_lang";
 import type { LangPhraseInterface, PhraseInterface } from "interface/phrase";
 
 const translateArrayOfPages = (pages: any, language: string | undefined): any => {
@@ -9,6 +10,19 @@ const translateArrayOfPages = (pages: any, language: string | undefined): any =>
 	// }
 
 	return pages.map((page: any) => {
+		// check if page.ident starts with "hbsc_"
+		if (page.ident.startsWith("hbsc_")) {
+			if (!MAIN_STUDY_LANG.includes(finalLanguage)) {
+				return { ...page, translations: page.translations["en-CA"] };
+			}
+		}
+		// check if page.ident starts with "gshs_"
+		if (page.ident.startsWith("gshs_")) {
+			if (!MAIN_STUDY_LANG.includes(finalLanguage)) {
+				return { ...page, translations: page.translations["en-CA"] };
+			}
+		}
+		// console.log(page.ident);
 		return { ...page, translations: page.translations[finalLanguage] };
 	});
 };
