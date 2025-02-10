@@ -38,6 +38,7 @@ import type {
 } from "interface/payload.type";
 import MAIN_STUDY_LANG from "constants/main_study_lang";
 import { type loadPagesFuncType } from "interface/function.type";
+import { randomBoolean } from "./random";
 
 const loadPages = (): void => {
 	const questions = store.getState().questions;
@@ -424,15 +425,23 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 	if (MAIN_STUDY_LANG.includes(language)) {
 		// main study extro pages
 
-		// collect hsbc pages
-		({ pages, sectionTotal } = loadHbscPages(newPages) as AccumulatedPageType);
-		newPages = { ...newPages, ...pages };
-		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-
-		// collect gshs pages
-		({ pages, sectionTotal } = loadGshsPages(newPages) as AccumulatedPageType);
-		newPages = { ...newPages, ...pages };
-		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+		// only the adolescent will answer the hbsc and gshs questions
+		if (mode === Mode.Teen) {
+			// randomly add hsbc or gshs pages 35% of the time
+			if (randomBoolean(0.35)) {
+				if (randomBoolean(0.5)) {
+					// collect hsbc pages
+					({ pages, sectionTotal } = loadHbscPages(newPages) as AccumulatedPageType);
+					newPages = { ...newPages, ...pages };
+					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+				} else {
+					// collect gshs pages
+					({ pages, sectionTotal } = loadGshsPages(newPages) as AccumulatedPageType);
+					newPages = { ...newPages, ...pages };
+					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+				}
+			}
+		}
 	} else {
 		// pilot study extro pages
 		// collect feedback pages
