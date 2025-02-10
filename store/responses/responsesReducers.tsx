@@ -44,6 +44,22 @@ const clearUnansweredResponses: ResponsesFuncType = (state) => {
 	}
 };
 
+const clearHbscResponses: ResponsesFuncType = (state) => {
+	for (const [key, value] of Object.entries(state)) {
+		if (value.section === Section.Hbsc) {
+			state[key].answer = null;
+		}
+	}
+};
+
+const clearGshsResponses: ResponsesFuncType = (state) => {
+	for (const [key, value] of Object.entries(state)) {
+		if (value.section === Section.Gshs) {
+			state[key].answer = null;
+		}
+	}
+};
+
 const clearQuestionResponses: ResponsesFuncType = (state) => {
 	for (const [key, value] of Object.entries(state)) {
 		if (value.section === Section.Question) {
@@ -86,6 +102,8 @@ export default {
 	newResponse,
 	clearResponseByIdent,
 	clearUnansweredResponses,
+	clearHbscResponses,
+	clearGshsResponses,
 	clearQuestionResponses,
 	clearIntroResponses,
 	clearFeedbackResponses,
