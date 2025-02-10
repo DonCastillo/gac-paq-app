@@ -87,7 +87,8 @@ export type KidExtroductoryPagesType = KidExtroductoryPageType[];
 
 export type LangKidExtroductoryPageType =
 	| LangSectionPayloadInterface
-	| LangQuestionRadioPayloadInterface;
+	| LangQuestionRadioPayloadInterface
+	| LangExtroPayloadInterface;
 export type LangKidExtroductoryPagesType = LangKidExtroductoryPageType[];
 
 // adult extroductory page
@@ -102,7 +103,8 @@ export type LangAdultExtroductoryPageType =
 	| LangQuestionRadioPayloadInterface
 	| LangQuestionCheckboxPayloadInterface
 	| LangQuestionOptionPayloadInterface
-	| LangQuestionInputPayloadInterface;
+	| LangQuestionInputPayloadInterface
+	| LangExtroPayloadInterface;
 export type LangAdultExtroductoryPagesType = LangAdultExtroductoryPageType[];
 
 // extroductory page
@@ -110,12 +112,14 @@ export type ExtroductoryPageType = KidExtroductoryPageType | AdultExtroductoryPa
 export type ExtroductoryPagesType = ExtroductoryPageType[];
 
 export type FeedbackExtroductoryPageType =
+	| SectionPayloadInterface
 	| QuestionRadioImagePayloadInterface
 	| QuestionTextareaPayloadInterface
 	| ExtroPayloadInterface;
 export type FeedbackExtroductoryPagesType = FeedbackExtroductoryPageType[];
 
 export type LangFeedbackExtroductoryPageType =
+	| LangSectionPayloadInterface
 	| LangQuestionRadioImagePayloadInterface
 	| LangQuestionTextareaPayloadInterface
 	| LangExtroPayloadInterface;
@@ -146,4 +150,5 @@ export type TranslatedQuestionQuestionType =
 
 export type FinalResponseType =
 	| Record<string, string | string[]>
+	| Record<string, boolean>
 	| Record<string, Record<string, string | string[]>>;

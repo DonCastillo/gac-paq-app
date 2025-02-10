@@ -73,6 +73,69 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 15",
+			label: "How did you go to school in the past week?",
+			kid_label: "How did you go to school in the past week?",
+			adult_label: "How did your child go to school in the past week?",
+			kid_sublabel: "Select the mode that you used the most.",
+			adult_sublabel: "Select the mode that your child used the most.",
+			choices: [
+				{
+					label: "Walking",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Wheeling",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult:
+							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+					},
+				},
+				{
+					label: "School bus",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Public transport",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "for example, bus, train, tram, boat",
+						adult: "for example, bus, train, tram, boat",
+					},
+				},
+				{
+					label: "Car, taxi, truck, or motorcycle",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Other, including combinations",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "for example walking and busing",
+						adult: "for example walking and busing",
+					},
+				},
+				{
+					label: "Stay home for school",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "I stay at home for school",
+						adult: "My child stays at home for school",
+					},
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadioImage,
 			heading: "Otázka 15",

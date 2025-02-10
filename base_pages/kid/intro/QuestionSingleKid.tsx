@@ -156,7 +156,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 	useEffect(() => {
 		// trigger a mode change if the mode changes from a values that is not a kid
 		if (mode !== Mode.Kid) {
-			changeMode(mode);
+			changeMode(mode, language);
 		}
 	}, [mode]);
 

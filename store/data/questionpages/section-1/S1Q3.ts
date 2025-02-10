@@ -18,6 +18,14 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			adult_label: "How many physical education classes did your child have in the past week?",
 			max_value: 7,
 		},
+		"en-NZ": {
+			type: Question.QuestionSlider,
+			heading: "Question 3",
+			label: "How many physical education (PE) classes did you have in the past week?",
+			kid_label: "How many physical education (PE) classes did you have in the past week?",
+			adult_label: "How many physical education classes did your child have in the past week?",
+			max_value: 7,
+		},
 		"cz-CR": {
 			type: Question.QuestionSlider,
 			heading: "Otázka 3",

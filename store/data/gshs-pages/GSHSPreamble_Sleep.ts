@@ -1,0 +1,68 @@
+import Screen from "constants/screen.enum";
+import type { LangPreamblePayloadInterface } from "interface/payload.type";
+
+const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
+	ident: "gshs_preamble_sleep",
+	heading: "GSHS - Sleep Preamble",
+	type: Screen.Preamble,
+	translations: {
+		"en-CA": {
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next question asks about how much sleep you get.",
+				adult: "The next question asks about how much sleep you get.",
+			},
+		},
+		"en-NZ": {
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next question asks about how much sleep you get.",
+				adult: "The next question asks about how much sleep you get.",
+			},
+		},
+		"en-MW": {
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next question asks about how much sleep you get.",
+				adult: "The next question asks about how much sleep you get.",
+			},
+		},
+		"en-NG": {
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next question asks about how much sleep you get.",
+				adult: "The next question asks about how much sleep you get.",
+			},
+		},
+		"en-AE": {
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next question asks about how much sleep you get.",
+				adult: "The next question asks about how much sleep you get.",
+			},
+		},
+		"sv-SE": {
+			heading: "Sömn",
+			subheading: "Global skolbaserad undersökning om studenthälsa",
+			description: {
+				kid: "Nästa fråga handlar om hur mycket du sover.",
+				adult: "Nästa fråga handlar om hur mycket du sover.",
+			},
+		},
+		"zh-CN": {
+			heading: "睡眠",
+			subheading: "全球学校基础学生健康调查",
+			description: {
+				kid: "下一问题是询问你睡觉的情况。",
+				adult: "下一问题是询问你睡觉的情况。",
+			},
+		},
+	},
+};
+
+export default GSHSPreamble_Sleep;

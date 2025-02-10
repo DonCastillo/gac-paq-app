@@ -46,6 +46,42 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Feedback",
+			label: "How satisfied are you with the app?",
+			kid_label: "How satisfied are you with the app?",
+			adult_label: "How satisfied are you with the app?",
+			adult_sublabel: "Click on the image (emoji) that best represents your satisfaction.",
+			kid_sublabel: "Click on the image (emoji) that best represents your satisfaction.",
+			choices: [
+				{
+					label: "Strongly dissatisfied",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Dissatisfied",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Neutral",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Satisfied",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Strongly satisfied",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Zpětná vazba",

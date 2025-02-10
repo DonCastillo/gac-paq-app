@@ -17,6 +17,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"en-NZ": {
+			heading: "Play or Free Time",
+			subheading: "Section 6",
+			description: {
+				kid: "This section includes all the physical activity that you do during your play or free time. This does not include organised activities or break times in school. For the next questions, do not include the activities that you just told us about.",
+				adult:
+					"This section includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
+			},
+		},
 		"cz-CR": {
 			heading: "Hra a volný čas",
 			subheading: "Sekce 6",

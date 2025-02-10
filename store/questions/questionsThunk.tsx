@@ -26,19 +26,24 @@ export const removeQuestionData = createAsyncThunk(
 
 export const loadQuestionData = createAsyncThunk(
 	"questions/loadQuestionData",
-	async (language: string | null, { getState, dispatch }) => {
+	async (language: string | undefined, { getState, dispatch }) => {
 		const finalLanguage = language ?? "en-CA";
+
 		const data = await readAppData();
 
 		if (data === null && data === undefined) return {};
+
 		const introductoryPages = translateArrayOfPages(data.introductoryPages, finalLanguage);
 		const questionPages = translateArrayOfPages(data.questionPages, finalLanguage);
 		const kidExtroPages = translateArrayOfPages(data.kidExtroPages, finalLanguage);
 		const adultExtroPages = translateArrayOfPages(data.adultExtroPages, finalLanguage);
+		const feedbackExtroPages = translateArrayOfPages(data.feedbackExtroPages, finalLanguage);
+		const hbscPages = translateArrayOfPages(data.hbscPages, finalLanguage);
+		const gshsPages = translateArrayOfPages(data.gshsPages, finalLanguage);
+		const appExtroPages = translateArrayOfPages(data.appExtroPages, finalLanguage);
 		const kidAgePage = translatePage(data.kidAgePage, finalLanguage);
 		const teenAgePage = translatePage(data.teenAgePage, finalLanguage);
 		const adultAgePage = translatePage(data.adultAgePage, finalLanguage);
-		const feedbackExtroPages = translateArrayOfPages(data.feedbackExtroPages, finalLanguage);
 		const backPhrase = translatePhrase(data.backPhrase, finalLanguage);
 		const completePhrase = translatePhrase(data.completePhrase, finalLanguage);
 		const donePhrase = translatePhrase(data.donePhrase, finalLanguage);
@@ -62,6 +67,9 @@ export const loadQuestionData = createAsyncThunk(
 			languageOption: data.languageOption as LanguageInterface[],
 			introductoryPages,
 			questionPages,
+			hbscPages,
+			gshsPages,
+			appExtroPages,
 			kidExtroPages,
 			adultExtroPages,
 			kidAgePage,
@@ -84,7 +92,7 @@ export const loadQuestionData = createAsyncThunk(
 			Transportation7,
 			Transportation8_10,
 			Transportation9_11,
-			sectionPages: [],
+			sectionPages: {},
 			optionLetters,
 			optionNumbers,
 		} satisfies QuestionSliceInterface;

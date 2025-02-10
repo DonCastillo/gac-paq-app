@@ -22,7 +22,7 @@ export interface SettingsSliceInterface {
 	currentPage: PageIndexInterface;
 	nextPage: PageIndexInterface;
 	phrases: PhrasePayloadInterface;
-	sectionTitles: string[];
+	sectionTitles: Record<number, string>;
 	sectionTotalPages: Record<number, number>;
 	totalPage: any;
 	colorTheme: ColorInterface;
@@ -49,7 +49,7 @@ const settingsSlice = createSlice({
 		currentPage: currentDefaultPage,
 		nextPage: nextDefaultPage,
 		phrases: defaultPhrase,
-		sectionTitles: [] as string[],
+		sectionTitles: {},
 		sectionTotalPages: {},
 		totalPage: null,
 		colorTheme: defaultColor,
@@ -75,7 +75,8 @@ const settingsSlice = createSlice({
 		setPage: reducersActions.setPage,
 		setPhrases: reducersActions.setPhrases,
 		setNarrations: reducersActions.setNarrations,
-		setSectionTitles: reducersActions.setSectionTitles,
+		addSectionTitle: reducersActions.addSectionTitle,
+		resetSectionTitles: reducersActions.resetSectionTitles,
 		addSectionTotalPages: reducersActions.addSectionTotalPages,
 		setKeyboardState: reducersActions.setKeyboardState,
 		removeExtroPages: reducersActions.removeExtroPages,
@@ -137,7 +138,8 @@ export const {
 	addPage,
 	setPage,
 	setPhrases,
-	setSectionTitles,
+	addSectionTitle,
+	resetSectionTitles,
 	addSectionTotalPages,
 	setKeyboardState,
 	removeExtroPages,

@@ -39,6 +39,7 @@ const AppWrapper = (): React.ReactElement => {
 	const settings = useSelector((state: any) => state.settings);
 	const responses = useSelector((state: any) => state.responses);
 	const questions = useSelector((state: any) => state.questions);
+	// console.log("app wrapper: ", language)
 
 	// console.log("expo admin urlL: ", process.env.EXPO_PUBLIC_ADMIN_API_URL);
 	// console.log("expo token: ", process.env.EXPO_PUBLIC_ADMIN_TOKEN);
@@ -96,7 +97,7 @@ const AppWrapper = (): React.ReactElement => {
 			await dispatch(loadQuestionData(language));
 			dispatch(resetResponses());
 			loadPages();
-			changeMode(mode);
+			changeMode(mode, language);
 			dispatch(setIsLoading(false));
 		};
 		loadApp()
