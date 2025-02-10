@@ -35,6 +35,31 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 15c",
+			label: "How long does it normally take you to go to school?",
+			kid_label: "How long does it normally take you to go to school?",
+			adult_label: "How long does it normally take your child to go to school?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 15c",

@@ -47,6 +47,51 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 27",
+			label: "What is your ethnicity?",
+			kid_label: "What is your ethnicity?",
+			adult_label: "What is your ethnicity?",
+			choices: [
+				{
+					label: "NZ European",
+					value: "NZ European",
+				},
+				{
+					label: "Māori",
+					value: "Māori",
+				},
+				{
+					label: "Samoan",
+					value: "Samoan",
+				},
+				{
+					label: "Tongan",
+					value: "Tongan",
+				},
+				{
+					label: "Niuean",
+					value: "Niuean",
+				},
+				{
+					label: "Chinese",
+					value: "Chinese",
+				},
+				{
+					label: "Indian",
+					value: "Indian",
+				},
+				{
+					label: "Other, e.g. Dutch, Japanese, Tokelauan",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to say",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionCheckbox,
 			heading: "Otázka 27",

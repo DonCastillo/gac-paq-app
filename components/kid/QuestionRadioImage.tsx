@@ -13,7 +13,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
 import type { Svg } from "react-native-svg";
 import { horizontalScale, moderateScale } from "utils/responsive.utils";
-import { getOptionImage, getOptionSubLabel, getOptionText } from "utils/background.utils";
+import { getOptionImage, getOptionSubLabel } from "utils/background.utils";
 import {
 	getUserSpecifiedOther,
 	hasOtherOption,
@@ -29,7 +29,6 @@ import {
 	getCurrentPage,
 	getDevice,
 	getPhrases,
-	getLanguage,
 } from "store/settings/settingsSlice";
 import type { ChoiceImage } from "interface/payload.type";
 import {

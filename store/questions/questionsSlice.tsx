@@ -4,7 +4,10 @@ import IntroductoryPages from "store/data/introductory-pages";
 import QuestionPages from "store/data/question-pages";
 import {
 	AdultExtroductoryPages,
+	AppExtroPage,
 	FeedbackExtroductoryPages,
+	GSHSPages,
+	HBSCPages,
 	KidExtroductoryPages,
 } from "store/data/extroductory-pages";
 import DemographicKidPage from "store/data/introductory-pages/demographic_kid_age";
@@ -57,8 +60,11 @@ export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
 	introductoryPages: IntroductoryPagesType;
 	questionPages: QuestionPagesType;
+	hbscPages: QuestionPagesType;
+	gshsPages: QuestionPagesType;
 	kidExtroPages: KidExtroductoryPagesType;
 	adultExtroPages: AdultExtroductoryPagesType;
+	appExtroPages: QuestionPagesType;
 	kidAgePage: QuestionDropdownPayloadInterface;
 	teenAgePage: QuestionDropdownPayloadInterface;
 	adultAgePage: QuestionDropdownPayloadInterface;
@@ -79,7 +85,7 @@ export interface QuestionSliceInterface {
 	Transportation7: ModeActivityInterface;
 	Transportation8_10: ModeActivityTransportationInterface;
 	Transportation9_11: ModeActivityTransportationInterface;
-	sectionPages: SectionPayloadInterface[];
+	sectionPages: Record<number, SectionPayloadInterface>;
 	optionLetters: string[];
 	optionNumbers: string[];
 }
@@ -93,6 +99,9 @@ const questionsSlice = createSlice({
 			defaultLanguage,
 		) as IntroductoryPagesType,
 		questionPages: translateArrayOfPages(QuestionPages, defaultLanguage) as QuestionPagesType,
+		hbscPages: translateArrayOfPages(HBSCPages, defaultLanguage) as QuestionPagesType,
+		gshsPages: translateArrayOfPages(GSHSPages, defaultLanguage) as QuestionPagesType,
+		appExtroPages: translateArrayOfPages(AppExtroPage, defaultLanguage) as QuestionPagesType,
 		kidExtroPages: translateArrayOfPages(
 			KidExtroductoryPages,
 			defaultLanguage,
@@ -146,14 +155,13 @@ const questionsSlice = createSlice({
 		Transportation9_11: Transportation9_11[
 			defaultLanguage
 		] satisfies ModeActivityTransportationInterface,
-		sectionPages: [],
+		sectionPages: {},
 		optionLetters: [],
 		optionNumbers: [],
 	} satisfies QuestionSliceInterface,
 	reducers: {
 		setLanguageOption: reducersActions.setLanguageOption,
 		setIntroductoryPages: reducersActions.setIntroductoryPages,
-		identifyLastSectionExtroPage: reducersActions.identifyLastSectionExtroPage,
 		addSectionPage: reducersActions.addSectionPage,
 		resetSectionPages: reducersActions.resetSectionPages,
 	},
@@ -161,6 +169,9 @@ const questionsSlice = createSlice({
 		getLanguageOption: (state: QuestionSliceInterface) => state.languageOption,
 		getIntroductoryPages: (state: QuestionSliceInterface) => state.introductoryPages,
 		getQuestionPages: (state: QuestionSliceInterface) => state.questionPages,
+		getHBSCPages: (state: QuestionSliceInterface) => state.hbscPages,
+		getGSHSPages: (state: QuestionSliceInterface) => state.gshsPages,
+		getAppExtroPages: (state: QuestionSliceInterface) => state.appExtroPages,
 		getKidExtroPages: (state: QuestionSliceInterface) => state.kidExtroPages,
 		getAdultExtroPages: (state: QuestionSliceInterface) => state.adultExtroPages,
 		getKidAgePage: (state: QuestionSliceInterface) => state.kidAgePage,
@@ -220,13 +231,8 @@ const questionsSlice = createSlice({
 		});
 	},
 });
-export const {
-	setLanguageOption,
-	setIntroductoryPages,
-	identifyLastSectionExtroPage,
-	addSectionPage,
-	resetSectionPages,
-} = questionsSlice.actions;
+export const { setLanguageOption, setIntroductoryPages, addSectionPage, resetSectionPages } =
+	questionsSlice.actions;
 
 export const {
 	getSectionPages,
@@ -235,6 +241,9 @@ export const {
 	getLanguageOption,
 	getIntroductoryPages,
 	getQuestionPages,
+	getHBSCPages,
+	getGSHSPages,
+	getAppExtroPages,
 	getKidExtroPages,
 	getAdultExtroPages,
 	getKidAgePage,

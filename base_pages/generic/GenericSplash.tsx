@@ -26,8 +26,8 @@ const GenericSplash = (): React.ReactElement => {
 		await dispatch(loadQuestionData(language));
 		dispatch(resetResponses());
 		loadPages();
+		changeMode(mode, language);
 		dispatch(skipPage(1));
-		changeMode(mode);
 	};
 
 	useFocusEffect(

@@ -52,7 +52,10 @@ const QuestionRadio = ({
 	}, [selected]);
 
 	const getLabel = (index: number, label: string): string => {
-		return currentPage.section === Section.Question || currentPage.section === Section.Extro
+		return currentPage.section === Section.Question ||
+			currentPage.section === Section.Extro ||
+			currentPage.section === Section.Gshs ||
+			currentPage.section === Section.Hbsc
 			? `${optionLetter(index)}.  ${label}`
 			: label;
 	};

@@ -14,6 +14,7 @@ import { falsyValue } from "./utils.utils";
 import LocalStorageKey from "constants/localstorage.enum";
 import { readData, removeData, storeData } from "utils/localstorage.utils";
 import { submitResponse } from "utils/api.utils";
+import MAIN_STUDY_LANG from "constants/main_study_lang";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -42,6 +43,7 @@ const getResponse = (): string | null => {
 const sanitizeResponse = (): FinalResponseType => {
 	const sanitizedResponse: FinalResponseType = {};
 	const mode = store.getState().settings.mode;
+	const language = store.getState().settings.language;
 	const usageStartTime = store.getState().settings.startDateTime;
 	const responses = store.getState().responses as Record<string, ResponseInterface>;
 	const pages = store.getState().settings.pages;
@@ -55,6 +57,12 @@ const sanitizeResponse = (): FinalResponseType => {
 	// record end date time when user is answering the question
 	sanitizedResponse.start_time = usageStartTime !== null ? usageStartTime.toISOString() : "";
 	sanitizedResponse.end_time = new Date().toISOString() ?? "";
+
+	// record whether the response is a main study or not based on the country
+	sanitizedResponse.is_main_study = false;
+	if (MAIN_STUDY_LANG.includes(language)) {
+		sanitizedResponse.is_main_study = true;
+	}
 
 	for (const [key, value] of Object.entries(responses)) {
 		// remove empty answers
@@ -87,6 +95,40 @@ const sanitizeResponse = (): FinalResponseType => {
 			sanitizedResponse[value.label ?? key] = value.answer;
 		}
 
+		// get all answers from the hbsc pages
+		if (value.section === Section.Hbsc) {
+			let label = (value.label ?? key).replace(/(\r\n|\n|\r)/g, "");
+			label = label.replace(/(\t)/g, " ");
+			if (value.answer.includes(" | ")) {
+				sanitizedResponse.questions = {
+					...sanitizedResponse.questions,
+					[label]: value.answer.split(" | "),
+				};
+			} else {
+				sanitizedResponse.questions = {
+					...sanitizedResponse.questions,
+					[label]: value.answer,
+				};
+			}
+		}
+
+		// get all answers from the gshs pages
+		if (value.section === Section.Gshs) {
+			let label = (value.label ?? key).replace(/(\r\n|\n|\r)/g, "");
+			label = label.replace(/(\t)/g, " ");
+			if (value.answer.includes(" | ")) {
+				sanitizedResponse.questions = {
+					...sanitizedResponse.questions,
+					[label]: value.answer.split(" | "),
+				};
+			} else {
+				sanitizedResponse.questions = {
+					...sanitizedResponse.questions,
+					[label]: value.answer,
+				};
+			}
+		}
+
 		// get all answers from the extros that match the current mode
 		// make sure questions whose idents are child_difficulties, child_ethnicity, and parent_ethnicity are sent as arrays
 		// to prevent server error
@@ -107,7 +149,11 @@ const sanitizeResponse = (): FinalResponseType => {
 	// get all questions and their column names
 	const finalSanitizedQuestions = {};
 	Object.values(pages).forEach((page: PageIndexInterface) => {
-		if (page.section === Section.Question) {
+		if (
+			page.section === Section.Question ||
+			page.section === Section.Hbsc ||
+			page.section === Section.Gshs
+		) {
 			const questionPage = page.page as
 				| QuestionRadioPayloadInterface
 				| QuestionSliderPayloadInterface

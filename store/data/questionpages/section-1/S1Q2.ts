@@ -47,6 +47,43 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 2",
+			label: "How many days did you attend school in the past week?",
+			kid_label: "How many days did you attend school in the past week?",
+			adult_label: "How many days did your child attend school in the past week?",
+			choices: [
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 2",

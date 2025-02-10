@@ -44,6 +44,40 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 29",
+			label: "What is the highest level of education completed by a member of your household?",
+			kid_label: "What is the highest level of education completed by a member of your household?",
+			adult_label:
+				"What is the highest level of education completed by a member of your household?",
+			choices: [
+				{
+					label: "No formal schooling",
+					value: "No formal schooling",
+				},
+				{
+					label: "Primary school",
+					value: "Primary school",
+				},
+				{
+					label: "Secondary or high school",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Vocational/polytechnic education",
+					value: "Vocational/polytechnic education",
+				},
+				{
+					label: "Tertiary/university education",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 29",
