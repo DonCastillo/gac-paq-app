@@ -24,7 +24,6 @@ import {
 	nextPage,
 	setIsLoading,
 	setLanguage,
-	setSectionTitles,
 	skipPage,
 } from "store/settings/settingsSlice";
 import { loadPhrases, loadSectionTitles } from "utils/load.utils";

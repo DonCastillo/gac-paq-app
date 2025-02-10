@@ -2,6 +2,7 @@ import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 import { store } from "store/store";
 import type { SectionPayloadInterface } from "interface/payload.type";
+import { addSectionTitle } from "store/settings/settingsSlice";
 
 const translateQuestionLabel = (kidLabel: string, adultLabel: string, mode: ModeType): string => {
 	if (mode === Mode.Adult) {
@@ -27,18 +28,22 @@ const translateDescription = (
 	}
 };
 
-const translateSectionHeading = (langCode: string): string[] => {
-	const sectionPages: SectionPayloadInterface[] = store.getState().questions.sectionPages;
-	if (sectionPages.length === 0) return [];
+const translateSectionHeading = (): Record<number, string> => {
+	const sectionPages: Record<number, SectionPayloadInterface> =
+		store.getState().questions.sectionPages;
+	if (Object.keys(sectionPages).length === 0) return [];
+	const sectionTitles: Record<number, string> = {};
 
-	const translatedSectionTitles = sectionPages.map((sectionPage: SectionPayloadInterface) => {
-		const translatedPage = sectionPage.translations;
-		if (translatedPage === undefined || translatedPage === null) {
-			return sectionPage.translations.heading;
+	for (const [key, value] of Object.entries(sectionPages)) {
+		const translatedPage = value.translations;
+		if (translatedPage.heading !== undefined && translatedPage.heading !== null) {
+			sectionTitles[key] = translatedPage.heading;
+		} else {
+			sectionTitles[key] = "";
 		}
-		return translatedPage.heading;
-	});
-	return translatedSectionTitles;
+	}
+
+	return sectionTitles;
 };
 
 const translateText = (text: { kid: string; adult: string }, mode: ModeType): string => {

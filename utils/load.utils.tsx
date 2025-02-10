@@ -1,7 +1,12 @@
 import { FlagIcons } from "styles/flags";
 import Languages from "store/data/languages";
 import { store } from "store/store";
-import { setPhrases, setSectionTitles } from "store/settings/settingsSlice";
+import {
+	addSectionTitle,
+	resetSectionTitles,
+	setPhrases,
+	setSectionTitles,
+} from "store/settings/settingsSlice";
 import PhraseLabel from "constants/phrase_label.enum";
 import type { LanguageInterface } from "interface/payload.type";
 import { translateSectionHeading } from "./translate.utils";
@@ -47,11 +52,19 @@ const loadPhrases = (): void => {
 };
 
 const loadSectionTitles = (): void => {
-	const language = store.getState().settings.language;
 	const phrases = store.getState().settings.phrases;
-	const translatedSectionTitles = translateSectionHeading(language);
-	const sectionTitles = [phrases?.introduction, ...translatedSectionTitles, phrases?.feedback];
-	store.dispatch(setSectionTitles(sectionTitles));
+	const translatedSectionTitles = translateSectionHeading();
+
+	// reset section titles
+	store.dispatch(resetSectionTitles());
+
+	// add introduction
+	store.dispatch(addSectionTitle({ sectionNumber: 0, sectionTitle: phrases?.introduction }));
+
+	// add the rest of the section titles
+	for (const [key, value] of Object.entries(translatedSectionTitles)) {
+		store.dispatch(addSectionTitle({ sectionNumber: parseInt(key), sectionTitle: value }));
+	}
 };
 
 export { loadLanguagesOffline, loadPhrases, loadSectionTitles };
