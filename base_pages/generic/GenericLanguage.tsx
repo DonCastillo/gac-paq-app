@@ -36,6 +36,8 @@ import { loadPages } from "utils/load_pages.utils";
 import {
 	clearExtroResponses,
 	clearFeedbackResponses,
+	clearGshsResponses,
+	clearHbscResponses,
 	clearQuestionResponses,
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
@@ -73,6 +75,8 @@ const GenericLanguage = (): React.ReactElement => {
 		changeMode(mode, language);
 		dispatch(skipPage(1));
 		dispatch(clearQuestionResponses());
+		dispatch(clearHbscResponses());
+		dispatch(clearGshsResponses());
 		dispatch(clearExtroResponses());
 		dispatch(clearFeedbackResponses());
 		dispatch(setIsLoading(false));

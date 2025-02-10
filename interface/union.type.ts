@@ -150,4 +150,5 @@ export type TranslatedQuestionQuestionType =
 
 export type FinalResponseType =
 	| Record<string, string | string[]>
+	| Record<string, boolean>
 	| Record<string, Record<string, string | string[]>>;

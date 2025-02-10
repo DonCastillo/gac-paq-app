@@ -33,7 +33,6 @@ import GSHS5 from "./gshs-pages/GSHS5";
 import GSHSPreamble_Sleep from "./gshs-pages/GSHSPreamble_Sleep";
 import GSHS6 from "./gshs-pages/GSHS6";
 import GSHSExtro from "./gshs-pages/GSHSExtro";
-import { type LangExtroPayloadInterface } from "interface/payload.type";
 import FeedbackExtro from "./extroductory-pages/FeedbackExtro";
 import FeedbackIntro from "./extroductory-pages/FeedbackIntro";
 import DemographicExtro from "./extroductory-pages/DemographicExtro";

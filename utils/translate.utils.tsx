@@ -2,7 +2,6 @@ import type { ModeType } from "interface/union.type";
 import Mode from "constants/mode.enum";
 import { store } from "store/store";
 import type { SectionPayloadInterface } from "interface/payload.type";
-import { addSectionTitle } from "store/settings/settingsSlice";
 
 const translateQuestionLabel = (kidLabel: string, adultLabel: string, mode: ModeType): string => {
 	if (mode === Mode.Adult) {

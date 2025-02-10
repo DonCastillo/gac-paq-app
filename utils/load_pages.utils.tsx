@@ -15,6 +15,8 @@ import { store } from "store/store";
 import {
 	clearExtroResponses,
 	clearFeedbackResponses,
+	clearGshsResponses,
+	clearHbscResponses,
 	clearQuestionResponses,
 	clearResponseByIdent,
 } from "store/responses/responsesSlice";
@@ -149,6 +151,8 @@ const loadAgePage = (mode: ModeType): void => {
 
 	// nullify question responses
 	store.dispatch(clearQuestionResponses());
+	store.dispatch(clearHbscResponses());
+	store.dispatch(clearGshsResponses());
 	store.dispatch(clearExtroResponses());
 	store.dispatch(clearFeedbackResponses());
 };
@@ -441,9 +445,9 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 	newPages = { ...newPages, ...pages };
 	newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
 
-	// console.log("************************************************");
-	// console.log("final pages: ", newPages);
-	// console.log("final sectionTotal: ", newSectionTotalPages);
+	console.log("************************************************");
+	console.log("final pages: ", newPages);
+	console.log("final sectionTotal: ", newSectionTotalPages);
 
 	store.dispatch(setPage(newPages));
 	for (const [key, value] of Object.entries(newSectionTotalPages)) {
