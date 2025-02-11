@@ -20,16 +20,14 @@ import {
 	getIsLoading,
 	getLanguage,
 	getMode,
-	getPhrases,
 	nextPage,
 	setIsLoading,
 	setLanguage,
-	setSectionTitles,
 	skipPage,
 } from "store/settings/settingsSlice";
 import { loadPhrases, loadSectionTitles } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
-import { translateQuestionLabel, translateSectionHeading } from "utils/translate.utils";
+import { translateQuestionLabel } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenKid from "./LoadingScreenKid";
@@ -39,9 +37,12 @@ import { loadPages } from "utils/load_pages.utils";
 import {
 	clearExtroResponses,
 	clearFeedbackResponses,
+	clearGshsResponses,
+	clearHbscResponses,
 	clearQuestionResponses,
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
+import { changeMode } from "utils/mode.utils";
 
 const LanguageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -73,8 +74,11 @@ const LanguageKid = (): React.ReactElement => {
 		loadPhrases();
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
+		changeMode(mode, language);
 		dispatch(skipPage(1));
 		dispatch(clearQuestionResponses());
+		dispatch(clearHbscResponses());
+		dispatch(clearGshsResponses());
 		dispatch(clearExtroResponses());
 		dispatch(clearFeedbackResponses());
 		dispatch(setIsLoading(false));

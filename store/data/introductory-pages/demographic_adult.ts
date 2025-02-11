@@ -59,6 +59,55 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old is your child?",
+			kid_label: "How old is your child?",
+			adult_label: "How old is your child?",
+			choices: [
+				{
+					label: "8 years old",
+					value: "8",
+				},
+				{
+					label: "9 years old",
+					value: "9",
+				},
+				{
+					label: "10 years old",
+					value: "10",
+				},
+				{
+					label: "11 years old",
+					value: "11",
+				},
+				{
+					label: "12 years old",
+					value: "12",
+				},
+				{
+					label: "13 years old",
+					value: "13",
+				},
+				{
+					label: "14 years old",
+					value: "14",
+				},
+				{
+					label: "15 years old",
+					value: "15",
+				},
+				{
+					label: "16 years old",
+					value: "16",
+				},
+				{
+					label: "17 years old",
+					value: "17",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionDropdown,
 			heading: "Vítejte",
@@ -356,9 +405,9 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionDropdown,
 			heading: "आपका स्वागत है",
-			label: "आपके बच्चे की उम्र क्या है?",
-			kid_label: "आपके बच्चे की उम्र क्या है?",
-			adult_label: "आपके बच्चे की उम्र क्या है?",
+			label: "आपके बच्चे की उम्र कितनी है?",
+			kid_label: "आपके बच्चे की उम्र कितनी है?",
+			adult_label: "आपके बच्चे की उम्र कितनी है?",
 			choices: [
 				{
 					label: "8 साल",

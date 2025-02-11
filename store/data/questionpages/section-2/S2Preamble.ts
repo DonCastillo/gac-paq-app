@@ -17,6 +17,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"en-NZ": {
+			heading: "Household Chores",
+			subheading: "Section 2",
+			description: {
+				kid: "This section is about chores or jobs that require you to be active. Examples of chores or jobs include housework and outdoor jobs like gardening, lawn mowing and other related jobs.",
+				adult:
+					"This section is about chores or jobs that require you to be active. Examples of chores or jobs include housework, and outdoor jobs like gardening, lawn mowing and other related jobs.",
+			},
+		},
 		"cz-CR": {
 			heading: "Domácí povinnosti",
 			subheading: "Sekce 2",
@@ -136,7 +145,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "家务",
-			subheading: "第2部分",
+			subheading: "第二部分",
 			description: {
 				kid: "本部分是关于你做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
 				adult:

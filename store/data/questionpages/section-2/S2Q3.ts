@@ -38,6 +38,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 10",
+			label:
+				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label:
+				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label:
+				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			choices: [
+				{
+					label: "15 minutes or less per day",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minutes per day",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minutes per day",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Over 60 minutes per day",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 10",
@@ -221,7 +249,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				"पिछले सप्ताह के दौरान जिन दिनों आपके बच्चे ने घरेलू कामकाज किए, उन्होंने पूरे दिन में घरेलू काम करने में कितना समय बिताया?",
 			choices: [
 				{
-					label: "रति दिन 15 मिनट या उससे कम",
+					label: "प्रतिदिन 15 मिनट या उससे कम",
 					value: "15 minutes or less per day",
 				},
 				{

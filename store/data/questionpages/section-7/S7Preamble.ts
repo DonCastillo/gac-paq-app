@@ -17,6 +17,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"en-NZ": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+			description: {
+				kid: "This section is about the amount of time that you spend outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in your free time. This also includes the time when you are outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+				adult:
+					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes any time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
+			},
+		},
 		"cz-CR": {
 			heading: "Venkovní aktivity",
 			subheading: "Sekce 7",
@@ -136,7 +145,7 @@ const S7Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "室外",
-			subheading: "第7部分",
+			subheading: "第七部分",
 			description: {
 				kid: "本部分是关于你的室外活动的一些问题，包括学校、家务、工作和志愿服务、交通、以及空闲时间的活动，也包括在室外坐着不动的活动(如，野餐，阅读，以及坐着烤火)。",
 				adult:

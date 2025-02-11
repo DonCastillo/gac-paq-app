@@ -17,6 +17,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"en-NZ": {
+			heading: "Play or Free Time",
+			subheading: "Section 6",
+			description: {
+				kid: "This section includes all the physical activity that you do during your play or free time. This does not include organised activities or break times in school. For the next questions, do not include the activities that you just told us about.",
+				adult:
+					"This section includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
+			},
+		},
 		"cz-CR": {
 			heading: "Hra a volný čas",
 			subheading: "Sekce 6",
@@ -136,7 +145,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
-			subheading: "第6部分",
+			subheading: "第六部分",
 			description: {
 				kid: "本部分是关于你在校外玩耍或空闲时间进行的所有身体活动的一些问题，不包括有组织的活动或学校休息时间的活动。[应用中会展示不同国家的示例]\n\n对于接下来的问题, 不要包括E部分的活动。",
 				adult:

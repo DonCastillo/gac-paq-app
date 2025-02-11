@@ -36,6 +36,32 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 17c - Walking",
+			label: "On a normal day, how much time did you walk to places other than school or work?",
+			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
+			adult_label:
+				"On a normal day, how much time did your child walk to places other than school or work?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 17c - Chůze",
@@ -199,13 +225,13 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
-			heading: "प्रश्न १७c - हिँड्नु",
+			heading: "प्रश्न १७c - पैदल चलना",
 			label:
-				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय पैदल गए?",
+				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय पैदल चलकर गए?",
 			kid_label:
-				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय पैदल गए?",
+				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय पैदल चलकर गए?",
 			adult_label:
-				"एक सामान्य दिन में, आपका बच्चा स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय पैदल गया?",
+				"एक सामान्य दिन में, आपका बच्चा स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय पैदल चलकर गया?",
 			choices: [
 				{
 					label: "10 मिनट या उससे कम",

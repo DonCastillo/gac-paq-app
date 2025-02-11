@@ -24,7 +24,14 @@ const QuestionSatisfactionImage = ({
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
-	const numColumn = device.isTablet ? 5 : 3;
+	const numColumn = device.isTablet ? 3 : 3;
+	const dissatisfiedOptions = options.filter(
+		(option) => option.image_ident === "dissatisfied" || option.image_ident === "very_dissatisfied",
+	);
+	const neutralOptions = options.filter((option) => option.image_ident === "neutral");
+	const satisfiedOptions = options.filter(
+		(option) => option.image_ident === "satisfied" || option.image_ident === "very_satisfied",
+	);
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -63,9 +70,9 @@ const QuestionSatisfactionImage = ({
 					style={{
 						width: "100%",
 						height: "100%",
-						maxWidth: horizontalScale(250, device.screenWidth) / numColumn,
-						maxHeight: horizontalScale(250, device.screenWidth) / numColumn,
-						aspectRatio: 1 / 1,
+						maxWidth: horizontalScale(device.isTablet ? 250 : 275, device.screenWidth) / numColumn,
+						maxHeight: horizontalScale(device.isTablet ? 250 : 275, device.screenWidth) / numColumn,
+						aspectRatio: 1,
 					}}
 				/>
 			);
@@ -103,16 +110,38 @@ const QuestionSatisfactionImage = ({
 
 	return (
 		<SafeAreaView style={styles.container}>
-			<View style={{}}>
+			<View style={{ width: "100%" }}>
 				<FlatList
-					style={{ width: "100%", flex: 1 }}
+					style={{}}
 					contentContainerStyle={{
 						alignItems: "center",
 					}}
-					data={[...options]}
+					data={[...dissatisfiedOptions]}
 					renderItem={({ item }) => blockRenderOption(item)}
 					numColumns={numColumn}
-					key={numColumn}
+					key={"dissatisfied" + numColumn}
+					bounces={false}
+				/>
+				<FlatList
+					style={{}}
+					contentContainerStyle={{
+						alignItems: "center",
+					}}
+					data={[...neutralOptions]}
+					renderItem={({ item }) => blockRenderOption(item)}
+					numColumns={numColumn}
+					key={"neutral" + numColumn}
+					bounces={false}
+				/>
+				<FlatList
+					style={{}}
+					contentContainerStyle={{
+						alignItems: "center",
+					}}
+					data={[...satisfiedOptions]}
+					renderItem={({ item }) => blockRenderOption(item)}
+					numColumns={numColumn}
+					key={"satisfied" + numColumn}
 					bounces={false}
 				/>
 			</View>
@@ -134,9 +163,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		maxHeight: "100%",
-		overflow: "hidden",
-		justifyContent: "center",
-		alignItems: "center",
 		width: "100%",
 		marginTop: 20,
 	},

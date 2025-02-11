@@ -47,6 +47,43 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 9",
+			label: "How many days did you do chores during the past week?",
+			kid_label: "How many days did you do chores during the past week?",
+			adult_label: "How many days did your child do chores during the past week?",
+			choices: [
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 9",
@@ -542,31 +579,31 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			adult_label: "在过去一周里，您的孩子有几天在做家务活？",
 			choices: [
 				{
-					label: "1 天",
+					label: "1天",
 					value: "1",
 				},
 				{
-					label: "2 天",
+					label: "2天",
 					value: "2",
 				},
 				{
-					label: "3 天",
+					label: "3天",
 					value: "3",
 				},
 				{
-					label: "4 天",
+					label: "4天",
 					value: "4",
 				},
 				{
-					label: "5 天",
+					label: "5天",
 					value: "5",
 				},
 				{
-					label: "6 天",
+					label: "6天",
 					value: "6",
 				},
 				{
-					label: "7 天",
+					label: "7天",
 					value: "7",
 				},
 			],

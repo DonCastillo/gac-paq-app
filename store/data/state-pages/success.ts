@@ -12,6 +12,11 @@ const SuccessPage: LangPagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"en-NZ": {
+			heading: "Success!",
+			description:
+				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
+		},
 		"cz-CR": {
 			heading: "Úspěch!",
 			description:
@@ -77,8 +82,8 @@ const SuccessPage: LangPagePayloadInterface = {
 				"เก่งมาก! คุณตอบแบบสอบถามเสร็จแล้ว คำตอบของคุณถูกส่งไปเป็นที่เรียบร้อย\n\nขอขอบคุณที่เข้าร่วมการตอบแบบสอบถามครั้งนี้",
 		},
 		"zh-CN": {
-			heading: "成功!",
-			description: "做得很好。您已经完成问卷。您的回答已成功提交。\n\n感谢您的帮助!",
+			heading: "问卷已成功提交!",
+			description: "非常棒，您已经完成了问卷。\n\n您的回答已成功提交，谢谢您！",
 		},
 		"es-MX": {
 			heading: "Éxito!",

@@ -10,6 +10,10 @@ const S4Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only three more to go!",
 		},
+		"en-NZ": {
+			heading: "Section Complete!",
+			subheading: "Only three more to go!",
+		},
 		"cz-CR": {
 			heading: "Sekce dokončena!",
 			subheading: "Zbývají už jen tři!",
@@ -63,8 +67,8 @@ const S4Extro: LangExtroPayloadInterface = {
 			subheading: "เหลืออีกแค่ 3 ส่วน!",
 		},
 		"zh-CN": {
-			heading: "此部分完成",
-			subheading: "还有3项未完成",
+			heading: "本部分完成！",
+			subheading: "只剩下三部分了！",
 		},
 		"es-ES": {
 			heading: "Sección Completa",

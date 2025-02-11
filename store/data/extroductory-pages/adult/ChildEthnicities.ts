@@ -47,6 +47,51 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Question 26",
+			label: "What is your child's ethnicity?",
+			kid_label: "What is your child's ethnicity?",
+			adult_label: "What is your child's ethnicity?",
+			choices: [
+				{
+					label: "NZ European",
+					value: "NZ European",
+				},
+				{
+					label: "Māori",
+					value: "Māori",
+				},
+				{
+					label: "Samoan",
+					value: "Samoan",
+				},
+				{
+					label: "Tongan",
+					value: "Tongan",
+				},
+				{
+					label: "Niuean",
+					value: "Niuean",
+				},
+				{
+					label: "Chinese",
+					value: "Chinese",
+				},
+				{
+					label: "Indian",
+					value: "Indian",
+				},
+				{
+					label: "Other, e.g. Dutch, Japanese, Tokelauan",
+					value: "Other",
+				},
+				{
+					label: "Prefer not to say",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionCheckbox,
 			heading: "Otázka 26",
@@ -437,7 +482,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 			],
 		},
 		"zh-CN": {
-			type: Question.QuestionCheckbox,
+			type: Question.QuestionRadio,
 			heading: "问题 26",
 			label: "您孩子的民族是?",
 			kid_label: "您孩子的民族是?",

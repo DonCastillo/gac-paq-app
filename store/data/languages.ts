@@ -92,13 +92,13 @@ const Languages: LanguageInterface[] = [
 		flag_code: "NP",
 		lang_code: "ne-NP",
 	},
-	// {
-	// 	name: "English",
-	// 	country_name: "New Zealand",
-	// 	local_name: "English",
-	// 	flag_code: "NZ",
-	// 	lang_code: "en-NZ",
-	// },
+	{
+		name: "English",
+		country_name: "New Zealand",
+		local_name: "English",
+		flag_code: "NZ",
+		lang_code: "en-NZ",
+	},
 	{
 		name: "English",
 		country_name: "Nigeria",

@@ -10,6 +10,10 @@ const S1Intro: LangSectionPayloadInterface = {
 			heading: "School",
 			subheading: "Section 1",
 		},
+		"en-NZ": {
+			heading: "School",
+			subheading: "Section 1",
+		},
 		"cz-CR": {
 			heading: "Škola",
 			subheading: "Sekce 1",
@@ -64,7 +68,7 @@ const S1Intro: LangSectionPayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "学校",
-			subheading: "第1部分",
+			subheading: "第一部分",
 		},
 		"es-ES": {
 			heading: "Escuela o colegio",

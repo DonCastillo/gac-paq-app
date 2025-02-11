@@ -17,6 +17,15 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"en-NZ": {
+			heading: "Organized Activities",
+			subheading: "Section 5",
+			description: {
+				kid: "This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport or extracurricular activities). They also include any sport and lessons for activities like swimming, gymnastics, dance, and martial arts outside of school.",
+				adult:
+					"This section is about physically active organised activities and sports. They include activities that your child did outside the school day (for example, some schools have sports or extracurricular activities). They also include any sports and lessons for activities like swimming, gymnastics, dance, and martial arts outside of school.",
+			},
+		},
 		"cz-CR": {
 			heading: "Organizované činnosti",
 			subheading: "Sekce 5",
@@ -136,7 +145,7 @@ const S5Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "有组织的活动",
-			subheading: "第5部分",
+			subheading: "第五部分",
 			description: {
 				kid: "本部分是关于课外有组织的身体活动和体育运动的一些问题，包括你课外参加的有组织的活动(如学校的运动队或体育社团、以及课外活动)，还包括任何校外的体育俱乐部、培训班课程的活动，如羽毛球、游泳、舞蹈和跆拳道等。",
 				adult:

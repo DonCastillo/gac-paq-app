@@ -10,6 +10,10 @@ const S7Intro: LangSectionPayloadInterface = {
 			heading: "Outdoors",
 			subheading: "Section 7",
 		},
+		"en-NZ": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+		},
 		"cz-CR": {
 			heading: "Venkovní aktivity",
 			subheading: "Sekce 7",
@@ -64,7 +68,7 @@ const S7Intro: LangSectionPayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "室外",
-			subheading: "第7部分",
+			subheading: "第七部分",
 		},
 		"es-ES": {
 			heading: "Al aire libre",

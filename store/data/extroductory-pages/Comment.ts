@@ -23,6 +23,19 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"en-NZ": {
+			type: Question.QuestionTextarea,
+			heading: "Feedback",
+			placeholder: "Enter your comment here",
+			label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label:
+				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_sublabel: "If yes, please write them in the box below",
+			adult_sublabel: "If yes, please write them in the box below",
+		},
 		"cz-CR": {
 			type: Question.QuestionTextarea,
 			heading: "Zpětná vazba",
@@ -186,7 +199,7 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionTextarea,
 			heading: "反馈",
-			placeholder: "请在此输入您的意见",
+			placeholder: "请填写您的评论或建议",
 			label: "您对本应用或我们的问题有评论或建议吗?",
 			kid_label: "您对本应用或我们的问题有评论或建议吗?",
 			adult_label: "您对本应用或我们的问题有评论或建议吗?",

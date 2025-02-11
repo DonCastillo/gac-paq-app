@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "Who's taking this questionnaire?",
+			kid_label: "Who's taking this questionnaire?",
+			adult_label: "Who's taking this questionnaire?",
+			choices: [
+				{
+					label: "Child",
+					value: "child",
+					sublabel: {
+						kid: "8 to 11 years old",
+						adult: "8 to 11 years old",
+					},
+				},
+				{
+					label: "Adolescent",
+					value: "teen",
+					sublabel: {
+						kid: "12 to 17 years old",
+						adult: "12 to 17 years old",
+					},
+				},
+				{
+					label: "Parent",
+					value: "adult",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionDropdown,
 			heading: "Vítejte",
@@ -416,7 +445,7 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionDropdown,
-			heading: "欢迎!",
+			heading: "欢迎！",
 			label: "谁在填写本问卷？",
 			kid_label: "谁在填写本问卷？",
 			adult_label: "谁在填写本问卷？",
@@ -425,16 +454,16 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 					label: "儿童",
 					value: "child",
 					sublabel: {
-						kid: "8到11岁",
-						adult: "8到11岁",
+						kid: "8-11岁",
+						adult: "8-11岁",
 					},
 				},
 				{
 					label: "青少年",
 					value: "teen",
 					sublabel: {
-						kid: "12到17岁",
-						adult: "12到17岁",
+						kid: "12-17岁",
+						adult: "12-17岁",
 					},
 				},
 				{

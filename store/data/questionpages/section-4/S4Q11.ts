@@ -37,6 +37,33 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 17c - Wheeling",
+			label: "On a normal day, how much time did you wheel to places other than school or work?",
+			kid_label:
+				"On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label:
+				"On a normal day, how much time did your child wheel to places other than school or work?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 17c - Vlastní pohon na kolečkách",
@@ -208,7 +235,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"एक सामान्य दिन में, आप स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गए?",
 			adult_label:
-				"एक सामान्य दिन में, आपके बच्चे ने स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके बिताया?",
+				"एक सामान्य दिन में, आपका बच्चा स्कूल या नौकरी के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गया?",
 			choices: [
 				{
 					label: "10 मिनट या उससे कम",

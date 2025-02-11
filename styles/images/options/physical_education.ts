@@ -11,6 +11,18 @@ const PhysicalEducationOptions = {
 			medium_or_hard_effort: require("assets/images/teen/AE/options/physical_education/medium_or_hard_effort.webp"),
 		},
 	},
+	CN: {
+		kid: {
+			not_moving: require("assets/images/kid/CN/options/physical_education/not_moving.webp"),
+			easy_effort: require("assets/images/kid/CN/options/physical_education/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/kid/CN/options/physical_education/medium_or_hard_effort.webp"),
+		},
+		teen: {
+			not_moving: require("assets/images/teen/CN/options/physical_education/not_moving.webp"),
+			easy_effort: require("assets/images/teen/CN/options/physical_education/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/CN/options/physical_education/medium_or_hard_effort.webp"),
+		},
+	},
 	BR: {
 		kid: {
 			not_moving: require("assets/images/kid/BR/options/physical_education/not_moving.webp"),

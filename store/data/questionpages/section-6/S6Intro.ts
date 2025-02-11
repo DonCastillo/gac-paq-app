@@ -10,6 +10,10 @@ const S6Intro: LangSectionPayloadInterface = {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
 		},
+		"en-NZ": {
+			heading: "Play or Free Time",
+			subheading: "Section 6",
+		},
 		"cz-CR": {
 			heading: "Hra a volný čas",
 			subheading: "Sekce 6",
@@ -64,7 +68,7 @@ const S6Intro: LangSectionPayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "自由活动或玩耍的时间",
-			subheading: "第6部分",
+			subheading: "第六部分",
 		},
 		"es-ES": {
 			heading: "Juego o tiempo libre",

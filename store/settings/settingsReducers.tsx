@@ -9,7 +9,6 @@ import type {
 	SetDirectusFuncType,
 	SetColorThemeFuncType,
 	SetPhrasesFuncType,
-	SetSectionTitlesFuncType,
 	SkipPageFuncType,
 	AddPageFuncType,
 	SetPageFuncType,
@@ -23,6 +22,7 @@ import type {
 	SetEnableNarrationState,
 	DisableNarrationAutoplayFuncType,
 	ResetAllNarrationAutoplayFuncType,
+	AddSectionTitleFuncType,
 } from "interface/function.type";
 import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
@@ -68,8 +68,13 @@ const addNarration: AddNarrationsFuncType = (state, action) => {
 	state.narrations = { ...state.narrations, [ident]: audio_id };
 };
 
-const setSectionTitles: SetSectionTitlesFuncType = (state, action) => {
-	state.sectionTitles = action.payload;
+const addSectionTitle: AddSectionTitleFuncType = (state, action) => {
+	const { sectionNumber, sectionTitle } = action.payload;
+	state.sectionTitles[sectionNumber] = sectionTitle;
+};
+
+const resetSectionTitles: SettingsFuncType = (state) => {
+	state.sectionTitles = {};
 };
 
 const setIsConnected: SetIsConnectedFuncType = (state, action) => {
@@ -240,7 +245,8 @@ export default {
 	setPhrases,
 	setNarrations,
 	addNarration,
-	setSectionTitles,
+	addSectionTitle,
+	resetSectionTitles,
 	addSectionTotalPages,
 	setKeyboardState,
 	removeExtroPages,

@@ -17,6 +17,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"en-NZ": {
+			heading: "School",
+			subheading: "Section 1",
+			description: {
+				kid: "This section is about what you do during normal school hours, for example during physical education (PE) classes, interval, and lunch time.",
+				adult:
+					"This section is about what your child does during normal school hours, for example during physical education classes, interval, and lunch time.",
+			},
+		},
 		"cz-CR": {
 			heading: "Škola",
 			subheading: "Sekce 1",
@@ -136,7 +145,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "学校",
-			subheading: "第1部分",
+			subheading: "第一部分",
 			description: {
 				kid: "本部分是关于你上学期间身体活动的一些问题，如在上体育课、课间休息和午餐时。",
 				adult: "本部分是关于您的孩子在上学期间身体活动的一些问题，如在上体育课、课间休息和午餐时。",

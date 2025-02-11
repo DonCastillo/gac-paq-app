@@ -10,6 +10,10 @@ const S5Intro: LangSectionPayloadInterface = {
 			heading: "Organized Activities",
 			subheading: "Section 5",
 		},
+		"en-NZ": {
+			heading: "Organized Activities",
+			subheading: "Section 5",
+		},
 		"cz-CR": {
 			heading: "Organizované činnosti",
 			subheading: "Sekce 5",
@@ -64,7 +68,7 @@ const S5Intro: LangSectionPayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "有组织的活动",
-			subheading: "第5部分",
+			subheading: "第五部分",
 		},
 		"es-ES": {
 			heading: "Actividades organizadas",

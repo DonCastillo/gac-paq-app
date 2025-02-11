@@ -17,6 +17,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"en-NZ": {
+			heading: "Work",
+			subheading: "Section 3",
+			description: {
+				kid: "This section is about work or volunteering away from your home – different from chores. Working would be when you make money for you or your family. Volunteering would be helping others or an organization for free (no money). Work and volunteering can take place at location such as a store, farm, restaurant, charity etc. Please answer both together.",
+				adult:
+					"This section is about work or volunteering away from your home – different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organisation for free (no money). Please answer both together.",
+			},
+		},
 		"cz-CR": {
 			heading: "Práce",
 			subheading: "Sekce 3",
@@ -136,7 +145,7 @@ const S3Preamble: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "工作",
-			subheading: "第3部分",
+			subheading: "第三部分",
 			description: {
 				kid: "本部分是关于你在家之外所做的工作（非家务）或志愿服务的一些问题。工作是指为自己或家人赚钱的活动，志愿服务是指无偿帮助他人或组织(没有收入)的活动。工作和志愿服务可以在商店、农场、餐馆等地方进行。请将工作和志愿服务的情况合并起来回答。",
 				adult:

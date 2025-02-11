@@ -41,5 +41,9 @@ export type ResponsesFuncType = (state: Record<string, ResponseInterface>) => vo
 /** Questions Slice Function Signature */
 export type SetLanguageOptionFuncType = (state: any, action: PayloadAction<LanguageInterface[]>) => void;
 export type SetIntroductoryPagesFuncType = (state: any, action: PayloadAction<IntroductoryPagesType>) => void;
-export type AddSectionPageFuncType = (state: any, action: PayloadAction<SectionPayloadInterface>) => void;
+export type AddSectionPageFuncType = (state: any, action: PayloadAction<{sectionNumber: number; page: SectionPayloadInterface}>) => void;
+export type AddSectionTitleFuncType = (state: any, action: PayloadAction<{sectionNumber: number; sectionTitle: string}>) => void;
 export type QuestionsFuncType = (state: any) => void; 
+
+export type loadPagesFuncType = (newPages: Record<number, PageIndexInterface>) => 
+    { pages: Record<number, PageIndexInterface>; sectionTotal: Record<number, number> };

@@ -28,6 +28,7 @@ import {
 import { resetResponses } from "store/responses/responsesSlice";
 import { changeMode } from "utils/mode.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk";
+import { loadPhrases } from "utils/load.utils";
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,7 @@ const AppWrapper = (): React.ReactElement => {
 	const settings = useSelector((state: any) => state.settings);
 	const responses = useSelector((state: any) => state.responses);
 	const questions = useSelector((state: any) => state.questions);
+	// console.log("app wrapper: ", language)
 
 	// console.log("expo admin urlL: ", process.env.EXPO_PUBLIC_ADMIN_API_URL);
 	// console.log("expo token: ", process.env.EXPO_PUBLIC_ADMIN_TOKEN);
@@ -95,8 +97,9 @@ const AppWrapper = (): React.ReactElement => {
 			await dispatch(storeQuestionData());
 			await dispatch(loadQuestionData(language));
 			dispatch(resetResponses());
+			loadPhrases();
 			loadPages();
-			changeMode(mode);
+			changeMode(mode, language);
 			dispatch(setIsLoading(false));
 		};
 		loadApp()

@@ -31,6 +31,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Question 24",
+			label: "What is your child's sex?",
+			kid_label: "What is your child's sex?",
+			adult_label: "What is your child's sex?",
+			choices: [
+				{
+					label: "Female",
+					value: "Female",
+				},
+				{
+					label: "Male",
+					value: "Male",
+				},
+				{
+					label: "Prefer not to answer",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 24",

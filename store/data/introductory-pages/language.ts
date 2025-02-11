@@ -15,6 +15,13 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
 		},
+		"en-NZ": {
+			type: Question.QuestionLanguage,
+			heading: "Welcome!",
+			label: "What language do you speak & Where are you?",
+			kid_label: "What language do you speak & Where are you?",
+			adult_label: "What language do you speak & Where are you?",
+		},
 		"cz-CR": {
 			type: Question.QuestionLanguage,
 			heading: "Vítejte",
@@ -108,7 +115,7 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionLanguage,
-			heading: "欢迎!",
+			heading: "欢迎！",
 			label: "您讲哪种语言？您在哪里?",
 			kid_label: "您讲哪种语言？您在哪里?",
 			adult_label: "您讲哪种语言？您在哪里?",

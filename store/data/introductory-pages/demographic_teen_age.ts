@@ -43,6 +43,39 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-NZ": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "How old are you?",
+			kid_label: "How old are you?",
+			adult_label: "How old are you?",
+			choices: [
+				{
+					label: "12 years old",
+					value: "12",
+				},
+				{
+					label: "13 years old",
+					value: "13",
+				},
+				{
+					label: "14 years old",
+					value: "14",
+				},
+				{
+					label: "15 years old",
+					value: "15",
+				},
+				{
+					label: "16 years old",
+					value: "16",
+				},
+				{
+					label: "17 years old",
+					value: "17",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionDropdown,
 			heading: "Vítejte",
@@ -244,9 +277,9 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionDropdown,
 			heading: "आपका स्वागत है",
-			label: "आपकी उम्र क्या है?",
-			kid_label: "आपकी उम्र क्या है?",
-			adult_label: "आपकी उम्र क्या है?",
+			label: "आपकी उम्र कितनी है?",
+			kid_label: "आपकी उम्र कितनी है?",
+			adult_label: "आपकी उम्र कितनी है?",
 			choices: [
 				{
 					label: "12 साल",
@@ -474,7 +507,7 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionDropdown,
-			heading: "欢迎!",
+			heading: "欢迎！",
 			label: "你多大了?",
 			kid_label: "你多大了?",
 			adult_label: "你多大了?",

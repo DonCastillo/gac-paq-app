@@ -30,7 +30,7 @@ import type State from "constants/state.enum";
 import StatusBackground from "styles/images/background/status";
 
 const getImageBackground = (): any | null => {
-	const blackListLanguages = ["sv-SE", "zh-CN", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "fr-CA", "en-NZ"];
 	const settings = store.getState().settings;
 	const ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";
@@ -57,10 +57,12 @@ const getImageBackground = (): any | null => {
 		region = "CA";
 	}
 
+	// background for the intro section
 	if (section === Section.Intro) {
 		return GenericBackground[region][platform][ident];
 	}
 
+	// background for the question section
 	if (section === Section.Question) {
 		if (screen === Screen.IntroQuestion) {
 			return IntroBackground[region][ident.split("_intro")[0]][mode][platform];
@@ -77,17 +79,68 @@ const getImageBackground = (): any | null => {
 		}
 	}
 
+	// background for the hbsc section
+	if (section === Section.Hbsc) {
+		if (screen === Screen.IntroQuestion) {
+			return GenericBackground[region][platform].language_location;
+		}
+		if (screen === Screen.Preamble) {
+			if (mode === Mode.Teen) {
+				return GenericBackground[region][platform].language_location;
+			}
+		}
+		if (screen === Screen.ExtroQuestion) {
+			if (mode === Mode.Teen) {
+				return GenericBackground[region][platform].language_location;
+			}
+		}
+	}
+
+	// background for the gshs section
+	if (section === Section.Gshs) {
+		if (screen === Screen.IntroQuestion) {
+			return GenericBackground[region][platform].mode;
+		}
+		if (screen === Screen.Preamble) {
+			if (mode === Mode.Teen) {
+				return GenericBackground[region][platform].mode;
+			}
+		}
+		if (screen === Screen.ExtroQuestion) {
+			if (mode === Mode.Teen) {
+				return GenericBackground[region][platform].mode;
+			}
+		}
+	}
+
+	// background for the extro / demographic section
 	if (section === Section.Extro) {
 		if (screen === Screen.IntroQuestion) {
 			return IntroBackground[region].extro[mode][platform];
 		}
+		if (screen === Screen.ExtroQuestion) {
+			return IntroBackground[region].extro[mode][platform];
+		}
 	}
 
+	// background for the feedback section
 	// feedback extro only applies on teen/parent
 	if (section === Section.Feedback) {
+		if (screen === Screen.IntroQuestion) {
+			return IntroBackground[region].extro[mode][platform];
+		}
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
 				return IntroBackground[region].extro[mode][platform];
+			}
+		}
+	}
+
+	// background for the app extro section
+	if (section === Section.AppExtro) {
+		if (screen === Screen.ExtroQuestion) {
+			if (mode === Mode.Teen) {
+				return GenericBackground[region][platform].participant_id;
 			}
 		}
 	}
@@ -96,7 +149,7 @@ const getImageBackground = (): any | null => {
 };
 
 const getImageBackgroundStatus = (state: State): any | null => {
-	const blackListLanguages = ["sv-SE", "zh-CN", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "fr-CA", "en-NZ"];
 	const settings = store.getState().settings;
 	let language = settings.language ?? "en-CA";
 	let region = language.split("-")[1].toUpperCase();
@@ -123,7 +176,7 @@ const getImageBackgroundStatus = (state: State): any | null => {
 };
 
 const getOptionImage = (image_ident: string): any | null => {
-	const blackListLanguages = ["sv-SE", "zh-CN", "fr-CA"];
+	const blackListLanguages = ["sv-SE", "fr-CA", "en-NZ"];
 	const settings = store.getState().settings;
 	const page_ident = settings.currentPage.page.ident;
 	let language = settings.language ?? "en-CA";

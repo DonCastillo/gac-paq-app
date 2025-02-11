@@ -30,6 +30,12 @@ const getSectionType = (sectionType: string): Section => {
 		return Section.Extro;
 	} else if (sectionType === "feedback") {
 		return Section.Feedback;
+	} else if (sectionType === "hbsc") {
+		return Section.Hbsc;
+	} else if (sectionType === "gshs") {
+		return Section.Gshs;
+	} else if (sectionType === "appExtro") {
+		return Section.AppExtro;
 	} else {
 		return Section.Question;
 	}
