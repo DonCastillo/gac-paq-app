@@ -12,6 +12,7 @@ import {
 import { loadPages } from "utils/load_pages.utils";
 import { changeMode } from "utils/mode.utils";
 import { resetResponses } from "store/responses/responsesSlice";
+import { loadPhrases } from "utils/load.utils";
 
 const GenericSplash = (): React.ReactElement => {
 	const navigation = useNavigation();
@@ -25,6 +26,7 @@ const GenericSplash = (): React.ReactElement => {
 		await dispatch(storeQuestionData());
 		await dispatch(loadQuestionData(language));
 		dispatch(resetResponses());
+		loadPhrases();
 		loadPages();
 		changeMode(mode, language);
 		dispatch(skipPage(1));

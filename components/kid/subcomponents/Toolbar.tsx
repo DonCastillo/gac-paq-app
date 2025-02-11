@@ -53,7 +53,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 		} else {
 			setTitle("");
 		}
-	}, [currentPageNumber]);
+	}, [currentPageNumber, sectionTitles]);
 
 	// load source file
 	useLayoutEffect(() => {
