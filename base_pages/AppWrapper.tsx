@@ -28,6 +28,7 @@ import {
 import { resetResponses } from "store/responses/responsesSlice";
 import { changeMode } from "utils/mode.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk";
+import { loadPhrases } from "utils/load.utils";
 
 const Stack = createNativeStackNavigator();
 
@@ -96,6 +97,7 @@ const AppWrapper = (): React.ReactElement => {
 			await dispatch(storeQuestionData());
 			await dispatch(loadQuestionData(language));
 			dispatch(resetResponses());
+			loadPhrases();
 			loadPages();
 			changeMode(mode, language);
 			dispatch(setIsLoading(false));
