@@ -28,6 +28,7 @@ import {
 import { resetResponses } from "store/responses/responsesSlice";
 import { changeMode } from "utils/mode.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk";
+import { loadPhrases } from "utils/load.utils";
 
 const Stack = createNativeStackNavigator();
 
