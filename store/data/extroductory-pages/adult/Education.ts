@@ -95,15 +95,15 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "Střední škola s výučním listem",
-					value: "Secondary or high school",
+					value: "Vocational school / Apprenticeship program",
 				},
 				{
 					label: "Střední škola s maturitou",
-					value: "Vocational/college education",
+					value: "Secondary school with A-levels / High school diploma",
 				},
 				{
 					label: "Vyšší odborná škola",
-					value: "Higher vocational school",
+					value: "Post-secondary vocational education",
 				},
 				{
 					label: "Vysoká škola",
