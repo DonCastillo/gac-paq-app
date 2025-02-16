@@ -113,7 +113,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"es-CO": {
 			type: Question.QuestionRadio,
-			heading: "Preunta 30",
+			heading: "Pregunta 30",
 			label:
 				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			kid_label:
@@ -556,7 +556,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Preunta 30",
+			heading: "Pregunta 30",
 			label:
 				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			kid_label:
@@ -592,7 +592,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Preunta 30",
+			heading: "Pregunta 30",
 			label:
 				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			kid_label:
