@@ -54,6 +54,54 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 31",
+			label:
+				"En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
+			kid_label:
+				"En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
+			adult_label:
+				"En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
+			kid_sublabel:
+				"Te preguntamos por el tiempo total; es decir, no es necesario que hayan sido 60 minutos seguidos, puedes sumar los distintos momentos del día en que realizabas algún tipo de actividad física.",
+			adult_sublabel:
+				"Te preguntamos por el tiempo total; es decir, no es necesario que hayan sido 60 minutos seguidos, puedes sumar los distintos momentos del día en que realizabas algún tipo de actividad física.",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 31",

@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 32",
+			label:
+				"Fuera del horario escolar: ¿con qué frecuencia realizas alguna actividad física en tu tiempo libre que haga que llegues a sudar o te falte el aliento?",
+			kid_label:
+				"Fuera del horario escolar: ¿con qué frecuencia realizas alguna actividad física en tu tiempo libre que haga que llegues a sudar o te falte el aliento?",
+			adult_label:
+				"Fuera del horario escolar: ¿con qué frecuencia realizas alguna actividad física en tu tiempo libre que haga que llegues a sudar o te falte el aliento?",
+			choices: [
+				{
+					label: "Todos los días",
+					value: "Every day",
+				},
+				{
+					label: "De 4 a 6 veces por semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 veces por semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 veces por semana",
+					value: "2 times a week",
+				},
+				{
+					label: "1 vez a la semana",
+					value: "Once a week",
+				},
+				{
+					label: "1 vez al mes",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de 1 vez al mes",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 32",
