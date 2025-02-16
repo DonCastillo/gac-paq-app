@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 32",
+			label:
+				"En dehors des heures de classe, à quelle fréquence fais-tu normalement de l’exercice, dans tes temps libres, au point de transpirer ou d’être essoufflé(e)?",
+			kid_label:
+				"En dehors des heures de classe, à quelle fréquence fais-tu normalement de l’exercice, dans tes temps libres, au point de transpirer ou d’être essoufflé(e)?",
+			adult_label:
+				"En dehors des heures de classe, à quelle fréquence fais-tu normalement de l’exercice, dans tes temps libres, au point de transpirer ou d’être essoufflé(e)?",
+			choices: [
+				{
+					label: "Tous les jours",
+					value: "Every day",
+				},
+				{
+					label: "4 à 6 fois par semaine",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 fois par semaine",
+					value: "3 times a week",
+				},
+				{
+					label: "2 fois par semaine",
+					value: "2 times a week",
+				},
+				{
+					label: "Une fois par semaine",
+					value: "Once a week",
+				},
+				{
+					label: "Une fois par mois",
+					value: "Once a month",
+				},
+				{
+					label: "Moins d’une fois par mois",
+					value: "Less than once a month",
+				},
+				{
+					label: "Jamais",
+					value: "Never",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 32",

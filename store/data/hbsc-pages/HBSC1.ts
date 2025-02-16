@@ -54,6 +54,53 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 31",
+			label:
+				"Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
+			kid_label:
+				"Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
+			adult_label:
+				"Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
+			kid_sublabel: "Additionne tout le temps que tu consacres à l'activité physique chaque jour.",
+			adult_sublabel:
+				"Additionne tout le temps que tu consacres à l'activité physique chaque jour.",
+			choices: [
+				{
+					label: "0 jour",
+					value: "0",
+				},
+				{
+					label: "1 jour",
+					value: "1",
+				},
+				{
+					label: "2 jours",
+					value: "2",
+				},
+				{
+					label: "3 jours",
+					value: "3",
+				},
+				{
+					label: "4 jours",
+					value: "4",
+				},
+				{
+					label: "5 jours",
+					value: "5",
+				},
+				{
+					label: "6 jours",
+					value: "6",
+				},
+				{
+					label: "7 jours",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 31",
