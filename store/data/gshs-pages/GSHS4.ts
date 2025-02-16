@@ -39,7 +39,43 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 					value: "4",
 				},
 				{
-					label: "5 days",
+					label: "5 or more days",
+					value: ">=5",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 36",
+			label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			kid_label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			adult_label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			choices: [
+				{
+					label: "0 jour",
+					value: "0",
+				},
+				{
+					label: "1 jour",
+					value: "1",
+				},
+				{
+					label: "2 jours",
+					value: "2",
+				},
+				{
+					label: "3 jours",
+					value: "3",
+				},
+				{
+					label: "4 jours",
+					value: "4",
+				},
+				{
+					label: "5 or more days",
 					value: ">=5",
 				},
 			],
@@ -111,7 +147,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 					value: "4",
 				},
 				{
-					label: "5 days",
+					label: "5 or more days",
 					value: ">=5",
 				},
 			],
@@ -147,7 +183,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 					value: "4",
 				},
 				{
-					label: "5 days",
+					label: "5 or more days",
 					value: ">=5",
 				},
 			],
@@ -183,7 +219,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 					value: "4",
 				},
 				{
-					label: "5 days",
+					label: "5 or more days",
 					value: ">=5",
 				},
 			],
@@ -219,7 +255,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 					value: "4",
 				},
 				{
-					label: "5 days",
+					label: "5 or more days",
 					value: ">=5",
 				},
 			],

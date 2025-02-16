@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 35",
+			label:
+				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
+			kid_label:
+				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
+			adult_label:
+				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
+			choices: [
+				{
+					label: "0 jour",
+					value: "0",
+				},
+				{
+					label: "1 jour",
+					value: "1",
+				},
+				{
+					label: "2 jours",
+					value: "2",
+				},
+				{
+					label: "3 jours",
+					value: "3",
+				},
+				{
+					label: "4 jours",
+					value: "4",
+				},
+				{
+					label: "5 jours",
+					value: "5",
+				},
+				{
+					label: "6 jours",
+					value: "6",
+				},
+				{
+					label: "7 jours",
+					value: "7",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 35",

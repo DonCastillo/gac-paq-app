@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
 			},
 		},
+		"fr-CA": {
+			heading: "Activité physique",
+			subheading: "Enquête mondiale sur la santé des élèves en milieu scolaire",
+			description: {
+				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+				adult:
+					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+			},
+		},
 		"es-MX": {
 			heading: "Actividad física",
 			subheading: "Encuesta global de salud escolar basada en estudiantes",

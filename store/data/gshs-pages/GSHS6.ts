@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 38",
+			label: "On an average school night, how many hours of sleep do you get?",
+			kid_label: "On an average school night, how many hours of sleep do you get?",
+			adult_label: "On an average school night, how many hours of sleep do you get?",
+			choices: [
+				{
+					label: "4 or less hours",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 hours",
+					value: "5 hours",
+				},
+				{
+					label: "6 hours",
+					value: "6 hours",
+				},
+				{
+					label: "7 hours",
+					value: "7 hours",
+				},
+				{
+					label: "8 hours",
+					value: "8 hours",
+				},
+				{
+					label: "9 hours",
+					value: "9 hours",
+				},
+				{
+					label: "10 or more hours",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 38",
