@@ -88,21 +88,37 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 					label: "Nepohybuji se",
 					value: "0.1",
 					image_ident: "not_moving",
+					label_mode: {
+						kid: "Nepohybuji se",
+						adult: "Nepohybuje se ",
+					},
 				},
 				{
 					label: "Věnuji se aktivitám nízké náročnosti",
 					value: "0.3",
 					image_ident: "easy_effort",
+					label_mode: {
+						kid: "Věnuji se aktivitám nízké náročnosti",
+						adult: "Věnuje se aktivitám nízké náročnosti",
+					},
 				},
 				{
 					label: "Věnuji se aktivitám střední nebo vysoké náročnosti",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
+					label_mode: {
+						kid: "Věnuji se aktivitám střední nebo vysoké náročnosti",
+						adult: "Věnuje se aktivitám střední nebo vysoké náročnosti",
+					},
 				},
 				{
 					label: "Nevím",
 					image_ident: "dont_know",
 					value: "0",
+					label_mode: {
+						kid: "Nevím",
+						adult: "Nevím",
+					},
 				},
 			],
 		},
