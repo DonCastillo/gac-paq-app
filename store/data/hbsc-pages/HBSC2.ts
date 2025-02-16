@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 32",
+			label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			kid_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			adult_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			choices: [
+				{
+					label: "Todos los días",
+					value: "Every day",
+				},
+				{
+					label: "4 - 6 veces a la semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 veces a la semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 veces a la semana",
+					value: "2 times a week",
+				},
+				{
+					label: "1 vez a la semana",
+					value: "Once a week",
+				},
+				{
+					label: "1 vez al mes",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de una vez al mes",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 32",

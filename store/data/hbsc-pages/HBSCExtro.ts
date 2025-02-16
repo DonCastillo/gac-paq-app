@@ -10,6 +10,10 @@ const HBSCExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"es-MX": {
+			heading: "¡Sección Completa!",
+			subheading: "",
+		},
 		"en-NZ": {
 			heading: "Section Complete!",
 			subheading: "",
