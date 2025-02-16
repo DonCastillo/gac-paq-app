@@ -5,7 +5,7 @@ const NextPhrase: LangPhraseInterface = {
 		label: "Next",
 	},
 	"mi-NZ": {
-		label: "Kaua e mohio",
+		label: "Panuku",
 	},
 	"en-NZ": {
 		label: "Next",
