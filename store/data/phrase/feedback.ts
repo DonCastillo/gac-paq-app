@@ -5,7 +5,7 @@ const FeedbackPhrase: LangPhraseInterface = {
 		label: "Feedback",
 	},
 	"mi-NZ": {
-		label: "Whakahoki",
+		label: "Kōrero urupare",
 	},
 	"en-NZ": {
 		label: "Feedback",
