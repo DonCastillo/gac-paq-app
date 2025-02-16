@@ -10,6 +10,10 @@ const S5Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only two more to go!",
 		},
+		"mi-NZ": {
+			heading: "Kua oti te wahanga",
+			subheading: "E rua noa atu hei haere!",
+		},
 		"en-NZ": {
 			heading: "Section Complete!",
 			subheading: "Only two more to go!",
