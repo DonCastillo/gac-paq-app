@@ -4,6 +4,9 @@ const PleaseSpecifyPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Please specify",
 	},
+	"mi-NZ": {
+		label: "Whakamāramatia",
+	},
 	"en-NZ": {
 		label: "Please specify",
 	},
