@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionDropdown,
+			heading: "Nau mai!",
+			label: "Mā wai tēnei rārangi pātai?",
+			kid_label: "Mā wai tēnei rārangi pātai?",
+			adult_label: "Mā wai tēnei rārangi pātai?",
+			choices: [
+				{
+					label: "Mā te tamaiti",
+					value: "child",
+					sublabel: {
+						kid: "8 ki te 11 te pakeke",
+						adult: "8 ki te 11 te pakeke",
+					},
+				},
+				{
+					label: "Mā te taitamariki",
+					value: "teen",
+					sublabel: {
+						kid: "12 ki te 17 te pakeke",
+						adult: "12 ki te 17 te pakeke",
+					},
+				},
+				{
+					label: "Mā ngā mātua",
+					value: "adult",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",
