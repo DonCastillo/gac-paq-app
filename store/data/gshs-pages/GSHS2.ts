@@ -52,6 +52,50 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 34",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 34",
