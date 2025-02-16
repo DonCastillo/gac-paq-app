@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
 			},
 		},
+		"es-MX": {
+			heading: "Actividad física",
+			subheading: "Encuesta global de salud escolar basada en estudiantes",
+			description: {
+				kid: "Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+				adult:
+					"Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+			},
+		},
 		"en-NZ": {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
