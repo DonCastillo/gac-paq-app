@@ -44,6 +44,42 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 30",
+			label:
+				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			kid_label:
+				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			adult_label:
+				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			choices: [
+				{
+					label: "Uaua rawa atu",
+					value: "Very difficult",
+				},
+				{
+					label: "Uaua",
+					value: "Difficult",
+				},
+				{
+					label: "Kāore i ngāwari, kāore i uaua",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Ngāwari",
+					value: "Easy",
+				},
+				{
+					label: "Tīno ngāwari",
+					value: "Very easy",
+				},
+				{
+					label: "Kāore mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",

@@ -47,6 +47,51 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Pātai 27",
+			label: "He aha tō iwi?",
+			kid_label: "He aha tō iwi?",
+			adult_label: "He aha tō iwi?",
+			choices: [
+				{
+					label: "NZ European",
+					value: "NZ European",
+				},
+				{
+					label: "Māori",
+					value: "Māori",
+				},
+				{
+					label: "Samoan",
+					value: "Samoan",
+				},
+				{
+					label: "Tongan",
+					value: "Tongan",
+				},
+				{
+					label: "Niuean",
+					value: "Niuean",
+				},
+				{
+					label: "Chinese",
+					value: "Chinese",
+				},
+				{
+					label: "Indian",
+					value: "Indian",
+				},
+				{
+					label: "Tētahi atu, hei tauira, Dutch, Japanese, Tokelauan",
+					value: "Other",
+				},
+				{
+					label: "Kāore mō te whāki",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 27",

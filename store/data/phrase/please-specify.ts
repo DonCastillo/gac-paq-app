@@ -5,7 +5,7 @@ const PleaseSpecifyPhrase: LangPhraseInterface = {
 		label: "Please specify",
 	},
 	"mi-NZ": {
-		label: "Whakamāramatia",
+		label: "Tēnā, whakamāramatia mai",
 	},
 	"en-NZ": {
 		label: "Please specify",

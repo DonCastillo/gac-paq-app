@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 28",
+			label: "Hei aha tō pānga ki te tamaiti?",
+			kid_label: "Hei aha tō pānga ki te tamaiti?",
+			adult_label: "Hei aha tō pānga ki te tamaiti?",
+			choices: [
+				{
+					label: "Pāpā",
+					value: "Father",
+				},
+				{
+					label: "Māmā",
+					value: "Mother",
+				},
+				{
+					label: "Koroua",
+					value: "Grandfather",
+				},
+				{
+					label: "Kuia",
+					value: "Grandmother",
+				},
+				{
+					label: "Kaiako, Kaitiaki rānei",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Tētahi atu",
+					value: "Other",
+				},
+				{
+					label: "Kāore mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 28",
