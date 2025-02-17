@@ -27,6 +27,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 12",
+			label: "I te wiki kua hipa, i tūao rānei, i mahi rānei koe?",
+			kid_label: "I te wiki kua hipa, i tūao rānei, i mahi rānei koe?",
+			adult_label: "I te wiki kua hipa, i mahi tūao rānei, i mahi rānei koe?",
+			choices: [
+				{
+					label: "Āe",
+					value: "yes",
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 12",

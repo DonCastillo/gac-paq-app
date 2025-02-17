@@ -11,8 +11,8 @@ const S2Extro: LangExtroPayloadInterface = {
 			subheading: "Only five more to go!",
 		},
 		"mi-NZ": {
-			heading: "Kua oti te wahanga",
-			subheading: "E rima noa atu ka haere!",
+			heading: "Kua oti tēnei wāhanga!",
+			subheading: "E rima anō hei mahi!",
 		},
 		"en-NZ": {
 			heading: "Section Complete!",
