@@ -44,6 +44,40 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Pātai 17",
+			label:
+				"I te wiki kua hipa, i haere ai koe mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki tētahi toa)?",
+			kid_label:
+				"I te wiki kua hipa, i haere ai koe mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki tētahi toa)?",
+			adult_label:
+				"Pātai 17 I te wiki kua hipa, i haere ai tāu tamaiti mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki te toa)?",
+			kid_sublabel: "Tēnā, kōwhiria ngā whakautu katoa e hāngai nei ki a koe.",
+			adult_sublabel: "Tēnā, kōwhiria ngā whakautu katoa e hāngai ana ki a koe.",
+			choices: [
+				{
+					label: "Āe, i haere mā raro",
+					value: "Walked",
+					label_mode: {
+						kid: "Āe, i haere mā raro",
+						adult: "Āe, i haere mā raro",
+					},
+				},
+				{
+					label: "Āe, i haere mā runga wīra",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Āe, i haere mā runga wīra",
+						adult: "Āe, i haere mā runga wīra",
+					},
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
