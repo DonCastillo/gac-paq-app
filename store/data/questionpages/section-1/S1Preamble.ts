@@ -17,6 +17,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Te Kura",
+			subheading: "Wāhanga 1",
+			description: {
+				kid: "E hāngai ana tēnei wāhanga ki āu mahi i ngā hāora o te kura, hei tauira i ngā wā o te akoranga whakakori (PE), i ngā wā whakatā me te wā kai.",
+				adult:
+					"E hāngai ana tēnei wāhanga ki tāu tamaiti mahi i ngā hāora o te kura, hei tauira i ngā wā o te akoranga whakakori (PE), i ngā wā whakatā me te wā kai anō hoki.",
+			},
+		},
 		"en-NZ": {
 			heading: "School",
 			subheading: "Section 1",
