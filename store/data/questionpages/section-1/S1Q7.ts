@@ -41,6 +41,38 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadioImage,
+			heading: "Pātai 7",
+			label:
+				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā whakatā?",
+			kid_label:
+				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā whakatā?",
+			adult_label:
+				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i te āhua o tāu tamaiti i te nuinga o te wā i ngā wā whakatā?",
+			choices: [
+				{
+					label: "Kāore i te neke",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "He kaha iti",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "He kaha waenga, he kaha nui rānei",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Kāore i te mōhio",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 7",

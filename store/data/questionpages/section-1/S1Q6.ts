@@ -47,6 +47,43 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 6",
+			label: "I ngā rā o te kura, e hia te roa o te wā whakatā?",
+			kid_label: "I ngā rā o te kura, e hia te roa o te wā whakatā?",
+			adult_label: "I ngā rā o te kura, e hia te roa o te wā whakatā o tāu tamaiti?",
+			kid_sublabel:
+				"Arā, ko ngā wā paramanawa me ngā tina. Tēnā, tāpirihia te wā kia kotahi – Hei tauira, e rua wā paramanawa e 15 meneti te roa, ā,  e 30 meneti ki te tina, ka 60 meneti te roa.",
+			adult_sublabel:
+				"Arā, ko ngā wā paramanawa me ngā tina. Tēnā, tāpirihia te wā kia kotahi – Hei tauira, e rua wā paramanawa e 15 meneti te roa, ā,  e 30 meneti ki te tina, ka 60 meneti te roa.",
+			choices: [
+				{
+					label: "0 meneti",
+					value: "0 minutes",
+				},
+				{
+					label: "1 – 15 meneti",
+					value: "1 - 15 minutes",
+				},
+				{
+					label: "16 – 30 meneti",
+					value: "16 - 30 minutes",
+				},
+				{
+					label: "31 – 60 meneti",
+					value: "31 - 60 minutes",
+				},
+				{
+					label: "Neke atu i te 60 meneti",
+					value: "More than 60 minutes",
+				},
+				{
+					label: "Kāori i te mōhio",
+					value: "Don't know",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 6",

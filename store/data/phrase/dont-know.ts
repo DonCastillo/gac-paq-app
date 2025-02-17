@@ -5,7 +5,7 @@ const DontKnowPhrase: LangPhraseInterface = {
 		label: "Don't know",
 	},
 	"mi-NZ": {
-		label: "Kaua e mohio",
+		label: "Kāore i te mōhio",
 	},
 	"en-NZ": {
 		label: "Don't know",
