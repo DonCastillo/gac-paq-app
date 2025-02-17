@@ -11,7 +11,7 @@ const S7Extro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"mi-NZ": {
-			heading: "Kua oti te wahanga",
+			heading: "Kua tutuki te wāhanga!",
 			subheading: "",
 		},
 		"en-NZ": {
