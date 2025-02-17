@@ -38,6 +38,32 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 20",
+			label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			kid_label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			adult_label:
+				"I ngā rā i mahi ai tāu tamaiti i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			choices: [
+				{
+					label: "30 meneti, neke iho rā nei ia rā",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 – 60 meneti ia rā",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 – 1.5 hāora ia rā",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Nui ake i te 1.5 hāora ia rā",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",

@@ -47,6 +47,43 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 19",
+			label: "E hia ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa?",
+			kid_label: "E hia ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa?",
+			adult_label: "E hia ngā rā i mahi ai tāu tamait i ēnei ngohe i te wiki kua hipa?",
+			choices: [
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā",
+					value: "5",
+				},
+				{
+					label: "E 6 ngā rā",
+					value: "6",
+				},
+				{
+					label: "E 7 ngā rā",
+					value: "7",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 19",
