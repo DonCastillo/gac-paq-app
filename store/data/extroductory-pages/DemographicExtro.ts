@@ -26,6 +26,10 @@ const DemographicExtro: LangExtroPayloadInterface = {
 			heading: "Sección Completa",
 			subheading: "",
 		},
+		"es-CL": {
+			heading: "Sección Completa",
+			subheading: "",
+		},
 		"en-MW": {
 			heading: "Section Complete!",
 			subheading: "",
