@@ -27,6 +27,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 12",
+			label: "I te wiki kua hipa, i tūao rānei, i mahi rānei koe?",
+			kid_label: "I te wiki kua hipa, i tūao rānei, i mahi rānei koe?",
+			adult_label: "I te wiki kua hipa, i mahi tūao rānei, i mahi rānei koe?",
+			choices: [
+				{
+					label: "Āe",
+					value: "yes",
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 12",
@@ -62,6 +79,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 12",
+			label: "En la última semana, ¿fuiste voluntario o trabajaste?",
+			kid_label: "En la última semana, ¿fuiste voluntario o trabajaste?",
+			adult_label: "En la última semana, ¿fue su hija o hijo voluntario o trabajó?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 12",
 			label: "En la última semana, ¿fuiste voluntario o trabajaste?",

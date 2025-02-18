@@ -4,6 +4,9 @@ const FeedbackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Feedback",
 	},
+	"mi-NZ": {
+		label: "Kōrero urupare",
+	},
 	"en-NZ": {
 		label: "Feedback",
 	},
@@ -11,6 +14,9 @@ const FeedbackPhrase: LangPhraseInterface = {
 		label: "Zpětná vazba",
 	},
 	"es-CO": {
+		label: "Comentarios",
+	},
+	"es-CL": {
 		label: "Comentarios",
 	},
 	"en-MW": {

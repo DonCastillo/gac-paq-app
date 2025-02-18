@@ -100,6 +100,51 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadioImage,
+			heading: "Pātai 16",
+			label: "Mā hea atu koe ki te mahi i te wiki kua hipa?",
+			kid_label: "Mā hea atu koe ki te mahi i te wiki kua hipa?",
+			adult_label: "Mā hea atu tāu tamaiti ki te mahi i te wiki kua hipa?",
+			kid_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
+			adult_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
+			choices: [
+				{
+					label: "Mā raro",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Mā runga wīra",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
+						adult:
+							"Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
+					},
+				},
+				{
+					label: "Mā runga waka tūmatawhānui",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "hei tauira, mā runga pahi, mā runga tereina, mā runga taramu, mā runga poti",
+						adult: "hei tauira, mā runga pahi, mā runga tereina, mā runga taramu, mā runga poti",
+					},
+				},
+				{
+					label: "Mā runga wakatono, mā runga taraka, mā motopaika rānei",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Mā waka kē, mā tēhea?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadioImage,
 			heading: "Otázka 16",
@@ -146,6 +191,50 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadioImage,
+			heading: "Pregunta 16",
+			label: "¿Cómo fuiste al trabajo la semana pasada?",
+			kid_label: "¿Cómo fuiste al trabajo la semana pasada?",
+			adult_label: "¿Cómo fue su hija o hijo al trabajo la semana pasada?",
+			kid_sublabel: "Seleccione el modo que más utilizaste",
+			adult_sublabel: "Seleccione el modo que más utilizó",
+			choices: [
+				{
+					label: "Caminando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Desplazarse sobre ruedas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patines",
+					},
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+					},
+				},
+				{
+					label: "Carro, taxi, camión o motocicleta",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Otro, ¿cuál?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 16",
 			label: "¿Cómo fuiste al trabajo la semana pasada?",

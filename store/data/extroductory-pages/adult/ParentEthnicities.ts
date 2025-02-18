@@ -47,6 +47,51 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Pātai 27",
+			label: "He aha tō iwi?",
+			kid_label: "He aha tō iwi?",
+			adult_label: "He aha tō iwi?",
+			choices: [
+				{
+					label: "NZ European",
+					value: "NZ European",
+				},
+				{
+					label: "Māori",
+					value: "Māori",
+				},
+				{
+					label: "Samoan",
+					value: "Samoan",
+				},
+				{
+					label: "Tongan",
+					value: "Tongan",
+				},
+				{
+					label: "Niuean",
+					value: "Niuean",
+				},
+				{
+					label: "Chinese",
+					value: "Chinese",
+				},
+				{
+					label: "Indian",
+					value: "Indian",
+				},
+				{
+					label: "Tētahi atu, hei tauira, Dutch, Japanese, Tokelauan",
+					value: "Other",
+				},
+				{
+					label: "Kāore mō te whāki",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 27",
@@ -118,6 +163,43 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 27",
+			label: "¿Cuál es su etnia?",
+			kid_label: "¿Cuál es su etnia?",
+			adult_label: "¿Cuál es su etnia?",
+			choices: [
+				{
+					label: "Asiático",
+					value: "Asian",
+				},
+				{
+					label: "Negro o afroamericano",
+					value: "Black or African American",
+				},
+				{
+					label: "Indígena",
+					value: "Indigenous",
+				},
+				{
+					label: "Latinoamericano",
+					value: "Latin American",
+				},
+				{
+					label: "Blanco o caucásico",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to say",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 27",
 			label: "¿Cuál es su etnia?",

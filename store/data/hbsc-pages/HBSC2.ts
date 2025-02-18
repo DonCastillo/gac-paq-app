@@ -52,6 +52,138 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 32",
+			label:
+				"Fuera del horario escolar: ¿con qué frecuencia realizas alguna actividad física en tu tiempo libre que haga que llegues a sudar o te falte el aliento?",
+			kid_label:
+				"Fuera del horario escolar: ¿con qué frecuencia realizas alguna actividad física en tu tiempo libre que haga que llegues a sudar o te falte el aliento?",
+			adult_label:
+				"Fuera del horario escolar: ¿con qué frecuencia realizas alguna actividad física en tu tiempo libre que haga que llegues a sudar o te falte el aliento?",
+			choices: [
+				{
+					label: "Todos los días",
+					value: "Every day",
+				},
+				{
+					label: "De 4 a 6 veces por semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 veces por semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 veces por semana",
+					value: "2 times a week",
+				},
+				{
+					label: "1 vez a la semana",
+					value: "Once a week",
+				},
+				{
+					label: "1 vez al mes",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de 1 vez al mes",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 32",
+			label:
+				"En dehors des heures de classe, à quelle fréquence fais-tu normalement de l’exercice, dans tes temps libres, au point de transpirer ou d’être essoufflé(e)?",
+			kid_label:
+				"En dehors des heures de classe, à quelle fréquence fais-tu normalement de l’exercice, dans tes temps libres, au point de transpirer ou d’être essoufflé(e)?",
+			adult_label:
+				"En dehors des heures de classe, à quelle fréquence fais-tu normalement de l’exercice, dans tes temps libres, au point de transpirer ou d’être essoufflé(e)?",
+			choices: [
+				{
+					label: "Tous les jours",
+					value: "Every day",
+				},
+				{
+					label: "4 à 6 fois par semaine",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 fois par semaine",
+					value: "3 times a week",
+				},
+				{
+					label: "2 fois par semaine",
+					value: "2 times a week",
+				},
+				{
+					label: "Une fois par semaine",
+					value: "Once a week",
+				},
+				{
+					label: "Une fois par mois",
+					value: "Once a month",
+				},
+				{
+					label: "Moins d’une fois par mois",
+					value: "Less than once a month",
+				},
+				{
+					label: "Jamais",
+					value: "Never",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 32",
+			label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			kid_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			adult_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			choices: [
+				{
+					label: "Todos los días",
+					value: "Every day",
+				},
+				{
+					label: "4 - 6 veces a la semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 veces a la semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 veces a la semana",
+					value: "2 times a week",
+				},
+				{
+					label: "1 vez a la semana",
+					value: "Once a week",
+				},
+				{
+					label: "1 vez al mes",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de una vez al mes",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 32",

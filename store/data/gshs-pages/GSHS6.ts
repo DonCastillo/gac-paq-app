@@ -45,6 +45,123 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 38",
+			label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			kid_label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			adult_label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			choices: [
+				{
+					label: "4 o menos horas",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 horas",
+					value: "5 hours",
+				},
+				{
+					label: "6 horas",
+					value: "6 hours",
+				},
+				{
+					label: "7 horas",
+					value: "7 hours",
+				},
+				{
+					label: "8 horas",
+					value: "8 hours",
+				},
+				{
+					label: "9 horas",
+					value: "9 hours",
+				},
+				{
+					label: "10 o más horas",
+					value: "10 or more hours",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 38",
+			label: "On an average school night, how many hours of sleep do you get?",
+			kid_label: "On an average school night, how many hours of sleep do you get?",
+			adult_label: "On an average school night, how many hours of sleep do you get?",
+			choices: [
+				{
+					label: "4 or less hours",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 hours",
+					value: "5 hours",
+				},
+				{
+					label: "6 hours",
+					value: "6 hours",
+				},
+				{
+					label: "7 hours",
+					value: "7 hours",
+				},
+				{
+					label: "8 hours",
+					value: "8 hours",
+				},
+				{
+					label: "9 hours",
+					value: "9 hours",
+				},
+				{
+					label: "10 or more hours",
+					value: "10 or more hours",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 38",
+			label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			kid_label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			adult_label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			choices: [
+				{
+					label: "4 o menos horas",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 horas",
+					value: "5 hours",
+				},
+				{
+					label: "6 horas",
+					value: "6 hours",
+				},
+				{
+					label: "7 horas",
+					value: "7 hours",
+				},
+				{
+					label: "8 horas",
+					value: "8 hours",
+				},
+				{
+					label: "9 horas",
+					value: "9 hours",
+				},
+				{
+					label: "10 o más horas",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 38",

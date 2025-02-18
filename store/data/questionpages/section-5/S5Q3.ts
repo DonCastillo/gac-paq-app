@@ -38,6 +38,32 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 20",
+			label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			kid_label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			adult_label:
+				"I ngā rā i mahi ai tāu tamaiti i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			choices: [
+				{
+					label: "30 meneti, neke iho rā nei ia rā",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 – 60 meneti ia rā",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 – 1.5 hāora ia rā",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Nui ake i te 1.5 hāora ia rā",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
@@ -95,6 +121,34 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 20",
+			label:
+				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			kid_label:
+				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			adult_label:
+				"En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			choices: [
+				{
+					label: "30 minutos o menos por día",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 - 60 minutos por día",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 a 1:30 horas por día Inciso",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "Más de 1:30 horas al día",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 20",
 			label:

@@ -44,6 +44,40 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 23",
+			label: "I te wiki kua hipa, i tētahi rā noa, i hia te roa o tō whakapaunga kaha ki waho?",
+			kid_label: "I te wiki kua hipa, i tētahi rā noa, i hia te roa o tō whakapaunga kaha ki waho?",
+			adult_label:
+				"I te wiki kua hipa, i tētahi rā noa, e hia te roa o tō tāu tamaiti whakapaunga kaha ki waho?",
+			choices: [
+				{
+					label: "Kore",
+					value: "None",
+				},
+				{
+					label: "Iti iho i te 1 hāora ia rā",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 iti iho rānei i te 2 hāora ia rā",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 iti iho rānei i te 3 hāora ia rā",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 iti iho rānei i te 4 hāora ia rā",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hāora neke atu rānei ia rā",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 23",
@@ -112,6 +146,40 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 23",
+			label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
+			kid_label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
+			adult_label:
+				"En la última semana, en un día normal, ¿cuánto tiempo pasó al aire libre su hija o hijo?",
+			choices: [
+				{
+					label: "Nada",
+					value: "None",
+				},
+				{
+					label: "Menos de 1 hora por día",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 a menos de 2 horas por día",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 a menos de 3 horas por día",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 a menos de 4 horas por día",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 horas o más por día",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 23",
 			label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",

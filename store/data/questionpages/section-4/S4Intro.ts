@@ -10,6 +10,10 @@ const S4Intro: LangSectionPayloadInterface = {
 			heading: "Transportation",
 			subheading: "Section 4",
 		},
+		"mi-NZ": {
+			heading: "Te Waka",
+			subheading: "Wāhanga 4",
+		},
 		"en-NZ": {
 			heading: "Transportation",
 			subheading: "Section 4",
@@ -19,6 +23,10 @@ const S4Intro: LangSectionPayloadInterface = {
 			subheading: "Sekce 4",
 		},
 		"es-CO": {
+			heading: "Transporte",
+			subheading: "Sección 4",
+		},
+		"es-CL": {
 			heading: "Transporte",
 			subheading: "Sección 4",
 		},

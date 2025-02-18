@@ -17,6 +17,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 					"This section is about household chores or tasks that require your child to be active. Examples of chores or tasks include housework, yard work, gardening, and other related tasks.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Ngā mahi o te kāinga",
+			subheading: "Wāhanga 2",
+			description: {
+				kid: "E hāngai ana tēnei wāhanga ki ngā mahi o te kāinga me ngā momo mahi e whakakori ai i a koe. Ko ngā tauira o ngā ngohe me ngā momo mahi, ko ngā mahi o te kāinga, ko ngā mahi o waho pēnei i te mahi māra, i te tapahi papa pātiti, i ētahi atu mahi anō hoki.",
+				adult:
+					"E hāngai ana tēnei wāhanga ki ngā mahi o te kāinga me ngā momo mahi e whakakori ai i a koe. Ko ngā tauira o ngā ngohe me ngā momo mahi, arā ko ngā mahi o te kāinga, ko ngā mahi o waho pēnei i te mahi māra, i te tapahi papa pātiti, i ētahi atu mahi anō hoki.",
+			},
+		},
 		"en-NZ": {
 			heading: "Household Chores",
 			subheading: "Section 2",
@@ -36,6 +45,15 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-CO": {
+			heading: "Tareas domesticas",
+			subheading: "Sección 2",
+			description: {
+				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
+				adult:
+					"Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
+			},
+		},
+		"es-CL": {
 			heading: "Tareas domesticas",
 			subheading: "Sección 2",
 			description: {

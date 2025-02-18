@@ -27,6 +27,25 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 8",
+			label: "I te wiki kua hipa, i oti rānei i a koe ngā mahi o te kāinga, i ngā momo mahi rānei?",
+			kid_label:
+				"I te wiki kua hipa, i oti rānei i a koe ngā mahi o te kāinga, i ngā momo mahi rānei?",
+			adult_label:
+				"I te wiki kua hipa, i oti rānei i tāu tamaiti ngā mahi o te kāinga, ngā momo mahi rānei?",
+			choices: [
+				{
+					label: "Āe",
+					value: "yes",
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 8",
@@ -62,6 +81,24 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 8",
+			label: "¿Realizaste tareas domésticas o quehaceres activos la semana pasada?",
+			kid_label: "¿Realizaste tareas domésticas o quehaceres activos la semana pasada?",
+			adult_label:
+				"¿Realizó su hija o hijo tareas domésticas o quehaceres activos la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 8",
 			label: "¿Realizaste tareas domésticas o quehaceres activos la semana pasada?",

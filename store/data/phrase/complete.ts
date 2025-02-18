@@ -4,6 +4,9 @@ const CompletePhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Complete",
 	},
+	"mi-NZ": {
+		label: "Whakatutuki",
+	},
 	"en-NZ": {
 		label: "Complete",
 	},
@@ -11,6 +14,9 @@ const CompletePhrase: LangPhraseInterface = {
 		label: "Dokončena",
 	},
 	"es-CO": {
+		label: "Completado",
+	},
+	"es-CL": {
 		label: "Completado",
 	},
 	"en-MW": {

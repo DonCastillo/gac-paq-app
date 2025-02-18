@@ -17,6 +17,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 					"This section is about the amount of time that your child spends outdoors. This can be at school, during chores, work and volunteering, and transport, as well as in their free time. This also includes the time when your child is outdoors, but not moving (for example, picnics, reading, sitting by a fire).",
 			},
 		},
+		"mi-NZ": {
+			heading: "Ki waho",
+			subheading: "Wāhanga 7",
+			description: {
+				kid: "E hāngai ana tēnei ki te nui o te wā e whai wāhi ana koe ki waho. Ka tū i te kura, i ngā mahi kāinga, i te mahi, i te mahi tūao, i te hautū waka, i te wā wātea anō hoki. Kei roto hoki i tēnei ko te wā e noho ana koe ki waho, engari kāore i te neke (hei tauira, ngā pikiniki, te pānui, te noho ki te taha o te ahi).",
+				adult:
+					"E hāngai ana tēnei ki te nui o te wā e whai wāhi ana tāu tamaiti ki waho. Ka tū i te kura, i ngā mahi kāinga, i te mahi, i te mahi tūao, i te hautū waka, i te wā wātea anō hoki. Kei roto hoki i tēnei ko te wā e noho ana koe ki waho, engari kāore i te neke (hei tauira, ngā pikiniki, te pānui, te noho ki te taha o te ahi).",
+			},
+		},
 		"en-NZ": {
 			heading: "Outdoors",
 			subheading: "Section 7",
@@ -36,6 +45,15 @@ const S7Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-CO": {
+			heading: "Al aire libre",
+			subheading: "Sección 7",
+			description: {
+				kid: "Esta sección trata sobre la cantidad de tiempo que pasas al aire libre. Puede ser en la escuela, durante las tareas domésticas, el trabajo y el voluntariado, y el transporte, así como en tu tiempo libre. También incluye el tiempo que pasas al aire libre, pero sin moverte (por ejemplo, de picnic, leyendo, sentado junto al fuego).",
+				adult:
+					"Esta sección trata sobre la cantidad de tiempo que pasa su hija o hijo al aire libre. Puede ser en la escuela, durante las tareas domésticas, el trabajo y el voluntariado, y el transporte, así como en su tiempo libre. También incluye el tiempo que pasa al aire libre, pero sin moverse (por ejemplo, de picnic, leyendo, sentado junto al fuego).",
+			},
+		},
+		"es-CL": {
 			heading: "Al aire libre",
 			subheading: "Sección 7",
 			description: {

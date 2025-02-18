@@ -27,6 +27,23 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 18",
+			label: "I oti rānei i a koe ētahi ngohe whakakori tinana i te wiki kua hipa?",
+			kid_label: "I oti rānei i a koe ētahi ngohe whakakori tinana i te wiki kua hipa?",
+			adult_label: "I oti rānei i tāu tamaiti ētahi ngohe whakakori tinana i te wiki kua hipa?",
+			choices: [
+				{
+					label: "Āe",
+					value: "yes",
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 18",
@@ -62,6 +79,23 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 18",
+			label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
+			kid_label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
+			adult_label: "¿Realizó su hija o hijo alguna actividad organizada durante la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 18",
 			label: "¿Realizaste alguna actividad organizada durante la semana pasada?",

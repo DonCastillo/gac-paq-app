@@ -38,6 +38,34 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 10",
+			label:
+				"i ngā rā i oti ai i a koe ngā mahi o te kāinga i te wiki kua hipa, i hia te roa o te wā i mahi ai koe i ngā mahi o te kāinga i te roanga o te rā?",
+			kid_label:
+				"i ngā rā i oti ai i a koe ngā mahi o te kāinga i te wiki kua hipa, i hia te roa o te wā i mahi ai koe i ngā mahi o te kāinga i te roanga o te rā?",
+			adult_label:
+				"i ngā rā i oti ai i a koe ngā mahi o te kāinga i te wiki kua hipa, i hia te roa o te wā i mahi ai koe i ngā mahi o te kāinga i te roanga o te rā?",
+			choices: [
+				{
+					label: "15 meneti iti iho rānei ia rā",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 – 30 meneti ia rā",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 – 60 meneti ia rā",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "Nui ake i te 60 meneti ia rā",
+					value: "Over 60 minutes per day",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
@@ -95,6 +123,38 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 10",
+			label:
+				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			kid_label:
+				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			adult_label:
+				"En los días que su hija o hijo hizo tareas domésticas durante la semana pasada, ¿cuánto tiempo pasó haciéndolas a lo largo del día?",
+			choices: [
+				{
+					label: "15 minutos o menos por día",
+					value: "15 minutes or less per day",
+				},
+				{
+					label: "16 - 30 minutos por día",
+					value: "16 - 30 minutes per day",
+				},
+				{
+					label: "31 - 60 minutos por día",
+					value: "31 - 60 minutes per day",
+				},
+				{
+					label: "61 - 90 minutos por día",
+					value: "61 - 90 minutes per day",
+				},
+				{
+					label: "91 minutos o más por día",
+					value: "91 minutes or more per day",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 10",
 			label:

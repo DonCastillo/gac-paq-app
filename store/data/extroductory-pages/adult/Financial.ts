@@ -44,6 +44,42 @@ const Financial: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 30",
+			label:
+				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			kid_label:
+				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			adult_label:
+				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			choices: [
+				{
+					label: "Uaua rawa atu",
+					value: "Very difficult",
+				},
+				{
+					label: "Uaua",
+					value: "Difficult",
+				},
+				{
+					label: "Kāore i ngāwari, kāore i uaua",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Ngāwari",
+					value: "Easy",
+				},
+				{
+					label: "Tīno ngāwari",
+					value: "Very easy",
+				},
+				{
+					label: "Kāore mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",
@@ -113,7 +149,43 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"es-CO": {
 			type: Question.QuestionRadio,
-			heading: "Preunta 30",
+			heading: "Pregunta 30",
+			label:
+				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			kid_label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			adult_label:
+				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			choices: [
+				{
+					label: "Muy difícil",
+					value: "Very difficult",
+				},
+				{
+					label: "Difícil",
+					value: "Difficult",
+				},
+				{
+					label: "Ni fácil ni difícil",
+					value: "Neither easy nor difficult",
+				},
+				{
+					label: "Fácil",
+					value: "Easy",
+				},
+				{
+					label: "Muy fácil",
+					value: "Very easy",
+				},
+				{
+					label: "Prefiero no contestar",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 30",
 			label:
 				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			kid_label:
@@ -556,7 +628,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Preunta 30",
+			heading: "Pregunta 30",
 			label:
 				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			kid_label:
@@ -592,7 +664,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Preunta 30",
+			heading: "Pregunta 30",
 			label:
 				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			kid_label:

@@ -12,6 +12,11 @@ const SuccessPage: LangPagePayloadInterface = {
 			description:
 				"Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 		},
+		"mi-NZ": {
+			heading: "Kaitoa!",
+			description:
+				"Ka pai. I oti i a koe te Rārangi pātai. Kua pai te tukuna o ngā whakautu.\n\nTēnā koe i tō āwhina mai!",
+		},
 		"en-NZ": {
 			heading: "Success!",
 			description:
@@ -23,6 +28,11 @@ const SuccessPage: LangPagePayloadInterface = {
 				"Dobrá práce, dokončili jste dotazník. Vaše odpovědi byly úspěšně odeslány.\n\nDěkujeme za vaši pomoc!",
 		},
 		"es-CO": {
+			heading: "Éxito!",
+			description:
+				"Bien hecho. Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",
+		},
+		"es-CL": {
 			heading: "Éxito!",
 			description:
 				"Bien hecho. Has terminado el cuestionario. Tus respuestas se han enviado correctamente.\n\nGracias por tu ayuda.",

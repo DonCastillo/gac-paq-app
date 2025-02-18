@@ -4,6 +4,9 @@ const DonePhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Done",
 	},
+	"mi-NZ": {
+		label: "Kua tutuki",
+	},
 	"en-NZ": {
 		label: "Done",
 	},
@@ -11,6 +14,9 @@ const DonePhrase: LangPhraseInterface = {
 		label: "Hotovo",
 	},
 	"es-CO": {
+		label: "Listo",
+	},
+	"es-CL": {
 		label: "Listo",
 	},
 	"en-MW": {

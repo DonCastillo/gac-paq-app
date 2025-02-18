@@ -12,6 +12,11 @@ const OfflineSuccessPage: LangPagePayloadInterface = {
 			description:
 				"Your responses will be saved and automatically resubmitted when the connection is restored.\n\nThank you for your help!",
 		},
+		"mi-NZ": {
+			heading: "Kāore koe e hono ki te Ipurangi",
+			description:
+				"Ka tiakina āu whakautu ka tukuna anō rātou aunoa ka hoki mai te hononga.\n\nNgā mihi mō tō āwhina!",
+		},
 		"en-NZ": {
 			heading: "You are not connected to the Internet",
 			description:
@@ -23,6 +28,11 @@ const OfflineSuccessPage: LangPagePayloadInterface = {
 				"Vaše odpovědi budou uloženy a po obnovení připojení automaticky znovu odeslány.\n\nDěkujeme za vaši pomoc!",
 		},
 		"es-CO": {
+			heading: "No estás conectado a Internet",
+			description:
+				"Tus respuestas se guardarán y se enviarán automáticamente cuando se restablezca la conexión.\n\n¡Gracias por tu ayuda!",
+		},
+		"es-CL": {
 			heading: "No estás conectado a Internet",
 			description:
 				"Tus respuestas se guardarán y se enviarán automáticamente cuando se restablezca la conexión.\n\n¡Gracias por tu ayuda!",

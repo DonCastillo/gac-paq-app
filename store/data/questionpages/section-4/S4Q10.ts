@@ -49,6 +49,46 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 17b - Wīra",
+			label:
+				"E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
+			kid_label:
+				"E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
+			adult_label:
+				"E hia ngā rā i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
+			choices: [
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā",
+					value: "5",
+				},
+				{
+					label: "E 6 ngā rā",
+					value: "6",
+				},
+				{
+					label: "E 7 ngā rā",
+					value: "7",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",
@@ -129,6 +169,46 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 17b - En ruedas",
+			label:
+				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
+			kid_label:
+				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
+			adult_label:
+				"¿Cuántos días se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
+			choices: [
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b - En ruedas",
 			label:

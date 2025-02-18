@@ -41,6 +41,38 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadioImage,
+			heading: "Pātai 7",
+			label:
+				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā whakatā?",
+			kid_label:
+				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā whakatā?",
+			adult_label:
+				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i te āhua o tāu tamaiti i te nuinga o te wā i ngā wā whakatā?",
+			choices: [
+				{
+					label: "Kāore i te neke",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "He kaha iti",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "He kaha waenga, he kaha nui rānei",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Kāore i te mōhio",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 7",
@@ -85,25 +117,73 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 					label: "Nepohybuji se",
 					value: "0.1",
 					image_ident: "not_moving",
+					label_mode: {
+						kid: "Nepohybuji se",
+						adult: "Nepohybuje se",
+					},
 				},
 				{
 					label: "Věnuji se aktivitám nízké náročnosti",
 					value: "0.3",
 					image_ident: "easy_effort",
+					label_mode: {
+						kid: "Věnuji se aktivitám nízké náročnosti",
+						adult: "Věnuje se aktivitám nízké náročnosti",
+					},
 				},
 				{
 					label: "Věnuji se aktivitám střední nebo vysoké náročnosti",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
+					label_mode: {
+						kid: "Věnuji se aktivitám střední nebo vysoké náročnosti",
+						adult: "Věnuje se aktivitám střední nebo vysoké náročnosti",
+					},
 				},
 				{
 					label: "Nevím",
 					value: "0",
 					image_ident: "dont_know",
+					label_mode: {
+						kid: "Nevím",
+						adult: "Nevím",
+					},
 				},
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadioImage,
+			heading: "Pregunta 7",
+			label:
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo durante tus descansos?",
+			kid_label:
+				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo durante tus descansos?",
+			adult_label:
+				"¿Cuál de las siguientes imágenes muestra lo que hace la mayor parte del tiempo su hija o hijo durante sus descansos?",
+			choices: [
+				{
+					label: "Sin moverte",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Esfuerzo fácil",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Esfuerzo medio o intenso",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "No sé",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 7",
 			label:
