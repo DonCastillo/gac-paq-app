@@ -16,6 +16,9 @@ const SelectPhrase: LangPhraseInterface = {
 	"es-CO": {
 		label: "Seleccionar",
 	},
+	"es-CL": {
+		label: "Seleccionar",
+	},
 	"en-MW": {
 		label: "Select",
 	},

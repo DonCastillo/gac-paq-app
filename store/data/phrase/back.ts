@@ -16,6 +16,9 @@ const BackPhrase: LangPhraseInterface = {
 	"es-CO": {
 		label: "Volver",
 	},
+	"es-CL": {
+		label: "Volver",
+	},
 	"en-MW": {
 		label: "Back",
 	},
