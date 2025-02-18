@@ -53,6 +53,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"Esta sección se trata del trabajo o el voluntariado fuera de casa, no incluye las tareas domésticas. Trabajar es ganar dinero para sí mismo o para su familia. El voluntariado consiste en ayudar a otras personas o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden llevarse a cabo en lugares como una tienda, una granja, un restaurante, etc. Por favor, responda a estas dos actividades (trabajo y voluntariado) a la vez.",
 			},
 		},
+		"es-CL": {
+			heading: "Trabajo",
+			subheading: "Sección 3",
+			description: {
+				kid: "Esta sección se trata del trabajo o el voluntariado fuera de casa, no incluye las tareas domésticas. Trabajar es ganar dinero para ti o para tu familia. El voluntariado consiste en ayudar a otras personas o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden llevarse a cabo en lugares como una tienda, una granja, un restaurante, etc. Por favor, responda a estas dos actividades (trabajo y voluntariado) a la vez.",
+				adult:
+					"Esta sección se trata del trabajo o el voluntariado fuera de casa, no incluye las tareas domésticas. Trabajar es ganar dinero para sí mismo o para su familia. El voluntariado consiste en ayudar a otras personas o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden llevarse a cabo en lugares como una tienda, una granja, un restaurante, etc. Por favor, responda a estas dos actividades (trabajo y voluntariado) a la vez.",
+			},
+		},
 		"en-MW": {
 			heading: "Work",
 			subheading: "Section 3",

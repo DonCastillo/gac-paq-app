@@ -26,6 +26,10 @@ const SocialEconomicsIntroKid: LangSectionPayloadInterface = {
 			heading: "Acerca de ti",
 			subheading: "Sección 8",
 		},
+		"es-CL": {
+			heading: "Acerca de ti",
+			subheading: "Sección 8",
+		},
 		"en-MW": {
 			heading: "About You",
 			subheading: "Section 8",

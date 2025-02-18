@@ -43,6 +43,13 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			kid_label: "¿Qué idioma hablas y dónde estás?",
 			adult_label: "¿Qué idioma hablas y dónde estás?",
 		},
+		"es-CL": {
+			type: Question.QuestionLanguage,
+			heading: "¡Bienvenido!",
+			label: "¿Qué idioma hablas y dónde estás?",
+			kid_label: "¿Qué idioma hablas y dónde estás?",
+			adult_label: "¿Qué idioma hablas y dónde estás?",
+		},
 		"en-MW": {
 			type: Question.QuestionLanguage,
 			heading: "Welcome!",

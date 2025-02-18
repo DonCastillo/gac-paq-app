@@ -195,6 +195,43 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 16b",
+			label: "¿Cuántos días usaste este modo en la última semana?",
+			kid_label: "¿Cuántos días usaste este modo en la última semana?",
+			adult_label: "¿Cuántos días usó su hija o hijo este modo en la última semana?",
+			choices: [
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 16b",

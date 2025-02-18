@@ -199,6 +199,43 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"es-CL": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 27",
+			label: "¿Cuál es su etnia?",
+			kid_label: "¿Cuál es su etnia?",
+			adult_label: "¿Cuál es su etnia?",
+			choices: [
+				{
+					label: "Asiático",
+					value: "Asian",
+				},
+				{
+					label: "Negro o afroamericano",
+					value: "Black or African American",
+				},
+				{
+					label: "Indígena",
+					value: "Indigenous",
+				},
+				{
+					label: "Latinoamericano",
+					value: "Latin American",
+				},
+				{
+					label: "Blanco o caucásico",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 27",

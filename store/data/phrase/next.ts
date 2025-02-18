@@ -16,6 +16,9 @@ const NextPhrase: LangPhraseInterface = {
 	"es-CO": {
 		label: "Siguiente",
 	},
+	"es-CL": {
+		label: "Siguiente",
+	},
 	"en-MW": {
 		label: "Next",
 	},
