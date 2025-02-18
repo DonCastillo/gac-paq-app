@@ -100,6 +100,13 @@ const Languages: LanguageInterface[] = [
 		lang_code: "en-NZ",
 	},
 	{
+		name: "Maori",
+		country_name: "New Zealand",
+		local_name: "Māori",
+		flag_code: "NZ",
+		lang_code: "mi-NZ",
+	},
+	{
 		name: "English",
 		country_name: "Nigeria",
 		local_name: "English",

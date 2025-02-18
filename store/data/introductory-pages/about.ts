@@ -19,7 +19,7 @@ const AboutPage: LangPagePayloadInterface = {
 			},
 		},
 		"mi-NZ": {
-			heading: "Nau mai ki\n\nGAC-PAQ",
+			heading: "Nau mai ki\nGAC-PAQ",
 			description: "",
 			description_mode: {
 				kid: "Mō tēnei rangahau, e hiahia ana mātou ki te ine i te āhua o tō kori i te wiki kua hipa (tae atu ki ngā rā o te mutunga wiki me te mutunga wiki ki mua).\n\nHe nui tonu ngā wāhi e whai wāhi atu ai te korikori, tae rā anō ki tō wā wātea, ki te mahi hākinakina, ki te tākaro, hei te wā ka haere ki wāhi kē (pēnei i te kura, i ngā papa tākaro, i ngā toa, i ngā whare o ō hoa, o ō whanaunga rānei), ki te kura, hei te wā e mahi ana i ngā mahi o te kāinga me te mahi. Mā te taupānga koe e āta ārahi i ngā wāhanga.\n\nKa uiui mātou i a koe mō ngā momo whakapaunga kaha o te korikori. Ka kī ana mātou “he kaha waenga rānei, he nui rānei” e kōrero ana mātou mō ngā  korikori e whakatere ai i te kakapa o te manawa, ā, me te whakapaunga o te hā i ētahi wā. (ko ngā tauira e kitea nei i te taupānga, ko ngā hākinakina pēnei i te kauhoe, i te omaoma, i te piu, i te retireti, i te eke pahikara rānei).\n\nKa kī ana mātou, “he kaha iti,” e kōrero ana mō ngā kori e kore e whakapau i te hā. Ko ngā tauira e kitea nei i te taupānga pēnei i te hīkoi pōturi, i te manaaki mōkai, i ngā kararehe pāmu rānei, i te tākaro i te rua kirikiri, ā, i ngā tini mahi o te kāinga.\n\nKāore he whakautu tika, he whakautu hē rānei. Tēnā, whakautua ngā pātai katoa ki tāu e tāea nei.",
