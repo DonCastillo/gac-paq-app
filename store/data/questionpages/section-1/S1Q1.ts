@@ -95,6 +95,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 1",
+			label: "¿Asististe a la escuela la semana pasada?",
+			kid_label: "¿Asististe a la escuela la semana pasada?",
+			adult_label: "¿Asistió su hija o hijo a la escuela la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 1",
