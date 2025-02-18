@@ -22,13 +22,13 @@ const Languages: LanguageInterface[] = [
 		flag_code: "CA",
 		lang_code: "fr-CA",
 	},
-	// {
-	// 	name: "Spanish",
-	// 	country_name: "Chile",
-	// 	local_name: "Español",
-	// 	flag_code: "CL",
-	// 	lang_code: "es-CL",
-	// },
+	{
+		name: "Spanish",
+		country_name: "Chile",
+		local_name: "Español",
+		flag_code: "CL",
+		lang_code: "es-CL",
+	},
 	{
 		name: "Chinese",
 		country_name: "China",
