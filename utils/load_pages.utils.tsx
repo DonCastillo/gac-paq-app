@@ -428,19 +428,19 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 		// only the adolescent will answer the hbsc and gshs questions
 		if (mode === Mode.Teen) {
 			// randomly add hsbc or gshs pages 35% of the time
-			if (randomBoolean(0.35)) {
-				if (randomBoolean(0.5)) {
+			// if (randomBoolean(0.35)) {
+				// if (randomBoolean(0.5)) {
 					// collect hsbc pages
 					({ pages, sectionTotal } = loadHbscPages(newPages) as AccumulatedPageType);
 					newPages = { ...newPages, ...pages };
 					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-				} else {
+				// } else {
 					// collect gshs pages
 					({ pages, sectionTotal } = loadGshsPages(newPages) as AccumulatedPageType);
 					newPages = { ...newPages, ...pages };
 					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-				}
-			}
+				// }
+			// }
 		}
 	} else {
 		// pilot study extro pages
