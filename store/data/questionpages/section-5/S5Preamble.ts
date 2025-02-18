@@ -17,6 +17,15 @@ const S5Preamble: LangPreamblePayloadInterface = {
 					"This section is about physically active organized activities and sports. They include activities that you do outside the school day (for example, some schools have sport leagues or extracurricular activities). They also include any sport leagues and lessons for activities like swimming, gymnastics, dance, and karate outside of school.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Ngā ngohe kua whakaritea",
+			subheading: "Wāhanga 5",
+			description: {
+				kid: "E hāngai ana tēnei wāhanga ki ngā ngohe whakakori tinana me ngā hākinakina kua whakaritea. Ko ngā hākinakina ēnei e kītea ana ki waho i te rā o te kura (Hei tauira, he hākinakina, he mahi marau-turuki ō ētahi kura). Ka tāpiri hoki ki ngā hākinakina me ngā ngohe pēnei i te kauhoe, i te takaporepore, i te kanikani me ngā toi whawhai i waho i te kura.",
+				adult:
+					"E hāngai ana tēnei wāhanga ki ngā ngohe whakakori tinana me ngā hākinakina kua whakaritea. Ko ngā hākinakina ēnei e kītea ana ki waho i te wā kura (Hei tauira, he hākinakina, he mahi marau-turuki ō ētahi kura). Ka tāpiri hoki ki ngā hākinakina me ngā ngohe pēnei i te kauhoe, i te takaporepore, i te kanikani me ngā toi whawhai i waho i te kura.",
+			},
+		},
 		"en-NZ": {
 			heading: "Organized Activities",
 			subheading: "Section 5",

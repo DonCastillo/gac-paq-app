@@ -18,6 +18,14 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			adult_label: "How many physical education classes did your child have in the past week?",
 			max_value: 7,
 		},
+		"mi-NZ": {
+			type: Question.QuestionSlider,
+			heading: "Pātai 3",
+			label: "E hia ngā akoranga whakakori i haere ai koe i te wiki kua hipa?",
+			kid_label: "E hia ngā akoranga whakakori i haere ai koe i te wiki kua hipa?",
+			adult_label: "E hia ngā akoranga whakakori i haere ai tāu tamaiti i te wiki kua hipa?",
+			max_value: 7,
+		},
 		"en-NZ": {
 			type: Question.QuestionSlider,
 			heading: "Question 3",

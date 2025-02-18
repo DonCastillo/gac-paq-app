@@ -10,6 +10,10 @@ const SocialEconomicsIntroAdult: LangSectionPayloadInterface = {
 			heading: "About Your Family",
 			subheading: "Section 8",
 		},
+		"mi-NZ": {
+			heading: "Mō tō ake whānau",
+			subheading: "Wāhanga 8",
+		},
 		"en-NZ": {
 			heading: "About Your Family",
 			subheading: "Section 8",

@@ -40,6 +40,38 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 13",
+			label:
+				"I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
+			kid_label:
+				"I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
+			adult_label:
+				"I te wiki kua hipa, e hia ngā hāora i whakapaua ai e tāu tamaiti ki te tūao, ki te mahi rānei?",
+			choices: [
+				{
+					label: "Iti iho i te 1 hāora ia rā",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 iti iho rānei i te 2 hāora ia rā",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 iti iho rānei i te 3 hāora ia rā",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 iti iho rānei i te 4 hāora ia rā",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hāora nui ake rānei ia rā",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 13",

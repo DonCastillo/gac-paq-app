@@ -64,6 +64,57 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Pātai 25",
+			label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
+			kid_label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
+			adult_label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
+			kid_sublabel: "Kōwhiria mēnā e hānga ana",
+			adult_sublabel: "Kōwhiria mēnā e hānga ana",
+			choices: [
+				{
+					label: "Te rongo",
+					value: "Hearing",
+				},
+				{
+					label: "Te kite",
+					value: "Seeing",
+				},
+				{
+					label: "Te kōrero",
+					value: "Speech",
+				},
+				{
+					label: "Te neke",
+					value: "Mobility",
+				},
+				{
+					label: "Te moruki",
+					value: "Agility",
+				},
+				{
+					label: "Te mamae",
+					value: "Pain",
+				},
+				{
+					label: "Te maumahara",
+					value: "Memory",
+				},
+				{
+					label: "Tētahi atu",
+					value: "Other",
+				},
+				{
+					label: "Kāore ahau mō te whāki",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Kāore ētahi o runga, kāore ōna whakararu",
+					value: "None of the above",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",

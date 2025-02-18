@@ -46,6 +46,42 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionSatisfactionImage,
+			heading: "Kōrero urupare",
+			label: "I pēhea te taupānga ki a koe?",
+			kid_label: "I pēhea te taupānga ki a koe?",
+			adult_label: "Kei te pēhea ō piropiro ki tēnei taupānga?",
+			adult_sublabel: "Pāwhiria te whakaahua (īmōtiki) e whakaatu ana i ō piropiro.",
+			kid_sublabel: "Pāwhiria te whakaahua (īmōtiki) e tino whakakanohi ana i ō piropiro.",
+			choices: [
+				{
+					label: "Aroha kore",
+					value: "Strongly dissatisfied",
+					image_ident: "very_dissatisfied",
+				},
+				{
+					label: "Aroha kore",
+					value: "Dissatisfied",
+					image_ident: "dissatisfied",
+				},
+				{
+					label: "Aroha kore",
+					value: "Neutral",
+					image_ident: "neutral",
+				},
+				{
+					label: "Rangatira",
+					value: "Satisfied",
+					image_ident: "satisfied",
+				},
+				{
+					label: "Rangatira",
+					value: "Strongly satisfied",
+					image_ident: "very_satisfied",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionSatisfactionImage,
 			heading: "Feedback",

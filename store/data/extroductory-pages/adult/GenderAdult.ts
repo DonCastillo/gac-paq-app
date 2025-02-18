@@ -31,6 +31,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 24",
+			label: "He aha tō ira?",
+			kid_label: "He aha tō ira?",
+			adult_label: "He aha tō ira?",
+			choices: [
+				{
+					label: "Tāne",
+					value: "Female",
+				},
+				{
+					label: "Wahine",
+					value: "Male",
+				},
+				{
+					label: "Kāore ahau mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 24",

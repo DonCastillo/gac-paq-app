@@ -39,6 +39,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 4",
+			label: "E hia te roa o ō akomanga whakakori?",
+			kid_label: "E hia te roa o ō akomanga whakakori?",
+			adult_label: "E hia te roa o ngā akomanga whakakori o tāu tamaiti?",
+			choices: [
+				{
+					label: "Iti iho i te 30 meneti ia akomanga",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 meneti ia akomanga",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 meneti ia akomanga",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Neke atu i te 60 meneti ia akomanga",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Kāore i te mōhio",
+					value: "Don't know",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 4",

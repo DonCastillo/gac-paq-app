@@ -16,6 +16,14 @@ const ParticipantIDPage: LangQuestionInputPayloadInterface = {
 			adult_label: "Please enter your Participant ID",
 			placeholder: "Participant ID Serial Number",
 		},
+		"mi-NZ": {
+			type: Question.QuestionInput,
+			heading: "Nau mai!",
+			label: "Whakaurua koa to ID Kaiuru",
+			kid_label: "Whakaurua koa to ID Kaiuru",
+			adult_label: "Whakaurua koa to ID Kaiuru",
+			placeholder: "Tau Rangatū ID Kaiuru",
+		},
 		"en-NZ": {
 			type: Question.QuestionInput,
 			heading: "Welcome!",

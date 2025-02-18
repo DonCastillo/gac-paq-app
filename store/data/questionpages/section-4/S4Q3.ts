@@ -35,6 +35,31 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 15c",
+			label: "Ka hia te roa o tō haerenga ki te kura?",
+			kid_label: "Ka hia te roa o tō haerenga ki te kura?",
+			adult_label: "Ka hia te roa o tō tāu tamaiti haere ki te kura?",
+			choices: [
+				{
+					label: "10 meneti iti iho rānei",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 – 20 meneti",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 meneti",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Nui ake i te 30 meneti",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 15c",

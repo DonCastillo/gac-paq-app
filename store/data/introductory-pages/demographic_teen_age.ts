@@ -43,6 +43,39 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionDropdown,
+			heading: "Nau mai!",
+			label: "E hia ō tau?",
+			kid_label: "E hia ō tau?",
+			adult_label: "E hia ō tau?",
+			choices: [
+				{
+					label: "12 ngā tau",
+					value: "12",
+				},
+				{
+					label: "13 ngā tau",
+					value: "13",
+				},
+				{
+					label: "14 ngā tau",
+					value: "14",
+				},
+				{
+					label: "15 ngā tau",
+					value: "15",
+				},
+				{
+					label: "16 ngā tau",
+					value: "16",
+				},
+				{
+					label: "17 ngā tau",
+					value: "17",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",

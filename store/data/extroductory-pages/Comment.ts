@@ -23,6 +23,18 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
+		"mi-NZ": {
+			type: Question.QuestionTextarea,
+			heading: "Kōrero urupare",
+			placeholder: "Tāpiri tō kōrero ki konei",
+			label: "He kōrero rānei, he huatau rānei āu mō te taupānga, o ngā pātai rānei i tukuna ai?",
+			kid_label:
+				"He kōrero rānei, he huatau rānei āu mō te taupānga, o ngā pātai rānei i tukuna ai?",
+			adult_label:
+				"He āwhina, he whakaaro rānei āu mō te taupānga, mō ngā pātai rānei i uia e mātou?",
+			kid_sublabel: "Mēnā i whakaae, tuhia ki pouaka ki raro",
+			adult_sublabel: "Mēnā e whakaae ana, tēnā tuhia i te pouaka i raro nei",
+		},
 		"en-NZ": {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",

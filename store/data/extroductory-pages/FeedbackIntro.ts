@@ -10,6 +10,10 @@ const FeedbackIntro: LangSectionPayloadInterface = {
 			heading: "Feedback",
 			subheading: "",
 		},
+		"mi-NZ": {
+			heading: "Kōrero urupare",
+			subheading: "",
+		},
 		"en-NZ": {
 			heading: "Feedback",
 			subheading: "",

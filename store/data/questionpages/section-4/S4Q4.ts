@@ -100,6 +100,51 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadioImage,
+			heading: "Pātai 16",
+			label: "Mā hea atu koe ki te mahi i te wiki kua hipa?",
+			kid_label: "Mā hea atu koe ki te mahi i te wiki kua hipa?",
+			adult_label: "Mā hea atu tāu tamaiti ki te mahi i te wiki kua hipa?",
+			kid_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
+			adult_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
+			choices: [
+				{
+					label: "Mā raro",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Mā runga wīra",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
+						adult:
+							"Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
+					},
+				},
+				{
+					label: "Mā runga waka tūmatawhānui",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "hei tauira, mā runga pahi, mā runga tereina, mā runga taramu, mā runga poti",
+						adult: "hei tauira, mā runga pahi, mā runga tereina, mā runga taramu, mā runga poti",
+					},
+				},
+				{
+					label: "Mā runga wakatono, mā runga taraka, mā motopaika rānei",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Mā waka kē, mā tēhea?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadioImage,
 			heading: "Otázka 16",

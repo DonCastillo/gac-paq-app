@@ -44,6 +44,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 29",
+			label: "He aha te taumata mātauranga nui katoa i tutuki i tētahi mema o tō kāinga?",
+			kid_label: "He aha te taumata mātauranga nui katoa i tutuki i tētahi mema o tō kāinga?",
+			adult_label: "He aha te taumata mātauranga nui katoa i tutuki i tētahi mema o tō kāinga?",
+			choices: [
+				{
+					label: "Kāore he taumata",
+					value: "No formal schooling",
+				},
+				{
+					label: "Kura teina",
+					value: "Primary school",
+				},
+				{
+					label: "Kura tuarua",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Ara ringarehe/Kuratini",
+					value: "Vocational/polytechnic education",
+				},
+				{
+					label: "Whare wānanga",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Kāore mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 29",

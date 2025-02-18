@@ -27,6 +27,23 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 18",
+			label: "I oti rānei i a koe ētahi ngohe whakakori tinana i te wiki kua hipa?",
+			kid_label: "I oti rānei i a koe ētahi ngohe whakakori tinana i te wiki kua hipa?",
+			adult_label: "I oti rānei i tāu tamaiti ētahi ngohe whakakori tinana i te wiki kua hipa?",
+			choices: [
+				{
+					label: "Āe",
+					value: "yes",
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 18",
