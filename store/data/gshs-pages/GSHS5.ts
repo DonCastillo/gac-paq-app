@@ -44,6 +44,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 37",
+			label:
+				"Em um dia típico (normal), quanto tempo você gasta sentado, assistindo televisão, jogando no computador, conversando com amigos, usando o Tablet, usando o celular/iPhone/smartphone ou realizando outras atividades sentado, como jogar cartas ou dominó?",
+			kid_label:
+				"Em um dia típico (normal), quanto tempo você gasta sentado, assistindo televisão, jogando no computador, conversando com amigos, usando o Tablet, usando o celular/iPhone/smartphone ou realizando outras atividades sentado, como jogar cartas ou dominó?",
+			adult_label:
+				"Em um dia típico (normal), quanto tempo você gasta sentado, assistindo televisão, jogando no computador, conversando com amigos, usando o Tablet, usando o celular/iPhone/smartphone ou realizando outras atividades sentado, como jogar cartas ou dominó?",
+			choices: [
+				{
+					label: "Menos de 1 hora por dia",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 a 2 horas por dia",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3 a 4 horas por dia",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "5 a 6 horas por dia",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "7 a 8 horas por dia",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Mais de 8 horas por dia",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 37",

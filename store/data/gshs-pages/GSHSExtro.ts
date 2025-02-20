@@ -10,6 +10,10 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"pt-BR": {
+			heading: "Seção Completa!",
+			subheading: "",
+		},
 		"es-ES": {
 			heading: "Sección Completa",
 			subheading: "",

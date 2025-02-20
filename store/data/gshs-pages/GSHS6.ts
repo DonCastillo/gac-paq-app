@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 38",
+			label: "Em dias de aula, quantas horas de sono você dorme por noite?",
+			kid_label: "Em dias de aula, quantas horas de sono você dorme por noite?",
+			adult_label: "Em dias de aula, quantas horas de sono você dorme por noite?",
+			choices: [
+				{
+					label: "4 horas ou menos",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 horas",
+					value: "5 hours",
+				},
+				{
+					label: "6 horas",
+					value: "6 hours",
+				},
+				{
+					label: "7 horas",
+					value: "7 hours",
+				},
+				{
+					label: "8 horas",
+					value: "8 hours",
+				},
+				{
+					label: "9 horas",
+					value: "9 hours",
+				},
+				{
+					label: "10 horas ou mais",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 38",

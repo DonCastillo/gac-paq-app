@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 35",
+			label:
+				"Durante os últimos 7 dias, em quantos dias você andou a pé ou de bicicleta para ir ou voltar da escola?",
+			kid_label:
+				"Durante os últimos 7 dias, em quantos dias você andou a pé ou de bicicleta para ir ou voltar da escola?",
+			adult_label:
+				"Durante os últimos 7 dias, em quantos dias você andou a pé ou de bicicleta para ir ou voltar da escola?",
+			choices: [
+				{
+					label: "0 (nenhum dia)",
+					value: "0",
+				},
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 35",

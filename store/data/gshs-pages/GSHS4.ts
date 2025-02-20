@@ -44,6 +44,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 36",
+			label:
+				"Ao longo deste ano escolar, quantos dias por semana você participou das aulas de Educação Física?",
+			kid_label:
+				"Ao longo deste ano escolar, quantos dias por semana você participou das aulas de Educação Física?",
+			adult_label:
+				"Ao longo deste ano escolar, quantos dias por semana você participou das aulas de Educação Física?",
+			choices: [
+				{
+					label: "0 (nenhum dia)",
+					value: "0",
+				},
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 ou mais dias",
+					value: ">=5",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 36",

@@ -54,6 +54,54 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 33",
+			label:
+				"Durante os últimos 7 dias, quantos dias você foi fisicamente ativo por um total de pelo menos 60 minutos por dia?",
+			kid_label:
+				"Durante os últimos 7 dias, quantos dias você foi fisicamente ativo por um total de pelo menos 60 minutos por dia?",
+			adult_label:
+				"Durante os últimos 7 dias, quantos dias você foi fisicamente ativo por um total de pelo menos 60 minutos por dia?",
+			kid_sublabel:
+				"Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
+			adult_sublabel:
+				"Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
+			choices: [
+				{
+					label: "0 (nenhum dia)",
+					value: "0",
+				},
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 33",

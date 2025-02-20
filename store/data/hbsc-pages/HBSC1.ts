@@ -69,7 +69,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				"Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
 			choices: [
 				{
-					label: "Nenhum dia",
+					label: "0 (nenhum dia)",
 					value: "0",
 				},
 				{
