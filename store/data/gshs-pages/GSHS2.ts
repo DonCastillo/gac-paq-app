@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const GSHS2: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_2",
-	name: "Question 34: During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+	name: "Question 26: During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
 	column_name: "GSHS 02",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 34",
+			heading: "Question 26",
 			label:
 				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
 			kid_label:
@@ -54,7 +54,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Questão 34",
+			heading: "Questão 26",
 			label:
 				"Durante os últimos 7 dias, quantos dias você fez exercícios para melhorar o tônus e a força dos seus músculos, tais como flexões de braço, abdominais ou levantamento de peso?",
 			kid_label:
@@ -98,7 +98,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 34",
+			heading: "Pregunta 26",
 			label:
 				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
 			kid_label:
@@ -142,7 +142,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 34",
+			heading: "Question 26",
 			label:
 				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
 			kid_label:
@@ -186,7 +186,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 34",
+			heading: "Pregunta 26",
 			label:
 				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
 			kid_label:
@@ -230,7 +230,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 34",
+			heading: "Question 26",
 			label:
 				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
 			kid_label:
@@ -274,7 +274,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 34",
+			heading: "Question 26",
 			label:
 				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
 			kid_label:
@@ -318,7 +318,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 34",
+			heading: "Question 26",
 			label:
 				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
 			kid_label:
@@ -362,7 +362,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 34",
+			heading: "Question 26",
 			label:
 				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
 			kid_label:
@@ -406,7 +406,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 34",
+			heading: "Fråga 26",
 			label:
 				"Hur många dagar gjorde du övningar som stärker dina muskler, till exempel armhävningar, sit-ups eller styrketränade under de senaste 7 dagarna?",
 			kid_label:
@@ -450,7 +450,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 34",
+			heading: "问题 26",
 			label: "在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
 			kid_label: "在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
 			adult_label:

@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const HBSC1: LangQuestionRadioPayloadInterface = {
 	ident: "hbsc_1",
-	name: "Question 31: Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
+	name: "Question 25: Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Please add up all the time you spent in physical activity each day.",
 	column_name: "HBSC 01",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 31",
+			heading: "Question 25",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -56,7 +56,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Questão 31",
+			heading: "Questão 25",
 			label:
 				"Nos últimos 7 dias, em quantos dias você fez atividade física por pelo menos 60 minutos (1 hora) por dia?",
 			kid_label:
@@ -104,7 +104,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 31",
+			heading: "Pregunta 25",
 			label:
 				"En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
 			kid_label:
@@ -152,7 +152,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 31",
+			heading: "Question 25",
 			label:
 				"Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
 			kid_label:
@@ -199,7 +199,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 31",
+			heading: "Pregunta 25",
 			label:
 				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
 			kid_label:
@@ -245,7 +245,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 31",
+			heading: "Question 25",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -291,7 +291,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 31",
+			heading: "Question 25",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -337,7 +337,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 31",
+			heading: "Question 25",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -383,7 +383,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 31",
+			heading: "Question 25",
 			label:
 				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -429,7 +429,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 31",
+			heading: "Fråga 25",
 			label:
 				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
 			kid_label:
@@ -475,7 +475,7 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 31",
+			heading: "问题 25",
 			label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",
 			kid_label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",
 			adult_label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",

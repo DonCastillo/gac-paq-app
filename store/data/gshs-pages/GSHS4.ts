@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const GSHS4: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_4",
-	name: "Question 36: During this school year, on how many days did you go to physical education (PE) class each week?",
+	name: "Question 28: During this school year, on how many days did you go to physical education (PE) class each week?",
 	column_name: "GSHS 04",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 36",
+			heading: "Question 28",
 			label:
 				"During this school year, on how many days did you go to physical education (PE) class each week?",
 			kid_label:
@@ -46,7 +46,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
-			heading: "Questão 36",
+			heading: "Questão 28",
 			label:
 				"Ao longo deste ano escolar, quantos dias por semana você participou das aulas de Educação Física?",
 			kid_label:
@@ -82,7 +82,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 36",
+			heading: "Pregunta 28",
 			label:
 				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
 			kid_label:
@@ -118,7 +118,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 36",
+			heading: "Question 28",
 			label:
 				"During this school year, on how many days did you go to physical education (PE) class each week?",
 			kid_label:
@@ -154,7 +154,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 36",
+			heading: "Pregunta 28",
 			label:
 				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
 			kid_label:
@@ -190,7 +190,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 36",
+			heading: "Question 28",
 			label:
 				"During this school year, on how many days did you go to physical education (PE) class each week?",
 			kid_label:
@@ -226,7 +226,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 36",
+			heading: "Question 28",
 			label:
 				"During this school year, on how many days did you go to physical education (PE) class each week?",
 			kid_label:
@@ -262,7 +262,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 36",
+			heading: "Question 28",
 			label:
 				"During this school year, on how many days did you go to physical education (PE) class each week?",
 			kid_label:
@@ -298,7 +298,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 36",
+			heading: "Question 28",
 			label:
 				"During this school year, on how many days did you go to physical education (PE) class each week?",
 			kid_label:
@@ -334,7 +334,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 36",
+			heading: "Fråga 28",
 			label: "Hur många dagar i veckan har du haft idrottslektion under det senaste skolåret?",
 			kid_label: "Hur många dagar i veckan har du haft idrottslektion under det senaste skolåret?",
 			adult_label:
@@ -368,7 +368,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 36",
+			heading: "问题 28",
 			label: "在本学年里，每周你有几天上体育课？",
 			kid_label: "在本学年里，每周你有几天上体育课？",
 			adult_label: "在本学年里，每周你有几天上体育课？",
