@@ -52,6 +52,52 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 32",
+			label:
+				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			kid_label:
+				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			adult_label:
+				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			kid_sublabel: "Considere as atividades fora do horário escolar.",
+			adult_sublabel: "Considere as atividades fora do horário escolar.",
+			choices: [
+				{
+					label: "Todos os dias",
+					value: "Every day",
+				},
+				{
+					label: "De 4 a 6 vezes por semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 vezes por semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 vezes por semana",
+					value: "2 times a week",
+				},
+				{
+					label: "Uma vez por semana",
+					value: "Once a week",
+				},
+				{
+					label: "Uma vez por mês",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de uma vez por mês",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 32",
