@@ -429,17 +429,17 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 		if (mode === Mode.Teen) {
 			// randomly add hsbc or gshs pages 35% of the time
 			// if (randomBoolean(0.35)) {
-				// if (randomBoolean(0.5)) {
-					// collect hsbc pages
-					({ pages, sectionTotal } = loadHbscPages(newPages) as AccumulatedPageType);
-					newPages = { ...newPages, ...pages };
-					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-				// } else {
-					// collect gshs pages
-					({ pages, sectionTotal } = loadGshsPages(newPages) as AccumulatedPageType);
-					newPages = { ...newPages, ...pages };
-					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-				// }
+			// if (randomBoolean(0.5)) {
+			// collect hsbc pages
+			({ pages, sectionTotal } = loadHbscPages(newPages) as AccumulatedPageType);
+			newPages = { ...newPages, ...pages };
+			newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+			// } else {
+			// collect gshs pages
+			({ pages, sectionTotal } = loadGshsPages(newPages) as AccumulatedPageType);
+			newPages = { ...newPages, ...pages };
+			newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
+			// }
 			// }
 		}
 	} else {
