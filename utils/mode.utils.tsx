@@ -17,16 +17,11 @@ const changeMode = (value: string | null | ModeType, language: string | undefine
 		finalMode = Mode.Kid;
 	}
 
-	console.log("------======------");
-	console.log("final mode: ", finalMode);
-	console.log("final language: ", language);
-	console.log("------======------");
-
 	// load age page
 	loadAgePage(finalMode);
 
 	// reload extro feedback pages
-	reloadExtroFeedbackPages(finalMode, language || "en-CA");
+	reloadExtroFeedbackPages(finalMode, language ?? "en-CA");
 
 	// reset narration autoplay
 	store.dispatch(resetAllNarrations());

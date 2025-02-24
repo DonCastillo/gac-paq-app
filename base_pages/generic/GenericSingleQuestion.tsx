@@ -40,6 +40,7 @@ import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import type Mode from "constants/mode.enum";
 import Toolbar from "components/adults/subcomponents/Toolbar";
+import { loadSectionPages } from "utils/load_pages.utils";
 
 const GenericSingleQuestion = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -96,6 +97,7 @@ const GenericSingleQuestion = (): React.ReactElement => {
 		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
 			dispatch(setMode(getModeType(value)));
 			changeMode(getModeType(value), language);
+			loadSectionPages();
 		}
 
 		// record start when user is answering questions

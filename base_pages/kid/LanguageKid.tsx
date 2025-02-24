@@ -25,7 +25,7 @@ import {
 	setLanguage,
 	skipPage,
 } from "store/settings/settingsSlice";
-import { loadPhrases, loadSectionTitles } from "utils/load.utils";
+import { loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { translateQuestionLabel } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
@@ -33,7 +33,7 @@ import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenKid from "./LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
 import { loadQuestionData } from "store/questions/questionsThunk";
-import { loadPages } from "utils/load_pages.utils";
+import { loadPages, loadSectionPages } from "utils/load_pages.utils";
 import {
 	clearExtroResponses,
 	clearFeedbackResponses,
@@ -75,6 +75,7 @@ const LanguageKid = (): React.ReactElement => {
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
 		changeMode(mode, language);
+		loadSectionPages();
 		dispatch(skipPage(1));
 		dispatch(clearQuestionResponses());
 		dispatch(clearHbscResponses());
@@ -83,11 +84,6 @@ const LanguageKid = (): React.ReactElement => {
 		dispatch(clearFeedbackResponses());
 		dispatch(setIsLoading(false));
 	};
-
-	// set translated section titles
-	useEffect(() => {
-		loadSectionTitles();
-	}, [sectionPages]);
 
 	// set background screen dynamically
 	useEffect(() => {
