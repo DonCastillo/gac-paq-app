@@ -27,6 +27,7 @@ import {
 	addSectionTotalPages,
 	resetSectionTitles,
 	addSectionTitle,
+	resetSectionTotalPages,
 } from "store/settings/settingsSlice";
 import { loadLanguagesOffline } from "./load.utils";
 import Screen from "constants/screen.enum";
@@ -42,6 +43,7 @@ const loadSectionPages = (): void => {
 	const allPages: Record<number, PageIndexInterface> = store.getState().settings.pages;
 	const phrases = store.getState().settings.phrases;
 	store.dispatch(resetSectionTitles());
+	store.dispatch(resetSectionTotalPages());
 
 	const sectionTotalPages: Record<number, number> = {};
 	const sectionTitles: Record<number, string> = {};

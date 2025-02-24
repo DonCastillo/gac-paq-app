@@ -25,7 +25,7 @@ import {
 	setLanguage,
 	skipPage,
 } from "store/settings/settingsSlice";
-import { loadPhrases, loadSectionTitles } from "utils/load.utils";
+import { loadPhrases } from "utils/load.utils";
 import { addResponse } from "utils/response.utils";
 import { translateQuestionLabel } from "utils/translate.utils";
 import type { QuestionDropdownLanguageInterface } from "interface/payload.type";
