@@ -32,7 +32,7 @@ import { type QuestionDropdownLanguageInterface } from "interface/payload.type";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import { loadQuestionData } from "store/questions/questionsThunk";
-import { loadPages } from "utils/load_pages.utils";
+import { loadPages, loadSectionPages } from "utils/load_pages.utils";
 import {
 	clearExtroResponses,
 	clearFeedbackResponses,
@@ -73,6 +73,7 @@ const GenericLanguage = (): React.ReactElement => {
 		await dispatch(getNarrationPayload({ mode, language }));
 		loadPages();
 		changeMode(mode, language);
+		loadSectionPages();
 		dispatch(skipPage(1));
 		dispatch(clearQuestionResponses());
 		dispatch(clearHbscResponses());
@@ -81,11 +82,6 @@ const GenericLanguage = (): React.ReactElement => {
 		dispatch(clearFeedbackResponses());
 		dispatch(setIsLoading(false));
 	};
-
-	// set translated section titles
-	useEffect(() => {
-		loadSectionTitles();
-	}, [sectionPages]);
 
 	// set selected value
 	useEffect(() => {

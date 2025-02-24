@@ -39,6 +39,7 @@ import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenKid from "../LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
 import { choiceMode } from "utils/options.utils";
+import { loadSectionPages } from "utils/load_pages.utils";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -157,6 +158,7 @@ const QuestionSingleKid = (): React.ReactElement => {
 		// trigger a mode change if the mode changes from a values that is not a kid
 		if (mode !== Mode.Kid) {
 			changeMode(mode, language);
+			loadSectionPages();
 		}
 	}, [mode]);
 

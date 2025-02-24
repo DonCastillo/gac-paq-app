@@ -16,7 +16,7 @@ import {
 	setIsLoading,
 } from "store/settings/settingsSlice";
 import { ErrorScreen, SplashScreen, SuccessScreen } from "utils/state_screen.utils";
-import { loadPages } from "utils/load_pages.utils";
+import { loadPages, loadSectionPages } from "utils/load_pages.utils";
 import LoadingScreenAdult from "./adult/LoadingScreenAdult";
 import NetInfo from "@react-native-community/netinfo";
 import { sendResponseQueue } from "utils/response.utils";
@@ -100,6 +100,7 @@ const AppWrapper = (): React.ReactElement => {
 			loadPhrases();
 			loadPages();
 			changeMode(mode, language);
+			loadSectionPages();
 			dispatch(setIsLoading(false));
 		};
 		loadApp()

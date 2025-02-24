@@ -38,6 +38,7 @@ import LoadingScreenAdult from "../LoadingScreenAdult";
 import AnimatedView from "components/AnimatedView";
 import type Mode from "constants/mode.enum";
 import { choiceMode } from "utils/options.utils";
+import { loadSectionPages } from "utils/load_pages.utils";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -153,6 +154,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
 			dispatch(setMode(getModeType(value)));
 			changeMode(getModeType(value), language);
+			loadSectionPages();
 		}
 
 		// set narration payload
