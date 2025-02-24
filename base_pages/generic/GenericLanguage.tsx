@@ -85,7 +85,7 @@ const GenericLanguage = (): React.ReactElement => {
 
 	useEffect(() => {
 		loadSectionPages();
-	}, [language])
+	}, [language]);
 
 	// set selected value
 	useEffect(() => {

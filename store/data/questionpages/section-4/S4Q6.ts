@@ -129,8 +129,8 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 16c",
-			label: "¿Cuánto tiempo necesitas normalmente para ir a la escuela?",
-			kid_label: "¿Cuánto tiempo necesitas normalmente para ir a la escuela?",
+			label: "¿Cuánto tiempo necesitas normalmente para ir al trabajo?",
+			kid_label: "¿Cuánto tiempo necesitas normalmente para ir al trabajo?",
 			adult_label: "¿Cuánto tiempo necesitó su hija o hijo normalmente para ir a la escuela?",
 			choices: [
 				{
