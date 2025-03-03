@@ -38,8 +38,8 @@ const skipTo = (answer: string | string[] | null): number => {
 		}
 	}
 
-	if(language === "es-MX") {
-		if(currentIdent === "child_ethnicity" && finalAnswer === "no") {
+	if (language === "es-MX") {
+		if (currentIdent === "child_ethnicity" && finalAnswer === "no") {
 			store.dispatch(clearResponseByIdent("parent_ethnicity"));
 			return getPageNumberBasedOnIdent("relationship_to_the_child", pages);
 		}

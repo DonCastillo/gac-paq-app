@@ -34,7 +34,6 @@ import {
 	prevPage,
 } from "store/settings/settingsSlice";
 import { proceedPage } from "utils/navigation.utils";
-import { getQuestion17Label } from "utils/label.utils";
 import { getQuestionType } from "utils/type.utils";
 import type { TranslatedQuestionQuestionType } from "interface/union.type";
 import type {
@@ -84,19 +83,6 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const questionType = getQuestionType(translatedPage.type);
 
 	let questionComponent = <></>;
-
-	// change labels if in question 17
-	// if (
-	// 	[
-	// 		"transportation_7",
-	// 		"transportation_8",
-	// 		"transportation_9",
-	// 		"transportation_10",
-	// 		"transportation_11",
-	// 	].includes(currentPage.page.ident)
-	// ) {
-	// 	questionLabel = getQuestion17Label();
-	// }
 
 	// fetch response for this question
 	useEffect(() => {

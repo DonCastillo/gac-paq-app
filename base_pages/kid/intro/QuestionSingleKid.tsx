@@ -162,26 +162,32 @@ const QuestionSingleKid = (): React.ReactElement => {
 		}
 	}, [mode]);
 
-	/**
-	 * temporarily store the initial selection
-	 */
-	const changeHandler = (value: string | null): void => {
+	const changeHandlerPromise = async (value: string | null): Promise<void> => {
 		addResponse(value);
 		setSelectedValue(value);
 
-		// set mode
-		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
-			dispatch(setMode(getModeType(value)));
-		}
+		if (value !== undefined && value !== null && value !== "") {
+			if (currentPage.page.ident === "mode") {
+				dispatch(setMode(getModeType(value)));
+			}
 
-		// set narration payload
-		if (
-			(currentPage.page.ident === "mode" || currentPage.page.ident === "language_location") &&
-			value !== undefined &&
-			value !== null
-		) {
-			loadNarrations(getModeType(value));
+			if (currentPage.page.ident === "mode") {
+				await loadNarrations(getModeType(value));
+				if (value !== selectedValue) {
+					dispatch(nextPage());
+				}
+			}
+
+			if (currentPage.page.ident === "language_location") {
+				await loadNarrations(getModeType(value));
+			}
 		}
+	};
+
+	const changeHandler = (value: string | null): void => {
+		changeHandlerPromise(value)
+			.then(() => {})
+			.catch(() => {});
 	};
 
 	if (questionType === Question.QuestionDropdown) {
