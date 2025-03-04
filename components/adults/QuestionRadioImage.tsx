@@ -212,7 +212,7 @@ const QuestionRadioImage = ({
 
 	return (
 		<SafeAreaView
-			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
+			style={[styles.container, { maxHeight: verticalScale(400, device.screenHeight) }]}
 		>
 			<View>
 				{options.length <= 4 || !hasOtherOption(options) ? (

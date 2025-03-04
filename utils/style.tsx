@@ -16,12 +16,16 @@ const adjustRadioImageAspectRatio = (): number => {
 
 	let denominator = 1;
 	if (mode === Mode.Kid) {
-		denominator = isTablet ? 1.05 : 1.3;
+		denominator = isTablet ? 1 : 1.3;
 		if (language === "pt-BR") {
-			denominator = isTablet ? 1.05 : 1.6;
+			denominator = isTablet ? 1 : 1.4;
 		}
 	} else {
-		denominator = isTablet ? 1.15 : 1.5;
+		// denominator = isTablet ? 1.15 : 1.5;
+		denominator = isTablet ? 1 : 1.2;
+		if (language === "pt-BR") {
+			denominator = isTablet ? 0.95 : 1.3;
+		}
 	}
 	return 1 / denominator;
 };

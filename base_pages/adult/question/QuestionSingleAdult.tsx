@@ -266,6 +266,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	if (isLoading) {
 		return <LoadingScreenAdult key={currentPageNumber} />;
 	}
+
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />
