@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const GSHS3: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_3",
-	name: "Question 35: During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
+	name: "Question 27: During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
 	column_name: "GSHS 03",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 35",
+			heading: "Question 27",
 			label:
 				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
 			kid_label:
@@ -52,9 +52,53 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 27",
+			label:
+				"Durante os últimos 7 dias, em quantos dias você andou a pé ou de bicicleta para ir ou voltar da escola?",
+			kid_label:
+				"Durante os últimos 7 dias, em quantos dias você andou a pé ou de bicicleta para ir ou voltar da escola?",
+			adult_label:
+				"Durante os últimos 7 dias, em quantos dias você andou a pé ou de bicicleta para ir ou voltar da escola?",
+			choices: [
+				{
+					label: "0 (nenhum dia)",
+					value: "0",
+				},
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 35",
+			heading: "Pregunta 27",
 			label:
 				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
 			kid_label:
@@ -98,7 +142,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 35",
+			heading: "Question 27",
 			label:
 				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
 			kid_label:
@@ -142,7 +186,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 35",
+			heading: "Pregunta 27",
 			label:
 				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
 			kid_label:
@@ -186,7 +230,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 35",
+			heading: "Question 27",
 			label:
 				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
 			kid_label:
@@ -230,7 +274,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 35",
+			heading: "Question 27",
 			label:
 				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
 			kid_label:
@@ -274,7 +318,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 35",
+			heading: "Question 27",
 			label:
 				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
 			kid_label:
@@ -318,7 +362,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 35",
+			heading: "Question 27",
 			label:
 				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
 			kid_label:
@@ -362,7 +406,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 35",
+			heading: "Fråga 27",
 			label:
 				"Hur många dagar gick eller cyklade du till eller från skolan under de senaste 7 dagarna?",
 			kid_label:
@@ -406,7 +450,7 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 35",
+			heading: "问题 27",
 			label: "在过去7天里，有多少天你步行或骑自行车上下学？",
 			kid_label: "在过去7天里，有多少天你步行或骑自行车上下学？",
 			adult_label: "在过去7天里，有多少天你步行或骑自行车上下学？",

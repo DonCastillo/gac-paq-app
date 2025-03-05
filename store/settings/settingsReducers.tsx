@@ -171,6 +171,10 @@ const addSectionTotalPages: AddSectionTotalPagesFuncType = (state, action) => {
 	state.sectionTotalPages = { ...state.sectionTotalPages, [sectionNumber]: totalPages };
 };
 
+const resetSectionTotalPages: SettingsFuncType = (state) => {
+	state.sectionTotalPages = {};
+};
+
 const setKeyboardState: SetKeyboardState = (state, action) => {
 	state.device.isKeyboardOpen = action.payload;
 };
@@ -248,6 +252,7 @@ export default {
 	addSectionTitle,
 	resetSectionTitles,
 	addSectionTotalPages,
+	resetSectionTotalPages,
 	setKeyboardState,
 	removeExtroPages,
 	removeFeedbackPages,

@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const GSHS6: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_6",
-	name: "Question 38: On an average school night, how many hours of sleep do you get?",
+	name: "Question 30: On an average school night, how many hours of sleep do you get?",
 	column_name: "GSHS 06",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 38",
+			heading: "Question 30",
 			label: "On an average school night, how many hours of sleep do you get?",
 			kid_label: "On an average school night, how many hours of sleep do you get?",
 			adult_label: "On an average school night, how many hours of sleep do you get?",
@@ -45,9 +45,46 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 30",
+			label: "Em dias de aula, quantas horas de sono você dorme por noite?",
+			kid_label: "Em dias de aula, quantas horas de sono você dorme por noite?",
+			adult_label: "Em dias de aula, quantas horas de sono você dorme por noite?",
+			choices: [
+				{
+					label: "4 horas ou menos",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 horas",
+					value: "5 hours",
+				},
+				{
+					label: "6 horas",
+					value: "6 hours",
+				},
+				{
+					label: "7 horas",
+					value: "7 hours",
+				},
+				{
+					label: "8 horas",
+					value: "8 hours",
+				},
+				{
+					label: "9 horas",
+					value: "9 hours",
+				},
+				{
+					label: "10 horas ou mais",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 38",
+			heading: "Pregunta 30",
 			label:
 				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
 			kid_label:
@@ -87,7 +124,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 38",
+			heading: "Question 30",
 			label: "On an average school night, how many hours of sleep do you get?",
 			kid_label: "On an average school night, how many hours of sleep do you get?",
 			adult_label: "On an average school night, how many hours of sleep do you get?",
@@ -124,7 +161,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 38",
+			heading: "Pregunta 30",
 			label:
 				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
 			kid_label:
@@ -164,7 +201,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 38",
+			heading: "Question 30",
 			label: "On an average school night, how many hours of sleep do you get?",
 			kid_label: "On an average school night, how many hours of sleep do you get?",
 			adult_label: "On an average school night, how many hours of sleep do you get?",
@@ -201,7 +238,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 38",
+			heading: "Question 30",
 			label: "On an average school night, how many hours of sleep do you get?",
 			kid_label: "On an average school night, how many hours of sleep do you get?",
 			adult_label: "On an average school night, how many hours of sleep do you get?",
@@ -238,7 +275,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 38",
+			heading: "Question 30",
 			label: "On an average school night, how many hours of sleep do you get?",
 			kid_label: "On an average school night, how many hours of sleep do you get?",
 			adult_label: "On an average school night, how many hours of sleep do you get?",
@@ -275,7 +312,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 38",
+			heading: "Question 30",
 			label: "On an average school night, how many hours of sleep do you get?",
 			kid_label: "On an average school night, how many hours of sleep do you get?",
 			adult_label: "On an average school night, how many hours of sleep do you get?",
@@ -312,7 +349,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 38",
+			heading: "Fråga 30",
 			label: "Hur många timmars sömn får du under en vanlig vardag?",
 			kid_label: "Hur många timmars sömn får du under en vanlig vardag?",
 			adult_label: "Hur många timmars sömn får du under en vanlig vardag?",
@@ -349,7 +386,7 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 38",
+			heading: "问题 30",
 			label: "通常你在上学日的晚上睡眠时长是多少个小时？",
 			kid_label: "通常你在上学日的晚上睡眠时长是多少个小时？",
 			adult_label: "通常你在上学日的晚上睡眠时长是多少个小时？",

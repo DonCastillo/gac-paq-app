@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"pt-BR": {
+			heading: "Comportamento de Saúde em Escolares",
+			subheading: "",
+			description: {
+				kid: "Agora vamos conversar sobre o tempo que você gasta fazendo atividades físicas. Atividade física é qualquer atividade que aumenta a sua frequência cardíaca e faz com que você fique sem fôlego em alguns momentos. A atividade física pode ser realizada por meio de esportes (futebol, voleibol, basquetebol, handebol), brincar com amigos, caminhar, correr, andar de bicicleta, nadar, dançar etc.",
+				adult:
+					"Agora vamos conversar sobre o tempo que você gasta fazendo atividades físicas. Atividade física é qualquer atividade que aumenta a sua frequência cardíaca e faz com que você fique sem fôlego em alguns momentos. A atividade física pode ser realizada por meio de esportes (futebol, voleibol, basquetebol, handebol), brincar com amigos, caminhar, correr, andar de bicicleta, nadar, dançar etc.",
+			},
+		},
 		"es-ES": {
 			heading: "Comportamiento de salud en niños en edad escolar",
 			subheading: "",

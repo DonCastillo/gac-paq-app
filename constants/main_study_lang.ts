@@ -1,3 +1,3 @@
-const MAIN_STUDY_LANG = ["sv-SE", "en-CA", "zh-CN", "es-MX"];
+const MAIN_STUDY_LANG = ["sv-SE", "en-CA", "zh-CN", "es-MX", "pt-BR"];
 
 export default MAIN_STUDY_LANG;

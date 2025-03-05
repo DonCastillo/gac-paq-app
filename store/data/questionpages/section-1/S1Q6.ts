@@ -165,9 +165,9 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			kid_label: "En un día escolar normal ¿Cuánto tiempo de descanso tienes?",
 			adult_label: "En un día escolar normal ¿Cuánto tiempo de descanso tiene su hija o hijo?",
 			kid_sublabel:
-				"Esto significa el recreo y la hora de almuerzo escolar) Por favor, suma los tiempos; por ejemplo, dos descansos de 15 minutos por día y 30 minutos para el almuerzo sumarían 60 minutos",
+				"Esto significa el recreo y la hora de almuerzo escolar. Por favor, suma los tiempos; por ejemplo, dos descansos de 15 minutos por día y 30 minutos para el almuerzo sumarían 60 minutos",
 			adult_sublabel:
-				"Esto significa el recreo y la hora de almuerzo escolar) Por favor, sume los tiempos; por ejemplo, dos descansos de 15 minutos por día y 30 minutos para el almuerzo sumarían 60 minutos",
+				"Esto significa el recreo y la hora de almuerzo escolar. Por favor, sume los tiempos; por ejemplo, dos descansos de 15 minutos por día y 30 minutos para el almuerzo sumarían 60 minutos",
 			choices: [
 				{
 					label: "0 minutos",

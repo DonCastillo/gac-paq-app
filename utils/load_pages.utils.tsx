@@ -20,25 +20,72 @@ import {
 	clearQuestionResponses,
 	clearResponseByIdent,
 } from "store/responses/responsesSlice";
+import { setLanguageOption } from "store/questions/questionsSlice";
 import {
-	addSectionPage,
-	resetSectionPages,
-	setLanguageOption,
-} from "store/questions/questionsSlice";
-import { addPage, setPage, addSectionTotalPages } from "store/settings/settingsSlice";
+	addPage,
+	setPage,
+	addSectionTotalPages,
+	resetSectionTitles,
+	addSectionTitle,
+	resetSectionTotalPages,
+} from "store/settings/settingsSlice";
 import { loadLanguagesOffline } from "./load.utils";
 import Screen from "constants/screen.enum";
 import Section from "constants/section.enum";
 import Mode from "constants/mode.enum";
 import { getScreenType } from "utils/type.utils";
-import type {
-	LanguageInterface,
-	PageIndexInterface,
-	SectionPayloadInterface,
-} from "interface/payload.type";
+import type { LanguageInterface, PageIndexInterface } from "interface/payload.type";
 import MAIN_STUDY_LANG from "constants/main_study_lang";
 import { type loadPagesFuncType } from "interface/function.type";
 import { randomBoolean } from "./random";
+
+const loadSectionPages = (): void => {
+	const allPages: Record<number, PageIndexInterface> = store.getState().settings.pages;
+	const phrases = store.getState().settings.phrases;
+	store.dispatch(resetSectionTitles());
+	store.dispatch(resetSectionTotalPages());
+
+	const sectionTotalPages: Record<number, number> = {};
+	const sectionTitles: Record<number, string> = {};
+
+	for (const [key, page] of Object.entries(allPages)) {
+		// collect section titles
+		if (page.sectionPageNumber === 1) {
+			if (page.sectionNumber === 0) {
+				sectionTitles[page.sectionNumber] = phrases?.introduction;
+			} else {
+				const translatedPage = page.page.translations;
+				if (translatedPage.heading !== undefined && translatedPage.heading !== null) {
+					sectionTitles[page.sectionNumber] = translatedPage.heading;
+				} else {
+					sectionTitles[page.sectionNumber] = "";
+				}
+			}
+
+			// reset app last page title
+			if (page.section === Section.AppExtro) {
+				sectionTitles[page.sectionNumber] = "";
+			}
+		}
+
+		// collect section numbers
+		if (page.sectionPageNumber === 1) {
+			sectionTotalPages[page.sectionNumber] = 1;
+		} else {
+			sectionTotalPages[page.sectionNumber] = sectionTotalPages[page.sectionNumber] + 1;
+		}
+	}
+
+	// load total pages
+	for (const [key, value] of Object.entries(sectionTotalPages)) {
+		store.dispatch(addSectionTotalPages({ sectionNumber: parseInt(key), totalPages: value }));
+	}
+
+	// load section titles
+	for (const [key, value] of Object.entries(sectionTitles)) {
+		store.dispatch(addSectionTitle({ sectionNumber: parseInt(key), sectionTitle: value }));
+	}
+};
 
 const loadPages = (): void => {
 	const questions = store.getState().questions;
@@ -54,15 +101,12 @@ const loadPages = (): void => {
 	// load offline languages
 	store.dispatch(setLanguageOption(languages));
 
-	// clear section pages
-	store.dispatch(resetSectionPages());
-
 	let pageNumber = 1;
 	let sectionNumber = 0;
 	let sectionPageNumber = 1;
 
 	// load introductory pages
-	console.log("load intro pages...");
+	// console.log("load intro pages...");
 	introductoryPages.forEach((page: IntroductoryPageType, sectionIndex: number) => {
 		const sectionPageNumber = ++sectionIndex;
 
@@ -80,22 +124,16 @@ const loadPages = (): void => {
 				},
 			}),
 		);
-		// add section total pages
-		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		pageNumber++;
 	});
 
 	// load section question pages
-	console.log("load question and section pages...");
+	// console.log("load question and section pages...");
 	questionPages.forEach((page: QuestionPageType) => {
 		// add page to section
 		if (getScreenType(page.type) === Screen.IntroQuestion) {
 			sectionPageNumber = 1;
 			sectionNumber++;
-			// store.dispatch(addSectionPage(page as SectionPayloadInterface));
-			if (getScreenType(page.type) === Screen.IntroQuestion) {
-				store.dispatch(addSectionPage({ sectionNumber, page: page as SectionPayloadInterface }));
-			}
 		}
 
 		store.dispatch(
@@ -112,11 +150,13 @@ const loadPages = (): void => {
 			}),
 		);
 
-		// add section total pages
-		store.dispatch(addSectionTotalPages({ sectionNumber, totalPages: sectionPageNumber }));
 		sectionPageNumber++;
 		pageNumber++;
 	});
+
+	// console.log("---------------------------------");
+	// console.log("intro and question pages done...");
+	// console.log(JSON.stringify(store.getState().settings.sectionTotalPages, null, 2));
 };
 
 const loadAgePage = (mode: ModeType): void => {
@@ -173,13 +213,6 @@ const loadKidDemographicPages: loadPagesFuncType = (newPages) => {
 	kidExtroPages.forEach((page: KidExtroductoryPageType, index: number) => {
 		const pageNumber = ++lastPageNumber;
 
-		// add page to section
-		if (getScreenType(page.type) === Screen.IntroQuestion) {
-			store.dispatch(
-				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
-			);
-		}
-
 		finalPages[pageNumber] = {
 			pageNumber,
 			page,
@@ -209,13 +242,6 @@ const loadAdultDemographicPages: loadPagesFuncType = (newPages) => {
 	lastSectionNumber++;
 	adultExtroPages.forEach((page: AdultExtroductoryPageType, index: number) => {
 		const pageNumber = ++lastPageNumber;
-
-		// add page to section
-		if (getScreenType(page.type) === Screen.IntroQuestion) {
-			store.dispatch(
-				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
-			);
-		}
 
 		finalPages[pageNumber] = {
 			pageNumber,
@@ -248,13 +274,6 @@ const loadFeedbackPages: loadPagesFuncType = (newPages) => {
 	feedbackPages.forEach((page: FeedbackExtroductoryPageType, index: number) => {
 		const pageNumber = ++lastPageNumber;
 
-		// add page to section
-		if (getScreenType(page.type) === Screen.IntroQuestion) {
-			store.dispatch(
-				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
-			);
-		}
-
 		finalPages[pageNumber] = {
 			pageNumber,
 			page,
@@ -285,13 +304,6 @@ const loadHbscPages: loadPagesFuncType = (newPages) => {
 	HbscPages.forEach((page: QuestionPageType, index: number) => {
 		const pageNumber = ++lastPageNumber;
 
-		// add page to section
-		if (getScreenType(page.type) === Screen.IntroQuestion) {
-			store.dispatch(
-				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
-			);
-		}
-
 		finalPages[pageNumber] = {
 			pageNumber,
 			page,
@@ -321,13 +333,6 @@ const loadGshsPages: loadPagesFuncType = (newPages) => {
 	lastSectionNumber++;
 	GshsPages.forEach((page: QuestionPageType, index: number) => {
 		const pageNumber = ++lastPageNumber;
-
-		// add page to section
-		if (getScreenType(page.type) === Screen.IntroQuestion) {
-			store.dispatch(
-				addSectionPage({ sectionNumber: lastSectionNumber, page: page as SectionPayloadInterface }),
-			);
-		}
 
 		finalPages[pageNumber] = {
 			pageNumber,
@@ -385,7 +390,6 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 	}
 
 	let newPages: Record<number, PageIndexInterface> = {};
-	let newSectionTotalPages: Record<number, number> = {};
 
 	if (allPages === undefined || allPages === null) {
 		return;
@@ -408,18 +412,15 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 
 	// collect extro pages
 	let pages: Record<number, PageIndexInterface> = {};
-	let sectionTotal: Record<number, number> = {};
 
 	if (mode === Mode.Kid || mode === Mode.Teen) {
 		// collect kid demographics pages
-		({ pages, sectionTotal } = loadKidDemographicPages(newPages) as AccumulatedPageType);
+		({ pages } = loadKidDemographicPages(newPages) as AccumulatedPageType);
 		newPages = { ...newPages, ...pages };
-		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
 	} else {
 		// collect adult demographics pages
-		({ pages, sectionTotal } = loadAdultDemographicPages(newPages) as AccumulatedPageType);
+		({ pages } = loadAdultDemographicPages(newPages) as AccumulatedPageType);
 		newPages = { ...newPages, ...pages };
-		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
 	}
 
 	if (MAIN_STUDY_LANG.includes(language)) {
@@ -427,41 +428,38 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 
 		// only the adolescent will answer the hbsc and gshs questions
 		if (mode === Mode.Teen) {
-			// randomly add hsbc or gshs pages 35% of the time
-			// if (randomBoolean(0.35)) {
-				// if (randomBoolean(0.5)) {
-					// collect hsbc pages
-					({ pages, sectionTotal } = loadHbscPages(newPages) as AccumulatedPageType);
-					newPages = { ...newPages, ...pages };
-					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-				// } else {
-					// collect gshs pages
-					({ pages, sectionTotal } = loadGshsPages(newPages) as AccumulatedPageType);
-					newPages = { ...newPages, ...pages };
-					newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-				// }
-			// }
+			if (process.env.EXPO_PUBLIC_ENVIRONMENT !== "production") {
+				// load all the gshs and hbsc pages
+				({ pages } = loadHbscPages(newPages) as AccumulatedPageType);
+				newPages = { ...newPages, ...pages };
+				({ pages } = loadGshsPages(newPages) as AccumulatedPageType);
+				newPages = { ...newPages, ...pages };
+			} else {
+				// randomly add hsbc or gshs pages 35% of the time
+				if (randomBoolean(0.35)) {
+					if (randomBoolean(0.5)) {
+						// collect hsbc pages
+						({ pages } = loadHbscPages(newPages) as AccumulatedPageType);
+						newPages = { ...newPages, ...pages };
+					} else {
+						// collect gshs pages
+						({ pages } = loadGshsPages(newPages) as AccumulatedPageType);
+						newPages = { ...newPages, ...pages };
+					}
+				}
+			}
 		}
 	} else {
 		// pilot study extro pages
 		// collect feedback pages
-		({ pages, sectionTotal } = loadFeedbackPages(newPages) as AccumulatedPageType);
+		({ pages } = loadFeedbackPages(newPages) as AccumulatedPageType);
 		newPages = { ...newPages, ...pages };
-		newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
 	}
 
-	({ pages, sectionTotal } = loadAppExtroPages(newPages) as AccumulatedPageType);
+	({ pages } = loadAppExtroPages(newPages) as AccumulatedPageType);
 	newPages = { ...newPages, ...pages };
-	newSectionTotalPages = { ...newSectionTotalPages, ...sectionTotal };
-
-	console.log("************************************************");
-	console.log("final pages: ", newPages);
-	console.log("final sectionTotal: ", newSectionTotalPages);
 
 	store.dispatch(setPage(newPages));
-	for (const [key, value] of Object.entries(newSectionTotalPages)) {
-		store.dispatch(addSectionTotalPages({ sectionNumber: parseInt(key), totalPages: value }));
-	}
 };
 
-export { loadPages, loadAgePage, reloadExtroFeedbackPages };
+export { loadPages, loadAgePage, reloadExtroFeedbackPages, loadSectionPages };

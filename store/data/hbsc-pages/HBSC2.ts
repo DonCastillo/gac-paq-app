@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const HBSC2: LangQuestionRadioPayloadInterface = {
 	ident: "hbsc_2",
-	name: "Question 32: Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+	name: "Question 26: Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 	column_name: "HBSC 02",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 32",
+			heading: "Question 26",
 			label:
 				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			kid_label:
@@ -52,9 +52,55 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 26",
+			label:
+				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			kid_label:
+				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			adult_label:
+				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			kid_sublabel: "Considere as atividades fora do horário escolar.",
+			adult_sublabel: "Considere as atividades fora do horário escolar.",
+			choices: [
+				{
+					label: "Todos os dias",
+					value: "Every day",
+				},
+				{
+					label: "De 4 a 6 vezes por semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 vezes por semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 vezes por semana",
+					value: "2 times a week",
+				},
+				{
+					label: "Uma vez por semana",
+					value: "Once a week",
+				},
+				{
+					label: "Uma vez por mês",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de uma vez por mês",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
 		"es-ES": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 32",
+			heading: "Pregunta 26",
 			label:
 				"Fuera del horario escolar: ¿con qué frecuencia realizas alguna actividad física en tu tiempo libre que haga que llegues a sudar o te falte el aliento?",
 			kid_label:
@@ -98,7 +144,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"fr-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 32",
+			heading: "Question 26",
 			label:
 				"En dehors des heures de classe, à quelle fréquence fais-tu normalement de l’exercice, dans tes temps libres, au point de transpirer ou d’être essoufflé(e)?",
 			kid_label:
@@ -142,7 +188,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 32",
+			heading: "Pregunta 26",
 			label:
 				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
 			kid_label:
@@ -186,7 +232,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 32",
+			heading: "Question 26",
 			label:
 				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			kid_label:
@@ -230,7 +276,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 32",
+			heading: "Question 26",
 			label:
 				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			kid_label:
@@ -274,7 +320,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 32",
+			heading: "Question 26",
 			label:
 				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			kid_label:
@@ -318,7 +364,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 32",
+			heading: "Question 26",
 			label:
 				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			kid_label:
@@ -362,7 +408,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 32",
+			heading: "Fråga 26",
 			label:
 				"Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
 			kid_label:
@@ -406,7 +452,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 32",
+			heading: "问题 26",
 			label: "学校课堂之外，你经常在空闲时间进行让你出汗或上气不接下气的运动吗？",
 			kid_label: "学校课堂之外，你经常在空闲时间进行让你出汗或上气不接下气的运动吗？",
 			adult_label: "学校课堂之外，你经常在空闲时间进行让你出汗或上气不接下气的运动吗？",

@@ -162,8 +162,6 @@ const questionsSlice = createSlice({
 	reducers: {
 		setLanguageOption: reducersActions.setLanguageOption,
 		setIntroductoryPages: reducersActions.setIntroductoryPages,
-		addSectionPage: reducersActions.addSectionPage,
-		resetSectionPages: reducersActions.resetSectionPages,
 	},
 	selectors: {
 		getLanguageOption: (state: QuestionSliceInterface) => state.languageOption,
@@ -231,8 +229,7 @@ const questionsSlice = createSlice({
 		});
 	},
 });
-export const { setLanguageOption, setIntroductoryPages, addSectionPage, resetSectionPages } =
-	questionsSlice.actions;
+export const { setLanguageOption, setIntroductoryPages } = questionsSlice.actions;
 
 export const {
 	getSectionPages,

@@ -170,32 +170,44 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "¿Cuál es su etnia?",
 			choices: [
 				{
-					label: "Asiático",
-					value: "Asian",
+					label: "Indígena",
+					value: "Indigenous",
 				},
 				{
 					label: "Negro o afroamericano",
 					value: "Black or African American",
 				},
 				{
-					label: "Indígena",
-					value: "Indigenous",
+					label: "Gitano (a) / Rom",
+					value: "Gypsy / Rom",
 				},
 				{
-					label: "Latinoamericano",
-					value: "Latin American",
+					label: "Raizal",
+					value: "Raizal",
 				},
 				{
 					label: "Blanco o caucásico",
 					value: "White or Caucasian",
 				},
 				{
-					label: "Otro",
-					value: "Other",
+					label: "Mestizo (a)",
+					value: "Mestizo (a)",
+				},
+				{
+					label: "Mulato/a",
+					value: "Mulato/a",
 				},
 				{
 					label: "Prefiero no decirlo",
 					value: "Prefer not to say",
+				},
+				{
+					label: "Ninguna",
+					value: "None",
+				},
+				{
+					label: "Otro",
+					value: "Other",
 				},
 			],
 		},
