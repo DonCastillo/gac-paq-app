@@ -106,7 +106,7 @@ const loadPages = (): void => {
 	let sectionPageNumber = 1;
 
 	// load introductory pages
-	console.log("load intro pages...");
+	// console.log("load intro pages...");
 	introductoryPages.forEach((page: IntroductoryPageType, sectionIndex: number) => {
 		const sectionPageNumber = ++sectionIndex;
 
@@ -128,7 +128,7 @@ const loadPages = (): void => {
 	});
 
 	// load section question pages
-	console.log("load question and section pages...");
+	// console.log("load question and section pages...");
 	questionPages.forEach((page: QuestionPageType) => {
 		// add page to section
 		if (getScreenType(page.type) === Screen.IntroQuestion) {
@@ -154,9 +154,9 @@ const loadPages = (): void => {
 		pageNumber++;
 	});
 
-	console.log("---------------------------------");
-	console.log("intro and question pages done...");
-	console.log(JSON.stringify(store.getState().settings.sectionTotalPages, null, 2));
+	// console.log("---------------------------------");
+	// console.log("intro and question pages done...");
+	// console.log(JSON.stringify(store.getState().settings.sectionTotalPages, null, 2));
 };
 
 const loadAgePage = (mode: ModeType): void => {
@@ -428,18 +428,26 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 
 		// only the adolescent will answer the hbsc and gshs questions
 		if (mode === Mode.Teen) {
-			// randomly add hsbc or gshs pages 35% of the time
-			// if (randomBoolean(0.35)) {
-			// if (randomBoolean(0.5)) {
-			// collect hsbc pages
-			({ pages } = loadHbscPages(newPages) as AccumulatedPageType);
-			newPages = { ...newPages, ...pages };
-			// } else {
-			// collect gshs pages
-			({ pages } = loadGshsPages(newPages) as AccumulatedPageType);
-			newPages = { ...newPages, ...pages };
-			// }
-			// }
+			if (process.env.EXPO_PUBLIC_ENVIRONMENT !== "production") {
+				// load all the gshs and hbsc pages
+				({ pages } = loadHbscPages(newPages) as AccumulatedPageType);
+				newPages = { ...newPages, ...pages };
+				({ pages } = loadGshsPages(newPages) as AccumulatedPageType);
+				newPages = { ...newPages, ...pages };
+			} else {
+				// randomly add hsbc or gshs pages 35% of the time
+				if (randomBoolean(0.35)) {
+					if (randomBoolean(0.5)) {
+						// collect hsbc pages
+						({ pages } = loadHbscPages(newPages) as AccumulatedPageType);
+						newPages = { ...newPages, ...pages };
+					} else {
+						// collect gshs pages
+						({ pages } = loadGshsPages(newPages) as AccumulatedPageType);
+						newPages = { ...newPages, ...pages };
+					}
+				}
+			}
 		}
 	} else {
 		// pilot study extro pages

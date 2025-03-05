@@ -46,6 +46,10 @@ const AppWrapper = (): React.ReactElement => {
 	// console.log("expo token: ", process.env.EXPO_PUBLIC_ADMIN_TOKEN);
 	// console.log("expo node env: ", process.env);
 
+
+	// console.log("process env: ", process.env)
+
+
 	const dispatch = useDispatch();
 
 	// set device dimensions
