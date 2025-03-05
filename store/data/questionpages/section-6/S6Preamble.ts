@@ -17,6 +17,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 					"This includes all the physical activity that your child does during their play or free time. This is the time that your child decides how to use. For the next questions, do not include the activities that you just told us about.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Te Tākaro me Te Wā Wātea",
+			subheading: "Wāhanga 6",
+			description: {
+				kid: "Kei roto i tēnei ko ngā mahi hākinakina katoa e mahia ana e koe i tō wā tākaro, i te wā wātea rānei. Kāore e kapi ana ngā mahi whakarite, ngā wā whakatā rānei i te kura. Mō ngā pātai e whai ake nei, kaua e whakauru i ngā mahi i kōrerotia ai e koe i mua.",
+				adult:
+					"Kei roto i tēnei ko ngā mahi hākinakina katoa e mahia ana e tāu tamaiti i te wā tākaro, i te wā wātea rānei. Koinei te wā e whakatau ai tāu tamaiti he aha hei mahi māna. Mō ngā pātai e whai ake nei, kaua e whakauru i ngā mahi i kōrero ai koe i mua.",
+			},
+		},
 		"en-NZ": {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
@@ -36,6 +45,15 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-CO": {
+			heading: "Juego o tiempo libre",
+			subheading: "Sección 6",
+			description: {
+				kid: "Esto incluye toda la actividad física que realizas durante tu tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela. Para las siguientes preguntas, no incluyas las actividades que acabas de informar.",
+				adult:
+					"Esto incluye toda la actividad física que realiza su hija o hijo durante su tiempo de juego o tiempo libre. No incluye las actividades organizadas ni los recreos en la escuela o colegio. Para las siguientes preguntas, no incluya las actividades que acaba de informar.",
+			},
+		},
+		"es-CL": {
 			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 			description: {

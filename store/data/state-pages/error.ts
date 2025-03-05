@@ -11,6 +11,10 @@ const ErrorPage: LangPagePayloadInterface = {
 			heading: "Error",
 			description: "There is a problem submitting your response.\n\nPlease try again.",
 		},
+		"mi-NZ": {
+			heading: "I puta he hapa",
+			description: "He raru kei te tukuna i tāu whakautu.\n\nMe ngana ano.",
+		},
 		"en-NZ": {
 			heading: "Error",
 			description: "There is a problem submitting your response.\n\nPlease try again.",
@@ -20,6 +24,10 @@ const ErrorPage: LangPagePayloadInterface = {
 			description: "Při odesílání vašich odpovědí došlo k problému.\n\nProsím, zkus to znovu.",
 		},
 		"es-CO": {
+			heading: "Error",
+			description: "Hay un problema al enviar tu respuesta.\n\nPor favor, inténtalo de nuevo.",
+		},
+		"es-CL": {
 			heading: "Error",
 			description: "Hay un problema al enviar tu respuesta.\n\nPor favor, inténtalo de nuevo.",
 		},

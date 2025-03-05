@@ -44,6 +44,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 29",
+			label: "He aha te taumata mātauranga nui katoa i tutuki i tētahi mema o tō kāinga?",
+			kid_label: "He aha te taumata mātauranga nui katoa i tutuki i tētahi mema o tō kāinga?",
+			adult_label: "He aha te taumata mātauranga nui katoa i tutuki i tētahi mema o tō kāinga?",
+			choices: [
+				{
+					label: "Kāore he taumata",
+					value: "No formal schooling",
+				},
+				{
+					label: "Kura teina",
+					value: "Primary school",
+				},
+				{
+					label: "Kura tuarua",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Ara ringarehe/Kuratini",
+					value: "Vocational/polytechnic education",
+				},
+				{
+					label: "Whare wānanga",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Kāore mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
@@ -95,15 +128,15 @@ const Education: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "Střední škola s výučním listem",
-					value: "Secondary or high school",
+					value: "Vocational school / Apprenticeship program",
 				},
 				{
 					label: "Střední škola s maturitou",
-					value: "Vocational/college education",
+					value: "Secondary school with A-levels / High school diploma",
 				},
 				{
 					label: "Vyšší odborná škola",
-					value: "Higher vocational school",
+					value: "Post-secondary vocational education",
 				},
 				{
 					label: "Vysoká škola",
@@ -116,6 +149,39 @@ const Education: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 29",
+			label: "¿Cuál es el nivel de educación más alto completado por un miembro de su hogar?",
+			kid_label: "¿Cuál es el nivel de educación más alto completado por un miembro de su hogar?",
+			adult_label: "¿Cuál es el nivel de educación más alto completado por un miembro de su hogar?",
+			choices: [
+				{
+					label: "Sin educación formal",
+					value: "No formal schooling",
+				},
+				{
+					label: "Primaria",
+					value: "Primary school",
+				},
+				{
+					label: "Secundaria o bachillerato",
+					value: "Secondary or high school",
+				},
+				{
+					label: "Técnico o tecnólogo",
+					value: "Vocational/college education",
+				},
+				{
+					label: "Profesional o formación universitaria",
+					value: "Tertiary/university education",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 29",
 			label: "¿Cuál es el nivel de educación más alto completado por un miembro de su hogar?",

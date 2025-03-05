@@ -4,13 +4,13 @@ import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
 
 const GSHS1: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_1",
-	name: "Question 33: During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
+	name: "Question 25: During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day? Add up all the time you spent in any kind of physical activity each day.",
 	column_name: "GSHS 01",
 	type: Screen.SingleQuestion,
 	translations: {
 		"en-CA": {
 			type: Question.QuestionRadio,
-			heading: "Question 33",
+			heading: "Question 25",
 			label:
 				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -54,9 +54,199 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"pt-BR": {
+			type: Question.QuestionRadio,
+			heading: "Questão 25",
+			label:
+				"Durante os últimos 7 dias, quantos dias você foi fisicamente ativo por um total de pelo menos 60 minutos por dia?",
+			kid_label:
+				"Durante os últimos 7 dias, quantos dias você foi fisicamente ativo por um total de pelo menos 60 minutos por dia?",
+			adult_label:
+				"Durante os últimos 7 dias, quantos dias você foi fisicamente ativo por um total de pelo menos 60 minutos por dia?",
+			kid_sublabel:
+				"Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
+			adult_sublabel:
+				"Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
+			choices: [
+				{
+					label: "0 (nenhum dia)",
+					value: "0",
+				},
+				{
+					label: "1 dia",
+					value: "1",
+				},
+				{
+					label: "2 dias",
+					value: "2",
+				},
+				{
+					label: "3 dias",
+					value: "3",
+				},
+				{
+					label: "4 dias",
+					value: "4",
+				},
+				{
+					label: "5 dias",
+					value: "5",
+				},
+				{
+					label: "6 dias",
+					value: "6",
+				},
+				{
+					label: "7 dias",
+					value: "7",
+				},
+			],
+		},
+		"es-ES": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 25",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+			kid_sublabel:
+				"Suma todo el tiempo que pasas haciendo algún tipo de actividad física cada día.",
+			adult_sublabel:
+				"Suma todo el tiempo que pasas haciendo algún tipo de actividad física cada día.",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
+		"fr-CA": {
+			type: Question.QuestionRadio,
+			heading: "Question 25",
+			label:
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label:
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label:
+				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+			adult_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+			choices: [
+				{
+					label: "0 jour",
+					value: "0",
+				},
+				{
+					label: "1 jour",
+					value: "1",
+				},
+				{
+					label: "2 jours",
+					value: "2",
+				},
+				{
+					label: "3 jours",
+					value: "3",
+				},
+				{
+					label: "4 jours",
+					value: "4",
+				},
+				{
+					label: "5 jours",
+					value: "5",
+				},
+				{
+					label: "6 jours",
+					value: "6",
+				},
+				{
+					label: "7 jours",
+					value: "7",
+				},
+			],
+		},
+		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 25",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+			kid_sublabel:
+				"Suma todo el tiempo que pasas haciendo algún tipo de actividad física cada día.",
+			adult_sublabel:
+				"Suma todo el tiempo que pasas haciendo algún tipo de actividad física cada día.",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Question 33",
+			heading: "Question 25",
 			label:
 				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -102,7 +292,7 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-MW": {
 			type: Question.QuestionRadio,
-			heading: "Question 33",
+			heading: "Question 25",
 			label:
 				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -148,7 +338,7 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-NG": {
 			type: Question.QuestionRadio,
-			heading: "Question 33",
+			heading: "Question 25",
 			label:
 				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -194,7 +384,7 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 		},
 		"en-AE": {
 			type: Question.QuestionRadio,
-			heading: "Question 33",
+			heading: "Question 25",
 			label:
 				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_label:
@@ -240,7 +430,7 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
-			heading: "Fråga 33",
+			heading: "Fråga 25",
 			label:
 				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
 			kid_label:
@@ -286,7 +476,7 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 		},
 		"zh-CN": {
 			type: Question.QuestionRadio,
-			heading: "问题 33",
+			heading: "问题 25",
 			label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",
 			kid_label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",
 			adult_label: "在过去7天里，有多少天你进行了至少60分钟的身体活动？",

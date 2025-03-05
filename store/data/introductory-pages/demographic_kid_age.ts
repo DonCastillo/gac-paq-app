@@ -35,6 +35,31 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionDropdown,
+			heading: "Nau mai!",
+			label: "E hia ō tau?",
+			kid_label: "E hia ō tau?",
+			adult_label: "E hia ō tau?",
+			choices: [
+				{
+					label: "E 8 ngā tau",
+					value: "8",
+				},
+				{
+					label: "E 9 ngā tau",
+					value: "9",
+				},
+				{
+					label: "10 ngā tau",
+					value: "10",
+				},
+				{
+					label: "11 ngā tau",
+					value: "11",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionDropdown,
 			heading: "Welcome!",
@@ -86,6 +111,31 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionDropdown,
+			heading: "¡Bienvenido!",
+			label: "¿Cuántos años tienes?",
+			kid_label: "¿Cuántos años tienes?",
+			adult_label: "¿Cuántos años tienes?",
+			choices: [
+				{
+					label: "8 años",
+					value: "8",
+				},
+				{
+					label: "9 años",
+					value: "9",
+				},
+				{
+					label: "10 años",
+					value: "10",
+				},
+				{
+					label: "11 años",
+					value: "11",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionDropdown,
 			heading: "¡Bienvenido!",
 			label: "¿Cuántos años tienes?",

@@ -39,6 +39,7 @@ import { getNarrationPayload } from "store/settings/settingsThunk";
 import LoadingScreenKid from "../LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
 import { choiceMode } from "utils/options.utils";
+import { loadSectionPages } from "utils/load_pages.utils";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -157,29 +158,36 @@ const QuestionSingleKid = (): React.ReactElement => {
 		// trigger a mode change if the mode changes from a values that is not a kid
 		if (mode !== Mode.Kid) {
 			changeMode(mode, language);
+			loadSectionPages();
 		}
 	}, [mode]);
 
-	/**
-	 * temporarily store the initial selection
-	 */
-	const changeHandler = (value: string | null): void => {
+	const changeHandlerPromise = async (value: string | null): Promise<void> => {
 		addResponse(value);
 		setSelectedValue(value);
 
-		// set mode
-		if (currentPage.page.ident === "mode" && value !== undefined && value !== null) {
-			dispatch(setMode(getModeType(value)));
-		}
+		if (value !== undefined && value !== null && value !== "") {
+			if (currentPage.page.ident === "mode") {
+				dispatch(setMode(getModeType(value)));
+			}
 
-		// set narration payload
-		if (
-			(currentPage.page.ident === "mode" || currentPage.page.ident === "language_location") &&
-			value !== undefined &&
-			value !== null
-		) {
-			loadNarrations(getModeType(value));
+			if (currentPage.page.ident === "mode") {
+				await loadNarrations(getModeType(value));
+				if (value !== selectedValue) {
+					dispatch(nextPage());
+				}
+			}
+
+			if (currentPage.page.ident === "language_location") {
+				await loadNarrations(getModeType(value));
+			}
 		}
+	};
+
+	const changeHandler = (value: string | null): void => {
+		changeHandlerPromise(value)
+			.then(() => {})
+			.catch(() => {});
 	};
 
 	if (questionType === Question.QuestionDropdown) {

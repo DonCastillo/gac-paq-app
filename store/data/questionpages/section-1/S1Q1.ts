@@ -27,6 +27,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 1",
+			label: "I haere rānei koe ki te kura i te wiki kua hipa?",
+			kid_label: "I haere rānei koe ki te kura i te wiki kua hipa?",
+			adult_label: "I haere rānei tāu tamaiti ki te kura i te wiki kua hipa?",
+			choices: [
+				{
+					label: "Āe",
+					value: "yes",
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 1",
@@ -62,6 +79,23 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 1",
+			label: "¿Asististe a la escuela la semana pasada?",
+			kid_label: "¿Asististe a la escuela la semana pasada?",
+			adult_label: "¿Asistió su hija o hijo a la escuela la semana pasada?",
+			choices: [
+				{
+					label: "Sí",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 1",
 			label: "¿Asististe a la escuela la semana pasada?",

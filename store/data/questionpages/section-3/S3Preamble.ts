@@ -17,6 +17,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 					"This section is about work or volunteering away from your home - different from chores. Working would be when your child makes money for them or for your family. Volunteering would be helping others or an organization for free (no money). Please answer both together.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Te Mahi",
+			subheading: "Wāhanga 3",
+			description: {
+				kid: "E hāngai ana tēnei wāhanga ki te mahi, ki te mahi tūao rānei i tua atu i tō kāinga – He rerekē i ngā mahi o te kāinga. Ko te mahi te wā e whai pūtea ai koe mō te whānau. Ko te tūao te wā e āwhina ai koe i ētahi atu, i tētahi rōpū rānei (kāore he pūtea). Ka kitea te mahi me te tūao ki ngā wāhi pēnei i te hokomaha, i te wharekai, i te rōpū ohaoha tmtm. Tēnā, whakautua tahitia ngā pātai e rua.",
+				adult:
+					"E hāngai ana tēnei wāhanga ki te mahi, ki te mahi tūao rānei i tua atu i tō kāinga – He rerekē ki ngā mahi o te kāinga. Ko te mahi te wā e whai pūtea ai koe mō te whānau. Ko te tūao te wā e āwhina ai koe i ētahi atu, i tētahi rōpū rānei (kāore he pūtea).Tēnā whakautua tahitia ngā pātai e rua.",
+			},
+		},
 		"en-NZ": {
 			heading: "Work",
 			subheading: "Section 3",
@@ -36,6 +45,15 @@ const S3Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-CO": {
+			heading: "Trabajo",
+			subheading: "Sección 3",
+			description: {
+				kid: "Esta sección se trata del trabajo o el voluntariado fuera de casa, no incluye las tareas domésticas. Trabajar es ganar dinero para ti o para tu familia. El voluntariado consiste en ayudar a otras personas o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden llevarse a cabo en lugares como una tienda, una granja, un restaurante, etc. Por favor, responde a estas dos actividades (trabajo y voluntariado) a la vez.",
+				adult:
+					"Esta sección se trata del trabajo o el voluntariado fuera de casa, no incluye las tareas domésticas. Trabajar es ganar dinero para sí mismo o para su familia. El voluntariado consiste en ayudar a otras personas o a una organización de forma gratuita (sin dinero). El trabajo y el voluntariado pueden llevarse a cabo en lugares como una tienda, una granja, un restaurante, etc. Por favor, responda a estas dos actividades (trabajo y voluntariado) a la vez.",
+			},
+		},
+		"es-CL": {
 			heading: "Trabajo",
 			subheading: "Sección 3",
 			description: {

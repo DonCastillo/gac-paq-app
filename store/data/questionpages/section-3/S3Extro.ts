@@ -10,6 +10,10 @@ const S3Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only four more to go!",
 		},
+		"mi-NZ": {
+			heading: "Kua tutuki te wāhanga!",
+			subheading: "E whā anō hei mahi!",
+		},
 		"en-NZ": {
 			heading: "Section Complete!",
 			subheading: "Only four more to go!",
@@ -19,6 +23,10 @@ const S3Extro: LangExtroPayloadInterface = {
 			subheading: "Zbývají už jen čtyři!",
 		},
 		"es-CO": {
+			heading: "Sección Completa",
+			subheading: "Sólo faltan cuatro",
+		},
+		"es-CL": {
 			heading: "Sección Completa",
 			subheading: "Sólo faltan cuatro",
 		},

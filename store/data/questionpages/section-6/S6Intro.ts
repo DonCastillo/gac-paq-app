@@ -10,6 +10,10 @@ const S6Intro: LangSectionPayloadInterface = {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
 		},
+		"mi-NZ": {
+			heading: "Te Tākaro me Te Wā Wātea",
+			subheading: "Wāhanga 6",
+		},
 		"en-NZ": {
 			heading: "Play or Free Time",
 			subheading: "Section 6",
@@ -19,6 +23,10 @@ const S6Intro: LangSectionPayloadInterface = {
 			subheading: "Sekce 6",
 		},
 		"es-CO": {
+			heading: "Juego o tiempo libre",
+			subheading: "Sección 6",
+		},
+		"es-CL": {
 			heading: "Juego o tiempo libre",
 			subheading: "Sección 6",
 		},

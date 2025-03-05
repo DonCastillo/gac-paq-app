@@ -73,6 +73,69 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadioImage,
+			heading: "Pātai 15",
+			label: "Mā hea atu koe ki te kura i tērā wiki?",
+			kid_label: "Mā hea atu koe ki te kura i tērā wiki?",
+			adult_label: "Mā hea atu tāu tamaiti ki te kura i tērā wiki?",
+			kid_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
+			adult_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
+			choices: [
+				{
+					label: "Mā raro",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Mā runga wīra",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
+						adult:
+							"Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
+					},
+				},
+				{
+					label: "Mā runga pahi kura",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Mā runga waka tūmatawhānui",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "hei tauira, mā runga pahi, mā runga tereina, mā runga taramu, mā runga poti",
+						adult: "hei tauira, mā pahi, mā tereina, mā taramu, mā poti rānei",
+					},
+				},
+				{
+					label: "Mā runga waka, mā runga wakatono, mā runga motopaika rānei",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Mā waka kē, tae rā anō ki ngā pahekotanga",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "hei tauira, ko te hīkoi me te pahi",
+						adult: "hei tauira, ko te hīkoi me te pahi",
+					},
+				},
+				{
+					label: "Noho ai ahau ki te kāinga mō te kura",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Noho ai ahau ki te kāinga mō te kura",
+						adult: "Noho ai tāu tamaiti ki te kāinga mō te kura",
+					},
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 15",
@@ -200,6 +263,68 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadioImage,
+			heading: "Pregunta 15",
+			label: "¿Cómo fuiste a la escuela la semana pasada?",
+			kid_label: "¿Cómo fuiste a la escuela la semana pasada?",
+			adult_label: "¿Cómo fue su hija o hijo a la escuela o colegio la semana pasada?",
+			kid_sublabel: "Selecciona el modo que más utilizaste",
+			adult_sublabel: "Seleccione el modo que más utilizó",
+			choices: [
+				{
+					label: "Caminando",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Desplazarse sobre ruedas",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+					},
+				},
+				{
+					label: "Autobús escolar",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
+					label: "Transporte público",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+					},
+				},
+				{
+					label: "Carro, taxi, camión o motocicleta",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Otro, incluyendo combinaciones ¿cuál?",
+					value: "Other",
+					image_ident: "other",
+					sublabel: {
+						kid: "por ejemplo, caminando y bus",
+						adult: "por ejemplo, caminando y bus",
+					},
+				},
+				{
+					label: "Recibo educación en casa o asisto a un internado",
+					value: "Stay home for school",
+					image_ident: "staying_home",
+					label_mode: {
+						kid: "Recibo educación en casa o asisto a un internado",
+						adult: "Recibo educación en casa o asisto a un internado",
+					},
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 15",
 			label: "¿Cómo fuiste a la escuela la semana pasada?",

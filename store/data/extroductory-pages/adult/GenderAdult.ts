@@ -31,6 +31,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 24",
+			label: "He aha tō ira?",
+			kid_label: "He aha tō ira?",
+			adult_label: "He aha tō ira?",
+			choices: [
+				{
+					label: "Tāne",
+					value: "Female",
+				},
+				{
+					label: "Wahine",
+					value: "Male",
+				},
+				{
+					label: "Kāore ahau mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 24",
@@ -70,6 +91,27 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 24",
+			label: "¿Cuál es el sexo de su hija o hijo?",
+			kid_label: "¿Cuál es el sexo de su hija o hijo?",
+			adult_label: "¿Cuál es el sexo de su hija o hijo?",
+			choices: [
+				{
+					label: "Mujer",
+					value: "Female",
+				},
+				{
+					label: "Hombre",
+					value: "Male",
+				},
+				{
+					label: "Prefiere no contestar",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 24",
 			label: "¿Cuál es el sexo de su hija o hijo?",

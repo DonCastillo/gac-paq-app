@@ -38,6 +38,13 @@ const skipTo = (answer: string | string[] | null): number => {
 		}
 	}
 
+	if (language === "es-MX") {
+		if (currentIdent === "child_ethnicity" && finalAnswer === "no") {
+			store.dispatch(clearResponseByIdent("parent_ethnicity"));
+			return getPageNumberBasedOnIdent("relationship_to_the_child", pages);
+		}
+	}
+
 	// if responder indicates they did not attend school, skip entire SCHOOL section
 	if (currentIdent === "school_1" && finalAnswer === "no") {
 		store.dispatch(clearResponseByIdent("school_2"));

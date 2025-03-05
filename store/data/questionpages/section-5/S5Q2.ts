@@ -47,6 +47,43 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 19",
+			label: "E hia ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa?",
+			kid_label: "E hia ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa?",
+			adult_label: "E hia ngā rā i mahi ai tāu tamait i ēnei ngohe i te wiki kua hipa?",
+			choices: [
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā",
+					value: "5",
+				},
+				{
+					label: "E 6 ngā rā",
+					value: "6",
+				},
+				{
+					label: "E 7 ngā rā",
+					value: "7",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 19",
@@ -122,6 +159,44 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 19",
+			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
+			kid_label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
+			adult_label:
+				"¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
+			choices: [
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 19",
 			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",

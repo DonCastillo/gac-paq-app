@@ -44,6 +44,40 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Pātai 17",
+			label:
+				"I te wiki kua hipa, i haere ai koe mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki tētahi toa)?",
+			kid_label:
+				"I te wiki kua hipa, i haere ai koe mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki tētahi toa)?",
+			adult_label:
+				"Pātai 17 I te wiki kua hipa, i haere ai tāu tamaiti mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki te toa)?",
+			kid_sublabel: "Tēnā, kōwhiria ngā whakautu katoa e hāngai nei ki a koe.",
+			adult_sublabel: "Tēnā, kōwhiria ngā whakautu katoa e hāngai ana ki a koe.",
+			choices: [
+				{
+					label: "Āe, i haere mā raro",
+					value: "Walked",
+					label_mode: {
+						kid: "Āe, i haere mā raro",
+						adult: "Āe, i haere mā raro",
+					},
+				},
+				{
+					label: "Āe, i haere mā runga wīra",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Āe, i haere mā runga wīra",
+						adult: "Āe, i haere mā runga wīra",
+					},
+				},
+				{
+					label: "Kāo",
+					value: "no",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
@@ -113,6 +147,40 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 17",
+			label:
+				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			kid_label:
+				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			adult_label:
+				"En la última semana su hija o hijo, ¿ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+			kid_sublabel: "Por favor, seleccione todas las respuestas que le correspondan.",
+			adult_sublabel: "Por favor, seleccione todas las respuestas que le correspondan.",
+			choices: [
+				{
+					label: "Sí, caminé",
+					value: "Walked",
+					label_mode: {
+						kid: "Sí, caminé",
+						adult: "Sí, caminó",
+					},
+				},
+				{
+					label: "Sí, me desplacé sobre ruedas",
+					value: "Wheeled",
+					label_mode: {
+						kid: "Sí, me desplacé sobre ruedas",
+						adult: "Sí, se desplazó sobre ruedas",
+					},
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 17",
 			label:

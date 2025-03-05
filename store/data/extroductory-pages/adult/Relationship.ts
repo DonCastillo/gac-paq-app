@@ -47,6 +47,43 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 28",
+			label: "Hei aha tō pānga ki te tamaiti?",
+			kid_label: "Hei aha tō pānga ki te tamaiti?",
+			adult_label: "Hei aha tō pānga ki te tamaiti?",
+			choices: [
+				{
+					label: "Pāpā",
+					value: "Father",
+				},
+				{
+					label: "Māmā",
+					value: "Mother",
+				},
+				{
+					label: "Koroua",
+					value: "Grandfather",
+				},
+				{
+					label: "Kuia",
+					value: "Grandmother",
+				},
+				{
+					label: "Kaiako, Kaitiaki rānei",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Tētahi atu",
+					value: "Other",
+				},
+				{
+					label: "Kāore mō te whakautu",
+					value: "Prefer not to answer",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 28",
@@ -122,6 +159,46 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 28",
+			label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label:
+				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			choices: [
+				{
+					label: "Papá",
+					value: "Father",
+				},
+				{
+					label: "Mamá",
+					value: "Mother",
+				},
+				{
+					label: "Abuelo",
+					value: "Grandfather",
+				},
+				{
+					label: "Abuela",
+					value: "Grandmother",
+				},
+				{
+					label: "Tutor",
+					value: "Tutor or guardian",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to answer",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
 			label:

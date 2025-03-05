@@ -39,6 +39,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 4",
+			label: "E hia te roa o ō akomanga whakakori?",
+			kid_label: "E hia te roa o ō akomanga whakakori?",
+			adult_label: "E hia te roa o ngā akomanga whakakori o tāu tamaiti?",
+			choices: [
+				{
+					label: "Iti iho i te 30 meneti ia akomanga",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 meneti ia akomanga",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 meneti ia akomanga",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Neke atu i te 60 meneti ia akomanga",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "Kāore i te mōhio",
+					value: "Don't know",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 4",
@@ -98,6 +127,35 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 4",
+			label: "¿Cuánto duran tus clases de educación física?",
+			kid_label: "¿Cuánto duran tus clases de educación física?",
+			adult_label: "¿Cuánto duran sus clases de educación física?",
+			choices: [
+				{
+					label: "Menos de 30 minutos por clase",
+					value: "Less than 30 minutes per class",
+				},
+				{
+					label: "30 - 45 minutos por clase",
+					value: "30 - 45 minutes per class",
+				},
+				{
+					label: "46 - 60 minutos por clase",
+					value: "46 - 60 minutes per class",
+				},
+				{
+					label: "Más de 60 minutos por clase",
+					value: "Over 60 minutes per class",
+				},
+				{
+					label: "No sé",
+					value: "Don't know",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 4",
 			label: "¿Cuánto duran tus clases de educación física?",

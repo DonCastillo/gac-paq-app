@@ -10,45 +10,81 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+			},
+		},
+		"pt-BR": {
+			heading: "Comportamento de Saúde em Escolares",
+			subheading: "",
+			description: {
+				kid: "Agora vamos conversar sobre o tempo que você gasta fazendo atividades físicas. Atividade física é qualquer atividade que aumenta a sua frequência cardíaca e faz com que você fique sem fôlego em alguns momentos. A atividade física pode ser realizada por meio de esportes (futebol, voleibol, basquetebol, handebol), brincar com amigos, caminhar, correr, andar de bicicleta, nadar, dançar etc.",
+				adult:
+					"Agora vamos conversar sobre o tempo que você gasta fazendo atividades físicas. Atividade física é qualquer atividade que aumenta a sua frequência cardíaca e faz com que você fique sem fôlego em alguns momentos. A atividade física pode ser realizada por meio de esportes (futebol, voleibol, basquetebol, handebol), brincar com amigos, caminhar, correr, andar de bicicleta, nadar, dançar etc.",
+			},
+		},
+		"es-ES": {
+			heading: "Comportamiento de salud en niños en edad escolar",
+			subheading: "",
+			description: {
+				kid: "La actividad física es cualquier actividad que hace que tu corazón se acelere y que en ocasiones te cueste trabajo respirar. Se puede hacer actividad física en los deportes, en las actividades escolares, jugando con los/as amigos/as o andando hacia el colegio o instituto. Algunos ejemplos de actividad física son correr, patinar, montar en bici, en monopatín, nadar, jugar al fútbol, al futbito, al baloncesto, hacer surf, bailar, andar rápido, etc.",
+				adult:
+					"La actividad física es cualquier actividad que hace que tu corazón se acelere y que en ocasiones te cueste trabajo respirar. Se puede hacer actividad física en los deportes, en las actividades escolares, jugando con los/as amigos/as o andando hacia el colegio o instituto. Algunos ejemplos de actividad física son correr, patinar, montar en bici, en monopatín, nadar, jugar al fútbol, al futbito, al baloncesto, hacer surf, bailar, andar rápido, etc.",
+			},
+		},
+		"fr-CA": {
+			heading: "Comportement de santé chez les enfants en âge scolaire",
+			subheading: "",
+			description: {
+				kid: "L'activité physique est une activité qui augmente ton rythme cardiaque et t'essouffle pendant un moment. Tu peux faire de l'activité physique en faisant du sport, des activités sportives à l’école, en jouant avec des amis ou amies, ou en marchant pour aller à l'école.\n\nVoici quelques exemples d'activités physiques : courir, marcher rapidement, danser, faire du vélo, nager, faire du patin à roues alignées, de la planche à roulettes; jouer au soccer, au basketball ou au football.",
+				adult:
+					"L'activité physique est une activité qui augmente ton rythme cardiaque et t'essouffle pendant un moment. Tu peux faire de l'activité physique en faisant du sport, des activités sportives à l’école, en jouant avec des amis ou amies, ou en marchant pour aller à l'école.\n\nVoici quelques exemples d'activités physiques : courir, marcher rapidement, danser, faire du vélo, nager, faire du patin à roues alignées, de la planche à roulettes; jouer au soccer, au basketball ou au football.",
+			},
+		},
+		"es-MX": {
+			heading: "Comportamiento de salud en escolares",
+			subheading: "",
+			description: {
+				kid: "Actividad física es cualquier actividad que incrementa tu ritmo cardiaco y que te hace sentir “sin aliento” una parte del tiempo. La actividad física puede realizarse en deportes, actividades escolares, jugando con los amigos o caminando hacia la escuela. Algunos ejemplos son: correr, caminar rápido, patinar con patines o patineta, andar en bicicleta, bailar, nadar, fútbol, basquetbol, fútbol americano y surfear.",
+				adult:
+					"Actividad física es cualquier actividad que incrementa tu ritmo cardiaco y que te hace sentir “sin aliento” una parte del tiempo. La actividad física puede realizarse en deportes, actividades escolares, jugando con los amigos o caminando hacia la escuela. Algunos ejemplos son: correr, caminar rápido, patinar con patines o patineta, andar en bicicleta, bailar, nadar, fútbol, basquetbol, fútbol americano y surfear.",
 			},
 		},
 		"en-NZ": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
 		"en-MW": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
 		"en-NG": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
 		"en-AE": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing. ",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
 		"sv-SE": {

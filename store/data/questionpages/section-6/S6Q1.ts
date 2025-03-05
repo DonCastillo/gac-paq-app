@@ -50,6 +50,46 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 21",
+			label:
+				"I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
+			kid_label:
+				"I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
+			adult_label:
+				"I te wiki kua hipa, i tētahi rā noa, e hia te roa o tō tāu tamaiti wā i whakapaua ai ki te tākaro, i te wairua ngahau noa iho nei?",
+			kid_sublabel:
+				"Ehara ēnei ngohe i te mahi hei whakataetae, hei whakangungu rānei. Ko ētahi tauira, , te kaukau i te puna kaukau, te pekepeke i runga poro rēporepo, te tākaro whai, piringa rānei, te tākaro i te rua kirikiri, te hanga whare nohinohi, whare rākau rānei.",
+			adult_sublabel:
+				"Ehara ēnei ngohe i te mahi hei whakataetae, hei whakangungu rānei. Ko ētahi tauira, ko te tākaro me te pōro, te kaukau i te puna kaukau, te pekepeke i runga poro rēporepo, te tākaro whai, te piringa rānei, te tākaro i te rua kirikiri, te hanga whare nohinohi, whare rākau rānei.",
+			choices: [
+				{
+					label: "Kore",
+					value: "None",
+				},
+				{
+					label: "Iti iho i te 1 hāora ia rā",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 iti iho rānei i te 2 hāora ia rā",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "2 iti iho rānei i te 3 hāora ia rā",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "3 iti iho rānei i te 4 hāora ia rā",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 hāora neke atu rānei ia rā",
+					value: "4 hours or more per day",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
@@ -129,6 +169,42 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 21",
+			label:
+				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			kid_label:
+				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			adult_label:
+				"En la última semana, en un día promedio, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+			choices: [
+				{
+					label: "Nada",
+					value: "None",
+				},
+				{
+					label: "Menos de 1 hora por día",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "De 1 a menos de 2 horas por día",
+					value: "1 to less than 2 hours per day",
+				},
+				{
+					label: "De 2 a menos de 3 horas por día",
+					value: "2 to less than 3 hours per day",
+				},
+				{
+					label: "De 3 a menos de 4 horas por día",
+					value: "3 to less than 4 hours per day",
+				},
+				{
+					label: "4 horas o más por día",
+					value: "4 hours or more per day",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",
 			label:

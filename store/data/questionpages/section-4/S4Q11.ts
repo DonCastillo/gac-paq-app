@@ -37,6 +37,34 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Pātai 17c - Wīra",
+			label:
+				"I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			kid_label:
+				"I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			adult_label:
+				"I tētahi rā, i hia te roa i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			choices: [
+				{
+					label: "10 meneti, heke iho rānei",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 meneti",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 – 30 meneti",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Neke atu i te 30 meneti",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
@@ -93,6 +121,34 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 17c - En ruedas",
+			label:
+				"En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
+			kid_label:
+				"En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
+			adult_label:
+				"En un día normal ¿Cuánto tiempo se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
+			choices: [
+				{
+					label: "10 minutos o menos",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutos",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutos",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "Más de 30 minutos",
+					value: "More than 30 minutes",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - En ruedas",
 			label:
@@ -398,11 +454,11 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 17c - ล้อ",
 			label:
-				"ในวันปกติ คุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+				"ในวันปกติ คุณใช้เวลาเท่าไหร่ในการใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกายไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			kid_label:
-				"ในวันปกติ คุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+				"ในวันปกติ คุณใช้เวลาเท่าไหร่ในการใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกายไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			adult_label:
-				"ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+				"ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกายไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			choices: [
 				{
 					label: "10 นาทีหรือน้อยกว่า",

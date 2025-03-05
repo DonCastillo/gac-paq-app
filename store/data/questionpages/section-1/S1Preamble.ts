@@ -17,6 +17,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Te Kura",
+			subheading: "Wāhanga 1",
+			description: {
+				kid: "E hāngai ana tēnei wāhanga ki āu mahi i ngā hāora o te kura, hei tauira i ngā wā o te akoranga whakakori (PE), i ngā wā whakatā me te wā kai.",
+				adult:
+					"E hāngai ana tēnei wāhanga ki tāu tamaiti mahi i ngā hāora o te kura, hei tauira i ngā wā o te akoranga whakakori (PE), i ngā wā whakatā me te wā kai anō hoki.",
+			},
+		},
 		"en-NZ": {
 			heading: "School",
 			subheading: "Section 1",
@@ -36,6 +45,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-CO": {
+			heading: "Escuela o colegio",
+			subheading: "Sección 1",
+			description: {
+				kid: "Esta sección es acerca de lo que haces normalmente durante tu tiempo en la escuela o colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora del almuerzo.",
+				adult:
+					"Esta sección es acerca de lo que hace su hija o hijo normalmente durante su tiempo en la escuela o colegio, por ejemplo, durante las clases de educación física, descansos o recreos y la hora del almuerzo.",
+			},
+		},
+		"es-CL": {
 			heading: "Escuela o colegio",
 			subheading: "Sección 1",
 			description: {

@@ -15,6 +15,13 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			kid_label: "What language do you speak & Where are you?",
 			adult_label: "What language do you speak & Where are you?",
 		},
+		"mi-NZ": {
+			type: Question.QuestionLanguage,
+			heading: "Nau mai!",
+			label: "Kei te kōrero koe i te reo pēhea, ā, kei hea koe?",
+			kid_label: "Kei te kōrero koe i te reo pēhea, ā, kei hea koe?",
+			adult_label: "Kei te kōrero koe i te reo pēhea, ā, kei hea koe?",
+		},
 		"en-NZ": {
 			type: Question.QuestionLanguage,
 			heading: "Welcome!",
@@ -30,6 +37,13 @@ const LanguagePage: LangQuestionDropdownPayloadLanguageInterface = {
 			adult_label: "Jakým jazykem mluvíš a kde jsi?",
 		},
 		"es-CO": {
+			type: Question.QuestionLanguage,
+			heading: "¡Bienvenido!",
+			label: "¿Qué idioma hablas y dónde estás?",
+			kid_label: "¿Qué idioma hablas y dónde estás?",
+			adult_label: "¿Qué idioma hablas y dónde estás?",
+		},
+		"es-CL": {
 			type: Question.QuestionLanguage,
 			heading: "¡Bienvenido!",
 			label: "¿Qué idioma hablas y dónde estás?",

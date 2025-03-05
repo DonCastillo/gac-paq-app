@@ -64,6 +64,57 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Pātai 25",
+			label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
+			kid_label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
+			adult_label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
+			kid_sublabel: "Kōwhiria mēnā e hānga ana",
+			adult_sublabel: "Kōwhiria mēnā e hānga ana",
+			choices: [
+				{
+					label: "Te rongo",
+					value: "Hearing",
+				},
+				{
+					label: "Te kite",
+					value: "Seeing",
+				},
+				{
+					label: "Te kōrero",
+					value: "Speech",
+				},
+				{
+					label: "Te neke",
+					value: "Mobility",
+				},
+				{
+					label: "Te moruki",
+					value: "Agility",
+				},
+				{
+					label: "Te mamae",
+					value: "Pain",
+				},
+				{
+					label: "Te maumahara",
+					value: "Memory",
+				},
+				{
+					label: "Tētahi atu",
+					value: "Other",
+				},
+				{
+					label: "Kāore ahau mō te whāki",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Kāore ētahi o runga, kāore ōna whakararu",
+					value: "None of the above",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",
@@ -173,6 +224,60 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 25",
+			label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			adult_label:
+				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_sublabel: "Seleccione todas las opciones que correspondan",
+			adult_sublabel: "Seleccione todas las opciones que correspondan",
+			choices: [
+				{
+					label: "Oír",
+					value: "Hearing",
+				},
+				{
+					label: "Ver",
+					value: "Seeing",
+				},
+				{
+					label: "Hablar",
+					value: "Speech",
+				},
+				{
+					label: "Movimiento",
+					value: "Mobility",
+				},
+				{
+					label: "Agilidad",
+					value: "Agility",
+				},
+				{
+					label: "Dolor",
+					value: "Pain",
+				},
+				{
+					label: "Memoria",
+					value: "Memory",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Ninguno de los anteriores, no tiene dificultades",
+					value: "None of the above",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 25",
 			label:

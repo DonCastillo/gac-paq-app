@@ -10,6 +10,10 @@ const FeedbackExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"mi-NZ": {
+			heading: "Kua tutuki tēnei wāhanga!",
+			subheading: "",
+		},
 		"en-NZ": {
 			heading: "Section Complete!",
 			subheading: "",
@@ -19,6 +23,10 @@ const FeedbackExtro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"es-CO": {
+			heading: "Sección Completa",
+			subheading: "",
+		},
+		"es-CL": {
 			heading: "Sección Completa",
 			subheading: "",
 		},

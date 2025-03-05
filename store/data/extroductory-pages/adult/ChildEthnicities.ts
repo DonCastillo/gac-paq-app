@@ -47,6 +47,51 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionCheckbox,
+			heading: "Pātai 26",
+			label: "He aha te iwi o tāu tamaiti?",
+			kid_label: "He aha te iwi o tāu tamaiti?",
+			adult_label: "He aha te iwi o tāu tamaiti?",
+			choices: [
+				{
+					label: "NZ European",
+					value: "NZ European",
+				},
+				{
+					label: "Māori",
+					value: "Māori",
+				},
+				{
+					label: "Samoan",
+					value: "Samoan",
+				},
+				{
+					label: "Tongan",
+					value: "Tongan",
+				},
+				{
+					label: "Niuean",
+					value: "Niuean",
+				},
+				{
+					label: "Chinese",
+					value: "Chinese",
+				},
+				{
+					label: "Indian",
+					value: "Indian",
+				},
+				{
+					label: "Tētahi atu, hei tauira, Dutch, Japanese, Tokelauan",
+					value: "Other",
+				},
+				{
+					label: "Kāore mō te whāki",
+					value: "Prefer not to say",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 26",
@@ -118,6 +163,55 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 			],
 		},
 		"es-CO": {
+			type: Question.QuestionCheckbox,
+			heading: "Pregunta 26",
+			label: "¿Cuál es la etnia de su hija o hijo?",
+			kid_label: "¿Cuál es la etnia de su hija o hijo?",
+			adult_label: "¿Cuál es la etnia de su hija o hijo?",
+			choices: [
+				{
+					label: "Indígena",
+					value: "Indigenous",
+				},
+				{
+					label: "Negro o afroamericano",
+					value: "Black or African American",
+				},
+				{
+					label: "Gitano (a) / Rom",
+					value: "Gypsy / Rom",
+				},
+				{
+					label: "Raizal",
+					value: "Raizal",
+				},
+				{
+					label: "Blanco o caucásico",
+					value: "White or Caucasian",
+				},
+				{
+					label: "Mestizo (a)",
+					value: "Mestizo (a)",
+				},
+				{
+					label: "Mulato/a",
+					value: "Mulato/a",
+				},
+				{
+					label: "Prefiero no decirlo",
+					value: "Prefer not to say",
+				},
+				{
+					label: "Ninguna",
+					value: "None",
+				},
+				{
+					label: "Otro",
+					value: "Other",
+				},
+			],
+		},
+		"es-CL": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 26",
 			label: "¿Cuál es la etnia de su hija o hijo?",
