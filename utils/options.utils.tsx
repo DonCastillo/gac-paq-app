@@ -118,14 +118,35 @@ const getUserSpecifiedOther = (value: string | null, selected: string | null): s
 	return match[1];
 };
 
-const optionLetter = (index: number): string => {
-	const letters = store.getState().questions.optionLetters;
-	return letters[index % letters.length];
-};
-
 const optionNumber = (index: number): string => {
 	const numbers = store.getState().questions.optionNumbers;
 	return numbers[index % numbers.length];
+};
+
+const optionLetter = (index: number): string => {
+	const letters = store.getState().questions.optionLetters;
+	const language = store.getState().settings.language;
+	const currentPageIdent = store.getState().settings.currentPage.page.ident;
+
+	// display numeric labels for some questions in the ma-IN version
+	if (language === "ma-IN") {
+		const numberIdent = [
+			"school_4",
+			"transportation_3",
+			"transportation_6",
+			"child_sex_entered_by_parent",
+			"child_difficulties",
+			"child_ethnicity",
+			"parent_ethnicity",
+			"relationship_to_the_child",
+			"highest_level_of_education",
+			"difficulty_to_meet_financial_needs",
+		];
+		if (numberIdent.includes(currentPageIdent)) {
+			return optionNumber(index);
+		}
+	}
+	return letters[index % letters.length];
 };
 
 export {
