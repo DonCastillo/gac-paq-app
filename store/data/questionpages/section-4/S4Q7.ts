@@ -338,7 +338,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "होय, मी बाईकने जातो/जाते",
-					value: "Other",
+					value: "Wheeled",
 					label_mode: {
 						kid: "होय, मी बाईकने जातो/जाते",
 						adult: "होय, माझे मूल बाईकने गेले",
@@ -346,7 +346,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
-					value: "Wheeled",
+					value: "Other",
 					label_mode: {
 						kid: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
 						adult: "माझ्या मुलाने वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
