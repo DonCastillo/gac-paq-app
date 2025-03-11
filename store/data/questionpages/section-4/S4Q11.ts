@@ -533,13 +533,13 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17c - En ruedas",
+			heading: "Pregunta 17c - Sobre ruedas",
 			label:
-				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo, la escuela o el colegio?",
+				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
 			kid_label:
-				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo, la escuela o el colegio?",
+				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
 			adult_label:
-				"En un día normal, ¿cuánto tiempo su hijo o hija se desplazó sobre ruedas a lugares distintos de la escuela o el trabajo?",
+				"En un día normal, ¿cuánto tiempo se desplazó sobre ruedas su hijo o hija para llegar a lugares distintos, al trabajo, escuela o colegio?",
 			choices: [
 				{
 					label: "10 minutos o menos",

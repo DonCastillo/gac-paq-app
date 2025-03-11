@@ -361,7 +361,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
 			kid_label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
 			adult_label:
-				"En la última semana ¿realizó su hija o hijo tareas del hogar o quehaceres activos?",
+				"En la última semana, ¿realizó su hija o hijo tareas del hogar o quehaceres activos?",
 			choices: [
 				{
 					label: "Sí",

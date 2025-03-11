@@ -575,15 +575,15 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 					},
 				},
 				{
-					label: "Adolescente",
+					label: "Adolescente o joven",
 					value: "teen",
 					sublabel: {
-						kid: "de 12 a 17 años de edad",
-						adult: "de 12 a 17 años de edad",
+						kid: "de 12 a 17 años",
+						adult: "de 12 a 17 años",
 					},
 				},
 				{
-					label: "Padre/madre o cuidador",
+					label: "Padre, madre o cuidador(a)",
 					value: "adult",
 				},
 			],

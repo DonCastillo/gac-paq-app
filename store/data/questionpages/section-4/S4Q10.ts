@@ -761,13 +761,13 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		},
 		"es-MX": {
 			type: Question.QuestionRadio,
-			heading: "Pregunta 17b - En ruedas",
+			heading: "Pregunta 17b - Sobre ruedas",
 			label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
+				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
 			kid_label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
+				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
 			adult_label:
-				"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo, escuela o colegio en la última semana?",
+				"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
 			choices: [
 				{
 					label: "1 día",
