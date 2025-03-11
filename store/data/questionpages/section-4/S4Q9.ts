@@ -530,11 +530,11 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - Caminando",
 			label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo, la escuela o el colegio?",
+				"En un día normal, ¿cuánto tiempo caminaste para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
 			kid_label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo, la escuela o el colegio?",
+				"En un día normal, ¿cuánto tiempo caminaste para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
 			adult_label:
-				"En un día normal, ¿cuánto tiempo caminó tu hijo o hija para llegar a lugares distintos al trabajo, escuela o colegio?",
+				"En un día normal, ¿cuánto tiempo caminó tu hijo o hija para llegar a lugares distintos, al trabajo, escuela o colegio?",
 			choices: [
 				{
 					label: "10 minutos o menos",
