@@ -362,8 +362,8 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
 			kid_label: "¿Realizaste alguna actividad organizada durante la semana pasada?",
 			adult_label: "¿Su hija o hijo realizó alguna actividad organizada durante la semana pasada?",
-			kid_sublabel: "Por ejemplo ir a una academia de fútbol, natación, danza, taekwondo u otro.",
-			adult_sublabel: "Por ejemplo ir a una academia de fútbol, natación, danza, taekwondo u otro.",
+			kid_sublabel: "Por ejemplo, ir a una academia de fútbol, natación, danza, taekwondo u otro",
+			adult_sublabel: "Por ejemplo, ir a una academia de fútbol, natación, danza, taekwondo u otro",
 			choices: [
 				{
 					label: "Sí",

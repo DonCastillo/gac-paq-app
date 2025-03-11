@@ -338,7 +338,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "होय, मी बाईकने जातो/जाते",
-					value: "Other",
+					value: "Wheeled",
 					label_mode: {
 						kid: "होय, मी बाईकने जातो/जाते",
 						adult: "होय, माझे मूल बाईकने गेले",
@@ -346,7 +346,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 				},
 				{
 					label: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
-					value: "Wheeled",
+					value: "Other",
 					label_mode: {
 						kid: "होय, मी वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
 						adult: "माझ्या मुलाने वेगळीच सक्रिय पद्धत वापरली. कृपया पद्धत नमूद करा",
@@ -680,7 +680,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			adult_label:
 				"En la última semana, ¿su hija o hijo ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos de trabajo, la escuela o colegio (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
 			kid_sublabel: "Por favor, selecciona todas las respuestas que correspondan",
-			adult_sublabel: "Por favor, selecciona todas las respuestas que correspondan",
+			adult_sublabel: "Por favor, seleccione todas las respuestas que le correspondan",
 			choices: [
 				{
 					label: "Sí, caminé",
