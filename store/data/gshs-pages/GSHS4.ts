@@ -84,11 +84,11 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
 			label:
-				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+				"En este curso académico, ¿cuántos días por semana fuiste a clase de educación física en el colegio?",
 			kid_label:
-				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+				"En este curso académico, ¿cuántos días por semana fuiste a clase de educación física en el colegio?",
 			adult_label:
-				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+				"En este curso académico, ¿cuántos días por semana fuiste a clase de educación física en el colegio?",
 			choices: [
 				{
 					label: "0 días",
@@ -120,11 +120,11 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 28",
 			label:
-				"During this school year, on how many days did you go to physical education (PE) class each week?",
+				"Pendant l’année scolaire en cours, combien de jours par semaine as-tu suivi des cours d’éducation physique (EP)?",
 			kid_label:
-				"During this school year, on how many days did you go to physical education (PE) class each week?",
+				"Pendant l’année scolaire en cours, combien de jours par semaine as-tu suivi des cours d’éducation physique (EP)?",
 			adult_label:
-				"During this school year, on how many days did you go to physical education (PE) class each week?",
+				"Pendant l’année scolaire en cours, combien de jours par semaine as-tu suivi des cours d’éducation physique (EP)?",
 			choices: [
 				{
 					label: "0 jour",
@@ -147,7 +147,7 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 					value: "4",
 				},
 				{
-					label: "5 or more days",
+					label: "5 jours ou plus",
 					value: ">=5",
 				},
 			],

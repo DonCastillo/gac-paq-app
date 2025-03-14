@@ -125,36 +125,36 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",
-			label: "On an average school night, how many hours of sleep do you get?",
-			kid_label: "On an average school night, how many hours of sleep do you get?",
-			adult_label: "On an average school night, how many hours of sleep do you get?",
+			label: "Combien d’heures dors-tu en moyenne par nuit d’école?",
+			kid_label: "Combien d’heures dors-tu en moyenne par nuit d’école?",
+			adult_label: "Combien d’heures dors-tu en moyenne par nuit d’école?",
 			choices: [
 				{
-					label: "4 or less hours",
+					label: "4 heures ou moins",
 					value: "4 or less hours",
 				},
 				{
-					label: "5 hours",
+					label: "5 heures",
 					value: "5 hours",
 				},
 				{
-					label: "6 hours",
+					label: "6 heures",
 					value: "6 hours",
 				},
 				{
-					label: "7 hours",
+					label: "7 heures",
 					value: "7 hours",
 				},
 				{
-					label: "8 hours",
+					label: "8 heures",
 					value: "8 hours",
 				},
 				{
-					label: "9 hours",
+					label: "9 heures",
 					value: "9 hours",
 				},
 				{
-					label: "10 or more hours",
+					label: "10 heures ou plus",
 					value: "10 or more hours",
 				},
 			],

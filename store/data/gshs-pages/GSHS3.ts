@@ -100,11 +100,11 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 27",
 			label:
-				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+				"Durante los últimos 7 días, ¿cuántos días fuiste de casa al colegio, o volviste caminando o en bicicleta?",
 			kid_label:
-				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+				"Durante los últimos 7 días, ¿cuántos días fuiste de casa al colegio, o volviste caminando o en bicicleta?",
 			adult_label:
-				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+				"Durante los últimos 7 días, ¿cuántos días fuiste de casa al colegio, o volviste caminando o en bicicleta?",
 			choices: [
 				{
 					label: "0 días",
@@ -144,11 +144,11 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 27",
 			label:
-				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
+				"Au cours des 7 derniers jours, combien de jours as-tu fait le chemin pour aller ou revenir de l’école à pied ou en vélo?",
 			kid_label:
-				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
+				"Au cours des 7 derniers jours, combien de jours as-tu fait le chemin pour aller ou revenir de l’école à pied ou en vélo?",
 			adult_label:
-				"During the past 7 days, on how many days did you walk or ride a bicycle to or from school?",
+				"Au cours des 7 derniers jours, combien de jours as-tu fait le chemin pour aller ou revenir de l’école à pied ou en vélo?",
 			choices: [
 				{
 					label: "0 jour",
