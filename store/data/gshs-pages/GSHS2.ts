@@ -144,11 +144,11 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
 			label:
-				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+				"Au cours des 7 derniers jours, combien de jours as-tu fait des exercices pour renforcer ou tonifier tes muscles, comme des pompes (push-ups), des redressements assis (sit-ups) ou des poids et haltères (weights)?",
 			kid_label:
-				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+				"Au cours des 7 derniers jours, combien de jours as-tu fait des exercices pour renforcer ou tonifier tes muscles, comme des pompes (push-ups), des redressements assis (sit-ups) ou des poids et haltères (weights)?",
 			adult_label:
-				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+				"Au cours des 7 derniers jours, combien de jours as-tu fait des exercices pour renforcer ou tonifier tes muscles, comme des pompes (push-ups), des redressements assis (sit-ups) ou des poids et haltères (weights)?",
 			choices: [
 				{
 					label: "0 jour",

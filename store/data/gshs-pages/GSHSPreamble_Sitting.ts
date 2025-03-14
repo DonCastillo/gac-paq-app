@@ -37,9 +37,9 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			heading: "Assis",
 			subheading: "Enquête mondiale sur la santé des élèves en milieu scolaire",
 			description: {
-				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				kid: "La question qui suit porte sur le temps que tu passes principalement assis.e lorsque tu n’es pas à l’école ou que tu ne fais pas tes devoirs.",
 				adult:
-					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+					"La question qui suit porte sur le temps que tu passes principalement assis.e lorsque tu n’es pas à l’école ou que tu ne fais pas tes devoirs.",
 			},
 		},
 		"es-MX": {

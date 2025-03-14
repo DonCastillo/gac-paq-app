@@ -120,34 +120,34 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
 			label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"Combien de temps passes-tu assis.e au cours d’une journée normale ou régulière, que ce soit pour regarder la télévision, jouer à l’ordinateur, parler avec des amis, consulter ton cellulaire, ou toute autre activité assise, comme les jeux vidéo et la lecture?",
 			kid_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"Combien de temps passes-tu assis.e au cours d’une journée normale ou régulière, que ce soit pour regarder la télévision, jouer à l’ordinateur, parler avec des amis, consulter ton cellulaire, ou toute autre activité assise, comme les jeux vidéo et la lecture?",
 			adult_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"Combien de temps passes-tu assis.e au cours d’une journée normale ou régulière, que ce soit pour regarder la télévision, jouer à l’ordinateur, parler avec des amis, consulter ton cellulaire, ou toute autre activité assise, comme les jeux vidéo et la lecture?",
 			choices: [
 				{
-					label: "Less than 1 hour per day",
+					label: "Moins de 1 heure par jour",
 					value: "Less than 1 hour per day",
 				},
 				{
-					label: "1 to 2 hours per day",
+					label: "1 à 2 heures par jour",
 					value: "1 to 2 hours per day",
 				},
 				{
-					label: "3 to 4 hours per day",
+					label: "3 à 4 heures par jour",
 					value: "3 to 4 hours per day",
 				},
 				{
-					label: "5 to 6 hours per day",
+					label: "5 à 6 heures par jour",
 					value: "5 to 6 hours per day",
 				},
 				{
-					label: "7 to 8 hours per day",
+					label: "7 à 8 heures par jour",
 					value: "7 to 8 hours per day",
 				},
 				{
-					label: "More than 8 hours per day",
+					label: "Plus de 8 heures par jour",
 					value: "More than 8 hours per day",
 				},
 			],
