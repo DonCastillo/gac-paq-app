@@ -28,9 +28,9 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 			heading: "Actividad física",
 			subheading: "Encuesta global de salud escolar basada en estudiantes",
 			description: {
-				kid: "Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+				kid: "Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, ir en bicicleta, bailar o jugar fútbol, nadar o patinar.",
 				adult:
-					"Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+					"Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, ir en bicicleta, bailar o jugar fútbol, nadar o patinar.",
 			},
 		},
 		"fr-CA": {

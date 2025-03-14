@@ -100,11 +100,11 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 27",
 			label:
-				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+				"Durante los últimos 7 días, ¿cuántos días fuiste de casa al colegio, o volviste caminando o en bicicleta?",
 			kid_label:
-				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+				"Durante los últimos 7 días, ¿cuántos días fuiste de casa al colegio, o volviste caminando o en bicicleta?",
 			adult_label:
-				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+				"Durante los últimos 7 días, ¿cuántos días fuiste de casa al colegio, o volviste caminando o en bicicleta?",
 			choices: [
 				{
 					label: "0 días",

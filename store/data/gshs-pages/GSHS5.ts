@@ -84,11 +84,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 29",
 			label:
-				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo televisión, jugando juegos en la computadora, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como jugar juegos de video, utilizar el celular, ver videos?",
+				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo la televisión, jugando a juegos en el ordenador, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como usar el móvil? ",
 			kid_label:
-				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo televisión, jugando juegos en la computadora, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como jugar juegos de video, utilizar el celular, ver videos?",
+				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo la televisión, jugando a juegos en el ordenador, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como usar el móvil? ",
 			adult_label:
-				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo televisión, jugando juegos en la computadora, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como jugar juegos de video, utilizar el celular, ver videos?",
+				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo la televisión, jugando a juegos en el ordenador, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como usar el móvil? ",
 			choices: [
 				{
 					label: "Menos de 1 hora al día",

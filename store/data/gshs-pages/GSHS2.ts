@@ -100,11 +100,11 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 26",
 			label:
-				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como flexiones, sentadillas o levantar pesas?",
 			kid_label:
-				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como flexiones, sentadillas o levantar pesas?",
 			adult_label:
-				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como lagartijas, sentadillas o levantar pesas?",
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicio para fortalecer o tonificar tus músculos, como flexiones, sentadillas o levantar pesas?",
 			choices: [
 				{
 					label: "0 días",

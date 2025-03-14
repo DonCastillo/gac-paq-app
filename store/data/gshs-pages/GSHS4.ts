@@ -84,11 +84,11 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
 			label:
-				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+				"En este curso académico, ¿cuántos días por semana fuiste a clase de educación física en el colegio?",
 			kid_label:
-				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+				"En este curso académico, ¿cuántos días por semana fuiste a clase de educación física en el colegio?",
 			adult_label:
-				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+				"En este curso académico, ¿cuántos días por semana fuiste a clase de educación física en el colegio?",
 			choices: [
 				{
 					label: "0 días",

@@ -106,11 +106,11 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
 			label:
-				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+				"Durante los últimos 7 días, ¿cuántos días practicaste una actividad física por un total de al menos 60 minutos al día?",
 			kid_label:
-				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+				"Durante los últimos 7 días, ¿cuántos días practicaste una actividad física por un total de al menos 60 minutos al día?",
 			adult_label:
-				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+				"Durante los últimos 7 días, ¿cuántos días practicaste una actividad física por un total de al menos 60 minutos al día?",
 			kid_sublabel:
 				"Suma todo el tiempo que pasas haciendo algún tipo de actividad física cada día.",
 			adult_sublabel:
