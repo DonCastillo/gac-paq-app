@@ -98,7 +98,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "坐着",
-			subheading: "全球学校基础学生健康调查",
+			subheading: "全球在校学生健康调查",
 			description: {
 				kid: "下一问题是询问你不在学校或做作业时坐着的情况。",
 				adult: "下一问题是询问你不在学校或做作业时坐着的情况。",

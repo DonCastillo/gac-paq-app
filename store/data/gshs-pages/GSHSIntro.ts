@@ -47,7 +47,7 @@ const GSHSIntro: LangSectionPayloadInterface = {
 			subheading: "",
 		},
 		"zh-CN": {
-			heading: "全球学校基础学生健康调查",
+			heading: "全球在校学生健康调查",
 			subheading: "",
 		},
 	},

@@ -98,7 +98,7 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "体育活动",
-			subheading: "全球学校基础学生健康调查",
+			subheading: "全球在校学生健康调查",
 			description: {
 				kid: "以下4个问题是关于身体活动的。身体活动是指任何让你心率加快且呼吸急促的活动。体育运动时、朋友玩耍时、步行上下学时或上体育课时都在进行身体活动。身体活动的例子包括跑步、快走、骑自行车、跳舞、足球以及所在国家的特定例子。",
 				adult:
