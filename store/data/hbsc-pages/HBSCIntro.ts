@@ -51,7 +51,7 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			subheading: "",
 		},
 		"zh-CN": {
-			heading: "学龄儿童的健康行为",
+			heading: "学龄儿童健康行为问卷",
 			subheading: "",
 		},
 	},
