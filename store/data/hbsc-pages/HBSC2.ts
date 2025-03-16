@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 26",
+			label:
+				"นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
+			kid_label:
+				"นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
+			adult_label:
+				"นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
+			choices: [
+				{
+					label: "ทุกวัน",
+					value: "Every day",
+				},
+				{
+					label: "4 - 6 ครั้งต่อสัปดาห์",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 ครั้งต่อสัปดาห์",
+					value: "3 times a week",
+				},
+				{
+					label: "2 ครั้งต่อสัปดาห์",
+					value: "2 times a week",
+				},
+				{
+					label: "สัปดาห์ละครั้ง",
+					value: "Once a week",
+				},
+				{
+					label: "เดือนละครั้ง",
+					value: "Once a month",
+				},
+				{
+					label: "น้อยกว่าหนึ่งครั้งต่อเดือน",
+					value: "Less than once a month",
+				},
+				{
+					label: "ไม่เคย",
+					value: "Never",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 26",

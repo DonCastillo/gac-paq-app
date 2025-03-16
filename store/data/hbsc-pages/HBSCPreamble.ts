@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"th-TH": {
+			heading: "พฤติกรรมสุขภาพในเด็กวัยเรียน",
+			subheading: "",
+			description: {
+				kid: "กิจกรรมทางกายหมายถึงกิจกรรมใด ๆ ที่ทำให้อัตราการเต้นของหัวใจเพิ่มขึ้นและทำให้คุณหายใจเร็วขึ้นเป็นบางครั้ง กิจกรรมทางกายสามารถทำได้ผ่านการเล่นกีฬา กิจกรรมในโรงเรียน เล่นกับเพื่อน หรือเดินไปโรงเรียน ตัวอย่างของกิจกรรมทางกาย ได้แก่ วิ่ง เดินเร็ว โรลเลอร์เบลด ปั่นจักรยาน เต้นรำ เล่นสเก็ตบอร์ด ว่ายน้ำ ฟุตบอล บาสเกตบอล อเมริกันฟุตบอล และโต้คลื่น",
+				adult:
+					"กิจกรรมทางกายหมายถึงกิจกรรมใด ๆ ที่ทำให้อัตราการเต้นของหัวใจเพิ่มขึ้นและทำให้คุณหายใจเร็วขึ้นเป็นบางครั้ง กิจกรรมทางกายสามารถทำได้ผ่านการเล่นกีฬา กิจกรรมในโรงเรียน เล่นกับเพื่อน หรือเดินไปโรงเรียน ตัวอย่างของกิจกรรมทางกาย ได้แก่ วิ่ง เดินเร็ว โรลเลอร์เบลด ปั่นจักรยาน เต้นรำ เล่นสเก็ตบอร์ด ว่ายน้ำ ฟุตบอล บาสเกตบอล อเมริกันฟุตบอล และโต้คลื่น",
+			},
+		},
 		"pt-BR": {
 			heading: "Comportamento de Saúde em Escolares",
 			subheading: "",
