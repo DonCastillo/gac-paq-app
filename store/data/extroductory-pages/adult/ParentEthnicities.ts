@@ -206,7 +206,7 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 					value: "None",
 				},
 				{
-					label: "Otro",
+					label: "Otro, ¿cuál?",
 					value: "Other",
 				},
 			],
