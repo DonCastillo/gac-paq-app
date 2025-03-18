@@ -113,15 +113,15 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 					value: "Every day",
 				},
 				{
-					label: "De 4 a 6 veces por semana",
+					label: "4-6 veces a la semana",
 					value: "4 to 6 times a week",
 				},
 				{
-					label: "3 veces por semana",
+					label: "3 veces a la semana",
 					value: "3 times a week",
 				},
 				{
-					label: "2 veces por semana",
+					label: "2 veces a la semana",
 					value: "2 times a week",
 				},
 				{
@@ -133,7 +133,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 					value: "Once a month",
 				},
 				{
-					label: "Menos de 1 vez al mes",
+					label: "Menos de una vez al mes",
 					value: "Less than once a month",
 				},
 				{

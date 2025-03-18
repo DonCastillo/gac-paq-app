@@ -106,11 +106,11 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
 			label:
-				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+				"Durante los últimos 7 días, ¿cuántos días practicaste una actividad física por un total de al menos 60 minutos al día?",
 			kid_label:
-				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+				"Durante los últimos 7 días, ¿cuántos días practicaste una actividad física por un total de al menos 60 minutos al día?",
 			adult_label:
-				"Durante los últimos 7 días, ¿cuántos días realizaste actividad física por un total de al menos 60 minutos por día?",
+				"Durante los últimos 7 días, ¿cuántos días practicaste una actividad física por un total de al menos 60 minutos al día?",
 			kid_sublabel:
 				"Suma todo el tiempo que pasas haciendo algún tipo de actividad física cada día.",
 			adult_sublabel:
@@ -154,13 +154,15 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
 			label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+				"Au cours des 7 derniers jours, combien de jours as-tu été actif.ve physiquement pendant un minimum de 60 minutes en tout pendant la journée?",
 			kid_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+				"Au cours des 7 derniers jours, combien de jours as-tu été actif.ve physiquement pendant un minimum de 60 minutes en tout pendant la journée?",
 			adult_label:
-				"During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			kid_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
-			adult_sublabel: "Add up all the time you spent in any kind of physical activity each day.",
+				"Au cours des 7 derniers jours, combien de jours as-tu été actif.ve physiquement pendant un minimum de 60 minutes en tout pendant la journée?",
+			kid_sublabel:
+				"Additionne tout le temps que tu as passé dans tout type d’activité physique pour chaque journée.",
+			adult_sublabel:
+				"Additionne tout le temps que tu as passé dans tout type d’activité physique pour chaque journée.",
 			choices: [
 				{
 					label: "0 jour",
