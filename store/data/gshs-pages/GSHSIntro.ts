@@ -10,6 +10,10 @@ const GSHSIntro: LangSectionPayloadInterface = {
 			heading: "Global School-based Student Health Survey",
 			subheading: "",
 		},
+		"th-TH": {
+			heading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
+			subheading: "",
+		},
 		"pt-BR": {
 			heading: "Pesquisa Global de Saúde de Estudantes em Escolas",
 			subheading: "",
