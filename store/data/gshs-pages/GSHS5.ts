@@ -300,11 +300,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
 			label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking/gisting with friends, using your mobile phone, or doing other sitting activities, such as listening to stories or music, & playing board games or cards.",
 			kid_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking/gisting with friends, using your mobile phone, or doing other sitting activities, such as listening to stories or music, & playing board games or cards.",
 			adult_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking/gisting with friends, using your mobile phone, or doing other sitting activities, such as listening to stories or music, & playing board games or cards.",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
