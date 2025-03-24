@@ -384,6 +384,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٣٠]",
+			label: "في ليالي الدراسة العادية، كم ساعةً تنامها؟",
+			kid_label: "في ليالي الدراسة العادية، كم ساعةً تنامها؟",
+			adult_label: "في ليالي الدراسة العادية، كم ساعةً تنامها؟",
+			choices: [
+				{
+					label: "4 ساعات أو أقل",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 ساعات",
+					value: "5 hours",
+				},
+				{
+					label: "6 ساعات",
+					value: "6 hours",
+				},
+				{
+					label: "7 ساعات",
+					value: "7 hours",
+				},
+				{
+					label: "8 ساعات",
+					value: "8 hours",
+				},
+				{
+					label: "9 ساعات",
+					value: "9 hours",
+				},
+				{
+					label: "10 ساعة أو أكثر",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 30",

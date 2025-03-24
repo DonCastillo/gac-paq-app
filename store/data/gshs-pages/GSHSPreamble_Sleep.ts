@@ -86,6 +86,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
+		"ar-AE": {
+			heading: "نوم",
+			subheading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
+			description: {
+				kid: "يدور السؤال التالي حول قسط النوم الذي تحصل عليه.",
+				adult: "يدور السؤال التالي حول قسط النوم الذي تحصل عليه.",
+			},
+		},
 		"sv-SE": {
 			heading: "Sömn",
 			subheading: "Global skolbaserad undersökning om studenthälsa",

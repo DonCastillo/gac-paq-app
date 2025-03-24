@@ -447,6 +447,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٧]",
+			label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			kid_label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			adult_label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			choices: [
+				{
+					label: "لا شيء (٠)",
+					value: "0",
+				},
+				{
+					label: "يوم واحد (١)",
+					value: "1",
+				},
+				{
+					label: "يومين (٢)",
+					value: "2",
+				},
+				{
+					label: "ثلاثة أيام (٣)",
+					value: "3",
+				},
+				{
+					label: "أربعة أيام (٤)",
+					value: "4",
+				},
+				{
+					label: "خمسة أيام (٥)",
+					value: "5",
+				},
+				{
+					label: "ستة أيام (٦)",
+					value: "6",
+				},
+				{
+					label: "سبعة أيام (٧)",
+					value: "7",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 27",

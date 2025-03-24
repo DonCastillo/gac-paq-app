@@ -96,6 +96,15 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"ar-AE": {
+			heading: "الجلوس",
+			subheading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
+			description: {
+				kid: "تدور الأسئلة التالية حول الوقت الذي تقضيه غالبًا جالسًا أو مستلقيًا عندما لا تكون بالمدرسة أو تؤدي واجباتك المدرسية.",
+				adult:
+					"تدور الأسئلة التالية حول الوقت الذي تقضيه غالبًا جالسًا أو مستلقيًا عندما لا تكون بالمدرسة أو تؤدي واجباتك المدرسية.",
+			},
+		},
 		"sv-SE": {
 			heading: "Sittande",
 			subheading: "Global skolbaserad undersökning om studenthälsa",

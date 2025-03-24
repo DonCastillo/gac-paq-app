@@ -96,6 +96,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
 			},
 		},
+		"ar-AE": {
+			heading: "النشاط البدني",
+			subheading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
+			description: {
+				kid: "تدور الأسئلة الأربعة التالية حول النشاط البدني. ويُقصد بالنشاط البدني أي نشاط يزيد معدل ضربات القلب ويجعلك تلهث. ويمكن ممارسة النشاط البدني من خلال الرياضة، أو اللعب مع الأصدقاء، أو المشي إلى المدرسة، أو في فصل التربية البدنية. ومن أمثلة النشاط البدني الركض والمشي السريع وركوب الدراجات والرقص وكرة القدم و(أمثلة خاصة بكل بلد).",
+				adult:
+					"تدور الأسئلة الأربعة التالية حول النشاط البدني. ويُقصد بالنشاط البدني أي نشاط يزيد معدل ضربات القلب ويجعلك تلهث. ويمكن ممارسة النشاط البدني من خلال الرياضة، أو اللعب مع الأصدقاء، أو المشي إلى المدرسة، أو في فصل التربية البدنية. ومن أمثلة النشاط البدني الركض والمشي السريع وركوب الدراجات والرقص وكرة القدم و(أمثلة خاصة بكل بلد).",
+			},
+		},
 		"sv-SE": {
 			heading: "Fysisk aktivitet",
 			subheading: "Global skolbaserad undersökning om studenthälsa",

@@ -365,6 +365,39 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٨]",
+			label: "خلال هذه السنة الدراسية، كم يومًا حضرت فيه فصل التربية البدنية كل أسبوع؟",
+			kid_label: "خلال هذه السنة الدراسية، كم يومًا حضرت فيه فصل التربية البدنية كل أسبوع؟",
+			adult_label: "خلال هذه السنة الدراسية، كم يومًا حضرت فيه فصل التربية البدنية كل أسبوع؟",
+			choices: [
+				{
+					label: "لم يحدث",
+					value: "0",
+				},
+				{
+					label: "يومًا واحدًا",
+					value: "1",
+				},
+				{
+					label: "يومين",
+					value: "2",
+				},
+				{
+					label: "3 أيام",
+					value: "3",
+				},
+				{
+					label: "4 أيام",
+					value: "4",
+				},
+				{
+					label: "5 أيام أو أكثر",
+					value: ">=5",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 28",
