@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"th-TH": {
+			heading: "พฤติกรรมสุขภาพในเด็กวัยเรียน",
+			subheading: "",
+			description: {
+				kid: "กิจกรรมทางกายหมายถึงกิจกรรมใด ๆ ที่ทำให้อัตราการเต้นของหัวใจเพิ่มขึ้นและทำให้คุณหายใจเร็วขึ้นเป็นบางครั้ง กิจกรรมทางกายสามารถทำได้ผ่านการเล่นกีฬา กิจกรรมในโรงเรียน เล่นกับเพื่อน หรือเดินไปโรงเรียน ตัวอย่างของกิจกรรมทางกาย ได้แก่ วิ่ง เดินเร็ว โรลเลอร์เบลด ปั่นจักรยาน เต้นรำ เล่นสเก็ตบอร์ด ว่ายน้ำ ฟุตบอล บาสเกตบอล อเมริกันฟุตบอล และโต้คลื่น",
+				adult:
+					"กิจกรรมทางกายหมายถึงกิจกรรมใด ๆ ที่ทำให้อัตราการเต้นของหัวใจเพิ่มขึ้นและทำให้คุณหายใจเร็วขึ้นเป็นบางครั้ง กิจกรรมทางกายสามารถทำได้ผ่านการเล่นกีฬา กิจกรรมในโรงเรียน เล่นกับเพื่อน หรือเดินไปโรงเรียน ตัวอย่างของกิจกรรมทางกาย ได้แก่ วิ่ง เดินเร็ว โรลเลอร์เบลด ปั่นจักรยาน เต้นรำ เล่นสเก็ตบอร์ด ว่ายน้ำ ฟุตบอล บาสเกตบอล อเมริกันฟุตบอล และโต้คลื่น",
+			},
+		},
 		"pt-BR": {
 			heading: "Comportamento de Saúde em Escolares",
 			subheading: "",
@@ -73,9 +82,9 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, biking, dancing, swimming, jumping and chasing, soccer (football), basketball, & playing hide-and-seek.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, biking, dancing, swimming, jumping and chasing, soccer (football), basketball, & playing hide-and-seek.",
 			},
 		},
 		"en-AE": {
@@ -85,6 +94,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 				adult:
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+			},
+		},
+		"ar-AE": {
+			heading: "سلوك الصحة لدى الأطفال في سن المدرسة",
+			subheading: "",
+			description: {
+				kid: "النشاط البدني هو أي مجهود يؤدي إلى زيادة معدل ضربات القلب وصعوبة التنفس في بعض الأحيان. يمكن ممارسة النشاط البدني أثناء الرياضة، أو الأنشطة المدرسية، أو اللعب مع الأصدقاء، أو المشي للذهاب إلى المدرسة. من الأمثلة على النشاط البدني: الجري والمشي السريع وحذاء التزلج أو لوح التزلج وركوب الدراجات والرقص والسباحة وكرة القدم وكرة السلة وغيرها. ",
+				adult:
+					"النشاط البدني هو أي مجهود يؤدي إلى زيادة معدل ضربات القلب وصعوبة التنفس في بعض الأحيان. يمكن ممارسة النشاط البدني أثناء الرياضة، أو الأنشطة المدرسية، أو اللعب مع الأصدقاء، أو المشي للذهاب إلى المدرسة. من الأمثلة على النشاط البدني: الجري والمشي السريع وحذاء التزلج أو لوح التزلج وركوب الدراجات والرقص والسباحة وكرة القدم وكرة السلة وغيرها. ",
 			},
 		},
 		"sv-SE": {
@@ -97,12 +115,12 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"zh-CN": {
-			heading: "学龄儿童的健康行为",
+			heading: "学龄儿童健康行为问卷",
 			subheading: "",
 			description: {
-				kid: "在下面的问题中，身体活动是指任何让你心跳加速并有时让你呼吸急促、上气不接下气的活动。体育运动时、学校体育活动活动时、与朋友玩耍时或步行上下学时都在进行身体活动。身体活动的例子包括如跑步、快走、轮滑、骑自行车、跳舞、滑板、游泳、足球、篮球、橄榄球和冲浪等[可给出所在国家的特定例子]。",
+				kid: "在下面的问题中，身体活动是指任何让你心跳加速并有时让你呼吸急促、上气不接下气的活动。体育运动时、学校体育活动时、与朋友玩耍时或步行上下学时都在进行身体活动。身体活动的例子包括跑步、快走、轮滑、骑自行车、跳舞、滑板、游泳、足球、篮球、橄榄球和冲浪等。",
 				adult:
-					"在下面的问题中，身体活动是指任何让你心跳加速并有时让你呼吸急促、上气不接下气的活动。体育运动时、学校体育活动活动时、与朋友玩耍时或步行上下学时都在进行身体活动。身体活动的例子包括如跑步、快走、轮滑、骑自行车、跳舞、滑板、游泳、足球、篮球、橄榄球和冲浪等[可给出所在国家的特定例子]。",
+					"在下面的问题中，身体活动是指任何让你心跳加速并有时让你呼吸急促、上气不接下气的活动。体育运动时、学校体育活动时、与朋友玩耍时或步行上下学时都在进行身体活动。身体活动的例子包括跑步、快走、轮滑、骑自行车、跳舞、滑板、游泳、足球、篮球、橄榄球和冲浪等。",
 			},
 		},
 	},

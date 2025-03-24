@@ -10,6 +10,10 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 		},
+		"th-TH": {
+			heading: "พฤติกรรมสุขภาพในเด็กวัยเรียน",
+			subheading: "",
+		},
 		"pt-BR": {
 			heading: "Comportamento de Saúde em Escolares",
 			subheading: "",
@@ -42,12 +46,16 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 		},
+		"ar-AE": {
+			heading: "سلوك الصحة لدى الأطفال في سن المدرسة",
+			subheading: "",
+		},
 		"sv-SE": {
 			heading: "Hälsobeteende hos skolbarn",
 			subheading: "",
 		},
 		"zh-CN": {
-			heading: "学龄儿童的健康行为",
+			heading: "学龄儿童健康行为问卷",
 			subheading: "",
 		},
 	},

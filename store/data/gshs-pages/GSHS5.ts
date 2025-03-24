@@ -44,6 +44,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 29",
+			label:
+				"โดยปกติในแต่ละวันในการนั่งดูโทรทัศน์  นั่งเล ่นเกมคอมพิวเตอร์  นั่งทางานโดยใช้โซเชี่ยลเนตเวิร์คนั่งคุยกับเพื่อน นั่งอ่านหนังสือ หรือนั่งคุยโทรศัพท์ฯลฯ นักเรียนใช้เวลาเท่าไร",
+			kid_label:
+				"โดยปกติในแต่ละวันในการนั่งดูโทรทัศน์  นั่งเล ่นเกมคอมพิวเตอร์  นั่งทางานโดยใช้โซเชี่ยลเนตเวิร์คนั่งคุยกับเพื่อน นั่งอ่านหนังสือ หรือนั่งคุยโทรศัพท์ฯลฯ นักเรียนใช้เวลาเท่าไร",
+			adult_label:
+				"โดยปกติในแต่ละวันในการนั่งดูโทรทัศน์  นั่งเล ่นเกมคอมพิวเตอร์  นั่งทางานโดยใช้โซเชี่ยลเนตเวิร์คนั่งคุยกับเพื่อน นั่งอ่านหนังสือ หรือนั่งคุยโทรศัพท์ฯลฯ นักเรียนใช้เวลาเท่าไร",
+			choices: [
+				{
+					label: "น้อยกว่า 1 ชั่วโมง ต่อวัน",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1-2 ชั่วโมง ต่อวัน",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3-4 ชั่วโมง ต่อวัน",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "5-6 ชั่วโมง ต่อวัน",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "7-8 ชั่วโมง ต่อวัน",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "มากกว่า 8 ชั่วโมง ต่อวัน",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 29",
@@ -264,11 +300,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
 			label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking/gisting with friends, using your mobile phone, or doing other sitting activities, such as listening to stories or music, & playing board games or cards.",
 			kid_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking/gisting with friends, using your mobile phone, or doing other sitting activities, such as listening to stories or music, & playing board games or cards.",
 			adult_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking/gisting with friends, using your mobile phone, or doing other sitting activities, such as listening to stories or music, & playing board games or cards.",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
@@ -332,6 +368,44 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٩]",
+			label:
+				"خلال يومك المعتاد، كم من الوقت تقضيه جالسًا أو مستلقيًا للقيام بأمور معينة مثل مشاهدة التلفزيون أو ممارسة ألعاب الكمبيوتر أو التحدث مع الأصدقاء أو استخدام هاتفك المحمول أو التنقل في سيارة أو القيلولة أو ممارسة أنشطة أخرى أثناء الجلوس أو الاستلقاء، مثل (أمثلة خاصة بكل بلد)؟ ",
+			kid_label:
+				"خلال يومك المعتاد، كم من الوقت تقضيه جالسًا أو مستلقيًا للقيام بأمور معينة مثل مشاهدة التلفزيون أو ممارسة ألعاب الكمبيوتر أو التحدث مع الأصدقاء أو استخدام هاتفك المحمول أو التنقل في سيارة أو القيلولة أو ممارسة أنشطة أخرى أثناء الجلوس أو الاستلقاء، مثل (أمثلة خاصة بكل بلد)؟ ",
+			adult_label:
+				"خلال يومك المعتاد، كم من الوقت تقضيه جالسًا أو مستلقيًا للقيام بأمور معينة مثل مشاهدة التلفزيون أو ممارسة ألعاب الكمبيوتر أو التحدث مع الأصدقاء أو استخدام هاتفك المحمول أو التنقل في سيارة أو القيلولة أو ممارسة أنشطة أخرى أثناء الجلوس أو الاستلقاء، مثل (أمثلة خاصة بكل بلد)؟ ",
+			kid_sublabel: "لا تحسب الوقت الذي تقضيه في النوم ليلاً.",
+			adult_sublabel: "لا تحسب الوقت الذي تقضيه في النوم ليلاً.",
+			choices: [
+				{
+					label: "أقل من ساعة واحدة في اليوم",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "ساعة إلى ساعتين في اليوم",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3 إلى 4 ساعات في اليوم",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "5 إلى 6 ساعات في اليوم",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "7 إلى 8 ساعات في اليوم",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "أكثر من 8 ساعات في اليوم",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 29",
@@ -372,11 +446,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "问题 29",
 			label:
-				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动，如所在国家的特定例子？",
+				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
 			kid_label:
-				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动，如所在国家的特定例子？",
+				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
 			adult_label:
-				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动，如所在国家的特定例子？",
+				"5. 在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
 			choices: [
 				{
 					label: "每天少于1小时",

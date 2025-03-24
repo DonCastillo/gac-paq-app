@@ -15,6 +15,15 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"th-TH": {
+			heading: "นั่ง",
+			subheading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
+			description: {
+				kid: "คำถามข้อต่อไปนี้ถามเกี่ยวกับเวลาส่วนใหญ่ที่นักเรียนใช้ในการนั่งทำกิจกรรม เมื่อนักเรียนไม่ได้อยู่ที่โรงเรียนหรือไม่ได้ทำการบ้าน",
+				adult:
+					"คำถามข้อต่อไปนี้ถามเกี่ยวกับเวลาส่วนใหญ่ที่นักเรียนใช้ในการนั่งทำกิจกรรม เมื่อนักเรียนไม่ได้อยู่ที่โรงเรียนหรือไม่ได้ทำการบ้าน",
+			},
+		},
 		"pt-BR": {
 			heading: "Sentado",
 			subheading: "Pesquisa Global de Saúde de Estudantes em Escolas",
@@ -87,6 +96,15 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"ar-AE": {
+			heading: "الجلوس",
+			subheading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
+			description: {
+				kid: "تدور الأسئلة التالية حول الوقت الذي تقضيه غالبًا جالسًا أو مستلقيًا عندما لا تكون بالمدرسة أو تؤدي واجباتك المدرسية.",
+				adult:
+					"تدور الأسئلة التالية حول الوقت الذي تقضيه غالبًا جالسًا أو مستلقيًا عندما لا تكون بالمدرسة أو تؤدي واجباتك المدرسية.",
+			},
+		},
 		"sv-SE": {
 			heading: "Sittande",
 			subheading: "Global skolbaserad undersökning om studenthälsa",
@@ -98,7 +116,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "坐着",
-			subheading: "全球学校基础学生健康调查",
+			subheading: "全球在校学生健康调查",
 			description: {
 				kid: "下一问题是询问你不在学校或做作业时坐着的情况。",
 				adult: "下一问题是询问你不在学校或做作业时坐着的情况。",

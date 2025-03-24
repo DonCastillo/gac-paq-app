@@ -139,7 +139,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 					value: "31 to 60 minutes per day",
 				},
 				{
-					label: "1 a 1:30 horas por día Inciso",
+					label: "1 a 1:30 horas por día",
 					value: "1 to 1 and a half hours per day",
 				},
 				{

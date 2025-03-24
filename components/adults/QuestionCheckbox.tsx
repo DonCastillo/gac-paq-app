@@ -64,7 +64,9 @@ const QuestionCheckbox = ({
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return false;
 		}
-		return !["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
+		return !["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(
+			finalValue,
+		);
 	};
 
 	const someNotAnswer = (value: string): boolean => {
@@ -73,7 +75,9 @@ const QuestionCheckbox = ({
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return true;
 		}
-		return ["prefer not to answer", "prefer not to say", "none of the above"].includes(finalValue);
+		return ["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(
+			finalValue,
+		);
 	};
 
 	const pressHandler = (value: string | null): void => {

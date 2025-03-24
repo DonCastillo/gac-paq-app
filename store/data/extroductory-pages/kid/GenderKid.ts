@@ -118,7 +118,7 @@ const GenderKid: LangQuestionRadioPayloadInterface = {
 					value: "Girl",
 				},
 				{
-					label: "Otro",
+					label: "Otro ¿cuál?",
 					value: "Other",
 				},
 				{

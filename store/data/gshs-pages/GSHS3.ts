@@ -52,6 +52,49 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 27",
+			label: "ในระหว่าง 7 วันที่ผ่านมา นักเรียนเดินหรือขี่จักรยานไปหรือกลับจากโรงเรียน จำนวนกี่วัน",
+			kid_label:
+				"ในระหว่าง 7 วันที่ผ่านมา นักเรียนเดินหรือขี่จักรยานไปหรือกลับจากโรงเรียน จำนวนกี่วัน",
+			adult_label:
+				"ในระหว่าง 7 วันที่ผ่านมา นักเรียนเดินหรือขี่จักรยานไปหรือกลับจากโรงเรียน จำนวนกี่วัน",
+			choices: [
+				{
+					label: "0 วัน",
+					value: "0",
+				},
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 27",
@@ -400,6 +443,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٧]",
+			label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			kid_label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			adult_label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			choices: [
+				{
+					label: "لم يحدث",
+					value: "0",
+				},
+				{
+					label: "يومًا واحدًا",
+					value: "1",
+				},
+				{
+					label: "يومين",
+					value: "2",
+				},
+				{
+					label: "3 أيام",
+					value: "3",
+				},
+				{
+					label: "4 أيام",
+					value: "4",
+				},
+				{
+					label: "5 أيام",
+					value: "5",
+				},
+				{
+					label: "6 أيام",
+					value: "6",
+				},
+				{
+					label: "7 أيام",
 					value: "7",
 				},
 			],

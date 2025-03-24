@@ -145,12 +145,8 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 					value: "31 - 60 minutes per day",
 				},
 				{
-					label: "61 - 90 minutos por día",
-					value: "61 - 90 minutes per day",
-				},
-				{
-					label: "91 minutos o más por día",
-					value: "91 minutes or more per day",
+					label: "Más de 60 minutos por día",
+					value: "Over 60 minutes per day",
 				},
 			],
 		},

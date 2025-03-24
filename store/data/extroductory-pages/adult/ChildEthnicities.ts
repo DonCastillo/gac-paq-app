@@ -206,7 +206,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 					value: "None",
 				},
 				{
-					label: "Otro",
+					label: "Otro, ¿cuál?",
 					value: "Other",
 				},
 			],
@@ -219,32 +219,36 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "¿Cuál es la etnia de su hija o hijo?",
 			choices: [
 				{
-					label: "Asiático",
-					value: "Asian",
+					label: "Pueblos indígenas",
+					value: "Indigenous people",
 				},
 				{
 					label: "Negro o afroamericano",
 					value: "Black or African American",
 				},
 				{
-					label: "Indígena",
-					value: "Indigenous",
-				},
-				{
-					label: "Latinoamericano",
-					value: "Latin American",
+					label: "Gitano (a)",
+					value: "Gypsy (a)",
 				},
 				{
 					label: "Blanco o caucásico",
 					value: "White or Caucasian",
 				},
 				{
-					label: "Otro",
-					value: "Other",
+					label: "Mestizo (a)",
+					value: "Mestizo (a)",
 				},
 				{
 					label: "Prefiero no decirlo",
 					value: "Prefer not to say",
+				},
+				{
+					label: "Ninguna",
+					value: "None",
+				},
+				{
+					label: "Otro, ¿cuál?",
+					value: "Other",
 				},
 			],
 		},

@@ -14,6 +14,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
+		"th-TH": {
+			heading: "นอน",
+			subheading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
+			description: {
+				kid: "คาถามข้อต่อไปนี้ ถามเกี่ยวกับการนอนหลับ",
+				adult: "คาถามข้อต่อไปนี้ ถามเกี่ยวกับการนอนหลับ",
+			},
+		},
 		"pt-BR": {
 			heading: "Dormir",
 			subheading: "Pesquisa Global de Saúde de Estudantes em Escolas",
@@ -78,6 +86,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
+		"ar-AE": {
+			heading: "نوم",
+			subheading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
+			description: {
+				kid: "يدور السؤال التالي حول قسط النوم الذي تحصل عليه.",
+				adult: "يدور السؤال التالي حول قسط النوم الذي تحصل عليه.",
+			},
+		},
 		"sv-SE": {
 			heading: "Sömn",
 			subheading: "Global skolbaserad undersökning om studenthälsa",
@@ -88,7 +104,7 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "睡眠",
-			subheading: "全球学校基础学生健康调查",
+			subheading: "全球在校学生健康调查",
 			description: {
 				kid: "下一问题是询问你睡觉的情况。",
 				adult: "下一问题是询问你睡觉的情况。",

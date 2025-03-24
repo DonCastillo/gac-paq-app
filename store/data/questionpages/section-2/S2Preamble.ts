@@ -48,7 +48,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			heading: "Tareas domesticas",
 			subheading: "Sección 2",
 			description: {
-				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
+				kid: "Esta sección se trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
 				adult:
 					"Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
 			},
@@ -57,9 +57,9 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			heading: "Tareas domesticas",
 			subheading: "Sección 2",
 			description: {
-				kid: "Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
+				kid: "Esta sección se trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, tareas de limpieza y otras tareas relacionadas.",
 				adult:
-					"Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, la jardinería y otras tareas relacionadas.",
+					"Esta sección trata de las tareas o quehaceres del hogar que requieren actividad física. Ejemplos de tareas o quehaceres incluyen las labores domésticas, el trabajo en el jardín, tareas de limpieza y otras tareas relacionadas.",
 			},
 		},
 		"en-MW": {
