@@ -46,6 +46,10 @@ const HBSCExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"ar-AE": {
+			heading: "اكتمل القسم",
+			subheading: "",
+		},
 		"sv-SE": {
 			heading: "Du är klar med denna sektion!",
 			subheading: "",

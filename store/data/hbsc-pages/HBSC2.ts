@@ -450,6 +450,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٦]",
+			label:
+				"خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
+			kid_label:
+				"خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
+			adult_label:
+				"خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
+			choices: [
+				{
+					label: "كل يوم",
+					value: "Every day",
+				},
+				{
+					label: "4 إلى 6 مرات في الأسبوع",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 مرات في الأسبوع",
+					value: "3 times a week",
+				},
+				{
+					label: "مرتين في الأسبوع",
+					value: "2 times a week",
+				},
+				{
+					label: "مرة واحدة في الأسبوع",
+					value: "Once a week",
+				},
+				{
+					label: "مرة واحدة في الشهر ",
+					value: "Once a month",
+				},
+				{
+					label: "أقل من مرة واحدة في الشهر",
+					value: "Less than once a month",
+				},
+				{
+					label: "أبداً",
+					value: "Never",
+				},
+			],
+		},
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 26",
