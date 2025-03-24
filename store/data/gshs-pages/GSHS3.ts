@@ -458,35 +458,35 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
 			choices: [
 				{
-					label: "لا شيء (٠)",
+					label: "لم يحدث",
 					value: "0",
 				},
 				{
-					label: "يوم واحد (١)",
+					label: "يومًا واحدًا",
 					value: "1",
 				},
 				{
-					label: "يومين (٢)",
+					label: "يومين",
 					value: "2",
 				},
 				{
-					label: "ثلاثة أيام (٣)",
+					label: "3 أيام",
 					value: "3",
 				},
 				{
-					label: "أربعة أيام (٤)",
+					label: "4 أيام",
 					value: "4",
 				},
 				{
-					label: "خمسة أيام (٥)",
+					label: "5 أيام",
 					value: "5",
 				},
 				{
-					label: "ستة أيام (٦)",
+					label: "6 أيام",
 					value: "6",
 				},
 				{
-					label: "سبعة أيام (٧)",
+					label: "7 أيام",
 					value: "7",
 				},
 			],

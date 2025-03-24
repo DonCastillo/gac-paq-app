@@ -485,35 +485,35 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 			adult_sublabel: "يرجى إضافة إجمالي الوقت الذي قضيته في النشاط البدني كل يوم.",
 			choices: [
 				{
-					label: "لا شيء (٠)",
+					label: "0 يوم",
 					value: "0",
 				},
 				{
-					label: "يوم واحد (١)",
+					label: "1 يوم",
 					value: "1",
 				},
 				{
-					label: "يومين (٢)",
+					label: "2 يوم",
 					value: "2",
 				},
 				{
-					label: "ثلاثة أيام (٣)",
+					label: "3 أيام",
 					value: "3",
 				},
 				{
-					label: "أربعة أيام (٤)",
+					label: "4 أيام",
 					value: "4",
 				},
 				{
-					label: "خمسة أيام (٥)",
+					label: "5 أيام",
 					value: "5",
 				},
 				{
-					label: "ستة أيام (٦)",
+					label: "6 أيام",
 					value: "6",
 				},
 				{
-					label: "سبعة أيام (٧)",
+					label: "7 أيام",
 					value: "7",
 				},
 			],
