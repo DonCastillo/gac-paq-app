@@ -44,6 +44,39 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 28",
+			label: "ในช่วงปีการศึกษานี้นักเรียนเข้าชั้นเรียนพลศึกษากี่วันต่อสัปดาห์",
+			kid_label: "ในช่วงปีการศึกษานี้นักเรียนเข้าชั้นเรียนพลศึกษากี่วันต่อสัปดาห์",
+			adult_label: "ในช่วงปีการศึกษานี้นักเรียนเข้าชั้นเรียนพลศึกษากี่วันต่อสัปดาห์",
+			choices: [
+				{
+					label: "0 วัน",
+					value: "0",
+				},
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วันหรือมากกว่านั้น",
+					value: ">=5",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 28",

@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 30",
+			label: "ในเวลากลางคืนของวันที่ไปโรงเรียน นักเรียนนอนกี่ชั่วโมงต่อวัน",
+			kid_label: "ในเวลากลางคืนของวันที่ไปโรงเรียน นักเรียนนอนกี่ชั่วโมงต่อวัน",
+			adult_label: "ในเวลากลางคืนของวันที่ไปโรงเรียน นักเรียนนอนกี่ชั่วโมงต่อวัน",
+			choices: [
+				{
+					label: "4 ชั่วโมง หรือน้อยกว่า",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 ชั่วโมง",
+					value: "5 hours",
+				},
+				{
+					label: "6 ชั่วโมง",
+					value: "6 hours",
+				},
+				{
+					label: "7 ชั่วโมง",
+					value: "7 hours",
+				},
+				{
+					label: "8 ชั่วโมง",
+					value: "8 hours",
+				},
+				{
+					label: "9 ชั่วโมง",
+					value: "9 hours",
+				},
+				{
+					label: "10 ชั่วโมง หรือมากกว่า",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 30",
