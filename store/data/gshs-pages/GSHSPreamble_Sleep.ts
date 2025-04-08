@@ -54,6 +54,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "La siguiente pregunta se refiere al tiempo que pasas durmiendo.",
 			},
 		},
+		"es-CO": {
+			heading: "Dormir",
+			subheading: "Encuesta global de salud escolar basada en estudiantes",
+			description: {
+				kid: "La siguiente pregunta se refiere al tiempo que pasas durmiendo.",
+				adult: "La siguiente pregunta se refiere al tiempo que pasas durmiendo.",
+			},
+		},
 		"en-NZ": {
 			heading: "Sleep",
 			subheading: "Global School-based Student Health Survey",

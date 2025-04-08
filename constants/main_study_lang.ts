@@ -10,6 +10,10 @@ const MAIN_STUDY_LANG = [
 	"ar-AE",
 	"th-TH",
 	"en-NG",
+	"es-CO"
 ];
+
+// main study live
+// const MAIN_STUDY_LANG = ["sv-SE", "es-MX", "es-ES"];
 
 export default MAIN_STUDY_LANG;

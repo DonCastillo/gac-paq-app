@@ -288,6 +288,52 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CO": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 25",
+			label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			adult_label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
+			adult_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",

@@ -60,6 +60,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Actividad física es cualquier actividad que incrementa tu ritmo cardiaco y que te hace sentir “sin aliento” una parte del tiempo. La actividad física puede realizarse en deportes, actividades escolares, jugando con los amigos o caminando hacia la escuela. Algunos ejemplos son: correr, caminar rápido, patinar con patines o patineta, andar en bicicleta, bailar, nadar, fútbol, basquetbol, fútbol americano y surfear.",
 			},
 		},
+		"es-CO": {
+			heading: "Comportamiento de salud en escolares",
+			subheading: "",
+			description: {
+				kid: "Actividad física es cualquier actividad que incrementa tu ritmo cardiaco y que te hace sentir “sin aliento” una parte del tiempo. La actividad física puede realizarse en deportes, actividades escolares, jugando con los amigos o caminando hacia la escuela. Algunos ejemplos son: correr, caminar rápido, patinar con patines o patineta, andar en bicicleta, bailar, nadar, fútbol, basquetbol, fútbol americano y surfear.",
+				adult:
+					"Actividad física es cualquier actividad que incrementa tu ritmo cardiaco y que te hace sentir “sin aliento” una parte del tiempo. La actividad física puede realizarse en deportes, actividades escolares, jugando con los amigos o caminando hacia la escuela. Algunos ejemplos son: correr, caminar rápido, patinar con patines o patineta, andar en bicicleta, bailar, nadar, fútbol, basquetbol, fútbol americano y surfear.",
+			},
+		},
 		"en-NZ": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
