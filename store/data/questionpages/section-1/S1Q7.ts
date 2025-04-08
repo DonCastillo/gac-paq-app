@@ -487,17 +487,17 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 				"Qual das opções a seguir corresponde ao que a criança ou adolescente que você é responsável faz na maior parte das vezes durante os intervalos ou recreios?",
 			choices: [
 				{
-					label: "Faço principalmente atividades sem esforço",
+					label: "Atividades sem esforço",
 					value: "0.1",
 					image_ident: "not_moving",
 				},
 				{
-					label: "Faço principalmente atividades com esforço leve",
+					label: "Atividades com esforço leve",
 					value: "0.3",
 					image_ident: "easy_effort",
 				},
 				{
-					label: "Faço principalmente atividades com esforço médio ou intenso",
+					label: "Atividades com esforço médio ou intenso",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 				},
