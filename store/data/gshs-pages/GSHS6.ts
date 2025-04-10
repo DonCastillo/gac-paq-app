@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "सामान्यतया स्कूलको समयमा रातमा, तपाईं कति घण्टा सुत्नुहुन्छ?",
+			kid_label: "सामान्यतया स्कूलको समयमा रातमा, तपाईं कति घण्टा सुत्नुहुन्छ?",
+			adult_label: "सामान्यतया स्कूलको समयमा रातमा, तपाईं कति घण्टा सुत्नुहुन्छ?",
+			choices: [
+				{
+					label: "४ घण्टा वा सोभन्दा कम",
+					value: "4 or less hours",
+				},
+				{
+					label: "५ घण्टा",
+					value: "5 hours",
+				},
+				{
+					label: "६ घण्टा",
+					value: "6 hours",
+				},
+				{
+					label: "७ घण्टा",
+					value: "7 hours",
+				},
+				{
+					label: "८ घण्टा",
+					value: "8 hours",
+				},
+				{
+					label: "९ घण्टा",
+					value: "9 hours",
+				},
+				{
+					label: "१० वा सोभन्दा बढी घण्टा",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 30",

@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २७",
+			label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			kid_label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			adult_label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 27",
