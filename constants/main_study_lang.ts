@@ -10,7 +10,8 @@ const MAIN_STUDY_LANG = [
 	"ar-AE",
 	"th-TH",
 	"en-NG",
-	"es-CO"
+	"es-CO",
+	"ne-NP",
 ];
 
 // main study live
