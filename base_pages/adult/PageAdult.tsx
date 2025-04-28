@@ -101,7 +101,16 @@ const PageAdult = (): React.ReactElement => {
 				<Toolbar />
 				<CenterMain>
 					<AnimatedView style={{ flex: 0 }}>
-						<ScrollContainer>
+						<ScrollContainer
+							scrollContainerStyle={{
+								width: 8,
+								backgroundColor: "#d6d4d2" + "99",
+							}}
+							scrollIndicatorStyle={{
+								width: 8,
+								backgroundColor: "#fff",
+							}}
+						>
 							<Heading
 								customStyle={{
 									...GeneralStyle.adult.pageHeading,

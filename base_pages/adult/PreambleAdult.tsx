@@ -78,7 +78,16 @@ const PreambleAdult = (): React.ReactElement => {
 				<CenterMain>
 					<AnimatedView style={{ flex: 0 }}>
 						<QuestionContainer customStyle={{ backgroundColor: color200 }}>
-							<ScrollContainer>
+							<ScrollContainer
+								scrollContainerStyle={{
+									width: 3,
+									backgroundColor: "#d6d4d2" + "99",
+								}}
+								scrollIndicatorStyle={{
+									width: 3,
+									backgroundColor: "#fff",
+								}}
+							>
 								<QuestionTitle
 									customStyle={{ marginBottom: 10 }}
 									textStyle={{ color: "#fff" }}
