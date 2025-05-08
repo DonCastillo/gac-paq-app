@@ -15,6 +15,24 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"ne-NP": {
+			heading: "शारीरिक गतिविधि",
+			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूdf दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
+				adult:
+					"शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूdf दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
+			},
+		},
+		"th-TH": {
+			heading: "กิจกรรมทางกาย",
+			subheading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
+			description: {
+				kid: "คำถาม 4 ข้อต่อไปนี้ ถามเกี่ยวกับกิจกรรมการออกกำลังกายกิจกรรมการออกกำลังกาย หมายถึง กิจกรรมใดๆ ที่เพิ่มอัตราการเต้นของหัวใจและทำให้นักเรียนหายใจไม่ทันในบางครั้ง กิจกรรมการออกกำลังกายสามารถทำได้โดยการเล่นกีฬา การเล่นกับเพื่อน หรือการเดินไปโรงเรียน\n\nตัวอย่างของกิจกรรมการออกกำลังกาย คือ การวิ่ง การเดินเร็วๆ การขี่จักรยาน การเต้นรำ การเล่นฟุตบอล หรือการเต้นแอโรบิก",
+				adult:
+					"คำถาม 4 ข้อต่อไปนี้ ถามเกี่ยวกับกิจกรรมการออกกำลังกายกิจกรรมการออกกำลังกาย หมายถึง กิจกรรมใดๆ ที่เพิ่มอัตราการเต้นของหัวใจและทำให้นักเรียนหายใจไม่ทันในบางครั้ง กิจกรรมการออกกำลังกายสามารถทำได้โดยการเล่นกีฬา การเล่นกับเพื่อน หรือการเดินไปโรงเรียน\n\nตัวอย่างของกิจกรรมการออกกำลังกาย คือ การวิ่ง การเดินเร็วๆ การขี่จักรยาน การเต้นรำ การเล่นฟุตบอล หรือการเต้นแอโรบิก",
+			},
+		},
 		"pt-BR": {
 			heading: "Atividade física",
 			subheading: "Pesquisa Global de Saúde de Estudantes em Escolas",
@@ -51,6 +69,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
 			},
 		},
+		"es-CO": {
+			heading: "Actividad física",
+			subheading: "Encuesta global de salud escolar basada en estudiantes",
+			description: {
+				kid: "Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+				adult:
+					"Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+			},
+		},
 		"en-NZ": {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
@@ -73,9 +100,9 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
 			description: {
-				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, jumping and chasing, sweeping and cleaning, & playing throwing and catching game.",
 				adult:
-					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, jumping and chasing, sweeping and cleaning, & playing throwing and catching game.",
 			},
 		},
 		"en-AE": {
@@ -85,6 +112,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
 				adult:
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+			},
+		},
+		"ar-AE": {
+			heading: "النشاط البدني",
+			subheading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
+			description: {
+				kid: "تدور الأسئلة الأربعة التالية حول النشاط البدني. ويُقصد بالنشاط البدني أي نشاط يزيد معدل ضربات القلب ويجعلك تلهث. ويمكن ممارسة النشاط البدني من خلال الرياضة، أو اللعب مع الأصدقاء، أو المشي إلى المدرسة، أو في فصل التربية البدنية. ومن أمثلة النشاط البدني الركض والمشي السريع وركوب الدراجات والرقص وكرة القدم و(أمثلة خاصة بكل بلد).",
+				adult:
+					"تدور الأسئلة الأربعة التالية حول النشاط البدني. ويُقصد بالنشاط البدني أي نشاط يزيد معدل ضربات القلب ويجعلك تلهث. ويمكن ممارسة النشاط البدني من خلال الرياضة، أو اللعب مع الأصدقاء، أو المشي إلى المدرسة، أو في فصل التربية البدنية. ومن أمثلة النشاط البدني الركض والمشي السريع وركوب الدراجات والرقص وكرة القدم و(أمثلة خاصة بكل بلد).",
 			},
 		},
 		"sv-SE": {
@@ -98,11 +134,11 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 		},
 		"zh-CN": {
 			heading: "体育活动",
-			subheading: "全球学校基础学生健康调查",
+			subheading: "全球在校学生健康调查",
 			description: {
-				kid: "以下4个问题是关于身体活动的。身体活动是指任何让你心率加快且呼吸急促的活动。体育运动时、朋友玩耍时、步行上下学时或上体育课时都在进行身体活动。身体活动的例子包括跑步、快走、骑自行车、跳舞、足球以及所在国家的特定例子。",
+				kid: "以下4个问题是关于身体活动的。身体活动是指任何让你心率加快且呼吸急促的活动。体育运动时、与朋友一起玩时、步行上下学时或上体育课时都在进行身体活动。身体活动的例子包括跑步、快走、骑自行车、跳舞、足球等。",
 				adult:
-					"以下4个问题是关于身体活动的。身体活动是指任何让你心率加快且呼吸急促的活动。体育运动时、朋友玩耍时、步行上下学时或上体育课时都在进行身体活动。身体活动的例子包括跑步、快走、骑自行车、跳舞、足球以及所在国家的特定例子。",
+					"以下4个问题是关于身体活动的。身体活动是指任何让你心率加快且呼吸急促的活动。体育运动时、与朋友一起玩时、步行上下学时或上体育课时都在进行身体活动。身体活动的例子包括跑步、快走、骑自行车、跳舞、足球等。",
 			},
 		},
 	},

@@ -54,6 +54,98 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २५",
+			label: "गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			kid_label:
+				"गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			adult_label:
+				"गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			kid_sublabel:
+				"कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
+			adult_sublabel:
+				"कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 25",
+			label: "ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
+			kid_label:
+				"ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
+			adult_label:
+				"ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
+			kid_sublabel: "โปรดรวมเวลาทั้งหมดที่น้องใช้ทำกิจกรรมทางกายในแต่ละวัน",
+			adult_sublabel: "โปรดรวมเวลาทั้งหมดที่น้องใช้ทำกิจกรรมทางกายในแต่ละวัน",
+			choices: [
+				{
+					label: "0 วัน",
+					value: "0",
+				},
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 25",
@@ -198,6 +290,52 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 25",
+			label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			adult_label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
+			adult_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
 			label:
@@ -423,6 +561,52 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٥]",
+			label:
+				"خلال الأيام السبعة الماضية، كم عدد الأيام التي مارست فيها النشاط البدني لمدة 60 دقيقة على الأقل في اليوم الواحد؟ يرجى إضافة الوقت الذي قضيته في النشاط البدني كل يوم.",
+			kid_label:
+				"خلال الأيام السبعة الماضية، كم عدد الأيام التي مارست فيها النشاط البدني لمدة 60 دقيقة على الأقل في اليوم الواحد؟ يرجى إضافة الوقت الذي قضيته في النشاط البدني كل يوم.",
+			adult_label:
+				"خلال الأيام السبعة الماضية، كم عدد الأيام التي مارست فيها النشاط البدني لمدة 60 دقيقة على الأقل في اليوم الواحد؟ يرجى إضافة الوقت الذي قضيته في النشاط البدني كل يوم.",
+			kid_sublabel: "يرجى إضافة إجمالي الوقت الذي قضيته في النشاط البدني كل يوم.",
+			adult_sublabel: "يرجى إضافة إجمالي الوقت الذي قضيته في النشاط البدني كل يوم.",
+			choices: [
+				{
+					label: "0 يوم",
+					value: "0",
+				},
+				{
+					label: "1 يوم",
+					value: "1",
+				},
+				{
+					label: "2 يوم",
+					value: "2",
+				},
+				{
+					label: "3 أيام",
+					value: "3",
+				},
+				{
+					label: "4 أيام",
+					value: "4",
+				},
+				{
+					label: "5 أيام",
+					value: "5",
+				},
+				{
+					label: "6 أيام",
+					value: "6",
+				},
+				{
+					label: "7 أيام",
 					value: "7",
 				},
 			],

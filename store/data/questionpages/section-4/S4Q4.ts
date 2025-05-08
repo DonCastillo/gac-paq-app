@@ -262,12 +262,12 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					value: "Public transit",
 					image_ident: "public_transit",
 					sublabel: {
-						kid: "por ejemplo, autobús, tren, tranvía, metro, barco",
-						adult: "por ejemplo, autobús, tren, tranvía, metro, barco",
+						kid: "por ejemplo, microbús, tren, tranvía, metro, barco",
+						adult: "por ejemplo, microbús, tren, tranvía, metro, barco",
 					},
 				},
 				{
-					label: "Carro, taxi, camión o motocicleta",
+					label: "Automóvil, taxi, camión o motocicleta",
 					value: "Car, taxi, truck, or motorcycle",
 					image_ident: "car",
 				},

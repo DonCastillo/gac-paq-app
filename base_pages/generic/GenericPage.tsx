@@ -31,7 +31,16 @@ const GenericPage = (): React.ReactElement => {
 				<ProgressBarAdult />
 				<Toolbar />
 				<CenterMain>
-					<ScrollContainer>
+					<ScrollContainer
+						scrollContainerStyle={{
+							width: 8,
+							backgroundColor: "#d6d4d2" + "99",
+						}}
+						scrollIndicatorStyle={{
+							width: 8,
+							backgroundColor: "#fff",
+						}}
+					>
 						<Heading customStyle={GeneralStyle.adult.pageHeading}>{translatedPage.heading}</Heading>
 						<Paragraph customStyle={GeneralStyle.adult.pageParagraph}>
 							{translatedPage.description}

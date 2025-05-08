@@ -10,6 +10,14 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"ne-NP": {
+			heading: "यो खण्ड सकियो!",
+			subheading: "",
+		},
+		"th-TH": {
+			heading: "ส่วนนี้เสร็จเรียบร้อย!",
+			subheading: "",
+		},
 		"pt-BR": {
 			heading: "Seção Completa!",
 			subheading: "",
@@ -26,6 +34,10 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			heading: "¡Sección Completa!",
 			subheading: "",
 		},
+		"es-CO": {
+			heading: "Sección Completa",
+			subheading: "",
+		},
 		"en-NZ": {
 			heading: "Section Complete!",
 			subheading: "",
@@ -40,6 +52,10 @@ const GSHSExtro: LangExtroPayloadInterface = {
 		},
 		"en-AE": {
 			heading: "Section Complete!",
+			subheading: "",
+		},
+		"ar-AE": {
+			heading: "اكتمل القسم",
 			subheading: "",
 		},
 		"sv-SE": {

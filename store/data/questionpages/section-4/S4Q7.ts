@@ -184,11 +184,11 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 17",
 			label:
-				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
 			kid_label:
-				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+				"En la última semana, ¿has caminado o te has desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
 			adult_label:
-				"En la última semana su hija o hijo, ¿ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
+				"En la última semana su hija o hijo, ¿ha caminado o se ha desplazado sobre ruedas de forma activa (por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines) a lugares distintos del colegio o el trabajo (por ejemplo, a casa de un amigo, a un parque, a una tienda)?",
 			kid_sublabel: "Por favor, seleccione todas las respuestas que le correspondan.",
 			adult_sublabel: "Por favor, seleccione todas las respuestas que le correspondan.",
 			choices: [

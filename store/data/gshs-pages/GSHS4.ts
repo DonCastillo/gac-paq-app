@@ -44,6 +44,73 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "यस शैक्षिक सत्रमा, हप्तामा कति दिन तपाई शारीरिक शिक्षाको कक्षामा सहभागी हुनुभयो",
+			kid_label: "यस शैक्षिक सत्रमा, हप्तामा कति दिन तपाई शारीरिक शिक्षाको कक्षामा सहभागी हुनुभयो",
+			adult_label:
+				"यस शैक्षिक सत्रमा, हप्तामा कति दिन तपाई शारीरिक शिक्षाको कक्षामा सहभागी हुनुभयो",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ वा सो भन्दा बढी दिन",
+					value: ">=5",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 28",
+			label: "ในช่วงปีการศึกษานี้นักเรียนเข้าชั้นเรียนพลศึกษากี่วันต่อสัปดาห์",
+			kid_label: "ในช่วงปีการศึกษานี้นักเรียนเข้าชั้นเรียนพลศึกษากี่วันต่อสัปดาห์",
+			adult_label: "ในช่วงปีการศึกษานี้นักเรียนเข้าชั้นเรียนพลศึกษากี่วันต่อสัปดาห์",
+			choices: [
+				{
+					label: "0 วัน",
+					value: "0",
+				},
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วันหรือมากกว่านั้น",
+					value: ">=5",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 28",
@@ -153,6 +220,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 28",
+			label:
+				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+			kid_label:
+				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+			adult_label:
+				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 o más días",
+					value: ">=5",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
 			label:
@@ -328,6 +431,39 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "5 or more days",
+					value: ">=5",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٨]",
+			label: "خلال هذه السنة الدراسية، كم يومًا حضرت فيه فصل التربية البدنية كل أسبوع؟",
+			kid_label: "خلال هذه السنة الدراسية، كم يومًا حضرت فيه فصل التربية البدنية كل أسبوع؟",
+			adult_label: "خلال هذه السنة الدراسية، كم يومًا حضرت فيه فصل التربية البدنية كل أسبوع؟",
+			choices: [
+				{
+					label: "لم يحدث",
+					value: "0",
+				},
+				{
+					label: "يومًا واحدًا",
+					value: "1",
+				},
+				{
+					label: "يومين",
+					value: "2",
+				},
+				{
+					label: "3 أيام",
+					value: "3",
+				},
+				{
+					label: "4 أيام",
+					value: "4",
+				},
+				{
+					label: "5 أيام أو أكثر",
 					value: ">=5",
 				},
 			],

@@ -10,6 +10,14 @@ const GSHSIntro: LangSectionPayloadInterface = {
 			heading: "Global School-based Student Health Survey",
 			subheading: "",
 		},
+		"ne-NP": {
+			heading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
+			subheading: "",
+		},
+		"th-TH": {
+			heading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
+			subheading: "",
+		},
 		"pt-BR": {
 			heading: "Pesquisa Global de Saúde de Estudantes em Escolas",
 			subheading: "",
@@ -23,6 +31,10 @@ const GSHSIntro: LangSectionPayloadInterface = {
 			subheading: "",
 		},
 		"es-MX": {
+			heading: "Encuesta global de salud escolar basada en estudiantes",
+			subheading: "",
+		},
+		"es-CO": {
 			heading: "Encuesta global de salud escolar basada en estudiantes",
 			subheading: "",
 		},
@@ -42,12 +54,16 @@ const GSHSIntro: LangSectionPayloadInterface = {
 			heading: "Global School-based Student Health Survey",
 			subheading: "",
 		},
+		"ar-AE": {
+			heading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
+			subheading: "",
+		},
 		"sv-SE": {
 			heading: "Global skolbaserad undersökning om studenthälsa",
 			subheading: "",
 		},
 		"zh-CN": {
-			heading: "全球学校基础学生健康调查",
+			heading: "全球在校学生健康调查",
 			subheading: "",
 		},
 	},

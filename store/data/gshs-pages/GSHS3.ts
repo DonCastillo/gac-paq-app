@@ -52,6 +52,93 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २७",
+			label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			kid_label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			adult_label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
+		"th-TH": {
+			type: Question.QuestionRadio,
+			heading: "ข้อ 27",
+			label: "ในระหว่าง 7 วันที่ผ่านมา นักเรียนเดินหรือขี่จักรยานไปหรือกลับจากโรงเรียน จำนวนกี่วัน",
+			kid_label:
+				"ในระหว่าง 7 วันที่ผ่านมา นักเรียนเดินหรือขี่จักรยานไปหรือกลับจากโรงเรียน จำนวนกี่วัน",
+			adult_label:
+				"ในระหว่าง 7 วันที่ผ่านมา นักเรียนเดินหรือขี่จักรยานไปหรือกลับจากโรงเรียน จำนวนกี่วัน",
+			choices: [
+				{
+					label: "0 วัน",
+					value: "0",
+				},
+				{
+					label: "1 วัน",
+					value: "1",
+				},
+				{
+					label: "2 วัน",
+					value: "2",
+				},
+				{
+					label: "3 วัน",
+					value: "3",
+				},
+				{
+					label: "4 วัน",
+					value: "4",
+				},
+				{
+					label: "5 วัน",
+					value: "5",
+				},
+				{
+					label: "6 วัน",
+					value: "6",
+				},
+				{
+					label: "7 วัน",
+					value: "7",
+				},
+			],
+		},
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 27",
@@ -185,6 +272,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 27",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 27",
 			label:
@@ -400,6 +531,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 				{
 					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"ar-AE": {
+			type: Question.QuestionRadio,
+			heading: "سؤال [٢٧]",
+			label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			kid_label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			adult_label:
+				"خلال السبعة أيام الماضية، كم يومًا ذهبت فيه إلى المدرسة أو رجعت منها مشيًا أو بالدراجة؟",
+			choices: [
+				{
+					label: "لم يحدث",
+					value: "0",
+				},
+				{
+					label: "يومًا واحدًا",
+					value: "1",
+				},
+				{
+					label: "يومين",
+					value: "2",
+				},
+				{
+					label: "3 أيام",
+					value: "3",
+				},
+				{
+					label: "4 أيام",
+					value: "4",
+				},
+				{
+					label: "5 أيام",
+					value: "5",
+				},
+				{
+					label: "6 أيام",
+					value: "6",
+				},
+				{
+					label: "7 أيام",
 					value: "7",
 				},
 			],

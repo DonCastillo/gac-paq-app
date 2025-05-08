@@ -343,8 +343,9 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					value: "Wheeling",
 					image_ident: "wheeling",
 					sublabel: {
-						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
-						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, patineta, patines",
+						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines",
+						adult:
+							"por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines",
 					},
 				},
 				{
@@ -362,7 +363,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "Carro, taxi, camión o motocicleta",
+					label: "Automóvil, taxi, camión o motocicleta",
 					value: "Car, taxi, truck, or motorcycle",
 					image_ident: "car",
 				},
