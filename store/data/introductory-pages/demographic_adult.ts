@@ -701,7 +701,7 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 			heading: "Bem-vindo(a)!",
 			label: "Quantos anos tem seu filho?",
 			kid_label: "Quantos anos tem seu filho?",
-			adult_label: "Quantos anos tem seu filho?",
+			adult_label: "Quantos anos tem a criança ou adolescente que você é responsável?",
 			choices: [
 				{
 					label: "8 anos",
