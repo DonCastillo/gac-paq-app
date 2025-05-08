@@ -26,6 +26,7 @@ import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { adjustPageDescriptionText, adjustPageHeadingText } from "utils/style";
+import Mode from "constants/mode.enum";
 
 const PageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -34,7 +35,7 @@ const PageKid = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 	const isLoading = useSelector(getIsLoading);
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 
 	// state
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
@@ -104,7 +105,16 @@ const PageKid = (): React.ReactElement => {
 				<Toolbar />
 				<CenterMain>
 					<AnimatedView style={{ flex: 0 }}>
-						<ScrollContainer>
+						<ScrollContainer
+							scrollContainerStyle={{
+								width: 8,
+								backgroundColor: color100 + "26",
+							}}
+							scrollIndicatorStyle={{
+								width: 8,
+								backgroundColor: color200,
+							}}
+						>
 							<Heading
 								customStyle={{
 									color: color100,

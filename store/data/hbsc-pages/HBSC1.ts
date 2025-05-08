@@ -54,6 +54,53 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २५",
+			label: "गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			kid_label:
+				"गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			adult_label:
+				"गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			kid_sublabel:
+				"कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
+			adult_sublabel:
+				"कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 25",
@@ -243,6 +290,52 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 25",
+			label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			adult_label:
+				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
+			adult_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
 			label:

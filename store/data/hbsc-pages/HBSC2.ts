@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २६",
+			label:
+				"विद्यालय समय बाहेक: तपाईं सामान्यतया तपाईंको खाली समयमा कति पटक यस्तो गतिविधिमा संलग्न हुनुहुन्छ जसले तपाईंलाई सास फेर्न गाह्रो बनाउँछ वा पसिना आउँछ?",
+			kid_label:
+				"विद्यालय समय बाहेक: तपाईं सामान्यतया तपाईंको खाली समयमा कति पटक यस्तो गतिविधिमा संलग्न हुनुहुन्छ जसले तपाईंलाई सास फेर्न गाह्रो बनाउँछ वा पसिना आउँछ?",
+			adult_label:
+				"विद्यालय समय बाहेक: तपाईं सामान्यतया तपाईंको खाली समयमा कति पटक यस्तो गतिविधिमा संलग्न हुनुहुन्छ जसले तपाईंलाई सास फेर्न गाह्रो बनाउँछ वा पसिना आउँछ?",
+			choices: [
+				{
+					label: "हरेक दिन",
+					value: "Every day",
+				},
+				{
+					label: "हप्तामा ४ देखि ६ पटक",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "हप्तामा ३ पटक",
+					value: "3 times a week",
+				},
+				{
+					label: "हप्तामा २ पटक",
+					value: "2 times a week",
+				},
+				{
+					label: "हप्तामा एक पटक",
+					value: "Once a week",
+				},
+				{
+					label: "महिनामा एक पटक",
+					value: "Once a month",
+				},
+				{
+					label: "महिनामा एक पटक भन्दा कम",
+					value: "Less than once a month",
+				},
+				{
+					label: "कहिल्यै पनि होइन",
+					value: "Never",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 26",
@@ -231,6 +275,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 26",
+			label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			kid_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			adult_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			choices: [
+				{
+					label: "Todos los días",
+					value: "Every day",
+				},
+				{
+					label: "4 - 6 veces a la semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 veces a la semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 veces a la semana",
+					value: "2 times a week",
+				},
+				{
+					label: "1 vez a la semana",
+					value: "Once a week",
+				},
+				{
+					label: "1 vez al mes",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de una vez al mes",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 26",
 			label:

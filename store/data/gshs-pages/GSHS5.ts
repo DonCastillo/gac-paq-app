@@ -44,6 +44,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २९",
+			label:
+				"तपाईं सामान्य वा सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
+			kid_label:
+				"तपाईं सामान्य वा सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
+			adult_label:
+				"तपाईं सामान्य वा सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
+			choices: [
+				{
+					label: "प्रति दिन १ घण्टा भन्दा कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "प्रति दिन १ देखि २ घण्टा",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "प्रति दिन ३ देखि ४ घण्टा",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "प्रति दिन ५ देखि ६ घण्टा",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "प्रति दिन ७ देखि ८ घण्टा",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "प्रति दिन ८ घण्टाभन्दा बढी",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 29",
@@ -189,6 +225,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 29",
+			label:
+				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo televisión, jugando juegos en la computadora, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como jugar juegos de video, utilizar el celular, ver videos?",
+			kid_label:
+				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo televisión, jugando juegos en la computadora, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como jugar juegos de video, utilizar el celular, ver videos?",
+			adult_label:
+				"Durante un día típico o normal, ¿cuánto tiempo pasas sentado viendo televisión, jugando juegos en la computadora, conversando con amigos o haciendo otras cosas que exigen permanecer sentado, como jugar juegos de video, utilizar el celular, ver videos?",
+			choices: [
+				{
+					label: "Menos de 1 hora al día",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 a 2 horas al día",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3 a 4 horas al día",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "5 a 6 horas al día",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "7 a 8 horas al día",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Más de 8 horas al día",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 29",
 			label:

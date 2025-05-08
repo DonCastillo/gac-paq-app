@@ -69,7 +69,16 @@ const PreambleKid = (): React.ReactElement => {
 				<Toolbar />
 				<CenterMain>
 					<AnimatedView style={{ flex: 0 }}>
-						<ScrollContainer>
+						<ScrollContainer
+							scrollContainerStyle={{
+								width: 8,
+								backgroundColor: color100 + "26",
+							}}
+							scrollIndicatorStyle={{
+								width: 8,
+								backgroundColor: color200,
+							}}
+						>
 							<Heading
 								customStyle={{
 									...GeneralStyle.kid.extroPageHeading,

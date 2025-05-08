@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २७",
+			label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			kid_label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			adult_label:
+				"गत ७ दिनको अवधिमा, कति दिन तपाईँले स्कूल जाने वा फर्कने क्रममा हिँड्नुभयो वा साइकल चलाउनुभयो",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ दिन",
+					value: "5",
+				},
+				{
+					label: "६ दिन",
+					value: "6",
+				},
+				{
+					label: "७ दिन",
+					value: "7",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 27",
@@ -228,6 +272,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 27",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste de la casa a la escuela, o volviste caminando o en bicicleta?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 27",
 			label:

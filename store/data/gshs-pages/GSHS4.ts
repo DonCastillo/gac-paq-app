@@ -44,6 +44,40 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label: "यस शैक्षिक सत्रमा, हप्तामा कति दिन तपाई शारीरिक शिक्षाको कक्षामा सहभागी हुनुभयो",
+			kid_label: "यस शैक्षिक सत्रमा, हप्तामा कति दिन तपाई शारीरिक शिक्षाको कक्षामा सहभागी हुनुभयो",
+			adult_label:
+				"यस शैक्षिक सत्रमा, हप्तामा कति दिन तपाई शारीरिक शिक्षाको कक्षामा सहभागी हुनुभयो",
+			choices: [
+				{
+					label: "० दिन",
+					value: "0",
+				},
+				{
+					label: "१ दिन",
+					value: "1",
+				},
+				{
+					label: "२ दिन",
+					value: "2",
+				},
+				{
+					label: "३ दिन",
+					value: "3",
+				},
+				{
+					label: "४ दिन",
+					value: "4",
+				},
+				{
+					label: "५ वा सो भन्दा बढी दिन",
+					value: ">=5",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 28",
@@ -186,6 +220,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 28",
+			label:
+				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+			kid_label:
+				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+			adult_label:
+				"En este año escolar, ¿cuántos días en la semana fuiste a clase de educación física en la escuela?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 o más días",
+					value: ">=5",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
 			label:

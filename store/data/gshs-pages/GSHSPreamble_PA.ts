@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"ne-NP": {
+			heading: "शारीरिक गतिविधि",
+			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूdf दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
+				adult:
+					"शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूdf दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
+			},
+		},
 		"th-TH": {
 			heading: "กิจกรรมทางกาย",
 			subheading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
@@ -60,6 +69,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
 			},
 		},
+		"es-CO": {
+			heading: "Actividad física",
+			subheading: "Encuesta global de salud escolar basada en estudiantes",
+			description: {
+				kid: "Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+				adult:
+					"Las próximas 4 preguntas se refieren a tu actividad física. Actividad física es cualquier actividad que acelera los latidos del corazón y te deja sin aliento algunas veces. Se hace actividad física en los deportes, jugando con amigos o caminando a la escuela. Algunos ejemplos de actividad física son correr, caminar rápido, andar en bicicleta, bailar o jugar fútbol, nadar, patinar.",
+			},
+		},
 		"en-NZ": {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
@@ -82,9 +100,9 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
 			description: {
-				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, jumping and chasing, sweeping and cleaning, & playing hide-and-seek.",
+				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, jumping and chasing, sweeping and cleaning, & playing throwing and catching game.",
 				adult:
-					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, jumping and chasing, sweeping and cleaning, & playing hide-and-seek.",
+					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, jumping and chasing, sweeping and cleaning, & playing throwing and catching game.",
 			},
 		},
 		"en-AE": {

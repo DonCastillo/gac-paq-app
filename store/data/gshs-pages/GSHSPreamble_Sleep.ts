@@ -14,6 +14,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
+		"ne-NP": {
+			heading: "सुत्ने",
+			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "अर्को प्रश्नमा तपाईं कति सुत्नुहुन्छ भन्ने बारेमा सोधिएको छ।",
+				adult: "अर्को प्रश्नमा तपाईं कति सुत्नुहुन्छ भन्ने बारेमा सोधिएको छ।",
+			},
+		},
 		"th-TH": {
 			heading: "นอน",
 			subheading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
@@ -47,6 +55,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 			},
 		},
 		"es-MX": {
+			heading: "Dormir",
+			subheading: "Encuesta global de salud escolar basada en estudiantes",
+			description: {
+				kid: "La siguiente pregunta se refiere al tiempo que pasas durmiendo.",
+				adult: "La siguiente pregunta se refiere al tiempo que pasas durmiendo.",
+			},
+		},
+		"es-CO": {
 			heading: "Dormir",
 			subheading: "Encuesta global de salud escolar basada en estudiantes",
 			description: {

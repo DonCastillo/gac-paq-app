@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ne-NP": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "सामान्यतया स्कूलको समयमा रातमा, तपाईं कति घण्टा सुत्नुहुन्छ?",
+			kid_label: "सामान्यतया स्कूलको समयमा रातमा, तपाईं कति घण्टा सुत्नुहुन्छ?",
+			adult_label: "सामान्यतया स्कूलको समयमा रातमा, तपाईं कति घण्टा सुत्नुहुन्छ?",
+			choices: [
+				{
+					label: "४ घण्टा वा सोभन्दा कम",
+					value: "4 or less hours",
+				},
+				{
+					label: "५ घण्टा",
+					value: "5 hours",
+				},
+				{
+					label: "६ घण्टा",
+					value: "6 hours",
+				},
+				{
+					label: "७ घण्टा",
+					value: "7 hours",
+				},
+				{
+					label: "८ घण्टा",
+					value: "8 hours",
+				},
+				{
+					label: "९ घण्टा",
+					value: "9 hours",
+				},
+				{
+					label: "१० वा सोभन्दा बढी घण्टा",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 30",
@@ -197,6 +234,46 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 			],
 		},
 		"es-MX": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 30",
+			label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			kid_label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			adult_label:
+				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			choices: [
+				{
+					label: "4 o menos horas",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 horas",
+					value: "5 hours",
+				},
+				{
+					label: "6 horas",
+					value: "6 hours",
+				},
+				{
+					label: "7 horas",
+					value: "7 hours",
+				},
+				{
+					label: "8 horas",
+					value: "8 hours",
+				},
+				{
+					label: "9 horas",
+					value: "9 hours",
+				},
+				{
+					label: "10 o más horas",
+					value: "10 or more hours",
+				},
+			],
+		},
+		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
 			label:
