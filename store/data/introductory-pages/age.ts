@@ -419,7 +419,7 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 			heading: "Bem-vindo(a)!",
 			label: "Quem está respondendo a este questionário?",
 			kid_label: "Quem está respondendo a este questionário?",
-			adult_label: "Quantos anos tem a criança ou adolescente que você é responsável?",
+			adult_label: "Quem está respondendo a este questionário?",
 			choices: [
 				{
 					label: "Criança",
