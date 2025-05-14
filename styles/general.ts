@@ -205,6 +205,12 @@ const GeneralStyle = {
 			flex: 1,
 			minWidth: "100%",
 		},
+		flatListScrollContainer: {
+			width: 6,
+		},
+		flatListScrollIndicator: {
+			width: 6,
+		},
 	},
 	adult: {
 		topHeaderSectionTitle: {
@@ -312,6 +318,14 @@ const GeneralStyle = {
 		optionImageLabelText: {
 			fontSize: 13,
 			fontFamily: Font.SpaceRegular,
+		},
+		flatListScrollContainer: {
+			width: 4,
+			backgroundColor: "#c4c4c4" + "99",
+		},
+		flatListScrollIndicator: {
+			width: 4,
+			backgroundColor: "#919191",
 		},
 	},
 };

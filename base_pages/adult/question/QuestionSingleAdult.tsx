@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
 import QuestionLabel from "components/kid/QuestionLabel";
@@ -50,6 +50,7 @@ import AnimatedView from "components/AnimatedView";
 import QuestionCheckboxInput from "components/adults/QuestionCheckboxInput";
 import LoadingScreenAdult from "../LoadingScreenAdult";
 import { adjustQuestionSingleQuestionLabel } from "utils/style";
+import { verticalScale } from "utils/responsive.utils";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -57,6 +58,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
 	const device = useSelector(getDevice);
+	// const questionType = useSelector(getQuestionType);
 	const isLoading = useSelector(getIsLoading);
 	const { isKeyboardOpen } = device;
 
@@ -83,6 +85,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const questionType = getQuestionType(translatedPage.type);
 
 	let questionComponent = <></>;
+	console.log("currentPage questionType", questionType);
 
 	// fetch response for this question
 	useEffect(() => {
@@ -171,6 +174,7 @@ const QuestionSingleAdult = (): React.ReactElement => {
 					changeHandler(value);
 				}}
 			/>
+			// <></>
 		);
 	} else if (questionType === Question.QuestionCheckbox) {
 		const questionCasted = translatedPage as QuestionCheckboxInterface;
@@ -279,9 +283,9 @@ const QuestionSingleAdult = (): React.ReactElement => {
 						style={{ flex: 0 }}
 					>
 						<QuestionContainer>
-							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
 							{!isKeyboardOpen && (
 								<View style={{ marginBottom: 13 }}>
+									<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 									<QuestionLabel
 										textStyle={{
 											...GeneralStyle.adult.questionLabel,
@@ -296,7 +300,13 @@ const QuestionSingleAdult = (): React.ReactElement => {
 									</QuestionSubLabel>
 								</View>
 							)}
-							{questionComponent}
+							<View
+								style={{
+									maxHeight: verticalScale(400, device.screenHeight),
+								}}
+							>
+								{questionComponent}
+							</View>
 						</QuestionContainer>
 					</AnimatedView>
 				</CenterMain>

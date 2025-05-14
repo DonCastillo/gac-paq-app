@@ -21,6 +21,7 @@ import {
 	adjustRadioImageBlockText,
 	adjustWritingDirection,
 } from "utils/style";
+import FlatListContainer from "components/FlatListContainer";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -216,7 +217,7 @@ const QuestionRadioImage = ({
 		>
 			<View>
 				{options.length <= 4 || !hasOtherOption(options) ? (
-					<FlatList
+					<FlatListContainer
 						initialNumToRender={4}
 						data={[...options]}
 						renderItem={({ item, index }) => blockRenderOption(item, index)}
@@ -226,9 +227,11 @@ const QuestionRadioImage = ({
 						contentContainerStyle={{
 							direction: adjustWritingDirection(),
 						}}
+						scrollContainerStyle={GeneralStyle.adult.flatListScrollContainer}
+						scrollIndicatorStyle={GeneralStyle.adult.flatListScrollIndicator}
 					/>
 				) : (
-					<FlatList
+					<FlatListContainer
 						removeClippedSubviews={false}
 						horizontal={false}
 						data={[...options]}
@@ -237,6 +240,8 @@ const QuestionRadioImage = ({
 						persistentScrollbar={true}
 						showsVerticalScrollIndicator={true}
 						contentContainerStyle={{ direction: adjustWritingDirection() }}
+						scrollContainerStyle={GeneralStyle.adult.flatListScrollContainer}
+						scrollIndicatorStyle={GeneralStyle.adult.flatListScrollIndicator}
 					/>
 				)}
 			</View>
