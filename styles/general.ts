@@ -211,6 +211,12 @@ const GeneralStyle = {
 		flatListScrollIndicator: {
 			width: 6,
 		},
+		scrollContainer: {
+			width: 6,
+		},
+		scrollIndicator: {
+			width: 6,
+		},
 	},
 	adult: {
 		topHeaderSectionTitle: {

@@ -1,4 +1,4 @@
-import { View, StyleSheet, FlatList, SafeAreaView } from "react-native";
+import { View, StyleSheet, SafeAreaView } from "react-native";
 import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import {
@@ -13,6 +13,7 @@ import Option from "./subcomponents/Option";
 import { useSelector } from "react-redux";
 import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 import type { Choice, ChoiceIcon } from "interface/payload.type";
+import FlatListContainer from "components/FlatListContainer";
 
 interface PropsInterface {
 	options: Choice[] | ChoiceIcon[];
@@ -29,7 +30,7 @@ const QuestionCheckbox = ({
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -150,7 +151,7 @@ const QuestionCheckbox = ({
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
-				<FlatList
+				<FlatListContainer
 					removeClippedSubviews={false}
 					horizontal={false}
 					bounces={false}
@@ -175,6 +176,14 @@ const QuestionCheckbox = ({
 								defaultOtherInputValue={extractUserSpecifiedOtherFromArray(selected)}
 							/>
 						);
+					}}
+					scrollContainerStyle={{
+						...GeneralStyle.kid.flatListScrollContainer,
+						backgroundColor: color100 + "26",
+					}}
+					scrollIndicatorStyle={{
+						...GeneralStyle.kid.flatListScrollIndicator,
+						backgroundColor: color200,
 					}}
 				/>
 			</View>
