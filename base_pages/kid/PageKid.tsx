@@ -118,6 +118,7 @@ const PageKid = (): React.ReactElement => {
 							<Heading
 								customStyle={{
 									color: color100,
+									backgroundColor: "#fff",
 									...GeneralStyle.kid.pageHeading,
 									...adjustPageHeadingText(),
 								}}
