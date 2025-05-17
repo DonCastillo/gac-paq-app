@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable, SafeAreaView, Image, TextInput } from "react-native";
+import { View, Text, StyleSheet, Pressable, SafeAreaView, Image, TextInput , FlatList } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
@@ -331,7 +331,7 @@ const QuestionRadioImage = ({
 		<SafeAreaView style={styles.container}>
 			<View>
 				{options.length <= 4 || !hasOtherOption(options) ? (
-					<FlatListContainer
+					<FlatList
 						initialNumToRender={4}
 						data={[...options]}
 						renderItem={({ item, index }) => blockRenderOption(item, index)}
@@ -339,14 +339,6 @@ const QuestionRadioImage = ({
 						key={numColumn}
 						bounces={false}
 						contentContainerStyle={{ direction: adjustWritingDirection() }}
-						scrollContainerStyle={{
-							...GeneralStyle.kid.flatListScrollContainer,
-							backgroundColor: color100 + "26",
-						}}
-						scrollIndicatorStyle={{
-							...GeneralStyle.kid.flatListScrollIndicator,
-							backgroundColor: color200,
-						}}
 					/>
 				) : (
 					<FlatListContainer

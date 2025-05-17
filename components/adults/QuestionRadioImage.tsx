@@ -217,7 +217,7 @@ const QuestionRadioImage = ({
 		>
 			<View>
 				{options.length <= 4 || !hasOtherOption(options) ? (
-					<FlatListContainer
+					<FlatList
 						initialNumToRender={4}
 						data={[...options]}
 						renderItem={({ item, index }) => blockRenderOption(item, index)}
@@ -227,8 +227,6 @@ const QuestionRadioImage = ({
 						contentContainerStyle={{
 							direction: adjustWritingDirection(),
 						}}
-						scrollContainerStyle={GeneralStyle.adult.flatListScrollContainer}
-						scrollIndicatorStyle={GeneralStyle.adult.flatListScrollIndicator}
 					/>
 				) : (
 					<FlatListContainer
