@@ -19,8 +19,7 @@ import { Audio } from "expo-av";
 import { getAudioURI } from "utils/narration";
 import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
 import LanguageIndicator from "components/LanguageIndicator";
-
-const ICON_SIZE = 35;
+import Menu from "./Toolbar/Menu";
 
 interface PropsInterface {
 	sectionTitle?: string;
@@ -158,7 +157,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 				<Icon
 					accessibilityLabel="Stop narration"
 					name="volume-up"
-					size={ICON_SIZE}
+					size={GeneralStyle.general.icon.fontSize}
 					color={"#fff"}
 					containerStyle={styles.icon}
 					onPress={() => {
@@ -177,7 +176,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 				<Icon
 					accessibilityLabel="Play narration"
 					name="volume-off"
-					size={ICON_SIZE}
+					size={GeneralStyle.general.icon.fontSize}
 					color={"#fff"}
 					containerStyle={styles.icon}
 					onPress={() => {
@@ -200,8 +199,15 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 
 	return (
 		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
-			<View style={{ justifyContent: "flex-start", alignItems: "center", flexDirection: "row" }}>
-				<View style={{ marginRight: 10 }}>
+			<View
+				style={{
+					justifyContent: "flex-start",
+					alignItems: "flex-start",
+					flexDirection: "row",
+					flex: 7,
+				}}
+			>
+				<View style={{ height: "100%", paddingTop: 8 }}>
 					<LanguageIndicator langCode={language} />
 				</View>
 				<Text
@@ -210,13 +216,27 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 						{
 							...adjustToolbarHeadingText(),
 							direction: adjustWritingDirection(),
+							flex: 1,
+							marginHorizontal: 5,
+							height: "100%",
+							paddingTop: 7,
 						},
 					]}
 				>
 					{title}
 				</Text>
 			</View>
-			{NarrationButtonComponent}
+			<View
+				style={{
+					flexDirection: "row",
+					flex: 2,
+					justifyContent: "flex-end",
+				}}
+			>
+				{NarrationButtonComponent}
+
+				<Menu />
+			</View>
 		</View>
 	);
 };
@@ -227,13 +247,11 @@ const styles = StyleSheet.create({
 	container: {
 		paddingVertical: 10,
 		paddingHorizontal: 20,
-		justifyContent: "space-between",
-		alignItems: "center",
 		flexDirection: "row",
-		height: "100%",
-		maxHeight: 45,
 	},
-	icon: {},
+	icon: {
+		flex: 1,
+	},
 	button: {
 		paddingHorizontal: 20,
 		paddingVertical: 10,

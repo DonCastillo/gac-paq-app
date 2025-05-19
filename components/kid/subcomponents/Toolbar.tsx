@@ -20,6 +20,7 @@ import {
 import { getAudioURI } from "utils/narration";
 import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
 import LanguageIndicator from "components/LanguageIndicator";
+import Menu from "./Toolbar/Menu";
 
 const ICON_SIZE = 35;
 
@@ -157,7 +158,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 				<Icon
 					accessibilityLabel="Stop narration"
 					name="volume-2"
-					size={ICON_SIZE}
+					size={GeneralStyle.general.icon.fontSize}
 					type={"simple-line-icon"}
 					color={"#000"}
 					containerStyle={styles.icon}
@@ -177,7 +178,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 				<Icon
 					accessibilityLabel="Play narration"
 					name="volume-off"
-					size={ICON_SIZE}
+					size={GeneralStyle.general.icon.fontSize}
 					type={"simple-line-icon"}
 					color={"#000"}
 					containerStyle={styles.icon}
@@ -210,11 +211,12 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			<View
 				style={{
 					justifyContent: "flex-start",
-					alignItems: "center",
+					alignItems: "flex-start",
 					flexDirection: "row",
+					flex: 7,
 				}}
 			>
-				<View style={{ marginRight: 10 }}>
+				<View style={{ height: "100%", paddingTop: 8 }}>
 					<LanguageIndicator langCode={language} />
 				</View>
 				<Text
@@ -223,13 +225,27 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 						{
 							...adjustToolbarHeadingText(),
 							direction: adjustWritingDirection(),
+							flex: 1,
+							marginHorizontal: 5,
+							height: "100%",
+							paddingTop: 7,
 						},
 					]}
 				>
 					{title}
 				</Text>
 			</View>
-			{NarrationButtonComponent}
+			<View
+				style={{
+					flexDirection: "row",
+					flex: 2,
+					justifyContent: "flex-end",
+				}}
+			>
+				{NarrationButtonComponent}
+
+				<Menu />
+			</View>
 		</View>
 	);
 };
@@ -238,16 +254,15 @@ export default Toolbar;
 
 const styles = StyleSheet.create({
 	container: {
-		paddingVertical: 10,
+		paddingVertical: 20,
 		paddingHorizontal: 20,
-		justifyContent: "space-between",
-		alignItems: "center",
 		flexDirection: "row",
-		height: "100%",
-		maxHeight: 45,
+		minHeight: 50,
 	},
 	safearea: {},
-	icon: {},
+	icon: {
+		flex: 1,
+	},
 	button: {
 		paddingHorizontal: 20,
 		paddingVertical: 10,
