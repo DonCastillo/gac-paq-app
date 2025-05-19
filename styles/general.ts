@@ -62,8 +62,8 @@ const GeneralStyle = {
 			aspectRatio: 1,
 		},
 		icon: {
-			fontSize: 33
-		}
+			fontSize: 33,
+		},
 	},
 	kid: {
 		topHeaderSectionTitle: {

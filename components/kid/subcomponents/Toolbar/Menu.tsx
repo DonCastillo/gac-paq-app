@@ -10,11 +10,12 @@ const Menu = (): React.ReactElement => {
 				accessibilityLabel="Toggle Menu"
 				name="menu"
 				size={GeneralStyle.general.icon.fontSize}
-				color={"#fff"}
+				type={"simple-line-icon"}
+				color={"#000"}
 				onPress={() => console.log("openinjg menu ...")}
 				containerStyle={{
 					flex: 1,
-					paddingHorizontal: 2,
+					paddingHorizontal: 6,
 				}}
 			/>
 		</View>
