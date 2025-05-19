@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
-import { Slider } from "@rneui/themed";
+import { Icon, Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label.enum";
 import { horizontalScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
@@ -83,6 +83,42 @@ const QuestionSlider = ({
 		borderColor: color100,
 	};
 
+	const displayLeftArrow = (value: number | undefined): React.ReactElement => {
+		if (value !== undefined && value > 0) {
+			return (
+				<Icon
+					name="chevron-left"
+					color={color200}
+					size={40}
+					containerStyle={{
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				/>
+			);
+		} else {
+			return <></>;
+		}
+	};
+
+	const displayRightArrow = (value: number | undefined, maxVal: number): React.ReactElement => {
+		if (value !== undefined && value >= 0 && value < maxVal) {
+			return (
+				<Icon
+					name="chevron-right"
+					color={color200}
+					size={40}
+					containerStyle={{
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				/>
+			);
+		} else {
+			return <></>;
+		}
+	};
+
 	return (
 		<View style={styles.container}>
 			{/** slider */}
@@ -96,20 +132,52 @@ const QuestionSlider = ({
 				minimumTrackTintColor={isColor200(value)}
 				maximumTrackTintColor={isColor100(value)}
 				trackStyle={styles.trackStyle}
+				allowTouchTrack={true}
 				thumbStyle={{ backgroundColor: isColor200(value) }}
 				thumbProps={{
 					children: (
 						<View
-							style={[
-								styles.tooltip,
-								{
-									backgroundColor: isColor200(value),
-								},
-							]}
+							style={{
+								position: "relative",
+								top: -50,
+							}}
 						>
-							<Text style={[styles.tooltipText, { color: isNumber(value) ? "#fff" : "#fff" }]}>
-								{displayValue(isNumber(value) ? value : 0)}
-							</Text>
+							<View
+								style={{
+									flex: 1,
+									justifyContent: "center",
+									flexDirection: "row",
+									alignItems: "center",
+									position: "absolute",
+								}}
+							>
+								<View
+									style={{
+										...styles.arrowContainer,
+										left: -30,
+									}}
+								>
+									{displayLeftArrow(setSliderValue(value))}
+								</View>
+								<View
+									style={{
+										...styles.tooltip,
+										backgroundColor: isColor200(value),
+									}}
+								>
+									<Text style={[styles.tooltipText, { color: isNumber(value) ? "#fff" : "#fff" }]}>
+										{displayValue(isNumber(value) ? value : 0)}
+									</Text>
+								</View>
+								<View
+									style={{
+										...styles.arrowContainer,
+										right: -30,
+									}}
+								>
+									{displayRightArrow(setSliderValue(value), maxVal)}
+								</View>
+							</View>
 						</View>
 					),
 				}}
@@ -153,17 +221,25 @@ const styles = StyleSheet.create({
 		paddingTop: 50,
 		maxHeight: "100%",
 		position: "relative",
+		paddingHorizontal: 10,
 	},
 	tooltip: {
-		bottom: 50,
 		justifyContent: "center",
 		alignItems: "center",
 		borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 		paddingVertical: 6,
 		paddingHorizontal: 4,
+		width: "100%",
+		zIndex: 1,
 	},
 	tooltipText: {
 		fontSize: 23,
+	},
+	arrowContainer: {
+		height: "100%",
+		width: "100%",
+		position: "absolute",
+		top: 0,
 	},
 	trackStyle: {
 		height: 15,

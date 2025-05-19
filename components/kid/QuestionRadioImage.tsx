@@ -1,4 +1,13 @@
-import { View, Text, StyleSheet, Pressable, SafeAreaView, Image, TextInput , FlatList } from "react-native";
+import {
+	View,
+	Text,
+	StyleSheet,
+	Pressable,
+	SafeAreaView,
+	Image,
+	TextInput,
+	FlatList,
+} from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
 import { GeneralStyle } from "styles/general";
