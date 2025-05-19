@@ -61,6 +61,9 @@ const GeneralStyle = {
 			marginRight: 15,
 			aspectRatio: 1,
 		},
+		icon: {
+			fontSize: 33
+		}
 	},
 	kid: {
 		topHeaderSectionTitle: {
