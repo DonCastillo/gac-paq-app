@@ -64,6 +64,15 @@ const GeneralStyle = {
 		icon: {
 			fontSize: 33,
 		},
+		menuOption: {
+			borderBottomColor: "#000",
+			borderBottomWidth: 1,
+		},
+		menuText: {
+			color: "#000",
+			fontFamily: "SpaceRegular",
+			fontSize: 20,
+		},
 	},
 	kid: {
 		topHeaderSectionTitle: {

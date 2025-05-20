@@ -19,7 +19,7 @@ import { Audio } from "expo-av";
 import { getAudioURI } from "utils/narration";
 import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
 import LanguageIndicator from "components/LanguageIndicator";
-import Menu from "./Toolbar/Menu";
+import MenuAdult from "./Toolbar/MenuAdult";
 
 interface PropsInterface {
 	sectionTitle?: string;
@@ -235,7 +235,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			>
 				{NarrationButtonComponent}
 
-				<Menu />
+				<MenuAdult />
 			</View>
 		</View>
 	);

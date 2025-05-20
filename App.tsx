@@ -8,6 +8,7 @@ import {
 	defineSubmitStoredResponsesBackground,
 	registerSubmitStoredResponsesBackground,
 } from "utils/process.utils";
+import { MenuProvider } from "react-native-popup-menu";
 
 if (__DEV__) {
 	// reference to ReactotronConfig
@@ -29,12 +30,12 @@ const App = (): React.ReactElement => {
 			});
 	}, []);
 	return (
-		<>
+		<MenuProvider>
 			<StatusBar hidden={true} />
 			<Provider store={store}>
 				<AppWrapper />
 			</Provider>
-		</>
+		</MenuProvider>
 	);
 };
 

@@ -20,7 +20,7 @@ import {
 import { getAudioURI } from "utils/narration";
 import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
 import LanguageIndicator from "components/LanguageIndicator";
-import Menu from "./Toolbar/Menu";
+import MenuKid from "./Toolbar/MenuKid";
 
 const ICON_SIZE = 35;
 
@@ -244,7 +244,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			>
 				{NarrationButtonComponent}
 
-				<Menu />
+				<MenuKid />
 			</View>
 		</View>
 	);
