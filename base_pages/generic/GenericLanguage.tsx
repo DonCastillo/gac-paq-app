@@ -42,9 +42,9 @@ import {
 	clearQuestionResponses,
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import { changeMode } from "utils/mode.utils";
 import { verticalScale } from "utils/responsive.utils";
+import Toolbar from "components/generic/subcomponents/Toolbar";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();

@@ -238,13 +238,13 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			<View
 				style={{
 					flexDirection: "row",
-					flex: 2,
+					// flex: 2, enable this to make space for the menu
+					flex: 1,
 					justifyContent: "flex-end",
 				}}
 			>
 				{NarrationButtonComponent}
-
-				<MenuKid />
+				{/* <MenuKid /> */}
 			</View>
 		</View>
 	);

@@ -9,7 +9,6 @@ import { getIntroductoryBackground } from "utils/background.utils";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
-import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -43,6 +42,7 @@ import {
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
 import { changeMode } from "utils/mode.utils";
+import Toolbar from "components/generic/subcomponents/Toolbar";
 
 const LanguageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();
