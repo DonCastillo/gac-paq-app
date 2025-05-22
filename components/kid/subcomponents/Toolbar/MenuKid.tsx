@@ -25,12 +25,12 @@ const MenuKid = (): React.ReactElement => {
 					>
 						<Text style={GeneralStyle.general.menuText}>Pending Submissions</Text>
 					</MenuOption>
-					<MenuOption
+					{/* <MenuOption
 						style={GeneralStyle.general.menuOption}
 						onSelect={() => console.log("Opening logs ...")}
 					>
 						<Text style={GeneralStyle.general.menuText}>Logs</Text>
-					</MenuOption>
+					</MenuOption> */}
 				</MenuOptions>
 			</Menu>
 		</View>
