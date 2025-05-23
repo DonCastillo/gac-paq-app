@@ -107,17 +107,18 @@ const PageKid = (): React.ReactElement => {
 					<AnimatedView style={{ flex: 0 }}>
 						<ScrollContainer
 							scrollContainerStyle={{
-								width: 8,
+								...GeneralStyle.kid.scrollContainer,
 								backgroundColor: color100 + "26",
 							}}
 							scrollIndicatorStyle={{
-								width: 8,
+								...GeneralStyle.kid.scrollIndicator,
 								backgroundColor: color200,
 							}}
 						>
 							<Heading
 								customStyle={{
 									color: color100,
+									backgroundColor: "#fff",
 									...GeneralStyle.kid.pageHeading,
 									...adjustPageHeadingText(),
 								}}

@@ -277,9 +277,9 @@ const QuestionSingleKid = (): React.ReactElement => {
 								},
 							]}
 						>
-							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
 							{!isKeyboardOpen && (
 								<View style={{ marginBottom: 9 }}>
+									<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 									<QuestionLabel
 										textStyle={GeneralStyle.kid.questionQuestionLabel}
 										customStyle={{

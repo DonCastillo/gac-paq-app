@@ -122,8 +122,8 @@ const LanguageAdult = (): React.ReactElement => {
 				<CenterMain>
 					<AnimatedView style={{ flex: 0 }}>
 						<QuestionContainer>
-							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 							<View style={{ marginBottom: 13 }}>
+								<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 								<QuestionLabel
 									textStyle={GeneralStyle.adult.questionLabel}
 									customStyle={{ marginBottom: 7 }}

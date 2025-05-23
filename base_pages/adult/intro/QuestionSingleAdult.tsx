@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
+	getDevice,
 	getIsLoading,
 	getLanguage,
 	getMode,
@@ -39,6 +40,7 @@ import AnimatedView from "components/AnimatedView";
 import type Mode from "constants/mode.enum";
 import { choiceMode } from "utils/options.utils";
 import { loadSectionPages } from "utils/load_pages.utils";
+import { verticalScale } from "utils/responsive.utils";
 
 const QuestionSingleAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -46,6 +48,8 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
+	const device = useSelector(getDevice);
+
 	const isLoading = useSelector(getIsLoading);
 
 	// state
@@ -213,8 +217,8 @@ const QuestionSingleAdult = (): React.ReactElement => {
 						style={{ flex: 0 }}
 					>
 						<QuestionContainer>
-							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 							<View style={{ marginBottom: 13 }}>
+								<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 								<QuestionLabel
 									textStyle={GeneralStyle.adult.questionLabel}
 									customStyle={{ marginBottom: 7 }}
@@ -225,7 +229,13 @@ const QuestionSingleAdult = (): React.ReactElement => {
 									{questionSubLabel}
 								</QuestionSubLabel>
 							</View>
-							{questionComponent}
+							<View
+								style={{
+									maxHeight: verticalScale(300, device.screenHeight),
+								}}
+							>
+								{questionComponent}
+							</View>
 						</QuestionContainer>
 					</AnimatedView>
 				</CenterMain>

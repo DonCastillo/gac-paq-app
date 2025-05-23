@@ -2,11 +2,12 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import type { LanguageInterface } from "interface/payload.type";
 import { useSelector } from "react-redux";
 import { getLanguageOption } from "store/questions/questionsSlice";
-import { SafeAreaView, StyleSheet, View, FlatList, Text, Pressable } from "react-native";
+import { SafeAreaView, StyleSheet, View, Text, Pressable } from "react-native";
 import { horizontalScale, verticalScale } from "utils/responsive.utils";
 import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
 import { GeneralStyle } from "styles/general";
 import { adjustWritingDirection } from "utils/style";
+import FlatListContainer from "components/FlatListContainer";
 
 interface PropsInterface {
 	onChange: (value: string | null) => void;
@@ -180,7 +181,7 @@ const QuestionSelectLanguageAdult = ({
 		>
 			<View style={{ backgroundColor: "white" }}>
 				{options.length > 0 && (
-					<FlatList
+					<FlatListContainer
 						ref={flatListRef}
 						data={[...options]}
 						renderItem={({ item, index }) => languageOption(item, index)}
@@ -200,6 +201,8 @@ const QuestionSelectLanguageAdult = ({
 								index,
 							};
 						}}
+						scrollContainerStyle={GeneralStyle.adult.flatListScrollContainer}
+						scrollIndicatorStyle={GeneralStyle.adult.flatListScrollIndicator}
 					/>
 				)}
 			</View>

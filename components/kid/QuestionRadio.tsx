@@ -1,4 +1,4 @@
-import { View, StyleSheet, FlatList, SafeAreaView } from "react-native";
+import { View, StyleSheet, SafeAreaView } from "react-native";
 import React, { useEffect, useState } from "react";
 import { GeneralStyle } from "styles/general";
 import {
@@ -15,6 +15,7 @@ import type { Choice, ChoiceIcon } from "interface/payload.type";
 import Mode from "constants/mode.enum";
 import { getOptionSubLabel } from "utils/background.utils";
 import { adjustWritingDirection } from "utils/style";
+import FlatListContainer from "components/FlatListContainer";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -31,7 +32,7 @@ const QuestionRadio = ({
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
 	let mode = useSelector(getMode);
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -110,7 +111,7 @@ const QuestionRadio = ({
 	return (
 		<SafeAreaView style={styles.container}>
 			<View>
-				<FlatList
+				<FlatListContainer
 					removeClippedSubviews={false}
 					horizontal={false}
 					bounces={false}
@@ -139,6 +140,14 @@ const QuestionRadio = ({
 								optionSublabel={getOptionSubLabel(item.sublabel, mode) ?? undefined}
 							/>
 						);
+					}}
+					scrollContainerStyle={{
+						...GeneralStyle.kid.flatListScrollContainer,
+						backgroundColor: color100 + "26",
+					}}
+					scrollIndicatorStyle={{
+						...GeneralStyle.kid.flatListScrollIndicator,
+						backgroundColor: color200,
 					}}
 				/>
 			</View>

@@ -1,25 +1,20 @@
-import React, { useEffect, useState, useRef } from "react";
-import { ScrollView, View, Animated } from "react-native";
-import { useSelector } from "react-redux";
-import { getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
+import React, { forwardRef, useRef, useState } from "react";
+import { FlatList, type FlatListProps, Animated } from "react-native";
+import { View } from "react-native-animatable";
 import ScrollViewIndicator from "./ScrollViewIndicator";
 
-interface PropsInterface {
-	children: React.ReactNode;
-	containerStyle?: object;
+interface PropsInterface<ItemT> extends FlatListProps<ItemT> {
+	contentContainerStyle?: object;
 	scrollContainerStyle?: object;
 	scrollIndicatorStyle?: object;
 }
 
-const ScrollContainer = ({
-	children,
-	containerStyle,
-	scrollContainerStyle,
-	scrollIndicatorStyle,
-}: PropsInterface): React.ReactElement => {
-	const device = useSelector(getDevice);
-	const currentPageNumber = useSelector(getCurrentPageNumber);
-	const [offset, setOffset] = useState({ x: 0, y: 0 });
+function FlatListContainerInner<ItemT>(
+	props: PropsInterface<ItemT>,
+	ref: React.Ref<FlatList<ItemT>>,
+): React.ReactElement {
+	const { contentContainerStyle, scrollContainerStyle, scrollIndicatorStyle, ...flatListProps } =
+		props;
 
 	const [completeScrollBarHeight, setCompleteScrollBarHeight] = useState(1);
 	const [visibleScrollBarHeight, setVisibleScrollBarHeight] = useState(0);
@@ -43,17 +38,11 @@ const ScrollContainer = ({
 		extrapolate: "clamp",
 	});
 
-	useEffect(() => {
-		setOffset({ x: 0, y: 0 });
-	}, [currentPageNumber]);
-
 	return (
-		<View style={{ flexDirection: "row", ...containerStyle }}>
-			<ScrollView
-				contentOffset={offset}
-				centerContent={true}
-				alwaysBounceVertical={false}
-				bounces={false}
+		<View style={{ flexDirection: "row" }}>
+			<FlatList
+				ref={ref}
+				{...flatListProps}
 				showsVerticalScrollIndicator={false}
 				scrollEventThrottle={16}
 				onContentSizeChange={(_, height) => {
@@ -70,14 +59,10 @@ const ScrollContainer = ({
 					useNativeDriver: false,
 				})}
 				contentContainerStyle={{
-					flexGrow: device.platform === "android" ? 1 : 0,
-					justifyContent: "center",
-					alignItems: "center",
 					paddingRight: 14,
+					...contentContainerStyle,
 				}}
-			>
-				<View onStartShouldSetResponder={() => true}>{children}</View>
-			</ScrollView>
+			/>
 			<ScrollViewIndicator
 				isVisible={Boolean(visibleScrollBarHeight - scrollIndicatorSize)}
 				scrollIndicatorSize={scrollIndicatorSize}
@@ -87,6 +72,10 @@ const ScrollContainer = ({
 			/>
 		</View>
 	);
-};
+}
 
-export default ScrollContainer;
+const FlatListContainer = forwardRef(FlatListContainerInner) as <ItemT>(
+	props: PropsInterface<ItemT> & { ref?: React.Ref<FlatList<ItemT>> },
+) => React.ReactElement;
+
+export default FlatListContainer;
