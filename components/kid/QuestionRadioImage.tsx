@@ -3,10 +3,10 @@ import {
 	Text,
 	StyleSheet,
 	Pressable,
-	FlatList,
 	SafeAreaView,
 	Image,
 	TextInput,
+	FlatList,
 } from "react-native";
 import type { ImageStyle, StyleProp } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
@@ -41,6 +41,7 @@ import {
 	adjustTextAlignmentDirection,
 	adjustWritingDirection,
 } from "utils/style";
+import FlatListContainer from "components/FlatListContainer";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -58,7 +59,7 @@ const QuestionRadioImage = ({
 	const colorTheme = useSelector(getColorTheme);
 	const mode = useSelector(getMode);
 	const phrase = useSelector(getPhrases);
-	const { color100 } = colorTheme;
+	const { color100, color200 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
@@ -349,13 +350,21 @@ const QuestionRadioImage = ({
 						contentContainerStyle={{ direction: adjustWritingDirection() }}
 					/>
 				) : (
-					<FlatList
+					<FlatListContainer
 						horizontal={false}
 						removeClippedSubviews={false}
 						data={[...options]}
 						renderItem={({ item, index }) => listRenderOption(item, index)}
 						bounces={false}
 						contentContainerStyle={{ direction: adjustWritingDirection() }}
+						scrollContainerStyle={{
+							...GeneralStyle.kid.flatListScrollContainer,
+							backgroundColor: color100 + "26",
+						}}
+						scrollIndicatorStyle={{
+							...GeneralStyle.kid.flatListScrollIndicator,
+							backgroundColor: color200,
+						}}
 					/>
 				)}
 			</View>

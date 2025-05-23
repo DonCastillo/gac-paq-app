@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import React, { useEffect, useState } from "react";
 import { DefaultStyle, GeneralStyle } from "styles/general";
-import { Slider } from "@rneui/themed";
+import { Icon, Slider } from "@rneui/themed";
 import PhraseLabel from "constants/phrase_label.enum";
 import RadioOption from "components/adults/subcomponents/RadioOption";
 import { useSelector } from "react-redux";
@@ -78,6 +78,40 @@ const QuestionSlider = ({
 		return undefined;
 	};
 
+	const displayLeftArrow = (value: number | undefined): React.ReactElement => {
+		if (value !== undefined && value > 0) {
+			return (
+				<Icon
+					name="chevron-left"
+					color={color200}
+					containerStyle={{
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				/>
+			);
+		} else {
+			return <></>;
+		}
+	};
+
+	const displayRightArrow = (value: number | undefined, maxVal: number): React.ReactElement => {
+		if (value !== undefined && value >= 0 && value < maxVal) {
+			return (
+				<Icon
+					name="chevron-right"
+					color={color200}
+					containerStyle={{
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				/>
+			);
+		} else {
+			return <></>;
+		}
+	};
+
 	return (
 		<View style={styles.container}>
 			{/** slider */}
@@ -91,6 +125,7 @@ const QuestionSlider = ({
 				minimumTrackTintColor={isColor200(value)}
 				maximumTrackTintColor={isColor100(value)}
 				trackStyle={[styles.trackStyle, !isNumber(value) && styles.trackStyleUnselected]}
+				allowTouchTrack={true}
 				thumbStyle={[
 					styles.thumbStyle,
 					{ backgroundColor: color200 },
@@ -99,13 +134,49 @@ const QuestionSlider = ({
 				thumbProps={{
 					children: (
 						<View
-							style={[
-								styles.tooltip,
-								{ backgroundColor: color200 },
-								!isNumber(value) && styles.tooltipUnselected,
-							]}
+							style={{
+								position: "relative",
+								bottom: 45,
+							}}
 						>
-							<Text style={[styles.tooltipText]}>{displayValue(isNumber(value) ? value : 0)}</Text>
+							<View
+								style={{
+									flex: 1,
+									justifyContent: "center",
+									flexDirection: "row",
+									alignItems: "center",
+									position: "absolute",
+									left: -3,
+								}}
+							>
+								<View
+									style={{
+										...styles.arrowContainer,
+										left: -30,
+									}}
+								>
+									{displayLeftArrow(setSliderValue(value))}
+								</View>
+								<View
+									style={[
+										styles.tooltip,
+										{ backgroundColor: color200 },
+										!isNumber(value) && styles.tooltipUnselected,
+									]}
+								>
+									<Text style={[styles.tooltipText]}>
+										{displayValue(isNumber(value) ? value : 0)}
+									</Text>
+								</View>
+								<View
+									style={{
+										...styles.arrowContainer,
+										right: -30,
+									}}
+								>
+									{displayRightArrow(setSliderValue(value), maxVal)}
+								</View>
+							</View>
 						</View>
 					),
 				}}
@@ -138,16 +209,16 @@ export default QuestionSlider;
 const styles = StyleSheet.create({
 	container: {
 		marginTop: 40,
+		paddingHorizontal: 10,
 	},
 	tooltip: {
-		bottom: 50,
-		left: -8,
 		height: 40,
 		width: 40,
 		justifyContent: "center",
 		alignItems: "center",
 		borderRadius: GeneralStyle.kid.optionContainer.borderRadius,
 		padding: 3,
+		zIndex: 1,
 	},
 	tooltipUnselected: {
 		backgroundColor: DefaultStyle.inactiveColor,
@@ -155,6 +226,14 @@ const styles = StyleSheet.create({
 	tooltipText: {
 		fontSize: 23,
 		color: "#fff",
+	},
+	arrowContainer: {
+		height: "100%",
+		width: "100%",
+		position: "absolute",
+		top: 0,
+		justifyContent: "center",
+		alignItems: "center",
 	},
 	tooltipTextUnselected: {
 		backgroundColor: DefaultStyle.inactiveColor,

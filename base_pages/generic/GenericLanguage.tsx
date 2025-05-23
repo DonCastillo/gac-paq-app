@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
+	getDevice,
 	getIsLoading,
 	getLanguage,
 	getMode,
@@ -43,11 +44,13 @@ import {
 import { getSectionPages } from "store/questions/questionsSlice";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { changeMode } from "utils/mode.utils";
+import { verticalScale } from "utils/responsive.utils";
 
 const GenericLanguage = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const language = useSelector(getLanguage);
 	const mode = useSelector(getMode);
+	const device = useSelector(getDevice);
 	const currentPage = useSelector(getCurrentPage);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const isLoading = useSelector(getIsLoading);
@@ -134,8 +137,8 @@ const GenericLanguage = (): React.ReactElement => {
 					<Toolbar />
 					<CenterMain>
 						<QuestionContainer>
-							<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 							<View style={{ marginBottom: 13 }}>
+								<QuestionTitle>{translatedPage.heading}</QuestionTitle>
 								<QuestionLabel
 									textStyle={GeneralStyle.adult.questionLabel}
 									customStyle={{ marginBottom: 7 }}
@@ -143,10 +146,12 @@ const GenericLanguage = (): React.ReactElement => {
 									{questionLabel}
 								</QuestionLabel>
 							</View>
-							<QuestionSelectLanguageAdult
-								onChange={changeHandler}
-								selectedValue={selectedValue}
-							/>
+							<View style={{ maxHeight: verticalScale(500, device.screenHeight) }}>
+								<QuestionSelectLanguageAdult
+									onChange={changeHandler}
+									selectedValue={selectedValue}
+								/>
+							</View>
 						</QuestionContainer>
 					</CenterMain>
 					<Navigation>

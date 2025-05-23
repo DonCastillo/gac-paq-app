@@ -41,6 +41,7 @@ import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import type Mode from "constants/mode.enum";
 import Toolbar from "components/adults/subcomponents/Toolbar";
 import { loadSectionPages } from "utils/load_pages.utils";
+import { verticalScale } from "utils/responsive.utils";
 
 const GenericSingleQuestion = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -167,8 +168,8 @@ const GenericSingleQuestion = (): React.ReactElement => {
 					{!isKeyboardOpen && <Toolbar />}
 					<CenterMain>
 						<QuestionContainer>
-							{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
 							<View style={{ marginBottom: 13 }}>
+								{!isKeyboardOpen && <QuestionTitle>{translatedPage.heading}</QuestionTitle>}
 								<QuestionLabel
 									textStyle={GeneralStyle.adult.questionLabel}
 									customStyle={{ marginBottom: 7 }}
@@ -182,7 +183,13 @@ const GenericSingleQuestion = (): React.ReactElement => {
 								)}
 							</View>
 
-							{questionComponent}
+							<View
+								style={{
+									maxHeight: verticalScale(300, device.screenHeight),
+								}}
+							>
+								{questionComponent}
+							</View>
 						</QuestionContainer>
 					</CenterMain>
 					<Navigation>

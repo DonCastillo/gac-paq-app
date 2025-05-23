@@ -15,6 +15,8 @@ import { getOptionSubLabel } from "utils/background.utils";
 import Mode from "constants/mode.enum";
 import Section from "constants/section.enum";
 import { adjustWritingDirection } from "utils/style";
+import FlatListContainer from "components/FlatListContainer";
+import { GeneralStyle } from "styles/general";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -110,7 +112,7 @@ const QuestionRadio = ({
 	}
 
 	return (
-		<FlatList
+		<FlatListContainer
 			removeClippedSubviews={false}
 			horizontal={false}
 			bounces={false}
@@ -139,6 +141,8 @@ const QuestionRadio = ({
 			)}
 			persistentScrollbar={true}
 			showsVerticalScrollIndicator={true}
+			scrollContainerStyle={GeneralStyle.adult.flatListScrollContainer}
+			scrollIndicatorStyle={GeneralStyle.adult.flatListScrollIndicator}
 		/>
 	);
 };
