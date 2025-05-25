@@ -29,6 +29,7 @@ import { resetResponses } from "store/responses/responsesSlice";
 import { changeMode } from "utils/mode.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import { loadPhrases } from "utils/load.utils";
+import GenericPendingSubmissions from "./generic/GenericPendingSubmissions";
 
 const Stack = createNativeStackNavigator();
 
@@ -142,6 +143,10 @@ const AppWrapper = (): React.ReactElement => {
 				<Stack.Screen
 					name="ErrorScreen"
 					component={ErrorScreen as React.FunctionComponent}
+				/>
+				<Stack.Screen
+					name="GenericPendingSubmissions"
+					component={GenericPendingSubmissions as React.FunctionComponent}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>

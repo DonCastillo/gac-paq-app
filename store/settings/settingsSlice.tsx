@@ -33,6 +33,7 @@ export interface SettingsSliceInterface {
 	startDateTime: Date | null;
 	isConnected: boolean;
 	enableNarration: boolean;
+	drawerOpened: boolean;
 	soundType: "online" | "offline";
 }
 
@@ -60,6 +61,7 @@ const settingsSlice = createSlice({
 		startDateTime: null as Date | null,
 		isConnected: false,
 		enableNarration: true,
+		drawerOpened: false,
 		soundType: "online",
 	} satisfies SettingsSliceInterface,
 	reducers: {
@@ -87,6 +89,7 @@ const settingsSlice = createSlice({
 		setStartDateTime: reducersActions.setStartDateTime,
 		setIsConnected: reducersActions.setIsConnected,
 		setEnableNarration: reducersActions.setEnableNarration,
+		setDrawerOpened: reducersActions.setDrawerOpened,
 		disableNarrationAutoplay: reducersActions.disableNarrationAutoplay,
 		resetAllNarrations: reducersActions.resetAllNarrationAutoplay,
 	},
@@ -123,6 +126,7 @@ const settingsSlice = createSlice({
 		getStartDateTime: (state: SettingsSliceInterface) => state.startDateTime,
 		getIsConnected: (state: SettingsSliceInterface) => state.isConnected,
 		getEnableNarration: (state: SettingsSliceInterface) => state.enableNarration,
+		getDrawerOpened: (state: SettingsSliceInterface) => state.drawerOpened,
 		getSoundType: (state: SettingsSliceInterface) => state.soundType,
 	},
 });
@@ -151,6 +155,7 @@ export const {
 	setStartDateTime,
 	setIsConnected,
 	setEnableNarration,
+	setDrawerOpened,
 	disableNarrationAutoplay,
 	resetAllNarrations,
 } = settingsSlice.actions;
@@ -177,6 +182,7 @@ export const {
 	getStartDateTime,
 	getIsConnected,
 	getEnableNarration,
+	getDrawerOpened,
 	getSoundType,
 } = settingsSlice.selectors;
 

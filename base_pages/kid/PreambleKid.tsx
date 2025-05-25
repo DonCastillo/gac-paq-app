@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import Main from "components/Main";
 import Navigation from "components/Navigation";
-import Toolbar from "components/kid/subcomponents/Toolbar";
 import CenterMain from "components/orientation/CenterMain";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { GeneralStyle } from "styles/general";
@@ -27,6 +26,7 @@ import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { adjustPreambleDescriptionText, adjustPreambleHeadingText } from "utils/style";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const PreambleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();

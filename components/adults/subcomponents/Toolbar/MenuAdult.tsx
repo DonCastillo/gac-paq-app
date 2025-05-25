@@ -5,19 +5,14 @@ import { View, Text, StyleSheet } from "react-native";
 import { GeneralStyle } from "styles/general";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
-import { getCurrentPageNumber, getIsLoading, getMode } from "store/settings/settingsSlice";
-import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
+import { getDrawerOpened, getMode, setDrawerOpened } from "store/settings/settingsSlice";
 import Mode from "constants/mode.enum";
 
 const MenuAdult = (): React.ReactElement => {
 	const navigation = useNavigation();
-	const isLoading = useSelector(getIsLoading);
-	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const mode = useSelector(getMode);
-
-	if (isLoading) {
-		return <LoadingScreenAdult key={currentPageNumber} />;
-	}
+	const dispatch = useDispatch();
+	const drawerOpened = useSelector(getDrawerOpened);
 
 	return (
 		<View style={styles.container}>
@@ -27,29 +22,28 @@ const MenuAdult = (): React.ReactElement => {
 						accessibilityLabel="Toggle MenuAdult"
 						name="menu"
 						size={GeneralStyle.general.icon.fontSize}
-						color={mode === Mode.Kid ? "#000" : "#fff"}
-						containerStyle={{}}
+						color={mode === Mode.Kid || drawerOpened ? "#000" : "#fff"}
 					/>
 				</MenuTrigger>
 				<MenuOptions>
 					<MenuOption
 						style={GeneralStyle.general.menuOption}
-						onSelect={() => navigation.navigate("RegularPageScreen")}
+						onSelect={() => {
+							dispatch(setDrawerOpened(false));
+							navigation.navigate("RegularPageScreen");
+						}}
 					>
 						<Text style={GeneralStyle.general.menuText}>Home</Text>
 					</MenuOption>
 					<MenuOption
 						style={GeneralStyle.general.menuOption}
-						onSelect={() => navigation.navigate("GenericPendingSubmissions")}
+						onSelect={() => {
+							dispatch(setDrawerOpened(true));
+							navigation.navigate("GenericPendingSubmissions");
+						}}
 					>
 						<Text style={GeneralStyle.general.menuText}>Pending Submissions</Text>
 					</MenuOption>
-					{/* <MenuOption
-						style={GeneralStyle.general.menuOption}
-						onSelect={() => console.log("Opening logs ...")}
-					>
-						<Text style={GeneralStyle.general.menuText}>Logs</Text>
-					</MenuOption> */}
 				</MenuOptions>
 			</Menu>
 		</View>
