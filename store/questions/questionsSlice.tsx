@@ -54,6 +54,11 @@ import {
 import BackPhrase from "store/data/phrase/back";
 import CompletePhrase from "store/data/phrase/complete";
 import NextPhrase from "store/data/phrase/next";
+import SubmitPhrase from "store/data/phrase/submit";
+import NoPendingSubmissionsPhrase from "store/data/phrase/no_pending_submissions";
+import NothingToSubmitPhrase from "store/data/phrase/nothing_to_submit";
+import PendingSubmissionsPhrase from "store/data/phrase/pending_submissions";
+import ResponsesSubmittedPhrase from "store/data/phrase/responses_submitted";
 
 const defaultLanguage = "en-CA";
 export interface QuestionSliceInterface {
@@ -79,6 +84,11 @@ export interface QuestionSliceInterface {
 	pleaseSpecifyPhrase: PhraseInterface;
 	selectPhrase: PhraseInterface;
 	tryAgainPhrase: PhraseInterface;
+	submitPhrase: PhraseInterface;
+	noPendingSubmissionsPhrase: PhraseInterface;
+	nothingToSubmitPhrase: PhraseInterface;
+	pendingSubmissionsPhrase: PhraseInterface;
+	responsesSubmittedPhrase: PhraseInterface;
 	successPage: PagePayloadInterface;
 	offlineSuccessPage: PagePayloadInterface;
 	errorPage: PagePayloadInterface;
@@ -142,6 +152,23 @@ const questionsSlice = createSlice({
 		) satisfies PhraseInterface,
 		selectPhrase: translatePhrase(SelectPhrase, defaultLanguage) satisfies PhraseInterface,
 		tryAgainPhrase: translatePhrase(TryAgainPhrase, defaultLanguage) satisfies PhraseInterface,
+		submitPhrase: translatePhrase(SubmitPhrase, defaultLanguage) satisfies PhraseInterface,
+		noPendingSubmissionsPhrase: translatePhrase(
+			NoPendingSubmissionsPhrase,
+			defaultLanguage,
+		) satisfies PhraseInterface,
+		nothingToSubmitPhrase: translatePhrase(
+			NothingToSubmitPhrase,
+			defaultLanguage,
+		) satisfies PhraseInterface,
+		pendingSubmissionsPhrase: translatePhrase(
+			PendingSubmissionsPhrase,
+			defaultLanguage,
+		) satisfies PhraseInterface,
+		responsesSubmittedPhrase: translatePhrase(
+			ResponsesSubmittedPhrase,
+			defaultLanguage,
+		) satisfies PhraseInterface,
 		successPage: translatePage(SuccessPage, defaultLanguage) satisfies PagePayloadInterface,
 		offlineSuccessPage: translatePage(
 			OfflineSuccessPage,
@@ -186,6 +213,12 @@ const questionsSlice = createSlice({
 		getPleaseSpecifyPhrase: (state: QuestionSliceInterface) => state.pleaseSpecifyPhrase,
 		getSelectPhrase: (state: QuestionSliceInterface) => state.selectPhrase,
 		getTryAgainPhrase: (state: QuestionSliceInterface) => state.tryAgainPhrase,
+		getSubmitPhrase: (state: QuestionSliceInterface) => state.submitPhrase,
+		getNoPendingSubmissionsPhrase: (state: QuestionSliceInterface) =>
+			state.noPendingSubmissionsPhrase,
+		getNothingToSubmitPhrase: (state: QuestionSliceInterface) => state.nothingToSubmitPhrase,
+		getPendingSubmissionsPhrase: (state: QuestionSliceInterface) => state.pendingSubmissionsPhrase,
+		getResponsesSubmittedPhrase: (state: QuestionSliceInterface) => state.responsesSubmittedPhrase,
 		getSuccessPage: (state: QuestionSliceInterface) => state.successPage,
 		getOfflineSuccessPage: (state: QuestionSliceInterface) => state.offlineSuccessPage,
 		getErrorPage: (state: QuestionSliceInterface) => state.errorPage,
@@ -257,6 +290,11 @@ export const {
 	getPleaseSpecifyPhrase,
 	getSelectPhrase,
 	getTryAgainPhrase,
+	getSubmitPhrase,
+	getNoPendingSubmissionsPhrase,
+	getNothingToSubmitPhrase,
+	getPendingSubmissionsPhrase,
+	getResponsesSubmittedPhrase,
 	getSuccessPage,
 	getOfflineSuccessPage,
 	getErrorPage,

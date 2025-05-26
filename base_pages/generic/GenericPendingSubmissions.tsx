@@ -17,6 +17,7 @@ import {
 	getCurrentPageNumber,
 	getIsLoading,
 	getMode,
+	getPhrases,
 	setIsLoading,
 } from "store/settings/settingsSlice";
 import { GeneralStyle } from "styles/general";
@@ -27,6 +28,7 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 	const dispatch = useDispatch();
 	const isLoading = useSelector(getIsLoading);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const phrases = useSelector(getPhrases);
 	const mode = useSelector(getMode);
 
 	const [pendingResponses, setPendingResponses] = React.useState<FinalResponseType[]>([]);
@@ -65,12 +67,12 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 		}
 	};
 
-	const stopPageLoading = (): void =>{
+	const stopPageLoading = (): void => {
 		const timeout = setTimeout(() => {
 			clearInterval(timeout);
 			dispatch(setIsLoading(false));
 		}, 1000);
-	}
+	};
 
 	useEffect(() => {
 		fetchData();
@@ -97,7 +99,7 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 									color: "#000",
 								}}
 							>
-								Pending Submissions
+								{phrases?.pendingSubmissions}
 							</Heading>
 						</View>
 						<PendingSubmissionList data={pendingResponses} />
@@ -105,7 +107,7 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 				</TopMain>
 				<Navigation>
 					<FWBtnShadowed
-						label="Submit"
+						label={phrases?.submit}
 						onPress={async () => await submitResponseHandler()}
 						colorTheme={"#FFCB66"}
 					/>
@@ -123,6 +125,6 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		position: "relative",
-		backgroundColor: "white"
+		backgroundColor: "white",
 	},
 });

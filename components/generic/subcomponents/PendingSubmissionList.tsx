@@ -7,6 +7,8 @@ import { adjustWritingDirection } from "utils/style";
 import moment from "moment";
 import LanguageIndicator from "components/LanguageIndicator";
 import Paragraph from "components/Paragraph";
+import { useSelector } from "react-redux";
+import { getPhrases } from "store/settings/settingsSlice";
 
 interface Props {
 	data: FinalResponseType[];
@@ -14,6 +16,7 @@ interface Props {
 
 const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
 	const [resultComponent, setResultComponent] = React.useState<React.ReactElement | null>(null);
+	const phrases = useSelector(getPhrases);
 
 	useEffect(() => {
 		if (data.length > 0) {
@@ -82,7 +85,7 @@ const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
 		} else {
 			setResultComponent(
 				<View style={{ backgroundColor: "pinkx", flex: 1 }}>
-					<Paragraph customStyle={{ color: "#000" }}>No pending submissions</Paragraph>
+					<Paragraph customStyle={{ color: "#000" }}>{phrases?.noPendingSubmissions}</Paragraph>
 				</View>,
 			);
 		}
