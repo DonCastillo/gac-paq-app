@@ -90,15 +90,15 @@ const QuestionExtroKid = (): React.ReactElement => {
 		try {
 			dispatch(setIsLoading(true));
 			const sanitizedResponses = sanitizeResponse();
-			// if (isConnected) {
-			// 	await submitResponse(sanitizedResponses);
-			// 	dispatch(resetResponses());
-			// 	navigation.navigate("SuccessScreen", { success_type: "online" });
-			// } else {
-			await queueResponseToStorage(sanitizedResponses);
-			dispatch(resetResponses());
-			navigation.navigate("SuccessScreen", { success_type: "offline" });
-			// }
+			if (isConnected) {
+				await submitResponse(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "online" });
+			} else {
+				await queueResponseToStorage(sanitizedResponses);
+				dispatch(resetResponses());
+				navigation.navigate("SuccessScreen", { success_type: "offline" });
+			}
 		} catch (error) {
 			console.log("Error submitting response: ", error.message);
 			navigation.navigate("ErrorScreen" as never);
