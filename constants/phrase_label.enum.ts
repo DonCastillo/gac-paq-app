@@ -9,6 +9,11 @@ enum PhraseLabel {
 	PleaseSpecify = "Please specify",
 	Select = "Select",
 	TryAgain = "Try Again",
+	Submit = "Submit",
+	NoPendingSubmissions = "No pending submissions",
+	NothingToSubmit = "Nothing to submit",
+	PendingSubmissions = "Pending Submissions",
+	ResponsesSubmitted = "Responses submitted",
 }
 
 export default PhraseLabel;

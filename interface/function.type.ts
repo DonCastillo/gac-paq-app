@@ -28,6 +28,7 @@ export type SetIsLoadingFuncType = (state: SettingsSliceInterface, action: Paylo
 export type AddSectionTotalPagesFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ sectionNumber: number; totalPages: number }>) => void;
 export type SetKeyboardState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SetEnableNarrationState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
+export type SetDrawerOpenedState = (state: SettingsSliceInterface, action: PayloadAction<boolean>) => void;
 export type SettingsFuncType = (state: SettingsSliceInterface) => void;
 export type DisableNarrationAutoplayFuncType = (state: SettingsSliceInterface) => void;
 export type ResetAllNarrationAutoplayFuncType = (state: SettingsSliceInterface) => void;

@@ -8,9 +8,10 @@ import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getDevice,
+	getDrawerOpened,
 	getEnableNarration,
-	getIsLoading,
 	getLanguage,
+	getMode,
 	getSectionTitles,
 	getSoundType,
 	setEnableNarration,
@@ -19,8 +20,8 @@ import { Audio } from "expo-av";
 import { getAudioURI } from "utils/narration";
 import { adjustToolbarHeadingText, adjustWritingDirection } from "utils/style";
 import LanguageIndicator from "components/LanguageIndicator";
-
-const ICON_SIZE = 35;
+import MenuAdult from "./Toolbar/MenuAdult";
+import Mode from "constants/mode.enum";
 
 interface PropsInterface {
 	sectionTitle?: string;
@@ -32,11 +33,12 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 	const sectionTitles = useSelector(getSectionTitles);
 	const language = useSelector(getLanguage);
 	const device = useSelector(getDevice);
-	const isLoading = useSelector(getIsLoading);
 	const dispatch = useDispatch();
 	const enableNarration = useSelector(getEnableNarration);
+	const drawerOpened = useSelector(getDrawerOpened);
 	const isAudioAutoplaying = currentPage?.page?.audio_autoplay ?? false;
 	const soundType = useSelector(getSoundType);
+	const mode = useSelector(getMode);
 
 	const soundSrc = useRef<null | string>(null);
 	const sound = useRef(new Audio.Sound());
@@ -56,7 +58,6 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 
 	// load source file
 	useLayoutEffect(() => {
-		console.log("load source file");
 		stopSound();
 		unloadSound();
 		if (soundType === "online") {
@@ -74,7 +75,6 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 
 	// load sound
 	useLayoutEffect(() => {
-		console.log("load sound");
 		loadSound(soundSrc.current);
 		return () => {
 			stopSound();
@@ -82,6 +82,10 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			soundSrc.current = null;
 		};
 	}, [soundSrc]);
+
+	useLayoutEffect(() => {
+		stopSound();
+	}, [drawerOpened]);
 
 	const loadSound = async (soundSrc: string): Promise<void> => {
 		setLoaded(false);
@@ -107,7 +111,7 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 					throw new Error("Sound not loaded");
 				} else {
 					setLoaded(true);
-					if (enableNarration && isAudioAutoplaying) {
+					if (enableNarration && isAudioAutoplaying && !drawerOpened) {
 						await playSound();
 					}
 				}
@@ -157,9 +161,10 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			NarrationButtonComponent = (
 				<Icon
 					accessibilityLabel="Stop narration"
-					name="volume-up"
-					size={ICON_SIZE}
-					color={"#fff"}
+					type={mode === Mode.Kid ? "simple-line-icon" : "material-icons"}
+					name={mode === Mode.Kid ? "volume-2" : "volume-up"}
+					color={mode === Mode.Kid ? "#000" : "#fff"}
+					size={GeneralStyle.general.icon.fontSize}
 					containerStyle={styles.icon}
 					onPress={() => {
 						stopSound()
@@ -176,9 +181,10 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 			NarrationButtonComponent = (
 				<Icon
 					accessibilityLabel="Play narration"
-					name="volume-off"
-					size={ICON_SIZE}
-					color={"#fff"}
+					type={mode === Mode.Kid ? "simple-line-icon" : "material-icons"}
+					name={mode === Mode.Kid ? "volume-off" : "volume-off"}
+					color={mode === Mode.Kid ? "#000" : "#fff"}
+					size={GeneralStyle.general.icon.fontSize}
 					containerStyle={styles.icon}
 					onPress={() => {
 						playSound()
@@ -200,8 +206,15 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 
 	return (
 		<View style={{ ...styles.container, paddingVertical: moderateScale(5, device.screenWidth) }}>
-			<View style={{ justifyContent: "flex-start", alignItems: "center", flexDirection: "row" }}>
-				<View style={{ marginRight: 10 }}>
+			<View
+				style={{
+					justifyContent: "flex-start",
+					alignItems: "flex-start",
+					flexDirection: "row",
+					flex: 7,
+				}}
+			>
+				<View style={{ height: "100%", paddingTop: 8 }}>
 					<LanguageIndicator langCode={language} />
 				</View>
 				<Text
@@ -210,13 +223,28 @@ const Toolbar = ({ sectionTitle }: PropsInterface): React.ReactElement => {
 						{
 							...adjustToolbarHeadingText(),
 							direction: adjustWritingDirection(),
+							flex: 1,
+							marginHorizontal: 5,
+							height: "100%",
+							paddingTop: 7,
+							color: mode === Mode.Kid ? "#000" : "#fff",
 						},
 					]}
 				>
 					{title}
 				</Text>
 			</View>
-			{NarrationButtonComponent}
+			<View
+				style={{
+					flexDirection: "row",
+					flex: 2,
+					justifyContent: "flex-end",
+					gap: 10,
+				}}
+			>
+				{NarrationButtonComponent}
+				<MenuAdult />
+			</View>
 		</View>
 	);
 };
@@ -226,14 +254,12 @@ export default Toolbar;
 const styles = StyleSheet.create({
 	container: {
 		paddingVertical: 10,
-		paddingHorizontal: 20,
-		justifyContent: "space-between",
-		alignItems: "center",
+		paddingHorizontal: 15,
 		flexDirection: "row",
-		height: "100%",
-		maxHeight: 45,
 	},
-	icon: {},
+	icon: {
+		flex: 1,
+	},
 	button: {
 		paddingHorizontal: 20,
 		paddingVertical: 10,

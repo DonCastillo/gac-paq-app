@@ -15,4 +15,9 @@ export interface PhrasePayloadInterface {
 	specify: string;
 	select: string;
 	tryAgain: string;
+	submit: string;
+	noPendingSubmissions: string;
+	nothingToSubmit: string;
+	pendingSubmissions: string;
+	responsesSubmitted: string;
 }
