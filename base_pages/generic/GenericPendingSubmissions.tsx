@@ -20,6 +20,7 @@ import {
 	getIsLoading,
 	getMode,
 	getPhrases,
+	setDrawerOpened,
 	setIsLoading,
 } from "store/settings/settingsSlice";
 import { GeneralStyle } from "styles/general";
@@ -104,10 +105,14 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 	}, []);
 
 	useEffect(() => {
+		console.log("yyy");
 		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+			console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+			dispatch(setDrawerOpened(false));
 			navigation.navigate("RegularPageScreen");
 			return true;
 		});
+		console.log("backHandler added for GenericPendingSubmissions");
 		return () => backHandler.remove();
 	}, [])
 

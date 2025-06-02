@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, BackHandler } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
@@ -7,7 +7,6 @@ import { horizontalScale, moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 import Paragraph from "components/Paragraph";
-import { sysBackButtonDisable } from "utils/navigation.utils";
 
 interface PropsInterface {
 	displayTitle?: boolean;
@@ -18,7 +17,10 @@ const LoadingScreenAdult = ({ displayTitle }: PropsInterface): React.ReactElemen
 	const progressBarTop = moderateScale(device.isTablet ? 10 : -20, device.screenHeight);
 
 	useEffect(() => {
-		sysBackButtonDisable();
+		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+				return true;
+			});
+			return () => backHandler.remove();
 	}, []);
 
 	return (

@@ -8,7 +8,6 @@ import type { ScreenByModeFuncType } from "interface/function.type";
 import { store } from "store/store";
 import { BackHandler } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { sysBackButtonDisable } from "./navigation.utils";
 
 const sysBackButton = (navigation: any): any => {
 	const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
@@ -22,9 +21,12 @@ const SplashScreen: ScreenByModeFuncType = () => {
 	const mode = store.getState().settings.mode;
 
 	useEffect(() => {
-		sysBackButtonDisable();
+		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+			return true;
+		});
+		return () => backHandler.remove();
 	}, []);
-	
+
 	return mode === Mode.Kid ? <GenericSplash key={Mode.Kid} /> : <GenericSplash key={Mode.Adult} />;
 };
 
