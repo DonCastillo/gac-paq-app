@@ -105,16 +105,13 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 	}, []);
 
 	useEffect(() => {
-		console.log("yyy");
 		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
-			console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 			dispatch(setDrawerOpened(false));
 			navigation.navigate("RegularPageScreen");
 			return true;
 		});
-		console.log("backHandler added for GenericPendingSubmissions");
 		return () => backHandler.remove();
-	}, [])
+	}, []);
 
 	if (isLoading) {
 		if (mode === Mode.Kid) {

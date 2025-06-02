@@ -18,9 +18,9 @@ const LoadingScreenAdult = ({ displayTitle }: PropsInterface): React.ReactElemen
 
 	useEffect(() => {
 		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
-				return true;
-			});
-			return () => backHandler.remove();
+			return true;
+		});
+		return () => backHandler.remove();
 	}, []);
 
 	return (

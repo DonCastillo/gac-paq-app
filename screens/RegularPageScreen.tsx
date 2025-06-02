@@ -12,7 +12,6 @@ import {
 	setColorTheme,
 } from "store/settings/settingsSlice";
 import { getScreenType, getSectionType } from "utils/type.utils";
-import { sysBackButtonRegPage } from "utils/navigation.utils";
 
 const RegularPageScreen = (): React.ReactElement => {
 	const dispatch = useDispatch();
@@ -52,14 +51,10 @@ const RegularPageScreen = (): React.ReactElement => {
 
 	useEffect(() => {
 		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
-			console.log("back button pressed on regular page");
 			dispatch(prevPage());
 			return true;
 		});
-		return () => {
-			console.log("leaving RegularPageScreen");
-			backHandler.remove()
-		};
+		return () => backHandler.remove();
 	}, []);
 
 	return (

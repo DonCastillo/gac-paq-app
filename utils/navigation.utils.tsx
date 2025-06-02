@@ -195,14 +195,4 @@ const skipTo = (answer: string | string[] | null): number => {
 	return 0;
 };
 
-const sysBackButtonRegPage = (): any => {
-	console.log("back button pressed on regular page outside");
-	const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
-		console.log("back button pressed on regular page");
-		store.dispatch(prevPage());
-		return true;
-	});
-	return () => backHandler.remove();
-};
-
-export { proceedPage, skipTo, sysBackButtonRegPage };
+export { proceedPage, skipTo };

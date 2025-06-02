@@ -9,14 +9,6 @@ import { store } from "store/store";
 import { BackHandler } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const sysBackButton = (navigation: any): any => {
-	const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
-		navigation.navigate("RegularPageScreen");
-		return true;
-	});
-	return () => backHandler.remove();
-};
-
 const SplashScreen: ScreenByModeFuncType = () => {
 	const mode = store.getState().settings.mode;
 
@@ -35,7 +27,11 @@ const ErrorScreen: ScreenByModeFuncType = () => {
 	const navigation = useNavigation();
 
 	useEffect(() => {
-		sysBackButton(navigation);
+		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+			navigation.navigate("RegularPageScreen");
+			return true;
+		});
+		return () => backHandler.remove();
 	}, []);
 
 	return mode === Mode.Kid ? <StateKid state={State.Error} /> : <StateAdult state={State.Error} />;
@@ -43,10 +39,12 @@ const ErrorScreen: ScreenByModeFuncType = () => {
 
 const SuccessScreen: ScreenByModeFuncType = () => {
 	const mode = store.getState().settings.mode;
-	const navigation = useNavigation();
 
 	useEffect(() => {
-		sysBackButton(navigation);
+		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+			return true;
+		});
+		return () => backHandler.remove();
 	}, []);
 
 	return mode === Mode.Kid ? (
