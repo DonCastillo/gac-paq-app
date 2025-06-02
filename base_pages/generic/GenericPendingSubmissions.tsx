@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import LoadingScreenAdult from "base_pages/adult/LoadingScreenAdult";
 import LoadingScreenKid from "base_pages/kid/LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
@@ -12,7 +13,7 @@ import TopMain from "components/orientation/TopMain";
 import Mode from "constants/mode.enum";
 import { type FinalResponseType } from "interface/union.type";
 import React, { useEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import { BackHandler, StyleSheet, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPageNumber,
@@ -27,6 +28,7 @@ import { adjustPageHeadingText } from "utils/style";
 
 const GenericPendingSubmissions = (): React.ReactElement => {
 	const dispatch = useDispatch();
+	const navigation = useNavigation();
 	const isLoading = useSelector(getIsLoading);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const phrases = useSelector(getPhrases);
@@ -100,6 +102,14 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 	useEffect(() => {
 		fetchData();
 	}, []);
+
+	useEffect(() => {
+		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+			navigation.navigate("RegularPageScreen");
+			return true;
+		});
+		return () => backHandler.remove();
+	}, [])
 
 	if (isLoading) {
 		if (mode === Mode.Kid) {

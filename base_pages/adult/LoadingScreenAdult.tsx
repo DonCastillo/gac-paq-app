@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, View, Image } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
@@ -7,6 +7,7 @@ import { horizontalScale, moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
 import { getDevice } from "store/settings/settingsSlice";
 import Paragraph from "components/Paragraph";
+import { sysBackButtonDisable } from "utils/navigation.utils";
 
 interface PropsInterface {
 	displayTitle?: boolean;
@@ -15,6 +16,11 @@ interface PropsInterface {
 const LoadingScreenAdult = ({ displayTitle }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const progressBarTop = moderateScale(device.isTablet ? 10 : -20, device.screenHeight);
+
+	useEffect(() => {
+		sysBackButtonDisable();
+	}, []);
+
 	return (
 		<View style={[styles.container]}>
 			<Main>

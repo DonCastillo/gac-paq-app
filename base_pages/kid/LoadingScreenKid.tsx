@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, View, Image } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
+import { sysBackButtonDisable } from "utils/navigation.utils";
 
 const LoadingScreenKid = (): React.ReactElement => {
+		useEffect(() => {
+			sysBackButtonDisable();
+		}, [])
+
 	return (
 		<View style={[styles.container, { backgroundColor: "white" }]}>
 			<Main>
