@@ -8,7 +8,6 @@ import CenterMain from "components/orientation/CenterMain";
 import QuestionContainer from "components/adults/QuestionContainer";
 import BGLinearGradient from "components/BGLinearGradient";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
-import Toolbar from "components/adults/subcomponents/Toolbar";
 import { GeneralStyle } from "styles/general";
 import QuestionTitle from "components/generic/QuestionTitle";
 import ProgressBarAdult from "components/adults/subcomponents/ProgressBarAdult";
@@ -42,6 +41,7 @@ import {
 } from "store/responses/responsesSlice";
 import { getSectionPages } from "store/questions/questionsSlice";
 import { changeMode } from "utils/mode.utils";
+import Toolbar from "components/generic/subcomponents/Toolbar";
 
 const LanguageAdult = (): React.ReactElement => {
 	const dispatch = useDispatch();

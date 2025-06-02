@@ -29,6 +29,11 @@ const loadPhrases = (): void => {
 	const pleaseSpecifyPhrase = store.getState().questions.pleaseSpecifyPhrase;
 	const selectPhrase = store.getState().questions.selectPhrase;
 	const tryAgainPhrase = store.getState().questions.tryAgainPhrase;
+	const submitPhrase = store.getState().questions.submitPhrase;
+	const noPendingSubmissionsPhrase = store.getState().questions.noPendingSubmissionsPhrase;
+	const nothingToSubmitPhrase = store.getState().questions.nothingToSubmitPhrase;
+	const pendingSubmissionsPhrase = store.getState().questions.pendingSubmissionsPhrase;
+	const responsesSubmittedPhrase = store.getState().questions.responsesSubmittedPhrase;
 
 	store.dispatch(
 		setPhrases({
@@ -42,6 +47,11 @@ const loadPhrases = (): void => {
 			specify: pleaseSpecifyPhrase.label ?? PhraseLabel.PleaseSpecify,
 			select: selectPhrase.label ?? PhraseLabel.Select,
 			tryAgain: tryAgainPhrase.label ?? PhraseLabel.TryAgain,
+			submit: submitPhrase.label ?? PhraseLabel.Submit,
+			noPendingSubmissions: noPendingSubmissionsPhrase.label ?? PhraseLabel.NoPendingSubmissions,
+			nothingToSubmit: nothingToSubmitPhrase.label ?? PhraseLabel.NothingToSubmit,
+			pendingSubmissions: pendingSubmissionsPhrase.label ?? PhraseLabel.PendingSubmissions,
+			responsesSubmitted: responsesSubmittedPhrase.label ?? PhraseLabel.ResponsesSubmitted,
 		}),
 	);
 };

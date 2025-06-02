@@ -29,6 +29,7 @@ import { resetResponses } from "store/responses/responsesSlice";
 import { changeMode } from "utils/mode.utils";
 import { getNarrationPayload } from "store/settings/settingsThunk";
 import { loadPhrases } from "utils/load.utils";
+import GenericPendingSubmissions from "./generic/GenericPendingSubmissions";
 
 const Stack = createNativeStackNavigator();
 
@@ -129,19 +130,27 @@ const AppWrapper = (): React.ReactElement => {
 				<Stack.Screen
 					name="SplashScreen"
 					component={SplashScreen as React.FunctionComponent}
+					initialParams={{ page_name: "splashPage" }}
 				/>
 				<Stack.Screen
 					name="RegularPageScreen"
 					component={RegularPageScreen as React.FunctionComponent}
+					initialParams={{ page_name: "questionPage" }}
 				/>
 				<Stack.Screen
 					name="SuccessScreen"
 					component={SuccessScreen as React.FunctionComponent}
-					initialParams={{ success_type: "offline" }}
+					initialParams={{ success_type: "offline", page_name: "successPage" }}
 				/>
 				<Stack.Screen
 					name="ErrorScreen"
 					component={ErrorScreen as React.FunctionComponent}
+					initialParams={{ page_name: "errorPage" }}
+				/>
+				<Stack.Screen
+					name="GenericPendingSubmissions"
+					component={GenericPendingSubmissions as React.FunctionComponent}
+					initialParams={{ page_name: "genericPendingSubmissionPage" }}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>

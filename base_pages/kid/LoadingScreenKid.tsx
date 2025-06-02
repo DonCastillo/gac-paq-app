@@ -1,10 +1,17 @@
-import React from "react";
-import { StyleSheet, View, Image } from "react-native";
+import React, { useEffect } from "react";
+import { StyleSheet, View, Image, BackHandler } from "react-native";
 import Main from "components/Main";
 import CenterMain from "components/orientation/CenterMain";
 import ProgressBar from "components/ProgressBar";
 
 const LoadingScreenKid = (): React.ReactElement => {
+	useEffect(() => {
+		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+			return true;
+		});
+		return () => backHandler.remove();
+	}, []);
+
 	return (
 		<View style={[styles.container, { backgroundColor: "white" }]}>
 			<Main>

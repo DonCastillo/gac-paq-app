@@ -1,9 +1,10 @@
-import { nextPage, skipPage } from "store/settings/settingsSlice";
+import { nextPage, prevPage, skipPage } from "store/settings/settingsSlice";
 import { getResponseByIdent } from "./response.utils";
 import { clearResponseByIdent } from "store/responses/responsesSlice";
 import { getPageNumberBasedOnIdent } from "./page.utils";
 import Mode from "constants/mode.enum";
 import { store } from "store/store";
+import { BackHandler } from "react-native";
 
 const proceedPage = (): void => {
 	const currentIdent = store.getState().settings.currentPage.page.ident;

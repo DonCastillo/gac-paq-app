@@ -13,7 +13,6 @@ import BackAndSubmitNav from "components/generic/navigation/BackAndSubmitNav";
 import { useNavigation } from "@react-navigation/native";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
-import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBar from "components/generic/ProgressBar";
 import { sanitizeResponse, queueResponseToStorage } from "utils/response.utils";
 import { useDispatch, useSelector } from "react-redux";
@@ -33,6 +32,7 @@ import type { ExtroInterface } from "interface/payload.type";
 import { submitResponse } from "utils/api.utils";
 import AnimatedView from "components/AnimatedView";
 import { adjustExtroDescriptionText, adjustExtroPageHeading } from "utils/style";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const QuestionExtroKid = (): React.ReactElement => {
 	const dispatch = useDispatch();

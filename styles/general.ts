@@ -61,6 +61,21 @@ const GeneralStyle = {
 			marginRight: 15,
 			aspectRatio: 1,
 		},
+		icon: {
+			fontSize: 33,
+		},
+		menuOption: {
+			// borderBottomColor: "#000",
+			// borderBottomWidth: 1,
+		},
+		menuText: {
+			color: "#000",
+			fontFamily: "SpaceRegular",
+			fontSize: 20,
+		},
+		modal: {
+			elevation: DEFAULT_ELEVATION,
+		},
 	},
 	kid: {
 		topHeaderSectionTitle: {

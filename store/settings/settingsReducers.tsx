@@ -23,6 +23,7 @@ import type {
 	DisableNarrationAutoplayFuncType,
 	ResetAllNarrationAutoplayFuncType,
 	AddSectionTitleFuncType,
+	SetDrawerOpenedState,
 } from "interface/function.type";
 import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
@@ -197,6 +198,10 @@ const setEnableNarration: SetEnableNarrationState = (state, action) => {
 	state.enableNarration = action.payload;
 };
 
+const setDrawerOpened: SetDrawerOpenedState = (state, action) => {
+	state.drawerOpened = action.payload;
+};
+
 const disableNarrationAutoplay: DisableNarrationAutoplayFuncType = (state) => {
 	const allPages = state.pages;
 	const currentPageNumber = state.currentPageNumber;
@@ -261,6 +266,7 @@ export default {
 	setStartDateTime,
 	setIsConnected,
 	setEnableNarration,
+	setDrawerOpened,
 	disableNarrationAutoplay,
 	resetAllNarrationAutoplay,
 };
