@@ -12,7 +12,6 @@ import { getIntroductoryBackground } from "utils/background.utils";
 import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
-import Toolbar from "components/kid/subcomponents/Toolbar";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import QuestionSubLabel from "components/generic/QuestionSubLabel";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,6 +39,7 @@ import LoadingScreenKid from "../LoadingScreenKid";
 import AnimatedView from "components/AnimatedView";
 import { choiceMode } from "utils/options.utils";
 import { loadSectionPages } from "utils/load_pages.utils";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();

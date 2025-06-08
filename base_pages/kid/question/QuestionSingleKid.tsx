@@ -18,7 +18,6 @@ import PhraseLabel from "constants/phrase_label.enum";
 import QuestionInput from "components/kid/QuestionInput";
 import { GeneralStyle } from "styles/general";
 import { verticalScale } from "utils/responsive.utils";
-import Toolbar from "components/kid/subcomponents/Toolbar";
 import QuestionSatisfactionImage from "components/kid/QuestionSatisfactionImage";
 import QuestionTextarea from "components/kid/QuestionTextarea";
 import QuestionCheckbox from "components/kid/QuestionCheckbox";
@@ -49,6 +48,7 @@ import type {
 } from "interface/payload.type";
 import AnimatedView from "components/AnimatedView";
 import LoadingScreenKid from "../LoadingScreenKid";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const QuestionSingleKid = (): React.ReactElement => {
 	const dispatch = useDispatch();

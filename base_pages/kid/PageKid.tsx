@@ -8,7 +8,6 @@ import Navigation from "components/Navigation";
 import BackAndNextNav from "components/generic/navigation/BackAndNextNav";
 import { getIntroductoryBackground } from "utils/background.utils";
 import { GeneralStyle } from "styles/general";
-import Toolbar from "components/kid/subcomponents/Toolbar";
 import ScrollContainer from "components/ScrollContainer";
 import ProgressBarKid from "components/kid/subcomponents/ProgressBarKid";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,7 +25,7 @@ import { proceedPage } from "utils/navigation.utils";
 import AnimatedView from "components/AnimatedView";
 import LoadingScreenKid from "./LoadingScreenKid";
 import { adjustPageDescriptionText, adjustPageHeadingText } from "utils/style";
-import Mode from "constants/mode.enum";
+import Toolbar from "components/adults/subcomponents/Toolbar";
 
 const PageKid = (): React.ReactElement => {
 	const dispatch = useDispatch();

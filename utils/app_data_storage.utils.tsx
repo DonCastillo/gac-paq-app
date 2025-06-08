@@ -32,6 +32,11 @@ import CompletePhrase from "store/data/phrase/complete";
 import NextPhrase from "store/data/phrase/next";
 import OptionLetters from "store/data/options/letters";
 import OptionNumbers from "store/data/options/numbers";
+import SubmitPhrase from "store/data/phrase/submit";
+import NoPendingSubmissionsPhrase from "store/data/phrase/no_pending_submissions";
+import NothingToSubmitPhrase from "store/data/phrase/nothing_to_submit";
+import PendingSubmissionsPhrase from "store/data/phrase/pending_submissions";
+import ResponsesSubmittedPhrase from "store/data/phrase/responses_submitted";
 
 // save all the raw pages and their different translations to local storage
 const saveAppData = async (): Promise<void> => {
@@ -58,6 +63,11 @@ const saveAppData = async (): Promise<void> => {
 		pleaseSpecifyPhrase: PleaseSpecifyPhrase,
 		selectPhrase: SelectPhrase,
 		tryAgainPhrase: TryAgainPhrase,
+		submitPhrase: SubmitPhrase,
+		noPendingSubmissionsPhrase: NoPendingSubmissionsPhrase,
+		nothingToSubmitPhrase: NothingToSubmitPhrase,
+		pendingSubmissionsPhrase: PendingSubmissionsPhrase,
+		responsesSubmittedPhrase: ResponsesSubmittedPhrase,
 		successPage: SuccessPage,
 		offlineSuccessPage: OfflineSuccessPage,
 		errorPage: ErrorPage,

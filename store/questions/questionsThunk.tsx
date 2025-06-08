@@ -54,6 +54,14 @@ export const loadQuestionData = createAsyncThunk(
 		const pleaseSpecifyPhrase = translatePhrase(data.pleaseSpecifyPhrase, finalLanguage);
 		const selectPhrase = translatePhrase(data.selectPhrase, finalLanguage);
 		const tryAgainPhrase = translatePhrase(data.tryAgainPhrase, finalLanguage);
+		const submitPhrase = translatePhrase(data.submitPhrase, finalLanguage);
+		const noPendingSubmissionsPhrase = translatePhrase(
+			data.noPendingSubmissionsPhrase,
+			finalLanguage,
+		);
+		const nothingToSubmitPhrase = translatePhrase(data.nothingToSubmitPhrase, finalLanguage);
+		const pendingSubmissionsPhrase = translatePhrase(data.pendingSubmissionsPhrase, finalLanguage);
+		const responsesSubmittedPhrase = translatePhrase(data.responsesSubmittedPhrase, finalLanguage);
 		const successPage = translatePage(data.successPage, finalLanguage);
 		const offlineSuccessPage = translatePage(data.offlineSuccessPage, finalLanguage);
 		const errorPage = translatePage(data.errorPage, finalLanguage);
@@ -86,6 +94,11 @@ export const loadQuestionData = createAsyncThunk(
 			pleaseSpecifyPhrase,
 			selectPhrase,
 			tryAgainPhrase,
+			submitPhrase,
+			noPendingSubmissionsPhrase,
+			nothingToSubmitPhrase,
+			pendingSubmissionsPhrase,
+			responsesSubmittedPhrase,
 			successPage,
 			offlineSuccessPage,
 			errorPage,

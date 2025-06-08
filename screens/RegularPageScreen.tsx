@@ -1,13 +1,14 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { getScreen } from "utils/screen.utils";
 import KeyboardSafeview from "components/KeyboardSafeview";
-import { View } from "react-native";
+import { BackHandler, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	getCurrentPage,
 	getCurrentPageNumber,
 	getMode,
 	nextPage,
+	prevPage,
 	setColorTheme,
 } from "store/settings/settingsSlice";
 import { getScreenType, getSectionType } from "utils/type.utils";
@@ -47,6 +48,14 @@ const RegularPageScreen = (): React.ReactElement => {
 			setComponent(<></>);
 		};
 	}, [currentPageNumber, currentPage, mode]);
+
+	useEffect(() => {
+		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
+			dispatch(prevPage());
+			return true;
+		});
+		return () => backHandler.remove();
+	}, []);
 
 	return (
 		<KeyboardSafeview>
