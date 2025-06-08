@@ -41,10 +41,10 @@ const PendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "الإرسالات المعلقة",
 	},
 	"ne-NP": {
-		label: "लंबित पेशहरू",
+		label: "बुझाउन बाँकी छ",
 	},
 	"pt-BR": {
-		label: "Envios Pendentes",
+		label: "Submissões pendentes",
 	},
 	"sv-SE": {
 		label: "Väntande inlämningar",

@@ -41,7 +41,7 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 		label: "تم إرسال الردود",
 	},
 	"ne-NP": {
-		label: "प्रतिक्रियाहरू पेश गरियो",
+		label: "प्रतिकृया बुझाइयो",
 	},
 	"pt-BR": {
 		label: "Respostas enviadas",

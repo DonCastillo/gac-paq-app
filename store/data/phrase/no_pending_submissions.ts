@@ -41,7 +41,7 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "لا توجد تقديمات معلقة",
 	},
 	"ne-NP": {
-		label: "कुनै बक्यौता पेशहरू छैनन्",
+		label: "बुझाउनु पर्ने केहि बाँकी छैन",
 	},
 	"pt-BR": {
 		label: "Nenhuma submissão pendente",

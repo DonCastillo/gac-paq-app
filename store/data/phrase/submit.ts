@@ -41,7 +41,7 @@ const SubmitPhrase: LangPhraseInterface = {
 		label: "إرسال",
 	},
 	"ne-NP": {
-		label: "पेश गर्नुहोस्",
+		label: "बुझाउनुहोस्",
 	},
 	"pt-BR": {
 		label: "Enviar",
