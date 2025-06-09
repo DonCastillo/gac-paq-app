@@ -10,6 +10,10 @@ const GSHSIntro: LangSectionPayloadInterface = {
 			heading: "Global School-based Student Health Survey",
 			subheading: "",
 		},
+		"mi-NZ": {
+			heading: "Te Rangahau Hauora Ākonga o te Ao i ngā Kura",
+			subheading: "",
+		},
 		"ch-MW": {
 			heading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
 			subheading: "",

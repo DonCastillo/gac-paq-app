@@ -44,6 +44,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 28",
+			label:
+				"I roto i tēnei tau kura, e hia ngā rā i tae atu koe ki te akomanga koiri (PE) i ia wiki?",
+			kid_label:
+				"I roto i tēnei tau kura, e hia ngā rā i tae atu koe ki te akomanga koiri (PE) i ia wiki?",
+			adult_label:
+				"I roto i tēnei tau kura, e hia ngā rā i tae atu koe ki te akomanga koiri (PE) i ia wiki?",
+			choices: [
+				{
+					label: "O ngā rā",
+					value: "0",
+				},
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā, neke atu rānei",
+					value: ">=5",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 28",

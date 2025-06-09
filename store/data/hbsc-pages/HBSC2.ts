@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 26",
+			label:
+				"I waho i ngā hāora ā-kura: i te nuinga o te wā he aha te auau ka kori tinana koe i tō wā wātea kia pau tō hau, kia heke tōtā rānei koe?",
+			kid_label:
+				"I waho i ngā hāora ā-kura: i te nuinga o te wā he aha te auau ka kori tinana koe i tō wā wātea kia pau tō hau, kia heke tōtā rānei koe?",
+			adult_label:
+				"I waho i ngā hāora ā-kura: i te nuinga o te wā he aha te auau ka kori tinana koe i tō wā wātea kia pau tō hau, kia heke tōtā rānei koe?",
+			choices: [
+				{
+					label: "Ia rā",
+					value: "Every day",
+				},
+				{
+					label: "E 4 ki te 6 ngā wā i te wiki",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "E 3 ngā wā i te wiki",
+					value: "3 times a week",
+				},
+				{
+					label: "E 2 ngā wā i te wiki",
+					value: "2 times a week",
+				},
+				{
+					label: "Kotahi te wā i te wiki",
+					value: "Once a week",
+				},
+				{
+					label: "Kotahi te wā i te marama",
+					value: "Once a month",
+				},
+				{
+					label: "He iti iho i te kotahi wā i te marama ",
+					value: "Less than once a month",
+				},
+				{
+					label: "Kore rawa",
+					value: "Never",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 26",

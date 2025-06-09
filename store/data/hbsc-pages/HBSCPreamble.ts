@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Ngā Āhua Hauora o Ngā Tamariki Kura",
+			subheading: "",
+			description: {
+				kid: "Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka pau tō hau i ētahi wā. Ka whakamahia te kori tinana pea i ngā hākinakina, i ngā mahi ā-kura, i te tākaro ki ngā hoa, i te hīkoi ki te kura rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke koneke, ko te eke pahikara, ko te kanikani, ko te eke papawīra, ko te kaukau, ko te poikiri, ko te poitūkohu, ko te eke ngaru, ko te whutupōro, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke kutarere, ko te haere ki te whare whakapakari tinana hoki.",
+				adult:
+					"Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka pau tō hau i ētahi wā. Ka whakamahia te kori tinana pea i ngā hākinakina, i ngā mahi ā-kura, i te tākaro ki ngā hoa, i te hīkoi ki te kura rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke koneke, ko te eke pahikara, ko te kanikani, ko te eke papawīra, ko te kaukau, ko te poikiri, ko te poitūkohu, ko te eke ngaru, ko te whutupōro, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke kutarere, ko te haere ki te whare whakapakari tinana hoki.",
+			},
+		},
 		"ch-MW": {
 			heading: "Makhalidwe a Zaumoyo mwa Ana a Sukulu",
 			subheading: "",

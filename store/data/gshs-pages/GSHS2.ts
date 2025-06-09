@@ -52,6 +52,50 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 26",
+			label:
+				"I roto i ngā rā e 7 kua pahure ake nei, e hia ngā rā i mahi whakapūoioi koe hei whakapakari, hei whakamārohirohi rānei i ō uaua, pērā i ngā pana ake, i ngā nohotū, i te hiki taimaha rānei?",
+			kid_label:
+				"I roto i ngā rā e 7 kua pahure ake nei, e hia ngā rā i mahi whakapūoioi koe hei whakapakari, hei whakamārohirohi rānei i ō uaua, pērā i ngā pana ake, i ngā nohotū, i te hiki taimaha rānei?",
+			adult_label:
+				"I roto i ngā rā e 7 kua pahure ake nei, e hia ngā rā i mahi whakapūoioi koe hei whakapakari, hei whakamārohirohi rānei i ō uaua, pērā i ngā pana ake, i ngā nohotū, i te hiki taimaha rānei?",
+			choices: [
+				{
+					label: "O ngā rā",
+					value: "0",
+				},
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā",
+					value: "5",
+				},
+				{
+					label: "E 6 ngā rā",
+					value: "6",
+				},
+				{
+					label: "E 7 ngā rā",
+					value: "7",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 26",

@@ -44,6 +44,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 29",
+			label:
+				"E hia te wā ka whakapau koe i te rangi noa e noho ana me te mātakitaki pouaka whakaata, te tākaro kēmu rorohiko, te kōrero ki ngā hoa, te whakamahi i tō waea pūkoro, te mahi i ētahi atu mahi ā-noho rānei?",
+			kid_label:
+				"E hia te wā ka whakapau koe i te rangi noa e noho ana me te mātakitaki pouaka whakaata, te tākaro kēmu rorohiko, te kōrero ki ngā hoa, te whakamahi i tō waea pūkoro, te mahi i ētahi atu mahi ā-noho rānei?",
+			adult_label:
+				"E hia te wā ka whakapau koe i te rangi noa e noho ana me te mātakitaki pouaka whakaata, te tākaro kēmu rorohiko, te kōrero ki ngā hoa, te whakamahi i tō waea pūkoro, te mahi i ētahi atu mahi ā-noho rānei?",
+			choices: [
+				{
+					label: "He iti iho i te 1 hāora i ia rā",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 ki te 2 ngā hāora i ia rā",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "E 3 ki te 4 ngā hāora i ia rā",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "E 5 ki te 6 ngā hāora i ia rā",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "E 7 ki te 8 ngā hāora i ia rā",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Neke atu i te 8 hāora i ia rā",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 29",

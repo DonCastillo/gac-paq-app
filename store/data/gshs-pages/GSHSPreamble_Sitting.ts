@@ -15,6 +15,15 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Noho",
+			subheading: "Te Rangahau Hauora Ākonga o te Ao i ngā Kura",
+			description: {
+				kid: "Ka ui te pātai e whai ake nei mō te roa o te wā e mātua noho ana koe ina kāore koe i te kura, i te whakaoti mahi kāinga rānei.",
+				adult:
+					"Ka ui te pātai e whai ake nei mō te roa o te wā e mātua noho ana koe ina kāore koe i te kura, i te whakaoti mahi kāinga rānei.",
+			},
+		},
 		"ch-MW": {
 			heading: "Kukhala Pansi",
 			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",

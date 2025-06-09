@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 30",
+			label: "I te pō kura noa, e hia ngā hāora ka moe koe?",
+			kid_label: "I te pō kura noa, e hia ngā hāora ka moe koe?",
+			adult_label: "I te pō kura noa, e hia ngā hāora ka moe koe?",
+			choices: [
+				{
+					label: "E 4 ngā hāora, iti iho rānei",
+					value: "4 or less hours",
+				},
+				{
+					label: "E 5 ngā hāora",
+					value: "5 hours",
+				},
+				{
+					label: "E 6 ngā hāora",
+					value: "6 hours",
+				},
+				{
+					label: "E 7 ngā hāora",
+					value: "7 hours",
+				},
+				{
+					label: "E 8 ngā hāora",
+					value: "8 hours",
+				},
+				{
+					label: "E 9 ngā hāora",
+					value: "9 hours",
+				},
+				{
+					label: "10, neke atu rānei ngā hāora",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 30",

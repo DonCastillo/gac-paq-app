@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"mi-NZ": {
+			heading: "Ngā Ngohe Tinana",
+			subheading: "Te Rangahau Hauora Ākonga o te Ao i ngā Kura",
+			description: {
+				kid: "Mō te mahi kori tinana ngā pātai e 4 e whai ake nei. Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka kaha tō hēhē. Ka whakamahia te kori tinana pea i ngā hākinakina, i te tākaro ki ngā hoa, i te hīkoi ki te kura, i te akomanga koiri rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke pahikara, ko te kanikani, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke papawīra, ko te eke kutarere, ko te kaukau, ko te haere ki te whare whakapakari tinana hoki.",
+				adult:
+					"Mō te mahi kori tinana ngā pātai e 4 e whai ake nei. Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka kaha tō hēhē. Ka whakamahia te kori tinana pea i ngā hākinakina, i te tākaro ki ngā hoa, i te hīkoi ki te kura, i te akomanga koiri rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke pahikara, ko te kanikani, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke papawīra, ko te eke kutarere, ko te kaukau, ko te haere ki te whare whakapakari tinana hoki.",
+			},
+		},
 		"ch-MW": {
 			heading: "Zochita Zamthupi",
 			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
