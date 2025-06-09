@@ -54,6 +54,54 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 25",
+			label:
+				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			kid_label:
+				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			adult_label:
+				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			kid_sublabel:
+				"Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
+			adult_sublabel:
+				"Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
+			choices: [
+				{
+					label: "Simunapangepo zochita zolimbitsa thupi",
+					value: "0",
+				},
+				{
+					label: "Tsiku Limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २५",

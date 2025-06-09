@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 27",
+			label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munayenda kapena kupalasa njinga popita kapena kuchokera kusukulu?",
+			kid_label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munayenda kapena kupalasa njinga popita kapena kuchokera kusukulu?",
+			adult_label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munayenda kapena kupalasa njinga popita kapena kuchokera kusukulu?",
+			choices: [
+				{
+					label: "Simunayende kapena kupalasa njinga",
+					value: "0",
+				},
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २७",

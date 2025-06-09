@@ -44,6 +44,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 28",
+			label:
+				"M'chaka chino cha sukulu, ndi masiku angati omwe mumaphunzira maphunziro olimbitsa thupi (P.E.) pa sabata iliyonse?",
+			kid_label:
+				"M'chaka chino cha sukulu, ndi masiku angati omwe mumaphunzira maphunziro olimbitsa thupi (P.E.) pa sabata iliyonse?",
+			adult_label:
+				"M'chaka chino cha sukulu, ndi masiku angati omwe mumaphunzira maphunziro olimbitsa thupi (P.E.) pa sabata iliyonse?",
+			choices: [
+				{
+					label: "Simunaphunzireko maphunzirowa",
+					value: "0",
+				},
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5 kapena kuposa",
+					value: ">=5",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २८",

@@ -14,6 +14,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
+		"ch-MW": {
+			heading: "Gona",
+			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
+			description: {
+				kid: "Funso lotsatira likufunsa za kuchuluka kwa nthawi yomwe mumakhala mukugona.",
+				adult: "Funso lotsatira likufunsa za kuchuluka kwa nthawi yomwe mumakhala mukugona.",
+			},
+		},
 		"ne-NP": {
 			heading: "सुत्ने",
 			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",

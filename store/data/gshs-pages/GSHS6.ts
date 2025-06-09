@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 30",
+			label: "Pa tsiku la sukulu, kodi usiku mumagona maola angati?",
+			kid_label: "Pa tsiku la sukulu, kodi usiku mumagona maola angati?",
+			adult_label: "Pa tsiku la sukulu, kodi usiku mumagona maola angati?",
+			choices: [
+				{
+					label: "Maola 4 kapena osakwana",
+					value: "4 or less hours",
+				},
+				{
+					label: "Maola 5",
+					value: "5 hours",
+				},
+				{
+					label: "Maola 6",
+					value: "6 hours",
+				},
+				{
+					label: "Maola 7",
+					value: "7 hours",
+				},
+				{
+					label: "Maola 8",
+					value: "8 hours",
+				},
+				{
+					label: "Maola 9",
+					value: "9 hours",
+				},
+				{
+					label: "Maola 10 kapena kuposa",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",

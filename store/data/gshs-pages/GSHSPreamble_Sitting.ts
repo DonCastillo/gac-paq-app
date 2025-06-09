@@ -15,6 +15,15 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"ch-MW": {
+			heading: "Kukhala Pansi",
+			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
+			description: {
+				kid: "Funso lotsatirali likufunsa za nthawi yomwe nthawi zambiri mumangokhala malo amodzi koma osati kusukulu kapena pamene mukuchita homuweki.",
+				adult:
+					"Funso lotsatirali likufunsa za nthawi yomwe nthawi zambiri mumangokhala malo amodzi koma osati kusukulu kapena pamene mukuchita homuweki.",
+			},
+		},
 		"ne-NP": {
 			heading: "बसेको",
 			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",

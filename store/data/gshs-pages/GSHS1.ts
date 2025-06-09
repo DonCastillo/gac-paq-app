@@ -54,6 +54,54 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 25",
+			label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munali mukuchita zochita zolimbitsa thupi kwa nthawi yosachepera 60 minutes/mphindi patsiku?",
+			kid_label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munali mukuchita zochita zolimbitsa thupi kwa nthawi yosachepera 60 minutes/mphindi patsiku?",
+			adult_label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munali mukuchita zochita zolimbitsa thupi kwa nthawi yosachepera 60 minutes/mphindi patsiku?",
+			kid_sublabel:
+				"Phatikizani nthawi yonse imene mumachita zochita zolimbitsa thupi zilizonse pa tsiku.",
+			adult_sublabel:
+				"Phatikizani nthawi yonse imene mumachita zochita zolimbitsa thupi zilizonse pa tsiku.",
+			choices: [
+				{
+					label: "Simunachite zolimbitsa thupi",
+					value: "0",
+				},
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २५",

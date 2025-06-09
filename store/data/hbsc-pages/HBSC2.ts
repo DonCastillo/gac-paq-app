@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 26",
+			label:
+				"Pa nthawi yomwe siyasukulu, ndi kangati pomwe mumapeza mpata ochita masewera olimbitsa thupi mpaka kumapuma mwamphuma kapena kutuluka thukuta?",
+			kid_label:
+				"Pa nthawi yomwe siyasukulu, ndi kangati pomwe mumapeza mpata ochita masewera olimbitsa thupi mpaka kumapuma mwamphuma kapena kutuluka thukuta?",
+			adult_label:
+				"Pa nthawi yomwe siyasukulu, ndi kangati pomwe mumapeza mpata ochita masewera olimbitsa thupi mpaka kumapuma mwamphuma kapena kutuluka thukuta?",
+			choices: [
+				{
+					label: "Tsiku lililonse",
+					value: "Every day",
+				},
+				{
+					label: "Ka 4 mpaka ka 6 pa sabata",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "Katatu pa sabata",
+					value: "3 times a week",
+				},
+				{
+					label: "Kawiri pa sabata",
+					value: "2 times a week",
+				},
+				{
+					label: "Kamodzi pa Sabata",
+					value: "Once a week",
+				},
+				{
+					label: "Kamodzi pamwezi",
+					value: "Once a month",
+				},
+				{
+					label: "Kochepera kamodzi pamwezi",
+					value: "Less than once a month",
+				},
+				{
+					label: "Simupanga masewera olimbitsa thupi",
+					value: "Never",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २६",

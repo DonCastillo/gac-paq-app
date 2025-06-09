@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"ch-MW": {
+			heading: "Makhalidwe a Zaumoyo mwa Ana a Sukulu",
+			subheading: "",
+			description: {
+				kid: "Zochita zolimbitsa thupi ndi zochita zomwe zimapangitsa kuti mtima wanu kuti uzigunda kwambiri komanso kuti muzipuma mwaphuma. Zochita zolimbitsa thupi zimatha kuchitidwa pamasewera ngati mpira, zochitika za kusukulu, kusewera ndi anzanu, kapena kuyenda popita kusukulu. Zitsanzo zina za zochita zolimbitsa thupi ndi kuthamanga, kuyenda mofulumira, kupalasa njinga, kuvina, kusambira, kusewera mpira, kudumphadumpha ndi zina.",
+				adult:
+					"Zochita zolimbitsa thupi ndi zochita zomwe zimapangitsa kuti mtima wanu kuti uzigunda kwambiri komanso kuti muzipuma mwaphuma. Zochita zolimbitsa thupi zimatha kuchitidwa pamasewera ngati mpira, zochitika za kusukulu, kusewera ndi anzanu, kapena kuyenda popita kusukulu. Zitsanzo zina za zochita zolimbitsa thupi ndi kuthamanga, kuyenda mofulumira, kupalasa njinga, kuvina, kusambira, kusewera mpira, kudumphadumpha ndi zina.",
+			},
+		},
 		"ne-NP": {
 			heading: "पढाइ उमेरका बालबालिकामा स्वास्थ्य व्यवहार",
 			subheading: "",

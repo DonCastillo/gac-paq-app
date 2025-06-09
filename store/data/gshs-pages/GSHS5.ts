@@ -44,6 +44,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 29",
+			label:
+				"Kodi ndi nthawi yochuluka bwanji pa tsiku lililonse yomwe mumangokhala ndi kumaonera TV, kusewera magemu apakompyuta, kucheza ndi anzanu, kugwiritsa ntchito foni, kapena kuchita zinthu zina mutangokhala malo amodzi ngat kusewera bawo kapena draft?",
+			kid_label:
+				"Kodi ndi nthawi yochuluka bwanji pa tsiku lililonse yomwe mumangokhala ndi kumaonera TV, kusewera magemu apakompyuta, kucheza ndi anzanu, kugwiritsa ntchito foni, kapena kuchita zinthu zina mutangokhala malo amodzi ngat kusewera bawo kapena draft?",
+			adult_label:
+				"Kodi ndi nthawi yochuluka bwanji pa tsiku lililonse yomwe mumangokhala ndi kumaonera TV, kusewera magemu apakompyuta, kucheza ndi anzanu, kugwiritsa ntchito foni, kapena kuchita zinthu zina mutangokhala malo amodzi ngat kusewera bawo kapena draft?",
+			choices: [
+				{
+					label: "Osafika ola limodzi patsiku",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "Ola limodzi mpaka maola awiri patsiku",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "Maola atatu mpaka 4 patsiku",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "Maola 5 mpaka maola 6 patsiku",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "Maola 7 mpaka maola 8 patsiku",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Kuposera maola 8 patsiku",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २९",

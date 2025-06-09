@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"ch-MW": {
+			heading: "Zochita Zamthupi",
+			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
+			description: {
+				kid: "Mafunso 4 otsatirawa akufunsa za zochita zolimbitsa thupi.  Zochita zolimbitsa thupi ndizochita zilizonse zomwe zimachititsa mtima kugunda kwambili komanso kukupangitsani kupuma mwamphuma.  Zochita zolimbitsa thupi zitha kuchitika m'maseŵera, pamene mukusewera ndi anzanu, kuyenda kupita kusukulu, kapena kukaphunzira maphunziro olimbisa thupi.  Zitsanzo zina zolimbitsa thupi ndi kuthamanga, kuyenda mwachangu, kupalasa njinga, kuvina, kusewera mpira ndi zina.",
+				adult:
+					"Mafunso 4 otsatirawa akufunsa za zochita zolimbitsa thupi.  Zochita zolimbitsa thupi ndizochita zilizonse zomwe zimachititsa mtima kugunda kwambili komanso kukupangitsani kupuma mwamphuma.  Zochita zolimbitsa thupi zitha kuchitika m'maseŵera, pamene mukusewera ndi anzanu, kuyenda kupita kusukulu, kapena kukaphunzira maphunziro olimbisa thupi.  Zitsanzo zina zolimbitsa thupi ndi kuthamanga, kuyenda mwachangu, kupalasa njinga, kuvina, kusewera mpira ndi zina.",
+			},
+		},
 		"ne-NP": {
 			heading: "शारीरिक गतिविधि",
 			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
