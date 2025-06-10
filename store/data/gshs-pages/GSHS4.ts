@@ -44,6 +44,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 28",
+			label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			kid_label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			adult_label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 or more days",
+					value: ">=5",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Wāhanga 28",
