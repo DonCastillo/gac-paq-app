@@ -4,6 +4,9 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Responses submitted",
 	},
+	"en-IN": {
+		label: "Responses submitted",
+	},
 	"mi-NZ": {
 		label: "Kua tukuna ngā whakautu",
 	},

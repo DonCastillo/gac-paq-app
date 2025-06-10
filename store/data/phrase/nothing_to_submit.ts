@@ -4,6 +4,9 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Nothing to submit",
 	},
+	"en-IN": {
+		label: "Nothing to submit",
+	},
 	"mi-NZ": {
 		label: "Kāore he mea hei tuku",
 	},
