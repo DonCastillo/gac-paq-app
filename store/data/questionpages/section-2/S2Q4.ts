@@ -41,6 +41,37 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 11",
+			label: "Which of the following images shows what you do most of the time during your chores?",
+			kid_label:
+				"Which of the following images shows what you do most of the time during your chores?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time during their chores?",
+			choices: [
+				{
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Don't know",
+					value: "0",
+					image_ident: "dont_know",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Pātai 11",
