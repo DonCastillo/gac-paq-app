@@ -4,6 +4,9 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "No pending submissions",
 	},
+	"en-IN": {
+		label: "No pending submissions",
+	},
 	"mi-NZ": {
 		label: "Kāore he tukunga kei te tatari",
 	},

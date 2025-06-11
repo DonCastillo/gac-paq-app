@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"en-IN": {
+			heading: "Health Behaviour in School-aged Children",
+			subheading: "",
+			description: {
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+				adult:
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+			},
+		},
 		"mi-NZ": {
 			heading: "Ngā Āhua Hauora o Ngā Tamariki Kura",
 			subheading: "",

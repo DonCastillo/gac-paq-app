@@ -42,6 +42,38 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 5",
+			label:
+				"Which of the following images shows what you do most of the time in physical education class?",
+			kid_label:
+				"Which of the following images shows what you do most of the time in physical education class?",
+			adult_label:
+				"Which of the following images resembles what your child does most of the time in physical education class?",
+			choices: [
+				{
+					label: "Not moving",
+					value: "0.1",
+					image_ident: "not_moving",
+				},
+				{
+					label: "Easy effort",
+					value: "0.3",
+					image_ident: "easy_effort",
+				},
+				{
+					label: "Medium or hard effort",
+					value: "0.5",
+					image_ident: "medium_or_hard_effort",
+				},
+				{
+					label: "Don't know",
+					image_ident: "dont_know",
+					value: "0",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Pātai 5",

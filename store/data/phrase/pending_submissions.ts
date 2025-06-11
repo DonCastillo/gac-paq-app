@@ -4,6 +4,9 @@ const PendingSubmissionsPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Pending Submissions",
 	},
+	"en-IN": {
+		label: "Pending Submissions",
+	},
 	"mi-NZ": {
 		label: "Ngā Tukunga e Tatari Ana",
 	},

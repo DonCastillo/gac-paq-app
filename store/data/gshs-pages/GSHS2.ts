@@ -52,6 +52,50 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 26",
+			label:
+				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+			kid_label:
+				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+			adult_label:
+				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Wāhanga 26",

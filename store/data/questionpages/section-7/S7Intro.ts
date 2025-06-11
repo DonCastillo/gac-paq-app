@@ -10,6 +10,10 @@ const S7Intro: LangSectionPayloadInterface = {
 			heading: "Outdoors",
 			subheading: "Section 7",
 		},
+		"en-IN": {
+			heading: "Outdoors",
+			subheading: "Section 7",
+		},
 		"mi-NZ": {
 			heading: "Ki waho",
 			subheading: "Wāhanga 7",

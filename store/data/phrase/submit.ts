@@ -4,6 +4,9 @@ const SubmitPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Submit",
 	},
+	"en-IN": {
+		label: "Submit",
+	},
 	"mi-NZ": {
 		label: "Tukuna",
 	},

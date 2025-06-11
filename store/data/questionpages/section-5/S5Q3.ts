@@ -38,6 +38,34 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 20",
+			label:
+				"On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label:
+				"On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label:
+				"On the days that your child did these activities during the past week, how long did it usually last?",
+			choices: [
+				{
+					label: "30 minutes or less per day",
+					value: "30 minutes or less per day",
+				},
+				{
+					label: "31 to 60 minutes per day",
+					value: "31 to 60 minutes per day",
+				},
+				{
+					label: "1 to 1 and a half hours per day",
+					value: "1 to 1 and a half hours per day",
+				},
+				{
+					label: "More than 1 and a half hours per day",
+					value: "More than 1 and a half hours per day",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 20",
