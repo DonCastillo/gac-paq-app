@@ -15,6 +15,14 @@ const S4Preamble: LangPreamblePayloadInterface = {
 				adult: "This section is about how your child goes to different places.",
 			},
 		},
+		"en-IN": {
+			heading: "Transportation",
+			subheading: "Section 4",
+			description: {
+				kid: "This section is about how you go to different places.",
+				adult: "This section is about how your child goes to different places.",
+			},
+		},
 		"mi-NZ": {
 			heading: "Te Waka",
 			subheading: "Wāhanga 4",

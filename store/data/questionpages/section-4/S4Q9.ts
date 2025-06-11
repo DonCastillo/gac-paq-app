@@ -36,6 +36,32 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 17c - Walking",
+			label: "On a normal day, how much time did you walk to places other than school or work?",
+			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
+			adult_label:
+				"On a normal day, how much time did your child walk to places other than school or work?",
+			choices: [
+				{
+					label: "10 minutes or less",
+					value: "10 minutes or less",
+				},
+				{
+					label: "11 - 20 minutes",
+					value: "11 - 20 minutes",
+				},
+				{
+					label: "21 - 30 minutes",
+					value: "21 - 30 minutes",
+				},
+				{
+					label: "More than 30 minutes",
+					value: "More than 30 minutes",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 17c - Hīkoi",
