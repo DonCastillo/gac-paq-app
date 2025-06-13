@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"hi-IN": {
+			heading: "शारीरिक गतिविधि",
+			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "अगले 4 प्रश्न शारीरिक गतिविधियों के बारे में पूछते हैं। शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और आपको सांस लेने में कठिनाई पैदा करती है। शारीरिक क्रियाकलाप खेल में, दोस्तों के साथ खेलने, स्कूल जाने या शारीरिक व्यायाम शिक्षा के कक्षा में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, साइकिल चलाना, नृत्य करना, फुटबॉल, खोखो, कबड्डी, हॉकी, मल्लक्का इत्यादि ।",
+				adult:
+					"अगले 4 प्रश्न शारीरिक गतिविधियों के बारे में पूछते हैं। शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और आपको सांस लेने में कठिनाई पैदा करती है। शारीरिक क्रियाकलाप खेल में, दोस्तों के साथ खेलने, स्कूल जाने या शारीरिक व्यायाम शिक्षा के कक्षा में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, साइकिल चलाना, नृत्य करना, फुटबॉल, खोखो, कबड्डी, हॉकी, मल्लक्का इत्यादि ।",
+			},
+		},
 		"en-IN": {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",

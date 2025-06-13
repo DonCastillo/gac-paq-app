@@ -44,6 +44,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label:
+				"इस स्कूल वर्ष के दौरान, आप प्रत्येक सप्ताह कितने दिनों में शारीरिक व्यायाम शिक्षा (पीई) कक्षा में जाते थे?",
+			kid_label:
+				"इस स्कूल वर्ष के दौरान, आप प्रत्येक सप्ताह कितने दिनों में शारीरिक व्यायाम शिक्षा (पीई) कक्षा में जाते थे?",
+			adult_label:
+				"इस स्कूल वर्ष के दौरान, आप प्रत्येक सप्ताह कितने दिनों में शारीरिक व्यायाम शिक्षा (पीई) कक्षा में जाते थे?",
+			choices: [
+				{
+					label: "0 दिन",
+					value: "0",
+				},
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 या अधिक दिन",
+					value: ">=5",
+				},
+			],
+		},
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 28",

@@ -14,6 +14,14 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
+		"hi-IN": {
+			heading: "नींद",
+			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "अगला प्रश्न आपको कितनी नींद मिलती हैं, उस बारे में हैं ।",
+				adult: "अगला प्रश्न आपको कितनी नींद मिलती हैं, उस बारे में हैं ।",
+			},
+		},
 		"en-IN": {
 			heading: "Sleep",
 			subheading: "Global School-based Student Health Survey",

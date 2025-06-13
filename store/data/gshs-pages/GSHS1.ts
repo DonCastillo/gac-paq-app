@@ -54,6 +54,52 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २५",
+			label:
+				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			kid_label:
+				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			adult_label:
+				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			kid_sublabel: "कृपया हर दिन के शारीरिक गतिविधि में बिताए गए सभी समय को जोड़ें।",
+			adult_sublabel: "कृपया हर दिन के शारीरिक गतिविधि में बिताए गए सभी समय को जोड़ें।",
+			choices: [
+				{
+					label: "0 दिन",
+					value: "0",
+				},
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",

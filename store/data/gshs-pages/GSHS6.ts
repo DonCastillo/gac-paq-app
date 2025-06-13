@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "औसतन (सामान्यता), स्कूल-वाली रात में आपको कितने घंटे की नींद मिलती है?",
+			kid_label: "औसतन (सामान्यता), स्कूल-वाली रात में आपको कितने घंटे की नींद मिलती है?",
+			adult_label: "औसतन (सामान्यता), स्कूल-वाली रात में आपको कितने घंटे की नींद मिलती है?",
+			choices: [
+				{
+					label: "4 घंटे या उससे कम",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 घंटे",
+					value: "5 hours",
+				},
+				{
+					label: "6 घंटे",
+					value: "6 hours",
+				},
+				{
+					label: "7 घंटे",
+					value: "7 hours",
+				},
+				{
+					label: "8 घंटे",
+					value: "8 hours",
+				},
+				{
+					label: "9 घंटे",
+					value: "9 hours",
+				},
+				{
+					label: "10 या अधिक घंटे",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",
