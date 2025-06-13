@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"hi-IN": {
+			heading: "स्कूल जाने वाली आयु के बच्चों में स्वास्थ्य व्यवहार",
+			subheading: "",
+			description: {
+				kid: "शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और कभी-कभी आपकी सांसें फूल जाती हैं । शारीरिक गतिविधि खेल, स्कूल की गतिविधियों, दोस्तों के साथ खेलने या स्कूल जाने में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, रोलरब्लैडिंग, साइकिल चलाना, नृत्य, स्केटबोर्डिंग, तैराकी, सॉकर, बास्केटबॉल, फुटबॉल, खोखो, कबड्डी, हॉकी, इत्यादि ।",
+				adult:
+					"शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और कभी-कभी आपकी सांसें फूल जाती हैं । शारीरिक गतिविधि खेल, स्कूल की गतिविधियों, दोस्तों के साथ खेलने या स्कूल जाने में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, रोलरब्लैडिंग, साइकिल चलाना, नृत्य, स्केटबोर्डिंग, तैराकी, सॉकर, बास्केटबॉल, फुटबॉल, खोखो, कबड्डी, हॉकी, इत्यादि ।",
+			},
+		},
 		"en-IN": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",

@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न 26",
+			label:
+				"स्कूल के घंटों के बाहरः आप आमतौर पर अपने खाली समय में कितनी बार व्यायाम करते हैं जिसके द्वारा आपकी सांसें फूल जाती हैं या पसीने छूट जाते हैं?",
+			kid_label:
+				"स्कूल के घंटों के बाहरः आप आमतौर पर अपने खाली समय में कितनी बार व्यायाम करते हैं जिसके द्वारा आपकी सांसें फूल जाती हैं या पसीने छूट जाते हैं?",
+			adult_label:
+				"स्कूल के घंटों के बाहरः आप आमतौर पर अपने खाली समय में कितनी बार व्यायाम करते हैं जिसके द्वारा आपकी सांसें फूल जाती हैं या पसीने छूट जाते हैं?",
+			choices: [
+				{
+					label: "रोज़",
+					value: "Every day",
+				},
+				{
+					label: "सप्ताह में 4 से 6 बार",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "सप्ताह में 3 बार",
+					value: "3 times a week",
+				},
+				{
+					label: "सप्ताह में 2 बार",
+					value: "2 times a week",
+				},
+				{
+					label: "सप्ताह में एक बार",
+					value: "Once a week",
+				},
+				{
+					label: "महीने में एक बार",
+					value: "Once a month",
+				},
+				{
+					label: "महीने में एक बार से कम",
+					value: "Less than once a month",
+				},
+				{
+					label: "कभी नहीं",
+					value: "Never",
+				},
+			],
+		},
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
