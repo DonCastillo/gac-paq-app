@@ -1,4 +1,16 @@
 const ChoresOptions = {
+	NZ: {
+		kid: {
+			not_moving: require("assets/images/kid/NZ/options/chores/not_moving.webp"),
+			easy_effort: require("assets/images/kid/NZ/options/chores/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/kid/NZ/options/chores/medium_or_hard_effort.webp"),
+		},
+		teen: {
+			not_moving: require("assets/images/teen/NZ/options/chores/not_moving.webp"),
+			easy_effort: require("assets/images/teen/NZ/options/chores/easy_effort.webp"),
+			medium_or_hard_effort: require("assets/images/teen/NZ/options/chores/medium_or_hard_effort.webp"),
+		},
+	},
 	AE: {
 		kid: {
 			not_moving: require("assets/images/kid/AE/options/chores/not_moving.webp"),

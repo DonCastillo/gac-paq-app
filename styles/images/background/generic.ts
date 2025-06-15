@@ -11,6 +11,18 @@ const GenericBackground = {
 			participant_id: require("assets/images/generic/CA/tablet/participant_id.webp"),
 		},
 	},
+	NZ: {
+		phone: {
+			language_location: require("assets/images/generic/NZ/phone/language_location.webp"),
+			mode: require("assets/images/generic/NZ/phone/mode.webp"),
+			participant_id: require("assets/images/generic/NZ/phone/participant_id.webp"),
+		},
+		tablet: {
+			language_location: require("assets/images/generic/NZ/tablet/language_location.webp"),
+			mode: require("assets/images/generic/NZ/tablet/mode.webp"),
+			participant_id: require("assets/images/generic/NZ/tablet/participant_id.webp"),
+		},
+	},
 	CN: {
 		phone: {
 			language_location: require("assets/images/generic/CN/phone/language_location.webp"),
