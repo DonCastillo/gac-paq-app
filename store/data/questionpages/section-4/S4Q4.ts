@@ -481,6 +481,11 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
+					label: "शाळेची बस",
+					value: "School bus",
+					image_ident: "school_bus",
+				},
+				{
 					label: "सार्वजनिक वाहतूक",
 					value: "Public transit",
 					image_ident: "public_transit",
