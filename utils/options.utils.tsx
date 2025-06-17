@@ -9,13 +9,14 @@ import {
 	Numbered_Options,
 	Outdoors_1_Options,
 	School_4_Options,
-	School_7_Options,
+	// School_7_Options,
 	Transportation_1_Options,
 	Transportation_3_Options,
 	Transportation_4_Options,
 	Transportation_6_Options,
 	Transportation_9_11_Options,
 	Work_1_Options,
+	Work_2_Options,
 	Work_3_Options,
 } from "store/data/options/others";
 
@@ -174,10 +175,10 @@ const optionLetter = (index: number): string => {
 			return optionOthers(index, School_4_Options, language, mode, letters);
 		}
 
-		ident = ["school_7"];
-		if (ident.includes(currentPageIdent)) {
-			return optionOthers(index, School_7_Options, language, mode, letters);
-		}
+		// ident = ["school_7"];
+		// if (ident.includes(currentPageIdent)) {
+		// 	return optionOthers(index, School_7_Options, language, mode, letters);
+		// }
 
 		ident = ["household_1"];
 		if (ident.includes(currentPageIdent)) {
@@ -222,6 +223,11 @@ const optionLetter = (index: number): string => {
 		ident = ["work_1"];
 		if (ident.includes(currentPageIdent)) {
 			return optionOthers(index, Work_1_Options, language, mode, letters);
+		}
+
+		ident = ["work_2"];
+		if (ident.includes(currentPageIdent)) {
+			return optionOthers(index, Work_2_Options, language, mode, letters);
 		}
 
 		ident = ["work_3"];

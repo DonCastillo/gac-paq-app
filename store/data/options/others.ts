@@ -1,17 +1,17 @@
 // Q4
 const School_4_Options: Record<string, Record<string, string[]>> = {
 	"ma-IN": {
-		adult_options: ["पर्याय एक", "पर्याय दोन", "पर्याय तीन", "पर्याय चार", "पर्याय पाच"],
+		adult_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
 	},
 };
 
 // Q7
-const School_7_Options: Record<string, Record<string, string[]>> = {
-	"ma-IN": {
-		kid_options: ["च", "छ", "ज", "झ", "ञ", "ट", "ठ", "ड", "ढ", "ण"],
-		teen_options: ["च", "छ", "ज", "झ", "ञ", "ट", "ठ", "ड", "ढ", "ण"],
-	},
-};
+// const School_7_Options: Record<string, Record<string, string[]>> = {
+// 	"ma-IN": {
+// 		kid_options: ["च", "छ", "ज", "झ", "ञ", "ट", "ठ", "ड", "ढ", "ण"],
+// 		teen_options: ["च", "छ", "ज", "झ", "ञ", "ट", "ठ", "ड", "ढ", "ण"],
+// 	},
+// };
 
 // Q8
 const Household_1_Options: Record<string, Record<string, string[]>> = {
@@ -36,6 +36,13 @@ const Work_1_Options: Record<string, Record<string, string[]>> = {
 	},
 };
 
+// Q13
+const Work_2_Options: Record<string, Record<string, string[]>> = {
+	"ma-IN": {
+		adult_options: ["च", "छ", "ज", "झ", "ण"],
+	},
+};
+
 // Q14
 const Work_3_Options: Record<string, Record<string, string[]>> = {
 	"ma-IN": {
@@ -54,7 +61,7 @@ const Transportation_1_Options: Record<string, Record<string, string[]>> = {
 // Q15c
 const Transportation_3_Options: Record<string, Record<string, string[]>> = {
 	"ma-IN": {
-		adult_options: ["पर्याय एक", "पर्याय दोन", "पर्याय तीन", "पर्याय चार", "पर्याय पाच"],
+		adult_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
 	},
 };
 
@@ -68,16 +75,16 @@ const Transportation_4_Options: Record<string, Record<string, string[]>> = {
 // Q16c
 const Transportation_6_Options: Record<string, Record<string, string[]>> = {
 	"ma-IN": {
-		adult_options: ["पर्याय एक", "पर्याय दोन", "पर्याय तीन", "पर्याय चार", "पर्याय पाच"],
+		adult_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
 	},
 };
 
 // Q17c walk and wheel
 const Transportation_9_11_Options: Record<string, Record<string, string[]>> = {
 	"ma-IN": {
-		kid_options: ["पर्याय एक", "पर्याय दोन", "पर्याय तीन", "पर्याय चार", "पर्याय पाच"],
-		teen_options: ["पर्याय एक", "पर्याय दोन", "पर्याय तीन", "पर्याय चार", "पर्याय पाच"],
-		adult_options: ["पर्याय एक", "पर्याय दोन", "पर्याय तीन", "पर्याय चार", "पर्याय पाच"],
+		kid_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
+		teen_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
+		adult_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
 	},
 };
 
@@ -92,24 +99,13 @@ const Outdoors_1_Options: Record<string, Record<string, string[]>> = {
 // Q24-30
 const Numbered_Options: Record<string, Record<string, string[]>> = {
 	"ma-IN": {
-		adult_options: [
-			"पर्याय एक",
-			"पर्याय दोन",
-			"पर्याय तीन",
-			"पर्याय चार",
-			"पर्याय पाच",
-			"पर्याय सहा",
-			"पर्याय सात",
-			"पर्याय आठ",
-			"पर्याय नऊ",
-			"पर्याय दहा",
-		],
+		adult_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
 	},
 };
 
 export {
 	School_4_Options,
-	School_7_Options,
+	// School_7_Options,
 	Household_1_Options,
 	Household_4_Options,
 	Transportation_1_Options,
@@ -117,6 +113,7 @@ export {
 	Transportation_9_11_Options,
 	Outdoors_1_Options,
 	Work_1_Options,
+	Work_2_Options,
 	Work_3_Options,
 	Transportation_4_Options,
 	Transportation_6_Options,
