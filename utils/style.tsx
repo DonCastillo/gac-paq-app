@@ -557,7 +557,6 @@ const adjustQuestionTitle = (): any => {
 const adjustQuestionLabelKid = (): any => {
 	const { language, device } = store.getState().settings;
 	const { isTablet, screenWidth } = device;
-	console.log("question label: ", language);
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,

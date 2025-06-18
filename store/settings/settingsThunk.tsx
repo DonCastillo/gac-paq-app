@@ -15,6 +15,9 @@ export const getNarrationPayload = createAsyncThunk(
 		if (language === "en-NG") {
 			language = "en-MW";
 		}
+		if (language === "en-IN") {
+			language = "en-CA";
+		}
 
 		const finalMode = mode === Mode.Adult ? "adult" : "kid";
 		const { settings } = getState() as any;

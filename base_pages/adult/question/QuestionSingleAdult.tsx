@@ -85,7 +85,6 @@ const QuestionSingleAdult = (): React.ReactElement => {
 	const questionType = getQuestionType(translatedPage.type);
 
 	let questionComponent = <></>;
-	console.log("currentPage questionType", questionType);
 
 	// fetch response for this question
 	useEffect(() => {

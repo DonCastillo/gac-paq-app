@@ -45,6 +45,154 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "औसतन (सामान्यता), स्कूल-वाली रात में आपको कितने घंटे की नींद मिलती है?",
+			kid_label: "औसतन (सामान्यता), स्कूल-वाली रात में आपको कितने घंटे की नींद मिलती है?",
+			adult_label: "औसतन (सामान्यता), स्कूल-वाली रात में आपको कितने घंटे की नींद मिलती है?",
+			choices: [
+				{
+					label: "4 घंटे या उससे कम",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 घंटे",
+					value: "5 hours",
+				},
+				{
+					label: "6 घंटे",
+					value: "6 hours",
+				},
+				{
+					label: "7 घंटे",
+					value: "7 hours",
+				},
+				{
+					label: "8 घंटे",
+					value: "8 hours",
+				},
+				{
+					label: "9 घंटे",
+					value: "9 hours",
+				},
+				{
+					label: "10 या अधिक घंटे",
+					value: "10 or more hours",
+				},
+			],
+		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 30",
+			label: "On an average school night, how many hours of sleep do you get?",
+			kid_label: "On an average school night, how many hours of sleep do you get?",
+			adult_label: "On an average school night, how many hours of sleep do you get?",
+			choices: [
+				{
+					label: "4 or less hours",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 hours",
+					value: "5 hours",
+				},
+				{
+					label: "6 hours",
+					value: "6 hours",
+				},
+				{
+					label: "7 hours",
+					value: "7 hours",
+				},
+				{
+					label: "8 hours",
+					value: "8 hours",
+				},
+				{
+					label: "9 hours",
+					value: "9 hours",
+				},
+				{
+					label: "10 or more hours",
+					value: "10 or more hours",
+				},
+			],
+		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 30",
+			label: "I te pō kura noa, e hia ngā hāora ka moe koe?",
+			kid_label: "I te pō kura noa, e hia ngā hāora ka moe koe?",
+			adult_label: "I te pō kura noa, e hia ngā hāora ka moe koe?",
+			choices: [
+				{
+					label: "E 4 ngā hāora, iti iho rānei",
+					value: "4 or less hours",
+				},
+				{
+					label: "E 5 ngā hāora",
+					value: "5 hours",
+				},
+				{
+					label: "E 6 ngā hāora",
+					value: "6 hours",
+				},
+				{
+					label: "E 7 ngā hāora",
+					value: "7 hours",
+				},
+				{
+					label: "E 8 ngā hāora",
+					value: "8 hours",
+				},
+				{
+					label: "E 9 ngā hāora",
+					value: "9 hours",
+				},
+				{
+					label: "10, neke atu rānei ngā hāora",
+					value: "10 or more hours",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 30",
+			label: "Pa tsiku la sukulu, kodi usiku mumagona maola angati?",
+			kid_label: "Pa tsiku la sukulu, kodi usiku mumagona maola angati?",
+			adult_label: "Pa tsiku la sukulu, kodi usiku mumagona maola angati?",
+			choices: [
+				{
+					label: "Maola 4 kapena osakwana",
+					value: "4 or less hours",
+				},
+				{
+					label: "Maola 5",
+					value: "5 hours",
+				},
+				{
+					label: "Maola 6",
+					value: "6 hours",
+				},
+				{
+					label: "Maola 7",
+					value: "7 hours",
+				},
+				{
+					label: "Maola 8",
+					value: "8 hours",
+				},
+				{
+					label: "Maola 9",
+					value: "9 hours",
+				},
+				{
+					label: "Maola 10 kapena kuposa",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",

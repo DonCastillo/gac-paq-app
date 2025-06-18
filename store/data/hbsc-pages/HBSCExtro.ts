@@ -10,6 +10,22 @@ const HBSCExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"hi-IN": {
+			heading: "भाग पूर्ण",
+			subheading: "",
+		},
+		"en-IN": {
+			heading: "Section Complete!",
+			subheading: "",
+		},
+		"mi-NZ": {
+			heading: "Kua tutuki tēnei wāhanga!",
+			subheading: "",
+		},
+		"ch-MW": {
+			heading: "Gawo latha",
+			subheading: "",
+		},
 		"ne-NP": {
 			heading: "यो खण्ड सकियो!",
 			subheading: "",

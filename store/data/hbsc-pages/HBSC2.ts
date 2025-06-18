@@ -52,6 +52,182 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न 26",
+			label:
+				"स्कूल के घंटों के बाहरः आप आमतौर पर अपने खाली समय में कितनी बार व्यायाम करते हैं जिसके द्वारा आपकी सांसें फूल जाती हैं या पसीने छूट जाते हैं?",
+			kid_label:
+				"स्कूल के घंटों के बाहरः आप आमतौर पर अपने खाली समय में कितनी बार व्यायाम करते हैं जिसके द्वारा आपकी सांसें फूल जाती हैं या पसीने छूट जाते हैं?",
+			adult_label:
+				"स्कूल के घंटों के बाहरः आप आमतौर पर अपने खाली समय में कितनी बार व्यायाम करते हैं जिसके द्वारा आपकी सांसें फूल जाती हैं या पसीने छूट जाते हैं?",
+			choices: [
+				{
+					label: "रोज़",
+					value: "Every day",
+				},
+				{
+					label: "सप्ताह में 4 से 6 बार",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "सप्ताह में 3 बार",
+					value: "3 times a week",
+				},
+				{
+					label: "सप्ताह में 2 बार",
+					value: "2 times a week",
+				},
+				{
+					label: "सप्ताह में एक बार",
+					value: "Once a week",
+				},
+				{
+					label: "महीने में एक बार",
+					value: "Once a month",
+				},
+				{
+					label: "महीने में एक बार से कम",
+					value: "Less than once a month",
+				},
+				{
+					label: "कभी नहीं",
+					value: "Never",
+				},
+			],
+		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 26",
+			label:
+				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			kid_label:
+				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			adult_label:
+				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			choices: [
+				{
+					label: "Every day",
+					value: "Every day",
+				},
+				{
+					label: "4 to 6 times a week",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 times a week",
+					value: "3 times a week",
+				},
+				{
+					label: "2 times a week",
+					value: "2 times a week",
+				},
+				{
+					label: "Once a week",
+					value: "Once a week",
+				},
+				{
+					label: "Once a month",
+					value: "Once a month",
+				},
+				{
+					label: "Less than once a month",
+					value: "Less than once a month",
+				},
+				{
+					label: "Never",
+					value: "Never",
+				},
+			],
+		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 26",
+			label:
+				"I waho i ngā hāora ā-kura: i te nuinga o te wā he aha te auau ka kori tinana koe i tō wā wātea kia pau tō hau, kia heke tōtā rānei koe?",
+			kid_label:
+				"I waho i ngā hāora ā-kura: i te nuinga o te wā he aha te auau ka kori tinana koe i tō wā wātea kia pau tō hau, kia heke tōtā rānei koe?",
+			adult_label:
+				"I waho i ngā hāora ā-kura: i te nuinga o te wā he aha te auau ka kori tinana koe i tō wā wātea kia pau tō hau, kia heke tōtā rānei koe?",
+			choices: [
+				{
+					label: "Ia rā",
+					value: "Every day",
+				},
+				{
+					label: "E 4 ki te 6 ngā wā i te wiki",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "E 3 ngā wā i te wiki",
+					value: "3 times a week",
+				},
+				{
+					label: "E 2 ngā wā i te wiki",
+					value: "2 times a week",
+				},
+				{
+					label: "Kotahi te wā i te wiki",
+					value: "Once a week",
+				},
+				{
+					label: "Kotahi te wā i te marama",
+					value: "Once a month",
+				},
+				{
+					label: "He iti iho i te kotahi wā i te marama ",
+					value: "Less than once a month",
+				},
+				{
+					label: "Kore rawa",
+					value: "Never",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 26",
+			label:
+				"Pa nthawi yomwe siyasukulu, ndi kangati pomwe mumapeza mpata ochita masewera olimbitsa thupi mpaka kumapuma mwamphuma kapena kutuluka thukuta?",
+			kid_label:
+				"Pa nthawi yomwe siyasukulu, ndi kangati pomwe mumapeza mpata ochita masewera olimbitsa thupi mpaka kumapuma mwamphuma kapena kutuluka thukuta?",
+			adult_label:
+				"Pa nthawi yomwe siyasukulu, ndi kangati pomwe mumapeza mpata ochita masewera olimbitsa thupi mpaka kumapuma mwamphuma kapena kutuluka thukuta?",
+			choices: [
+				{
+					label: "Tsiku lililonse",
+					value: "Every day",
+				},
+				{
+					label: "Ka 4 mpaka ka 6 pa sabata",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "Katatu pa sabata",
+					value: "3 times a week",
+				},
+				{
+					label: "Kawiri pa sabata",
+					value: "2 times a week",
+				},
+				{
+					label: "Kamodzi pa Sabata",
+					value: "Once a week",
+				},
+				{
+					label: "Kamodzi pamwezi",
+					value: "Once a month",
+				},
+				{
+					label: "Kochepera kamodzi pamwezi",
+					value: "Less than once a month",
+				},
+				{
+					label: "Simupanga masewera olimbitsa thupi",
+					value: "Never",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २६",

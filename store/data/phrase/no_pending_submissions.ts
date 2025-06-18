@@ -4,6 +4,9 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "No pending submissions",
 	},
+	"en-IN": {
+		label: "No pending submissions",
+	},
 	"mi-NZ": {
 		label: "Kāore he tukunga kei te tatari",
 	},
@@ -41,7 +44,7 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "لا توجد تقديمات معلقة",
 	},
 	"ne-NP": {
-		label: "कुनै बक्यौता पेशहरू छैनन्",
+		label: "बुझाउनु पर्ने केहि बाँकी छैन",
 	},
 	"pt-BR": {
 		label: "Nenhuma submissão pendente",

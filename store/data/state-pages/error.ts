@@ -11,6 +11,10 @@ const ErrorPage: LangPagePayloadInterface = {
 			heading: "Error",
 			description: "There is a problem submitting your response.\n\nPlease try again.",
 		},
+		"en-IN": {
+			heading: "Error",
+			description: "There is a problem submitting your response.\n\nPlease try again.",
+		},
 		"mi-NZ": {
 			heading: "I puta he hapa",
 			description: "He raru kei te tukuna i tāu whakautu.\n\nMe ngana ano.",

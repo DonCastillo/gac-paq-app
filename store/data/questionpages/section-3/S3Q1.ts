@@ -27,6 +27,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 12",
+			label: "In the past week, did you volunteer or work?",
+			kid_label: "In the past week, did you volunteer or work?",
+			adult_label: "In the past week, did your child volunteer or work?",
+			choices: [
+				{
+					label: "Yes",
+					value: "yes",
+				},
+				{
+					label: "No",
+					value: "no",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 12",

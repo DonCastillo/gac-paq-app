@@ -4,6 +4,9 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Nothing to submit",
 	},
+	"en-IN": {
+		label: "Nothing to submit",
+	},
 	"mi-NZ": {
 		label: "Kāore he mea hei tuku",
 	},
@@ -14,10 +17,10 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 		label: "Není co odeslat",
 	},
 	"es-CO": {
-		label: "Nada que enviar",
+		label: "No hay nada para enviar",
 	},
 	"es-CL": {
-		label: "Nada que enviar",
+		label: "No hay nada para enviar",
 	},
 	"en-MW": {
 		label: "Nothing to submit",
@@ -41,10 +44,10 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 		label: "لا يوجد ما يمكن تقديمه",
 	},
 	"ne-NP": {
-		label: "पेश गर्न केही छैन",
+		label: "बुझाउनु पर्ने केहि छैन",
 	},
 	"pt-BR": {
-		label: "Nada para enviar",
+		label: "Nada a enviar",
 	},
 	"sv-SE": {
 		label: "Ingenting att skicka in",
@@ -56,10 +59,10 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 		label: "没有可提交的内容",
 	},
 	"es-MX": {
-		label: "Nada que enviar",
+		label: "No hay nada para enviar",
 	},
 	"es-ES": {
-		label: "Nada que enviar",
+		label: "No hay nada para enviar",
 	},
 	"fr-CA": {
 		label: "Rien à soumettre",

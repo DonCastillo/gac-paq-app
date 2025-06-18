@@ -10,6 +10,10 @@ const S5Intro: LangSectionPayloadInterface = {
 			heading: "Organized Activities",
 			subheading: "Section 5",
 		},
+		"en-IN": {
+			heading: "Organized Activities",
+			subheading: "Section 5",
+		},
 		"mi-NZ": {
 			heading: "Ngā ngohe kua whakaritea",
 			subheading: "Wāhanga 5",

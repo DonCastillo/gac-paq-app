@@ -44,6 +44,150 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २९",
+			label:
+				"आप एक विशिष्ट या सामान्य दिन में बैठने, टेलीविजन देखने, कंप्यूटर गेम खेलने, दोस्तों के साथ बात करने, अपने मोबाइल फोन का उपयोग करने या बैठे हुए की अन्य गतिविधियों  के दौरान कितना समय बिताते हैं?",
+			kid_label:
+				"आप एक विशिष्ट या सामान्य दिन में बैठने, टेलीविजन देखने, कंप्यूटर गेम खेलने, दोस्तों के साथ बात करने, अपने मोबाइल फोन का उपयोग करने या बैठे हुए की अन्य गतिविधियों  के दौरान कितना समय बिताते हैं?",
+			adult_label:
+				"आप एक विशिष्ट या सामान्य दिन में बैठने, टेलीविजन देखने, कंप्यूटर गेम खेलने, दोस्तों के साथ बात करने, अपने मोबाइल फोन का उपयोग करने या बैठे हुए की अन्य गतिविधियों  के दौरान कितना समय बिताते हैं?",
+			choices: [
+				{
+					label: "प्रति दिन 1 घंटे से कम",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "प्रति दिन 1 से 2 घंटे",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "प्रतिदिन 3 से 4 घंटे",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "प्रतिदिन 5 से 6 घंटे",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "प्रतिदिन 7 से 8 घंटे",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "प्रति दिन 8 घंटे से अधिक",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 29",
+			label:
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as video games and reading?",
+			kid_label:
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as video games and reading?",
+			adult_label:
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as video games and reading?",
+			choices: [
+				{
+					label: "Less than 1 hour per day",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 to 2 hours per day",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3 to 4 hours per day",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "5 to 6 hours per day",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "7 to 8 hours per day",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "More than 8 hours per day",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 29",
+			label:
+				"E hia te wā ka whakapau koe i te rangi noa e noho ana me te mātakitaki pouaka whakaata, te tākaro kēmu rorohiko, te kōrero ki ngā hoa, te whakamahi i tō waea pūkoro, te mahi i ētahi atu mahi ā-noho rānei?",
+			kid_label:
+				"E hia te wā ka whakapau koe i te rangi noa e noho ana me te mātakitaki pouaka whakaata, te tākaro kēmu rorohiko, te kōrero ki ngā hoa, te whakamahi i tō waea pūkoro, te mahi i ētahi atu mahi ā-noho rānei?",
+			adult_label:
+				"E hia te wā ka whakapau koe i te rangi noa e noho ana me te mātakitaki pouaka whakaata, te tākaro kēmu rorohiko, te kōrero ki ngā hoa, te whakamahi i tō waea pūkoro, te mahi i ētahi atu mahi ā-noho rānei?",
+			choices: [
+				{
+					label: "He iti iho i te 1 hāora i ia rā",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 ki te 2 ngā hāora i ia rā",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "E 3 ki te 4 ngā hāora i ia rā",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "E 5 ki te 6 ngā hāora i ia rā",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "E 7 ki te 8 ngā hāora i ia rā",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Neke atu i te 8 hāora i ia rā",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 29",
+			label:
+				"Kodi ndi nthawi yochuluka bwanji pa tsiku lililonse yomwe mumangokhala ndi kumaonera TV, kusewera magemu apakompyuta, kucheza ndi anzanu, kugwiritsa ntchito foni, kapena kuchita zinthu zina mutangokhala malo amodzi ngat kusewera bawo kapena draft?",
+			kid_label:
+				"Kodi ndi nthawi yochuluka bwanji pa tsiku lililonse yomwe mumangokhala ndi kumaonera TV, kusewera magemu apakompyuta, kucheza ndi anzanu, kugwiritsa ntchito foni, kapena kuchita zinthu zina mutangokhala malo amodzi ngat kusewera bawo kapena draft?",
+			adult_label:
+				"Kodi ndi nthawi yochuluka bwanji pa tsiku lililonse yomwe mumangokhala ndi kumaonera TV, kusewera magemu apakompyuta, kucheza ndi anzanu, kugwiritsa ntchito foni, kapena kuchita zinthu zina mutangokhala malo amodzi ngat kusewera bawo kapena draft?",
+			choices: [
+				{
+					label: "Osafika ola limodzi patsiku",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "Ola limodzi mpaka maola awiri patsiku",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "Maola atatu mpaka 4 patsiku",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "Maola 5 mpaka maola 6 patsiku",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "Maola 7 mpaka maola 8 patsiku",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Kuposera maola 8 patsiku",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २९",
@@ -300,11 +444,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
 			label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities?",
 			kid_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities?",
 			adult_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities?",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
@@ -336,11 +480,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
 			label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as playing bawo or draft?",
 			kid_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as playing bawo or draft?",
 			adult_label:
-				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?",
+				"How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, using your mobile phone, or doing other sitting activities, such as playing bawo or draft?",
 			choices: [
 				{
 					label: "Less than 1 hour per day",

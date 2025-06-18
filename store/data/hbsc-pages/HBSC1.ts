@@ -54,6 +54,192 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २५",
+			label:
+				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			kid_label:
+				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			adult_label:
+				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			kid_sublabel: "कृपया हर दिन के शारीरिक गतिविधि में बिताए गए सभी समय को जोड़ें।",
+			adult_sublabel: "कृपया हर दिन के शारीरिक गतिविधि में बिताए गए सभी समय को जोड़ें।",
+			choices: [
+				{
+					label: "0 दिन",
+					value: "0",
+				},
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 25",
+			label:
+				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label:
+				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label:
+				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_sublabel: "Please add up all the time you spent in physical activity each day.",
+			adult_sublabel: "Please add up all the time you spent in physical activity each day.",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 25",
+			label:
+				"I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
+			kid_label:
+				"I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
+			adult_label:
+				"I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
+			kid_sublabel: "Tatauhia te katoa o te wā e kori tinana ana koe ia te rā.",
+			adult_sublabel: "Tatauhia te katoa o te wā e kori tinana ana koe ia te rā.",
+			choices: [
+				{
+					label: "O ngā rā",
+					value: "0",
+				},
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā",
+					value: "5",
+				},
+				{
+					label: "E 6 ngā rā",
+					value: "6",
+				},
+				{
+					label: "E 7 ngā rā",
+					value: "7",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 25",
+			label:
+				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			kid_label:
+				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			adult_label:
+				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			kid_sublabel:
+				"Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
+			adult_sublabel:
+				"Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
+			choices: [
+				{
+					label: "Simunapangepo zochita zolimbitsa thupi",
+					value: "0",
+				},
+				{
+					label: "Tsiku Limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २५",

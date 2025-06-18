@@ -55,6 +55,51 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionRadioImage,
+			heading: "Question 16",
+			label: "How did you go to work in the past week?",
+			kid_label: "How did you go to work in the past week?",
+			adult_label: "How did your child go to work in the past week?",
+			kid_sublabel: "Select the mode that you used the most.",
+			adult_sublabel: "Select the mode that your child used the most.",
+			choices: [
+				{
+					label: "Walking",
+					value: "Walking",
+					image_ident: "walking",
+				},
+				{
+					label: "Wheeling",
+					value: "Wheeling",
+					image_ident: "wheeling",
+					sublabel: {
+						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult:
+							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+					},
+				},
+				{
+					label: "Public transit",
+					value: "Public transit",
+					image_ident: "public_transit",
+					sublabel: {
+						kid: "example: bus, train, tramway, subway, boat",
+						adult: "example: bus, train, tramway, subway, boat",
+					},
+				},
+				{
+					label: "Car, taxi, truck, or motorcycle",
+					value: "Car, taxi, truck, or motorcycle",
+					image_ident: "car",
+				},
+				{
+					label: "Other, which one?",
+					value: "Other",
+					image_ident: "other",
+				},
+			],
+		},
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 16",
@@ -434,6 +479,11 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 						kid: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
 						adult: "उदा. चाकांची खुर्ची, सायकल, स्केटबोर्ड, ढकलायची स्कूटर, रोलरब्लेड इ.",
 					},
+				},
+				{
+					label: "शाळेची बस",
+					value: "School bus",
+					image_ident: "school_bus",
 				},
 				{
 					label: "सार्वजनिक वाहतूक",
