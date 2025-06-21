@@ -52,6 +52,182 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न 26",
+			label:
+				"पिछले 7 दिनों के दौरान, आपने कितने दिनों में अपनी मांसपेशियों को मजबूत करने या टोन करने के लिए व्यायाम किया, जैसे पुश-अप, उठक-बैठक या भार उठाना ?",
+			kid_label:
+				"पिछले 7 दिनों के दौरान, आपने कितने दिनों में अपनी मांसपेशियों को मजबूत करने या टोन करने के लिए व्यायाम किया, जैसे पुश-अप, उठक-बैठक या भार उठाना ?",
+			adult_label:
+				"पिछले 7 दिनों के दौरान, आपने कितने दिनों में अपनी मांसपेशियों को मजबूत करने या टोन करने के लिए व्यायाम किया, जैसे पुश-अप, उठक-बैठक या भार उठाना ?",
+			choices: [
+				{
+					label: "0 दिन",
+					value: "0",
+				},
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 दिन",
+					value: "5",
+				},
+				{
+					label: "6 दिन",
+					value: "6",
+				},
+				{
+					label: "7 दिन",
+					value: "7",
+				},
+			],
+		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 26",
+			label:
+				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+			kid_label:
+				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+			adult_label:
+				"During the past 7 days, on how many days did you do exercises to strengthen or tone your muscles, such as push-ups, sit-ups, or weightlifting?",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 days",
+					value: "5",
+				},
+				{
+					label: "6 days",
+					value: "6",
+				},
+				{
+					label: "7 days",
+					value: "7",
+				},
+			],
+		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 26",
+			label:
+				"I roto i ngā rā e 7 kua pahure ake nei, e hia ngā rā i mahi whakapūoioi koe hei whakapakari, hei whakamārohirohi rānei i ō uaua, pērā i ngā pana ake, i ngā nohotū, i te hiki taimaha rānei?",
+			kid_label:
+				"I roto i ngā rā e 7 kua pahure ake nei, e hia ngā rā i mahi whakapūoioi koe hei whakapakari, hei whakamārohirohi rānei i ō uaua, pērā i ngā pana ake, i ngā nohotū, i te hiki taimaha rānei?",
+			adult_label:
+				"I roto i ngā rā e 7 kua pahure ake nei, e hia ngā rā i mahi whakapūoioi koe hei whakapakari, hei whakamārohirohi rānei i ō uaua, pērā i ngā pana ake, i ngā nohotū, i te hiki taimaha rānei?",
+			choices: [
+				{
+					label: "O ngā rā",
+					value: "0",
+				},
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā",
+					value: "5",
+				},
+				{
+					label: "E 6 ngā rā",
+					value: "6",
+				},
+				{
+					label: "E 7 ngā rā",
+					value: "7",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 26",
+			label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munachita masewero olimbitsa thupi kuti mulimbitse minofu ya thupi lanu, monga kupanga ma push-up, ndi kunyamula ma weti kapena zitsulo?",
+			kid_label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munachita masewero olimbitsa thupi kuti mulimbitse minofu ya thupi lanu, monga kupanga ma push-up, ndi kunyamula ma weti kapena zitsulo?",
+			adult_label:
+				"M'masiku 7 apitawa, ndi masiku angati omwe munachita masewero olimbitsa thupi kuti mulimbitse minofu ya thupi lanu, monga kupanga ma push-up, ndi kunyamula ma weti kapena zitsulo?",
+			choices: [
+				{
+					label: "Simunapangeko masewerowa",
+					value: "0",
+				},
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5",
+					value: "5",
+				},
+				{
+					label: "Masiku 6",
+					value: "6",
+				},
+				{
+					label: "Masiku 7",
+					value: "7",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २६",

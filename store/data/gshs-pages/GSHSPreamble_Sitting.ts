@@ -15,6 +15,42 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"hi-IN": {
+			heading: "बैठना",
+			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "अगला प्रश्न उस समय के बारे में पूछता है जब आप स्कूल में नहीं होते हैं या गृहकार्य नहीं कर रहे होते लेकिन आप ज्यादातर समय बैठे बिताते हैं।",
+				adult:
+					"अगला प्रश्न उस समय के बारे में पूछता है जब आप स्कूल में नहीं होते हैं या गृहकार्य नहीं कर रहे होते लेकिन आप ज्यादातर समय बैठे बिताते हैं।",
+			},
+		},
+		"en-IN": {
+			heading: "Sitting",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				adult:
+					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+			},
+		},
+		"mi-NZ": {
+			heading: "Noho",
+			subheading: "Te Rangahau Hauora Ākonga o te Ao i ngā Kura",
+			description: {
+				kid: "Ka ui te pātai e whai ake nei mō te roa o te wā e mātua noho ana koe ina kāore koe i te kura, i te whakaoti mahi kāinga rānei.",
+				adult:
+					"Ka ui te pātai e whai ake nei mō te roa o te wā e mātua noho ana koe ina kāore koe i te kura, i te whakaoti mahi kāinga rānei.",
+			},
+		},
+		"ch-MW": {
+			heading: "Kukhala Pansi",
+			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
+			description: {
+				kid: "Funso lotsatirali likufunsa za nthawi yomwe nthawi zambiri mumangokhala malo amodzi koma osati kusukulu kapena pamene mukuchita homuweki.",
+				adult:
+					"Funso lotsatirali likufunsa za nthawi yomwe nthawi zambiri mumangokhala malo amodzi koma osati kusukulu kapena pamene mukuchita homuweki.",
+			},
+		},
 		"ne-NP": {
 			heading: "बसेको",
 			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",

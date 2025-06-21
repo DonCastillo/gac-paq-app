@@ -4,6 +4,9 @@ const PendingSubmissionsPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Pending Submissions",
 	},
+	"en-IN": {
+		label: "Pending Submissions",
+	},
 	"mi-NZ": {
 		label: "Ngā Tukunga e Tatari Ana",
 	},
@@ -41,10 +44,10 @@ const PendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "الإرسالات المعلقة",
 	},
 	"ne-NP": {
-		label: "लंबित पेशहरू",
+		label: "बुझाउन बाँकी छ",
 	},
 	"pt-BR": {
-		label: "Envios Pendentes",
+		label: "Submissões pendentes",
 	},
 	"sv-SE": {
 		label: "Väntande inlämningar",

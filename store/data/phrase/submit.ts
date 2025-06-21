@@ -4,6 +4,9 @@ const SubmitPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Submit",
 	},
+	"en-IN": {
+		label: "Submit",
+	},
 	"mi-NZ": {
 		label: "Tukuna",
 	},
@@ -41,7 +44,7 @@ const SubmitPhrase: LangPhraseInterface = {
 		label: "إرسال",
 	},
 	"ne-NP": {
-		label: "पेश गर्नुहोस्",
+		label: "बुझाउनुहोस्",
 	},
 	"pt-BR": {
 		label: "Enviar",

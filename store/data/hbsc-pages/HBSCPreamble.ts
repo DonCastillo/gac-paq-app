@@ -15,6 +15,42 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"hi-IN": {
+			heading: "स्कूल जाने वाली आयु के बच्चों में स्वास्थ्य व्यवहार",
+			subheading: "",
+			description: {
+				kid: "शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और कभी-कभी आपकी सांसें फूल जाती हैं । शारीरिक गतिविधि खेल, स्कूल की गतिविधियों, दोस्तों के साथ खेलने या स्कूल जाने में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, रोलरब्लैडिंग, साइकिल चलाना, नृत्य, स्केटबोर्डिंग, तैराकी, सॉकर, बास्केटबॉल, फुटबॉल, खोखो, कबड्डी, हॉकी, इत्यादि ।",
+				adult:
+					"शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और कभी-कभी आपकी सांसें फूल जाती हैं । शारीरिक गतिविधि खेल, स्कूल की गतिविधियों, दोस्तों के साथ खेलने या स्कूल जाने में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, रोलरब्लैडिंग, साइकिल चलाना, नृत्य, स्केटबोर्डिंग, तैराकी, सॉकर, बास्केटबॉल, फुटबॉल, खोखो, कबड्डी, हॉकी, इत्यादि ।",
+			},
+		},
+		"en-IN": {
+			heading: "Health Behaviour in School-aged Children",
+			subheading: "",
+			description: {
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+				adult:
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+			},
+		},
+		"mi-NZ": {
+			heading: "Ngā Āhua Hauora o Ngā Tamariki Kura",
+			subheading: "",
+			description: {
+				kid: "Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka pau tō hau i ētahi wā. Ka whakamahia te kori tinana pea i ngā hākinakina, i ngā mahi ā-kura, i te tākaro ki ngā hoa, i te hīkoi ki te kura rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke koneke, ko te eke pahikara, ko te kanikani, ko te eke papawīra, ko te kaukau, ko te poikiri, ko te poitūkohu, ko te eke ngaru, ko te whutupōro, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke kutarere, ko te haere ki te whare whakapakari tinana hoki.",
+				adult:
+					"Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka pau tō hau i ētahi wā. Ka whakamahia te kori tinana pea i ngā hākinakina, i ngā mahi ā-kura, i te tākaro ki ngā hoa, i te hīkoi ki te kura rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke koneke, ko te eke pahikara, ko te kanikani, ko te eke papawīra, ko te kaukau, ko te poikiri, ko te poitūkohu, ko te eke ngaru, ko te whutupōro, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke kutarere, ko te haere ki te whare whakapakari tinana hoki.",
+			},
+		},
+		"ch-MW": {
+			heading: "Makhalidwe a Zaumoyo mwa Ana a Sukulu",
+			subheading: "",
+			description: {
+				kid: "Zochita zolimbitsa thupi ndi zochita zomwe zimapangitsa kuti mtima wanu kuti uzigunda kwambiri komanso kuti muzipuma mwaphuma. Zochita zolimbitsa thupi zimatha kuchitidwa pamasewera ngati mpira, zochitika za kusukulu, kusewera ndi anzanu, kapena kuyenda popita kusukulu. Zitsanzo zina za zochita zolimbitsa thupi ndi kuthamanga, kuyenda mofulumira, kupalasa njinga, kuvina, kusambira, kusewera mpira, kudumphadumpha ndi zina.",
+				adult:
+					"Zochita zolimbitsa thupi ndi zochita zomwe zimapangitsa kuti mtima wanu kuti uzigunda kwambiri komanso kuti muzipuma mwaphuma. Zochita zolimbitsa thupi zimatha kuchitidwa pamasewera ngati mpira, zochitika za kusukulu, kusewera ndi anzanu, kapena kuyenda popita kusukulu. Zitsanzo zina za zochita zolimbitsa thupi ndi kuthamanga, kuyenda mofulumira, kupalasa njinga, kuvina, kusambira, kusewera mpira, kudumphadumpha ndi zina.",
+			},
+		},
 		"ne-NP": {
 			heading: "पढाइ उमेरका बालबालिकामा स्वास्थ्य व्यवहार",
 			subheading: "",
@@ -82,18 +118,18 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, surfing, playing tag, kilikiti, kapa haka, scootering, and going to the gym.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, surfing, playing tag, kilikiti, kapa haka, scootering, and going to the gym.",
 			},
 		},
 		"en-MW": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 			description: {
-				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+				kid: "Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, biking, dancing, skateboarding, swimming, soccer, basketball, football, netball, volley ball, & surfing.",
 				adult:
-					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
+					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, biking, dancing, skateboarding, swimming, soccer, basketball, football, netball, volley ball, & surfing.",
 			},
 		},
 		"en-NG": {

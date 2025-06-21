@@ -10,6 +10,22 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 		},
+		"hi-IN": {
+			heading: "स्कूल जाने वाली आयु के बच्चों में स्वास्थ्य व्यवहार",
+			subheading: "",
+		},
+		"en-IN": {
+			heading: "Health Behaviour in School-aged Children",
+			subheading: "",
+		},
+		"mi-NZ": {
+			heading: "Ngā Āhua Hauora o Ngā Tamariki Kura",
+			subheading: "",
+		},
+		"ch-MW": {
+			heading: "Makhalidwe a Zaumoyo mwa Ana a Sukulu",
+			subheading: "",
+		},
 		"ne-NP": {
 			heading: "पढाइ उमेरका बालबालिकामा स्वास्थ्य व्यवहार",
 			subheading: "",

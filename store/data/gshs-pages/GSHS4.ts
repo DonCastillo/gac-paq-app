@@ -44,6 +44,150 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"hi-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label:
+				"इस स्कूल वर्ष के दौरान, आप प्रत्येक सप्ताह कितने दिनों में शारीरिक व्यायाम शिक्षा (पीई) कक्षा में जाते थे?",
+			kid_label:
+				"इस स्कूल वर्ष के दौरान, आप प्रत्येक सप्ताह कितने दिनों में शारीरिक व्यायाम शिक्षा (पीई) कक्षा में जाते थे?",
+			adult_label:
+				"इस स्कूल वर्ष के दौरान, आप प्रत्येक सप्ताह कितने दिनों में शारीरिक व्यायाम शिक्षा (पीई) कक्षा में जाते थे?",
+			choices: [
+				{
+					label: "0 दिन",
+					value: "0",
+				},
+				{
+					label: "1 दिन",
+					value: "1",
+				},
+				{
+					label: "2 दिन",
+					value: "2",
+				},
+				{
+					label: "3 दिन",
+					value: "3",
+				},
+				{
+					label: "4 दिन",
+					value: "4",
+				},
+				{
+					label: "5 या अधिक दिन",
+					value: ">=5",
+				},
+			],
+		},
+		"en-IN": {
+			type: Question.QuestionRadio,
+			heading: "Question 28",
+			label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			kid_label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			adult_label:
+				"During this school year, on how many days did you go to physical education (PE) class each week?",
+			choices: [
+				{
+					label: "0 days",
+					value: "0",
+				},
+				{
+					label: "1 day",
+					value: "1",
+				},
+				{
+					label: "2 days",
+					value: "2",
+				},
+				{
+					label: "3 days",
+					value: "3",
+				},
+				{
+					label: "4 days",
+					value: "4",
+				},
+				{
+					label: "5 or more days",
+					value: ">=5",
+				},
+			],
+		},
+		"mi-NZ": {
+			type: Question.QuestionRadio,
+			heading: "Wāhanga 28",
+			label:
+				"I roto i tēnei tau kura, e hia ngā rā i tae atu koe ki te akomanga koiri (PE) i ia wiki?",
+			kid_label:
+				"I roto i tēnei tau kura, e hia ngā rā i tae atu koe ki te akomanga koiri (PE) i ia wiki?",
+			adult_label:
+				"I roto i tēnei tau kura, e hia ngā rā i tae atu koe ki te akomanga koiri (PE) i ia wiki?",
+			choices: [
+				{
+					label: "O ngā rā",
+					value: "0",
+				},
+				{
+					label: "1 te rā",
+					value: "1",
+				},
+				{
+					label: "E 2 ngā rā",
+					value: "2",
+				},
+				{
+					label: "E 3 ngā rā",
+					value: "3",
+				},
+				{
+					label: "E 4 ngā rā",
+					value: "4",
+				},
+				{
+					label: "E 5 ngā rā, neke atu rānei",
+					value: ">=5",
+				},
+			],
+		},
+		"ch-MW": {
+			type: Question.QuestionRadio,
+			heading: "Funso 28",
+			label:
+				"M'chaka chino cha sukulu, ndi masiku angati omwe mumaphunzira maphunziro olimbitsa thupi (P.E.) pa sabata iliyonse?",
+			kid_label:
+				"M'chaka chino cha sukulu, ndi masiku angati omwe mumaphunzira maphunziro olimbitsa thupi (P.E.) pa sabata iliyonse?",
+			adult_label:
+				"M'chaka chino cha sukulu, ndi masiku angati omwe mumaphunzira maphunziro olimbitsa thupi (P.E.) pa sabata iliyonse?",
+			choices: [
+				{
+					label: "Simunaphunzireko maphunzirowa",
+					value: "0",
+				},
+				{
+					label: "Tsiku limodzi",
+					value: "1",
+				},
+				{
+					label: "Masiku awiri",
+					value: "2",
+				},
+				{
+					label: "Masiku atatu",
+					value: "3",
+				},
+				{
+					label: "Masiku 4",
+					value: "4",
+				},
+				{
+					label: "Masiku 5 kapena kuposa",
+					value: ">=5",
+				},
+			],
+		},
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २८",

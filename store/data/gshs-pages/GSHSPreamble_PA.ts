@@ -15,6 +15,42 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"hi-IN": {
+			heading: "शारीरिक गतिविधि",
+			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "अगले 4 प्रश्न शारीरिक गतिविधियों के बारे में पूछते हैं। शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और आपको सांस लेने में कठिनाई पैदा करती है। शारीरिक क्रियाकलाप खेल में, दोस्तों के साथ खेलने, स्कूल जाने या शारीरिक व्यायाम शिक्षा के कक्षा में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, साइकिल चलाना, नृत्य करना, फुटबॉल, खोखो, कबड्डी, हॉकी, मल्लक्का इत्यादि ।",
+				adult:
+					"अगले 4 प्रश्न शारीरिक गतिविधियों के बारे में पूछते हैं। शारीरिक गतिविधि कोई भी ऐसी गतिविधि है जो आपके हृदय गति को बढ़ाती है और आपको सांस लेने में कठिनाई पैदा करती है। शारीरिक क्रियाकलाप खेल में, दोस्तों के साथ खेलने, स्कूल जाने या शारीरिक व्यायाम शिक्षा के कक्षा में की जा सकती है। शारीरिक गतिविधि के कुछ उदाहरण हैं दौड़ना, तेज चलना, साइकिल चलाना, नृत्य करना, फुटबॉल, खोखो, कबड्डी, हॉकी, मल्लक्का इत्यादि ।",
+			},
+		},
+		"en-IN": {
+			heading: "Physical Activity",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
+				adult:
+					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
+			},
+		},
+		"mi-NZ": {
+			heading: "Ngā Ngohe Tinana",
+			subheading: "Te Rangahau Hauora Ākonga o te Ao i ngā Kura",
+			description: {
+				kid: "Mō te mahi kori tinana ngā pātai e 4 e whai ake nei. Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka kaha tō hēhē. Ka whakamahia te kori tinana pea i ngā hākinakina, i te tākaro ki ngā hoa, i te hīkoi ki te kura, i te akomanga koiri rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke pahikara, ko te kanikani, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke papawīra, ko te eke kutarere, ko te kaukau, ko te haere ki te whare whakapakari tinana hoki.",
+				adult:
+					"Mō te mahi kori tinana ngā pātai e 4 e whai ake nei. Ko te kori tinana ko tētahi mahi ka whakapiki ai i tō pāpātanga manawa, ā, ka kaha tō hēhē. Ka whakamahia te kori tinana pea i ngā hākinakina, i te tākaro ki ngā hoa, i te hīkoi ki te kura, i te akomanga koiri rānei. Ko ētahi tauira o te kori tinana ko te omaoma, ko te hīkoi tere, ko te eke pahikara, ko te kanikani, ko te tākaro pā, ko te kilikiti, ko te kapa haka, ko te eke papawīra, ko te eke kutarere, ko te kaukau, ko te haere ki te whare whakapakari tinana hoki.",
+			},
+		},
+		"ch-MW": {
+			heading: "Zochita Zamthupi",
+			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
+			description: {
+				kid: "Mafunso 4 otsatirawa akufunsa za zochita zolimbitsa thupi.  Zochita zolimbitsa thupi ndizochita zilizonse zomwe zimachititsa mtima kugunda kwambili komanso kukupangitsani kupuma mwamphuma.  Zochita zolimbitsa thupi zitha kuchitika m'maseŵera, pamene mukusewera ndi anzanu, kuyenda kupita kusukulu, kapena kukaphunzira maphunziro olimbisa thupi.  Zitsanzo zina zolimbitsa thupi ndi kuthamanga, kuyenda mwachangu, kupalasa njinga, kuvina, kusewera mpira ndi zina.",
+				adult:
+					"Mafunso 4 otsatirawa akufunsa za zochita zolimbitsa thupi.  Zochita zolimbitsa thupi ndizochita zilizonse zomwe zimachititsa mtima kugunda kwambili komanso kukupangitsani kupuma mwamphuma.  Zochita zolimbitsa thupi zitha kuchitika m'maseŵera, pamene mukusewera ndi anzanu, kuyenda kupita kusukulu, kapena kukaphunzira maphunziro olimbisa thupi.  Zitsanzo zina zolimbitsa thupi ndi kuthamanga, kuyenda mwachangu, kupalasa njinga, kuvina, kusewera mpira ndi zina.",
+			},
+		},
 		"ne-NP": {
 			heading: "शारीरिक गतिविधि",
 			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
@@ -82,18 +118,18 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
 			description: {
-				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, playing tag, kilikiti, kapa haka, skateboarding, scootering, swimming, and going to the gym.",
 				adult:
-					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, playing tag, kilikiti, kapa haka, skateboarding, scootering, swimming, and going to the gym.",
 			},
 		},
 		"en-MW": {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
 			description: {
-				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, playing soccer, and so on.",
 				adult:
-					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, playing soccer, and so on.",
 			},
 		},
 		"en-NG": {
@@ -109,9 +145,9 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 			heading: "Physical Activity",
 			subheading: "Global School-based Student Health Survey",
 			description: {
-				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+				kid: "The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and so on.",
 				adult:
-					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and COUNTRY SPECIFIC EXAMPLES.",
+					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, and so on.",
 			},
 		},
 		"ar-AE": {

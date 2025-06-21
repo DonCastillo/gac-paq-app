@@ -37,6 +37,35 @@ const AgePage: LangQuestionDropdownPayloadInterface = {
 				},
 			],
 		},
+		"en-IN": {
+			type: Question.QuestionDropdown,
+			heading: "Welcome!",
+			label: "Who's taking this questionnaire?",
+			kid_label: "Who's taking this questionnaire?",
+			adult_label: "Who's taking this questionnaire?",
+			choices: [
+				{
+					label: "Child",
+					value: "child",
+					sublabel: {
+						kid: "8 to 11 years old",
+						adult: "8 to 11 years old",
+					},
+				},
+				{
+					label: "Adolescent",
+					value: "teen",
+					sublabel: {
+						kid: "12 to 17 years old",
+						adult: "12 to 17 years old",
+					},
+				},
+				{
+					label: "Parent",
+					value: "adult",
+				},
+			],
+		},
 		"mi-NZ": {
 			type: Question.QuestionDropdown,
 			heading: "Nau mai!",

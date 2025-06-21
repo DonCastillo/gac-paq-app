@@ -12,6 +12,12 @@ const MAIN_STUDY_LANG = [
 	"en-NG",
 	"es-CO",
 	"ne-NP",
+	"mi-NZ",
+	"en-NZ",
+	"ch-MW",
+	"en-MW",
+	"en-IN",
+	"hi-IN"
 ];
 
 // main study live

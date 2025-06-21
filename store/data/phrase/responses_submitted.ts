@@ -4,6 +4,9 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Responses submitted",
 	},
+	"en-IN": {
+		label: "Responses submitted",
+	},
 	"mi-NZ": {
 		label: "Kua tukuna ngā whakautu",
 	},
@@ -41,7 +44,7 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 		label: "تم إرسال الردود",
 	},
 	"ne-NP": {
-		label: "प्रतिक्रियाहरू पेश गरियो",
+		label: "प्रतिकृया बुझाइयो",
 	},
 	"pt-BR": {
 		label: "Respostas enviadas",

@@ -14,6 +14,38 @@ const GSHSPreamble_Sleep: LangPreamblePayloadInterface = {
 				adult: "The next question asks about how much sleep you get.",
 			},
 		},
+		"hi-IN": {
+			heading: "नींद",
+			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",
+			description: {
+				kid: "अगला प्रश्न आपको कितनी नींद मिलती हैं, उस बारे में हैं ।",
+				adult: "अगला प्रश्न आपको कितनी नींद मिलती हैं, उस बारे में हैं ।",
+			},
+		},
+		"en-IN": {
+			heading: "Sleep",
+			subheading: "Global School-based Student Health Survey",
+			description: {
+				kid: "The next question asks about how much sleep you get.",
+				adult: "The next question asks about how much sleep you get.",
+			},
+		},
+		"mi-NZ": {
+			heading: "Moe",
+			subheading: "Te Rangahau Hauora Ākonga o te Ao i ngā Kura",
+			description: {
+				kid: "Mō te roa o tō moe te pātai e whai ake nei.",
+				adult: "Mō te roa o tō moe te pātai e whai ake nei.",
+			},
+		},
+		"ch-MW": {
+			heading: "Gona",
+			subheading: "Kafukufuku wa Zaumoyo wa Ophunzira wa M’sukulu Padziko Lonse",
+			description: {
+				kid: "Funso lotsatira likufunsa za kuchuluka kwa nthawi yomwe mumakhala mukugona.",
+				adult: "Funso lotsatira likufunsa za kuchuluka kwa nthawi yomwe mumakhala mukugona.",
+			},
+		},
 		"ne-NP": {
 			heading: "सुत्ने",
 			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",

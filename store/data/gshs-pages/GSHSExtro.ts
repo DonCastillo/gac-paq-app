@@ -10,6 +10,18 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"hi-IN": {
+			heading: "भाग पूर्ण",
+			subheading: "",
+		},
+		"en-IN": {
+			heading: "Section Complete!",
+			subheading: "",
+		},
+		"mi-NZ": {
+			heading: "Kua tutuki tēnei wāhanga!",
+			subheading: "",
+		},
 		"ne-NP": {
 			heading: "यो खण्ड सकियो!",
 			subheading: "",
@@ -44,6 +56,10 @@ const GSHSExtro: LangExtroPayloadInterface = {
 		},
 		"en-MW": {
 			heading: "Section Complete!",
+			subheading: "",
+		},
+		"ch-MW": {
+			heading: "Gawo latha",
 			subheading: "",
 		},
 		"en-NG": {

@@ -51,6 +51,13 @@ const Languages: LanguageInterface[] = [
 		lang_code: "cz-CR",
 	},
 	{
+		name: "English",
+		country_name: "India",
+		local_name: "English",
+		flag_code: "IN",
+		lang_code: "en-IN",
+	},
+	{
 		name: "Hindi",
 		country_name: "India",
 		local_name: "हिन्दी",

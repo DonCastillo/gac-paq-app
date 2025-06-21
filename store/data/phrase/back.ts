@@ -4,6 +4,9 @@ const BackPhrase: LangPhraseInterface = {
 	"en-CA": {
 		label: "Back",
 	},
+	"en-IN": {
+		label: "Back",
+	},
 	"mi-NZ": {
 		label: "Hoki",
 	},
