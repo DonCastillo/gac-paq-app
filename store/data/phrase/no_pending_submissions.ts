@@ -41,7 +41,7 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "No pending submissions",
 	},
 	"ar-AE": {
-		label: "لا توجد تقديمات معلقة",
+		label: "لا توجد ردود معلقة",
 	},
 	"ne-NP": {
 		label: "बुझाउनु पर्ने केहि बाँकी छैन",

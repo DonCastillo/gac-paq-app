@@ -41,7 +41,7 @@ const SubmitPhrase: LangPhraseInterface = {
 		label: "Submit",
 	},
 	"ar-AE": {
-		label: "إرسال",
+		label: "تقديم",
 	},
 	"ne-NP": {
 		label: "बुझाउनुहोस्",

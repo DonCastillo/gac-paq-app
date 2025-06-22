@@ -41,7 +41,7 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 		label: "Responses submitted",
 	},
 	"ar-AE": {
-		label: "تم إرسال الردود",
+		label: "ردود مقدمة",
 	},
 	"ne-NP": {
 		label: "प्रतिकृया बुझाइयो",

@@ -41,7 +41,7 @@ const PendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "Pending Submissions",
 	},
 	"ar-AE": {
-		label: "الإرسالات المعلقة",
+		label: "ردود معلقة ",
 	},
 	"ne-NP": {
 		label: "बुझाउन बाँकी छ",
