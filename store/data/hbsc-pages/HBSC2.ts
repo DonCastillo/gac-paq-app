@@ -52,6 +52,50 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 26",
+			label:
+				"Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
+			kid_label:
+				"Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
+			adult_label:
+				"Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
+			choices: [
+				{
+					label: "Každý den",
+					value: "Every day",
+				},
+				{
+					label: "4 – 6krát týdně",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3krát týdně",
+					value: "3 times a week",
+				},
+				{
+					label: "2krát týdně",
+					value: "2 times a week",
+				},
+				{
+					label: "Jednou týdně",
+					value: "Once a week",
+				},
+				{
+					label: "Jednou měsíčně",
+					value: "Once a month",
+				},
+				{
+					label: "Méně než jednou měsíčně",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nikdy",
+					value: "Never",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न 26",

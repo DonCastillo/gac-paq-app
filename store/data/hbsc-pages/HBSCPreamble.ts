@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"cz-CR": {
+			heading: "Zdravotní chování školáků",
+			subheading: "",
+			description: {
+				kid: "Pohybová aktivita je jakákoli činnost, při níž se zrychlí srdeční frekvence a člověk se zadýchá. K tomu může docházet při sportu, školních aktivitách, při hře s přáteli nebo cestou do školy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kolečkových bruslích, jízda na kole, jízda na skateboardu, tanec, plavání, basketbal, fotbal nebo lyžování.",
+				adult:
+					"Pohybová aktivita je jakákoli činnost, při níž se zrychlí srdeční frekvence a člověk se zadýchá. K tomu může docházet při sportu, školních aktivitách, při hře s přáteli nebo cestou do školy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kolečkových bruslích, jízda na kole, jízda na skateboardu, tanec, plavání, basketbal, fotbal nebo lyžování.",
+			},
+		},
 		"hi-IN": {
 			heading: "स्कूल जाने वाली आयु के बच्चों में स्वास्थ्य व्यवहार",
 			subheading: "",
