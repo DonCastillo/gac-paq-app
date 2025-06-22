@@ -167,7 +167,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			adult_label:
-				"¿Cuántas horas has pasado si hija o hijo como voluntario y/o trabajando en la última semana?",
+				"¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando en la última semana?",
 			choices: [
 				{
 					label: "Menos de 1 hora por día",
