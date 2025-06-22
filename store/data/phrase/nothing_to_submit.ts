@@ -50,7 +50,7 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 		label: "Nada a enviar",
 	},
 	"sv-SE": {
-		label: "Ingenting att skicka in",
+		label: "Inga svar att skicka",
 	},
 	"th-TH": {
 		label: "ไม่มีอะไรให้ส่ง",

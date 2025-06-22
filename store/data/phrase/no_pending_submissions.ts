@@ -50,7 +50,7 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "Nenhuma submissão pendente",
 	},
 	"sv-SE": {
-		label: "Inga väntande inlämningar",
+		label: "Inga svar väntar på att skickas",
 	},
 	"th-TH": {
 		label: "ไม่มีการส่งที่รอดำเนินการ",

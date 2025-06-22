@@ -53,7 +53,7 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 		label: "Réponses soumises",
 	},
 	"sv-SE": {
-		label: "Svar skickade in",
+		label: "Ditt svar har skickats",
 	},
 	"th-TH": {
 		label: "ส่งคำตอบแล้ว",
