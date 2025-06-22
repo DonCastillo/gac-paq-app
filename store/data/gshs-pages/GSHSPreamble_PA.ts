@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"cz-CR": {
+			heading: "Fyzická aktivita",
+			subheading: "Globální školní průzkum o zdraví studentů",
+			description: {
+				kid: "Následující 4 otázky se týkají pohybové aktivity. Pohybová aktivita je jakákoli činnost, při které se zrychlí srdeční frekvence a zadýcháš se. Může zahrnovat sport, hru s přáteli, chůzi do školy nebo hodiny tělesné výchovy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kole, tanec, fotbal, volejbal nebo aerobic.",
+				adult:
+					"Následující 4 otázky se týkají pohybové aktivity. Pohybová aktivita je jakákoli činnost, při které se zrychlí srdeční frekvence a zadýcháš se. Může zahrnovat sport, hru s přáteli, chůzi do školy nebo hodiny tělesné výchovy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kole, tanec, fotbal, volejbal nebo aerobic.",
+			},
+		},
 		"hi-IN": {
 			heading: "शारीरिक गतिविधि",
 			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",

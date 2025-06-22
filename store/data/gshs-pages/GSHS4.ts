@@ -44,6 +44,39 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 28",
+			label: "Kolikrát týdně jsi měl/a během tohoto školního roku hodinu tělesné výchovy?",
+			kid_label: "Kolikrát týdně jsi měl/a během tohoto školního roku hodinu tělesné výchovy?",
+			adult_label: "Kolikrát týdně jsi měl/a během tohoto školního roku hodinu tělesné výchovy?",
+			choices: [
+				{
+					label: "0 den",
+					value: "0",
+				},
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 nebo více dní",
+					value: ">=5",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २८",

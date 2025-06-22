@@ -54,6 +54,54 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 25",
+			label:
+				"V kolika z posledních 7 dnů ses věnoval/a pohybové aktivitě v celkové délce alespoň 60 minut denně?",
+			kid_label:
+				"V kolika z posledních 7 dnů ses věnoval/a pohybové aktivitě v celkové délce alespoň 60 minut denně?",
+			adult_label:
+				"V kolika z posledních 7 dnů ses věnoval/a pohybové aktivitě v celkové délce alespoň 60 minut denně?",
+			kid_sublabel:
+				"Prosím, sečti veškerý čas věnovaný jakémukoli druhu pohybové aktivity za každý den.",
+			adult_sublabel:
+				"Prosím, sečti veškerý čas věnovaný jakémukoli druhu pohybové aktivity za každý den.",
+			choices: [
+				{
+					label: "0 den",
+					value: "0",
+				},
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 dní",
+					value: "5",
+				},
+				{
+					label: "6 dní",
+					value: "6",
+				},
+				{
+					label: "7 dní",
+					value: "7",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २५",

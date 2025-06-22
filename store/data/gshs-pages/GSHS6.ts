@@ -45,6 +45,43 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 30",
+			label: "Kolik hodin obvykle spíš během dní, kdy vstáváš do školy?",
+			kid_label: "Kolik hodin obvykle spíš během dní, kdy vstáváš do školy?",
+			adult_label: "Kolik hodin obvykle spíš během dní, kdy vstáváš do školy?",
+			choices: [
+				{
+					label: "4 hodiny nebo méně",
+					value: "4 or less hours",
+				},
+				{
+					label: "5 hodin",
+					value: "5 hours",
+				},
+				{
+					label: "6 hodin",
+					value: "6 hours",
+				},
+				{
+					label: "7 hodin",
+					value: "7 hours",
+				},
+				{
+					label: "8 hodin",
+					value: "8 hours",
+				},
+				{
+					label: "9 hodin",
+					value: "9 hours",
+				},
+				{
+					label: "10 hodin nebo více",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",
