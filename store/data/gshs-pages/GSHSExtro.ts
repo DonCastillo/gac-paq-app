@@ -58,6 +58,10 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"ch-MW": {
+			heading: "Gawo latha",
+			subheading: "",
+		},
 		"en-NG": {
 			heading: "Section Complete!",
 			subheading: "",
