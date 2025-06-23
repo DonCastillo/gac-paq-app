@@ -15,6 +15,15 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"cz-CR": {
+			heading: "Zdravotní chování školáků",
+			subheading: "",
+			description: {
+				kid: "Pohybová aktivita je jakákoli činnost, při níž se zrychlí srdeční frekvence a člověk se zadýchá. K tomu může docházet při sportu, školních aktivitách, při hře s přáteli nebo cestou do školy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kolečkových bruslích, jízda na kole, jízda na skateboardu, tanec, plavání, basketbal, fotbal nebo lyžování.",
+				adult:
+					"Pohybová aktivita je jakákoli činnost, při níž se zrychlí srdeční frekvence a člověk se zadýchá. K tomu může docházet při sportu, školních aktivitách, při hře s přáteli nebo cestou do školy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kolečkových bruslích, jízda na kole, jízda na skateboardu, tanec, plavání, basketbal, fotbal nebo lyžování.",
+			},
+		},
 		"hi-IN": {
 			heading: "स्कूल जाने वाली आयु के बच्चों में स्वास्थ्य व्यवहार",
 			subheading: "",
@@ -52,7 +61,7 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 			},
 		},
 		"ne-NP": {
-			heading: "पढाइ उमेरका बालबालिकामा स्वास्थ्य व्यवहार",
+			heading: "स्कूल जाने उमेरका बालबालिकाको स्वास्थ्य व्यवहार",
 			subheading: "",
 			description: {
 				kid: "शारीरिक गतिविधि भन्नाले यस्तो कुनै पनि गतिविधि बुझिन्छ जसले तपाईंको मुटुको गति बढाउँछ र कहिलेकाहीँ सास फेर्न गाह्रो बनाउँछ। शारीरिक गतिविधि खेलकुद, विद्यालयका कार्यक्रमहरू, साथीहरूसँग खेल्दा वा विद्यालयसम्म हिँड्दा गर्न सकिन्छ।\n\nशारीरिक गतिविधिका केही उदाहरणहरूमा दौडनु, छिटो हिँड्नु, रोलरब्लेडिङ गर्नु, साइकल चलाउनु, नाच्नु, स्केटबोर्ड चलाउनु, पौडी खेल्नु, फुटबल, बास्केटबल खेल्नु, र डोरी तानेर हाम्फाल्ने (जम्प रोप) जस्ता गतिविधिहरू पर्छन्।",

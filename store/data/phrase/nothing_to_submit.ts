@@ -41,7 +41,7 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 		label: "Nothing to submit",
 	},
 	"ar-AE": {
-		label: "لا يوجد ما يمكن تقديمه",
+		label: "لا يوجد شيء للتقديم",
 	},
 	"ne-NP": {
 		label: "बुझाउनु पर्ने केहि छैन",
@@ -50,7 +50,7 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 		label: "Nada a enviar",
 	},
 	"sv-SE": {
-		label: "Ingenting att skicka in",
+		label: "Inga svar att skicka",
 	},
 	"th-TH": {
 		label: "ไม่มีอะไรให้ส่ง",

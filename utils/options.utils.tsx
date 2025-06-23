@@ -248,6 +248,12 @@ const optionLetter = (index: number): string => {
 			return optionOthers(index, Numbered_Options, language, mode, letters);
 		}
 	}
+	if (language === "th-TH") {
+		const ident = ["child_difficulties", "child_ethnicity", "parent_ethnicity"];
+		if (ident.includes(currentPageIdent)) {
+			return optionOthers(index, Numbered_Options, language, mode, letters);
+		}
+	}
 	return letters[index % letters.length];
 };
 

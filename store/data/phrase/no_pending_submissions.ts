@@ -41,7 +41,7 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "No pending submissions",
 	},
 	"ar-AE": {
-		label: "لا توجد تقديمات معلقة",
+		label: "لا توجد ردود معلقة",
 	},
 	"ne-NP": {
 		label: "बुझाउनु पर्ने केहि बाँकी छैन",
@@ -50,7 +50,7 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 		label: "Nenhuma submissão pendente",
 	},
 	"sv-SE": {
-		label: "Inga väntande inlämningar",
+		label: "Inga svar väntar på att skickas",
 	},
 	"th-TH": {
 		label: "ไม่มีการส่งที่รอดำเนินการ",

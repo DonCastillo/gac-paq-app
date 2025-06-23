@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 27",
+			label:
+				"V kolika z posledních 7 dnů jsi šel/šla pěšky nebo jel/a na kole do školy nebo ze školy?",
+			kid_label:
+				"V kolika z posledních 7 dnů jsi šel/šla pěšky nebo jel/a na kole do školy nebo ze školy?",
+			adult_label:
+				"V kolika z posledních 7 dnů jsi šel/šla pěšky nebo jel/a na kole do školy nebo ze školy?",
+			choices: [
+				{
+					label: "0 den",
+					value: "0",
+				},
+				{
+					label: "1 den",
+					value: "1",
+				},
+				{
+					label: "2 dny",
+					value: "2",
+				},
+				{
+					label: "3 dny",
+					value: "3",
+				},
+				{
+					label: "4 dny",
+					value: "4",
+				},
+				{
+					label: "5 dní",
+					value: "5",
+				},
+				{
+					label: "6 dní",
+					value: "6",
+				},
+				{
+					label: "7 dní",
+					value: "7",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न 27",

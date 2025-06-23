@@ -15,6 +15,15 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 					"The next 4 questions ask about physical activity. Physical activity is any activity that increases your heart rate and makes you breathe hard. Physical activity can be done in sports, playing with friends, walking to school, or in physical education class. Some examples of physical activity are running, fast walking, biking, dancing, football, basketball and hockey.",
 			},
 		},
+		"cz-CR": {
+			heading: "Fyzická aktivita",
+			subheading: "Globální školní průzkum o zdraví studentů",
+			description: {
+				kid: "Následující 4 otázky se týkají pohybové aktivity. Pohybová aktivita je jakákoli činnost, při které se zrychlí srdeční frekvence a zadýcháš se. Může zahrnovat sport, hru s přáteli, chůzi do školy nebo hodiny tělesné výchovy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kole, tanec, fotbal, volejbal nebo aerobic.",
+				adult:
+					"Následující 4 otázky se týkají pohybové aktivity. Pohybová aktivita je jakákoli činnost, při které se zrychlí srdeční frekvence a zadýcháš se. Může zahrnovat sport, hru s přáteli, chůzi do školy nebo hodiny tělesné výchovy. Mezi příklady pohybové aktivity patří běhání, rychlá chůze, jízda na kole, tanec, fotbal, volejbal nebo aerobic.",
+			},
+		},
 		"hi-IN": {
 			heading: "शारीरिक गतिविधि",
 			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",
@@ -53,11 +62,11 @@ const GSHSPreamble_PA: LangPreamblePayloadInterface = {
 		},
 		"ne-NP": {
 			heading: "शारीरिक गतिविधि",
-			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
+			subheading: "विश्वव्यापी विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
 			description: {
-				kid: "शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूdf दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
+				kid: "शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूमा दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
 				adult:
-					"शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूdf दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
+					"शारीरिक गतिविधि बारे ४ वटा प्रश्नहरू सोधिएका छन्। शारीरिक गतिविधि भन्नाले कुनै पनि यस्तो क्रियाकलाप हो जसले तपाईँको मुटुको गति बढाउँछ र गहिरो सास फेर्न बाध्य बनाउँछ। शारीरिक गतिविधि खेलकुदमा, साथीहरूसँग खेल्दा, स्कूल हिँड्दा, वा शारीरिक शिक्षाको कक्षामा गर्न सकिन्छ। शारीरिक गतिविधिका केही उदाहरणहरूमा दौडने, छिटो हिँड्ने, साइकल चलाउने, नाच्ने, फुटबल खेल्ने, र देश विशिष्ट उदाहरणहरू।",
 			},
 		},
 		"th-TH": {

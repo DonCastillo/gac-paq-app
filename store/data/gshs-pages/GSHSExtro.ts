@@ -10,6 +10,10 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"cz-CR": {
+			heading: "Sekce dokončena!",
+			subheading: "",
+		},
 		"hi-IN": {
 			heading: "भाग पूर्ण",
 			subheading: "",

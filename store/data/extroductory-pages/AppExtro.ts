@@ -64,7 +64,7 @@ const AppExtro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"ne-NP": {
-			heading: "सर्भे पूरा गर्नु भएकोमा धन्यवाद!",
+			heading: "सर्वे पूरा गर्नु भएकोमा धन्यवाद!",
 			subheading: "",
 		},
 		"th-TH": {

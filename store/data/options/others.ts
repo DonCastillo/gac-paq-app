@@ -101,6 +101,9 @@ const Numbered_Options: Record<string, Record<string, string[]>> = {
 	"ma-IN": {
 		adult_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
 	},
+	"th-TH": {
+		adult_options: ["๑", "๒", "๓", "๔", "๕", "๖", "๗", "๘", "๙", "๑๐"],
+	},
 };
 
 export {
