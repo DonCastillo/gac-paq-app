@@ -311,7 +311,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 					value: "Less than once a month",
 				},
 				{
-					label: "कहिल्यै पनि होइन",
+					label: "कहिल्यै गर्दिन",
 					value: "Never",
 				},
 			],

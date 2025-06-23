@@ -31,7 +31,7 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			subheading: "",
 		},
 		"ne-NP": {
-			heading: "पढाइ उमेरका बालबालिकामा स्वास्थ्य व्यवहार",
+			heading: "स्कूल जाने उमेरका बालबालिकाको स्वास्थ्य व्यवहार",
 			subheading: "",
 		},
 		"th-TH": {
