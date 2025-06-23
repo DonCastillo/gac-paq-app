@@ -23,6 +23,9 @@ const RegularPageScreen = (): React.ReactElement => {
 	const sectionType = currentPage?.section !== null ? getSectionType(currentPage?.section) : null;
 	const [component, setComponent] = useState<React.ReactElement>(<></>);
 
+	// console.log("Question Number:", currentPageNumber - 7);
+	console.log("Current Page: ", currentPage.page.ident);
+
 	const changeComponent = (): void => {
 		let tempComponent = <></>;
 

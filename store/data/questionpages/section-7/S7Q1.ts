@@ -500,7 +500,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 					value: "None",
 				},
 				{
-					label: "प्रत्येक दिन एक घण्टा भन्दा कम भन्दा कम",
+					label: "प्रत्येक दिन एक घण्टा भन्दा कम",
 					value: "Less than 1 hour per day",
 				},
 				{

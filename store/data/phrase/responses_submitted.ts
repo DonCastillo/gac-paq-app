@@ -41,7 +41,7 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 		label: "Responses submitted",
 	},
 	"ar-AE": {
-		label: "تم إرسال الردود",
+		label: "ردود مقدمة",
 	},
 	"ne-NP": {
 		label: "प्रतिकृया बुझाइयो",
@@ -53,7 +53,7 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 		label: "Réponses soumises",
 	},
 	"sv-SE": {
-		label: "Svar skickade in",
+		label: "Ditt svar har skickats",
 	},
 	"th-TH": {
 		label: "ส่งคำตอบแล้ว",

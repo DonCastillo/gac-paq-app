@@ -44,6 +44,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"cz-CR": {
+			type: Question.QuestionRadio,
+			heading: "Otázka 29",
+			label:
+				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, používáním mobilního telefonu nebo jinými činnostmi v sedě (např. [vložte místní příklady])?",
+			kid_label:
+				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, používáním mobilního telefonu nebo jinými činnostmi v sedě (např. [vložte místní příklady])?",
+			adult_label:
+				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, používáním mobilního telefonu nebo jinými činnostmi v sedě (např. [vložte místní příklady])?",
+			choices: [
+				{
+					label: "Méně než 1 hodinu denně",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "1 až 2 hodiny denně",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3 až 4 hodiny denně",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "5 až 6 hodin denně",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "7 až 8 hodin denně",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Více než 8 hodin denně",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २९",
@@ -192,11 +228,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २९",
 			label:
-				"तपाईं सामान्य वा सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
+				"तपाईं सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
 			kid_label:
-				"तपाईं सामान्य वा सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
+				"तपाईं सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
 			adult_label:
-				"तपाईं सामान्य वा सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
+				"तपाईं सामान्य दिनमा कति समय बसेर टेलिभिजन हेर्ने, कम्प्युटर गेम खेल्ने, साथीहरूसँग कुरा गर्ने, मोबाइल फोन प्रयोग गर्ने, वा भिडियो गेम खेल्ने र पढ्ने जस्ता अन्य बसेर गर्ने गतिविधिहरूमा बिताउनुहुन्छ?",
 			choices: [
 				{
 					label: "प्रति दिन १ घण्टा भन्दा कम",

@@ -15,6 +15,15 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"cz-CR": {
+			heading: "Sezení",
+			subheading: "Globální školní průzkum o zdraví studentů",
+			description: {
+				kid: "Následující otázka se týká času, který trávíš převážně sezením mimo školní výuku a psaní domácích úkolů.",
+				adult:
+					"Následující otázka se týká času, který trávíš převážně sezením mimo školní výuku a psaní domácích úkolů.",
+			},
+		},
 		"hi-IN": {
 			heading: "बैठना",
 			subheading: "वैश्विक विद्यालय-आधारित छात्र स्वास्थ्य सर्वेक्षण",
@@ -53,7 +62,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 		},
 		"ne-NP": {
 			heading: "बसेको",
-			subheading: "वैश्विक विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
+			subheading: "विश्वव्यापी विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
 			description: {
 				kid: "अर्को प्रश्नमा तपाईं स्कूलमा नभएको बेला वा गृहकार्य नगरेको बेला बसेर बिताउने समयको बारेमा सोधिएको छ।",
 				adult:
