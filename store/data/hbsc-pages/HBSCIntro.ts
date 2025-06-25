@@ -10,6 +10,10 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 		},
+		"es-CL": {
+			heading: "Comportamiento Saludable en Edad Escolar",
+			subheading: "",
+		},
 		"cz-CR": {
 			heading: "Zdravotní chování školáků",
 			subheading: "",
