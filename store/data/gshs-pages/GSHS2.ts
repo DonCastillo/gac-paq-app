@@ -52,6 +52,50 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 26",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicios para fortalecer o tonificar los músculos, como flexiones, abdominales, sentadillas o levantamiento de pesas?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicios para fortalecer o tonificar los músculos, como flexiones, abdominales, sentadillas o levantamiento de pesas?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicios para fortalecer o tonificar los músculos, como flexiones, abdominales, sentadillas o levantamiento de pesas?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 26",

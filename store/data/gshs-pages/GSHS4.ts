@@ -44,6 +44,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 28",
+			label:
+				"Durante este año escolar, ¿cuántos días a la semana tuviste clase de educación física?",
+			kid_label:
+				"Durante este año escolar, ¿cuántos días a la semana tuviste clase de educación física?",
+			adult_label:
+				"Durante este año escolar, ¿cuántos días a la semana tuviste clase de educación física?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días o más",
+					value: ">=5",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 28",

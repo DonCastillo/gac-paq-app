@@ -44,6 +44,42 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 29",
+			label:
+				"Durante un día normal ¿Cuánto tiempo pasas sentado viendo la televisión, jugando en el computador u otras pantallas, chateando con amigos, utilizando el celular o realizando otras actividades sentado, como revisando redes sociales?",
+			kid_label:
+				"Durante un día normal ¿Cuánto tiempo pasas sentado viendo la televisión, jugando en el computador u otras pantallas, chateando con amigos, utilizando el celular o realizando otras actividades sentado, como revisando redes sociales?",
+			adult_label:
+				"Durante un día normal ¿Cuánto tiempo pasas sentado viendo la televisión, jugando en el computador u otras pantallas, chateando con amigos, utilizando el celular o realizando otras actividades sentado, como revisando redes sociales?",
+			choices: [
+				{
+					label: "Menos de 1 hora al día",
+					value: "Less than 1 hour per day",
+				},
+				{
+					label: "De 1 a 2 horas al día ",
+					value: "1 to 2 hours per day",
+				},
+				{
+					label: "3 a 4 horas al día",
+					value: "3 to 4 hours per day",
+				},
+				{
+					label: "De 5 a 6 horas al día ",
+					value: "5 to 6 hours per day",
+				},
+				{
+					label: "De 7 a 8 horas al día",
+					value: "7 to 8 hours per day",
+				},
+				{
+					label: "Más de 8 horas al día",
+					value: "More than 8 hours per day",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 29",

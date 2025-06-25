@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 27",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste caminando o en bicicleta al colegio y volviste de él?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste caminando o en bicicleta al colegio y volviste de él?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días fuiste caminando o en bicicleta al colegio y volviste de él?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 27",
