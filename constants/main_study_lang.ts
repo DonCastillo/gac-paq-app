@@ -38,7 +38,7 @@ const MAIN_STUDY_LANG = [
 	"th-TH",
 	"ch-MW",
 	"en-MW",
-	"cz-CR"
+	"cz-CR",
 ];
 
 export default MAIN_STUDY_LANG;
