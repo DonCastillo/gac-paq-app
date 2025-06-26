@@ -15,6 +15,15 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
+		"ma-IN": {
+			heading: "बसलेले",
+			subheading: "जागतिक शाळा-आधारित विद्यार्थी आरोग्य सर्वेक्षण",
+			description: {
+				kid: "पुढील प्रश्न तुम्ही बसून घालवलेल्या वेळेबद्दल आहे जेव्हा तुम्ही शाळेत नसता किंवा गृहपाठ करीत नसता.",
+				adult:
+					"पुढील प्रश्न तुम्ही बसून घालवलेल्या वेळेबद्दल आहे जेव्हा तुम्ही शाळेत नसता किंवा गृहपाठ करीत नसता.",
+			},
+		},
 		"es-CL": {
 			heading: "Sentado",
 			subheading: "Encuesta Mundial de Salud en Escolares",

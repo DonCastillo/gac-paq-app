@@ -52,6 +52,50 @@ const GSHS3: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २७",
+			label:
+				"मागील ७ दिवसांत, तुम्ही किती दिवस घरून शाळेला किंवा शाळेतून घरी चालत किंवा सायकल चालवत आला- गेला?",
+			kid_label:
+				"मागील ७ दिवसांत, तुम्ही किती दिवस घरून शाळेला किंवा शाळेतून घरी चालत किंवा सायकल चालवत आला- गेला?",
+			adult_label:
+				"मागील ७ दिवसांत, तुम्ही किती दिवस घरून शाळेला किंवा शाळेतून घरी चालत किंवा सायकल चालवत आला- गेला?",
+			choices: [
+				{
+					label: "० दिवस",
+					value: "0",
+				},
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 27",

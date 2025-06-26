@@ -44,6 +44,42 @@ const GSHS4: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २८",
+			label:
+				"या शालेय वर्षात, तुम्ही प्रत्येक आठवड्यातील किती दिवस शारीरिक शिक्षणाच्या वर्गात गेला होता?",
+			kid_label:
+				"या शालेय वर्षात, तुम्ही प्रत्येक आठवड्यातील किती दिवस शारीरिक शिक्षणाच्या वर्गात गेला होता?",
+			adult_label:
+				"या शालेय वर्षात, तुम्ही प्रत्येक आठवड्यातील किती दिवस शारीरिक शिक्षणाच्या वर्गात गेला होता?",
+			choices: [
+				{
+					label: "० दिवस",
+					value: "0",
+				},
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ किंवा जास्त दिवस",
+					value: ">=5",
+				},
+			],
+		},
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",

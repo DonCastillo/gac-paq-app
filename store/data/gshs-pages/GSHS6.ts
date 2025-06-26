@@ -45,6 +45,45 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न ३०",
+			label: "आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
+			kid_label:
+				"आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
+			adult_label:
+				"आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
+			choices: [
+				{
+					label: "४ किंवा कमी तास",
+					value: "4 or less hours",
+				},
+				{
+					label: "५ तास",
+					value: "5 hours",
+				},
+				{
+					label: "६ तास",
+					value: "6 hours",
+				},
+				{
+					label: "७ तास",
+					value: "7 hours",
+				},
+				{
+					label: "८ तास",
+					value: "8 hours",
+				},
+				{
+					label: "९ तास",
+					value: "9 hours",
+				},
+				{
+					label: "१० किंवा अधिक तास",
+					value: "10 or more hours",
+				},
+			],
+		},
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
