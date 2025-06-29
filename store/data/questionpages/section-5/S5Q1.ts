@@ -245,7 +245,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			adult_label: "هل شارك طفلك في أي أنشطة منظّمة أو خارجية خلال الأسبوع الماضي؟",
 			choices: [
 				{
-					label: "‌نعم",
+					label: "نعم",
 					value: "yes",
 				},
 				{
