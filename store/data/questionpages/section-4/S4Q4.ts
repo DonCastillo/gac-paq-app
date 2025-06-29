@@ -518,10 +518,10 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १६",
-			label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
-			kid_label: "पिछले सप्ताह आप नौकरी पर कैसे गए?",
+			label: "पिछले सप्ताह आप काम पर कैसे गए?",
+			kid_label: "पिछले सप्ताह आप काम पर कैसे गए?",
 			adult_label: "आपका बच्चा पिछले सप्ताह काम पर कैसे गया?",
-			kid_sublabel: "परिवहन का वह साधन चुनें जिसका आपने सबसे अधिक उपयोग किया है",
+			kid_sublabel: "वह साधन चुनें जिसका आपने सबसे अधिक उपयोग किया है",
 			adult_sublabel: "परिवहन का वह साधन चुनें जिसे आपके बच्चे ने सबसे अधिक उपयोग किया है",
 			choices: [
 				{

@@ -395,7 +395,7 @@ const S1Q7: LangQuestionRadioImagePayloadInterface = {
 				"निम्नलिखित में से कौन सा चित्र आपके बच्चे द्वारा अपने अवकाश के दौरान अधिकांश समय किए जाने वाले कार्यों से मिलता जुलता है?",
 			choices: [
 				{
-					label: "कम हलचल वाली गतिविधियाँ",
+					label: "बिल्कुल न चलना-फिरना",
 					value: "0.1",
 					image_ident: "not_moving",
 				},
