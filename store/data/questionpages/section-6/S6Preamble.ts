@@ -48,7 +48,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			heading: "Hra a volný čas",
 			subheading: "Sekce 6",
 			description: {
-				kid: "TTato část se týká veškeré pohybové aktivity, které se věnuješ při hře nebo během volného času. Nejedná se o organizované aktivity ani přestávky ve škole. Do odpovědí na následující otázky nezahrnuj aktivity, které jsi právě uvedl(a).",
+				kid: "Tato část se týká veškeré pohybové aktivity, které se věnuješ při hře nebo během volného času. Nejedná se o organizované aktivity ani přestávky ve škole. Do odpovědí na následující otázky nezahrnuj aktivity, které jsi právě uvedl(a).",
 				adult:
 					"Tato sekce se týká veškeré pohybové aktivity, které se vaše dítě věnuje při hře nebo během volného času. Je to čas, u kterého se vaše dítě rozhodne, jak jej bude trávit. Do odpovědí na následující otázky nezahrnujte aktivity, které jste právě uvedli.",
 			},
