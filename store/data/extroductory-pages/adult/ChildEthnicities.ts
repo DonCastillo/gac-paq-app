@@ -55,27 +55,12 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "What is your child's ethnicity?",
 			choices: [
 				{
-					label: "Asian",
-					value: "Asian",
+					label: "Indian",
+					value: "Indian",
 				},
+
 				{
-					label: "Black or African American",
-					value: "Black or African American",
-				},
-				{
-					label: "Indigenous",
-					value: "Indigenous",
-				},
-				{
-					label: "Latin American",
-					value: "Latin American",
-				},
-				{
-					label: "White or Caucasian",
-					value: "White or Caucasian",
-				},
-				{
-					label: "Other",
+					label: "Other, please specify",
 					value: "Other",
 				},
 				{
