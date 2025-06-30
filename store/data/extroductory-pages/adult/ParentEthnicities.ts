@@ -437,27 +437,11 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "आपकी जातीयता क्या है?",
 			choices: [
 				{
-					label: "एशियाई",
-					value: "Asian",
+					label: "भारतीय",
+					value: "Indian",
 				},
 				{
-					label: "ब्लैक या अफ़्रीकी अमेरिकी",
-					value: "Black or African American",
-				},
-				{
-					label: "स्वदेशी",
-					value: "Indigenous",
-				},
-				{
-					label: "लैटिन अमेरिकी",
-					value: "Latin American",
-				},
-				{
-					label: "व्हाइट या कोकेशियान",
-					value: "White or Caucasian",
-				},
-				{
-					label: "अन्य",
+					label: "अन्य, कृपया निर्दिष्ट करें",
 					value: "Other",
 				},
 				{
