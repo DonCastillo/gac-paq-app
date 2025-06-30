@@ -522,7 +522,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			kid_label: "पिछले सप्ताह आप काम पर कैसे गए?",
 			adult_label: "आपका बच्चा पिछले सप्ताह काम पर कैसे गया?",
 			kid_sublabel: "वह साधन चुनें जिसका आपने सबसे अधिक उपयोग किया है",
-			adult_sublabel: "परिवहन का वह साधन चुनें जिसे आपके बच्चे ने सबसे अधिक उपयोग किया है",
+			adult_sublabel: "वह साधन चुनें जिसे आपके बच्चे ने सबसे अधिक उपयोग किया है",
 			choices: [
 				{
 					label: "चल के जाना",
