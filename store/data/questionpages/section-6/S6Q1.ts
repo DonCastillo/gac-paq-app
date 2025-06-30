@@ -737,6 +737,8 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			adult_label: "在过去一周里，您的孩子每天仅仅是为了玩耍而进行的活动平均有多长时间？",
 			kid_sublabel:
 				"如玩球类游戏、在泳池里玩耍、荡秋千、捉迷藏、玩沙子、玩飞盘等，不包括比赛或训练时的活动",
+			adult_sublabel:
+				"如玩球类游戏、在泳池里玩耍、荡秋千、捉迷藏、玩沙子、玩飞盘等，不包括比赛或训练时的活动",
 			choices: [
 				{
 					label: "无",

@@ -595,8 +595,12 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 					value: "Han",
 				},
 				{
-					label: "其他",
+					label: "其他民族，请说明",
 					value: "Other",
+				},
+				{
+					label: "不想说",
+					value: "Prefer not to say",
 				},
 			],
 		},
