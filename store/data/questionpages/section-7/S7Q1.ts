@@ -636,19 +636,19 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 					value: "None",
 				},
 				{
-					label: "每天少于1小时",
+					label: "每天少于1小时（不包括1小时）",
 					value: "Less than 1 hour per day",
 				},
 				{
-					label: "每天1-2小时",
+					label: "每天1-2小时（不包括2小时）",
 					value: "1 to less than 2 hours per day",
 				},
 				{
-					label: "每天2-3小时",
+					label: "每天2-3小时（不包括3小时）",
 					value: "2 to less than 3 hours per day",
 				},
 				{
-					label: "每天3-4小时",
+					label: "每天3-4小时（不包括4小时）",
 					value: "3 to less than 4 hours per day",
 				},
 				{
