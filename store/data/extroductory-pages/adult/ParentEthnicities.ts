@@ -55,27 +55,12 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "What is your ethnicity?",
 			choices: [
 				{
-					label: "Asian",
-					value: "Asian",
+					label: "Indian",
+					value: "Indian",
 				},
+
 				{
-					label: "Black or African American",
-					value: "Black or African American",
-				},
-				{
-					label: "Indigenous",
-					value: "Indigenous",
-				},
-				{
-					label: "Latin American",
-					value: "Latin American",
-				},
-				{
-					label: "White or Caucasian",
-					value: "White or Caucasian",
-				},
-				{
-					label: "Other",
+					label: "Other, please specify",
 					value: "Other",
 				},
 				{
@@ -437,27 +422,11 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "आपकी जातीयता क्या है?",
 			choices: [
 				{
-					label: "एशियाई",
-					value: "Asian",
+					label: "भारतीय",
+					value: "Indian",
 				},
 				{
-					label: "ब्लैक या अफ़्रीकी अमेरिकी",
-					value: "Black or African American",
-				},
-				{
-					label: "स्वदेशी",
-					value: "Indigenous",
-				},
-				{
-					label: "लैटिन अमेरिकी",
-					value: "Latin American",
-				},
-				{
-					label: "व्हाइट या कोकेशियान",
-					value: "White or Caucasian",
-				},
-				{
-					label: "अन्य",
+					label: "अन्य, कृपया निर्दिष्ट करें",
 					value: "Other",
 				},
 				{
@@ -626,8 +595,12 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 					value: "Han",
 				},
 				{
-					label: "其他",
+					label: "其他民族，请说明",
 					value: "Other",
+				},
+				{
+					label: "不想说",
+					value: "Prefer not to say",
 				},
 			],
 		},

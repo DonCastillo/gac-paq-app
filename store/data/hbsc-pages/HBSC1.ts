@@ -54,6 +54,100 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २५",
+			label:
+				"गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
+			kid_label:
+				"गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
+			adult_label:
+				"गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
+			kid_sublabel: "कृपया तुम्ही दररोज शारीरिक हालचालींमध्ये घालवलेला वेळ जोडा.",
+			adult_sublabel: "कृपया तुम्ही दररोज शारीरिक हालचालींमध्ये घालवलेला वेळ जोडा.",
+			choices: [
+				{
+					label: "० दिवस",
+					value: "0",
+				},
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 25",
+			label:
+				"Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
+			kid_label:
+				"Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
+			adult_label:
+				"Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
+			kid_sublabel:
+				"Este tiempo no debe ser todo seguido, puedes sumar los tiempos de diferentes momentos del día en que corriste, brincaste, bailaste o hiciste cualquier otra actividad física.",
+			adult_sublabel:
+				"Este tiempo no debe ser todo seguido, puedes sumar los tiempos de diferentes momentos del día en que corriste, brincaste, bailaste o hiciste cualquier otra actividad física.",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 25",

@@ -52,6 +52,94 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २६",
+			label:
+				"शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
+			kid_label:
+				"शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
+			adult_label:
+				"शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
+			choices: [
+				{
+					label: "दररोज",
+					value: "Every day",
+				},
+				{
+					label: "आठवड्यातून ४ ते ६ वेळा",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "आठवड्यातून ३ वेळा",
+					value: "3 times a week",
+				},
+				{
+					label: "आठवड्यातून २ वेळा",
+					value: "2 times a week",
+				},
+				{
+					label: "आठवड्यातून एकदा",
+					value: "Once a week",
+				},
+				{
+					label: "मक्रहन्यातून एकदा",
+					value: "Once a month",
+				},
+				{
+					label: "मक्रहन्यातून एकदापेक्षा कमी",
+					value: "Less than once a month",
+				},
+				{
+					label: "कधीही नाही",
+					value: "Never",
+				},
+			],
+		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 26",
+			label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			kid_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			adult_label:
+				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			choices: [
+				{
+					label: "Todos los días",
+					value: "Every day",
+				},
+				{
+					label: "4 - 6 veces a la semana",
+					value: "4 to 6 times a week",
+				},
+				{
+					label: "3 veces a la semana",
+					value: "3 times a week",
+				},
+				{
+					label: "2 veces a la semana",
+					value: "2 times a week",
+				},
+				{
+					label: "1 vez a la semana",
+					value: "Once a week",
+				},
+				{
+					label: "1 vez al mes",
+					value: "Once a month",
+				},
+				{
+					label: "Menos de una vez al mes",
+					value: "Less than once a month",
+				},
+				{
+					label: "Nunca",
+					value: "Never",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 26",

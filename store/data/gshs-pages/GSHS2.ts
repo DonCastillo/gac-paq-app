@@ -52,6 +52,94 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 				},
 			],
 		},
+		"ma-IN": {
+			type: Question.QuestionRadio,
+			heading: "प्रश्न २६",
+			label:
+				"मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
+			kid_label:
+				"मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
+			adult_label:
+				"मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
+			choices: [
+				{
+					label: "० दिवस",
+					value: "0",
+				},
+				{
+					label: "१ दिवस",
+					value: "1",
+				},
+				{
+					label: "२ दिवस",
+					value: "2",
+				},
+				{
+					label: "३ दिवस",
+					value: "3",
+				},
+				{
+					label: "४ दिवस",
+					value: "4",
+				},
+				{
+					label: "५ दिवस",
+					value: "5",
+				},
+				{
+					label: "६ दिवस",
+					value: "6",
+				},
+				{
+					label: "७ दिवस",
+					value: "7",
+				},
+			],
+		},
+		"es-CL": {
+			type: Question.QuestionRadio,
+			heading: "Pregunta 26",
+			label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicios para fortalecer o tonificar los músculos, como flexiones, abdominales, sentadillas o levantamiento de pesas?",
+			kid_label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicios para fortalecer o tonificar los músculos, como flexiones, abdominales, sentadillas o levantamiento de pesas?",
+			adult_label:
+				"Durante los últimos 7 días, ¿cuántos días hiciste ejercicios para fortalecer o tonificar los músculos, como flexiones, abdominales, sentadillas o levantamiento de pesas?",
+			choices: [
+				{
+					label: "0 días",
+					value: "0",
+				},
+				{
+					label: "1 día",
+					value: "1",
+				},
+				{
+					label: "2 días",
+					value: "2",
+				},
+				{
+					label: "3 días",
+					value: "3",
+				},
+				{
+					label: "4 días",
+					value: "4",
+				},
+				{
+					label: "5 días",
+					value: "5",
+				},
+				{
+					label: "6 días",
+					value: "6",
+				},
+				{
+					label: "7 días",
+					value: "7",
+				},
+			],
+		},
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 26",
