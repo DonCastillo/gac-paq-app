@@ -385,12 +385,12 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २३",
-			label: "पिछले सप्ताह में, सामान्य दिन में, आपने कितना समय बाहर बिताया है?",
-			kid_label: "पिछले सप्ताह में, सामान्य दिन में, आपने कितना समय बाहर बिताया है?",
-			adult_label: "पिछले सप्ताह में, सामान्य दिन में, आपके बच्चे ने बाहर कितना समय बिताया?",
+			label: "पिछले सप्ताह में, सामान्य दिन पर, आपने कितना समय बाहर बिताया है?",
+			kid_label: "पिछले सप्ताह में, सामान्य दिन पर, आपने कितना समय बाहर बिताया है?",
+			adult_label: "पिछले सप्ताह में, सामान्य दिन पर, आपके बच्चे ने बाहर कितना समय बिताया?",
 			choices: [
 				{
-					label: "कुछ भी नहीं",
+					label: "बिल्कुल नहीं",
 					value: "None",
 				},
 				{
@@ -636,19 +636,19 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 					value: "None",
 				},
 				{
-					label: "每天少于1小时",
+					label: "每天少于1小时（不包括1小时）",
 					value: "Less than 1 hour per day",
 				},
 				{
-					label: "每天1-2小时",
+					label: "每天1-2小时（不包括2小时）",
 					value: "1 to less than 2 hours per day",
 				},
 				{
-					label: "每天2-3小时",
+					label: "每天2-3小时（不包括3小时）",
 					value: "2 to less than 3 hours per day",
 				},
 				{
-					label: "每天3-4小时",
+					label: "每天3-4小时（不包括4小时）",
 					value: "3 to less than 4 hours per day",
 				},
 				{

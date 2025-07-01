@@ -15,6 +15,24 @@ const HBSCPreamble: LangPreamblePayloadInterface = {
 					"Physical activity is any activity that increases your heart rate and makes you get out of breath some of the time. Physical activity can be done in sports, school activities, playing with friends, or walking to school. Some examples of physical activity are running, brisk walking, rollerblading, biking, dancing, skateboarding, swimming, soccer, basketball, football, & surfing.",
 			},
 		},
+		"ma-IN": {
+			heading: "शाळेच्या वयोगटातील मुलांचे आरोग्यविषयक वर्तन",
+			subheading: "",
+			description: {
+				kid: "शारीररक क्रियाकलाप म्हणजे अशी कोणतीही क्रिया ज्यामुळे तुमच्या हृदयाची गती वाढते आक्रण तुम्हाला काही काळासाठी धाप लागते. शारीररक क्रियाकलाप खेळ, शाळेतील हालचाली, क्रमत्ाांसोबत खेळणे क्रकांवा शाळेत चालणे यात केले जाऊ शकते. धावणे, वेगाने चालणे, रोलरब्लेक्र ांग, बाइक चालवणे, नृत्य, स्केटबोक्र िंग, पोहणे, सॉकर, बास्केटबॉल, फुटबॉल आक्रण सक्रफिंग ही शारीररक हालचालीांची काही उदाहरणे आहेत [देशक्रनहाय क्रवक्रशष्ट उदाहरणे क्रदली जाऊ शकतात].",
+				adult:
+					"शारीररक क्रियाकलाप म्हणजे अशी कोणतीही क्रिया ज्यामुळे तुमच्या हृदयाची गती वाढते आक्रण तुम्हाला काही काळासाठी धाप लागते. शारीररक क्रियाकलाप खेळ, शाळेतील हालचाली, क्रमत्ाांसोबत खेळणे क्रकांवा शाळेत चालणे यात केले जाऊ शकते. धावणे, वेगाने चालणे, रोलरब्लेक्र ांग, बाइक चालवणे, नृत्य, स्केटबोक्र िंग, पोहणे, सॉकर, बास्केटबॉल, फुटबॉल आक्रण सक्रफिंग ही शारीररक हालचालीांची काही उदाहरणे आहेत [देशक्रनहाय क्रवक्रशष्ट उदाहरणे क्रदली जाऊ शकतात].",
+			},
+		},
+		"es-CL": {
+			heading: "Comportamiento Saludable en Edad Escolar",
+			subheading: "",
+			description: {
+				kid: "La actividad física es cualquier actividad que incrementa tu ritmo cardiaco y que te hace sentir 'sin aliento' una parte del tiempo. La actividad física puede realizarse en deportes, actividades escolares, jugando con los amigos o caminando hacia la escuela o colegio. Algunos ejemplos son: correr, caminar rápido, patinar con patines o patineta, andar en bicicleta, bailar, nadar, fútbol, basquetbol, fútbol americano y surfear.",
+				adult:
+					"La actividad física es cualquier actividad que incrementa tu ritmo cardiaco y que te hace sentir 'sin aliento' una parte del tiempo. La actividad física puede realizarse en deportes, actividades escolares, jugando con los amigos o caminando hacia la escuela o colegio. Algunos ejemplos son: correr, caminar rápido, patinar con patines o patineta, andar en bicicleta, bailar, nadar, fútbol, basquetbol, fútbol americano y surfear.",
+			},
+		},
 		"cz-CR": {
 			heading: "Zdravotní chování školáků",
 			subheading: "",

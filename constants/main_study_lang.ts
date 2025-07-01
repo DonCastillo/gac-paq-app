@@ -18,8 +18,12 @@ const MAIN_STUDY_LANG = [
 	"en-MW",
 	"en-IN",
 	"hi-IN",
-	"cz-CR"
+	"ma-IN",
+	"cz-CR",
+	"es-CL",
 ];
+
+
 
 // main study live
 // const MAIN_STUDY_LANG = [

@@ -997,7 +997,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 					value: "Mobility",
 				},
 				{
-					label: "灵活性",
+					label: "灵敏性",
 					value: "Agility",
 				},
 				{

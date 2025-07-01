@@ -401,7 +401,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 				"निम्नलिखित में से कौन सा चित्र आपके बच्चे द्वारा पीटी क्लास में अधिकांश समय किए जाने वाले कार्यों में से मिलता जुलता है?",
 			choices: [
 				{
-					label: "कम हलचल वाली गतिविधियाँ",
+					label: "बिल्कुल न चलना-फिरना",
 					value: "0.1",
 					image_ident: "not_moving",
 				},
