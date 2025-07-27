@@ -62,7 +62,6 @@ const QuestionRadioImage = ({
 	const { color100, color200 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
-	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 	const otherInputRef = useRef<TextInput>(null);
 	const numColumn = device.isTablet && device.orientation === "landscape" ? 4 : 2;
 
@@ -71,9 +70,6 @@ const QuestionRadioImage = ({
 		borderColor: color100,
 	};
 
-	useState(() => {
-		setAutoFocusOtherField(false);
-	});
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -91,10 +87,6 @@ const QuestionRadioImage = ({
 
 	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
-
-		if (isOtherOption(value)) {
-			setAutoFocusOtherField(true);
-		}
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
@@ -314,11 +306,6 @@ const QuestionRadioImage = ({
 							style={{
 								fontSize: GeneralStyle.kid.field.fontSize,
 								paddingVertical: GeneralStyle.kid.field.paddingVertical,
-							}}
-							onLayout={(event) => {
-								if (autofocusOtherField) {
-									otherInputRef?.current?.focus();
-								}
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}

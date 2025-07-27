@@ -21,7 +21,6 @@ interface PropsInterface {
 	color: string;
 	width?: string | number;
 	isOtherSelected?: boolean;
-	autofocusOtherField?: boolean;
 	defaultOtherInputValue?: string;
 	optionSublabel?: string;
 }
@@ -34,7 +33,6 @@ const Option = ({
 	color,
 	width = "100%",
 	isOtherSelected = false,
-	autofocusOtherField = false,
 	defaultOtherInputValue,
 	optionSublabel,
 }: PropsInterface): React.ReactElement => {
@@ -112,11 +110,6 @@ const Option = ({
 							style={{
 								fontSize: GeneralStyle.kid.field.fontSize,
 								paddingVertical: GeneralStyle.kid.field.paddingVertical,
-							}}
-							onLayout={(event) => {
-								if (autofocusOtherField) {
-									otherInputRef?.current?.focus();
-								}
 							}}
 							autoCapitalize="none"
 							autoCorrect={false}
