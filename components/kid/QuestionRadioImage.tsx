@@ -70,7 +70,6 @@ const QuestionRadioImage = ({
 		borderColor: color100,
 	};
 
-
 	useEffect(() => {
 		if (selected !== selectedValue) {
 			setSelected(selectedValue);

@@ -35,7 +35,6 @@ const QuestionCheckbox = ({
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 
-
 	useEffect(() => {
 		if (JSON.stringify(selected) !== JSON.stringify(selectedValue)) {
 			setSelected(initializeSelectedValue());
@@ -85,7 +84,6 @@ const QuestionCheckbox = ({
 		let existingSelectedValue = initializeSelectedValue();
 
 		if (value === "" || value === null || value === undefined) return;
-
 
 		// if value is "prefer not to answer" or" prefer not to say" or "none of the above" reset existing value and add this
 		if (someNotAnswer(value)) {

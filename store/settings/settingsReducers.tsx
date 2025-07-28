@@ -225,12 +225,12 @@ const disableNarrationAutoplay: DisableNarrationAutoplayFuncType = (state) => {
 };
 
 const setNumPendingSubmissions: SetNumPendingSubmissionsFuncType = (state, action) => {
-	if(action.payload < 0) {
+	if (action.payload < 0) {
 		state.numPendingSubmissions = 0;
 	} else {
 		state.numPendingSubmissions = action.payload;
 	}
-}
+};
 
 const resetAllNarrationAutoplay: ResetAllNarrationAutoplayFuncType = (state) => {
 	const allPages = state.pages;
@@ -278,5 +278,5 @@ export default {
 	setDrawerOpened,
 	disableNarrationAutoplay,
 	resetAllNarrationAutoplay,
-	setNumPendingSubmissions
+	setNumPendingSubmissions,
 };

@@ -36,7 +36,6 @@ const QuestionRadio = ({
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 
-
 	useEffect(() => {
 		if (selected !== selectedValue) {
 			setSelected(selectedValue);
@@ -53,7 +52,6 @@ const QuestionRadio = ({
 
 	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
-
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {

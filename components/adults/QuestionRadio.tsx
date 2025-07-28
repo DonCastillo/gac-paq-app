@@ -34,7 +34,6 @@ const QuestionRadio = ({
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
 
-
 	useEffect(() => {
 		if (selected !== selectedValue) {
 			setSelected(selectedValue);
