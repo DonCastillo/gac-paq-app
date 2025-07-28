@@ -32,6 +32,7 @@ export type SetDrawerOpenedState = (state: SettingsSliceInterface, action: Paylo
 export type SettingsFuncType = (state: SettingsSliceInterface) => void;
 export type DisableNarrationAutoplayFuncType = (state: SettingsSliceInterface) => void;
 export type ResetAllNarrationAutoplayFuncType = (state: SettingsSliceInterface) => void;
+export type SetNumPendingSubmissionsFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;
 
 
 /** Responses Slice Function Signature */

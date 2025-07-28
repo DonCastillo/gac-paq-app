@@ -35,6 +35,7 @@ export interface SettingsSliceInterface {
 	enableNarration: boolean;
 	drawerOpened: boolean;
 	soundType: "online" | "offline";
+	numPendingSubmissions?: number;
 }
 
 const settingsSlice = createSlice({
@@ -63,6 +64,7 @@ const settingsSlice = createSlice({
 		enableNarration: true,
 		drawerOpened: false,
 		soundType: "online",
+		numPendingSubmissions: 0,
 	} satisfies SettingsSliceInterface,
 	reducers: {
 		setMode: reducersActions.setMode,
@@ -92,6 +94,7 @@ const settingsSlice = createSlice({
 		setDrawerOpened: reducersActions.setDrawerOpened,
 		disableNarrationAutoplay: reducersActions.disableNarrationAutoplay,
 		resetAllNarrations: reducersActions.resetAllNarrationAutoplay,
+		setNumPendingSubmissions: reducersActions.setNumPendingSubmissions,
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
@@ -128,6 +131,7 @@ const settingsSlice = createSlice({
 		getEnableNarration: (state: SettingsSliceInterface) => state.enableNarration,
 		getDrawerOpened: (state: SettingsSliceInterface) => state.drawerOpened,
 		getSoundType: (state: SettingsSliceInterface) => state.soundType,
+		getNumPendingSubmissions: (state: SettingsSliceInterface) => state.numPendingSubmissions,
 	},
 });
 
@@ -158,6 +162,7 @@ export const {
 	setDrawerOpened,
 	disableNarrationAutoplay,
 	resetAllNarrations,
+	setNumPendingSubmissions,
 } = settingsSlice.actions;
 
 export const {
@@ -184,6 +189,7 @@ export const {
 	getEnableNarration,
 	getDrawerOpened,
 	getSoundType,
+	getNumPendingSubmissions,
 } = settingsSlice.selectors;
 
 export default settingsSlice.reducer;

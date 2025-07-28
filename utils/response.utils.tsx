@@ -15,6 +15,7 @@ import LocalStorageKey from "constants/localstorage.enum";
 import { readData, removeData, storeData } from "utils/localstorage.utils";
 import { submitResponse } from "utils/api.utils";
 import MAIN_STUDY_LANG from "constants/main_study_lang";
+import { setNumPendingSubmissions } from "store/settings/settingsSlice";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -234,6 +235,7 @@ const queueResponseToStorage = async (response: FinalResponseType): Promise<void
 	}
 
 	await storeData(LocalStorageKey.responses, mergedResponses);
+	store.dispatch(setNumPendingSubmissions(mergedResponses.length));
 };
 
 const sendResponseQueue = async (): Promise<void> => {
@@ -251,6 +253,7 @@ const sendResponseQueue = async (): Promise<void> => {
 					await submitResponse(responseToSend);
 					await removeData(LocalStorageKey.responses);
 					await storeData(LocalStorageKey.responses, existingResponses);
+					store.dispatch(setNumPendingSubmissions(existingResponses.length));
 				}
 			} else {
 				break;
@@ -258,6 +261,15 @@ const sendResponseQueue = async (): Promise<void> => {
 		} catch (error) {
 			throw new Error(error);
 		}
+	}
+};
+
+const loadNumPendingSubmissions = async (): Promise<void> => {
+	const existingResponses = await retrieveResponseFromStorage();
+	if (existingResponses === null || existingResponses === undefined) {
+		store.dispatch(setNumPendingSubmissions(0));
+	} else {
+		store.dispatch(setNumPendingSubmissions(existingResponses.length));
 	}
 };
 
@@ -269,4 +281,5 @@ export {
 	queueResponseToStorage,
 	retrieveResponseFromStorage,
 	sendResponseQueue,
+	loadNumPendingSubmissions,
 };

@@ -19,7 +19,7 @@ import { ErrorScreen, SplashScreen, SuccessScreen } from "utils/state_screen.uti
 import { loadPages, loadSectionPages } from "utils/load_pages.utils";
 import LoadingScreenAdult from "./adult/LoadingScreenAdult";
 import NetInfo from "@react-native-community/netinfo";
-import { sendResponseQueue } from "utils/response.utils";
+import { loadNumPendingSubmissions, sendResponseQueue } from "utils/response.utils";
 import {
 	loadQuestionData,
 	removeQuestionData,
@@ -82,6 +82,7 @@ const AppWrapper = (): React.ReactElement => {
 		};
 	}, []);
 
+	// auto submit pending responses when there is an internet connection
 	useEffect(() => {
 		dispatch(setIsConnected(hasNetwork));
 		if (hasNetwork) {
@@ -99,6 +100,7 @@ const AppWrapper = (): React.ReactElement => {
 			await dispatch(removeQuestionData());
 			await dispatch(storeQuestionData());
 			await dispatch(loadQuestionData(language));
+			await loadNumPendingSubmissions();
 			dispatch(resetResponses());
 			loadPhrases();
 			loadPages();
