@@ -275,7 +275,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 					value: "21 - 30 minutes",
 				},
 				{
-					label: "Minutes kuposera 30 minutes",
+					label: "Kuposera 30 minutes",
 					value: "More than 30 minutes",
 				},
 			],

@@ -358,6 +358,10 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				{
 					label: "Simupita buleki",
 					value: "0 minutes",
+					label_mode: {
+						kid: "Simupita buleki",
+						adult: "Samapita ku buleki",
+					},
 				},
 				{
 					label: "1 mpaka 15 minutes",
@@ -378,6 +382,10 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 				{
 					label: "Sindikudziwa",
 					value: "Don't know",
+					label_mode: {
+						kid: "Sindikudziwa",
+						adult: "Simukudziwa",
+					},
 				},
 			],
 		},

@@ -89,7 +89,8 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
 			kid_label:
 				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
-			adult_label: "Kodi mwana wanu anapita kusukulu masiku angati m’sabata yapitayi?",
+			adult_label:
+				"Kodi mwana wanu anaphunzira maphunziro olimbitsa thupi kangati m’sabata yapitayi?",
 			max_value: 7,
 		},
 		"ma-IN": {

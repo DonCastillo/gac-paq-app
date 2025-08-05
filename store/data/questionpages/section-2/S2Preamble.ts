@@ -95,7 +95,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			description: {
 				kid: "Gawoli likunena za ntchito zapakhomo kapena ntchito zomwe zimafuna kuti ukhale otanganidwa. Zitsanzo za ntchito zapakhomo ndi ntchito yokonza m’nyumba, panja panyumba, kulima dimba, ndi zina.",
 				adult:
-					"Gawoli likunena za ntchito zapakhomo kapena ntchito zomwe zimafuna kuti mwana wanu akhale otanganidwa. Zitsanzo za ntchito zapakhomo ndi ntchito yokonza nyumba, panja panyumba, kulima pa munda wapakhomo, ndi zina.",
+					"Gawoli likunena za ntchito zapakhomo kapena ntchito zomwe zimafuna kuti mwana wanu akhale otanganidwa. Zitsanzo za ntchito zapakhomo ndi ntchito yokonza m’nyumba, panja panyumba, kulima pa munda wapakhomo, ndi zina.",
 			},
 		},
 		"ma-IN": {

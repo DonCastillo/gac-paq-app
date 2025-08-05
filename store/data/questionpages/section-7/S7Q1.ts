@@ -328,6 +328,10 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				{
 					label: "Sunakhaleko panja",
 					value: "None",
+					label_mode: {
+						kid: "Sunakhaleko panja",
+						adult: "Sanakhaleko panja",
+					},
 				},
 				{
 					label: "Osafika ola limodzi pa tsiku",

@@ -419,7 +419,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 					value: "4 hours or more per day",
 					label_mode: {
 						kid: "Kupitilira maola 4 patsiku",
-						adult: "Kupitilira maola 4 kapena 4 hours patsiku",
+						adult: "Kupitilira 4 hours patsiku",
 					},
 				},
 			],
