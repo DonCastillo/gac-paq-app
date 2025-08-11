@@ -65,8 +65,9 @@ const GeneralStyle = {
 			fontSize: 33,
 		},
 		menuOption: {
-			// borderBottomColor: "#000",
-			// borderBottomWidth: 1,
+			borderBottomColor: "#5c5c5c",
+			borderBottomWidth: 1,
+			borderTopidth: 1,
 		},
 		menuText: {
 			color: "#000",

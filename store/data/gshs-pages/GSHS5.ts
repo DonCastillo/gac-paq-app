@@ -120,11 +120,11 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Otázka 29",
 			label:
-				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, používáním mobilního telefonu nebo jinými činnostmi v sedě (např. [vložte místní příklady])?",
+				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, čtení knih nebo malování, používáním mobilního telefonu nebo jinými činnostmi v sedě?",
 			kid_label:
-				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, používáním mobilního telefonu nebo jinými činnostmi v sedě (např. [vložte místní příklady])?",
+				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, čtení knih nebo malování, používáním mobilního telefonu nebo jinými činnostmi v sedě?",
 			adult_label:
-				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, používáním mobilního telefonu nebo jinými činnostmi v sedě (např. [vložte místní příklady])?",
+				"Kolik času obvykle denně (mimo školu a domácí úkoly) trávíš sezením – např. sledováním televize, hraním počítačových her, povídáním si s přáteli, čtení knih nebo malování, používáním mobilního telefonu nebo jinými činnostmi v sedě?",
 			choices: [
 				{
 					label: "Méně než 1 hodinu denně",

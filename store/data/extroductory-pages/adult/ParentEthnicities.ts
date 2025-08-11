@@ -385,31 +385,15 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "तुमचा वांशिक गट कोणता?",
 			choices: [
 				{
-					label: "आशियाई",
-					value: "Asian",
+					label: "भारतीय",
+					value: "Indian",
 				},
 				{
-					label: "कृष्णवर्णीय किंवा अमेरिकन कृष्णवर्णीय",
-					value: "Black or African American",
-				},
-				{
-					label: "स्थानिक / मूलनिवासी / आदिवासी",
-					value: "Indigenous",
-				},
-				{
-					label: "लॅटिन अमेरिकन",
-					value: "Latin American",
-				},
-				{
-					label: "श्वेतवर्णीय किंवा कॉकेशियन",
-					value: "White or Caucasian",
-				},
-				{
-					label: "इतर",
+					label: "इतर (कृपया नमूद करा)",
 					value: "Other",
 				},
 				{
-					label: "मला नाही सांगायचे",
+					label: "मला सांगायचे नाही",
 					value: "Prefer not to say",
 				},
 			],

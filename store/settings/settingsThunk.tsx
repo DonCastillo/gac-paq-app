@@ -72,6 +72,27 @@ export const getNarrationPayload = createAsyncThunk(
 			narrations.parent_ethnicities = enNGAdultNarrations?.parent_ethnicities;
 		}
 
+		// if en-IN && mode === kid or teen, merge en-CA payload and get en-IN version of about and play_2
+		if (language === "en-IN" && [Mode.Kid, Mode.Teen].includes(mode)) {
+			const enINKidEndpoint = getNarrationEndpoint(directusBaseEndpoint, Mode.Kid, "en-IN");
+			const enINKidNarrations = await collectNarrationData(enINKidEndpoint, directusAccessToken);
+			narrations.about = enINKidNarrations?.about;
+			narrations.play_2 = enINKidNarrations?.play_2;
+		}
+
+		// if en-IN && mode === adult, merge en-CA payload and get en-IN version of about, play_2, child_ethnicities, parent_ethnicities
+		if (language === "en-IN" && [Mode.Adult].includes(mode)) {
+			const enINAdultEndpoint = getNarrationEndpoint(directusBaseEndpoint, Mode.Adult, "en-IN");
+			const enINAdultNarrations = await collectNarrationData(
+				enINAdultEndpoint,
+				directusAccessToken,
+			);
+			narrations.about = enINAdultNarrations?.about;
+			narrations.play_2 = enINAdultNarrations?.play_2;
+			narrations.child_ethnicities = enINAdultNarrations?.child_ethnicities;
+			narrations.parent_ethnicities = enINAdultNarrations?.parent_ethnicities;
+		}
+
 		return narrations;
 	},
 );

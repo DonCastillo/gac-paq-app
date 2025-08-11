@@ -32,11 +32,6 @@ const QuestionCheckbox = ({
 
 	const [selected, setSelected] = useState<string[]>(initializeSelectedValue());
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
-	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
-
-	useState(() => {
-		setAutoFocusOtherField(false);
-	});
 
 	useEffect(() => {
 		if (JSON.stringify(selected) !== JSON.stringify(selectedValue)) {
@@ -87,11 +82,6 @@ const QuestionCheckbox = ({
 		let existingSelectedValue = initializeSelectedValue();
 
 		if (value === "" || value === null || value === undefined) return;
-
-		// activate other field if "other" or "other (xxxxx)" is selected
-		if (isOtherOption(value)) {
-			setAutoFocusOtherField(true);
-		}
 
 		// if value is "prefer not to answer" or" prefer not to say" or "none of the above" reset existing value and add this
 		if (someNotAnswer(value)) {
@@ -173,7 +163,6 @@ const QuestionCheckbox = ({
 					}
 					onPress={pressHandler}
 					isOtherSelected={isOtherSelected}
-					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={extractUserSpecifiedOtherFromArray(selected)}
 				/>
 			)}

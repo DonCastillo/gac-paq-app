@@ -89,7 +89,8 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
 			kid_label:
 				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
-			adult_label: "Kodi mwana wanu anapita kusukulu masiku angati m’sabata yapitayi?",
+			adult_label:
+				"Kodi mwana wanu anaphunzira maphunziro olimbitsa thupi kangati m’sabata yapitayi?",
 			max_value: 7,
 		},
 		"ma-IN": {
@@ -152,12 +153,45 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			max_value: 7,
 		},
 		"th-TH": {
-			type: Question.QuestionSlider,
+			type: Question.QuestionRadio,
 			heading: "ข้อ 3",
 			label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
 			kid_label: "สัปดาห์ที่แล้ว น้องมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
-			max_value: 7,
+			choices: [
+				{
+					label: "๐",
+					value: "0",
+				},
+				{
+					label: "๑",
+					value: "1",
+				},
+				{
+					label: "๒",
+					value: "2",
+				},
+				{
+					label: "๓",
+					value: "3",
+				},
+				{
+					label: "๔",
+					value: "4",
+				},
+				{
+					label: "๕",
+					value: "5",
+				},
+				{
+					label: "๖",
+					value: "6",
+				},
+				{
+					label: "๗",
+					value: "7",
+				},
+			],
 		},
 		"zh-CN": {
 			type: Question.QuestionSlider,

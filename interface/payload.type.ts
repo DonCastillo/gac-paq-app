@@ -340,7 +340,7 @@ export interface QuestionSliderPayloadInterface extends BaseQuestionSliderPayloa
 }
 
 export interface LangQuestionSliderPayloadInterface extends BaseQuestionSliderPayloadInterface {
-	translations: Record<string, QuestionSliderInterface>;
+	translations: Record<string, QuestionSliderInterface | QuestionRadioInterface>;
 }
 
 export interface QuestionTextareaPayloadInterface extends BaseQuestionTextareaPayloadInterface {

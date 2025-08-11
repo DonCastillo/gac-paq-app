@@ -310,9 +310,9 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionDropdown,
 			heading: "Mwalandilidwa!",
-			label: "Uli ndi dzaka zingati?",
-			kid_label: "Uli ndi dzaka zingati?",
-			adult_label: "Uli ndi dzaka zingati?",
+			label: "Uli ndi zaka zingati?",
+			kid_label: "Uli ndi zaka zingati?",
+			adult_label: "Uli ndi zaka zingati?",
 			choices: [
 				{
 					label: "Zaka 12",

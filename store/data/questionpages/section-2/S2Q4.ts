@@ -339,11 +339,11 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 					},
 				},
 				{
-					label: "Mumalimbikira mwapakakatikati",
+					label: "Mumalimbikira mwapakakatikati kapena kwambiri",
 					value: "0.5",
 					image_ident: "medium_or_hard_effort",
 					label_mode: {
-						kid: "Mumalimbikira mwapakakatikati",
+						kid: "Mumalimbikira mwapakakatikati kapena kwambiri",
 						adult: "Amalimbikira mwapakakatikati kapena kwambiri",
 					},
 				},

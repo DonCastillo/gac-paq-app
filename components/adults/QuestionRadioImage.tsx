@@ -41,16 +41,11 @@ const QuestionRadioImage = ({
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
-	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
 	const numColumn = device.isTablet && device.orientation === "landscape" ? 4 : 2;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
 	};
-
-	useState(() => {
-		setAutoFocusOtherField(false);
-	});
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -68,10 +63,6 @@ const QuestionRadioImage = ({
 
 	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
-
-		if (isOtherOption(value)) {
-			setAutoFocusOtherField(true);
-		}
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
@@ -202,7 +193,6 @@ const QuestionRadioImage = ({
 					selected={isSelected}
 					onPress={selectHandler}
 					isOtherSelected={isOtherSelected}
-					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={getUserSpecifiedOther(value, selected)}
 					optionLabel={`${optionLetter(index)}.  ${label}`}
 					optionSublabel={optionSublabel ?? undefined}
