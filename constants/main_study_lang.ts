@@ -1,3 +1,4 @@
+// testing
 const MAIN_STUDY_LANG = [
 	"sv-SE",
 	"es-MX",
@@ -23,8 +24,6 @@ const MAIN_STUDY_LANG = [
 	"es-CL",
 ];
 
-
-
 // main study live
 // const MAIN_STUDY_LANG = [
 // 	"sv-SE",
@@ -42,6 +41,10 @@ const MAIN_STUDY_LANG = [
 // 	"th-TH",
 // 	"ch-MW",
 // 	"en-MW",
+// 	"cz-CR",
+// 	"en-IN",
+// 	"hi-IN",
+// 	"ma-IN",
 // ];
 
 export default MAIN_STUDY_LANG;
