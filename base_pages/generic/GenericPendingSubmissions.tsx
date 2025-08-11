@@ -41,10 +41,6 @@ const GenericPendingSubmissions = (): React.ReactElement => {
 	const [modalStatus, setModalStatus] = React.useState<boolean | undefined>(undefined);
 
 	const submitResponseHandler = async (): Promise<void> => {
-		// console.log("-----------");
-		// console.log("pendingResponses: ", pendingResponses);
-		// console.log("pendingResponses.length: ", pendingResponses.length);
-
 		// if there no pending responses to submit
 		if (pendingResponses.length === 0) {
 			setModalMessage(phrases?.nothingToSubmit);

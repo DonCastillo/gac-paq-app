@@ -33,11 +33,6 @@ const QuestionRadio = ({
 	let mode = useSelector(getMode);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
-	const [autofocusOtherField, setAutoFocusOtherField] = useState<boolean>(false);
-
-	useState(() => {
-		setAutoFocusOtherField(false);
-	});
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -64,10 +59,6 @@ const QuestionRadio = ({
 
 	const pressHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
-
-		if (isOtherOption(value)) {
-			setAutoFocusOtherField(true);
-		}
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
 		if (isOtherOption(value)) {
@@ -134,7 +125,6 @@ const QuestionRadio = ({
 					}
 					onPress={pressHandler}
 					isOtherSelected={isOtherSelected}
-					autofocusOtherField={autofocusOtherField}
 					defaultOtherInputValue={getUserSpecifiedOther(item.value, selected)}
 					optionSublabel={getOptionSubLabel(item.sublabel, mode) ?? undefined}
 				/>

@@ -380,36 +380,20 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २६",
-			label: "तुमच्या मुलाचा/ मुलीचा वांशिक गट कोणता?",
-			kid_label: "तुमच्या मुलाचा/ मुलीचा वांशिक गट कोणता?",
-			adult_label: "तुमच्या मुलाचा/ मुलीचा वांशिक गट कोणता?",
+			label: "तुमच्या मुलाचा वांशिक गट कोणता?",
+			kid_label: "तुमच्या मुलाचा वांशिक गट कोणता?",
+			adult_label: "तुमच्या मुलाचा वांशिक गट कोणता?",
 			choices: [
 				{
-					label: "आशियाई",
-					value: "Asian",
+					label: "भारतीय",
+					value: "Indian",
 				},
 				{
-					label: "कृष्णवर्णीय किंवा अमेरिकन कृष्णवर्णीय",
-					value: "Black or African American",
-				},
-				{
-					label: "स्थानिक / मूलनिवासी / आदिवासी",
-					value: "Indigenous",
-				},
-				{
-					label: "लॅटिन अमेरिकन",
-					value: "Latin American",
-				},
-				{
-					label: "श्वेतवर्णीय किंवा कॉकेशियन",
-					value: "White or Caucasian",
-				},
-				{
-					label: "इतर",
+					label: "इतर (कृपया नमूद करा)",
 					value: "Other",
 				},
 				{
-					label: "मला नाही सांगायचे",
+					label: "मला सांगायचे नाही",
 					value: "Prefer not to say",
 				},
 			],

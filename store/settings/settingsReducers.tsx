@@ -24,6 +24,7 @@ import type {
 	ResetAllNarrationAutoplayFuncType,
 	AddSectionTitleFuncType,
 	SetDrawerOpenedState,
+	SetNumPendingSubmissionsFuncType,
 } from "interface/function.type";
 import { type PageIndexInterface } from "interface/payload.type";
 const TOTAL_COLORS = 8;
@@ -223,6 +224,14 @@ const disableNarrationAutoplay: DisableNarrationAutoplayFuncType = (state) => {
 	}
 };
 
+const setNumPendingSubmissions: SetNumPendingSubmissionsFuncType = (state, action) => {
+	if (action.payload < 0) {
+		state.numPendingSubmissions = 0;
+	} else {
+		state.numPendingSubmissions = action.payload;
+	}
+};
+
 const resetAllNarrationAutoplay: ResetAllNarrationAutoplayFuncType = (state) => {
 	const allPages = state.pages;
 	const updatedPages = Object.entries(allPages).map(([key, page]) => {
@@ -269,4 +278,5 @@ export default {
 	setDrawerOpened,
 	disableNarrationAutoplay,
 	resetAllNarrationAutoplay,
+	setNumPendingSubmissions,
 };

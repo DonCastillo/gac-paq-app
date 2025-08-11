@@ -19,7 +19,6 @@ interface PropsInterface {
 	onPress: (value: string | null) => void;
 	selected: boolean;
 	isOtherSelected?: boolean;
-	autofocusOtherField?: boolean;
 	defaultOtherInputValue?: string;
 }
 
@@ -30,7 +29,6 @@ const CheckboxOption = ({
 	onPress,
 	selected = false,
 	isOtherSelected = false,
-	autofocusOtherField = false,
 	defaultOtherInputValue,
 }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
@@ -112,11 +110,6 @@ const CheckboxOption = ({
 							width: "100%",
 							alignItems: "center",
 							justifyContent: "center",
-						}}
-						onLayout={(event) => {
-							if (autofocusOtherField) {
-								otherInputRef?.current?.focus();
-							}
 						}}
 						autoCapitalize="none"
 						autoCorrect={false}

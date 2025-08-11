@@ -496,14 +496,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionCheckbox,
 			heading: "Funso 25",
-			label:
-				"Chonde onetsani ngati mwana wanu ali ndi zovuta ndi zotsatirazi pazochitika zake za tsiku ndi tsiku.",
-			kid_label:
-				"Chonde onetsani ngati mwana wanu ali ndi zovuta ndi zotsatirazi pazochitika zake za tsiku ndi tsiku.",
-			adult_label:
-				"Chonde onetsani ngati mwana wanu ali ndi zovuta ndi zotsatirazi pazochitika zake za tsiku ndi tsiku.",
-			kid_sublabel: "Sankhani zonse zomwe zikugwira ntchito.",
-			adult_sublabel: "Sankhani zonse zomwe zikugwira ntchito.",
+			label: "Sankhani mavuto onse omwe akumukhuza mwana wanu.",
+			kid_label: "Sankhani mavuto onse omwe akumukhuza mwana wanu.",
+			adult_label: "Sankhani mavuto onse omwe akumukhuza mwana wanu.",
 			choices: [
 				{
 					label: "Kumva",

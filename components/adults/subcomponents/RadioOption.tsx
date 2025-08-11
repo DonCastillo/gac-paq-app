@@ -20,7 +20,6 @@ interface PropsInterface {
 	onPress: (value: string | null) => void;
 	selected: boolean;
 	isOtherSelected?: boolean;
-	autofocusOtherField?: boolean;
 	defaultOtherInputValue?: string;
 	optionLabel?: string;
 	optionSublabel?: string;
@@ -33,7 +32,6 @@ const RadioOption = ({
 	onPress,
 	selected = false,
 	isOtherSelected = false,
-	autofocusOtherField = false,
 	defaultOtherInputValue,
 	optionLabel,
 	optionSublabel,
@@ -133,11 +131,6 @@ const RadioOption = ({
 							width: "100%",
 							alignItems: "center",
 							justifyContent: "center",
-						}}
-						onLayout={(event) => {
-							if (autofocusOtherField) {
-								otherInputRef?.current?.focus();
-							}
 						}}
 						autoCapitalize="none"
 						autoCorrect={false}

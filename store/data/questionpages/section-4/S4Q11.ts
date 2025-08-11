@@ -268,7 +268,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 				"Pa tsiku, Zimamutengera nthawi yaitali bwanji mwana wanu kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
 			choices: [
 				{
-					label: "ma minutes 10 kapena osakwana",
+					label: "Ma minutes 10 kapena osakwana",
 					value: "10 minutes or less",
 				},
 				{
@@ -280,7 +280,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 					value: "21 - 30 minutes",
 				},
 				{
-					label: "minutes kuposera 30 minutes",
+					label: "Kuposera 30 minutes",
 					value: "More than 30 minutes",
 				},
 			],
@@ -314,11 +314,11 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७c - व्हीलिंग",
 			label:
-				"एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गए?",
+				"एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गए?",
 			kid_label:
-				"एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गए?",
+				"एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गए?",
 			adult_label:
-				"एक सामान्य दिन में, आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर जाने के लिए कितना समय व्हीलिंग करके गया?",
+				"एक सामान्य दिन में, आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गया?",
 			choices: [
 				{
 					label: "10 मिनट या उससे कम",

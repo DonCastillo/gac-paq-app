@@ -328,6 +328,10 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 				{
 					label: "Sunakhaleko panja",
 					value: "None",
+					label_mode: {
+						kid: "Sunakhaleko panja",
+						adult: "Sanakhaleko panja",
+					},
 				},
 				{
 					label: "Osafika ola limodzi pa tsiku",
@@ -594,9 +598,11 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 23",
-			label: "สัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
-			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
-			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			label: "ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			kid_label:
+				"ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			adult_label:
+				"ในวันปกติเมื่อสัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
 			choices: [
 				{
 					label: "ไม่มีเลย",
