@@ -160,35 +160,35 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณมีเรียนวิชาพลศึกษาทั้งหมดกี่คาบ?",
 			choices: [
 				{
-					label: "๐",
+					label: "0",
 					value: "0",
 				},
 				{
-					label: "๑",
+					label: "1",
 					value: "1",
 				},
 				{
-					label: "๒",
+					label: "2",
 					value: "2",
 				},
 				{
-					label: "๓",
+					label: "3",
 					value: "3",
 				},
 				{
-					label: "๔",
+					label: "4",
 					value: "4",
 				},
 				{
-					label: "๕",
+					label: "5",
 					value: "5",
 				},
 				{
-					label: "๖",
+					label: "6",
 					value: "6",
 				},
 				{
-					label: "๗",
+					label: "7",
 					value: "7",
 				},
 			],
