@@ -51,3 +51,10 @@ To refresh the app in local development, enter `r` on the terminal.
 Some participating countries like China cannot access GAC-PAQ app on Google Playstore. For that, you need to release the APK version of the app so that it can be installed manually.
 
 1. `eas build --profile temp:production --platform android`
+
+## Submitting to TestFlight / Apple (For IOS)
+
+1. After you have built the iOS binary/files through eas build command, run the following to submit:
+   1. `eas submit`
+   2. Select IOS as the platform
+   3. Wait for the submission to finish. After that, you'll receive an email stating that your app is on Testflight and ready to be submitted to Apple for review.
