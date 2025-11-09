@@ -102,7 +102,7 @@ const Numbered_Options: Record<string, Record<string, string[]>> = {
 		adult_options: ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"],
 	},
 	"th-TH": {
-		adult_options: ["๑", "๒", "๓", "๔", "๕", "๖", "๗", "๘", "๙", "๑๐"],
+		adult_options: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
 	},
 };
 
