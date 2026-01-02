@@ -1,22 +1,13 @@
-import { StyleSheet } from "react-native";
+import useCurrentPage from "@hooks/useCurrentPage";
+import type { Choice, ChoiceIcon } from "@interface/payload.type";
+import { getColorTheme, getDevice, getPhrases } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { moderateScale } from "@utils/responsive.utils";
+import { adjustDropdownIconSize, adjustDropdownLabelText, adjustWritingDirection } from "@utils/style";
 import React, { useEffect, useState } from "react";
+import { StyleSheet } from "react-native";
 import DropDownPicker from "react-native-dropdown-picker";
-import { GeneralStyle } from "styles/general";
-import { moderateScale } from "utils/responsive.utils";
 import { useSelector } from "react-redux";
-import {
-	getColorTheme,
-	getCurrentPage,
-	getCurrentPageNumber,
-	getDevice,
-	getPhrases,
-} from "store/settings/settingsSlice";
-import type { Choice, ChoiceIcon } from "interface/payload.type";
-import {
-	adjustDropdownIconSize,
-	adjustDropdownLabelText,
-	adjustWritingDirection,
-} from "utils/style";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -36,9 +27,8 @@ const DropDownSelector = ({
 	dropdownMinHeight = "100%",
 }: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
-	const currentPageNumber = useSelector(getCurrentPageNumber);
+	const { currentPageNumber, currentPage } = useCurrentPage();
 	const device = useSelector(getDevice);
-	const currentPage = useSelector(getCurrentPage);
 	const { color100 } = colorTheme;
 	const [value, setValue] = useState<string | null>(selectedValue);
 	const [items, setItems] = useState<ChoiceIcon[] | Choice[]>(options);
@@ -96,10 +86,7 @@ const DropDownSelector = ({
 				]}
 				listItemContainerStyle={{
 					...styles.listItemContainerStyle,
-					height: moderateScale(
-						device.isTablet ? 35 : 45,
-						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-					),
+					height: moderateScale(device.isTablet ? 35 : 45, device.orientation === "portrait" ? device.screenWidth : device.screenHeight),
 					direction: adjustWritingDirection(),
 				}}
 				onChangeValue={(value: string) => onSelect(value)}

@@ -1,13 +1,12 @@
-import ProgressBar from "components/generic/ProgressBar";
+import ProgressBar from "@components/generic/ProgressBar";
+import { getCurrentPage, getSectionTotalPages } from "@store/settings/settingsSlice";
 import React from "react";
 import { useSelector } from "react-redux";
-import { getCurrentPage, getSectionTotalPages } from "store/settings/settingsSlice";
 
 const ProgressBarAdult = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
-	const sectionPageTotal =
-		currentPage.sectionNumber !== null ? sectionTotalPages[currentPage.sectionNumber] : null;
+	const sectionPageTotal = currentPage.sectionNumber !== null ? sectionTotalPages[currentPage.sectionNumber] : null;
 
 	return (
 		<ProgressBar

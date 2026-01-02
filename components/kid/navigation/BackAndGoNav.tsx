@@ -1,8 +1,8 @@
-import { View, StyleSheet } from "react-native";
-import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
+import ButtonContainerWidth from "@components/buttons/ButtonContainerWidth";
+import { getColorTheme, getPhrases, nextPage, prevPage } from "@store/settings/settingsSlice";
 import React from "react";
+import { StyleSheet, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import { getPhrases, getColorTheme, nextPage, prevPage } from "store/settings/settingsSlice";
 
 const BackAndGoNav = (): React.ReactElement => {
 	const dispatch = useDispatch();

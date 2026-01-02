@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangPreamblePayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangPreamblePayloadInterface } from "@interface/payload.type";
 
 const S1Preamble: LangPreamblePayloadInterface = {
 	ident: "school_preamble",
@@ -157,8 +157,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 			subheading: "Sektion 1",
 			description: {
 				kid: "Den här delen handlar om vad du gör i skolan. Till exempel under idrottslektionen, dina raster och lunchen.",
-				adult:
-					"Den här delen handlar om vad ditt barn gör i skolan. Till exempel under idrottslektionen, raster och lunchen.",
+				adult: "Den här delen handlar om vad ditt barn gör i skolan. Till exempel under idrottslektionen, raster och lunchen.",
 			},
 		},
 		"th-TH": {
@@ -166,8 +165,7 @@ const S1Preamble: LangPreamblePayloadInterface = {
 			subheading: "ส่วนที่ 1",
 			description: {
 				kid: "ส่วนนี้เป็นคำถามเกี่ยวกับสิ่งที่น้องทำในวันปกติที่ไปโรงเรียน เช่น ในวิชาพลศึกษา ช่วงเวลาพัก และช่วงพักกลางวัน",
-				adult:
-					"ส่วนนี้เป็นคำถามเกี่ยวกับสิ่งที่บุตรหลานของคุณทำในวันปกติที่ไปโรงเรียน เช่น ในวิชาพลศึกษา ช่วงเวลาพัก และช่วงพักกลางวัน",
+				adult: "ส่วนนี้เป็นคำถามเกี่ยวกับสิ่งที่บุตรหลานของคุณทำในวันปกติที่ไปโรงเรียน เช่น ในวิชาพลศึกษา ช่วงเวลาพัก และช่วงพักกลางวัน",
 			},
 		},
 		"zh-CN": {

@@ -1,22 +1,7 @@
-import { FlagIcons } from "styles/flags";
-import Languages from "store/data/languages";
-import { store } from "store/store";
-import { addSectionTitle, resetSectionTitles, setPhrases } from "store/settings/settingsSlice";
-import PhraseLabel from "constants/phrase_label.enum";
-import type { LanguageInterface } from "interface/payload.type";
+import PhraseLabel from "@constants/phrase_label.enum";
+import { addSectionTitle, resetSectionTitles, setPhrases } from "@store/settings/settingsSlice";
+import { store } from "@store/store";
 import { translateSectionHeading } from "./translate.utils";
-
-const loadLanguagesOffline = (): LanguageInterface[] => {
-	return Languages.map((language: LanguageInterface) => {
-		return {
-			...language,
-			flag:
-				language.flag_code !== "" && language.flag_code !== undefined
-					? FlagIcons[language.flag_code.toLowerCase()]
-					: null,
-		};
-	});
-};
 
 const loadPhrases = (): void => {
 	const backPhrase = store.getState().questions.backPhrase;
@@ -72,4 +57,4 @@ const loadSectionTitles = (): void => {
 	}
 };
 
-export { loadLanguagesOffline, loadPhrases, loadSectionTitles };
+export { loadPhrases, loadSectionTitles };

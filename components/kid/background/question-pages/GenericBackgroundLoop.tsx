@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import AbsoluteFullScreenContainer from "@components/kid/background/AbsoluteFullScreenContainer";
+import { LoopPink } from "@components/svgs/kid/doodles";
 import React, { memo } from "react";
-import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
-import { LoopPink } from "components/svgs/kid/doodles";
+import { StyleSheet } from "react-native";
 
 interface PropsInterface {
 	fillColor: string;

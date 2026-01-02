@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangPreamblePayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangPreamblePayloadInterface } from "@interface/payload.type";
 
 const S4Preamble: LangPreamblePayloadInterface = {
 	ident: "transportation_preamble",
@@ -132,8 +132,7 @@ const S4Preamble: LangPreamblePayloadInterface = {
 			subheading: "Seção 4",
 			description: {
 				kid: "Esta seção é sobre como você vai a diferentes lugares.",
-				adult:
-					"Esta seção é sobre como a criança ou adolescente que você é responsável vai a diferentes lugares.",
+				adult: "Esta seção é sobre como a criança ou adolescente que você é responsável vai a diferentes lugares.",
 			},
 		},
 		"sv-SE": {
@@ -181,8 +180,7 @@ const S4Preamble: LangPreamblePayloadInterface = {
 			subheading: "Section 4",
 			description: {
 				kid: "Cette section porte sur comment tu vas à différents endroits.",
-				adult:
-					"Cette section porte sur les moyens que ton enfant utilise pour aller à différents endroits.",
+				adult: "Cette section porte sur les moyens que ton enfant utilise pour aller à différents endroits.",
 			},
 		},
 	},

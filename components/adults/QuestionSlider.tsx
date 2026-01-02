@@ -1,14 +1,14 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import RadioOption from "@components/adults/subcomponents/RadioOption";
+import PhraseLabel from "@constants/phrase_label.enum";
+import { Icon, Slider } from "@rneui/base";
+import { DefaultStyle, GeneralStyle } from "@styles/general";
 import React, { useEffect, useState } from "react";
-import { DefaultStyle, GeneralStyle } from "styles/general";
-import { Icon, Slider } from "@rneui/themed";
-import PhraseLabel from "constants/phrase_label.enum";
-import RadioOption from "components/adults/subcomponents/RadioOption";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import { useSelector } from "react-redux";
 
-import { getPhrases, getColorTheme, getCurrentPage } from "store/settings/settingsSlice";
-import { adjustWritingDirection } from "utils/style";
-import { optionNumber } from "utils/options.utils";
+import { getColorTheme, getCurrentPage, getPhrases } from "@store/settings/settingsSlice";
+import { optionNumber } from "@utils/options.utils";
+import { adjustWritingDirection } from "@utils/style";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -16,11 +16,7 @@ interface PropsInterface {
 	maxValue?: number;
 }
 
-const QuestionSlider = ({
-	onChange,
-	selectedValue,
-	maxValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionSlider = ({ onChange, selectedValue, maxValue }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const colorTheme = useSelector(getColorTheme);
 	const phrases = useSelector(getPhrases);
@@ -126,11 +122,7 @@ const QuestionSlider = ({
 				maximumTrackTintColor={isColor100(value)}
 				trackStyle={[styles.trackStyle, !isNumber(value) && styles.trackStyleUnselected]}
 				allowTouchTrack={true}
-				thumbStyle={[
-					styles.thumbStyle,
-					{ backgroundColor: color200 },
-					!isNumber(value) && styles.thumbStyleUnselected,
-				]}
+				thumbStyle={[styles.thumbStyle, { backgroundColor: color200 }, !isNumber(value) && styles.thumbStyleUnselected]}
 				thumbProps={{
 					children: (
 						<View
@@ -157,16 +149,8 @@ const QuestionSlider = ({
 								>
 									{displayLeftArrow(setSliderValue(value))}
 								</View>
-								<View
-									style={[
-										styles.tooltip,
-										{ backgroundColor: color200 },
-										!isNumber(value) && styles.tooltipUnselected,
-									]}
-								>
-									<Text style={[styles.tooltipText]}>
-										{displayValue(isNumber(value) ? value : 0)}
-									</Text>
+								<View style={[styles.tooltip, { backgroundColor: color200 }, !isNumber(value) && styles.tooltipUnselected]}>
+									<Text style={[styles.tooltipText]}>{displayValue(isNumber(value) ? value : 0)}</Text>
 								</View>
 								<View
 									style={{

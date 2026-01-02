@@ -1,44 +1,40 @@
+import { LanguageInterface } from "@/interface/payload.type";
+import { getLanguageOption } from "@/store/questions/questionsSlice";
+import { getDevice } from "@/store/settings/settingsSlice";
+import FlagIcons, { FlagCodeType } from "@/styles/flags";
+import React, { useMemo } from "react";
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
-import { getLanguageOption } from "store/questions/questionsSlice";
 import { useSelector } from "react-redux";
-import type { LanguageInterface } from "interface/payload.type";
-import { getDevice, getLanguage } from "store/settings/settingsSlice";
 
 const LanguageIndicator = ({ langCode = "" }: { langCode: string }): React.ReactElement => {
-	const languageSelected = useSelector(getLanguage);
-	const languageOptions: LanguageInterface[] = useSelector(getLanguageOption) ?? [];
 	const device = useSelector(getDevice);
-	const [language, setLanguage] = useState<LanguageInterface | null>(null);
+	const languageOptionsRaw = useSelector(getLanguageOption);
+	const languageOptions: LanguageInterface[] = useMemo(() => languageOptionsRaw ?? [], [languageOptionsRaw]);
 
-	useEffect(() => {
-		if (languageOptions.length > 0 && langCode !== "") {
-			const tempLanguage = languageOptions.find(
-				(option: LanguageInterface) => option.lang_code === langCode,
-			);
-			setLanguage(tempLanguage ?? null);
-		}
-	}, [languageSelected, languageOptions]);
+	const flagCode = useMemo(() => {
+		return languageOptions.find((item) => item.lang_code === langCode)?.flag_code?.toLowerCase() as FlagCodeType;
+	}, [langCode, languageOptions]);
 
-	if (language === null) {
-		return <View />;
+	const Flag = flagCode && FlagIcons[flagCode];
+
+	if (flagCode && Flag) {
+		return (
+			<View>
+				<Flag
+					style={{
+						maxWidth: device.isTablet ? 60 : 40,
+						maxHeight: "100%",
+						width: "100%",
+						aspectRatio: 2 / 1,
+						justifyContent: "flex-start",
+						alignItems: "center",
+					}}
+				/>
+			</View>
+		);
 	}
 
-	const Flag = language?.flag;
-	return (
-		<View>
-			<Flag
-				style={{
-					maxWidth: device.isTablet ? 60 : 40,
-					maxHeight: "100%",
-					width: "100%",
-					aspectRatio: 2 / 1,
-					justifyContent: "flex-start",
-					alignItems: "center",
-				}}
-			/>
-		</View>
-	);
+	return <></>;
 };
 
 export default LanguageIndicator;

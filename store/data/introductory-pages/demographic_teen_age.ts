@@ -1,6 +1,6 @@
-import Question from "constants/question.enum";
-import Screen from "constants/screen.enum";
-import type { LangQuestionDropdownPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionDropdownPayloadInterface } from "@interface/payload.type";
 
 const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 	ident: "age",

@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const GSHS2: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_2",
@@ -55,12 +55,9 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २६",
-			label:
-				"मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
-			kid_label:
-				"मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
-			adult_label:
-				"मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
+			label: "मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
+			kid_label: "मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
+			adult_label: "मागील ७ दिवसांत, तुम्ही तुमचे स्नायू मजबूत बनवण्यासाठी किती दिवस व्यायाम केला, जसे की जोर, बैठका किंवा वेटलिफ्टिंग?",
 			choices: [
 				{
 					label: "० दिवस",
@@ -143,8 +140,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 26",
-			label:
-				"V kolika z posledních 7 dnů ses věnoval/a cvičením na posílení nebo zpevnění svalů, jako jsou kliky, sedy-lehy nebo cvičení se zátěží?",
+			label: "V kolika z posledních 7 dnů ses věnoval/a cvičením na posílení nebo zpevnění svalů, jako jsou kliky, sedy-lehy nebo cvičení se zátěží?",
 			kid_label:
 				"V kolika z posledních 7 dnů ses věnoval/a cvičením na posílení nebo zpevnění svalů, jako jsou kliky, sedy-lehy nebo cvičení se zátěží?",
 			adult_label:
@@ -363,12 +359,9 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २६",
-			label:
-				"गत ७ दिनको अवधिमा, कति दिन तपाईंले मांसपेशी सुदृढीकरण वा टोनिङ अभ्यासहरू जस्तै पुश–अप, सीट–अप, वा वजन उठाउने गर्नुभयो",
-			kid_label:
-				"गत ७ दिनको अवधिमा, कति दिन तपाईंले मांसपेशी सुदृढीकरण वा टोनिङ अभ्यासहरू जस्तै पुश–अप, सीट–अप, वा वजन उठाउने गर्नुभयो ",
-			adult_label:
-				"गत ७ दिनको अवधिमा, कति दिन तपाईंले मांसपेशी सुदृढीकरण वा टोनिङ अभ्यासहरू जस्तै पुश–अप, सीट–अप, वा वजन उठाउने गर्नुभयो",
+			label: "गत ७ दिनको अवधिमा, कति दिन तपाईंले मांसपेशी सुदृढीकरण वा टोनिङ अभ्यासहरू जस्तै पुश–अप, सीट–अप, वा वजन उठाउने गर्नुभयो",
+			kid_label: "गत ७ दिनको अवधिमा, कति दिन तपाईंले मांसपेशी सुदृढीकरण वा टोनिङ अभ्यासहरू जस्तै पुश–अप, सीट–अप, वा वजन उठाउने गर्नुभयो ",
+			adult_label: "गत ७ दिनको अवधिमा, कति दिन तपाईंले मांसपेशी सुदृढीकरण वा टोनिङ अभ्यासहरू जस्तै पुश–अप, सीट–अप, वा वजन उठाउने गर्नुभयो",
 			choices: [
 				{
 					label: "० दिन",
@@ -407,12 +400,9 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 26",
-			label:
-				"ในระหว่าง 7 วันที่ผ่านมา นักเรียนออกกำลังกายเพื่อให้กล้ามเนื้อแข็งแรง เช่น วิดพื้น ลุก-นั่ง หรือยกน้ำหนัก จำนวนกี่วัน",
-			kid_label:
-				"ในระหว่าง 7 วันที่ผ่านมา นักเรียนออกกำลังกายเพื่อให้กล้ามเนื้อแข็งแรง เช่น วิดพื้น ลุก-นั่ง หรือยกน้ำหนัก จำนวนกี่วัน",
-			adult_label:
-				"ในระหว่าง 7 วันที่ผ่านมา นักเรียนออกกำลังกายเพื่อให้กล้ามเนื้อแข็งแรง เช่น วิดพื้น ลุก-นั่ง หรือยกน้ำหนัก จำนวนกี่วัน",
+			label: "ในระหว่าง 7 วันที่ผ่านมา นักเรียนออกกำลังกายเพื่อให้กล้ามเนื้อแข็งแรง เช่น วิดพื้น ลุก-นั่ง หรือยกน้ำหนัก จำนวนกี่วัน",
+			kid_label: "ในระหว่าง 7 วันที่ผ่านมา นักเรียนออกกำลังกายเพื่อให้กล้ามเนื้อแข็งแรง เช่น วิดพื้น ลุก-นั่ง หรือยกน้ำหนัก จำนวนกี่วัน",
+			adult_label: "ในระหว่าง 7 วันที่ผ่านมา นักเรียนออกกำลังกายเพื่อให้กล้ามเนื้อแข็งแรง เช่น วิดพื้น ลุก-นั่ง หรือยกน้ำหนัก จำนวนกี่วัน",
 			choices: [
 				{
 					label: "0 วัน",
@@ -847,12 +837,9 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "سؤال [٢٦]",
-			label:
-				"خلال السبعة أيام الماضية، كم يومًا تمرنت فيه لتقوية عضلاتك أو ضبطها، مثل تمارين الضغط، أو البطن أو رفع الأثقال؟",
-			kid_label:
-				"خلال السبعة أيام الماضية، كم يومًا تمرنت فيه لتقوية عضلاتك أو ضبطها، مثل تمارين الضغط، أو البطن أو رفع الأثقال؟",
-			adult_label:
-				"خلال السبعة أيام الماضية، كم يومًا تمرنت فيه لتقوية عضلاتك أو ضبطها، مثل تمارين الضغط، أو البطن أو رفع الأثقال؟",
+			label: "خلال السبعة أيام الماضية، كم يومًا تمرنت فيه لتقوية عضلاتك أو ضبطها، مثل تمارين الضغط، أو البطن أو رفع الأثقال؟",
+			kid_label: "خلال السبعة أيام الماضية، كم يومًا تمرنت فيه لتقوية عضلاتك أو ضبطها، مثل تمارين الضغط، أو البطن أو رفع الأثقال؟",
+			adult_label: "خلال السبعة أيام الماضية، كم يومًا تمرنت فيه لتقوية عضلاتك أو ضبطها، مثل تمارين الضغط، أو البطن أو رفع الأثقال؟",
 			choices: [
 				{
 					label: "لم يحدث",
@@ -937,8 +924,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 			heading: "问题 26",
 			label: "在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
 			kid_label: "在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
-			adult_label:
-				"在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
+			adult_label: "在过去7天里，有多少天你进行了加强或锻炼肌肉的运动，比如俯卧撑、仰卧起坐或举重？",
 			choices: [
 				{
 					label: "0天",

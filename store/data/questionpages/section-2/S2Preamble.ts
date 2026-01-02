@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangPreamblePayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangPreamblePayloadInterface } from "@interface/payload.type";
 
 const S2Preamble: LangPreamblePayloadInterface = {
 	ident: "household_preamble",
@@ -175,8 +175,7 @@ const S2Preamble: LangPreamblePayloadInterface = {
 			subheading: "第二部分",
 			description: {
 				kid: "本部分是关于你做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
-				adult:
-					"本部分是关于您的孩子做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
+				adult: "本部分是关于您的孩子做的家务活的一些问题，包括各种家务、打扫庭院、打理植物及其他与家务有关的需要身体活动的任务。",
 			},
 		},
 		"es-ES": {

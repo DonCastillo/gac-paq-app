@@ -1,9 +1,9 @@
-import type React from "react";
-import type { IntroductoryPagesType, ModeType } from "interface/union.type";
-import { type SettingsSliceInterface } from "store/settings/settingsSlice";
+import type { LanguageInterface, PageIndexInterface, ResponseInterface, SectionPayloadInterface } from "@interface/payload.type";
+import type { IntroductoryPagesType, ModeType } from "@interface/union.type";
 import { type PayloadAction } from "@reduxjs/toolkit";
+import { type SettingsSliceInterface } from "@store/settings/settingsSlice";
+import type React from "react";
 import type DeviceInterface from "./dimensions";
-import type { ResponseInterface, LanguageInterface, PageIndexInterface, SectionPayloadInterface } from "interface/payload.type";
 import type { PhrasePayloadInterface } from "./phrase";
 
 
@@ -18,7 +18,7 @@ export type SetDirectusFuncType = (state: SettingsSliceInterface, action: Payloa
 export type SetColorThemeFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;
 export type SetPhrasesFuncType = (state: SettingsSliceInterface, action: PayloadAction<PhrasePayloadInterface>) => void;
 export type SetSectionTitlesFuncType = (state: SettingsSliceInterface, action: PayloadAction<string[]>) => void;
-export type SetNarrationsFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<string, string | null>>) => void;
+export type SetNarrationsFuncType = (state: SettingsSliceInterface, action: PayloadAction<Record<string, any>|null>) => void;
 export type AddNarrationsFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ident: string, audio_id: string | null}>) => void;
 export type SkipPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;
 export type AddPageFuncType = (state: SettingsSliceInterface, action: PayloadAction<{ key: number; page: PageIndexInterface }>) => void;
@@ -49,3 +49,7 @@ export type QuestionsFuncType = (state: any) => void;
 
 export type loadPagesFuncType = (newPages: Record<number, PageIndexInterface>) => 
     { pages: Record<number, PageIndexInterface>; sectionTotal: Record<number, number> };
+
+export type Component = () => React.ReactNode;
+export type ParentComponent = ({children}: {children: React.ReactNode}) => React.ReactNode;
+ 

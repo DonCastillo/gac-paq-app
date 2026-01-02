@@ -1,6 +1,6 @@
-import Question from "constants/question.enum";
-import Screen from "constants/screen.enum";
-import type { LangQuestionOptionPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionOptionPayloadInterface } from "@interface/payload.type";
 
 const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 	ident: "child_ethnicity",

@@ -1,4 +1,4 @@
-import type { Transportation9_11Interface } from "interface/question17";
+import type { Transportation9_11Interface } from "@interface/question17";
 
 const Transportation9_11: Transportation9_11Interface = {
 	"en-CA": {
@@ -42,8 +42,7 @@ const Transportation9_11: Transportation9_11Interface = {
 			},
 			walk: {
 				none: "Em um dia normal, quanto tempo você gasta caminhando para ir a lugares?",
-				school:
-					"Em um dia normal, quanto tempo você gasta caminhando para ir a lugares além da escola?",
+				school: "Em um dia normal, quanto tempo você gasta caminhando para ir a lugares além da escola?",
 				work: "Em um dia normal, quanto tempo você gasta caminhando para ir a lugares além do trabalho?",
 				both: "Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			},
@@ -58,8 +57,7 @@ const Transportation9_11: Transportation9_11Interface = {
 			},
 			walk: {
 				none: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta caminhando para ir a lugares?",
-				school:
-					"Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta caminhando para ir a lugares além da escola?",
+				school: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta caminhando para ir a lugares além da escola?",
 				work: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) gasta caminhando para ir a lugares além do trabalho?",
 				both: "Em um dia normal, quanto tempo o(a) seu(sua) filho(a) leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			},
@@ -69,15 +67,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		kid: {
 			wheel: {
 				none: "Hur mycket tid spenderade du på att cykla till platser under en vanlig dag?",
-				school:
-					"Hur mycket tid spenderade du på att cykla till platser utanför skolan under en vanlig dag?",
+				school: "Hur mycket tid spenderade du på att cykla till platser utanför skolan under en vanlig dag?",
 				work: "Hur mycket tid spenderade du på att cykla till platser utanför arbetet under en vanlig dag?",
 				both: "Hur mycket tid spenderade du på att cykla till andra platser än skolan eller arbetet under en vanlig dag?",
 			},
 			walk: {
 				none: "Hur mycket tid spenderade du på att gå till olika platser under en vanlig dag?",
-				school:
-					"Hur mycket tid spenderade du på att gå till platser utanför skolan under en vanlig dag?",
+				school: "Hur mycket tid spenderade du på att gå till platser utanför skolan under en vanlig dag?",
 				work: "Hur mycket tid spenderade du på att gå till platser utanför arbetet under en vanlig dag?",
 				both: "Hur mycket tid spenderade du på att gå till andra platser än skolan eller arbetet under en vanlig dag?",
 			},
@@ -115,15 +111,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		adult: {
 			wheel: {
 				none: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่ต่าง ๆ?",
-				school:
-					"ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน?",
+				school: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน?",
 				work: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่ที่ทำงาน?",
 				both: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			},
 			walk: {
 				none: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการเดินไปยังสถานที่ต่าง ๆ?",
-				school:
-					"ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการเดินไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน?",
+				school: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการเดินไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน?",
 				work: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการเดินไปยังสถานที่อื่นที่ไม่ใช่ที่ทำงาน?",
 				both: "ในวันปกติ บุตรหลานของคุณใช้เวลาเท่าไหร่ในการเดินไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			},
@@ -163,15 +157,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		kid: {
 			wheel: {
 				none: "En un día normal, ¿cuánto tiempo pasaste usando ruedas para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo pasaste usando ruedas para ir a lugares distintos a la escuela o colegio?",
+				school: "En un día normal, ¿cuánto tiempo pasaste usando ruedas para ir a lugares distintos a la escuela o colegio?",
 				work: "En un día normal, ¿cuánto tiempo pasaste usando ruedas para ir a lugares distintos al trabajo o voluntariado?",
 				both: "En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
 			},
 			walk: {
 				none: "En un día normal, ¿cuánto tiempo pasaste caminando para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo pasaste caminando para ir a lugares distintos a la escuela o colegio?",
+				school: "En un día normal, ¿cuánto tiempo pasaste caminando para ir a lugares distintos a la escuela o colegio?",
 				work: "En un día normal, ¿cuánto tiempo pasaste caminando para ir a lugares distintos al trabajo o voluntariado?",
 				both: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
 			},
@@ -179,15 +171,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		adult: {
 			wheel: {
 				none: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija usando ruedas para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo pasó tu hijo o hija usando ruedas para ir a lugares distintos a la escuela o colegio?",
+				school: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija usando ruedas para ir a lugares distintos a la escuela o colegio?",
 				work: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija usando ruedas para ir a lugares distintos al trabajo o voluntariado?",
 				both: "En un día normal, ¿cuánto tiempo su hijo o hija se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio?",
 			},
 			walk: {
 				none: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija caminando para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo pasó tu hijo o hija caminando para ir a lugares distintos a la escuela o colegio?",
+				school: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija caminando para ir a lugares distintos a la escuela o colegio?",
 				work: "En un día normal, ¿cuánto tiempo pasó tu hijo o hija caminando para ir a lugares distintos al trabajo o voluntariado?",
 				both: "En un día normal, ¿cuánto tiempo caminó tu hijo o hija para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio?",
 			},
@@ -197,15 +187,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		kid: {
 			wheel: {
 				none: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo rodaste para ir a lugares que no fueran la escuela?",
+				school: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares que no fueran la escuela?",
 				work: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares que no fueran el trabajo?",
 				both: "En un día normal, ¿cuánto tiempo rodaste para ir a lugares que no fueran la escuela o el trabajo?",
 			},
 			walk: {
 				none: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo caminaste para ir a lugares que no fueran la escuela?",
+				school: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares que no fueran la escuela?",
 				work: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares que no fueran el trabajo?",
 				both: "En un día normal, ¿cuánto tiempo caminaste para ir a lugares que no fueran la escuela o el trabajo?",
 			},
@@ -213,15 +201,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		adult: {
 			wheel: {
 				none: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares que no fueran la escuela?",
+				school: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares que no fueran la escuela?",
 				work: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares que no fueran el trabajo?",
 				both: "En un día normal, ¿cuánto tiempo tu hijo rodó para ir a lugares que no fueran la escuela o el trabajo?",
 			},
 			walk: {
 				none: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares?",
-				school:
-					"En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran la escuela?",
+				school: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran la escuela?",
 				work: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran el trabajo?",
 				both: "En un día normal, ¿cuánto tiempo tu hijo caminó para ir a lugares que no fueran la escuela o el trabajo?",
 			},
@@ -231,15 +217,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		kid: {
 			wheel: {
 				none: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits?",
-				school:
-					"En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que l'école?",
+				school: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que l'école?",
 				work: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que le travail?",
 				both: "En une journée normale, combien de temps as-tu roulé pour te rendre à des endroits autres que l'école ou le travail?",
 			},
 			walk: {
 				none: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits?",
-				school:
-					"En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que l'école?",
+				school: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que l'école?",
 				work: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que le travail?",
 				both: "En une journée normale, combien de temps as-tu marché pour te rendre à des endroits autres que l'école ou le travail?",
 			},
@@ -247,15 +231,13 @@ const Transportation9_11: Transportation9_11Interface = {
 		adult: {
 			wheel: {
 				none: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits?",
-				school:
-					"En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école?",
+				school: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école?",
 				work: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que le travail?",
 				both: "En une journée normale, combien de temps ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école ou le travail?",
 			},
 			walk: {
 				none: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits?",
-				school:
-					"En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que l'école?",
+				school: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que l'école?",
 				work: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que le travail?",
 				both: "En une journée normale, combien de temps ton enfant a-t-il marché pour se rendre à des endroits autres que l'école ou le travail?",
 			},

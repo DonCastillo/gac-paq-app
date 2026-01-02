@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const HBSC2: LangQuestionRadioPayloadInterface = {
 	ident: "hbsc_2",
@@ -11,12 +11,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
-			label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			kid_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			adult_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			kid_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			adult_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			choices: [
 				{
 					label: "Every day",
@@ -55,12 +52,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २६",
-			label:
-				"शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
-			kid_label:
-				"शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
-			adult_label:
-				"शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
+			label: "शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
+			kid_label: "शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
+			adult_label: "शाळेबाहेरील वेळ : तुमच्या मोकळ्या वेळेत तुम्ही धाप लागेपर्यंत किंवा घाम येईपर्यंत व्यायाम किती वेळा करता?",
 			choices: [
 				{
 					label: "दररोज",
@@ -99,12 +93,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 26",
-			label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
-			kid_label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
-			adult_label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			kid_label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			adult_label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
 			choices: [
 				{
 					label: "Todos los días",
@@ -143,12 +134,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 26",
-			label:
-				"Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
-			kid_label:
-				"Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
-			adult_label:
-				"Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
+			label: "Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
+			kid_label: "Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
+			adult_label: "Mimo školní vyučování: jak často se věnuješ nějakému cvičení v takové míře, že nemůžeš popadnout dech nebo se zpotíš?",
 			choices: [
 				{
 					label: "Každý den",
@@ -231,12 +219,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
-			label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			kid_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			adult_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			kid_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			adult_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			choices: [
 				{
 					label: "Every day",
@@ -407,12 +392,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 26",
-			label:
-				"นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
-			kid_label:
-				"นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
-			adult_label:
-				"นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
+			label: "นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
+			kid_label: "นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
+			adult_label: "นอกเวลาเรียน: โดยปกติเมื่อมีเวลาว่าง น้องออกกำลังกายจนรู้สึกเหนื่อยหรือมีเหงื่อออกบ่อยแค่ไหน?",
 			choices: [
 				{
 					label: "ทุกวัน",
@@ -451,12 +433,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 26",
-			label:
-				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
-			kid_label:
-				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
-			adult_label:
-				"No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			label: "No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			kid_label: "No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
+			adult_label: "No seu tempo livre, com que frequência você costuma se exercitar até ficar sem fôlego ou suar?",
 			kid_sublabel: "Considere as atividades fora do horário escolar.",
 			adult_sublabel: "Considere as atividades fora do horário escolar.",
 			choices: [
@@ -585,12 +564,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 26",
-			label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
-			kid_label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
-			adult_label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			kid_label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			adult_label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
 			choices: [
 				{
 					label: "Todos los días",
@@ -629,12 +605,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 26",
-			label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
-			kid_label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
-			adult_label:
-				"Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			kid_label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
+			adult_label: "Fuera del horario de clase: ¿Qué tan seguido haces ejercicio en tu tiempo libre tanto que te quedas sin aliento o sudas?",
 			choices: [
 				{
 					label: "Todos los días",
@@ -673,12 +646,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
-			label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			kid_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			adult_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			kid_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			adult_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			choices: [
 				{
 					label: "Every day",
@@ -717,12 +687,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
-			label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			kid_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			adult_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			kid_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			adult_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			choices: [
 				{
 					label: "Every day",
@@ -761,12 +728,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
-			label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			kid_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			adult_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			kid_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			adult_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			choices: [
 				{
 					label: "Every day",
@@ -805,12 +769,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 26",
-			label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			kid_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
-			adult_label:
-				"Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			kid_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
+			adult_label: "Outside school hours: how often do you usually exercise in your free time so much that you get out of breath or sweat?",
 			choices: [
 				{
 					label: "Every day",
@@ -849,12 +810,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "سؤال [٢٦]",
-			label:
-				"خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
-			kid_label:
-				"خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
-			adult_label:
-				"خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
+			label: "خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
+			kid_label: "خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
+			adult_label: "خارج أوقات الدوام المدرسي: كم مرة تمارس الرياضة عادةً في أوقات فراغك بحيث تتنفس بشدة أو تتعرق؟",
 			choices: [
 				{
 					label: "كل يوم",
@@ -893,12 +851,9 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 26",
-			label:
-				"Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
-			kid_label:
-				"Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
-			adult_label:
-				"Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
+			label: "Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
+			kid_label: "Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
+			adult_label: "Hur ofta brukar du träna på din fritid utanför skoltid så mycket att du blir andfådd eller svettas?",
 			choices: [
 				{
 					label: "Varje dag",

@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S4Q10: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_10",
@@ -14,10 +14,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",
 			label: "How many days did you wheel to places other than school or work in the past week?",
-			kid_label:
-				"How many days did you wheel to places other than school or work in the past week?",
-			adult_label:
-				"How many days did your child wheel to places other than school or work in the past week?",
+			kid_label: "How many days did you wheel to places other than school or work in the past week?",
+			adult_label: "How many days did your child wheel to places other than school or work in the past week?",
 			choices: [
 				{
 					label: "1 day",
@@ -53,10 +51,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",
 			label: "How many days did you wheel to places other than school or work in the past week?",
-			kid_label:
-				"How many days did you wheel to places other than school or work in the past week?",
-			adult_label:
-				"How many days did your child wheel to places other than school or work in the past week?",
+			kid_label: "How many days did you wheel to places other than school or work in the past week?",
+			adult_label: "How many days did your child wheel to places other than school or work in the past week?",
 			choices: [
 				{
 					label: "1 day",
@@ -91,12 +87,9 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 17b - Wīra",
-			label:
-				"E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
-			kid_label:
-				"E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
-			adult_label:
-				"E hia ngā rā i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
+			label: "E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
+			kid_label: "E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
+			adult_label: "E hia ngā rā i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
 			choices: [
 				{
 					label: "1 te rā",
@@ -132,10 +125,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",
 			label: "How many days did you wheel to places other than school or work in the past week?",
-			kid_label:
-				"How many days did you wheel to places other than school or work in the past week?",
-			adult_label:
-				"How many days did your child wheel to places other than school or work in the past week?",
+			kid_label: "How many days did you wheel to places other than school or work in the past week?",
+			adult_label: "How many days did your child wheel to places other than school or work in the past week?",
 			choices: [
 				{
 					label: "1 day",
@@ -170,12 +161,9 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 17b - Vlastní pohon na kolečkách",
-			label:
-				"V kolika dnech jsi minulý týden použil(a) vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
-			kid_label:
-				"V kolika dnech jsi minulý týden použil(a) vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
-			adult_label:
-				"V kolika dnech použilo vaše dítě minulý týden vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
+			label: "V kolika dnech jsi minulý týden použil(a) vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
+			kid_label: "V kolika dnech jsi minulý týden použil(a) vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
+			adult_label: "V kolika dnech použilo vaše dítě minulý týden vlastní pohon na kolečkách při cestě na různá místa kromě školy a práce?",
 			choices: [
 				{
 					label: "1 den",
@@ -210,10 +198,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b - En ruedas",
-			label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
-			kid_label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
+			label: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
+			kid_label: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
 			adult_label:
 				"¿Cuántos días se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
 			choices: [
@@ -250,10 +236,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b - En ruedas",
-			label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
-			kid_label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
+			label: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
+			kid_label: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
 			adult_label:
 				"¿Cuántos días se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o el trabajo en la última semana?",
 			choices: [
@@ -291,10 +275,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",
 			label: "How many days did you wheel to places other than school or work in the past week?",
-			kid_label:
-				"How many days did you wheel to places other than school or work in the past week?",
-			adult_label:
-				"How many days did your child wheel to places other than school or work in the past week?",
+			kid_label: "How many days did you wheel to places other than school or work in the past week?",
+			adult_label: "How many days did your child wheel to places other than school or work in the past week?",
 			choices: [
 				{
 					label: "1 day",
@@ -330,10 +312,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",
 			label: "How many days did you wheel to places other than school or work in the past week?",
-			kid_label:
-				"How many days did you wheel to places other than school or work in the past week?",
-			adult_label:
-				"How many days did your child wheel to places other than school or work in the past week?",
+			kid_label: "How many days did you wheel to places other than school or work in the past week?",
+			adult_label: "How many days did your child wheel to places other than school or work in the past week?",
 			choices: [
 				{
 					label: "1 day",
@@ -368,12 +348,9 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 17b - Kukwera njinga",
-			label:
-				"Kodi sabata yapitayi ndi masiku angati omwe unagwiritsa ntchito njinga yopalasa kupita malo ena kupatula ku sukukulu?",
-			kid_label:
-				"Kodi sabata yapitayi ndi masiku angati omwe unagwiritsa ntchito njinga yopalasa kupita malo ena kupatula ku sukukulu?",
-			adult_label:
-				"Kodi ndi masiku angati omwe mwana wanu anagwiritsa ntchito njinga yopalasa kupita malo ena kupatula ku sukukulu sabata yapitayi?",
+			label: "Kodi sabata yapitayi ndi masiku angati omwe unagwiritsa ntchito njinga yopalasa kupita malo ena kupatula ku sukukulu?",
+			kid_label: "Kodi sabata yapitayi ndi masiku angati omwe unagwiritsa ntchito njinga yopalasa kupita malo ena kupatula ku sukukulu?",
+			adult_label: "Kodi ndi masiku angati omwe mwana wanu anagwiritsa ntchito njinga yopalasa kupita malo ena kupatula ku sukukulu sabata yapitayi?",
 			choices: [
 				{
 					label: "Tsiku limodzi",
@@ -445,12 +422,9 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७b - व्हीलिंग",
-			label:
-				"पिछले सप्ताह में आप स्कूल या काम के अलावा अन्य स्थानों पर कितने दिन व्हीलिंग करके गए?",
-			kid_label:
-				"पिछले सप्ताह में आप स्कूल या काम के अलावा अन्य स्थानों पर कितने दिन व्हीलिंग करके गए?",
-			adult_label:
-				"पिछले सप्ताह में आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर जाने के लिए कितने दिन व्हीलिंग करके गया?",
+			label: "पिछले सप्ताह में आप स्कूल या काम के अलावा अन्य स्थानों पर कितने दिन व्हीलिंग करके गए?",
+			kid_label: "पिछले सप्ताह में आप स्कूल या काम के अलावा अन्य स्थानों पर कितने दिन व्हीलिंग करके गए?",
+			adult_label: "पिछले सप्ताह में आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर जाने के लिए कितने दिन व्हीलिंग करके गया?",
 			choices: [
 				{
 					label: "1 दिन",
@@ -486,10 +460,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Wheeling",
 			label: "How many days did you wheel to places other than school or work in the past week?",
-			kid_label:
-				"How many days did you wheel to places other than school or work in the past week?",
-			adult_label:
-				"How many days did your child wheel to places other than school or work in the past week?",
+			kid_label: "How many days did you wheel to places other than school or work in the past week?",
+			adult_label: "How many days did your child wheel to places other than school or work in the past week?",
 			choices: [
 				{
 					label: "1 day",
@@ -524,12 +496,9 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "سؤال [١٧ب] - العجلات",
-			label:
-				"كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
-			kid_label:
-				"كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
-			adult_label:
-				"كم عدد الأيام التي قام فيها طفلك باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			label: "كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			kid_label: "كم عدد الأيام التي قمت فيها باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
+			adult_label: "كم عدد الأيام التي قام فيها طفلك باستخدام العجلات للذهاب إلى أماكن أخرى غير المدرسة أو العمل خلال الأسبوع الماضي؟",
 			choices: [
 				{
 					label: "يوم واحد (١)",
@@ -564,12 +533,9 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७ख - साईकल",
-			label:
-				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
-			kid_label:
-				"पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
-			adult_label:
-				"पछिल्लो हप्तामा, तपाईंको छोरा वा छोरीले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
+			label: "पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
+			kid_label: "पछिल्लो हप्तामा, तपाईंले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
+			adult_label: "पछिल्लो हप्तामा, तपाईंको छोरा वा छोरीले विध्यालय वा कामबाहेकका अन्य ठाउँमा जान कति दिन साइकल चलाउनु भयो?",
 			choices: [
 				{
 					label: "१ दिन",
@@ -684,8 +650,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 17b - ล้อ",
-			label:
-				"สัปดาห์ที่แล้ว คุณใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกายไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
+			label: "สัปดาห์ที่แล้ว คุณใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกายไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
 			kid_label:
 				"สัปดาห์ที่แล้ว คุณใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกายไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
 			adult_label:
@@ -801,10 +766,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17b - Sobre ruedas",
-			label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
-			kid_label:
-				"¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
+			label: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
+			kid_label: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
 			adult_label:
 				"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos, al trabajo, escuela o colegio en la última semana?",
 			choices: [
@@ -841,10 +804,8 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 17b - Rouler",
-			label:
-				"Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
-			kid_label:
-				"Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
+			label: "Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
+			kid_label: "Combien de jours as-tu roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
 			adult_label:
 				"Combien de jours ton enfant a-t-il (elle) roulé pour aller à des endroits autres que l'école ou le travail durant la dernière semaine?",
 			choices: [

@@ -1,9 +1,5 @@
-import Section from "constants/section.enum";
-import type {
-	ClearResponseByIdentFuncType,
-	NewResponseFuncType,
-	ResponsesFuncType,
-} from "interface/function.type";
+import Section from "@constants/section.enum";
+import type { ClearResponseByIdentFuncType, NewResponseFuncType, ResponsesFuncType } from "@interface/function.type";
 
 /** Function Definition */
 const newResponse: NewResponseFuncType = (state, action) => {

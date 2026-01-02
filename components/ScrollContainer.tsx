@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
-import { ScrollView, View, Animated } from "react-native";
+import { getCurrentPageNumber, getDevice } from "@store/settings/settingsSlice";
+import React, { useEffect, useRef, useState } from "react";
+import { Animated, ScrollView, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getCurrentPageNumber, getDevice } from "store/settings/settingsSlice";
 import ScrollViewIndicator from "./ScrollViewIndicator";
 
 interface PropsInterface {
@@ -11,12 +11,7 @@ interface PropsInterface {
 	scrollIndicatorStyle?: object;
 }
 
-const ScrollContainer = ({
-	children,
-	containerStyle,
-	scrollContainerStyle,
-	scrollIndicatorStyle,
-}: PropsInterface): React.ReactElement => {
+const ScrollContainer = ({ children, containerStyle, scrollContainerStyle, scrollIndicatorStyle }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 	const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -31,13 +26,9 @@ const ScrollContainer = ({
 			? (visibleScrollBarHeight * visibleScrollBarHeight) / completeScrollBarHeight
 			: visibleScrollBarHeight;
 
-	const difference =
-		visibleScrollBarHeight > scrollIndicatorSize ? visibleScrollBarHeight - scrollIndicatorSize : 1;
+	const difference = visibleScrollBarHeight > scrollIndicatorSize ? visibleScrollBarHeight - scrollIndicatorSize : 1;
 
-	const scrollIndicatorPosition = Animated.multiply(
-		scrollIndicator,
-		visibleScrollBarHeight / completeScrollBarHeight,
-	).interpolate({
+	const scrollIndicatorPosition = Animated.multiply(scrollIndicator, visibleScrollBarHeight / completeScrollBarHeight).interpolate({
 		inputRange: [0, difference],
 		outputRange: [0, difference],
 		extrapolate: "clamp",

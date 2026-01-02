@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const Financial: LangQuestionRadioPayloadInterface = {
 	ident: "difficulty_to_meet_financial_needs",
@@ -15,8 +15,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
-			adult_label:
-				"How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
 					label: "Very difficult",
@@ -49,8 +48,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
-			adult_label:
-				"How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
 					label: "Very difficult",
@@ -81,12 +79,9 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 30",
-			label:
-				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
-			kid_label:
-				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
-			adult_label:
-				"He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			label: "He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			kid_label: "He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
+			adult_label: "He uaua rānei, he ngāwari rānei ki a koe te whakarato i ngā hiahia ahumoni o tō whānau?",
 			choices: [
 				{
 					label: "Uaua rawa atu",
@@ -119,8 +114,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
-			adult_label:
-				"How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
 					label: "Very difficult",
@@ -184,12 +178,9 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
-			label:
-				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			kid_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			adult_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			label: "¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			kid_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			adult_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			choices: [
 				{
 					label: "Muy difícil",
@@ -220,12 +211,9 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
-			label:
-				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			kid_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			adult_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			label: "¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			kid_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			adult_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			choices: [
 				{
 					label: "Muy difícil",
@@ -258,8 +246,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
-			adult_label:
-				"How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
 					label: "Very difficult",
@@ -292,8 +279,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
-			adult_label:
-				"How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
 					label: "Very difficult",
@@ -358,10 +344,8 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",
 			label: "तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
-			kid_label:
-				"तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
-			adult_label:
-				"तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			kid_label: "तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
+			adult_label: "तुमच्या कुटुंबाच्या आर्थिक गरजा पूर्ण करणे तुमच्यासाठी कितपत अवघड किंवा सोपे आहे?",
 			choices: [
 				{
 					label: "खूप अवघड",
@@ -427,8 +411,7 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			heading: "Question 30",
 			label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			kid_label: "How difficult or easy is it for you to meet the financial needs of your family?",
-			adult_label:
-				"How difficult or easy is it for you to meet the financial needs of your family?",
+			adult_label: "How difficult or easy is it for you to meet the financial needs of your family?",
 			choices: [
 				{
 					label: "Very difficult",
@@ -526,10 +509,8 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Questão 30",
 			label: "Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
-			kid_label:
-				"Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
-			adult_label:
-				"Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
+			kid_label: "Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
+			adult_label: "Quão difícil ou fácil é para você suprir as necessidades financeiras de sua família?",
 			choices: [
 				{
 					label: "Muito difícil",
@@ -561,10 +542,8 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Fråga 30",
 			label: "Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
-			kid_label:
-				"Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
-			adult_label:
-				"Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
+			kid_label: "Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
+			adult_label: "Hur svårt eller enkelt är det för dig att tillgodose din familjs ekonomiska behov?",
 			choices: [
 				{
 					label: "Mycket svårt",
@@ -596,10 +575,8 @@ const Financial: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 30",
 			label: "คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
-			kid_label:
-				"คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
-			adult_label:
-				"คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
+			kid_label: "คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
+			adult_label: "คุณสามารถตอบสนองความต้องการของครอบครัวทางการเงินในด้านต่าง ๆ ได้ยากหรือง่ายเพียงใด?",
 			choices: [
 				{
 					label: "ยากมาก",
@@ -663,12 +640,9 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
-			label:
-				"¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			kid_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			adult_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			label: "¿Cómo de difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			kid_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			adult_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			choices: [
 				{
 					label: "Muy difícil",
@@ -699,12 +673,9 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
-			label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			kid_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
-			adult_label:
-				"¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			kid_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
+			adult_label: "¿Qué tan difícil o fácil es para usted cubrir las necesidades económicas de su familia?",
 			choices: [
 				{
 					label: "Muy difícil",
@@ -735,12 +706,9 @@ const Financial: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 30",
-			label:
-				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
-			kid_label:
-				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
-			adult_label:
-				"Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			label: "Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			kid_label: "Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
+			adult_label: "Est-ce difficile ou facile pour vous de subvenir aux besoins financiers de votre famille?",
 			choices: [
 				{
 					label: "Très difficile",

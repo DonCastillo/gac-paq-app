@@ -1,9 +1,9 @@
+import { getColorTheme, getDevice } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { adjustTextAlignmentDirection } from "@utils/style";
 import React from "react";
-import { TextInput, View, StyleSheet } from "react-native";
-import { GeneralStyle } from "styles/general";
+import { StyleSheet, TextInput, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getColorTheme, getDevice } from "store/settings/settingsSlice";
-import { adjustTextAlignmentDirection } from "utils/style";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -11,11 +11,7 @@ interface PropsInterface {
 	placeholder: string | null;
 }
 
-const QuestionInput = ({
-	onChange,
-	selectedValue,
-	placeholder,
-}: PropsInterface): React.ReactElement => {
+const QuestionInput = ({ onChange, selectedValue, placeholder }: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
 

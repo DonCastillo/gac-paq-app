@@ -1,21 +1,21 @@
-import FlatListContainer from "components/FlatListContainer";
-import { type FinalResponseType } from "interface/union.type";
-import React, { useEffect } from "react";
-import { View, Text } from "react-native";
-import { GeneralStyle } from "styles/general";
-import { adjustWritingDirection } from "utils/style";
+import FlatListContainer from "@components/FlatListContainer";
+import LanguageIndicator from "@components/LanguageIndicator";
+import Paragraph from "@components/Paragraph";
+import { type FinalResponseType } from "@interface/union.type";
+import { getPhrases } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { adjustWritingDirection } from "@utils/style";
 import moment from "moment";
-import LanguageIndicator from "components/LanguageIndicator";
-import Paragraph from "components/Paragraph";
+import React, { useEffect, useState } from "react";
+import { Text, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getPhrases } from "store/settings/settingsSlice";
 
 interface Props {
 	data: FinalResponseType[];
 }
 
 const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
-	const [resultComponent, setResultComponent] = React.useState<React.ReactElement | null>(null);
+	const [resultComponent, setResultComponent] = useState<React.ReactElement | null>(null);
 	const phrases = useSelector(getPhrases);
 
 	useEffect(() => {
@@ -24,7 +24,6 @@ const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
 				<FlatListContainer
 					removeClippedSubviews={false}
 					horizontal={false}
-					// data={[...sampledata, ...sampledata, ...sampledata, ...sampledata]}
 					data={data}
 					renderItem={({ item, index }) => {
 						return (
@@ -63,9 +62,7 @@ const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
 									</View>
 
 									<View style={{ flex: 2 }}>
-										<Text style={{ color: "#000" }}>
-											{moment(item.start_time).format("YYYY-MM-DD h:mm A")}
-										</Text>
+										<Text style={{ color: "#000" }}>{moment(item.start_time).format("YYYY-MM-DD h:mm A")}</Text>
 									</View>
 									<View style={{ flex: 2 }}>
 										<Text style={{ textAlign: "right" }}>{item.participant_id}</Text>
@@ -84,7 +81,7 @@ const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
 			);
 		} else {
 			setResultComponent(
-				<View style={{ backgroundColor: "pinkx", flex: 1 }}>
+				<View style={{ flex: 1 }}>
 					<Paragraph customStyle={{ color: "#000" }}>{phrases?.noPendingSubmissions}</Paragraph>
 				</View>,
 			);
@@ -93,7 +90,12 @@ const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
 
 	return (
 		<View
-			style={{ flex: 1, paddingTop: 0, width: "100%", height: "100%", backgroundColor: "orangex" }}
+			style={{
+				flex: 1,
+				paddingTop: 0,
+				width: "100%",
+				height: "100%",
+			}}
 		>
 			{resultComponent}
 		</View>

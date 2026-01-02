@@ -1,5 +1,5 @@
+import type { ResponseInterface } from "@interface/payload.type";
 import { createSlice } from "@reduxjs/toolkit";
-import type { ResponseInterface } from "interface/payload.type";
 import reducersActions from "./responsesReducers";
 
 const responsesSlice = createSlice({

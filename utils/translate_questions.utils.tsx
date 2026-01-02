@@ -1,5 +1,5 @@
-import MAIN_STUDY_LANG from "constants/main_study_lang";
-import type { LangPhraseInterface, PhraseInterface } from "interface/phrase";
+import MAIN_STUDY_LANG from "@constants/main_study_lang";
+import type { LangPhraseInterface, PhraseInterface } from "@interface/phrase";
 
 const translateArrayOfPages = (pages: any, language: string | undefined): any => {
 	const finalLanguage = language ?? "en-CA";
@@ -38,10 +38,7 @@ const translatePage = (page: any, language: string | undefined): any => {
 	return { ...page, translations: page.translations[finalLanguage] };
 };
 
-const translatePhrase = (
-	phrase: LangPhraseInterface,
-	language: string | undefined,
-): PhraseInterface => {
+const translatePhrase = (phrase: LangPhraseInterface, language: string | undefined): PhraseInterface => {
 	const finalLanguage = language ?? "en-CA";
 
 	// modify conditional statement here if 2 or more languages are the same translations
@@ -52,10 +49,7 @@ const translatePhrase = (
 	return phrase[finalLanguage];
 };
 
-const translateOptionLetters = (
-	letters: Record<string, string[]>,
-	language: string | undefined,
-): string[] => {
+const translateOptionLetters = (letters: Record<string, string[]>, language: string | undefined): string[] => {
 	const finalLanguage = language ?? "en-CA";
 	let finalLetters = letters["en-CA"];
 
@@ -66,10 +60,7 @@ const translateOptionLetters = (
 	return finalLetters;
 };
 
-const translateOptionNumbers = (
-	numbers: Record<string, string[]>,
-	language: string | undefined,
-): string[] => {
+const translateOptionNumbers = (numbers: Record<string, string[]>, language: string | undefined): string[] => {
 	const finalLanguage = language ?? "en-CA";
 	let finalNumbers = numbers["en-CA"];
 
@@ -80,10 +71,4 @@ const translateOptionNumbers = (
 	return finalNumbers;
 };
 
-export {
-	translateArrayOfPages,
-	translatePage,
-	translatePhrase,
-	translateOptionLetters,
-	translateOptionNumbers,
-};
+export { translateArrayOfPages, translateOptionLetters, translateOptionNumbers, translatePage, translatePhrase };

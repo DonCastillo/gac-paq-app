@@ -1,5 +1,5 @@
-import Mode from "constants/mode.enum";
-import { store } from "store/store";
+import Mode from "@constants/mode.enum";
+import { store } from "@store/store";
 import { moderateScale } from "./responsive.utils";
 
 const NONALPHANUMERIC = ["th-TH", "hi-IN", "ma-IN", "ne-NP", "ar-AE"];
@@ -119,14 +119,8 @@ const adjustPreambleDescriptionText = (): { fontSize: number; lineHeight: number
 		};
 	} else {
 		return {
-			fontSize: moderateScale(
-				isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 20 : 17,
-				screenWidth,
-			),
-			lineHeight: moderateScale(
-				isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 25 : 22,
-				screenWidth,
-			),
+			fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 20 : 17, screenWidth),
+			lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 25 : 22, screenWidth),
 		};
 	}
 };
@@ -203,14 +197,8 @@ const adjustRadioOptionSublabel = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 17 : 12) : language === "ar-AE" ? 17 : 14,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 17 : 12) : language === "ar-AE" ? 17 : 14, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18, screenWidth),
 	};
 };
 
@@ -220,14 +208,8 @@ const adjustCheckboxOptionLabel = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20, screenWidth),
 	};
 };
 
@@ -236,14 +218,8 @@ const adjustPageHeadingText = (): { fontSize: number; lineHeight: number } => {
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 43 : 40) : language === "ar-AE" ? 33 : 30,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 53 : 50) : language === "ar-AE" ? 43 : 40,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 43 : 40) : language === "ar-AE" ? 33 : 30, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 53 : 50) : language === "ar-AE" ? 43 : 40, screenWidth),
 	};
 };
 
@@ -252,14 +228,8 @@ const adjustStateKidPageHeadingText = (): { fontSize: number; lineHeight: number
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 33 : 30) : language === "ar-AE" ? 30 : 27,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 43 : 40) : language === "ar-AE" ? 40 : 37,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 33 : 30) : language === "ar-AE" ? 30 : 27, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 43 : 40) : language === "ar-AE" ? 40 : 37, screenWidth),
 	};
 };
 
@@ -269,25 +239,13 @@ const adjustStateDescriptionText = (): { fontSize: number; lineHeight: number } 
 
 	if (mode === Mode.Kid) {
 		return {
-			fontSize: moderateScale(
-				isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18,
-				screenWidth,
-			),
-			lineHeight: moderateScale(
-				isTablet ? (language === "ar-AE" ? 26 : 23) : language === "ar-AE" ? 28 : 25,
-				screenWidth,
-			),
+			fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18, screenWidth),
+			lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 26 : 23) : language === "ar-AE" ? 28 : 25, screenWidth),
 		};
 	} else {
 		return {
-			fontSize: moderateScale(
-				isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
-				screenWidth,
-			),
-			lineHeight: moderateScale(
-				isTablet ? (language === "ar-AE" ? 26 : 23) : language === "ar-AE" ? 28 : 25,
-				screenWidth,
-			),
+			fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20, screenWidth),
+			lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 26 : 23) : language === "ar-AE" ? 28 : 25, screenWidth),
 		};
 	}
 };
@@ -301,14 +259,8 @@ const adjustPageDescriptionText = (): {
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (isNonAlphanumeric(language) ? 17 : 14) : isNonAlphanumeric(language) ? 19 : 16,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (isNonAlphanumeric(language) ? 24 : 16) : isNonAlphanumeric(language) ? 27 : 22,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (isNonAlphanumeric(language) ? 17 : 14) : isNonAlphanumeric(language) ? 19 : 16, screenWidth),
+		lineHeight: moderateScale(isTablet ? (isNonAlphanumeric(language) ? 24 : 16) : isNonAlphanumeric(language) ? 27 : 22, screenWidth),
 		paddingVertical: isNonAlphanumeric(language) ? PADDINGNONALPHANUMERIC + 5 : 0,
 	};
 };
@@ -319,25 +271,13 @@ const adjustExtroPageHeading = (): any => {
 
 	if (mode === Mode.Kid) {
 		return {
-			fontSize: moderateScale(
-				isTablet ? (language === "ar-AE" ? 34 : 30) : language === "ar-AE" ? 30 : 27,
-				screenWidth,
-			),
-			lineHeight: moderateScale(
-				isTablet ? (language === "ar-AE" ? 38 : 35) : language === "ar-AE" ? 34 : 30,
-				screenWidth,
-			),
+			fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 34 : 30) : language === "ar-AE" ? 30 : 27, screenWidth),
+			lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 38 : 35) : language === "ar-AE" ? 34 : 30, screenWidth),
 		};
 	} else {
 		return {
-			fontSize: moderateScale(
-				isTablet ? (language === "ar-AE" ? 43 : 40) : language === "ar-AE" ? 33 : 30,
-				screenWidth,
-			),
-			lineHeight: moderateScale(
-				isTablet ? (language === "ar-AE" ? 53 : 50) : language === "ar-AE" ? 43 : 40,
-				screenWidth,
-			),
+			fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 43 : 40) : language === "ar-AE" ? 33 : 30, screenWidth),
+			lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 53 : 50) : language === "ar-AE" ? 43 : 40, screenWidth),
 		};
 	}
 };
@@ -348,25 +288,13 @@ const adjustExtroDescriptionText = (): { fontSize: number; lineHeight: number } 
 
 	if (mode === Mode.Kid) {
 		return {
-			fontSize: moderateScale(
-				isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18,
-				screenWidth,
-			),
-			lineHeight: moderateScale(
-				isTablet ? (language === "ar-AE" ? 30 : 27) : language === "ar-AE" ? 30 : 27,
-				screenWidth,
-			),
+			fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18, screenWidth),
+			lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 30 : 27) : language === "ar-AE" ? 30 : 27, screenWidth),
 		};
 	} else {
 		return {
-			fontSize: moderateScale(
-				isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
-				screenWidth,
-			),
-			lineHeight: moderateScale(
-				isTablet ? (language === "ar-AE" ? 26 : 23) : language === "ar-AE" ? 28 : 25,
-				screenWidth,
-			),
+			fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20, screenWidth),
+			lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 26 : 23) : language === "ar-AE" ? 28 : 25, screenWidth),
 		};
 	}
 };
@@ -407,14 +335,8 @@ const adjustIntroDescriptionText = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 30 : 27,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 28 : 25) : language === "ar-AE" ? 35 : 32,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 30 : 27, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 28 : 25) : language === "ar-AE" ? 35 : 32, screenWidth),
 	};
 };
 
@@ -423,14 +345,8 @@ const adjustToolbarHeadingText = (): { fontSize: number; lineHeight: number } =>
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 16 : 13) : language === "ar-AE" ? 16 : 13,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 16 : 13) : language === "ar-AE" ? 16 : 13, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16, screenWidth),
 	};
 };
 
@@ -439,14 +355,8 @@ const adjustQuestionSingleQuestionLabel = (): { fontSize: number; lineHeight: nu
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 18 : 15,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 23 : 20,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 18 : 15, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 23 : 20, screenWidth),
 	};
 };
 
@@ -478,14 +388,8 @@ const adjustOptionLabelKid = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC - 5 : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20, screenWidth),
 	};
 };
 
@@ -494,14 +398,8 @@ const adjustOptionSubLabelKid = (): { fontSize: number; lineHeight: number } => 
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 15 : 12) : language === "ar-AE" ? 15 : 12,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 15 : 12) : language === "ar-AE" ? 15 : 12, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16, screenWidth),
 	};
 };
 
@@ -510,14 +408,8 @@ const adjustQuestionSliderTextKid = (): { fontSize: number; lineHeight: number }
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 19 : 16, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 23 : 20, screenWidth),
 	};
 };
 
@@ -526,14 +418,8 @@ const adjustQuestionSublabel = (): { fontSize: number; lineHeight: number } => {
 	const { isTablet, screenWidth } = device;
 
 	return {
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 14 : 12) : language === "ar-AE" ? 14 : 12,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 18 : 16) : language === "ar-AE" ? 18 : 16,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 14 : 12) : language === "ar-AE" ? 14 : 12, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 18 : 16) : language === "ar-AE" ? 18 : 16, screenWidth),
 	};
 };
 
@@ -543,14 +429,8 @@ const adjustQuestionTitle = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18, screenWidth),
 	};
 };
 
@@ -560,14 +440,8 @@ const adjustQuestionLabelKid = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 22 : 19,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 27 : 24,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 18 : 15) : language === "ar-AE" ? 22 : 19, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 23 : 20) : language === "ar-AE" ? 27 : 24, screenWidth),
 	};
 };
 
@@ -586,14 +460,8 @@ const adjustQuestionRadioImageListOptionLabelKid = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 17 : 14) : language === "ar-AE" ? 17 : 14, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 21 : 18) : language === "ar-AE" ? 21 : 18, screenWidth),
 	};
 };
 
@@ -603,51 +471,45 @@ const adjustQuestionRadioImageListOptionSubLabelKid = (): any => {
 
 	return {
 		paddingVertical: NONALPHANUMERIC.includes(language) ? PADDINGNONALPHANUMERIC : 0,
-		fontSize: moderateScale(
-			isTablet ? (language === "ar-AE" ? 15 : 12) : language === "ar-AE" ? 15 : 12,
-			screenWidth,
-		),
-		lineHeight: moderateScale(
-			isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16,
-			screenWidth,
-		),
+		fontSize: moderateScale(isTablet ? (language === "ar-AE" ? 15 : 12) : language === "ar-AE" ? 15 : 12, screenWidth),
+		lineHeight: moderateScale(isTablet ? (language === "ar-AE" ? 19 : 16) : language === "ar-AE" ? 19 : 16, screenWidth),
 	};
 };
 
 export {
-	adjustParagraph,
-	adjustHeading,
+	adjustCheckboxOptionLabel,
 	adjustDropdownIconSize,
 	adjustDropdownLabelText,
-	adjustRadioImageAspectRatio,
-	adjustRadioImageBlockText,
-	adjustWritingDirection,
-	adjustTextAlignmentDirection,
-	adjustPreambleHeadingText,
-	adjustPreambleDescriptionText,
-	adjustOptionListImageSizeSVGAdult,
-	adjustOptionListImageSizeNonSVGAdult,
-	adjustRadioOptionLabel,
-	adjustRadioOptionSublabel,
-	adjustCheckboxOptionLabel,
-	adjustPageHeadingText,
-	adjustStateKidPageHeadingText,
-	adjustStateDescriptionText,
-	adjustPageDescriptionText,
-	adjustExtroPageHeading,
 	adjustExtroDescriptionText,
-	adjustIntroHeadingText,
+	adjustExtroPageHeading,
+	adjustHeading,
 	adjustIntroDescriptionText,
-	adjustToolbarHeadingText,
-	adjustQuestionSingleQuestionLabel,
-	adjustOptionListImageSizeSVGKid,
-	adjustOptionListImageSizeNonSVGKid,
+	adjustIntroHeadingText,
 	adjustOptionLabelKid,
+	adjustOptionListImageSizeNonSVGAdult,
+	adjustOptionListImageSizeNonSVGKid,
+	adjustOptionListImageSizeSVGAdult,
+	adjustOptionListImageSizeSVGKid,
 	adjustOptionSubLabelKid,
-	adjustQuestionSliderTextKid,
-	adjustQuestionSublabel,
-	adjustQuestionTitle,
+	adjustPageDescriptionText,
+	adjustPageHeadingText,
+	adjustParagraph,
+	adjustPreambleDescriptionText,
+	adjustPreambleHeadingText,
 	adjustQuestionLabelKid,
 	adjustQuestionRadioImageListOptionLabelKid,
 	adjustQuestionRadioImageListOptionSubLabelKid,
+	adjustQuestionSingleQuestionLabel,
+	adjustQuestionSliderTextKid,
+	adjustQuestionSublabel,
+	adjustQuestionTitle,
+	adjustRadioImageAspectRatio,
+	adjustRadioImageBlockText,
+	adjustRadioOptionLabel,
+	adjustRadioOptionSublabel,
+	adjustStateDescriptionText,
+	adjustStateKidPageHeadingText,
+	adjustTextAlignmentDirection,
+	adjustToolbarHeadingText,
+	adjustWritingDirection,
 };

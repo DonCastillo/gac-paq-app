@@ -1,4 +1,30 @@
 // testing
+const MAIN_STUDY_LANG = [
+	"sv-SE",
+	"es-MX",
+	"es-ES",
+	// "en-CA",
+	"fr-CA",
+	"zh-CN",
+	"pt-BR",
+	"en-AE",
+	"ar-AE",
+	"th-TH",
+	"en-NG",
+	"es-CO",
+	"ne-NP",
+	"mi-NZ",
+	"en-NZ",
+	"ch-MW",
+	"en-MW",
+	"en-IN",
+	"hi-IN",
+	"ma-IN",
+	"cz-CR",
+	"es-CL",
+];
+
+// main study live
 // const MAIN_STUDY_LANG = [
 // 	"sv-SE",
 // 	"es-MX",

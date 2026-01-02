@@ -1,6 +1,6 @@
-import Question from "constants/question.enum";
-import Screen from "constants/screen.enum";
-import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioImagePayloadInterface } from "@interface/payload.type";
 
 const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 	ident: "app_use_satisfaction",
@@ -412,10 +412,8 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 			label: "आप ऐप से कितने संतुष्ट हैं?",
 			kid_label: "आप ऐप से कितने संतुष्ट हैं?",
 			adult_label: "आप ऐप से कितने संतुष्ट हैं?",
-			adult_sublabel:
-				"उस चित्र (इमोजी) पर क्लिक करें जो आपकी संतुष्टि का सबसे अच्छा प्रतिनिधित्व करता है।",
-			kid_sublabel:
-				"उस चित्र (इमोजी) पर क्लिक करें जो आपकी संतुष्टि का सबसे अच्छा प्रतिनिधित्व करता है।",
+			adult_sublabel: "उस चित्र (इमोजी) पर क्लिक करें जो आपकी संतुष्टि का सबसे अच्छा प्रतिनिधित्व करता है।",
+			kid_sublabel: "उस चित्र (इमोजी) पर क्लिक करें जो आपकी संतुष्टि का सबसे अच्छा प्रतिनिधित्व करता है।",
 			choices: [
 				{
 					label: "पूरी तरह से असंतुष्ट",

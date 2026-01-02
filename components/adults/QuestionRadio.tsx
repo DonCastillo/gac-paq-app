@@ -1,22 +1,15 @@
-import { FlatList } from "react-native";
-import RadioOption from "components/adults/subcomponents/RadioOption";
+import { GeneralStyle } from "@/styles/general";
+import { getOptionSubLabel } from "@/utils/background.utils";
+import { adjustWritingDirection } from "@/utils/style";
+import Mode from "@constants/mode.enum";
+import Section from "@constants/section.enum";
+import type { Choice, ChoiceIcon } from "@interface/payload.type";
+import { getCurrentPage, getMode } from "@store/settings/settingsSlice";
+import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue, optionLetter } from "@utils/options.utils";
 import React, { useEffect, useState } from "react";
-import type { ChoiceIcon, Choice } from "interface/payload.type";
-
-import {
-	getUserSpecifiedOther,
-	isOtherOption,
-	isOtherWithSpecifiedValue,
-	optionLetter,
-} from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getCurrentPage, getMode } from "store/settings/settingsSlice";
-import { getOptionSubLabel } from "utils/background.utils";
-import Mode from "constants/mode.enum";
-import Section from "constants/section.enum";
-import { adjustWritingDirection } from "utils/style";
-import FlatListContainer from "components/FlatListContainer";
-import { GeneralStyle } from "styles/general";
+import FlatListContainer from "../FlatListContainer";
+import RadioOption from "./subcomponents/RadioOption";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -24,11 +17,7 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-const QuestionRadio = ({
-	options,
-	onSelect,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionRadio = ({ options, onSelect, selectedValue }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	let mode = useSelector(getMode);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
@@ -119,10 +108,7 @@ const QuestionRadio = ({
 					{...item}
 					label={getLabel(index, item.label)}
 					value={item.value}
-					selected={
-						selected !== null &&
-						(selected === item.value || (isOtherOption(item.value) && isOtherOption(selected)))
-					}
+					selected={selected !== null && (selected === item.value || (isOtherOption(item.value) && isOtherOption(selected)))}
 					onPress={pressHandler}
 					isOtherSelected={isOtherSelected}
 					defaultOtherInputValue={getUserSpecifiedOther(item.value, selected)}

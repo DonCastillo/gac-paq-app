@@ -1,20 +1,19 @@
-import { FlatList } from "react-native";
-import React, { useEffect, useState } from "react";
-import CheckboxOption from "components/adults/subcomponents/CheckboxOption";
-import type { Choice, ChoiceIcon } from "interface/payload.type";
+import CheckboxOption from "@components/adults/subcomponents/CheckboxOption";
+import FlatListContainer from "@components/FlatListContainer";
+import Section from "@constants/section.enum";
+import type { Choice, ChoiceIcon } from "@interface/payload.type";
+import { getCurrentPage } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
 import {
 	extractUserSpecifiedOtherFromArray,
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
 	optionLetter,
-} from "utils/options.utils";
+} from "@utils/options.utils";
+import { adjustWritingDirection } from "@utils/style";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { getCurrentPage } from "store/settings/settingsSlice";
-import Section from "constants/section.enum";
-import { adjustWritingDirection } from "utils/style";
-import FlatListContainer from "components/FlatListContainer";
-import { GeneralStyle } from "styles/general";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -22,11 +21,7 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-const QuestionCheckbox = ({
-	options,
-	onSelect,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionCheckbox = ({ options, onSelect, selectedValue }: PropsInterface): React.ReactElement => {
 	const SEPARATOR = " | ";
 	const currentPage = useSelector(getCurrentPage);
 
@@ -61,9 +56,7 @@ const QuestionCheckbox = ({
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return false;
 		}
-		return !["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(
-			finalValue,
-		);
+		return !["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(finalValue);
 	};
 
 	const someNotAnswer = (value: string): boolean => {
@@ -72,9 +65,7 @@ const QuestionCheckbox = ({
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return true;
 		}
-		return ["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(
-			finalValue,
-		);
+		return ["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(finalValue);
 	};
 
 	const pressHandler = (value: string | null): void => {
@@ -99,9 +90,7 @@ const QuestionCheckbox = ({
 			if (value.toString().toLowerCase() === "other") {
 				if (arrayHasOther(existingSelectedValue)) {
 					// if "Other", "other", "other (xxxx)" is already selected, remove all
-					finalSelected = existingSelectedValue
-						.filter((item) => !isOtherOption(item))
-						.join(SEPARATOR);
+					finalSelected = existingSelectedValue.filter((item) => !isOtherOption(item)).join(SEPARATOR);
 				} else {
 					// if not add it
 					finalSelected = [...existingSelectedValue, value].join(SEPARATOR);
@@ -156,11 +145,7 @@ const QuestionCheckbox = ({
 							? `${optionLetter(index)}.  ${item.label}`
 							: item.label
 					}
-					selected={
-						selected !== null &&
-						(selected?.includes(item.value) ||
-							(isOtherOption(item.value) && arrayHasOther(selected)))
-					}
+					selected={selected !== null && (selected?.includes(item.value) || (isOtherOption(item.value) && arrayHasOther(selected)))}
 					onPress={pressHandler}
 					isOtherSelected={isOtherSelected}
 					defaultOtherInputValue={extractUserSpecifiedOtherFromArray(selected)}

@@ -1,7 +1,7 @@
+import { getCurrentPageNumber } from "@store/settings/settingsSlice";
 import React, { useLayoutEffect, useState } from "react";
 import * as Animatable from "react-native-animatable";
 import { useSelector } from "react-redux";
-import { getCurrentPageNumber } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;

@@ -1,19 +1,19 @@
-import { View, StyleSheet, SafeAreaView } from "react-native";
-import React, { useEffect, useState } from "react";
-import { GeneralStyle } from "styles/general";
+import FlatListContainer from "@components/FlatListContainer";
+import type { Choice, ChoiceIcon } from "@interface/payload.type";
+import { getColorTheme, getCurrentPage, getDevice } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
 import {
 	extractUserSpecifiedOtherFromArray,
 	getUserSpecifiedOther,
 	isOtherOption,
 	isOtherWithSpecifiedValue,
 	optionLetter,
-} from "utils/options.utils";
-import { horizontalScale } from "utils/responsive.utils";
-import Option from "./subcomponents/Option";
+} from "@utils/options.utils";
+import { horizontalScale } from "@utils/responsive.utils";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
-import type { Choice, ChoiceIcon } from "interface/payload.type";
-import FlatListContainer from "components/FlatListContainer";
+import Option from "./subcomponents/Option";
 
 interface PropsInterface {
 	options: Choice[] | ChoiceIcon[];
@@ -21,11 +21,7 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-const QuestionCheckbox = ({
-	options,
-	onChange,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionCheckbox = ({ options, onChange, selectedValue }: PropsInterface): React.ReactElement => {
 	const SEPARATOR = " | ";
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
@@ -63,9 +59,7 @@ const QuestionCheckbox = ({
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return false;
 		}
-		return !["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(
-			finalValue,
-		);
+		return !["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(finalValue);
 	};
 
 	const someNotAnswer = (value: string): boolean => {
@@ -74,9 +68,7 @@ const QuestionCheckbox = ({
 		if (currentPageIdent === "transportation_7" && finalValue === "no") {
 			return true;
 		}
-		return ["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(
-			finalValue,
-		);
+		return ["prefer not to answer", "prefer not to say", "none of the above", "none"].includes(finalValue);
 	};
 
 	const selectHandler = (value: string | null): void => {
@@ -101,9 +93,7 @@ const QuestionCheckbox = ({
 			if (value.toString().toLowerCase() === "other") {
 				if (arrayHasOther(existingSelectedValue)) {
 					// if "Other", "other", "other (xxxx)" is already selected, remove all
-					finalSelected = existingSelectedValue
-						.filter((item) => !isOtherOption(item))
-						.join(SEPARATOR);
+					finalSelected = existingSelectedValue.filter((item) => !isOtherOption(item)).join(SEPARATOR);
 				} else {
 					// if not add it
 					finalSelected = [...existingSelectedValue, value].join(SEPARATOR);
@@ -139,7 +129,7 @@ const QuestionCheckbox = ({
 	const adjustWidth = enableColumnWrap ? horizontalScale(150, device.screenWidth) : "100%";
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<View style={styles.container}>
 			<View>
 				<FlatListContainer
 					removeClippedSubviews={false}
@@ -153,11 +143,7 @@ const QuestionCheckbox = ({
 							<Option
 								text={`${optionLetter(index)}.  ${item.label}`}
 								value={item.value}
-								selected={
-									selected !== null &&
-									(selected?.includes(item.value) ||
-										(isOtherOption(item.value) && arrayHasOther(selected)))
-								}
+								selected={selected !== null && (selected?.includes(item.value) || (isOtherOption(item.value) && arrayHasOther(selected)))}
 								selectHandler={selectHandler}
 								color={color100}
 								width={adjustWidth}
@@ -176,7 +162,7 @@ const QuestionCheckbox = ({
 					}}
 				/>
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 };
 

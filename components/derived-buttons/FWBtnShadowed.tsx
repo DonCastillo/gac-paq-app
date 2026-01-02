@@ -1,5 +1,5 @@
+import FullWidthButton from "@components/buttons/FullWidthButton";
 import React from "react";
-import FullWidthButton from "components/buttons/FullWidthButton";
 
 interface Props {
 	label: string;

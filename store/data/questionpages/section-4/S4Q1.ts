@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioImagePayloadInterface } from "@interface/payload.type";
 
 const S4Q1: LangQuestionRadioImagePayloadInterface = {
 	ident: "transportation_1",
@@ -30,8 +30,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
-						adult:
-							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
 					},
 				},
 				{
@@ -93,8 +92,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
-						adult:
-							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
 					},
 				},
 				{
@@ -156,8 +154,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
-						adult:
-							"Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
+						adult: "Hei tauira, mā runga tūruwīra, mā runga pahikara, mā runga ī-pahikara, mā runga papareti, mā runga kutarere, mā runga konoke",
 					},
 				},
 				{
@@ -219,8 +216,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
-						adult:
-							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
 					},
 				},
 				{
@@ -282,8 +278,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "např. invalidní vozík, jízdní kolo, elektrokolo, skateboard, koloběžka, kolečkové brusle",
-						adult:
-							"například invalidní vozík, jízdní kolo, elektrokolo, skateboard, koloběžka, kolečkové brusle",
+						adult: "například invalidní vozík, jízdní kolo, elektrokolo, skateboard, koloběžka, kolečkové brusle",
 					},
 				},
 				{
@@ -407,8 +402,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines",
-						adult:
-							"por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines",
+						adult: "por ejemplo, en silla de ruedas, bicicleta, monopatín, skate o patineta, patines",
 					},
 				},
 				{
@@ -470,8 +464,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
-						adult:
-							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
 					},
 				},
 				{
@@ -533,8 +526,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
-						adult:
-							"for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
+						adult: "for example, wheelchair use, bicycle, e-bicycle, skateboard, push scooter, rollerblades",
 					},
 				},
 				{
@@ -720,8 +712,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
-						adult:
-							"उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
+						adult: "उदाहरण के लिए, व्हीलचेयर का उपयोग, साइकिल, इ-साइकिल, स्केटबोर्ड, पुश स्कूटर, रोलरब्लेड",
 					},
 				},
 				{
@@ -783,8 +774,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "for example, bicycle, e-bicycle, skateboard, push scooter, rollerblades, wheelchair use",
-						adult:
-							"for example, bicycle, e-bicycle, skateboard, push scooter, rollerblades, wheelchair use",
+						adult: "for example, bicycle, e-bicycle, skateboard, push scooter, rollerblades, wheelchair use",
 					},
 				},
 				{
@@ -846,8 +836,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكراسي المتحركة، وغيرها",
-						adult:
-							"مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
+						adult: "مثل الدراجة الهوائية، الدراجة الإلكترونية، لوح التزلج، سكوتر، حذاء التزلج، الكرسي المتحرك، وغيرها",
 					},
 				},
 				{
@@ -956,8 +945,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 			heading: "Questão 15",
 			label: "Na última semana, como você foi para a escola?",
 			kid_label: "Na última semana, como você foi para a escola?",
-			adult_label:
-				"Na última semana, como a criança ou adolescente que você é responsável foi para a escola?",
+			adult_label: "Na última semana, como a criança ou adolescente que você é responsável foi para a escola?",
 			kid_sublabel: "Selecione o meio de transporte principal que você usou.",
 			adult_sublabel: "Selecione o meio de transporte principal que ele ou ela usou.",
 			choices: [
@@ -1333,10 +1321,8 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 15",
 			label: "Comment es-tu allé.e de la maison jusqu'à l'école au cours de la dernière semaine?",
-			kid_label:
-				"Comment es-tu allé.e de la maison jusqu'à l'école au cours de la dernière semaine?",
-			adult_label:
-				"Comment ton enfant est-il (elle) allé(e) de la maison jusqu'à l'école au cours de la dernière semaine?",
+			kid_label: "Comment es-tu allé.e de la maison jusqu'à l'école au cours de la dernière semaine?",
+			adult_label: "Comment ton enfant est-il (elle) allé(e) de la maison jusqu'à l'école au cours de la dernière semaine?",
 			kid_sublabel: "Sélectionne le moyen principal que tu as utilisé.",
 			adult_sublabel: "Sélectionne le moyen principal que ton enfant a utilisé.",
 			choices: [
@@ -1351,8 +1337,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "wheeling",
 					sublabel: {
 						kid: "par exemple, fauteuil roulant, vélo, vélo électrique, planche à roulettes, trottinette, patins à roues alignées",
-						adult:
-							"par exemple, fauteuil roulant, vélo, vélo électrique, planche à roulettes, trottinette, patins à roues alignées",
+						adult: "par exemple, fauteuil roulant, vélo, vélo électrique, planche à roulettes, trottinette, patins à roues alignées",
 					},
 				},
 				{

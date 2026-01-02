@@ -17,7 +17,7 @@
 			"requireFullScreen": true,
 			"bundleIdentifier": "com.uleth.gacpaq",
 			"infoPlist": {
-				"UIBackgroundModes": ["fetch"]
+				"UIBackgroundModes": ["fetch", "processing"]
 			},
 			"config": {
 				"usesNonExemptEncryption": false
@@ -37,6 +37,8 @@
 			}
 		},
 		"plugins": [
+			"expo-audio",
+			"expo-router",
 			[
 				"expo-screen-orientation",
 				{
@@ -50,10 +52,13 @@
 						"compileSdkVersion": 35,
 						"targetSdkVersion": 35,
 						"buildToolsVersion": "35.0.0",
-						"minSdkVersion": 21
+						"minSdkVersion": 24
 					}
 				}
-			]
+			],
+			"expo-web-browser",
+			"expo-audio",
+			"expo-background-task"
 		]
 	}
 }

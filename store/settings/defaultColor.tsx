@@ -1,4 +1,4 @@
-import type ColorInterface from "interface/color";
+import type ColorInterface from "@interface/color";
 
 const defaultColor: ColorInterface = {
 	color100: "#E09F57",

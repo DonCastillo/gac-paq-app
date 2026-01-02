@@ -1,7 +1,4 @@
-import type {
-	SetLanguageOptionFuncType,
-	SetIntroductoryPagesFuncType,
-} from "interface/function.type";
+import type { SetLanguageOptionFuncType, SetIntroductoryPagesFuncType } from "@interface/function.type";
 
 const setLanguageOption: SetLanguageOptionFuncType = (state, action) => {
 	state.languageOption = action.payload;

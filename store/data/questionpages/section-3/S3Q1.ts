@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S3Q1: LangQuestionRadioPayloadInterface = {
 	ident: "work_1",
@@ -167,10 +167,8 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Funso 12",
 			label: "M’sabata yapitayi, kodi unagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
-			kid_label:
-				"M’sabata yapitayi, kodi unagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
-			adult_label:
-				"M’sabata yapitayi, kodi mwana wanu anagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			kid_label: "M’sabata yapitayi, kodi unagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
+			adult_label: "M’sabata yapitayi, kodi mwana wanu anagwira ntchito yongodzipereka kapena ntchito yolipidwa?",
 			choices: [
 				{
 					label: "Eya",
@@ -189,8 +187,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 				"गेल्या आठवड्यात, तुम्ही स्वयंसेवक म्हणून काही काम केले का किंवा एखादे काम असे केले का ज्यामुळे तुम्हाला किंवा तुमच्या कुटुंबाला थोडेफार उत्पन्न मिळाले?",
 			kid_label:
 				"गेल्या आठवड्यात, तुम्ही स्वयंसेवक म्हणून काही काम केले का किंवा एखादे काम असे केले का ज्यामुळे तुम्हाला किंवा तुमच्या कुटुंबाला थोडेफार उत्पन्न मिळाले?",
-			adult_label:
-				"गेल्या आठवड्यात, तुमच्या मुलाने स्वयंसेवक म्हणून काही काम केले का किंवा एखादी नोकरी केली का?",
+			adult_label: "गेल्या आठवड्यात, तुमच्या मुलाने स्वयंसेवक म्हणून काही काम केले का किंवा एखादी नोकरी केली का?",
 			choices: [
 				{
 					label: "होय",
@@ -258,8 +255,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 			heading: "प्रश्न १२",
 			label: "पछिल्लो (गएको/ बितेको) हप्तामा, के तपाईंले कुनै काम वा स्वयंसेवा गर्नुभयो ?",
 			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, के तपाईंले कुनै काम वा स्वयंसेवा गर्नुभयो ?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको)  हप्तामा, के तपाईंको छोरा वा छोरीले कुनै काम वा स्वयंसेवा गर्नुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको)  हप्तामा, के तपाईंको छोरा वा छोरीले कुनै काम वा स्वयंसेवा गर्नुभयो?",
 			choices: [
 				{
 					label: "गरें",
@@ -284,8 +280,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 12",
 			label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
 			kid_label: "Na última semana, você fez algum trabalho voluntário ou trabalho remunerado?",
-			adult_label:
-				"Na última semana, a criança ou adolescente que você é responsável fez algum trabalho voluntário ou trabalho remunerado?",
+			adult_label: "Na última semana, a criança ou adolescente que você é responsável fez algum trabalho voluntário ou trabalho remunerado?",
 			choices: [
 				{
 					label: "Sim",
@@ -387,8 +382,7 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 12",
 			label: "Durant la dernière semaine, as-tu fait du bénévolat ou un travail?",
 			kid_label: "Durant la dernière semaine, as-tu fait du bénévolat ou un travail?",
-			adult_label:
-				"Durant la dernière semaine, ton enfant a-t-il (elle) fait du bénévolat ou un travail?",
+			adult_label: "Durant la dernière semaine, ton enfant a-t-il (elle) fait du bénévolat ou un travail?",
 			choices: [
 				{
 					label: "Oui",

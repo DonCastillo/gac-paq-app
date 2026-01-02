@@ -1,10 +1,10 @@
-import FWBtnShadowed from "components/derived-buttons/FWBtnShadowed";
-import Paragraph from "components/Paragraph";
+import FWBtnShadowed from "@components/derived-buttons/FWBtnShadowed";
+import Paragraph from "@components/Paragraph";
+import { GeneralStyle } from "@styles/general";
+import Images from "@styles/images";
+import { adjustPageDescriptionText } from "@utils/style";
 import React from "react";
-import { StyleSheet, View, Modal } from "react-native";
-import { GeneralStyle } from "styles/general";
-import Images from "styles/images";
-import { adjustPageDescriptionText } from "utils/style";
+import { Modal, StyleSheet, View } from "react-native";
 
 interface Props {
 	isVisible: boolean;
@@ -14,13 +14,7 @@ interface Props {
 	setModalVisible: (visible: boolean) => void;
 }
 
-const CustomModal = ({
-	isVisible,
-	mainText,
-	buttonText,
-	status,
-	setModalVisible,
-}: Props): React.ReactElement => {
+const CustomModal = ({ isVisible, mainText, buttonText, status, setModalVisible }: Props): React.ReactElement => {
 	const ErrorMark = Images.general.error;
 	const CheckMark = Images.general.check;
 
@@ -43,11 +37,7 @@ const CustomModal = ({
 									height: 100,
 								}}
 							>
-								{status ? (
-									<CheckMark style={styles.statusIcon} />
-								) : (
-									<ErrorMark style={styles.statusIcon} />
-								)}
+								{status ? <CheckMark style={styles.statusIcon} /> : <ErrorMark style={styles.statusIcon} />}
 							</View>
 						)}
 

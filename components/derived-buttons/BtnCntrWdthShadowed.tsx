@@ -1,9 +1,9 @@
+import ButtonContainerWidth from "@components/buttons/ButtonContainerWidth";
+import { getDevice } from "@store/settings/settingsSlice";
+import { DefaultStyle } from "@styles/general";
 import React from "react";
-import ButtonContainerWidth from "components/buttons/ButtonContainerWidth";
 import { Shadow } from "react-native-shadow-2";
-import { DefaultStyle } from "styles/general";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/settings/settingsSlice";
 
 interface Props {
 	label: string;

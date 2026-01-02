@@ -1,8 +1,4 @@
-import LocalStorageKey from "constants/localstorage.enum";
-import Languages from "store/data/languages";
-import { readData, removeData, storeData } from "./localstorage.utils";
-import IntroductoryPages from "store/data/introductory-pages";
-import QuestionPages from "store/data/question-pages";
+import LocalStorageKey from "@constants/localstorage.enum";
 import {
 	AdultExtroductoryPages,
 	AppExtroPage,
@@ -10,33 +6,37 @@ import {
 	GSHSPages,
 	HBSCPages,
 	KidExtroductoryPages,
-} from "store/data/extroductory-pages";
-import DemographicKidPage from "store/data/introductory-pages/demographic_kid_age";
-import DemographicTeenPage from "store/data/introductory-pages/demographic_teen_age";
-import DemographicAdultPage from "store/data/introductory-pages/demographic_adult";
-import DonePhrase from "store/data/phrase/done";
-import DontKnowPhrase from "store/data/phrase/dont-know";
-import IntroductionPhrase from "store/data/phrase/introduction";
-import TryAgainPhrase from "store/data/phrase/try-again";
-import FeedbackPhrase from "store/data/phrase/feedback";
-import SelectPhrase from "store/data/phrase/select";
-import PleaseSpecifyPhrase from "store/data/phrase/please-specify";
-import SuccessPage from "store/data/state-pages/success";
-import OfflineSuccessPage from "store/data/state-pages/offline-success";
-import ErrorPage from "store/data/state-pages/error";
-import Transportation7 from "store/data/questionpages/section-4/transportation_7/S4Q7a";
-import Transportation8_10 from "store/data/questionpages/section-4/transportation_7/S4Q8_10";
-import Transportation9_11 from "store/data/questionpages/section-4/transportation_7/S4Q9_11";
-import BackPhrase from "store/data/phrase/back";
-import CompletePhrase from "store/data/phrase/complete";
-import NextPhrase from "store/data/phrase/next";
-import OptionLetters from "store/data/options/letters";
-import OptionNumbers from "store/data/options/numbers";
-import SubmitPhrase from "store/data/phrase/submit";
-import NoPendingSubmissionsPhrase from "store/data/phrase/no_pending_submissions";
-import NothingToSubmitPhrase from "store/data/phrase/nothing_to_submit";
-import PendingSubmissionsPhrase from "store/data/phrase/pending_submissions";
-import ResponsesSubmittedPhrase from "store/data/phrase/responses_submitted";
+} from "@store/data/extroductory-pages";
+import IntroductoryPages from "@store/data/introductory-pages";
+import DemographicAdultPage from "@store/data/introductory-pages/demographic_adult";
+import DemographicKidPage from "@store/data/introductory-pages/demographic_kid_age";
+import DemographicTeenPage from "@store/data/introductory-pages/demographic_teen_age";
+import Languages from "@store/data/languages";
+import OptionLetters from "@store/data/options/letters";
+import OptionNumbers from "@store/data/options/numbers";
+import BackPhrase from "@store/data/phrase/back";
+import CompletePhrase from "@store/data/phrase/complete";
+import DonePhrase from "@store/data/phrase/done";
+import DontKnowPhrase from "@store/data/phrase/dont-know";
+import FeedbackPhrase from "@store/data/phrase/feedback";
+import IntroductionPhrase from "@store/data/phrase/introduction";
+import NextPhrase from "@store/data/phrase/next";
+import NoPendingSubmissionsPhrase from "@store/data/phrase/no_pending_submissions";
+import NothingToSubmitPhrase from "@store/data/phrase/nothing_to_submit";
+import PendingSubmissionsPhrase from "@store/data/phrase/pending_submissions";
+import PleaseSpecifyPhrase from "@store/data/phrase/please-specify";
+import ResponsesSubmittedPhrase from "@store/data/phrase/responses_submitted";
+import SelectPhrase from "@store/data/phrase/select";
+import SubmitPhrase from "@store/data/phrase/submit";
+import TryAgainPhrase from "@store/data/phrase/try-again";
+import QuestionPages from "@store/data/question-pages";
+import Transportation7 from "@store/data/questionpages/section-4/transportation_7/S4Q7a";
+import Transportation8_10 from "@store/data/questionpages/section-4/transportation_7/S4Q8_10";
+import Transportation9_11 from "@store/data/questionpages/section-4/transportation_7/S4Q9_11";
+import ErrorPage from "@store/data/state-pages/error";
+import OfflineSuccessPage from "@store/data/state-pages/offline-success";
+import SuccessPage from "@store/data/state-pages/success";
+import { readData, removeData, storeData } from "./localstorage.utils";
 
 // save all the raw pages and their different translations to local storage
 const saveAppData = async (): Promise<void> => {
@@ -89,4 +89,4 @@ const removeAppData = async (): Promise<void> => {
 	await removeData(LocalStorageKey.app_data);
 };
 
-export { saveAppData, readAppData, removeAppData };
+export { readAppData, removeAppData, saveAppData };

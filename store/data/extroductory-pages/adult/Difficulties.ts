@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionCheckboxPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionCheckboxPayloadInterface } from "@interface/payload.type";
 
 const Difficulties: LangQuestionCheckboxPayloadInterface = {
 	ident: "child_difficulties",
@@ -13,12 +13,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",
-			label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			kid_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			adult_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			adult_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
 			kid_sublabel: "Select all that apply",
 			adult_sublabel: "Select all that apply",
 			choices: [
@@ -67,12 +64,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",
-			label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			kid_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			adult_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			adult_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
 			kid_sublabel: "Select all that apply",
 			adult_sublabel: "Select all that apply",
 			choices: [
@@ -172,12 +166,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",
-			label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			kid_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			adult_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			adult_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
 			kid_sublabel: "Select all that apply",
 			adult_sublabel: "Select all that apply",
 			choices: [
@@ -226,12 +217,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionCheckbox,
 			heading: "Otázka 25",
-			label:
-				"Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
-			kid_label:
-				"Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
-			adult_label:
-				"Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
+			label: "Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
+			kid_label: "Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
+			adult_label: "Uveďte prosím, jestli má vaše dítě u běžných aktivit problémy v následujících oblastech",
 			kid_sublabel: "Můžete uvést i více možností",
 			adult_sublabel: "Můžete uvést i více možností",
 			choices: [
@@ -280,12 +268,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 25",
-			label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
-			kid_label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
-			adult_label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			adult_label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
 			kid_sublabel: "Seleccione todas las opciones que correspondan",
 			adult_sublabel: "Seleccione todas las opciones que correspondan",
 			choices: [
@@ -334,12 +319,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 25",
-			label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
-			kid_label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
-			adult_label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			adult_label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
 			kid_sublabel: "Seleccione todas las opciones que correspondan",
 			adult_sublabel: "Seleccione todas las opciones que correspondan",
 			choices: [
@@ -388,12 +370,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",
-			label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			kid_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			adult_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			adult_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
 			kid_sublabel: "Select all that apply",
 			adult_sublabel: "Select all that apply",
 			choices: [
@@ -442,12 +421,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",
-			label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			kid_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			adult_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			adult_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
 			kid_sublabel: "Select all that apply",
 			adult_sublabel: "Select all that apply",
 			choices: [
@@ -545,12 +521,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २५",
-			label:
-				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
-			kid_label:
-				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
-			adult_label:
-				"कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			label: "कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			kid_label: "कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
+			adult_label: "कृपया तुमच्या मुलाला त्याच्या / तिच्या दैनंदिन कामांमध्ये खालीलपैकी काही अडचणी येत असल्यास नमूद करा.",
 			kid_sublabel: "लागू होणारे सर्व पर्याय निवडा",
 			adult_sublabel: "लागू होणारे सर्व पर्याय निवडा",
 			choices: [
@@ -599,12 +572,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २५",
-			label:
-				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
-			kid_label:
-				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
-			adult_label:
-				"कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			label: "कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			kid_label: "कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
+			adult_label: "कृपया बताएं कि क्या आपके बच्चे को अपनी दैनिक गतिविधियों में निम्नलिखित में से किसी में कठिनाई होती है",
 			kid_sublabel: "हर वो जो लागू हो उन्हें चुनें",
 			adult_sublabel: "हर वो जो लागू हो उन्हें चुनें",
 			choices: [
@@ -653,12 +623,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 25",
-			label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			kid_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
-			adult_label:
-				"Please indicate if your child has difficulties with any of the following in their daily activities.",
+			label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			kid_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
+			adult_label: "Please indicate if your child has difficulties with any of the following in their daily activities.",
 			kid_sublabel: "Select all that apply",
 			adult_sublabel: "Select all that apply",
 			choices: [
@@ -758,12 +725,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionCheckbox,
 			heading: "प्रश्न २५",
-			label:
-				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
-			kid_label:
-				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
-			adult_label:
-				"कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			label: "कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			kid_label: "कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
+			adult_label: "कृपया जानकारी गराउनु होला, यदी तपाईं छोरा वा छोरी लाईको कुनै प्रकारको शारीरिक गतिविधिहरु गर्न कठिनाइ छ भने",
 			kid_sublabel: "उपयुक्त मा चिन्ह लगाउनुहोस् ।",
 			adult_sublabel: "उपयुक्त मा चिन्ह लगाउनुहोस् ।",
 			choices: [
@@ -868,8 +832,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 			heading: "Fråga 25",
 			label: "Ange om ditt barn har problem med något av följande i sina dagliga aktiviteter.",
 			kid_label: "Ange om ditt barn har problem med något av följande i sina dagliga aktiviteter.",
-			adult_label:
-				"Ange om ditt barn har problem med något av följande i sina dagliga aktiviteter.",
+			adult_label: "Ange om ditt barn har problem med något av följande i sina dagliga aktiviteter.",
 			kid_sublabel: "välj alla som stämmer",
 			adult_sublabel: "välj alla som stämmer",
 			choices: [
@@ -1020,12 +983,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 25",
-			label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
-			kid_label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
-			adult_label:
-				"Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			kid_label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
+			adult_label: "Por favor indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias",
 			kid_sublabel: "Seleccione todas las opciones que correspondan",
 			adult_sublabel: "Seleccione todas las opciones que correspondan",
 			choices: [
@@ -1074,12 +1034,9 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionCheckbox,
 			heading: "Pregunta 25",
-			label:
-				"Por favor, indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias.",
-			kid_label:
-				"Por favor, indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias.",
-			adult_label:
-				"Por favor, indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias.",
+			label: "Por favor, indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias.",
+			kid_label: "Por favor, indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias.",
+			adult_label: "Por favor, indique si su hija o hijo tiene dificultades con alguno de los siguientes aspectos en sus actividades diarias.",
 			kid_sublabel: "Seleccione todas las opciones que correspondan",
 			adult_sublabel: "Seleccione todas las opciones que correspondan",
 			choices: [
