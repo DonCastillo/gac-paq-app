@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangPreamblePayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangPreamblePayloadInterface } from "@interface/payload.type";
 
 const S5Preamble: LangPreamblePayloadInterface = {
 	ident: "organized_preamble",

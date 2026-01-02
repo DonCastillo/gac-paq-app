@@ -1,6 +1,6 @@
+import { adjustParagraph, adjustWritingDirection } from "@utils/style";
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import { adjustParagraph, adjustWritingDirection } from "utils/style";
+import { StyleSheet, Text, View } from "react-native";
 
 interface PropsInterface {
 	children: React.ReactNode;

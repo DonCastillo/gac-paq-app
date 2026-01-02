@@ -1,33 +1,65 @@
+import {
+	BackgroundFive,
+	BackgroundFour,
+	BackgroundOne,
+	BackgroundSeven,
+	BackgroundSix,
+	BackgroundThree,
+	BackgroundTwo,
+} from "@/components/kid/background/introductory-pages";
+import {
+	BackgroundCenter,
+	BackgroundRight,
+	GenericBackgroundLoop,
+	GenericBackgroundStars,
+	GenericBackgroundStroke,
+} from "@/components/kid/background/question-pages";
+import Device from "@/constants/device.enum";
+import Mode from "@/constants/mode.enum";
+import Question from "@/constants/question.enum";
+import Screen from "@/constants/screen.enum";
+import Section from "@/constants/section.enum";
+import Images from "@/styles/images";
+import GenericBackground, {
+	GenericBackgroundIdent as GBIdent,
+	GenericBackgroundPlatform as GBPlatform,
+	GenericBackgroundRegion as GBRegion,
+} from "@/styles/images/background/generic";
+import IntroBackground, {
+	IntroBackgroundMode as IBMode,
+	IntroBackgroundPlatform as IBPlatform,
+	IntroBackgroundRegion as IBRegion,
+	IntroBackgroundSection as IBSection,
+} from "@/styles/images/background/intro";
+import BreaksOptions, {
+	BreaksOptionsDifficulty as BODifficulty,
+	BreaksOptionsMode as BOMode,
+	BreaksOptionsRegion as BORegion,
+} from "@/styles/images/options/breaks";
+import ChoresOptions, {
+	ChoresOptionsDifficulty as CODifficulty,
+	ChoresOptionsMode as COMode,
+	ChoresOptionsRegion as CORegion,
+} from "@/styles/images/options/chores";
+import PhysicalEducationOptions, {
+	PEOptionsDifficulty as PEDifficulty,
+	PEOptionsMode as PEMode,
+	PEOptionsRegion as PERegion,
+} from "@/styles/images/options/physical_education";
+import VolunteeringOptions, {
+	VolunteeringOptionsDifficulty as VODifficulty,
+	VolunteeringOptionsRegion as VORegion,
+} from "@/styles/images/options/volunteering";
+import type State from "@constants/state.enum";
+import type { DeviceType, ModeType, QuestionType } from "@interface/union.type";
+import { store } from "@store/store";
+import StatusBackground, {
+	StatusBackgroundPlatform as SBPlatform,
+	StatusBackgroundRegion as SBRegion,
+	StatusBackgroundStatus as SBStatus,
+} from "@styles/images/background/status";
 import React from "react";
-import BackgroundOne from "components/kid/background/introductory-pages/BackgroundOne";
-import BackgroundTwo from "components/kid/background/introductory-pages/BackgroundTwo";
-import BackgroundThree from "components/kid/background/introductory-pages/BackgroundThree";
-import BackgroundFour from "components/kid/background/introductory-pages/BackgroundFour";
-import BackgroundFive from "components/kid/background/introductory-pages/BackgroundFive";
-import BackgroundSix from "components/kid/background/introductory-pages/BackgroundSix";
-import BackgroundSeven from "components/kid/background/introductory-pages/BackgroundSeven";
-import Question from "constants/question.enum";
-import Device from "constants/device.enum";
-import GenericBackgroundStroke from "components/kid/background/question-pages/GenericBackgroundStroke";
-import BackgroundRight from "components/kid/background/question-pages/BackgroundRight";
-import BackgroundCenter from "components/kid/background/question-pages/BackgroundCenter";
-import Images from "styles/images/index";
-import GenericBackgroundStars from "components/kid/background/question-pages/GenericBackgroundStars";
-import GenericBackgroundLoop from "components/kid/background/question-pages/GenericBackgroundLoop";
-import Mode from "constants/mode.enum";
-import type { DeviceType, ModeType, QuestionType } from "interface/union.type";
-import { store } from "store/store";
 import { getScreenType, getSectionType } from "./type.utils";
-import Section from "constants/section.enum";
-import GenericBackground from "styles/images/background/generic";
-import Screen from "constants/screen.enum";
-import IntroBackground from "styles/images/background/intro";
-import PhysicalEducationOptions from "styles/images/options/physical_education";
-import BreaksOptions from "styles/images/options/breaks";
-import ChoresOptions from "styles/images/options/chores";
-import VolunteeringOptions from "styles/images/options/volunteering";
-import type State from "constants/state.enum";
-import StatusBackground from "styles/images/background/status";
 
 const getImageBackground = (): any | null => {
 	const blackListLanguages = ["sv-SE", "fr-CA"];
@@ -64,22 +96,22 @@ const getImageBackground = (): any | null => {
 
 	// background for the intro section
 	if (section === Section.Intro) {
-		return GenericBackground[region][platform][ident];
+		return GenericBackground[region as GBRegion][platform as GBPlatform][ident as GBIdent];
 	}
 
 	// background for the question section
 	if (section === Section.Question) {
 		if (screen === Screen.IntroQuestion) {
-			return IntroBackground[region][ident.split("_intro")[0]][mode][platform];
+			return IntroBackground[region as IBRegion][ident.split("_intro")[0] as IBSection][mode as IBMode][platform as IBPlatform];
 		}
 		if (screen === Screen.Preamble) {
 			if (mode === Mode.Teen) {
-				return IntroBackground[region][ident.split("_preamble")[0]][mode][platform];
+				return IntroBackground[region as IBRegion][ident.split("_preamble")[0] as IBSection][mode as IBMode][platform as IBPlatform];
 			}
 		}
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
-				return IntroBackground[region][ident.split("_extro")[0]][mode][platform];
+				return IntroBackground[region as IBRegion][ident.split("_extro")[0] as IBSection][mode as IBMode][platform as IBPlatform];
 			}
 		}
 	}
@@ -87,16 +119,16 @@ const getImageBackground = (): any | null => {
 	// background for the hbsc section
 	if (section === Section.Hbsc) {
 		if (screen === Screen.IntroQuestion) {
-			return GenericBackground[region][platform].language_location;
+			return GenericBackground[region as GBRegion][platform as GBPlatform].language_location;
 		}
 		if (screen === Screen.Preamble) {
 			if (mode === Mode.Teen) {
-				return GenericBackground[region][platform].language_location;
+				return GenericBackground[region as GBRegion][platform as GBPlatform].language_location;
 			}
 		}
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
-				return GenericBackground[region][platform].language_location;
+				return GenericBackground[region as GBRegion][platform as GBPlatform].language_location;
 			}
 		}
 	}
@@ -104,16 +136,16 @@ const getImageBackground = (): any | null => {
 	// background for the gshs section
 	if (section === Section.Gshs) {
 		if (screen === Screen.IntroQuestion) {
-			return GenericBackground[region][platform].mode;
+			return GenericBackground[region as GBRegion][platform as GBPlatform].mode;
 		}
 		if (screen === Screen.Preamble) {
 			if (mode === Mode.Teen) {
-				return GenericBackground[region][platform].mode;
+				return GenericBackground[region as GBRegion][platform as GBPlatform].mode;
 			}
 		}
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
-				return GenericBackground[region][platform].mode;
+				return GenericBackground[region as GBRegion][platform as GBPlatform].mode;
 			}
 		}
 	}
@@ -121,10 +153,10 @@ const getImageBackground = (): any | null => {
 	// background for the extro / demographic section
 	if (section === Section.Extro) {
 		if (screen === Screen.IntroQuestion) {
-			return IntroBackground[region].extro[mode][platform];
+			return IntroBackground[region as IBRegion].extro[mode as IBMode][platform as IBPlatform];
 		}
 		if (screen === Screen.ExtroQuestion) {
-			return IntroBackground[region].extro[mode][platform];
+			return IntroBackground[region as IBRegion].extro[mode as IBMode][platform as IBPlatform];
 		}
 	}
 
@@ -132,11 +164,11 @@ const getImageBackground = (): any | null => {
 	// feedback extro only applies on teen/parent
 	if (section === Section.Feedback) {
 		if (screen === Screen.IntroQuestion) {
-			return IntroBackground[region].extro[mode][platform];
+			return IntroBackground[region as IBRegion].extro[mode as IBMode][platform as IBPlatform];
 		}
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
-				return IntroBackground[region].extro[mode][platform];
+				return IntroBackground[region as IBRegion].extro[mode as IBMode][platform as IBPlatform];
 			}
 		}
 	}
@@ -145,7 +177,7 @@ const getImageBackground = (): any | null => {
 	if (section === Section.AppExtro) {
 		if (screen === Screen.ExtroQuestion) {
 			if (mode === Mode.Teen) {
-				return GenericBackground[region][platform].participant_id;
+				return GenericBackground[region as GBRegion][platform as GBPlatform].participant_id;
 			}
 		}
 	}
@@ -182,7 +214,7 @@ const getImageBackgroundStatus = (state: State): any | null => {
 		region = "CA";
 	}
 
-	return StatusBackground[region][state][platform];
+	return StatusBackground[region as SBRegion][state as SBStatus][platform as SBPlatform];
 };
 
 const getOptionImage = (image_ident: string): any | null => {
@@ -244,7 +276,7 @@ const getOptionImage = (image_ident: string): any | null => {
 				return doNotKnowImage;
 			}
 		}
-		return PhysicalEducationOptions[region][mode][image_ident];
+		return PhysicalEducationOptions[region as PERegion][mode as PEMode][image_ident as PEDifficulty];
 	}
 
 	// options for breaks
@@ -256,7 +288,7 @@ const getOptionImage = (image_ident: string): any | null => {
 				return doNotKnowImage;
 			}
 		}
-		return BreaksOptions[region][mode][image_ident];
+		return BreaksOptions[region as BORegion][mode as BOMode][image_ident as BODifficulty];
 	}
 
 	// options for chores
@@ -268,7 +300,7 @@ const getOptionImage = (image_ident: string): any | null => {
 				return doNotKnowImage;
 			}
 		}
-		return ChoresOptions[region][mode][image_ident];
+		return ChoresOptions[region as CORegion][mode as COMode][image_ident as CODifficulty];
 	}
 
 	// options for volunteering. only for teens and parent of teens
@@ -280,7 +312,7 @@ const getOptionImage = (image_ident: string): any | null => {
 				return doNotKnowImage;
 			}
 		}
-		return VolunteeringOptions[region].teen[image_ident];
+		return VolunteeringOptions[region as VORegion].teen[image_ident as VODifficulty];
 	}
 
 	// options for transportation
@@ -323,11 +355,7 @@ const getOptionImage = (image_ident: string): any | null => {
 	return null;
 };
 
-const getOptionText = (
-	origOptionText: string,
-	optionTextObj: { kid: string; adult: string } | undefined,
-	mode: ModeType,
-): string | null => {
+const getOptionText = (origOptionText: string, optionTextObj: { kid: string; adult: string } | undefined, mode: ModeType): string | null => {
 	if (optionTextObj === undefined || optionTextObj === null) return origOptionText;
 	if (mode === undefined || mode === null) return origOptionText;
 
@@ -340,10 +368,7 @@ const getOptionText = (
 	}
 };
 
-const getOptionSubLabel = (
-	subLabelObj: { kid: string; adult: string } | undefined,
-	mode: ModeType,
-): string | null => {
+const getOptionSubLabel = (subLabelObj: { kid: string; adult: string } | undefined, mode: ModeType): string | null => {
 	if (subLabelObj === undefined || subLabelObj === null) return null;
 	if (mode === undefined || mode === null) return null;
 
@@ -431,11 +456,11 @@ const getQuestionBackground = (
 };
 
 export {
-	getIntroductoryBackground,
-	getQuestionBackground,
 	getImageBackground,
 	getImageBackgroundStatus,
+	getIntroductoryBackground,
 	getOptionImage,
-	getOptionText,
 	getOptionSubLabel,
+	getOptionText,
+	getQuestionBackground,
 };

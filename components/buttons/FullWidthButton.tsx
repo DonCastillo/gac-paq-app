@@ -1,6 +1,6 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
-import { DefaultStyle } from "styles/general";
+import { DefaultStyle } from "@styles/general";
 import React, { memo } from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 interface Props {
 	children: React.ReactNode;
@@ -9,12 +9,7 @@ interface Props {
 	customStyle?: any;
 }
 
-const FullWidthButton = ({
-	children,
-	onPress,
-	textStyle,
-	customStyle,
-}: Props): React.ReactElement => {
+const FullWidthButton = ({ children, onPress, textStyle, customStyle }: Props): React.ReactElement => {
 	return (
 		<View style={[style.container, customStyle]}>
 			<Pressable onPress={onPress}>

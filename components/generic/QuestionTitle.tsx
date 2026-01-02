@@ -1,7 +1,7 @@
+import { GeneralStyle } from "@styles/general";
+import { adjustQuestionTitle, adjustWritingDirection } from "@utils/style";
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import { GeneralStyle } from "styles/general";
-import { adjustQuestionTitle, adjustWritingDirection } from "utils/style";
+import { StyleSheet, Text, View } from "react-native";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -9,11 +9,7 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-const QuestionTitle = ({
-	children,
-	customStyle = {},
-	textStyle = {},
-}: PropsInterface): React.ReactElement => {
+const QuestionTitle = ({ children, customStyle = {}, textStyle = {} }: PropsInterface): React.ReactElement => {
 	return (
 		<View style={[styles.container, customStyle]}>
 			<Text

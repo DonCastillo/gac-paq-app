@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S4Q9: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_9",
@@ -15,8 +15,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			heading: "Question 17c - Walking",
 			label: "On a normal day, how much time did you walk to places other than school or work?",
 			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child walk to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child walk to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -41,8 +40,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			heading: "Question 17c - Walking",
 			label: "On a normal day, how much time did you walk to places other than school or work?",
 			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child walk to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child walk to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -65,12 +63,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 17c - Hīkoi",
-			label:
-				"I tētahi rā māori, i hia te roa i hīkoi ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
-			kid_label:
-				"I tētahi rā māori, i hia te roa i hīkoi ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
-			adult_label:
-				"I tētahi rā, i hia te roa i hīkoi ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			label: "I tētahi rā māori, i hia te roa i hīkoi ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			kid_label: "I tētahi rā māori, i hia te roa i hīkoi ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			adult_label: "I tētahi rā, i hia te roa i hīkoi ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei?",
 			choices: [
 				{
 					label: "10 meneti, heke iho rānei",
@@ -95,8 +90,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			heading: "Question 17c - Walking",
 			label: "On a normal day, how much time did you walk to places other than school or work?",
 			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child walk to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child walk to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -119,12 +113,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 17c - Chůze",
-			label:
-				"Kolik času strávíš v průměrný den chůzí, aby ses dopravil(a) na různá místa kromě školy a práce?",
-			kid_label:
-				"Kolik času strávíš v průměrný den chůzí, aby ses dopravil(a) na různá místa kromě školy a práce?",
-			adult_label:
-				"Kolik času stráví vaše dítě v průměrný den chůzí, aby se dopravilo na různá místa kromě školy a práce?",
+			label: "Kolik času strávíš v průměrný den chůzí, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			kid_label: "Kolik času strávíš v průměrný den chůzí, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			adult_label: "Kolik času stráví vaše dítě v průměrný den chůzí, aby se dopravilo na různá místa kromě školy a práce?",
 			choices: [
 				{
 					label: "10 minut a méně",
@@ -147,12 +138,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - Caminando",
-			label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
-			kid_label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
-			adult_label:
-				"En un día normal ¿Cuánto tiempo caminó su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
+			label: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
+			kid_label: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
+			adult_label: "En un día normal ¿Cuánto tiempo caminó su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -175,12 +163,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - Caminando",
-			label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
-			kid_label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
-			adult_label:
-				"En un día normal ¿Cuánto tiempo caminó su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
+			label: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
+			kid_label: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos a la escuela o trabajo?",
+			adult_label: "En un día normal ¿Cuánto tiempo caminó su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -205,8 +190,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			heading: "Question 17c - Walking",
 			label: "On a normal day, how much time did you walk to places other than school or work?",
 			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child walk to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child walk to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -231,8 +215,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			heading: "Question 17c - Walking",
 			label: "On a normal day, how much time did you walk to places other than school or work?",
 			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child walk to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child walk to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -255,12 +238,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 17c - Kuyenda",
-			label:
-				"Pa tsiku, Zinakutengera nthawi yaitali bwanji kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
-			kid_label:
-				"Pa tsiku, Zinakutengera nthawi yaitali bwanji kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
-			adult_label:
-				"Pa tsiku, Zimamutengera nthawi yaitali bwanji mwana wanu kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
+			label: "Pa tsiku, Zinakutengera nthawi yaitali bwanji kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
+			kid_label: "Pa tsiku, Zinakutengera nthawi yaitali bwanji kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
+			adult_label: "Pa tsiku, Zimamutengera nthawi yaitali bwanji mwana wanu kuyenda kupita malo ena kupatula ku sukukulu kapena ku ntchito?",
 			choices: [
 				{
 					label: "Ma minutes 10 kapena osakwana",
@@ -309,10 +289,8 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७c - पैदल चलना",
 			label: "एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय पैदल चलकर गए?",
-			kid_label:
-				"एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय पैदल चलकर गए?",
-			adult_label:
-				"एक सामान्य दिन में, आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर कितना समय पैदल चलकर गया?",
+			kid_label: "एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय पैदल चलकर गए?",
+			adult_label: "एक सामान्य दिन में, आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर कितना समय पैदल चलकर गया?",
 			choices: [
 				{
 					label: "10 मिनट या उससे कम",
@@ -337,8 +315,7 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 			heading: "Question 17c - Walking",
 			label: "On a normal day, how much time did you walk to places other than school or work?",
 			kid_label: "On a normal day, how much time did you walk to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child walk to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child walk to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -361,12 +338,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "سؤال [١٧ج] - المشي",
-			label:
-				"في الأيام العادية، كم من الوقت تقضي في المشي للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
-			kid_label:
-				"في الأيام العادية، كم من الوقت تقضي في المشي للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
-			adult_label:
-				"في الأيام العادية، كم من الوقت يقضي طفلك في المشي للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			label: "في الأيام العادية، كم من الوقت تقضي في المشي للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			kid_label: "في الأيام العادية، كم من الوقت تقضي في المشي للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			adult_label: "في الأيام العادية، كم من الوقت يقضي طفلك في المشي للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
 			choices: [
 				{
 					label: "‌١٠ دقائق أو أقل",
@@ -389,12 +363,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७ग - हिँड्नु",
-			label:
-				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
-			kid_label:
-				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
-			adult_label:
-				"सामान्य दिनमा, तपाईंको छोरा वा छोरीले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			label: "सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			kid_label: "सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
+			adult_label: "सामान्य दिनमा, तपाईंको छोरा वा छोरीले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय व्यतित गर्नुहुन्छ?",
 			choices: [
 				{
 					label: "१० मिनेट वा सोभन्दा कम",
@@ -417,10 +388,8 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 17c - Andando",
-			label:
-				"Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
-			kid_label:
-				"Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
+			label: "Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
+			kid_label: "Em um dia normal, quanto tempo você leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			adult_label:
 				"Em um dia normal, quanto tempo a criança ou adolescente que você é responsável leva caminhando para ir a outros lugares além da escola ou trabalho?",
 			choices: [
@@ -445,12 +414,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 17c - Gående",
-			label:
-				"Hur mycket tid spenderade du på att gå till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
-			kid_label:
-				"Hur mycket tid spenderade du på att gå till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
-			adult_label:
-				"Hur mycket tid spenderade ditt barn på att gå till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			label: "Hur mycket tid spenderade du på att gå till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			kid_label: "Hur mycket tid spenderade du på att gå till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			adult_label: "Hur mycket tid spenderade ditt barn på att gå till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
 			choices: [
 				{
 					label: "10 minuter eller mindre",
@@ -473,12 +439,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 17c - เดิน",
-			label:
-				"ในวันปกติน้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
-			kid_label:
-				"ในวันปกติน้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
-			adult_label:
-				"ในวันปกติบุตรหลานของคุณใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+			label: "ในวันปกติน้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+			kid_label: "ในวันปกติน้องใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
+			adult_label: "ในวันปกติบุตรหลานของคุณใช้เวลานานเท่าไหร่ในการเดิน เพื่อเดินทางไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน?",
 			choices: [
 				{
 					label: "10 นาทีหรือน้อยกว่า",
@@ -526,10 +489,8 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - Caminando",
-			label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
-			kid_label:
-				"En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			label: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
+			kid_label: "En un día normal ¿Cuánto tiempo caminaste para llegar a lugares distintos al trabajo o voluntariado, la escuela o el colegio?",
 			adult_label:
 				"En un día normal, ¿cuánto tiempo caminó tu hijo o hija para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio?",
 			choices: [
@@ -554,12 +515,9 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - Caminando",
-			label:
-				"En un día normal, ¿cuánto tiempo caminaste para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
-			kid_label:
-				"En un día normal, ¿cuánto tiempo caminaste para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
-			adult_label:
-				"En un día normal, ¿cuánto tiempo caminó su hijo o hija para llegar a lugares distintos, al trabajo, escuela o colegio?",
+			label: "En un día normal, ¿cuánto tiempo caminaste para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
+			kid_label: "En un día normal, ¿cuánto tiempo caminaste para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
+			adult_label: "En un día normal, ¿cuánto tiempo caminó su hijo o hija para llegar a lugares distintos, al trabajo, escuela o colegio?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -582,10 +540,8 @@ const S4Q9: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Marche",
-			label:
-				"Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail?",
-			kid_label:
-				"Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail?",
+			label: "Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail?",
+			kid_label: "Lors d'une journée normale, combien de temps as-tu marché pour aller à des endroits autres que l'école ou le travail?",
 			adult_label:
 				"Lors d'une journée normale, combien de temps ton enfant a-t-il (elle) marché pour aller à des endroits autres que l'école ou le travail?",
 			choices: [

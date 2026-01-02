@@ -1,5 +1,5 @@
-import Orientation from "constants/orientation.enum";
-import type DeviceInterface from "interface/dimensions";
+import Orientation from "@constants/orientation.enum";
+import type DeviceInterface from "@interface/dimensions";
 
 const defaultDevice: DeviceInterface = {
 	screenWidth: 0,

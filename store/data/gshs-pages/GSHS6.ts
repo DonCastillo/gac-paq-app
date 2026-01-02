@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const GSHS6: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_6",
@@ -49,10 +49,8 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न ३०",
 			label: "आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
-			kid_label:
-				"आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
-			adult_label:
-				"आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
+			kid_label: "आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
+			adult_label: "आठवड्यातील ज्या दिवशी शाळा असते त्यावेळी तुम्ही रात्रीची सरासरी किती तास झोप घेता?",
 			choices: [
 				{
 					label: "४ किंवा कमी तास",
@@ -420,12 +418,9 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
-			label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
-			kid_label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
-			adult_label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			kid_label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			adult_label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
 			choices: [
 				{
 					label: "4 o menos horas",
@@ -497,12 +492,9 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
-			label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
-			kid_label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
-			adult_label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			kid_label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			adult_label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
 			choices: [
 				{
 					label: "4 o menos horas",
@@ -537,12 +529,9 @@ const GSHS6: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 30",
-			label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
-			kid_label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
-			adult_label:
-				"Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			kid_label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
+			adult_label: "Durante los días que tienes clases ¿cuántas horas duermes habitualmente por la noche?",
 			choices: [
 				{
 					label: "4 o menos horas",

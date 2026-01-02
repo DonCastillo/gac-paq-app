@@ -1,10 +1,10 @@
+import { getDevice } from "@store/settings/settingsSlice";
+import { Font, GeneralStyle } from "@styles/general";
+import { verticalScale } from "@utils/responsive.utils";
+import { adjustTextAlignmentDirection } from "@utils/style";
 import React from "react";
-import { TextInput, View, StyleSheet } from "react-native";
-import { Font, GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive.utils";
+import { StyleSheet, TextInput, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/settings/settingsSlice";
-import { adjustTextAlignmentDirection } from "utils/style";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -12,11 +12,7 @@ interface PropsInterface {
 	placeholder: string | null;
 }
 
-const QuestionTextarea = ({
-	onChange,
-	selectedValue,
-	placeholder,
-}: PropsInterface): React.ReactElement => {
+const QuestionTextarea = ({ onChange, selectedValue, placeholder }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 
 	const changeHandler = (value: string): void => {

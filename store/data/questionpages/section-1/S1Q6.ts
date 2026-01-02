@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S1Q6: LangQuestionRadioPayloadInterface = {
 	ident: "school_6",
@@ -348,8 +348,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Funso 6",
 			label: "Kodi patsiku lasukulu, mumakhala ndi nthawi ya buleki yaitali bwanji?",
 			kid_label: "Kodi patsiku lasukulu, mumakhala ndi nthawi ya buleki yaitali bwanji?",
-			adult_label:
-				"Patsiku lasukulu labwinobwino kodi mwana wanu amakhala ndi nthawi ya buleki yochuluka bwanji?",
+			adult_label: "Patsiku lasukulu labwinobwino kodi mwana wanu amakhala ndi nthawi ya buleki yochuluka bwanji?",
 			kid_sublabel:
 				"Apa ndikufuna uphatikize nthawi yonse ya buleki kuphatikizapo yachokudya chamasana, mwachitsanzo ngati umakhala ndi ma buleki awiri a 15 minutes komanso buleki ya chokudya chamasana ya 30 minutes, nthawi yonse pamozi ikhala 60 minutes.",
 			adult_sublabel:
@@ -542,8 +541,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			heading: "प्रश्न ६",
 			label: "एक सामान्य विध्यालय जाने दिनमा, तपाईंसंग कति समयको ब्रेक टाइम (खाली समय) हुन्छ?",
 			kid_label: "एक सामान्य विध्यालय जाने दिनमा, तपाईंसंग कति समयको ब्रेक टाइम (खाली समय) हुन्छ?",
-			adult_label:
-				"एक सामान्य विध्यालय जाने दिनमा, तपाईंको छोरा वा छोरी संग कति समयको ब्रेक टाइम (खाली समय) हुन्छ?",
+			adult_label: "एक सामान्य विध्यालय जाने दिनमा, तपाईंको छोरा वा छोरी संग कति समयको ब्रेक टाइम (खाली समय) हुन्छ?",
 			kid_sublabel:
 				"यसको मतलब रिसेस् र खाजाको समय । कृपया जोडेर समग्र समय निकाल्नुहोला- उदाहरणका लागि एक दिनमा, दुईटा १५ मिनेटको छोटो ब्रेक (रिसेस् टाईम) र ३० मिनेटको खाजा ब्रेकको समय जोड्दा समग्रमा ६० मिनेट हुनेछ l",
 			adult_sublabel:
@@ -580,8 +578,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 6",
 			label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
 			kid_label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio você tem?",
-			adult_label:
-				"Em um dia normal na escola, quanto tempo de intervalo ou recreio a criança ou adolescente que você é responsável tem?",
+			adult_label: "Em um dia normal na escola, quanto tempo de intervalo ou recreio a criança ou adolescente que você é responsável tem?",
 			kid_sublabel:
 				"Isso significa recreios ou intervalos na escola. Por favor, contabilize todo o tempo junto - por exemplo, se você tem dois intervalos ou recreios de 15 minutos por dia e mais 30 minutos para o almoço por dia, o seu tempo total seria de 60 minutos",
 			adult_sublabel:
@@ -656,10 +653,8 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			label: "Hur mycket rast har du under en vanlig skoldag?",
 			kid_label: "Hur mycket rast har du under en vanlig skoldag?",
 			adult_label: "Hur mycket rast har ditt barn under en vanlig skoldag?",
-			kid_sublabel:
-				"både rast och lunchrast.  Plussa ihop tiden - till exempel två 15-minuters raster och 30 minuter lunchrast blir 60 minuter",
-			adult_sublabel:
-				"både rast och lunchrast.  Plussa ihop tiden - till exempel två 15-minuters raster och 30 minuter lunchrast blir 60 minuter",
+			kid_sublabel: "både rast och lunchrast.  Plussa ihop tiden - till exempel två 15-minuters raster och 30 minuter lunchrast blir 60 minuter",
+			adult_sublabel: "både rast och lunchrast.  Plussa ihop tiden - till exempel två 15-minuters raster och 30 minuter lunchrast blir 60 minuter",
 			choices: [
 				{
 					label: "0 minuter",
@@ -693,10 +688,8 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			label: "通常在上学日，在学校时你有多长休息时间？",
 			kid_label: "通常在上学日，在学校时你有多长休息时间？",
 			adult_label: "通常在上学日，在学校时您的孩子有多长休息时间？",
-			kid_sublabel:
-				"包括课间休息和午休时间。请将所有休息时间加在一起——如, 每天两次15分钟的课间休息/午休时间和30分钟的午餐时间一共是60分钟",
-			adult_sublabel:
-				"包括课间休息和午休时间。请将所有休息时间加在一起——如, 每天两次15分钟的课间休息/午休时间和30分钟的午餐时间一共是60分钟",
+			kid_sublabel: "包括课间休息和午休时间。请将所有休息时间加在一起——如, 每天两次15分钟的课间休息/午休时间和30分钟的午餐时间一共是60分钟",
+			adult_sublabel: "包括课间休息和午休时间。请将所有休息时间加在一起——如, 每天两次15分钟的课间休息/午休时间和30分钟的午餐时间一共是60分钟",
 			choices: [
 				{
 					label: "无",
@@ -729,8 +722,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 6",
 			label: "En un día escolar normal ¿Cuánto tiempo de recreo o descanso tienes?",
 			kid_label: "En un día escolar normal ¿Cuánto tiempo de recreo o descanso tienes?",
-			adult_label:
-				"En un día escolar normal ¿Cuánto tiempo de recreo o descanso tiene su hija o hijo?",
+			adult_label: "En un día escolar normal ¿Cuánto tiempo de recreo o descanso tiene su hija o hijo?",
 			kid_sublabel:
 				"Esto significa el recreo o descanso y la hora de comer. Por favor, suma los tiempos; por ejemplo, dos recreos o descansos de 15 minutos por día y 30 minutos para comer sumarían 60 minutos",
 			adult_sublabel:
@@ -767,8 +759,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 6",
 			label: "En un día escolar normal, ¿cuánto tiempo de recreo o descanso tienes?",
 			kid_label: "En un día escolar normal, ¿cuánto tiempo de recreo o descanso tienes?",
-			adult_label:
-				"En un día escolar normal, ¿cuánto tiempo de recreo o descanso tiene su hija o hijo?",
+			adult_label: "En un día escolar normal, ¿cuánto tiempo de recreo o descanso tiene su hija o hijo?",
 			kid_sublabel:
 				"Esto significa el recreo o descanso y la hora del refrigerio. Por favor, suma los tiempos; por ejemplo, dos recreos o descansos de 15 minutos por día y 30 minutos para consumir refrigerios sumarían 60 minutos",
 			adult_sublabel:
@@ -805,8 +796,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Question 6",
 			label: "Lors d'une journée d'école normale, combien as-tu de temps de pause?",
 			kid_label: "Lors d'une journée d'école normale, combien as-tu de temps de pause?",
-			adult_label:
-				"Lors d'une journée d'école normale, combien de temps de pause ton enfant a-t-il (elle)?",
+			adult_label: "Lors d'une journée d'école normale, combien de temps de pause ton enfant a-t-il (elle)?",
 			kid_sublabel:
 				"Ici, il faut additionner les durées - par exemple, deux récréations/pauses de 15 minutes par jour et 30 minutes pour dîner donnent 60 minutes.",
 			adult_sublabel:

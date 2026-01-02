@@ -1,44 +1,53 @@
-import { StyleSheet, View } from "react-native";
-import React from "react";
-import { moderateScale } from "utils/responsive.utils";
-import { useSelector } from "react-redux";
-import { getDevice, getLanguage } from "store/settings/settingsSlice";
+import { NarrationProvider } from "@/contexts/common/NarrationContext";
+import useCharacter from "@/hooks/useCharacter";
 import LanguageIndicator from "components/LanguageIndicator";
-import MenuAdult from "components/adults/subcomponents/Toolbar/MenuAdult";
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { useSelector } from "react-redux";
+import { getDevice } from "store/settings/settingsSlice";
+import { moderateScale } from "utils/responsive.utils";
+import Audio from "./Audio";
+import MenuButton from "./MenuButton";
+import Title from "./Title";
 
 const Toolbar = (): React.ReactElement => {
-	const language = useSelector(getLanguage);
+	const { language } = useCharacter();
 	const device = useSelector(getDevice);
 
 	return (
-		<View
-			style={{
-				...styles.container,
-				paddingVertical: moderateScale(5, device.screenWidth),
-			}}
-		>
+		<NarrationProvider>
 			<View
 				style={{
-					justifyContent: "flex-start",
-					alignItems: "flex-start",
-					flexDirection: "row",
-					flex: 7,
+					...styles.container,
+					paddingVertical: moderateScale(5, device.screenWidth),
 				}}
 			>
-				<View style={{ height: "100%", paddingTop: 8 }}>
-					<LanguageIndicator langCode={language} />
+				<View
+					style={{
+						justifyContent: "flex-start",
+						alignItems: "flex-start",
+						flexDirection: "row",
+						flex: 2,
+					}}
+				>
+					<View style={{ height: "100%", paddingTop: 8 }}>
+						<LanguageIndicator langCode={language} />
+					</View>
+					<Title />
+				</View>
+				<View
+					style={{
+						flexDirection: "row",
+						flex: 1,
+						justifyContent: "flex-end",
+						gap: 20,
+					}}
+				>
+					<Audio />
+					<MenuButton />
 				</View>
 			</View>
-			<View
-				style={{
-					flexDirection: "row",
-					flex: 2,
-					justifyContent: "flex-end",
-				}}
-			>
-				<MenuAdult />
-			</View>
-		</View>
+		</NarrationProvider>
 	);
 };
 

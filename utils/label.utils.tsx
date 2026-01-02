@@ -1,10 +1,7 @@
-import Mode from "constants/mode.enum";
-import { store } from "store/store";
+import Mode from "@constants/mode.enum";
+import type { ModeActivityInterface, ModeActivityTransportationInterface } from "@interface/question17";
+import { store } from "@store/store";
 import { getResponseByIdent } from "./response.utils";
-import type {
-	ModeActivityInterface,
-	ModeActivityTransportationInterface,
-} from "interface/question17";
 
 const getQuestion17Label = (): string => {
 	const mode = store.getState().settings.mode === Mode.Adult ? Mode.Adult : Mode.Kid;
@@ -33,26 +30,22 @@ const getQuestion17Label = (): string => {
 	}
 
 	if (currentIdent === "transportation_8") {
-		const questionLabels: ModeActivityTransportationInterface =
-			store.getState().questions.Transportation8_10;
+		const questionLabels: ModeActivityTransportationInterface = store.getState().questions.Transportation8_10;
 		return questionLabels[mode].walk[attendance] ?? "";
 	}
 
 	if (currentIdent === "transportation_9") {
-		const questionLabels: ModeActivityTransportationInterface =
-			store.getState().questions.Transportation9_11;
+		const questionLabels: ModeActivityTransportationInterface = store.getState().questions.Transportation9_11;
 		return questionLabels[mode].walk[attendance] ?? "";
 	}
 
 	if (currentIdent === "transportation_10") {
-		const questionLabels: ModeActivityTransportationInterface =
-			store.getState().questions.Transportation8_10;
+		const questionLabels: ModeActivityTransportationInterface = store.getState().questions.Transportation8_10;
 		return questionLabels[mode].wheel[attendance] ?? "";
 	}
 
 	if (currentIdent === "transportation_11") {
-		const questionLabels: ModeActivityTransportationInterface =
-			store.getState().questions.Transportation9_11;
+		const questionLabels: ModeActivityTransportationInterface = store.getState().questions.Transportation9_11;
 		return questionLabels[mode].wheel[attendance] ?? "";
 	}
 

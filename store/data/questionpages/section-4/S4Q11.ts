@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S4Q11: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_11",
@@ -14,10 +14,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
-			kid_label:
-				"On a normal day, how much time did you wheel to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child wheel to places other than school or work?",
+			kid_label: "On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child wheel to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -41,10 +39,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
-			kid_label:
-				"On a normal day, how much time did you wheel to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child wheel to places other than school or work?",
+			kid_label: "On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child wheel to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -67,12 +63,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 17c - Wīra",
-			label:
-				"I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
-			kid_label:
-				"I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
-			adult_label:
-				"I tētahi rā, i hia te roa i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			label: "I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			kid_label: "I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			adult_label: "I tētahi rā, i hia te roa i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei?",
 			choices: [
 				{
 					label: "10 meneti, heke iho rānei",
@@ -96,10 +89,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
-			kid_label:
-				"On a normal day, how much time did you wheel to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child wheel to places other than school or work?",
+			kid_label: "On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child wheel to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -122,12 +113,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 17c - Vlastní pohon na kolečkách",
-			label:
-				"Kolik času strávíš v průměrný den vlastním pohonem na kolečkách, aby ses dopravil(a) na různá místa kromě školy a práce?",
-			kid_label:
-				"Kolik času strávíš v průměrný den vlastním pohonem na kolečkách, aby ses dopravil(a) na různá místa kromě školy a práce?",
-			adult_label:
-				"Kolik času stráví vaše dítě v průměrný den vlastním pohonem na kolečkách, aby se dopravilo na různá místa kromě školy a práce?",
+			label: "Kolik času strávíš v průměrný den vlastním pohonem na kolečkách, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			kid_label: "Kolik času strávíš v průměrný den vlastním pohonem na kolečkách, aby ses dopravil(a) na různá místa kromě školy a práce?",
+			adult_label: "Kolik času stráví vaše dítě v průměrný den vlastním pohonem na kolečkách, aby se dopravilo na různá místa kromě školy a práce?",
 			choices: [
 				{
 					label: "10 minut a méně",
@@ -150,12 +138,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - En ruedas",
-			label:
-				"En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
-			kid_label:
-				"En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
-			adult_label:
-				"En un día normal ¿Cuánto tiempo se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
+			label: "En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
+			kid_label: "En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
+			adult_label: "En un día normal ¿Cuánto tiempo se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -178,12 +163,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - En ruedas",
-			label:
-				"En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
-			kid_label:
-				"En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
-			adult_label:
-				"En un día normal ¿Cuánto tiempo se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
+			label: "En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
+			kid_label: "En un día normal ¿Cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos a la escuela o trabajo?",
+			adult_label: "En un día normal ¿Cuánto tiempo se desplazó sobre ruedas su hija o hijo para llegar a lugares distintos a la escuela o trabajo?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -207,10 +189,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
-			kid_label:
-				"On a normal day, how much time did you wheel to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child wheel to places other than school or work?",
+			kid_label: "On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child wheel to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -234,10 +214,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
-			kid_label:
-				"On a normal day, how much time did you wheel to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child wheel to places other than school or work?",
+			kid_label: "On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child wheel to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -260,12 +238,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 17c - Kukwera njinga",
-			label:
-				"Pa tsiku, Zinakutengera nthawi yaitali bwanji kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
-			kid_label:
-				"Pa tsiku, Zinakutengera nthawi yaitali bwanji kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
-			adult_label:
-				"Pa tsiku, Zimamutengera nthawi yaitali bwanji mwana wanu kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
+			label: "Pa tsiku, Zinakutengera nthawi yaitali bwanji kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
+			kid_label: "Pa tsiku, Zinakutengera nthawi yaitali bwanji kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
+			adult_label: "Pa tsiku, Zimamutengera nthawi yaitali bwanji mwana wanu kupalasa njinga kupita malo ena kupatula ku sukukulu kapena kuntchito?",
 			choices: [
 				{
 					label: "Ma minutes 10 kapena osakwana",
@@ -313,12 +288,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७c - व्हीलिंग",
-			label:
-				"एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गए?",
-			kid_label:
-				"एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गए?",
-			adult_label:
-				"एक सामान्य दिन में, आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गया?",
+			label: "एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गए?",
+			kid_label: "एक सामान्य दिन में, आप स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गए?",
+			adult_label: "एक सामान्य दिन में, आपका बच्चा स्कूल या काम के अलावा अन्य स्थानों पर कितना समय व्हीलिंग करके गया?",
 			choices: [
 				{
 					label: "10 मिनट या उससे कम",
@@ -342,10 +314,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Wheeling",
 			label: "On a normal day, how much time did you wheel to places other than school or work?",
-			kid_label:
-				"On a normal day, how much time did you wheel to places other than school or work?",
-			adult_label:
-				"On a normal day, how much time did your child wheel to places other than school or work?",
+			kid_label: "On a normal day, how much time did you wheel to places other than school or work?",
+			adult_label: "On a normal day, how much time did your child wheel to places other than school or work?",
 			choices: [
 				{
 					label: "10 minutes or less",
@@ -368,12 +338,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "سؤال [١٧ج] - العجلات",
-			label:
-				"في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
-			kid_label:
-				"في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
-			adult_label:
-				"في الأيام العادية، كم من الوقت يقضي طفلك في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			label: "في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			kid_label: "في الأيام العادية، كم من الوقت تقضي في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
+			adult_label: "في الأيام العادية، كم من الوقت يقضي طفلك في استخدام العجلات للنقل والذهاب إلى أماكن أخرى غير المدرسة أو العمل؟",
 			choices: [
 				{
 					label: "‌١٠ دقائق أو أقل",
@@ -396,12 +363,9 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १७ग - साईकल",
-			label:
-				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
-			kid_label:
-				"सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
-			adult_label:
-				"सामान्य दिनमा, तपाईंको छोरा वा छोरीले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
+			label: "सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
+			kid_label: "सामान्य दिनमा, तपाईंले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
+			adult_label: "सामान्य दिनमा, तपाईंको छोरा वा छोरीले विध्यालय वा काममा बाहेकका अन्य ठाउँमा जान कति समय साइकल चलाउनुहुन्छ?",
 			choices: [
 				{
 					label: "१० मिनेट वा सोभन्दा कम",
@@ -452,10 +416,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 17c - Cyklade",
-			label:
-				"Hur mycket tid spenderade du på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
-			kid_label:
-				"Hur mycket tid spenderade du på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			label: "Hur mycket tid spenderade du på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
+			kid_label: "Hur mycket tid spenderade du på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
 			adult_label:
 				"Hur mycket tid spenderade ditt barn på att cykla till andra ställen än skolan eller arbetet under en vanlig dag den senaste veckan?",
 			choices: [
@@ -561,10 +523,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 17c - Sobre ruedas",
-			label:
-				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
-			kid_label:
-				"En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
+			label: "En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
+			kid_label: "En un día normal, ¿cuánto tiempo te desplazaste sobre ruedas para llegar a lugares distintos, al trabajo, la escuela o el colegio?",
 			adult_label:
 				"En un día normal, ¿cuánto tiempo se desplazó sobre ruedas su hijo o hija para llegar a lugares distintos, al trabajo, escuela o colegio?",
 			choices: [
@@ -589,10 +549,8 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 17c - Rouler",
-			label:
-				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail?",
-			kid_label:
-				"Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail?",
+			label: "Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail?",
+			kid_label: "Lors d'une journée normale, combien de temps as-tu roulé pour aller à des endroits autres que l'école ou le travail?",
 			adult_label:
 				"Lors d'une journée normale, combien de temps ton enfant a-t-il (elle) roulé pour aller à des endroits autres que l'école ou le travail?",
 			choices: [

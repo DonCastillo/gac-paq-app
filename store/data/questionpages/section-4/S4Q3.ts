@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S4Q3: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_3",
@@ -390,8 +390,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 15c",
 			label: "Quanto tempo, normalmente, você leva para ir para a escola?",
 			kid_label: "Quanto tempo, normalmente, você leva para ir para a escola?",
-			adult_label:
-				"Quanto tempo, normalmente, a criança ou adolescente que você é responsável leva para ir para a escola?",
+			adult_label: "Quanto tempo, normalmente, a criança ou adolescente que você é responsável leva para ir para a escola?",
 			choices: [
 				{
 					label: "10 minutos ou menos",
@@ -491,8 +490,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 15c",
 			label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
-			adult_label:
-				"¿Normalmente cuánto tiempo necesita su hija o hijo para ir a la escuela o colegio?",
+			adult_label: "¿Normalmente cuánto tiempo necesita su hija o hijo para ir a la escuela o colegio?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -517,8 +515,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 15c",
 			label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir a la escuela o colegio?",
-			adult_label:
-				"¿Normalmente cuánto tiempo necesita su hija o hijo para ir a la escuela o colegio?",
+			adult_label: "¿Normalmente cuánto tiempo necesita su hija o hijo para ir a la escuela o colegio?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -542,10 +539,8 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 15c",
 			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école?",
-			kid_label:
-				"Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école?",
-			adult_label:
-				"Combien de temps faut-il, en général, à ton enfant pour aller de la maison jusqu'à l'école?",
+			kid_label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'à l'école?",
+			adult_label: "Combien de temps faut-il, en général, à ton enfant pour aller de la maison jusqu'à l'école?",
 			choices: [
 				{
 					label: "10 minutes ou moins",

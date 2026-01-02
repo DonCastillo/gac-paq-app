@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S2Q2: LangQuestionRadioPayloadInterface = {
 	ident: "household_2",
@@ -348,8 +348,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Funso 9",
 			label: "Ndi masiku angati omwe unagwira ntchito zapakhomo m’sabata yapitayi?",
 			kid_label: "Ndi masiku angati omwe unagwira ntchito zapakhomo m’sabata yapitayi?",
-			adult_label:
-				"Ndi masiku angati omwe mwana wanu anagwira ntchito zapakhomo m’sabata yapitayi?",
+			adult_label: "Ndi masiku angati omwe mwana wanu anagwira ntchito zapakhomo m’sabata yapitayi?",
 			choices: [
 				{
 					label: "Tsiku limodzi",
@@ -534,8 +533,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			heading: "प्रश्न ९",
 			label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति दिन घरायसी कामकाज गर्नुभयो?",
 			kid_label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति दिन घरायसी कामकाज गर्नुभयो?",
-			adult_label:
-				"तपाईंको छोरा वा छोरीले पछिल्लो (गएको/ बितेको) हप्तामा कति दिन घरायसी कामकाज गर्नुभयो?",
+			adult_label: "तपाईंको छोरा वा छोरीले पछिल्लो (गएको/ बितेको) हप्तामा कति दिन घरायसी कामकाज गर्नुभयो?",
 			choices: [
 				{
 					label: "१ दिन",
@@ -572,8 +570,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 9",
 			label: "Na última semana, quantos dias você fez atividades ou tarefas domésticas?",
 			kid_label: "Na última semana, quantos dias você fez atividades ou tarefas domésticas?",
-			adult_label:
-				"Na última semana, quantos dias a criança ou adolescente que você é responsável fez atividades ou tarefas domésticas?",
+			adult_label: "Na última semana, quantos dias a criança ou adolescente que você é responsável fez atividades ou tarefas domésticas?",
 			choices: [
 				{
 					label: "1 dia",
@@ -645,12 +642,9 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 9",
-			label:
-				"สัปดาห์ที่แล้ว น้องทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวทั้งหมดกี่วัน?",
-			kid_label:
-				"สัปดาห์ที่แล้ว น้องทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวทั้งหมดกี่วัน?",
-			adult_label:
-				"สัปดาห์ที่แล้ว บุตรหลานของคุณทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวทั้งหมดกี่วัน?",
+			label: "สัปดาห์ที่แล้ว น้องทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวทั้งหมดกี่วัน?",
+			kid_label: "สัปดาห์ที่แล้ว น้องทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวทั้งหมดกี่วัน?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวทั้งหมดกี่วัน?",
 			choices: [
 				{
 					label: "1 วัน",
@@ -724,8 +718,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 9",
 			label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
 			kid_label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
-			adult_label:
-				"¿Cuántos días de la semana pasada realizó su hija o hijo tareas del hogar o quehaceres?",
+			adult_label: "¿Cuántos días de la semana pasada realizó su hija o hijo tareas del hogar o quehaceres?",
 			choices: [
 				{
 					label: "1 día",
@@ -762,8 +755,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 9",
 			label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
 			kid_label: "¿Cuántos días de la semana pasada realizaste tareas  del hogar o quehaceres?",
-			adult_label:
-				"¿Cuántos días de la semana pasada realizó su hija o hijo tareas del hogar o quehaceres?",
+			adult_label: "¿Cuántos días de la semana pasada realizó su hija o hijo tareas del hogar o quehaceres?",
 			choices: [
 				{
 					label: "1 día",
@@ -800,8 +792,7 @@ const S2Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 9",
 			label: "Durant combien de jours as-tu fait des tâches au cours de la dernière semaine?",
 			kid_label: "Durant combien de jours as-tu fait des tâches au cours de la dernière semaine?",
-			adult_label:
-				"Durant combien de jours ton enfant a-t-il (elle) fait des tâches au cours de la dernière semaine?",
+			adult_label: "Durant combien de jours ton enfant a-t-il (elle) fait des tâches au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 jour",

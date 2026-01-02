@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioImagePayloadInterface } from "@interface/payload.type";
 
 const S2Q4: LangQuestionRadioImagePayloadInterface = {
 	ident: "household_4",
@@ -14,10 +14,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
 			label: "Which of the following images shows what you do most of the time during your chores?",
-			kid_label:
-				"Which of the following images shows what you do most of the time during your chores?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time during their chores?",
+			kid_label: "Which of the following images shows what you do most of the time during your chores?",
+			adult_label: "Which of the following images resembles what your child does most of the time during their chores?",
 			choices: [
 				{
 					label: "Not moving",
@@ -45,10 +43,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
 			label: "Which of the following images shows what you do most of the time during your chores?",
-			kid_label:
-				"Which of the following images shows what you do most of the time during your chores?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time during their chores?",
+			kid_label: "Which of the following images shows what you do most of the time during your chores?",
+			adult_label: "Which of the following images resembles what your child does most of the time during their chores?",
 			choices: [
 				{
 					label: "Not moving",
@@ -75,12 +71,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Pātai 11",
-			label:
-				"Ko tēhea o ngā whakaahua e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā o ngā mahi o te kāinga?",
-			kid_label:
-				"Ko tēhea o ngā whakaahua e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā o ngā mahi o te kāinga?",
-			adult_label:
-				"Ko tēhea o ngā whakaahua e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā o ngā mahi o te kāinga?",
+			label: "Ko tēhea o ngā whakaahua e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā o ngā mahi o te kāinga?",
+			kid_label: "Ko tēhea o ngā whakaahua e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā o ngā mahi o te kāinga?",
+			adult_label: "Ko tēhea o ngā whakaahua e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i ngā wā o ngā mahi o te kāinga?",
 			choices: [
 				{
 					label: "Kāore i te neke",
@@ -107,12 +100,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
-			label:
-				"Which of the following pictures looks like what you do most of the time during your chores?",
-			kid_label:
-				"Which of the following pictures looks like what you do most of the time during your chores?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time during their chores?",
+			label: "Which of the following pictures looks like what you do most of the time during your chores?",
+			kid_label: "Which of the following pictures looks like what you do most of the time during your chores?",
+			adult_label: "Which of the following images resembles what your child does most of the time during their chores?",
 			choices: [
 				{
 					label: "Not moving",
@@ -139,12 +129,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadioImage,
 			heading: "Otázka 11",
-			label:
-				"Který z následujících obrázků vystihuje, co většinou během domácích povinností děláš?",
-			kid_label:
-				"Který z následujících obrázků vystihuje, co většinou během domácích povinností děláš?",
-			adult_label:
-				"Který z následujících obrázků vystihuje, co většinou během domácích povinností vaše dítě dělá?",
+			label: "Který z následujících obrázků vystihuje, co většinou během domácích povinností děláš?",
+			kid_label: "Který z následujících obrázků vystihuje, co většinou během domácích povinností děláš?",
+			adult_label: "Který z následujících obrázků vystihuje, co většinou během domácích povinností vaše dítě dělá?",
 			choices: [
 				{
 					label: "Nepohybuji se",
@@ -187,10 +174,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 11",
-			label:
-				"¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
-			kid_label:
-				"¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
+			label: "¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
+			kid_label: "¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
 			adult_label:
 				"¿Cuál de las siguientes afirmaciones describe lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas domésticas?",
 			choices: [
@@ -219,10 +204,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 11",
-			label:
-				"¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
-			kid_label:
-				"¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
+			label: "¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
+			kid_label: "¿Cuál de las siguientes afirmaciones describe lo que haces la mayor parte del tiempo durante tus tareas domésticas?",
 			adult_label:
 				"¿Cuál de las siguientes afirmaciones describe lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas domésticas?",
 			choices: [
@@ -252,10 +235,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
 			label: "Which of the following images shows what you do most of the time during your chores?",
-			kid_label:
-				"Which of the following images shows what you do most of the time during your chores?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time during their chores?",
+			kid_label: "Which of the following images shows what you do most of the time during your chores?",
+			adult_label: "Which of the following images resembles what your child does most of the time during their chores?",
 			choices: [
 				{
 					label: "Not moving",
@@ -283,10 +264,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
 			label: "Which of the following images shows what you do most of the time during your chores?",
-			kid_label:
-				"Which of the following images shows what you do most of the time during your chores?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time during their chores?",
+			kid_label: "Which of the following images shows what you do most of the time during your chores?",
+			adult_label: "Which of the following images resembles what your child does most of the time during their chores?",
 			choices: [
 				{
 					label: "Not moving",
@@ -313,10 +292,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadioImage,
 			heading: "Funso 11",
-			label:
-				"Ndi chithunzi chiti mwa zotsatirazi chomwe chikufana ndi zomwe umachita nthawi zambiri ukamagwira ntchito zapakhomo?",
-			kid_label:
-				"Ndi chithunzi chiti mwa zotsatirazi chomwe chikufana ndi zomwe umachita nthawi zambiri ukamagwira ntchito zapakhomo?",
+			label: "Ndi chithunzi chiti mwa zotsatirazi chomwe chikufana ndi zomwe umachita nthawi zambiri ukamagwira ntchito zapakhomo?",
+			kid_label: "Ndi chithunzi chiti mwa zotsatirazi chomwe chikufana ndi zomwe umachita nthawi zambiri ukamagwira ntchito zapakhomo?",
 			adult_label:
 				"Ndi chithunzi chiti mwa zithunzi zotsatirazi chomwe chikufana ndi zomwe mwana wanu amachita nthawi zambiri akamagwira ntchito zapakhomo?",
 			choices: [
@@ -357,12 +334,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ११",
-			label:
-				"तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
-			kid_label:
-				"तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
-			adult_label:
-				"तुमचे मूल घरातील नेहमीची कामे करताना बहुतेक वेळ काय करते हे पुढीलपैकी कशातून दिसून येते?",
+			label: "तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
+			kid_label: "तुम्ही तुमची घरातील नेहमीची कामे करताना बहुतेक वेळ काय करता हे पुढीलपैकी कशातून दिसून येते?",
+			adult_label: "तुमचे मूल घरातील नेहमीची कामे करताना बहुतेक वेळ काय करते हे पुढीलपैकी कशातून दिसून येते?",
 			choices: [
 				{
 					label: "बहुतेक वेळा बैठ्या हालचाली",
@@ -389,12 +363,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ११",
-			label:
-				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने घरेलू कामकाज के दौरान अधिकांश समय करते हैं?",
-			kid_label:
-				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने घरेलू कामकाज के दौरान अधिकांश समय करते हैं?",
-			adult_label:
-				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आपका बच्चा अपने घरेलू कामकाज के दौरान अधिकांश समय करता/करती है?",
+			label: "निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने घरेलू कामकाज के दौरान अधिकांश समय करते हैं?",
+			kid_label: "निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आप अपने घरेलू कामकाज के दौरान अधिकांश समय करते हैं?",
+			adult_label: "निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आपका बच्चा अपने घरेलू कामकाज के दौरान अधिकांश समय करता/करती है?",
 			choices: [
 				{
 					label: "बिल्कुल न चलना-फिरना",
@@ -422,10 +393,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
 			label: "Which of the following images shows what you do most of the time during your chores?",
-			kid_label:
-				"Which of the following images shows what you do most of the time during your chores?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time during their chores?",
+			kid_label: "Which of the following images shows what you do most of the time during your chores?",
+			adult_label: "Which of the following images resembles what your child does most of the time during their chores?",
 			choices: [
 				{
 					label: "Not moving",
@@ -483,8 +452,7 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 			heading: "प्रश्न ११",
 			label: "तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने घरायसी कामकाजलाई देखाउँछ?",
 			kid_label: "तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने घरायसी कामकाजलाई देखाउँछ?",
-			adult_label:
-				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने घरायसी कामकाजलाई देखाउँछ?",
+			adult_label: "तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने घरायसी कामकाजलाई देखाउँछ?",
 			choices: [
 				{
 					label: "हलचल नगरेको",
@@ -511,10 +479,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Questão 11",
-			label:
-				"Qual das opções a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
-			kid_label:
-				"Qual das opções a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
+			label: "Qual das opções a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
+			kid_label: "Qual das opções a seguir mostra o que você faz na maior parte do tempo durante suas atividades ou tarefas domésticas?",
 			adult_label:
 				"Qual das opções a seguir mostra o que a criança ou adolescente que você é responsável faz na maior parte do tempo durante as atividades ou tarefas domésticas?",
 			choices: [
@@ -572,12 +538,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadioImage,
 			heading: "ข้อ 11",
-			label:
-				"ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
-			kid_label:
-				"ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
-			adult_label:
-				"ภาพใดต่อไปนี้ แสดงสิ่งที่บุตรหลานของคุณทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
+			label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
+			kid_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
+			adult_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่บุตรหลานของคุณทำเป็นส่วนใหญ่ขณะทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัว?",
 			choices: [
 				{
 					label: "ไม่ได้เคลื่อนไหว",
@@ -633,10 +596,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 11",
-			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
+			label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
+			kid_label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
 			adult_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas del hogar o quehaceres?",
 			choices: [
@@ -665,10 +626,8 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 11",
-			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
+			label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
+			kid_label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo durante tus tareas del hogar o quehaceres?",
 			adult_label:
 				"¿Cuál de las siguientes imágenes describe lo que hace su hija o hijo la mayor parte del tiempo durante sus tareas del hogar o quehaceres?",
 			choices: [
@@ -697,12 +656,9 @@ const S2Q4: LangQuestionRadioImagePayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 11",
-			label:
-				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu accomplis tes tâches?",
-			kid_label:
-				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu accomplis tes tâches?",
-			adult_label:
-				"Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps en accomplissant ses tâches?",
+			label: "Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu accomplis tes tâches?",
+			kid_label: "Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu accomplis tes tâches?",
+			adult_label: "Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps en accomplissant ses tâches?",
 			choices: [
 				{
 					label: "Pas de mouvement",

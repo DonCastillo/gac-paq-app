@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S1Q2: LangQuestionRadioPayloadInterface = {
 	ident: "school_2",
@@ -570,8 +570,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 2",
 			label: "Na última semana, quantos dias você foi à escola?",
 			kid_label: "Na última semana, quantos dias você foi à escola?",
-			adult_label:
-				"Na última semana, quantos dias a criança ou adolescente que você é responsável foi à escola?",
+			adult_label: "Na última semana, quantos dias a criança ou adolescente que você é responsável foi à escola?",
 			choices: [
 				{
 					label: "1 dia",
@@ -793,8 +792,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 2",
 			label: "Combien de jours es-tu allé.e à l'école durant la dernière semaine?",
 			kid_label: "Combien de jours es-tu allé.e à l'école durant la dernière semaine?",
-			adult_label:
-				"Combien de jours ton enfant est-il (elle) allé à l'école durant la dernière semaine?",
+			adult_label: "Combien de jours ton enfant est-il (elle) allé à l'école durant la dernière semaine?",
 			choices: [
 				{
 					label: "1 jour",

@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionOptionPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionOptionPayloadInterface } from "@interface/payload.type";
 
 const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 	ident: "parent_ethnicity",
@@ -514,12 +514,9 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionCheckboxInput,
 			heading: "Fråga 27",
-			label:
-				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
-			kid_label:
-				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
-			adult_label:
-				"Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			label: "Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			kid_label: "Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
+			adult_label: "Om du är född i ett annat land än i Sverige, hur länge har du varit bosatt i Sverige?",
 			input_label: "år",
 			input_placeholder: "år",
 			input_label_en: "years",

@@ -1,0 +1,9 @@
+export { default as LanguageKidPage } from "./language/LanguageKidPage";
+export { default as LoadingScreenKidPage } from "./LoadingScreenKid";
+export { default as OpeningQuestionKidPage } from "./opening/OpeningQuestionKidPage";
+export { default as PreambleKidPage } from "./preamble/PreambleKidPage";
+export { default as QuestionnaireKidExtroPage } from "./questionnaire_extro/QuestionnaireKidExtroPage";
+export { default as QuestionnaireKidIntroPage } from "./questionnaire_intro/QuestionnaireKidIntroPage";
+export { default as QuestionnaireKidQuestionPage } from "./questionnaire_page/QuestionnaireKidQuestionPage";
+export { default as StateKidPage } from "./state/StateKidPage";
+export { default as TextKidPage } from "./text/TextKidPage";

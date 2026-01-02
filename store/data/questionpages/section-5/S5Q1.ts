@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S5Q1: LangQuestionRadioPayloadInterface = {
 	ident: "organized_1",
@@ -166,12 +166,9 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 18",
-			label:
-				"Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
-			kid_label:
-				"Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
-			adult_label:
-				"Kodi m’sabata yathayi mwana wanu anasewerako pa zochitika zinazake zokonzedwa ndi sukulu kapena kalabu?",
+			label: "Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
+			kid_label: "Kodi sabata yapitayi unasewerako pa zochitika zina zili zonse zokonzedwa ndi sukulu kapena kalabu?",
+			adult_label: "Kodi m’sabata yathayi mwana wanu anasewerako pa zochitika zinazake zokonzedwa ndi sukulu kapena kalabu?",
 			choices: [
 				{
 					label: "Eya",
@@ -186,12 +183,9 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १८",
-			label:
-				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
-			kid_label:
-				"मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
-			adult_label:
-				"मागील आठवड्यात तुमच्या मुलाने शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			label: "मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			kid_label: "मागील आठवड्यात तुम्ही शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
+			adult_label: "मागील आठवड्यात तुमच्या मुलाने शारीरिकदृष्ट्या सक्रिय संघटनाची आवश्यकता असलेले उपक्रम केले का?",
 			choices: [
 				{
 					label: "होय",
@@ -258,10 +252,8 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १८",
 			label: "पछिल्लो (गएको/ बितेको)  हप्ता, के तपाईं कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
-			kid_label:
-				"पछिल्लो (गएको/ बितेको)  हप्ता, के तपाईं कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, के तपाईंको छोरा वा छोरीले कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको)  हप्ता, के तपाईं कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्ता, के तपाईंको छोरा वा छोरीले कुनै सन्गठित क्रियाकलापमा सक्रिय हुनुभयो?",
 			choices: [
 				{
 					label: "भएं",
@@ -286,8 +278,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 18",
 			label: "Na última semana, você praticou alguma atividade física organizada ou esporte?",
 			kid_label: "Na última semana, você praticou alguma atividade física organizada ou esporte?",
-			adult_label:
-				"Na última semana, a criança ou adolescente que você é responsável praticou alguma atividade física organizada ou esporte?",
+			adult_label: "Na última semana, a criança ou adolescente que você é responsável praticou alguma atividade física organizada ou esporte?",
 			choices: [
 				{
 					label: "Sim",
@@ -302,12 +293,9 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 18",
-			label:
-				"Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
-			kid_label:
-				"Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
-			adult_label:
-				"Har ditt barn gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			label: "Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			kid_label: "Har du gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
+			adult_label: "Har ditt barn gått på någon organiserad idrott under den senaste veckan? (T.ex. fotboll, dans, hockey, ridning med mera)",
 			choices: [
 				{
 					label: "Ja",
@@ -322,8 +310,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 18",
-			label:
-				"สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมหรือเล่นกีฬาที่ทางโรงเรียนจัดขึ้น การเรียนพิเศษทางด้านกีฬา รวมถึงกิจกรรมที่ทางชุมชนจัดขึ้นบ้างหรือไม่?",
+			label: "สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมหรือเล่นกีฬาที่ทางโรงเรียนจัดขึ้น การเรียนพิเศษทางด้านกีฬา รวมถึงกิจกรรมที่ทางชุมชนจัดขึ้นบ้างหรือไม่?",
 			kid_label:
 				"สัปดาห์ที่แล้ว น้องได้ทำกิจกรรมหรือเล่นกีฬาที่ทางโรงเรียนจัดขึ้น การเรียนพิเศษทางด้านกีฬา รวมถึงกิจกรรมที่ทางชุมชนจัดขึ้นบ้างหรือไม่?",
 			adult_label:
@@ -397,8 +384,7 @@ const S5Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 18",
 			label: "As-tu participé à une activité organisée au cours de la dernière semaine?",
 			kid_label: "As-tu participé à une activité organisée au cours de la dernière semaine?",
-			adult_label:
-				"Ton enfant a-t-il (elle) participé à une activité organisée au cours de la dernière semaine?",
+			adult_label: "Ton enfant a-t-il (elle) participé à une activité organisée au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "Oui",

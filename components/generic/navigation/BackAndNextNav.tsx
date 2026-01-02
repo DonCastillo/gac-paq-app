@@ -1,7 +1,7 @@
-import { View, StyleSheet } from "react-native";
-import type { FlexStyle } from "react-native";
+import ButtonIcon from "@components/buttons/ButtonIcon";
 import React, { useEffect, useState } from "react";
-import ButtonIcon from "components/buttons/ButtonIcon";
+import type { FlexStyle } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 interface Props {
 	onPrev?: () => void;

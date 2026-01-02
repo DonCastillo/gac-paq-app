@@ -1,5 +1,5 @@
-import PhraseLabel from "constants/phrase_label.enum";
-import type { PhrasePayloadInterface } from "interface/phrase";
+import PhraseLabel from "@constants/phrase_label.enum";
+import type { PhrasePayloadInterface } from "@interface/phrase";
 
 const defaultPhrase: PhrasePayloadInterface = {
 	back: PhraseLabel.Back,

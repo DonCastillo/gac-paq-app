@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S6Q1: LangQuestionRadioPayloadInterface = {
 	ident: "play_1",
@@ -13,12 +13,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
-			label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			kid_label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
 			kid_sublabel:
 				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
 			adult_sublabel:
@@ -53,12 +50,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
-			label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			kid_label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
 			kid_sublabel:
 				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
 			adult_sublabel:
@@ -93,10 +87,8 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 21",
-			label:
-				"I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
-			kid_label:
-				"I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
+			label: "I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
+			kid_label: "I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
 			adult_label:
 				"I te wiki kua hipa, i tētahi rā noa, e hia te roa o tō tāu tamaiti wā i whakapaua ai ki te tākaro, i te wairua ngahau noa iho nei?",
 			kid_sublabel:
@@ -133,12 +125,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
-			label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			kid_label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
 			kid_sublabel:
 				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandpit, building forts or treehouses.",
 			adult_sublabel:
@@ -175,8 +164,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Otázka 21",
 			label: "Kolik času jsi v průměrný den minulého týdne strávil(a) aktivní hrou pro zábavu?",
 			kid_label: "Kolik času jsi v průměrný den minulého týdne strávil(a) aktivní hrou pro zábavu?",
-			adult_label:
-				"Kolik času v průměrný den minulého týdne strávilo vaše dítě aktivní hrou pro zábavu?",
+			adult_label: "Kolik času v průměrný den minulého týdne strávilo vaše dítě aktivní hrou pro zábavu?",
 			kid_sublabel:
 				"Tyto činnosti nezahrnují soutěže ani trénink. příkladem mohou být míčové hry pro zábavu, aktivity v bazénu, skákání na trampolíně, hra na honěnou či na schovávanou, hra v pískovišti, stavění bunkrů nebo např. domečků na stromech.",
 			adult_sublabel:
@@ -211,12 +199,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",
-			label:
-				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			kid_label:
-				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			adult_label:
-				"En la última semana, en un día promedio, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+			label: "En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			kid_label: "En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			adult_label: "En la última semana, en un día promedio, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
 			choices: [
 				{
 					label: "Nada",
@@ -247,12 +232,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",
-			label:
-				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			kid_label:
-				"En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			adult_label:
-				"En la última semana, en un día promedio, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+			label: "En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			kid_label: "En la última semana, en un día promedio, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			adult_label: "En la última semana, en un día promedio, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
 			choices: [
 				{
 					label: "Nada",
@@ -283,12 +265,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
-			label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			kid_label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
 			kid_sublabel:
 				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
 			adult_sublabel:
@@ -323,12 +302,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
-			label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			kid_label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
 			kid_sublabel:
 				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, tag, hide and seek, playing in the sandbox, building forts or treehouses.",
 			adult_sublabel:
@@ -363,10 +339,8 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 21",
-			label:
-				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
-			kid_label:
-				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
+			label: "M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
+			kid_label: "M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe unasewera masewero othamangathamanga pongosangalala chabe?",
 			adult_label:
 				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe mwana wanu anasewera masewero othamangathamanga pongosangalala chabe?",
 			kid_sublabel:
@@ -427,12 +401,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २१",
-			label:
-				"गेल्या आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुम्ही किती वेळ केवळ मजेसाठी सक्रियपणे खेळलात?",
-			kid_label:
-				"गेल्या आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुम्ही किती वेळ केवळ मजेसाठी सक्रियपणे खेळलात?",
-			adult_label:
-				"मागील आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुमचे मूल किती वेळ केवळ मजेसाठी सक्रियपणे खेळले?",
+			label: "गेल्या आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुम्ही किती वेळ केवळ मजेसाठी सक्रियपणे खेळलात?",
+			kid_label: "गेल्या आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुम्ही किती वेळ केवळ मजेसाठी सक्रियपणे खेळलात?",
+			adult_label: "मागील आठवड्यात, कोणत्याही सर्वसामान्य दिवशी, तुमचे मूल किती वेळ केवळ मजेसाठी सक्रियपणे खेळले?",
 			kid_sublabel:
 				"या हालचाली स्पर्धेसाठी अथवा प्रशिक्षणासाठी केल्या जात नाहीत. उदा. बॉल गेम्स खेळणे, स्विमिंग पूलमध्ये खेळणे, ट्रॅम्पोलिनवर उड्या मारणे, लपाछपी, वाळूत खेळणे, किल्ले अथवा ट्री हाऊस बनवणे इ.",
 			adult_sublabel:
@@ -463,12 +434,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २१",
-			label:
-				"पिछले सप्ताह में, एक सामान्य दिन पर, आपने केवल मनोरंजन के लिए सक्रिय रूप से खेलने में कितना समय बिताया?",
-			kid_label:
-				"पिछले सप्ताह में, एक सामान्य दिन पर, आपने केवल मनोरंजन के लिए सक्रिय रूप से खेलने में कितना समय बिताया?",
-			adult_label:
-				"पिछले सप्ताह में, एक सामान्य दिन पर, आपके बच्चे ने केवल मनोरंजन के लिए, सक्रिय रूप से खेलने में कितना समय बिताया?",
+			label: "पिछले सप्ताह में, एक सामान्य दिन पर, आपने केवल मनोरंजन के लिए सक्रिय रूप से खेलने में कितना समय बिताया?",
+			kid_label: "पिछले सप्ताह में, एक सामान्य दिन पर, आपने केवल मनोरंजन के लिए सक्रिय रूप से खेलने में कितना समय बिताया?",
+			adult_label: "पिछले सप्ताह में, एक सामान्य दिन पर, आपके बच्चे ने केवल मनोरंजन के लिए, सक्रिय रूप से खेलने में कितना समय बिताया?",
 			kid_sublabel:
 				"ये वे गतिविधियाँ हैं जो प्रतिस्पर्धा या प्रशिक्षण के लिए नहीं की गईं। उदाहरणों में मनोरंजन के लिए बॉल गेम्स खेलना, स्विमिंग पूल में खेलना, ट्रैम्पोलिन पर कूदना, पकड़म-पकड़ाई खेलना, लुका-छिपी खेलना, सैंडबॉक्स में खेलना, किले या ट्री हाउस बनाना आदि शामिल हैं।",
 			adult_sublabel:
@@ -503,12 +471,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
-			label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			kid_label:
-				"In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
+			label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			kid_label: "In the past week, on a normal day, how much time did you spend playing actively, just for fun?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend playing actively, just for fun?",
 			kid_sublabel:
 				"These activities are not done for competing or training. Examples include playing ball games for fun, playing in a swimming pool, jumping on a trampoline, hide and seek, etc.",
 			adult_sublabel:
@@ -544,10 +509,8 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "سؤال [٢١]",
 			label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في اللعب بنشاط، للمتعة فقط؟",
-			kid_label:
-				"خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في اللعب بنشاط، للمتعة فقط؟",
-			adult_label:
-				"خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضى طفلك باللعب بنشاط، للمتعة فقط؟",
+			kid_label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضيت في اللعب بنشاط، للمتعة فقط؟",
+			adult_label: "خلال الأسبوع الماضي، في الأيام العادية، كم من الوقت قضى طفلك باللعب بنشاط، للمتعة فقط؟",
 			kid_sublabel:
 				"هذه الأنشطة ليست للتنافس أو التدريب. ومن الأمثلة على ذلك اللعب بالكرة للمرح واللعب في المسبح والقفز على الترامبولين ولعبة الغميضة وغيرها.",
 			adult_sublabel:
@@ -582,16 +545,11 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २१",
-			label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईं रमाइलोको लागि सक्रिय रुपमा कति समय खेल्नुभयो?",
-			kid_label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईं रमाइलोको लागि सक्रिय रुपमा कति समय खेल्नुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, रमाइलोको लागि तपाईंको छोरा वा छोरीले सक्रिय रुपमा कति समय खेल्नुभयो?",
-			kid_sublabel:
-				"उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
-			adult_sublabel:
-				"उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
+			label: "पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईं रमाइलोको लागि सक्रिय रुपमा कति समय खेल्नुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईं रमाइलोको लागि सक्रिय रुपमा कति समय खेल्नुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, रमाइलोको लागि तपाईंको छोरा वा छोरीले सक्रिय रुपमा कति समय खेल्नुभयो?",
+			kid_sublabel: "उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
+			adult_sublabel: "उदाहरणमा भकुण्डो खेलहरु, लुकामारी, बालुवाको बाकसमा खेल्ने, साना रुखघरहरु बनाउने आदि पर्दछन् l",
 			choices: [
 				{
 					label: "कुनै पनि नगरेको",
@@ -658,12 +616,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 21",
-			label:
-				"Hur mycket tid rörde du dig, på din fritid (ej sport) under en vanlig dag den senaste veckan?",
-			kid_label:
-				"Hur mycket tid rörde du dig, på din fritid (ej sport) under en vanlig dag den senaste veckan?",
-			adult_label:
-				"Hur mycket tid var ditt barn aktiv på fritiden (ej organiserat idrott eller transport) under en vanlig dag den senaste veckan?",
+			label: "Hur mycket tid rörde du dig, på din fritid (ej sport) under en vanlig dag den senaste veckan?",
+			kid_label: "Hur mycket tid rörde du dig, på din fritid (ej sport) under en vanlig dag den senaste veckan?",
+			adult_label: "Hur mycket tid var ditt barn aktiv på fritiden (ej organiserat idrott eller transport) under en vanlig dag den senaste veckan?",
 			choices: [
 				{
 					label: "Ingen",
@@ -694,12 +649,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 21",
-			label:
-				"ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
-			kid_label:
-				"ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
-			adult_label:
-				"ในวันปกติเมื่อสัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
+			label: "ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
+			kid_label: "ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
+			adult_label: "ในวันปกติเมื่อสัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลากับการเล่นออกแรงเพื่อความสนุกสนานมากน้อยเพียงใด?",
 			kid_sublabel:
 				"กิจกรรมในที่นี้จะไม่รวมถึงกิจกรรมที่ทำเพื่อการแข่งขันหรือฝึกซ้อม ตัวอย่างกิจกรรม เช่น การเล่นบอลเพื่อความสนุกสนาน การเล่นในสระว่ายน้ำ การกระโดดเล่นบนแทรมโพลีน การเล่นวิ่งไล่จับ การเล่นซ่อนหา การเล่นในกระบะทราย การสร้างป้อมหรือบ้านต้นไม้ เป็นต้น",
 			adult_sublabel:
@@ -737,10 +689,8 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			label: "在过去一周里，你每天仅仅是为了玩耍而进行的活动平均有多长时间？",
 			kid_label: "在过去一周里，你每天仅仅是为了玩耍而进行的活动平均有多长时间？",
 			adult_label: "在过去一周里，您的孩子每天仅仅是为了玩耍而进行的活动平均有多长时间？",
-			kid_sublabel:
-				"如玩球类游戏、在泳池里玩耍、荡秋千、捉迷藏、玩沙子、玩飞盘等，不包括比赛或训练时的活动",
-			adult_sublabel:
-				"如玩球类游戏、在泳池里玩耍、荡秋千、捉迷藏、玩沙子、玩飞盘等，不包括比赛或训练时的活动",
+			kid_sublabel: "如玩球类游戏、在泳池里玩耍、荡秋千、捉迷藏、玩沙子、玩飞盘等，不包括比赛或训练时的活动",
+			adult_sublabel: "如玩球类游戏、在泳池里玩耍、荡秋千、捉迷藏、玩沙子、玩飞盘等，不包括比赛或训练时的活动",
 			choices: [
 				{
 					label: "无",
@@ -771,12 +721,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",
-			label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			kid_label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			adult_label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+			label: "Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			kid_label: "Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			adult_label: "Durante la semana pasada, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
 			kid_sublabel:
 				"Estas actividades no se realizan para competir o entrenar. Algunos ejemplos incluyen juegos de pelota por diversión, jugar en una piscina, saltar en camas elásticas, juego del escondite, jugar en el arenero, construir casas en los árboles, etc.",
 			adult_sublabel:
@@ -811,12 +758,9 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 21",
-			label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			kid_label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
-			adult_label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
+			label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			kid_label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste jugando activamente, solo por diversión?",
+			adult_label: "En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo jugando activamente, solo por diversión?",
 			kid_sublabel:
 				"Estas actividades no se realizan para competir o entrenar. Algunos ejemplos incluyen juegos de pelota por diversión, jugar en una piscina, saltar en camas elásticas o brincolines, jugar escondidas, jugar en el arenero, construir casas en los árboles, etc.",
 			adult_sublabel:
@@ -851,10 +795,8 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 21",
-			label:
-				"Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé à jouer activement, juste pour le plaisir?",
-			kid_label:
-				"Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé à jouer activement, juste pour le plaisir?",
+			label: "Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé à jouer activement, juste pour le plaisir?",
+			kid_label: "Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé à jouer activement, juste pour le plaisir?",
 			adult_label:
 				"Durant la dernière semaine, lors d'une journée normale, combien de temps ton enfant a-t-il (elle) passé à jouer activement, juste pour le plaisir?",
 			kid_sublabel:

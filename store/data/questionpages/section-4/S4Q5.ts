@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S4Q5: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_5",
@@ -348,8 +348,7 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 			heading: "Funso 16b",
 			label: "Ndi masiku angati omwe unagwiritsa ntchito mayendedwe oterewa m’sabata yapitayi?",
 			kid_label: "Ndi masiku angati omwe unagwiritsa ntchito mayendedwe oterewa m’sabata yapitayi?",
-			adult_label:
-				"Ndi masiku angati omwe mwana wanu anagwiritsa ntchito mayendedwe oterewa m’sabata yapitayi?",
+			adult_label: "Ndi masiku angati omwe mwana wanu anagwiritsa ntchito mayendedwe oterewa m’sabata yapitayi?",
 			choices: [
 				{
 					label: "Tsiku limodzi",
@@ -534,8 +533,7 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 			heading: "प्रश्न १६ख",
 			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
 			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंको छोरा वा छोरीले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंको छोरा वा छोरीले यो माध्यम कति दिन प्रयोग गर्नुभयो?",
 			choices: [
 				{
 					label: "१ दिन",
@@ -570,12 +568,9 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 16b",
-			label:
-				"Na última semana, quantos dias você usou este meio de transporte para ir ao trabalho?",
-			kid_label:
-				"Na última semana, quantos dias você usou este meio de transporte para ir ao trabalho?",
-			adult_label:
-				"Na última semana, quantos dias a criança ou adolescente que você é responsável usou este meio de transporte para ir ao trabalho?",
+			label: "Na última semana, quantos dias você usou este meio de transporte para ir ao trabalho?",
+			kid_label: "Na última semana, quantos dias você usou este meio de transporte para ir ao trabalho?",
+			adult_label: "Na última semana, quantos dias a criança ou adolescente que você é responsável usou este meio de transporte para ir ao trabalho?",
 			choices: [
 				{
 					label: "1 dia",
@@ -610,12 +605,9 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 16b",
-			label:
-				"Hur många dagar tog du dig till arbetet (eller ideella arbete) på detta sätt under den senaste veckan?",
-			kid_label:
-				"Hur många dagar tog du dig till arbetet (eller ideella arbete) på detta sätt under den senaste veckan?",
-			adult_label:
-				"Hur många dagar tog sig ditt barn till arbetet (eller ideella arbetet) på detta sätt den senaste veckan?",
+			label: "Hur många dagar tog du dig till arbetet (eller ideella arbete) på detta sätt under den senaste veckan?",
+			kid_label: "Hur många dagar tog du dig till arbetet (eller ideella arbete) på detta sätt under den senaste veckan?",
+			adult_label: "Hur många dagar tog sig ditt barn till arbetet (eller ideella arbetet) på detta sätt den senaste veckan?",
 			choices: [
 				{
 					label: "En dag",
@@ -726,8 +718,7 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 16b",
 			label: "¿Cuántos días usaste este modo de transporte durante la semana pasada?",
 			kid_label: "¿Cuántos días usaste este modo de transporte durante la semana pasada?",
-			adult_label:
-				"¿Cuántos días usó su hija o hijo este modo de transporte durante la semana pasada?",
+			adult_label: "¿Cuántos días usó su hija o hijo este modo de transporte durante la semana pasada?",
 			choices: [
 				{
 					label: "1 día",
@@ -799,12 +790,9 @@ const S4Q5: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 16b",
-			label:
-				"Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
-			kid_label:
-				"Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
-			adult_label:
-				"Combien de jours ton enfant a-t-il (elle) utilisé ce moyen de transport au cours de la dernière semaine?",
+			label: "Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
+			kid_label: "Combien de jours as-tu utilisé ce moyen de transport au cours de la dernière semaine?",
+			adult_label: "Combien de jours ton enfant a-t-il (elle) utilisé ce moyen de transport au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 jour",

@@ -1,7 +1,14 @@
+import type { LanguageInterface, PagePayloadInterface, QuestionDropdownPayloadInterface, SectionPayloadInterface } from "@interface/payload.type";
+import type { PhraseInterface } from "@interface/phrase";
+import type { ModeActivityInterface, ModeActivityTransportationInterface } from "@interface/question17";
+import type {
+	AdultExtroductoryPagesType,
+	FeedbackExtroductoryPagesType,
+	IntroductoryPagesType,
+	KidExtroductoryPagesType,
+	QuestionPagesType,
+} from "@interface/union.type";
 import { createSlice } from "@reduxjs/toolkit";
-import Languages from "store/data/languages";
-import IntroductoryPages from "store/data/introductory-pages";
-import QuestionPages from "store/data/question-pages";
 import {
 	AdultExtroductoryPages,
 	AppExtroPage,
@@ -9,56 +16,37 @@ import {
 	GSHSPages,
 	HBSCPages,
 	KidExtroductoryPages,
-} from "store/data/extroductory-pages";
-import DemographicKidPage from "store/data/introductory-pages/demographic_kid_age";
-import DemographicTeenPage from "store/data/introductory-pages/demographic_teen_age";
-import DemographicAdultPage from "store/data/introductory-pages/demographic_adult";
-import DonePhrase from "store/data/phrase/done";
-import DontKnowPhrase from "store/data/phrase/dont-know";
-import IntroductionPhrase from "store/data/phrase/introduction";
-import TryAgainPhrase from "store/data/phrase/try-again";
-import SuccessPage from "store/data/state-pages/success";
-import ErrorPage from "store/data/state-pages/error";
-import Transportation7 from "store/data/questionpages/section-4/transportation_7/S4Q7a";
-import Transportation8_10 from "store/data/questionpages/section-4/transportation_7/S4Q8_10";
-import Transportation9_11 from "store/data/questionpages/section-4/transportation_7/S4Q9_11";
-import type {
-	ModeActivityInterface,
-	ModeActivityTransportationInterface,
-} from "interface/question17";
+} from "@store/data/extroductory-pages";
+import IntroductoryPages from "@store/data/introductory-pages";
+import DemographicAdultPage from "@store/data/introductory-pages/demographic_adult";
+import DemographicKidPage from "@store/data/introductory-pages/demographic_kid_age";
+import DemographicTeenPage from "@store/data/introductory-pages/demographic_teen_age";
+import Languages from "@store/data/languages";
+import BackPhrase from "@store/data/phrase/back";
+import CompletePhrase from "@store/data/phrase/complete";
+import DonePhrase from "@store/data/phrase/done";
+import DontKnowPhrase from "@store/data/phrase/dont-know";
+import FeedbackPhrase from "@store/data/phrase/feedback";
+import IntroductionPhrase from "@store/data/phrase/introduction";
+import NextPhrase from "@store/data/phrase/next";
+import NoPendingSubmissionsPhrase from "@store/data/phrase/no_pending_submissions";
+import NothingToSubmitPhrase from "@store/data/phrase/nothing_to_submit";
+import PendingSubmissionsPhrase from "@store/data/phrase/pending_submissions";
+import PleaseSpecifyPhrase from "@store/data/phrase/please-specify";
+import ResponsesSubmittedPhrase from "@store/data/phrase/responses_submitted";
+import SelectPhrase from "@store/data/phrase/select";
+import SubmitPhrase from "@store/data/phrase/submit";
+import TryAgainPhrase from "@store/data/phrase/try-again";
+import QuestionPages from "@store/data/question-pages";
+import Transportation7 from "@store/data/questionpages/section-4/transportation_7/S4Q7a";
+import Transportation8_10 from "@store/data/questionpages/section-4/transportation_7/S4Q8_10";
+import Transportation9_11 from "@store/data/questionpages/section-4/transportation_7/S4Q9_11";
+import ErrorPage from "@store/data/state-pages/error";
+import OfflineSuccessPage from "@store/data/state-pages/offline-success";
+import SuccessPage from "@store/data/state-pages/success";
+import { translateArrayOfPages, translatePage, translatePhrase } from "@utils/translate_questions.utils";
 import reducersActions from "./questionsReducers";
-import type { PhraseInterface } from "interface/phrase";
-import type {
-	LanguageInterface,
-	PagePayloadInterface,
-	QuestionDropdownPayloadInterface,
-	SectionPayloadInterface,
-} from "interface/payload.type";
-import type {
-	AdultExtroductoryPagesType,
-	FeedbackExtroductoryPagesType,
-	IntroductoryPagesType,
-	KidExtroductoryPagesType,
-	QuestionPagesType,
-} from "interface/union.type";
-import FeedbackPhrase from "store/data/phrase/feedback";
-import SelectPhrase from "store/data/phrase/select";
-import OfflineSuccessPage from "store/data/state-pages/offline-success";
-import PleaseSpecifyPhrase from "store/data/phrase/please-specify";
 import { loadQuestionData, removeQuestionData, storeQuestionData } from "./questionsThunk";
-import {
-	translatePage,
-	translateArrayOfPages,
-	translatePhrase,
-} from "utils/translate_questions.utils";
-import BackPhrase from "store/data/phrase/back";
-import CompletePhrase from "store/data/phrase/complete";
-import NextPhrase from "store/data/phrase/next";
-import SubmitPhrase from "store/data/phrase/submit";
-import NoPendingSubmissionsPhrase from "store/data/phrase/no_pending_submissions";
-import NothingToSubmitPhrase from "store/data/phrase/nothing_to_submit";
-import PendingSubmissionsPhrase from "store/data/phrase/pending_submissions";
-import ResponsesSubmittedPhrase from "store/data/phrase/responses_submitted";
 
 const defaultLanguage = "en-CA";
 export interface QuestionSliceInterface {
@@ -104,84 +92,38 @@ const questionsSlice = createSlice({
 	name: "questions",
 	initialState: {
 		languageOption: Languages satisfies LanguageInterface[],
-		introductoryPages: translateArrayOfPages(
-			IntroductoryPages,
-			defaultLanguage,
-		) as IntroductoryPagesType,
+		introductoryPages: translateArrayOfPages(IntroductoryPages, defaultLanguage) as IntroductoryPagesType,
 		questionPages: translateArrayOfPages(QuestionPages, defaultLanguage) as QuestionPagesType,
 		hbscPages: translateArrayOfPages(HBSCPages, defaultLanguage) as QuestionPagesType,
 		gshsPages: translateArrayOfPages(GSHSPages, defaultLanguage) as QuestionPagesType,
 		appExtroPages: translateArrayOfPages(AppExtroPage, defaultLanguage) as QuestionPagesType,
-		kidExtroPages: translateArrayOfPages(
-			KidExtroductoryPages,
-			defaultLanguage,
-		) as KidExtroductoryPagesType,
-		adultExtroPages: translateArrayOfPages(
-			AdultExtroductoryPages,
-			defaultLanguage,
-		) as AdultExtroductoryPagesType,
-		kidAgePage: translatePage(
-			DemographicKidPage,
-			defaultLanguage,
-		) satisfies QuestionDropdownPayloadInterface,
-		teenAgePage: translatePage(
-			DemographicTeenPage,
-			defaultLanguage,
-		) satisfies QuestionDropdownPayloadInterface,
-		adultAgePage: translatePage(
-			DemographicAdultPage,
-			defaultLanguage,
-		) satisfies QuestionDropdownPayloadInterface,
-		feedbackExtroPages: translateArrayOfPages(
-			FeedbackExtroductoryPages,
-			defaultLanguage,
-		) as FeedbackExtroductoryPagesType,
+		kidExtroPages: translateArrayOfPages(KidExtroductoryPages, defaultLanguage) as KidExtroductoryPagesType,
+		adultExtroPages: translateArrayOfPages(AdultExtroductoryPages, defaultLanguage) as AdultExtroductoryPagesType,
+		kidAgePage: translatePage(DemographicKidPage, defaultLanguage) satisfies QuestionDropdownPayloadInterface,
+		teenAgePage: translatePage(DemographicTeenPage, defaultLanguage) satisfies QuestionDropdownPayloadInterface,
+		adultAgePage: translatePage(DemographicAdultPage, defaultLanguage) satisfies QuestionDropdownPayloadInterface,
+		feedbackExtroPages: translateArrayOfPages(FeedbackExtroductoryPages, defaultLanguage) as FeedbackExtroductoryPagesType,
 		backPhrase: translatePhrase(BackPhrase, defaultLanguage) satisfies PhraseInterface,
 		completePhrase: translatePhrase(CompletePhrase, defaultLanguage) satisfies PhraseInterface,
 		donePhrase: translatePhrase(DonePhrase, defaultLanguage) satisfies PhraseInterface,
 		dontKnowPhrase: translatePhrase(DontKnowPhrase, defaultLanguage) satisfies PhraseInterface,
 		feedbackPhrase: translatePhrase(FeedbackPhrase, defaultLanguage) satisfies PhraseInterface,
-		introductionPhrase: translatePhrase(
-			IntroductionPhrase,
-			defaultLanguage,
-		) satisfies PhraseInterface,
+		introductionPhrase: translatePhrase(IntroductionPhrase, defaultLanguage) satisfies PhraseInterface,
 		nextPhrase: translatePhrase(NextPhrase, defaultLanguage) satisfies PhraseInterface,
-		pleaseSpecifyPhrase: translatePhrase(
-			PleaseSpecifyPhrase,
-			defaultLanguage,
-		) satisfies PhraseInterface,
+		pleaseSpecifyPhrase: translatePhrase(PleaseSpecifyPhrase, defaultLanguage) satisfies PhraseInterface,
 		selectPhrase: translatePhrase(SelectPhrase, defaultLanguage) satisfies PhraseInterface,
 		tryAgainPhrase: translatePhrase(TryAgainPhrase, defaultLanguage) satisfies PhraseInterface,
 		submitPhrase: translatePhrase(SubmitPhrase, defaultLanguage) satisfies PhraseInterface,
-		noPendingSubmissionsPhrase: translatePhrase(
-			NoPendingSubmissionsPhrase,
-			defaultLanguage,
-		) satisfies PhraseInterface,
-		nothingToSubmitPhrase: translatePhrase(
-			NothingToSubmitPhrase,
-			defaultLanguage,
-		) satisfies PhraseInterface,
-		pendingSubmissionsPhrase: translatePhrase(
-			PendingSubmissionsPhrase,
-			defaultLanguage,
-		) satisfies PhraseInterface,
-		responsesSubmittedPhrase: translatePhrase(
-			ResponsesSubmittedPhrase,
-			defaultLanguage,
-		) satisfies PhraseInterface,
+		noPendingSubmissionsPhrase: translatePhrase(NoPendingSubmissionsPhrase, defaultLanguage) satisfies PhraseInterface,
+		nothingToSubmitPhrase: translatePhrase(NothingToSubmitPhrase, defaultLanguage) satisfies PhraseInterface,
+		pendingSubmissionsPhrase: translatePhrase(PendingSubmissionsPhrase, defaultLanguage) satisfies PhraseInterface,
+		responsesSubmittedPhrase: translatePhrase(ResponsesSubmittedPhrase, defaultLanguage) satisfies PhraseInterface,
 		successPage: translatePage(SuccessPage, defaultLanguage) satisfies PagePayloadInterface,
-		offlineSuccessPage: translatePage(
-			OfflineSuccessPage,
-			defaultLanguage,
-		) satisfies PagePayloadInterface,
+		offlineSuccessPage: translatePage(OfflineSuccessPage, defaultLanguage) satisfies PagePayloadInterface,
 		errorPage: translatePage(ErrorPage, defaultLanguage) satisfies PagePayloadInterface,
 		Transportation7: Transportation7[defaultLanguage] satisfies ModeActivityInterface,
-		Transportation8_10: Transportation8_10[
-			defaultLanguage
-		] satisfies ModeActivityTransportationInterface,
-		Transportation9_11: Transportation9_11[
-			defaultLanguage
-		] satisfies ModeActivityTransportationInterface,
+		Transportation8_10: Transportation8_10[defaultLanguage] satisfies ModeActivityTransportationInterface,
+		Transportation9_11: Transportation9_11[defaultLanguage] satisfies ModeActivityTransportationInterface,
 		sectionPages: {},
 		optionLetters: [],
 		optionNumbers: [],
@@ -214,8 +156,7 @@ const questionsSlice = createSlice({
 		getSelectPhrase: (state: QuestionSliceInterface) => state.selectPhrase,
 		getTryAgainPhrase: (state: QuestionSliceInterface) => state.tryAgainPhrase,
 		getSubmitPhrase: (state: QuestionSliceInterface) => state.submitPhrase,
-		getNoPendingSubmissionsPhrase: (state: QuestionSliceInterface) =>
-			state.noPendingSubmissionsPhrase,
+		getNoPendingSubmissionsPhrase: (state: QuestionSliceInterface) => state.noPendingSubmissionsPhrase,
 		getNothingToSubmitPhrase: (state: QuestionSliceInterface) => state.nothingToSubmitPhrase,
 		getPendingSubmissionsPhrase: (state: QuestionSliceInterface) => state.pendingSubmissionsPhrase,
 		getResponsesSubmittedPhrase: (state: QuestionSliceInterface) => state.responsesSubmittedPhrase,
@@ -231,33 +172,33 @@ const questionsSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(storeQuestionData.fulfilled, (state, action) => {
-			console.log("question saving fulfilled...");
+			// console.log("question saving fulfilled...");
 		});
 		builder.addCase(storeQuestionData.pending, (state, action) => {
-			console.log("question saving pending...");
+			// console.log("question saving pending...");
 		});
 		builder.addCase(storeQuestionData.rejected, (state, action) => {
-			console.log("question saving rejected...");
+			// console.log("question saving rejected...");
 		});
 		builder.addCase(removeQuestionData.fulfilled, (state, action) => {
-			console.log("question removing fulfilled...");
+			// console.log("question removing fulfilled...");
 		});
 		builder.addCase(removeQuestionData.pending, (state, action) => {
-			console.log("question removing pending...");
+			// console.log("question removing pending...");
 		});
 		builder.addCase(removeQuestionData.rejected, (state, action) => {
-			console.log("question removing rejected...");
+			// console.log("question removing rejected...");
 		});
 		builder.addCase(loadQuestionData.fulfilled, (state, action) => {
-			console.log("question loaded fulfilled...");
+			// console.log("question loaded fulfilled...");
 			return { ...state, ...action.payload };
 		});
 		builder.addCase(loadQuestionData.pending, (state, action) => {
-			console.log("question loaded pending...");
+			// console.log("question loaded pending...");
 			state = {};
 		});
 		builder.addCase(loadQuestionData.rejected, (state, action) => {
-			console.log("question loaded rejected...");
+			// console.log("question loaded rejected...");
 			state = {};
 		});
 	},
