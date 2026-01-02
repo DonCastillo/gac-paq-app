@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioImagePayloadInterface } from "@interface/payload.type";
 
 const S3Q3: LangQuestionRadioImagePayloadInterface = {
 	ident: "work_3",
@@ -13,12 +13,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
-			label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			kid_label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
+			label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			kid_label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			adult_label: "Which of the following images resembles what your child does most of the time while volunteering and/or working?",
 			choices: [
 				{
 					label: "Not moving",
@@ -45,12 +42,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
-			label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			kid_label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
+			label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			kid_label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			adult_label: "Which of the following images resembles what your child does most of the time while volunteering and/or working?",
 			choices: [
 				{
 					label: "Not moving",
@@ -77,10 +71,8 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Pātai 14",
-			label:
-				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
-			kid_label:
-				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
+			label: "Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
+			kid_label: "Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
 			adult_label:
 				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i te āhua o tāu tamaiti i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
 			choices: [
@@ -109,12 +101,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
-			label:
-				"Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
-			kid_label:
-				"Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
+			label: "Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
+			kid_label: "Which of the following pictures looks like what you do most of the time while volunteering and/or working?",
+			adult_label: "Which of the following images resembles what your child does most of the time while volunteering and/or working?",
 			choices: [
 				{
 					label: "Not moving",
@@ -141,12 +130,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadioImage,
 			heading: "Otázka 14",
-			label:
-				"Který z následujících obrázků vystihuje, co většinou při dobrovolnictví či brigádě děláš?",
-			kid_label:
-				"Který z následujících obrázků vystihuje, co většinou při dobrovolnictví či brigádě děláš?",
-			adult_label:
-				"Který z následujících obrázků vystihuje, co většinou při dobrovolnictví či brigádě vaše dítě dělá?",
+			label: "Který z následujících obrázků vystihuje, co většinou při dobrovolnictví či brigádě děláš?",
+			kid_label: "Který z následujících obrázků vystihuje, co většinou při dobrovolnictví či brigádě děláš?",
+			adult_label: "Který z následujících obrázků vystihuje, co většinou při dobrovolnictví či brigádě vaše dítě dělá?",
 			choices: [
 				{
 					label: "Nepohybuji se",
@@ -189,10 +175,8 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 14",
-			label:
-				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
-			kid_label:
-				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			label: "¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			kid_label: "¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			adult_label:
 				"¿Cuál de las siguientes opciones muestra lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
 			choices: [
@@ -221,10 +205,8 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 14",
-			label:
-				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
-			kid_label:
-				"¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			label: "¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			kid_label: "¿Cuál de las siguientes opciones muestra lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			adult_label:
 				"¿Cuál de las siguientes opciones muestra lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
 			choices: [
@@ -253,12 +235,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
-			label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			kid_label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
+			label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			kid_label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			adult_label: "Which of the following images resembles what your child does most of the time while volunteering and/or working?",
 			choices: [
 				{
 					label: "Not moving",
@@ -285,12 +264,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
-			label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			kid_label:
-				"Which of the following images shows what you do most of the time while volunteering and/or working?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time while volunteering and/or working?",
+			label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			kid_label: "Which of the following images shows what you do most of the time while volunteering and/or working?",
+			adult_label: "Which of the following images resembles what your child does most of the time while volunteering and/or working?",
 			choices: [
 				{
 					label: "Not moving",
@@ -361,12 +337,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १४",
-			label:
-				"स्वयंसेवा आणि/किंवा नोकरी करताना तुम्ही बहुतेक वेळा काय करता हे खालीलपैकी कोणते चित्र दाखवते?",
-			kid_label:
-				"स्वयंसेवा आणि/किंवा नोकरी करताना तुम्ही बहुतेक वेळा काय करता हे खालीलपैकी कोणते चित्र दाखवते?",
-			adult_label:
-				"स्वयंसेवा आणि/किंवा नोकरी करताना तुमचे मूल बहुतेक वेळा काय करते हे खालीलपैकी कोणते चित्र दाखवते?",
+			label: "स्वयंसेवा आणि/किंवा नोकरी करताना तुम्ही बहुतेक वेळा काय करता हे खालीलपैकी कोणते चित्र दाखवते?",
+			kid_label: "स्वयंसेवा आणि/किंवा नोकरी करताना तुम्ही बहुतेक वेळा काय करता हे खालीलपैकी कोणते चित्र दाखवते?",
+			adult_label: "स्वयंसेवा आणि/किंवा नोकरी करताना तुमचे मूल बहुतेक वेळा काय करते हे खालीलपैकी कोणते चित्र दाखवते?",
 			choices: [
 				{
 					label: "बहुतेक वेळा बैठ्या हालचाली",
@@ -393,12 +366,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १४",
-			label:
-				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप स्वयंसेवा और/या काम करते समय अधिकांश समय करते हैं?",
-			kid_label:
-				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप स्वयंसेवा और/या काम करते समय अधिकांश समय करते हैं?",
-			adult_label:
-				"निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आपका बच्चा स्वयंसेवा और/या काम करते समय अधिकांश समय करता/करती है?",
+			label: "निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप स्वयंसेवा और/या काम करते समय अधिकांश समय करते हैं?",
+			kid_label: "निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप स्वयंसेवा और/या काम करते समय अधिकांश समय करते हैं?",
+			adult_label: "निम्नलिखित चित्रों में से कौन-सा चित्र वैसा दिखता है जैसा आपका बच्चा स्वयंसेवा और/या काम करते समय अधिकांश समय करता/करती है?",
 			choices: [
 				{
 					label: "बिल्कुल न चलना-फिरना",
@@ -425,12 +395,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
-			label:
-				"Which of the following images shows what you do most of the time while volunteering or working?",
-			kid_label:
-				"Which of the following images shows what you do most of the time while volunteering or working?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time while volunteering or working?",
+			label: "Which of the following images shows what you do most of the time while volunteering or working?",
+			kid_label: "Which of the following images shows what you do most of the time while volunteering or working?",
+			adult_label: "Which of the following images resembles what your child does most of the time while volunteering or working?",
 			choices: [
 				{
 					label: "Not moving",
@@ -459,8 +426,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 			heading: "سؤال [١٤]",
 			label: "أي من الصور التالية تبيّن ما تفعله معظم الوقت أثناء العمل التطوعي أو الوظيفة؟",
 			kid_label: "أي من الصور التالية تبيّن ما تفعله معظم الوقت أثناء العمل التطوعي أو الوظيفة؟",
-			adult_label:
-				"أي من الصور التالية تبيّن ما يفعله طفلك معظم الوقت أثناء العمل التطوعي و/أو الوظيفة؟",
+			adult_label: "أي من الصور التالية تبيّن ما يفعله طفلك معظم الوقت أثناء العمل التطوعي و/أو الوظيفة؟",
 			choices: [
 				{
 					label: "لا حركة",
@@ -487,12 +453,9 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न १४",
-			label:
-				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
-			kid_label:
-				"तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
-			adult_label:
-				"तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			label: "तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			kid_label: "तल दिएको कुन तस्विरले तपाईंले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
+			adult_label: "तल दिएको कुन तस्विरले तपाईंको छोरा वा छोरीले सबैभन्दा धेरै गर्ने काम वा स्वयंमसेवकिय कार्यलाइ देखाउँछ?",
 			choices: [
 				{
 					label: "हलचल नगरेको",
@@ -519,10 +482,8 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Questão 14",
-			label:
-				"Qual das opções a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
-			kid_label:
-				"Qual das opções a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
+			label: "Qual das opções a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
+			kid_label: "Qual das opções a seguir mostra o que você faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
 			adult_label:
 				"Qual das opções a seguir mostra o que a criança ou adolescente que você é responsável faz na maior parte do tempo enquanto faz trabalho voluntário ou trabalho remunerado?",
 			choices: [
@@ -553,8 +514,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 			heading: "Fråga 14",
 			label: "Vilken av bilderna visar vad du gör mest när du arbetar eller arbetar ideellt?",
 			kid_label: "Vilken av bilderna visar vad du gör mest när du arbetar eller arbetar ideellt?",
-			adult_label:
-				"Vilken av bilderna visar vad ditt barn gör mest när han/hon arbetar eller arbetar ideellt?",
+			adult_label: "Vilken av bilderna visar vad ditt barn gör mest när han/hon arbetar eller arbetar ideellt?",
 			choices: [
 				{
 					label: "Stillasittande",
@@ -583,8 +543,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 			heading: "ข้อ 14",
 			label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
 			kid_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่น้องทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
-			adult_label:
-				"ภาพใดต่อไปนี้ แสดงสิ่งที่บุตรหลานของคุณทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
+			adult_label: "ภาพใดต่อไปนี้ แสดงสิ่งที่บุตรหลานของคุณทำเป็นส่วนใหญ่ขณะทำงานและ/หรือเป็นอาสาสมัคร?",
 			choices: [
 				{
 					label: "ไม่ได้เคลื่อนไหว",
@@ -640,10 +599,8 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 14",
-			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			kid_label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			adult_label:
 				"¿Cuál de las siguientes opciones se parece más a lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
 			choices: [
@@ -672,10 +629,8 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 14",
-			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
+			kid_label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo mientras eres voluntario y/o trabajas?",
 			adult_label:
 				"¿Cuál de las siguientes opciones se parece más a lo que hace la mayor parte del tiempo su hija o hijo mientras es voluntario y/o trabaja?",
 			choices: [
@@ -704,10 +659,8 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 14",
-			label:
-				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu fais du bénévolat et/ou travailles?",
-			kid_label:
-				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu fais du bénévolat et/ou travailles?",
+			label: "Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu fais du bénévolat et/ou travailles?",
+			kid_label: "Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps lorsque tu fais du bénévolat et/ou travailles?",
 			adult_label:
 				"Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps en travaillant et/ou en faisant du bénévolat?",
 			choices: [

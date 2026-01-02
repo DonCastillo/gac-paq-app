@@ -1,4 +1,4 @@
-import type { LanguageInterface } from "interface/payload.type";
+import type { LanguageInterface } from "@interface/payload.type";
 
 const Languages: LanguageInterface[] = [
 	{

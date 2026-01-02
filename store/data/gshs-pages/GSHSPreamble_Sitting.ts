@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangPreamblePayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangPreamblePayloadInterface } from "@interface/payload.type";
 
 const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 	ident: "gshs_preamble_sitting",
@@ -11,8 +11,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
-				adult:
-					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				adult: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
 		"ma-IN": {
@@ -20,8 +19,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "जागतिक शाळा-आधारित विद्यार्थी आरोग्य सर्वेक्षण",
 			description: {
 				kid: "पुढील प्रश्न तुम्ही बसून घालवलेल्या वेळेबद्दल आहे जेव्हा तुम्ही शाळेत नसता किंवा गृहपाठ करीत नसता.",
-				adult:
-					"पुढील प्रश्न तुम्ही बसून घालवलेल्या वेळेबद्दल आहे जेव्हा तुम्ही शाळेत नसता किंवा गृहपाठ करीत नसता.",
+				adult: "पुढील प्रश्न तुम्ही बसून घालवलेल्या वेळेबद्दल आहे जेव्हा तुम्ही शाळेत नसता किंवा गृहपाठ करीत नसता.",
 			},
 		},
 		"es-CL": {
@@ -29,8 +27,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Encuesta Mundial de Salud en Escolares",
 			description: {
 				kid: "La siguiente pregunta se refiere al tiempo que pasas sentado cuando no estás en el colegio o haciendo tus tareas escolares. ",
-				adult:
-					"La siguiente pregunta se refiere al tiempo que pasas sentado cuando no estás en el colegio o haciendo tus tareas escolares. ",
+				adult: "La siguiente pregunta se refiere al tiempo que pasas sentado cuando no estás en el colegio o haciendo tus tareas escolares. ",
 			},
 		},
 		"cz-CR": {
@@ -38,8 +35,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Globální školní průzkum o zdraví studentů",
 			description: {
 				kid: "Následující otázka se týká času, který trávíš převážně sezením mimo školní výuku a psaní domácích úkolů.",
-				adult:
-					"Následující otázka se týká času, který trávíš převážně sezením mimo školní výuku a psaní domácích úkolů.",
+				adult: "Následující otázka se týká času, který trávíš převážně sezením mimo školní výuku a psaní domácích úkolů.",
 			},
 		},
 		"hi-IN": {
@@ -56,8 +52,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
-				adult:
-					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				adult: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
 		"mi-NZ": {
@@ -65,8 +60,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Te Rangahau Hauora Ākonga o te Ao i ngā Kura",
 			description: {
 				kid: "Ka ui te pātai e whai ake nei mō te roa o te wā e mātua noho ana koe ina kāore koe i te kura, i te whakaoti mahi kāinga rānei.",
-				adult:
-					"Ka ui te pātai e whai ake nei mō te roa o te wā e mātua noho ana koe ina kāore koe i te kura, i te whakaoti mahi kāinga rānei.",
+				adult: "Ka ui te pātai e whai ake nei mō te roa o te wā e mātua noho ana koe ina kāore koe i te kura, i te whakaoti mahi kāinga rānei.",
 			},
 		},
 		"ch-MW": {
@@ -83,8 +77,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "विश्वव्यापी विद्यालय आधारित विद्यार्थी स्वास्थ्य सर्वेक्षण",
 			description: {
 				kid: "अर्को प्रश्नमा तपाईं स्कूलमा नभएको बेला वा गृहकार्य नगरेको बेला बसेर बिताउने समयको बारेमा सोधिएको छ।",
-				adult:
-					"अर्को प्रश्नमा तपाईं स्कूलमा नभएको बेला वा गृहकार्य नगरेको बेला बसेर बिताउने समयको बारेमा सोधिएको छ।",
+				adult: "अर्को प्रश्नमा तपाईं स्कूलमा नभएको बेला वा गृहकार्य नगरेको बेला बसेर बिताउने समयको बारेमा सोधिएको छ।",
 			},
 		},
 		"th-TH": {
@@ -92,8 +85,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "แบบสำรวจสุขภาพนักเรียนในโรงเรียนทั่วโลก",
 			description: {
 				kid: "คำถามข้อต่อไปนี้ถามเกี่ยวกับเวลาส่วนใหญ่ที่นักเรียนใช้ในการนั่งทำกิจกรรม เมื่อนักเรียนไม่ได้อยู่ที่โรงเรียนหรือไม่ได้ทำการบ้าน",
-				adult:
-					"คำถามข้อต่อไปนี้ถามเกี่ยวกับเวลาส่วนใหญ่ที่นักเรียนใช้ในการนั่งทำกิจกรรม เมื่อนักเรียนไม่ได้อยู่ที่โรงเรียนหรือไม่ได้ทำการบ้าน",
+				adult: "คำถามข้อต่อไปนี้ถามเกี่ยวกับเวลาส่วนใหญ่ที่นักเรียนใช้ในการนั่งทำกิจกรรม เมื่อนักเรียนไม่ได้อยู่ที่โรงเรียนหรือไม่ได้ทำการบ้าน",
 			},
 		},
 		"pt-BR": {
@@ -110,8 +102,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Encuesta global de salud escolar basada en estudiantes",
 			description: {
 				kid: "La próxima pregunta se refiere al tiempo que pasas generalmente sentado cuando no estás en el colegio o haciendo tus deberes.",
-				adult:
-					"La próxima pregunta se refiere al tiempo que pasas generalmente sentado cuando no estás en el colegio o haciendo tus deberes.",
+				adult: "La próxima pregunta se refiere al tiempo que pasas generalmente sentado cuando no estás en el colegio o haciendo tus deberes.",
 			},
 		},
 		"fr-CA": {
@@ -146,8 +137,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
-				adult:
-					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				adult: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
 		"en-MW": {
@@ -155,8 +145,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
-				adult:
-					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				adult: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
 		"en-NG": {
@@ -164,8 +153,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
-				adult:
-					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				adult: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
 		"en-AE": {
@@ -173,8 +161,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Global School-based Student Health Survey",
 			description: {
 				kid: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
-				adult:
-					"The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
+				adult: "The next question asks about the time you spend mostly sitting when you are not in school or doing homework.",
 			},
 		},
 		"ar-AE": {
@@ -182,8 +169,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "مسح الصحة الطلابية المعتمد على المدارس العالمية",
 			description: {
 				kid: "تدور الأسئلة التالية حول الوقت الذي تقضيه غالبًا جالسًا أو مستلقيًا عندما لا تكون بالمدرسة أو تؤدي واجباتك المدرسية.",
-				adult:
-					"تدور الأسئلة التالية حول الوقت الذي تقضيه غالبًا جالسًا أو مستلقيًا عندما لا تكون بالمدرسة أو تؤدي واجباتك المدرسية.",
+				adult: "تدور الأسئلة التالية حول الوقت الذي تقضيه غالبًا جالسًا أو مستلقيًا عندما لا تكون بالمدرسة أو تؤدي واجباتك المدرسية.",
 			},
 		},
 		"sv-SE": {
@@ -191,8 +177,7 @@ const GSHSPreamble_Sitting: LangPreamblePayloadInterface = {
 			subheading: "Global skolbaserad undersökning om studenthälsa",
 			description: {
 				kid: "Nästa fråga handlar om tiden du är stillasittande när du inte är i skolan eller gör läxor.",
-				adult:
-					"Nästa fråga handlar om tiden du är stillasittande när du inte är i skolan eller gör läxor.",
+				adult: "Nästa fråga handlar om tiden du är stillasittande när du inte är i skolan eller gör läxor.",
 			},
 		},
 		"zh-CN": {

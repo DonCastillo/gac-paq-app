@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioImagePayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioImagePayloadInterface } from "@interface/payload.type";
 
 const S1Q5: LangQuestionRadioImagePayloadInterface = {
 	ident: "school_5",
@@ -13,12 +13,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
-			label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			kid_label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time in physical education class?",
+			label: "Which of the following images shows what you do most of the time in physical education class?",
+			kid_label: "Which of the following images shows what you do most of the time in physical education class?",
+			adult_label: "Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [
 				{
 					label: "Not moving",
@@ -45,12 +42,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
-			label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			kid_label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time in physical education class?",
+			label: "Which of the following images shows what you do most of the time in physical education class?",
+			kid_label: "Which of the following images shows what you do most of the time in physical education class?",
+			adult_label: "Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [
 				{
 					label: "Not moving",
@@ -77,12 +71,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Pātai 5",
-			label:
-				"ko tēhea o ēnei pikitia e whakaatu ana i tō āhua i te nuinga o te wā ki ngā akoranga whakakori?",
-			kid_label:
-				"ko tēhea o ēnei pikitia e whakaatu ana i tō āhua i te nuinga o te wā ki ngā akoranga whakakori?",
-			adult_label:
-				"ko tēhea o ēnei pikitia e whakaatu ana i te āhua o tāu tamaiti i te nuinga o te wā ki ngā akoranga whakakori?",
+			label: "ko tēhea o ēnei pikitia e whakaatu ana i tō āhua i te nuinga o te wā ki ngā akoranga whakakori?",
+			kid_label: "ko tēhea o ēnei pikitia e whakaatu ana i tō āhua i te nuinga o te wā ki ngā akoranga whakakori?",
+			adult_label: "ko tēhea o ēnei pikitia e whakaatu ana i te āhua o tāu tamaiti i te nuinga o te wā ki ngā akoranga whakakori?",
 			choices: [
 				{
 					label: "Kāore i te neke",
@@ -109,12 +100,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
-			label:
-				"Which of the following pictures looks like what you do most of the time in physical education class?",
-			kid_label:
-				"Which of the following pictures looks like what you do most of the time in physical education class?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time in physical education class?",
+			label: "Which of the following pictures looks like what you do most of the time in physical education class?",
+			kid_label: "Which of the following pictures looks like what you do most of the time in physical education class?",
+			adult_label: "Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [
 				{
 					label: "Not moving",
@@ -141,12 +129,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadioImage,
 			heading: "Otázka 5",
-			label:
-				"Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy děláš?",
-			kid_label:
-				"Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy děláš?",
-			adult_label:
-				"Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy vaše dítě dělá?",
+			label: "Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy děláš?",
+			kid_label: "Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy děláš?",
+			adult_label: "Který z následujících obrázků vystihuje, co většinou v hodinách tělesné výchovy vaše dítě dělá?",
 			choices: [
 				{
 					label: "Nepohybuji se",
@@ -189,12 +174,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 5",
-			label:
-				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
-			adult_label:
-				"¿Cuál de las siguientes imágenes muestra lo que hace su hija o hijo la mayor parte del tiempo en la clase de educación física?",
+			label: "¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
+			kid_label: "¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
+			adult_label: "¿Cuál de las siguientes imágenes muestra lo que hace su hija o hijo la mayor parte del tiempo en la clase de educación física?",
 			choices: [
 				{
 					label: "Sin moverte",
@@ -221,12 +203,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 5",
-			label:
-				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
-			adult_label:
-				"¿Cuál de las siguientes imágenes muestra lo que hace su hija o hijo la mayor parte del tiempo en la clase de educación física?",
+			label: "¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
+			kid_label: "¿Cuál de las siguientes imágenes muestra lo que haces la mayor parte del tiempo en la clase de educación física?",
+			adult_label: "¿Cuál de las siguientes imágenes muestra lo que hace su hija o hijo la mayor parte del tiempo en la clase de educación física?",
 			choices: [
 				{
 					label: "Sin moverte",
@@ -253,12 +232,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
-			label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			kid_label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time in physical education class?",
+			label: "Which of the following images shows what you do most of the time in physical education class?",
+			kid_label: "Which of the following images shows what you do most of the time in physical education class?",
+			adult_label: "Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [
 				{
 					label: "Not moving",
@@ -285,12 +261,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
-			label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			kid_label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time in physical education class?",
+			label: "Which of the following images shows what you do most of the time in physical education class?",
+			kid_label: "Which of the following images shows what you do most of the time in physical education class?",
+			adult_label: "Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [
 				{
 					label: "Not moving",
@@ -361,12 +334,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ५",
-			label:
-				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
-			kid_label:
-				"तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
-			adult_label:
-				"तुमचे मूल शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करते हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			label: "तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			kid_label: "तुम्ही शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करता हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
+			adult_label: "तुमचे मूल शारीरिक शिक्षणाच्या वर्गात बहुतेक वेळ काय करते हे पुढीलपैकी कोणत्या चित्रांमधून दिसून येते?",
 			choices: [
 				{
 					label: "बहुतेक वेळा बैठ्या हालचाली",
@@ -393,12 +363,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ५",
-			label:
-				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
-			kid_label:
-				"निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
-			adult_label:
-				"निम्नलिखित में से कौन सा चित्र आपके बच्चे द्वारा पीटी क्लास में अधिकांश समय किए जाने वाले कार्यों में से मिलता जुलता है?",
+			label: "निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
+			kid_label: "निम्नलिखित में से कौन सा चित्र वैसा दिखता है जैसा आप पीटी क्लास में अधिकांश समय करते हैं?",
+			adult_label: "निम्नलिखित में से कौन सा चित्र आपके बच्चे द्वारा पीटी क्लास में अधिकांश समय किए जाने वाले कार्यों में से मिलता जुलता है?",
 			choices: [
 				{
 					label: "बिल्कुल न चलना-फिरना",
@@ -425,12 +392,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
-			label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			kid_label:
-				"Which of the following images shows what you do most of the time in physical education class?",
-			adult_label:
-				"Which of the following images resembles what your child does most of the time in physical education class?",
+			label: "Which of the following images shows what you do most of the time in physical education class?",
+			kid_label: "Which of the following images shows what you do most of the time in physical education class?",
+			adult_label: "Which of the following images resembles what your child does most of the time in physical education class?",
 			choices: [
 				{
 					label: "Not moving",
@@ -486,12 +450,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadioImage,
 			heading: "प्रश्न ५",
-			label:
-				"तल दिएको कुन तस्विरले तपाईंले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ होला?",
-			kid_label:
-				"तल दिएको कुन तस्विरले तपाईंले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ होला?",
-			adult_label:
-				"तल दिएको कुन तस्बिरले तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने काम देखाउँछ होला?",
+			label: "तल दिएको कुन तस्विरले तपाईंले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ होला?",
+			kid_label: "तल दिएको कुन तस्विरले तपाईंले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने कामलाई देखाउँछ होला?",
+			adult_label: "तल दिएको कुन तस्बिरले तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कक्षामा सबैभन्दा धेरै समय गर्ने काम देखाउँछ होला?",
 			choices: [
 				{
 					label: "हलचल नगरेको",
@@ -518,10 +479,8 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadioImage,
 			heading: "Questão 5",
-			label:
-				"Qual das opções a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
-			kid_label:
-				"Qual das opções a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
+			label: "Qual das opções a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
+			kid_label: "Qual das opções a seguir corresponde ao que você faz na maior parte do tempo nas aulas de Educação Física?",
 			adult_label:
 				"Qual das opções a seguir corresponde ao que a criança ou adolescente que você é responsável faz na maior parte do tempo nas aulas de Educação Física?",
 			choices: [
@@ -637,10 +596,8 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 5",
-			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
+			label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
+			kid_label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
 			adult_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo en la clase de educación física?",
 			choices: [
@@ -669,10 +626,8 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadioImage,
 			heading: "Pregunta 5",
-			label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
-			kid_label:
-				"¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
+			label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
+			kid_label: "¿Cuál de las siguientes imágenes se parece más a lo que haces la mayor parte del tiempo en la clase de educación física?",
 			adult_label:
 				"¿Cuál de las siguientes imágenes se parece más a lo que hace la mayor parte del tiempo su hija o hijo en la clase de educación física?",
 			choices: [
@@ -701,12 +656,9 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadioImage,
 			heading: "Question 5",
-			label:
-				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
-			kid_label:
-				"Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
-			adult_label:
-				"Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps dans les cours d'éducation physique?",
+			label: "Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
+			kid_label: "Laquelle des photos suivantes ressemble à ce que tu fais la plupart du temps dans les cours d'éducation physique?",
+			adult_label: "Laquelle des images suivantes ressemble à ce que ton enfant fait la plupart du temps dans les cours d'éducation physique?",
 			choices: [
 				{
 					label: "Pas de mouvement",

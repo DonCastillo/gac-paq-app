@@ -3,7 +3,7 @@ const MAIN_STUDY_LANG = [
 	"sv-SE",
 	"es-MX",
 	"es-ES",
-	"en-CA",
+	// "en-CA",
 	"fr-CA",
 	"zh-CN",
 	"pt-BR",

@@ -1,8 +1,8 @@
+import { getColorTheme } from "@store/settings/settingsSlice";
+import { LinearGradient } from "expo-linear-gradient";
 import React, { memo } from "react";
 import { StyleSheet } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { useSelector } from "react-redux";
-import { getColorTheme } from "store/settings/settingsSlice";
 
 const BGLinearGradient = (): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);

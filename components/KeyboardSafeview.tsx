@@ -1,11 +1,7 @@
+import { disableNarrationAutoplay, getDevice, setKeyboardState } from "@store/settings/settingsSlice";
 import React, { useEffect } from "react";
 import { Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import {
-	disableNarrationAutoplay,
-	getDevice,
-	setKeyboardState,
-} from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	children: React.ReactNode;

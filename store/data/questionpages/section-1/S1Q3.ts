@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionSliderPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionSliderPayloadInterface } from "@interface/payload.type";
 
 const S1Q3: LangQuestionSliderPayloadInterface = {
 	ident: "school_3",
@@ -85,12 +85,9 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionSlider,
 			heading: "Funso 3",
-			label:
-				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
-			kid_label:
-				"Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
-			adult_label:
-				"Kodi mwana wanu anaphunzira maphunziro olimbitsa thupi kangati m’sabata yapitayi?",
+			label: "Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
+			kid_label: "Ndi makalasi angati a maphunziro olimbitsa thupi omwe unakhala nawo m’sabata yapitayi?",
+			adult_label: "Kodi mwana wanu anaphunzira maphunziro olimbitsa thupi kangati m’sabata yapitayi?",
 			max_value: 7,
 		},
 		"ma-IN": {
@@ -129,10 +126,8 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			type: Question.QuestionSlider,
 			heading: "प्रश्न ३",
 			label: "पछिल्लो (गएको/बितेको) हप्तामा तपाईंले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
-			kid_label:
-				"पछिल्लो (गएको/बितेको) हप्तामा तपाईंले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/बितेको) हप्तामा तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
+			kid_label: "पछिल्लो (गएको/बितेको) हप्तामा तपाईंले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
+			adult_label: "पछिल्लो (गएको/बितेको) हप्तामा तपाईंको छोरा वा छोरीले शारीरिक शिक्षासम्बन्धी कतिओटा कक्षा लिनुभयो?",
 			max_value: 7,
 		},
 		"pt-BR": {
@@ -140,8 +135,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			heading: "Questão 3",
 			label: "Na última semana, quantas aulas de Educação Física você teve?",
 			kid_label: "Na última semana, quantas aulas de Educação Física você teve?",
-			adult_label:
-				"Na última semana, a criança ou adolescente que você é responsável teve quantas aulas de Educação Física?",
+			adult_label: "Na última semana, a criança ou adolescente que você é responsável teve quantas aulas de Educação Física?",
 			max_value: 7,
 		},
 		"sv-SE": {
@@ -222,8 +216,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			heading: "Question 3",
 			label: "Combien as-tu eu de cours d'éducation physique pendant la dernière semaine?",
 			kid_label: "Combien as-tu eu de cours d'éducation physique pendant la dernière semaine?",
-			adult_label:
-				"Combien ton enfant a-t-il (elle) eu de cours d'éducation physique pendant la dernière semaine?",
+			adult_label: "Combien ton enfant a-t-il (elle) eu de cours d'éducation physique pendant la dernière semaine?",
 			max_value: 7,
 		},
 	},

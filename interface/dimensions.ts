@@ -1,4 +1,4 @@
-import type Orientation from "constants/orientation.enum";
+import type Orientation from "@constants/orientation.enum";
 
 export default interface DeviceInterface {
 	screenWidth: number;

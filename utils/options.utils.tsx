@@ -1,8 +1,7 @@
-import React from "react";
-import type { Choice, ChoiceIcon, ChoiceImage, LanguageInterface } from "interface/payload.type";
-import type { ModeType } from "interface/union.type";
-import Mode from "constants/mode.enum";
-import { store } from "store/store";
+import FlagIcons, { FlagCodeType } from "@/styles/flags";
+import Mode from "@constants/mode.enum";
+import type { Choice, ChoiceIcon, ChoiceImage, LanguageInterface } from "@interface/payload.type";
+import type { ModeType } from "@interface/union.type";
 import {
 	Household_1_Options,
 	Household_4_Options,
@@ -18,7 +17,9 @@ import {
 	Work_1_Options,
 	Work_2_Options,
 	Work_3_Options,
-} from "store/data/options/others";
+} from "@store/data/options/others";
+import { store } from "@store/store";
+import React from "react";
 
 const HAS_OTHER_REGEX = /other\s\((.*?)\)/;
 
@@ -43,13 +44,21 @@ const choiceMode = (choices: Choice[] | ChoiceIcon[], mode: ModeType): Choice[] 
 
 	if (mode === Mode.Adult) {
 		return choices.map((choice: Choice | ChoiceIcon) => {
-			return { ...choice, label: choice.label_mode?.adult ?? choice.label, value: choice.value };
+			return {
+				...choice,
+				label: choice.label_mode?.adult ?? choice.label,
+				value: choice.value,
+			};
 		});
 	}
 
 	if (mode === Mode.Kid || mode === Mode.Teen) {
 		return choices.map((choice: Choice | ChoiceIcon) => {
-			return { ...choice, label: choice.label_mode?.kid ?? choice.label, value: choice.value };
+			return {
+				...choice,
+				label: choice.label_mode?.kid ?? choice.label,
+				value: choice.value,
+			};
 		});
 	}
 
@@ -59,14 +68,15 @@ const choiceMode = (choices: Choice[] | ChoiceIcon[], mode: ModeType): Choice[] 
 };
 
 const optionLanguage = (options: LanguageInterface[]): ChoiceIcon[] => {
-	return options.map(({ name, lang_code, flag }) => {
-		const FlagComponent = flag;
-		if (FlagComponent !== null || FlagComponent !== undefined) {
+	return options.map(({ name, lang_code, flag_code }) => {
+		const flagCode: FlagCodeType = flag_code?.toLowerCase() as FlagCodeType;
+		const Flag = flag_code && FlagIcons[flagCode];
+		if (Flag !== null || Flag !== undefined) {
 			return {
 				label: name,
 				value: lang_code,
 				icon: () => (
-					<FlagComponent
+					<Flag
 						height={"100%"}
 						width={"100%"}
 						padding={0}
@@ -258,13 +268,13 @@ const optionLetter = (index: number): string => {
 };
 
 export {
-	optionLanguage,
+	choiceMode,
+	extractUserSpecifiedOtherFromArray,
+	getUserSpecifiedOther,
 	hasOtherOption,
 	isOtherOption,
-	getUserSpecifiedOther,
 	isOtherWithSpecifiedValue,
-	extractUserSpecifiedOtherFromArray,
-	choiceMode,
+	optionLanguage,
 	optionLetter,
 	optionNumber,
 };

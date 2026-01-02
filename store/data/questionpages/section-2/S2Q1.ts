@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S2Q1: LangQuestionRadioPayloadInterface = {
 	ident: "household_1",
@@ -48,10 +48,8 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pātai 8",
 			label: "I te wiki kua hipa, i oti rānei i a koe ngā mahi o te kāinga, i ngā momo mahi rānei?",
-			kid_label:
-				"I te wiki kua hipa, i oti rānei i a koe ngā mahi o te kāinga, i ngā momo mahi rānei?",
-			adult_label:
-				"I te wiki kua hipa, i oti rānei i tāu tamaiti ngā mahi o te kāinga, ngā momo mahi rānei?",
+			kid_label: "I te wiki kua hipa, i oti rānei i a koe ngā mahi o te kāinga, i ngā momo mahi rānei?",
+			adult_label: "I te wiki kua hipa, i oti rānei i tāu tamaiti ngā mahi o te kāinga, ngā momo mahi rānei?",
 			choices: [
 				{
 					label: "Āe",
@@ -102,8 +100,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 8",
 			label: "¿Realizaste tareas domésticas o quehaceres activos la semana pasada?",
 			kid_label: "¿Realizaste tareas domésticas o quehaceres activos la semana pasada?",
-			adult_label:
-				"¿Realizó su hija o hijo tareas domésticas o quehaceres activos la semana pasada?",
+			adult_label: "¿Realizó su hija o hijo tareas domésticas o quehaceres activos la semana pasada?",
 			choices: [
 				{
 					label: "Sí",
@@ -120,8 +117,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 8",
 			label: "¿Realizaste tareas domésticas o quehaceres activos la semana pasada?",
 			kid_label: "¿Realizaste tareas domésticas o quehaceres activos la semana pasada?",
-			adult_label:
-				"¿Realizó su hija o hijo tareas domésticas o quehaceres activos la semana pasada?",
+			adult_label: "¿Realizó su hija o hijo tareas domésticas o quehaceres activos la semana pasada?",
 			choices: [
 				{
 					label: "Sí",
@@ -240,8 +236,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "سؤال [٨]",
 			label: "خلال الأسبوع الماضي، هل قمت بأعمال منزلية أو مهام تتطلّب منك النشاط البدني؟",
 			kid_label: "خلال الأسبوع الماضي، هل قمت بأعمال منزلية أو مهام تتطلّب منك النشاط البدني؟",
-			adult_label:
-				"خلال الأسبوع الماضي، هل قام طفلك بأعمال منزلية أو مهام تتطلّب منه النشاط البدني؟",
+			adult_label: "خلال الأسبوع الماضي، هل قام طفلك بأعمال منزلية أو مهام تتطلّب منه النشاط البدني؟",
 			choices: [
 				{
 					label: "نعم",
@@ -258,8 +253,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "प्रश्न ८",
 			label: "पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
 			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंको छोरा वा छोरीले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्तामा के तपाईंको छोरा वा छोरीले सक्रिय हुने घरायसी कामकाज गर्नुभयो?",
 			choices: [
 				{
 					label: "गरें",
@@ -284,8 +278,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 8",
 			label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
 			kid_label: "Na última semana, você realizou ativamente atividades ou tarefas domésticas?",
-			adult_label:
-				"Na última semana, a criança ou adolescente que você é responsável realizou ativamente atividades ou tarefas domésticas?",
+			adult_label: "Na última semana, a criança ou adolescente que você é responsável realizou ativamente atividades ou tarefas domésticas?",
 			choices: [
 				{
 					label: "Sim",
@@ -300,12 +293,9 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 8",
-			label:
-				"Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
-			kid_label:
-				"Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
-			adult_label:
-				"Har ditt barn gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			label: "Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			kid_label: "Har du gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
+			adult_label: "Har ditt barn gjort några aktiva hushållssysslor eller uppgifter i hemmet under den senaste veckan?",
 			choices: [
 				{
 					label: "Ja",
@@ -320,12 +310,9 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 8",
-			label:
-				"สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
-			kid_label:
-				"สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
-			adult_label:
-				"สัปดาห์ที่แล้ว บุตรหลานของคุณได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
+			label: "สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
+			kid_label: "สัปดาห์ที่แล้ว น้องได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณได้ทำงานบ้านหรือทำงานที่ได้รับมอบหมายหน้าที่จากครอบครัวที่ต้องออกแรงบ้างหรือไม่?",
 			choices: [
 				{
 					label: "ใช่ ได้ทำ",
@@ -359,8 +346,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 8",
 			label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
 			kid_label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
-			adult_label:
-				"¿Realizó su hija o hijo tareas del hogar o quehaceres activos la semana pasada?",
+			adult_label: "¿Realizó su hija o hijo tareas del hogar o quehaceres activos la semana pasada?",
 			choices: [
 				{
 					label: "Sí",
@@ -377,8 +363,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 8",
 			label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
 			kid_label: "¿Realizaste tareas del hogar o quehaceres activos la semana pasada?",
-			adult_label:
-				"En la última semana, ¿realizó su hija o hijo tareas del hogar o quehaceres activos?",
+			adult_label: "En la última semana, ¿realizó su hija o hijo tareas del hogar o quehaceres activos?",
 			choices: [
 				{
 					label: "Sí",
@@ -395,8 +380,7 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 8",
 			label: "Au cours de la dernière semaine, as-tu effectué des tâches actives?",
 			kid_label: "Au cours de la dernière semaine, as-tu effectué des tâches actives?",
-			adult_label:
-				"Au cours de la dernière semaine, ton enfant a-t-il (elle) effectué des tâches actives?",
+			adult_label: "Au cours de la dernière semaine, ton enfant a-t-il (elle) effectué des tâches actives?",
 			choices: [
 				{
 					label: "Oui",

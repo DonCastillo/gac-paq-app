@@ -1,5 +1,5 @@
 import React, { forwardRef, useRef, useState } from "react";
-import { FlatList, type FlatListProps, Animated } from "react-native";
+import { Animated, FlatList, type FlatListProps } from "react-native";
 import { View } from "react-native-animatable";
 import ScrollViewIndicator from "./ScrollViewIndicator";
 
@@ -9,12 +9,8 @@ interface PropsInterface<ItemT> extends FlatListProps<ItemT> {
 	scrollIndicatorStyle?: object;
 }
 
-function FlatListContainerInner<ItemT>(
-	props: PropsInterface<ItemT>,
-	ref: React.Ref<FlatList<ItemT>>,
-): React.ReactElement {
-	const { contentContainerStyle, scrollContainerStyle, scrollIndicatorStyle, ...flatListProps } =
-		props;
+function FlatListContainerInner<ItemT>(props: PropsInterface<ItemT>, ref: React.Ref<FlatList<ItemT>>): React.ReactElement {
+	const { contentContainerStyle, scrollContainerStyle, scrollIndicatorStyle, ...flatListProps } = props;
 
 	const [completeScrollBarHeight, setCompleteScrollBarHeight] = useState(1);
 	const [visibleScrollBarHeight, setVisibleScrollBarHeight] = useState(0);
@@ -26,13 +22,9 @@ function FlatListContainerInner<ItemT>(
 			? (visibleScrollBarHeight * visibleScrollBarHeight) / completeScrollBarHeight
 			: visibleScrollBarHeight;
 
-	const difference =
-		visibleScrollBarHeight > scrollIndicatorSize ? visibleScrollBarHeight - scrollIndicatorSize : 1;
+	const difference = visibleScrollBarHeight > scrollIndicatorSize ? visibleScrollBarHeight - scrollIndicatorSize : 1;
 
-	const scrollIndicatorPosition = Animated.multiply(
-		scrollIndicator,
-		visibleScrollBarHeight / completeScrollBarHeight,
-	).interpolate({
+	const scrollIndicatorPosition = Animated.multiply(scrollIndicator, visibleScrollBarHeight / completeScrollBarHeight).interpolate({
 		inputRange: [0, difference],
 		outputRange: [0, difference],
 		extrapolate: "clamp",

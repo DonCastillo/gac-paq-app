@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S1Q4: LangQuestionRadioPayloadInterface = {
 	ident: "school_4",
@@ -450,8 +450,7 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 4",
 			label: "Quanto tempo duram as suas aulas de Educação Física?",
 			kid_label: "Quanto tempo duram as suas aulas de Educação Física?",
-			adult_label:
-				"Quanto tempo duram as aulas de Educação Física da criança ou adolescente que você é responsável?",
+			adult_label: "Quanto tempo duram as aulas de Educação Física da criança ou adolescente que você é responsável?",
 			choices: [
 				{
 					label: "Menos de 30 minutos por aula",

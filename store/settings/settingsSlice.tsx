@@ -1,14 +1,14 @@
+import type ColorInterface from "@interface/color";
+import type DeviceInterface from "@interface/dimensions";
+import type { PageIndexInterface } from "@interface/payload.type";
+import type { PhrasePayloadInterface } from "@interface/phrase";
+import type { ModeType } from "@interface/union.type";
 import { createSlice } from "@reduxjs/toolkit";
+import defaultColor from "./defaultColor";
 import defaultDevice from "./defaultDevice";
 import { currentDefaultPage, nextDefaultPage } from "./defaultPage";
-import defaultColor from "./defaultColor";
-import type DeviceInterface from "interface/dimensions";
-import type ColorInterface from "interface/color";
 import defaultPhrase from "./defaultPhrase";
-import type { ModeType } from "interface/union.type";
 import reducersActions from "./settingsReducers";
-import type { PhrasePayloadInterface } from "interface/phrase";
-import type { PageIndexInterface } from "interface/payload.type";
 import { getNarrationPayload } from "./settingsThunk";
 
 export interface SettingsSliceInterface {
@@ -27,9 +27,8 @@ export interface SettingsSliceInterface {
 	totalPage: any;
 	colorTheme: ColorInterface;
 	pages: Record<number, PageIndexInterface>;
-	narrations: Record<string, string | null>;
+	narrations: Record<string, any> | null;
 	history: number[];
-	isLoading: boolean;
 	startDateTime: Date | null;
 	isConnected: boolean;
 	enableNarration: boolean;
@@ -42,6 +41,8 @@ const settingsSlice = createSlice({
 	name: "settings",
 	initialState: {
 		mode: undefined as ModeType,
+		// mode: Mode.Adult as ModeType,
+		// mode: Mode.Kid as ModeType,
 		device: defaultDevice,
 		language: "en-CA",
 		directusAccessToken: process.env.EXPO_PUBLIC_ADMIN_TOKEN as string,
@@ -56,9 +57,8 @@ const settingsSlice = createSlice({
 		totalPage: null,
 		colorTheme: defaultColor,
 		pages: {},
-		narrations: {},
+		narrations: null,
 		history: [] as number[],
-		isLoading: false as boolean,
 		startDateTime: null as Date | null,
 		isConnected: false,
 		enableNarration: true,
@@ -87,7 +87,6 @@ const settingsSlice = createSlice({
 		removeExtroPages: reducersActions.removeExtroPages,
 		removeFeedbackPages: reducersActions.removeFeedbackPages,
 		reset: reducersActions.reset,
-		setIsLoading: reducersActions.setIsLoading,
 		setStartDateTime: reducersActions.setStartDateTime,
 		setIsConnected: reducersActions.setIsConnected,
 		setEnableNarration: reducersActions.setEnableNarration,
@@ -98,13 +97,13 @@ const settingsSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getNarrationPayload.fulfilled, (state, action) => {
-			state.narrations = action.payload;
+			state.narrations = action.payload as any;
 		});
 		builder.addCase(getNarrationPayload.pending, (state) => {
-			state.narrations = {};
+			state.narrations = null;
 		});
 		builder.addCase(getNarrationPayload.rejected, (state) => {
-			state.narrations = {};
+			state.narrations = null;
 		});
 	},
 	selectors: {
@@ -125,7 +124,6 @@ const settingsSlice = createSlice({
 		getPages: (state: SettingsSliceInterface) => state.pages,
 		getHistory: (state: SettingsSliceInterface) => state.history,
 		getDirectusBaseEndpoint: (state: SettingsSliceInterface) => state.directusBaseEndpoint,
-		getIsLoading: (state: SettingsSliceInterface) => state.isLoading,
 		getStartDateTime: (state: SettingsSliceInterface) => state.startDateTime,
 		getIsConnected: (state: SettingsSliceInterface) => state.isConnected,
 		getEnableNarration: (state: SettingsSliceInterface) => state.enableNarration,
@@ -155,7 +153,6 @@ export const {
 	removeExtroPages,
 	removeFeedbackPages,
 	reset,
-	setIsLoading,
 	setStartDateTime,
 	setIsConnected,
 	setEnableNarration,
@@ -183,7 +180,6 @@ export const {
 	getPages,
 	getHistory,
 	getDirectusBaseEndpoint,
-	getIsLoading,
 	getStartDateTime,
 	getIsConnected,
 	getEnableNarration,

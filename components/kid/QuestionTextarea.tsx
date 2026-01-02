@@ -1,10 +1,10 @@
+import { getColorTheme, getDevice } from "@store/settings/settingsSlice";
+import { Font, GeneralStyle } from "@styles/general";
+import { verticalScale } from "@utils/responsive.utils";
+import { adjustTextAlignmentDirection } from "@utils/style";
 import React from "react";
-import { TextInput, View, StyleSheet } from "react-native";
-import { Font, GeneralStyle } from "styles/general";
-import { verticalScale } from "utils/responsive.utils";
+import { StyleSheet, TextInput, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getColorTheme, getDevice } from "store/settings/settingsSlice";
-import { adjustTextAlignmentDirection } from "utils/style";
 
 interface PropsInterface {
 	onChange: (value: string) => void;
@@ -12,11 +12,7 @@ interface PropsInterface {
 	placeholder: string | null;
 }
 
-const QuestionTextarea = ({
-	onChange,
-	selectedValue,
-	placeholder,
-}: PropsInterface): React.ReactElement => {
+const QuestionTextarea = ({ onChange, selectedValue, placeholder }: PropsInterface): React.ReactElement => {
 	const colorTheme = useSelector(getColorTheme);
 	const device = useSelector(getDevice);
 	const { color100 } = colorTheme;
@@ -28,10 +24,7 @@ const QuestionTextarea = ({
 	return (
 		<View>
 			<TextInput
-				style={[
-					styles.container,
-					{ borderColor: color100, maxHeight: verticalScale(230, device.screenHeight) },
-				]}
+				style={[styles.container, { borderColor: color100, maxHeight: verticalScale(230, device.screenHeight) }]}
 				autoCapitalize="none"
 				autoCorrect={false}
 				onChangeText={changeHandler}

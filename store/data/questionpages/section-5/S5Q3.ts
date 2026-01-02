@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S5Q3: LangQuestionRadioPayloadInterface = {
 	ident: "organized_3",
@@ -13,12 +13,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
-			label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			kid_label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			adult_label:
-				"On the days that your child did these activities during the past week, how long did it usually last?",
+			label: "On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label: "On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label: "On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
 					label: "30 minutes or less per day",
@@ -41,12 +38,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
-			label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			kid_label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			adult_label:
-				"On the days that your child did these activities during the past week, how long did it usually last?",
+			label: "On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label: "On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label: "On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
 					label: "30 minutes or less per day",
@@ -71,8 +65,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 20",
 			label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
 			kid_label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
-			adult_label:
-				"I ngā rā i mahi ai tāu tamaiti i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			adult_label: "I ngā rā i mahi ai tāu tamaiti i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
 			choices: [
 				{
 					label: "30 meneti, neke iho rā nei ia rā",
@@ -95,12 +88,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
-			label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			kid_label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			adult_label:
-				"On the days that your child did these activities during the past week, how long did it usually last?",
+			label: "On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label: "On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label: "On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
 					label: "30 minutes or less per day",
@@ -123,12 +113,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 20",
-			label:
-				"Ve dnech, kdy ses minulý týden těmto aktivitám věnoval(a), jak dlouho to obvykle trvalo?",
-			kid_label:
-				"Ve dnech, kdy ses minulý týden těmto aktivitám věnoval(a), jak dlouho to obvykle trvalo?",
-			adult_label:
-				"Ve dnech, kdy se vaše dítě minulý týden těmto aktivitám věnovalo a jak dlouho to obvykle trvalo?",
+			label: "Ve dnech, kdy ses minulý týden těmto aktivitám věnoval(a), jak dlouho to obvykle trvalo?",
+			kid_label: "Ve dnech, kdy ses minulý týden těmto aktivitám věnoval(a), jak dlouho to obvykle trvalo?",
+			adult_label: "Ve dnech, kdy se vaše dítě minulý týden těmto aktivitám věnovalo a jak dlouho to obvykle trvalo?",
 			choices: [
 				{
 					label: "30 minut a méně za den",
@@ -151,12 +138,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 20",
-			label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			kid_label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			adult_label:
-				"En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			kid_label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			adult_label: "En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
 			choices: [
 				{
 					label: "30 minutos o menos por día",
@@ -179,12 +163,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 20",
-			label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			kid_label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			adult_label:
-				"En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			kid_label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			adult_label: "En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
 			choices: [
 				{
 					label: "30 minutos o menos por día",
@@ -207,12 +188,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
-			label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			kid_label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			adult_label:
-				"On the days that your child did these activities during the past week, how long did it usually last?",
+			label: "On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label: "On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label: "On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
 					label: "30 minutes or less per day",
@@ -235,12 +213,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
-			label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			kid_label:
-				"On the days that you do these activities during the past week, how long did it usually last?",
-			adult_label:
-				"On the days that your child did these activities during the past week, how long did it usually last?",
+			label: "On the days that you do these activities during the past week, how long did it usually last?",
+			kid_label: "On the days that you do these activities during the past week, how long did it usually last?",
+			adult_label: "On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
 					label: "30 minutes or less per day",
@@ -264,10 +239,8 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Funso 20",
 			label: "Pamasiku omwe umachita zochitika zimenezi, kodi zimatenga nthawi yayitali bwanji?",
-			kid_label:
-				"Pamasiku omwe umachita zochitika zimenezi, kodi zimatenga nthawi yayitali bwanji?",
-			adult_label:
-				"Pamasiku omwe mwana wanu anachita masewerowo, kodi zimatenga nthawi yayitali bwanji?",
+			kid_label: "Pamasiku omwe umachita zochitika zimenezi, kodi zimatenga nthawi yayitali bwanji?",
+			adult_label: "Pamasiku omwe mwana wanu anachita masewerowo, kodi zimatenga nthawi yayitali bwanji?",
 			choices: [
 				{
 					label: "30 minitsi kapena osafika pa tsiku",
@@ -291,10 +264,8 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २०",
 			label: "मागील आठवड्यात तुम्ही ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
-			kid_label:
-				"मागील आठवड्यात तुम्ही ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
-			adult_label:
-				"मागील आठवड्यात तुमच्या मुलाने ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			kid_label: "मागील आठवड्यात तुम्ही ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
+			adult_label: "मागील आठवड्यात तुमच्या मुलाने ज्या दिवशी हे उपक्रम केले, त्यावेळी ते साधारण किती वेळ केले?",
 			choices: [
 				{
 					label: "दररोज ३० मिनिटे किंवा त्यापेक्षा कमी वेळ",
@@ -317,12 +288,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २०",
-			label:
-				"पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
-			kid_label:
-				"पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
-			adult_label:
-				"पिछले सप्ताह के दौरान आपके बच्चे ने जिन दिनों ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			label: "पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			kid_label: "पिछले सप्ताह के दौरान जिन दिनों आपने ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
+			adult_label: "पिछले सप्ताह के दौरान आपके बच्चे ने जिन दिनों ये गतिविधियाँ कीं, वे आमतौर पर कितने समय तक चलती थीं?",
 			choices: [
 				{
 					label: "प्रति दिन 30 मिनट या उससे कम",
@@ -345,12 +313,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
-			label:
-				"On the days that you did these activities during the past week, how long did it usually last?",
-			kid_label:
-				"On the days that you did these activities during the past week, how long did it usually last?",
-			adult_label:
-				"On the days that your child did these activities during the past week, how long did it usually last?",
+			label: "On the days that you did these activities during the past week, how long did it usually last?",
+			kid_label: "On the days that you did these activities during the past week, how long did it usually last?",
+			adult_label: "On the days that your child did these activities during the past week, how long did it usually last?",
 			choices: [
 				{
 					label: "30 minutes or less per day",
@@ -374,10 +339,8 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "سؤال [٢٠]",
 			label: "في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
-			kid_label:
-				"في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
-			adult_label:
-				"في الأيام التي قام فيها طفلك بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرق عادةً؟",
+			kid_label: "في الأيام التي قمت فيها بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرقت عادةً؟",
+			adult_label: "في الأيام التي قام فيها طفلك بهذه الأنشطة خلال الأسبوع الماضي، كم من الوقت استغرق عادةً؟",
 			choices: [
 				{
 					label: "٣٠ دقيقة أو أقل في اليوم",
@@ -426,10 +389,8 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 20",
-			label:
-				"Na última semana, nos dias em que você fez essas atividades quanto tempo geralmente durou?",
-			kid_label:
-				"Na última semana, nos dias em que você fez essas atividades quanto tempo geralmente durou?",
+			label: "Na última semana, nos dias em que você fez essas atividades quanto tempo geralmente durou?",
+			kid_label: "Na última semana, nos dias em que você fez essas atividades quanto tempo geralmente durou?",
 			adult_label:
 				"Na última semana, nos dias em que a criança ou adolescente que você é responsável fez essas atividades quanto tempo geralmente durou?",
 			choices: [
@@ -454,12 +415,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 20",
-			label:
-				"Under de dagar du ägnade dig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
-			kid_label:
-				"Under de dagar du ägnade dig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
-			adult_label:
-				"Under de dagar ditt barn ägnade sig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
+			label: "Under de dagar du ägnade dig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
+			kid_label: "Under de dagar du ägnade dig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
+			adult_label: "Under de dagar ditt barn ägnade sig åt dessa aktiviteter den senaste veckan, hur lång tid varade aktiviteten vanligtvis?",
 			choices: [
 				{
 					label: "30 minuter eller mindre per dag",
@@ -482,12 +440,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 20",
-			label:
-				"ในวันที่น้องทำกิจกรรมดังกล่าวในสัปดาห์ที่ผ่านมา โดยปกติแล้วกิจกรรมเหล่านั้นใช้เวลานานเท่าไร?",
-			kid_label:
-				"ในวันที่น้องทำกิจกรรมดังกล่าวในสัปดาห์ที่ผ่านมา โดยปกติแล้วกิจกรรมเหล่านั้นใช้เวลานานเท่าไร?",
-			adult_label:
-				"ในวันที่บุตรหลานของคุณทำกิจกรรมดังกล่าวในสัปดาห์ที่ผ่านมา โดยปกติแล้วกิจกรรมเหล่านั้นใช้เวลานานเท่าไร?",
+			label: "ในวันที่น้องทำกิจกรรมดังกล่าวในสัปดาห์ที่ผ่านมา โดยปกติแล้วกิจกรรมเหล่านั้นใช้เวลานานเท่าไร?",
+			kid_label: "ในวันที่น้องทำกิจกรรมดังกล่าวในสัปดาห์ที่ผ่านมา โดยปกติแล้วกิจกรรมเหล่านั้นใช้เวลานานเท่าไร?",
+			adult_label: "ในวันที่บุตรหลานของคุณทำกิจกรรมดังกล่าวในสัปดาห์ที่ผ่านมา โดยปกติแล้วกิจกรรมเหล่านั้นใช้เวลานานเท่าไร?",
 			choices: [
 				{
 					label: "30 นาทีต่อวันหรือน้อยกว่า",
@@ -535,12 +490,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 20",
-			label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			kid_label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			adult_label:
-				"En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			kid_label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			adult_label: "En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
 			choices: [
 				{
 					label: "30 minutos o menos al día",
@@ -563,12 +515,9 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 20",
-			label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			kid_label:
-				"En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
-			adult_label:
-				"En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			kid_label: "En los días que realizaste estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
+			adult_label: "En los días que su hija o hijo realizó estas actividades durante la semana pasada, ¿cuánto tiempo duraron por lo general?",
 			choices: [
 				{
 					label: "30 minutos o menos al día",
@@ -591,10 +540,8 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 20",
-			label:
-				"Lors des journées où tu as fait ces activités au cours de la dernière semaine, combien de temps duraient-elles en général?",
-			kid_label:
-				"Lors des journées où tu as fait ces activités au cours de la dernière semaine, combien de temps duraient-elles en général?",
+			label: "Lors des journées où tu as fait ces activités au cours de la dernière semaine, combien de temps duraient-elles en général?",
+			kid_label: "Lors des journées où tu as fait ces activités au cours de la dernière semaine, combien de temps duraient-elles en général?",
 			adult_label:
 				"Lors des journées où ton enfant a fait ces activités au cours de la dernière semaine, combien de temps duraient-elles en général?",
 			choices: [

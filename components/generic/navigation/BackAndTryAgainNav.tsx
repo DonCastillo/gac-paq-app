@@ -1,9 +1,9 @@
-import { View, StyleSheet } from "react-native";
+import ButtonIcon from "@components/buttons/ButtonIcon";
+import BtnCntrWdthShadowed from "@components/derived-buttons/BtnCntrWdthShadowed";
+import { getPhrases } from "@store/settings/settingsSlice";
 import React from "react";
-import ButtonIcon from "components/buttons/ButtonIcon";
-import BtnCntrWdthShadowed from "components/derived-buttons/BtnCntrWdthShadowed";
+import { StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getPhrases } from "store/settings/settingsSlice";
 
 interface Props {
 	onPrev: () => void;

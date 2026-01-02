@@ -1,0 +1,9 @@
+export { default as LanguageAdultPage } from "./language/LanguageAdultPage";
+export { default as LoadingScreenAdultPage } from "./LoadingScreenAdult";
+export { default as OpeningQuestionAdultPage } from "./opening/OpeningQuestionAdultPage";
+export { default as PreambleAdultPage } from "./preamble/PreambleAdultPage";
+export { default as QuestionnaireAdultExtroPage } from "./questionnaire_extro/QuestionnaireAdultExtroPage";
+export { default as QuestionnaireAdultIntroPage } from "./questionnaire_intro/QuestionnaireAdultIntroPage";
+export { default as QuestionnaireAdultQuestionPage } from "./questionnaire_page/QuestionnaireAdultQuestionPage";
+export { default as StateAdultPage } from "./state/StateAdultPage";
+export { default as TextAdultPage } from "./text/TextAdultPage";

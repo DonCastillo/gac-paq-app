@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangSectionPayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangSectionPayloadInterface } from "@interface/payload.type";
 
 const S4Intro: LangSectionPayloadInterface = {
 	ident: "transportation_intro",

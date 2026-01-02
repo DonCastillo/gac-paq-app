@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S3Q2: LangQuestionRadioPayloadInterface = {
 	ident: "work_2",
@@ -15,8 +15,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 13",
 			label: "In the past week, how many hours have you spent volunteering and/or working?",
 			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
-			adult_label:
-				"In the past week, how many hours did your child spend volunteering and/or working?",
+			adult_label: "In the past week, how many hours did your child spend volunteering and/or working?",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
@@ -45,8 +44,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 13",
 			label: "In the past week, how many hours have you spent volunteering and/or working?",
 			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
-			adult_label:
-				"In the past week, how many hours did your child spend volunteering and/or working?",
+			adult_label: "In the past week, how many hours did your child spend volunteering and/or working?",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
@@ -73,12 +71,9 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 13",
-			label:
-				"I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
-			kid_label:
-				"I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
-			adult_label:
-				"I te wiki kua hipa, e hia ngā hāora i whakapaua ai e tāu tamaiti ki te tūao, ki te mahi rānei?",
+			label: "I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
+			kid_label: "I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
+			adult_label: "I te wiki kua hipa, e hia ngā hāora i whakapaua ai e tāu tamaiti ki te tūao, ki te mahi rānei?",
 			choices: [
 				{
 					label: "Iti iho i te 1 hāora ia rā",
@@ -107,8 +102,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 13",
 			label: "In the past week, how many hours have you spent volunteering and/or working?",
 			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
-			adult_label:
-				"In the past week, how many hours did your child spent volunteering and/or working?",
+			adult_label: "In the past week, how many hours did your child spent volunteering and/or working?",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
@@ -166,8 +160,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 13",
 			label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
-			adult_label:
-				"¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando en la última semana?",
+			adult_label: "¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando en la última semana?",
 			choices: [
 				{
 					label: "Menos de 1 hora por día",
@@ -196,8 +189,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 13",
 			label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
-			adult_label:
-				"¿Cuántas horas has pasado si hija o hijo como voluntario y/o trabajando en la última semana?",
+			adult_label: "¿Cuántas horas has pasado si hija o hijo como voluntario y/o trabajando en la última semana?",
 			choices: [
 				{
 					label: "Menos de 1 hora por día",
@@ -226,8 +218,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 13",
 			label: "In the past week, how many hours have you spent volunteering and/or working?",
 			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
-			adult_label:
-				"In the past week, how many hours did your child spend volunteering and/or working?",
+			adult_label: "In the past week, how many hours did your child spend volunteering and/or working?",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
@@ -256,8 +247,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 13",
 			label: "In the past week, how many hours have you spent volunteering and/or working?",
 			kid_label: "In the past week, how many hours have you spent volunteering and/or working?",
-			adult_label:
-				"In the past week, how many hours did your child spend volunteering and/or working?",
+			adult_label: "In the past week, how many hours did your child spend volunteering and/or working?",
 			choices: [
 				{
 					label: "Less than 1 hour per day",
@@ -284,12 +274,9 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 13",
-			label:
-				"M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
-			kid_label:
-				"M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
-			adult_label:
-				"M'sabata yapitayi, ndi maola angati omwe mwana wanu anagwira ntchito yolipidwa kapena yongodzipereka?",
+			label: "M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
+			kid_label: "M'sabata yapitayi, ndi maola angati omwe wakhala ukugwira ntchito yolipidwa kapena yongodzipereka?",
+			adult_label: "M'sabata yapitayi, ndi maola angati omwe mwana wanu anagwira ntchito yolipidwa kapena yongodzipereka?",
 			choices: [
 				{
 					label: "Osafika ola limodzi pa tsiku",
@@ -318,8 +305,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "प्रश्न १३",
 			label: "गेल्या आठवड्यात, तुम्ही किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
 			kid_label: "गेल्या आठवड्यात, तुम्ही किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
-			adult_label:
-				"गेल्या आठवड्यात, तुमच्या मुलाने किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
+			adult_label: "गेल्या आठवड्यात, तुमच्या मुलाने किती तास स्वयंसेवक म्हणून आणि/किंवा नोकरीतील काम केले?",
 			choices: [
 				{
 					label: "दररोज एका तासापेक्षा कमी वेळ",
@@ -406,8 +392,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "سؤال [١٣]",
 			label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
 			kid_label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضيتها في العمل التطوعي أو الوظيفة؟",
-			adult_label:
-				"خلال الأسبوع الماضي، كم عدد الساعات التي قضاها طفلك في العمل التطوعي و/أو الوظيفة؟",
+			adult_label: "خلال الأسبوع الماضي، كم عدد الساعات التي قضاها طفلك في العمل التطوعي و/أو الوظيفة؟",
 			choices: [
 				{
 					label: "‌أقل من ساعة في اليوم",
@@ -434,12 +419,9 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १३",
-			label:
-				"तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
-			kid_label:
-				"तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको)  हप्तामा, तपाईंको छोरा वा छोरीले कति घण्टा काम वा स्वयंसेवामा व्यतित गर्नुभयो?",
+			label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
+			kid_label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्तामा कति घण्टा काम वा स्वयंसेवा मा व्यतित (बिताउनु) गर्नुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको)  हप्तामा, तपाईंको छोरा वा छोरीले कति घण्टा काम वा स्वयंसेवामा व्यतित गर्नुभयो?",
 			choices: [
 				{
 					label: "दिनको १ घन्टा भन्दा कम",
@@ -466,10 +448,8 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 13",
-			label:
-				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado?",
-			kid_label:
-				"Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado?",
+			label: "Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado?",
+			kid_label: "Na última semana, quantas horas por dia você passou fazendo trabalho voluntário e/ou trabalho remunerado?",
 			adult_label:
 				"Na última semana, quantas horas por dia a criança ou adolescente que você é responsável passou fazendo trabalho voluntário ou trabalho remunerado?",
 			choices: [
@@ -500,8 +480,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Fråga 13",
 			label: "Hur många timmar arbetade du (eller arbetade ideellt) under den senaste veckan?",
 			kid_label: "Hur många timmar arbetade du (eller arbetade ideellt) under den senaste veckan?",
-			adult_label:
-				"Hur många timmar arbetade ditt barn (eller arbetade ideellt) under den senaste veckan?",
+			adult_label: "Hur många timmar arbetade ditt barn (eller arbetade ideellt) under den senaste veckan?",
 			choices: [
 				{
 					label: "Mindre än 1 timme per dag",
@@ -530,8 +509,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "ข้อ 13",
 			label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
 			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
-			adult_label:
-				"สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลากับการทำงานและ/หรือเป็นอาสาสมัครวันละกี่ชั่วโมง?",
 			choices: [
 				{
 					label: "น้อยกว่า 1 ชั่วโมง (ต่อวัน)",
@@ -589,8 +567,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 13",
 			label: "¿Cuántas horas has pasado como voluntario y/o trabajando la semana pasada?",
 			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando la semana pasada?",
-			adult_label:
-				"¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando durante la semana pasada?",
+			adult_label: "¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando durante la semana pasada?",
 			choices: [
 				{
 					label: "Menos de 1 hora al día",
@@ -619,8 +596,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 13",
 			label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
 			kid_label: "¿Cuántas horas has pasado como voluntario y/o trabajando en la última semana?",
-			adult_label:
-				"¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando en la última semana?",
+			adult_label: "¿Cuántas horas ha pasado su hija o hijo como voluntario y/o trabajando en la última semana?",
 			choices: [
 				{
 					label: "Menos de 1 hora al día",
@@ -647,12 +623,9 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 13",
-			label:
-				"Durant la dernière semaine, combien d'heures as-tu passées à faire du bénévolat et/ou à travailler?",
-			kid_label:
-				"Durant la dernière semaine, combien d'heures as-tu passées à faire du bénévolat et/ou à travailler?",
-			adult_label:
-				"Durant la dernière semaine, combien d'heures ton enfant a-t-il (elle) passées à faire du bénévolat et/ou à travailler?",
+			label: "Durant la dernière semaine, combien d'heures as-tu passées à faire du bénévolat et/ou à travailler?",
+			kid_label: "Durant la dernière semaine, combien d'heures as-tu passées à faire du bénévolat et/ou à travailler?",
+			adult_label: "Durant la dernière semaine, combien d'heures ton enfant a-t-il (elle) passées à faire du bénévolat et/ou à travailler?",
 			choices: [
 				{
 					label: "Moins de 1 heure par jour",

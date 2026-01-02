@@ -1,7 +1,7 @@
-import type { ModeType } from "interface/union.type";
-import Mode from "constants/mode.enum";
-import { store } from "store/store";
-import type { SectionPayloadInterface } from "interface/payload.type";
+import Mode from "@constants/mode.enum";
+import type { SectionPayloadInterface } from "@interface/payload.type";
+import type { ModeType } from "@interface/union.type";
+import { store } from "@store/store";
 
 const translateQuestionLabel = (kidLabel: string, adultLabel: string, mode: ModeType): string => {
 	if (mode === Mode.Adult) {
@@ -10,26 +10,8 @@ const translateQuestionLabel = (kidLabel: string, adultLabel: string, mode: Mode
 	return kidLabel;
 };
 
-const translateDescription = (
-	originalDescription: string,
-	descriptionMode: { kid: string; adult: string } | undefined,
-	mode: ModeType,
-): string | null => {
-	if (descriptionMode === undefined || descriptionMode === null) return originalDescription;
-	if (mode === undefined || mode === null) return originalDescription;
-
-	if (mode === Mode.Kid || mode === Mode.Teen) {
-		return descriptionMode.kid ?? originalDescription;
-	} else if (mode === Mode.Adult) {
-		return descriptionMode.adult ?? originalDescription;
-	} else {
-		return originalDescription;
-	}
-};
-
 const translateSectionHeading = (): Record<number, string> => {
-	const sectionPages: Record<number, SectionPayloadInterface> =
-		store.getState().questions.sectionPages;
+	const sectionPages: Record<number, SectionPayloadInterface> = store.getState().questions.sectionPages;
 	if (Object.keys(sectionPages).length === 0) return [];
 	const sectionTitles: Record<number, string> = {};
 
@@ -45,7 +27,7 @@ const translateSectionHeading = (): Record<number, string> => {
 	return sectionTitles;
 };
 
-const translateText = (text: { kid: string; adult: string }, mode: ModeType): string => {
+const translateText = (text: { kid: string; adult: string } | undefined, mode: ModeType): string => {
 	if (mode === undefined) return "";
 	if (text === undefined || text === null) return "";
 	if (mode === Mode.Adult) return text.adult;
@@ -72,11 +54,4 @@ const intToString = (value: number | null): string => {
 	return value.toString();
 };
 
-export {
-	translateQuestionLabel,
-	translateDescription,
-	translateSectionHeading,
-	translateText,
-	stringToInt,
-	intToString,
-};
+export { intToString, stringToInt, translateQuestionLabel, translateSectionHeading, translateText };

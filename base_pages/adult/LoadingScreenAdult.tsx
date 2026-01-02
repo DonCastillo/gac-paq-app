@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
-import { StyleSheet, View, Image, BackHandler } from "react-native";
-import Main from "components/Main";
-import CenterMain from "components/orientation/CenterMain";
-import ProgressBar from "components/ProgressBar";
-import { horizontalScale, moderateScale } from "utils/responsive.utils";
+import Main from "@components/Main";
+import CenterMain from "@components/orientation/CenterMain";
+import Paragraph from "@components/Paragraph";
+import ProgressBar from "@components/ProgressBar";
+import useBackHandler from "@hooks/useBackHandler";
+import { getDevice } from "@store/settings/settingsSlice";
+import { horizontalScale, moderateScale } from "@utils/responsive.utils";
+import React from "react";
+import { Image, StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/settings/settingsSlice";
-import Paragraph from "components/Paragraph";
 
 interface PropsInterface {
 	displayTitle?: boolean;
@@ -16,12 +17,7 @@ const LoadingScreenAdult = ({ displayTitle }: PropsInterface): React.ReactElemen
 	const device = useSelector(getDevice);
 	const progressBarTop = moderateScale(device.isTablet ? 10 : -20, device.screenHeight);
 
-	useEffect(() => {
-		const backHandler = BackHandler.addEventListener("hardwareBackPress", () => {
-			return true;
-		});
-		return () => backHandler.remove();
-	}, []);
+	useBackHandler();
 
 	return (
 		<View style={[styles.container]}>
@@ -29,7 +25,7 @@ const LoadingScreenAdult = ({ displayTitle }: PropsInterface): React.ReactElemen
 				<CenterMain>
 					<Image
 						style={[styles.logo, { maxWidth: horizontalScale(250, device.screenWidth) }]}
-						source={require("assets/splash-icon-loading.png")}
+						source={require("@assets/splash-icon-loading.png")}
 					/>
 					{displayTitle === true && (
 						<Paragraph customStyle={{ color: "#37383c", fontSize: 20, lineHeight: 30 }}>

@@ -1,7 +1,7 @@
-import QuestionLabel from "components/kid/QuestionLabel";
+import QuestionLabel from "@components/kid/QuestionLabel";
+import { GeneralStyle } from "@styles/general";
+import { adjustQuestionSublabel } from "@utils/style";
 import React from "react";
-import { GeneralStyle } from "styles/general";
-import { adjustQuestionSublabel } from "utils/style";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -9,11 +9,7 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-const QuestionSubLabel = ({
-	children,
-	customStyle = {},
-	textStyle = {},
-}: PropsInterface): React.ReactElement => {
+const QuestionSubLabel = ({ children, customStyle = {}, textStyle = {} }: PropsInterface): React.ReactElement => {
 	if (children !== null && children !== undefined && children !== "") {
 		return (
 			<QuestionLabel

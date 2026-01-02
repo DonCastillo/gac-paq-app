@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S2Q3: LangQuestionRadioPayloadInterface = {
 	ident: "household_3",
@@ -13,12 +13,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
-			label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			kid_label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			adult_label:
-				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			choices: [
 				{
 					label: "15 minutes or less per day",
@@ -41,12 +38,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
-			label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			kid_label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			adult_label:
-				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			choices: [
 				{
 					label: "15 minutes or less per day",
@@ -97,12 +91,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
-			label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			kid_label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			adult_label:
-				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			choices: [
 				{
 					label: "15 minutes or less per day",
@@ -125,12 +116,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 10",
-			label:
-				"Ve dnech, kdy ses v minulém týdnu věnoval(a) domácím povinnostem, kolik času za den jsi těmito povinnostmi strávil(a)?",
-			kid_label:
-				"Ve dnech, kdy ses v minulém týdnu věnoval(a) domácím povinnostem, kolik času za den jsi těmito povinnostmi strávil(a)?",
-			adult_label:
-				"Ve dnech, kdy se vaše dítě v minulém týdnu věnovalo domácím povinnostem, kolik času za den těmito povinnostmi strávilo?",
+			label: "Ve dnech, kdy ses v minulém týdnu věnoval(a) domácím povinnostem, kolik času za den jsi těmito povinnostmi strávil(a)?",
+			kid_label: "Ve dnech, kdy ses v minulém týdnu věnoval(a) domácím povinnostem, kolik času za den jsi těmito povinnostmi strávil(a)?",
+			adult_label: "Ve dnech, kdy se vaše dítě v minulém týdnu věnovalo domácím povinnostem, kolik času za den těmito povinnostmi strávilo?",
 			choices: [
 				{
 					label: "Méně než 15 minut za den",
@@ -153,10 +141,8 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 10",
-			label:
-				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
-			kid_label:
-				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			label: "En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			kid_label: "En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			adult_label:
 				"En los días que su hija o hijo realizó tareas domésticas durante la semana pasada, ¿cuánto tiempo pasó haciéndolas a lo largo del día?",
 			choices: [
@@ -181,10 +167,8 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 10",
-			label:
-				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
-			kid_label:
-				"En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			label: "En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			kid_label: "En los días que hiciste tareas domésticas durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			adult_label:
 				"En los días que su hija o hijo hizo tareas domésticas durante la semana pasada, ¿cuánto tiempo pasó haciéndolas a lo largo del día?",
 			choices: [
@@ -213,12 +197,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
-			label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			kid_label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			adult_label:
-				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			choices: [
 				{
 					label: "15 minutes or less per day",
@@ -241,12 +222,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
-			label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			kid_label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			adult_label:
-				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			choices: [
 				{
 					label: "15 minutes or less per day",
@@ -269,8 +247,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 10",
-			label:
-				"Pa masiku amene unagwira ntchito zapakhomo sabata yapitayi, kodi zinakutengera nthawi yaitali bwanji kugwira ntchitozi pa tsiku lonse?",
+			label: "Pa masiku amene unagwira ntchito zapakhomo sabata yapitayi, kodi zinakutengera nthawi yaitali bwanji kugwira ntchitozi pa tsiku lonse?",
 			kid_label:
 				"Pa masiku amene unagwira ntchito zapakhomo sabata yapitayi, kodi zinakutengera nthawi yaitali bwanji kugwira ntchitozi pa tsiku lonse?",
 			adult_label:
@@ -297,10 +274,8 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १०",
-			label:
-				"गेल्या आठवड्यादरम्यान तुम्ही ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी तुम्ही दिवसभरात ही कामे करण्यात किती वेळ घालवलात?",
-			kid_label:
-				"गेल्या आठवड्यादरम्यान तुम्ही ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी तुम्ही दिवसभरात ही कामे करण्यात किती वेळ घालवलात?",
+			label: "गेल्या आठवड्यादरम्यान तुम्ही ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी तुम्ही दिवसभरात ही कामे करण्यात किती वेळ घालवलात?",
+			kid_label: "गेल्या आठवड्यादरम्यान तुम्ही ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी तुम्ही दिवसभरात ही कामे करण्यात किती वेळ घालवलात?",
 			adult_label:
 				"गेल्या आठवड्यात तुमच्या मुलाने ज्या दिवशी घरातील नेहमीची कामे केलीत, त्यावेळी त्याने/ तिने दिवसभरात ही कामे करण्यात किती वेळ घालवला?",
 			choices: [
@@ -325,12 +300,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १०",
-			label:
-				"पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में वह काम करने में कितना समय बिताया?",
-			kid_label:
-				"पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में वह काम करने में कितना समय बिताया?",
-			adult_label:
-				"पिछले सप्ताह के दौरान जिन दिनों आपके बच्चे ने घरेलू कामकाज किए, उन्होंने पूरे दिन में वह काम करने में कितना समय बिताया?",
+			label: "पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में वह काम करने में कितना समय बिताया?",
+			kid_label: "पिछले सप्ताह के दौरान जिन दिनों आपने घरेलू कामकाज किए, आपने पूरे दिन में वह काम करने में कितना समय बिताया?",
+			adult_label: "पिछले सप्ताह के दौरान जिन दिनों आपके बच्चे ने घरेलू कामकाज किए, उन्होंने पूरे दिन में वह काम करने में कितना समय बिताया?",
 			choices: [
 				{
 					label: "प्रतिदिन 15 मिनट या उससे कम",
@@ -353,12 +325,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
-			label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			kid_label:
-				"On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
-			adult_label:
-				"On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
+			label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			kid_label: "On the days when you did chores during the past week, how much time did you spend doing chores throughout the day?",
+			adult_label: "On the days when your child did chores during the past week, how much time did they spend doing chores throughout the day?",
 			choices: [
 				{
 					label: "15 minutes or less per day",
@@ -381,12 +350,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"ar-AE": {
 			type: Question.QuestionRadio,
 			heading: "سؤال [١٠]",
-			label:
-				"في الأيام التي قمت فيها بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت قضيت في القيام بتلك الأعمال طوال اليوم؟",
-			kid_label:
-				"في الأيام التي قمت فيها بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت قضيت في القيام بتلك الأعمال طوال اليوم؟",
-			adult_label:
-				"في الأيام التي قام فيها طفلك بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت قضى في القيام بتلك الأعمال طوال اليوم؟",
+			label: "في الأيام التي قمت فيها بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت قضيت في القيام بتلك الأعمال طوال اليوم؟",
+			kid_label: "في الأيام التي قمت فيها بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت قضيت في القيام بتلك الأعمال طوال اليوم؟",
+			adult_label: "في الأيام التي قام فيها طفلك بالأعمال المنزلية خلال الأسبوع الماضي، كم من الوقت قضى في القيام بتلك الأعمال طوال اليوم؟",
 			choices: [
 				{
 					label: "١٥ دقيقة أو أقل في اليوم",
@@ -409,12 +375,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १०",
-			label:
-				"तपाईंले पछिल्लो (गएको/ बितेको) हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन घरायसी कामकाजमा कति समय व्यतित् गर्नुभयो?",
-			kid_label:
-				"तपाईंले पछिल्लो (गएको/ बितेको) हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन घरायसी कामकाजमा कति समय व्यतित् गर्नुभयो?",
-			adult_label:
-				"तपाईंको छोरा वा छोरीले पछिल्लो हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन सो घरायसी काममा कति समय व्यतित गर्नुभयो?",
+			label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन घरायसी कामकाजमा कति समय व्यतित् गर्नुभयो?",
+			kid_label: "तपाईंले पछिल्लो (गएको/ बितेको) हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन घरायसी कामकाजमा कति समय व्यतित् गर्नुभयो?",
+			adult_label: "तपाईंको छोरा वा छोरीले पछिल्लो हप्ता काम गरेका दिनहरुमध्ये प्रत्येक दिन सो घरायसी काममा कति समय व्यतित गर्नुभयो?",
 			choices: [
 				{
 					label: "प्रत्येक दिन १५ मिनेट वा सो भन्दा कम",
@@ -465,12 +428,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 10",
-			label:
-				"Under de dagar då du gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
-			kid_label:
-				"Under de dagar då du gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
-			adult_label:
-				"Under de dagar då ditt barn gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
+			label: "Under de dagar då du gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
+			kid_label: "Under de dagar då du gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
+			adult_label: "Under de dagar då ditt barn gjorde hushållssysslor den senaste veckan, hur mycket tid tog det då?",
 			choices: [
 				{
 					label: "15 minuter eller mindre per dag",
@@ -493,12 +453,9 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"th-TH": {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 10",
-			label:
-				"สัปดาห์ที่แล้ว น้องใช้เวลาไปกับการทำงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัวมากน้อยเพียงใดในแต่ละวัน?",
-			kid_label:
-				"สัปดาห์ที่แล้ว น้องใช้เวลาไปกับการทำงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัวมากน้อยเพียงใดในแต่ละวัน?",
-			adult_label:
-				"สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาไปกับการทำงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัวมากน้อยเพียงใดในแต่ละวัน?",
+			label: "สัปดาห์ที่แล้ว น้องใช้เวลาไปกับการทำงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัวมากน้อยเพียงใดในแต่ละวัน?",
+			kid_label: "สัปดาห์ที่แล้ว น้องใช้เวลาไปกับการทำงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัวมากน้อยเพียงใดในแต่ละวัน?",
+			adult_label: "สัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาไปกับการทำงานบ้านหรืองานที่ได้รับมอบหมายหน้าที่จากครอบครัวมากน้อยเพียงใดในแต่ละวัน?",
 			choices: [
 				{
 					label: "15 นาทีหรือน้อยกว่าต่อวัน",
@@ -546,8 +503,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 10",
-			label:
-				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			label: "En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			kid_label:
 				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			adult_label:
@@ -574,8 +530,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 10",
-			label:
-				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
+			label: "En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			kid_label:
 				"En los días que hiciste tareas del hogar o quehaceres durante la semana pasada, ¿cuánto tiempo pasaste haciéndolas a lo largo del día?",
 			adult_label:
@@ -602,10 +557,8 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 10",
-			label:
-				"Lors des journées où tu as fait des tâches dans la dernière semaine, combien de temps y as-tu accordé chaque jour?",
-			kid_label:
-				"Lors des journées où tu as fait des tâches dans la dernière semaine, combien de temps y as-tu accordé chaque jour?",
+			label: "Lors des journées où tu as fait des tâches dans la dernière semaine, combien de temps y as-tu accordé chaque jour?",
+			kid_label: "Lors des journées où tu as fait des tâches dans la dernière semaine, combien de temps y as-tu accordé chaque jour?",
 			adult_label:
 				"Lors des journées où ton enfant a fait des tâches dans la dernière semaine, combien de temps y a-t-il (elle) accordé chaque jour?",
 			choices: [

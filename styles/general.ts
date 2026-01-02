@@ -62,7 +62,7 @@ const GeneralStyle = {
 			aspectRatio: 1,
 		},
 		icon: {
-			fontSize: 33,
+			fontSize: 30,
 		},
 		menuOption: {
 			borderBottomColor: "#5c5c5c",
@@ -374,4 +374,4 @@ const DefaultStyle = {
 	},
 };
 
-export { GeneralStyle, DefaultStyle, Font };
+export { DefaultStyle, Font, GeneralStyle };

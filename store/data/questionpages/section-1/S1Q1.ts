@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S1Q1: LangQuestionRadioPayloadInterface = {
 	ident: "school_1",
@@ -278,8 +278,7 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 1",
 			label: "Na última semana, você foi à escola?",
 			kid_label: "Na última semana, você foi à escola?",
-			adult_label:
-				"Na última semana, a criança ou adolescente que você é responsável foi à escola?",
+			adult_label: "Na última semana, a criança ou adolescente que você é responsável foi à escola?",
 			choices: [
 				{
 					label: "Sim",

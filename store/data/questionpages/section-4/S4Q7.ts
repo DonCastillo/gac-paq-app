@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionCheckboxPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionCheckboxPayloadInterface } from "@interface/payload.type";
 
 const S4Q7: LangQuestionCheckboxPayloadInterface = {
 	ident: "transportation_7",
@@ -13,10 +13,8 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
-			label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
-			kid_label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			adult_label:
 				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			kid_sublabel: "Please select all responses that apply to you.",
@@ -47,10 +45,8 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
-			label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
-			kid_label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			adult_label:
 				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			kid_sublabel: "Please select all responses that apply to you.",
@@ -115,10 +111,8 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
-			label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend’s house, a park, a shop)?",
-			kid_label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend’s house, a park, a shop)?",
+			label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend’s house, a park, a shop)?",
+			kid_label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend’s house, a park, a shop)?",
 			adult_label:
 				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			kid_sublabel: "Please select all responses that apply to you.",
@@ -251,10 +245,8 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
-			label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
-			kid_label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			adult_label:
 				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			kid_sublabel: "Please select all responses that apply to you.",
@@ -285,10 +277,8 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
-			label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
-			kid_label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			adult_label:
 				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			kid_sublabel: "Please select all responses that apply to you.",
@@ -429,10 +419,8 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionCheckbox,
 			heading: "Question 17",
-			label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
-			kid_label:
-				"In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
+			kid_label: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			adult_label:
 				"In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 			kid_sublabel: "Please select all responses that apply to you.",
@@ -591,8 +579,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					value: "Wheeled",
 					label_mode: {
 						kid: "Ja jag har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
-						adult:
-							"Ja mitt barn har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
+						adult: "Ja mitt barn har cyklat (eller åkt rullstol, e-cykel, sparkcykel eller rollerblades)",
 					},
 				},
 				{
@@ -626,8 +613,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					value: "Wheeled",
 					label_mode: {
 						kid: "ใช่ ฉันใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
-						adult:
-							"ใช่ บุตรหลานของฉันใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
+						adult: "ใช่ บุตรหลานของฉันใช้อุปกรณ์หรือรถที่มีล้อ หรือล้อเลื่อนที่ใช้การออกแรงของร่างกาย",
 					},
 				},
 				{
@@ -639,12 +625,9 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionCheckbox,
 			heading: "问题 17",
-			label:
-				"在过去一周里，你是否采用积极交通方式（如步行和骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
-			kid_label:
-				"在过去一周里，你是否采用积极交通方式（如步行和骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
-			adult_label:
-				"在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
+			label: "在过去一周里，你是否采用积极交通方式（如步行和骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
+			kid_label: "在过去一周里，你是否采用积极交通方式（如步行和骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
+			adult_label: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
 			kid_sublabel: "请选择所有适用于你的答案。",
 			adult_sublabel: "请选择所有适用于您的孩子的答案。",
 			choices: [

@@ -1,15 +1,14 @@
-import ProgressBar from "components/generic/ProgressBar";
+import ProgressBar from "@components/generic/ProgressBar";
+import { getColorTheme, getCurrentPage, getSectionTotalPages } from "@store/settings/settingsSlice";
 import React from "react";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPage, getSectionTotalPages } from "store/settings/settingsSlice";
 
 const ProgressBarKid = (): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const sectionTotalPages = useSelector(getSectionTotalPages);
 	const colorTheme = useSelector(getColorTheme);
 	const { color100, color200 } = colorTheme;
-	const sectionPageTotal =
-		currentPage.sectionNumber !== null ? sectionTotalPages[currentPage.sectionNumber] : null;
+	const sectionPageTotal = currentPage.sectionNumber !== null ? sectionTotalPages[currentPage.sectionNumber] : null;
 
 	return (
 		<ProgressBar

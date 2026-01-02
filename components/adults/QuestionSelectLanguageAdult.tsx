@@ -1,37 +1,30 @@
+import FlagIcons, { FlagCodeType } from "@/styles/flags";
+import FlatListContainer from "@components/FlatListContainer";
+import type { LanguageInterface } from "@interface/payload.type";
+import { getLanguageOption } from "@store/questions/questionsSlice";
+import { getColorTheme, getDevice } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { horizontalScale, verticalScale } from "@utils/responsive.utils";
+import { adjustWritingDirection } from "@utils/style";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import type { LanguageInterface } from "interface/payload.type";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getLanguageOption } from "store/questions/questionsSlice";
-import { SafeAreaView, StyleSheet, View, Text, Pressable } from "react-native";
-import { horizontalScale, verticalScale } from "utils/responsive.utils";
-import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
-import { GeneralStyle } from "styles/general";
-import { adjustWritingDirection } from "utils/style";
-import FlatListContainer from "components/FlatListContainer";
 
 interface PropsInterface {
 	onChange: (value: string | null) => void;
 	selectedValue: string | null;
 }
 
-const QuestionSelectLanguageAdult = ({
-	onChange,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface): React.ReactElement => {
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-	const currentPage = useSelector(getCurrentPage);
 	const { color100 } = colorTheme;
 	const flatListRef = React.useRef<FlatList>(null);
 
-	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [optionRowIndex, setOptionRowIndex] = useState<number>(0);
 
 	const options: LanguageInterface[] = useSelector(getLanguageOption);
-	const questionContainerWidth = horizontalScale(
-		device.orientation === "landscape" ? 250 : device.isTablet ? 290 : 340,
-		device.screenWidth,
-	);
+	const questionContainerWidth = horizontalScale(device.orientation === "landscape" ? 250 : device.isTablet ? 290 : 340, device.screenWidth);
 
 	const numColumns = device.isTablet ? 3 : 2;
 	let lastOptionMarginRight = 35;
@@ -61,8 +54,7 @@ const QuestionSelectLanguageAdult = ({
 	}
 
 	const questionContainerWidthPadding = GeneralStyle.adult.questionContainer.paddingHorizontal * 2;
-	const optionHeight =
-		(questionContainerWidth - questionContainerWidthPadding) / numColumns - optionMarginRight;
+	const optionHeight = (questionContainerWidth - questionContainerWidthPadding) / numColumns - optionMarginRight;
 
 	const optionPressedStyle = {
 		backgroundColor: color100,
@@ -75,16 +67,10 @@ const QuestionSelectLanguageAdult = ({
 	};
 
 	useEffect(() => {
-		if (selected !== selectedValue) {
-			setSelected(selectedValue);
-		}
-	}, [currentPage, selectedValue]);
-
-	useEffect(() => {
-		let index = options.findIndex((item) => item.lang_code === selected);
+		let index = options.findIndex((item) => item.lang_code === selectedValue);
 		index = Math.floor(index / numColumns);
 		setOptionRowIndex(index);
-	}, [selected]);
+	}, [selectedValue]);
 
 	useLayoutEffect(() => {
 		flatListRef.current?.scrollToIndex({
@@ -97,6 +83,8 @@ const QuestionSelectLanguageAdult = ({
 
 	const languageOption = (item: LanguageInterface, index: number): React.ReactElement => {
 		const lastItem = index === options.length - 1;
+		const flagCode: FlagCodeType = item?.flag_code?.toLowerCase() as FlagCodeType;
+		const Flag = item?.flag_code && FlagIcons[flagCode];
 
 		return (
 			<Pressable
@@ -104,16 +92,17 @@ const QuestionSelectLanguageAdult = ({
 					styles.blockOptionContainer,
 					{
 						width: "100%",
-						// height: "100%",
 						aspectRatio: device.isTablet ? 1 : 1,
-						// height: optionHeight,
 						flex: device.isTablet ? 1 / 3 : 1 / 2,
 						marginBottom: 5,
 						marginTop: 5,
 						marginLeft: 5,
 						marginRight: lastItem ? lastOptionMarginRight : optionMarginRight,
 					},
-					selected === item.lang_code && { borderColor: color100, borderWidth: 1 },
+					selectedValue === item.lang_code && {
+						borderColor: color100,
+						borderWidth: 1,
+					},
 				]}
 				onPress={() => selectHandler(item.lang_code)}
 			>
@@ -125,10 +114,8 @@ const QuestionSelectLanguageAdult = ({
 						padding: 20,
 					}}
 				>
-					{selected === item.lang_code && (
-						<View style={[styles.imageFilter, optionPressedStyle]}></View>
-					)}
-					{item?.flag?.()}
+					{selectedValue === item.lang_code && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
+					{item?.flag_code && <Flag />}
 				</View>
 				<View
 					style={[
@@ -176,9 +163,7 @@ const QuestionSelectLanguageAdult = ({
 	};
 
 	return (
-		<SafeAreaView
-			style={[styles.container, { maxHeight: verticalScale(400, device.screenHeight) }]}
-		>
+		<View style={[styles.container, { maxHeight: verticalScale(400, device.screenHeight) }]}>
 			<View style={{ backgroundColor: "white" }}>
 				{options.length > 0 && (
 					<FlatListContainer
@@ -206,7 +191,7 @@ const QuestionSelectLanguageAdult = ({
 					/>
 				)}
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 };
 

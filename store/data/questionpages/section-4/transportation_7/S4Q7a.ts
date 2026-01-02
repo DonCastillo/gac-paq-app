@@ -1,18 +1,16 @@
-import type { Transportation7Interface } from "interface/question17";
+import type { Transportation7Interface } from "@interface/question17";
 
 const Transportation7: Transportation7Interface = {
 	"en-CA": {
 		kid: {
 			none: "In the past week, did you walk or wheel to go to places (for example, a friend's house, a park, a shop)?",
-			school:
-				"In the past week, did you walk or wheel to go to places other than school (for example, a friend's house, a park, a shop)?",
+			school: "In the past week, did you walk or wheel to go to places other than school (for example, a friend's house, a park, a shop)?",
 			work: "In the past week, did you walk or wheel to go to places other than work (for example, a friend's house, a park, a shop)?",
 			both: "In the past week, did you walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 		},
 		adult: {
 			none: "In the past week, did your child walk or wheel to go to places (for example, a friend's house, a park, a shop)?",
-			school:
-				"In the past week, did your child walk or wheel to go to places other than school (for example, a friend's house, a park, a shop)?",
+			school: "In the past week, did your child walk or wheel to go to places other than school (for example, a friend's house, a park, a shop)?",
 			work: "In the past week, did your child walk or wheel to go to places other than work (for example, a friend's house, a park, a shop)?",
 			both: "In the past week, did your child walk or wheel to go to places other than school or work (for example, a friend's house, a park, a shop)?",
 		},
@@ -52,15 +50,13 @@ const Transportation7: Transportation7Interface = {
 	"th-TH": {
 		kid: {
 			none: "ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่ต่าง ๆ (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
-			school:
-				"ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			school: "ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
 			work: "ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่ที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
 			both: "ในสัปดาห์ที่แล้ว คุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
 		},
 		adult: {
 			none: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่ต่าง ๆ (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
-			school:
-				"ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
+			school: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
 			work: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่ที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
 			both: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณเดินหรือใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงาน (เช่น บ้านเพื่อน สวนสาธารณะ ร้านค้า) หรือไม่?",
 		},
@@ -68,15 +64,13 @@ const Transportation7: Transportation7Interface = {
 	"zh-CN": {
 		kid: {
 			none: "在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去其他地方（例如，朋友家、公园或商店）？",
-			school:
-				"在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去过除了学校以外的地方（例如，朋友家、公园或商店）？",
+			school: "在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去过除了学校以外的地方（例如，朋友家、公园或商店）？",
 			work: "在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去过除了工作以外的地方（例如，朋友家、公园或商店）？",
 			both: "在过去一周里，你是否采用积极交通方式（如步行或骑自行车）去过除了学校或工作以外的地方（例如，朋友家、公园或商店）？",
 		},
 		adult: {
 			none: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去过其他地方（例如，朋友家、公园或商店）？",
-			school:
-				"在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去过除了学校以外的地方（例如，朋友家、公园或商店）？",
+			school: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去过除了学校以外的地方（例如，朋友家、公园或商店）？",
 			work: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去过除了工作以外的地方（例如，朋友家、公园或商店）？",
 			both: "在过去一周里，您的孩子是否采用积极交通方式（如步行或骑自行车）去学校或工作以外的地方(如朋友家、公园、商店)?",
 		},

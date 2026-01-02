@@ -1,9 +1,9 @@
+import { getDevice } from "@store/settings/settingsSlice";
+import { moderateScale } from "@utils/responsive.utils";
 import React, { memo } from "react";
 import { StyleSheet, View } from "react-native";
 import * as Progress from "react-native-progress";
 import { useSelector } from "react-redux";
-import { getDevice } from "store/settings/settingsSlice";
-import { moderateScale } from "utils/responsive.utils";
 
 interface PropsInterface {
 	currentSectionPage: number | null;
@@ -21,20 +21,12 @@ const ProgressBar = ({
 	const device = useSelector(getDevice);
 	if (currentSectionPage !== null && sectionPageTotal !== null) {
 		return (
-			<View
-				style={[
-					styles.container,
-					{ paddingHorizontal: 20, paddingTop: device.platform === "ios" ? 0 : 25 },
-				]}
-			>
+			<View style={[styles.container, { paddingHorizontal: 20, paddingTop: device.platform === "ios" ? 0 : 25 }]}>
 				<Progress.Bar
 					style={{ width: "100%" }}
 					progress={currentSectionPage / sectionPageTotal}
 					width={null}
-					height={moderateScale(
-						device.isTablet ? 4 : 4,
-						device.orientation === "portrait" ? device.screenWidth : device.screenHeight,
-					)}
+					height={moderateScale(device.isTablet ? 4 : 4, device.orientation === "portrait" ? device.screenWidth : device.screenHeight)}
 					color={filledColor}
 					unfilledColor={unfilledColor}
 					borderWidth={0}

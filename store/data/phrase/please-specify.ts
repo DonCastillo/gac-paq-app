@@ -1,4 +1,4 @@
-import type { LangPhraseInterface } from "interface/phrase";
+import type { LangPhraseInterface } from "@interface/phrase";
 
 const PleaseSpecifyPhrase: LangPhraseInterface = {
 	"en-CA": {
