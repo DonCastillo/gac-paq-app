@@ -1,6 +1,6 @@
+import { adjustQuestionLabelKid, adjustWritingDirection } from "@utils/style";
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-import { adjustQuestionLabelKid, adjustWritingDirection } from "utils/style";
+import { StyleSheet, Text, View } from "react-native";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -8,11 +8,7 @@ interface PropsInterface {
 	textStyle?: object;
 }
 
-const QuestionLabel = ({
-	children,
-	customStyle = {},
-	textStyle = {},
-}: PropsInterface): React.ReactElement => {
+const QuestionLabel = ({ children, customStyle = {}, textStyle = {} }: PropsInterface): React.ReactElement => {
 	return (
 		<View style={[styles.container, customStyle]}>
 			<Text

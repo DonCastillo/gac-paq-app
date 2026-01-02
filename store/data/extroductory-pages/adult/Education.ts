@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const Education: LangQuestionRadioPayloadInterface = {
 	ident: "highest_level_of_education",
@@ -15,8 +15,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
-			adult_label:
-				"What is the highest level of education completed by a member of your household?",
+			adult_label: "What is the highest level of education completed by a member of your household?",
 			choices: [
 				{
 					label: "No formal schooling",
@@ -49,8 +48,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
-			adult_label:
-				"What is the highest level of education completed by a member of your household?",
+			adult_label: "What is the highest level of education completed by a member of your household?",
 			choices: [
 				{
 					label: "No formal schooling",
@@ -116,8 +114,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
-			adult_label:
-				"What is the highest level of education completed by a member of your household?",
+			adult_label: "What is the highest level of education completed by a member of your household?",
 			choices: [
 				{
 					label: "No formal schooling",
@@ -253,8 +250,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
-			adult_label:
-				"What is the highest level of education completed by a member of your household?",
+			adult_label: "What is the highest level of education completed by a member of your household?",
 			choices: [
 				{
 					label: "No formal schooling",
@@ -287,8 +283,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
-			adult_label:
-				"What is the highest level of education completed by a member of your household?",
+			adult_label: "What is the highest level of education completed by a member of your household?",
 			choices: [
 				{
 					label: "No formal schooling",
@@ -320,10 +315,8 @@ const Education: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Funso 29",
 			label: "Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
-			kid_label:
-				"Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
-			adult_label:
-				"Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
+			kid_label: "Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
+			adult_label: "Kodi m’banja mwanu munthu amene anaphunzira kwambiri anafika nawo pati maphunzirowo?",
 			choices: [
 				{
 					label: "Palibe anapita ku sukulu",
@@ -422,8 +415,7 @@ const Education: LangQuestionRadioPayloadInterface = {
 			heading: "Question 29",
 			label: "What is the highest level of education completed by a member of your household?",
 			kid_label: "What is the highest level of education completed by a member of your household?",
-			adult_label:
-				"What is the highest level of education completed by a member of your household?",
+			adult_label: "What is the highest level of education completed by a member of your household?",
 			choices: [
 				{
 					label: "No formal schooling",
@@ -719,10 +711,8 @@ const Education: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 29",
 			label: "Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
-			kid_label:
-				"Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
-			adult_label:
-				"Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
+			kid_label: "Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
+			adult_label: "Quel est le plus haut niveau de scolarité complété par un membre de votre ménage?",
 			choices: [
 				{
 					label: "Aucune scolarité",

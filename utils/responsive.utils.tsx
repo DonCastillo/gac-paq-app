@@ -1,7 +1,7 @@
-import Orientation from "constants/orientation.enum";
-import type DeviceInterface from "interface/dimensions";
-import { Dimensions, Platform, PixelRatio } from "react-native";
+import Orientation from "@constants/orientation.enum";
+import type DeviceInterface from "@interface/dimensions";
 import * as ScreenOrientation from "expo-screen-orientation";
+import { Dimensions, PixelRatio, Platform } from "react-native";
 
 const BASE_WIDTH = 375;
 const BASE_HEIGHT = 812;
@@ -75,12 +75,7 @@ const verticalScale = (size: number, height: number = BASE_HEIGHT): number => {
 		return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 1;
 	}
 };
-const moderateScale = (
-	size: number,
-	width: number = BASE_WIDTH,
-	minSize: number = 16,
-	maxSize: number = 60,
-): number => {
+const moderateScale = (size: number, width: number = BASE_WIDTH, minSize: number = 16, maxSize: number = 60): number => {
 	const factor = 0.5;
 	const newSize = size + (horizontalScale(size, width) - size) * factor;
 	let finalSize = newSize;
@@ -93,4 +88,4 @@ const moderateScale = (
 	return finalSize;
 };
 
-export { getDeviceInfo, getInitialDeviceInfo, horizontalScale, verticalScale, moderateScale };
+export { getDeviceInfo, getInitialDeviceInfo, horizontalScale, moderateScale, verticalScale };

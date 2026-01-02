@@ -1,8 +1,8 @@
-import Mode from "constants/mode.enum";
+import Mode from "@constants/mode.enum";
+import type { ModeType } from "@interface/union.type";
+import { resetAllNarrations } from "@store/settings/settingsSlice";
+import { store } from "@store/store";
 import { loadAgePage, reloadExtroFeedbackPages } from "./load_pages.utils";
-import type { ModeType } from "interface/union.type";
-import { store } from "store/store";
-import { resetAllNarrations } from "store/settings/settingsSlice";
 
 const changeMode = (value: string | null | ModeType, language: string | undefined): void => {
 	let finalMode = Mode.Kid;

@@ -1,27 +1,17 @@
-import { View, Text, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
-import type { ImageStyle, StyleProp } from "react-native";
+import FlatListContainer from "@components/FlatListContainer";
+import type { ChoiceImage } from "@interface/payload.type";
+import { getColorTheme, getCurrentPage, getDevice, getMode } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { getOptionImage, getOptionSubLabel } from "@utils/background.utils";
+import { getUserSpecifiedOther, hasOtherOption, isOtherOption, isOtherWithSpecifiedValue, optionLetter } from "@utils/options.utils";
+import { verticalScale } from "@utils/responsive.utils";
+import { adjustRadioImageAspectRatio, adjustRadioImageBlockText, adjustWritingDirection } from "@utils/style";
 import React, { useEffect, useState } from "react";
-import { GeneralStyle } from "styles/general";
+import type { ImageStyle, StyleProp } from "react-native";
+import { FlatList, Image, Pressable, StyleSheet, Text, View } from "react-native";
 import type { Svg } from "react-native-svg";
-import { getOptionImage, getOptionSubLabel } from "utils/background.utils";
-import { verticalScale } from "utils/responsive.utils";
-import RadioOption from "./subcomponents/RadioOption";
-import {
-	getUserSpecifiedOther,
-	hasOtherOption,
-	isOtherOption,
-	isOtherWithSpecifiedValue,
-	optionLetter,
-} from "utils/options.utils";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
-import type { ChoiceImage } from "interface/payload.type";
-import {
-	adjustRadioImageAspectRatio,
-	adjustRadioImageBlockText,
-	adjustWritingDirection,
-} from "utils/style";
-import FlatListContainer from "components/FlatListContainer";
+import RadioOption from "./subcomponents/RadioOption";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -29,11 +19,7 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-const QuestionRadioImage = ({
-	options,
-	onChange,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionRadioImage = ({ options, onChange, selectedValue }: PropsInterface): React.ReactElement => {
 	const mode = useSelector(getMode);
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
@@ -202,9 +188,7 @@ const QuestionRadioImage = ({
 	};
 
 	return (
-		<SafeAreaView
-			style={[styles.container, { maxHeight: verticalScale(400, device.screenHeight) }]}
-		>
+		<View style={[styles.container, { maxHeight: verticalScale(400, device.screenHeight) }]}>
 			<View>
 				{options.length <= 4 || !hasOtherOption(options) ? (
 					<FlatList
@@ -233,7 +217,7 @@ const QuestionRadioImage = ({
 					/>
 				)}
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 };
 

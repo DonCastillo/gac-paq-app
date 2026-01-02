@@ -1,13 +1,13 @@
-import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
+import PhraseLabel from "@constants/phrase_label.enum";
+import { Icon, Slider } from "@rneui/base";
+import { getColorTheme, getCurrentPage, getDevice, getPhrases } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { optionNumber } from "@utils/options.utils";
+import { horizontalScale } from "@utils/responsive.utils";
+import { adjustQuestionSliderTextKid, adjustWritingDirection } from "@utils/style";
 import React, { useEffect, useState } from "react";
-import { GeneralStyle } from "styles/general";
-import { Icon, Slider } from "@rneui/themed";
-import PhraseLabel from "constants/phrase_label.enum";
-import { horizontalScale } from "utils/responsive.utils";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getPhrases, getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
-import { adjustQuestionSliderTextKid, adjustWritingDirection } from "utils/style";
-import { optionNumber } from "utils/options.utils";
 
 interface PropsInterface {
 	onChange: (value: number | PhraseLabel.DontKnow | null) => void;
@@ -15,11 +15,7 @@ interface PropsInterface {
 	maxValue?: number;
 }
 
-const QuestionSlider = ({
-	onChange,
-	selectedValue,
-	maxValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionSlider = ({ onChange, selectedValue, maxValue }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
@@ -165,9 +161,7 @@ const QuestionSlider = ({
 										backgroundColor: isColor200(value),
 									}}
 								>
-									<Text style={[styles.tooltipText, { color: isNumber(value) ? "#fff" : "#fff" }]}>
-										{displayValue(isNumber(value) ? value : 0)}
-									</Text>
+									<Text style={[styles.tooltipText, { color: isNumber(value) ? "#fff" : "#fff" }]}>{displayValue(isNumber(value) ? value : 0)}</Text>
 								</View>
 								<View
 									style={{

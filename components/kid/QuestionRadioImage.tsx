@@ -1,36 +1,15 @@
-import {
-	View,
-	Text,
-	StyleSheet,
-	Pressable,
-	SafeAreaView,
-	Image,
-	TextInput,
-	FlatList,
-} from "react-native";
-import type { ImageStyle, StyleProp } from "react-native";
-import React, { useState, useEffect, useRef } from "react";
-import { GeneralStyle } from "styles/general";
+import { GeneralStyle } from "@styles/general";
+import { getOptionImage, getOptionSubLabel } from "@utils/background.utils";
+import { getUserSpecifiedOther, hasOtherOption, isOtherOption, isOtherWithSpecifiedValue, optionLetter } from "@utils/options.utils";
+import { horizontalScale, moderateScale } from "@utils/responsive.utils";
+import React, { useEffect, useRef, useState } from "react";
+import { FlatList, Image, ImageStyle, Pressable, StyleProp, StyleSheet, Text, TextInput, View } from "react-native";
 import type { Svg } from "react-native-svg";
-import { horizontalScale, moderateScale } from "utils/responsive.utils";
-import { getOptionImage, getOptionSubLabel } from "utils/background.utils";
-import {
-	getUserSpecifiedOther,
-	hasOtherOption,
-	isOtherOption,
-	isOtherWithSpecifiedValue,
-	optionLetter,
-} from "utils/options.utils";
 import { useSelector } from "react-redux";
 
-import {
-	getMode,
-	getColorTheme,
-	getCurrentPage,
-	getDevice,
-	getPhrases,
-} from "store/settings/settingsSlice";
-import type { ChoiceImage } from "interface/payload.type";
+import FlatListContainer from "@components/FlatListContainer";
+import type { ChoiceImage } from "@interface/payload.type";
+import { getColorTheme, getCurrentPage, getDevice, getMode, getPhrases } from "@store/settings/settingsSlice";
 import {
 	adjustOptionListImageSizeNonSVGKid,
 	adjustOptionListImageSizeSVGKid,
@@ -40,8 +19,7 @@ import {
 	adjustRadioImageBlockText,
 	adjustTextAlignmentDirection,
 	adjustWritingDirection,
-} from "utils/style";
-import FlatListContainer from "components/FlatListContainer";
+} from "@utils/style";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -49,11 +27,7 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-const QuestionRadioImage = ({
-	options,
-	onChange,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionRadioImage = ({ options, onChange, selectedValue }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
@@ -323,7 +297,7 @@ const QuestionRadioImage = ({
 	};
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<View style={styles.container}>
 			<View>
 				{options.length <= 4 || !hasOtherOption(options) ? (
 					<FlatList
@@ -354,7 +328,7 @@ const QuestionRadioImage = ({
 					/>
 				)}
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 };
 

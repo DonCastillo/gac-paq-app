@@ -1,6 +1,6 @@
-import Question from "constants/question.enum";
-import Screen from "constants/screen.enum";
-import type { LangQuestionTextareaPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionTextareaPayloadInterface } from "@interface/payload.type";
 
 const Comment: LangQuestionTextareaPayloadInterface = {
 	ident: "app_use_comment",
@@ -14,12 +14,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Enter your comment here",
-			label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			kid_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			adult_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
@@ -27,12 +24,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Enter your comment here",
-			label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			kid_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			adult_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
@@ -41,10 +35,8 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			heading: "Kōrero urupare",
 			placeholder: "Tāpiri tō kōrero ki konei",
 			label: "He kōrero rānei, he huatau rānei āu mō te taupānga, o ngā pātai rānei i tukuna ai?",
-			kid_label:
-				"He kōrero rānei, he huatau rānei āu mō te taupānga, o ngā pātai rānei i tukuna ai?",
-			adult_label:
-				"He āwhina, he whakaaro rānei āu mō te taupānga, mō ngā pātai rānei i uia e mātou?",
+			kid_label: "He kōrero rānei, he huatau rānei āu mō te taupānga, o ngā pātai rānei i tukuna ai?",
+			adult_label: "He āwhina, he whakaaro rānei āu mō te taupānga, mō ngā pātai rānei i uia e mātou?",
 			kid_sublabel: "Mēnā i whakaae, tuhia ki pouaka ki raro",
 			adult_sublabel: "Mēnā e whakaae ana, tēnā tuhia i te pouaka i raro nei",
 		},
@@ -52,12 +44,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Enter your comment here",
-			label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			kid_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			adult_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
@@ -75,12 +64,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",
 			placeholder: "Escribe aquí tu comentario",
-			label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
-			kid_label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
-			adult_label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			label: "¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			kid_label: "¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			adult_label: "¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
 			kid_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 		},
@@ -88,12 +74,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",
 			placeholder: "Escribe aquí tu comentario",
-			label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
-			kid_label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
-			adult_label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			label: "¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			kid_label: "¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			adult_label: "¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
 			kid_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 		},
@@ -101,12 +84,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Enter your comment here",
-			label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			kid_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			adult_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
@@ -114,12 +94,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Enter your comment here",
-			label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			kid_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			adult_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
@@ -127,12 +104,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Ndemanga",
 			placeholder: "Lembani ndemanga yanu apa",
-			label:
-				"Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
-			kid_label:
-				"Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
-			adult_label:
-				"Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
+			label: "Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
+			kid_label: "Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
+			adult_label: "Kodi muli ndi ndemanga kapena malingaliro okhudza pulogalamuyi kapena mafunso omwe takufunsani?",
 			kid_sublabel: "Ngati inde, chonde zilembeni m'bokosi lomwe lili pansipa",
 			adult_sublabel: "Ngati inde, chonde zilembeni m'bokosi lomwe lili pansipa",
 		},
@@ -140,12 +114,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "प्रतिसाद",
 			placeholder: "तुमची टिप्पणी येथे नोंदवा",
-			label:
-				"ॲपबद्दल किंवा आम्ही विचारलेल्या प्रश्नांबद्दल तुमच्या काही टिप्पण्या किंवा सूचना आहेत का?",
-			kid_label:
-				"ॲपबद्दल किंवा आम्ही विचारलेल्या प्रश्नांबद्दल तुमच्या काही टिप्पण्या किंवा सूचना आहेत का?",
-			adult_label:
-				"ॲपबद्दल किंवा आम्ही विचारलेल्या प्रश्नांबद्दल तुमच्या काही टिप्पण्या किंवा सूचना आहेत का?",
+			label: "ॲपबद्दल किंवा आम्ही विचारलेल्या प्रश्नांबद्दल तुमच्या काही टिप्पण्या किंवा सूचना आहेत का?",
+			kid_label: "ॲपबद्दल किंवा आम्ही विचारलेल्या प्रश्नांबद्दल तुमच्या काही टिप्पण्या किंवा सूचना आहेत का?",
+			adult_label: "ॲपबद्दल किंवा आम्ही विचारलेल्या प्रश्नांबद्दल तुमच्या काही टिप्पण्या किंवा सूचना आहेत का?",
 			kid_sublabel: "होय असल्यास, कृपया त्या खालील बॉक्समध्ये लिहा",
 			adult_sublabel: "होय असल्यास, कृपया त्या खालील बॉक्समध्ये लिहा",
 		},
@@ -153,12 +124,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "प्रतिक्रिया",
 			placeholder: "अपनी टिप्पणी यहां दर्ज करें",
-			label:
-				"क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
-			kid_label:
-				"क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
-			adult_label:
-				"क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
+			label: "क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
+			kid_label: "क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
+			adult_label: "क्या आपके पास ऐप या हमारे द्वारा पूछे गए प्रश्नों के बारे में कोई टिप्पणी या सुझाव है?",
 			kid_sublabel: "यदि हां, तो कृपया उन्हें नीचे दिए गए बॉक्स में लिखें",
 			adult_sublabel: "यदि हां, तो कृपया उन्हें नीचे दिए गए बॉक्स में लिखें",
 		},
@@ -166,12 +134,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Enter your comment here",
-			label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			kid_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
-			adult_label:
-				"Do you have any comments or suggestions about the app or the questions that we asked?",
+			label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			kid_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
+			adult_label: "Do you have any comments or suggestions about the app or the questions that we asked?",
 			kid_sublabel: "If yes, please write them in the box below",
 			adult_sublabel: "If yes, please write them in the box below",
 		},
@@ -199,12 +164,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Comentários",
 			placeholder: "Digite seu comentário aqui",
-			label:
-				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
-			kid_label:
-				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
-			adult_label:
-				"Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			label: "Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			kid_label: "Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
+			adult_label: "Você tem algum comentário ou sugestão sobre o aplicativo ou as perguntas que fizemos?",
 			kid_sublabel: "Se sim, por favor escreva-os na caixa abaixo",
 			adult_sublabel: "Se sim, por favor escreva-os na caixa abaixo",
 		},
@@ -212,12 +174,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Feedback",
 			placeholder: "Skriv din kommentar här",
-			label:
-				"Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
-			kid_label:
-				"Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
-			adult_label:
-				"Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
+			label: "Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
+			kid_label: "Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
+			adult_label: "Har du några andra kommentarer eller förslag om appen eller frågorna som vi har ställt?",
 			kid_sublabel: "Om ja, skriv dem nedan",
 			adult_sublabel: "Om ja, skriv dem nedan",
 		},
@@ -225,12 +184,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "ข้อเสนอแนะ",
 			placeholder: "ใส่ความคิดเห็นของคุณได้ที่นี่",
-			label:
-				"น้องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
-			kid_label:
-				"น้องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
-			adult_label:
-				"คุณมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามคุณไปหรือไม่",
+			label: "น้องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			kid_label: "น้องมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามน้องไปหรือไม่",
+			adult_label: "คุณมีข้อคิดเห็นหรือข้อเสนอแนะเกี่ยวกับแอปนี้ หรือเกี่ยวกับคำถามที่เราถามคุณไปหรือไม่",
 			kid_sublabel: "ถ้ามี ขอให้พิมพ์ลงในช่องด้านล่าง",
 			adult_sublabel: "ถ้ามี ขอให้พิมพ์ลงในช่องด้านล่าง",
 		},
@@ -248,12 +204,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",
 			placeholder: "Escribe aquí tu comentario",
-			label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
-			kid_label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
-			adult_label:
-				"¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
+			label: "¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+			kid_label: "¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+			adult_label: "¿Tiene algún comentario o sugerencia acerca de la aplicación o el cuestionario que acaba de contestar?",
 			kid_sublabel: "Si es así escríbelas en el siguiente cuadro por favor",
 			adult_sublabel: "Si es así por favor escríbalas en el siguiente cuadro",
 		},
@@ -261,12 +214,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Comentarios",
 			placeholder: "Escribe tus comentarios aquí",
-			label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
-			kid_label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
-			adult_label:
-				"¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+			label: "¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+			kid_label: "¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
+			adult_label: "¿Tienes algún comentario o sugerencia acerca de la aplicación o el cuestionario que acabas de contestar?",
 			kid_sublabel: "Si es así, escríbelas en el siguiente cuadro, por favor:",
 			adult_sublabel: "Si es así, escríbelas en el siguiente cuadro, por favor:",
 		},
@@ -274,12 +224,9 @@ const Comment: LangQuestionTextareaPayloadInterface = {
 			type: Question.QuestionTextarea,
 			heading: "Commentaires",
 			placeholder: "Écris ton commentaire ici",
-			label:
-				"As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
-			kid_label:
-				"As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
-			adult_label:
-				"Avez-vous des commentaires ou suggestions à propos de l'application ou des questions que nous avons posées?",
+			label: "As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
+			kid_label: "As-tu des commentaires ou suggestions à propos de l'application ou à propos des questions que nous avons posées?",
+			adult_label: "Avez-vous des commentaires ou suggestions à propos de l'application ou des questions que nous avons posées?",
 			kid_sublabel: "Si oui, veuillez les écrire dans la boîte ci-dessous.",
 			adult_sublabel: "Si oui, veuillez les écrire dans la boîte ci-dessous.",
 		},

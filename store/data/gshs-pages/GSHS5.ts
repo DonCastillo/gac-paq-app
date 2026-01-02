@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const GSHS5: LangQuestionRadioPayloadInterface = {
 	ident: "gshs_5",
@@ -769,12 +769,9 @@ const GSHS5: LangQuestionRadioPayloadInterface = {
 		"zh-CN": {
 			type: Question.QuestionRadio,
 			heading: "问题 29",
-			label:
-				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
-			kid_label:
-				"在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
-			adult_label:
-				"5. 在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
+			label: "在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
+			kid_label: "在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
+			adult_label: "5. 在典型或通常的一天里，你花多少时间坐着看电视、玩电脑游戏、与朋友聊天、使用手机或做其他坐着的活动。",
 			choices: [
 				{
 					label: "每天少于1小时",

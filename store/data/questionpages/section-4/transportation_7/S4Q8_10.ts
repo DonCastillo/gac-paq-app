@@ -1,4 +1,4 @@
-import type { Transportation8_10Interface } from "interface/question17";
+import type { Transportation8_10Interface } from "@interface/question17";
 
 const Transportation8_10: Transportation8_10Interface = {
 	"en-CA": {
@@ -35,8 +35,7 @@ const Transportation8_10: Transportation8_10Interface = {
 		kid: {
 			wheel: {
 				none: "Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares?",
-				school:
-					"Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola?",
+				school: "Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola?",
 				work: "Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além do trabalho?",
 				both: "Na última semana, quantos dias você usou uma bicicleta ou outro meio de transporte ativo para ir a lugares além da escola ou do trabalho?",
 			},
@@ -57,8 +56,7 @@ const Transportation8_10: Transportation8_10Interface = {
 			},
 			walk: {
 				none: "Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para ir a lugares?",
-				school:
-					"Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para lugares além da escola?",
+				school: "Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para lugares além da escola?",
 				work: "Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para lugares além do trabalho?",
 				both: "Na última semana, quantos dias o(a) seu(sua) filho(a) caminhou para outros lugares além da escola ou trabalho?",
 			},
@@ -82,15 +80,13 @@ const Transportation8_10: Transportation8_10Interface = {
 		adult: {
 			wheel: {
 				none: "Hur många dagar cyklade ditt barn till olika platser under den senaste veckan?",
-				school:
-					"Hur många dagar cyklade ditt barn till platser utanför skolan under den senaste veckan?",
+				school: "Hur många dagar cyklade ditt barn till platser utanför skolan under den senaste veckan?",
 				work: "Hur många dagar cyklade ditt barn till platser utanför arbetet under den senaste veckan?",
 				both: "Hur många dagar cyklade ditt barn till platser utanför skolan eller arbetet under den senaste veckan?",
 			},
 			walk: {
 				none: "Hur många dagar gick ditt barn till olika platser under den senaste veckan?",
-				school:
-					"Hur många dagar gick ditt barn till platser utanför skolan under den senaste veckan?",
+				school: "Hur många dagar gick ditt barn till platser utanför skolan under den senaste veckan?",
 				work: "Hur många dagar gick ditt barn till platser utanför arbetet under den senaste veckan?",
 				both: "Hur många dagar gick ditt barn till platser utanför skolan eller arbetet under den senaste veckan?",
 			},
@@ -114,8 +110,7 @@ const Transportation8_10: Transportation8_10Interface = {
 		adult: {
 			wheel: {
 				none: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณใช้รถที่มีล้อไปยังสถานที่กี่วัน?",
-				school:
-					"ในสัปดาห์ที่แล้ว บุตรหลานของคุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนกี่วัน?",
+				school: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนกี่วัน?",
 				work: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่ที่ทำงานกี่วัน?",
 				both: "ในสัปดาห์ที่แล้ว บุตรหลานของคุณใช้รถที่มีล้อไปยังสถานที่อื่นที่ไม่ใช่โรงเรียนหรือที่ทำงานกี่วัน?",
 			},
@@ -161,15 +156,13 @@ const Transportation8_10: Transportation8_10Interface = {
 		kid: {
 			wheel: {
 				none: "¿Cuántos días usaste ruedas para ir a lugares durante la semana pasada?",
-				school:
-					"¿Cuántos días usaste ruedas para ir a lugares distintos a la escuela o colegio durante la semana pasada?",
+				school: "¿Cuántos días usaste ruedas para ir a lugares distintos a la escuela o colegio durante la semana pasada?",
 				work: "¿Cuántos días usaste ruedas para ir a lugares distintos al trabajo o voluntariado durante la semana pasada?",
 				both: "¿Cuántos días te desplazaste sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
 			},
 			walk: {
 				none: "¿Cuántos días caminaste para ir a lugares durante la semana pasada?",
-				school:
-					"¿Cuántos días caminaste para ir a lugares distintos a la escuela o al colegio durante la semana pasada?",
+				school: "¿Cuántos días caminaste para ir a lugares distintos a la escuela o al colegio durante la semana pasada?",
 				work: "¿Cuántos días caminaste para ir a lugares distintos al trabajo o voluntariado durante la semana pasada?",
 				both: "¿Cuántos días caminaste para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio durante la semana pasada?",
 			},
@@ -177,15 +170,13 @@ const Transportation8_10: Transportation8_10Interface = {
 		adult: {
 			wheel: {
 				none: "¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares la semana pasada?",
-				school:
-					"¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos a la escuela o colegio la semana pasada?",
+				school: "¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos a la escuela o colegio la semana pasada?",
 				work: "¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado la semana pasada?",
 				both: "¿Cuántos días su hija o hijo se desplazó sobre ruedas para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio la semana pasada?",
 			},
 			walk: {
 				none: "¿Cuántos días su hija o hijo caminó para ir a lugares la semana pasada?",
-				school:
-					"¿Cuántos días su hija o hijo caminó para ir a lugares distintos a la escuela o colegio la semana pasada?",
+				school: "¿Cuántos días su hija o hijo caminó para ir a lugares distintos a la escuela o colegio la semana pasada?",
 				work: "¿Cuántos días su hija o hijo caminó para ir a lugares distintos al trabajo o voluntariado la semana pasada?",
 				both: "¿Cuántos días su hija o hijo caminó para llegar a lugares distintos al trabajo o voluntariado, escuela o colegio la semana pasada?",
 			},
@@ -195,15 +186,13 @@ const Transportation8_10: Transportation8_10Interface = {
 		kid: {
 			wheel: {
 				none: "¿Cuántos días rodaste para ir a lugares la semana pasada?",
-				school:
-					"¿Cuántos días rodaste para ir a lugares que no fueran la escuela la semana pasada?",
+				school: "¿Cuántos días rodaste para ir a lugares que no fueran la escuela la semana pasada?",
 				work: "¿Cuántos días rodaste para ir a lugares que no fueran el trabajo la semana pasada?",
 				both: "¿Cuántos días rodaste para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
 			},
 			walk: {
 				none: "¿Cuántos días caminaste para ir a lugares la semana pasada?",
-				school:
-					"¿Cuántos días caminaste para ir a lugares que no fueran la escuela la semana pasada?",
+				school: "¿Cuántos días caminaste para ir a lugares que no fueran la escuela la semana pasada?",
 				work: "¿Cuántos días caminaste para ir a lugares que no fueran el trabajo la semana pasada?",
 				both: "¿Cuántos días caminaste para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
 			},
@@ -211,15 +200,13 @@ const Transportation8_10: Transportation8_10Interface = {
 		adult: {
 			wheel: {
 				none: "¿Cuántos días tu hijo rodó para ir a lugares la semana pasada?",
-				school:
-					"¿Cuántos días tu hijo rodó para ir a lugares que no fueran la escuela la semana pasada?",
+				school: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran la escuela la semana pasada?",
 				work: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran el trabajo la semana pasada?",
 				both: "¿Cuántos días tu hijo rodó para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
 			},
 			walk: {
 				none: "¿Cuántos días tu hijo caminó para ir a lugares la semana pasada?",
-				school:
-					"¿Cuántos días tu hijo caminó para ir a lugares que no fueran la escuela la semana pasada?",
+				school: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran la escuela la semana pasada?",
 				work: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran el trabajo la semana pasada?",
 				both: "¿Cuántos días tu hijo caminó para ir a lugares que no fueran la escuela o el trabajo la semana pasada?",
 			},
@@ -229,15 +216,13 @@ const Transportation8_10: Transportation8_10Interface = {
 		kid: {
 			wheel: {
 				none: "Combien de jours as-tu roulé pour te rendre à des endroits la semaine dernière?",
-				school:
-					"Combien de jours as-tu roulé pour te rendre à des endroits autres que l'école la semaine dernière?",
+				school: "Combien de jours as-tu roulé pour te rendre à des endroits autres que l'école la semaine dernière?",
 				work: "Combien de jours as-tu roulé pour te rendre à des endroits autres que le travail la semaine dernière?",
 				both: "Combien de jours as-tu roulé pour te rendre à des endroits autres que l'école ou le travail la semaine dernière?",
 			},
 			walk: {
 				none: "Combien de jours as-tu marché pour te rendre à des endroits la semaine dernière?",
-				school:
-					"Combien de jours as-tu marché pour te rendre à des endroits autres que l'école la semaine dernière?",
+				school: "Combien de jours as-tu marché pour te rendre à des endroits autres que l'école la semaine dernière?",
 				work: "Combien de jours as-tu marché pour te rendre à des endroits autres que le travail la semaine dernière?",
 				both: "Combien de jours as-tu marché pour te rendre à des endroits autres que l'école ou le travail la semaine dernière?",
 			},
@@ -245,15 +230,13 @@ const Transportation8_10: Transportation8_10Interface = {
 		adult: {
 			wheel: {
 				none: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits la semaine dernière?",
-				school:
-					"Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école la semaine dernière?",
+				school: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école la semaine dernière?",
 				work: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que le travail la semaine dernière?",
 				both: "Combien de jours ton enfant a-t-il roulé pour se rendre à des endroits autres que l'école ou le travail la semaine dernière?",
 			},
 			walk: {
 				none: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits la semaine dernière?",
-				school:
-					"Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que l'école la semaine dernière?",
+				school: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que l'école la semaine dernière?",
 				work: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que le travail la semaine dernière?",
 				both: "Combien de jours ton enfant a-t-il marché pour se rendre à des endroits autres que l'école ou le travail la semaine dernière?",
 			},

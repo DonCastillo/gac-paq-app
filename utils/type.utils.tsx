@@ -1,7 +1,7 @@
-import Mode from "constants/mode.enum";
-import Question from "constants/question.enum";
-import Screen from "constants/screen.enum";
-import Section from "constants/section.enum";
+import Mode from "@constants/mode.enum";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import Section from "@constants/section.enum";
 
 const getScreenType = (screenType: string): Screen => {
 	if (screenType === "page") {
@@ -78,4 +78,4 @@ const getModeType = (modeType: string): Mode => {
 	return Mode.Kid;
 };
 
-export { getScreenType, getSectionType, getQuestionType, getModeType };
+export { getModeType, getQuestionType, getScreenType, getSectionType };

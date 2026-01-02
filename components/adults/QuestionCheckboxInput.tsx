@@ -1,11 +1,11 @@
-import { Text } from "react-native";
+import type { Choice, ChoiceIcon } from "@interface/payload.type";
+import { getCurrentPage, getCurrentPageNumber } from "@store/settings/settingsSlice";
 import React, { useEffect, useState } from "react";
-import type { Choice, ChoiceIcon } from "interface/payload.type";
-import { useSelector } from "react-redux";
-import { getCurrentPage, getCurrentPageNumber } from "store/settings/settingsSlice";
+import { Text } from "react-native";
 import { View } from "react-native-animatable";
-import QuestionInput from "./QuestionInput";
+import { useSelector } from "react-redux";
 import QuestionCheckbox from "./QuestionCheckbox";
+import QuestionInput from "./QuestionInput";
 
 interface PropsInterface {
 	inputPlaceholder: string;

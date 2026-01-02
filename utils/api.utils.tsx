@@ -1,6 +1,6 @@
+import type { FinalResponseType } from "@interface/union.type";
+import { store } from "@store/store";
 import axios from "axios";
-import type { FinalResponseType } from "interface/union.type";
-import { store } from "store/store";
 
 const submitResponse = async (responses: FinalResponseType): Promise<boolean> => {
 	console.log("submitting response ...");

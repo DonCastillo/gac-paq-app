@@ -1,9 +1,6 @@
-import { Pressable, StyleSheet, Text, View, Image, TextInput } from "react-native";
-import { GeneralStyle } from "styles/general";
-import React, { useRef } from "react";
-import { isOtherOption } from "utils/options.utils";
-import { useSelector } from "react-redux";
-import { getColorTheme, getDevice, getPhrases } from "store/settings/settingsSlice";
+import { getColorTheme, getDevice, getPhrases } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { isOtherOption } from "@utils/options.utils";
 import {
 	adjustOptionListImageSizeNonSVGAdult,
 	adjustOptionListImageSizeSVGAdult,
@@ -11,7 +8,10 @@ import {
 	adjustRadioOptionSublabel,
 	adjustTextAlignmentDirection,
 	adjustWritingDirection,
-} from "utils/style";
+} from "@utils/style";
+import React, { useRef } from "react";
+import { Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { useSelector } from "react-redux";
 
 interface PropsInterface {
 	label: string;
@@ -89,9 +89,7 @@ const RadioOption = ({
 								writingDirection: adjustWritingDirection(),
 							}}
 						>
-							{optionLabel !== "" && optionLabel !== undefined && optionLabel !== null
-								? optionLabel
-								: label}
+							{optionLabel !== "" && optionLabel !== undefined && optionLabel !== null ? optionLabel : label}
 						</Text>
 
 						{/* Sublabel */}

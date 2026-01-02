@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S6Q2: LangQuestionRadioPayloadInterface = {
 	ident: "play_2",
@@ -13,16 +13,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",
-			label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			kid_label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			adult_label:
-				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
-			kid_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
-			adult_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label: "In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
 					label: "0 days",
@@ -61,16 +56,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",
-			label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			kid_label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			adult_label:
-				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
-			kid_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
-			adult_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label: "In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
 					label: "0 days",
@@ -109,16 +99,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Pātai 22",
-			label:
-				"I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai koe i ngā ngohe e whakakaha ake ana i ngā uaua?",
-			kid_label:
-				"I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai koe i ngā ngohe e whakakaha ake ana i ngā uaua?",
-			adult_label:
-				"I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai tāu tamaiti i ngā ngohe e whakakaha ana i ngā uaua?",
-			kid_sublabel:
-				"Ko ngā tauira, ko te takaporepore, ko te kake, ko ngā pana-tū, ko te hiki maitai, ko te pae makimaki rānei.",
-			adult_sublabel:
-				"Hei tauira ko te takaporepore, ko te kake, ko ngā pana tū, ko te hiki maitai, ko te pae makimaki rānei.",
+			label: "I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai koe i ngā ngohe e whakakaha ake ana i ngā uaua?",
+			kid_label: "I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai koe i ngā ngohe e whakakaha ake ana i ngā uaua?",
+			adult_label: "I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai tāu tamaiti i ngā ngohe e whakakaha ana i ngā uaua?",
+			kid_sublabel: "Ko ngā tauira, ko te takaporepore, ko te kake, ko ngā pana-tū, ko te hiki maitai, ko te pae makimaki rānei.",
+			adult_sublabel: "Hei tauira ko te takaporepore, ko te kake, ko ngā pana tū, ko te hiki maitai, ko te pae makimaki rānei.",
 			choices: [
 				{
 					label: "O ngā rā",
@@ -157,16 +142,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",
-			label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			kid_label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			adult_label:
-				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
-			kid_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
-			adult_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label: "In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
 					label: "0 days",
@@ -205,16 +185,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 22",
-			label:
-				"Kolik dnů v minulém týdnu ses věnoval(a) aktivitám, které měly charakter posilování svalů?",
-			kid_label:
-				"Kolik dnů v minulém týdnu ses věnoval(a) aktivitám, které měly charakter posilování svalů?",
-			adult_label:
-				"Kolik dnů v minulém týdnu se vaše dítě věnovalo aktivitám, které měly charakter posilování svalů?",
-			kid_sublabel:
-				"Příkladem může být gymnastika, šplh, shyby, posilování s činkami, aktivity na prolézačkách.",
-			adult_sublabel:
-				"Příkladem může být gymnastika, šplh, shyby, posilování s činkami, aktivity na prolézačkách.",
+			label: "Kolik dnů v minulém týdnu ses věnoval(a) aktivitám, které měly charakter posilování svalů?",
+			kid_label: "Kolik dnů v minulém týdnu ses věnoval(a) aktivitám, které měly charakter posilování svalů?",
+			adult_label: "Kolik dnů v minulém týdnu se vaše dítě věnovalo aktivitám, které měly charakter posilování svalů?",
+			kid_sublabel: "Příkladem může být gymnastika, šplh, shyby, posilování s činkami, aktivity na prolézačkách.",
+			adult_sublabel: "Příkladem může být gymnastika, šplh, shyby, posilování s činkami, aktivity na prolézačkách.",
 			choices: [
 				{
 					label: "0 den",
@@ -253,12 +228,9 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 22",
-			label:
-				"En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
-			kid_label:
-				"En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
-			adult_label:
-				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron físicamente?",
+			label: "En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
+			kid_label: "En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
+			adult_label: "En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron físicamente?",
 			choices: [
 				{
 					label: "0 días",
@@ -297,12 +269,9 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 22",
-			label:
-				"En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
-			kid_label:
-				"En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
-			adult_label:
-				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron físicamente?",
+			label: "En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
+			kid_label: "En la última semana, ¿cuántos días de la semana realizaste actividades que te fortalecieron físicamente?",
+			adult_label: "En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron físicamente?",
 			choices: [
 				{
 					label: "0 días",
@@ -341,16 +310,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",
-			label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			kid_label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			adult_label:
-				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
-			kid_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
-			adult_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label: "In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
 					label: "0 days",
@@ -389,16 +353,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",
-			label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			kid_label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			adult_label:
-				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
-			kid_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
-			adult_sublabel:
-				"Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label: "In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			kid_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
+			adult_sublabel: "Examples include gymnastics, climbing, push-ups, weightlifting, or using monkey bars.",
 			choices: [
 				{
 					label: "0 days",
@@ -437,16 +396,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 22",
-			label:
-				"M’sabata yapitayi ndi masiku angati omwe unachita zinthu zomwe zingakuthandize Kukhala ndi thupi lamphamvu?",
-			kid_label:
-				"M’sabata yapitayi ndi masiku angati omwe unachita zinthu zomwe zingakuthandize Kukhala ndi thupi lamphamvu?",
-			adult_label:
-				"M’sabata yapitayi ndi masiku angati omwe mwana wanu anachita zinthu zomwe zingamuthandize kukhala wamphamvu?",
-			kid_sublabel:
-				"Zitsanzo ndi masewero olimbitsa thupi, ma push up, kapena kunyamula ma weti ndi zina.",
-			adult_sublabel:
-				"Zitsanzo ndi masewero olimbitsa thupi, ma push up, kapena kunyamula ma weti ndi zina.",
+			label: "M’sabata yapitayi ndi masiku angati omwe unachita zinthu zomwe zingakuthandize Kukhala ndi thupi lamphamvu?",
+			kid_label: "M’sabata yapitayi ndi masiku angati omwe unachita zinthu zomwe zingakuthandize Kukhala ndi thupi lamphamvu?",
+			adult_label: "M’sabata yapitayi ndi masiku angati omwe mwana wanu anachita zinthu zomwe zingamuthandize kukhala wamphamvu?",
+			kid_sublabel: "Zitsanzo ndi masewero olimbitsa thupi, ma push up, kapena kunyamula ma weti ndi zina.",
+			adult_sublabel: "Zitsanzo ndi masewero olimbitsa thupi, ma push up, kapena kunyamula ma weti ndi zina.",
 			choices: [
 				{
 					label: "Masiku 0",
@@ -486,13 +440,10 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २२",
 			label: "मागील आठवड्यात, तुम्ही किती दिवस अशा हालचाली केल्या ज्यांनी तुम्हाला मजबूत बनवले?",
-			kid_label:
-				"मागील आठवड्यात, तुम्ही किती दिवस अशा हालचाली केल्या ज्यांनी तुम्हाला मजबूत बनवले?",
-			adult_label:
-				"मागील आठवड्यात, तुमच्या मुलाने किती दिवस अशा हालचाली केल्या ज्यांनी त्याला/ तिला मजबूत बनवले?",
+			kid_label: "मागील आठवड्यात, तुम्ही किती दिवस अशा हालचाली केल्या ज्यांनी तुम्हाला मजबूत बनवले?",
+			adult_label: "मागील आठवड्यात, तुमच्या मुलाने किती दिवस अशा हालचाली केल्या ज्यांनी त्याला/ तिला मजबूत बनवले?",
 			kid_sublabel: "जिम्नॅस्टिकस, टेकडी चढणे, जोर-बैठक मारणे, वेटलिफ्टिंग, मंकी बार्सवर खेळणे इ.",
-			adult_sublabel:
-				"उदा. जिम्नॅस्टिक्स, टेकडी चढणे, जोर बैठका मारणे, वेटलिफ्टिंग, मंकी बार्सवर खेळणे इ.",
+			adult_sublabel: "उदा. जिम्नॅस्टिक्स, टेकडी चढणे, जोर बैठका मारणे, वेटलिफ्टिंग, मंकी बार्सवर खेळणे इ.",
 			choices: [
 				{
 					label: "० दिवस",
@@ -531,16 +482,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २२",
-			label:
-				"पिछले सप्ताह में, आपने  कितने दिन ऐसी गतिविधियाँ कीं जो आपकी मांसपेशियों को मजबूत बनाती हैं?",
-			kid_label:
-				"पिछले सप्ताह में, आपने  कितने दिन ऐसी गतिविधियाँ कीं जो आपकी मांसपेशियों को मजबूत बनाती हैं?",
-			adult_label:
-				"पिछले सप्ताह में, आपके बच्चे ने कितने दिन ऐसी गतिविधियाँ कीं जो उसकी मांसपेशियों को मजबूत बनाती हैं?",
-			kid_sublabel:
-				"उदाहरणों में जिमनास्टिक्स, चढ़ाई, पुश-अप्स, भारोत्तोलन या मंकी बार्स का उपयोग शामिल हैं।",
-			adult_sublabel:
-				"उदाहरणों में जिमनास्टिक्स, चढ़ाई, पुश-अप्स, भारोत्तोलन या मंकी बार्स का उपयोग शामिल हैं।",
+			label: "पिछले सप्ताह में, आपने  कितने दिन ऐसी गतिविधियाँ कीं जो आपकी मांसपेशियों को मजबूत बनाती हैं?",
+			kid_label: "पिछले सप्ताह में, आपने  कितने दिन ऐसी गतिविधियाँ कीं जो आपकी मांसपेशियों को मजबूत बनाती हैं?",
+			adult_label: "पिछले सप्ताह में, आपके बच्चे ने कितने दिन ऐसी गतिविधियाँ कीं जो उसकी मांसपेशियों को मजबूत बनाती हैं?",
+			kid_sublabel: "उदाहरणों में जिमनास्टिक्स, चढ़ाई, पुश-अप्स, भारोत्तोलन या मंकी बार्स का उपयोग शामिल हैं।",
+			adult_sublabel: "उदाहरणों में जिमनास्टिक्स, चढ़ाई, पुश-अप्स, भारोत्तोलन या मंकी बार्स का उपयोग शामिल हैं।",
 			choices: [
 				{
 					label: "0 दिन",
@@ -579,12 +525,9 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",
-			label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			kid_label:
-				"In the past week, how many days per week did you do activities that make your muscles stronger?",
-			adult_label:
-				"In the past week, how many days per week did your child do activities that make their muscles stronger?",
+			label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			kid_label: "In the past week, how many days per week did you do activities that make your muscles stronger?",
+			adult_label: "In the past week, how many days per week did your child do activities that make their muscles stronger?",
 			kid_sublabel: "Examples include gymnastics, climbing, weightlifting, etc.",
 			adult_sublabel: "Examples include gymnastics, climbing, weightlifting, etc.",
 			choices: [
@@ -668,12 +611,9 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"ne-NP": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २२",
-			label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
-			kid_label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, तपाईंको छोरा वा छोरीले कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
+			label: "पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्ता, तपाईं कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्ता, तपाईंको छोरा वा छोरीले कति दिन आफु (माम्सपेसि) लाई थप बलियो बनाउने गतिविधिहरुमा लाग्नुभयो?",
 			choices: [
 				{
 					label: "० दिन",
@@ -756,12 +696,9 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 22",
-			label:
-				"Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
-			kid_label:
-				"Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
-			adult_label:
-				"Hur många dagar gjorde ditt barn någon aktivitet som gör musklerna starkare under den senaste veckan?",
+			label: "Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
+			kid_label: "Hur många dagar gjorde du någon aktivitet som gör att dina muskler blir starkare under den senaste veckan?",
+			adult_label: "Hur många dagar gjorde ditt barn någon aktivitet som gör musklerna starkare under den senaste veckan?",
 			choices: [
 				{
 					label: "0 dagar",
@@ -884,16 +821,11 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 22",
-			label:
-				"Durante la semana pasada, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
-			kid_label:
-				"Durante la semana pasada, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
-			adult_label:
-				"Durante la semana pasada, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
-			kid_sublabel:
-				"Algunos ejemplos incluyen niños/jovenes haciendo gimnasia, escalando, flexiones, levantando pesas o usando barras.",
-			adult_sublabel:
-				"Algunos ejemplos incluyen niños/jovenes haciendo gimnasia, escalando, flexiones, levantando pesas o usando barras.",
+			label: "Durante la semana pasada, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			kid_label: "Durante la semana pasada, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			adult_label: "Durante la semana pasada, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
+			kid_sublabel: "Algunos ejemplos incluyen niños/jovenes haciendo gimnasia, escalando, flexiones, levantando pesas o usando barras.",
+			adult_sublabel: "Algunos ejemplos incluyen niños/jovenes haciendo gimnasia, escalando, flexiones, levantando pesas o usando barras.",
 			choices: [
 				{
 					label: "0 días",
@@ -932,12 +864,9 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 22",
-			label:
-				"En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
-			kid_label:
-				"En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
-			adult_label:
-				"En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
+			label: "En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			kid_label: "En la última semana, ¿cuántos días realizaste actividades que fortalecieron tus músculos?",
+			adult_label: "En la última semana, ¿cuántos días de la semana realizó su hija o hijo actividades que le fortalecieron sus músculos?",
 			kid_sublabel:
 				"Algunos ejemplos incluyen niños, niñas o jóvenes haciendo gimnasia, escalando, haciendo lagartijas, levantando pesas o usando el pasamanos.",
 			adult_sublabel:
@@ -980,16 +909,12 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 22",
-			label:
-				"Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
-			kid_label:
-				"Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
+			label: "Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
+			kid_label: "Au cours de la dernière semaine, combien de jours as-tu pratiqué des activités qui rendent tes muscles plus forts?",
 			adult_label:
 				"Au cours de la dernière semaine, combien de jours ton enfant a-t-il (elle) pratiqué des activités qui rendent ses muscles plus forts?",
-			kid_sublabel:
-				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
-			adult_sublabel:
-				"Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
+			kid_sublabel: "Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
+			adult_sublabel: "Les exemples incluent la gymnastique, l'escalade, les pompes (ou push-ups), l'haltérophilie ou utiliser des barres de singe.",
 			choices: [
 				{
 					label: "0 jour",

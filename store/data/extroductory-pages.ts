@@ -16,7 +16,7 @@ import type {
 	LangFeedbackExtroductoryPagesType,
 	LangKidExtroductoryPagesType,
 	LangQuestionPagesType,
-} from "interface/union.type";
+} from "@interface/union.type";
 import HBSC1 from "./hbsc-pages/HBSC1";
 import HBSCIntro from "./hbsc-pages/HBSCIntro";
 import HBSCPreamble from "./hbsc-pages/HBSCPreamble";
@@ -37,11 +37,7 @@ import FeedbackExtro from "./extroductory-pages/FeedbackExtro";
 import FeedbackIntro from "./extroductory-pages/FeedbackIntro";
 import DemographicExtro from "./extroductory-pages/DemographicExtro";
 
-const KidExtroductoryPages: LangKidExtroductoryPagesType = [
-	SocialEconomicsIntroKid,
-	GenderKid,
-	DemographicExtro,
-];
+const KidExtroductoryPages: LangKidExtroductoryPagesType = [SocialEconomicsIntroKid, GenderKid, DemographicExtro];
 const AdultExtroductoryPages: LangAdultExtroductoryPagesType = [
 	SocialEconomicsIntroAdult,
 	GenderAdult,
@@ -53,12 +49,7 @@ const AdultExtroductoryPages: LangAdultExtroductoryPagesType = [
 	Financial,
 	DemographicExtro,
 ];
-const FeedbackExtroductoryPages: LangFeedbackExtroductoryPagesType = [
-	FeedbackIntro,
-	Satisfaction,
-	Comment,
-	FeedbackExtro,
-];
+const FeedbackExtroductoryPages: LangFeedbackExtroductoryPagesType = [FeedbackIntro, Satisfaction, Comment, FeedbackExtro];
 
 const HBSCPages: LangQuestionPagesType = [HBSCIntro, HBSCPreamble, HBSC1, HBSC2, HBSCExtro];
 
@@ -78,11 +69,4 @@ const GSHSPages: LangQuestionPagesType = [
 
 const AppExtroPage: LangQuestionPagesType = [AppExtro];
 
-export {
-	KidExtroductoryPages,
-	AdultExtroductoryPages,
-	FeedbackExtroductoryPages,
-	HBSCPages,
-	GSHSPages,
-	AppExtroPage,
-};
+export { KidExtroductoryPages, AdultExtroductoryPages, FeedbackExtroductoryPages, HBSCPages, GSHSPages, AppExtroPage };

@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const Relationship: LangQuestionRadioPayloadInterface = {
 	ident: "relationship_to_the_child",
@@ -198,12 +198,9 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
-			label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			kid_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			adult_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
 			choices: [
 				{
 					label: "Papá",
@@ -238,12 +235,9 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
-			label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			kid_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			adult_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
 			choices: [
 				{
 					label: "Papá",
@@ -722,12 +716,9 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
-			label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			kid_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			adult_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
 			choices: [
 				{
 					label: "Papá",
@@ -762,12 +753,9 @@ const Relationship: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 28",
-			label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			kid_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
-			adult_label:
-				"¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			kid_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
+			adult_label: "¿Cuál es su relación con la niña, niño o adolescente sobre quien acaba de contestar esta encuesta?",
 			choices: [
 				{
 					label: "Papá",

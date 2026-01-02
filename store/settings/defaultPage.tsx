@@ -1,8 +1,8 @@
-import Screen from "constants/screen.enum";
-import Section from "constants/section.enum";
-import type { PageIndexInterface } from "interface/payload.type";
-import AboutPage from "store/data/introductory-pages/about";
-import LanguagePage from "store/data/introductory-pages/language";
+import Screen from "@constants/screen.enum";
+import Section from "@constants/section.enum";
+import type { PageIndexInterface } from "@interface/payload.type";
+import AboutPage from "@store/data/introductory-pages/about";
+import LanguagePage from "@store/data/introductory-pages/language";
 
 export const currentDefaultPage: PageIndexInterface = {
 	page: { ...LanguagePage, translations: LanguagePage.translations["en-CA"] },

@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S4Q6: LangQuestionRadioPayloadInterface = {
 	ident: "transportation_6",
@@ -446,8 +446,7 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 16c",
 			label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
 			kid_label: "Quanto tempo, normalmente, você leva para ir para o trabalho?",
-			adult_label:
-				"Quanto tempo, normalmente, a criança ou adolescente que você é responsável leva para ir para o trabalho?",
+			adult_label: "Quanto tempo, normalmente, a criança ou adolescente que você é responsável leva para ir para o trabalho?",
 			choices: [
 				{
 					label: "10 minutos ou menos",
@@ -475,10 +474,8 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Fråga 16c",
 			label: "Hur lång tid tar det vanligtvis dig att ta dig till arbetet (eller ideella arbete)?",
-			kid_label:
-				"Hur lång tid tar det vanligtvis dig att ta dig till arbetet (eller ideella arbete)?",
-			adult_label:
-				"Hur lång tid tar det vanligtvis ditt barn att ta sig till arbetet (eller ideella arbete)?",
+			kid_label: "Hur lång tid tar det vanligtvis dig att ta dig till arbetet (eller ideella arbete)?",
+			adult_label: "Hur lång tid tar det vanligtvis ditt barn att ta sig till arbetet (eller ideella arbete)?",
 			choices: [
 				{
 					label: "10 minuter eller mindre",
@@ -565,8 +562,7 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 16c",
 			label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
 			kid_label: "¿Normalmente cuánto tiempo tardas en ir al trabajo o voluntariado?",
-			adult_label:
-				"¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo o voluntariado?",
+			adult_label: "¿Normalmente cuánto tiempo necesita su hija o hijo en ir al trabajo o voluntariado?",
 			choices: [
 				{
 					label: "10 minutos o menos",
@@ -623,10 +619,8 @@ const S4Q6: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Question 16c",
 			label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
-			kid_label:
-				"Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
-			adult_label:
-				"Combien de temps faut-il, en général, à ton enfant pour se déplacer de la maison jusqu'au travail?",
+			kid_label: "Combien de temps te faut-il, en général, pour aller de la maison jusqu'au travail?",
+			adult_label: "Combien de temps faut-il, en général, à ton enfant pour se déplacer de la maison jusqu'au travail?",
 			choices: [
 				{
 					label: "10 minutes ou moins",

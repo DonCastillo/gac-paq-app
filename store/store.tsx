@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import responsesSlice from "./responses/responsesSlice";
+import devToolsEnhancer from "redux-devtools-expo-dev-plugin";
 import questionsSlice from "./questions/questionsSlice";
+import responsesSlice from "./responses/responsesSlice";
 import settingsSlice from "./settings/settingsSlice";
 
 export const store = configureStore({
@@ -9,6 +10,8 @@ export const store = configureStore({
 		questions: questionsSlice,
 		settings: settingsSlice,
 	},
+	devTools: false,
+	enhancers: (getDefaultEnhancers) => getDefaultEnhancers().concat(devToolsEnhancer()),
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({
 			serializableCheck: false,

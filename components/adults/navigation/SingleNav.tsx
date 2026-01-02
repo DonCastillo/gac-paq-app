@@ -1,8 +1,8 @@
+import FullWidthButton from "@components/buttons/FullWidthButton";
+import { getColorTheme } from "@store/settings/settingsSlice";
+import { DefaultStyle } from "@styles/general";
 import React from "react";
-import FullWidthButton from "components/buttons/FullWidthButton";
-import { DefaultStyle } from "styles/general";
 import { useSelector } from "react-redux";
-import { getColorTheme } from "store/settings/settingsSlice";
 
 interface PropsInterface {
 	label: string;

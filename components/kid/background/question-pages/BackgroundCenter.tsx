@@ -1,16 +1,8 @@
+import AbsoluteFullScreenContainer from "@components/kid/background/AbsoluteFullScreenContainer";
 import React, { memo } from "react";
 import { StyleSheet, View } from "react-native";
-import AbsoluteFullScreenContainer from "components/kid/background/AbsoluteFullScreenContainer";
 
-const BackgroundCenter = ({
-	svg,
-	height,
-	width,
-}: {
-	svg: any;
-	height?: number;
-	width?: number;
-}): React.ReactElement => {
+const BackgroundCenter = ({ svg, height, width }: { svg: any; height?: number; width?: number }): React.ReactElement => {
 	const SVGImage = svg;
 	return (
 		<AbsoluteFullScreenContainer>

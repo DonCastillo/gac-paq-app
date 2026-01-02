@@ -1,32 +1,31 @@
-import defaultColor from "./defaultColor";
-import Colors from "store/data/colors";
-import { getPage } from "utils/page.utils";
-import Section from "constants/section.enum";
+import Section from "@constants/section.enum";
 import type {
-	SetModeFuncType,
-	SetDeviceFuncType,
-	SetLanguageFuncType,
-	SetDirectusFuncType,
-	SetColorThemeFuncType,
-	SetPhrasesFuncType,
-	SkipPageFuncType,
-	AddPageFuncType,
-	SetPageFuncType,
-	AddSectionTotalPagesFuncType,
-	SetKeyboardState,
-	SettingsFuncType,
-	SetNarrationsFuncType,
 	AddNarrationsFuncType,
-	SetIsConnectedFuncType,
-	SetIsLoadingFuncType,
-	SetEnableNarrationState,
+	AddPageFuncType,
+	AddSectionTitleFuncType,
+	AddSectionTotalPagesFuncType,
 	DisableNarrationAutoplayFuncType,
 	ResetAllNarrationAutoplayFuncType,
-	AddSectionTitleFuncType,
+	SetColorThemeFuncType,
+	SetDeviceFuncType,
+	SetDirectusFuncType,
 	SetDrawerOpenedState,
+	SetEnableNarrationState,
+	SetIsConnectedFuncType,
+	SetKeyboardState,
+	SetLanguageFuncType,
+	SetModeFuncType,
+	SetNarrationsFuncType,
 	SetNumPendingSubmissionsFuncType,
-} from "interface/function.type";
-import { type PageIndexInterface } from "interface/payload.type";
+	SetPageFuncType,
+	SetPhrasesFuncType,
+	SettingsFuncType,
+	SkipPageFuncType,
+} from "@interface/function.type";
+import { type PageIndexInterface } from "@interface/payload.type";
+import Colors from "@store/data/colors";
+import { getPage } from "@utils/page.utils";
+import defaultColor from "./defaultColor";
 const TOTAL_COLORS = 8;
 
 const setMode: SetModeFuncType = (state, action) => {
@@ -81,10 +80,6 @@ const resetSectionTitles: SettingsFuncType = (state) => {
 
 const setIsConnected: SetIsConnectedFuncType = (state, action) => {
 	state.isConnected = action.payload;
-};
-
-const setIsLoading: SetIsLoadingFuncType = (state, action) => {
-	state.isLoading = action.payload;
 };
 
 const skipPage: SkipPageFuncType = (state, action) => {
@@ -144,10 +139,7 @@ const prevPage: SettingsFuncType = (state) => {
 	}
 	const newHistory = [...state.history];
 	newHistory.pop(); // remove current page
-	const currentPageNumber =
-		newHistory !== undefined && newHistory !== null && newHistory.length > 0
-			? newHistory.at(-1)
-			: 1; // remove previous page
+	const currentPageNumber = newHistory !== undefined && newHistory !== null && newHistory.length > 0 ? newHistory.at(-1) : 1; // remove previous page
 
 	// update current page
 	const currentPage = getPage(currentPageNumber ?? 1, state.pages);
@@ -271,7 +263,6 @@ export default {
 	removeExtroPages,
 	removeFeedbackPages,
 	reset,
-	setIsLoading,
 	setStartDateTime,
 	setIsConnected,
 	setEnableNarration,

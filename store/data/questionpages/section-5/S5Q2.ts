@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S5Q2: LangQuestionRadioPayloadInterface = {
 	ident: "organized_2",
@@ -200,8 +200,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 19",
 			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
 			kid_label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
-			adult_label:
-				"¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
+			adult_label: "¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
 			choices: [
 				{
 					label: "1 día",
@@ -238,8 +237,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 19",
 			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
 			kid_label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
-			adult_label:
-				"¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
+			adult_label: "¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
 			choices: [
 				{
 					label: "1 día",
@@ -534,10 +532,8 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न १९",
 			label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
-			kid_label:
-				"पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको) हप्तामा, कति दिन तपाईंको छोरा वा छोरीले सन्गठित क्रियाकलापमा लाग्नुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्तामा, तपाईंले सन्गठित क्रियाकलापमा कति दिन सक्रिय हुनुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्तामा, कति दिन तपाईंको छोरा वा छोरीले सन्गठित क्रियाकलापमा लाग्नुभयो?",
 			choices: [
 				{
 					label: "१ दिन",
@@ -574,8 +570,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Questão 19",
 			label: "Na última semana, quantos dias você fez essas atividades?",
 			kid_label: "Na última semana, quantos dias você fez essas atividades?",
-			adult_label:
-				"Na última semana, quantos dias a criança ou adolescente que você é responsável fez essas atividades?",
+			adult_label: "Na última semana, quantos dias a criança ou adolescente que você é responsável fez essas atividades?",
 			choices: [
 				{
 					label: "1 dia",
@@ -612,8 +607,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Fråga 19",
 			label: "Hur många dagar gick du på dessa aktiviteter under den senaste veckan?",
 			kid_label: "Hur många dagar gick du på dessa aktiviteter under den senaste veckan?",
-			adult_label:
-				"Hur många dagar gjorde ditt barn på dessa aktiviteter under den senaste veckan?",
+			adult_label: "Hur många dagar gjorde ditt barn på dessa aktiviteter under den senaste veckan?",
 			choices: [
 				{
 					label: "En dag",
@@ -724,8 +718,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 19",
 			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
 			kid_label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
-			adult_label:
-				"¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
+			adult_label: "¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
 			choices: [
 				{
 					label: "1 día",
@@ -762,8 +755,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 19",
 			label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
 			kid_label: "¿Cuántos días realizaste estas actividades durante la semana pasada?",
-			adult_label:
-				"¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
+			adult_label: "¿Cuántos días realizó su hija o hijo estas actividades durante la semana pasada?",
 			choices: [
 				{
 					label: "1 día",
@@ -800,8 +792,7 @@ const S5Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Question 19",
 			label: "Combien de jours as-tu fait ces activités au cours de la dernière semaine?",
 			kid_label: "Combien de jours as-tu fait ces activités au cours de la dernière semaine?",
-			adult_label:
-				"Combien de jours ton enfant a-t-il (elle) fait ces activités au cours de la dernière semaine?",
+			adult_label: "Combien de jours ton enfant a-t-il (elle) fait ces activités au cours de la dernière semaine?",
 			choices: [
 				{
 					label: "1 jour",

@@ -1,21 +1,18 @@
-import { View, StyleSheet, SafeAreaView } from "react-native";
+import FlatListContainer from "@components/FlatListContainer";
+import Mode from "@constants/mode.enum";
+import useCharacter from "@hooks/useCharacter";
+import useCurrentPage from "@hooks/useCurrentPage";
+import type { Choice, ChoiceIcon } from "@interface/payload.type";
+import { getColorTheme, getDevice } from "@store/settings/settingsSlice";
+import { GeneralStyle } from "@styles/general";
+import { getOptionSubLabel } from "@utils/background.utils";
+import { getUserSpecifiedOther, isOtherOption, isOtherWithSpecifiedValue, optionLetter } from "@utils/options.utils";
+import { horizontalScale } from "@utils/responsive.utils";
+import { adjustWritingDirection } from "@utils/style";
 import React, { useEffect, useState } from "react";
-import { GeneralStyle } from "styles/general";
-import {
-	getUserSpecifiedOther,
-	isOtherOption,
-	isOtherWithSpecifiedValue,
-	optionLetter,
-} from "utils/options.utils";
-import { horizontalScale } from "utils/responsive.utils";
-import Option from "./subcomponents/Option";
+import { StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
-import { getColorTheme, getCurrentPage, getDevice, getMode } from "store/settings/settingsSlice";
-import type { Choice, ChoiceIcon } from "interface/payload.type";
-import Mode from "constants/mode.enum";
-import { getOptionSubLabel } from "utils/background.utils";
-import { adjustWritingDirection } from "utils/style";
-import FlatListContainer from "components/FlatListContainer";
+import Option from "./subcomponents/Option";
 
 interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
@@ -23,15 +20,11 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-const QuestionRadio = ({
-	options,
-	onChange,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
-	const currentPage = useSelector(getCurrentPage);
+const QuestionRadio = ({ options, onChange, selectedValue }: PropsInterface): React.ReactElement => {
+	const { currentPage } = useCurrentPage();
+	let { mode } = useCharacter();
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
-	let mode = useSelector(getMode);
 	const { color100, color200 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const [isOtherSelected, setIsOtherSelected] = useState<boolean>(false);
@@ -100,7 +93,7 @@ const QuestionRadio = ({
 	}
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<View style={styles.container}>
 			<View>
 				<FlatListContainer
 					removeClippedSubviews={false}
@@ -117,11 +110,7 @@ const QuestionRadio = ({
 							<Option
 								text={`${optionLetter(index)}.  ${item.label}`}
 								value={item.value}
-								selected={
-									selected !== null &&
-									(selected === item.value ||
-										(isOtherOption(item.value) && isOtherOption(selected)))
-								}
+								selected={selected !== null && (selected === item.value || (isOtherOption(item.value) && isOtherOption(selected)))}
 								selectHandler={selectHandler}
 								color={color100}
 								width={adjustWidth}
@@ -141,7 +130,7 @@ const QuestionRadio = ({
 					}}
 				/>
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 };
 

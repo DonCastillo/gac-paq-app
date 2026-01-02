@@ -1,17 +1,12 @@
+import { GeneralStyle } from "@styles/general";
+import { isOtherOption } from "@utils/options.utils";
+import { moderateScale } from "@utils/responsive.utils";
 import React, { useRef } from "react";
-import { Pressable, TextInput, View, Text } from "react-native";
-import { GeneralStyle } from "styles/general";
-import { isOtherOption } from "utils/options.utils";
-import { moderateScale } from "utils/responsive.utils";
+import { Pressable, Text, TextInput, View } from "react-native";
 import { useSelector } from "react-redux";
 
-import { getDevice, getPhrases } from "store/settings/settingsSlice";
-import {
-	adjustOptionLabelKid,
-	adjustOptionSubLabelKid,
-	adjustTextAlignmentDirection,
-	adjustWritingDirection,
-} from "utils/style";
+import { getDevice, getPhrases } from "@store/settings/settingsSlice";
+import { adjustOptionLabelKid, adjustOptionSubLabelKid, adjustTextAlignmentDirection, adjustWritingDirection } from "@utils/style";
 
 interface PropsInterface {
 	text: string;

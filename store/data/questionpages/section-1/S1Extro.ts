@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangExtroPayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangExtroPayloadInterface } from "@interface/payload.type";
 
 const S1Extro: LangExtroPayloadInterface = {
 	ident: "school_extro",

@@ -1,4 +1,6 @@
-import Section from "constants/section.enum";
+import LocalStorageKey from "@constants/localstorage.enum";
+import MAIN_STUDY_LANG from "@constants/main_study_lang";
+import Section from "@constants/section.enum";
 import type {
 	PageIndexInterface,
 	QuestionCheckboxPayloadInterface,
@@ -6,16 +8,14 @@ import type {
 	QuestionRadioPayloadInterface,
 	QuestionSliderPayloadInterface,
 	ResponseInterface,
-} from "interface/payload.type";
-import type { FinalResponseType } from "interface/union.type";
-import { clearUnansweredResponses, newResponse } from "store/responses/responsesSlice";
-import { store } from "store/store";
+} from "@interface/payload.type";
+import type { FinalResponseType } from "@interface/union.type";
+import { clearUnansweredResponses, newResponse } from "@store/responses/responsesSlice";
+import { setNumPendingSubmissions } from "@store/settings/settingsSlice";
+import { store } from "@store/store";
+import { submitResponse } from "@utils/api.utils";
+import { readData, removeData, storeData } from "@utils/localstorage.utils";
 import { falsyValue } from "./utils.utils";
-import LocalStorageKey from "constants/localstorage.enum";
-import { readData, removeData, storeData } from "utils/localstorage.utils";
-import { submitResponse } from "utils/api.utils";
-import MAIN_STUDY_LANG from "constants/main_study_lang";
-import { setNumPendingSubmissions } from "store/settings/settingsSlice";
 
 const getResponse = (): string | null => {
 	const { currentPage } = store.getState().settings;
@@ -150,11 +150,7 @@ const sanitizeResponse = (): FinalResponseType => {
 	// get all questions and their column names
 	const finalSanitizedQuestions = {};
 	Object.values(pages).forEach((page: PageIndexInterface) => {
-		if (
-			page.section === Section.Question ||
-			page.section === Section.Hbsc ||
-			page.section === Section.Gshs
-		) {
+		if (page.section === Section.Question || page.section === Section.Hbsc || page.section === Section.Gshs) {
 			const questionPage = page.page as
 				| QuestionRadioPayloadInterface
 				| QuestionSliderPayloadInterface
@@ -162,8 +158,7 @@ const sanitizeResponse = (): FinalResponseType => {
 				| QuestionCheckboxPayloadInterface;
 
 			if (questionPage.column_name !== undefined && questionPage.column_name !== null) {
-				finalSanitizedQuestions[questionPage.column_name] =
-					sanitizedResponse.questions[questionPage.column_name] ?? "";
+				finalSanitizedQuestions[questionPage.column_name] = sanitizedResponse.questions[questionPage.column_name] ?? "";
 			}
 		}
 	});
@@ -242,11 +237,7 @@ const sendResponseQueue = async (): Promise<void> => {
 	while (true) {
 		try {
 			const existingResponses = await retrieveResponseFromStorage();
-			if (
-				existingResponses !== null &&
-				existingResponses !== undefined &&
-				existingResponses.length > 0
-			) {
+			if (existingResponses !== null && existingResponses !== undefined && existingResponses.length > 0) {
 				const responseToSend = existingResponses.pop();
 
 				if (responseToSend !== null && responseToSend !== undefined) {
@@ -274,12 +265,12 @@ const loadNumPendingSubmissions = async (): Promise<void> => {
 };
 
 export {
-	getResponse,
-	sanitizeResponse,
-	getResponseByIdent,
 	addResponse,
+	getResponse,
+	getResponseByIdent,
+	loadNumPendingSubmissions,
 	queueResponseToStorage,
 	retrieveResponseFromStorage,
+	sanitizeResponse,
 	sendResponseQueue,
-	loadNumPendingSubmissions,
 };

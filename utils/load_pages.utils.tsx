@@ -1,3 +1,9 @@
+import MAIN_STUDY_LANG from "@constants/main_study_lang";
+import Mode from "@constants/mode.enum";
+import Screen from "@constants/screen.enum";
+import Section from "@constants/section.enum";
+import { type loadPagesFuncType } from "@interface/function.type";
+import type { LanguageInterface, PageIndexInterface } from "@interface/payload.type";
 import type {
 	AdultExtroductoryPageType,
 	AdultExtroductoryPagesType,
@@ -10,8 +16,9 @@ import type {
 	ModeType,
 	QuestionPageType,
 	QuestionPagesType,
-} from "interface/union.type";
-import { store } from "store/store";
+} from "@interface/union.type";
+import Languages from "@store/data/languages";
+import { setLanguageOption } from "@store/questions/questionsSlice";
 import {
 	clearExtroResponses,
 	clearFeedbackResponses,
@@ -19,24 +26,10 @@ import {
 	clearHbscResponses,
 	clearQuestionResponses,
 	clearResponseByIdent,
-} from "store/responses/responsesSlice";
-import { setLanguageOption } from "store/questions/questionsSlice";
-import {
-	addPage,
-	setPage,
-	addSectionTotalPages,
-	resetSectionTitles,
-	addSectionTitle,
-	resetSectionTotalPages,
-} from "store/settings/settingsSlice";
-import { loadLanguagesOffline } from "./load.utils";
-import Screen from "constants/screen.enum";
-import Section from "constants/section.enum";
-import Mode from "constants/mode.enum";
-import { getScreenType } from "utils/type.utils";
-import type { LanguageInterface, PageIndexInterface } from "interface/payload.type";
-import MAIN_STUDY_LANG from "constants/main_study_lang";
-import { type loadPagesFuncType } from "interface/function.type";
+} from "@store/responses/responsesSlice";
+import { addPage, addSectionTitle, addSectionTotalPages, resetSectionTitles, resetSectionTotalPages, setPage } from "@store/settings/settingsSlice";
+import { store } from "@store/store";
+import { getScreenType } from "@utils/type.utils";
 import { randomBoolean } from "./random";
 
 const loadSectionPages = (): void => {
@@ -91,7 +84,7 @@ const loadPages = (): void => {
 	const questions = store.getState().questions;
 	const introductoryPages: IntroductoryPagesType = questions.introductoryPages;
 	const questionPages: QuestionPagesType = questions.questionPages;
-	const languages: LanguageInterface[] = loadLanguagesOffline();
+	const languages: LanguageInterface[] = Languages;
 
 	// DO NOT RESET APP CONFIGURATIONS HERE
 
@@ -462,4 +455,4 @@ const reloadExtroFeedbackPages = (mode: ModeType, language: string): void => {
 	store.dispatch(setPage(newPages));
 };
 
-export { loadPages, loadAgePage, reloadExtroFeedbackPages, loadSectionPages };
+export { loadAgePage, loadPages, loadSectionPages, reloadExtroFeedbackPages };

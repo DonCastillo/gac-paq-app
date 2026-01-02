@@ -1,12 +1,12 @@
-import { View, StyleSheet, Pressable, FlatList, SafeAreaView, Image } from "react-native";
+import { getOptionImage } from "@utils/background.utils";
+import { horizontalScale, verticalScale } from "@utils/responsive.utils";
+import React, { useEffect, useState } from "react";
 import type { ImageStyle, StyleProp } from "react-native";
-import React, { useState, useEffect } from "react";
-import { horizontalScale, verticalScale } from "utils/responsive.utils";
-import { getOptionImage } from "utils/background.utils";
+import { FlatList, Image, Pressable, StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
 
-import { getColorTheme, getCurrentPage, getDevice } from "store/settings/settingsSlice";
-import type { ChoiceImage } from "interface/payload.type";
+import type { ChoiceImage } from "@interface/payload.type";
+import { getColorTheme, getCurrentPage, getDevice } from "@store/settings/settingsSlice";
 
 interface PropsInterface {
 	options: ChoiceImage[];
@@ -14,24 +14,16 @@ interface PropsInterface {
 	selectedValue: string | null;
 }
 
-const QuestionSatisfactionImage = ({
-	options,
-	onChange,
-	selectedValue,
-}: PropsInterface): React.ReactElement => {
+const QuestionSatisfactionImage = ({ options, onChange, selectedValue }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	const device = useSelector(getDevice);
 	const colorTheme = useSelector(getColorTheme);
 	const { color100 } = colorTheme;
 	const [selected, setSelected] = useState<string | null>(selectedValue);
 	const numColumn = device.isTablet ? 5 : 3;
-	const dissatisfiedOptions = options.filter(
-		(option) => option.image_ident === "dissatisfied" || option.image_ident === "very_dissatisfied",
-	);
+	const dissatisfiedOptions = options.filter((option) => option.image_ident === "dissatisfied" || option.image_ident === "very_dissatisfied");
 	const neutralOptions = options.filter((option) => option.image_ident === "neutral");
-	const satisfiedOptions = options.filter(
-		(option) => option.image_ident === "satisfied" || option.image_ident === "very_satisfied",
-	);
+	const satisfiedOptions = options.filter((option) => option.image_ident === "satisfied" || option.image_ident === "very_satisfied");
 
 	useEffect(() => {
 		if (selected !== selectedValue) {
@@ -88,32 +80,21 @@ const QuestionSatisfactionImage = ({
 				style={[
 					styles.blockOptionContainer,
 					{
-						paddingHorizontal:
-							horizontalScale(device.isTablet ? 3 : 0, device.screenWidth) / numColumn,
-						paddingVertical:
-							horizontalScale(device.isTablet ? 5 : 0, device.screenWidth) / numColumn,
+						paddingHorizontal: horizontalScale(device.isTablet ? 3 : 0, device.screenWidth) / numColumn,
+						paddingVertical: horizontalScale(device.isTablet ? 5 : 0, device.screenWidth) / numColumn,
 					},
 				]}
 				onPress={() => {
 					selectHandler(value);
 				}}
 			>
-				<View
-					style={[
-						styles.blockOptionImageContainer,
-						selected === value && { backgroundColor: color100 },
-					]}
-				>
-					{renderImage(imageByMode)}
-				</View>
+				<View style={[styles.blockOptionImageContainer, selected === value && { backgroundColor: color100 }]}>{renderImage(imageByMode)}</View>
 			</Pressable>
 		);
 	};
 
 	return (
-		<SafeAreaView
-			style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}
-		>
+		<View style={[styles.container, { maxHeight: verticalScale(300, device.screenHeight) }]}>
 			<View style={{ width: "100%" }}>
 				{device.isTablet ? (
 					<View>
@@ -167,7 +148,7 @@ const QuestionSatisfactionImage = ({
 					</View>
 				)}
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 };
 

@@ -1,5 +1,5 @@
-import Screen from "constants/screen.enum";
-import type { LangExtroPayloadInterface } from "interface/payload.type";
+import Screen from "@constants/screen.enum";
+import type { LangExtroPayloadInterface } from "@interface/payload.type";
 
 const AppExtro: LangExtroPayloadInterface = {
 	ident: "survey_app_extro",

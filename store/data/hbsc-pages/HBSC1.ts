@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const HBSC1: LangQuestionRadioPayloadInterface = {
 	ident: "hbsc_1",
@@ -11,12 +11,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"en-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
-			label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			kid_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			adult_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_sublabel: "Please add up all the time you spent in physical activity each day.",
 			adult_sublabel: "Please add up all the time you spent in physical activity each day.",
 			choices: [
@@ -57,12 +54,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"ma-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २५",
-			label:
-				"गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
-			kid_label:
-				"गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
-			adult_label:
-				"गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
+			label: "गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
+			kid_label: "गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
+			adult_label: "गेल्या ७ क्रदवसाांमध्ये, तुम्ही क्रकती क्रदवस दररोज क्रकमान ६० क्रमक्रनटे शारीररकररत्या सक्रिय होता?",
 			kid_sublabel: "कृपया तुम्ही दररोज शारीरिक हालचालींमध्ये घालवलेला वेळ जोडा.",
 			adult_sublabel: "कृपया तुम्ही दररोज शारीरिक हालचालींमध्ये घालवलेला वेळ जोडा.",
 			choices: [
@@ -103,12 +97,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"es-CL": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
-			label:
-				"Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
-			kid_label:
-				"Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
-			adult_label:
-				"Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
+			label: "Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
+			kid_label: "Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
+			adult_label: "Durante los últimos 7 días, ¿Cuántos días fuiste físicamente activo por al menos 60 minutos en total?",
 			kid_sublabel:
 				"Este tiempo no debe ser todo seguido, puedes sumar los tiempos de diferentes momentos del día en que corriste, brincaste, bailaste o hiciste cualquier otra actividad física.",
 			adult_sublabel:
@@ -151,16 +142,11 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"cz-CR": {
 			type: Question.QuestionRadio,
 			heading: "Otázka 25",
-			label:
-				"V kolika z uplynulých 7 dní ses věnoval/a pohybové aktivitě alespoň 60 minut za celý den?",
-			kid_label:
-				"V kolika z uplynulých 7 dní ses věnoval/a pohybové aktivitě alespoň 60 minut za celý den?",
-			adult_label:
-				"V kolika z uplynulých 7 dní ses věnoval/a pohybové aktivitě alespoň 60 minut za celý den?",
-			kid_sublabel:
-				"Prosím, sečti všechen čas strávený pohybovou aktivitou za každý jednotlivý den.",
-			adult_sublabel:
-				"Prosím, sečti všechen čas strávený pohybovou aktivitou za každý jednotlivý den.",
+			label: "V kolika z uplynulých 7 dní ses věnoval/a pohybové aktivitě alespoň 60 minut za celý den?",
+			kid_label: "V kolika z uplynulých 7 dní ses věnoval/a pohybové aktivitě alespoň 60 minut za celý den?",
+			adult_label: "V kolika z uplynulých 7 dní ses věnoval/a pohybové aktivitě alespoň 60 minut za celý den?",
+			kid_sublabel: "Prosím, sečti všechen čas strávený pohybovou aktivitou za každý jednotlivý den.",
+			adult_sublabel: "Prosím, sečti všechen čas strávený pohybovou aktivitou za každý jednotlivý den.",
 			choices: [
 				{
 					label: "0 den",
@@ -199,12 +185,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"hi-IN": {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २५",
-			label:
-				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
-			kid_label:
-				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
-			adult_label:
-				"पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			label: "पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			kid_label: "पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
+			adult_label: "पिछले 7 दिनों में, आप प्रति दिन कम से कम 60 मिनट के लिए कितने दिनों तक शारीरिक रूप से सक्रिय थे? ",
 			kid_sublabel: "कृपया हर दिन के शारीरिक गतिविधि में बिताए गए सभी समय को जोड़ें।",
 			adult_sublabel: "कृपया हर दिन के शारीरिक गतिविधि में बिताए गए सभी समय को जोड़ें।",
 			choices: [
@@ -245,12 +228,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"en-IN": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
-			label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			kid_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			adult_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_sublabel: "Please add up all the time you spent in physical activity each day.",
 			adult_sublabel: "Please add up all the time you spent in physical activity each day.",
 			choices: [
@@ -291,12 +271,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Wāhanga 25",
-			label:
-				"I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
-			kid_label:
-				"I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
-			adult_label:
-				"I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
+			label: "I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
+			kid_label: "I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
+			adult_label: "I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
 			kid_sublabel: "Tatauhia te katoa o te wā e kori tinana ana koe ia te rā.",
 			adult_sublabel: "Tatauhia te katoa o te wā e kori tinana ana koe ia te rā.",
 			choices: [
@@ -337,16 +314,11 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 25",
-			label:
-				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
-			kid_label:
-				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
-			adult_label:
-				"Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
-			kid_sublabel:
-				"Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
-			adult_sublabel:
-				"Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
+			label: "Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			kid_label: "Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			adult_label: "Pa masiku 7 apitawa, ndi masiku angati omwe munachita zochita zolimbitsa thupi kwa mphindi zosachepera 60 patsiku?",
+			kid_sublabel: "Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
+			adult_sublabel: "Chonde phatikizani nthawi yonse yomwe munachita zochita zolimbitsa thupi tsiku lililonse.",
 			choices: [
 				{
 					label: "Simunapangepo zochita zolimbitsa thupi",
@@ -386,14 +358,10 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २५",
 			label: "गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
-			kid_label:
-				"गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
-			adult_label:
-				"गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
-			kid_sublabel:
-				"कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
-			adult_sublabel:
-				"कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
+			kid_label: "गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			adult_label: "गत ७ दिनको अवधिमा, तपाईं कति दिन कम्तिमा ६० मिनेट शारीरिक रूपमा सक्रिय हुनुहुन्थ्यो?",
+			kid_sublabel: "कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
+			adult_sublabel: "कृपया प्रत्येक दिन तपाईंले शारीरिक गतिविधिमा खर्च गरेको कुल समय उल्लेख गर्नुहोस्।",
 			choices: [
 				{
 					label: "० दिन",
@@ -433,10 +401,8 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 25",
 			label: "ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
-			kid_label:
-				"ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
-			adult_label:
-				"ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
+			kid_label: "ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
+			adult_label: "ในช่วง 7 วันที่ผ่านมา น้องได้ทำกิจกรรมทางกายอย่างน้อย 60 นาทีต่อวัน เป็นเวลากี่วัน?",
 			kid_sublabel: "โปรดรวมเวลาทั้งหมดที่น้องใช้ทำกิจกรรมทางกายในแต่ละวัน",
 			adult_sublabel: "โปรดรวมเวลาทั้งหมดที่น้องใช้ทำกิจกรรมทางกายในแต่ละวัน",
 			choices: [
@@ -477,16 +443,11 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 25",
-			label:
-				"Nos últimos 7 dias, em quantos dias você fez atividade física por pelo menos 60 minutos (1 hora) por dia?",
-			kid_label:
-				"Nos últimos 7 dias, em quantos dias você fez atividade física por pelo menos 60 minutos (1 hora) por dia?",
-			adult_label:
-				"Nos últimos 7 dias, em quantos dias você fez atividade física por pelo menos 60 minutos (1 hora) por dia?",
-			kid_sublabel:
-				"Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
-			adult_sublabel:
-				"Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
+			label: "Nos últimos 7 dias, em quantos dias você fez atividade física por pelo menos 60 minutos (1 hora) por dia?",
+			kid_label: "Nos últimos 7 dias, em quantos dias você fez atividade física por pelo menos 60 minutos (1 hora) por dia?",
+			adult_label: "Nos últimos 7 dias, em quantos dias você fez atividade física por pelo menos 60 minutos (1 hora) por dia?",
+			kid_sublabel: "Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
+			adult_sublabel: "Some todo o tempo que você gastou em qualquer tipo de atividade física, em cada dia.",
 			choices: [
 				{
 					label: "0 (nenhum dia)",
@@ -525,12 +486,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"es-ES": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
-			label:
-				"En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
-			kid_label:
-				"En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
-			adult_label:
-				"En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
+			label: "En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
+			kid_label: "En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
+			adult_label: "En los últimos 7 días, ¿en cuántos días te sentiste físicamente activo/a durante un total de al menos 60 minutos por día?",
 			kid_sublabel:
 				"Te preguntamos por el tiempo total; es decir, no es necesario que hayan sido 60 minutos seguidos, puedes sumar los distintos momentos del día en que realizabas algún tipo de actividad física.",
 			adult_sublabel:
@@ -573,15 +531,12 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
-			label:
-				"Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
-			kid_label:
-				"Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
+			label: "Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
+			kid_label: "Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
 			adult_label:
 				"Au cours des sept derniers jours, combien de jours as-tu été physiquement actif (ou active) pendant au moins 60 minutes par jour?",
 			kid_sublabel: "Additionne tout le temps que tu consacres à l'activité physique chaque jour.",
-			adult_sublabel:
-				"Additionne tout le temps que tu consacres à l'activité physique chaque jour.",
+			adult_sublabel: "Additionne tout le temps que tu consacres à l'activité physique chaque jour.",
 			choices: [
 				{
 					label: "0 jour",
@@ -620,12 +575,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"es-MX": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
-			label:
-				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
-			kid_label:
-				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
-			adult_label:
-				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			label: "Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_label: "Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			adult_label: "Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
 			kid_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
 			adult_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
 			choices: [
@@ -666,12 +618,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"es-CO": {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 25",
-			label:
-				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
-			kid_label:
-				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
-			adult_label:
-				"Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			label: "Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			kid_label: "Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
+			adult_label: "Durante los pasados 7 días, ¿en cuántos días fuiste físicamente activo por al menos 60 minutos por día?",
 			kid_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
 			adult_sublabel: "Por favor, suma todo el tiempo que pasaste en actividad física cada día.",
 			choices: [
@@ -712,12 +661,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"en-NZ": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
-			label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			kid_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			adult_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_sublabel: "Please add up all the time you spent in physical activity each day.",
 			adult_sublabel: "Please add up all the time you spent in physical activity each day.",
 			choices: [
@@ -758,12 +704,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"en-MW": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
-			label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			kid_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			adult_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_sublabel: "Please add up all the time you spent in physical activity each day.",
 			adult_sublabel: "Please add up all the time you spent in physical activity each day.",
 			choices: [
@@ -804,12 +747,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"en-NG": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
-			label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			kid_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			adult_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_sublabel: "Please add up all the time you spent in physical activity each day.",
 			adult_sublabel: "Please add up all the time you spent in physical activity each day.",
 			choices: [
@@ -850,12 +790,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"en-AE": {
 			type: Question.QuestionRadio,
 			heading: "Question 25",
-			label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			kid_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
-			adult_label:
-				"Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			kid_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+			adult_label: "Over the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
 			kid_sublabel: "Please add up all the time you spent in physical activity each day.",
 			adult_sublabel: "Please add up all the time you spent in physical activity each day.",
 			choices: [
@@ -942,12 +879,9 @@ const HBSC1: LangQuestionRadioPayloadInterface = {
 		"sv-SE": {
 			type: Question.QuestionRadio,
 			heading: "Fråga 25",
-			label:
-				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
-			kid_label:
-				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
-			adult_label:
-				"Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
+			label: "Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
+			kid_label: "Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
+			adult_label: "Hur många dagar har du varit fysiskt aktiv sammanlagt minst 60 minuter om dagen under de senaste 7 dagarna?",
 			kid_sublabel: "Räkna ihop all tid som du är fysiskt aktiv varje dag.",
 			adult_sublabel: "Räkna ihop all tid som du är fysiskt aktiv varje dag.",
 			choices: [

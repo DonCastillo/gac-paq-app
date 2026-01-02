@@ -1,9 +1,8 @@
-import type Question from "constants/question.enum";
-import type Screen from "constants/screen.enum";
+import type Question from "@constants/question.enum";
+import type Screen from "@constants/screen.enum";
 import { type ReactElement } from "react";
 import { type Image } from "react-native";
-import { type ScreenType, type SectionType, type ModeType, type AllPageType } from "./union.type";
-import type { Svg } from "react-native-svg";
+import { type AllPageType, type ModeType, type ScreenType, type SectionType } from "./union.type";
 
 
 export interface Choice {
@@ -33,7 +32,6 @@ export interface LanguageInterface {
 	local_name?: string;
 	flag_code?: string;
 	lang_code: string;
-	flag?: Svg;
 }
 
 export interface ResponseInterface {
@@ -58,11 +56,10 @@ export interface PageIndexInterface {
 
 export interface PageInterface {
 	heading: string;
-	description: string | null;
-	description_mode?: {
+	description: {
 		kid: string;
 		adult: string;
-	}
+	};
 }
 
 

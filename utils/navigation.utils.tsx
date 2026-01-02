@@ -1,10 +1,9 @@
-import { nextPage, prevPage, skipPage } from "store/settings/settingsSlice";
-import { getResponseByIdent } from "./response.utils";
-import { clearResponseByIdent } from "store/responses/responsesSlice";
+import Mode from "@constants/mode.enum";
+import { clearResponseByIdent } from "@store/responses/responsesSlice";
+import { nextPage, skipPage } from "@store/settings/settingsSlice";
+import { store } from "@store/store";
 import { getPageNumberBasedOnIdent } from "./page.utils";
-import Mode from "constants/mode.enum";
-import { store } from "store/store";
-import { BackHandler } from "react-native";
+import { getResponseByIdent } from "./response.utils";
 
 const proceedPage = (): void => {
 	const currentIdent = store.getState().settings.currentPage.page.ident;
@@ -75,8 +74,7 @@ const skipTo = (answer: string | string[] | null): number => {
 	// if responder age is between 12-17 or is an adult/parent, answer WORK section
 	if (currentIdent === "household_extro") {
 		const age = getResponseByIdent("age");
-		const finalAge =
-			age !== "" && age !== undefined && age !== null && !Array.isArray(age) ? parseInt(age) : -1;
+		const finalAge = age !== "" && age !== undefined && age !== null && !Array.isArray(age) ? parseInt(age) : -1;
 		const isTeen = [12, 13, 14, 15, 16, 17].includes(finalAge);
 		if ((finalAge !== -1 && isTeen && mode === Mode.Adult) || isTeen) {
 			return getPageNumberBasedOnIdent("work_intro", pages);
@@ -98,10 +96,7 @@ const skipTo = (answer: string | string[] | null): number => {
 		const attendedWork = getResponseByIdent("work_1")?.toString().toLowerCase();
 
 		// if responder did not attend school or work, skip transportation questions related to school and work
-		if (
-			["no", null, undefined].includes(attendedSchool) &&
-			["no", null, undefined].includes(attendedWork)
-		) {
+		if (["no", null, undefined].includes(attendedSchool) && ["no", null, undefined].includes(attendedWork)) {
 			store.dispatch(clearResponseByIdent("transportation_1"));
 			store.dispatch(clearResponseByIdent("transportation_2"));
 			store.dispatch(clearResponseByIdent("transportation_3"));
@@ -175,9 +170,7 @@ const skipTo = (answer: string | string[] | null): number => {
 
 	if (currentIdent === "transportation_9") {
 		let transpoMode = getResponseByIdent("transportation_7");
-		transpoMode = Array.isArray(transpoMode)
-			? transpoMode?.map((transmode) => transmode.toLowerCase())
-			: null;
+		transpoMode = Array.isArray(transpoMode) ? transpoMode?.map((transmode) => transmode.toLowerCase()) : null;
 
 		if (transpoMode !== null && Boolean(transpoMode?.includes("wheeled"))) {
 			return getPageNumberBasedOnIdent("transportation_10", pages);

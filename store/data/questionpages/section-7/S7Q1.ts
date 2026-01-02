@@ -1,6 +1,6 @@
-import Screen from "constants/screen.enum";
-import Question from "constants/question.enum";
-import type { LangQuestionRadioPayloadInterface } from "interface/payload.type";
+import Question from "@constants/question.enum";
+import Screen from "@constants/screen.enum";
+import type { LangQuestionRadioPayloadInterface } from "@interface/payload.type";
 
 const S7Q1: LangQuestionRadioPayloadInterface = {
 	ident: "outdoors_1",
@@ -15,8 +15,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 23",
 			label: "In the past week, on a normal day, how much time do you spend outdoors?",
 			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend outdoors?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [
 				{
 					label: "None",
@@ -49,8 +48,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 23",
 			label: "In the past week, on a normal day, how much time do you spend outdoors?",
 			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend outdoors?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [
 				{
 					label: "None",
@@ -83,8 +81,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 23",
 			label: "I te wiki kua hipa, i tētahi rā noa, i hia te roa o tō whakapaunga kaha ki waho?",
 			kid_label: "I te wiki kua hipa, i tētahi rā noa, i hia te roa o tō whakapaunga kaha ki waho?",
-			adult_label:
-				"I te wiki kua hipa, i tētahi rā noa, e hia te roa o tō tāu tamaiti whakapaunga kaha ki waho?",
+			adult_label: "I te wiki kua hipa, i tētahi rā noa, e hia te roa o tō tāu tamaiti whakapaunga kaha ki waho?",
 			choices: [
 				{
 					label: "Kore",
@@ -117,8 +114,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 23",
 			label: "In the past week, on a normal day, how much time do you spend outdoors?",
 			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend outdoors?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [
 				{
 					label: "None",
@@ -184,8 +180,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 23",
 			label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
 			kid_label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
-			adult_label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasó al aire libre su hija o hijo?",
+			adult_label: "En la última semana, en un día normal, ¿cuánto tiempo pasó al aire libre su hija o hijo?",
 			choices: [
 				{
 					label: "Nada",
@@ -218,8 +213,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 23",
 			label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
 			kid_label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
-			adult_label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasó al aire libre su hija o hijo?",
+			adult_label: "En la última semana, en un día normal, ¿cuánto tiempo pasó al aire libre su hija o hijo?",
 			choices: [
 				{
 					label: "Nada",
@@ -252,8 +246,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 23",
 			label: "In the past week, on a normal day, how much time do you spend outdoors?",
 			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend outdoors?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [
 				{
 					label: "None",
@@ -286,8 +279,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 23",
 			label: "In the past week, on a normal day, how much time do you spend outdoors?",
 			kid_label: "In the past week, on a normal day, how much time do you spend outdoors?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend outdoors?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [
 				{
 					label: "None",
@@ -318,12 +310,9 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 		"ch-MW": {
 			type: Question.QuestionRadio,
 			heading: "Funso 23",
-			label:
-				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
-			kid_label:
-				"M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
-			adult_label:
-				"M’sabata yapitayi, pa tsiku labwinobwno ndi nthawi yaitali bwanji yomwe mwana wanu amakhala panja?",
+			label: "M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
+			kid_label: "M’sabata yapitayi, ndi nthawi yochuluka bwanji pa tsiku yomwe umakhala panja panyumba?",
+			adult_label: "M’sabata yapitayi, pa tsiku labwinobwno ndi nthawi yaitali bwanji yomwe mwana wanu amakhala panja?",
 			choices: [
 				{
 					label: "Sunakhaleko panja",
@@ -359,10 +348,8 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २३",
 			label: "मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
-			kid_label:
-				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
-			adult_label:
-				"मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुमच्या मुलाने सरासरी किती वेळ घराबाहेर घालवला?",
+			kid_label: "मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुम्ही सरासरी किती वेळ घराबाहेर घालवला?",
+			adult_label: "मागील आठवड्यात, एखाद्या सर्वसामान्य दिवशी, तुमच्या मुलाने सरासरी किती वेळ घराबाहेर घालवला?",
 			choices: [
 				{
 					label: "अजिबात नाही",
@@ -424,8 +411,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 23",
 			label: "In the past week, on a normal day, how much time did you spend outdoors?",
 			kid_label: "In the past week, on a normal day, how much time did you spend outdoors?",
-			adult_label:
-				"In the past week, on a normal day, how much time did your child spend outdoors?",
+			adult_label: "In the past week, on a normal day, how much time did your child spend outdoors?",
 			choices: [
 				{
 					label: "None",
@@ -490,10 +476,8 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "प्रश्न २३",
 			label: "पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंले कति समय घर बाहिर बिताउनुभयो?",
-			kid_label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंले कति समय घर बाहिर बिताउनुभयो?",
-			adult_label:
-				"पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंको छोरा वा छोरीले कति समय घर बाहिर बिताउनुभयो?",
+			kid_label: "पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंले कति समय घर बाहिर बिताउनुभयो?",
+			adult_label: "पछिल्लो (गएको/ बितेको) हप्ता, एक सामान्य दिनमा, तपाईंको छोरा वा छोरीले कति समय घर बाहिर बिताउनुभयो?",
 			choices: [
 				{
 					label: "कुनै पनि समय घर बाहिर बिताइन",
@@ -528,10 +512,8 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 		"pt-BR": {
 			type: Question.QuestionRadio,
 			heading: "Questão 23",
-			label:
-				"Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
-			kid_label:
-				"Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
+			label: "Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
+			kid_label: "Na última semana, em um dia normal, quanto tempo você realizou atividades ao ar livre?",
 			adult_label:
 				"Na última semana, em um dia normal, quanto tempo a criança ou adolescente que você é responsável realizou atividades ao ar livre?",
 			choices: [
@@ -566,8 +548,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Fråga 23",
 			label: "Hur mycket tid spenderade du utomhus på en vanlig dag under den senaste veckan?",
 			kid_label: "Hur mycket tid spenderade du utomhus på en vanlig dag under den senaste veckan?",
-			adult_label:
-				"Hur mycket tid spenderade ditt barn utomhus på en vanlig dag den senaste veckan?",
+			adult_label: "Hur mycket tid spenderade ditt barn utomhus på en vanlig dag den senaste veckan?",
 			choices: [
 				{
 					label: "Ingen",
@@ -599,10 +580,8 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "ข้อ 23",
 			label: "ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
-			kid_label:
-				"ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
-			adult_label:
-				"ในวันปกติเมื่อสัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			kid_label: "ในวันปกติเมื่อสัปดาห์ที่แล้ว น้องใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
+			adult_label: "ในวันปกติเมื่อสัปดาห์ที่แล้ว บุตรหลานของคุณใช้เวลาทำกิจกรรมกลางแจ้ง/ในที่โล่งมากน้อยเพียงใด?",
 			choices: [
 				{
 					label: "ไม่มีเลย",
@@ -667,10 +646,8 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			type: Question.QuestionRadio,
 			heading: "Pregunta 23",
 			label: "Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
-			kid_label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
-			adult_label:
-				"Durante la semana pasada, en un día normal, ¿cuánto tiempo pasó su hija o hijo al aire libre?",
+			kid_label: "Durante la semana pasada, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
+			adult_label: "Durante la semana pasada, en un día normal, ¿cuánto tiempo pasó su hija o hijo al aire libre?",
 			choices: [
 				{
 					label: "Nada",
@@ -703,8 +680,7 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pregunta 23",
 			label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
 			kid_label: "En la última semana, en un día normal, ¿cuánto tiempo pasaste al aire libre?",
-			adult_label:
-				"En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo al aire libre?",
+			adult_label: "En la última semana, en un día normal, ¿cuánto tiempo pasó su hija o hijo al aire libre?",
 			choices: [
 				{
 					label: "Nada",
@@ -735,12 +711,9 @@ const S7Q1: LangQuestionRadioPayloadInterface = {
 		"fr-CA": {
 			type: Question.QuestionRadio,
 			heading: "Question 23",
-			label:
-				"Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé dehors?",
-			kid_label:
-				"Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé dehors?",
-			adult_label:
-				"Durant la dernière semaine, lors d'une journée normale, combien de temps ton enfant a-t-il (elle) passé dehors?",
+			label: "Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé dehors?",
+			kid_label: "Durant la dernière semaine, lors d'une journée normale, combien de temps as-tu passé dehors?",
+			adult_label: "Durant la dernière semaine, lors d'une journée normale, combien de temps ton enfant a-t-il (elle) passé dehors?",
 			choices: [
 				{
 					label: "Pas du tout",
