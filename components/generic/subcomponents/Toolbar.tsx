@@ -11,7 +11,7 @@ import MenuButton from "./MenuButton";
 import Title from "./Title";
 
 const Toolbar = (): React.ReactElement => {
-	const { language } = useCharacter();
+	const { language, pageName } = useCharacter();
 	const device = useSelector(getDevice);
 
 	return (
@@ -43,7 +43,8 @@ const Toolbar = (): React.ReactElement => {
 						gap: 20,
 					}}
 				>
-					<Audio />
+					
+					{pageName === "questionnaire" && <Audio />}
 					<MenuButton />
 				</View>
 			</View>
