@@ -28,6 +28,9 @@ const NoPendingSubmissionsPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "No pending submissions",
 	},
+	"en-GH": {
+		label: "No pending submissions",
+	},
 	"ch-MW": {
 		label: "Palibe zoperekedwa zomwe zikuyembekezeredwa",
 	},

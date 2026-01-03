@@ -89,6 +89,15 @@ const S1Preamble: LangPreamblePayloadInterface = {
 					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
 			},
 		},
+		"en-GH": {
+			heading: "School",
+			subheading: "Section 1",
+			description: {
+				kid: "This section is about what you do during normal school hours, for example during physical education classes, recess, and lunch time.",
+				adult:
+					"This section is about what your child does during normal school hours, for example during physical education classes, recess, and lunch time.",
+			},
+		},
 		"ch-MW": {
 			heading: "Sukulu",
 			subheading: "Gawo loyamba",

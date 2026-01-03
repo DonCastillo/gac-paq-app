@@ -42,6 +42,10 @@ const FeedbackIntro: LangSectionPayloadInterface = {
 			heading: "Feedback",
 			subheading: "",
 		},
+		"en-GH": {
+			heading: "Feedback",
+			subheading: "",
+		},
 		"ch-MW": {
 			heading: "Ndemanga",
 			subheading: "",

@@ -42,6 +42,10 @@ const DemographicExtro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "",
 		},
+		"en-GH": {
+			heading: "Section Complete!",
+			subheading: "",
+		},
 		"ch-MW": {
 			heading: "Gawo latha",
 			subheading: "",

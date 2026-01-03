@@ -62,12 +62,12 @@ const Section7 = [S7Intro, S7Preamble, S7Q1, S7Extro];
 
 const QuestionPages: LangQuestionPagesType = [
 	...Section1,
-	// ...Section2,
-	// ...Section3,
-	// ...Section4,
-	// ...Section5,
-	// ...Section6,
-	// ...Section7,
+	...Section2,
+	...Section3,
+	...Section4,
+	...Section5,
+	...Section6,
+	...Section7,
 ];
 
 export default QuestionPages;

@@ -28,6 +28,9 @@ const ResponsesSubmittedPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Responses submitted",
 	},
+	"en-GH": {
+		label: "Responses submitted",
+	},
 	"ch-MW": {
 		label: "Mayankho atumizidwa",
 	},

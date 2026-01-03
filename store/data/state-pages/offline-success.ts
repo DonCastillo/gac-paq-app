@@ -70,6 +70,13 @@ const OfflineSuccessPage: LangPagePayloadInterface = {
 				adult: "Your responses will be saved and automatically resubmitted when the connection is restored.\n\nThank you for your help!",
 			},
 		},
+		"en-GH": {
+			heading: "You are not connected to the Internet",
+			description: {
+				kid: "Your responses will be saved and automatically resubmitted when the connection is restored.\n\nThank you for your help!",
+				adult: "Your responses will be saved and automatically resubmitted when the connection is restored.\n\nThank you for your help!",
+			},
+		},
 		"ch-MW": {
 			heading: "Simunalumikizane ndi intaneti",
 			description: {
