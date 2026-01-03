@@ -3,7 +3,7 @@ import type { LangPhraseInterface, PhraseInterface } from "@interface/phrase";
 
 const translateArrayOfPages = (pages: any, language: string | undefined): any => {
 	const finalLanguage = language ?? "en-CA";
-	
+
 	return pages.map((page: any) => {
 		// check if page.ident starts with "hbsc_"
 		if (page.ident.startsWith("hbsc_")) {

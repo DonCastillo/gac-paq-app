@@ -462,6 +462,5 @@ export {
 	getOptionImage,
 	getOptionSubLabel,
 	getOptionText,
-	getQuestionBackground
+	getQuestionBackground,
 };
-

@@ -1,4 +1,4 @@
-import { getDevice, setKeyboardState } from "@store/settings/settingsSlice";
+import { disableNarrationAutoplay, getDevice, setKeyboardState } from "@store/settings/settingsSlice";
 import React, { useEffect } from "react";
 import { Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,7 +44,7 @@ const KeyboardSafeview = ({ children }: PropsInterface): React.ReactElement => {
 			<TouchableWithoutFeedback
 				onPress={() => {
 					Keyboard.dismiss();
-					// dispatch(disableNarrationAutoplay());
+					dispatch(disableNarrationAutoplay());
 				}}
 			>
 				<View style={{ flex: 1 }}>{children}</View>
