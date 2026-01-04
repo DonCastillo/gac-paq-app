@@ -28,6 +28,9 @@ const DonePhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Done",
 	},
+	"en-GH": {
+		label: "Done",
+	},
 	"ch-MW": {
 		label: "Zatheka",
 	},

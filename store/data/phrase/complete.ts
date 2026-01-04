@@ -28,6 +28,9 @@ const CompletePhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Complete",
 	},
+	"en-GH": {
+		label: "Complete",
+	},
 	"ch-MW": {
 		label: "Tamaliza",
 	},

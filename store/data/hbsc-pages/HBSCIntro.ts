@@ -78,6 +78,10 @@ const HBSCIntro: LangSectionPayloadInterface = {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",
 		},
+		"en-GH": {
+			heading: "Health Behaviour in School-aged Children",
+			subheading: "",
+		},
 		"en-AE": {
 			heading: "Health Behaviour in School-aged Children",
 			subheading: "",

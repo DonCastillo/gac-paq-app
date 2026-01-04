@@ -70,6 +70,13 @@ const ErrorPage: LangPagePayloadInterface = {
 				adult: "There is a problem submitting your response.\n\nPlease try again.",
 			},
 		},
+		"en-GH": {
+			heading: "Error",
+			description: {
+				kid: "There is a problem submitting your response.\n\nPlease try again.",
+				adult: "There is a problem submitting your response.\n\nPlease try again.",
+			},
+		},
 		"ch-MW": {
 			heading: "Chinachake chalakwika",
 			description: {

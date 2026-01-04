@@ -7,6 +7,7 @@ import COSvg from "@assets/icons/flags/co.svg";
 import CZSvg from "@assets/icons/flags/cz.svg";
 import ESSvg from "@assets/icons/flags/es.svg";
 import FRSvg from "@assets/icons/flags/fr.svg";
+import GHSvg from "@assets/icons/flags/gh.svg";
 import INSvg from "@assets/icons/flags/in.svg";
 import MWSvg from "@assets/icons/flags/mw.svg";
 import MXSvg from "@assets/icons/flags/mx.svg";
@@ -27,6 +28,7 @@ const FlagIcons = {
 	cz: CZSvg,
 	es: ESSvg,
 	fr: FRSvg,
+	gh: GHSvg,
 	in: INSvg,
 	mw: MWSvg,
 	mx: MXSvg,

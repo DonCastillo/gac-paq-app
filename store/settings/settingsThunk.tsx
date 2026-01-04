@@ -44,7 +44,7 @@ export const getNarrationPayload = createAsyncThunk(
 		}
 
 		// modify conditional statement here if 2 or more languages are the same translations
-		if (tempLanguage === "en-NG") {
+		if (["en-NG", "en-GH"].includes(tempLanguage)) {
 			tempLanguage = "en-MW";
 		}
 		if (tempLanguage === "en-IN") {
@@ -57,7 +57,7 @@ export const getNarrationPayload = createAsyncThunk(
 		if (!narrations) return null;
 
 		// if en-NG && mode === adult, merge en-MW payload and get en-NG version of child_ethnicities and parent_ethnicities
-		if (language === "en-NG" && mode === Mode.Adult) {
+		if (["en-NG", "en-GH"].includes(language) && mode === Mode.Adult) {
 			const enNGAdultEndpoint = getNarrationEndpoint(directusBaseEndpoint, Mode.Adult, "en-NG");
 			const enNGAdultNarrations = (await collectNarrationData(enNGAdultEndpoint, directusAccessToken)) as Record<string, any> | null;
 			if (!enNGAdultNarrations) return narrations;

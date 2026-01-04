@@ -28,6 +28,9 @@ const FeedbackPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Feedback",
 	},
+	"en-GH": {
+		label: "Feedback",
+	},
 	"ch-MW": {
 		label: "Ndemanga",
 	},

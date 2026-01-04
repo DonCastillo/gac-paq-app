@@ -60,14 +60,6 @@ const Section5 = [S5Intro, S5Preamble, S5Q1, S5Q2, S5Q3, S5Extro];
 const Section6 = [S6Intro, S6Preamble, S6Q1, S6Q2, S6Extro];
 const Section7 = [S7Intro, S7Preamble, S7Q1, S7Extro];
 
-const QuestionPages: LangQuestionPagesType = [
-	...Section1,
-	// ...Section2,
-	// ...Section3,
-	// ...Section4,
-	// ...Section5,
-	// ...Section6,
-	// ...Section7,
-];
+const QuestionPages: LangQuestionPagesType = [...Section1, ...Section2, ...Section3, ...Section4, ...Section5, ...Section6, ...Section7];
 
 export default QuestionPages;

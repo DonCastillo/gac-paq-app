@@ -52,6 +52,13 @@ const Languages: LanguageInterface[] = [
 	},
 	{
 		name: "English",
+		country_name: "Ghana",
+		local_name: "English",
+		flag_code: "GH",
+		lang_code: "en-GH",
+	},
+	{
+		name: "English",
 		country_name: "India",
 		local_name: "English",
 		flag_code: "IN",

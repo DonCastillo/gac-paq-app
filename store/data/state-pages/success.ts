@@ -70,6 +70,13 @@ const SuccessPage: LangPagePayloadInterface = {
 				adult: "Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
 			},
 		},
+		"en-GH": {
+			heading: "Success!",
+			description: {
+				kid: "Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
+				adult: "Good Job, You finished the Questionnaire. Your answers have been sent successfully.\n\nThank you for your help!",
+			},
+		},
 		"ch-MW": {
 			heading: "Zatheka!",
 			description: {

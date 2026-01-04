@@ -73,7 +73,7 @@ const getImageBackground = (): any | null => {
 	const screen = getScreenType(settings.currentPage.screen ?? "page");
 
 	// modify conditional statement here if 2 or more languages have the same background images
-	if (language === "en-NG") {
+	if (["en-NG", "en-GH"].includes(language)) {
 		language = "en-MW";
 		region = "MW";
 	}
@@ -193,7 +193,7 @@ const getImageBackgroundStatus = (state: State): any | null => {
 	const platform = settings.device.isTablet ? "tablet" : "phone";
 
 	// modify conditional statement here if 2 or more languages have the same background images
-	if (language === "en-NG") {
+	if (["en-NG", "en-GH"].includes(language)) {
 		language = "en-MW";
 		region = "MW";
 	}
@@ -226,7 +226,7 @@ const getOptionImage = (image_ident: string): any | null => {
 	const mode = settings.mode === Mode.Kid ? Mode.Kid : Mode.Teen;
 
 	// modify conditional statement here if 2 or more languages have the same images
-	if (language === "en-NG") {
+	if (["en-NG", "en-GH"].includes(language)) {
 		language = "en-MW";
 		region = "MW";
 	}
