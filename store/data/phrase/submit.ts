@@ -28,6 +28,9 @@ const SubmitPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Submit",
 	},
+	"en-GH": {
+		label: "Submit",
+	},
 	"ch-MW": {
 		label: "Tumiza",
 	},

@@ -88,7 +88,9 @@ const QuestionSatisfactionImage = ({ options, onChange, selectedValue }: PropsIn
 					selectHandler(value);
 				}}
 			>
-				<View style={[styles.blockOptionImageContainer, selected === value && { backgroundColor: color100 }]}>{renderImage(imageByMode)}</View>
+				<View style={[styles.blockOptionImageContainer, selected === value && { backgroundColor: color100, ...styles.blockOptionImageContainer }]}>
+					{renderImage(imageByMode)}
+				</View>
 			</Pressable>
 		);
 	};
@@ -159,15 +161,12 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		margin: 1,
+		borderRadius: "100%",
 	},
 	container: {},
 	blockOptionImageContainer: {
 		padding: 5,
-		borderRadius: 100,
-		borderTopLeftRadius: 100,
-		borderTopRightRadius: 100,
-		borderBottomLeftRadius: 100,
-		borderBottomRightRadius: 100,
+		borderRadius: "100%",
 	},
 	optionImage: {},
 });

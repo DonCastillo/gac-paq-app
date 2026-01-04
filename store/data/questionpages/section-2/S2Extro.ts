@@ -42,6 +42,10 @@ const S2Extro: LangExtroPayloadInterface = {
 			heading: "Section Complete!",
 			subheading: "Only five more to go!",
 		},
+		"en-GH": {
+			heading: "Section Complete!",
+			subheading: "Only five more to go!",
+		},
 		"ch-MW": {
 			heading: "Gawo latha",
 			subheading: "Tasala ndi magawo 5 okha kuti timalize",

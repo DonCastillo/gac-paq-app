@@ -62,7 +62,7 @@ const QuestionnaireKidIntroLayout: ParentComponent = ({ children }) => {
 						{
 							backgroundColor: color200,
 							maxWidth: device.isTablet ? 400 : "100%",
-							minHeight: device.isTablet ? "100%" : 220,
+							minHeight: device.isTablet ? 250 : 220,
 						},
 					]}
 				>

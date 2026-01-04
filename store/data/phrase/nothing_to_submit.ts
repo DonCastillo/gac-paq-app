@@ -28,6 +28,9 @@ const NothingToSubmitPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Nothing to submit",
 	},
+	"en-GH": {
+		label: "Nothing to submit",
+	},
 	"ch-MW": {
 		label: "Palibe choti tumiza",
 	},

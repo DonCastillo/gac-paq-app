@@ -28,6 +28,9 @@ const NextPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Next",
 	},
+	"en-GH": {
+		label: "Next",
+	},
 	"ch-MW": {
 		label: "Yotsatira",
 	},

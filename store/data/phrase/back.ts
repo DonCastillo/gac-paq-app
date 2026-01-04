@@ -28,6 +28,9 @@ const BackPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Back",
 	},
+	"en-GH": {
+		label: "Back",
+	},
 	"ch-MW": {
 		label: "Bwererani",
 	},

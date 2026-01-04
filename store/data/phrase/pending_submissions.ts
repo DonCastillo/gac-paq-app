@@ -28,6 +28,9 @@ const PendingSubmissionsPhrase: LangPhraseInterface = {
 	"en-NG": {
 		label: "Pending Submissions",
 	},
+	"en-GH": {
+		label: "Pending Submissions",
+	},
 	"ch-MW": {
 		label: "Zoperekedwa Zikuyembekezera",
 	},
