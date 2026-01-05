@@ -66,7 +66,7 @@ const S1Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Question 1",
 			label: "Did you attend school in the past week?",
 			kid_label: "Did you attend school in the past week?",
-			adult_label: "Did your child attend school in the past week?",
+			adult_label: "Did your child go to school in the past week?",
 			choices: [
 				{
 					label: "Yes",

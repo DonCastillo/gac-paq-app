@@ -243,8 +243,8 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					value: "Other",
 					image_ident: "other",
 					sublabel: {
-						kid: "for example walking and busing",
-						adult: "for example walking and busing",
+						kid: "for example walk and bus",
+						adult: "for example walk and bus",
 					},
 				},
 				{
