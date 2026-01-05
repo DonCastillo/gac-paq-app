@@ -57,7 +57,8 @@
 				}
 			],
 			"expo-web-browser",
-			"expo-background-task"
+			"expo-background-task",
+			"./plugins/remove-audio-boot-receiver.js"
 		]
 	}
 }
