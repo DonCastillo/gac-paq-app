@@ -154,7 +154,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 					value: "3 to less than 4 hours per day",
 				},
 				{
-					label: "4 hours or more per day",
+					label: "4 or more hours per day",
 					value: "4 hours or more per day",
 				},
 			],
