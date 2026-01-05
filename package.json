@@ -12,7 +12,9 @@
 		"lint": "expo lint",
 		"format": "prettier --write .",
 		"test:android": "eas build --platform android --profile test:external:aab",
-		"test:ios": "eas build --platform ios --profile test:testflight"
+		"test:ios": "eas build --platform ios --profile test:testflight",
+		"publish:android": "eas build --platform android --profile production",
+		"publish:ios": "eas build --platform ios --profile production"
 	},
 	"dependencies": {
 		"@expo/vector-icons": "^15.0.3",
