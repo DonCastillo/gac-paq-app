@@ -43,7 +43,6 @@ const Toolbar = (): React.ReactElement => {
 						gap: 20,
 					}}
 				>
-					
 					{pageName === "questionnaire" && <Audio />}
 					<MenuButton />
 				</View>

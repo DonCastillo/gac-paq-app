@@ -10,7 +10,6 @@ const useBackgroundTaskRegistration = (): void => {
 		const registerBackgroundTask = async (): Promise<void> => {
 			try {
 				await registerSubmitStoredResponsesBackground();
-				console.log("Background task registered");
 			} catch (error) {
 				console.error("Background task registration failed: ", error);
 			}

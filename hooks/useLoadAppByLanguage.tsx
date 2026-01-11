@@ -27,7 +27,6 @@ const useLoadAppByLanguage = () => {
 	const loadApp = useCallback(
 		async (mode: ModeType, language: string): Promise<void> => {
 			try {
-				console.log("inside useLoadAppByLanguage loadApp: ", { mode, language });
 				// Set loading state
 				setIsLoading(true);
 

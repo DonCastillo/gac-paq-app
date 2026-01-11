@@ -3,15 +3,10 @@ import { store } from "@store/store";
 import axios from "axios";
 
 const submitResponse = async (responses: FinalResponseType): Promise<boolean> => {
-	console.log("submitting response ...");
 	const settings = store.getState().settings;
 	const responseTable = settings.responseTable;
 	const endpoint = settings.directusBaseEndpoint + "/items/" + responseTable;
 	const accessToken = settings.directusAccessToken;
-
-	console.log("Endpoint: ", endpoint);
-	console.log("Access Token: ", accessToken);
-	console.log("Responses: ", responses);
 
 	return new Promise((resolve, reject) => {
 		axios
@@ -22,7 +17,6 @@ const submitResponse = async (responses: FinalResponseType): Promise<boolean> =>
 				},
 			})
 			.then((response) => {
-				console.log("Response submitted: ", response.data);
 				resolve(true);
 			})
 			.catch((error) => {

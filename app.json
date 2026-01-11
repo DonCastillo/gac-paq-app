@@ -3,6 +3,7 @@
 		"name": "GAC-PAQ",
 		"slug": "gacpaq-app",
 		"version": "4.0.1",
+		"scheme": "gacpaq",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
@@ -17,7 +18,9 @@
 			"requireFullScreen": true,
 			"bundleIdentifier": "com.uleth.gacpaq",
 			"infoPlist": {
-				"UIBackgroundModes": ["fetch", "processing"]
+				"UIBackgroundModes": ["fetch", "processing"],
+				"NSMicrophoneUsageDescription": "This app requires microphone access for audio features.",
+				"NSBackgroundFetchUsageDescription": "This app fetches updated data in the background."
 			},
 			"config": {
 				"usesNonExemptEncryption": false
@@ -58,7 +61,8 @@
 			],
 			"expo-web-browser",
 			"expo-background-task",
-			"./plugins/remove-audio-boot-receiver.js"
+			"./plugins/remove-audio-boot-receiver.js",
+			"expo-asset"
 		]
 	}
 }

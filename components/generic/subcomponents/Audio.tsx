@@ -22,9 +22,6 @@ const Audio: Component = () => {
 	}, [currentTime, duration]);
 
 	const showReplayOnNonAudioAutoplay = useMemo(() => {
-		console.log("+++++");
-		console.log("absolute: ", Math.abs(duration - currentTime));
-		console.log("precent: ", (Math.abs(duration - currentTime) / duration) * 100);
 		if (currentTime === 0) return true;
 		if ((Math.abs(duration - currentTime) / duration) * 100 === 0) return true;
 		return false;
