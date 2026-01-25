@@ -99,7 +99,6 @@ const loadPages = (): void => {
 	let sectionPageNumber = 1;
 
 	// load introductory pages
-	// console.log("load intro pages...");
 	introductoryPages.forEach((page: IntroductoryPageType, sectionIndex: number) => {
 		const sectionPageNumber = ++sectionIndex;
 
@@ -121,7 +120,6 @@ const loadPages = (): void => {
 	});
 
 	// load section question pages
-	// console.log("load question and section pages...");
 	questionPages.forEach((page: QuestionPageType) => {
 		// add page to section
 		if (getScreenType(page.type) === Screen.IntroQuestion) {
@@ -146,10 +144,6 @@ const loadPages = (): void => {
 		sectionPageNumber++;
 		pageNumber++;
 	});
-
-	// console.log("---------------------------------");
-	// console.log("intro and question pages done...");
-	// console.log(JSON.stringify(store.getState().settings.sectionTotalPages, null, 2));
 };
 
 const loadAgePage = (mode: ModeType): void => {

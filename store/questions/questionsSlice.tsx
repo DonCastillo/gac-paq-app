@@ -171,34 +171,19 @@ const questionsSlice = createSlice({
 		getOptionNumbers: (state: QuestionSliceInterface) => state.optionNumbers,
 	},
 	extraReducers: (builder) => {
-		builder.addCase(storeQuestionData.fulfilled, (state, action) => {
-			// console.log("question saving fulfilled...");
-		});
-		builder.addCase(storeQuestionData.pending, (state, action) => {
-			// console.log("question saving pending...");
-		});
-		builder.addCase(storeQuestionData.rejected, (state, action) => {
-			// console.log("question saving rejected...");
-		});
-		builder.addCase(removeQuestionData.fulfilled, (state, action) => {
-			// console.log("question removing fulfilled...");
-		});
-		builder.addCase(removeQuestionData.pending, (state, action) => {
-			// console.log("question removing pending...");
-		});
-		builder.addCase(removeQuestionData.rejected, (state, action) => {
-			// console.log("question removing rejected...");
-		});
+		builder.addCase(storeQuestionData.fulfilled, (state, action) => {});
+		builder.addCase(storeQuestionData.pending, (state, action) => {});
+		builder.addCase(storeQuestionData.rejected, (state, action) => {});
+		builder.addCase(removeQuestionData.fulfilled, (state, action) => {});
+		builder.addCase(removeQuestionData.pending, (state, action) => {});
+		builder.addCase(removeQuestionData.rejected, (state, action) => {});
 		builder.addCase(loadQuestionData.fulfilled, (state, action) => {
-			// console.log("question loaded fulfilled...");
 			return { ...state, ...action.payload };
 		});
 		builder.addCase(loadQuestionData.pending, (state, action) => {
-			// console.log("question loaded pending...");
 			state = {};
 		});
 		builder.addCase(loadQuestionData.rejected, (state, action) => {
-			// console.log("question loaded rejected...");
 			state = {};
 		});
 	},
