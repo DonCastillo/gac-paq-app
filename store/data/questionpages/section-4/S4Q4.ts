@@ -780,7 +780,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			heading: "Fråga 16",
 			label: "Hur tog du dig till arbetet (eller ditt ideella arbete) den senaste veckan?",
 			kid_label: "Hur tog du dig till arbetet (eller ditt ideella arbete) den senaste veckan?",
-			adult_label: "How did your child go to work in the past week?",
+			adult_label: "Hur tog ditt barn sig till arbetet (eller ideella arbetet) den senaste veckan?",
 			kid_sublabel: "Välj det du oftast gjorde.",
 			adult_sublabel: "Välj det han/hon oftast gjorde.",
 			choices: [
