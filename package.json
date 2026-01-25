@@ -11,10 +11,10 @@
 		"web": "expo start --web",
 		"lint": "expo lint",
 		"format": "prettier --write .",
-		"test:android": "eas build --platform android --profile test:external:aab",
-		"test:ios": "eas build --platform ios --profile test:testflight",
-		"publish:android": "eas build --platform android --profile production",
-		"publish:ios": "eas build --platform ios --profile production"
+		"test:android": "eas build --profile test:external:aab --platform android",
+		"test:ios": "eas build --profile test:testflight --platform ios",
+		"publish:android": "eas build --profile production --platform android`",
+		"publish:ios": "eas build --profile production --platform ios"
 	},
 	"dependencies": {
 		"@expo/vector-icons": "^15.0.3",

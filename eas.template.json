@@ -1,0 +1,104 @@
+{
+	"build": {
+		"development:simulator": {
+			"developmentClient": true,
+			"distribution": "internal",
+			"ios": {
+				"simulator": true
+			},
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": ""
+			}
+		},
+		"development": {
+			"autoIncrement": true,
+			"developmentClient": true,
+			"distribution": "internal",
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": "",
+				"WATCHMAN_MAX_FILES": ""
+			}
+		},
+		"preview": {
+			"distribution": "internal",
+			"autoIncrement": true,
+			"android": {
+				"buildType": "apk"
+			},
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": ""
+			}
+		},
+		"test:external:apk": {
+			"autoIncrement": true,
+			"android": {
+				"buildType": "apk"
+			},
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": ""
+			}
+		},
+		"test:external:aab": {
+			"autoIncrement": true,
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": ""
+			}
+		},
+		"test:testflight": {
+			"autoIncrement": true,
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": ""
+			}
+		},
+		"temp:production": {
+			"autoIncrement": true,
+			"android": {
+				"buildType": "apk",
+				"gradleCommand": ":app:assembleRelease"
+			},
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": ""
+			}
+		},
+		"production": {
+			"autoIncrement": true,
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": ""
+			},
+			"android": {
+				"buildType": "app-bundle",
+				"gradleCommand": ":app:bundleRelease"
+			}
+		}
+	},
+	"submit": {
+		"test:testflight": {}
+	},
+	"cli": {
+		"appVersionSource": "remote"
+	}
+}
