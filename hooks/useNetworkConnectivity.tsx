@@ -27,7 +27,6 @@ const useNetworkConnectivity = (hasNetwork: boolean, mode: ModeType, language: s
 			// Auto-submit pending responses when network is available
 			sendResponseQueue()
 				.then((res) => {
-					console.log("Response queue processed successfully:", res);
 					return res;
 				})
 				.catch((err) => {

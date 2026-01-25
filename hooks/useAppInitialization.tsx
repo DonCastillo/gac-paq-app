@@ -59,9 +59,7 @@ const useAppInitialization = (mode: ModeType, language: string): void => {
 		};
 
 		loadApp()
-			.then(() => {
-				console.log("app initially loaded ...");
-			})
+			.then(() => {})
 			.catch((err) => {
 				console.error("error loading app", err);
 			});

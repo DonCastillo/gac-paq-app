@@ -19,7 +19,6 @@ export default function SplashLayout() {
 			const timer = setTimeout(() => {
 				loadApp()
 					.then(() => {
-						console.log("finished reloading app");
 						router.replace("/questionnaire/");
 					})
 					.catch((error: any) => {

@@ -21,7 +21,6 @@ import { LoadingScreenAdultPage } from "../adult";
 import { LoadingScreenKidPage } from "../kid";
 
 const GenericPendingSubmissions: Component = () => {
-	console.log("Rendering GenericPendingSubmissions");
 	const phrases = useSelector(getPhrases);
 	const { mode } = useCharacter();
 	const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -47,7 +46,6 @@ const GenericPendingSubmissions: Component = () => {
 			setModalMessage(phrases?.responsesSubmitted);
 			setModalStatus(true);
 			await fetchData();
-			console.log("Response submitted successfully");
 		} catch (error) {
 			// somthing went wrong while submitting the responses
 			console.log("Error submitting response: ", error);
@@ -64,7 +62,6 @@ const GenericPendingSubmissions: Component = () => {
 			setIsLoading(true);
 			const storedResponses = (await retrieveResponseFromStorage()) || [];
 			setPendingResponses(storedResponses);
-			console.log("Pending Responses: ", storedResponses);
 		} catch (error) {
 			console.log("Error submitting response: ", error);
 		} finally {

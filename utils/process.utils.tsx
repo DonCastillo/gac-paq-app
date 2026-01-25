@@ -6,9 +6,7 @@ const BACKGROUND_SUBMIT_STORED_RESPONSES = "background-submit-stored-responses";
 const defineSubmitStoredResponsesBackground = (): void => {
 	TaskManager.defineTask(BACKGROUND_SUBMIT_STORED_RESPONSES, async (): Promise<BackgroundTask.BackgroundTaskResult> => {
 		try {
-			console.log("running background task....");
 			await sendResponseQueue();
-			console.log("done submitting background response...");
 			return BackgroundTask.BackgroundTaskResult.Success;
 		} catch (error) {
 			console.log("background task error: ", error);
