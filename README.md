@@ -62,8 +62,8 @@ To refresh the app in local development, enter `r` on the terminal.
 9. Add a new version; specify the new version number
 10. Select the build you want to deploy
 11. Write the release notes to the `What's New in This Version`
-12. Click `Save` and `Submit to Review`
-13. Wait for Apple to review and approve the app
+12. Click `Save` and `Add for Review`, then `Submit for Review`
+13. Wait for Apple to review and approve the app (should take less than 24 hours)
 14. Once approved, distribute the app. It should then be available on the Apple app store
 
 ### To Google Playstore
@@ -73,7 +73,7 @@ To refresh the app in local development, enter `r` on the terminal.
 6. Download the `aab` file from the latest Android build
 7. Login to Google Play Console and select the app in the list
 8. Go to `Test and release` > `Latest releases and bundles` > `View all app bundles` > `Upload new version`
-9. Upload the `aab` file you downloaded earlier, write the release notes, and finish by clicking save
+9. Upload the `aab` file you downloaded earlier, and finish by clicking save
 10. Go to `Production` > `Create new release`
 11. Click the `Add from library` and select the `aab` file in the app bundles, write the release notes, and click `Next`
 12. Then publish

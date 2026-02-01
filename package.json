@@ -15,7 +15,7 @@
 		"format": "prettier --write .",
 		"test:android": "eas build --profile test:external:aab --platform android",
 		"test:ios": "eas build --profile test:testflight --platform ios",
-		"publish:android": "eas build --profile production --platform android`",
+		"publish:android": "eas build --profile production --platform android",
 		"publish:ios": "eas build --profile production --platform ios"
 	},
 	"dependencies": {
