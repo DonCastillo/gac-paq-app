@@ -2,6 +2,7 @@ enum Screen {
 	Splash = "splash",
 	Page = "page",
 	Language = "language",
+	Country = "country",
 	Preamble = "preamble",
 	SingleQuestion = "question_single",
 	IntroQuestion = "question_intro",

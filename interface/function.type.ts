@@ -1,5 +1,5 @@
-import type { LanguageInterface, PageIndexInterface, ResponseInterface, SectionPayloadInterface } from "@interface/payload.type";
-import type { IntroductoryPagesType, ModeType } from "@interface/union.type";
+import type { PageIndexInterface, ResponseInterface, SectionPayloadInterface } from "@interface/payload.type";
+import type { ModeType } from "@interface/union.type";
 import { type PayloadAction } from "@reduxjs/toolkit";
 import { type SettingsSliceInterface } from "@store/settings/settingsSlice";
 import type React from "react";
@@ -14,6 +14,7 @@ export type ScreenByModeFuncType = (mode: ModeType) => React.ReactElement;
 export type SetModeFuncType = (state: SettingsSliceInterface, action: PayloadAction<ModeType>) => void;
 export type SetDeviceFuncType = (state: SettingsSliceInterface, action: PayloadAction<DeviceInterface>) => void;
 export type SetLanguageFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
+export type SetCountryFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
 export type SetDirectusFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
 export type SetColorThemeFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;
 export type SetPhrasesFuncType = (state: SettingsSliceInterface, action: PayloadAction<PhrasePayloadInterface>) => void;
@@ -41,8 +42,6 @@ export type ClearResponseByIdentFuncType = (state: Record<string, ResponseInterf
 export type ResponsesFuncType = (state: Record<string, ResponseInterface>) => void;
 
 /** Questions Slice Function Signature */
-export type SetLanguageOptionFuncType = (state: any, action: PayloadAction<LanguageInterface[]>) => void;
-export type SetIntroductoryPagesFuncType = (state: any, action: PayloadAction<IntroductoryPagesType>) => void;
 export type AddSectionPageFuncType = (state: any, action: PayloadAction<{sectionNumber: number; page: SectionPayloadInterface}>) => void;
 export type AddSectionTitleFuncType = (state: any, action: PayloadAction<{sectionNumber: number; sectionTitle: string}>) => void;
 export type QuestionsFuncType = (state: any) => void; 

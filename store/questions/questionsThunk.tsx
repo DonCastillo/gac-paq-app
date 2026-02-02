@@ -1,4 +1,4 @@
-import type { LanguageInterface } from "@interface/payload.type";
+import type { CountryInterface, LanguageInterface } from "@interface/payload.type";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { readAppData, removeAppData, saveAppData } from "@utils/app_data_storage.utils";
 import {
@@ -62,6 +62,7 @@ export const loadQuestionData = createAsyncThunk("questions/loadQuestionData", a
 
 	const questionData = {
 		languageOption: data.languageOption as LanguageInterface[],
+		countryOption: data.countryOption as CountryInterface[],
 		introductoryPages,
 		questionPages,
 		hbscPages,

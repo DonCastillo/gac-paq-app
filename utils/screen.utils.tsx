@@ -7,7 +7,7 @@ import {
 	QuestionnaireAdultQuestionPage,
 	TextAdultPage,
 } from "@base_pages/adult";
-import { GenericLanguagePage, GenericQuestionnairePage, GenericTextPage } from "@base_pages/generic";
+import { GenericCountryPage, GenericLanguagePage, GenericQuestionnairePage, GenericTextPage } from "@base_pages/generic";
 import {
 	LanguageKidPage,
 	OpeningQuestionKidPage,
@@ -24,9 +24,12 @@ import type { ModeType, ScreenType, SectionType } from "@interface/union.type";
 import React from "react";
 
 const getScreen = (mode: ModeType, screen: ScreenType | string, section: SectionType | string): React.ReactElement => {
+	console.log(`getScreen called with mode: ${mode}, screen: ${screen}, section: ${section}`);
 	switch (mode) {
 		case Mode.Kid: {
 			switch (screen) {
+				case Screen.Country:
+					return <></>;
 				case Screen.Language:
 					return <LanguageKidPage />;
 				case Screen.Page:
@@ -59,6 +62,8 @@ const getScreen = (mode: ModeType, screen: ScreenType | string, section: Section
 		case Mode.Adult:
 		case Mode.Teen: {
 			switch (screen) {
+				case Screen.Country:
+					return <></>;
 				case Screen.Language:
 					return <LanguageAdultPage />;
 				case Screen.Page:
@@ -90,6 +95,8 @@ const getScreen = (mode: ModeType, screen: ScreenType | string, section: Section
 
 		case undefined: {
 			switch (screen) {
+				case Screen.Country:
+					return <GenericCountryPage />;
 				case Screen.Language:
 					return <GenericLanguagePage />;
 				case Screen.Page:

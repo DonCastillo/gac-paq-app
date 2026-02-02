@@ -15,6 +15,7 @@ export interface SettingsSliceInterface {
 	mode: ModeType;
 	device: DeviceInterface;
 	language: string;
+	country: string;
 	directusAccessToken: string;
 	directusBaseEndpoint: string;
 	responseTable: string;
@@ -41,10 +42,9 @@ const settingsSlice = createSlice({
 	name: "settings",
 	initialState: {
 		mode: undefined as ModeType,
-		// mode: Mode.Adult as ModeType,
-		// mode: Mode.Kid as ModeType,
 		device: defaultDevice,
 		language: "en-CA",
+		country: "CA",
 		directusAccessToken: process.env.EXPO_PUBLIC_ADMIN_TOKEN as string,
 		directusBaseEndpoint: process.env.EXPO_PUBLIC_ADMIN_API_URL as string,
 		responseTable: process.env.EXPO_PUBLIC_RESPONSE_TABLE as string,
@@ -70,6 +70,7 @@ const settingsSlice = createSlice({
 		setMode: reducersActions.setMode,
 		setDevice: reducersActions.setDevice,
 		setLanguage: reducersActions.setLanguage,
+		setCountry: reducersActions.setCountry,
 		setDirectusAccessToken: reducersActions.setDirectusAccessToken,
 		setColorTheme: reducersActions.setColorTheme,
 		skipPage: reducersActions.skipPage,
@@ -111,6 +112,7 @@ const settingsSlice = createSlice({
 		getMode: (state: SettingsSliceInterface) => state.mode,
 		getDevice: (state: SettingsSliceInterface) => state.device,
 		getLanguage: (state: SettingsSliceInterface) => state.language,
+		getCountry: (state: SettingsSliceInterface) => state.country,
 		getDirectusAccessToken: (state: SettingsSliceInterface) => state.directusAccessToken,
 		getResponseTable: (state: SettingsSliceInterface) => state.responseTable,
 		getColorTheme: (state: SettingsSliceInterface) => state.colorTheme,
@@ -137,6 +139,7 @@ export const {
 	setMode,
 	setDevice,
 	setLanguage,
+	setCountry,
 	setDirectusAccessToken,
 	setColorTheme,
 	skipPage,
@@ -167,6 +170,7 @@ export const {
 	getMode,
 	getDevice,
 	getLanguage,
+	getCountry,
 	getDirectusAccessToken,
 	getResponseTable,
 	getColorTheme,

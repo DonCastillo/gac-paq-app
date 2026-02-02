@@ -3,7 +3,7 @@ import Mode from "@constants/mode.enum";
 import Screen from "@constants/screen.enum";
 import Section from "@constants/section.enum";
 import { type loadPagesFuncType } from "@interface/function.type";
-import type { LanguageInterface, PageIndexInterface } from "@interface/payload.type";
+import type { PageIndexInterface } from "@interface/payload.type";
 import type {
 	AdultExtroductoryPageType,
 	AdultExtroductoryPagesType,
@@ -17,8 +17,6 @@ import type {
 	QuestionPageType,
 	QuestionPagesType,
 } from "@interface/union.type";
-import Languages from "@store/data/languages";
-import { setLanguageOption } from "@store/questions/questionsSlice";
 import {
 	clearExtroResponses,
 	clearFeedbackResponses,
@@ -84,7 +82,6 @@ const loadPages = (): void => {
 	const questions = store.getState().questions;
 	const introductoryPages: IntroductoryPagesType = questions.introductoryPages;
 	const questionPages: QuestionPagesType = questions.questionPages;
-	const languages: LanguageInterface[] = Languages;
 
 	// DO NOT RESET APP CONFIGURATIONS HERE
 
@@ -92,8 +89,6 @@ const loadPages = (): void => {
 	// store.dispatch(resetResponses());
 
 	// load offline languages
-	store.dispatch(setLanguageOption(languages));
-
 	let pageNumber = 1;
 	let sectionNumber = 0;
 	let sectionPageNumber = 1;

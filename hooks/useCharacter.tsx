@@ -1,5 +1,4 @@
-import { getLanguage, getMode } from "@/store/settings/settingsSlice";
-import { getCountry } from "@/utils/country.utils";
+import { getCountry, getLanguage, getMode } from "@/store/settings/settingsSlice";
 import { ModeType } from "@interface/union.type";
 import { useSegments } from "expo-router";
 import { useSelector } from "react-redux";
@@ -16,7 +15,7 @@ export default function useCharacter() {
 	const pageName = segments[0];
 	const mode = useSelector(getMode);
 	const language = useSelector(getLanguage) ?? "en-CA";
-	const country = getCountry(language) ?? "CA";
+	const country = useSelector(getCountry) ?? "CA";
 
 	return {
 		pageName,

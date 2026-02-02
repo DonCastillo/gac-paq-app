@@ -34,6 +34,12 @@ export interface LanguageInterface {
 	lang_code: string;
 }
 
+export interface CountryInterface {
+	eng_name: string;
+	local_name: string;
+	code: string;
+}
+
 export interface ResponseInterface {
 	ident: string;
 	label: string;
@@ -176,7 +182,7 @@ export interface BaseQuestionDropdownPayloadLanguageInterface {
 	audio_ident?: string;
 	audio_autoplay?: boolean;
 	column_name: string;
-	type: Screen.Language;
+	type: Screen.Language | Screen.Country;
 }
 
 // question input payload

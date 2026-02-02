@@ -7,6 +7,7 @@ import type {
 	DisableNarrationAutoplayFuncType,
 	ResetAllNarrationAutoplayFuncType,
 	SetColorThemeFuncType,
+	SetCountryFuncType,
 	SetDeviceFuncType,
 	SetDirectusFuncType,
 	SetDrawerOpenedState,
@@ -38,6 +39,10 @@ const setDevice: SetDeviceFuncType = (state, action) => {
 
 const setLanguage: SetLanguageFuncType = (state, action) => {
 	state.language = action.payload;
+};
+
+const setCountry: SetCountryFuncType = (state, action) => {
+	state.country = action.payload;
 };
 
 const setDirectusAccessToken: SetDirectusFuncType = (state, action) => {
@@ -245,6 +250,7 @@ export default {
 	setMode,
 	setDevice,
 	setLanguage,
+	setCountry,
 	setDirectusAccessToken,
 	setColorTheme,
 	skipPage,

@@ -47,7 +47,7 @@ const Languages: LanguageInterface[] = [
 		name: "Czech",
 		country_name: "Czech Republic",
 		local_name: "Czech",
-		flag_code: "CZ",
+		flag_code: "CR",
 		lang_code: "cz-CR",
 	},
 	{

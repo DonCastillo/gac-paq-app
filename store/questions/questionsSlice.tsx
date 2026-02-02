@@ -1,4 +1,10 @@
-import type { LanguageInterface, PagePayloadInterface, QuestionDropdownPayloadInterface, SectionPayloadInterface } from "@interface/payload.type";
+import type {
+	CountryInterface,
+	LanguageInterface,
+	PagePayloadInterface,
+	QuestionDropdownPayloadInterface,
+	SectionPayloadInterface,
+} from "@interface/payload.type";
 import type { PhraseInterface } from "@interface/phrase";
 import type { ModeActivityInterface, ModeActivityTransportationInterface } from "@interface/question17";
 import type {
@@ -9,6 +15,7 @@ import type {
 	QuestionPagesType,
 } from "@interface/union.type";
 import { createSlice } from "@reduxjs/toolkit";
+import Countries from "@store/data/country";
 import {
 	AdultExtroductoryPages,
 	AppExtroPage,
@@ -45,12 +52,12 @@ import ErrorPage from "@store/data/state-pages/error";
 import OfflineSuccessPage from "@store/data/state-pages/offline-success";
 import SuccessPage from "@store/data/state-pages/success";
 import { translateArrayOfPages, translatePage, translatePhrase } from "@utils/translate_questions.utils";
-import reducersActions from "./questionsReducers";
 import { loadQuestionData, removeQuestionData, storeQuestionData } from "./questionsThunk";
 
 const defaultLanguage = "en-CA";
 export interface QuestionSliceInterface {
 	languageOption: LanguageInterface[];
+	countryOption: CountryInterface[];
 	introductoryPages: IntroductoryPagesType;
 	questionPages: QuestionPagesType;
 	hbscPages: QuestionPagesType;
@@ -92,6 +99,7 @@ const questionsSlice = createSlice({
 	name: "questions",
 	initialState: {
 		languageOption: Languages satisfies LanguageInterface[],
+		countryOption: Countries satisfies CountryInterface[],
 		introductoryPages: translateArrayOfPages(IntroductoryPages, defaultLanguage) as IntroductoryPagesType,
 		questionPages: translateArrayOfPages(QuestionPages, defaultLanguage) as QuestionPagesType,
 		hbscPages: translateArrayOfPages(HBSCPages, defaultLanguage) as QuestionPagesType,
@@ -128,12 +136,10 @@ const questionsSlice = createSlice({
 		optionLetters: [],
 		optionNumbers: [],
 	} satisfies QuestionSliceInterface,
-	reducers: {
-		setLanguageOption: reducersActions.setLanguageOption,
-		setIntroductoryPages: reducersActions.setIntroductoryPages,
-	},
+	reducers: {},
 	selectors: {
 		getLanguageOption: (state: QuestionSliceInterface) => state.languageOption,
+		getCountryOption: (state: QuestionSliceInterface) => state.countryOption,
 		getIntroductoryPages: (state: QuestionSliceInterface) => state.introductoryPages,
 		getQuestionPages: (state: QuestionSliceInterface) => state.questionPages,
 		getHBSCPages: (state: QuestionSliceInterface) => state.hbscPages,
@@ -188,13 +194,13 @@ const questionsSlice = createSlice({
 		});
 	},
 });
-export const { setLanguageOption, setIntroductoryPages } = questionsSlice.actions;
 
 export const {
 	getSectionPages,
 	getOptionLetters,
 	getOptionNumbers,
 	getLanguageOption,
+	getCountryOption,
 	getIntroductoryPages,
 	getQuestionPages,
 	getHBSCPages,

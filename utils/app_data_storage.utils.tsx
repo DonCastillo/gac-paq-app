@@ -1,3 +1,4 @@
+import Countries from "@/store/data/country";
 import LocalStorageKey from "@constants/localstorage.enum";
 import {
 	AdultExtroductoryPages,
@@ -41,6 +42,7 @@ import { readData, removeData, storeData } from "./localstorage.utils";
 // save all the raw pages and their different translations to local storage
 const saveAppData = async (): Promise<void> => {
 	const appData = {
+		countryOption: Countries,
 		languageOption: Languages,
 		introductoryPages: IntroductoryPages,
 		questionPages: QuestionPages,
