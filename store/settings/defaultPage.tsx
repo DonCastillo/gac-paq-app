@@ -1,22 +1,22 @@
 import Screen from "@constants/screen.enum";
 import Section from "@constants/section.enum";
 import type { PageIndexInterface } from "@interface/payload.type";
-import AboutPage from "@store/data/introductory-pages/about";
+import CountryPage from "@store/data/introductory-pages/country";
 import LanguagePage from "@store/data/introductory-pages/language";
 
 export const currentDefaultPage: PageIndexInterface = {
-	page: { ...LanguagePage, translations: LanguagePage.translations["en-CA"] },
+	page: { ...CountryPage, translations: CountryPage.translations["en-CA"] },
 	pageNumber: 1,
-	screen: Screen.Language,
+	screen: Screen.Country,
 	section: Section.Intro,
 	sectionNumber: 0,
 	sectionPageNumber: 1,
 };
 
 export const nextDefaultPage: PageIndexInterface = {
-	page: { ...AboutPage, translations: AboutPage.translations["en-CA"] },
+	page: { ...LanguagePage, translations: LanguagePage.translations["en-CA"] },
 	pageNumber: 2,
-	screen: Screen.Page,
+	screen: Screen.Language,
 	section: Section.Intro,
 	sectionNumber: 0,
 	sectionPageNumber: 2,

@@ -10,7 +10,7 @@ const CountryPage: LangQuestionDropdownPayloadLanguageInterface = {
 	translations: {
 		"en-CA": {
 			type: Question.QuestionLanguage,
-			heading: "Welcome! CA",
+			heading: "Welcome!",
 			label: "Where are you?",
 			kid_label: "Where are you?",
 			adult_label: "Where are you?",

@@ -1,7 +1,7 @@
 import FlagIcons, { FlagCodeType } from "@/styles/flags";
 import FlatListContainer from "@components/FlatListContainer";
-import type { LanguageInterface } from "@interface/payload.type";
-import { getLanguageOption } from "@store/questions/questionsSlice";
+import type { CountryInterface } from "@interface/payload.type";
+import { getCountryOption } from "@store/questions/questionsSlice";
 import { getColorTheme, getDevice } from "@store/settings/settingsSlice";
 import { GeneralStyle } from "@styles/general";
 import { horizontalScale, verticalScale } from "@utils/responsive.utils";
@@ -22,8 +22,7 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 	const flatListRef = React.useRef<FlatList>(null);
 
 	const [optionRowIndex, setOptionRowIndex] = useState<number>(0);
-
-	const options: LanguageInterface[] = useSelector(getLanguageOption);
+	const options: CountryInterface[] = useSelector(getCountryOption);
 	const questionContainerWidth = horizontalScale(device.orientation === "landscape" ? 250 : device.isTablet ? 290 : 340, device.screenWidth);
 
 	const numColumns = device.isTablet ? 3 : 2;
@@ -62,12 +61,11 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 
 	const selectHandler = (value: string | null): void => {
 		if (value === "" || value === null || value === undefined) return;
-
 		onChange(value);
 	};
 
 	useEffect(() => {
-		let index = options.findIndex((item) => item.lang_code === selectedValue);
+		let index = options.findIndex((item) => item.code === selectedValue);
 		index = Math.floor(index / numColumns);
 		setOptionRowIndex(index);
 	}, [selectedValue]);
@@ -81,10 +79,10 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 		});
 	}, [optionRowIndex]);
 
-	const languageOption = (item: LanguageInterface, index: number): React.ReactElement => {
+	const languageOption = (item: CountryInterface, index: number): React.ReactElement => {
 		const lastItem = index === options.length - 1;
-		const flagCode: FlagCodeType = item?.flag_code?.toLowerCase() as FlagCodeType;
-		const Flag = item?.flag_code && FlagIcons[flagCode];
+		const flagCode: FlagCodeType = item?.code?.toLowerCase() as FlagCodeType;
+		const Flag = item?.code && FlagIcons[flagCode];
 
 		return (
 			<Pressable
@@ -99,12 +97,12 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 						marginLeft: 5,
 						marginRight: lastItem ? lastOptionMarginRight : optionMarginRight,
 					},
-					selectedValue === item.lang_code && {
+					selectedValue === item.code && {
 						borderColor: color100,
 						borderWidth: 1,
 					},
 				]}
-				onPress={() => selectHandler(item.lang_code)}
+				onPress={() => selectHandler(item.code)}
 			>
 				<View
 					style={{
@@ -114,8 +112,8 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 						padding: 20,
 					}}
 				>
-					{selectedValue === item.lang_code && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
-					{item?.flag_code && <Flag />}
+					{selectedValue === item.code && <View style={[styles.imageFilter, optionPressedStyle]}></View>}
+					{item?.code && <Flag />}
 				</View>
 				<View
 					style={[
@@ -139,7 +137,7 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 								paddingTop: 6,
 							}}
 						>
-							{`${item.local_name}`}
+							{`${item.eng_name}`}
 						</Text>
 					</View>
 
@@ -154,7 +152,7 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 								fontStyle: "italic",
 							}}
 						>
-							{!["English", "Chichewa", "Czech"].includes(item.name ?? "") && `${item.name}`}
+							{item.local_name}
 						</Text>
 					</View>
 				</View>
@@ -173,7 +171,7 @@ const QuestionSelectLanguageAdult = ({ onChange, selectedValue }: PropsInterface
 						numColumns={numColumns}
 						key={numColumns}
 						bounces={false}
-						keyExtractor={(item) => item.lang_code}
+						keyExtractor={(item) => item.code}
 						refreshing={true}
 						initialScrollIndex={optionRowIndex >= 0 ? optionRowIndex : 0}
 						persistentScrollbar={true}

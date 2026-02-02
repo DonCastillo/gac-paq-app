@@ -28,7 +28,7 @@ const Countries: CountryInterface[] = [
 	},
 	{
 		eng_name: "Czech Republic",
-		local_name: "Česká republika",
+		local_name: "Česko",
 		code: "CR",
 	},
 	{
