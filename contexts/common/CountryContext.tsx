@@ -1,5 +1,6 @@
 import { ParentComponent } from "@/interface/function.type";
-import { setCountry } from "@/store/settings/settingsSlice";
+import { clearResponseByIdent } from "@/store/responses/responsesSlice";
+import { setCountry, setLanguage } from "@/store/settings/settingsSlice";
 import useCharacter from "@hooks/useCharacter";
 import useCurrentPage from "@hooks/useCurrentPage";
 import useTranslations from "@hooks/useTranslations";
@@ -30,12 +31,14 @@ const CountryProvider: ParentComponent = ({ children }) => {
 		setSelectedValue(country);
 	}, [currentPageNumber, country]);
 
-	// set language default and add to response
+	// set country default and add to response
 	useEffect(() => {
 		addResponse(country);
 	}, []);
 
 	const changeHandler = (value: string | null): void => {
+		dispatch(clearResponseByIdent("language_location"));
+		dispatch(setLanguage(null));
 		if (value !== "" && value !== null && value !== undefined) {
 			addResponse(value);
 			setSelectedValue(value);

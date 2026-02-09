@@ -49,7 +49,7 @@ const useLoadAppByLanguage = () => {
 				loadSectionPages();
 
 				// Skip to page 1
-				dispatch(skipPage(1));
+				dispatch(skipPage(2));
 
 				// Clear all response states
 				dispatch(clearQuestionResponses());

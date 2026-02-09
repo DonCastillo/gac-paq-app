@@ -46,9 +46,9 @@ const LanguageProvider: ParentComponent = ({ children }) => {
 					dispatch(setLanguage(value));
 				})
 				.catch((error) => {
-					addResponse("en-CA");
-					setSelectedValue("en-CA");
-					dispatch(setLanguage("en-CA"));
+					addResponse(null);
+					setSelectedValue(null);
+					dispatch(setLanguage(null));
 					console.error(error);
 				});
 		} else {
