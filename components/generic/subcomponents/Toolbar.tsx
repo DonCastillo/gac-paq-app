@@ -10,8 +10,8 @@ import Audio from "./Audio";
 import MenuButton from "./MenuButton";
 import Title from "./Title";
 
-const Toolbar = (): React.ReactElement => {
-	const { language, pageName } = useCharacter();
+const Toolbar = ({ showLanguageIndicator }: { showLanguageIndicator?: boolean }): React.ReactElement => {
+	const { pageName, country } = useCharacter();
 	const device = useSelector(getDevice);
 
 	return (
@@ -30,9 +30,7 @@ const Toolbar = (): React.ReactElement => {
 						flex: 2,
 					}}
 				>
-					<View style={{ height: "100%", paddingTop: 8 }}>
-						<LanguageIndicator langCode={language} />
-					</View>
+					<View style={{ height: "100%", paddingTop: 8 }}>{showLanguageIndicator && <LanguageIndicator countryCode={country} />}</View>
 					<Title />
 				</View>
 				<View

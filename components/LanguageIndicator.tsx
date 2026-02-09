@@ -1,23 +1,17 @@
-import { LanguageInterface } from "@/interface/payload.type";
-import { getLanguageOption } from "@/store/questions/questionsSlice";
 import { getDevice } from "@/store/settings/settingsSlice";
 import FlagIcons, { FlagCodeType } from "@/styles/flags";
-import React, { useMemo } from "react";
+import React from "react";
 import { View } from "react-native";
 import { useSelector } from "react-redux";
 
-const LanguageIndicator = ({ langCode = "" }: { langCode: string }): React.ReactElement => {
+const LanguageIndicator = ({ countryCode = null }: { countryCode: string | null }): React.ReactElement => {
 	const device = useSelector(getDevice);
-	const languageOptionsRaw = useSelector(getLanguageOption);
-	const languageOptions: LanguageInterface[] = useMemo(() => languageOptionsRaw ?? [], [languageOptionsRaw]);
+	if (!countryCode) return <></>;
 
-	const flagCode = useMemo(() => {
-		return languageOptions.find((item) => item.lang_code === langCode)?.flag_code?.toLowerCase() as FlagCodeType;
-	}, [langCode, languageOptions]);
+	console.log("countryCode in LanguageIndicator: ", countryCode);
+	const Flag = countryCode && FlagIcons[countryCode.toLowerCase() as FlagCodeType];
 
-	const Flag = flagCode && FlagIcons[flagCode];
-
-	if (flagCode && Flag) {
+	if (countryCode && Flag) {
 		return (
 			<View>
 				<Flag

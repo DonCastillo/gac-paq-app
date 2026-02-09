@@ -58,14 +58,16 @@ const PendingSubmissionList = ({ data }: Props): React.ReactElement => {
 									</View>
 
 									<View style={{ width: 60 }}>
-										<LanguageIndicator langCode={item.language_location} />
+										<LanguageIndicator countryCode={typeof item.language_location === "string" ? item.language_location.slice(-2) : null} />
 									</View>
 
 									<View style={{ flex: 2 }}>
-										<Text style={{ color: "#000" }}>{moment(item.start_time).format("YYYY-MM-DD h:mm A")}</Text>
+										<Text style={{ color: "#000" }}>
+											{typeof item.start_time === "string" ? moment(item.start_time).format("YYYY-MM-DD h:mm A") : ""}
+										</Text>
 									</View>
 									<View style={{ flex: 2 }}>
-										<Text style={{ textAlign: "right" }}>{item.participant_id}</Text>
+										<Text style={{ textAlign: "right" }}>{String(item.participant_id)}</Text>
 									</View>
 								</View>
 							</View>
