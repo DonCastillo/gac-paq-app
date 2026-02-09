@@ -12,6 +12,11 @@ const defaultPhrase: PhrasePayloadInterface = {
 	specify: PhraseLabel.PleaseSpecify,
 	select: PhraseLabel.Select,
 	tryAgain: PhraseLabel.TryAgain,
+	submit: PhraseLabel.Submit,
+	noPendingSubmissions: PhraseLabel.NoPendingSubmissions,
+	nothingToSubmit: PhraseLabel.NothingToSubmit,
+	pendingSubmissions: PhraseLabel.PendingSubmissions,
+	responsesSubmitted: PhraseLabel.ResponsesSubmitted,
 };
 
 export default defaultPhrase;
