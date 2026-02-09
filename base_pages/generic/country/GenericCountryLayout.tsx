@@ -8,26 +8,19 @@ import ImageBackdrop from "@components/ImageBackdrop";
 import Main from "@components/Main";
 import Navigation from "@components/Navigation";
 import CenterMain from "@components/orientation/CenterMain";
-import useCharacter from "@hooks/useCharacter";
 import useCurrentPage from "@hooks/useCurrentPage";
 import { ParentComponent } from "@interface/function.type";
 import { nextPage } from "@store/settings/settingsSlice";
 import { getImageBackground } from "@utils/background.utils";
-import { loadSectionPages } from "@utils/load_pages.utils";
-import React, { useEffect } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
 import { useDispatch } from "react-redux";
 
 const GenericCountryLayout: ParentComponent = ({ children }) => {
 	const { currentPageNumber } = useCurrentPage();
-	const { country } = useCharacter();
 	const dispatch = useDispatch();
 	const backgroundImage = getImageBackground();
 	const { selectedValue } = useCountryContext();
-
-	useEffect(() => {
-		loadSectionPages();
-	}, [country]);
 
 	return (
 		<View
@@ -43,7 +36,7 @@ const GenericCountryLayout: ParentComponent = ({ children }) => {
 			)}
 			<Main>
 				<ProgressBarAdult />
-				<Toolbar />
+				<Toolbar showLanguageIndicator={false} />
 				<CenterMain>
 					<QuestionContainer>{children}</QuestionContainer>
 				</CenterMain>

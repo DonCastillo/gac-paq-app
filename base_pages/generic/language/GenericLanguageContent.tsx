@@ -1,4 +1,4 @@
-import QuestionSelectLanguageAdult from "@components/adults/QuestionSelectLanguageAdult";
+import QuestionSelectLanguageAdult from "@/components/adults/QuestionSelectLanguageAdult";
 import QuestionTitle from "@components/generic/QuestionTitle";
 import QuestionLabel from "@components/kid/QuestionLabel";
 import { useLanguageContext } from "@contexts/common/LanguageContext";

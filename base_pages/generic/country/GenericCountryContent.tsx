@@ -1,5 +1,5 @@
 import { useCountryContext } from "@/contexts/common/CountryContext";
-import QuestionSelectLanguageAdult from "@components/adults/QuestionSelectLanguageAdult";
+import QuestionSelectCountryAdult from "@components/adults/QuestionSelectCountryAdult";
 import QuestionTitle from "@components/generic/QuestionTitle";
 import QuestionLabel from "@components/kid/QuestionLabel";
 import { Component } from "@interface/function.type";
@@ -25,7 +25,7 @@ const GenericCountryContent: Component = () => {
 				</QuestionLabel>
 			</View>
 			<View style={{ maxHeight: verticalScale(500, device.screenHeight) }}>
-				<QuestionSelectLanguageAdult
+				<QuestionSelectCountryAdult
 					onChange={changeHandler}
 					selectedValue={selectedValue}
 				/>

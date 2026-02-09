@@ -11,7 +11,7 @@ import { useLanguageContext } from "@contexts/common/LanguageContext";
 import useCharacter from "@hooks/useCharacter";
 import useCurrentPage from "@hooks/useCurrentPage";
 import { ParentComponent } from "@interface/function.type";
-import { nextPage } from "@store/settings/settingsSlice";
+import { nextPage, prevPage } from "@store/settings/settingsSlice";
 import { getImageBackground } from "@utils/background.utils";
 import { loadSectionPages } from "@utils/load_pages.utils";
 import React, { useEffect } from "react";
@@ -47,7 +47,20 @@ const GenericLanguageLayout: ParentComponent = ({ children }) => {
 				<CenterMain>
 					<QuestionContainer>{children}</QuestionContainer>
 				</CenterMain>
-				<Navigation>{selectedValue !== null && <BackAndNextNav onNext={() => dispatch(nextPage())} />}</Navigation>
+				<Navigation>
+					{selectedValue !== null ? (
+						<BackAndNextNav
+							key={"WithValue"}
+							onPrev={() => dispatch(prevPage())}
+							onNext={() => dispatch(nextPage())}
+						/>
+					) : (
+						<BackAndNextNav
+							key={"WithoutValue"}
+							onPrev={() => dispatch(prevPage())}
+						/>
+					)}
+				</Navigation>
 			</Main>
 		</View>
 	);
