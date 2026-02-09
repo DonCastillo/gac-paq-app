@@ -65,6 +65,12 @@ export const getNarrationPayload = createAsyncThunk(
 			narrations.parent_ethnicities = enNGAdultNarrations?.parent_ethnicities;
 		}
 
+		// temporarily removed the en-GH narration of the Q26 and Q27 (ethnicity questions) of the parent version
+		if (language === "en-GH" && mode === Mode.Adult) {
+			narrations.child_ethnicities = null;
+			narrations.parent_ethnicities = null;
+		}
+
 		// if en-IN && mode === kid or teen, merge en-CA payload and get en-IN version of about and play_2
 		if (language === "en-IN" && [Mode.Kid, Mode.Teen].includes(mode)) {
 			const enINKidEndpoint = getNarrationEndpoint(directusBaseEndpoint, Mode.Kid, "en-IN");
