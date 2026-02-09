@@ -13,7 +13,7 @@ export type ScreenByModeFuncType = (mode: ModeType) => React.ReactElement;
 /** Setting Slice Function Signature */
 export type SetModeFuncType = (state: SettingsSliceInterface, action: PayloadAction<ModeType>) => void;
 export type SetDeviceFuncType = (state: SettingsSliceInterface, action: PayloadAction<DeviceInterface>) => void;
-export type SetLanguageFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
+export type SetLanguageFuncType = (state: SettingsSliceInterface, action: PayloadAction<string | null>) => void;
 export type SetCountryFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
 export type SetDirectusFuncType = (state: SettingsSliceInterface, action: PayloadAction<string>) => void;
 export type SetColorThemeFuncType = (state: SettingsSliceInterface, action: PayloadAction<number>) => void;

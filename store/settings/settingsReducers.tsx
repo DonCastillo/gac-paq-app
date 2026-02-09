@@ -241,7 +241,8 @@ const reset: SettingsFuncType = (state) => {
 	setMode(state, { type: "", payload: undefined });
 	skipPage(state, { type: "", payload: 1 });
 	setColorTheme(state, { type: "", payload: 0 });
-	setLanguage(state, { type: "", payload: "en-CA" });
+	setCountry(state, { type: "", payload: "CA" });
+	setLanguage(state, { type: "", payload: null });
 	setEnableNarration(state, { type: "", payload: true });
 	setStartDateTime(state);
 };

@@ -14,7 +14,7 @@ import { getNarrationPayload } from "./settingsThunk";
 export interface SettingsSliceInterface {
 	mode: ModeType;
 	device: DeviceInterface;
-	language: string;
+	language: string | null;
 	country: string;
 	directusAccessToken: string;
 	directusBaseEndpoint: string;
@@ -43,7 +43,7 @@ const settingsSlice = createSlice({
 	initialState: {
 		mode: undefined as ModeType,
 		device: defaultDevice,
-		language: "en-CA",
+		language: null,
 		country: "CA",
 		directusAccessToken: process.env.EXPO_PUBLIC_ADMIN_TOKEN as string,
 		directusBaseEndpoint: process.env.EXPO_PUBLIC_ADMIN_API_URL as string,

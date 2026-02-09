@@ -1,7 +1,7 @@
 import MAIN_STUDY_LANG from "@constants/main_study_lang";
 import type { LangPhraseInterface, PhraseInterface } from "@interface/phrase";
 
-const translateArrayOfPages = (pages: any, language: string | undefined): any => {
+const translateArrayOfPages = (pages: any, language: string | undefined | null): any => {
 	const finalLanguage = language ?? "en-CA";
 
 	return pages.map((page: any) => {
@@ -21,17 +21,17 @@ const translateArrayOfPages = (pages: any, language: string | undefined): any =>
 	});
 };
 
-const translatePage = (page: any, language: string | undefined): any => {
+const translatePage = (page: any, language: string | undefined | null): any => {
 	const finalLanguage = language ?? "en-CA";
 	return { ...page, translations: page.translations[finalLanguage] };
 };
 
-const translatePhrase = (phrase: LangPhraseInterface, language: string | undefined): PhraseInterface => {
+const translatePhrase = (phrase: LangPhraseInterface, language: string | undefined | null): PhraseInterface => {
 	const finalLanguage = language ?? "en-CA";
 	return phrase[finalLanguage];
 };
 
-const translateOptionLetters = (letters: Record<string, string[]>, language: string | undefined): string[] => {
+const translateOptionLetters = (letters: Record<string, string[]>, language: string | undefined | null): string[] => {
 	const finalLanguage = language ?? "en-CA";
 	let finalLetters = letters["en-CA"];
 
@@ -42,7 +42,7 @@ const translateOptionLetters = (letters: Record<string, string[]>, language: str
 	return finalLetters;
 };
 
-const translateOptionNumbers = (numbers: Record<string, string[]>, language: string | undefined): string[] => {
+const translateOptionNumbers = (numbers: Record<string, string[]>, language: string | undefined | null): string[] => {
 	const finalLanguage = language ?? "en-CA";
 	let finalNumbers = numbers["en-CA"];
 

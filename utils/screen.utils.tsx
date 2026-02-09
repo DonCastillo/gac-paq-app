@@ -24,7 +24,6 @@ import type { ModeType, ScreenType, SectionType } from "@interface/union.type";
 import React from "react";
 
 const getScreen = (mode: ModeType, screen: ScreenType | string, section: SectionType | string): React.ReactElement => {
-	console.log(`getScreen called with mode: ${mode}, screen: ${screen}, section: ${section}`);
 	switch (mode) {
 		case Mode.Kid: {
 			switch (screen) {

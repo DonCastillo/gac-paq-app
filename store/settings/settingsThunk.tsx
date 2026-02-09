@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import type { SettingsSliceInterface } from "./settingsSlice";
 
-const getNarrationEndpoint = (directusBaseEndpoint: string, mode: Mode, language: string): string => {
+const getNarrationEndpoint = (directusBaseEndpoint: string, mode: Mode, language: string | null): string => {
 	const finalMode = mode === Mode.Adult ? "adult" : "kid";
 	const fields = "*,language.lang_code,mode.value";
 	const limit = "-1";
@@ -34,7 +34,7 @@ const collectNarrationData = async (endpoint: string, directusAccessToken: strin
 
 export const getNarrationPayload = createAsyncThunk(
 	"settings/fetchNarrations",
-	async ({ mode, language }: { mode: ModeType; language: string }, { getState }) => {
+	async ({ mode, language }: { mode: ModeType; language: string | null }, { getState }) => {
 		const { settings } = getState() as any;
 		const { directusAccessToken, directusBaseEndpoint } = settings as SettingsSliceInterface;
 		let tempLanguage = language ?? "en-CA";
@@ -57,7 +57,7 @@ export const getNarrationPayload = createAsyncThunk(
 		if (!narrations) return null;
 
 		// if en-NG && mode === adult, merge en-MW payload and get en-NG version of child_ethnicities and parent_ethnicities
-		if (["en-NG", "en-GH"].includes(language) && mode === Mode.Adult) {
+		if (["en-NG", "en-GH"].includes(language ?? "en-CA") && mode === Mode.Adult) {
 			const enNGAdultEndpoint = getNarrationEndpoint(directusBaseEndpoint, Mode.Adult, "en-NG");
 			const enNGAdultNarrations = (await collectNarrationData(enNGAdultEndpoint, directusAccessToken)) as Record<string, any> | null;
 			if (!enNGAdultNarrations) return narrations;

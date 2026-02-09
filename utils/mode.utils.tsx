@@ -4,7 +4,7 @@ import { resetAllNarrations } from "@store/settings/settingsSlice";
 import { store } from "@store/store";
 import { loadAgePage, reloadExtroFeedbackPages } from "./load_pages.utils";
 
-const changeMode = (value: string | null | ModeType, language: string | undefined): void => {
+const changeMode = (value: string | null | ModeType, language: string | undefined | null): void => {
 	let finalMode = Mode.Kid;
 
 	if (value === "adult") {

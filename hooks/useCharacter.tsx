@@ -14,7 +14,7 @@ export default function useCharacter() {
 	const segments = useSegments();
 	const pageName = segments[0];
 	const mode = useSelector(getMode);
-	const language = useSelector(getLanguage) ?? "en-CA";
+	const language = useSelector(getLanguage) ?? null;
 	const country = useSelector(getCountry) ?? "CA";
 
 	return {
