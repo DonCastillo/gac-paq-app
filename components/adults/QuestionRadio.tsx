@@ -15,9 +15,10 @@ interface PropsInterface {
 	options: ChoiceIcon[] | Choice[];
 	onSelect: (value: string | null) => void;
 	selectedValue: string | null;
+	enableRessetingValue?: boolean;
 }
 
-const QuestionRadio = ({ options, onSelect, selectedValue }: PropsInterface): React.ReactElement => {
+const QuestionRadio = ({ options, onSelect, selectedValue, enableRessetingValue = true }: PropsInterface): React.ReactElement => {
 	const currentPage = useSelector(getCurrentPage);
 	let mode = useSelector(getMode);
 	const [selected, setSelected] = useState<string | null>(selectedValue);
@@ -47,6 +48,7 @@ const QuestionRadio = ({ options, onSelect, selectedValue }: PropsInterface): Re
 	};
 
 	const pressHandler = (value: string | null): void => {
+		console.log("inside pressHandler, value:", value);
 		if (value === "" || value === null || value === undefined) return;
 
 		// check if the other option in the format "other" or "other (xxxxx)" is selected
@@ -79,7 +81,11 @@ const QuestionRadio = ({ options, onSelect, selectedValue }: PropsInterface): Re
 			}
 		} else {
 			if (selected === value) {
-				onSelect(null);
+				if (enableRessetingValue) {
+					onSelect(null);
+				} else {
+					onSelect(value);
+				}
 			} else {
 				onSelect(value);
 			}
