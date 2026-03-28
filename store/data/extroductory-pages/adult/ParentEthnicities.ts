@@ -348,8 +348,8 @@ const ParentEthnicities: LangQuestionOptionPayloadInterface = {
 			adult_label: "What is your ethnicity?",
 			choices: [
 				{
-					label: "Alan",
-					value: "Alan",
+					label: "Akan",
+					value: "Akan",
 				},
 				{
 					label: "Ga",
