@@ -193,6 +193,10 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 					label: "7",
 					value: "7",
 				},
+				{
+					label: "ไม่ทราบ",
+					value: "Don't know",
+				},
 			],
 		},
 		"zh-CN": {
