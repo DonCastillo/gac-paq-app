@@ -1,3 +1,5 @@
+import { loadSectionPages } from "@/utils/load_pages.utils";
+import { changeMode } from "@/utils/mode.utils";
 import QuestionInput from "@components/kid/QuestionInput";
 import QuestionSelect from "@components/kid/QuestionSelect";
 import Question from "@constants/question.enum";
