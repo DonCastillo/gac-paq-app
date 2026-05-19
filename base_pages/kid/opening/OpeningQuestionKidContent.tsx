@@ -17,7 +17,7 @@ import { useDispatch } from "react-redux";
 const OpeningQuestionKidContent: Component = () => {
 	const dispatch = useDispatch();
 	const { currentPageNumber, currentPage } = useCurrentPage();
-	const { mode } = useCharacter();
+	const { mode, language } = useCharacter();
 	const { questionType, translatedPage, selectedValue, setSelectedValue } = useQuestionContext();
 	const { dropdownOpen, setDropdownOpen } = useDropdownContext();
 
@@ -28,6 +28,8 @@ const OpeningQuestionKidContent: Component = () => {
 		if (value !== undefined && value !== null && value !== "") {
 			if (currentPage.page.ident === "mode") {
 				dispatch(setMode(getModeType(value)));
+				changeMode(getModeType(value), language);
+				loadSectionPages();
 			}
 
 			if (currentPage.page.ident === "mode") {
