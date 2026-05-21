@@ -305,11 +305,11 @@ const GenderAdult: LangQuestionRadioPayloadInterface = {
 			choices: [
 				{
 					label: "ذكر",
-					value: "Female",
+					value: "Male",
 				},
 				{
 					label: "أنثى",
-					value: "Male",
+					value: "Female",
 				},
 			],
 		},
