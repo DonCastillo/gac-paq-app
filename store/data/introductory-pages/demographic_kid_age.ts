@@ -68,19 +68,19 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 			adult_label: "E hia ō tau?",
 			choices: [
 				{
-					label: "E 8 ngā tau",
+					label: "8 E waru ngā tau",
 					value: "8",
 				},
 				{
-					label: "E 9 ngā tau",
+					label: "9 E iwa ngā tau",
 					value: "9",
 				},
 				{
-					label: "10 ngā tau",
+					label: "10 tekau ngā tau",
 					value: "10",
 				},
 				{
-					label: "11 ngā tau",
+					label: "11 tekau mā tahi ngā tau",
 					value: "11",
 				},
 			],
@@ -387,7 +387,7 @@ const DemographicKidPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"ne-NP": {
 			type: Question.QuestionDropdown,
-			heading: "Welcome!",
+			heading: "तपाईं लाई स्वागत् छ",
 			label: "तपाईंको उमेर कति हो?",
 			kid_label: "तपाईंको उमेर कति हो?",
 			adult_label: "तपाईंको उमेर कति हो?",
