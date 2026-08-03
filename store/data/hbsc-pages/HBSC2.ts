@@ -259,7 +259,7 @@ const HBSC2: LangQuestionRadioPayloadInterface = {
 		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Wāhanga 26",
+			heading: "Pātai 26",
 			label:
 				"I waho i ngā hāora ā-kura: i te nuinga o te wā he aha te auau ka kori tinana koe i tō wā wātea kia pau tō hau, kia heke tōtā rānei koe?",
 			kid_label:
