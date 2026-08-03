@@ -68,7 +68,7 @@ const S2Q3: LangQuestionRadioPayloadInterface = {
 			kid_label:
 				"i ngā rā i oti ai i a koe ngā mahi o te kāinga i te wiki kua hipa, i hia te roa o te wā i mahi ai koe i ngā mahi o te kāinga i te roanga o te rā?",
 			adult_label:
-				"i ngā rā i oti ai i a koe ngā mahi o te kāinga i te wiki kua hipa, i hia te roa o te wā i mahi ai koe i ngā mahi o te kāinga i te roanga o te rā?",
+				"i ngā rā i oti ai i a koe ngā mahi o te kāinga i te wiki kua hipa, i hia te roa o te wā i ai tō tamaiti i ngā mahi o te kāinga i te roanga o te rā?",
 			choices: [
 				{
 					label: "15 meneti iti iho rānei ia rā",

@@ -88,7 +88,7 @@ const Satisfaction: LangQuestionRadioImagePayloadInterface = {
 			label: "I pēhea te taupānga ki a koe?",
 			kid_label: "I pēhea te taupānga ki a koe?",
 			adult_label: "Kei te pēhea ō piropiro ki tēnei taupānga?",
-			adult_sublabel: "Pāwhiria te whakaahua (īmōtiki) e whakaatu ana i ō piropiro.",
+			adult_sublabel: "Pāwhiria te whakaahua (īmōtiki) e tino whakakanohi ana i ō piropiro.",
 			kid_sublabel: "Pāwhiria te whakaahua (īmōtiki) e tino whakakanohi ana i ō piropiro.",
 			choices: [
 				{

@@ -89,7 +89,7 @@ const S4Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 15b",
 			label: "E hia ngā rā i haere ai koe mā tēnei momo ki te kura i tērā wiki?",
 			kid_label: "E hia ngā rā i haere ai koe mā tēnei momo ki te kura i tērā wiki?",
-			adult_label: "E hia ngā rā i haere ai tāu tamaiti mā tēnei momo ki te kura i tērā wiki?",
+			adult_label: "E hia ngā rā i haere ai tō tamaiti mā tēnei momo ki te kura i tērā wiki?",
 			choices: [
 				{
 					label: "1 te rā",

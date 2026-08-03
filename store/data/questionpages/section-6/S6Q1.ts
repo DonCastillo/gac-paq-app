@@ -89,8 +89,7 @@ const S6Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 21",
 			label: "I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
 			kid_label: "I te wiki kua hipa ake nei, i tētahi rā noa, e hia te roa o tō wā i whakapau ai ki te tākaro, i te wairua ngahau noa iho?",
-			adult_label:
-				"I te wiki kua hipa, i tētahi rā noa, e hia te roa o tō tāu tamaiti wā i whakapaua ai ki te tākaro, i te wairua ngahau noa iho nei?",
+			adult_label: "I te wiki kua hipa, i tētahi rā noa, e hia te roa o tō tamaiti wā i whakapaua ai ki te tākaro, i te wairua ngahau noa iho nei?",
 			kid_sublabel:
 				"Ehara ēnei ngohe i te mahi hei whakataetae, hei whakangungu rānei. Ko ētahi tauira, , te kaukau i te puna kaukau, te pekepeke i runga poro rēporepo, te tākaro whai, piringa rānei, te tākaro i te rua kirikiri, te hanga whare nohinohi, whare rākau rānei.",
 			adult_sublabel:

@@ -65,7 +65,7 @@ const S5Q3: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 20",
 			label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
 			kid_label: "I ngā rā i mahi ai koe i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
-			adult_label: "I ngā rā i mahi ai tāu tamaiti i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
+			adult_label: "I ngā rā i mahi ai tō tamaiti i ēnei ngohe i te wiki kua hipa, e hia te roa o te ngohe?",
 			choices: [
 				{
 					label: "30 meneti, neke iho rā nei ia rā",

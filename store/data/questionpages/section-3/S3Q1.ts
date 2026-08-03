@@ -49,15 +49,23 @@ const S3Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 12",
 			label: "I te wiki kua hipa, i tūao rānei, i mahi rānei koe?",
 			kid_label: "I te wiki kua hipa, i tūao rānei, i mahi rānei koe?",
-			adult_label: "I te wiki kua hipa, i mahi tūao rānei, i mahi rānei koe?",
+			adult_label: "I te wiki kua hipa, i mahi tūao rānei, i mahi rānei tō tamaiti?",
 			choices: [
 				{
 					label: "Āe",
 					value: "yes",
+					label_mode: {
+						kid: "Āe",
+						adult: "Āe",
+					},
 				},
 				{
-					label: "Kāo",
+					label: "Kāo. Ka tōpihangia ngā pātai e whai ake nei i tēnei wāhanga i te taupānga.",
 					value: "no",
+					label_mode: {
+						kid: "Kāo. Ka tōpihangia ngā pātai e whai ake nei i tēnei wāhanga i te taupānga.",
+						adult: "Kāo. Ka tōpihangia ngā pātai e whai ake nei i tēnei wāhanga i te taupānga.",
+					},
 				},
 			],
 		},

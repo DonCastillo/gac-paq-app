@@ -111,9 +111,9 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionDropdown,
 			heading: "Nau mai!",
-			label: "E hia ngā tau o tāu tamaiti?",
-			kid_label: "E hia ngā tau o tāu tamaiti?",
-			adult_label: "E hia ngā tau o tāu tamaiti?",
+			label: "E hia ngā tau o tō tamaiti?",
+			kid_label: "E hia ngā tau o tō tamaiti?",
+			adult_label: "E hia ngā tau o tō tamaiti?",
 			choices: [
 				{
 					label: "8 E waru ngā tau",

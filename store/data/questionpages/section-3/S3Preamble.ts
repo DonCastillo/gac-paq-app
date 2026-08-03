@@ -32,7 +32,7 @@ const S3Preamble: LangPreamblePayloadInterface = {
 			description: {
 				kid: "E hāngai ana tēnei wāhanga ki te mahi, ki te mahi tūao rānei i tua atu i tō kāinga – He rerekē i ngā mahi o te kāinga. Ko te mahi te wā e whai pūtea ai koe mō te whānau. Ko te tūao te wā e āwhina ai koe i ētahi atu, i tētahi rōpū rānei (kāore he pūtea). Ka kitea te mahi me te tūao ki ngā wāhi pēnei i te hokomaha, i te wharekai, i te rōpū ohaoha tmtm. Tēnā, whakautua tahitia ngā pātai e rua.",
 				adult:
-					"E hāngai ana tēnei wāhanga ki te mahi, ki te mahi tūao rānei i tua atu i tō kāinga – He rerekē ki ngā mahi o te kāinga. Ko te mahi te wā e whai pūtea ai koe mō te whānau. Ko te tūao te wā e āwhina ai koe i ētahi atu, i tētahi rōpū rānei (kāore he pūtea).Tēnā whakautua tahitia ngā pātai e rua.",
+					"E hāngai ana tēnei wāhanga ki te mahi, ki te mahi tūao rānei i tua atu i tō kāinga – He rerekē ki ngā mahi o te kāinga. Ko te mahi te wā e whai pūtea ai tō tamaiti mō te whānau. Ko te tūao te wā e āwhina ai koe i ētahi atu, i tētahi rōpū rānei (kāore he pūtea).Tēnā whakautua tahitia ngā pātai e rua.",
 			},
 		},
 		"en-NZ": {

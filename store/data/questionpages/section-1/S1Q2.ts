@@ -89,7 +89,7 @@ const S1Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 2",
 			label: "E hia ngā rā i haere ai koe ki te kura i te wiki kua hipa?",
 			kid_label: "E hia ngā rā i haere ai koe ki te kura i te wiki kua hipa?",
-			adult_label: "E hia ngā rā i haere ai tāu tamaiti ki te kura i te wiki kua hipa?",
+			adult_label: "E hia ngā rā i haere ai tō tamaiti ki te kura i te wiki kua hipa?",
 			choices: [
 				{
 					label: "1 te rā",

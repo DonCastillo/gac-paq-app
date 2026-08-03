@@ -89,7 +89,7 @@ const S4Q10: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 17b - Wīra",
 			label: "E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
 			kid_label: "E hia ngā rā i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
-			adult_label: "E hia ngā rā i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
+			adult_label: "E hia ngā rā i wīra ai tō tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei i te wiki kua hipa?",
 			choices: [
 				{
 					label: "1 te rā",
