@@ -14,7 +14,7 @@ import { clearUnansweredResponses, newResponse } from "@store/responses/response
 import { setNumPendingSubmissions } from "@store/settings/settingsSlice";
 import { store } from "@store/store";
 import { submitResponse } from "@utils/api.utils";
-import { readData, removeData, storeData } from "@utils/localstorage.utils";
+import { readData, storeData } from "@utils/localstorage.utils";
 import { falsyValue } from "./utils.utils";
 
 const getResponse = (): string | null => {
@@ -233,26 +233,61 @@ const queueResponseToStorage = async (response: FinalResponseType): Promise<void
 	store.dispatch(setNumPendingSubmissions(mergedResponses.length));
 };
 
-const sendResponseQueue = async (): Promise<void> => {
-	while (true) {
-		try {
-			const existingResponses = await retrieveResponseFromStorage();
-			if (existingResponses !== null && existingResponses !== undefined && existingResponses.length > 0) {
-				const responseToSend = existingResponses.pop();
+// the tail is the oldest entry, so appending restores a claimed response to its place in line
+const requeueResponse = async (response: FinalResponseType): Promise<void> => {
+	const existingResponses = await retrieveResponseFromStorage();
+	const restored = [...(existingResponses ?? []), response];
 
-				if (responseToSend !== null && responseToSend !== undefined) {
-					await submitResponse(responseToSend);
-					await removeData(LocalStorageKey.responses);
-					await storeData(LocalStorageKey.responses, existingResponses);
-					store.dispatch(setNumPendingSubmissions(existingResponses.length));
-				}
-			} else {
-				break;
-			}
+	await storeData(LocalStorageKey.responses, restored);
+	store.dispatch(setNumPendingSubmissions(restored.length));
+};
+
+const drainResponseQueue = async (): Promise<void> => {
+	while (true) {
+		const existingResponses = await retrieveResponseFromStorage();
+		if (existingResponses === null || existingResponses === undefined || existingResponses.length === 0) {
+			break;
+		}
+
+		// oldest first: queueResponseToStorage prepends, so the tail is the earliest response
+		const responseToSend = existingResponses.pop();
+
+		// claim the response before submitting it. Removing it afterwards leaves a window where
+		// the server has already stored the response but the queue still holds it, and the next
+		// drain submits it a second time. A single overwriting write also means a kill here
+		// cannot empty the queue the way a remove-then-write pair could.
+		await storeData(LocalStorageKey.responses, existingResponses);
+		store.dispatch(setNumPendingSubmissions(existingResponses.length));
+
+		if (responseToSend === null || responseToSend === undefined) {
+			continue;
+		}
+
+		try {
+			await submitResponse(responseToSend);
 		} catch (error) {
-			throw new Error(error);
+			// the submission never reached the server, so put the response back for the next drain
+			await requeueResponse(responseToSend);
+			throw error;
 		}
 	}
+};
+
+// the queue is drained from the background task, the network-regain effect, and the
+// pending screen. Overlapping drains would read the same queue and submit an entry twice,
+// so concurrent callers share the drain that is already running.
+let drainInFlight: Promise<void> | null = null;
+
+const sendResponseQueue = async (): Promise<void> => {
+	if (drainInFlight !== null) {
+		return drainInFlight;
+	}
+
+	drainInFlight = drainResponseQueue().finally(() => {
+		drainInFlight = null;
+	});
+
+	return drainInFlight;
 };
 
 const loadNumPendingSubmissions = async (): Promise<void> => {

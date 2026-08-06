@@ -30,6 +30,7 @@ To refresh the app during local development, press `r` in the terminal. View loc
 ## Environment Setup
 
 Copy `.env.template` to `.env` and fill in:
+
 - `EXPO_PUBLIC_ADMIN_API_URL` — Directus CMS base URL
 - `EXPO_PUBLIC_ADMIN_TOKEN` — Directus admin bearer token
 - `EXPO_PUBLIC_RESPONSE_TABLE` — Table name for submissions (`responses` for dev/test, `participant_responses` for production)
@@ -39,24 +40,25 @@ Copy `.env.template` to `.env` and fill in:
 
 TypeScript paths are configured in `tsconfig.json`. Use these instead of relative paths:
 
-| Alias | Directory |
-|---|---|
-| `@/*` | `./*` (root) |
-| `@interface/*` | `./interface/*` |
-| `@utils/*` | `./utils/*` |
-| `@constants/*` | `./constants/*` |
-| `@store/*` | `./store/*` |
-| `@styles/*` | `./styles/*` |
+| Alias           | Directory        |
+| --------------- | ---------------- |
+| `@/*`           | `./*` (root)     |
+| `@interface/*`  | `./interface/*`  |
+| `@utils/*`      | `./utils/*`      |
+| `@constants/*`  | `./constants/*`  |
+| `@store/*`      | `./store/*`      |
+| `@styles/*`     | `./styles/*`     |
 | `@components/*` | `./components/*` |
-| `@hooks/*` | `./hooks/*` |
+| `@hooks/*`      | `./hooks/*`      |
 | `@base_pages/*` | `./base_pages/*` |
-| `@contexts/*` | `./contexts/*` |
+| `@contexts/*`   | `./contexts/*`   |
 
 ## Architecture
 
 ### App Flow
 
 The app uses Expo Router (file-based routing under `app/`). On launch, `app/index.tsx` redirects to `/splash`, and navigation proceeds through:
+
 1. **`/splash`** — Language and mode selection (kid/teen/adult)
 2. **`/questionnaire`** — Main questionnaire loop (pages dispatched from Redux)
 3. **`/success`** — Submission confirmed
@@ -72,6 +74,7 @@ The app operates in three modes defined in `constants/mode.enum.ts`: `adult`, `k
 ### Redux Store (`store/`)
 
 Three slices:
+
 - **`settings`** — App-wide state: current mode, language, active page, navigation history, narration config, color theme, network status, pending submission count
 - **`questions`** — Loaded and translated question/page data for the current language
 - **`responses`** — Participant answers collected during a session
@@ -79,6 +82,7 @@ Three slices:
 ### Question Data Pipeline
 
 All question content lives as TypeScript objects under `store/data/`. The data loading flow on each app init:
+
 1. `saveAppData()` serializes all raw multilingual page data (questions, introductory pages, extroductory pages, phrases, etc.) to AsyncStorage via `LocalStorageKey.app_data`
 2. `loadQuestionData(language)` reads it back and runs `translateArrayOfPages()` to resolve the correct locale's text into each page object
 3. The translated pages go into the Redux `questions` slice, and `loadPages()` + `loadSectionPages()` populate the `settings` slice navigation index
@@ -86,6 +90,7 @@ All question content lives as TypeScript objects under `store/data/`. The data l
 ### Question Page Structure
 
 Each question file (e.g., `store/data/questionpages/section-1/S1Q1.ts`) exports a `LangQuestionPagesType` object with:
+
 - `ident` — unique string key (used for audio and response storage)
 - `column_name` — database column name for the response
 - `type` — `Screen` enum value (e.g., `SingleQuestion`, `MultiQuestion`)
