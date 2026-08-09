@@ -5,6 +5,7 @@ import { skipPage } from "@store/settings/settingsSlice";
 import { loadPhrases } from "@utils/load.utils";
 import { loadPages } from "@utils/load_pages.utils";
 import { changeMode } from "@utils/mode.utils";
+import { seedLockedLanguageResponse } from "@utils/response.utils";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 
@@ -30,6 +31,9 @@ const useAppLoader = (mode: ModeType, language: string) => {
 
 			// Reset responses state
 			dispatch(resetResponses());
+
+			// Re-seed the language response a country-locked build has no page to collect
+			seedLockedLanguageResponse();
 
 			// Load phrases and pages
 			loadPhrases();

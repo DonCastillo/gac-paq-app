@@ -1,3 +1,4 @@
+import { LOCKED_LANGUAGE } from "@constants/locked_country";
 import type ColorInterface from "@interface/color";
 import type DeviceInterface from "@interface/dimensions";
 import type { PageIndexInterface } from "@interface/payload.type";
@@ -44,7 +45,7 @@ const settingsSlice = createSlice({
 		// mode: Mode.Adult as ModeType,
 		// mode: Mode.Kid as ModeType,
 		device: defaultDevice,
-		language: "en-CA",
+		language: LOCKED_LANGUAGE ?? "en-CA",
 		directusAccessToken: process.env.EXPO_PUBLIC_ADMIN_TOKEN as string,
 		directusBaseEndpoint: process.env.EXPO_PUBLIC_ADMIN_API_URL as string,
 		responseTable: process.env.EXPO_PUBLIC_RESPONSE_TABLE as string,
