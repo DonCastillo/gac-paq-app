@@ -23,7 +23,7 @@ import { falsyValue } from "./utils.utils";
  * the server already committed collides on this column, so the retry is rejected instead of
  * inserting a second row.
  */
-const IDEMPOTENCY_COLUMN = "submission_id";
+const IDEMPOTENCY_COLUMN = "idempotency_key";
 
 /**
  * The key identifies one logical submission, not one POST attempt, so the same value has to be
