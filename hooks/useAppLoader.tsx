@@ -5,6 +5,7 @@ import { skipPage } from "@store/settings/settingsSlice";
 import { loadPhrases } from "@utils/load.utils";
 import { loadPages } from "@utils/load_pages.utils";
 import { changeMode } from "@utils/mode.utils";
+import { clearSubmissionId } from "@utils/response.utils";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 
@@ -30,6 +31,10 @@ const useAppLoader = (mode: ModeType, language: string) => {
 
 			// Reset responses state
 			dispatch(resetResponses());
+
+			// the answers these responses belonged to are gone, so the key must not carry over
+			// to the next participant — a shared key would collide and discard their submission
+			clearSubmissionId();
 
 			// Load phrases and pages
 			loadPhrases();

@@ -45,4 +45,4 @@ Note that rotation does **not** recreate the activity — the manifest declares 
 
 The app opts out of predictive back via `android:enableOnBackInvokedCallback="false"` (React Native's default). Apps targeting API 36 otherwise get predictive back by default, where `onBackPressed()` is not called and `KEYCODE_BACK` is not dispatched — the mechanism React Native's `BackHandler` depends on.
 
-`hooks/useBackHandler.tsx` returns `true` by default to *block* back navigation, and is applied on the splash, questionnaire, pending, and loading screens so participants cannot back out mid-session. When the opt-out goes, that blocking must be reimplemented against the predictive back APIs, or participants will be able to exit a questionnaire in progress.
+`hooks/useBackHandler.tsx` returns `true` by default to _block_ back navigation, and is applied on the splash, questionnaire, pending, and loading screens so participants cannot back out mid-session. When the opt-out goes, that blocking must be reimplemented against the predictive back APIs, or participants will be able to exit a questionnaire in progress.

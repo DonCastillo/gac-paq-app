@@ -9,7 +9,17 @@ interface PropsInterface {
 }
 
 const AnimatedView = ({ children, style }: PropsInterface): React.ReactElement => {
-	const [isContentVisible, setIsContentVisible] = useState(false);
+	/**
+	 * Starts visible so the first render asks for "fadeIn", not "fadeOut".
+	 *
+	 * Mounting in the hidden state made every screen play a fadeOut before the layout effect below
+	 * could flip it to fadeIn. Both animations are native-driven and only 100ms long, so the two
+	 * ran on the same node at once and whichever landed last won — when that was the fadeOut, the
+	 * view stuck at opacity 0 and the screen came up blank with only the Toolbar and Navigation,
+	 * which sit outside this component, still painted. Any remount cleared it, which is why
+	 * pressing a button that toggles a loading state appeared to "fix" the page.
+	 */
+	const [isContentVisible, setIsContentVisible] = useState(true);
 	const currentPageNumber = useSelector(getCurrentPageNumber);
 
 	useLayoutEffect(() => {
