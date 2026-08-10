@@ -11,10 +11,10 @@ import Navigation from "@components/Navigation";
 import TopMain from "@components/orientation/TopMain";
 import { Component } from "@interface/function.type";
 import { FinalResponseType } from "@interface/union.type";
-import { getPhrases } from "@store/settings/settingsSlice";
+import { getNumPendingSubmissions, getPhrases } from "@store/settings/settingsSlice";
 import { GeneralStyle } from "@styles/general";
 import { adjustPageHeadingText } from "@utils/style";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { View } from "react-native";
 import { useSelector } from "react-redux";
 import { LoadingScreenAdultPage } from "../adult";
@@ -22,8 +22,10 @@ import { LoadingScreenKidPage } from "../kid";
 
 const GenericPendingSubmissions: Component = () => {
 	const phrases = useSelector(getPhrases);
+	const numPendingSubmissions = useSelector(getNumPendingSubmissions);
 	const { mode } = useCharacter();
 	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const hasLoadedOnce = useRef<boolean>(false);
 
 	const [pendingResponses, setPendingResponses] = useState<FinalResponseType[]>([]);
 	const [modalVisible, setModalVisible] = useState<boolean>(false);
@@ -57,20 +59,29 @@ const GenericPendingSubmissions: Component = () => {
 		}
 	};
 
-	const fetchData = async (): Promise<void> => {
+	// showLoading swaps the whole screen for the loading page, which is right for the first read but
+	// not for a refresh triggered by a drain the user did not start
+	const fetchData = async (showLoading: boolean = true): Promise<void> => {
 		try {
-			setIsLoading(true);
+			if (showLoading) setIsLoading(true);
 			const storedResponses = (await retrieveResponseFromStorage()) || [];
 			setPendingResponses(storedResponses);
 		} catch (error) {
-			console.log("Error submitting response: ", error);
+			console.log("Error reading pending responses: ", error);
 		} finally {
-			setIsLoading(false);
+			if (showLoading) setIsLoading(false);
 		}
 	};
 
+	// the queue also drains from the background task and the network-regain effect, neither of which
+	// this page starts. Every queue change dispatches setNumPendingSubmissions, so following that
+	// count keeps the list in step with all three drain sources instead of only this page's button.
 	useEffect(() => {
-		fetchData();
+		fetchData(!hasLoadedOnce.current);
+		hasLoadedOnce.current = true;
+	}, [numPendingSubmissions]);
+
+	useEffect(() => {
 		return () => {
 			setPendingResponses([]);
 		};

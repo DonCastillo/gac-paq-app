@@ -5,7 +5,7 @@ import { resetResponses } from "@store/responses/responsesSlice";
 import { loadPhrases } from "@utils/load.utils";
 import { loadPages, loadSectionPages } from "@utils/load_pages.utils";
 import { changeMode } from "@utils/mode.utils";
-import { loadNumPendingSubmissions } from "@utils/response.utils";
+import { clearSubmissionId, loadNumPendingSubmissions } from "@utils/response.utils";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
@@ -39,6 +39,10 @@ const useAppInitialization = (mode: ModeType, language: string): void => {
 
 				// Reset responses state
 				dispatch(resetResponses());
+
+				// the answers these responses belonged to are gone, so the key must not carry over
+				// to the next participant — a shared key would collide and discard their submission
+				clearSubmissionId();
 
 				// Load phrases and pages
 				loadPhrases();

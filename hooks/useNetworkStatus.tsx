@@ -1,5 +1,17 @@
-import NetInfo from "@react-native-community/netinfo";
+import NetInfo, { type NetInfoState } from "@react-native-community/netinfo";
 import { useEffect, useState } from "react";
+
+/**
+ * isConnected only means the device is attached to a network, which is true of a school wifi that
+ * has not let the device past its captive portal. Submissions would fail against it, so prefer
+ * isInternetReachable where it is known.
+ *
+ * It is null while NetInfo is still probing, and treating that as offline would queue responses
+ * that could have been sent, so fall back to isConnected until the probe resolves.
+ */
+const hasUsableNetwork = (state: NetInfoState): boolean => {
+	return state.isInternetReachable ?? state.isConnected ?? false;
+};
 
 /**
  * Custom hook for monitoring network connectivity
@@ -12,13 +24,13 @@ const useNetworkStatus = () => {
 	useEffect(() => {
 		// Listen for network state changes
 		const unsubscribe = NetInfo.addEventListener((state) => {
-			setHasNetwork(state.isConnected ?? false);
+			setHasNetwork(hasUsableNetwork(state));
 			setNetworkState(state);
 		});
 
 		// Get initial network state
 		NetInfo.fetch().then((state) => {
-			setHasNetwork(state.isConnected ?? false);
+			setHasNetwork(hasUsableNetwork(state));
 			setNetworkState(state);
 		});
 
