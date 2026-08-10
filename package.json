@@ -16,7 +16,11 @@
 		"test:android": "eas build --profile test:external:aab --platform android",
 		"test:ios": "eas build --profile test:testflight --platform ios",
 		"publish:android": "eas build --profile production --platform android",
-		"publish:ios": "eas build --profile production --platform ios"
+		"publish:ios": "eas build --profile production --platform ios",
+		"test:mexico:android": "eas build --profile test:mexico --platform android",
+		"test:mexico:ios": "eas build --profile test:mexico --platform ios",
+		"publish:mexico:android": "eas build --profile production:mexico --platform android",
+		"publish:mexico:ios": "eas build --profile production:mexico --platform ios"
 	},
 	"dependencies": {
 		"@expo/vector-icons": "^15.0.3",

@@ -1,3 +1,4 @@
+import { LOCKED_LANGUAGE } from "@constants/locked_country";
 import Section from "@constants/section.enum";
 import type {
 	AddNarrationsFuncType,
@@ -236,7 +237,11 @@ const reset: SettingsFuncType = (state) => {
 	setMode(state, { type: "", payload: undefined });
 	skipPage(state, { type: "", payload: 1 });
 	setColorTheme(state, { type: "", payload: 0 });
-	setLanguage(state, { type: "", payload: "en-CA" });
+	// Must match initialState. The regular app can fall back to en-CA because the language page
+	// comes first and the participant picks again; a country-locked build has no such page, so
+	// resetting to en-CA would hand every participant after the first an English questionnaire
+	// while seedLockedLanguageResponse still stamped the locked language onto their submission.
+	setLanguage(state, { type: "", payload: LOCKED_LANGUAGE ?? "en-CA" });
 	setEnableNarration(state, { type: "", payload: true });
 	setStartDateTime(state);
 };
