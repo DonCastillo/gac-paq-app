@@ -31,7 +31,7 @@ const GSHSExtro: LangExtroPayloadInterface = {
 			subheading: "",
 		},
 		"mi-NZ": {
-			heading: "Kua tutuki tēnei wāhanga!",
+			heading: "Kua oti tēnei wāhanga!",
 			subheading: "",
 		},
 		"ne-NP": {

@@ -65,7 +65,7 @@ const S4Q3: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 15c",
 			label: "Ka hia te roa o tō haerenga ki te kura?",
 			kid_label: "Ka hia te roa o tō haerenga ki te kura?",
-			adult_label: "Ka hia te roa o tō tāu tamaiti haere ki te kura?",
+			adult_label: "Ka hia te roa o tō tamaiti haere ki te kura?",
 			choices: [
 				{
 					label: "10 meneti iti iho rānei",

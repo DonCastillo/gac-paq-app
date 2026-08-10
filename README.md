@@ -46,6 +46,12 @@ To refresh the app in local development, enter `r` on the terminal.
 1. On a separate terminal, in the root project, enter `react-devtools`
 2. Refresh/rebuild by entering `r`
 
+### View Redux state in development
+
+1. Run the local development
+2. Enter Shift + m
+3. Select `Open redux-devtools-expo-dev-plugin`
+
 ## PUBLISHING THE APP
 
 1. On the `main` branch, update app version on `app.json`

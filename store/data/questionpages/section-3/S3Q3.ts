@@ -73,8 +73,7 @@ const S3Q3: LangQuestionRadioImagePayloadInterface = {
 			heading: "Pātai 14",
 			label: "Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
 			kid_label: "Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i tō āhua i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
-			adult_label:
-				"Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i te āhua o tāu tamaiti i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
+			adult_label: "Ko tēhea o ngā pikitia e whai ake nei e whakaatu ana i te āhua o tō tamaiti i te nuinga o te wā i te mahi tūao, i te mahi rānei?",
 			choices: [
 				{
 					label: "Kāore i te neke",

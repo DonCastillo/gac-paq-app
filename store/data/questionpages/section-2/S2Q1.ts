@@ -49,15 +49,23 @@ const S2Q1: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 8",
 			label: "I te wiki kua hipa, i oti rānei i a koe ngā mahi o te kāinga, i ngā momo mahi rānei?",
 			kid_label: "I te wiki kua hipa, i oti rānei i a koe ngā mahi o te kāinga, i ngā momo mahi rānei?",
-			adult_label: "I te wiki kua hipa, i oti rānei i tāu tamaiti ngā mahi o te kāinga, ngā momo mahi rānei?",
+			adult_label: "I te wiki kua hipa, i oti rānei i tō tamaiti ngā mahi o te kāinga, ngā momo mahi rānei?",
 			choices: [
 				{
 					label: "Āe",
 					value: "yes",
+					label_mode: {
+						kid: "Āe",
+						adult: "Āe",
+					},
 				},
 				{
-					label: "Kāo",
+					label: "Kāo. Ka tōpihangia ngā pātai e whai ake nei i tēnei wāhanga i te taupānga.",
 					value: "no",
+					label_mode: {
+						kid: "Kāo. Ka tōpihangia ngā pātai e whai ake nei i tēnei wāhanga i te taupānga.",
+						adult: "Kāo. Ka tōpihangia ngā pātai e whai ake nei i tēnei wāhanga i te taupānga.",
+					},
 				},
 			],
 		},

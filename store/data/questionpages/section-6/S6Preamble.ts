@@ -32,7 +32,7 @@ const S6Preamble: LangPreamblePayloadInterface = {
 			description: {
 				kid: "Kei roto i tēnei ko ngā mahi hākinakina katoa e mahia ana e koe i tō wā tākaro, i te wā wātea rānei. Kāore e kapi ana ngā mahi whakarite, ngā wā whakatā rānei i te kura. Mō ngā pātai e whai ake nei, kaua e whakauru i ngā mahi i kōrerotia ai e koe i mua.",
 				adult:
-					"Kei roto i tēnei ko ngā mahi hākinakina katoa e mahia ana e tāu tamaiti i te wā tākaro, i te wā wātea rānei. Koinei te wā e whakatau ai tāu tamaiti he aha hei mahi māna. Mō ngā pātai e whai ake nei, kaua e whakauru i ngā mahi i kōrero ai koe i mua.",
+					"Kei roto i tēnei ko ngā mahi hākinakina katoa e mahia ana e tō tamaiti i te wā tākaro, i te wā wātea rānei. Koinei te wā e whakatau ai tō tamaiti he aha hei mahi māna. Mō ngā pātai e whai ake nei, kaua e whakauru i ngā mahi i kōrero ai koe i mua.",
 			},
 		},
 		"en-NZ": {

@@ -31,7 +31,7 @@ const S1Q3: LangQuestionSliderPayloadInterface = {
 			heading: "Pātai 3",
 			label: "E hia ngā akoranga whakakori i haere ai koe i te wiki kua hipa?",
 			kid_label: "E hia ngā akoranga whakakori i haere ai koe i te wiki kua hipa?",
-			adult_label: "E hia ngā akoranga whakakori i haere ai tāu tamaiti i te wiki kua hipa?",
+			adult_label: "E hia ngā akoranga whakakori i haere ai tō tamaiti i te wiki kua hipa?",
 			max_value: 7,
 		},
 		"en-NZ": {

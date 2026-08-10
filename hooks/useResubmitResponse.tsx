@@ -2,7 +2,7 @@ import { useLoadingContext } from "@/contexts/common/LoadingContext";
 import { submitResponse } from "@/utils/api.utils";
 import { resetResponses } from "@store/responses/responsesSlice";
 import { getIsConnected } from "@store/settings/settingsSlice";
-import { queueResponseToStorage, sanitizeResponse } from "@utils/response.utils";
+import { clearSubmissionId, queueResponseToStorage, sanitizeResponse } from "@utils/response.utils";
 import { router } from "expo-router";
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,11 +27,16 @@ const useSubmitResponseHandler = () => {
 			if (isConnected) {
 				// Submit online
 				await submitResponse(sanitizedResponses);
+				// the answers are on the server, so the next participant starts a new key. A
+				// failure above skips this deliberately: "Try Again" must reuse the same key.
+				clearSubmissionId();
 				dispatch(resetResponses());
 				router.replace({ pathname: "/success", params: { success_type: "online" } });
 			} else {
 				// Queue for offline submission
 				await queueResponseToStorage(sanitizedResponses);
+				// the queued copy carries the key, so retries reuse it from storage
+				clearSubmissionId();
 				dispatch(resetResponses());
 				router.replace({ pathname: "/success", params: { success_type: "offline" } });
 			}

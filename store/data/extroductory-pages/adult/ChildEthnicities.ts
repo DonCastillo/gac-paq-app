@@ -74,7 +74,7 @@ const ChildEthnicities: LangQuestionOptionPayloadInterface = {
 			heading: "Pātai 26",
 			label: "He aha te iwi o tāu tamaiti?",
 			kid_label: "He aha te iwi o tāu tamaiti?",
-			adult_label: "He aha te iwi o tāu tamaiti?",
+			adult_label: "He aha te iwi o tō tamaiti?",
 			choices: [
 				{
 					label: "NZ European",

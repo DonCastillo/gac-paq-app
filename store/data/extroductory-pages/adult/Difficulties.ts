@@ -117,7 +117,7 @@ const Difficulties: LangQuestionCheckboxPayloadInterface = {
 			heading: "Pātai 25",
 			label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
 			kid_label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
-			adult_label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tāu tamaiti?",
+			adult_label: "Tēnā, tautohua ngā ngohe o ia rā e uaua ana ki tō tamaiti?",
 			kid_sublabel: "Kōwhiria mēnā e hānga ana",
 			adult_sublabel: "Kōwhiria mēnā e hānga ana",
 			choices: [

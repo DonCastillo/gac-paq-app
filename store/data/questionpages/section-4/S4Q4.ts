@@ -147,7 +147,7 @@ const S4Q4: LangQuestionRadioImagePayloadInterface = {
 			heading: "Pātai 16",
 			label: "Mā hea atu koe ki te mahi i te wiki kua hipa?",
 			kid_label: "Mā hea atu koe ki te mahi i te wiki kua hipa?",
-			adult_label: "Mā hea atu tāu tamaiti ki te mahi i te wiki kua hipa?",
+			adult_label: "Mā hea o tō tamaiti ki te mahi i te wiki kua hipa?",
 			kid_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
 			adult_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
 			choices: [

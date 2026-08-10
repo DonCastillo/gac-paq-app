@@ -1,3 +1,4 @@
+import defaultColor from "@/store/settings/defaultColor";
 import { getColorTheme } from "@store/settings/settingsSlice";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { memo } from "react";
@@ -10,7 +11,12 @@ const BGLinearGradient = (): React.ReactElement => {
 
 	return (
 		<LinearGradient
-			colors={[grad100 ?? "#FFF", grad200 ?? "#FFF", grad300 ?? "#FFF", grad400 ?? "#FFF"]}
+			colors={[
+				(grad100 ?? defaultColor.grad100) as string,
+				(grad200 ?? defaultColor.grad200) as string,
+				(grad300 ?? defaultColor.grad300) as string,
+				(grad400 ?? defaultColor.grad400) as string,
+			]}
 			start={[1, 0]}
 			end={[0, 1]}
 			locations={[0, 0.3, 0.6, 1]}

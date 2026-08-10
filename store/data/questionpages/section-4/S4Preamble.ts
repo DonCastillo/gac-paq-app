@@ -28,7 +28,7 @@ const S4Preamble: LangPreamblePayloadInterface = {
 			subheading: "Wāhanga 4",
 			description: {
 				kid: "E pā ana tēnei wāhanga ki tō haere ki ngā wāhi rerekē.",
-				adult: "E pā ana tēnei wāhanga ki tō tāu tamaiti haere ki ngā wāhi rerekē.",
+				adult: "E pā ana tēnei wāhanga ki tō tamaiti haere ki ngā wāhi rerekē.",
 			},
 		},
 		"en-NZ": {
