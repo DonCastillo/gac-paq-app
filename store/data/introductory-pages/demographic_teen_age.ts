@@ -84,27 +84,27 @@ const DemographicTeenPage: LangQuestionDropdownPayloadInterface = {
 			adult_label: "E hia ō tau?",
 			choices: [
 				{
-					label: "12 ngā tau",
+					label: "12 tekau mā rua ngā tau",
 					value: "12",
 				},
 				{
-					label: "13 ngā tau",
+					label: "13 tekau mā toru ngā tau",
 					value: "13",
 				},
 				{
-					label: "14 ngā tau",
+					label: "14 tekau mā whā ngā tau",
 					value: "14",
 				},
 				{
-					label: "15 ngā tau",
+					label: "15 tekau mā rima ngā tau",
 					value: "15",
 				},
 				{
-					label: "16 ngā tau",
+					label: "16 tekau mā ono ngā tau",
 					value: "16",
 				},
 				{
-					label: "17 ngā tau",
+					label: "17 tekau mā whitu ngā tau",
 					value: "17",
 				},
 			],

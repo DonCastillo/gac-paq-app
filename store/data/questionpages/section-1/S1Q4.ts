@@ -73,7 +73,7 @@ const S1Q4: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 4",
 			label: "E hia te roa o ō akomanga whakakori?",
 			kid_label: "E hia te roa o ō akomanga whakakori?",
-			adult_label: "E hia te roa o ngā akomanga whakakori o tāu tamaiti?",
+			adult_label: "E hia te roa o ngā akomanga whakakori o tō tamaiti?",
 			choices: [
 				{
 					label: "Iti iho i te 30 meneti ia akomanga",

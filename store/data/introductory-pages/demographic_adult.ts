@@ -111,48 +111,48 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		"mi-NZ": {
 			type: Question.QuestionDropdown,
 			heading: "Nau mai!",
-			label: "E hia ngā tau o tāu tamaiti?",
-			kid_label: "E hia ngā tau o tāu tamaiti?",
-			adult_label: "E hia ngā tau o tāu tamaiti?",
+			label: "E hia ngā tau o tō tamaiti?",
+			kid_label: "E hia ngā tau o tō tamaiti?",
+			adult_label: "E hia ngā tau o tō tamaiti?",
 			choices: [
 				{
-					label: "E 8 ngā tau",
+					label: "8 E waru ngā tau",
 					value: "8",
 				},
 				{
-					label: "E 9 ngā tau",
+					label: "9 E iwa ngā tau",
 					value: "9",
 				},
 				{
-					label: "10 ngā tau",
+					label: "10 tekau ngā tau",
 					value: "10",
 				},
 				{
-					label: "11 ngā tau",
+					label: "11 tekau mā tahi ngā tau",
 					value: "11",
 				},
 				{
-					label: "12 ngā tau",
+					label: "12 tekau mā rua ngā tau",
 					value: "12",
 				},
 				{
-					label: "13 ngā tau",
+					label: "13 tekau mā toru ngā tau",
 					value: "13",
 				},
 				{
-					label: "14 ngā tau",
+					label: "14 tekau mā whā ngā tau",
 					value: "14",
 				},
 				{
-					label: "15 ngā tau",
+					label: "15 tekau mā rima ngā tau",
 					value: "15",
 				},
 				{
-					label: "16 ngā tau",
+					label: "16 tekau mā ono ngā tau",
 					value: "16",
 				},
 				{
-					label: "17 ngā tau",
+					label: "17 tekau mā whitu ngā tau",
 					value: "17",
 				},
 			],
@@ -845,7 +845,7 @@ const DemographicAdultPage: LangQuestionDropdownPayloadInterface = {
 		},
 		"sv-SE": {
 			type: Question.QuestionDropdown,
-			heading: "Welcome!",
+			heading: "Välkommen!",
 			label: "Hur gammalt är ditt barn?",
 			kid_label: "Hur gammalt är ditt barn?",
 			adult_label: "Hur gammalt är ditt barn?",

@@ -57,7 +57,7 @@ export const getNarrationPayload = createAsyncThunk(
 		if (!narrations) return null;
 
 		// if en-NG && mode === adult, merge en-MW payload and get en-NG version of child_ethnicities and parent_ethnicities
-		if (["en-NG", "en-GH"].includes(language) && mode === Mode.Adult) {
+		if (["en-NG"].includes(language) && mode === Mode.Adult) {
 			const enNGAdultEndpoint = getNarrationEndpoint(directusBaseEndpoint, Mode.Adult, "en-NG");
 			const enNGAdultNarrations = (await collectNarrationData(enNGAdultEndpoint, directusAccessToken)) as Record<string, any> | null;
 			if (!enNGAdultNarrations) return narrations;
@@ -65,10 +65,13 @@ export const getNarrationPayload = createAsyncThunk(
 			narrations.parent_ethnicities = enNGAdultNarrations?.parent_ethnicities;
 		}
 
-		// temporarily removed the en-GH narration of the Q26 and Q27 (ethnicity questions) of the parent version
-		if (language === "en-GH" && mode === Mode.Adult) {
-			narrations.child_ethnicities = null;
-			narrations.parent_ethnicities = null;
+		// if en-GH && mode === adult, merge en-MW payload and get en-GH version of child_ethnicities and parent_ethnicities
+		if (["en-GH"].includes(language) && mode === Mode.Adult) {
+			const enGHAdultEndpoint = getNarrationEndpoint(directusBaseEndpoint, Mode.Adult, "en-GH");
+			const enGHAdultNarrations = (await collectNarrationData(enGHAdultEndpoint, directusAccessToken)) as Record<string, any> | null;
+			if (!enGHAdultNarrations) return narrations;
+			narrations.child_ethnicities = enGHAdultNarrations?.child_ethnicities;
+			narrations.parent_ethnicities = enGHAdultNarrations?.parent_ethnicities;
 		}
 
 		// if en-IN && mode === kid or teen, merge en-CA payload and get en-IN version of about and play_2

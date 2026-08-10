@@ -73,7 +73,7 @@ const S1Q5: LangQuestionRadioImagePayloadInterface = {
 			heading: "Pātai 5",
 			label: "ko tēhea o ēnei pikitia e whakaatu ana i tō āhua i te nuinga o te wā ki ngā akoranga whakakori?",
 			kid_label: "ko tēhea o ēnei pikitia e whakaatu ana i tō āhua i te nuinga o te wā ki ngā akoranga whakakori?",
-			adult_label: "ko tēhea o ēnei pikitia e whakaatu ana i te āhua o tāu tamaiti i te nuinga o te wā ki ngā akoranga whakakori?",
+			adult_label: "ko tēhea o ēnei pikitia e whakaatu ana i te āhua o tō tamaiti i te nuinga o te wā ki ngā akoranga whakakori?",
 			choices: [
 				{
 					label: "Kāore i te neke",

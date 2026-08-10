@@ -82,7 +82,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 			kid_label:
 				"I te wiki kua hipa, i haere ai koe mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki tētahi toa)?",
 			adult_label:
-				"Pātai 17 I te wiki kua hipa, i haere ai tāu tamaiti mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki te toa)?",
+				"Pātai 17 I te wiki kua hipa, i haere ai tō tamaiti mā raro, mā runga wīra rānei ki ngā wāhi, atu i te kura, i te mahi rānei (hei tauira, ki te whare o tētahi hoa, ki te pāka, ki te toa)?",
 			kid_sublabel: "Tēnā, kōwhiria ngā whakautu katoa e hāngai nei ki a koe.",
 			adult_sublabel: "Tēnā, kōwhiria ngā whakautu katoa e hāngai ana ki a koe.",
 			choices: [
@@ -103,7 +103,7 @@ const S4Q7: LangQuestionCheckboxPayloadInterface = {
 					},
 				},
 				{
-					label: "Kāo",
+					label: "Kāo. Ka tōpihangia ngā pātai e whai ake nei i tēnei wāhanga i te taupānga.",
 					value: "no",
 				},
 			],

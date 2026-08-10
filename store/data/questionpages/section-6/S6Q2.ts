@@ -101,7 +101,7 @@ const S6Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 22",
 			label: "I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai koe i ngā ngohe e whakakaha ake ana i ngā uaua?",
 			kid_label: "I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai koe i ngā ngohe e whakakaha ake ana i ngā uaua?",
-			adult_label: "I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai tāu tamaiti i ngā ngohe e whakakaha ana i ngā uaua?",
+			adult_label: "I te wiki kua hipa, e hia ngā rā ia wiki i mahi ai tō tamaiti i ngā ngohe e whakakaha ana i ngā uaua?",
 			kid_sublabel: "Ko ngā tauira, ko te takaporepore, ko te kake, ko ngā pana-tū, ko te hiki maitai, ko te pae makimaki rānei.",
 			adult_sublabel: "Hei tauira ko te takaporepore, ko te kake, ko ngā pana tū, ko te hiki maitai, ko te pae makimaki rānei.",
 			choices: [

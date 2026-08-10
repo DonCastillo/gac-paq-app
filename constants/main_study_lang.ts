@@ -46,6 +46,9 @@ const MAIN_STUDY_LANG = [
 	"hi-IN",
 	"ma-IN",
 	"es-CL",
+	"en-GH",
+	"en-NZ",
+	"mi-NZ",
 ];
 
 export default MAIN_STUDY_LANG;

@@ -65,7 +65,7 @@ const S4Q11: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 17c - Wīra",
 			label: "I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
 			kid_label: "I tētahi rā māori, i hia te roa i wīra ai koe ki ētahi wāhi, atu i te kura, i te mahi rānei?",
-			adult_label: "I tētahi rā, i hia te roa i wīra ai tāu tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei?",
+			adult_label: "I tētahi rā, i hia te roa i wīra ai tō tamaiti ki ētahi wāhi, atu i te kura, i te mahi rānei?",
 			choices: [
 				{
 					label: "10 meneti, heke iho rānei",

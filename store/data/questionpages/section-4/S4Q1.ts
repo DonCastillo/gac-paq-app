@@ -139,9 +139,9 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 			heading: "Pātai 15",
 			label: "Mā hea atu koe ki te kura i tērā wiki?",
 			kid_label: "Mā hea atu koe ki te kura i tērā wiki?",
-			adult_label: "Mā hea atu tāu tamaiti ki te kura i tērā wiki?",
+			adult_label: "Mā hea atu tō tamaiti ki te kura i tērā wiki?",
 			kid_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
-			adult_sublabel: "Kōwhiria te momo i kaha whakamahi ai koe.",
+			adult_sublabel: "Kōwhiria te momo i kaha whakamahi ai tō tamaiti.",
 			choices: [
 				{
 					label: "Mā raro",
@@ -191,7 +191,7 @@ const S4Q1: LangQuestionRadioImagePayloadInterface = {
 					image_ident: "staying_home",
 					label_mode: {
 						kid: "Noho ai ahau ki te kāinga mō te kura",
-						adult: "Noho ai tāu tamaiti ki te kāinga mō te kura",
+						adult: "Noho ai tō tamaiti ki te kāinga mō te kura",
 					},
 				},
 			],

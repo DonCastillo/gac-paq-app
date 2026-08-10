@@ -270,7 +270,7 @@ const GSHS2: LangQuestionRadioPayloadInterface = {
 		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Wāhanga 26",
+			heading: "Pātai 26",
 			label:
 				"I roto i ngā rā e 7 kua pahure ake nei, e hia ngā rā i mahi whakapūoioi koe hei whakapakari, hei whakamārohirohi rānei i ō uaua, pērā i ngā pana ake, i ngā nohotū, i te hiki taimaha rānei?",
 			kid_label:

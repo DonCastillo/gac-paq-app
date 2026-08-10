@@ -73,7 +73,7 @@ const S3Q2: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 13",
 			label: "I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
 			kid_label: "I te wiki kua hipa, e hia ngā hāora i whakapaua ai e koe ki te tūao, ki te mahi rānei?",
-			adult_label: "I te wiki kua hipa, e hia ngā hāora i whakapaua ai e tāu tamaiti ki te tūao, ki te mahi rānei?",
+			adult_label: "I te wiki kua hipa, e hia ngā hāora i whakapaua ai e tō tamaiti ki te tūao, ki te mahi rānei?",
 			choices: [
 				{
 					label: "Iti iho i te 1 hāora ia rā",

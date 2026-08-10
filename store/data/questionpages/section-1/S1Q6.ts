@@ -89,7 +89,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 			heading: "Pātai 6",
 			label: "I ngā rā o te kura, e hia te roa o te wā whakatā?",
 			kid_label: "I ngā rā o te kura, e hia te roa o te wā whakatā?",
-			adult_label: "I ngā rā o te kura, e hia te roa o te wā whakatā o tāu tamaiti?",
+			adult_label: "I ngā rā o te kura, e hia te roa o te wā whakatā o tō tamaiti?",
 			kid_sublabel:
 				"Arā, ko ngā wā paramanawa me ngā tina. Tēnā, tāpirihia te wā kia kotahi – Hei tauira, e rua wā paramanawa e 15 meneti te roa, ā,  e 30 meneti ki te tina, ka 60 meneti te roa.",
 			adult_sublabel:
@@ -116,7 +116,7 @@ const S1Q6: LangQuestionRadioPayloadInterface = {
 					value: "More than 60 minutes",
 				},
 				{
-					label: "Kāori i te mōhio",
+					label: "Kāore i te mōhio",
 					value: "Don't know",
 				},
 			],

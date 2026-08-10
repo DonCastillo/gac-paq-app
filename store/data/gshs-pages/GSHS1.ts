@@ -268,7 +268,7 @@ const GSHS1: LangQuestionRadioPayloadInterface = {
 		},
 		"mi-NZ": {
 			type: Question.QuestionRadio,
-			heading: "Wāhanga 25",
+			heading: "Pātai 25",
 			label: "I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
 			kid_label: "I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
 			adult_label: "I ngā rangi e 7 kua pahure ake nei, e hia ngā rā i kori tinana koe mō te tapeke o te 60 meneti, neke atu rānei i te rā?",
