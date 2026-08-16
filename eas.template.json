@@ -93,6 +93,30 @@
 				"buildType": "app-bundle",
 				"gradleCommand": ":app:bundleRelease"
 			}
+		},
+		"test:mexico": {
+			"autoIncrement": true,
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": "",
+				"EXPO_PUBLIC_COUNTRY": "MX"
+			}
+		},
+		"production:mexico": {
+			"autoIncrement": true,
+			"env": {
+				"EXPO_PUBLIC_ENVIRONMENT": "",
+				"EXPO_PUBLIC_ADMIN_API_URL": "",
+				"EXPO_PUBLIC_ADMIN_TOKEN": "",
+				"EXPO_PUBLIC_RESPONSE_TABLE": "",
+				"EXPO_PUBLIC_COUNTRY": "MX"
+			},
+			"android": {
+				"buildType": "app-bundle",
+				"gradleCommand": ":app:bundleRelease"
+			}
 		}
 	},
 	"submit": {

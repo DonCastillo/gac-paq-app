@@ -28,6 +28,8 @@ const GenericQuestionnaireLayout: ParentComponent = ({ children }) => {
 	const { isKeyboardOpen } = device;
 	const { questionLabel, questionSubLabel, heading, selectedValue } = useQuestionContext();
 	const backgroundImage = getImageBackground();
+	const hasPrevPage = currentPageNumber > 1;
+
 
 	return (
 		<View style={styles.container}>
@@ -64,18 +66,17 @@ const GenericQuestionnaireLayout: ParentComponent = ({ children }) => {
 					</QuestionContainer>
 				</CenterMain>
 				<Navigation>
-					{selectedValue !== null ? (
-						<BackAndNextNav
-							key={"WithValue"}
-							onPrev={() => dispatch(prevPage())}
-							onNext={() => dispatch(nextPage())}
-						/>
-					) : (
-						<BackAndNextNav
-							key={"WithoutValue"}
-							onPrev={() => dispatch(prevPage())}
-						/>
-					)}
+					{/*
+					 * There is nothing behind page 1, so it gets no back button. In the regular app the language
+					 * page occupies that slot, so this only takes effect in a country-locked build, where the
+					 * participant page opens the app. The key varies with both branches because BackAndNextNav
+					 * latches its buttons on mount and has to be remounted to drop one.
+					 */}
+					<BackAndNextNav
+						key={`${hasPrevPage ? "WithPrev" : "WithoutPrev"}${selectedValue !== null ? "WithValue" : "WithoutValue"}`}
+						onPrev={hasPrevPage ? () => dispatch(prevPage()) : undefined}
+						onNext={selectedValue !== null ? () => dispatch(nextPage()) : undefined}
+					/>
 				</Navigation>
 			</Main>
 		</View>
