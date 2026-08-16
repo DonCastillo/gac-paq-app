@@ -128,11 +128,20 @@ paths are wired in `app.config.js` but commented out, so dropping in artwork is 
 `eas.json` and `eas.template.json` gained `test:mexico` and `production:mexico`, each setting
 `EXPO_PUBLIC_COUNTRY=MX` and `EXPO_PUBLIC_RESPONSE_TABLE=mexico_participant_responses`.
 
-**Both apps share `slug: gacpaq-app`,** so they are one EAS project. Two consequences: EAS will
-prompt for fresh credentials for `com.uleth.gacpaq.mx` on the first build, and with
-`appVersionSource: "remote"` the build-number counter is tracked per project, so the two apps
-interleave build numbers. Numbers still only increase, so no store rejection — just gaps. Making
-them fully independent means a separate EAS project and a different slug; decide before shipping.
+**Both apps share `slug: gacpaq-app`,** so they are one EAS project. **Decided: it stays that way.**
+Two consequences: EAS will prompt for fresh credentials for `com.uleth.gacpaq.mx` on the first build,
+and with `appVersionSource: "remote"` the build-number counter is tracked per project, so the two
+apps interleave build numbers. Numbers still only increase, so no store rejection — just gaps.
+Making them fully independent would mean a separate EAS project and a different slug, which buys
+nothing here: the two apps ship from one branch, on one release cadence.
+
+**Version numbers are shared too.** `app.config.js` overrides identity but deliberately not
+`version`, so both apps carry whatever `app.json` says. `expo.version` is read by nothing at
+runtime — it is not shown in the UI and not part of the submission payload — so its only consumers
+are the store listings and the git tags, and one number across the family keeps releases tracked as
+one thing. **v5.0.0 is the first release carrying the Mexico app**, and `GAC-PAQ México` therefore
+debuts on the stores at 5.0.0 rather than 1.0.0, matching the global app's feature parity rather
+than reading as a fresh v1.
 
 Calendar time here is dominated by store review, not code.
 
@@ -188,7 +197,7 @@ Nothing is lost — the entry stays queued and the next drain sends it.
 | --- | ---------------------------------------------------------------------------------- | ----------------- |
 | 1   | Register `com.uleth.gacpaq.mx` on App Store Connect and Google Play                | client / release  |
 | 2   | Confirm admin token has write permission on `mexico_participant_responses`         | backend           |
-| 3   | Decide whether Mexico needs its own EAS project, or shares `gacpaq-app`            | release           |
+| 3   | ✅ Decided — shares the `gacpaq-app` EAS project and one shared version number      | release           |
 | 4   | Build `test:mexico` and run Phase 3 verification on device                         | dev               |
 | 5   | Build one unflagged profile to prove the global app is unchanged                   | dev               |
 | 6   | Mexico icon and adaptive-icon artwork, then uncomment the paths in `app.config.js` | client            |
