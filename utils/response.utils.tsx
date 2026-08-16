@@ -1,4 +1,5 @@
 import LocalStorageKey from "@constants/localstorage.enum";
+import { LOCKED_LANGUAGE } from "@constants/locked_country";
 import MAIN_STUDY_LANG from "@constants/main_study_lang";
 import Section from "@constants/section.enum";
 import type {
@@ -10,6 +11,7 @@ import type {
 	ResponseInterface,
 } from "@interface/payload.type";
 import type { FinalResponseType } from "@interface/union.type";
+import LanguagePage from "@store/data/introductory-pages/language";
 import { clearUnansweredResponses, newResponse } from "@store/responses/responsesSlice";
 import { setNumPendingSubmissions } from "@store/settings/settingsSlice";
 import { store } from "@store/store";
@@ -243,6 +245,31 @@ const addResponse = (value: string | null): void => {
 	);
 };
 
+/**
+ * A country-locked build drops the language page, so nothing records the language_location
+ * response the way LanguageContext does on that page. Without this the column would be missing
+ * from every submission with no visible error, so seed it from the locked language instead.
+ *
+ * sectionPageNumber 0 keeps the response out of the way of the real intro pages: those are
+ * numbered from 1, and with the language page gone the participant page now occupies 1.
+ */
+const seedLockedLanguageResponse = (): void => {
+	if (LOCKED_LANGUAGE === null) return;
+
+	store.dispatch(
+		newResponse({
+			ident: LanguagePage.ident,
+			label: LanguagePage.column_name,
+			answer: LOCKED_LANGUAGE,
+			pageNumber: 0,
+			mode: store.getState().settings.mode,
+			section: Section.Intro,
+			sectionNumber: 0,
+			sectionPageNumber: 0,
+		}),
+	);
+};
+
 const retrieveResponseFromStorage = async (): Promise<FinalResponseType[] | null> => {
 	const existingResponses: FinalResponseType[] | null = await readData(LocalStorageKey.responses)
 		.then((responses) => {
@@ -366,5 +393,6 @@ export {
 	queueResponseToStorage,
 	retrieveResponseFromStorage,
 	sanitizeResponse,
+	seedLockedLanguageResponse,
 	sendResponseQueue,
 };

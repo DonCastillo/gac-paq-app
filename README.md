@@ -123,6 +123,38 @@ Some participating countries like China cannot access GAC-PAQ app on Google Play
 12. Publish the changes
 13. Wait for Google to review and approve the app
 
+## THE MEXICO APP
+
+Mexico ships as a separate app (`GAC-PAQ México`, `com.uleth.gacpaq.mx`) that starts in `es-MX` and skips the language page. It is the same codebase, selected by `EXPO_PUBLIC_COUNTRY=MX`.
+
+### Running it in development
+
+1. In `.env`, set `EXPO_PUBLIC_COUNTRY="MX"` and `EXPO_PUBLIC_RESPONSE_TABLE="mexico_participant_responses"`
+2. `npm run prebuild:clean` — required, the bundle ID and package name change
+3. `npm run android` or `npm run ios`
+
+Both apps can be installed side by side, so make sure you are opening `GAC-PAQ México`. To go back to the regular app, clear `EXPO_PUBLIC_COUNTRY`, restore `EXPO_PUBLIC_RESPONSE_TABLE`, and prebuild again.
+
+### Testing it
+
+`.env` is not used by EAS — the build profile sets the country and the response table.
+
+1. `npm run test:mexico:ios` or `npm run test:mexico:android`
+2. Then follow the same store steps as [TESTING THE APP](#testing-the-app), selecting `GAC-PAQ México` in Store Connect / Play Console
+
+### Publishing it
+
+1. `npm run publish:mexico:ios` or `npm run publish:mexico:android`
+2. Then follow the same store steps as [PUBLISHING THE APP](#publishing-the-app), selecting `GAC-PAQ México` in Store Connect / Play Console
+
+### Adding another country
+
+`MX` is currently the only supported code. A new one has to be added in three places, or the build will be wrong:
+
+1. `constants/locked_country.ts` — the country's language
+2. `app.config.js` — the app name, bundle identifier, package, and scheme
+3. `eas.json` — the `test:` and `production:` profiles, plus `package.json` scripts
+
 ## RUNNING LOCALLY ON PHYSICAL DEVICES
 
 1. `eas build --profile development`
