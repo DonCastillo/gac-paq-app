@@ -30,7 +30,6 @@ const GenericQuestionnaireLayout: ParentComponent = ({ children }) => {
 	const backgroundImage = getImageBackground();
 	const hasPrevPage = currentPageNumber > 1;
 
-
 	return (
 		<View style={styles.container}>
 			<BGLinearGradient />

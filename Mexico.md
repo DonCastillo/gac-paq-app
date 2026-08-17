@@ -129,11 +129,24 @@ paths are wired in `app.config.js` but commented out, so dropping in artwork is 
 `EXPO_PUBLIC_COUNTRY=MX` and `EXPO_PUBLIC_RESPONSE_TABLE=mexico_participant_responses`.
 
 **Both apps share `slug: gacpaq-app`,** so they are one EAS project. **Decided: it stays that way.**
-Two consequences: EAS will prompt for fresh credentials for `com.uleth.gacpaq.mx` on the first build,
-and with `appVersionSource: "remote"` the build-number counter is tracked per project, so the two
-apps interleave build numbers. Numbers still only increase, so no store rejection — just gaps.
-Making them fully independent would mean a separate EAS project and a different slug, which buys
-nothing here: the two apps ship from one branch, on one release cadence.
+EAS will prompt for fresh credentials for `com.uleth.gacpaq.mx` on the first build, since Apple
+credentials are per bundle ID. Making the two fully independent would mean a separate EAS project
+and a different slug, which buys nothing here: they ship from one branch, on one release cadence.
+
+**Build numbers do not collide.** An earlier revision of this document claimed that with
+`appVersionSource: "remote"` the counter is tracked per project, so the two apps would interleave
+build numbers with gaps. **That is wrong.** The remote counter is keyed per application identifier,
+verified with `eas build:version:get`:
+
+| profile       | identifier            | iOS       | Android         |
+| ------------- | --------------------- | --------- | --------------- |
+| `production`  | `com.uleth.gacpaq`    | build 127 | versionCode 119 |
+| `test:mexico` | `com.uleth.gacpaq.mx` | none yet  | none yet        |
+
+Mexico therefore starts a clean counter rather than continuing the global app's. On iOS that means
+build 1, since `app.json` carries no `ios.buildNumber` for EAS to seed from. On Android `app.json`
+still has `versionCode: 91`, and whether EAS seeds the new counter from that or from 1 has not been
+confirmed — either is valid for a brand-new package, so it is worth noting but not worth blocking on.
 
 **Version numbers are shared too.** `app.config.js` overrides identity but deliberately not
 `version`, so both apps carry whatever `app.json` says. `expo.version` is read by nothing at
@@ -144,6 +157,36 @@ debuts on the stores at 5.0.0 rather than 1.0.0, matching the global app's featu
 than reading as a fresh v1.
 
 Calendar time here is dominated by store review, not code.
+
+#### Store registration status
+
+Both store accounts are the developer's own personal accounts — the same ones that already ship
+`com.uleth.gacpaq` on iOS and Android. There is no third-party account access to arrange.
+
+**Apple — bundle ID registered.** `com.uleth.gacpaq.mx` exists in Certificates, Identifiers &
+Profiles, so it appears in the App Store Connect New App dropdown immediately and the app record can
+be created before any build has run. EAS will still generate a fresh distribution certificate and
+provisioning profile on the first Mexico build, because Apple credentials are per bundle ID.
+
+**Google Play — nothing is registered yet, and cannot be.** Play has no concept of reserving a
+package name. `com.uleth.gacpaq.mx` is claimed by the first AAB uploaded carrying that
+`applicationId`, and the binding is irreversible. A Play Console app entry created ahead of time is
+not bound to the package until that upload happens.
+
+That first upload **must be done by hand through the Play Console** — the Play Developer API refuses
+the initial upload for a new package, so `eas submit --platform android` would fail. This costs
+nothing here: the release process in `README.md` already downloads the AAB from expo.dev and uploads
+it manually, and `eas.json` has no Android submit config at all.
+
+**Closed testing:** Google requires new apps on _individual_ developer accounts created after
+13 November 2023 to run a continuous closed test with 12 testers for 14 days before production
+access is granted. The account predates that cutoff — it has been publishing since the v3.7.x
+releases — so the requirement should not apply. Confirm once in Play Console rather than assuming;
+if it does apply, it is a two-week gate on the Mexico launch and needs starting early.
+
+**Testers do not carry over.** TestFlight groups are per app, and Play tester lists are per track per
+app, so the existing `com.uleth.gacpaq` testers will not see the Mexico build and have to be added
+again on the new listing.
 
 ### Phase 3 — Verification — **not started**
 
@@ -195,9 +238,11 @@ Nothing is lost — the entry stays queued and the next drain sends it.
 
 | #   | Task                                                                               | Owner             |
 | --- | ---------------------------------------------------------------------------------- | ----------------- |
-| 1   | Register `com.uleth.gacpaq.mx` on App Store Connect and Google Play                | client / release  |
+| 1a  | ✅ Apple bundle ID `com.uleth.gacpaq.mx` registered; accounts confirmed as our own | release           |
+| 1b  | Create the App Store Connect app record against that bundle ID                     | release           |
+| 1c  | Create the Play Console app, then claim the package with a manual first AAB upload | release           |
 | 2   | Confirm admin token has write permission on `mexico_participant_responses`         | backend           |
-| 3   | ✅ Decided — shares the `gacpaq-app` EAS project and one shared version number      | release           |
+| 3   | ✅ Decided — shares the `gacpaq-app` EAS project and one shared version number     | release           |
 | 4   | Build `test:mexico` and run Phase 3 verification on device                         | dev               |
 | 5   | Build one unflagged profile to prove the global app is unchanged                   | dev               |
 | 6   | Mexico icon and adaptive-icon artwork, then uncomment the paths in `app.config.js` | client            |

@@ -19,7 +19,6 @@
 			"bundleIdentifier": "com.uleth.gacpaq",
 			"infoPlist": {
 				"UIBackgroundModes": ["fetch", "processing"],
-				"NSMicrophoneUsageDescription": "This app requires microphone access for audio features.",
 				"NSBackgroundFetchUsageDescription": "This app fetches updated data in the background."
 			},
 			"config": {
@@ -62,6 +61,7 @@
 			"expo-web-browser",
 			"expo-background-task",
 			"./plugins/remove-audio-boot-receiver.js",
+			"./plugins/remove-audio-foreground-services.js",
 			"./plugins/allow-restricted-resizability.js",
 			"expo-asset"
 		]
