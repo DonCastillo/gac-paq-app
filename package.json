@@ -20,7 +20,11 @@
 		"test:mexico:android": "eas build --profile test:mexico --platform android",
 		"test:mexico:ios": "eas build --profile test:mexico --platform ios",
 		"publish:mexico:android": "eas build --profile production:mexico --platform android",
-		"publish:mexico:ios": "eas build --profile production:mexico --platform ios"
+		"publish:mexico:ios": "eas build --profile production:mexico --platform ios",
+		"builds:ios": "node ./scripts/list-builds.js ios",
+		"builds:android": "node ./scripts/list-builds.js android",
+		"submit:ios": "EXPO_PUBLIC_COUNTRY= eas submit --platform ios",
+		"submit:mexico:ios": "EXPO_PUBLIC_COUNTRY=MX eas submit --platform ios"
 	},
 	"dependencies": {
 		"@expo/vector-icons": "^15.0.3",

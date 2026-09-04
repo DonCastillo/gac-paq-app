@@ -61,8 +61,8 @@ To refresh the app in local development, enter `r` on the terminal.
 ### To Apple Store
 
 4. `npm run publish:ios`
-5. `eas submit`
-6. Choose latest build
+5. `npm run builds:ios` — note the ID of the newest `com.uleth.gacpaq` build
+6. `npm run submit:ios -- --id <BUILD_ID>`
 7. Log in to `developer.apple.com` and go to the GAC-PAQ app
 8. Go to `Distribution` page
 9. Add a new version; specify the new version number
@@ -75,8 +75,8 @@ To refresh the app in local development, enter `r` on the terminal.
 ### To Google Playstore
 
 4. `npm run publish:android`
-5. Login to `expo.dev`
-6. Download the `aab` file from the latest Android build
+5. `npm run builds:android` — note the newest `com.uleth.gacpaq` build
+6. Download that build's `aab` from `expo.dev`
 7. Login to Google Play Console and select the app in the list
 8. Go to `Test and release` > `Latest releases and bundles` > `View all app bundles` > `Upload new version`
 9. Upload the `aab` file you downloaded earlier, and finish by clicking save
@@ -102,8 +102,8 @@ Some participating countries like China cannot access GAC-PAQ app on Google Play
 ### To Apple Store
 
 4. `npm run test:ios`
-5. `eas submit`
-6. Choose latest build
+5. `npm run builds:ios` — note the ID of the newest `com.uleth.gacpaq` build
+6. `npm run submit:ios -- --id <BUILD_ID>`
 7. Log in to `developer.apple.com` and go to the GAC-PAQ app
 8. Go to `Testflight` page
 9. You will see the new version
@@ -113,8 +113,8 @@ Some participating countries like China cannot access GAC-PAQ app on Google Play
 ### To Google Playstore
 
 4. `npm run test:android`
-5. Login to `expo.dev`
-6. Download the `aab` file from the latest Android build
+5. `npm run builds:android` — note the newest `com.uleth.gacpaq` build
+6. Download that build's `aab` from `expo.dev`
 7. Login to Google Play Console and select the app in the list
 8. Go to `Test and release` > `Latest releases and bundles` > `View all app bundles` > `Upload new version`
 9. Upload the `aab` file you downloaded earlier, write the release notes, and finish by clicking save
@@ -125,25 +125,23 @@ Some participating countries like China cannot access GAC-PAQ app on Google Play
 
 ## THE MEXICO APP
 
-Mexico ships as a separate app (`GAC-PAQ México`, `com.uleth.gacpaq.mx`) that starts in `es-MX` and skips the language page. It is the same codebase, selected by `EXPO_PUBLIC_COUNTRY=MX`.
+Mexico ships as a separate app (`GAC-PAQ México`, `com.uleth.gacpaq.mx`) that starts in `es-MX` and skips the language page. Same codebase, selected by `EXPO_PUBLIC_COUNTRY=MX`.
 
 ### First-time store setup
 
-One-off, only needed before the first Mexico build reaches a store.
+One-off, before the first Mexico build reaches a store.
 
-**iOS — register the bundle ID, then create the app record.** These are separate objects in separate portals: the bundle ID lives in the Apple Developer portal, the app record in App Store Connect.
+**iOS** — the bundle ID lives in the Apple Developer portal, the app record in App Store Connect. Both are needed.
 
-1. `npx eas-cli credentials:configure-build -p ios -e test:mexico` — registers `com.uleth.gacpaq.mx` as an App ID and generates its certificate and provisioning profile. No build minutes used. (`npm run test:mexico:ios` does the same as part of provisioning; this is just the standalone version.)
+1. `npx eas-cli credentials:configure-build -p ios -e test:mexico` — registers `com.uleth.gacpaq.mx` and generates its certificate and provisioning profile. No build minutes used. **`-e test:mexico` is required**: without it the command resolves `app.config.js` from your `.env` and can operate on `com.uleth.gacpaq`, the live production app, without saying so.
 2. App Store Connect > **Apps** > **+** > **New App** — iOS, name `GAC-PAQ México`, primary language Spanish (Mexico), bundle ID `com.uleth.gacpaq.mx`, SKU `gacpaq-mx`. The bundle ID only appears in the dropdown once step 1 has run.
 
-> **`-e test:mexico` is required.** Without it the command resolves `app.config.js` from your local `.env`, which normally selects the regular app — it would then operate on `com.uleth.gacpaq`, the live production app, without saying so. Verify with `EXPO_PUBLIC_COUNTRY=MX npx expo config --type public --json | grep bundleIdentifier`.
-
-**Android — create the app, then claim the package by hand.** Play has no way to reserve a package name: `com.uleth.gacpaq.mx` is bound to the listing by the first AAB uploaded, and that binding is permanent.
+**Android** — Play cannot reserve a package name. `com.uleth.gacpaq.mx` is bound to the listing by the first AAB uploaded, permanently.
 
 3. Play Console > **All apps** > **Create app**
-4. Upload the first AAB through the Play Console UI. It **must** be manual — the Play Developer API refuses the first upload for a new package, so `eas submit --platform android` fails here. (The publishing steps below already upload by hand, so nothing changes after this first one.)
+4. Upload the first AAB through the Play Console UI. It **must** be manual — the Play Developer API refuses the first upload for a new package.
 
-Then fill in the new listing's privacy policy, Data safety, content rating, target audience, and app access forms. Mirror the answers from the global app, and give reviewers a working Participant ID under app access or they cannot get past the first page.
+Then fill in the new listing's privacy policy, Data safety, content rating, target audience, and app access forms. Mirror the global app's answers, and give reviewers a working Participant ID under app access or they cannot get past the first page.
 
 ### Running it in development
 
@@ -151,48 +149,29 @@ Then fill in the new listing's privacy policy, Data safety, content rating, targ
 2. `npm run prebuild:clean` — required, the bundle ID and package name change
 3. `npm run android` or `npm run ios`
 
-Both apps can be installed side by side, so make sure you are opening `GAC-PAQ México`. To go back to the regular app, clear `EXPO_PUBLIC_COUNTRY`, restore `EXPO_PUBLIC_RESPONSE_TABLE`, and prebuild again.
+Both apps install side by side, so make sure you are opening `GAC-PAQ México`. To go back to the regular app, clear `EXPO_PUBLIC_COUNTRY`, restore `EXPO_PUBLIC_RESPONSE_TABLE`, and prebuild again.
 
-### Testing it
+### Testing and publishing it
 
 `.env` is not used by EAS — the build profile sets the country and the response table.
 
-1. `npm run test:mexico:ios` or `npm run test:mexico:android`
-2. Then follow the same store steps as [TESTING THE APP](#testing-the-app), selecting `GAC-PAQ México` in Store Connect / Play Console
-
-#### Getting the iOS build onto TestFlight
-
-`npm run test:mexico:ios` only **builds**. It produces an `.ipa` on the EAS servers and stops — nothing is uploaded, and the build will never appear in TestFlight on its own. Submitting is a separate step.
-
-1. Find the build ID:
+1. Build: `npm run test:mexico:ios` / `npm run test:mexico:android`, or `npm run publish:mexico:ios` / `npm run publish:mexico:android`
+2. **iOS only** — those commands build and stop. The `.ipa` sits on the EAS servers and never reaches TestFlight on its own; submitting is a separate step:
 
    ```bash
-   npx eas-cli build:list --platform ios --limit 5
+   npm run builds:ios     # find the build; confirm it reads com.uleth.gacpaq.mx
+   npm run submit:mexico:ios -- --id <BUILD_ID>
    ```
 
-   Confirm the one you want reads `com.uleth.gacpaq.mx` and not `com.uleth.gacpaq`.
+   `--id` pins the Mexico build — a bare submit lists the global app's builds too, so it is easy to ship the wrong one. The script sets `EXPO_PUBLIC_COUNTRY=MX` because `eas submit` resolves `app.config.js` to choose the App Store Connect app; without it `.env` decides, and the upload can be aimed at the live global app.
 
-2. Submit that exact build:
+   Wait a few minutes for TestFlight to finish "Processing", then add testers.
 
-   ```bash
-   EXPO_PUBLIC_COUNTRY=MX npx eas-cli submit -p ios --id <BUILD_ID>
-   ```
+3. Then follow the store steps in [TESTING THE APP](#testing-the-app) or [PUBLISHING THE APP](#publishing-the-app), selecting `GAC-PAQ México` in Store Connect / Play Console
 
-3. Wait a few minutes for TestFlight to finish "Processing", then add testers.
-
-Both parts of that command matter:
-
-- **`--id`** pins the Mexico build. A bare `eas submit` prompts with a list that includes the global app's builds, so it is easy to ship the wrong one.
-- **`EXPO_PUBLIC_COUNTRY=MX`** because `eas submit` resolves `app.config.js` to decide which App Store Connect app to target. Without it, `.env` selects the regular app and the upload is aimed at `com.uleth.gacpaq` — the live production app.
+Android has no submit step. Run `npm run builds:android` to find the newest `com.uleth.gacpaq.mx` build, download its AAB from `expo.dev`, and upload it to the Play Console by hand, as the sections above describe.
 
 If no `GAC-PAQ México` record exists in App Store Connect yet, `eas submit` offers to create one; see [First-time store setup](#first-time-store-setup). TestFlight cannot show a build for an app record that does not exist, which is the usual reason a successful build seems to vanish.
-
-Android has no equivalent step — the AAB is downloaded from `expo.dev` and uploaded to the Play Console by hand, exactly as the sections above describe.
-
-### Publishing it
-
-1. `npm run publish:mexico:ios` or `npm run publish:mexico:android`
-2. Then follow the same store steps as [PUBLISHING THE APP](#publishing-the-app), selecting `GAC-PAQ México` in Store Connect / Play Console
 
 ### Adding another country
 
