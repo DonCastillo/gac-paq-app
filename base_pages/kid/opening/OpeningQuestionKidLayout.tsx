@@ -37,6 +37,7 @@ const OpeningQuestionKidLayout: ParentComponent = ({ children }) => {
 	const { selectedValue, questionLabel, questionSubLabel } = useQuestionContext();
 	const { setDropdownOpen } = useDropdownContext();
 	const [background, setBackground] = useState<React.ReactElement | null>(null);
+	const hasPrevPage = currentPageNumber > 1;
 
 	// change background on page change
 	useEffect(() => {
@@ -53,46 +54,23 @@ const OpeningQuestionKidLayout: ParentComponent = ({ children }) => {
 
 	// set button component dynamically
 	useEffect(() => {
-		if (currentPageNumber > 1) {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"bothCurrentPage"}
-					colorTheme={color200}
-					onPrev={() => dispatch(prevPage())}
-					onNext={() => dispatch(nextPage())}
-				/>,
-			);
-		} else {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"next"}
-					colorTheme={color200}
-					onNext={() => dispatch(nextPage())}
-				/>,
-			);
-		}
-	}, [currentPageNumber]);
-
-	useEffect(() => {
-		if (selectedValue !== null && proceed) {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"bothSelectedValue"}
-					colorTheme={color200}
-					onPrev={() => dispatch(prevPage())}
-					onNext={() => dispatch(nextPage())}
-				/>,
-			);
-		} else {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"prev"}
-					colorTheme={color200}
-					onPrev={() => dispatch(prevPage())}
-				/>,
-			);
-		}
-	}, [selectedValue, proceed]);
+		/*
+		 * There is nothing behind page 1, so it gets no back button. In the regular app the language page
+		 * occupies that slot, so this only takes effect in a country-locked build, where the participant
+		 * page opens the app. This layout renders that page whenever a mode is already set, which is the
+		 * case on every launch after the first. The key varies with both branches because BackAndNextNav
+		 * latches its buttons on mount and has to be remounted to drop one.
+		 */
+		const canProceed = selectedValue !== null && proceed;
+		setButtonComponent(
+			<BackAndNextNav
+				key={`${hasPrevPage ? "WithPrev" : "WithoutPrev"}${canProceed ? "WithNext" : "WithoutNext"}`}
+				colorTheme={color200}
+				onPrev={hasPrevPage ? () => dispatch(prevPage()) : undefined}
+				onNext={canProceed ? () => dispatch(nextPage()) : undefined}
+			/>,
+		);
+	}, [currentPageNumber, selectedValue, proceed]);
 
 	return (
 		<TouchableWithoutFeedback

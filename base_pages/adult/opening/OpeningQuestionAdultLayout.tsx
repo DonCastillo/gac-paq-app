@@ -29,49 +29,27 @@ const OpeningQuestionAdultLayout: ParentComponent = ({ children }) => {
 	const { buttonComponent, setButtonComponent } = useButtonContext();
 	const { proceed } = useProceedContext();
 	const { heading, selectedValue, questionLabel, questionSubLabel } = useQuestionContext();
+	const hasPrevPage = currentPageNumber > 1;
 
 	// set button component dynamically
 	useEffect(() => {
-		if (currentPageNumber > 1) {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"both"}
-					colorTheme="#FFF"
-					onPrev={() => dispatch(prevPage())}
-					onNext={() => dispatch(nextPage())}
-				/>,
-			);
-		} else {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"next"}
-					colorTheme="#FFF"
-					onNext={() => dispatch(nextPage())}
-				/>,
-			);
-		}
-	}, [currentPageNumber]);
-
-	useEffect(() => {
-		if (selectedValue !== null && proceed) {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"both"}
-					colorTheme="#FFF"
-					onPrev={() => dispatch(prevPage())}
-					onNext={() => dispatch(nextPage())}
-				/>,
-			);
-		} else {
-			setButtonComponent(
-				<BackAndNextNav
-					key={"prev"}
-					colorTheme="#FFF"
-					onPrev={() => dispatch(prevPage())}
-				/>,
-			);
-		}
-	}, [selectedValue, proceed]);
+		/*
+		 * There is nothing behind page 1, so it gets no back button. In the regular app the language page
+		 * occupies that slot, so this only takes effect in a country-locked build, where the participant
+		 * page opens the app. This layout renders that page whenever a mode is already set, which is the
+		 * case on every launch after the first. The key varies with both branches because BackAndNextNav
+		 * latches its buttons on mount and has to be remounted to drop one.
+		 */
+		const canProceed = selectedValue !== null && proceed;
+		setButtonComponent(
+			<BackAndNextNav
+				key={`${hasPrevPage ? "WithPrev" : "WithoutPrev"}${canProceed ? "WithNext" : "WithoutNext"}`}
+				colorTheme="#FFF"
+				onPrev={hasPrevPage ? () => dispatch(prevPage()) : undefined}
+				onNext={canProceed ? () => dispatch(nextPage()) : undefined}
+			/>,
+		);
+	}, [currentPageNumber, selectedValue, proceed]);
 
 	return (
 		<View style={styles.container}>
