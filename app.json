@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "GAC-PAQ",
 		"slug": "gacpaq-app",
-		"version": "5.0.0",
+		"version": "5.0.1",
 		"scheme": "gacpaq",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
