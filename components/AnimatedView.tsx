@@ -1,7 +1,5 @@
-import { getCurrentPageNumber } from "@store/settings/settingsSlice";
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 import * as Animatable from "react-native-animatable";
-import { useSelector } from "react-redux";
 
 interface PropsInterface {
 	children: React.ReactNode;
@@ -10,31 +8,22 @@ interface PropsInterface {
 
 const AnimatedView = ({ children, style }: PropsInterface): React.ReactElement => {
 	/**
-	 * Starts visible so the first render asks for "fadeIn", not "fadeOut".
+	 * Only ever fades in, and runs on the JS thread rather than the native driver.
 	 *
-	 * Mounting in the hidden state made every screen play a fadeOut before the layout effect below
-	 * could flip it to fadeIn. Both animations are native-driven and only 100ms long, so the two
-	 * ran on the same node at once and whichever landed last won — when that was the fadeOut, the
-	 * view stuck at opacity 0 and the screen came up blank with only the Toolbar and Navigation,
-	 * which sit outside this component, still painted. Any remount cleared it, which is why
-	 * pressing a button that toggles a loading state appeared to "fix" the page.
+	 * This used to toggle between "fadeIn" and "fadeOut" on page change, native-driven. Twice that
+	 * left the view stuck at opacity 0 and the screen blank: first when a fadeOut raced the mount's
+	 * fadeIn, and again on iPad (kid mode, section intro), where the page painted for a frame and
+	 * then vanished while the component re-rendered mid-animation. The fadeOut never did anything
+	 * useful (the cleanup and re-run happen in the same commit), and a JS-driven opacity is always
+	 * re-applied from the animated value on re-render, so neither failure can recur.
 	 */
-	const [isContentVisible, setIsContentVisible] = useState(true);
-	const currentPageNumber = useSelector(getCurrentPageNumber);
-
-	useLayoutEffect(() => {
-		setIsContentVisible(true);
-		return () => {
-			setIsContentVisible(false);
-		};
-	}, [currentPageNumber]);
 	return (
 		<Animatable.View
-			animation={isContentVisible ? "fadeIn" : "fadeOut"}
+			animation="fadeIn"
 			delay={0}
 			duration={100}
 			style={{ flex: 1, ...style }}
-			useNativeDriver={true}
+			useNativeDriver={false}
 			easing={"ease-in"}
 		>
 			{children}

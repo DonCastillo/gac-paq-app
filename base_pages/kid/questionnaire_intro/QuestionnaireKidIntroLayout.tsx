@@ -47,15 +47,16 @@ const QuestionnaireKidIntroLayout: ParentComponent = ({ children }) => {
 	}, [currentPageNumber]);
 
 	return (
-		<AnimatedView>
-			<View style={styles.container}>
-				{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
-					<ImageBackdrop
-						source={backgroundImage}
-						key={currentPageNumber}
-					/>
-				)}
+		<View style={styles.container}>
+			{backgroundImage !== undefined && backgroundImage !== null && backgroundImage !== "" && (
+				<ImageBackdrop
+					source={backgroundImage}
+					key={currentPageNumber}
+				/>
+			)}
 
+			{/* only the panel fades; the backdrop and navigation stay outside so a failed fade can't blank the page */}
+			<AnimatedView style={styles.panelContainer}>
 				<View
 					style={[
 						styles.headingPanel,
@@ -68,14 +69,14 @@ const QuestionnaireKidIntroLayout: ParentComponent = ({ children }) => {
 				>
 					<ScrollView>{children}</ScrollView>
 				</View>
-				<Main>
-					<BottomMain>
-						<></>
-					</BottomMain>
-					<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
-				</Main>
-			</View>
-		</AnimatedView>
+			</AnimatedView>
+			<Main>
+				<BottomMain>
+					<></>
+				</BottomMain>
+				<Navigation>{buttonComponent !== null && buttonComponent}</Navigation>
+			</Main>
+		</View>
 	);
 };
 
@@ -87,6 +88,10 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		position: "relative",
+	},
+	panelContainer: {
+		...StyleSheet.absoluteFillObject,
+		alignItems: "center",
 	},
 	headingPanel: {
 		position: "absolute",
